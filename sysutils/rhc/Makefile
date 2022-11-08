@@ -1,5 +1,3 @@
-# Created by: Dereckson <dereckson@gmail.com>
-
 PORTNAME=	rhc
 PORTVERSION=	1.32.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	dereckson@gmail.com
 COMMENT=	Administration console client for RedHat OpenShift
+WWW=		https://github.com/openshift/rhc
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

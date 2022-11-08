@@ -1,5 +1,3 @@
-# Created by: Cy SChubert <cy@FreeBSD.org>
-
 PORTNAME=	mxascii
 PORTVERSION=	1.1
 CATEGORIES=	x11
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	X/Motif Display an ASCII table
+WWW=		https://www.muquit.com/muquit/software/mxascii/mxascii.html
 
 USES=		imake:noman motif
 USE_XORG=	xt x11

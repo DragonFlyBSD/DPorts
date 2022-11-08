@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	marko
 PORTVERSION=	1.2.1
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Markdown parser with high extensibility
+WWW=		https://github.com/frostming/marko
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

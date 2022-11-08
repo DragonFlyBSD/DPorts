@@ -1,5 +1,3 @@
-# Created by: Jonathan Weiss (<jw@innerewut.de>)
-
 PORTNAME=	activesupport
 PORTVERSION=	5.1.7
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	5
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utility classes and extension that are required by Rails MVC Framework
+WWW=		https://github.com/rails/rails/tree/main/activesupport
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

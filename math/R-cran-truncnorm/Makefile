@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni
-
 PORTNAME=	truncnorm
 PORTREVISION=	5
 DISTVERSION=	1.0-8
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Truncated normal distribution
+WWW=		https://cran.r-project.org/package=truncnorm
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Path-Abstract
 PORTVERSION=	0.096
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Fast and featureful UNIX-style path parsing and manipulation
+WWW=		https://metacpan.org/release/Path-Abstract
 
 BUILD_DEPENDS=	p5-Sub-Exporter>=0:devel/p5-Sub-Exporter
 RUN_DEPENDS=	p5-Sub-Exporter>=0:devel/p5-Sub-Exporter

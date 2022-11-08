@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	noto
 PORTVERSION=	2.034
 CATEGORIES=	x11-fonts
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	# empty
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Google Noto Fonts family (Emoji)
+WWW=		https://www.google.com/get/noto/
 
 LICENSE=	APACHE20
 

@@ -1,11 +1,12 @@
 PORTNAME=	paritwine
 DISTVERSION=	0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://www.multiprecision.org/downloads/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Glue library between PARI/GP and other mathematics libraries
+WWW=		https://www.multiprecision.org/paritwine/home.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

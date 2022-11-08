@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	viewnior
 DISTVERSIONPREFIX=	${PORTNAME}-
 DISTVERSION=	1.8
@@ -7,6 +5,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Fast and simple image viewer
+WWW=		https://siyanpanayotov.com/project/viewnior/
 
 LICENSE=	GPLv3
 

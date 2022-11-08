@@ -1,5 +1,3 @@
-# Created by: Olivier Cochard-Labbe <olivier@FreeBSD.org>
-
 PORTNAME=	todo
 PORTVERSION=	0.2.1
 CATEGORIES=	deskutils
@@ -9,6 +7,7 @@ DISTNAME=	Todo-${PORTVERSION}
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	DeforaOS desktop todo list
+WWW=		https://www.defora.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

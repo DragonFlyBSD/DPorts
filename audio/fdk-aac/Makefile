@@ -1,12 +1,11 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	fdk-aac
-DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.2
 CATEGORIES=	audio
+MASTER_SITES=	SF/opencore-amr/${PORTNAME}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Port of the Fraunhofer FDK AAC Codec Library
+WWW=		https://sourceforge.net/projects/opencore-amr/
 
 LICENSE=	FRAUNHOFER_FDK_AAC
 LICENSE_NAME=	Software License for The Fraunhofer FDK AAC Codec Library for Android
@@ -17,10 +16,7 @@ NOT_FOR_ARCHS=		sparc64
 NOT_FOR_ARCHS_REASON=	not yet ported to this architecture
 
 USES=		cmake
-USE_GITHUB=	yes
 USE_LDCONFIG=	yes
-
-GH_ACCOUNT=	mstorsjo
 
 PLIST_SUB=	VER=${PORTVERSION}
 

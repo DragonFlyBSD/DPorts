@@ -1,10 +1,8 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	UCD
-PORTVERSION=	14.0.0
+PORTVERSION=	15.0.0
 CATEGORIES=	textproc
 MASTER_SITES=	https://www.unicode.org/Public/zipped/${DISTVERSION}/:src	\
-		https://raw.githubusercontent.com/unicode-org/unihan-database/f1e8e08a138bc7e834958c8d50d26ec4bca305d3/:lic
+		https://raw.githubusercontent.com/unicode-org/unihan-database/0da97601945f29dbd34ebc1a2f3bbd28bf3f8462/:lic
 DISTFILES=	${PORTNAME}.zip:src	\
 		LICENSE.md:lic
 DIST_SUBDIR=	unicode-${PORTNAME}/${DISTVERSION}
@@ -12,6 +10,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Unicode Character Database
+WWW=		https://unicode.org/ucd/
 
 LICENSE=	Unicode_License_Agreement
 LICENSE_NAME=	Unicode License Agreement

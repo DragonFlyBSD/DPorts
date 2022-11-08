@@ -1,5 +1,3 @@
-# Created by: David Thiel <lx@redundancy.redundancy.org>
-
 PORTNAME=	plugdaemon
 PORTVERSION=	2.5.5
 PORTREVISION=	1
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Plug proxy daemon, forwards TCP/IP connections
+WWW=		http://plugdaemon.sourceforge.net/
 
 PLIST_FILES=	man/man1/plug.1.gz sbin/plug
 

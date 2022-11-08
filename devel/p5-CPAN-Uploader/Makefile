@@ -1,5 +1,3 @@
-# Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-
 PORTNAME=	CPAN-Uploader
 PORTVERSION=	0.103013
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	geraud@gcu.info
 COMMENT=	Upload things to the CPAN
+WWW=		https://metacpan.org/release/CPAN-Uploader
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: torstenb
-
 PORTNAME=	ctwm
 DISTVERSION=	4.0.3
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	https://www.ctwm.org/dist/ \
 
 MAINTAINER=	fullermd@over-yonder.net
 COMMENT=	Extension to twm, with support for multiple virtual screens
+WWW=		https://www.ctwm.org/
 
 LICENSE=	MIT
 

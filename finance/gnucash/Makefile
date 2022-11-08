@@ -1,10 +1,11 @@
 PORTNAME=	gnucash
-PORTVERSION=	4.11
+PORTVERSION=	4.12
 CATEGORIES=	finance gnome
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28stable%29/${PORTVERSION}
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Quicken-like money and finance manager
+WWW=		https://www.gnucash.org/
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual

@@ -1,13 +1,12 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	textmail
 PORTVERSION=	20070803
-PORTREVISION=	31
+PORTREVISION=	34
 CATEGORIES=	mail
 MASTER_SITES=	http://raf.org/textmail/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Converts e-mail attachments to plain-text
+WWW=		https://raf.org/textmail/
 
 RUN_DEPENDS=	antiword:textproc/antiword \
 		catdoc:textproc/catdoc \

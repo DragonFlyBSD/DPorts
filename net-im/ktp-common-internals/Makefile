@@ -4,6 +4,7 @@ CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Telepathy internal library
+WWW=		https://community.kde.org/KTp
 
 LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
 		libsignon-qt5.so:sysutils/signon-qt5 \
@@ -19,15 +20,16 @@ LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		cmake compiler:c++11-lang gettext pkgconfig kde:5 \
-		qt:5 tar:xz
+		qt:5 tar:xz xorg
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons i18n iconthemes itemviews jobwidgets kcmutils \
 		kio notifications notifyconfig parts people service solid \
 		sonnet syntaxhighlighting texteditor textwidgets wallet widgetsaddons \
 		windowsystem xmlgui \
-		ecm_build
+		ecm:build
 USE_QT=		concurrent core dbus declarative gui network sql widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
+USE_XORG=	x11
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOCS

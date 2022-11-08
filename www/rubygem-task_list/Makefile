@@ -1,5 +1,3 @@
-# Created by: Torsten Zuhlsdorff <ports@toco-domains.de>
-
 PORTNAME=	task_list
 PORTVERSION=	1.0.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	GitHub-flavored-Markdown TaskList components
+WWW=		https://github.com/github/task_list
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-objectpath
 PORTVERSION=	1.2.1.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	XStatic-objectpath-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	objectpath (XStatic packaging standard)
+WWW=		https://github.com/mike-marcacci/objectpath
 
 LICENSE=	MIT
 

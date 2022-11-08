@@ -1,5 +1,3 @@
-# Created by: Anders Nordby <anders@fix.no>
-
 PORTNAME=	dante
 PORTVERSION=	1.4.3
 CATEGORIES=	net security
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.inet.no/dante/files/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Circuit-level firewall/proxy
+WWW=		https://www.inet.no/dante/
 
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

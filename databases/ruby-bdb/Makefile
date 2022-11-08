@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	bdb
 PORTVERSION=	0.6.6
 PORTREVISION=	8
@@ -12,6 +10,7 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby interface to Oracle Berkeley DB revision 2 or later
+WWW=		https://github.com/knu/ruby-bdb
 
 LICENSE=	RUBY
 

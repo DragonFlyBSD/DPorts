@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	swfmill
 PORTVERSION=	0.3.6
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	http://swfmill.org/releases/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to generate or decompile Adobe Flash SWF files
+WWW=		https://swfmill.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

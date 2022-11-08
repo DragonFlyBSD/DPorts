@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	zlib
 PORTVERSION=	2.1.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby interface for the zlib compression/decompression library
+WWW=		https://github.com/ruby/zlib
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

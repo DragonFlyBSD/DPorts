@@ -1,12 +1,11 @@
-# Created by: Andreas Kohn <andreas@syndrom23.de>
-
 PORTNAME=	libnotify
-DISTVERSION=	0.7.12
+DISTVERSION=	0.8.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Library for desktop notifications
+WWW=		https://gitlab.gnome.org/GNOME/libnotify
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

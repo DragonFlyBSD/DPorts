@@ -1,11 +1,10 @@
-# Created by: trasz
-
 PORTNAME=	iksemel
 PORTVERSION=	1.5
 CATEGORIES=	textproc
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XML parser library mainly designed for Jabber applications
+WWW=		https://github.com/meduketto/iksemel
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

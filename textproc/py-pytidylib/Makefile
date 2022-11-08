@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	pytidylib
 PORTVERSION=	0.3.2
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Python wrapper for HTML Tidy (tidylib)
+WWW=		http://countergram.com/open-source/pytidylib
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	system-config-printer
 PORTVERSION=	1.5.12
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	print gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CUPS configuration Gtk+2.0 GUI
+WWW=		http://cyberelk.net/tim/software/system-config-printer/
 
 BUILD_DEPENDS=	xmlto:textproc/xmlto \
 		docbook-xml>0:textproc/docbook-xml

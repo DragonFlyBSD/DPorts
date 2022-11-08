@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	xviewer
 PORTVERSION=	3.2.4
 CATEGORIES=	graphics gnome
@@ -7,6 +5,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Fast and functional image viewer
+WWW=		https://github.com/linuxmint/xviewer
 
 LICENSE=	GPLv2+
 

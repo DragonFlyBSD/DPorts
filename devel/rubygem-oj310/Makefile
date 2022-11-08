@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	oj
 PORTVERSION=	3.10.18
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	310
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast JSON parser and serializer
+WWW=		https://www.ohler.com/oj/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

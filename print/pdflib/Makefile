@@ -1,5 +1,3 @@
-# Created by: Alex Dupre <sysadmin@alexdupre.com>
-
 PORTNAME=	pdflib
 PORTVERSION=	7.0.5
 PORTREVISION=	6
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	C library for dynamically generating PDF
+WWW=		http://www.pdflib.de/
 
 LICENSE=	PDFlib-Lite
 LICENSE_NAME=	PDFlib-Lite

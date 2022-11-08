@@ -1,7 +1,5 @@
-# Created by: Grzegorz Blach <gblach@FreeBSD.org>
-
 PORTNAME=	jupp
-PORTVERSION=	3.1.38
+PORTVERSION=	3.1.41
 CATEGORIES=	editors
 MASTER_SITES=	http://www.mirbsd.org/MirOS/dist/jupp/ \
 		http://pub.allbsd.org/MirOS/dist/jupp/
@@ -9,6 +7,7 @@ DISTNAME=	joe-${PORTVERSION:C/([0-9]+\.[0-9]+)\.([0-9]+)/\1${PORTNAME}\2/}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Portable version of Joe's Own Editor from MirBSD
+WWW=		https://www.mirbsd.org/jupp.htm
 
 LICENSE=	GPLv1
 

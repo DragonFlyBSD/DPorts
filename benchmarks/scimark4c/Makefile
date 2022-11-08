@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	scimark4c
 PORTVERSION=	4
 CATEGORIES=	benchmarks
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	ANSI C version of the SciMark2 benchmark
+WWW=		https://math.nist.gov/scimark2/download_c.html
 
 LICENSE=	PD
 

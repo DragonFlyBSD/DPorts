@@ -1,5 +1,3 @@
-# Created by: Glenn Trewitt <glenn@trewitt.org>
-
 PORTNAME=	htmldoc
 PORTVERSION=	1.9.16
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Converts HTML to PDF and/or PostScript
+WWW=		https://michaelrsweet.github.io/htmldoc
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

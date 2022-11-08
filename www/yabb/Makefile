@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	yabb
 PORTVERSION=	2.6.11
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	YaBB_${PORTVERSION}
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Original free open-source forum written in Perl
+WWW=		http://www.yabbforum.com/
 
 LICENSE=	YABB_PUBLIC_LICENCE
 LICENSE_NAME=	YABB PUBLIC LICENCE

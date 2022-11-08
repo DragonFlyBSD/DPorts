@@ -1,5 +1,3 @@
-# Created by: Phillip Neumann <pneumann@gmail.com>
-
 PORTNAME=	murrine
 PORTVERSION=	0.98.2
 PORTREVISION=	5
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	-engine
 
 MAINTAINER=	pneumann@gmail.com
 COMMENT=	Murrine GTK+ 2.x cairo based engine
+WWW=		http://www.cimitan.com/murrine
 
 USES=		gettext gmake gnome libtool pkgconfig tar:xz xorg
 USE_XORG=	pixman

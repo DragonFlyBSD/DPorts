@@ -1,5 +1,3 @@
-# Created by: Sergei Vyshenski <svysh.fbsd@gmail.com>
-
 PORTNAME=	Module-Extract-Use
 PORTVERSION=	1.051
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Pull out the modules a module explicitly uses
+WWW=		https://github.com/briandfoy/module-extract-use/tree/master
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

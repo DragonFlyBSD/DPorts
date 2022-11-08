@@ -1,5 +1,3 @@
-# Created by: Masafumi Otsune <info@otsune.com>
-
 PORTNAME=	bsfilter
 PORTVERSION=	1.0.19
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	OSDN/bsfilter
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Bayesian spam filter written in Ruby
+WWW=		https://en.sourceforge.jp/projects/bsfilter/
 
 LICENSE=	GPLv2
 

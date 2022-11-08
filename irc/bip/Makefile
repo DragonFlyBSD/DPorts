@@ -1,5 +1,3 @@
-# Created by: Chess Griffin <chess@chessgriffin.com>
-
 PORTNAME=	bip
 DISTVERSION=	0.9.0-rc4
 CATEGORIES=	irc
@@ -7,6 +5,7 @@ MASTER_SITES=	https://projects.duckcorp.org/attachments/download/97/
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Simple IRC proxy with SSL support
+WWW=		https://bip.milkypond.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

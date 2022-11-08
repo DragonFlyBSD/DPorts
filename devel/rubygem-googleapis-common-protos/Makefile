@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	googleapis-common-protos
 PORTVERSION=	1.3.12
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Common gRPC and protocol buffer classes used in Google APIs
+WWW=		https://github.com/googleapis/common-protos-ruby/tree/master/googleapis-common-protos
 
 LICENSE=	APACHE20
 

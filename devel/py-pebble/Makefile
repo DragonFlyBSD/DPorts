@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pebble
 PORTVERSION=	4.6.3
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	Pebble-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Threading and multiprocessing eye-candy
+WWW=		https://github.com/noxdafox/pebble
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	num
 PORTVERSION=	1.4
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Legacy library for arbitrary-precision arithmetic
+WWW=		https://github.com/ocaml/num
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

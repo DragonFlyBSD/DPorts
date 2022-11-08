@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	libxs
 PORTVERSION=	1.2.0
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open source lightweight messaging layer
+WWW=		https://github.com/crossroads-io/libxs
 
 LICENSE=	GPLv3
 

@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	Tcl
 PORTVERSION=	1.27
 CATEGORIES=	lang perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Tcl extension module for Perl5
+WWW=		https://metacpan.org/release/Tcl
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

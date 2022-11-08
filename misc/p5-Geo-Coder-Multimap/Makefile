@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Geo-Coder-Multimap
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Geocode addresses with the Multimap Open API
+WWW=		https://metacpan.org/release/Geo-Coder-Multimap
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	MogileFS-Utils
 PORTVERSION=	2.30
 CATEGORIES=	sysutils net perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	MogileFS tools
+WWW=		https://metacpan.org/release/MogileFS-Utils
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-MogileFS-Client>=1.16:sysutils/p5-MogileFS-Client \

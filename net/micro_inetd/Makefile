@@ -1,5 +1,3 @@
-# Created by: Pankov Pavel <pankov_p@mail.ru>
-
 PORTNAME=	micro_inetd
 PORTVERSION=	2014.08.14
 CATEGORIES=	net
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_14Aug2014
 
 MAINTAINER=	pankov_p@mail.ru
 COMMENT=	inetd-like program intended for temporarily usage
+WWW=		https://www.acme.com/software/micro_inetd/
 
 LICENSE=	BSD2CLAUSE
 

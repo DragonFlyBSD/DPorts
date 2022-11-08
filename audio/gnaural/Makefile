@@ -1,5 +1,3 @@
-# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-
 PORTNAME=	gnaural
 PORTVERSION=	1.0.20110606
 PORTREVISION=	7
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}/Gnaural/ \
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Binaural beat generator
+WWW=		http://gnaural.sourceforge.net
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi

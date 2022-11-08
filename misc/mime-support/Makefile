@@ -1,5 +1,3 @@
-# Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-
 PORTNAME=	mime-support
 PORTVERSION=	3.62
 CATEGORIES=	misc
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION:C/([0-9]*\.[0-9]*)\.(.*)/\1-\2/}
 
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	MIME Media Types list
+WWW=		https://packages.qa.debian.org/m/mime-support.html
 
 LICENSE=	PD
 

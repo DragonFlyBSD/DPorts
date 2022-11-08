@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	hdrcde
 PORTVERSION=	3.4
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Highest Density Regions and Conditional Density Estimation
+WWW=		https://cran.r-project.org/package=hdrcde
 
 LICENSE=	GPLv3
 

@@ -1,5 +1,3 @@
-# Created by: Marc Recht <marc@informatik.uni-bremen.de>
-
 PORTNAME=	gtkglarea
 PORTVERSION=	2.0.1
 PORTREVISION=	11
@@ -10,6 +8,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OpenGL widget for the GTK+2 GUI toolkit
+WWW=		https://www.mono-project.com/archived/gtkglarea/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING

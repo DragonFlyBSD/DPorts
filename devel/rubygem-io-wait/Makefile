@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	io-wait
 PORTVERSION=	0.2.3
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Wait until IO is readable or writable without blocking
+WWW=		https://github.com/ruby/io-wait
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

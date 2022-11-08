@@ -1,3 +1,3 @@
-TIMESTAMP = 1654389110
-SHA256 (gnome/gnome-desktop-42.2.tar.xz) = f42b14eac8d1456c2bfc1fbc97ef6afe49c8dd6f57796e8fd5feb39331ed55bd
-SIZE (gnome/gnome-desktop-42.2.tar.xz) = 743268
+TIMESTAMP = 1660854206
+SHA256 (gnome/gnome-desktop-42.4.tar.xz) = 1ce2c9d5067969dbe0b282ea5a9acfb8698751f03cd07e2c730240f85dc9ad25
+SIZE (gnome/gnome-desktop-42.4.tar.xz) = 743212

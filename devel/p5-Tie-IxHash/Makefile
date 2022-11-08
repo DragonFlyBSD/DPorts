@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	Tie-IxHash
 PORTVERSION=	1.23
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module implementing ordered in-memory associative arrays
+WWW=		https://metacpan.org/release/Tie-IxHash
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

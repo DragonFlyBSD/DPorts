@@ -31,6 +31,7 @@ include/mtx/events/mscs/image_packs.hpp
 include/mtx/events/name.hpp
 include/mtx/events/nheko_extensions/hidden_events.hpp
 include/mtx/events/pinned_events.hpp
+include/mtx/events/policy_rules.hpp
 include/mtx/events/power_levels.hpp
 include/mtx/events/presence.hpp
 include/mtx/events/reaction.hpp
@@ -49,12 +50,12 @@ include/mtx/log.hpp
 include/mtx/pushrules.hpp
 include/mtx/requests.hpp
 include/mtx/responses.hpp
+include/mtx/responses/capabilities.hpp
 include/mtx/responses/common.hpp
 include/mtx/responses/create_room.hpp
 include/mtx/responses/crypto.hpp
 include/mtx/responses/device.hpp
 include/mtx/responses/empty.hpp
-include/mtx/responses/groups.hpp
 include/mtx/responses/login.hpp
 include/mtx/responses/media.hpp
 include/mtx/responses/members.hpp

@@ -1,5 +1,3 @@
-# Created by: Greg Larkin <glarkin@FreeBSD.org>
-
 PORTNAME=	Net-Amazon-Signature
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to create Amazon AWS signatures
+WWW=		https://metacpan.org/release/Net-Amazon-Signature
 
 TEST_DEPENDS=	p5-Spiffy>=0:devel/p5-Spiffy \
 		p5-URI>=0:net/p5-URI \

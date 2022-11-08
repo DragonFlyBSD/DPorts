@@ -1,5 +1,3 @@
-# Created by: Tim Niemueller <tim@niemueller.de>
-
 PORTNAME=	yaml-cpp
 PORTVERSION=	0.3.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	03
 
 MAINTAINER=	tim@niemueller.de
 COMMENT=	YAML parser and emitter in C++ matching the YAML 1.2 spec
+WWW=		https://code.google.com/p/yaml-cpp/
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ExtUtils-InstallPaths
 PORTVERSION=	0.012
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Build.PL install path logic made easy
+WWW=		https://metacpan.org/release/ExtUtils-InstallPaths
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

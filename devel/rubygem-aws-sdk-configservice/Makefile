@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	aws-sdk-configservice
-PORTVERSION=	1.77.0
+PORTVERSION=	1.83.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Official AWS Ruby gem for AWS Config (Config Service)
+WWW=		https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-configservice
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

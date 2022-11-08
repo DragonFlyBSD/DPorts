@@ -1,5 +1,3 @@
-# Created by: Andrey Chernov <ache@FreeBSD.org>
-
 PORTNAME=	zip
 PORTVERSION=	3.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
 
 MAINTAINER=	ler@FreeBSD.org
 COMMENT=	Create/update ZIP files compatible with PKZIP
+WWW=		http://infozip.sourceforge.net/Zip.html
 
 # License is BSD-based, but not identical, so install with documentation
 LICENSE=	BSD3CLAUSE

@@ -1,13 +1,12 @@
-# Created by: Vsevolod Lobko <seva@sevasoft.kiev.ua>
-
 PORTNAME=	milter
-PORTVERSION=	1.0.4
+PORTVERSION=	1.0.5
 DISTVERSIONPREFIX=	${GH_PROJECT}-
 CATEGORIES=	mail python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	estartu@augusta.de
 COMMENT=	Python interface to Sendmail milter API
+WWW=		https://pythonhosted.org/milter/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

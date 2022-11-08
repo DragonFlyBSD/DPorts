@@ -1,5 +1,3 @@
-# Created by: Olivier Cochard-Labbe <olivier@FreeBSD.org>
-
 PORTNAME=	deforaos-panel
 PORTVERSION=	0.3.6
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	Panel-${PORTVERSION}
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	DeforaOS desktop panel
+WWW=		https://www.defora.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

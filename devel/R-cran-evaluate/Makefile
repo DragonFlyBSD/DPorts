@@ -1,12 +1,11 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	evaluate
-PORTVERSION=	0.15
+PORTVERSION=	0.16
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Parsing and Evaluation Tools
+WWW=		https://cran.r-project.org/web/packages/evaluate/
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: Martin Neubauer <m.ne@gmx.net>
-
 PORTNAME=	colour
 PORTVERSION=	0.1.5
 CATEGORIES=	graphics devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	m.ne@gmx.net
 COMMENT=	Python colour representations manipulation library
+WWW=		https://github.com/vaab/colour
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

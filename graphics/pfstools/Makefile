@@ -1,13 +1,12 @@
-# Created by: Daniel O'Connor <darius@dons.net.au>
-
 PORTNAME=	pfstools
 DISTVERSION=	2.1.0
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
 MAINTAINER=	fbsd@any.com.ru
 COMMENT=	Tools for manipulating HDR images and video frames
+WWW=		http://pfstools.sourceforge.net/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -86,7 +85,7 @@ GLVIEW_USE=		GL=glut GL=gl,glu
 
 VIEW_CMAKE_BOOL=	WITH_QT
 VIEW_USES=		gl qt:5
-VIEW_USE=		GL=glut GL=gl,glu QT=core,gui,widgets,buildtools_build,qmake_build
+VIEW_USE=		GL=glut GL=gl,glu QT=core,gui,widgets,buildtools:build,qmake:build
 
 .include <bsd.port.options.mk>
 

@@ -1,5 +1,3 @@
-# Created by: Johann Visagie <wjv@FreeBSD.org>
-
 PORTNAME=	lamarc
 PORTVERSION=	2.1.8
 DISTVERSIONSUFFIX=	-src
@@ -10,6 +8,7 @@ MASTER_SITES=	http://evolution.genetics.washington.edu/lamarc/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Package of programs for computing population parameters
+WWW=		https://evolution.genetics.washington.edu/lamarc/
 
 LICENSE=	APACHE20
 

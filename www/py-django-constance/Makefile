@@ -1,13 +1,11 @@
-# Created by: Richard Gallamore <ultima@FreeBSD.org>
-
 PORTNAME=	django-constance
-PORTVERSION=	2.8.0
-PORTREVISION=	1
+PORTVERSION=	2.9.1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	Dynamic Django settings
+WWW=		https://github.com/jazzband/django-constance
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Net-DNS-Lite
 PORTVERSION=	0.12
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Pure-Perl DNS resolver with support for timeout
+WWW=		https://metacpan.org/release/Net-DNS-Lite
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

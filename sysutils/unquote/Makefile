@@ -1,5 +1,3 @@
-# Created by: roam@FreeBSD.org
-
 PORTNAME=	unquote
 PORTVERSION=	1.0.b4
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.b/pre/}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Execute a command with safely quoted arguments
+WWW=		https://devel.ringlet.net/misc/unquote/
 
 USES=		uidfix
 

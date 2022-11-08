@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	jsonnet
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.18.0
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	gasol.wu@gmail.com
 COMMENT=	JSON data templating language
+WWW=		https://jsonnet.org
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

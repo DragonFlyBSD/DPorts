@@ -1,5 +1,3 @@
-# Created by: Yinghong Liu <relaxbsd@gmail.com>
-
 PORTNAME=	scim
 PORTVERSION=	3.1.1
 PORTREVISION=	9
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}.${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SCIM IMEngine module for fcitx
+WWW=		http://www.fcitx.org
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

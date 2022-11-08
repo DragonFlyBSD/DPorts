@@ -1,13 +1,12 @@
-# Created by: SeaD
-
 PORTNAME=	ipguard
 PORTVERSION=	1.04
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security net
 MASTER_SITES=	http://ipguard.deep.perm.ru/files/ http://deep.perm.ru/files/ipguard/
 
 MAINTAINER=	sead@deep.perm.ru
 COMMENT=	Tool designed to protect LAN IP address space by ARP spoofing
+WWW=		http://ipguard.deep.perm.ru/
 
 LICENSE=	BSD2CLAUSE
 

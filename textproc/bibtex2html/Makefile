@@ -1,5 +1,3 @@
-# Created by: Gerald Pfeifer <gerald@pfeifer.com>
-
 PORTNAME=	bibtex2html
 PORTVERSION=	1.99
 CATEGORIES=	textproc print
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.lri.fr/~filliatr/ftp/bibtex2html/
 
 MAINTAINER=	gerald@FreeBSD.org
 COMMENT=	Tools for searching BibTeX and translating from BibTeX to HTML
+WWW=		https://www.lri.fr/~filliatr/bibtex2html/
 
 LICENSE=	GPLv2
 

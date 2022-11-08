@@ -1,5 +1,3 @@
-# Created by: Grzegorz Blach <gblach@FreeBSD.org>
-
 PORTNAME=	Dancer-Plugin-Feed
 PORTVERSION=	1.131470
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Dancer plugin for generating RSS or Atom feeds
+WWW=		https://metacpan.org/release/Dancer-Plugin-Feed
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

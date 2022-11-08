@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	tmux-mem-cpu-load
 PORTVERSION=	3.6.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	adamw@FreeBSD.org
 COMMENT=	CPU, RAM, and load monitor for use with tmux
+WWW=		https://github.com/thewtex/tmux-mem-cpu-load
 
 LICENSE=	APACHE20
 

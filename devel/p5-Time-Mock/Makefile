@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Time-Mock
 PORTVERSION=	0.0.2
 DISTVERSIONPREFIX=	v
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Shift and scale time
+WWW=		https://metacpan.org/release/Time-Mock
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

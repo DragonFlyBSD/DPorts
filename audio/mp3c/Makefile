@@ -1,5 +1,3 @@
-# Created by: Joris Vandalon <joris@vandalon.nl>
-
 PORTNAME=	mp3c
 PORTVERSION=	0.31
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.wspse.de/linux/wspse/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	CD to mp3c converter with a console frontend
+WWW=		http://mp3c.wspse.de/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

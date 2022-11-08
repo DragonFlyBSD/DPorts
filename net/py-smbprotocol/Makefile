@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	smbprotocol
 PORTVERSION=	1.9.0
 CATEGORIES=	net python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Interact with a server using the SMB 2/3 Protocol
+WWW=		https://github.com/jborean93/smbprotocol
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	exceptiongroup
-PORTVERSION=	1.0.0rc8
+PORTVERSION=	1.0.0rc9
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Backport of PEP 654 (exception groups)
+WWW=		https://github.com/agronholm/exceptiongroup
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

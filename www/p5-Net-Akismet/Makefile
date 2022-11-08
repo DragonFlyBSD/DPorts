@@ -1,5 +1,3 @@
-# Created by: Peter Pentchev <roam@FreeBSD.org>
-
 PORTNAME=	Net-Akismet
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl interface to the Akismet comment and trackback spam blocker
+WWW=		https://metacpan.org/release/Net-Akismet
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

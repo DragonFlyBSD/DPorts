@@ -1,5 +1,3 @@
-# Created by: Kuang-che Wu <kcwu@csie.org>
-
 PORTNAME=	convmv
 PORTVERSION=	2.05
 CATEGORIES=	converters perl5
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.j3e.de/linux/convmv/ \
 
 MAINTAINER=	kcwu@csie.org
 COMMENT=	Convert filenames from one encoding to another
+WWW=		https://j3e.de/linux/convmv/man/
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual

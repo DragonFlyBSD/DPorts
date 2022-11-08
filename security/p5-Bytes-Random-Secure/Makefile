@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Bytes-Random-Secure
 PORTVERSION=	0.29
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generate cryptographically-secure random bytes
+WWW=		https://metacpan.org/release/Bytes-Random-Secure
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

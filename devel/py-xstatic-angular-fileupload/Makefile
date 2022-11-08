@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-angular-fileupload
 PORTVERSION=	12.0.4.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	XStatic-Angular-FileUpload-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Angular-FileUpload (XStatic packaging standard)
+WWW=		https://opendev.org/x/xstatic-angular-fileupload
 
 LICENSE=	MIT
 

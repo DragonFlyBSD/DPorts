@@ -1,10 +1,11 @@
 PORTNAME=	slimta
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.1
 CATEGORIES=	mail
 MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Configurable MTA based on the python-slimta libraries
+WWW=		https://www.slimta.org/
 
 LICENSE=	MIT
 

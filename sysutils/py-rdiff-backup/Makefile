@@ -1,5 +1,3 @@
-# Created by: Gerhard Häring <gh@ghaering.de>
-
 PORTNAME=	rdiff-backup
 DISTVERSION=	2.0.5
 CATEGORIES=	sysutils python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	uzsolt@uzsolt.hu
 COMMENT=	Easy to use and efficient backup and restore utility
+WWW=		https://www.nongnu.org/rdiff-backup/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

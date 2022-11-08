@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pyaml
 PORTVERSION=	21.10.1
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Produce pretty and readable YAML-serialized data
+WWW=		https://github.com/mk-fg/pretty-yaml
 
 LICENSE=	WTFPL
 LICENSE_FILE=	${WRKSRC}/COPYING

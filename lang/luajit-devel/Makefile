@@ -1,13 +1,12 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org>
-
 PORTNAME=	luajit
-DISTVERSION=	2.1.0.20220602
+DISTVERSION=	2.1.0.20220815
 CATEGORIES=	lang
 PKGNAMESUFFIX=	-devel
 DISTNAME=	LuaJIT-${DISTVERSION}
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Just-In-Time Compiler for Lua
+WWW=		https://luajit.org/luajit.html
 
 LICENSE=	MIT PD
 LICENSE_COMB=	multi
@@ -22,7 +21,7 @@ USE_LDCONFIG=	yes
 MAKE_ARGS=	CC=${CC} CCOPT= CCOPT_x86= Q=
 
 USE_GITHUB=	yes
-GH_TUPLE=	LuaJIT:LuaJIT:68bb114
+GH_TUPLE=	LuaJIT:LuaJIT:03080b7
 
 LUAJIT_VERSION=	2.1.0-beta3
 LUAJIT_SOVERSION=	2.1.0

@@ -1,11 +1,12 @@
 PORTNAME=	luarocks
-PORTVERSION=	3.9.0
+PORTVERSION=	3.9.1
 CATEGORIES=	devel
 MASTER_SITES=	https://luarocks.org/releases/
 PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Package manager for Lua modules
+WWW=		https://luarocks.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

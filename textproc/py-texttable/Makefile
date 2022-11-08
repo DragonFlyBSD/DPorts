@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	texttable
 PORTVERSION=	1.6.4
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Module for creating simple ASCII tables
+WWW=		https://pypi.org/project/texttable/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

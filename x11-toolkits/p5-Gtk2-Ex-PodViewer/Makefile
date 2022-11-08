@@ -1,5 +1,3 @@
-# Created by: ports@c0decafe.net
-
 PORTNAME=	Gtk2-Ex-PodViewer
 PORTVERSION=	0.18
 PORTREVISION=	5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Displays plain old documentation
+WWW=		https://metacpan.org/release/Gtk2-Ex-PodViewer
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

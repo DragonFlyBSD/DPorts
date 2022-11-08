@@ -1,5 +1,3 @@
-# Created by: Landon Fuller <landonf@opendarwin.org>
-
 PORTNAME=	zconfig
 PORTVERSION=	3.0.4
 CATEGORIES=	devel python
@@ -10,6 +8,7 @@ DIST_SUBDIR=	zope
 
 MAINTAINER=	zope@FreeBSD.org
 COMMENT=	General use python configuration library
+WWW=		https://pypi.org/project/ZConfig/
 
 LICENSE=	ZPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

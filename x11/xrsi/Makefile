@@ -1,5 +1,3 @@
-# Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-
 PORTNAME=	xrsi
 PORTVERSION=	0.9
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Minimalist break enforcer for Linux/Unix for the prevention of RSI
+WWW=		https://sourceforge.net/projects/xrsi/
 
 LICENSE=	ART10
 LICENSE_FILE=	${WRKSRC}/Licence

@@ -1,10 +1,11 @@
 PORTNAME=	sdl12-compat
 DISTVERSIONPREFIX=	release-
-DISTVERSION=	1.2.52
+DISTVERSION=	1.2.56
 CATEGORIES=	devel wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	SDL-1.2 compatibility layer that uses SDL 2.0 behind the scenes
+WWW=		https://github.com/libsdl-org/sdl12-compat
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -22,7 +23,7 @@ SUFFIX=		-${PORTNAME:C/.*-//}
 PLIST_FILES=	etc/libmap.d/${PORTNAME}.conf \
 		lib/libSDL-1.2${SUFFIX}.so \
 		lib/libSDL-1.2${SUFFIX}.so.0 \
-		lib/libSDL-1.2${SUFFIX}.so.1.2.52 \
+		lib/libSDL-1.2${SUFFIX}.so.${DISTVERSION:C/-*//} \
 		"@comment lib/libSDLmain.a"
 
 post-patch:

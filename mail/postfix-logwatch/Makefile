@@ -1,5 +1,3 @@
-# Created by: Alexander Moisseev <moiseev@mezonplus.ru>
-
 PORTNAME=	postfix-logwatch
 PORTVERSION=	1.40.03
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/logreporters/${PORTNAME}/release/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Postfix MTA log parser
+WWW=		http://logreporters.sourceforge.net/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@tobez.org>
-
 PORTNAME=	Hook-LexWrap
 PORTVERSION=	0.26
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Lexically scoped subroutine wrappers for Perl
+WWW=		https://metacpan.org/release/Hook-LexWrap
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	curl
 PORTVERSION=	4.3.2
 CATEGORIES=	ftp
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Modern and Flexible Web Client for R
+WWW=		https://cran.r-project.org/web/packages/curl/
 
 LICENSE=	MIT
 

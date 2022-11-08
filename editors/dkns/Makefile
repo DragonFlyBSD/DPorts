@@ -1,5 +1,3 @@
-# Created by: James Bailie <jimmy@mammothcheese.ca>
-
 PORTNAME=	dkns
 PORTVERSION=	1.100
 CATEGORIES=	editors
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.mammothcheese.ca/
 
 MAINTAINER=	jimmy@mammothcheese.ca
 COMMENT=	Simple console text editor
+WWW=		http://www.mammothcheese.ca/munger.html
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

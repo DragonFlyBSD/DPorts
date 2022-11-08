@@ -1,5 +1,3 @@
-# Created by: Anton Tornqvist <antont@inbox.lv>
-
 PORTNAME=	unibilium
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.1.0
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	chuck@tuffli.net
 COMMENT=	Very basic terminfo library
+WWW=		https://github.com/mauke/unibilium
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LGPLv3

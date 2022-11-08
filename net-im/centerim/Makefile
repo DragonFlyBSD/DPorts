@@ -1,5 +1,3 @@
-# Created by: Frank Altpeter <frank@altpeter.de>
-
 PORTNAME=	centerim
 PORTVERSION=	4.22.10
 PORTREVISION=	6
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.centerim.org/download/releases/ \
 
 MAINTAINER=	frank@altpeter.de
 COMMENT=	Text mode menu- and window-driven IM interface
+WWW=		https://www.centerim.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -54,6 +54,9 @@ dfly-patch:
 	${CP} -v ${DFLY_FILESDIR}/skia-cmath.patch ${WRKSRC}/external/skia
 	${REINPLACE_CMD} -e 's,skia_patches := ,& skia-cmath.patch ,g' \
 		${WRKSRC}/external/skia/UnpackedTarball_skia.mk
+	${CP} -v ${DFLY_FILESDIR}/pdfium-build__config.patch ${WRKSRC}/external/pdfium
+	${REINPLACE_CMD} -e 's,pdfium_patches :=,& pdfium-build__config.patch ,g' \
+		${WRKSRC}/external/pdfium/UnpackedTarball_pdfium.mk
 	${REINPLACE_CMD} -e 's|$$ENV{TMPDIR};|"${WRKDIR}";|' \
 		${WRKSRC}/solenv/bin/ooinstall
 	(cd ${WRKSRC} && ${REINPLACE_CMD} -e 's|FREEBSD|DRAGONFLY|' \

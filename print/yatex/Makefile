@@ -1,8 +1,6 @@
-# Created by: Satoshi Taoka <taoka@FreeBSD.org>
-
 PORTNAME=	yatex
 PORTVERSION=	1.82
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES?=	print elisp
 MASTER_SITES=	http://www.yatex.org/
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Yet Another LaTeX mode and html mode on Emacs
+WWW=		http://www.yatex.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKDIR}/LICENSE

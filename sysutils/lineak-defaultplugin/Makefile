@@ -1,5 +1,3 @@
-# Created by: Kay Lehmann <kay_lehmann@web.de>
-
 PORTNAME=	lineak-defaultplugin
 PORTVERSION=	0.9
 PORTREVISION=	5
@@ -9,6 +7,7 @@ DIST_SUBDIR=	lineak
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Default plugins for lineakd
+WWW=		http://lineak.sourceforge.net/
 
 LICENSE=	GPLv2
 

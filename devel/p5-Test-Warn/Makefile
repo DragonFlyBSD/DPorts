@@ -1,13 +1,12 @@
-# Created by: Brian Minard <bminard@flatfoot.ca>
-
 PORTNAME=	Test-Warn
-PORTVERSION=	0.36
+PORTVERSION=	0.37
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to test methods for warnings
+WWW=		https://metacpan.org/release/Test-Warn
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

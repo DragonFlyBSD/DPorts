@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	libvncserver
 PORTVERSION=	0.9.13
 DISTVERSIONPREFIX=	LibVNCServer-
@@ -12,6 +10,7 @@ PATCHFILES+=	0becaf749e83.patch:-p1 # https://github.com/LibVNC/libvncserver/pul
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Provide an easy API to a custom vnc server
+WWW=		https://libvnc.github.io/
 
 LICENSE=	GPLv2
 

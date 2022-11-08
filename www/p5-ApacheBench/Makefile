@@ -1,5 +1,3 @@
-# Created by: dom@happygiraffe.net
-
 PORTNAME=	ApacheBench
 PORTVERSION=	0.73
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for HTTP benchmarking
+WWW=		https://metacpan.org/release/ApacheBench
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

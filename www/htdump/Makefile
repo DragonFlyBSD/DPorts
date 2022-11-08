@@ -1,5 +1,3 @@
-# Created by: Maxime Henrion (mux@FreeBSD.org)
-
 PORTNAME=	htdump
 PORTVERSION=	0.9y
 CATEGORIES=	www
@@ -7,6 +5,7 @@ MASTER_SITES=	http://ivo.palli.nl/prog/linux/htdump/bin/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to retrieve WWW data
+WWW=		https://ivo.palli.nl/prog/linux/htdump/overview.html
 
 LICENSE=	APACHE20
 

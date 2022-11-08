@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	Math-Financial
 PORTVERSION=	0.76
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Perl module containing common functions for loans and annuities
+WWW=		https://metacpan.org/release/Math-Financial
 
 USES=		perl5
 USE_PERL5=	configure

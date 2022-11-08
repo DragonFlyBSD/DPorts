@@ -1,7 +1,5 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	dbus
-DISTVERSION=	1.2.18
+DISTVERSION=	1.3.2
 PORTREVISION?=	0
 CATEGORIES=	devel gnome python
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
@@ -11,6 +9,7 @@ DISTNAME=	dbus-python-${PORTVERSION}
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT?=	Common files for the Python bindings for the D-BUS messaging system
+WWW=		https://dbus.freedesktop.org/doc/dbus-python/
 
 BUILD_DEPENDS=	dbus-glib>=0:devel/dbus-glib
 

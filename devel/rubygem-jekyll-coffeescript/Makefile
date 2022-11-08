@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	jekyll-coffeescript
 PORTVERSION=	2.0.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CoffeeScript converter for Jekyll
+WWW=		https://github.com/jekyll/jekyll-coffeescript
 
 LICENSE=	MIT
 

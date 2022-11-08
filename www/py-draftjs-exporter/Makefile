@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	draftjs-exporter
 PORTVERSION=	5.0.0
 CATEGORIES=	www python
@@ -9,6 +7,7 @@ DISTNAME=	draftjs_exporter-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library to convert rich text from Draft.js raw ContentState to HTML
+WWW=		https://github.com/springload/draftjs_exporter
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

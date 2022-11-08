@@ -1,5 +1,3 @@
-# Created by: Sofian Brabez <sbrabez@gmail.com>
-
 PORTNAME=	bitstring
 PORTVERSION=	3.1.9
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Simple construction, analysis, and modification of binary data
+WWW=		https://pypi.org/project/bitstring/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

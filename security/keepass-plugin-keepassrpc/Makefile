@@ -1,5 +1,3 @@
-# Created by: Ben Woods <woodsb02@FreeBSD.org>
-
 PORTNAME=	keepassrpc
 PORTVERSION=	1.8.0
 DISTVERSIONPREFIX=v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	keepass-plugin-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	KeePass plugin which facilitates the Kee Firefox plugin
+WWW=		https://www.kee.pm/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

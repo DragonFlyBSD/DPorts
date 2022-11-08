@@ -1,11 +1,12 @@
 PORTNAME=	opensubdiv
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3_4_4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES?=	graphics
 
 MAINTAINER=	FreeBSD@Shaneware.biz
 COMMENT=	High performance subdivision surface libraries
+WWW=		https://graphics.pixar.com/opensubdiv
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

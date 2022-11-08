@@ -1,13 +1,13 @@
 PORTNAME=	routinator
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.11.2
-PORTREVISION=	3
+DISTVERSION=	0.11.3
 CATEGORIES=	net
 MASTER_SITES=	${ROUTINATOR_UI_URL}/v${ROUTINATOR_UI_VERSION}/:0
 DISTFILES+=	routinator-ui-build.tar.gz:0
 
 MAINTAINER=	jaap@NLnetLabs.nl
 COMMENT=	RPKI signed route collector and validator
+WWW=		https://github.com/NLnetLabs/routinator
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

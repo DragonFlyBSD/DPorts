@@ -1,18 +1,12 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	glade
-PORTVERSION=	3.38.2
-PORTREVISION=	1
+PORTVERSION=	3.40.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
-
-PATCH_SITES=	https://gitlab.gnome.org/GNOME/${PORTNAME}/-/commit/
-PATCHFILES+=	04ba6f96.patch:-p1 \
-		61304b2e.patch:-p1
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	User interface builder for GTK+ 3
+WWW=		https://glade.gnome.org/
 
 LICENSE=	GPLv2+ LGPL21+
 LICENSE_COMB=	multi

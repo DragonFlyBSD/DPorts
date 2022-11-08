@@ -1,5 +1,3 @@
-# Created by: David Bremner <bremner@unb.ca>
-
 PORTNAME=	ipe
 PORTVERSION=	7.2.23
 DISTVERSIONSUFFIX=	-src
@@ -9,6 +7,7 @@ MASTER_SITES=	https://dl.bintray.com/otfried/generic/ipe/${PORTVERSION:R}/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Extensible vector graphics editor with LaTeX support
+WWW=		https://ipe.otfried.org/
 
 LICENSE=	GPLv3+
 
@@ -21,7 +20,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 
 USES=		compiler:c++11-lib gmake gnome jpeg lua:52 pkgconfig shebangfix qt:5
 USE_GNOME=	cairo
-USE_QT=		buildtools_build core gui qmake_build widgets
+USE_QT=		buildtools:build core gui qmake:build widgets
 USE_TEX=	pdftex
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src

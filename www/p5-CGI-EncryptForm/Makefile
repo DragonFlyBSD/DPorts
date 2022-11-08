@@ -1,5 +1,3 @@
-# Created by: Steve Wills <steve@mouf.net>
-
 PORTNAME=	CGI-EncryptForm
 PORTVERSION=	1.02
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Implement trusted stateful CGI Form Data using cryptography
+WWW=		https://metacpan.org/release/CGI-EncryptForm
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Crypt-HCE_SHA>=0:security/p5-Crypt-HCE_SHA \

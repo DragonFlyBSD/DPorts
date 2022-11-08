@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	liba52
 PORTVERSION=	0.7.4
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	a52dec-${PORTVERSION:S/.b/b/}
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Free library for decoding ATSC A/52 streams, aka AC-3
+WWW=		http://liba52.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

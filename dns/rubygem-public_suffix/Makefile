@@ -1,13 +1,12 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	public_suffix
-PORTVERSION=	4.0.7
+PORTVERSION=	5.0.0
 PORTREVISION=	2
 CATEGORIES=	dns rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby domain name parser based on the Public Suffix List
+WWW=		https://github.com/weppos/publicsuffix-ruby
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

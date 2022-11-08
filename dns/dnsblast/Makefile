@@ -1,11 +1,10 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	dnsblast
 PORTVERSION=	0.0.2016060901
 CATEGORIES=	dns benchmarks
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Simple load testing tool for DNS resolvers
+WWW=		https://github.com/jedisct1/dnsblast
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING

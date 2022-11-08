@@ -1,3 +1,7 @@
-Argument Parser for Modern C++  in the form of a simple header
+Argument Parser for Modern C++
 
-WWW: https://github.com/p-ranav/argparse
+Highlights:
+
+ - Single header file
+ - Requires C++17
+ - MIT License

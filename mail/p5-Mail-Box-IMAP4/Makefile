@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Mail-Box-IMAP4
 PORTVERSION=	3.007
 CATEGORIES=	mail perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Handle IMAP4 folders as client
+WWW=		https://metacpan.org/release/Mail-Box-IMAP4
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

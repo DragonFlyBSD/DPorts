@@ -1,13 +1,12 @@
-# Created by: Peter Dunning
-
 PORTNAME=	etr
-PORTVERSION=	0.8.1
+PORTVERSION=	0.8.2
 CATEGORIES=	games
 MASTER_SITES=	SF/extremetuxracer/releases/${PORTVERSION}
 PKGNAMESUFFIX=	acer
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Extreme Tux Racer
+WWW=		https://sourceforge.net/projects/extremetuxracer/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin
-
 PORTNAME=	dispy
 PORTVERSION=	4.10.6
 CATEGORIES=	devel net
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Distributed and Parallel Computing with/for Python
+WWW=		http://dispy.sourceforge.net/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

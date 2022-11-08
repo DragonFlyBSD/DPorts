@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	smashing
 PORTVERSION=	1.3.5
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Sinatra-based framework for building dashboards
+WWW=		https://smashing.github.io/
 
 LICENSE=	MIT
 

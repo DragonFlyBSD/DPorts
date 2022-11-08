@@ -1,5 +1,3 @@
-# Created by: Anish Mistry
-
 PORTNAME=	sshfs
 PORTVERSION=	3.7.3
 PORTREVISION=	1
@@ -12,6 +10,7 @@ PATCHFILES+=	a73501f2159875aef082ab0a61731a8b7673d477.patch:-p1 # https://github
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Mount remote directories over ssh
+WWW=		https://github.com/libfuse/sshfs
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

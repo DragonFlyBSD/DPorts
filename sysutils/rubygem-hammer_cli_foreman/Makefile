@@ -1,12 +1,11 @@
-# Created by: Michael Moll <kvedulv@kvedulv.de>
-
 PORTNAME=	hammer_cli_foreman
-PORTVERSION=	3.3.0
+PORTVERSION=	3.4.0
 CATEGORIES=	sysutils ruby
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Foreman commands for Hammer CLI
+WWW=		https://github.com/theforeman/hammer-cli-foreman
 
 LICENSE=	GPLv3+
 

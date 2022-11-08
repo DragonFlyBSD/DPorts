@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	aylet
 PORTVERSION=	0.5
 PORTREVISION=	6
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.worldofspectrum.org/pub/sinclair/music/players-unix/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Aylet plays music files in the .ay format
+WWW=		https://www.worldofspectrum.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

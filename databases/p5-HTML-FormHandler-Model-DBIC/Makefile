@@ -1,5 +1,3 @@
-# Created by: Vladimir Timofeev <vovkasm@gmail.com>
-
 PORTNAME=	HTML-FormHandler-Model-DBIC
 PORTVERSION=	0.29
 CATEGORIES=	databases perl5 www
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bokutin@bokut.in
 COMMENT=	Model class for FormHandler unsing DBIx::Class
+WWW=		https://metacpan.org/release/HTML-FormHandler-Model-DBIC
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

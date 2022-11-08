@@ -1,5 +1,3 @@
-# Created by: Zane C. Bowers-Hadley <vvelox@vvelox.net>
-
 PORTNAME=	Net-Connection-ncnetstat
 PORTVERSION=	0.7.1
 CATEGORIES=	net perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Netstat like utility that supports color and searching
+WWW=		https://metacpan.org/release/Net-Connection-ncnetstat
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

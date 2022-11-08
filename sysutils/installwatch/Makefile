@@ -1,5 +1,3 @@
-# Created by: George Reid <greid@ukug.uk.freebsd.org>
-
 PORTNAME=	installwatch
 PORTVERSION=	0.6.3
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://asic-linux.com.mx/~izto/checkinstall/files/source/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	File creation/modification logger
+WWW=		http://asic-linux.com.mx/~izto/checkinstall/installwatch.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

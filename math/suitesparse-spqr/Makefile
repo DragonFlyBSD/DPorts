@@ -1,10 +1,9 @@
-# Created by: Thierry Thomas (<thierry@pompo.net>)
-
 PORTNAME=	${MPORTNAME:tl}
 PORTVERSION=	2.1.0
 CATEGORIES=	math
 
 COMMENT=	Sparse QR factorization
+WWW=		https://faculty.cse.tamu.edu/davis/suitesparse.html
 
 LICENSE=	GPLv2+
 

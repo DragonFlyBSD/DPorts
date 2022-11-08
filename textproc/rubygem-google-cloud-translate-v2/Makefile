@@ -1,13 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	google-cloud-translate-v2
-PORTVERSION=	0.3.1
-PORTREVISION=	1
+PORTVERSION=	0.4.0
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby Client for the Cloud Translation V2 API
+WWW=		https://github.com/googleapis/google-cloud-ruby/tree/master/google-cloud-translate-v2
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

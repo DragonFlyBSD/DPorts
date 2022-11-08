@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-
 PORTNAME=	aifad
 PORTVERSION=	2.0.8
 DISTVERSIONPREFIX=	v
@@ -10,6 +8,7 @@ PATCHFILES=	6c94276f361614b4c447.diff:-p1 e08856647724737ca15e.diff:-p1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Machine learning system
+WWW=		https://mmottl.github.io/aifad
 
 LICENSE=	LGPL21+
 

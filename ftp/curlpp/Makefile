@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	curlpp
 PORTVERSION=	0.8.1
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	ftp
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	C++ wrapper for libcurl
+WWW=		https://www.curlpp.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE

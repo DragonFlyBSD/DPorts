@@ -1,5 +1,3 @@
-# Created by: Joseph Benden <joe@thrallingpenguin.com>
-
 PORTNAME=	projectlibre
 PORTVERSION=	1.9.3
 CATEGORIES=	deskutils editors java
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	joe@thrallingpenguin.com
 COMMENT=	Open source desktop alternative to Microsoft Project
+WWW=		https://www.projectlibre.com/product/1-alternative-microsoft-project-open-source
 
 LICENSE=	CPAL-1.0
 

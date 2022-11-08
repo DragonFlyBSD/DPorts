@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	async-pool
-PORTVERSION=	0.3.10
+PORTVERSION=	0.3.12
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Redis client library
+WWW=		https://github.com/socketry/async-pool
 
 LICENSE=	MIT
 

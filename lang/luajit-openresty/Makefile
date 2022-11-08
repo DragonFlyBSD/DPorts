@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	luajit
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.1-20220411
@@ -10,6 +8,7 @@ PATCH_SITES=	https://github.com/openresty/luajit2/commit/
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Just-In-Time Compiler for Lua (OpenResty branch)
+WWW=		https://github.com/openresty/luajit2
 
 LICENSE=	MIT PD
 LICENSE_COMB=	multi

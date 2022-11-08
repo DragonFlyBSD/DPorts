@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	gdbm
 PORTVERSION=	2.1.0
 PORTEPOCH=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby extension to GDBM library
+WWW=		https://rubygems.org/gems/gdbm
 
 LICENSE=	BSD2CLAUSE
 

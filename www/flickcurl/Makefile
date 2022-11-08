@@ -1,5 +1,3 @@
-# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-
 PORTNAME=	flickcurl
 PORTVERSION=	1.26
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://download.dajobe.org/flickcurl/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C library for the Flickr API
+WWW=		https://librdf.org/flickcurl/
 
 LICENSE=	APACHE20 GPLv2 LGPL21
 LICENSE_COMB=	dual

@@ -1,13 +1,12 @@
-# Created by: Murilo Opsfelder <mopsfelder@gmail.com>
-
 PORTNAME=	Mojolicious
-PORTVERSION=	9.26
+PORTVERSION=	9.27
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	adamw@FreeBSD.org
 COMMENT=	High-level MVC web framework written in Perl
+WWW=		https://metacpan.org/pod/Mojolicious
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

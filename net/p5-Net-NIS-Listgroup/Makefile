@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Net-NIS-Listgroup
 PORTVERSION=	1.0.0
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Lists hosts/users in a netgroup group
+WWW=		https://metacpan.org/release/Net-NIS-Listgroup
 
 LICENSE=	GPLv2
 

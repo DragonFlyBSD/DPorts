@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pytest-regressions
 PORTVERSION=	2.3.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Easy to use fixtures to write regression tests
+WWW=		https://github.com/ESSS/pytest-regressions
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

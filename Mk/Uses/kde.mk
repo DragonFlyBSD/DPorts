@@ -9,8 +9,8 @@
 #
 # USE_KDE	List of KF5/Plasma5 components (other ports) that this
 #		port depends on.
-#		* foo_build	Add a build-time dependency (BUILD_DEPENDS)
-#		* foo_run	Add a run-time dependency (RUN_DEPENDS)
+#		* foo:build	Add a build-time dependency (BUILD_DEPENDS)
+#		* foo:run	Add a run-time dependency (RUN_DEPENDS)
 #		* foo (default)	Add both dependencies on component <foo>, or
 #				a LIB_DEPENDS if applicable.
 #
@@ -25,7 +25,7 @@
 #
 # option DOCS	If the port is part of kde-applications (see CATEGORIES,
 #		above) and has an option defined for DOCS then a dependency
-#		for doctools_build is added. The option itself doesn't
+#		for doctools:build is added. The option itself doesn't
 #		have to do anything -- the dependency is always there.
 #
 # KDE_INVENT	If the port does not have a regular release, and should
@@ -79,14 +79,14 @@ KDE_PLASMA_VERSION?=		5.24.6
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS_VERSION?=	5.95.0
+KDE_FRAMEWORKS_VERSION?=	5.98.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	22.04.3
-KDE_APPLICATIONS_SHLIB_VER?=	5.20.3
+KDE_APPLICATIONS_VERSION?=	22.08.1
+KDE_APPLICATIONS_SHLIB_VER?=	5.21.1
 # G as in KDE Gear, and as in "don't make the variable name longer than required"
-KDE_APPLICATIONS_SHLIB_G_VER?=	22.04.3
+KDE_APPLICATIONS_SHLIB_G_VER?=	22.8.1
 KDE_APPLICATIONS_BRANCH?=	stable
 
 # Extended KDE universe applications.
@@ -159,7 +159,7 @@ _KDE_OPTIONS=		bogus ${OPTIONS_DEFINE}
 .        if ${_KDE_OPTIONS:MDOCS}
 DOCSDIR=		${PREFIX}/share/doc
 PORTDOCS?=		HTML/*
-USE_KDE+=		doctools_build
+USE_KDE+=		doctools:build
 .        endif
 # Further pass along a SHLIB_VER PLIST_SUB
 PLIST_SUB+=		KDE_APPLICATIONS_SHLIB_VER=${KDE_APPLICATIONS_SHLIB_VER} \
@@ -173,6 +173,7 @@ DIST_SUBDIR?=		KDE/plasma/${KDE_PLASMA_VERSION}
 .      elif ${_KDE_CATEGORY:Mkde-frameworks}
 PORTVERSION?=		${KDE_FRAMEWORKS_VERSION}
 PKGNAMEPREFIX?=		kf5-
+WWW?=			https://api.kde.org/frameworks/${PORTNAME}/html/index.html
 # This is a slight duplication of _USE_FRAMEWORKS_PORTING -- it maybe would be
 # better to rely on ${_USE_FRAMEWORKS_PORTING:S/^/k/g}
 _PORTINGAIDS=		kjs kjsembed kdelibs4support kdesignerplugin kdewebkit khtml kmediaplayer kross kxmlrpcclient
@@ -709,7 +710,7 @@ kde-kdav_PORT=			net/kf5-kdav
 kde-kdav_LIB=			libKF5DAV.so
 
 kde-kdepim-addons_PORT=	deskutils/kdepim-addons
-kde-kdepim-addons_PATH=	${KDE_PREFIX}/lib/contacteditor/editorpageplugins/cryptopageplugin.so
+kde-kdepim-addons_PATH=	${QT_PLUGINDIR}/pim5/contacteditor/editorpageplugins/cryptopageplugin.so
 
 kde-kdepim-runtime5_PORT=	deskutils/kdepim-runtime
 kde-kdepim-runtime5_PATH=	${KDE_PREFIX}/bin/gidmigrator
@@ -869,18 +870,18 @@ kde-${comp}_PATH=		${kde-${comp}${_KDE_VERSION}_LIB}
 _USE_KDE_ALL=	${_USE_${_KDE_RELNAME}_ALL}
 
 # Iterate through components deprived of suffix.
-.    for component in ${USE_KDE:O:u:C/_.+//}
+.    for component in ${USE_KDE:O:u:C/:.+//}
   # Check that the component is valid.
 .      if ${_USE_KDE_ALL:M${component}} != ""
    # Skip meta-components (currently none).
 .        if defined(kde-${component}_PORT) && (defined(kde-${component}_PATH) || defined(kde-${component}_LIB))
     # Check if a dependency type is explicitly requested.
-.          if ${USE_KDE:M${component}_*} != "" && ${USE_KDE:M${component}} == ""
+.          if ${USE_KDE:M${component}\:*} != "" && ${USE_KDE:M${component}} == ""
 kde-${component}_TYPE=	# empty
-.            if ${USE_KDE:M${component}_build} != ""
+.            if ${USE_KDE:M${component}\:build} != ""
 kde-${component}_TYPE+=	build
 .            endif
-.            if ${USE_KDE:M${component}_run} != ""
+.            if ${USE_KDE:M${component}\:run} != ""
 kde-${component}_TYPE+=	run
 .            endif
 .          endif # ${USE_KDE:M${component}_*} != "" && ${USE_KDE:M${component}} == ""

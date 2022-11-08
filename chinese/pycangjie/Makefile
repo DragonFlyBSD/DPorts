@@ -1,5 +1,3 @@
-# Created by: blubee <hello@blubee.me>
-
 PORTNAME=	pycangjie
 PORTVERSION=	1.3
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	chinese
 
 MAINTAINER=	hello@blubee.me
 COMMENT=	Python wrapper to libcangjie
+WWW=		https://cangjians.github.io/projects/pycangjie/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

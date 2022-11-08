@@ -6,6 +6,7 @@ PKGNAMESUFFIX=	-lv2
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Old-school polyphonic sampler
+WWW=		https://samplv1.sourceforge.io/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -20,7 +21,7 @@ LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 USES=		cmake compiler:c++17-lang desktop-file-utils gl pkgconfig qt:5 \
 		shared-mime-info
 USE_GL=		gl
-USE_QT=		core gui svg widgets xml buildtools_build linguisttools_build qmake_build
+USE_QT=		core gui svg widgets xml buildtools:build linguisttools:build qmake:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	rncbc

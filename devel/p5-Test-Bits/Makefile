@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-Bits
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provides a bits_is() subroutine for testing binary data
+WWW=		https://metacpan.org/release/Test-Bits
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

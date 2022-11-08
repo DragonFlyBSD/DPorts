@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	PadWalker
 PORTVERSION=	2.5
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Play with Perl lexical variables
+WWW=		https://metacpan.org/release/PadWalker
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

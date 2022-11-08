@@ -1,5 +1,3 @@
-# Created by: Pascal Vizeli <pvizeli@yahoo.de>
-
 PORTNAME=	mp4box
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.0
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	gpac-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for merge mpg4 from Gpac
+WWW=		http://gpac.sourceforge.net/
 
 LICENSE=	LGPL21
 

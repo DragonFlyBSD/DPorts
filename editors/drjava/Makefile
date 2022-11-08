@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale	<nivit@email.it>
-
 PORTNAME=	drjava
 DISTVERSION=	20140826-r5761
 PORTREVISION=	1
@@ -11,6 +9,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Lightweight IDE for writing Java programs
+WWW=		http://www.drjava.org
 
 NO_BUILD=	yes
 USE_JAVA=	yes

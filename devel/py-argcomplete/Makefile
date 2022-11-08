@@ -1,5 +1,3 @@
-# Created by: Tony Narlock <tony@git-pull.com>
-
 PORTNAME=	argcomplete
 PORTVERSION=	2.0.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bash tab completion for argparse
+WWW=		https://pypi.org/project/argcomplete/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst

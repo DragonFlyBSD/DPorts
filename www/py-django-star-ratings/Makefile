@@ -1,5 +1,3 @@
-# Created by: Kevin Golding <ports@caomhin.org>
-
 PORTNAME=	django-star-ratings
 PORTVERSION=	0.9.2
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@caomhin.org
 COMMENT=	Django app to add star ratings to models
+WWW=		https://github.com/wildfish/django-star-ratings
 
 LICENSE=	BSD3CLAUSE
 

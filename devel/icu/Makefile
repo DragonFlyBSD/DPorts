@@ -1,5 +1,3 @@
-# Created by: dwm
-
 PORTNAME=	icu
 DISTVERSION=	71_1
 PORTREVISION?=	0 # keep for icu-lx
@@ -11,6 +9,7 @@ DISTNAME=	icu4c-${DISTVERSION}-src
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT?=	International Components for Unicode (from IBM)
+WWW=		http://site.icu-project.org/
 
 LICENSE=	ICU
 LICENSE_NAME=	ICU license

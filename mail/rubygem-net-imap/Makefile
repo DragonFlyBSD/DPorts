@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	net-imap
 PORTVERSION=	0.2.3
 CATEGORIES=	mail rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby client api for Internet Message Access Protocol
+WWW=		https://github.com/ruby/net-imap
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

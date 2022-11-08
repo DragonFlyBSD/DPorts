@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	DiagrammeR
 PORTVERSION=	1.0.9
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Create Diagrams and Flowcharts Using R
+WWW=		https://cran.r-project.org/web/packages/DiagrammeR/
 
 LICENSE=	MIT
 

@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	terser
-PORTVERSION=	1.1.11
+PORTVERSION=	1.1.12
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	11
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Minify JavaScript files by wrapping TerserJS to be accessible in Ruby
+WWW=		https://github.com/ahorek/terser-ruby
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

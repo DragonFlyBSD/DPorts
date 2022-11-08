@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	batterycat
 PORTVERSION=	1.6
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Graphical battery monitoring tool
+WWW=		https://sourceforge.net/projects/batterycat/
 
 LICENSE=	GPLv2+
 

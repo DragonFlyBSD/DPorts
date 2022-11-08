@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Object-Array
 PORTVERSION=	0.060
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Array references with accessors
+WWW=		https://metacpan.org/release/Object-Array
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

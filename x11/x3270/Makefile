@@ -1,5 +1,3 @@
-# Created by: janek
-
 PORTNAME?=	x3270
 PORTVERSION=	4.2
 CATEGORIES?=	x11 net
@@ -8,6 +6,7 @@ DISTFILES=	suite3270-${PORTVERSION}ga4-src.tgz
 
 MAINTAINER=	kbowling@FreeBSD.org
 COMMENT?=	3270 Terminal emulator
+WWW=		https://x3270.miraheze.org/wiki/Main_Page
 
 LICENSE=	BSD3CLAUSE
 

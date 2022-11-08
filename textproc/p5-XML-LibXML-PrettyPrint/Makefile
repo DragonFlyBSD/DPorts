@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	XML-LibXML-PrettyPrint
 PORTVERSION=	0.006
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Add pleasant whitespace to a DOM tree
+WWW=		https://metacpan.org/release/XML-LibXML-PrettyPrint
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

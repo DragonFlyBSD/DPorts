@@ -1,11 +1,10 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	porttools
 PORTVERSION=	1.10
 CATEGORIES=	ports-mgmt
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Tools for testing and submitting port updates and new ports
+WWW=		https://github.com/skreuzer/porttools/
 
 LICENSE=	BSD2CLAUSE
 

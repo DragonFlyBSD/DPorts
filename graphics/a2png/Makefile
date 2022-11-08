@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	a2png
 PORTVERSION=	0.1.5
 PORTREVISION=	11
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Converts plain ASCII text into PNG bitmap images
+WWW=		https://sourceforge.net/projects/a2png/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

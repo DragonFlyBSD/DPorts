@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	OpenCA-CRL
 PORTVERSION=	0.9.6
 PORTREVISION=	1
@@ -11,6 +9,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	CRL Management module
+WWW=		https://metacpan.org/release/OpenCA-CRL
 
 PORTSCOUT=	skipv:0.9.17
 

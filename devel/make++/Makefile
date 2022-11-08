@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	make++
 PORTVERSION=	2.0
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME:S/+/p/g}-${PORTVERSION}
 
 MAINTAINER=	gavin@16degrees.com.au
 COMMENT=	Drop-in replacement for GNU make
+WWW=		http://makepp.sourceforge.net/
 
 LICENSE=	ART10 GPLv2+
 LICENSE_COMB=	dual

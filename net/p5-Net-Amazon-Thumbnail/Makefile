@@ -1,5 +1,3 @@
-# Created by: Greg Larkin <glarkin@FreeBSD.org>
-
 PORTNAME=	Net-Amazon-Thumbnail
 PORTVERSION=	0.06
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl interface to Amazon Alexa Site Thumbnail web service
+WWW=		https://metacpan.org/release/Net-Amazon-Thumbnail
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

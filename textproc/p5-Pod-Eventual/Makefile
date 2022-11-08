@@ -1,5 +1,3 @@
-# Created by: Andrey Kostenko <andrey@kostenko.name>
-
 PORTNAME=	Pod-Eventual
 PORTVERSION=	0.094002
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Read a POD document as a series of trivial events
+WWW=		https://metacpan.org/release/Pod-Eventual
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

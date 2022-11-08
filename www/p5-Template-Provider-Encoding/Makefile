@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	Template-Provider-Encoding
 PORTVERSION=	0.10
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Explicitly declare encodings of your templates
+WWW=		https://metacpan.org/release/Template-Provider-Encoding
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

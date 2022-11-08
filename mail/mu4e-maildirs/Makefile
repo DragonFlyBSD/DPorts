@@ -1,11 +1,12 @@
 PORTNAME=	mu4e-maildirs
 PORTVERSION=	0.8.20201028
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	mail
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Maildirs extension for Mu4e
+WWW=		https://github.com/agpchil/mu4e-maildirs-extension
 
 LICENSE=	GPLv3
 

@@ -1,14 +1,13 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	sphinx-markdown-tables
 PORTVERSION=	0.0.15
-PORTREVISION=	1
+PORTEPOCH=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Sphinx extension for rendering tables written in markdown
+WWW=		https://github.com/ryanfox/sphinx-markdown-tables
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

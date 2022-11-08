@@ -1,11 +1,10 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	Net_DNS2
 PORTVERSION=	1.5.2
 CATEGORIES=	dns net pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PHP Resolver library used to communicate with a DNS server
+WWW=		https://pear.php.net/package/Net_DNS2
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

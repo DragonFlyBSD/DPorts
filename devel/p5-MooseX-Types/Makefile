@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	MooseX-Types
 PORTVERSION=	0.50
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Organise your Moose types in libraries
+WWW=		https://metacpan.org/release/MooseX-Types
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

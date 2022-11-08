@@ -1,13 +1,12 @@
-# Created by: Chuck Robey <chuckr@FreeBSD.org>
-
 PORTNAME=	a2ps
 PORTVERSION=	4.13b
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	print
 MASTER_SITES=	GNU LOCAL/hrs/a2ps/:i18n
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Formats an ASCII file for printing on a postscript printer
+WWW=		https://www.gnu.org/software/a2ps/
 
 LICENSE=	GPLv2
 

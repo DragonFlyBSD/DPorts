@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	form
 PORTVERSION=	4.2.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	math
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Symbolic Manipulation System
+WWW=		https://www.nikhef.nl/~form/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

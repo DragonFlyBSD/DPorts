@@ -1,5 +1,3 @@
-# Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-
 PORTNAME=	flpsed
 DISTVERSION=	0.7.3
 CATEGORIES=	print
@@ -7,6 +5,7 @@ MASTER_SITES=	http://flpsed.org/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	WYSIWYG Postscript annotator
+WWW=		https://flpsed.org/flpsed.html
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

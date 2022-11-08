@@ -10,8 +10,9 @@ PATCHFILES=	cd3486343001d6a47.patch:-p1 \
 # detect RTLD_DEEPBIND: https://github.com/apitrace/apitrace/pull/571
 PATCHFILES+=	2d31d49eac9bcc010.patch:-p1
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tools for tracing OpenGL and other graphics APIs
+WWW=		https://apitrace.github.io
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -32,7 +33,7 @@ OPTIONS_SUB=		yes
 WAFFLE_DESC=	Use Waffle library to allow retrace on Wayland, headless etc.
 
 QT5_USES=	qt:5
-QT5_USE=	QT=core,gui,network,widgets,buildtools_build,qmake_build
+QT5_USE=	QT=core,gui,network,widgets,buildtools:build,qmake:build
 QT5_CMAKE_BOOL=	ENABLE_GUI
 
 WAFFLE_LIB_DEPENDS=	libwaffle-1.so:graphics/waffle

@@ -1,5 +1,3 @@
-# Created by: Anders Nordby <anders@fix.no>
-
 PORTNAME=	pam_mysql
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.8.2
@@ -7,6 +5,7 @@ CATEGORIES=	security databases
 
 MAINTAINER=	jsm@FreeBSD.org
 COMMENT=	PAM module for authenticating with MySQL
+WWW=		https://github.com/NigelCunningham/pam-MySQL
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

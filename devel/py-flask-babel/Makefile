@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-
 PORTNAME=	flask-babel
 PORTVERSION=	1.0.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	Flask-Babel-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Adds i18n/l10n support to Flask applications
+WWW=		https://pypi.org/project/Flask-Babel/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

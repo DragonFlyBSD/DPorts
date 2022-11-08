@@ -1,12 +1,12 @@
-# Created by: Carlos J Puga Medina <cpm@fbsd.es>
-
 PORTNAME=	dnsdist
 DISTVERSION=	1.7.2
+PORTREVISION=	1
 CATEGORIES=	dns net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 
 MAINTAINER=	tremere@cainites.net
 COMMENT=	Highly DNS-, DoS- and abuse-aware loadbalancer
+WWW=		https://dnsdist.org/
 
 LICENSE=	GPLv2 ISCL MIT
 LICENSE_COMB=	multi

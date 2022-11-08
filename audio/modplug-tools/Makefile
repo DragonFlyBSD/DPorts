@@ -1,11 +1,10 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	modplug-tools
 PORTVERSION=	0.5.6
 CATEGORIES=	audio
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Command line mod music players using libmodplug
+WWW=		https://github.com/alexmyczko/modplug-tools
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

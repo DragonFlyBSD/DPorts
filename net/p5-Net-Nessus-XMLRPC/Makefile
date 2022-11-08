@@ -1,5 +1,3 @@
-# Created by: Paul Schmehl <pauls@utdallas.edu>
-
 PORTNAME=	Net-Nessus-XMLRPC
 PORTVERSION=	0.30
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl5 interface for communication with Nessus scanner over XMLRPC
+WWW=		https://metacpan.org/release/Net-Nessus-XMLRPC
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

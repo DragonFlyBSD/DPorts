@@ -1,5 +1,3 @@
-# Created by: Mosconi <mosconi.rmg@gmail.com>
-
 PORTNAME=	Crypt-OpenSSL-CA
 PORTVERSION=	0.91
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for OpenSSL CA API
+WWW=		https://metacpan.org/release/Crypt-OpenSSL-CA
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

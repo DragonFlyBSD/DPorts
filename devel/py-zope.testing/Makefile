@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	zope.testing
 PORTVERSION=	4.1.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DIST_SUBDIR=	zope
 
 MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Zope testing helpers
+WWW=		https://pypi.org/project/zope.testing/
 
 LICENSE=	ZPL21
 

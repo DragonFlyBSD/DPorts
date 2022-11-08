@@ -1,11 +1,10 @@
-# Created by: vanilla@
-
 PORTNAME=	swoole
-PORTVERSION=	4.8.10
+PORTVERSION=	4.8.11
 CATEGORIES=	devel net
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	Asynchronous, concurrent, and distributed networking framework
+WWW=		https://pecl.php.net/package/swoole
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

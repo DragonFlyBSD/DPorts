@@ -1,5 +1,3 @@
-# Created by: Dan Langille <dan@langille.org>
-
 PORTNAME=	bacula
 PORTVERSION=	9.6.7
 PORTREVISION=	1
@@ -12,6 +10,7 @@ CONFLICTS=	bacula bacula11
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Bacula document set
+WWW=		https://www.bacula.org/
 
 USES=		tar:bz2
 NO_BUILD=	yes

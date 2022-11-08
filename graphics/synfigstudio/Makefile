@@ -1,12 +1,12 @@
-# Created by: Yinghong.Liu <relaxbsd@gmail.com>
-
 PORTNAME=	synfigstudio
 PORTVERSION=	1.4.2
+PORTREVISION=	1
 DISTVERSIONPREFIX=v
 CATEGORIES=	graphics multimedia
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Vector-based 2D animation software package
+WWW=		https://www.synfig.org/
 
 LICENSE=	GPLv2+
 

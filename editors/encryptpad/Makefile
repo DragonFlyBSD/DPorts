@@ -1,12 +1,11 @@
-# Created by: Dmitri Goutnik <dg@syrec.org>
-
 PORTNAME=	encryptpad
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.0.1
+DISTVERSION=	0.5.0.2
 CATEGORIES=	editors security
 
 MAINTAINER=	dmgk@FreeBSD.org
 COMMENT=	Minimalist secure text editor and binary encryptor
+WWW=		https://evpo.net/encryptpad/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/license.txt
@@ -21,7 +20,7 @@ GH_ACCOUNT=	evpo
 GH_PROJECT=	EncryptPad
 
 USE_GL=		gl
-USE_QT=		core gui widgets buildtools_build qmake_build
+USE_QT=		core gui widgets buildtools:build qmake:build
 BINARY_ALIAS=	python=${PYTHON_CMD} \
 		qmake=${QMAKE}
 

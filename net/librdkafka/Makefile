@@ -1,12 +1,11 @@
-# Created by: Victor Yagofarov <xnasx@yandex.ru>
-
 PORTNAME=	librdkafka
-DISTVERSION=	1.8.2
+DISTVERSION=	1.9.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 
 MAINTAINER=	pizzamig@FreeBSD.org
 COMMENT=	Apache Kafka C/C++ library
+WWW=		https://github.com/edenhill/librdkafka/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

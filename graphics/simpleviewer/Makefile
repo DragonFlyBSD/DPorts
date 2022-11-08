@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	simpleviewer
 PORTVERSION=	3.1.7
 PORTREVISION=	14
@@ -10,6 +8,7 @@ DIST_SUBDIR=	${PORTNAME}	# and that's why we need ${DIST_SUBDIR}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Small and simple image viewer based on OpenGL
+WWW=		https://bitbucket.org/andreyu/simple-viewer-gl
 
 LICENSE=	GPLv2
 

@@ -1,11 +1,10 @@
-# Created by: Boris Lytochkin (lytboris@gmail.com)
-
 PORTNAME=	mongoose
 PORTVERSION=	5.6
 CATEGORIES=	www
 
 MAINTAINER=	lytboris@gmail.com
 COMMENT=	Small, fast, embeddable web server with CGI, SSL, Authorization
+WWW=		https://github.com/cesanta/mongoose
 
 LICENSE=	GPLv2
 

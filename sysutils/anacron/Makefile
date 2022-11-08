@@ -1,5 +1,3 @@
-# Created by: Derik van Zuetphen <dz@426.ch>
-
 PORTNAME=	anacron
 PORTVERSION=	2.3
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	dz@426.ch
 COMMENT=	Schedules periodic jobs on systems that are not permanently up
+WWW=		https://sourceforge.net/projects/anacron/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

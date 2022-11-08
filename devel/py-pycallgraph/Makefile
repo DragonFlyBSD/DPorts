@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-
 PORTNAME=	pycallgraph
 PORTVERSION=	1.0.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Python library that creates call graphs for Python programs
+WWW=		https://pycallgraph.slowchop.com/
 
 LICENSE=	GPLv2
 

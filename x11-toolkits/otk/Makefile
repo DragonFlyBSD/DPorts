@@ -1,5 +1,3 @@
-# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-
 PORTNAME=	otk
 PORTVERSION=	0.96
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_lib_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Widget library based on OpenGL
+WWW=		http://otk.sourceforge.net/
 
 LICENSE=	LGPL20+
 

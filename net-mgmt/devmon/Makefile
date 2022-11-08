@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	devmon
 DISTVERSION=	0.3.1-beta1
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION}
 
 MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Device monitoring addition to Xymon/Hobbit/BigBrother
+WWW=		http://devmon.sourceforge.net/
 
 LICENSE=	GPLv2
 

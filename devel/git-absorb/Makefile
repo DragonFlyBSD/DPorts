@@ -1,10 +1,11 @@
 PORTNAME=	git-absorb
 DISTVERSION=	0.6.6
-PORTREVISION=	7
+PORTREVISION=	9
 CATEGORIES=	devel
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Git command for automating fixup/autosquash commits
+WWW=		https://github.com/tummychow/git-absorb
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

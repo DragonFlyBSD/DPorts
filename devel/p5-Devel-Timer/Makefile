@@ -1,5 +1,3 @@
-# Created by: Cory R. King <coryking@mozimediacom>
-
 PORTNAME=	Devel-Timer
 PORTVERSION=	0.04
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	coryking@mozimedia.com
 COMMENT=	Track and report execution time for parts of code
+WWW=		https://metacpan.org/release/Devel-Timer
 
 USES=		perl5
 USE_PERL5=	configure

@@ -1,5 +1,3 @@
-# Created by: Jens K. Loewe <bsd@tuxproject.de>
-
 PORTNAME=	rodent
 PORTVERSION=	5.3.16.3
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/xffm/${PORTVERSION}
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Fast, small, and powerful file manager
+WWW=		http://xffm.org/
 
 LICENSE=	GPLv3
 

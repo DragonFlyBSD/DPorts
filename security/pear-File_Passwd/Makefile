@@ -1,11 +1,10 @@
-# Created by: Antonio Carlos Venancio Junior <antonio@inf.ufsc.br>
-
 PORTNAME=	File_Passwd
 PORTVERSION=	1.1.7
 CATEGORIES=	security pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR class to manipulate many kinds of password files
+WWW=		https://pear.php.net/package/File_Passwd
 
 USES=		pear
 

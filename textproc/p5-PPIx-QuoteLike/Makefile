@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	PPIx-QuoteLike
 PORTVERSION=	0.022
 CATEGORIES=	textproc perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parse Perl string literals and string-literal-like things
+WWW=		https://metacpan.org/release/PPIx-QuoteLike
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

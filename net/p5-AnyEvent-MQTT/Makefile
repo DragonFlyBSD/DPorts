@@ -1,5 +1,3 @@
-# Created by: Alex Bakhtin <Alex.Bakhtin@gmail.com>
-
 PORTNAME=	AnyEvent-MQTT
 PORTVERSION=	1.142640
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	Alex.Bakhtin@gmail.com
 COMMENT=	AnyEvent Perl module for MQTT client
+WWW=		https://metacpan.org/release/AnyEvent-MQTT
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

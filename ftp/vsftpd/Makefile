@@ -1,5 +1,3 @@
-# Created by: Neil Blakey-Milner
-
 PORTNAME=	vsftpd
 PORTVERSION=	3.0.5
 CATEGORIES=	ftp
@@ -9,6 +7,7 @@ PKGNAMESUFFIX?=	${SSL_SUFFIX}${PKGNAMESUFFIX2}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	FTP daemon that aims to be "very secure"
+WWW=		https://security.appspot.com/vsftpd.html
 
 LICENSE=	GPLv2
 

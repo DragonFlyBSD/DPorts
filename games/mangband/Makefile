@@ -1,5 +1,3 @@
-# Created by: driedfruit
-
 PORTNAME=	mangband
 PORTVERSION=	1.5.3
 CATEGORIES=	games
@@ -7,6 +5,7 @@ MASTER_SITES=	http://mangband.org/download/
 
 MAINTAINER=	flambard@mangband.org
 COMMENT=	Free online multiplayer real-time roguelike game
+WWW=		https://mangband.org/
 
 LICENSE=	GPLv2
 

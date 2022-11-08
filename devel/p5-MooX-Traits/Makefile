@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	MooX-Traits
 PORTVERSION=	0.005
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Automatically apply roles at object creation time
+WWW=		https://metacpan.org/release/MooX-Traits
 
 LICENSE=	ARTPERL10
 

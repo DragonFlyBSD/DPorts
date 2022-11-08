@@ -1,5 +1,3 @@
-# Created by: dikshie <dikshie@lapi.itb.ac.id>
-
 PORTNAME=	IP-Country
 PORTVERSION=	2.28
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dikshie@lapi.itb.ac.id
 COMMENT=	Fast lookup of country codes from IP addresses
+WWW=		https://metacpan.org/release/IP-Country
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Geography-Countries>=0:misc/p5-Geography-Countries

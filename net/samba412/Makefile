@@ -1,5 +1,3 @@
-# Created by: timur@FreeBSD.org
-
 PORTNAME=			${SAMBA4_BASENAME}412
 PORTVERSION=			${SAMBA4_VERSION}
 PORTREVISION=			4
@@ -9,6 +7,7 @@ DISTNAME=			${SAMBA4_DISTNAME}
 
 MAINTAINER=			timur@FreeBSD.org
 COMMENT=			Free SMB/CIFS and AD/DC server and client for Unix
+WWW=		https://www.samba.org/
 
 LICENSE=			GPLv3+
 LICENSE_FILE=			${WRKSRC}/COPYING

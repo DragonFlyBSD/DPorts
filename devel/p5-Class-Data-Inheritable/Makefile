@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Class-Data-Inheritable
 PORTVERSION=	0.09
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Inheritable, overridable class data
+WWW=		https://metacpan.org/release/Class-Data-Inheritable
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

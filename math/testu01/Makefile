@@ -1,5 +1,3 @@
-# Created by: bf <bf2006a@yahoo.com>
-
 PORTNAME=	TestU01
 PORTVERSION=	1.2.3
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Utilities for statistical testing of uniform random number generators
+WWW=		http://simul.iro.umontreal.ca/testu01/tu01.html
 
 LICENSE=	TestU01
 LICENSE_NAME=	TestU01 license

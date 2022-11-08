@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@dragon2.net>
-
 PORTNAME=	LWP-Authen-Wsse
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Library for enabling X-WSSE authentication in LWP
+WWW=		https://metacpan.org/release/LWP-Authen-Wsse
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

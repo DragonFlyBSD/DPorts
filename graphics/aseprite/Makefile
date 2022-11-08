@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=		aseprite
 DISTVERSIONPREFIX=	v
 DISTVERSION=		1.2.9
@@ -8,6 +6,7 @@ CATEGORIES=		graphics
 
 MAINTAINER=		yuri@FreeBSD.org
 COMMENT=		Animated sprite editor and pixel art tool
+WWW=		https://www.aseprite.org/
 
 LICENSE=		EULA
 LICENSE_NAME=		END-USER LICENSE AGREEMENT FOR ASEPRITE

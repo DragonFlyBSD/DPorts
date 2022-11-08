@@ -1,5 +1,3 @@
-# Created by: jesper@jdn.dk
-
 PORTNAME=	sipp
 PORTVERSION=	3.5.1
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${PO
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	SIP benchmarking and testing tool
+WWW=		http://sipp.sourceforge.net/
 
 LICENSE=	GPLv2
 

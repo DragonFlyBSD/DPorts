@@ -1,5 +1,3 @@
-# Created by: Denis Shaposhnikov <dsh@vlink.ru>
-
 PORTNAME=	wmblob
 PORTVERSION=	1.0.4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/x11/wmblob/
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Shows moving blobs
+WWW=		https://BSDforge.com/projects/x11/wmblob/
 
 USES=		gnome pkgconfig tar:xz xorg
 USE_XORG=	xpm

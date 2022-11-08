@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Net-LimeLight-Purge
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	LimeLight Purge Service API
+WWW=		https://metacpan.org/release/Net-LimeLight-Purge
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

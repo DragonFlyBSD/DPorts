@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	staticReflection
 PORTVERSION=	1.0.0
 CATEGORIES=	devel pear
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PEAR_PKGNAMEPREFIX}${PEAR_CHANNEL}_
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	staticReflection package for PHP
+WWW=		http://pear.pdepend.org/
 
 LICENSE=	BSD3CLAUSE
 

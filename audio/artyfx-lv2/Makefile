@@ -1,12 +1,13 @@
 PORTNAME=	artyfx
 DISTVERSIONPREFIX=	release-
-DISTVERSION=	1.3-24
-DISTVERSIONSUFFIX=	-g6010d1a
+DISTVERSION=	1.3.1
+PORTEPOCH=	1
 CATEGORIES=	audio
 PKGNAMESUFFIX=	-lv2
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	ArtyFX plugin bundle
+WWW=		http://openavproductions.com/artyfx/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,11 +18,12 @@ BUILD_DEPENDS=	lv2>0:audio/lv2
 LIB_DEPENDS=	libsndfile.so:audio/libsndfile
 
 USES=		cmake compiler:c++11-lang gnome localbase:ldflags pkgconfig xorg
+USE_GNOME=	cairo
+USE_XORG=	x11
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	openAVproductions
 GH_PROJECT=	openAV-ArtyFX
-USE_GNOME=	cairo
-USE_XORG=	x11
 
 OPTIONS_DEFINE_x86_64=	SSE
 OPTIONS_DEFINE_i386=	SSE

@@ -1,5 +1,3 @@
-# Created by: Michael Haro <mharo@area51.fremont.ca.us>
-
 PORTNAME=	libmikmod
 PORTVERSION=	3.3.11.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/mikmod/libmikmod/${PORTVERSION}/
 
 MAINTAINER=	neuroworker@gmail.com
 COMMENT=	MikMod Sound Library
+WWW=		http://mikmod.sourceforge.net/
 
 LICENSE=	LGPL21
 

@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	HTML-Encoding
 PORTVERSION=	0.61
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Determine the encoding of HTML/XML/XHTML documents
+WWW=		https://metacpan.org/release/HTML-Encoding
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-HTML-Parser>=0:www/p5-HTML-Parser \

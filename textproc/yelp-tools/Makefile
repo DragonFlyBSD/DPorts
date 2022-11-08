@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	yelp-tools
 PORTVERSION=	42.0
 CATEGORIES=	textproc gnome
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Utilities to help manage documentation for Yelp and the web
+WWW=		https://wiki.gnome.org/Apps/Yelp/Tools
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.GPL

@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	sqlite3-ruby
 PORTVERSION=	1.3.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby interface to the SQLite DB engine version 3
+WWW=		https://github.com/sparklemotion/sqlite3-ruby
 
 LICENSE=	BSD3CLAUSE
 

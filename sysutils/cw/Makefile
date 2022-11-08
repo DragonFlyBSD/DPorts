@@ -1,5 +1,3 @@
-# Created by: Dryice Liu <dryice@dryice.name>
-
 PORTNAME=	cw
 PORTVERSION=	1.0.16
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://cwrapper.sourceforge.net/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Non-intrusive color wrapper for common commands
+WWW=		http://cwrapper.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

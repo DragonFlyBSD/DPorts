@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-TableDriven
 PORTVERSION=	0.02
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Write tests, not scripts that run them
+WWW=		https://metacpan.org/release/Test-TableDriven
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

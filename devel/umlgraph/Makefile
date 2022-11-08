@@ -1,5 +1,3 @@
-# Created by: Kevin Lo <kevlo@FreeBSD.org>
-
 PORTNAME=	umlgraph
 DISTVERSIONPREFIX=	R
 DISTVERSION=	5_7_2
@@ -7,6 +5,7 @@ CATEGORIES=	devel java
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Automated drawing of UML diagrams
+WWW=		https://www.umlgraph.org/
 
 LICENSE=	BSD3CLAUSE
 

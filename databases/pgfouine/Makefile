@@ -1,5 +1,3 @@
-# Created by: Pierre-Emmanuel Andre <pea@raveland.org>
-
 PORTNAME=	pgfouine
 PORTVERSION=	1.2
 CATEGORIES=	databases
@@ -8,6 +6,7 @@ MASTER_SITES=	http://pgfoundry.org/frs/download.php/2575/ \
 
 MAINTAINER=	pea@raveland.org
 COMMENT=	PostgreSQL log analyzer
+WWW=		http://pgfouine.projects.postgresql.org/
 
 USES+=		php
 

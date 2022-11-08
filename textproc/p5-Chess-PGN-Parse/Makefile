@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@daltons.ca>
-
 PORTNAME=	Chess-PGN-Parse
 PORTVERSION=	0.20
 CATEGORIES=	textproc games perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Reads and parses PGN (Portable Game Notation) Chess files
+WWW=		https://metacpan.org/release/Chess-PGN-Parse
 
 NO_ARCH=	yes
 USES=		perl5

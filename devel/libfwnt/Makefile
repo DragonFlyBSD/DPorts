@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	libfwnt
 PORTVERSION=	20210906
 DISTVERSIONPREFIX=	alpha-
@@ -9,6 +7,7 @@ MASTER_SITES=	https://github.com/libyal/libfwnt/releases/download/${PORTVERSION}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library for Windows NT data types
+WWW=		https://github.com/libyal/libfwnt
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING

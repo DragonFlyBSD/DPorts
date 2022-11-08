@@ -1,5 +1,3 @@
-# Created by: Craig Rodrigues <rodrigc@FreeBSD.org>
-
 PORTNAME=	serf
 PORTVERSION=	1.3.9
 PORTREVISION=	6
@@ -11,6 +9,7 @@ PATCH_SITES=	https://salsa.debian.org/jamessan/serf/-/raw/f6a5256b2de696c2527524
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Serf HTTP client library
+WWW=		https://serf.apache.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

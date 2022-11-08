@@ -1,11 +1,12 @@
 PORTNAME=	facter
-PORTVERSION=	3.14.23
+PORTVERSION=	3.14.24
 PORTREVISION=	1
 CATEGORIES?=	sysutils
 MASTER_SITES=	https://downloads.puppetlabs.com/facter/
 
 MAINTAINER=	puppet@FreeBSD.org
 COMMENT=	Cross-platform library for retrieving facts from OS
+WWW=		https://puppetlabs.com/facter
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

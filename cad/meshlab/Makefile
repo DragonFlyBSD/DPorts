@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	meshlab
 DISTVERSIONPREFIX=	Meshlab-
 DISTVERSION=	2020.05
@@ -8,6 +6,7 @@ CATEGORIES=	cad
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	3D triangular meshes processing and editing tool
+WWW=		https://www.meshlab.net/
 
 LICENSE=	GPLv2
 
@@ -16,7 +15,7 @@ LIB_DEPENDS=	libmpirxx.so:math/mpir
 
 USES=		dos2unix gl qmake:outsource qt:5
 USE_GL=		gl glu glew
-USE_QT=		buildtools_build core gui network \
+USE_QT=		buildtools:build core gui network \
 		opengl script xml xmlpatterns widgets
 USE_GITHUB=	yes
 GH_ACCOUNT=	cnr-isti-vclab

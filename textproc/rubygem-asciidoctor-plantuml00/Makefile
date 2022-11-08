@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	asciidoctor-plantuml
 PORTVERSION=	0.0.16
 CATEGORIES=	textproc rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	00
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Asciidoctor PlantUML extension
+WWW=		https://github.com/hsanson/asciidoctor-plantuml
 
 LICENSE=	MIT
 

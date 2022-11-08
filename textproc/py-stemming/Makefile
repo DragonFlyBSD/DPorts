@@ -1,5 +1,3 @@
-# Created by: Rene Ladan <rene@FreeBSD.org>
-
 PORTNAME=	stemming
 PORTVERSION=	1.0.1
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Algorithms for stemming
+WWW=		https://pypi.org/project/stemming/
 
 LICENSE=	PD
 

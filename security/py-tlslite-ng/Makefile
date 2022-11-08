@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	tlslite-ng
 PORTVERSION=	0.7.6
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pure python implementation of SSL and TLS
+WWW=		https://github.com/tlsfuzzer/tlslite-ng
 
 LICENSE=	BSD3CLAUSE LGPL21 PD
 LICENSE_COMB=	multi

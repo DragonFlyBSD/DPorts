@@ -1,5 +1,3 @@
-# Created by: Jean-Baptiste Quenot <jb.quenot@caraldi.com>
-
 PORTNAME=	resin
 PORTVERSION=	3.1.16
 CATEGORIES=	www java
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.caucho.com/download/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Java-based Application Server, 3.x branch
+WWW=		https://www.caucho.com/
 
 LICENSE=	GPLv2
 

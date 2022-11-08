@@ -6,6 +6,7 @@ DISTFILES=	m1dgnhiemo47lhxczrn6si71bwxoxor8.gz
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Scientific program aimed at the ab initio virtual experimentation
+WWW=		https://berkeleygw.org
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
@@ -32,8 +33,8 @@ PORTEXAMPLES=	*
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == i386 && ${GCC_DEFAULT} >= 10
-BROKEN=		f951: internal compiler error: Segmentation fault
+.if ${GCC_DEFAULT} >= 10
+BROKEN_i386=	f951: internal compiler error: Segmentation fault
 .endif
 
 post-patch:

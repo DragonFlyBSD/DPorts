@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	resolv-replace
 PORTVERSION=	0.1.0
 CATEGORIES=	dns rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Replace Socket DNS with Resolv
+WWW=		https://github.com/ruby/resolv-replace
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

@@ -1,11 +1,10 @@
-# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-
 PORTNAME=	openjazz
 PORTVERSION=	20190106
 CATEGORIES=	games
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Free re-implementation of the Jazz Jackrabbit(tm) game engine
+WWW=		http://alister.eu/jazz/oj
 
 LICENSE=	GPLv2
 

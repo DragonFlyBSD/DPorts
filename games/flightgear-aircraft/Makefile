@@ -1,5 +1,3 @@
-# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-
 PORTNAME=	flightgear-aircraft
 PORTVERSION=	20190826
 CATEGORIES=	games
@@ -48,6 +46,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Selection of additional aircraft for the FlightGear flight simulator
+WWW=		https://www.flightgear.org/
 
 LICENSE=	GPLv2
 

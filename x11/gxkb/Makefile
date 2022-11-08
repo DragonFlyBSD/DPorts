@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	gxkb
 PORTVERSION=	0.9.3
 CATEGORIES=	x11
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	X11 keyboard layout indicator and switcher
+WWW=		https://zen-tools.github.io/gxkb/
 
 LICENSE=	GPLv2
 

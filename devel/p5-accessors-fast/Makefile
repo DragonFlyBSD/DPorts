@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	accessors-fast
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Wrap fastest Class::Accessor::* into pragma
+WWW=		https://metacpan.org/release/accessors-fast
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

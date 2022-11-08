@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	kexis
 PORTVERSION=	0.2.2
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/Kexis/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lossless WAV file compressor
+WWW=		https://sourceforge.net/projects/kexis/
 
 USES=		tar:tgz
 WRKSRC=		${WRKDIR}/${PORTNAME}

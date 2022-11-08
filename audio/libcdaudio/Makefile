@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	libcdaudio
 PORTVERSION=	0.99.12p2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for playing audio CDs
+WWW=		http://libcdaudio.sourceforge.net/
 
 USES=		libtool pathfix pkgconfig
 GNU_CONFIGURE=	yes

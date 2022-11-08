@@ -1,13 +1,12 @@
-# Created by: DarwinSurvivor <darwinsurvivor@gmail.com>
-
 PORTNAME=	notmuch
-DISTVERSION=	0.36
+DISTVERSION=	0.37
 PORTREVISION?=	0
 CATEGORIES?=	mail
 MASTER_SITES=	https://notmuchmail.org/releases/
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT?=	Thread-based email index, search and tagging application
+WWW?=		https://notmuchmail.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/${WRKSRC_SUBDIR:C/[^\/]+/../g}/COPYING-GPL-3
@@ -66,6 +65,7 @@ OPTIONS_DEFAULT=	MANPAGES
 OPTIONS_SUB=		yes
 
 DOXYGEN_BUILD_DEPENDS=		doxygen:devel/doxygen
+DOXYGEN_USES=			perl5
 DOXYGEN_CONFIGURE_WITH=		api-docs
 MANPAGES_BUILD_DEPENDS=		sphinx-build:textproc/py-sphinx
 MANPAGES_CONFIGURE_WITH=	docs

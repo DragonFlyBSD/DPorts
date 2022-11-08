@@ -1,12 +1,13 @@
 PORTNAME=	xfuse
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.0-alpha
-PORTREVISION=	5
+PORTREVISION=	11
 CATEGORIES=	sysutils
 PKGNAMEPREFIX=	fusefs-
 
 MAINTAINER=	mail@KhaledEmara.dev
 COMMENT=	Read-only FUSE server implementing XFS
+WWW=		https://github.com/KhaledEmaraDev/xfuse
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

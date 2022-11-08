@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	pynacl
 DISTVERSION=	1.5.0
 CATEGORIES=	security python
@@ -9,6 +7,7 @@ DISTNAME=	PyNaCl-${PORTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python binding to the Networking and Cryptography library
+WWW=		https://github.com/pyca/pynacl
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

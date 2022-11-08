@@ -1,5 +1,3 @@
-# Created by: lippe
-
 PORTNAME=	Test-Portability-Files
 PORTVERSION=	0.10
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Check file names portability
+WWW=		https://metacpan.org/release/Test-Portability-Files
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

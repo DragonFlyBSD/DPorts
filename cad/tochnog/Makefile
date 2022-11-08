@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni <giffunip@asme.org>
-
 PORTNAME=	tochnog
 PORTVERSION=	20140100
 PORTREVISION=	10
@@ -11,6 +9,7 @@ DIST_SUBDIR=	${DISTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free explicit/implicit Finite Element Program
+WWW=		http://tochnog.sourceforge.net/
 
 LICENSE=	GPLv2
 

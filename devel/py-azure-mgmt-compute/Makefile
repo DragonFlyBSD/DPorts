@@ -1,11 +1,12 @@
 PORTNAME=	azure-mgmt-compute
-PORTVERSION=	27.0.0
+PORTVERSION=	27.1.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Microsoft Azure Compute Management Client Library for Python
+WWW=		https://pypi.org/project/azure-mgmt-compute/
 
 LICENSE=	MIT
 

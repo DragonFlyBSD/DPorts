@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Hash-AutoHash-Args
 PORTVERSION=	1.18
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Object-oriented processing of keyword-based argument lists
+WWW=		https://metacpan.org/release/Hash-AutoHash-Args
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

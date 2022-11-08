@@ -1,5 +1,3 @@
-# Created by: Alexander Logvinov <ports@logvinov.com>
-
 PORTNAME=	analogger
 PORTVERSION=	0.9.3
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Fast, flexible, easy to use logging service for Ruby
+WWW=		https://github.com/wyhaines/analogger
 
 LICENSE=	MIT
 

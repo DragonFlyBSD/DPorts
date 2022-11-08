@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	ChangeAnomalyDetection
 PORTVERSION=	0.1.0
 PORTREVISION=	9
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Change Anomaly Detection
+WWW=		https://cran.r-project.org/web/packages/ChangeAnomalyDetection/
 
 LICENSE=	BSD
 

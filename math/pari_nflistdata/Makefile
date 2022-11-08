@@ -1,5 +1,6 @@
 PORTNAME=	nflistdata
 DISTVERSION=	2022-03-26
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	https://pari.math.u-bordeaux.fr/pub/pari/packages/
 PKGNAMEPREFIX=	pari-
@@ -8,6 +9,7 @@ DIST_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}/${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	List fields of small discriminant for nflist() in PARI/GP
+WWW=		https://pari.math.u-bordeaux.fr/packages.html
 
 LICENSE=	ART20
 

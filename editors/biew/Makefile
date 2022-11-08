@@ -1,5 +1,3 @@
-# Created by: Michael Vasilenko <acid@stu.cn.ua>
-
 PORTNAME=	biew
 PORTVERSION=	6.1.0
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.//g}-src
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Binary file viewer and editor
+WWW=		http://beye.sourceforge.net/
 
 LICENSE=	GPLv2
 

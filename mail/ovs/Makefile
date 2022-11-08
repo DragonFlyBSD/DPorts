@@ -1,5 +1,3 @@
-# Created by: Xavier Beaudouin <kiwi@oav.net>
-
 PORTNAME=	ovs
 PORTVERSION=	1.05
 PORTREVISION=	5
@@ -9,6 +7,7 @@ MASTER_SITES=	ftp://ftp.oav.net/openvisp/stats/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	RRDtool frontend for mail statistics
+WWW=		http://openvisp.fr/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

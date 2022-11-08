@@ -1,5 +1,3 @@
-# Created by: Matthew Luckie <mjl@luckie.org.nz>
-
 PORTNAME=	Net-IPTrie
 PORTVERSION=	0.7
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	mjl@luckie.org.nz
 COMMENT=	Module for building IPv4 and IPv6 address space hierarchies
+WWW=		https://metacpan.org/release/Net-IPTrie
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

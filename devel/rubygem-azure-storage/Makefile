@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	azure-storage
 PORTVERSION=	0.15.0.preview
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Microsoft Azure Storage Client Library for Ruby
+WWW=		https://github.com/Azure/azure-storage-ruby
 
 LICENSE=	MIT
 

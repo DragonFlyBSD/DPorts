@@ -1,11 +1,12 @@
 PORTNAME=	collada-dom
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.5.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	trueos@norwegianrockcat.com
 COMMENT=	COLLADA Document Object Model (DOM) C++ Library
+WWW=		https://github.com/rdiankov/collada-dom
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale	<nivit@email.it>
-
 PORTNAME=	cherrypy
 PORTVERSION=	17.4.2
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	CherryPy-${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Pythonic, object-oriented web development framework
+WWW=		http://www.cherrypy.org/
 
 LICENSE=	BSD3CLAUSE
 

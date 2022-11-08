@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Class-Throwable
 PORTVERSION=	0.13
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Minimal lightweight exception class
+WWW=		https://metacpan.org/release/Class-Throwable
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

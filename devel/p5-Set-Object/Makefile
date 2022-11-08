@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@tobez.org>
-
 PORTNAME=	Set-Object
 PORTVERSION=	1.42
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to manage sets of objects
+WWW=		https://metacpan.org/release/Set-Object
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

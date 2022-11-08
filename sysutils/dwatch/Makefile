@@ -1,5 +1,3 @@
-# Created by: Andrew Turner <zombie@i4free.co.nz>
-
 PORTNAME=	dwatch
 PORTVERSION=	0.1.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://siag.nu/pub/dwatch/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Daemon Watcher
+WWW=		https://siag.nu/dwatch/
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual

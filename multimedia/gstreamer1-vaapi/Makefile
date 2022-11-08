@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@rainbow-runner.nl>
-
 PORTNAME=	gstreamer1-vaapi
 PORTVERSION=	1.16.2
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	gstreamer-vaapi-${PORTVERSION}
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	GStreamer hardware video decoding via VA-API plug-in
+WWW=		https://github.com/GStreamer/gstreamer-vaapi
 
 LICENSE=	LGPL21
 

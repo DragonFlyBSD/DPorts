@@ -1,5 +1,3 @@
-# Created by: Thorsten Greiner <thorsten.greiner@web.de>
-
 PORTNAME=	Lingua-Stem-Snowball-Da
 PORTVERSION=	1.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Porters stemming algorithm for Denmark
+WWW=		https://metacpan.org/release/Lingua-Stem-Snowball-Da
 
 LICENSE=	GPLv2
 

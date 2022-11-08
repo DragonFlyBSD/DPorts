@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	mosh
 PORTVERSION=	1.3.2
 PORTREVISION=	19
@@ -9,6 +7,7 @@ MASTER_SITES=	https://mosh.org/ \
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Mobile terminal that supports intermittent connectivity
+WWW=		https://mosh.org/
 
 LICENSE=	GPLv3
 

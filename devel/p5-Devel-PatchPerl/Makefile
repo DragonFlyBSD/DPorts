@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Devel-PatchPerl
 PORTVERSION=	2.08
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl module to patch Perl source
+WWW=		https://metacpan.org/release/Devel-PatchPerl
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

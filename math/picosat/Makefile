@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	picosat
 DISTVERSION=	965
 CATEGORIES=	math
@@ -7,6 +5,7 @@ MASTER_SITES=	http://fmv.jku.at/picosat/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Satisfiability (SAT) solver for boolean variables
+WWW=		http://fmv.jku.at/picosat
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

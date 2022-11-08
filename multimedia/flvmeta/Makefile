@@ -1,5 +1,3 @@
-# Created by: Earl Gay <earl@eeg3.net>
-
 PORTNAME=	flvmeta
 PORTVERSION=	1.0.11
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	multimedia
 
 MAINTAINER=	earl@eeg3.net
 COMMENT=	Manipulation tool for Adobe Flash Video files (FLV)
+WWW=		http://code.google.com/p/flvmeta/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

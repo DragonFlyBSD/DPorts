@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-
 PORTNAME=	Tree-Simple
 PORTVERSION=	1.33
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Simple tree object
+WWW=		https://metacpan.org/release/Tree-Simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

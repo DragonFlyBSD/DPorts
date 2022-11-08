@@ -1,5 +1,3 @@
-# Created by: gpalmer
-
 PORTNAME=	amanda
 PORTVERSION=	3.3.9
 PORTREVISION=	4
@@ -10,6 +8,7 @@ PKGNAMESUFFIX?=	-server
 
 MAINTAINER=	fbsd@dylanleigh.net
 COMMENT?=	Advanced Maryland Automatic Network Disk Archiver (server)
+WWW=		https://sourceforge.net/projects/amanda/
 
 RUN_DEPENDS=	perl-amanda:misc/amanda-perl-wrapper
 BUILD_DEPENDS=	perl-amanda:misc/amanda-perl-wrapper

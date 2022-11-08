@@ -1,11 +1,10 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	cccc
 DISTVERSION=	3.1.6
 CATEGORIES=	devel textproc www
 
 MAINTAINER=	pizzamig@FreeBSD.org
 COMMENT=	C and C++ Code Counter
+WWW=		http://cccc.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/cccc/COPYING

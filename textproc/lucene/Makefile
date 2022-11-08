@@ -1,5 +1,3 @@
-# Created by: Gerrit Beine <gerrit.beine@gmx.de>
-
 PORTNAME=	lucene
 PORTVERSION=	3.6.2
 # Be sure to chase devel/openoffice-devel and textproc/py-lucene
@@ -9,6 +7,7 @@ MASTER_SITES=	https://archive.apache.org/dist/${PORTNAME}/java/${PORTVERSION}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Full-text search engine for Java
+WWW=		https://lucene.apache.org/core/
 
 LICENSE=	APACHE20
 

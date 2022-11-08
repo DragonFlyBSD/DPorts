@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	libcsv
 PORTVERSION=	3.0.3
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	bob@eager.cx
 COMMENT=	Small, simple and fast CSV library
+WWW=		https://sourceforge.net/projects/libcsv/
 
 LICENSE=	LGPL21
 

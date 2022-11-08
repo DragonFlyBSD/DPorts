@@ -1,9 +1,9 @@
---- absl/debugging/internal/vdso_support.cc.intermediate	2022-01-23 20:06:13.000000000 +0000
-+++ absl/debugging/internal/vdso_support.cc
-@@ -50,7 +50,7 @@
- #define AT_SYSINFO_EHDR 33  // for crosstoolv10
+--- absl/debugging/internal/vdso_support.cc.orig	2022-10-15 18:53:40.059652000 +0200
++++ absl/debugging/internal/vdso_support.cc	2022-10-15 18:53:51.109406000 +0200
+@@ -54,7 +54,7 @@
+ using Elf32_auxv_t = Aux32Info;
+ using Elf64_auxv_t = Aux64Info;
  #endif
- 
 -#if defined(__FreeBSD__)
 +#if defined(__FreeBSD__) || defined(__DragonFly__)
  #if defined(__ELF_WORD_SIZE) && __ELF_WORD_SIZE == 64

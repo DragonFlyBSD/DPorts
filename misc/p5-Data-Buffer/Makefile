@@ -1,5 +1,3 @@
-# Created by: Michael Haro <mharo@FreeBSD.org>
-
 PORTNAME=	Data-Buffer
 PORTVERSION=	0.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Read/write buffer class
+WWW=		https://metacpan.org/release/Data-Buffer
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

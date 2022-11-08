@@ -1,5 +1,3 @@
-# Created by: Jeremy Shaffner <jeremy@external.org>
-
 PORTNAME=	gwhich
 PORTVERSION=	2.21
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	which-${PORTVERSION}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	GNU Which - Everything you never wanted in a which
+WWW=		https://savannah.gnu.org/projects/which/
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--program-prefix=g

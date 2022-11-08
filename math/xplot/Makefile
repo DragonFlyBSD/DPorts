@@ -1,5 +1,3 @@
-# Created by: fenner
-
 PORTNAME=	xplot
 PORTVERSION=	0.90.7.1
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.xplot.org/xplot/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X11 plotting package
+WWW=		http://www.xplot.org/
 
 USES=		perl5 xorg
 USE_XORG=	x11

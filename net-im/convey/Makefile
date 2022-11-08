@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@email.it>
-
 PORTNAME=	convey
 PORTVERSION=	0.3
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Instant Message (IM) program using the Jabber protocol
+WWW=		http://convey.sourceforge.net/
 
 USE_ANT=	yes
 USE_JAVA=	yes

@@ -1,5 +1,3 @@
-# Created by: djp
-
 PORTNAME=	fortune-mod-bible
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	bible
 
 MAINTAINER=	doug@polands.org
 COMMENT=	King James V Bible in fortune file format
+WWW=		http://fortunebible.sourceforge.net
 
 DIST_SUBDIR=	${PORTNAME}
 NO_WRKSUBDIR=	yes

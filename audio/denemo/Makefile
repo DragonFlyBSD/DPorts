@@ -1,5 +1,3 @@
-# Created by: trevor
-
 PORTNAME=	denemo
 PORTVERSION=	2.0.6
 PORTREVISION=	15
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Graphical score editor
+WWW=		http://www.denemo.org/
 
 LICENSE=	GPLv3+
 

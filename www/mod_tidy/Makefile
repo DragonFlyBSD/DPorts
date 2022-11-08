@@ -1,5 +1,3 @@
-# Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-
 PORTNAME=	mod_tidy
 PORTVERSION=	0.5.5
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DIST_SUBDIR=	apache2
 
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Validates the HTML output of your apache2 webserver
+WWW=		http://mod-tidy.sourceforge.net/
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	multi

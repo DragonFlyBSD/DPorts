@@ -1,5 +1,3 @@
-# Created by: Jase Thew <freebsd@beardz.net>
-
 PORTNAME=	POE-Component-IRC-Plugin-Blowfish
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	POE::Component::IRC plugin tthat provides blowfish encryption
+WWW=		https://metacpan.org/release/POE-Component-IRC-Plugin-Blowfish
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

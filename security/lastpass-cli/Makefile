@@ -1,5 +1,3 @@
-# Created by: Thomas Hurst <tom@hur.st>
-
 PORTNAME=	lastpass-cli
 PORTVERSION=	1.3.3
 PORTREVISION=	2
@@ -8,6 +6,7 @@ CATEGORIES=	security
 
 MAINTAINER=	tom@hur.st
 COMMENT=	LastPass command line interface tool
+WWW=		https://lastpass.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

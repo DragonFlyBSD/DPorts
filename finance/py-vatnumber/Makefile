@@ -1,5 +1,3 @@
-# Created by: Qian Jin <eric.siroh@gmail.com>
-
 PORTNAME=	vatnumber
 PORTVERSION=	1.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	chian.jin@gmail.com
 COMMENT=	Python module to validate VAT numbers
+WWW=		http://code.google.com/p/vatnumber/
 
 LICENSE=	GPLv3
 

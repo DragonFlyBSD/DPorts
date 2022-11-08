@@ -1,5 +1,3 @@
-# Created by: kris@FreeBSD.org
-
 PORTNAME=	tads
 PORTVERSION=	2.5.9
 CATEGORIES=	games lang
@@ -8,6 +6,7 @@ DISTNAME=	tads23-unix
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	TADS compiler/interpreter for interactive fiction
+WWW=		https://www.tads.org/
 
 LICENSE=	TADS
 LICENSE_NAME=	TADS FREEWARE SOURCE CODE LICENSE

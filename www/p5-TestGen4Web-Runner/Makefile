@@ -1,5 +1,3 @@
-# Created by: Conor McDermottroe <ports@mcdermottroe.com>
-
 PORTNAME=	TestGen4Web-Runner
 PORTVERSION=	0.11
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	eg@fbsd.lt
 COMMENT=	Perl module to replay files recorded with TestGen4Web
+WWW=		https://metacpan.org/release/TestGen4Web-Runner
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-libwww>=0:www/p5-libwww \

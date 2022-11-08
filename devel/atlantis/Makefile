@@ -1,13 +1,12 @@
-# Created by: Gabriel M. Dutra <0xdutra@gmail.com>
-
 PORTNAME=	atlantis
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.18.2
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	0xdutra@gmail.com
 COMMENT=	Terraform Pull Requests Automation
+WWW=		https://www.runatlantis.io
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

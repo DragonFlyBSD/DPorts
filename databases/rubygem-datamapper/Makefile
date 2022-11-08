@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	datamapper
 PORTVERSION=	1.2.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Fast, thread-safe, object-relational mapper
+WWW=		http://datamapper.org
 
 LICENSE=	MIT
 

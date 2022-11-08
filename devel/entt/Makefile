@@ -1,10 +1,11 @@
 PORTNAME=	entt
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.10.1
+DISTVERSION=	3.10.3
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Fast and reliable entity-component system (ECS) and much more
+WWW=		https://github.com/skypjack/entt/wiki
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

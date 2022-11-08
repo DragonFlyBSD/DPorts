@@ -1,5 +1,3 @@
-# Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-
 PORTNAME=	Text-EtText
 PORTVERSION=	2.2
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Simple plain-text to HTML converter
+WWW=		http://ettext.taint.org/
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

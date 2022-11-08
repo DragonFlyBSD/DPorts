@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	openttd
 DISTVERSION=	12.2
 CATEGORIES=	games
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Open source clone of Microprose Transport Tycoon Deluxe
+WWW=		https://www.openttd.org/
 
 LICENSE=	GPLv2
 

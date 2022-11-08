@@ -1,10 +1,12 @@
 PORTNAME=	gitleaks
 DISTVERSIONPREFIX=	v
-DISTVERSION=	8.8.11
+DISTVERSION=	8.13.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Tool for detecting hardcoded secrets in git repositories
+WWW=		https://github.com/zricethezav/gitleaks
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

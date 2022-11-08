@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	atspi
 PORTVERSION=	2.38.2
 CATEGORIES=	accessibility x11-toolkits python
@@ -10,6 +8,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Python API for the D-BUS based SPI framework
+WWW=		https://gitlab.gnome.org/GNOME/pyatspi2
 
 LICENSE=	LGPL20
 

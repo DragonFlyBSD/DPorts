@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	Sort-Maker
 DISTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple way to make efficient sort subs
+WWW=		https://metacpan.org/release/Sort-Maker
 
 USES=		perl5
 USE_PERL5=	configure

@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	pdfoutline
 PORTVERSION=	5.4
 DISTVERSIONPREFIX=	release/
@@ -8,6 +6,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Add outlines to PDF files
+WWW=		https://github.com/eugmes/fntsample
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

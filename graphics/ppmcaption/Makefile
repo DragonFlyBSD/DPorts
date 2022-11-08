@@ -1,5 +1,3 @@
-# Created by: Mark Pulford <mark@kyne.com.au>
-
 PORTNAME=	ppmcaption
 PORTVERSION=	1.1
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.jwz.org/ppmcaption/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility which adds text to images
+WWW=		https://www.jwz.org/ppmcaption/
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPP="${CPP}"

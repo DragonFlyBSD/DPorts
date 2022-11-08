@@ -1,5 +1,3 @@
-# Created by: Colin Percival
-
 PORTNAME=	tarsnap
 PORTVERSION=	1.0.40
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-autoconf-${PORTVERSION}
 
 MAINTAINER=	cperciva@tarsnap.com
 COMMENT=	Online encrypted backup service (client)
+WWW=		https://www.tarsnap.com/
 
 LICENSE=	tarsnap
 LICENSE_NAME=	tarsnap

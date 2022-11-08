@@ -1,11 +1,13 @@
 PORTNAME=	libstaroffice
 PORTVERSION=	0.0.7
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	LODEV
 MASTER_SITE_SUBDIR=	#
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Library to build a filter for old StarOffice's documents
+WWW=		https://github.com/fosnola/libstaroffice
 
 LICENSE=	LGPL21+ MPL20
 LICENSE_COMB=	dual

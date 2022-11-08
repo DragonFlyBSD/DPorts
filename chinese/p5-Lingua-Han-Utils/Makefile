@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Lingua-Han-Utils
 PORTVERSION=	0.13
 CATEGORIES=	chinese perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Utility tools of Chinese character(HanZi)
+WWW=		https://metacpan.org/release/Lingua-Han-Utils
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

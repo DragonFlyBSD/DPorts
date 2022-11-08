@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Lingua-EN-Syllable
 PORTVERSION=	0.251
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Routine for estimating syllable count in words
+WWW=		https://metacpan.org/release/Lingua-EN-Syllable
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

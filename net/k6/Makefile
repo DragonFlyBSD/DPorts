@@ -1,11 +1,12 @@
 PORTNAME=	k6
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.37.0
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	net
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Modern load testing tool, using Go and Javascript
+WWW=		https://k6.io/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

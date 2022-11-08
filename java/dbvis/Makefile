@@ -1,5 +1,3 @@
-# Created by: Anton Yudin (<contact@toha.org.ua>)
-
 PORTNAME=	dbvis
 DISTVERSION=	13.0.4
 CATEGORIES=	java databases
@@ -8,6 +6,7 @@ DISTNAME=	dbvis_linux_${PORTVERSION:S/./_/g}
 
 MAINTAINER=	jim@ohlste.in
 COMMENT=	DbVisualizer database tool
+WWW=		https://www.dbvis.com/
 
 LICENSE=	DbVisualizer_EULA
 LICENSE_NAME=	End-User License Agreement for DbVisualizer

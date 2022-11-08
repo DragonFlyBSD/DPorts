@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	AnyEvent-BDB
 PORTVERSION=	1.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Truly asynchronous Berkeley DB access
+WWW=		https://metacpan.org/release/AnyEvent-BDB
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

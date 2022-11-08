@@ -1,12 +1,12 @@
 PORTNAME=	antic
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.4
-PORTREVISION=	2
+DISTVERSION=	0.2.5
 PORTEPOCH=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Algebraic Number Theory In C
+WWW=		https://github.com/wbhart/antic
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/gpl-2.0.txt
@@ -15,9 +15,7 @@ LIB_DEPENDS=	libflint.so:math/flint2 \
 		libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr
 
-USES=		gmake
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-static
+USES=		cmake:testing
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -28,7 +26,7 @@ PLIST_FILES=	include/antic/nf.h \
 		include/antic/qfb.h \
 		lib/libantic.so \
 		lib/libantic.so.0 \
-		lib/libantic.so.0.2.4
+		lib/libantic.so.0.2.5
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libantic.so

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	autoprefixer-rails
 PORTVERSION=	10.4.7.0
 CATEGORIES=	textproc ruby
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parse CSS and add vendor prefixes to CSS rules
+WWW=		https://github.com/ai/autoprefixer-rails
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

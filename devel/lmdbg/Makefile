@@ -1,5 +1,3 @@
-# Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-
 PORTNAME=	lmdbg
 PORTVERSION=	1.3.0
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Lightweight malloc debugger
+WWW=		https://sourceforge.net/projects/lmdbg/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE

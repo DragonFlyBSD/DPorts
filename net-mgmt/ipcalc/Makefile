@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	ipcalc
 PORTVERSION=	0.41
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DIST_SUBDIR=	ipcalc
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	IP Calculator
+WWW=		https://jodies.de/ipcalc
 
 LICENSE=	GPLv2
 

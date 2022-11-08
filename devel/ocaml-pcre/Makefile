@@ -1,5 +1,3 @@
-# Created by: Henrik Motakef <henrik.motakef@web.de>
-
 PORTNAME=	pcre
 PORTVERSION=	7.2.3
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Perl compatible regular expressions for Objective Caml
+WWW=		http://www.ocaml.info/home/ocaml_sources.html #pcre-ocaml
 
 LICENSE=	LGPL21
 

@@ -1,5 +1,3 @@
-# Created by: Horia Racoviceanu <horia@racoviceanu.com>
-
 PORTNAME=	ent
 PORTVERSION=	0.20080128
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Entropy calculation and analysis of putative random sequences
+WWW=		https://www.fourmilab.ch/random/
 
 USES=		compiler zip
 NO_WRKSUBDIR=	yes

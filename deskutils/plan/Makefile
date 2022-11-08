@@ -1,5 +1,3 @@
-# Created by: Daniel Eischen <deischen@FreeBSD.org>
-
 # Also update	ports/japanese/plan/ (ja-plan) when this port is updated
 
 PORTNAME=	plan
@@ -11,6 +9,7 @@ MASTER_SITES=	https://cschubert.com/distfiles/plan/ \
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	X/Motif schedule planner with calendar
+WWW=		https://www.bitrot.de/plan.html
 
 FETCH_ARGS=	-Fr --no-passive
 USES=		motif

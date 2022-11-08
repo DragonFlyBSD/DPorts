@@ -1,5 +1,3 @@
-# Created by: Simon Barner <barner@gmx.de>
-
 PORTNAME=	irrlicht
 PORTVERSION=	1.8.5
 CATEGORIES=	x11-toolkits graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/Irrlicht%20SDK/${PORTVERSION:R}/${PORTVERSION}/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	High performance realtime 3D engine
+WWW=		http://irrlicht.sourceforge.net/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/readme.txt

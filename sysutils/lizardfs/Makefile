@@ -1,13 +1,12 @@
-# Created by: John Hixson <jhixson@FreeBSD.org>
-
 PORTNAME=	lizardfs
 PORTVERSION=	3.12.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	16
+PORTREVISION=	18
 CATEGORIES=	sysutils
 
 MAINTAINER=	jhixson@FreeBSD.org
 COMMENT=	Open Source Distributed Filesystem
+WWW=		https://lizardfs.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

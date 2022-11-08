@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	makiki
 PORTVERSION=	0.3
 DISTVERSIONPREFIX=	release_
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	gauche-
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Simple multithreaded HTTP server written in Gauche
+WWW=		https://github.com/shirok/Gauche-makiki
 
 LICENSE=	BSD
 

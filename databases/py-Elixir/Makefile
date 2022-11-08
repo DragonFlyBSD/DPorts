@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	Elixir
 PORTVERSION=	0.7.1
 PORTREVISION=	3
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Declarative Mapper for SQLAlchemy
+WWW=		http://elixir.ematia.de/
 
 LICENSE=	MIT
 

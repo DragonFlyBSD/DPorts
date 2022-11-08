@@ -1,5 +1,3 @@
-# Created by: Dennis Herrmann <dhn@FreeBSD.org>
-
 PORTNAME=	i3lock
 PORTVERSION=	2.13
 CATEGORIES=	deskutils x11
@@ -7,6 +5,7 @@ MASTER_SITES=	http://i3wm.org/${PORTNAME}/
 
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Slightly improved screen locker based on slock
+WWW=		https://i3wm.org/i3lock/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -34,9 +33,6 @@ USE_CSTD=	c99
 GNU_CONFIGURE=	yes
 
 CONFLICTS_INSTALL=	i3lock-color
-
-BUILD_WRKSRC=	${WRKSRC}/${CONFIGURE_TARGET}
-INSTALL_WRKSRC=	${WRKSRC}/${CONFIGURE_TARGET}
 
 PORTDOCS=	CHANGELOG README.md
 

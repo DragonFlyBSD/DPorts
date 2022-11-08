@@ -1,10 +1,11 @@
 PORTNAME=	colmap
 DISTVERSION=	3.6
-PORTREVISION=	8
+PORTREVISION=	10
 CATEGORIES=	graphics
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Structure from motion and multi-view stereo
+WWW=		https://colmap.github.io/
 
 LICENSE=	BSD2CLAUSE BSD3CLAUSE CC-BY-3.0 GPLv3+ MIT SIFTGPU
 LICENSE_COMB=	multi
@@ -26,7 +27,7 @@ USES=		cmake compiler:${OPENMP}c++11-lib eigen:3 gl localbase qt:5 \
 		sqlite
 USE_GITHUB=	yes
 USE_GL=		gl glew
-USE_QT=		qmake_build buildtools_build core gui opengl_build widgets
+USE_QT=		qmake:build buildtools:build core gui opengl:build widgets
 EXCLUDE=	SQLite
 EXTRACT_AFTER_ARGS=	${EXCLUDE:S,^,--exclude lib/,}
 CMAKE_OFF=	BOOST_STATIC CUDA_ENABLED

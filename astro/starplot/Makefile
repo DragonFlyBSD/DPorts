@@ -1,5 +1,3 @@
-# Created by: Patrick Li <pat@databits.net>
-
 PORTNAME=	starplot
 PORTVERSION=	0.95.5
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	http://starplot.org/downloads/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	3-dimensional viewer for star charts
+WWW=		http://www.starplot.org/
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 

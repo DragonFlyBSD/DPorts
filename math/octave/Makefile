@@ -1,13 +1,11 @@
-# Created by: chuckr@FreeBSD.org
-
 PORTNAME=	octave
 PORTVERSION=	${OCTAVE_VERSION}
-PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	GNU
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	High-level interactive language for numerical computations
+WWW=		https://www.octave.org/
 
 LICENSE=	GPLv3
 
@@ -54,7 +52,7 @@ USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}/${PORTVERSION}
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
 USE_QT=		core gui help network opengl \
-		qmake_build buildtools_build linguist_build \
+		qmake:build buildtools:build linguist:build \
 		printsupport sql widgets \
 		xml
 USE_XORG=	x11 xext xfixes xft \
@@ -117,9 +115,9 @@ pre-configure:
 	${REINPLACE_CMD} 's+"makeinfo"+"${LOCALBASE}/bin/makeinfo"+' ${WRKSRC}/libinterp/corefcn/help.cc
 	${REINPLACE_CMD} 's/"-qt=$$qt_version"/"-qt=qt$$qt_version"/' ${WRKSRC}/configure
 
-post-install:
-	(cd ${STAGEDIR}${DATADIR} && ${LN} -s ${PORTVERSION}/imagelib  .)
-	${RM} -r ${STAGEDIR}${DATADIR}/${PORTVERSION}/etc/tests/fixed/${WRKDIR:C+/++:C+/.*++}
+#post-install:
+#	(cd ${STAGEDIR}${DATADIR} && ${LN} -s ${PORTVERSION}/imagelib  .)
+#	${RM} -r ${STAGEDIR}${DATADIR}/${PORTVERSION}/etc/tests/fixed/${WRKDIR:C+/++:C+/.*++}
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

@@ -1,5 +1,3 @@
-# Created by: roam@FreeBSD.org
-
 PORTNAME=	qmail-conf
 PORTVERSION=	0.60
 PORTREVISION=	4
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	Configure various qmail services to run under daemontools
+WWW=		http://www.din.or.jp/~ushijima/qmail-conf.html
 
 # Converted from LEGAL_TEXT
 LICENSE=	djb

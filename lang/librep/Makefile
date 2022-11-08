@@ -1,5 +1,3 @@
-# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-
 PORTNAME=	librep
 PORTVERSION=	0.92.7
 PORTREVISION=	5
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Emacs Lisp like runtime library
+WWW=		https://sawfish.tuxfamily.org/
 
 LICENSE=	GPLv2
 

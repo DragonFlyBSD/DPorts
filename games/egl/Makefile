@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-
 PORTNAME=	egl
 PORTVERSION=	0.3.1
 PORTREVISION=	9
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Enhanced OpenGL-only Quake II engine
+WWW=		http://bfeared.com/library/quake/archive/quakedev/egl/
 
 LICENSE=	GPLv2
 

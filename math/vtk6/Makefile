@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	vtk
 PORTVERSION=	6.2.0
 PORTREVISION=	15
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME:tu}-${PORTVERSION}
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Visualization toolkit
+WWW=		https://www.vtk.org
 
 LICENSE=	BSD3CLAUSE
 
@@ -121,8 +120,8 @@ PLIST_SUB+=	MPI="@comment "
 
 .if ${PORT_OPTIONS:MQT5}
 USES+=		qt:5
-USE_QT=		gui_build gui_run network_build network_run sql_build sql_run \
-		qmake_build opengl webkit_build buildtools webkit_run
+USE_QT=		gui:build gui:run network:build network:run sql:build sql:run \
+		qmake:build opengl webkit:build buildtools webkit:run
 CMAKE_ARGS+=	-DVTK_QT_VERSION:STRING="5" \
 		-DCMAKE_PREFIX_PATH:STRING=${LOCALBASE}/lib/qt5
 PLIST_SUB+=	QTV="qt5"

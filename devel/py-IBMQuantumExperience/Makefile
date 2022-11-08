@@ -1,11 +1,12 @@
 PORTNAME=	IBMQuantumExperience
 DISTVERSION=	2.0.4
-CATEGORIES=	devel
+CATEGORIES=	devel python # quantum-computing
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python library for the Quantum Experience API
+WWW=		https://github.com/IBM/qiskit-api-py
 
 LICENSE=	APACHE20
 

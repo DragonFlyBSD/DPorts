@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	wizznic
 PORTVERSION=	1.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Implementation of the arcade classic Puzznic
+WWW=		https://dustedgames.blogspot.com/p/wizznic.html
 
 LICENSE=	GPLv3+
 

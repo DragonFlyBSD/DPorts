@@ -1,5 +1,3 @@
-# Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-
 # Port logic gratuitously stolen from x11-themes/kde-icons-noia by
 # lioux@.  If it's not defined here and you think it should be, check
 # x11-themes/gnome-icons/bsd.gnome-icons.mk for it.
@@ -14,6 +12,7 @@ EXTRACT_SUFX=	.bz2
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Crystal SVG Icons for Gnome
+WWW=		https://art.gnome.org/
 
 # Converted from RESTRICTED
 LICENSE=	icons

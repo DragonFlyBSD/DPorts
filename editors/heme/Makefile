@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	heme
 PORTVERSION=	0.4.2
 CATEGORIES=	editors
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Small and fast console hex editor for Unix-like systems
+WWW=		http://heme.sourceforge.net/
 
 LICENSE=	GPLv2
 

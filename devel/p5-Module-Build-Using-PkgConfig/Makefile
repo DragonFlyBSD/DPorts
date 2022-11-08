@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Module-Build-Using-PkgConfig
 PORTVERSION=	0.03
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extend Module::Build to use platform libraries provided by pkg-config
+WWW=		https://metacpan.org/release/Module-Build-Using-PkgConfig
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

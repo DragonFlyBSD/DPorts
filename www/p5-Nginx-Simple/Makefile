@@ -1,5 +1,3 @@
-# Created by: Simon Dick <simond@irrelevant.org>
-
 PORTNAME=	Nginx-Simple
 PORTVERSION=	0.07
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	simond@irrelevant.org
 COMMENT=	Perl 5 module for easy to use interface for Nginx Perl Module
+WWW=		https://metacpan.org/release/Nginx-Simple
 
 USES=		perl5
 USE_PERL5=	configure

@@ -1,5 +1,3 @@
-# Created by: Chin-San Huang <chinsan@mail2000.com.tw>
-
 PORTNAME=	dokuwiki
 PORTVERSION=	${DIST_VER:S/${PORTNAME}//:S/-//g}
 CATEGORIES=	www
@@ -8,6 +6,7 @@ DISTNAME=	${DIST_VER}
 
 MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	Simple and easy to use wiki, no database required
+WWW=		https://www.dokuwiki.org/
 
 LICENSE=			BSD3CLAUSE GPLv2 GPLv2+ GPLv3 MIT
 LICENSE_COMB=			multi

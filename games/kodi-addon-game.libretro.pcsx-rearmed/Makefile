@@ -1,5 +1,3 @@
-# Created by: Rozhuk Ivan <rozhuk.im@gmail.com>
-
 PORTNAME=	game.libretro.pcsx-rearmed
 PORTVERSION=	22.0.0.39
 DISTVERSIONSUFFIX=	-Matrix
@@ -8,6 +6,7 @@ CATEGORIES=	games
 
 MAINTAINER=	rozhuk.im@gmail.com
 COMMENT=	Kodi game addon for Sony - PlayStation (PCSX ReARMed)
+WWW=		https://github.com/libretro/pcsx_rearmed
 
 LICENSE=	GPLv2+
 

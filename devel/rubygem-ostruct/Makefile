@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ostruct
 PORTVERSION=	0.5.5
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Class to build custom data structures, similar to a Hash
+WWW=		https://github.com/ruby/ostruct
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

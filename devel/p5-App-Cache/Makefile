@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	App-Cache
 PORTVERSION=	0.37
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Easy application-level caching
+WWW=		https://metacpan.org/release/App-Cache
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

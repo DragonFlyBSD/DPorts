@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	pkgmaker
 PORTVERSION=	0.32.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Package development utilities
+WWW=		https://cran.r-project.org/web/packages/pkgmaker/
 
 LICENSE=	GPLv2+
 

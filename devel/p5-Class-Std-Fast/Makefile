@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	Class-Std-Fast
 PORTVERSION=	0.0.8
 DISTVERSIONPREFIX=	v
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Faster but less secure than Class::Std
+WWW=		https://metacpan.org/release/Class-Std-Fast
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

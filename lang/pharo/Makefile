@@ -1,5 +1,3 @@
-# Created by: mutoh@openedu.org
-
 PORTNAME=	pharo
 DISTVERSION=	1.4
 PORTREVISION=	2
@@ -10,6 +8,7 @@ EXTRACT_ONLY=	Pharo-${DISTVERSION}-${SVNVERSION}.zip
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Smalltalk-inspired language and environment
+WWW=		http://www.pharo-project.org/
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	multi

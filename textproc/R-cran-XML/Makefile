@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	XML
 DISTVERSION=	3.99-0.10
 CATEGORIES=	textproc
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Tools for parsing and generating XML
+WWW=		https://cran.r-project.org/web/packages/XML/
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	typer
-PORTVERSION=	0.4.1
+PORTVERSION=	0.6.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for building CLI applications
+WWW=		https://github.com/tiangolo/typer
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

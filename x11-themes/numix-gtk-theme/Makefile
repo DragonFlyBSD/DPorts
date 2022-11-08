@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	numix-gtk-theme
 PORTVERSION=	2.6.7
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	x11-themes xfce
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gtk flat themes
+WWW=		https://numixproject.github.io
 
 LICENSE=	GPLv3
 

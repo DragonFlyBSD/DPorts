@@ -1,5 +1,3 @@
-# Created by: Andy Clark <andrewclarkii@gmail.com>
-
 PORTNAME=	nuttcp
 PORTVERSION=	8.2.2
 CATEGORIES=	benchmarks net
@@ -10,6 +8,7 @@ EXTRACT_ONLY=	# none
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	TCP/UDP network testing tool
+WWW=		https://nuttcp.net/
 
 LICENSE=	GPLv2
 

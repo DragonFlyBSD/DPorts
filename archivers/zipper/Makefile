@@ -1,5 +1,3 @@
-# Created by: gurkan@phys.ethz.ch
-
 PORTNAME=	zipper
 PORTVERSION=	1.5
 PORTREVISION=	8
@@ -9,6 +7,7 @@ DISTNAME=	Zipper-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Tool for inspecting the contents of a compressed archive
+WWW=		http://gap.nongnu.org/zipper/
 
 USES=		gnustep
 USE_GNUSTEP=	back build

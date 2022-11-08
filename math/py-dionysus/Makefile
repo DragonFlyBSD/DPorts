@@ -1,11 +1,13 @@
 PORTNAME=	dionysus
 PORTVERSION=	g20210521
+PORTREVISION=	1
 CATEGORIES=	math
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	-topology-library
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Library for computing persistent homology
+WWW=		https://mrzv.org/software/dionysus2/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

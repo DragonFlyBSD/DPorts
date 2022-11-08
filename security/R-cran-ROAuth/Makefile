@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	ROAuth
 PORTVERSION=	0.9.6
 PORTREVISION=	4
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	R interface for OAuth
+WWW=		https://cran.r-project.org/web/packages/ROAuth/
 
 LICENSE=	ART20
 

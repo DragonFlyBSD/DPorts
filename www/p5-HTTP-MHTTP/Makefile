@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	HTTP-MHTTP
 PORTVERSION=	0.15
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Low level access to the HTTP protocol
+WWW=		https://metacpan.org/release/HTTP-MHTTP
 
 USES=		perl5 ssl
 USE_PERL5=	configure patch

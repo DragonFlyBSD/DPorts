@@ -1,5 +1,3 @@
-# Created by: Takefu
-
 PORTNAME=	POE-Quickie
 PORTVERSION=	0.18
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	takefu@airport.fm
 COMMENT=	Lazy way to wrap blocking code and programs
+WWW=		https://metacpan.org/release/POE-Quickie
 
 LICENSE=	GPLv1 ART10
 LICENSE_COMB=	dual

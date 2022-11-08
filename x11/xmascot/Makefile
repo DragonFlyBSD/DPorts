@@ -1,5 +1,3 @@
-# Created by: Yukihiro Nakai <Nakai@Mlab.t.u-tokyo.ac.jp>
-
 PORTNAME=	xmascot
 PORTVERSION=	2.6a.20200830
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	x11
 
 MAINTAINER=	nyan@FreeBSD.org
 COMMENT=	Moving mascot on your X11 screen
+WWW=		https://cclub-flying.dsl.gr.jp/products/xmascot/
 
 LICENSE=	UNKNOWN
 LICENSE_NAME=	XMascot

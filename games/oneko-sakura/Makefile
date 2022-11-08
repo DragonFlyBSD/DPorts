@@ -1,5 +1,3 @@
-# Created by: HOTARU-YA <hotaru@tail.net>
-
 PORTNAME=	oneko
 PORTVERSION=	1.2
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	-sakura
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cat, Sakura or Tomoyo chasing a mouse all over the screen
+WWW=		http://www.daidouji.com/oneko/
 
 # Converted from NO_CDROM
 LICENSE=	oneko

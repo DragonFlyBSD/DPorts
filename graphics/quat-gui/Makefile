@@ -1,5 +1,3 @@
-# Created by: David Yeske <dyeske@gmail.com>
-
 PORTNAME=	quat
 PORTVERSION=	1.20
 PORTREVISION=	17
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-gui
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Three-dimensional fractal creator (X11 GUI)
+WWW=		https://www.physcip.uni-stuttgart.de/pages/~phy11733/index_e.html
 
 LICENSE=	GPLv2+
 

@@ -1,5 +1,3 @@
-# Created by: Colin Booth <colin@heliocat.net>
-
 PORTNAME=	s6
 PORTVERSION=	2.11.1.1
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.skarnet.org/software/${PORTNAME}/
 
 MAINTAINER=	crest@rlwinm.de
 COMMENT=	Skarnet.org supervision suite
+WWW=		https://www.skarnet.org/software/s6/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING

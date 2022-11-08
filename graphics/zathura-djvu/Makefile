@@ -1,5 +1,3 @@
-# Created by: Alexander Y. Grigoryev <alexander.4mail@gmail.com>
-
 PORTNAME=	zathura-djvu
 DISTVERSION=	0.2.9
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://git.pwmt.org/pwmt/${PORTNAME}/-/archive/${DISTVERSION}/
 
 MAINTAINER=	alexander.4mail@gmail.com
 COMMENT=	DjVu support for zathura
+WWW=		https://pwmt.org/projects/zathura/plugins/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE

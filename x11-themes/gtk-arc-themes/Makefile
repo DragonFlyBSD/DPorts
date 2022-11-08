@@ -1,5 +1,3 @@
-# Created by: archfan <mail_me@riseup.net>
-
 PORTNAME=	gtk-arc-themes
 DISTVERSION=	20220223
 CATEGORIES=	x11-themes
@@ -8,6 +6,7 @@ DISTNAME=	arc-theme-${DISTVERSION}
 
 MAINTAINER=	Alexander88207@protonmail.com
 COMMENT=	Arc-themes for GTK-2.0,3.0 & 4.0 based desktop environments
+WWW=		https://github.com/jnsh/arc-theme
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

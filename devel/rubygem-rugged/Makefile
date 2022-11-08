@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 # Also update devel/libgit2, devel/libgit2-glib, devel/py-pygit2
 
 PORTNAME=	rugged
@@ -9,6 +7,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Ruby bindings to the libgit2 library
+WWW=		https://github.com/libgit2/rugged
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,11 +1,11 @@
---- aconfigure.intermediate	2021-12-22 06:39:42.000000000 +0000
+--- aconfigure.orig	2022-10-26 21:22:55 UTC
 +++ aconfigure
-@@ -9162,7 +9162,7 @@ $as_echo "Checking if libwebrtc is disab
+@@ -9941,7 +9941,7 @@ printf "%s\n" "Checking if libwebrtc is
  			ac_webrtc_instset=sse2
  			ac_webrtc_cflags="-msse2"
  			;;
--		     *win32* | *w32* | *darwin* | *linux* | *amd64*freebsd*)
-+		     *win32* | *w32* | *darwin* | *linux* | *amd64*freebsd* | *dragonfly*)
+-		     *win32* | *w32* | *darwin* | *linux* | *amd64*freebsd* | *x86_64*freebsd*)
++		     *win32* | *w32* | *darwin* | *linux* | *amd64*freebsd* | *x86_64*freebsd* | *dragonfly*)
                           case $target in
                               armv7l*gnueabihf)
                                   ac_webrtc_instset=neon

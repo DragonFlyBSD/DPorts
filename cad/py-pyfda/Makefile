@@ -8,6 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	GUI tool for designing and analysing discrete time filters
+WWW=		https://github.com/chipmuenk/pyFDA
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}docutils>0:textproc/py-docutils@${PY_FLAVOR}
 
 USES=		python:3.7+ pyqt:5
 USE_PYTHON=	distutils autoplist
-USE_PYQT=	pyqt5_run
+USE_PYQT=	pyqt5:run
 NO_ARCH=	yes
 
 post-extract:

@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Clone-More
 PORTVERSION=	0.90.2
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl module for natively copying Perl data structures
+WWW=		https://metacpan.org/release/WAZZUTEKE/Clone-More-0.90.2
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

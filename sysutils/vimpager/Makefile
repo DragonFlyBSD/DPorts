@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	vimpager
 DISTVERSION=	2.06.20200712
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Use Vim/NeoVim as a pager
+WWW=		https://github.com/rkitover/vimpager
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

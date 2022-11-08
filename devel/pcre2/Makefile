@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	pcre2
 PORTVERSION=	10.40
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/PCRE2Project/${PORTNAME}/releases/download/${PO
 
 MAINTAINER=	krion@FreeBSD.org
 COMMENT=	Perl Compatible Regular Expressions library, version 2
+WWW=		https://www.pcre.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENCE

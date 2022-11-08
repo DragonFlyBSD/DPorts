@@ -1,5 +1,3 @@
-# Created by: Sevan Janiyan <venture37@geeklan.co.uk>
-
 PORTNAME=	hashtypes
 PORTVERSION=	0.1.1
 PORTREVISION=	3
@@ -9,6 +7,7 @@ MASTER_SITES=	http://api.pgxn.org/dist/hashtypes/${PORTVERSION}/ \
 
 MAINTAINER=	oss-contrib@dreamindustries.co
 COMMENT=	Hash data types for PostgreSQL
+WWW=		https://pgxn.org/dist/hashtypes/
 
 USES=		gmake pgsql zip
 LLD_UNSAFE=	yes

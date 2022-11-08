@@ -1,5 +1,3 @@
-# Created by: Mathieu Arnold <m@absolight.net>
-
 PORTNAME=	Locale-Maketext-Gettext
 PORTVERSION=	1.32
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Joins gettext and Maketext frameworks
+WWW=		https://metacpan.org/release/Locale-Maketext-Gettext
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

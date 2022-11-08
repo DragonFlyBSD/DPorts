@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	tcllauncher
 PORTVERSION=	1.10
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Launcher program for Tcl applications
+WWW=		https://github.com/flightaware/tcllauncher/
 
 LICENSE=	MIT
 

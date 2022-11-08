@@ -1,5 +1,3 @@
-# Created by: Thomas Quinot <thomas@cuivre.fr.eu.org>
-
 PORTNAME=	proxy-suite
 PORTVERSION=	1.9.2.4
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.suse.com/pub/projects/proxy-suite/src/
 
 MAINTAINER=	thomas@FreeBSD.org
 COMMENT=	The SuSE Proxy-Suite, a set of programs to enhance firewall security
+WWW=		https://www.suse.com/en/whitepapers/proxy_suite/
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes

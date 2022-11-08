@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	List-Cycle
 PORTVERSION=	1.04
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Objects for cycling through a list of values
+WWW=		https://metacpan.org/release/List-Cycle
 
 LICENSE=	ART20
 

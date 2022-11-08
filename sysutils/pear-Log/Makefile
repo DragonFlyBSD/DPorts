@@ -1,11 +1,10 @@
-# Created by: Thierry Thomas (<thierry@pompo.net>)
-
 PORTNAME=	Log
 PORTVERSION=	1.13.3
 CATEGORIES=	sysutils www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR logging utilities
+WWW=		https://pear.php.net/package/Log
 
 LICENSE=	MIT
 

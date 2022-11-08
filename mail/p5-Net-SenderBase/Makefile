@@ -1,5 +1,3 @@
-# Created by: J.R. Oldroyd <fbsd@opal.com>
-
 PORTNAME=	Net-SenderBase
 PORTVERSION=	1.02
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Query the SenderBase service
+WWW=		https://metacpan.org/release/Net-SenderBase
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

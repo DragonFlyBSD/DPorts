@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Method-Signatures
 PORTVERSION=	20170211
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Method and function declarations with signatures and no source filter
+WWW=		https://metacpan.org/release/Method-Signatures
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

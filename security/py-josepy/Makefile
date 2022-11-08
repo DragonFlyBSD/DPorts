@@ -1,5 +1,3 @@
-# Created by: Carlos J Puga Medina <cpm@FreeBSD.org>
-
 PORTNAME=	josepy
 PORTVERSION=	1.13.0
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	JOSE protocol implementation in Python
+WWW=		https://josepy.readthedocs.io/en/latest/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

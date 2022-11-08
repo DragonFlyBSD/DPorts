@@ -1,5 +1,3 @@
-# Created by: Patrick Powell <papowell@astart.com>
-
 PORTNAME=	XML-Compile-Dumper
 PORTVERSION=	0.13
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	papowell@astart.com
 COMMENT=	Dump Compiled XML Translators
+WWW=		https://metacpan.org/release/XML-Compile-Dumper
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

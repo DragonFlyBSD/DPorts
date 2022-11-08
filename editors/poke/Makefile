@@ -1,5 +1,3 @@
-# Created by: Olga Smirnova <mistresssilvara@hotmail.com>
-
 PORTNAME=	poke
 PORTVERSION=	1.0
 CATEGORIES=	editors
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	mistresssilvara@hotmail.com
 COMMENT=	Scriptable interactive binary editor
+WWW=		https://www.jemarch.net/poke
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

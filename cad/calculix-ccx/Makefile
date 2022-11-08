@@ -1,7 +1,5 @@
-# Created by: Pedro Giffuni
-
 PORTNAME=	ccx
-PORTVERSION=	2.19
+PORTVERSION=	2.20
 CATEGORIES=	cad
 MASTER_SITES=	http://www.dhondt.de/
 PKGNAMEPREFIX=	CalculiX-
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${DIST_SOURCES}
 
 MAINTAINER=	rsmith@xs4all.nl
 COMMENT=	Three-Dimensional Structural Finite Element Program
+WWW=		http://www.calculix.de/
 
 LICENSE=	GPLv2
 
@@ -22,22 +21,22 @@ USE_PERL5=	build
 
 DIST_SOURCES=	ccx_${PORTVERSION}.src${EXTRACT_SUFX}
 DIST_HTM=	ccx_${PORTVERSION}.htm${EXTRACT_SUFX}
-DIST_PS=	ccx_${PORTVERSION}.ps${EXTRACT_SUFX}
+DIST_PDF=	ccx_${PORTVERSION}.pdf
 DIST_EXAMPLES=	ccx_${PORTVERSION}.test${EXTRACT_SUFX}
 
 ALL_TARGET=	#Empty
 
 CCX_VER=	ccx_${PORTVERSION}
-WRKSRC=		${WRKDIR}/CalculiX/${CCX_VER}/src
 DOCSDIR=	${PREFIX}/share/doc/CalculiX
+WRKSRC=		${WRKDIR}/CalculiX/${CCX_VER}/src
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
-DISTFILES+=	${DIST_HTM} ${DIST_PS}
-EXTRACT_ONLY+=	${DIST_HTM} ${DIST_PS}
+DISTFILES+=	${DIST_HTM} ${DIST_PDF}
+EXTRACT_ONLY+=	${DIST_HTM}
 .endif
 
 .if $(PORT_OPTIONS:MEXAMPLES)
@@ -73,9 +72,8 @@ do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	@(cd ${WRKDIR}/CalculiX/${CCX_VER}/doc/ccx && ${COPYTREE_SHARE} . \
 		${STAGEDIR}${DOCSDIR}/ccx)
-	${INSTALL_DATA} ${WRKDIR}/CalculiX/${CCX_VER}/doc/${CCX_VER}.ps \
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${DIST_PDF} \
 		${STAGEDIR}${DOCSDIR}
-	@${GZIP_CMD} ${STAGEDIR}${DOCSDIR}/${CCX_VER}.ps
 
 do-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}

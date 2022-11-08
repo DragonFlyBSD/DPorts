@@ -1,8 +1,6 @@
-# Created by: Jacek Pelka <jacek@combit.com.pl>
-
 PORTNAME=	kadu
 PORTVERSION=	4.3
-PORTREVISION=	23
+PORTREVISION=	24
 PORTEPOCH=	1
 CATEGORIES=	polish net-im
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION}/:kadu \
@@ -14,6 +12,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Internet communicator supporting Gadu-Gadu and Jabber/XMPP
+WWW=		http://kadu.im
 
 LICENSE=	GPLv2
 
@@ -41,8 +40,8 @@ USE_GNOME=	glib20
 USE_QT=		concurrent core dbus declarative gui multimedia network \
 		script scripttools sql webkit widgets x11extras \
 		xml xmlpatterns \
-		buildtools_build linguisttools_build testlib_build \
-		qmake_build imageformats_run sql-sqlite3_run
+		buildtools:build linguisttools:build testlib:build \
+		qmake:build imageformats:run sql-sqlite3:run
 # Setting KADU_VERSION disables git invocation
 CMAKE_ARGS=	-DKADU_VERSION:STRING="${DISTVERSION}" -DWITH_ENCHANT=ON \
 		-DENABLE_TESTS=OFF

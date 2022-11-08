@@ -1,13 +1,12 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	traits
-PORTVERSION=	6.3.2
+PORTVERSION=	6.4.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Explicitly Typed Attributes for Python
+WWW=		https://pypi.org/project/traits/
 
 LICENSE=	BSD3CLAUSE PSFL
 LICENSE_COMB=	multi

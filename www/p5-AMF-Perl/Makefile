@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	AMF-Perl
 PORTVERSION=	0.15
 PORTREVISION=	3
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Flash Remoting in Perl
+WWW=		https://metacpan.org/release/Flash-FLAP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Denis Pokataev <catone@cpan.org>
-
 PORTNAME=	AnyEvent-Run
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Run a process or coderef asynchronously
+WWW=		https://metacpan.org/release/AnyEvent-Run
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

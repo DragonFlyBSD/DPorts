@@ -1,5 +1,3 @@
-# Created by: Yinghong Liu <relaxbsd@gmail.com>
-
 PORTNAME=	etl
 PORTVERSION=	1.4.2
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel lang
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Voria Extended Class and Template Library
+WWW=		https://www.synfig.org/
 
 LICENSE=	GPLv2+
 

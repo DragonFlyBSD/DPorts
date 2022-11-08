@@ -1,10 +1,11 @@
 PORTNAME=	gsad
 DISTVERSIONPREFIX=	v
-DISTVERSION=	21.4.4
+DISTVERSION=	22.4.0
 CATEGORIES=	security
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Greenbone Security Assistant HTTP server
+WWW=		https://github.com/greenbone/gsa
 
 LICENSE=	AGPLv3+
 
@@ -39,6 +40,7 @@ post-patch:
 	${REINPLACE_CMD} -e 's|$${GVM_LOG_DIR}|/var/log/gvm|g' ${WRKSRC}/src/gsad_log.conf.sample
 
 post-install:
+	@${MKDIR} ${STAGEDIR}/var/run/gsad
 	@${MKDIR} ${STAGEDIR}/var/run/gvm
 	@${MKDIR} ${STAGEDIR}${ETCDIR}
 	@${INSTALL_DATA} ${WRKSRC}/src/gsad_log.conf.sample ${STAGEDIR}${ETCDIR}
@@ -47,6 +49,7 @@ post-install:
 	@${ECHO_CMD} "sbin/gsad" >> ${TMPPLIST} >> ${TMPPLIST}
 	@${ECHO_CMD} "share/man/man8/gsad.8.gz" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dir(gvm,gvm,750) /var/run/gsad" >> ${TMPPLIST}
+	@${ECHO_CMD} "@dir(gvm,gvm,750) /var/run/gvm" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dir(gvm,gvm,750) /var/run/gvm" >> ${TMPPLIST}
 
 .include <bsd.port.mk>

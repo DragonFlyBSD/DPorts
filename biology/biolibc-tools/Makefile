@@ -1,5 +1,3 @@
-# Created by: J. Bacon <jwb@FreeBSD.org>
-
 PORTNAME=	biolibc-tools
 DISTVERSION=	0.1.3
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	biology
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	High-performance bioinformatics tools based on biolibc
+WWW=		https://github.com/auerlab/biolibc-tools
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

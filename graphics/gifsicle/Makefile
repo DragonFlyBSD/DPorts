@@ -1,5 +1,3 @@
-# Created by: Brad Hendrickse <bradh@iafrica.com>
-
 PORTNAME=	gifsicle
 PORTVERSION=	1.93
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.lcdf.org/gifsicle/
 
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Manipulates GIF images and animations
+WWW=		https://www.lcdf.org/gifsicle/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

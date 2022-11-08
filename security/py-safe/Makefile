@@ -1,5 +1,3 @@
-# Created by: andrej@ebert.su
-
 PORTNAME=	safe
 PORTVERSION=	0.4
 CATEGORIES=	security python
@@ -9,6 +7,7 @@ DISTNAME=	Safe-${PORTVERSION}
 
 MAINTAINER=	andrej@ebert.su
 COMMENT=	Python library to test password strength
+WWW=		https://pypi.org/project/Safe/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

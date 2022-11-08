@@ -1,5 +1,3 @@
-# Created by: George Hartzell <hartzell@alerce.com>
-
 PORTNAME=	CGI-Application-Plugin-Redirect
 PORTVERSION=	1.00
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Easy external redirects in CGI::Application
+WWW=		https://metacpan.org/release/CGI-Application-Plugin-Redirect
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

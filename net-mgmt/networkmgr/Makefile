@@ -1,5 +1,3 @@
-# Created by: Eric Turgeon <ericturgeon.bsd@gmail.org>
-
 PORTNAME=	networkmgr
 DISTVERSION=	6.1
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	net-mgmt
 
 MAINTAINER=	ericbsd@FreeBSD.org
 COMMENT=	FreeBSD/GhostBSD network connection manager
+WWW=		https://github.com/GhostBSD/networkmgr
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Class-Method-Modifiers
 PORTVERSION=	2.13
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Provides Moose-like method modifiers
+WWW=		https://metacpan.org/release/Class-Method-Modifiers
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

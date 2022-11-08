@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Text-Prefix-XS
 PORTVERSION=	0.15
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast prefix searching
+WWW=		https://metacpan.org/release/Text-Prefix-XS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

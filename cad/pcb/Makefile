@@ -1,5 +1,3 @@
-# Created by: Michael Reifenberger <mr@FreeBSD.org>
-
 PORTNAME=	pcb
 PORTVERSION=	4.2.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	X11 interactive printed circuit board layout system
+WWW=		http://pcb.geda-project.org/
 
 LICENSE=	GPLv2
 

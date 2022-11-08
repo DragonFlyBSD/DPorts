@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	codeworker
 PORTVERSION=	4.5.3
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ DISTNAME=	CodeWorker_SRC${PORTVERSION:S/./_/g}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Versatile parsing tool and source code generator
+WWW=		http://codeworker.free.fr/
 
 LICENSE=	LGPL21
 

@@ -1,11 +1,10 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	dump1090
 PORTVERSION=	20200718
 CATEGORIES=	comms
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Simple Mode S decoder for RTLSDR devices
+WWW=		https://github.com/antirez/dump1090
 
 LICENSE=	BSD3CLAUSE
 

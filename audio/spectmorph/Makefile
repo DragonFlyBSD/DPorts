@@ -6,6 +6,7 @@ MASTER_SITES=	https://spectmorph.org/files/releases/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Analyze and combine samples of musical instruments
+WWW=		https://spectmorph.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -20,7 +21,7 @@ LIB_DEPENDS=	libao.so:audio/libao \
 		libsndfile.so:audio/libsndfile
 
 USES=		autoreconf desktop-file-utils gettext-runtime gl gmake gnome libtool pkgconfig python:run qt:5 shebangfix tar:bz2 xorg
-USE_QT=		core gui widgets buildtools_build
+USE_QT=		core gui widgets buildtools:build
 USE_GNOME=	cairo glib20
 USE_GL=		gl
 USE_XORG=	x11

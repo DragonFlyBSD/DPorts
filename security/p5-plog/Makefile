@@ -1,5 +1,3 @@
-# Created by: Cy Schubert <cy@FreeBSD.org>
-
 PORTNAME=	plog
 PORTVERSION=	0.10
 CATEGORIES=	security perl5
@@ -9,6 +7,7 @@ DISTFILES=	plog.pl
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Perl based ipfilter log reporter
+WWW=		http://www.antibozo.net/ogata/webtools/
 
 USES=		perl5 shebangfix
 EXTRACT_CMD=	${CP}

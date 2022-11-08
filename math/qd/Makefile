@@ -1,5 +1,3 @@
-# Created by: Nakata Maho <maho@FreeBSD.org>
-
 PORTNAME=	qd
 DISTVERSION=	2.3.23
 CATEGORIES=	math
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.davidhbailey.com/dhbsoftware/
 
 MAINTAINER=	fortran@FreeBSD.org
 COMMENT=	Double-Double and Quad-Double Arithmetic
+WWW=		https://crd-legacy.lbl.gov/~dhbailey/mpdist
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

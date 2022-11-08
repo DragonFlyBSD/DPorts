@@ -1,5 +1,3 @@
-# Created by: Alexander Sulfrian <alexander@sulfrian.net>
-
 PORTNAME=	nsca-ng
 PORTVERSION=	1.6
 DISTVERSIONPREFIX=v
@@ -7,6 +5,7 @@ CATEGORIES=	net-mgmt
 
 MAINTAINER=	alexander@sulfrian.net
 COMMENT=	Nagios Service Check Acceptor
+WWW=		https://github.com/weiss/nsca-ng
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

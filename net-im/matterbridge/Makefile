@@ -1,11 +1,12 @@
 PORTNAME=	matterbridge
 PORTVERSION=	1.22.3
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	net-im
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Chat network bridge
+WWW=		https://github.com/42wim/matterbridge
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

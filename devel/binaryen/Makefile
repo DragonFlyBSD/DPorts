@@ -3,8 +3,9 @@ DISTVERSIONPREFIX=	version_
 DISTVERSION=	105
 CATEGORIES=	devel
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Compiler infrastructure and toolchain library for WebAssembly
+WWW=		https://github.com/WebAssembly/binaryen
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

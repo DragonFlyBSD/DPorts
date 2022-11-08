@@ -1,5 +1,3 @@
-# Created by: Chris Piazza <cpiazza@FreeBSD.org>
-
 PORTNAME=	yafc
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.3.7
@@ -7,6 +5,7 @@ CATEGORIES=	ftp
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Yet another FTP client, similar to ftp(1)
+WWW=		https://web.archive.org/web/20180422134425/http://www.yafc-ftp.com/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

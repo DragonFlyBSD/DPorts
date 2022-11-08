@@ -1,5 +1,3 @@
-# Created by: Pav Lucistnik <pav@FreeBSD.org>
-
 PORTNAME=	rzip
 PORTVERSION=	2.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SAMBA/rzip
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Compression program similar to gzip or bzip2
+WWW=		https://rzip.samba.org/
 
 LICENSE=	GPLv2
 

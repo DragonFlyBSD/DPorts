@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Graph-SocialMap
 PORTVERSION=	0.13
 CATEGORIES=	graphics perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Easy tool to create social network maps
+WWW=		https://metacpan.org/release/Graph-SocialMap
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

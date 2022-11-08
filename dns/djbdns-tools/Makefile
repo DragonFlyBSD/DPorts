@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@FreeBSD.org>
-
 PORTNAME=	djbdns
 PORTVERSION=	1.05
 CATEGORIES=	dns
@@ -12,6 +10,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Resolver tools from djbdns package
+WWW=		https://cr.yp.to/djbdns.html
 
 CONFLICTS=	djbdns
 

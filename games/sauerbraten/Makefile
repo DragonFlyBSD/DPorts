@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-
 PORTNAME=	sauerbraten
 PORTVERSION=	20201221
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_2020_12_21_linux
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	First person shooter based on Cube
+WWW=		http://sauerbraten.org/
 
 LICENSE=	MIT ZLIB
 LICENSE_COMB=	multi

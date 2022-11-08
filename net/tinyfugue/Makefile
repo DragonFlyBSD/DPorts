@@ -1,5 +1,3 @@
-# Created by: mike@binghamton.edu
-
 PORTNAME=	tf
 PORTVERSION=	5.0b8
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.//}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Popular programmable MUD client, with macro support and more
+WWW=		http://tinyfugue.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

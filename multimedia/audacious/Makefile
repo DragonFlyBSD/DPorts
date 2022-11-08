@@ -1,13 +1,11 @@
-# Created by: Zastupov Stepan [RedChrom] <redchrom@mail.ru>
-
 PORTNAME=	audacious
-PORTVERSION=	4.1
-PORTREVISION=	1
+PORTVERSION=	4.2
 CATEGORIES=	multimedia audio
 MASTER_SITES=	https://distfiles.audacious-media-player.org/
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Lightweight and versatile audio player
+WWW=		https://audacious-media-player.org/
 
 LICENSE=	BSD2CLAUSE BSD3CLAUSE
 LICENSE_COMB=	multi
@@ -40,7 +38,7 @@ CONFIGURE_ARGS=	--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
 .if ${FLAVOR} == qt5
 CONFIGURE_ARGS+=	--enable-qt --disable-gtk
 USES+=			qt:5
-USE_QT=			buildtools_build core gui widgets
+USE_QT=			buildtools:build core gui widgets
 PLIST_SUB=		QT5="" GTK2="@comment "
 .elif ${FLAVOR} == gtk2
 CONFIGURE_ARGS+=	--disable-qt --enable-gtk

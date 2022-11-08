@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	vincenty
 PORTVERSION=	0.1.4
 CATEGORIES=	math geography python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Calculate the geographical distance between 2 points
+WWW=		https://github.com/maurycyp/vincenty
 
 LICENSE=	UNLICENSE
 

@@ -1,12 +1,11 @@
-# Created by: marcus@FreeBSD.org
-
 PORTNAME=	poppler
-DISTVERSION=	22.06.0
+DISTVERSION=	22.09.0
 CATEGORIES=	graphics print
 MASTER_SITES=	https://poppler.freedesktop.org/
 
 MAINTAINER?=	desktop@FreeBSD.org
 COMMENT?=	PDF rendering library
+WWW=		https://poppler.freedesktop.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -18,10 +17,11 @@ LIB_DEPENDS=	libnspr4.so:devel/nspr \
 		libfreetype.so:print/freetype2 \
 		libnss3.so:security/nss \
 		libfontconfig.so:x11-fonts/fontconfig
-BUILD_DEPENDS=	${LOCALBASE}/include/boost/container/small_vector.hpp:devel/boost-libs
+BUILD_DEPENDS=	${LOCALBASE}/include/boost/container/small_vector.hpp:devel/boost-libs \
+		gsed:textproc/gsed
 RUN_DEPENDS=	poppler-data>0:graphics/poppler-data
 
-USES=		cmake:insource compiler:c++17-lang cpe gnome jpeg libtool \
+USES=		cmake:insource compiler:c++17-lang cpe gnome gperf jpeg libtool \
 		localbase pathfix pkgconfig tar:xz
 CPE_VENDOR=	freedesktop
 USE_GNOME=	cairo libxml2
@@ -41,8 +41,11 @@ CMAKE_OFF=	BUILD_GTK_TESTS
 CMAKE_ARGS+=	-DCMAKE_IGNORE_PATH:PATH=${PREFIX}/lib/openjpeg-1.5
 
 # Slave ports.
-_POPPLER_SLAVES=	library glib qt5 utils
+_POPPLER_SLAVES=	library glib qt5 qt6 utils
 _SLAVE_PORT?=		library
+
+BINARY_ALIAS=		gperf=${GPERF} \
+			sed=${LOCALBASE}/bin/gsed
 
 # Activate the wanted module, and deactivate the others.
 CMAKE_ON+=	ENABLE_${_SLAVE_PORT:tu}
@@ -52,7 +55,7 @@ CMAKE_OFF+=	${_POPPLER_SLAVES:N${_SLAVE_PORT}:tu:S/^/ENABLE_/}
 PORTSCOUT=	limitw:1,even
 USES+=		iconv
 CMAKE_ON+=	ENABLE_CPP
-PLIST_SUB+=	SHLIB_VER=122
+PLIST_SUB+=	SHLIB_VER=124
 
 OPTIONS_DEFINE=		CURL OPENJPEG
 OPTIONS_DEFAULT=	OPENJPEG
@@ -72,11 +75,15 @@ CMAKE_ARGS+=		-DENABLE_LIBOPENJPEG:STRING="none" \
 .  if ${_SLAVE_PORT} == glib
 USES+=			python:build
 USE_GNOME+=		glib20 introspection:Build
-BINARY_ALIAS=		python3=${PYTHON_CMD}
+BINARY_ALIAS+=		python3=${PYTHON_CMD}
 .  elif ${_SLAVE_PORT} == qt5
 USES+=			qt:5
 USE_QT=			core gui widgets xml \
-			buildtools_build qmake_build testlib_build
+			buildtools:build qmake:build testlib:build
+.  elif ${_SLAVE_PORT} == qt6
+USES+=			gl qt:6
+USE_GL+=		gl opengl
+USE_QT=			base
 .  elif ${_SLAVE_PORT} == utils
 LIB_DEPENDS+=		libpoppler-glib.so:graphics/poppler-glib
 USES+=			gnome

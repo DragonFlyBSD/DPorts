@@ -1,5 +1,3 @@
-# Created by Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	marginalia
 PORTVERSION=	1.10.1
 CATEGORIES=	databases rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Attach comments to your ActiveRecord queries
+WWW=		https://github.com/basecamp/marginalia
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

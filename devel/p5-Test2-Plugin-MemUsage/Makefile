@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test2-Plugin-MemUsage
 PORTVERSION=	0.002003
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Collect and display memory usage information
+WWW=		https://metacpan.org/release/Test2-Plugin-MemUsage
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

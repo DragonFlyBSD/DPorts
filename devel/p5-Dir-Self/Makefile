@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Dir-Self
 PORTVERSION=	0.11
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	__DIR__ constant for the directory your source file is in
+WWW=		https://metacpan.org/release/Dir-Self
 
 USES=		perl5
 USE_PERL5=	configure

@@ -7,6 +7,7 @@ DISTNAME=	Protego-${DISTVERSION}
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Pure-Python robots.txt parser
+WWW=		https://pypi.org/project/Protego/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,5 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}
 
 USES=		python:3.6+
 USE_PYTHON=	distutils concurrent autoplist
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

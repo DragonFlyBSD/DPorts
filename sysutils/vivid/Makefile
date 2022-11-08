@@ -1,11 +1,12 @@
 PORTNAME=	vivid
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.8.0
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	sysutils
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Themeable LS_COLORS generator with a rich filetype datebase
+WWW=		https://github.com/sharkdp/vivid
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

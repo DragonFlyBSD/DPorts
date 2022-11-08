@@ -1,5 +1,3 @@
-# Created by: Autrijus Tang <autrijus@autrijus.org>
-
 PORTNAME=	libapreq2
 PORTVERSION=	2.13
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	APACHE_HTTPD/libapreq
 
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Generic Apache2 Request Library
+WWW=		https://metacpan.org/dist/libapreq2
 
 LICENSE=	APACHE20
 

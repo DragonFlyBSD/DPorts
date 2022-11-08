@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	MooseX-Getopt
 PORTVERSION=	0.75
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Moose role for processing command line options
+WWW=		https://metacpan.org/release/MooseX-Getopt
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

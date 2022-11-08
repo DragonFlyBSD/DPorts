@@ -1,5 +1,3 @@
-# Created by: Danny Howard <dannyman@toldme.com>
-
 PORTNAME=	enteruser
 PORTVERSION=	1.0
 CATEGORIES=	sysutils
@@ -10,6 +8,7 @@ EXTRACT_ONLY=	# empty
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Extensible script for adding new users
+WWW=		https://web.archive.org/web/20041211013021/http://www.daemonnews.org/199908/enteruser.html
 
 LICENSE=	BSD2CLAUSE
 

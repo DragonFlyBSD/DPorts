@@ -1,5 +1,3 @@
-# Created by: Andreas Kohn <andreas@syndrom23.de>
-
 PORTNAME=	dumb
 PORTVERSION=	0.9.3
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	IT, XM, S3M, and MOD player library
+WWW=		http://dumb.sourceforge.net
 
 USES=		gmake
 

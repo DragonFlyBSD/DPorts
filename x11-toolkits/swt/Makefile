@@ -1,5 +1,3 @@
-# Created by: Robert C. Noland III <rnoland@FreeBSD.org>
-
 PORTNAME=	swt
 DISTVERSION=	4.21
 CATEGORIES=	x11-toolkits devel java
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}-gtk-linux-x86_64
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Standard Widget Toolkit for Java
+WWW=		https://www.eclipse.org/swt/
 
 LICENSE=	EPL
 

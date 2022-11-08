@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	singularity
 PORTVERSION=	1.00
 CATEGORIES=	games
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	endgame-
 
 MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Simulates the life of a true AI
+WWW=		http://emhsoft.com/singularity/
 
 LICENSE=	GPLv2+ MIT CC-BY-SA-3.0 NASA AEFONTS BITSTREAM AREV \
 		MEMESBRUH03 CC0-1.0

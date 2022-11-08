@@ -1,7 +1,7 @@
 PORTNAME=	cargo-c
 DISTVERSION=	0.9.8
 DISTVERSIONSUFFIX=	+cargo-0.60
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	CRATESIO
 # XXX Teach USES=cargo to have proper default
@@ -9,6 +9,7 @@ DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Cargo C-ABI helpers
+WWW=		https://github.com/lu-zero/cargo-c
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

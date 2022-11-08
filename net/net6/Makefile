@@ -1,5 +1,3 @@
-# Created by: Andreas Kohn <andreas@syndrom23.de>
-
 PORTNAME=	net6
 PORTVERSION=	1.3.14
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	http://releases.0x539.de/net6/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Network access framework for IPv4/IPv6
+WWW=		http://gobby.0x539.de
 
 LICENSE=	LGPL20+ # though COPYING is LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

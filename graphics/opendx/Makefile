@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	opendx
 PORTVERSION=	4.4.4
 PORTREVISION=	35
@@ -9,6 +7,7 @@ DISTNAME=	dx-${PORTVERSION}
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	IBM's Open Visualization Data Explorer
+WWW=		http://www.opendx.org/
 
 LICENSE=	IBM-OVDX-v1
 LICENSE_NAME=	IBM PUBLIC LICENSE - Open Visualization Data Explorer VERSION 1.0

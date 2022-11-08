@@ -1,5 +1,3 @@
-# Created by: Rozhuk Ivan <rozhuk.im@gmail.com>
-
 PORTNAME=	game.libretro.picodrive
 PORTVERSION=	1.98.0.26
 DISTVERSIONSUFFIX=	-Matrix
@@ -8,6 +6,7 @@ CATEGORIES=	games
 
 MAINTAINER=	rozhuk.im@gmail.com
 COMMENT=	Kodi game addon for Sega - MS/MD/CD/32X (PicoDrive)
+WWW=		https://github.com/libretro/picodrive
 
 LICENSE=	GPLv2+
 

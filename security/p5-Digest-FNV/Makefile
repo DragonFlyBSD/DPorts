@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan
-
 PORTNAME=	Digest-FNV
 PORTVERSION=	2.00
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension for Fowler/Noll/Vo hash algorithm
+WWW=		https://metacpan.org/release/Digest-FNV
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

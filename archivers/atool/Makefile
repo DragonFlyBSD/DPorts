@@ -1,5 +1,3 @@
-# Created by: Matteo Cypriani <mcy@lm7.fr>
-
 PORTNAME=	atool
 PORTVERSION=	0.39.0
 CATEGORIES=	archivers
@@ -7,6 +5,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	mcy@lm7.fr
 COMMENT=	Manage file archives of various types
+WWW=		https://www.nongnu.org/atool/
 
 LICENSE=	GPLv2
 

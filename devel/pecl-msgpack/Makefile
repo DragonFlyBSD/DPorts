@@ -1,11 +1,10 @@
-# Created by: John Chen <johnpupu@gmail.com>
-
 PORTNAME=	msgpack
 PORTVERSION=	2.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Provides API for communicating with MessagePack serialization
+WWW=		https://pecl.php.net/package/msgpack
 
 LICENSE=	BSD3CLAUSE
 

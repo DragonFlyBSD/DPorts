@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	sphinx-inline-tabs
 PORTVERSION=	2022.1.2b11
 CATEGORIES=	textproc python
@@ -9,6 +7,7 @@ DISTNAME=	sphinx_inline_tabs-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Add inline tabbed content to your Sphinx documentation
+WWW=		https://github.com/pradyunsg/sphinx-inline-tabs
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

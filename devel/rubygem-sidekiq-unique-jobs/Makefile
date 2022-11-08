@@ -1,10 +1,11 @@
 PORTNAME=	sidekiq-unique-jobs
-PORTVERSION=	7.1.25
+PORTVERSION=	7.1.27
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ensure only a single copy of a job is in Redis
+WWW=		https://github.com/mhenrixon/sidekiq-unique-jobs
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

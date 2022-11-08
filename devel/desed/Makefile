@@ -1,15 +1,18 @@
 PORTNAME=	desed
 DISTVERSION=	1.2.0
-PORTREVISION=	17
+PORTREVISION=	19
 CATEGORIES=	devel
 MASTER_SITES=	CRATESIO
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Demystify and debug sed scripts from the comfort of your terminal
+WWW=		https://github.com/SoptikHa2/desed
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_armv7=	compilation fails: error[E0308]: mismatched types, see https://gitlab.com/rust-kqueue/rust-kqueue-sys/-/issues/3
 
 RUN_DEPENDS=	gsed:textproc/gsed
 

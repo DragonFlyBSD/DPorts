@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	tartiflette-aiohttp
 PORTVERSION=	1.4.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Run Tartiflette GraphQL Engine through aiohttp
+WWW=		https://github.com/tartiflette/tartiflette-aiohttp
 
 LICENSE=	MIT
 

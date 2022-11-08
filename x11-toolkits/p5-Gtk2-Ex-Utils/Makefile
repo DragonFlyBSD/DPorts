@@ -1,5 +1,3 @@
-# Created by: Paul Schmehl <pauls@utdallas.edu>
-
 PORTNAME=	Gtk2-Ex-Utils
 PORTVERSION=	0.09
 PORTREVISION=	8
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Extra Gtk2 utilities for Gtk2 in perl
+WWW=		https://metacpan.org/release/Gtk2-Ex-Utils
 
 LICENSE=	LGPL21
 

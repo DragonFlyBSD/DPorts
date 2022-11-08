@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lars@thegler.dk>
-
 PORTNAME=	Email-LocalDelivery
 PORTVERSION=	1.201
 CATEGORIES=	mail perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Deliver a piece of email - simply
+WWW=		https://metacpan.org/release/Email-LocalDelivery
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

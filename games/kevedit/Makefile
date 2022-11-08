@@ -1,5 +1,3 @@
-# Created by: Raymond Pasco <ray@cultofray.net>
-
 PORTNAME=	kevedit
 PORTVERSION=	0.5.1
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Modern ZZT editor with necessary features
+WWW=		https://github.com/cknave/kevedit
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Dima Sivachenko <dima@chg.ru>
-
 PORTNAME=	Net-RawIP
 PORTVERSION=	0.25
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Perl module to manipulate raw IP packets
+WWW=		https://metacpan.org/release/Net-RawIP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

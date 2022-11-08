@@ -1,5 +1,3 @@
-# Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-
 PORTNAME=	cgiirc
 PORTVERSION=	0.5.12
 CATEGORIES=	irc www perl5
@@ -8,6 +6,7 @@ MASTER_SITES=	http://cgiirc.org/releases/ \
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	IRC web gateway written in Perl
+WWW=		http://cgiirc.sourceforge.net/
 
 LICENSE=	GPLv2
 

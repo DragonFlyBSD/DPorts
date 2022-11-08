@@ -1,9 +1,10 @@
 PORTNAME=	arcan-trayicon
-DISTVERSION=	0.6.1.1
+DISTVERSION=	0.6.2
 CATEGORIES=	x11
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Generic wrapper for registering Arcan clients as tray icons
+WWW=		https://arcan-fe.com/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC:H:H:H}/data/distr/LICENSE.BSD

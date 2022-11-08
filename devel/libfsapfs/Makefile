@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	libfsapfs
 # If/When moving from experimental to alpha, switch to DISTVERSIONPREFIX to prevent PORTEPOCH
 DISTVERSION=	experimental-20210424
@@ -9,6 +7,7 @@ MASTER_SITES=	https://github.com/libyal/libfsapfs/releases/download/${PORTVERSIO
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library and tools to access the Apple File System (APFS)
+WWW=		https://github.com/libyal/libfsapfs
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING

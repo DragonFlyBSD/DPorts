@@ -1,5 +1,3 @@
-# Created by: OKAZAKI Tetsurou
-
 PORTNAME=	junit
 PORTVERSION=	4.12
 CATEGORIES=	java devel
@@ -9,6 +7,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Regression testing utility for use with the Java(TM) Language
+WWW=		https://www.junit.org/
 
 RUN_DEPENDS=	${JAVALIBDIR}/hamcrest.jar:java/hamcrest
 

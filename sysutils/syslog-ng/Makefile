@@ -1,12 +1,11 @@
-# Created by: Ivan Lago <ivan.lago@ifom-ieo-campus.it>
-
 PORTNAME=	syslog-ng
-DISTVERSION=	3.37.1
+DISTVERSION=	3.38.1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Powerful syslogd replacement
+WWW=		https://www.syslog-ng.org/
 
 LICENSE=	GPLv2+ LGPL21+
 LICENSE_COMB=	multi
@@ -145,14 +144,11 @@ JAVA_MOD_PLIST_FILES=		lib/syslog-ng/java-modules/log4j-api-2.17.2.jar \
 				lib/syslog-ng/java-modules/http.jar \
 				lib/syslog-ng/java-modules/syslog-ng-common.jar
 
-PYTHON_USES=			python:3.5+ 
-PYTHON_CONFIGURE_ON=		--enable-python 
+PYTHON_USES=			python:3.5+
+PYTHON_CONFIGURE_ON=		--enable-python
 PYTHON_CONFIGURE_OFF=		--disable-python
 PYTHON_PLIST_FILES=		lib/syslog-ng/libmod-python.so \
-		lib/syslog-ng/python/syslogng-1.0-py%%PYTHON_VER%%.egg-info/PKG-INFO \
-		lib/syslog-ng/python/syslogng-1.0-py%%PYTHON_VER%%.egg-info/SOURCES.txt \
-		lib/syslog-ng/python/syslogng-1.0-py%%PYTHON_VER%%.egg-info/dependency_links.txt \
-		lib/syslog-ng/python/syslogng-1.0-py%%PYTHON_VER%%.egg-info/top_level.txt \
+		lib/syslog-ng/python/syslogng-1.0-py%%PYTHON_VER%%.egg-info \
 		lib/syslog-ng/python/syslogng/__init__.py \
 		lib/syslog-ng/python/syslogng/__pycache__/__init__.cpython-${PYTHON_SUFFIX}.pyc \
 		lib/syslog-ng/python/syslogng/debuggercli/__init__.py \

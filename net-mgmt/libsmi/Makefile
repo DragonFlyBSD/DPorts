@@ -1,5 +1,3 @@
-# Created by: Marcin Cieslak <saper@system.pl>
-
 PORTNAME=	libsmi
 PORTVERSION=	0.4.8
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/libsmi/ \
 
 MAINTAINER=	saper@saper.info
 COMMENT=	Library to access SMI MIB information
+WWW=		https://www.ibr.cs.tu-bs.de/projects/libsmi/
 
 USES=		cpe gmake libtool pathfix pkgconfig
 CPE_VENDOR=	tu-braunschweig

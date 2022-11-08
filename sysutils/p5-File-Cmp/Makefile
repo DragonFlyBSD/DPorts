@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	File-Cmp
 PORTVERSION=	1.07
 CATEGORIES=	sysutils perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to compare two files character by character
+WWW=		https://metacpan.org/release/File-Cmp
 
 USES=		perl5
 USE_PERL5=	configure

@@ -1,5 +1,3 @@
-# Created by: Alexander Logvinov <info@logvinov.com>
-
 PORTNAME=	lightsquid
 PORTVERSION=	1.8
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Light and fast web based squid proxy traffic analyser
+WWW=		http://lightsquid.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/doc/gnugpl.txt

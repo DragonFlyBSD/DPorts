@@ -1,5 +1,3 @@
-# Created by: Bjorn Konig <bkoenig@alpha-tierchen.de>
-
 PORTNAME=	linknx
 PORTVERSION=	0.0.1.32
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	bkoenig@alpha-tierchen.de
 COMMENT=	Rule-based event handling in a KNX installation
+WWW=		http://linknx.sourceforge.net/
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Lev Walkin <vlm@lionet.info>
-
 PORTNAME=	asn1c
 PORTVERSION=	0.9.27
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	lang converters security
 
 MAINTAINER=	vlm@lionet.info
 COMMENT=	Modern ASN.1 to C compiler
+WWW=		https://lionet.info/asn1c
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	vlm

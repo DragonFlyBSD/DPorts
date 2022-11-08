@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	Devel-Leak-Cb
 PORTVERSION=	0.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Detect leaked callbacks
+WWW=		https://metacpan.org/release/Devel-Leak-Cb
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

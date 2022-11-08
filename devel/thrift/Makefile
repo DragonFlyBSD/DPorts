@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION}	# get these from bsd.thrift.mk. any upgrade needs to check ALL dependencies
 PORTREVISION=	0
@@ -9,6 +7,7 @@ MASTER_SITES=	APACHE/thrift/${PORTVERSION}
 
 MAINTAINER=	komarov@valerka.net
 COMMENT=	Framework for scalable cross-language services development
+WWW=		https://thrift.apache.org/
 
 LICENSE=	APACHE20
 

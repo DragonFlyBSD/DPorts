@@ -1,10 +1,11 @@
 PORTNAME=	panopticum
 PORTVERSION=	2.0.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	ports-mgmt haskell
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	Query port information with every combination of OPTIONS
+WWW=		https://foss.heptapod.net/bsdutils/panopticum
 
 LICENSE=	BSD3CLAUSE
 
@@ -15,10 +16,9 @@ GL_SITE=	https://foss.heptapod.net
 GL_ACCOUNT=	bsdutils
 GL_COMMIT=	ef5c3793acad2ed2ef17138dabfeb575e26458c5
 
-USE_CABAL=	ansi-terminal-0.11.1 \
+USE_CABAL=	ansi-terminal-0.11.3 \
 		ansi-wl-pprint-0.6.9_3 \
 		async-2.2.4_1 \
-		base-orphans-0.8.6 \
 		clock-0.8.3 \
 		colour-2.3.6 \
 		extra-1.7.10 \

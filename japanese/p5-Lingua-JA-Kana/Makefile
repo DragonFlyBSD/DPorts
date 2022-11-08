@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	Lingua-JA-Kana
 PORTVERSION=	0.07
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	CPAN
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Converts between Kanas and Romaji
+WWW=		https://metacpan.org/release/Lingua-JA-Kana
 
 USES=		perl5
 USE_PERL5=	configure

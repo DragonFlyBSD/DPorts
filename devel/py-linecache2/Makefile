@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	linecache2
 PORTVERSION=	1.0.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	New features in linecache backported to Python 2
+WWW=		https://pypi.org/project/linecache2/
 
 LICENSE=	PSFL
 

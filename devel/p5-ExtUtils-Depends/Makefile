@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	ExtUtils-Depends
 PORTVERSION=	0.8001
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Easily build XS extensions that depend on XS extensions
+WWW=		https://metacpan.org/release/ExtUtils-Depends
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

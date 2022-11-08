@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	CGI-Ex
 PORTVERSION=	2.54
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	CGI utility suite - makes powerful application writing fun and easy
+WWW=		https://metacpan.org/release/CGI-Ex
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

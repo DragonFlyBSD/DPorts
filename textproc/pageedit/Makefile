@@ -4,6 +4,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	FreeBSD@Shaneware.biz
 COMMENT=	WYSIWYG visual XHTML editor
+WWW=		https://github.com/Sigil-Ebook/PageEdit
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
@@ -16,6 +17,6 @@ GH_PROJECT=	PageEdit
 
 USE_QT=		concurrent core declarative gui location network \
 		printsupport webchannel webengine widgets xml \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 
 .include <bsd.port.mk>

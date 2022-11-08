@@ -1,5 +1,3 @@
-# Created by: Danny Warren <danny@dannywarren.com>
-
 PORTNAME=	Devel-InheritNamespace
 PORTVERSION=	0.00003
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	danny@dannywarren.com
 COMMENT=	Inherit an entire namespace
+WWW=		https://metacpan.org/release/Devel-InheritNamespace
 
 LICENSE=	ART10
 

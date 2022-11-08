@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	Template-Plugin-YAML
 PORTVERSION=	1.23
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Plugin interface to YAML
+WWW=		https://metacpan.org/dist/Template-Plugin-YAML
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

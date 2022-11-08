@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	textual
 PORTVERSION=	0.1.18
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Text User Interface using Rich
+WWW=		https://github.com/Textualize/textual
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

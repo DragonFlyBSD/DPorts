@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	LWP-Authen-OAuth2
 PORTVERSION=	0.19
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Perl extension to generate signed OAuth2 requests
+WWW=		https://metacpan.org/release/LWP-Authen-OAuth2
 
 LICENSE=	ART20
 

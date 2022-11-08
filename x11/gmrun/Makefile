@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adam@vectors.cx>
-
 PORTNAME=	gmrun
 PORTVERSION=	0.9.2
 PORTREVISION=	14
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Customizable program to run programs, with tab-completion
+WWW=		https://sourceforge.net/projects/gmrun/
 
 LICENSE=	GPLv2
 

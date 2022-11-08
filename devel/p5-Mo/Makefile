@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Mo
 PORTVERSION=	0.40
 PORTEPOCH=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Micro Objects. Mo is less
+WWW=		https://metacpan.org/release/Mo
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: antoine@FreeBSD.org
-
 PORTNAME=	Flask-Sockets
 PORTVERSION=	0.2.1
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Elegant WebSockets for your Flask apps
+WWW=		https://github.com/kennethreitz/flask-sockets
 
 LICENSE=	MIT
 

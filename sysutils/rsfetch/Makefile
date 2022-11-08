@@ -1,10 +1,11 @@
 PORTNAME=	rsfetch
 DISTVERSION=	2.0.0
-PORTREVISION=	23
+PORTREVISION=	25
 CATEGORIES=	sysutils
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Minimal fetch program written in Rust
+WWW=		https://github.com/rsfetch/rsfetch
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

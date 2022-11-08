@@ -1,10 +1,9 @@
-# Created by: Thierry Thomas (<thierry@pompo.net>)
-
 PORTNAME=	${MPORTNAME:tl}
 PORTVERSION=	${SSPVERSION}
 CATEGORIES=	math
 
 COMMENT=	Common library for SuiteSparse
+WWW=		https://faculty.cse.tamu.edu/davis/suitesparse.html
 
 LICENSE=	GPLv2+
 

@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	ModelMetrics
 PORTVERSION=	1.2.2.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Rapid Calculation of Model Metrics
+WWW=		https://cran.r-project.org/web/packages/ModelMetrics/
 
 LICENSE=	GPLv2+
 

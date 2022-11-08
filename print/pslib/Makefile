@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	pslib
 PORTVERSION=	0.4.6
 CATEGORIES=	print
@@ -8,6 +6,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C-library for generating multi page PostScript documents
+WWW=		http://pslib.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

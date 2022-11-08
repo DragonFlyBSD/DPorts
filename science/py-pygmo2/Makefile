@@ -1,12 +1,13 @@
 PORTNAME=	pygmo2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.18.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science graphics
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python platform to perform parallel computations of optimisation tasks
+WWW=		https://esa.github.io/pygmo2/
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE

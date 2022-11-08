@@ -1,5 +1,3 @@
-# Created by: andrew@scoop.co.nz
-
 PORTNAME=	Net-Printer
 PORTVERSION=	1.12
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl extension for direct-to-lpd printing
+WWW=		https://metacpan.org/release/Net-Printer
 
 LICENSE=	BSD2CLAUSE
 

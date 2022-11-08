@@ -1,5 +1,3 @@
-# Created by: Pavel Timofeev <timp87@gmail.com>
-
 PORTNAME=	ufdbGuard
 PORTVERSION=	1.35.3
 CATEGORIES=	www
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME:tl}/1.35
 
 MAINTAINER=	timp87@gmail.com
 COMMENT=	URL filter for the Squid web proxy
+WWW=		https://www.urlfilterdb.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Stas Timokhin <stast@bsdportal.ru>
-
 PORTNAME=	alpng
 PORTVERSION=	1.3
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}13
 
 MAINTAINER=	devel@stasyan.com
 COMMENT=	Library for display PNG images in programs
+WWW=		http://alpng.sourceforge.net/
 
 LIB_DEPENDS=	liballeg.so:devel/allegro
 

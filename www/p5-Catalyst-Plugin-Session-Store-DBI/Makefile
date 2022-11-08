@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Catalyst-Plugin-Session-Store-DBI
 PORTVERSION=	0.16
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Store your sessions in a database
+WWW=		https://metacpan.org/release/Catalyst-Plugin-Session-Store-DBI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

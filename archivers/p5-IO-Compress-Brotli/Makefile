@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	IO-Compress-Brotli
 PORTVERSION=	0.004001
 CATEGORIES=	archivers perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl implementation of Brotli
+WWW=		https://metacpan.org/release/IO-Compress-Brotli
 
 LICENSE=	MIT
 

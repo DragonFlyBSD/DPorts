@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	${GH_PROJECT:tl}
 PORTVERSION=	1.0.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	sysutils python
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Quick search GUI tool for Unix-like systems
+WWW=		https://github.com/DoTheEvo/ANGRYsearch
 
 LICENSE=	GPLv2
 
@@ -20,7 +19,7 @@ GH_PROJECT=	ANGRYsearch
 
 USES=		python pyqt:5
 USE_PYTHON=	autoplist distutils noflavors
-USE_PYQT=	pyqt5_run
+USE_PYQT=	pyqt5:run
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,Linux,${OPSYS}, ; s,linux,${OPSYS:tl}, \

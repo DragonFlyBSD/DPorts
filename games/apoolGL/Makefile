@@ -1,5 +1,3 @@
-# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-
 PORTNAME=	apoolGL
 PORTVERSION=	0.99.22
 PORTREVISION=	9
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-099-pre22
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Another billiards simulator
+WWW=		https://www.planetjahn.de/apool/
 
 LICENSE=	GPLv2+
 

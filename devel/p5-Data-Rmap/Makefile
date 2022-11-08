@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Data-Rmap
 PORTVERSION=	0.65
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Recursive map, apply a block to a data structure
+WWW=		https://metacpan.org/release/Data-Rmap
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

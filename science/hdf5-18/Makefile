@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	hdf5
 PORTVERSION=	1.8.21 # When PORTVERSION changes, please update french/med/files/patch-configure
 PORTREVISION=	4
@@ -11,6 +9,7 @@ PKGNAMESUFFIX=	-18
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Hierarchical Data Format library (from NCSA) 1.8
+WWW=		https://www.hdfgroup.org/HDF5/
 
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

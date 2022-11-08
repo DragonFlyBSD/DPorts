@@ -1,10 +1,11 @@
 PORTNAME=	yara
-DISTVERSION=	4.1.1
+DISTVERSION=	4.2.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Malware identification and classification tool
+WWW=		https://virustotal.github.io/yara/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

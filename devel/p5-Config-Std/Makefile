@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	Config-Std
 PORTVERSION=	0.903
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Load and save configuration files in a standard format
+WWW=		https://metacpan.org/release/Config-Std
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

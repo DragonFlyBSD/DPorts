@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	graphlib-backport
 PORTVERSION=	1.0.3
 CATEGORIES=	graphics python
@@ -9,6 +7,7 @@ DISTNAME=	graphlib_backport-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Backport of the Python 3.9 graphlib module for Python 3.6+
+WWW=		https://github.com/mariushelf/graphlib_backport
 
 LICENSE=	PSFL
 

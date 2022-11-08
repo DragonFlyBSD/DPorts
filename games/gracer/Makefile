@@ -1,5 +1,3 @@
-# Created by: nox@jelal.kn-bremen.de
-
 PORTNAME=	gracer
 PORTVERSION=	0.1.5
 PORTREVISION=	23
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	3D motor sport simulator
+WWW=		http://gracer.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

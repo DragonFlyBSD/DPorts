@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	VM-EC2-Security-CredentialCache
 PORTVERSION=	0.25
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Cache credentials respecting expiration time for IAM roles
+WWW=		https://metacpan.org/release/VM-EC2-Security-CredentialCache
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,11 +1,10 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	iso-codes
 PORTVERSION=	4.7
 CATEGORIES=	misc
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Lists of the country, language, and currency iso names
+WWW=		https://salsa.debian.org/iso-codes-team/iso-codes
 
 LICENSE=	LGPL21
 

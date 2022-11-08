@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	dry-configurable
 PORTVERSION=	0.15.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Mixin to add configuration functionality to your classes
+WWW=		https://github.com/dry-rb/dry-configurable
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

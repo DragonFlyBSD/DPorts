@@ -1,10 +1,11 @@
 PORTNAME=	sra-tools
 DISTVERSION=	2.11.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	biology
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	NCBI's toolkit for handling data in INSDC Sequence Read Archives
+WWW=		https://github.com/ncbi/sra-tools/wiki
 
 LICENSE=		PD LGPL21+
 LICENSE_COMB=		multi

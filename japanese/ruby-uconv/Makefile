@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	uconv
 PORTVERSION=	0.5.3
 CATEGORIES=	japanese converters ruby
@@ -8,6 +6,7 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Unicode conversion library with Japanese codesets support for Ruby
+WWW=		http://www.yoshidam.net/Ruby.html #uconv
 
 USE_RUBY=	yes
 USE_RUBY_EXTCONF=	yes

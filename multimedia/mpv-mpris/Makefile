@@ -1,9 +1,10 @@
 PORTNAME=	mpv-mpris
-DISTVERSION=	0.8.1
+DISTVERSION=	0.9
 CATEGORIES=	multimedia
 
 MAINTAINER=	tcberner@FreeBSD.org
 COMMENT=	MPRIS plugin for mpv
+WWW=		https://github.com/hoyon/mpv-mpris
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

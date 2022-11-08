@@ -1,5 +1,3 @@
-# Created by: Masanori Kiriake <seiken@nbs.co.jp>
-
 PORTNAME=	aish
 PORTVERSION=	1.13
 CATEGORIES=	converters
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S/.//}u
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ish/uuencode/Base64 converter
+WWW=		https://hp.vector.co.jp/authors/VA004474/etc/etc.html
 
 MAKE_ARGS=	DSTDIR=${STAGEDIR}${PREFIX}/bin
 

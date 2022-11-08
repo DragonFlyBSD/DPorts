@@ -1,14 +1,13 @@
-# Created by: Dave McKay <dave@mu.org>
-
 PORTNAME=	libcryptui
 PORTVERSION=	3.12.2
 PORTREVISION=	2
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME application for managing encryption keys (PGP, SSH)
+WWW=		https://gitlab.gnome.org/GNOME/libcryptui
 
 BUILD_DEPENDS=	seahorse>=3.0.0:security/seahorse \
 		gpg:security/gnupg

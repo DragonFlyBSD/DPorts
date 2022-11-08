@@ -1,5 +1,3 @@
-# Created by: Mateusz Piotrowski <0mp@FreeBSD.org>
-
 PORTNAME=	2048-py
 DISTVERSION=	0.1.6
 CATEGORIES=	games python
@@ -8,6 +6,7 @@ MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Console version of the 2048 game written in Python
+WWW=		https://github.com/LadueCS/2048
 
 LICENSE=	GPLv3+
 

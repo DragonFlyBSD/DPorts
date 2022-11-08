@@ -1,5 +1,3 @@
-# Created by: michaelnottebrock@gmx.net and lioux@FreeBSD.org
-
 PORTNAME=	portaudio
 PORTVERSION=	19.6.0
 PORTREVISION=	6
@@ -10,6 +8,7 @@ DISTNAME=	pa_stable_v190600_20161030
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Portable cross-platform Audio API
+WWW=		http://www.portaudio.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

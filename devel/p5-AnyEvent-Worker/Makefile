@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	AnyEvent-Worker
 PORTVERSION=	0.06
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Manage blocking task in external process
+WWW=		https://metacpan.org/release/AnyEvent-Worker
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

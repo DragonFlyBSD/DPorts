@@ -1,11 +1,12 @@
 PORTNAME=	opentoonz
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	multimedia
 
 MAINTAINER=	rozhuk.im@gmail.com
 COMMENT=	Open-source full-featured 2D animation creation software
+WWW=		https://opentoonz.github.io/e/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -27,7 +28,7 @@ USE_GITHUB=	yes
 USE_GL=		gl glew glu glut
 USE_QT=		core gui multimedia network opengl printsupport \
 		script serialport svg widgets xml \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 CMAKE_ARGS=	-DWITH_SYSTEM_LZO:BOOL=ON \
 		-DWITH_SYSTEM_SUPERLU:BOOL=ON
 CMAKE_SOURCE_PATH=	${WRKSRC}/toonz/sources

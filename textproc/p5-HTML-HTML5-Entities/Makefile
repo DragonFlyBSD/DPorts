@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <culot@FreeBSD.org>
-
 PORTNAME=	HTML-HTML5-Entities
 PORTVERSION=	0.004
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Pure Perl drop-in replacement for HTML::Entities
+WWW=		https://metacpan.org/release/HTML-HTML5-Entities
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

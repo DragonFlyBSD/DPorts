@@ -1,13 +1,12 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	graphviz
 PORTVERSION=	2.50.0
-PORTREVISION=	5
+PORTREVISION=	12
 CATEGORIES=	graphics tk
 MASTER_SITES=	https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/${PORTVERSION}/
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Graph Visualization Software from AT&T and Bell Labs
+WWW=		https://www.graphviz.org/
 
 LICENSE=	EPL
 LICENSE_FILE=	${WRKSRC}/COPYING

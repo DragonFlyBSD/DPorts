@@ -1,5 +1,3 @@
-# Created by: alepulver
-
 PORTNAME=	alienarena
 PORTVERSION=	2013.766
 PORTREVISION=	2
@@ -18,6 +16,7 @@ DISTNAME=	${PORTNAME}-7.66-linux20130827
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Alien Arena (data)
+WWW=		http://red.planetarena.org/
 
 LICENSE=	AlienArena-Data
 LICENSE_NAME=	Freely redistributable as a whole

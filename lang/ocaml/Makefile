@@ -1,4 +1,3 @@
-# Created by: Kiriyama Kazuhiko <kiri@kiri.toba-cmt.ac.jp>
 # for committer: bump PORTREVISION for math/facile whenever ocaml gets updated
 
 PORTNAME=	ocaml
@@ -12,6 +11,7 @@ PKGNAMESUFFIX=	${SFX}
 
 MAINTAINER=	michipili@gmail.com
 COMMENT=	Objective Caml compiler and programming environment
+WWW=		https://ocaml.org/
 
 LICENSE=		QPL10 LGPL20
 LICENSE_COMB=		multi

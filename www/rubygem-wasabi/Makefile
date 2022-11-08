@@ -1,5 +1,3 @@
-# Created by: Joseph Benden <joe@thrallingpenguin.com>
-
 PORTNAME=	wasabi
 PORTVERSION=	3.5.0
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	joe@thrallingpenguin.com
 COMMENT=	Library for simple WSDL parsing
+WWW=		https://github.com/savonrb/wasabi
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

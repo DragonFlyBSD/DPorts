@@ -1,5 +1,3 @@
-# Created by: Laurent LEVIER <llevier@argosnet.com>
-
 PORTNAME=	hydra
 DISTVERSIONPREFIX=v
 DISTVERSION=	9.2
@@ -8,6 +6,7 @@ CATEGORIES=	security
 
 MAINTAINER=	rm@FreeBSD.org
 COMMENT=	Brute force attack utility working on multiple network services
+WWW=		https://www.thc.org/thc-hydra/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

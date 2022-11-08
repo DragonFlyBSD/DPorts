@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Statistics-Basic
 PORTVERSION=	1.6611
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Collection of basic statistics modules
+WWW=		https://metacpan.org/release/Statistics-Basic
 
 LICENSE=	LGPL20
 

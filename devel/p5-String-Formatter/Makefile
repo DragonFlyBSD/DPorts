@@ -1,5 +1,3 @@
-# Created by: Geraud CONTINSOUZAS <geraud@gcu.info>
-
 PORTNAME=	String-Formatter
 PORTVERSION=	0.102084
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	geraud@gcu.info
 COMMENT=	Build sprintf-like functions of your own
+WWW=		https://metacpan.org/release/String-Formatter
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

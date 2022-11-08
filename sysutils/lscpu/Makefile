@@ -1,11 +1,10 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	lscpu
 PORTVERSION=	1.2.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Display information about the CPU architecture
+WWW=		https://github.com/NanXiao/lscpu
 
 LICENSE=	BSD3CLAUSE
 

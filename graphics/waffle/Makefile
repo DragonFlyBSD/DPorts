@@ -1,5 +1,3 @@
-# Created by: Jean-Sébastien Pédron <dumbbell@FreeBSD.org>
-
 PORTNAME=	waffle
 DISTVERSION=	1.6.1-15
 PORTREVISION=	3
@@ -13,11 +11,12 @@ PATCHFILES=	39ad2b26f46e90cbae13a9cbc58e1f9df03f0980.patch:-p1 \
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Library that allows to defer selection of an OpenGL API until runtime
+WWW=		https://www.waffle-gl.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BUILD_DEPENDS=	cmake:devel/cmake
+BUILD_DEPENDS=	cmake:devel/cmake-core
 
 USES=		compiler:c11 gl localbase meson pkgconfig python:3.5+,build
 USE_GITLAB=	yes

@@ -1,12 +1,16 @@
-# Created by: Philippe Audeoud <jadawin@tuxaco.net>
-
 PORTNAME=	irssi-xmpp
-PORTVERSION=	0.54
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.54
+PORTREVISION=	1
 CATEGORIES=	irc
-MASTER_SITES=	http://cybione.org/~irssi-xmpp/files/
+
+PATCH_SITES=	https://github.com/ailin-nemui/${PORTNAME}/commit/
+PATCHFILES+=	f84cca86f6cbfa34.patch:-p1 # Use full paths to irssi includes
+PATCHFILES+=	c7728ea5aa2f4e58.patch:-p1 # GTimeVal -> gint64 transition
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Irssi plugin to connect to Jabber network
+WWW=		https://cybione.org/~irssi-xmpp/
 
 LICENSE=	GPLv2
 
@@ -15,15 +19,18 @@ LIB_DEPENDS=	libloudmouth-1.so:net-im/loudmouth
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		gettext-runtime gnome pkgconfig
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	cdidier
+
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
+
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+CFLAGS+=	-fPIC
+
 DATADIR=	${PREFIX}/share/irssi
 DOCSDIR=	${PREFIX}/share/doc/irssi
-CFLAGS_aarch64=	-fPIC
-CFLAGS_x86_64=	-fPIC
-CFLAGS_i386=	-fPIC
-CFLAGS_powerpc64=	-fPIC
 
 OPTIONS_DEFINE=	DOCS
 

@@ -1,5 +1,3 @@
-# Created by: tobez@plab.ku.dk
-
 PORTNAME=	mathopd
 PORTVERSION=	1.5p8
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.mathopd.org/dist/
 
 MAINTAINER=	michiel@boland.org
 COMMENT=	Small, yet fast HTTP server
+WWW=		http://www.mathopd.org/
 
 LICENSE=	BSD3CLAUSE
 

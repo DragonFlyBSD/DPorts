@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	sympy
 PORTVERSION=	1.10.1
 CATEGORIES=	math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Python Library For Symbolic Mathematics
+WWW=		https://sympy.org/
 
 LICENSE=	BSD3CLAUSE
 

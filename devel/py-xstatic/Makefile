@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic
 PORTVERSION=	1.0.2
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	XStatic-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	XStatic base package with minimal support code
+WWW=		https://github.com/xstatic-py/xstatic
 
 LICENSE=	MIT
 

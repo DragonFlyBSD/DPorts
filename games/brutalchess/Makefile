@@ -1,5 +1,3 @@
-# Created by: Gustavo Perez Querol <gustau.perez@gmail.com>
-
 PORTNAME=	brutalchess
 PORTVERSION=	0.5.2
 PORTREVISION=	15
@@ -11,6 +9,7 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2
 
 MAINTAINER=	gustau.perez@gmail.com
 COMMENT=	Nice looking OpenGL chess game
+WWW=		http://brutalchess.sourceforge.net/
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 

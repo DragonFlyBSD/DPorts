@@ -1,13 +1,12 @@
-# Created by: Gabriel M. Dutra <0xdutra@gmail.com>
-
 PORTNAME=	ffuf
 DISTVERSIONPREFIX=v
 DISTVERSION=	1.5.0
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	security www
 
 MAINTAINER=	0xdutra@gmail.com
 COMMENT=	Fast web fuzzer written in Go
+WWW=		https://github.com/ffuf/ffuf
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

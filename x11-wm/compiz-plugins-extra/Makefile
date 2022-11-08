@@ -1,5 +1,3 @@
-# Created by: Robert Noland <rnoland@FreeBSD.org>
-
 PORTNAME=	compiz-plugins-extra
 PORTVERSION=	0.8.8
 PORTREVISION=	12
@@ -8,6 +6,7 @@ MASTER_SITES=	http://releases.compiz.org/${PORTVERSION}/
 
 MAINTAINER=	samy.mahmoudi@gmail.com
 COMMENT=	Plugins for Compiz Composite Window Manager
+WWW=		https://gitlab.com/compiz/compiz-plugins-extra
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

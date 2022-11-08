@@ -1,5 +1,3 @@
-# Created by: Anders Nordby <anders@fix.no>
-
 PORTNAME=	oftpd
 PORTVERSION=	0.3.7
 CATEGORIES=	ftp
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.time-travellers.org/oftpd/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Threaded, anonymous only FTP server designed for security
+WWW=		https://www.time-travellers.org/oftpd/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Ed Schouten <ed@FreeBSD.org>
-
 PORTNAME=	yaml2argdata
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4
@@ -8,6 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	ed@FreeBSD.org
 COMMENT=	Helper classes for parsing YAML into Argdata
+WWW=		https://github.com/NuxiNL/yaml2argdata
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

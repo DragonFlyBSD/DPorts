@@ -1,5 +1,3 @@
-# Created by: Carl Makin <carl@stagecraft.cx>
-
 PORTNAME=	xastir
 DISTVERSIONPREFIX=	Release-
 DISTVERSION=	2.1.8
@@ -8,6 +6,7 @@ CATEGORIES=	comms hamradio
 
 MAINTAINER=	carl@stagecraft.cx
 COMMENT=	X Amateur Station Tracking and Information Reporting
+WWW=		http://www.xastir.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

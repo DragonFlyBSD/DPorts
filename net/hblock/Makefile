@@ -1,10 +1,11 @@
 PORTNAME=	hblock
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.3.2
+DISTVERSION=	3.4.0
 CATEGORIES=	net
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Adblocker using automatically generated hosts file
+WWW=		https://github.com/hectorm/hblock
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

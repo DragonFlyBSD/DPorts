@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	cmprsk
 DISTVERSION=	2.2-11
 CATEGORIES=	science
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Subdistribution Analysis of Competing Risks
+WWW=		https://cran.r-project.org/web/packages/cmprsk/
 
 LICENSE=	GPLv2+
 

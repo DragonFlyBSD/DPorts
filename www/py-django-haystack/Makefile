@@ -1,5 +1,3 @@
-# Created by: Kristaps Kulis <kristaps.kulis@gmail.com>
-
 PORTNAME=	django-haystack
 PORTVERSION=	3.2.1
 CATEGORIES=	www databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pluggable search for Django
+WWW=		https://haystacksearch.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

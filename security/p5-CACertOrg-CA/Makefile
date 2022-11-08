@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	CACertOrg-CA
 PORTVERSION=	20210114.001
 CATEGORIES=	security perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CACert.org CA root certificate in PEM format
+WWW=		https://metacpan.org/release/CACertOrg-CA
 
 LICENSE=	CACERT
 LICENSE_NAME=	CAcert Root Distribution License

@@ -1,5 +1,3 @@
-# Created by: Mons Anderson <mons@cpan.org>
-
 PORTNAME=	Object-Event
 PORTVERSION=	1.220
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/0$//}
 
 MAINTAINER=	mons@cpan.org
 COMMENT=	Class that provides an event callback interface
+WWW=		https://metacpan.org/release/Object-Event
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

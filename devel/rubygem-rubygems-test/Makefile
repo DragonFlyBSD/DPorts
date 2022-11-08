@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	rubygems-test
 PORTVERSION=	0.4.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Run automated tests
+WWW=		https://github.com/rubygems/rubygems-test
 
 LICENSE=	MIT
 

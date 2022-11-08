@@ -1,13 +1,12 @@
-# Created by: Jin-Sih Lin <linpct@gmail.com>
-
 PORTNAME=	phalcon
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.0.0RC2
+DISTVERSION=	5.0.0RC4
 CATEGORIES=	www
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
 MAINTAINER=	franco@opnsense.org
 COMMENT=	Phalcon PHP Framework written in C-language
+WWW=		https://phalcon.io/
 
 LICENSE=	BSD3CLAUSE
 

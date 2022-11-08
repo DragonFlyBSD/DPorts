@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	gnet
 PORTVERSION=	2.0.8
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Simple network library built upon Glib-2
+WWW=		https://www.gnetlibrary.org/
 
 USES=		gnome libtool pathfix pkgconfig
 USE_GNOME=	glib20

@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	rfbproxy
 PORTVERSION=	1.1.1
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	pphillips@experts-exchange.com
 COMMENT=	Simple tool for recording VNC sessions
+WWW=		http://rfbproxy.sourceforge.net/
 
 GNU_CONFIGURE=	yes
 

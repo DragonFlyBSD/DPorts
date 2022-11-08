@@ -1,5 +1,3 @@
-# Created by: Timothy Beyer <beyert@cs.ucr.edu>
-
 PORTNAME=	libretro-mame
 PORTVERSION=	20220124
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	emulators games
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	MAME-current for libretro
+WWW=		https://github.com/libretro/mame
 
 LICENSE=	BSD2CLAUSE GPLv2
 LICENSE_COMB=	multi

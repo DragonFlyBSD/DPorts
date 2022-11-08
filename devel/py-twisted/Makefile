@@ -1,5 +1,3 @@
-# Created by: Johann Visagie <wjv@FreeBSD.org>
-
 PORTNAME=	twisted
 PORTVERSION=	22.4.0
 CATEGORIES=	devel net python
@@ -9,6 +7,7 @@ DISTNAME=	Twisted-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Asynchronous networking framework written in Python
+WWW=		https://twistedmatrix.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

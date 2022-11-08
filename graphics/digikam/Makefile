@@ -1,13 +1,15 @@
 PORTNAME=	digikam
-DISTVERSION=	7.7.0
+DISTVERSION=	7.8.0
+PORTREVISION=	2
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
-DIST_SUBDIR=	KDE/digikam/${PORTVERSION}
+DIST_SUBDIR=	KDE/${PORTNAME}/${PORTVERSION}
 # One bit changed in the naming convention ..
 DISTFILES=	digiKam-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}${EXTRACT_SUFX}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE digital photo management application
+WWW=		https://www.digikam.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -41,8 +43,8 @@ USE_KDE=	archive auth bookmarks calendarcore codecs completion config \
 		widgetsaddons windowsystem xmlgui
 USE_QT=		concurrent core dbus declarative gui location network opengl \
 		printsupport sql webchannel widgets x11extras xml xmlpatterns \
-		sql-sqlite3_run \
-		buildtools_build qmake_build
+		sql-sqlite3:run \
+		buildtools:build qmake:build
 USE_XORG=	ice sm x11 xext
 
 USE_LDCONFIG=	yes
@@ -78,7 +80,7 @@ MEDIAPLAYER_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_FFmpeg \
 				CMAKE_DISABLE_FIND_PACKAGE_QtAV
 
 MYSQL_USES=		mysql:server
-MYSQL_USE=		QT=sql-mysql_run
+MYSQL_USE=		QT=sql-mysql:run
 MYSQL_CMAKE_BOOL=	ENABLE_INTERNALMYSQL \
 			ENABLE_MYSQLSUPPORT
 MYSQL_CMAKE_ON=		-DMYSQLD_PATH:PATH=${LOCALBASE}/libexec \

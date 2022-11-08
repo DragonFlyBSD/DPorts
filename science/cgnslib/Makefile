@@ -1,14 +1,13 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	cgnslib
 PORTVERSION=	4.3.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	science
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	CFD General Notation System library code
+WWW=		https://cgns.github.io/
 
 LICENSE=	AS-IS
 LICENSE_NAME=	AS-IS

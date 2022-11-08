@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-TrailingSpace
 PORTVERSION=	0.0601
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Test for lack of trailing space
+WWW=		https://metacpan.org/release/Test-TrailingSpace
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

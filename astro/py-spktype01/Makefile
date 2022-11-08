@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	spktype01
 PORTVERSION=	1.0.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Supporting module for jplephem to handle data type 1
+WWW=		https://github.com/whiskie14142/spktype01
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: Gustau Perez <gustau.perez@gmail.com>
-
 PORTNAME=	gfbgraph
 DISTVERSION=	0.2.4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GObject library for Facebook Graph API
+WWW=		https://git.gnome.org/browse/libgfbgraph
 
 BUILD_DEPENDS=	gtkdoc-rebase:textproc/gtk-doc
 LIB_DEPENDS=	librest-0.7.so:devel/librest \

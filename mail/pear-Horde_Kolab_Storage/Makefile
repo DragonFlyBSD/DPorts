@@ -1,11 +1,10 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	Horde_Kolab_Storage
 DISTVERSION=	2.2.4
 CATEGORIES=	mail www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde library for handling Kolab data stored on an IMAP server
+WWW=		https://pear.horde.org
 
 USES=		horde php cpe
 USE_HORDE_RUN=	Horde_Cache \

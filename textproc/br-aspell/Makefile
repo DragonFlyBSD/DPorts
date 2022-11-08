@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	${DICT}-aspell
 SPELLVERSION=	-br-0.50-2
 PORTEPOCH=	1
@@ -7,6 +5,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Aspell Breton dictionary
+WWW=		http://aspell.sourceforge.net/
 
 DICT=	 	br
 

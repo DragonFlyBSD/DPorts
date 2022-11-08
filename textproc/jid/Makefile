@@ -1,13 +1,12 @@
-# Created by: Sofian Brabez <sbz@FreeBSD.org>
-
 PORTNAME=	jid
 PORTVERSION=	0.7.6
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	textproc
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	JSON Incremental Digger
+WWW=		https://github.com/simeji/jid
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

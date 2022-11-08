@@ -1,5 +1,3 @@
-# Created by: Lars Koeller <Lars_Koeller@odie.physik2.uni-rostock.de>
-
 PORTNAME=	faces
 PORTVERSION=	1.7.7
 PORTREVISION=	12
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Visual mail, user, and print face server
+WWW=		http://faces.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

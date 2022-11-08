@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@ahze.net>
-
 PORTNAME=	exiv2
 DISTVERSION=	0.27.5
 DISTVERSIONSUFFIX=	-Source
@@ -9,6 +7,7 @@ MASTER_SITES=	https://github.com/Exiv2/exiv2/releases/download/v${DISTVERSION}/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Exif, IPTC, and XMP metadata manipulation library and tools
+WWW=		https://www.exiv2.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

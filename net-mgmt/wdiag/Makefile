@@ -1,5 +1,3 @@
-# Created by: Josh Carroll <josh.carroll@gmail.com>
-
 PORTNAME=	wdiag
 PORTVERSION=	0.10.2
 CATEGORIES=	net-mgmt
@@ -8,6 +6,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	josh.carroll@gmail.com
 COMMENT=	Utility to collect DSL line stats from Westell DSL modems
+WWW=		http://wdiag.sourceforge.net/
 
 WRKSRC=		${WRKDIR}/${PORTNAME}/src
 

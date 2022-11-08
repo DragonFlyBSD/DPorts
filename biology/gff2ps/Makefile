@@ -1,5 +1,3 @@
-# Created by: Camson Huynh <chuynh@biolateral.com.au>
-
 PORTNAME=	gff2ps
 PORTVERSION=	0.98l
 CATEGORIES=	biology
@@ -9,6 +7,7 @@ DISTFILES=	${PORTNAME}_v${PORTVERSION}.gz
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Convert gff-formatted genomic data sets to PostScript
+WWW=		https://genome.crg.es/software/gfftools/GFF2PS.html
 
 LICENSE=	GPLv2+
 

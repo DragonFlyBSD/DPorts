@@ -1,5 +1,3 @@
-# Created by: Bernhard Froehlich <decke@bluelife.at>
-
 PORTNAME=	srelay
 PORTVERSION=	0.4.8p3
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	SOURCEFORGE/socks-relay/socks-relay/${PORTNAME}-0.4.8
 
 MAINTAINER=	decke@FreeBSD.org
 COMMENT=	Srelay is a SOCKS4/5 proxy and Relay
+WWW=		https://socks-relay.sourceforge.io/
 
 LICENSE=	BSD3CLAUSE
 

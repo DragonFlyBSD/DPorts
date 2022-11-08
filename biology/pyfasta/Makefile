@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	pyfasta
 PORTVERSION=	0.5.2
 PORTREVISION=	4
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Fast, memory-efficient, pythonic access to fasta sequence files
+WWW=		https://bitbucket.org/brentp/biostuff/src/
 
 LICENSE=	MIT
 

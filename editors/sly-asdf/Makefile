@@ -1,11 +1,12 @@
 PORTNAME=	sly-asdf
 PORTVERSION=	20210308
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	editors elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	olce.freebsd.ports@certner.fr
 COMMENT=	SLY support for ASDF
+WWW=		https://github.com/mmgeorge/sly-asdf
 
 LICENSE=	GPLv3
 

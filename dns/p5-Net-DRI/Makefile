@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	Net-DRI
 PORTVERSION=	0.96
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	feld@FreeBSD.org
 COMMENT=	Perl library to access Domain Name Registries/Registrars
+WWW=		https://metacpan.org/release/Net-DRI
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual

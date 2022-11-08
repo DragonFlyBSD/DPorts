@@ -1,5 +1,3 @@
-# Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-
 PORTNAME=	mona
 PORTVERSION=	2.90
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	monafont-${PORTVERSION}
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	12,14,16-dot Kanji fonts
+WWW=		http://monafont.sourceforge.net/
 
 LICENSE=	PD
 

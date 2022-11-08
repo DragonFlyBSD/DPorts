@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	cheffish
 PORTVERSION=	16.0.26
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Library to manipulate Chef in Chef
+WWW=		https://github.com/chef/cheffish
 
 LICENSE=	APACHE20
 

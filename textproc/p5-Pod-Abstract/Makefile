@@ -1,5 +1,3 @@
-# Created by: Cezary Morga <cm@therek.net>
-
 PORTNAME=	Pod-Abstract
 PORTVERSION=	0.20
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Abstract document tree for Perl POD documents
+WWW=		https://metacpan.org/release/Pod-Abstract
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

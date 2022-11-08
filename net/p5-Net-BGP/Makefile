@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Net-BGP
 PORTVERSION=	0.18
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Border Gateway Protocol version 4 speaker/listener library
+WWW=		https://metacpan.org/release/Net-BGP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

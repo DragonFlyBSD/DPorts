@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fog-serverlove
 PORTVERSION=	0.1.2
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module for the 'fog' gem to support ServerLove
+WWW=		https://github.com/fog/fog-serverlove
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

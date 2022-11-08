@@ -1,0 +1,42 @@
+--- build/build_config.h.orig	2022-10-16 15:24:30.736385000 +0200
++++ build/build_config.h	2022-10-16 15:26:50.303150000 +0200
+@@ -83,6 +83,8 @@
+ #define OS_WIN 1
+ #elif defined(__Fuchsia__)
+ #define OS_FUCHSIA 1
++#elif defined(__DragonFly__)
++#define OS_DRAGONFLY 1
+ #elif defined(__FreeBSD__)
+ #define OS_FREEBSD 1
+ #elif defined(__NetBSD__)
+@@ -111,7 +113,7 @@
+ 
+ // For access to standard BSD features, use OS_BSD instead of a
+ // more specific macro.
+-#if defined(OS_FREEBSD) || defined(OS_NETBSD) || defined(OS_OPENBSD)
++#if defined(OS_DRAGONFLY) || defined(OS_FREEBSD) || defined(OS_NETBSD) || defined(OS_OPENBSD)
+ #define OS_BSD 1
+ #endif
+ 
+@@ -121,7 +123,7 @@
+     defined(OS_FREEBSD) || defined(OS_IOS) || defined(OS_LINUX) ||  \
+     defined(OS_CHROMEOS) || defined(OS_MAC) || defined(OS_NACL) ||  \
+     defined(OS_NETBSD) || defined(OS_OPENBSD) || defined(OS_QNX) || \
+-    defined(OS_SOLARIS) || defined(OS_ZOS)
++    defined(OS_SOLARIS) || defined(OS_ZOS) || defined(OS_DRAGONFLY)
+ #define OS_POSIX 1
+ #endif
+ 
+@@ -162,6 +164,12 @@
+ #define BUILDFLAG_INTERNAL_IS_CHROMEOS() (0)
+ #endif
+ 
++#if defined(OS_DRAGONFLY)
++#define BUILDFLAG_INTERNAL_IS_DRAGONFLY() (1)
++#else
++#define BUILDFLAG_INTERNAL_IS_DRAGONFLY() (0)
++#endif
++
+ #if defined(OS_FREEBSD)
+ #define BUILDFLAG_INTERNAL_IS_FREEBSD() (1)
+ #else

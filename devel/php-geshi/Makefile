@@ -1,5 +1,3 @@
-# Created by: Eygene Ryabinkin <rea-fbsd@codelabs.ru>
-
 PORTNAME=	geshi
 DISTVERSION=	1.0.9.1
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	php-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Native PHP syntax highlighting engine
+WWW=		http://qbnz.com/highlighter/
 
 LICENSE=	GPLv2
 

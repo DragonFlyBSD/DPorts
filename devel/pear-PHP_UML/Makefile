@@ -1,11 +1,10 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	PHP_UML
 PORTVERSION=	1.6.2
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR Class to Create UML Representation of PHP Code
+WWW=		https://pear.php.net/package/PHP_UML
 
 LICENSE=	LGPL3
 

@@ -1,18 +1,17 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	znotes
 DISTVERSION=	0.4.7
 CATEGORIES=	deskutils
 
 MAINTAINER=	rigoletto@FreeBSD.org
 COMMENT=	Simple notes managment application based on Qt
+WWW=		http://znotes.sourceforge.net
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		compiler:c++11-lang gl qmake qt:5
 USE_GL=		gl
-USE_QT=		buildtools_build linguisttools_build core gui network \
+USE_QT=		buildtools:build linguisttools:build core gui network \
 		printsupport widgets xml
 
 USE_GITHUB=	yes

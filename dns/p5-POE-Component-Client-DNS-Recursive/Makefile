@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	POE-Component-Client-DNS-Recursive
 PORTVERSION=	1.12
 CATEGORIES=	dns perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Recursive DNS client for POE
+WWW=		https://metacpan.org/release/POE-Component-Client-DNS-Recursive
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

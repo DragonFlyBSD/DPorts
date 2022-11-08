@@ -1,5 +1,3 @@
-# Created by: Andrey Slusar <anray@FreeBSD.org>
-
 PORTNAME=	masqmail
 PORTVERSION=	0.3.5
 CATEGORIES=	mail
@@ -7,6 +5,7 @@ MASTER_SITES=	http://marmaro.de/prog/masqmail/files/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Mail server for hosts, not permanently connected to the internet
+WWW=		http://marmaro.de/prog/masqmail/
 
 LICENSE=	GPLv2
 

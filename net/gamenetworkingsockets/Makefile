@@ -1,5 +1,3 @@
-# Created by: Karsten Pedersen <kpedersen@disroot.org>
-
 PORTNAME=	gamenetworkingsockets
 PORTVERSION=	1.3.0
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	net
 
 MAINTAINER=	kpedersen@disroot.org
 COMMENT=	GameNetworkingSockets is a basic transport layer for games
+WWW=		https://github.com/ValveSoftware/GameNetworkingSockets
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

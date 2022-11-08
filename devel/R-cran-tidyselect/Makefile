@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	tidyselect
 PORTVERSION=	1.1.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Select from a Set of Strings
+WWW=		https://cran.r-project.org/web/packages/tidyselect/
 
 LICENSE=	MIT
 

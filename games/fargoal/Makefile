@@ -1,5 +1,3 @@
-# Created by: chris_pressey@yahoo.ca
-
 PORTNAME=	fargoal
 PORTVERSION=	20040629
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Remake of classic roguelike game "Sword of Fargoal"
+WWW=		http://squidfighter.sourceforge.net/fargoal/
 
 LIB_DEPENDS=	liballeg.so:devel/allegro
 

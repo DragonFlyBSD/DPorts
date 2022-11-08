@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	Bio-Das-Lite
 PORTVERSION=	2.11
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for the DAS (HTTP+XML) Protocol
+WWW=		https://metacpan.org/release/Bio-Das-Lite
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

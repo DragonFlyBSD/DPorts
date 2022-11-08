@@ -1,5 +1,3 @@
-# Created by: ijliao@FreeBSD.org
-
 PORTNAME=	yaml
 PORTVERSION=	5.4.1
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	PyYAML-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python YAML parser
+WWW=		https://pyyaml.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

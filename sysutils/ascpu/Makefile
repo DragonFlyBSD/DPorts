@@ -1,5 +1,3 @@
-# Created by: Dima Sivachenko <dima@chg.ru>
-
 PORTNAME=	ascpu
 PORTVERSION=	1.11
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.tigr.net/afterstep/download/ascpu/
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	CPU statistics monitor utility for XFree86
+WWW=		http://www.tigr.net/
 
 USES=		jpeg xorg
 USE_XORG=	xpm

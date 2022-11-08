@@ -1,5 +1,3 @@
-# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-
 PORTNAME=	Mail-OpenRelay-Simple
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Check if a mail server runs as an open relay
+WWW=		https://metacpan.org/release/Mail-OpenRelay-Simple
 
 LICENSE=	ART10
 

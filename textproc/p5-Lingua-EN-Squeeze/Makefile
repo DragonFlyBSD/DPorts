@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Lingua-EN-Squeeze
 PORTVERSION=	2020.02
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Shorten text to minimum syllables by using hash table
+WWW=		https://metacpan.org/release/Lingua-EN-Squeeze
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

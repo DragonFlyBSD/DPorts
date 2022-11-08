@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	patchutils
 PORTVERSION=	0.4.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://cyberelk.net/tim/data/patchutils/stable/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Small collection of programs that operate on patch files
+WWW=		http://cyberelk.net/tim/software/patchutils/
 
 LICENSE=	GPLv2+
 

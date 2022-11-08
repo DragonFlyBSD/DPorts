@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Astro-PAL
 PORTVERSION=	1.09
 CATEGORIES=	astro perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl interface to Starlink PAL positional astronomy library
+WWW=		https://metacpan.org/release/Astro-PAL
 
 LICENSE=	GPLv3
 

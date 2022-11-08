@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Iterator-DBI
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Iterator for returning DBI query results
+WWW=		https://metacpan.org/release/Iterator-DBI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

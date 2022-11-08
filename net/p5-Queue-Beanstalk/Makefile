@@ -1,5 +1,3 @@
-# Created by: Anton Yuzhaninov <citrin@citrin.ru>
-
 PORTNAME=	Queue-Beanstalk
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	citrin@citrin.ru
 COMMENT=	Client for beanstalkd, in-memory workqueue daemon
+WWW=		https://metacpan.org/release/Queue-Beanstalk
 
 USES=		perl5
 USE_PERL5=	modbuild

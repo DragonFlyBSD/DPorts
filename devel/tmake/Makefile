@@ -1,5 +1,3 @@
-# Created by: jesse@cs.uni-magdeburg.de
-
 PORTNAME=	tmake
 PORTVERSION=	2.12
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ MASTER_SITES=	SF \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extremely portable perl-based make utility
+WWW=		http://tmake.sourceforge.net/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Artem Zaytsev <a.arepo@gmail.com>
-
 PORTNAME=	pp
 PORTVERSION=	1.03
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://de.nologin.ru/distfiles/sysutils/pp/
 
 MAINTAINER=	a.arepo@gmail.com
 COMMENT=	Small and fast progress bar for pipe
+WWW=		https://github.com/avz/pp
 
 LICENSE=	BSD3CLAUSE
 

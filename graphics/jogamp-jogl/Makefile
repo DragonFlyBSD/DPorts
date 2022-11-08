@@ -1,5 +1,3 @@
-# Created by: Tassilo Philipp <tphilipp@potion-studios.com>
-
 PORTNAME=	jogamp-jogl
 PORTVERSION=	2.3.2
 PORTREVISION=	1
@@ -12,6 +10,7 @@ DISTFILES=	jogl-v${PORTVERSION}.tar.xz \
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Java bindings for OpenGL
+WWW=		https://jogamp.org/jogl
 
 BUILD_DEPENDS=	${JAVALIBDIR}/swt.jar:x11-toolkits/swt
 RUN_DEPENDS=	${JAVALIBDIR}/swt.jar:x11-toolkits/swt

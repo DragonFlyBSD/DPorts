@@ -1,11 +1,10 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	amigafonts
 PORTVERSION=	1.02
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Faithfully remade Amiga fonts
+WWW=		https://github.com/rewtnull/amigafonts
 
 LICENSE=	GPLv3RLE+
 

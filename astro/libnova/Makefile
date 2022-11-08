@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	libnova
 PORTVERSION=	0.15.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/v%20${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Astronomical Calculation Library
+WWW=		http://libnova.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

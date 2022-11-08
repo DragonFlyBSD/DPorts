@@ -1,5 +1,3 @@
-# Created by: Ivan Voras <ivoras@FreeBSD.org>
-
 PORTNAME=	mdcached
 PORTVERSION=	1.0.9
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ivoras@FreeBSD.org
 COMMENT=	High performance cache server similar to memcached
+WWW=		http://mdcached.sourceforge.net/
 
 LICENSE=	BSD2CLAUSE
 

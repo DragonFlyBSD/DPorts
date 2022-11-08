@@ -1,13 +1,12 @@
-# Created by: ache
-
 PORTNAME=	URI
-PORTVERSION=	5.10
+PORTVERSION=	5.12
 CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 interface to Uniform Resource Identifier (URI) references
+WWW=		https://metacpan.org/release/URI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

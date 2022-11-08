@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	IOC
 PORTVERSION=	0.29
 PORTREVISION=	3
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Lightweight IOC (Inversion of Control) framework
+WWW=		https://metacpan.org/release/IOC
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Class-Throwable>=0:devel/p5-Class-Throwable \

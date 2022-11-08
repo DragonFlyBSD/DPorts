@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	tcl-signal
 PORTVERSION=	1.4.0.1
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ DISTNAME=	signal_ext${PORTVERSION:R:R}
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Dynamically loadable signal handling for Tcl/Tk scripts
+WWW=		https://www.nyx.net/~mschwart/signal_ext.html
 
 USES+=		tcl:tea
 ALL_TARGET=	signal.so

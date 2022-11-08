@@ -1,5 +1,3 @@
-# Created by: Dylan Simon <dylan@dylex.net>
-
 PORTNAME=	orpie
 PORTVERSION=	1.5.2
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	GENTOO http://pessimization.com/software/orpie/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fullscreen RPN calculator for the console
+WWW=		https://pessimization.com/software/orpie/
 
 LICENSE=	GPLv2
 

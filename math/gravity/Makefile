@@ -1,11 +1,13 @@
 PORTNAME=	gravity
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.1.20220309
+PORTREVISION=	1
 CATEGORIES=	math
 PKGNAMEPREFIX=	coin-or-
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Mathematical modeling for optimization and machine learning
+WWW=		https://www.gravityopt.com/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

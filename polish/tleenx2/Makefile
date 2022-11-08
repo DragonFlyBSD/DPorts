@@ -1,5 +1,3 @@
-# Created by: Maciek Korzen <eaquer@ceti.pl>
-
 PORTNAME=	tleenx2
 PORTVERSION=	20040214
 PORTREVISION=	11
@@ -9,6 +7,7 @@ DISTNAME=	TleenX2-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Client for polish IM service called Tlen.pl
+WWW=		http://tleenx.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

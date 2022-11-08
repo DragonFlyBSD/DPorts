@@ -1,5 +1,3 @@
-# Created by: Zane C. Bowers-Hadley <vvelox@vvelox.net>
-
 PORTNAME=	MP3-Tag-Utils
 PORTVERSION=	0.0.3
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Assorted utilities for manipulating MP3 files via MP3::Tag
+WWW=		https://metacpan.org/release/MP3-Tag-Utils
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

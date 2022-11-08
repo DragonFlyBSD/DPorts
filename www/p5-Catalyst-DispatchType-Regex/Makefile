@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Catalyst-DispatchType-Regex
 PORTVERSION=	5.90035
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Regex DispatchType
+WWW=		https://metacpan.org/release/Catalyst-DispatchType-Regex
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

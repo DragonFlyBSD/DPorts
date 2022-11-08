@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Protocol-HTTP2
 PORTVERSION=	1.10
 CATEGORIES=	www perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HTTP/2 protocol implementation
+WWW=		https://metacpan.org/release/Protocol-HTTP2
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

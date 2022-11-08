@@ -1,12 +1,11 @@
-# Created by: David Naylor <naylor.b.david@gmail.com>
-
 PORTNAME=	fGarch
-DISTVERSION=	3042.83.2
+DISTVERSION=	4021.87
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Rmetrics - Autoregressive Conditional Heteroskedastic Modelling
+WWW=		https://www.rmetrics.org
 
 LICENSE=	GPLv2+
 

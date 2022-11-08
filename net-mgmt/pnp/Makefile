@@ -1,5 +1,3 @@
-# Created by: rea-fbsd@codelabs.ru
-
 PORTNAME=	pnp
 PORTVERSION=	0.6.26
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	pnp4nagios-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
 
 MAINTAINER?=	joneum@FreeBSD.org
 COMMENT?=	Nagios / Icinga performance data collector and grapher
+WWW=		https://www.pnp4nagios.org/
 
 LICENSE=	GPLv2
 

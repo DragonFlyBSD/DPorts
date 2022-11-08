@@ -1,11 +1,10 @@
-# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-
 PORTNAME=	DB_QueryTool
 PORTVERSION=	1.1.2
 CATEGORIES=	databases www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR OO-interface for easily retrieving and modifying data in a DB
+WWW=		https://pear.php.net/package/DB_QueryTool
 
 LICENSE=	BSD2CLAUSE
 

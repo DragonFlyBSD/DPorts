@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Lingua-Ident
 PORTVERSION=	1.7
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Statistical language identification
+WWW=		https://metacpan.org/release/Lingua-Ident
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

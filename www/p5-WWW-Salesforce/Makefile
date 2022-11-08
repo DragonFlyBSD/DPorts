@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman <matthew@FreeBSD.org>
-
 PORTNAME=	WWW-Salesforce
 PORTVERSION=	0.304
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Simple abstraction layer between SOAP::Lite and Salesforce.com
+WWW=		https://metacpan.org/release/WWW-Salesforce
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

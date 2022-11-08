@@ -1,5 +1,3 @@
-# Created by: Gabriel Ambuehl <gabriel_ambuehl@buz.ch>
-
 PORTNAME=	easysoap
 PORTVERSION=	0.8.0
 PORTREVISION=	6
@@ -9,6 +7,7 @@ DISTNAME=	EasySoap++-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ SOAP library based on Expat
+WWW=		http://easysoap.sourceforge.net/
 
 LICENSE=	LGPL21
 

@@ -1,13 +1,12 @@
-# Created by: Josh Elsasser <jre@vineyard.net>
-
 PORTNAME=	haskell-mode
 DISTVERSION=	17.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	lang elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	aehlig@linta.de
 COMMENT=	Emacs lisp mode for editing haskell programs
+WWW=		https://projects.haskell.org/haskellmode-emacs/
 
 LICENSE=	GPLv3
 

@@ -1,5 +1,3 @@
-# Created by: Julien Laffaye <kimelto@gmail.com>
-
 PORTNAME=	bgs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.8
@@ -7,6 +5,7 @@ CATEGORIES=	x11
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple X11 BackGround Setter using Imlib2
+WWW=		https://github.com/Gottox/bgs
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: Henk van Oers <hvo.pm@xs4all.nl>
-
 PORTNAME=	Mojolicious-Plugin-Mongodb
 PORTVERSION=	1.16
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Use MongoDB in Mojolicious
+WWW=		https://metacpan.org/release/Mojolicious-Plugin-Mongodb
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

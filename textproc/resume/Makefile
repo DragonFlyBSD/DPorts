@@ -1,5 +1,3 @@
-# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-
 PORTNAME=	resume
 DISTVERSION=	1_5_1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/xml${PORTNAME}/xml${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XML Resume library
+WWW=		http://xmlresume.sourceforge.net/
 
 LICENSE=	MIT
 

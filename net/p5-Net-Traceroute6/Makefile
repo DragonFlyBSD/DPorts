@@ -1,5 +1,3 @@
-# Created by: petef
-
 PORTNAME=	Net-Traceroute6
 PORTVERSION=	0.03
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl module to parse traceroute6(8) output
+WWW=		https://metacpan.org/release/Net-Traceroute6
 
 LICENSE=	MIT
 

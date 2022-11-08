@@ -1,7 +1,5 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	avro
-PORTVERSION=	1.11.0
+PORTVERSION=	1.11.1
 CATEGORIES=	devel
 MASTER_SITES=	APACHE/avro/stable/c
 PKGNAMESUFFIX=	-c
@@ -9,6 +7,7 @@ DISTNAME=	avro-c-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	C library for Apache Avro
+WWW=		https://avro.apache.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

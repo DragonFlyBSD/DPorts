@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	redis
 PORTVERSION=	3.5.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python client for Redis key-value store
+WWW=		https://github.com/andymccurdy/redis-py
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

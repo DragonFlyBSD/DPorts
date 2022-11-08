@@ -1,14 +1,13 @@
-# Created by: Mikhail Teterin
-
 PORTNAME=	quantlib
 PORTVERSION=	1.20
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	finance math devel
 MASTER_SITES=	https://dl.bintray.com/${PORTNAME}/releases/
 DISTNAME=	QuantLib-${PORTVERSION}
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	C++ library for quantitative finance
+WWW=		https://www.quantlib.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT

@@ -1,8 +1,6 @@
-# Created by: aaron@FreeBSD.org
-
 PORTNAME=	mkhexgrid
 PORTVERSION=	0.1.1
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	games
 MASTER_SITES=	http://www.nomic.net/~uckelman/mkhexgrid/releases/ \
 		http://aaron.daltons.ca/freebsd/
@@ -10,6 +8,7 @@ EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fully-configurable hex grid generator
+WWW=		https://www.nomic.net/~uckelman/mkhexgrid/
 
 LICENSE=	GPLv2
 

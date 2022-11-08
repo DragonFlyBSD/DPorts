@@ -1,5 +1,3 @@
-# Created by: Olivier Cochard-Labbe <olivier@FreeBSD.org>
-
 PORTNAME=	editor
 PORTVERSION=	0.4.0
 CATEGORIES=	editors
@@ -9,6 +7,7 @@ DISTNAME=	Editor-${PORTVERSION}
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	DeforaOS desktop text editor
+WWW=		https://www.defora.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

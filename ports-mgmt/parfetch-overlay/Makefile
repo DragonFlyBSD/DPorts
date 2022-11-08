@@ -6,6 +6,7 @@ PKGNAMESUFFIX=	-overlay
 
 MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Fetch distfiles in parallel and with pipelining
+WWW=		https://codeberg.org/tobik/parfetch-overlay
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

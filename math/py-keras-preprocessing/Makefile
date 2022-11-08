@@ -1,10 +1,11 @@
 PORTNAME=	keras-preprocessing
-DISTVERSION=	1.1.0
+DISTVERSION=	1.1.2
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rm@FreeBSD.org
 COMMENT=	Easy data preprocessing and data augmentation for DL models
+WWW=		https://github.com/keras-team/keras-preprocessing
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

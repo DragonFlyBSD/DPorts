@@ -1,5 +1,3 @@
-# Created by: dikshie
-
 PORTNAME=	networkx
 DISTVERSION=	2.6.3
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dikshie@sfc.wide.ad.jp
 COMMENT=	Tools for complex networks
+WWW=		https://networkx.github.io/
 
 LICENSE=	BSD3CLAUSE
 

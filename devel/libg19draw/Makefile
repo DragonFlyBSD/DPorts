@@ -1,5 +1,3 @@
-# Created by: Armin Pirkovitsch <armin@frozen-zone.org>
-
 PORTNAME=	libg19draw
 PORTVERSION=	1.0.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/g19linux/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	armin@frozen-zone.org
 COMMENT=	G19 draw library
+WWW=		http://g19linux.sourceforge.net/
 
 LIB_DEPENDS=	libg19.so:devel/libg19 \
 		libfreetype.so:print/freetype2

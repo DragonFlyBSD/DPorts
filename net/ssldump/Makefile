@@ -1,5 +1,3 @@
-# Created by: Kris Kennaway <kris@FreeBSD.org>
-
 PORTNAME=	ssldump
 PORTVERSION=	0.9b3
 PORTREVISION=	5
@@ -10,6 +8,7 @@ PATCH_SITES=	https://gist.githubusercontent.com/mtigas/5969597/raw/e62ea9ab8a66a
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SSLv3/TLS network protocol analyzer
+WWW=		https://sourceforge.net/projects/ssldump/
 
 USES=	ssl
 

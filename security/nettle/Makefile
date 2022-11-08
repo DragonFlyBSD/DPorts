@@ -1,13 +1,12 @@
-# Created by: ijliao
-
 PORTNAME=	nettle
-PORTVERSION=	3.8
+PORTVERSION=	3.8.1
 CATEGORIES=	security
 MASTER_SITES=	GNU \
 		https://www.lysator.liu.se/~nisse/archive/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Low-level cryptographic library
+WWW=		https://www.lysator.liu.se/~nisse/nettle/
 
 LICENSE=	GPLv2+ LGPL3
 LICENSE_COMB=	multi
@@ -35,10 +34,6 @@ EXAMPLES_CFLAGS=	-I${OPENSSLINC}
 EXAMPLES_USES=		ssl
 
 .include <bsd.port.options.mk>
-
-.if ${ARCH} == "aarch64"
-CONFIGURE_ARGS+=--disable-assembler
-.endif
 
 .if ${ARCH} == "sparc64"
 CONFIGURE_ENV+=	CCPIC=-fPIC

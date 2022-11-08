@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <culot@FreeBSD.org>
-
 PORTNAME=	Path-FindDev
 PORTVERSION=	0.5.2
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Find a development path in an upper hierarchy
+WWW=		https://metacpan.org/release/Path-FindDev
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

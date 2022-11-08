@@ -1,11 +1,10 @@
-# Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-
 PORTNAME=	gather
 PORTVERSION=	0.4.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Utility to store and display system statistics
+WWW=		https://github.com/trociny/gather
 
 LICENSE=	BSD2CLAUSE
 

@@ -1,5 +1,3 @@
-# Created by: James E Keenan <jkeenan@cpan.org>
-
 PORTNAME=	System-Info
 PORTVERSION=	0.058
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	jkeenan@cpan.org
 COMMENT=	Extract system info for reporting
+WWW=		https://metacpan.org/release/System-Info
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

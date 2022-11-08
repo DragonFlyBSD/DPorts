@@ -1,5 +1,3 @@
-# Created by: Denis Pokataev <catone@cpan.org>
-
 PORTNAME=	Event-Join
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Join multiple "events" into one
+WWW=		https://metacpan.org/release/Event-Join
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

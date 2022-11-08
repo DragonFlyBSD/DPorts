@@ -1,11 +1,10 @@
-# Created by: Ben Woods <woodsb02@FreeBSD.org>
-
 PORTNAME=	gstreamer1-transcoder
 PORTVERSION=	1.16.0
 CATEGORIES=	multimedia
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GStreamer Transcoding API
+WWW=		https://github.com/pitivi/gst-transcoder
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

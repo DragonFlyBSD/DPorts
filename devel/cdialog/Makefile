@@ -1,5 +1,5 @@
 PORTNAME=	cdialog
-DISTVERSION=	1.3-20220414
+DISTVERSION=	1.3-20220728
 PORTEPOCH=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.invisible-island.net/pub/${PORTNAME:S|^c||}/\
@@ -8,6 +8,7 @@ DISTNAME=	${PORTNAME:S|^c||}-${PORTVERSION:R}-${PORTVERSION:E}
 
 MAINTAINER=	jcpierri@gmail.com
 COMMENT=	Enhanced version of 'dialog' to work with ncurses
+WWW=		https://invisible-island.net/dialog/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

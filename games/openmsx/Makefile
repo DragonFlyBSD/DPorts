@@ -1,5 +1,3 @@
-# Created by: Ilya A. Arhipov <admin@gorodkirov.ru>
-
 PORTNAME=	openmsx
 PORTVERSION=	0.4.2
 CATEGORIES=	games
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	openttd-
 
 MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Free alternative music for OpenTTD game engine
+WWW=		https://github.com/OpenTTD/OpenMSX
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/license.txt

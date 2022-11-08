@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@ahze.net>
-
 PORTNAME=	leafpad
 PORTVERSION=	0.8.18.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	GTK+ based simple text editor
+WWW=		http://tarot.freeshell.org/leafpad/
 
 LICENSE=	GPLv2
 

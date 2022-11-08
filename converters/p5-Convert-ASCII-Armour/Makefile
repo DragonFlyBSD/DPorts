@@ -1,5 +1,3 @@
-# Created by: nork@cityfujisawa.ne.jp
-
 PORTNAME=	Convert-ASCII-Armour
 PORTVERSION=	1.4
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert binary octets into ASCII armoured messages
+WWW=		https://metacpan.org/release/Convert-ASCII-Armour
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

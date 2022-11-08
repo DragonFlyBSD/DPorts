@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	radeontop
 PORTVERSION=	1.4
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Program that shows AMD Radeon GPU resource utilization
+WWW=		https://github.com/clbr/radeontop
 
 LICENSE=	GPLv3
 

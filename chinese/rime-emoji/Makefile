@@ -1,11 +1,10 @@
-# Created by: Ka Ho Ng <khng300@gmail.com>
-
 PORTNAME=	rime-emoji
 DISTVERSION=	g20210909
 CATEGORIES=	chinese textproc
 
 MAINTAINER=	khng@FreeBSD.org
 COMMENT=	Rime emoji suggestions support
+WWW=		https://github.com/rime/rime-emoji
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE

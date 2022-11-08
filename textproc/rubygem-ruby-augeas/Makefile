@@ -1,5 +1,3 @@
-# Created by: Russell Jackson <raj@csub.edu>
-
 PORTNAME=	ruby-augeas
 PORTVERSION=	0.5.0
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby bindings for Augeas
+WWW=		https://augeas.net/
 
 LICENSE=	LGPL21
 

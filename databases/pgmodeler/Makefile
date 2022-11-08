@@ -1,5 +1,3 @@
-# Created by: Loïc BARTOLETTI
-
 PORTNAME=	pgmodeler
 PORTVERSION=	0.9.4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	PostgreSQL Database Modeler
+WWW=		http://pgmodeler.com.br/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -18,7 +17,7 @@ USE_GITHUB=	yes
 USE_GNOME=	libxml2
 USE_GL=		gl
 USE_QT=		core gui network printsupport sql svg widgets testlib uitools \
-		buildtools_build 
+		buildtools:build
 USE_XORG=	x11 xext
 
 USE_LDCONFIG=	yes

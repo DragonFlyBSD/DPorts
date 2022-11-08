@@ -1,13 +1,12 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	public_suffix_service
 PORTVERSION=	0.9.1
-PORTREVISION=	65
+PORTREVISION=	68
 CATEGORIES=	dns rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parse and decompose domain names into TLD, domain, and subdomains
+WWW=		http://www.simonecarletti.com/code/public_suffix_service
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

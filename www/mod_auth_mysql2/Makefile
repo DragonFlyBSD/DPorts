@@ -1,5 +1,3 @@
-# Created by: Clement Laforet <clement@FreeBSD.org>
-
 PORTNAME=	mod_auth_mysql
 PORTVERSION=	1.11
 CATEGORIES=	www
@@ -10,6 +8,7 @@ DIST_SUBDIR=	apache2
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	MySQL-based authentication module with VirtualHost support
+WWW=		https://www.heuer.org/mod_auth_mysql/
 
 LICENSE=	APACHE20
 

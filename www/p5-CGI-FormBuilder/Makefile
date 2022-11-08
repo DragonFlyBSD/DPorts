@@ -1,5 +1,3 @@
-# Created by: Fernan Aguero
-
 PORTNAME=	CGI-FormBuilder
 PORTVERSION=	3.1000
 CATEGORIES=	www perl5
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S|00$||}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	FormBuilder for CGI
+WWW=		https://metacpan.org/release/CGI-FormBuilder
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	lxqt-runner
 PORTVERSION=	1.1.0
 CATEGORIES=	x11
@@ -11,6 +9,7 @@ PATCHFILES=     b83c40c5086010eda3ad810e7332aa68799aad65.patch:-p1 \
 
 MAINTAINER=	jsm@FreeBSD.org
 COMMENT=	LXQt tool used to launch programs quickly
+WWW=		https://lxqt-project.org
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,7 +18,7 @@ LIB_DEPENDS=	libmuparser.so:math/muparser
 
 USES=		cmake compiler:c++14-lang gettext-runtime kde:5 qt:5 \
 		gnome localbase lxqt pkgconfig tar:xz xorg
-USE_QT=		buildtools_build qmake_build core dbus gui linguisttools \
+USE_QT=		buildtools:build qmake:build core dbus gui linguisttools \
 		script svg widgets x11extras xml
 USE_KDE=	windowsystem
 USE_GNOME=	glib20

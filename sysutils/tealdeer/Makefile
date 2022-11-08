@@ -1,11 +1,12 @@
 PORTNAME=	tealdeer
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.0
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	sysutils
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Fast tldr client written in Rust
+WWW=		https://github.com/dbrgn/tealdeer
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

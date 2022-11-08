@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	apache-solr
 PORTVERSION=	8.11.2
 PORTREVISION=	0
@@ -9,6 +7,7 @@ DISTNAME=	solr-${PORTVERSION}
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	High performance search server built using Lucene Java
+WWW=		https://lucene.apache.org/solr/
 
 LICENSE=	APACHE20
 

@@ -1,5 +1,3 @@
-# Created by: Muhammad Moinur Rahman <5u623l20@gmail.com>
-
 PORTNAME=	newtonsoft-json
 PORTVERSION=	9.0.1
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Popular high-performance JSON framework for .NET
+WWW=		http://james.newtonking.com/json
 
 LICENSE=	MIT
 

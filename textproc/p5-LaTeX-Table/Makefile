@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	LaTeX-Table
 PORTVERSION=	1.0.6
 DISTVERSIONPREFIX=	v
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for the automatic generation of LaTeX tables
+WWW=		https://metacpan.org/release/LaTeX-Table
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

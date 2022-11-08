@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	minitar
 PORTVERSION=	0.9
 CATEGORIES=	archivers rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library and command-line utility for tar archives
+WWW=		https://github.com/halostatue/minitar
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

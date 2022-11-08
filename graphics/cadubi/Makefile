@@ -1,5 +1,3 @@
-# Created by: Kris Kennaway <kris@FreeBSD.org>
-
 PORTNAME=	cadubi
 PORTVERSION=	1.3.4
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	graphics editors
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ASCII drawing utility
+WWW=		https://github.com/statico/cadubi
 
 LICENSE=	ART10
 

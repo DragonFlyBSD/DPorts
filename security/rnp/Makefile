@@ -1,10 +1,11 @@
 PORTNAME=	rnp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.16.0
+DISTVERSION=	0.16.2
 CATEGORIES=	security
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	RNP is a set of OpenPGP (RFC4880) tools
+WWW=		https://www.rnpgp.com/
 
 LICENSE=	APACHE20 BSD2CLAUSE BSD3CLAUSE OCB_Patent
 LICENSE_COMB=	multi
@@ -25,6 +26,8 @@ USE_LDCONFIG=	yes
 
 CMAKE_ARGS=	-DBUILD_SHARED_LIBS=on \
 		-DBUILD_TESTING=off
+
+PLIST_SUB=	VERS=${DISTVERSION}
 
 pre-configure:
 		${CP} ${FILESDIR}/version.cmake ${WRKSRC}/cmake/

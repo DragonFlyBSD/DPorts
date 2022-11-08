@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	fastdb
 PORTVERSION=	3.75
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Main Memory Relational Database Management System
+WWW=		https://sourceforge.net/projects/fastdb/
 
 LICENSE=	MIT
 

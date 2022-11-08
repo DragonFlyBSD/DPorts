@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MooX-Types-MooseLike
 PORTVERSION=	0.29
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Some Moosish types and a typer builder
+WWW=		https://metacpan.org/release/MooX-Types-MooseLike
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

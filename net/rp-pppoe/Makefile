@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <liouxFreeBSD.org>
-
 PORTNAME=	rp-pppoe
 PORTVERSION=	3.15
 PORTREVISION=	0
@@ -8,6 +6,7 @@ MASTER_SITES=	https://dianne.skoll.ca/projects/rp-pppoe/download/
 
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Roaring Penguin's PPPoE software
+WWW=		https://dianne.skoll.ca/projects/rp-pppoe/
 
 LICENSE=	GPLv2+
 

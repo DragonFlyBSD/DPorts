@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	DBIx-XHTML_Table
 PORTVERSION=	1.49
 CATEGORIES=	databases www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Create XHTML tables from SQL queries
+WWW=		https://metacpan.org/release/DBIx-XHTML_Table
 
 LICENSE=	ART20
 

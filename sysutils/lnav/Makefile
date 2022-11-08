@@ -1,5 +1,3 @@
-# Created by: Thomas Hurst <tom@hur.st>
-
 PORTNAME=	lnav
 DISTVERSION=	0.10.1
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/tstack/${PORTNAME}/releases/download/v${PORTVER
 
 MAINTAINER=	tom@hur.st
 COMMENT=	Terminal based log file navigator
+WWW=		https://lnav.org/
 
 LICENSE=	BSD2CLAUSE
 

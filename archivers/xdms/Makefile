@@ -1,5 +1,3 @@
-# Created by: Mark Pulford <mark@kyne.com.au>
-
 PORTNAME=	xdms
 PORTVERSION=	1.3.2
 CATEGORIES=	archivers
@@ -7,6 +5,7 @@ MASTER_SITES=	http://zakalwe.fi/~shd/foss/xdms/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for decompressing Amiga DMS files
+WWW=		https://zakalwe.fi/~shd/foss/xdms/
 
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/COPYING

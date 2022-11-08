@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	libddwaf
 PORTVERSION=	1.3.0.2.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	WAF implementation in C++, exposed to Ruby
+WWW=		https://github.com/DataDog/libddwaf
 
 LICENSE=	APACHE20 BSD3CLAUSE
 LICENSE_COMB=	dual

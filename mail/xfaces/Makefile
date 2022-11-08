@@ -1,5 +1,3 @@
-# Created by: Ted Faber <faber@isi.edu>
-
 PORTNAME=	xfaces
 PORTVERSION=	3.3
 PORTREVISION=	5
@@ -17,6 +15,7 @@ PATCH_DIST_STRIP=
 
 MAINTAINER=	faber@isi.edu
 COMMENT=	Display shaped icons for mail spool contents
+WWW=		https://legacy.cs.indiana.edu/ftp/faces/index.html
 
 LIB_DEPENDS=	libcompface.so:mail/faces
 

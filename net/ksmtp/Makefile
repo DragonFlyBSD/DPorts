@@ -4,6 +4,7 @@ CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Job-based library to send email through an SMTP server
+WWW=		https://github.com/KDE/mailcommon
 
 LICENSE=	LGPL21
 LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
@@ -13,7 +14,7 @@ USE_KDE=	config coreaddons i18n kio service
 # pim components
 USE_KDE+=	mime
 USE_QT=		concurrent core dbus network \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 
 USE_LDCONFIG=	yes
 

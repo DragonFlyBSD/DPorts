@@ -1,5 +1,3 @@
-# Created by: Michael Haro <mharo@FreeBSD.org>
-
 PORTNAME=	Crypt-Random
 PORTVERSION=	1.54
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Cryptographically Secure, True Random Number Generator
+WWW=		https://metacpan.org/release/Crypt-Random
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

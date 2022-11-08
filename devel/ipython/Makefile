@@ -1,5 +1,3 @@
-# Created by: Dryice Liu
-
 PORTNAME=	ipython
 PORTVERSION=	7.34.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Enhanced Interactive Python shell
+WWW=		https://ipython.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING.rst

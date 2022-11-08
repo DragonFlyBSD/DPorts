@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	argouml
 PORTVERSION=	0.34
 PORTREVISION=	2
@@ -14,6 +12,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	UML design tool with cognitive support
+WWW=		http://argouml.tigris.org/
 
 LICENSE=	EPL
 

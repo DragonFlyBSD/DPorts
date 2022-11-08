@@ -1,5 +1,3 @@
-# Created by: Cyrille.Lefevre@laposte.net
-
 PORTNAME=	v7sh
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -15,6 +13,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Implementation of the UNIX 7th Edition shell
+WWW=		http://minnie.tuhs.org/UnixTree/V7/
 
 BROKEN_aarch64=	Fails to link: missing sbrk
 BROKEN_riscv64=	Fails to link: missing sbrk

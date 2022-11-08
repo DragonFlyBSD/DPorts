@@ -1,5 +1,3 @@
-# Created by: kftseng@iyard.org
-
 PORTNAME=	Crypt-OpenSSL-X509
 PORTVERSION=	1.914
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for OpenSSL X509 API
+WWW=		https://metacpan.org/release/Crypt-OpenSSL-X509
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

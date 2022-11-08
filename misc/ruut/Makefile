@@ -1,11 +1,12 @@
 PORTNAME=	ruut
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.1
-PORTREVISION=	19
+DISTVERSION=	0.7.0
+PORTREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Print arbitrary trees on the command line
+WWW=		https://github.com/HarrisonB/ruut
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

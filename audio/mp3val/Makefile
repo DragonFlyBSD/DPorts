@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-
 PORTNAME=	mp3val
 PORTVERSION=	0.1.8
 DISTVERSIONSUFFIX=	-src
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/mp3val/mp3val/mp3val%20${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Program for MPEG audio stream validation
+WWW=		http://mp3val.sourceforge.net/
 
 LICENSE=	GPLv2
 

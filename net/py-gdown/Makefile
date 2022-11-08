@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	gdown
-PORTVERSION=	4.5.0
+PORTVERSION=	4.5.1
 CATEGORIES=	net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Google Drive direct download of big files
+WWW=		https://github.com/wkentaro/gdown
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-Warnings
 PORTVERSION=	0.031
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Test for warnings and the lack of them
+WWW=		https://metacpan.org/release/Test-Warnings
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

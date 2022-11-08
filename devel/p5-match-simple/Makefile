@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	match-simple
 PORTVERSION=	0.010
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simplified clone of smartmatch operator
+WWW=		https://metacpan.org/release/match-simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

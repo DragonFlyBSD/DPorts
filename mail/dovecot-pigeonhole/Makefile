@@ -1,5 +1,3 @@
-# Created by: Nils Vogels <nivo+kw+ports.bfa274@is-root.com>
-
 PORTNAME=	dovecot-pigeonhole
 PORTVERSION=	0.5.19
 CATEGORIES=	mail
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME:C/-/-${DOVECOTVERSION}-/}-${PORTVERSION}
 
 MAINTAINER=	ler@FreeBSD.org
 COMMENT=	Sieve plugin for the Dovecot 'deliver' LDA and LMTP
+WWW=		https://wiki2.dovecot.org/Pigeonhole
 
 LICENSE=	LGPL21
 

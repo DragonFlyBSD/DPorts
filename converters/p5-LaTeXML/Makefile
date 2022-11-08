@@ -1,5 +1,3 @@
-# Created by: Carlos J. Puga Medina <cpm@fbsd.es>
-
 PORTNAME=	LaTeXML
 PORTVERSION=	0.8.6
 CATEGORIES=	converters perl5
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	LaTeX to XML/HTML/MathML converter in Perl
+WWW=		https://metacpan.org/release/LaTeXML
 
 LICENSE=	PD CC0-1.0
 LICENSE_COMB=	dual

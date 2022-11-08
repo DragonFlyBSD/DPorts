@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	raindrops
 PORTVERSION=	0.20.0
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Real-time stats toolkit to show statistics for Rack HTTP servers
+WWW=		https://yhbt.net/raindrops/
 
 LICENSE=	LGPL21+ LGPL3
 LICENSE_COMB=	dual

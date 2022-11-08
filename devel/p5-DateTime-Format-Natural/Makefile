@@ -1,5 +1,3 @@
-# Created by: Timur I. Bakeyev <bat@cpan.org>
-
 PORTNAME=	DateTime-Format-Natural
 PORTVERSION=	1.13
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Create machine readable date/time with natural parsing logic
+WWW=		https://metacpan.org/release/DateTime-Format-Natural
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

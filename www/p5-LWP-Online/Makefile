@@ -1,5 +1,3 @@
-# Created by: milki <milki@rescomp.berkeley.edu>
-
 PORTNAME=	LWP-Online
 PORTVERSION=	1.08
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Checks if process has access to the web
+WWW=		https://metacpan.org/release/LWP-Online
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

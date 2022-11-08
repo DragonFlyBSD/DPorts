@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	pytest-xdist
 PORTVERSION=	2.5.0
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Pytest xdist plugin for distributed testing and loop-on-failing modes
+WWW=		https://github.com/pytest-dev/pytest-xdist
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -2,6 +2,7 @@ bin/yosys
 bin/yosys-config
 bin/yosys-filterlib
 bin/yosys-smtbmc
+bin/yosys-witness
 %%DATADIR%%/abc9_map.v
 %%DATADIR%%/abc9_model.v
 %%DATADIR%%/abc9_unmap.v
@@ -51,7 +52,10 @@ bin/yosys-smtbmc
 %%DATADIR%%/gatemate/brams_map.v
 %%DATADIR%%/gatemate/cells_bb.v
 %%DATADIR%%/gatemate/cells_sim.v
+%%DATADIR%%/gatemate/inv_map.v
 %%DATADIR%%/gatemate/lut_map.v
+%%DATADIR%%/gatemate/lut_tree_cells.genlib
+%%DATADIR%%/gatemate/lut_tree_map.v
 %%DATADIR%%/gatemate/mul_map.v
 %%DATADIR%%/gatemate/mux_map.v
 %%DATADIR%%/gatemate/reg_map.v
@@ -172,6 +176,7 @@ bin/yosys-smtbmc
 %%DATADIR%%/nexus/parse_init.vh
 %%DATADIR%%/pmux2mux.v
 %%DATADIR%%/python3/smtio.py
+%%DATADIR%%/python3/ywio.py
 %%DATADIR%%/quicklogic/abc9_map.v
 %%DATADIR%%/quicklogic/abc9_model.v
 %%DATADIR%%/quicklogic/abc9_unmap.v

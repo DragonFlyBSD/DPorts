@@ -1,5 +1,3 @@
-# Created by: David Thiel <lx@redundancy.redundancy.org>
-
 PORTNAME=	uird
 PORTVERSION=	1.1
 CATEGORIES=	comms
@@ -8,6 +6,7 @@ MASTER_SITES=	http://kbinstuff.googlepages.com/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The Universal IR Receiver Daemon
+WWW=		http://kbinstuff.googlepages.com/uirduniversalirreceiverdaemon
 
 USES=		perl5 gmake tar:tgz
 

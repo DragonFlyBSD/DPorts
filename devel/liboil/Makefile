@@ -1,6 +1,3 @@
-# Created by: ijliao
-#    $MCom: ports/devel/liboil/Makefile,v 1.7 2008/03/23 06:57:57 marcus Exp $
-
 PORTNAME=	liboil
 PORTVERSION=	0.3.17
 PORTREVISION=	3
@@ -9,6 +6,7 @@ MASTER_SITES=	http://liboil.freedesktop.org/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library of optimized inner loops
+WWW=		https://liboil.freedesktop.org/wiki/
 
 LICENSE=	BSD2CLAUSE BSD3CLAUSE MIT
 LICENSE_COMB=	multi

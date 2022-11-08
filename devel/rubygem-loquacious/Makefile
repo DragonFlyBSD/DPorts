@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
-
 PORTNAME=	loquacious
 PORTVERSION=	1.9.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Mechanism to parse ruby loquacious files
+WWW=		https://github.com/TwP/loquacious
 
 LICENSE=	MIT
 

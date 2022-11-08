@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	Net-IMAP-Server
 PORTVERSION=	1.39
 CATEGORIES=	mail perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Single-threaded multiplexing IMAP server implementation
+WWW=		https://metacpan.org/release/Net-IMAP-Server
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

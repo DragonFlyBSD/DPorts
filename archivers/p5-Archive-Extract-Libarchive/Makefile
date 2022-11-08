@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Archive-Extract-Libarchive
 PORTVERSION=	0.38
 PORTREVISION=	4
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generic archive extracting mechanism (using libarchive)
+WWW=		https://metacpan.org/release/Archive-Extract-Libarchive
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Carlo Strub
-
 PORTNAME=	testtools
 PORTVERSION=	2.5.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extensions to the Python standard library unit testing framework
+WWW=		https://github.com/testing-cabal/testtools
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	gauche
 PORTVERSION=	0.9.10
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	Gauche-${PORTVERSION}
 
 MAINTAINER=	lassi+freebsd@lassi.io
 COMMENT=	Scheme script interpreter with multibyte character handling
+WWW=		https://practical-scheme.net/gauche/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

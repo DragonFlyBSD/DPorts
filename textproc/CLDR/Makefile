@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	CLDR
 PORTVERSION=	41.0
 CATEGORIES=	textproc
@@ -11,6 +9,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Unicode Common Locale Data Repository
+WWW=		https://cldr.unicode.org/index
 
 LICENSE=	Unicode_License_Agreement
 LICENSE_NAME=	Unicode License Agreement

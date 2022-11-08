@@ -1,5 +1,3 @@
-# Created by: Andrej Zverev
-
 PORTNAME=	lincity-ng
 PORTVERSION=	2.0
 PORTREVISION=	19
@@ -8,6 +6,7 @@ MASTER_SITES=	BERLIOS
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Improved rich city simulation game for X
+WWW=		http://lincity-ng.berlios.de
 
 BUILD_DEPENDS=	jam:devel/jam
 LIB_DEPENDS=	libphysfs.so:devel/physfs

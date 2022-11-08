@@ -1,13 +1,12 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	BSD-Sysctl
-PORTVERSION=	0.12.2
+PORTVERSION=	0.12.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils perl5
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	glebius@FreeBSD.org
 COMMENT=	Fetch sysctl values from BSD-like systems
+WWW=		https://metacpan.org/release/BSD-Sysctl
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	File-Find-Object
 PORTVERSION=	0.3.2
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Object oriented File::Find replacement
+WWW=		https://metacpan.org/release/File-Find-Object
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

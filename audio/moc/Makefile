@@ -1,13 +1,12 @@
-# Created by: Rob Zinkov <rzinkov@gmail.com>
-
 PORTNAME=	moc
 PORTVERSION=	2.5.2
-PORTREVISION=	7
+PORTREVISION=	9
 CATEGORIES=	audio
 MASTER_SITES=	http://ftp.daper.net/pub/soft/moc/stable/
 
 MAINTAINER=	rzinkov@gmail.com
 COMMENT=	Console audio player designed to be powerful and easy to use
+WWW=		https://moc.daper.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Elisey Savateev <b3k@mail.ru>
-
 PORTNAME=	c-icap
 PORTVERSION=	0.5.10
 PORTEPOCH=	2
@@ -9,6 +7,7 @@ DISTNAME=	c_icap-${PORTVERSION}
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	ICAP server implementation
+WWW=		http://c-icap.sourceforge.net/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING

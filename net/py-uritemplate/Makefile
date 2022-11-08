@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	uritemplate
 PORTVERSION=	3.0.1
 PORTREVISION=	0
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python implementation of URI Template
+WWW=		https://github.com/python-hyper/uritemplate
 
 LICENSE=	APACHE20
 

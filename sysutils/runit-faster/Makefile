@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	runit
 DISTVERSION=	2.1.3.7
 CATEGORIES=	sysutils
@@ -9,6 +7,7 @@ DISTNAME=	freebsd-runit-${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Runit based init replacement for ${OPSYS}
+WWW=		https://codeberg.org/tobik/runit-faster
 
 LICENSE=	BSD3CLAUSE CC0-1.0
 LICENSE_COMB=	multi

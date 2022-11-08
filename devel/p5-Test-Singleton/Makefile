@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Test-Singleton
 PORTVERSION=	1.03
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Test for Singleton classes
+WWW=		https://metacpan.org/release/Test-Singleton
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

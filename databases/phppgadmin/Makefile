@@ -1,5 +1,3 @@
-# Created by: nbm
-
 PORTNAME=	phppgadmin
 DISTVERSIONPREFIX=	REL_
 DISTVERSION=	7-13-0
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Web Based Postgres Administration
+WWW=		http://phppgadmin.sourceforge.net/
 
 LICENSE=	GPLv2
 

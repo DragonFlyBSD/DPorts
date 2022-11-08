@@ -1,5 +1,3 @@
-# Created by: Kevin Golding <ports@caomhin.org>
-
 PORTNAME=	django-sortedm2m
 PORTVERSION=	3.1.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	ports@caomhin.org
 COMMENT=	Replacement for Django's many to many field #'
+WWW=		https://github.com/gregmuellegger/django-sortedm2m
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

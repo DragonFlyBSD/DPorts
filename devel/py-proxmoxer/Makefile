@@ -1,13 +1,12 @@
-# Created by: Davíð Steinn Geirsson <david@isnic.is>
-
 PORTNAME=	proxmoxer
 PORTVERSION=	1.2.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	david@isnic.is
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Wrapper around the Proxmox REST API v2
+WWW=		https://github.com/proxmoxer/proxmoxer
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

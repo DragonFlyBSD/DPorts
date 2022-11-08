@@ -1,11 +1,10 @@
-# Created by: Thibault Payet <monwarez@mailoo.org>
-
 PORTNAME=	socketw
 DISTVERSION=	3.10.27
 CATEGORIES=	net
 
 MAINTAINER=	monwarez@mailoo.org
 COMMENT=	Cross platform C++ streaming socket library
+WWW=		https://github.com/RigsOfRods/socketw
 
 LICENSE=	GPLv2+
 

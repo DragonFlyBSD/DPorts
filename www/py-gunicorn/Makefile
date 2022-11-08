@@ -1,5 +1,3 @@
-# Created by: Kristaps Kulis <kristaps.kulis@gmail.com>
-
 PORTNAME=	gunicorn
 PORTVERSION=	20.1.0
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	WSGI HTTP Server for UNIX
+WWW=		https://gunicorn.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

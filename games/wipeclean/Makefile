@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	wipeclean
 PORTVERSION=	1.1.2
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	LOCAL/ehaupt
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	CLI tool to wipe away your error messages in style
+WWW=		https://github.com/JeanJouliaCode/wipeClean
 
 LICENSE=	ISCL
 

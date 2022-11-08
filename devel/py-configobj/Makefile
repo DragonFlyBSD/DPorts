@@ -1,5 +1,3 @@
-# Created by: Choe, Cheng-Dae
-
 PORTNAME=	configobj
 PORTVERSION=	5.0.6
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Simple but powerful config file reader and writer
+WWW=		https://github.com/DiffSK/configobj/
 
 LICENSE=	BSD3CLAUSE
 

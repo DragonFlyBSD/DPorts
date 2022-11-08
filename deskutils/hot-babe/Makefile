@@ -1,5 +1,3 @@
-# Created by: Roman Bogorodskiy <bogorodskiy@inbox.ru>
-
 PORTNAME=	hot-babe
 PORTVERSION=	0.2.2
 PORTREVISION=	9
@@ -9,6 +7,7 @@ MASTER_SITES=	http://dindinx.net/hotbabe/downloads/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small utility which displays the system activity in a special way
+WWW=		http://dindinx.net/hotbabe/
 
 USES=		gnome pkgconfig tar:bzip2
 MAKE_ARGS+=	PREFIX="${PREFIX}" CC="${CC}"

@@ -1,5 +1,3 @@
-# Created by: Kay Lehmann
-
 PORTNAME=	cdbkup
 PORTVERSION=	1.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}-1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple but full-featured backup/restore perl scripts (uses gnu tar)
+WWW=		http://cdbkup.sourceforge.net/
 
 BUILD_DEPENDS=	${LOCALBASE}/sbin/eject:sysutils/eject \
 		cdrecord:sysutils/cdrtools

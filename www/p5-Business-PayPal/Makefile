@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer
-
 PORTNAME=	Business-PayPal
 PORTVERSION=	0.19
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Perl extension for automating PayPal transactions
+WWW=		https://metacpan.org/release/Business-PayPal
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

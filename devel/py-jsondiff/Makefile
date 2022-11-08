@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	jsondiff
 PORTVERSION=	2.0.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Diff JSON and JSON-like structures in Python
+WWW=		https://github.com/xlwings/jsondiff
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

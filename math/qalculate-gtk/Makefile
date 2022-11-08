@@ -1,12 +1,11 @@
-# Created by: Sergey Akifyev <asa@gascom.ru>
-
 PORTNAME=	qalculate-gtk
-PORTVERSION=	4.2.0
+PORTVERSION=	4.3.0
 CATEGORIES=	math
 MASTER_SITES=	https://github.com/Qalculate/${PORTNAME}/releases/download/v${PORTVERSION}/
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Multi-purpose desktop calculator (GTK+3 frontend)
+WWW=		https://qalculate.github.io/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

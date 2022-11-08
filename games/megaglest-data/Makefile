@@ -1,5 +1,3 @@
-# Created by: Sven Moeller <smoeller@nichthelfer.de>
-
 PORTNAME=	megaglest
 PORTVERSION=	3.13.0
 CATEGORIES=	games
@@ -7,6 +5,7 @@ PKGNAMESUFFIX=	-data
 
 MAINTAINER=	monwarez@mailoo.org
 COMMENT=	MegaGlest data files
+WWW=		https://megaglest.org/
 
 LICENSE=	CC-BY-SA-3.0
 LICENSE_FILE=	${WRKSRC}/docs/LICENSE.data.txt

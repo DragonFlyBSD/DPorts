@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Test-HasVersion
 PORTVERSION=	0.014
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Check Perl modules have version numbers
+WWW=		https://metacpan.org/release/Test-HasVersion
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

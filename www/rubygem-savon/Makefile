@@ -1,5 +1,3 @@
-# Created by: Joseph Benden <joe@thrallingpenguin.com>
-
 PORTNAME=	savon
 PORTVERSION=	2.11.2
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	joe@thrallingpenguin.com
 COMMENT=	Library for SOAP communications
+WWW=		https://github.com/savonrb/savon
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Zane C. Bowers-Hadley <vvelox@vvelox.net>
-
 PORTNAME=	Net-Connection-Sort
 PORTVERSION=	0.0.1
 CATEGORIES=	net perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Sorts array of Net::Connection objects
+WWW=		https://metacpan.org/release/Net-Connection-Sort
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

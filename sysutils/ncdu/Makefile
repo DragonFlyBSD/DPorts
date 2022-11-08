@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	ncdu
 PORTVERSION=	1.17
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	https://dev.yorhel.nl/download/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ncurses du(1)
+WWW=		https://dev.yorhel.nl/ncdu
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

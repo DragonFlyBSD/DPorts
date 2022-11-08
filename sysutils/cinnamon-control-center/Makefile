@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	cinnamon-control-center
 PORTVERSION=	4.8.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Control center for Cinnamon
+WWW=		http://cinnamon.linuxmint.com
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Hernan Di Pietro <hernan.di.pietro@gmail.com>
-
 PORTNAME=	glexcess
 PORTVERSION=	1.0
 PORTREVISION=	8
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	hernan.di.pietro@gmail.com
 COMMENT=	Impressive OpenGL Demo
+WWW=		http://www.glexcess.com
 
 USES=		gl
 USE_GL=		glut

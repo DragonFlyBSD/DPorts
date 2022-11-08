@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	deco
 PORTVERSION=	3.9
 PORTREVISION=	5
@@ -10,6 +8,7 @@ DISTNAME=	deco39
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Demos Commander, a free Norton Commander clone
+WWW=		http://deco.sourceforge.net/
 
 USES=		ncurses tar:tgz
 GNU_CONFIGURE=	yes

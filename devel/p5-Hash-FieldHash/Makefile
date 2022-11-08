@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Hash-FieldHash
 PORTVERSION=	0.15
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Lightweight field hash implementation
+WWW=		https://metacpan.org/release/Hash-FieldHash
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

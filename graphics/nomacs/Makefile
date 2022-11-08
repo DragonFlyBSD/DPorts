@@ -1,7 +1,7 @@
 PORTNAME=	nomacs
 PORTVERSION=	3.16
 DISTVERSIONSUFFIX=	.224
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	graphics
 
 PATCH_SITES=	https://github.com/nomacs/nomacs/commit/
@@ -9,6 +9,7 @@ PATCHFILES=	8c44e10ae48a88ed2ea885f432c65a0859013011.patch:-p1
 
 MAINTAINER=	vidar@karlsen.tech
 COMMENT=	Small, fast, and free image viewer
+WWW=		https://www.nomacs.org/
 
 LICENSE=	GPLv3
 
@@ -21,7 +22,7 @@ LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
 USES=		cmake compiler:c++11-lang cpe desktop-file-utils \
 		dos2unix pkgconfig qt:5
 USE_QT=		concurrent core gui network printsupport svg widgets \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 DOS2UNIX_FILES=	ImageLounge/plugins/PaintPlugin/src/DkPaintPlugin.cpp \
 		ImageLounge/src/DkGui/DkWidgets.cpp
 

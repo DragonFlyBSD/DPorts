@@ -1,5 +1,3 @@
-# Created by: blubee <hello@blubee.me>
-
 PORTNAME=	libcangjie
 PORTVERSION=	1.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	chinese
 
 MAINTAINER=	hello@blubee.me
 COMMENT=	C library implementing the Cangjie input method
+WWW=		https://github.com/Cangjians/libcangjie
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

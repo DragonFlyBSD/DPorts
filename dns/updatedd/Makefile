@@ -1,5 +1,3 @@
-# Created by: geniusj@ods.org
-
 PORTNAME=	updatedd
 PORTVERSION=	2.6
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	geniusj@ods.org
 COMMENT=	Dynamic DNS Update Client supporting multiple services
+WWW=		http://updatedd.philipp-benner.de
 
 OPTIONS_DEFINE=	DOCS
 

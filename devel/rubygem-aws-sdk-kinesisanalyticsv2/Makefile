@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	aws-sdk-kinesisanalyticsv2
 PORTVERSION=	1.40.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Official AWS Ruby gem for Amazon Kinesis Analytics (Kinesis Analytics V2)
+WWW=		https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-kinesisanalyticsv2
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

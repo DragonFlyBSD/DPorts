@@ -1,5 +1,3 @@
-# Created by: Alexander Novitsky <alecn2002@yandex.ru>
-
 PORTNAME=	fxscintilla
 PORTVERSION=	2.28.0
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fox toolkit reimplementation of Scintilla editing widget
+WWW=		https://www.nongnu.org/fxscintilla/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING

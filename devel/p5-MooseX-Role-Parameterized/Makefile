@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	MooseX-Role-Parameterized
 PORTVERSION=	1.11
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Roles with composition parameters
+WWW=		https://metacpan.org/release/MooseX-Role-Parameterized
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

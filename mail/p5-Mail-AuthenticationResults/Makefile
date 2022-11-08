@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Mail-AuthenticationResults
 PORTVERSION=	2.20210915
 CATEGORIES=	mail perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Object Oriented Authentication-Results Headers
+WWW=		https://metacpan.org/release/Mail-AuthenticationResults
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

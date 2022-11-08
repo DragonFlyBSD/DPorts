@@ -1,13 +1,12 @@
-# Created by: Nick Barkas <snb@threerings.net>
-
 PORTNAME=	openvpn-auth-ldap
 PORTVERSION=	2.0.4
-PORTREVISION=	1
+PORTREVISION=	2
 DISTVERSIONPREFIX=	auth-ldap-
 CATEGORIES=	security net-vpn
 
-MAINTAINER=	mandree@FreeBSD.org
+MAINTAINER=	zi@FreeBSD.org
 COMMENT=	LDAP authentication plugin for OpenVPN
+WWW=		https://github.com/threerings/openvpn-auth-ldap
 
 LICENSE=	BSD3CLAUSE
 

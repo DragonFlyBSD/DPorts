@@ -407,6 +407,7 @@
 %%WWWDIR%%/app/views/js/monitoring.map.view.js.php
 %%WWWDIR%%/app/views/js/monitoring.problem.view.js.php
 %%WWWDIR%%/app/views/js/monitoring.web.view.js.php
+%%WWWDIR%%/app/views/js/monitoring.widget.navtreeitem.edit.js.php
 %%WWWDIR%%/app/views/js/popup.acknowledge.edit.js.php
 %%WWWDIR%%/app/views/js/popup.dashboard.share.edit.js.php
 %%WWWDIR%%/app/views/js/popup.discovery.check.js.php
@@ -789,8 +790,6 @@
 %%WWWDIR%%/include/classes/html/CLink.php
 %%WWWDIR%%/include/classes/html/CLinkAction.php
 %%WWWDIR%%/include/classes/html/CList.php
-%%WWWDIR%%/include/classes/html/CListBox.php
-%%WWWDIR%%/include/classes/html/CListBoxItem.php
 %%WWWDIR%%/include/classes/html/CListItem.php
 %%WWWDIR%%/include/classes/html/CMacroValue.php
 %%WWWDIR%%/include/classes/html/CMenu.php
@@ -1309,6 +1308,8 @@
 %%WWWDIR%%/locale/ca/LC_MESSAGES/frontend.po
 %%WWWDIR%%/locale/cs/LC_MESSAGES/frontend.mo
 %%WWWDIR%%/locale/cs/LC_MESSAGES/frontend.po
+%%WWWDIR%%/locale/da/LC_MESSAGES/frontend.mo
+%%WWWDIR%%/locale/da/LC_MESSAGES/frontend.po
 %%WWWDIR%%/locale/de/LC_MESSAGES/frontend.mo
 %%WWWDIR%%/locale/de/LC_MESSAGES/frontend.po
 %%WWWDIR%%/locale/el/LC_MESSAGES/frontend.mo

@@ -1,5 +1,3 @@
-# Created by: Herve Quiroz <herve.quiroz@esil.univ-mrs.fr>
-
 PORTNAME=	jaxen
 PORTVERSION=	1.0
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-FCS
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java XPath Engine
+WWW=		https://jaxen.org
 
 USE_JAVA=	YES
 NO_BUILD=	YES

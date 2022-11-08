@@ -1,5 +1,3 @@
-# Created by: Jeremy Shaffner <jeremy@external.org>
-
 PORTNAME=	prips
 PORTVERSION=	1.2.0
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://devel.ringlet.net/files/sys/prips/
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Prints IP subnet ranges by list or CIDR
+WWW=		https://devel.ringlet.net/sysutils/prips/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/GPL-2

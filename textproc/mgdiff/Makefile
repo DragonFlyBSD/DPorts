@@ -1,5 +1,3 @@
-# Created by: andreas@marvin.robin.de
-
 PORTNAME=	mgdiff
 PORTVERSION=	1.0
 PORTREVISION=	5
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Graphical front end to the UNIX diff command
+WWW=		https://BSDforge.com/projects/textproc/mgdiff/
 
 LICENSE=	MIT
 

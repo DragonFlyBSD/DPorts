@@ -1,5 +1,3 @@
-# Created by: igor@zynaps.ru
-
 PORTNAME=	aclgen
 PORTVERSION=	2.02
 CATEGORIES=	misc
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/.//}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Optimize Cisco routers IP access lists
+WWW=		http://gatling.ikk.sztaki.hu/~kissg/pd/
 
 NO_WRKSUBDIR=	yes
 

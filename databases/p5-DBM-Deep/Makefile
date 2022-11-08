@@ -1,5 +1,3 @@
-# Created by: Janos.Mohacsi@bsd.hu
-
 PORTNAME=	DBM-Deep
 PORTVERSION=	2.0016
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Pure perl persistent multi-level hash/array DBM
+WWW=		https://metacpan.org/release/DBM-Deep
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

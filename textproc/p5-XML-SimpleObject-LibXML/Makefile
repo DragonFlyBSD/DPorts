@@ -1,5 +1,3 @@
-# Created by: Foxfair Hu <foxfair@FreeBSD.org>
-
 PORTNAME=	XML-SimpleObject-LibXML
 PORTVERSION=	0.60
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple(r) object representation of an XML::LibXML DOM object
+WWW=		https://metacpan.org/release/XML-SimpleObject-LibXML
 
 BUILD_DEPENDS=	p5-XML-LibXML>=0:textproc/p5-XML-LibXML \
 		p5-XML-SimpleObject>=0:textproc/p5-XML-SimpleObject

@@ -1,5 +1,3 @@
-# Created by: Bill Fumerola <billf@chc-chimes.com>
-
 PORTNAME=	muh
 PORTVERSION=	2.2a
 CATEGORIES=	irc
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	Smart irc-bouncing-tool that remains on IRC all the time
+WWW=		https://sourceforge.net/projects/muh/
 
 GNU_CONFIGURE=	yes
 

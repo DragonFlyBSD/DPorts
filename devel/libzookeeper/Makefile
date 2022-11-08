@@ -1,5 +1,3 @@
-# Created by: skreuzer@FreeBSD.org
-
 PORTNAME=	zookeeper
 PORTVERSION=	3.8.0
 CATEGORIES=	devel
@@ -9,6 +7,7 @@ DISTNAME=	apache-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	dmitry.wagin@ya.ru
 COMMENT=	C client interface to Zookeeper server
+WWW=		https://zookeeper.apache.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

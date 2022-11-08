@@ -1,17 +1,17 @@
-# Created by: Igor Pokrovsky <tiamat@telegraph.spb.ru>
-
 PORTNAME=	exult
-DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.0.20220622
+DISTVERSION?=	1.8
+PORTREVISION?=	1
+PORTEPOCH=	1
 CATEGORIES=	games
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Engine for Ultima VII (BG, FOV, SI, SS)
+WWW=		http://exult.info
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libfreetype.so:print/freetype2 \
+LIB_DEPENDS?=	libfreetype.so:print/freetype2 \
 		libogg.so:audio/libogg \
 		libpng.so:graphics/png \
 		libvorbis.so:audio/libvorbis
@@ -19,8 +19,6 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 USES=		autoreconf compiler:c++17-lang gmake libtool localbase \
 		pkgconfig sdl xorg
 
-USE_GITHUB=	yes
-GH_TAGNAME=	snapshot-${DISTVERSIONPREFIX}${DISTVERSION}
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30
 USE_SDL=	mixer2 sdl2
 USE_XORG=	x11 xext
@@ -31,7 +29,18 @@ CONFIGURE_ARGS=	--disable-static \
 		--enable-shared \
 		--with-icondir=${PREFIX}/share/pixmaps
 
-SUB_FILES=	pkg-message
+CONFLICTS_INSTALL=	exult-devel
+SUB_FILES=		pkg-message
+PLIST?=			${.CURDIR}/pkg-plist
+
+.if !defined(MASTERDIR)
+MASTER_SITES=	http://prdownloads.sourceforge.net/exult/
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-version.cc \
+		${PATCHDIR}/extra-patch-configure.ac
+.else
+USE_GITHUB=	yes
+GH_TAGNAME=	snapshot-${DISTVERSIONPREFIX}${DISTVERSION}
+.endif
 
 OPTIONS_DEFINE=		ALSA DEBUG DOCS FLUIDSYNTH GIMP STUDIO
 OPTIONS_DEFAULT=	STUDIO

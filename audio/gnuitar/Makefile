@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan
-
 PORTNAME=	gnuitar
 PORTVERSION=	0.3.2
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Real-time guitar processor
+WWW=		http://www.gnuitar.com
 
 USE_GNOME=	gtk20
 USES=		gmake gnome pkgconfig tar:bzip2

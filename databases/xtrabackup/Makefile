@@ -1,5 +1,3 @@
-# Created by: Alex Samorukov <samm@freebsd.org>
-
 PORTNAME=	xtrabackup
 DISTVERSION=	2.4.21
 CATEGORIES=	databases
@@ -10,6 +8,7 @@ DISTFILES=	percona-${PORTNAME}-${PORTVERSION}.tar.gz:xtrabackup \
 
 MAINTAINER=	samm@FreeBSD.org
 COMMENT=	OpenSource version of InnoDB backup with support of Percona extensions
+WWW=		https://www.percona.com/doc/percona-xtrabackup/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -20,7 +19,7 @@ BROKEN_mips64=		fails to compile: 'fpsetmask' was not declared in this scope
 
 # quilt is required by build.sh
 BUILD_DEPENDS=	bash:shells/bash \
-		cmake:devel/cmake
+		cmake:devel/cmake-core
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libev.so:devel/libev \
 		libgcrypt.so:security/libgcrypt \

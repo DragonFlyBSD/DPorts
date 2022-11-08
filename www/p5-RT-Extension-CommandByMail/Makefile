@@ -1,5 +1,3 @@
-# Created by: Michael Schout <mschout@gkg.net>
-
 PORTNAME=	RT-Extension-CommandByMail
 PORTVERSION=	3.00
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sysadmin@gkg.net
 COMMENT=	RT Extension to change ticket metadata via email
+WWW=		https://metacpan.org/release/RT-Extension-CommandByMail
 
 LICENSE=	GPLv2
 

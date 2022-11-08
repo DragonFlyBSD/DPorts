@@ -1,7 +1,5 @@
-# Created by: Jan Hornyak <pav@oook.cz>
-
 PORTNAME=	luasocket
-PORTVERSION=	3.0.0
+PORTVERSION=	3.1.0
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	1
 CATEGORIES=	net
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Socket support for the Lua language
+WWW=		https://github.com/lunarmodules/luasocket
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

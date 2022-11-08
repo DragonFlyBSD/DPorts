@@ -1,5 +1,3 @@
-# Created by: Lukasz Komsta
-
 PORTNAME=	ssss
 PORTVERSION=	0.5
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	http://point-at-infinity.org/ssss/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shamir's Secret Sharing Scheme
+WWW=		http://point-at-infinity.org/ssss/
 
 LIB_DEPENDS=	libgmp.so:math/gmp
 

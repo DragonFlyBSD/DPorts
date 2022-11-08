@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-
 PORTNAME=	Flask-Uploads
 PORTVERSION=	0.2.1
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Flexible and efficient upload handling for Flask
+WWW=		https://pypi.org/project/Flask-Uploads/
 
 LICENSE=	MIT
 

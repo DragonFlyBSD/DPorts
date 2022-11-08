@@ -1,5 +1,3 @@
-# Created by: Timur I. Bakeyev <bat@cpan.org>
-
 PORTNAME=	Test-MockTime
 PORTVERSION=	0.17
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Replaces actual time with simulated time
+WWW=		https://metacpan.org/release/Test-MockTime
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

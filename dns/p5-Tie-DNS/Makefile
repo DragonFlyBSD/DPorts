@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Tie-DNS
 PORTVERSION=	1.151560
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tie interface to Net::DNS
+WWW=		https://metacpan.org/release/Tie-DNS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

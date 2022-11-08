@@ -1,5 +1,3 @@
-# Created by: William Grzybowski
-
 PORTNAME=	python-mimeparse
 PORTVERSION=	1.6.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Basic functions for handling mime-types in Python
+WWW=		http://code.google.com/p/mimeparse/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

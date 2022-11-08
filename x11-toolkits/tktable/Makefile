@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	tktable
 PORTVERSION=	2.10
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME:S/tk/Tk/}${PORTVERSION}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Table/matrix widget extension to Tk
+WWW=		http://tktable.sourceforge.net/
 
 LICENSE=	TclTk
 LICENSE_NAME=	Tcl/Tk License

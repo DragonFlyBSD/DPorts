@@ -1,5 +1,3 @@
-# Created by: gebhart@secnetix.de
-
 PORTNAME=	Term-Bash-Completion-Generator
 PORTVERSION=	0.02.8
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	gebhart@secnetix.de
 COMMENT=	Generate bash completion scripts
+WWW=		https://metacpan.org/release/Term-Bash-Completion-Generator
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

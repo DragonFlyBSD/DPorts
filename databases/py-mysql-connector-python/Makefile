@@ -1,10 +1,11 @@
 PORTNAME=	mysql-connector-python
-PORTVERSION=	8.0.29
+PORTVERSION=	8.0.30
 CATEGORIES=	databases python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	MySQL driver written in Python
+WWW=		https://dev.mysql.com/doc/connector-python/en
 
 LICENSE=	GPLv2
 

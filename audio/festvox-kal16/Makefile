@@ -1,5 +1,3 @@
-# Created by: trevor
-
 PORTNAME=	festvox-kal16
 PORTVERSION=	1.4.0
 CATEGORIES=	audio accessibility
@@ -10,6 +8,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	American English male voice, sampled at 16 kHz, for Festival
+WWW=		https://www.cstr.ed.ac.uk/projects/festival/
 
 RUN_DEPENDS=	\
 ${LOCALBASE}/share/festival/lib/dicts/wsj.wp39.poslexR:audio/festlex-poslex \

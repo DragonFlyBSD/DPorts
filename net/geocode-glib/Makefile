@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	geocode-glib
 PORTVERSION=	3.26.2
 CATEGORIES=	net devel gnome
@@ -7,6 +5,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Convenience library for the geocoding and reverse geocoding
+WWW=		https://git.gnome.org/browse/geocode-glib
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB

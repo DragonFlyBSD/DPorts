@@ -1,5 +1,3 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	fapg
 PORTVERSION=	0.43
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	http://royale.zerezo.com/${PORTNAME}/
 
 MAINTAINER=	m.muenz@gmail.com
 COMMENT=	Fast Audio Playlist Generator
+WWW=		http://royale.zerezo.com/fapg/
 
 LICENSE=	GPLv2
 

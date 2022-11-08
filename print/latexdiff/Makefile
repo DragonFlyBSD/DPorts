@@ -1,5 +1,3 @@
-# Created by: Maxim Loginov <Zeliboba@mail.ru>
-
 PORTNAME=	latexdiff
 PORTVERSION=	1.3.2
 CATEGORIES=	print perl5
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/ftilmann/${PORTNAME}/releases/download/${PORTVE
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Determine and mark up significant differences between latex files
+WWW=		https://ctan.org/tex-archive/support/latexdiff
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

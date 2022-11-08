@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman <matthew@FreeBSD.org>
-
 PORTNAME=	Log-Syslog-Constants
 PORTVERSION=	1.02
 CATEGORIES=	sysutils perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Syslog priority constants as defined in RFC3164
+WWW=		https://metacpan.org/release/Log-Syslog-Constants
 
 NO_ARCH=	yes
 

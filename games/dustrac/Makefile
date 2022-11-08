@@ -5,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	2D top-view racing game
+WWW=		http://dustrac.sourceforge.net/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -20,7 +21,7 @@ GH_TAGNAME=	ae380b8  # includes crash fix
 USES=		compiler:c++11-lib cmake gl openal pkgconfig qt:5
 USE_GL=		gl glu
 USE_QT=		core gui opengl xml widgets testlib sql \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 CMAKE_ARGS=	-DReleaseBuild=on \
 		-DSystemFonts=on \
 		-DDATA_PATH=${DATADIR} \

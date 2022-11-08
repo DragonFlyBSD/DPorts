@@ -1,5 +1,3 @@
-# Created by: Mij <mij@bitchx.it>
-
 PORTNAME=	vmailmgr
 PORTVERSION=	0.97
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://vault.101011010.xyz/distfiles/ GENTOO
 
 MAINTAINER=	mij@bitchx.it
 COMMENT=	Virtual domain manager for qmail
+WWW=		http://www.vmailmgr.org
 
 LICENSE=	GPLv2+
 

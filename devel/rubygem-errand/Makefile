@@ -1,5 +1,3 @@
-# Created by: Brad Davis <brd@FreeBSD.org>
-
 PORTNAME=	errand
 PORTVERSION=	0.8.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ruby bindings for RRD
+WWW=		https://rubygems.org/gems/errand
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENCE

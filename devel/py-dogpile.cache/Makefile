@@ -1,13 +1,12 @@
-# Created by: William Grzybowski <william88@gmail.com>
-
 PORTNAME=	dogpile.cache
-PORTVERSION=	1.1.6
+PORTVERSION=	1.1.8
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Caching front-end based on the Dogpile lock
+WWW=		https://github.com/sqlalchemy/dogpile.cache
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	mod_sql_sqlite
 PORTREVISION=	3
 CATEGORIES=	databases ftp
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	proftpd-
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	SQLite ProFTPD module
+WWW=		http://www.proftpd.org/docs/contrib/mod_sql.html
 
 LICENSE=	GPLv2
 

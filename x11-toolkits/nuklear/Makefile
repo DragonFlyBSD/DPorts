@@ -1,9 +1,10 @@
 PORTNAME=	nuklear
-DISTVERSION=	4.9.6
+DISTVERSION=	4.10.1
 CATEGORIES=	x11-toolkits
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Minimal-state, immediate-mode graphical user interface toolkit
+WWW=		https://github.com/Immediate-Mode-UI/Nuklear
 
 LICENSE=	MIT PD
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Pav Lucistnik <pav@FreeBSD.org>
-
 PORTNAME=	chemical-mime-data
 PORTVERSION=	0.1.94
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/chemical-mime/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Collection of chemical MIME types for UNIX desktops
+WWW=		http://chemical-mime.sourceforge.net/
 
 USES=		gettext-tools gmake gnome pathfix pkgconfig shared-mime-info \
 		tar:bzip2

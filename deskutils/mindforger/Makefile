@@ -1,18 +1,17 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	mindforger
 PORTVERSION=	1.54.0
 CATEGORIES=	deskutils
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Thinking notebook and markdown editor
+WWW=		https://www.mindforger.com/
 
 LICENSE=	GPLv2+
 
 LIB_DEPENDS=	libhunspell-1.7.so:textproc/hunspell
 
 USES=		pkgconfig qmake qt:5
-USE_QT=		buildtools_build core declarative gui location network \
+USE_QT=		buildtools:build core declarative gui location network \
 		printsupport webchannel widgets
 USE_GITHUB=	yes
 GH_ACCOUNT=	dvorka
@@ -26,7 +25,7 @@ OPTIONS_DEFINE=	CMARK
 OPTIONS_DEFAULT=	CMARK
 CMARK_DESC=	CommonMark support (Markdown -> HTML rendering)
 
-CMARK_BUILD_DEPENDS=	cmake:devel/cmake
+CMARK_BUILD_DEPENDS=	cmake:devel/cmake-core
 CMARK_QMAKE_OFF=	CONFIG+="mfnomd2html"
 
 .include <bsd.port.options.mk>

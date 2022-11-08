@@ -1,5 +1,3 @@
-# Created by: melifaro@ipfw.ru
-
 PORTNAME=		nss-pam-ldapd
 PORTVERSION=		0.9.12
 CATEGORIES=		net
@@ -8,6 +6,7 @@ MASTER_SITES=		http://arthurdejong.org/nss-pam-ldapd/ \
 
 MAINTAINER?=		zi@FreeBSD.org
 COMMENT?=		Advanced fork of nss_ldap
+WWW=		https://arthurdejong.org/nss-pam-ldapd/
 
 LICENSE=		LGPL21 LGPL3
 LICENSE_COMB=		dual

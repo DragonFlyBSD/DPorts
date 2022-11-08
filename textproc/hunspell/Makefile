@@ -1,14 +1,12 @@
-# Created by: janos.mohacsi@bsd.hu
-
 PORTNAME=	hunspell
-PORTVERSION=	1.7.0
-PORTREVISION=	2
+PORTVERSION=	1.7.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Improved spell-checker for Hungarian and other languages
+WWW=		https://hunspell.github.io/
 
 LICENSE=	GPLv2+ LGPL21+ MPL11
 LICENSE_COMB=	dual

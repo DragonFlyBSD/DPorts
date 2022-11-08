@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	PerlCryptLib
 PORTVERSION=	1.12
 CATEGORIES=	security perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to Peter Guttman cryptlib API
+WWW=		https://metacpan.org/release/PerlCryptLib
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

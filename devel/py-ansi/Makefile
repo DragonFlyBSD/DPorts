@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ansi
 PORTVERSION=	0.3.6
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	ANSI cursor movement and graphics
+WWW=		https://github.com/tehmaze/ansi
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

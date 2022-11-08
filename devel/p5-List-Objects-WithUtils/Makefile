@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	List-Objects-WithUtils
 PORTVERSION=	2.028003
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	List objects, kitchen sink included
+WWW=		https://metacpan.org/release/List-Objects-WithUtils
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

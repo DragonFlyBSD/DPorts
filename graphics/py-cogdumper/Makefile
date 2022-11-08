@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cogdumper
 PORTVERSION=	1.1.0
 CATEGORIES=	graphics python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Cloud Optimized GeoTIFF (COG) dumper
+WWW=		https://github.com/mapbox/COGDumper
 
 LICENSE=	MIT
 

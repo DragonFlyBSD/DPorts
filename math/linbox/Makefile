@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	linbox
 PORTVERSION=	1.6.3
 DISTVERSIONPREFIX=	v
@@ -11,6 +9,7 @@ PATCHFILES=	b79fb13522fceef79e291922ca9c7af0a09b65ae.diff:-p1
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	C++ library for exact, high-performance linear algebra
+WWW=		https://linalg.org/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	dual

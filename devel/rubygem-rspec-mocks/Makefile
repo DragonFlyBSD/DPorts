@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	rspec-mocks
 PORTVERSION=	3.11.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Rspec-mocks provides a test-double framework for rspec
+WWW=		https://github.com/rspec/rspec-mocks
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

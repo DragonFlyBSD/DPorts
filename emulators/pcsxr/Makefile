@@ -1,5 +1,3 @@
-# Created by: Ganael Laplanche <ganael.laplanche@martymac.org>
-
 PORTNAME=	pcsxr
 PORTVERSION=	1.9.95.20180604
 PORTREVISION=	5
@@ -7,6 +5,7 @@ CATEGORIES=	emulators
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Playstation (PSX) emulator
+WWW=		http://pcsxr.codeplex.com
 
 LICENSE=	GPLv3+
 

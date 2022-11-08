@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-font-awesome
 PORTVERSION=	4.7.0.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	XStatic-Font-Awesome-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Iconic font and CSS framework (font-awesome)
+WWW=		https://fontawesome.com/
 
 LICENSE=	OFL11
 

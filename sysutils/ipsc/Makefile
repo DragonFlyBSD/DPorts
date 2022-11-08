@@ -1,5 +1,3 @@
-# Created by: Jeremy Shaffner <jeremy@external.org>
-
 PORTNAME=	ipsc
 PORTVERSION=	0.4.3
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	IP Subnet Calculator
+WWW=		http://www.alaskaparadise.com/ipsc
 
 BUILD_DEPENDS=	${PRIPS_WRKSRC}/prips.o:sysutils/prips:build
 

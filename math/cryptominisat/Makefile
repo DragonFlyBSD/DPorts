@@ -1,10 +1,11 @@
 PORTNAME=	cryptominisat
 DISTVERSION=	5.8.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	General-purpose award-winning SAT solver
+WWW=		https://github.com/msoos/cryptominisat
 
 LICENSE=	MIT LGPL21
 LICENSE_COMB=	multi

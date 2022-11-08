@@ -1,5 +1,3 @@
-# Created by: Michael Grünewald <michipili@gmail.com>
-
 PORTNAME=	ppx-tools
 PORTVERSION=	5.1
 DISTVERSIONSUFFIX=+4.06.0
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	michipili@gmail.com
 COMMENT=	Tools for authors of ppx rewriters
+WWW=		https://github.com/ocaml-ppx/ppx_tools
 
 LICENSE=	MIT
 

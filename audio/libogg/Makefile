@@ -1,5 +1,3 @@
-# Created by: t.vanklaveren@student.utwente.nl
-
 PORTNAME=	libogg
 PORTVERSION=	1.3.5
 PORTEPOCH=	4
@@ -9,6 +7,7 @@ MASTER_SITES=	https://downloads.xiph.org/releases/ogg/ \
 
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Ogg bitstream library
+WWW=		https://www.xiph.org/ogg/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

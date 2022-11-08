@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Devel-Leak
 PORTVERSION=	0.03
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Utility for looking for perl objects that are not reclaimed
+WWW=		https://metacpan.org/release/Devel-Leak
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Lars Koeller <Lars.Koeller@Uni-Bielefeld.de>
-
 PORTNAME=	grace
 PORTVERSION=	5.1.25
 PORTREVISION=	8
@@ -11,6 +9,7 @@ MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/graphics/grace/src/stable/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Powerful 2D plotting tool (successor of xmgr)
+WWW=		https://plasma-gate.weizmann.ac.il/Grace/
 
 LICENSE=	GPLv2
 

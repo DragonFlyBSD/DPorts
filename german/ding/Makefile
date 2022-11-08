@@ -1,5 +1,3 @@
-# Created by: n@nectar.com
-
 PORTNAME=	ding
 PORTVERSION=	1.9
 CATEGORIES=	german tk
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.tu-chemnitz.de/pub/Local/urz/ding/ \
 
 MAINTAINER=	beat@FreeBSD.org
 COMMENT=	German-English dictionary program for X windows/Unix
+WWW=		https://www-user.tu-chemnitz.de/~fri/ding/
 
 LICENSE=	GPLv2
 

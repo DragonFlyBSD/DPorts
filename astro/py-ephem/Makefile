@@ -1,5 +1,3 @@
-# Created by: db
-
 PORTNAME=	ephem
 PORTVERSION=	4.1.3
 CATEGORIES=	astro math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Compute positions of the planets and stars
+WWW=		https://pypi.org/project/ephem/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,13 +1,12 @@
-# Created by: Carlos J Puga Medina <cpm@FreeBSD.org>
-
 PORTNAME=	grive2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5.2-dev
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	samuel@andersentech.net
 COMMENT=	Open source client for Google Drive
+WWW=		https://github.com/vitalif/grive2
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

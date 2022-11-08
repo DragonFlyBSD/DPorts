@@ -1,5 +1,3 @@
-# Created by: Muhammad Moinur Rahman <bofh@FreeBSD.org>
-
 PORTNAME=	arouteserver
 PORTVERSION=	1.15.1
 CATEGORIES=	net-mgmt python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Tool to automatically build configurations for BGP route servers
+WWW=		https://github.com/pierky/arouteserver
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

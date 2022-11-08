@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	first
 PORTVERSION=	2.0.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Return the first true value of an iterable
+WWW=		https://pypi.org/project/first/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

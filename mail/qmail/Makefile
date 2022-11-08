@@ -1,5 +1,3 @@
-# Created by: Mario S F Ferreira <lioux@linf.unb.br>
-
 PORTNAME=	${QMAIL_PORTNAME}
 PORTVERSION?=	${QMAIL_VERSION}
 PORTREVISION?=	6
@@ -11,6 +9,7 @@ EXTRACT_ONLY?=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	erdgeist@erdgeist.org
 COMMENT?=	Secure, reliable, efficient, simple, and fast MTA
+WWW?=		https://cr.yp.to/qmail.html
 
 DIST_SUBDIR=	qmail
 

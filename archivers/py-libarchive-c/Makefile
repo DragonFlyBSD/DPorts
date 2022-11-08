@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	libarchive-c
 PORTVERSION=	4.0
 CATEGORIES=	archivers python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Python interface to libarchive
+WWW=		https://github.com/Changaco/python-libarchive-c
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

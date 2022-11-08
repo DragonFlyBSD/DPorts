@@ -5,6 +5,7 @@ MASTER_SITES=	https://numpi.dm.unipi.it/_media/software/mpsolve/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Multiprecision rootfinder for complex roots of univariate polynomials
+WWW=		https://numpi.dm.unipi.it/software/mpsolve
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -29,6 +30,6 @@ OPTIONS_SUB=		yes
 GUI_DESC=		Graphical UI to solve polynomial equations visually
 GUI_CONFIGURE_OFF=	--disable-ui
 GUI_USES=		bison desktop-file-utils qt:5
-GUI_USE=		QT=core,gui,widgets,buildtools_build
+GUI_USE=		QT=core,gui,widgets,buildtools:build
 
 .include <bsd.port.mk>

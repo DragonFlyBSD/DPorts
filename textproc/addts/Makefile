@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	addts
 PORTVERSION=	1.0
 CATEGORIES=	textproc
@@ -8,6 +6,7 @@ MASTER_SITES=	http://download.gnu.org.ua/release/addts/ \
 
 MAINTAINER=	zeus@gnu.org.ua
 COMMENT=	Prepend current timestamp to every line of input text
+WWW=		https://puszcza.gnu.org.ua/projects/addts/
 
 LICENSE=	GPLv3+
 

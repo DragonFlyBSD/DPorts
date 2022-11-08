@@ -1,11 +1,12 @@
 PORTNAME=	pytest-metadata
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Pytest plugin for test session metadata
+WWW=		https://github.com/pytest-dev/pytest-metadata
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE

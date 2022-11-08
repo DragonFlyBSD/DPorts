@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	inplace
 PORTVERSION=	1.2.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	ftp://ftp.iDaemons.org/pub/distfiles/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to edit files in-place through given filter commands
+WWW=		https://akinori.org/ #inplace
 
 USES=		tar:bzip2 uidfix shebangfix
 USE_RUBY=	yes

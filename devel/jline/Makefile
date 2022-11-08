@@ -1,5 +1,3 @@
-# Created by: Martin Kammerhofer <mkamm@gmx.net>
-
 PORTNAME=	jline
 PORTVERSION=	0.9.94
 CATEGORIES=	devel java
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	mkamm@gmx.net
 COMMENT=	Java library for handling console input
+WWW=		http://jline.sourceforge.net/
 
 LICENSE=	BSD4CLAUSE
 

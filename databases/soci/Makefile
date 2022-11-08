@@ -1,13 +1,12 @@
-# Created by: Julien Laffaye <kimelto@gmail.com>
-
 PORTNAME=	soci
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	C++ Database Access Library
+WWW=		http://soci.sourceforge.net/
 
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE_1_0.txt

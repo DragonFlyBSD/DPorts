@@ -1,14 +1,13 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	tagpy
 PORTVERSION=	2013.1
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	audio python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python bindings for Scott Wheeler's TagLib
+WWW=		https://mathema.tician.de/software/tagpy
 
 LICENSE=	MIT
 

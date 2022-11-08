@@ -1,5 +1,3 @@
-# Created by: Ben Woods <woodsb02@FreeBSD.org>
-
 PORTNAME=	distro
 PORTVERSION=	1.7.0
 CATEGORIES=	sysutils python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Linux OS platform information API
+WWW=		https://github.com/python-distro/distro
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

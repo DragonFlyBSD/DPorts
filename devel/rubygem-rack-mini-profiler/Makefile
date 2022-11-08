@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	rack-mini-profiler
 PORTVERSION=	0.10.7
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Profiles loading speed for rack applications
+WWW=		https://miniprofiler.com/
 
 LICENSE=	MIT
 

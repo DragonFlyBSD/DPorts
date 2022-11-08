@@ -1,4 +1,3 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # If you have compelling evidence that some ports need at least this version of
 # p5-Module-Build to build, be sure to update the BUILD_DEPENDS version in
@@ -12,6 +11,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Build and install Perl modules
+WWW=		https://metacpan.org/release/Module-Build
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

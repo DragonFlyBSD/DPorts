@@ -1,5 +1,3 @@
-# Created by: jkh
-
 PORTNAME=	tclX
 PORTVERSION=	8.4.1
 CATEGORIES=	lang tcl devel
@@ -12,6 +10,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Extended TCL
+WWW=		http://tclx.sourceforge.net/
 
 LICENSE=	TclTk
 LICENSE_NAME=	Tcl/Tk License

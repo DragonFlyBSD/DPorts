@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-
 PORTNAME=	gspiceui
 PORTVERSION=	1.1.00
 PORTREVISION=	6
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
 MAINTAINER=	kevinz5000@gmail.com
 COMMENT=	GUI for ngspice and gnucap circuit simulators
+WWW=		http://users.tpg.com.au/micksw012/gspiceui.html
 
 LICENSE=	GPLv3
 

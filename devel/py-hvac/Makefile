@@ -1,19 +1,18 @@
-# Created by: Alessando Sagratini <ale_sagra@hotmail.com>
-
 PORTNAME=	hvac
-PORTVERSION=	0.11.2
+PORTVERSION=	1.0.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ale_sagra@hotmail.com
 COMMENT=	HashiCorp Vault API client
+WWW=		https://pypi.org/project/hvac/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyhcl>=0.3.10:devel/py-pyhcl@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}requests>2.21.0:www/py-requests@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyhcl>=0.4.4:devel/py-pyhcl@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}requests>2.27.1:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>=1.5.0:devel/py-six@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tox>0:devel/py-tox@${PY_FLAVOR}
 

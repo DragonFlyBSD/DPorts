@@ -1,5 +1,3 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	HTML-WikiConverter-MoinMoin
 PORTVERSION=	0.54
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert HTML to MoinMoin markup
+WWW=		https://metacpan.org/release/HTML-WikiConverter-MoinMoin
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

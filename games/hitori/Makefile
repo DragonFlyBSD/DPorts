@@ -1,13 +1,12 @@
-# Created by: FreeBSD GNOME Team <gnome@freebsd.org>
-
 PORTNAME=	hitori
 PORTVERSION=	3.38.4
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Hitori
+WWW=		https://wiki.gnome.org/Apps/Hitori
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

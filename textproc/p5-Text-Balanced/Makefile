@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Text-Balanced
 PORTVERSION=	2.06
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extract delimited text sequences from strings
+WWW=		https://metacpan.org/release/Text-Balanced
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

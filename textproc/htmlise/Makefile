@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	htmlise
 PORTVERSION=	0.2
 CATEGORIES=	textproc
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.ex-parrot.com/~chris/stuff/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Formats plain text as HTML
+WWW=		https://www.ex-parrot.com/~chris/software.html
 
 TABSIZE?=	8
 

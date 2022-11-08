@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	Unipath
 PORTVERSION=	1.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Object-oriented alternative to os/os.path/shutil
+WWW=		https://github.com/mikeorr/Unipath
 
 LICENSE=	PSFL
 

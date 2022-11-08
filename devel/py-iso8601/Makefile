@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	iso8601
 PORTVERSION=	1.0.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple module to parse ISO 8601 dates
+WWW=		https://bitbucket.org/micktwomey/pyiso8601
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

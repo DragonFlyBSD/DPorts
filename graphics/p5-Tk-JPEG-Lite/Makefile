@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@ahze.net>
-
 PORTNAME=	Tk-JPEG-Lite
 PORTVERSION=	2.01500
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/00$//}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Very simplistic image viewer that loads JPEG images
+WWW=		https://metacpan.org/release/Tk-JPEG-Lite
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Tk>=0:x11-toolkits/p5-Tk

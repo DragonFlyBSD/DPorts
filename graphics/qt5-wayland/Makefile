@@ -1,5 +1,6 @@
 PORTNAME=	wayland
 PORTVERSION=	${QT5_VERSION}${QT5_KDE_PATCH}
+PORTREVISION=	1
 CATEGORIES=	graphics wayland
 PKGNAMEPREFIX=	qt5-
 
@@ -17,7 +18,7 @@ USES=		compiler:c++11-lang gl gnome pkgconfig qmake:norecursive \
 USE_GL=		egl gl
 USE_GNOME=	glib20
 USE_QT=		core dbus gui declarative \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	x11 xcomposite
 
 QT_BINARIES=	yes

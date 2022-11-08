@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=		codeville
 PORTVERSION=	0.1.18
 CATEGORIES=		devel python
@@ -7,6 +5,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/devel/codeville/
 
 MAINTAINER=		portmaster@bsdforge.com
 COMMENT=		Anarchic control version system without unnecessary re-merges
+WWW=		https://bsdforge.com/projects/devel/codeville/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

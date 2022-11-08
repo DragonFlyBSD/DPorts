@@ -1,5 +1,3 @@
-# Created by: Frederic Dubuy <fdubuy@free.fr>
-
 PORTNAME=	mifluz
 PORTVERSION=	0.26.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ library to build and query a full text inverted index
+WWW=		https://www.gnu.org/software/mifluz/
 
 LICENSE=	GPLv3
 

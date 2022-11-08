@@ -1,11 +1,10 @@
-# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-
 PORTNAME=	PEAR_PackageFileManager
 PORTVERSION=	1.7.2
 CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR class to maintain PEAR packages
+WWW=		https://pear.php.net/package/PEAR_PackageFileManager
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

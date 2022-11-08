@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	darts
 PORTVERSION=	0.32
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.chasen.org/~taku/software/darts/src/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ template library that implements Double-Array
+WWW=		http://www.chasen.org/~taku/software/darts/
 
 LICENSE=	BSD3CLAUSE LGPL21+
 LICENSE_COMB=	dual

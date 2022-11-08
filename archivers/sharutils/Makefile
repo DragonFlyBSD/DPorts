@@ -1,5 +1,3 @@
-# Created by: ache
-
 PORTNAME=	sharutils
 PORTVERSION=	4.15.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Pack, send, and unpack shell archives; synchronize via e-mail
+WWW=		https://www.gnu.org/s/sharutils/
 
 LICENSE=	GPLv3
 

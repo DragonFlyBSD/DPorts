@@ -1,5 +1,3 @@
-# Created by: John Holland <john@zoner.org>
-
 PORTNAME=	ubh
 PORTVERSION=	2.5
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://ubh.sourceforge.net/download/
 
 MAINTAINER=	john@zoner.org
 COMMENT=	Perl script to download and decode binaries posted to Usenet
+WWW=		http://ubh.sourceforge.net/
 
 RUN_DEPENDS=	\
 	p5-News-Newsrc>=0:news/p5-News-Newsrc \

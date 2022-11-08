@@ -1,5 +1,3 @@
-# Created by: Pawel Pekala <c0rn@o2.pl>
-
 PORTNAME=	qnapi
 PORTVERSION=	0.2.3
 PORTREVISION=	9
@@ -7,6 +5,7 @@ CATEGORIES=	polish multimedia
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Qt5 based subtitle downloader
+WWW=		https://qnapi.github.io/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE
@@ -21,7 +20,7 @@ USE_GITHUB=	yes
 
 USES=		compiler:c++11-lib gl pkgconfig qmake qt:5
 USE_GL=		gl
-USE_QT=		buildtools_build core gui network widgets xml
+USE_QT=		buildtools:build core gui network widgets xml
 
 CXXFLAGS+=	-I${LOCALBASE}/include/maia
 

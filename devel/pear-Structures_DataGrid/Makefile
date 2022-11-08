@@ -1,11 +1,10 @@
-# Created by: Nick Hilliard <nick@foobar.org>
-
 PORTNAME=	Structures_DataGrid
 PORTVERSION=	0.9.3
 CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Full-featured tabular structured data management package
+WWW=		https://pear.php.net/package/Structures_DataGrid
 
 LICENSE=	BSD3CLAUSE
 

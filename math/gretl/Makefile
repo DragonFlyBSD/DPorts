@@ -1,13 +1,11 @@
-# Created by: ijliao
-
 PORTNAME=	gretl
-PORTVERSION=	2022a
-PORTREVISION=	2
+PORTVERSION=	2022b
 CATEGORIES=	math finance
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSIONFULL}/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	GNU Regression, Econometrics, and Time-series Library
+WWW=		http://gretl.sourceforge.net/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

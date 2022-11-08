@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Color-Theme-Role
 PORTVERSION=	0.020
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Role for class wanting to support color themes
+WWW=		https://metacpan.org/release/Color-Theme-Role
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

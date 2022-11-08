@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	vault
 PORTVERSION=	0.17.0
 CATEGORIES=	security rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby API client for interacting with a Vault server
+WWW=		https://github.com/hashicorp/vault-ruby
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE

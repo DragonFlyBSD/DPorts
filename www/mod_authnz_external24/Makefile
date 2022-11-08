@@ -1,5 +1,3 @@
-# Created by: Jose Garcia Juanino <jjuanino@gmail.com>
-
 PORTNAME=	mod_authnz_external
 PORTVERSION=	3.3.2
 CATEGORIES=	www
@@ -9,6 +7,7 @@ DIST_SUBDIR=	apache24
 
 MAINTAINER=	eugene@zhegan.in
 COMMENT=	Allows users authentication based on external mechanisms on apache 2.4
+WWW=		https://code.google.com/p/mod-auth-external/
 
 LICENSE=	APACHE20
 

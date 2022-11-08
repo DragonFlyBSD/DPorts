@@ -1,5 +1,3 @@
-# Created by: Daniel Thiele
-
 PORTNAME=	scanbuttond
 PORTVERSION=	0.2.3
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	dthiele@gmx.net
 COMMENT=	Daemon to monitor and configure modern scanner's buttons
+WWW=		http://scanbuttond.sourceforge.net/
 
 LICENSE=	GPLv2
 

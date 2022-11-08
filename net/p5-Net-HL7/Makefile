@@ -1,5 +1,3 @@
-# Created by: Brent B. Powers <bbp2006@columbia.edu>
-
 PORTNAME=	Net-HL7
 PORTVERSION=	0.76
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bbp2006@columbia.edu
 COMMENT=	Simple yet flexible API for non-XML HL7 applications
+WWW=		http://hl7toolkit.sourceforge.net
 
 LICENSE=	GPLv2
 

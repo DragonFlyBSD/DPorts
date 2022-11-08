@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	IPC-Mmap-Share
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Safely share structures among processes using anonymous mmap
+WWW=		https://metacpan.org/release/IPC-Mmap-Share
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

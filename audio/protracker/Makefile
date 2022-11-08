@@ -1,7 +1,5 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	protracker
-PORTVERSION=	1.49
+PORTVERSION=	1.51
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	2
 CATEGORIES=	audio
@@ -10,6 +8,7 @@ DISTFILES=	${PORTNAME}-extras-1${EXTRACT_SUFX}:extras
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Amiga ProTracker clone
+WWW=		https://16-bits.org/pt.php
 
 LICENSE=	WTFPL
 

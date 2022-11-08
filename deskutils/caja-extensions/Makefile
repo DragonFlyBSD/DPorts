@@ -1,14 +1,13 @@
-# Created by: Eric Turgeon <ericturgeon@ghostbsd.org>
-
 PORTNAME=	caja-extensions
 PORTVERSION=	1.26.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Set of extensions for Caja
+WWW=		https://mate-desktop.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -26,6 +25,7 @@ USE_MATE=	caja desktop
 USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS= --enable-gksu=no
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.mate.Caja.Sendto.gschema.xml \

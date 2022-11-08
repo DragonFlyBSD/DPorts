@@ -1,13 +1,12 @@
-# Created by: Scott Mace <smace@FreeBSD.org>
-
 PORTNAME=	xlockmore
-PORTVERSION=	5.69
+PORTVERSION=	5.71
 CATEGORIES=	x11
 MASTER_SITES=	http://www.sillycycle.com/xlock/ \
 		SF/bsdsrc/${.CURDIR:T}
 
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Like XLock session locker/screen saver, but just more
+WWW=		https://sillycycle.com/xlockmore.html
 
 LICENSE=	BSD2CLAUSE
 

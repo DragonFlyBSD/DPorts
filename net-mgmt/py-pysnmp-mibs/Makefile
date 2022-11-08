@@ -1,5 +1,3 @@
-# Created by: Martin Jackson <mhjacks@swbell.net>
-
 PORTNAME=	pysnmp-mibs
 PORTVERSION=	0.1.6
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	mhjacks@swbell.net
 COMMENT=	Additional python MIB files for pysnmp and friends
+WWW=		https://github.com/etingof/pysnmp-mibs
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,14 +1,13 @@
-# Created by: Henrik Motakef <henrik.motakef@web.de>
-
 PORTNAME=	lml
 PORTVERSION=	2.5.7
-PORTREVISION=	68
+PORTREVISION=	69
 CATEGORIES=	www textproc
 PKGNAMEPREFIX=	cl-
 DISTFILES=	# none
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Lisp Markup Language
+WWW=		http://lml.b9.com/
 
 BUILD_DEPENDS=	${LOCALBASE}/${CL_LIBDIR_REL}/system-registry/lml.asd:www/cl-lml
 RUN_DEPENDS=	${LOCALBASE}/${CL_LIBDIR_REL}/system-registry/lml.asd:www/cl-lml

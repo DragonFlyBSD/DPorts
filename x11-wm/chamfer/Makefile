@@ -1,9 +1,11 @@
 PORTNAME=	chamfer
 DISTVERSION=	s20210622
+PORTREVISION=	1
 CATEGORIES=	x11-wm
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Tiling X11 window manager with Vulkan compositor
+WWW=		https://jaelpark.github.io/chamferwm-docs/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

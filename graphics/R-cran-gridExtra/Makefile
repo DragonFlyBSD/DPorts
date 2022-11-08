@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	gridExtra
 PORTVERSION=	2.3
 PORTREVISION=	4
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Miscellaneous Functions for "Grid" Graphics
+WWW=		https://cran.r-project.org/web/packages/gridExtra/
 
 LICENSE=	GPLv2+
 

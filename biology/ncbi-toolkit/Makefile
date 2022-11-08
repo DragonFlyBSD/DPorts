@@ -1,5 +1,3 @@
-# Created by: tonym
-
 PORTNAME=	ncbi-toolkit
 DISTVERSION=	2017.01.06	# containing BLAST v2.2.27 (? is this true)
 PORTREVISION=	6
@@ -10,6 +8,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	NCBI development toolkit, including BLAST 2 and GenBank/Entrez support
+WWW=		https://www.ncbi.nlm.nih.gov/IEB/ToolBox/MainPage/index.html
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libgmp.so:math/gmp \

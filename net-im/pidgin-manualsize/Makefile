@@ -1,5 +1,3 @@
-# Created by: Joseph S. Atkinson <jsatkinson@embarqmail.com>
-
 PORTNAME=	manualsize
 PORTVERSION=	0.7
 PORTREVISION=	5
@@ -11,6 +9,7 @@ DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	eugen@FreeBSD.org
 COMMENT=	Plugin to allow manual resizing of Pidgin's message input area
+WWW=		https://developer.pidgin.im/wiki/ThirdPartyPlugins #Third-PartyPlugins
 
 LICENSE=	GPLv2
 

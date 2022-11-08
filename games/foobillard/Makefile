@@ -1,5 +1,3 @@
-# Created by: Thomas Vogt <thomas.vogt@bsdunix.ch>
-
 PORTNAME=	foobillard
 PORTVERSION=	3.0a
 PORTREVISION=	12
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/FooBillard-Sources/
 
 MAINTAINER=	thomas@bsdunix.ch
 COMMENT=	Free OpenGL billiards game
+WWW=		http://foobillard.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

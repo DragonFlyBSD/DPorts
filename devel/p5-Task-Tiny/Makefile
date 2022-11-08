@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Task-Tiny
 PORTVERSION=	0.002
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Install a lightweight development environment
+WWW=		https://metacpan.org/release/Task-Tiny
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

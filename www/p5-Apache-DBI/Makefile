@@ -1,5 +1,3 @@
-# Created by: Igor Vinokurov <igor@zynaps.ru>
-
 PORTNAME=	Apache-DBI
 PORTVERSION=	1.12
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	DBI persistent connection, authentication and authorization
+WWW=		https://metacpan.org/release/Apache-DBI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

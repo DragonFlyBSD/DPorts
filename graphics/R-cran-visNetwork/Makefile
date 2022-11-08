@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	visNetwork
 PORTVERSION=	2.1.0
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Network Visualization using 'vis.js' Library
+WWW=		https://cran.r-project.org/web/packages/visNetwork/
 
 LICENSE=	MIT
 

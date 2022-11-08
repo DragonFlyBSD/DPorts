@@ -1,5 +1,3 @@
-# Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-
 PORTNAME=	rrdman
 PORTVERSION=	1.0.1
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/rrfw/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Apply Holt-Winters prediction parameters to RRD data
+WWW=		http://rrfw.sourceforge.net/rrdman/
 
 BUILD_DEPENDS=	rrdtool:databases/rrdtool
 RUN_DEPENDS:=	${BUILD_DEPENDS}

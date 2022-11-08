@@ -1,5 +1,3 @@
-# Created by: Gerrit Beine <mail+freebsd@gerritbeine.de>
-
 PORTNAME=	libsml
 PORTVERSION=	0.1.1
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	mail+freebsd@gerritbeine.de
 COMMENT=	Implementation in C of the Smart Message Language (SML) protocol
+WWW=		https://github.com/volkszaehler/libsml
 
 LICENSE=	GPLv3
 

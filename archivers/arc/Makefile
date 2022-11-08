@@ -1,5 +1,3 @@
-# Created by: ache
-
 PORTNAME=	arc
 PORTVERSION=	5.21p
 CATEGORIES=	archivers
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	delphij@FreeBSD.org
 COMMENT=	Create & extract files from DOS .ARC files
+WWW=		http://arc.sourceforge.net/
 
 LICENSE=	GPLv2
 

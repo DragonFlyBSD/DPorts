@@ -1,5 +1,3 @@
-# Created by: Kazumasa Nishizawa <k_nishizawa@anet.ne.jp>
-
 PORTNAME=	webstone
 PORTVERSION=	2.5
 PORTREVISION=	4
@@ -10,6 +8,7 @@ DISTNAME=	WebStone-SSL-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	World wide web server benchmarking with SSL support
+WWW=		https://crypto.stanford.edu/~nagendra/projects/WebStone/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

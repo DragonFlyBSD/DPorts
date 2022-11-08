@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Class-InsideOut
 PORTVERSION=	1.14
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Safe, simple inside-out object construction kit
+WWW=		https://metacpan.org/release/Class-InsideOut
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

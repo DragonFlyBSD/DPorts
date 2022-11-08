@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	File-Slurp
 PORTVERSION=	9999.27
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for single call read and write file routines
+WWW=		https://metacpan.org/release/File-Slurp
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

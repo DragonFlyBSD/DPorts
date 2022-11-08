@@ -1,5 +1,3 @@
-# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-
 PORTNAME=	jing
 PORTVERSION=	20220510
 CATEGORIES=	textproc java
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/relaxng/jing-trang/releases/download/V${PORTVER
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	RELAX NG validator in Java
+WWW=		http://www.thaiopensource.com/relaxng/jing.html
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/doc/copying.html

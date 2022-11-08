@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-
 PORTNAME=	ua_parser
 PORTVERSION=	0.5.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-core
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Regex file for building language ports of Browserscope's UA parser
+WWW=		https://github.com/ua-parser/uap-core
 
 LICENSE=	APACHE20
 

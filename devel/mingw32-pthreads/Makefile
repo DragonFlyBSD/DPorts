@@ -1,5 +1,3 @@
-# Created by: Ed Schouten <ed@fxq.nl>
-
 PORTNAME=	pthreads
 PORTVERSION=	2.8.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-w32-${PORTVERSION:S/./-/g}-release
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	POSIX threads library for Windows compiled with MinGW32
+WWW=		https://sourceware.org/pthreads-win32/
 
 BUILD_DEPENDS=	${PKGNAMEPREFIX}gcc:devel/${PKGNAMEPREFIX}gcc \
 		mingwm10.dll:devel/mingw32-bin-msvcrt

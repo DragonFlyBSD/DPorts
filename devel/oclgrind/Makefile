@@ -1,5 +1,3 @@
-# Created by: Johannes Dieterich <jmd@freebsd.org>
-
 PORTNAME=	oclgrind
 PORTVERSION=	21.10
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	SPIR interpreter and virtual OpenCL device simulator
+WWW=		https://github.com/jrprice/Oclgrind
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

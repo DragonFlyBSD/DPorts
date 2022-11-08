@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	Date-Manip
 PORTVERSION=	6.86
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Perl5 module containing date manipulation routines
+WWW=		https://metacpan.org/release/Date-Manip
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,11 +1,12 @@
 PORTNAME=	fabio
 PORTVERSION=	1.6.0
-PORTREVISION=	1
+PORTREVISION=	5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
 MAINTAINER=	stl@ossuary.net
 COMMENT=	Zero-conf load balancing HTTP(S) router managed by Consul
+WWW=		https://github.com/fabiolb/fabio
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

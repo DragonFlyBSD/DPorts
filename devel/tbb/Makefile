@@ -1,5 +1,3 @@
-# Created by: Arun Sharma <arun@sharma-home.net>
-
 PORTNAME=	tbb
 PORTVERSION=	2020.3
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Library that provides thread building blocks (legacy version)
+WWW=		https://threadingbuildingblocks.org/
 
 LICENSE=	APACHE20
 

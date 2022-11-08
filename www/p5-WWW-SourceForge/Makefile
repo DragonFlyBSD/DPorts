@@ -1,5 +1,3 @@
-# Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.idv.tw>
-
 PORTNAME=	WWW-SourceForge
 PORTVERSION=	0.70
 PORTREVISION=	3
@@ -11,6 +9,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ychsiao@ychsiao.org
 COMMENT=	Retrieve information from SourceForge site
+WWW=		https://metacpan.org/release/WWW-SourceForge
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-WWW-Mechanize>=0:www/p5-WWW-Mechanize \

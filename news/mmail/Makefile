@@ -1,5 +1,3 @@
-# Created by: Frederic Cambus
-
 PORTNAME=	mmail
 DISTVERSION=	0.52
 CATEGORIES=	news
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/multimail/MultiMail/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Offline BBS mail packet reader supporting QWK/OMEN/SOUP/OPX/BLUEWAVE
+WWW=		http://multimail.sourceforge.net/
 
 RUN_DEPENDS=	zip:archivers/zip
 

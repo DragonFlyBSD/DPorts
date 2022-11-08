@@ -1,10 +1,12 @@
 PORTNAME=	kickoff
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5.1
+PORTREVISION=	2
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Minimalistic program launcher for Wayland
+WWW=		https://github.com/j0ru/kickoff
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

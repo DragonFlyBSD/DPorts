@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Number-Nary
 PORTVERSION=	1.100312
 CATEGORIES=	converters perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Encode and decode numbers as n-ary strings
+WWW=		https://metacpan.org/release/Number-Nary
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

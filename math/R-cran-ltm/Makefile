@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	ltm
 DISTVERSION=	1.2-0
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Latent Trait Models under IRT
+WWW=		https://cran.r-project.org/package=ltm
 
 LICENSE=	GPLv2+
 

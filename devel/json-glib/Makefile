@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	json-glib
 PORTVERSION=	1.6.6
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	JSON (RFC 4627) interface for Glib
+WWW=		https://live.gnome.org/JsonGlib
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

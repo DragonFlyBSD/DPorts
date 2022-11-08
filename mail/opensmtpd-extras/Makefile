@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	opensmtpd-extras
 PORTVERSION?=	6.7.1
 PORTREVISION?=	0
@@ -12,6 +10,7 @@ MASTER_SITES=	http://www.opensmtpd.org/archives/
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT?=	Addons for OpenSMTPD
+WWW=		https://github.com/OpenSMTPD/OpenSMTPD-extras
 
 LICENSE?=	ISCL
 

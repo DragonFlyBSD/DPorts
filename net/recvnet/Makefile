@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	recvnet
 PORTVERSION=	0.0.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	https://www.vanheusden.com/Linux/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Utility for debugging TCP connections
+WWW=		https://www.vanheusden.com/Linux/ #recvnet
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/license.txt

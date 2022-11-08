@@ -1,5 +1,3 @@
-# Created by: wghicks@bellsouth.net
-
 PORTNAME=	tkcon
 PORTVERSION=	2.5
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Tk console for Tcl
+WWW=		http://tkcon.sourceforge.net/
 
 OPTIONS_DEFINE=	DOCS
 

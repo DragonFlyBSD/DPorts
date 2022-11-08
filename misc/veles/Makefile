@@ -8,6 +8,7 @@ PATCHFILES=	f9125454bfb2cd28d78544ba41d92c028be6a277.patch:-p1 # Lift the defaul
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Tool for binary data visualization and analysis
+WWW=		https://codisec.com/veles/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE-2.0
@@ -27,7 +28,7 @@ SHEBANG_GLOB=	*.py
 SHEBANG_FILES=	python/plugin python/proxy resources/install/postinst python/test_dis
 USE_GITHUB=	yes
 GH_ACCOUNT=	codilime
-USE_QT=		core gui network widgets buildtools_build qmake_build
+USE_QT=		core gui network widgets buildtools:build qmake:build
 
 CMAKE_ARGS=	-DFREEBSD_PYTHON_CMD:STRING=${PYTHON_CMD} \
 		-DFREEBSD_PYTHON_EXENAME:STRING=${PYTHON_CMD:C/.*\///} \

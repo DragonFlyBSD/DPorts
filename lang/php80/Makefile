@@ -1,5 +1,5 @@
 PORTNAME=	php80
-DISTVERSION=	8.0.20
+DISTVERSION=	8.0.24
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP
@@ -8,6 +8,7 @@ DIST_SUBDIR=	php
 
 MAINTAINER=	tz@FreeBSD.org
 COMMENT=	PHP Scripting Language
+WWW=		https://www.php.net/
 
 LICENSE=	PHP301
 
@@ -150,6 +151,22 @@ test: build
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/php.ini-development ${WRKSRC}/php.ini-production \
 		${WRKDIR}/php.conf ${STAGEDIR}/${PREFIX}/etc
+
+post-install-CLI-on:
+	${STRIP_CMD} ${STAGEDIR}/${PREFIX}/bin/php
+
+post-install-CGI-on:
+	${STRIP_CMD} ${STAGEDIR}/${PREFIX}/bin/php-cgi
+
+post-install-EMBED-on:
+	${STRIP_CMD} ${STAGEDIR}/${PREFIX}/lib/libphp.so
+
+post-install-FPM-on:
+	${STRIP_CMD} ${STAGEDIR}/${PREFIX}/sbin/php-fpm
+
+post-install-PHPDBG-on:
+	${STRIP_CMD} ${STAGEDIR}/${PREFIX}/bin/phpdbg
+
 .else
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/${APACHEMODDIR}

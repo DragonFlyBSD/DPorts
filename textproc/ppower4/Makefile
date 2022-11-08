@@ -1,5 +1,3 @@
-# Created by: Stefan Walter <sw@gegenunendlich.de>
-
 PORTNAME=	ppower4
 PORTVERSION=	0.9.4
 PORTREVISION=	8
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	pp4sty.zip leveldemo.zip
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Post processor for PDF presentations made with (La)TeX
+WWW=		https://ctan.org/tex-archive/support/ppower4/
 
 LICENSE=	GPLv2 # version not really specified
 

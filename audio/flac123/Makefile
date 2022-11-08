@@ -1,14 +1,13 @@
-# Created by: michael johnson <ahze@ahze.net>
-
 PORTNAME=	flac123
 PORTVERSION=	0.0.12
 DISTVERSIONSUFFIX=	-release
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	SF/flac-tools/${PORTNAME}/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Command-line player for flac audio files
+WWW=		http://flac-tools.sf.net
 
 LIB_DEPENDS=	libFLAC.so:audio/flac \
 		libao.so:audio/libao \

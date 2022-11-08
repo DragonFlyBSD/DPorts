@@ -1,5 +1,3 @@
-# Created by: Will Andrews <andrews@technologist.com>
-
 PORTNAME=	tkmoo
 PORTVERSION=	0.3.32
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	tkMOO-light-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tk-based M** client with scripting support
+WWW=		http://www.awns.com/tkMOO-light/
 
 LICENSE=	TKMOO # non-commercial
 LICENSE_NAME=	tkMOO license

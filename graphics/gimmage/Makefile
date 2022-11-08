@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	gimmage
 PORTVERSION=	0.2.3
 PORTREVISION=	18
@@ -8,6 +6,7 @@ MASTER_SITES=	BERLIOS
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Simple image viewer
+WWW=		https://sourceforge.net/projects/gimmage.berlios/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,13 +1,12 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	jaraco.logging
-PORTVERSION=	3.1.0
+PORTVERSION=	3.1.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Additional facilities to supplement Python stdlib logging module
+WWW=		https://github.com/jaraco/jaraco.logging
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -26,6 +25,9 @@ USE_PYTHON=	autoplist concurrent distutils pytest
 NO_ARCH=	yes
 
 POST_PLIST=	trim-jaraco-namespace
+
+post-patch:
+	@${CP} ${FILESDIR}/setup.py ${WRKSRC}/
 
 post-install:
 	@${RM} ${STAGEDIR}${PYTHON_SITELIBDIR}/jaraco/__init__.py*

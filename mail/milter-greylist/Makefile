@@ -1,5 +1,3 @@
-# Created by: Cyril Guibourg
-
 PORTNAME=	milter-greylist
 PORTVERSION=	4.6.4
 CATEGORIES=	mail
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/ \
 
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	Easy-to-use greylist milter for sendmail and postfix
+WWW=		http://hcpnet.free.fr/milter-greylist/
 
 LICENSE=	BSD3CLAUSE
 

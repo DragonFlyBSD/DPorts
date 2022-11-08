@@ -1,10 +1,11 @@
 PORTNAME=	msgpuck
 PORTVERSION=	2.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	balaev@tarantool.org
 COMMENT=	Lightweight MessagePack library
+WWW=		https://github.com/tarantool/msgpuck
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,6 +18,6 @@ CPE_VENDOR=	tarantool
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	tarantool
-GH_TAGNAME=	234f305
+GH_TAGNAME=	0c6680a
 
 .include <bsd.port.mk>

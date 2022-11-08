@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	qvge
 PORTVERSION=	0.6.3
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Qt Visual Graph Editor
+WWW=		https://github.com/ArsMasiuk/qvge
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../LICENSE
@@ -18,7 +17,7 @@ GH_ACCOUNT=	ArsMasiuk
 USES=		compiler:c++11-lang desktop-file-utils gl qt:5 \
 		shared-mime-info xorg
 USE_GL=		gl
-USE_QT=		buildtools_build qmake_build core gui network opengl \
+USE_QT=		buildtools:build qmake:build core gui network opengl \
 		printsupport svg widgets x11extras xml
 USE_XORG=	x11
 

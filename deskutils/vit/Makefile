@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	vit
 PORTVERSION=	1.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://taskwarrior.org/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Curses-based interface to taskwarrior
+WWW=		https://tasktools.org/projects/vit.html
 
 LICENSE=	GPLv3+
 

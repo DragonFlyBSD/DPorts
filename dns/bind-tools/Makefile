@@ -1,4 +1,5 @@
 # Define PORTREVISION in ${MASTERDIR}
+
 .ifdef BIND_TOOLS_DEVEL
 MASTERDIR=	${.CURDIR}/../../dns/bind9-devel
 

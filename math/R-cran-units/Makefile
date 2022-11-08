@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	units
 DISTVERSION=	0.8-0
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Measurement Units for R Vectors
+WWW=		https://cran.r-project.org/web/packages/units/
 
 LICENSE=	GPLv2
 

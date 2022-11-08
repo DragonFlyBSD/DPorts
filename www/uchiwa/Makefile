@@ -1,11 +1,12 @@
 PORTNAME=		uchiwa
 PORTVERSION=	0.18.2
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=		www
 MASTER_SITES=	http://uchiwa.io/
 
 MAINTAINER=	alexander@treg.io
 COMMENT=	Simple dashboard for Sensu
+WWW=		https://uchiwa.io/
 
 LICENSE=	MIT
 

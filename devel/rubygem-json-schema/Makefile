@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	json-schema
 PORTVERSION=	3.0.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby JSON schema validator
+WWW=		https://github.com/ruby-json-schema/json-schema
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

@@ -1,13 +1,12 @@
-# Created by: AMAKAWA Shuhei <amakawa@jp.FreeBSD.org>
-
 PORTNAME=	ngspice_rework
-PORTVERSION=	36
+PORTVERSION=	37
 CATEGORIES=	cad
 MASTER_SITES=	SF/ngspice/ng-spice-rework/${PORTVERSION}
 DISTNAME=	ngspice-${PORTVERSION}
 
 MAINTAINER=	kevinz5000@gmail.com
 COMMENT=	Mixed-signal circuit simulator derived from Spice and Cider
+WWW=		https://ngspice.sourceforge.io/
 
 LICENSE=	BSD3CLAUSE BSD4CLAUSE LGPL21+
 LICENSE_COMB=	multi

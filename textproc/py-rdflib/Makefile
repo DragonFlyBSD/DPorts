@@ -1,13 +1,12 @@
-# Created by: ijliao
-
 PORTNAME=	rdflib
-PORTVERSION=	6.1.1
+PORTVERSION=	6.2.0
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python library for RDF manipulation
+WWW=		https://pypi.org/project/rdflib/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

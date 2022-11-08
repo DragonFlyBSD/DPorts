@@ -1,12 +1,13 @@
 PORTNAME=	trimesh
 PORTVERSION=	3.5.25
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel cad python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	db@FreeBSD.org
 COMMENT=	Library for loading and using triangular meshes
+WWW=		https://pypi.org/project/trimesh/ #description
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

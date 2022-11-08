@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	hllib
 PORTVERSION=	2.4.6
 CATEGORIES=	games devel
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION:S/.//g}
 
 MAINTAINER=	kpedersen@disroot.org
 COMMENT=	Library to work with various Half-Life file formats
+WWW=		https://developer.valvesoftware.com/wiki/HLLib
 
 LICENSE=	LGPL21
 

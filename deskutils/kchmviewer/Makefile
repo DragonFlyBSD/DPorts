@@ -1,19 +1,21 @@
-# Created by: Markus Brueffer <markus@FreeBSD.org>
-
 PORTNAME=	kchmviewer
 DISTVERSIONPREFIX=	RELEASE_
 DISTVERSION=	8_0
+PORTREVISION=	2
 CATEGORIES=	deskutils kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE viewer for CHM files
+WWW=		https://www.kchmviewer.net/
 
 LIB_DEPENDS=	libchm.so:misc/chmlib \
 		libzip.so:archivers/libzip
 
-USES=		compiler:c++11-lang dos2unix qmake:outsource qt:5 xorg
+USES=		compiler:c++11-lang desktop-file-utils dos2unix gl \
+		qmake:outsource qt:5 xorg
+USE_GL=		gl
 USE_QT=		core dbus gui network printsupport webkit widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	x11
 
 USE_GITHUB=	yes

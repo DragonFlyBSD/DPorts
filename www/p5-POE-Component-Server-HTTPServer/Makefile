@@ -1,5 +1,3 @@
-# Created by: Zach Thompson <lin-chi@lastamericanempire.com>
-
 PORTNAME=	POE-Component-Server-HTTPServer
 PORTVERSION=	0.9.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	lin-chi@lastamericanempire.com
 COMMENT=	POE Component to server HTTP requests
+WWW=		https://metacpan.org/release/POE-Component-Server-HTTPServer
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-POE>=0:devel/p5-POE \

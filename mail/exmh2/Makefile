@@ -1,5 +1,3 @@
-# Created by: Peter Wemm <peter@FreeBSD.org>
-
 # "+=" and "?=" lines are for sharing this Makefile with japanese/exmh2.
 
 PORTNAME=	exmh
@@ -11,6 +9,7 @@ MASTER_SITES=	https://sourceforge.net/projects/${PORTNAME}/files/${PORTNAME}/${P
 
 MAINTAINER?=	cy@FreeBSD.org
 COMMENT?=	X11/TK based mail reader front end to MH
+WWW=		http://www.beedub.com/exmh/
 
 .if defined(JAPANESE_EXMH)
 RUN_DEPENDS=	wish8.0jp:japanese/tk80

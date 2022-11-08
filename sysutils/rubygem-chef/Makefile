@@ -1,13 +1,11 @@
-# Created by: Renaud Chaput <renchap@cocoa-x.com>
-
 PORTNAME=	chef
-PORTVERSION=	16.17.18
-PORTREVISION=	1
+PORTVERSION=	16.18.0
 CATEGORIES=	sysutils
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Systems integration framework. Client part
+WWW=		https://www.chef.io/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -35,7 +33,7 @@ RUN_DEPENDS=	rubygem-addressable>=0:www/rubygem-addressable \
 		rubygem-mixlib-log>=2.0.3<4.0:devel/rubygem-mixlib-log \
 		rubygem-mixlib-shellout>=3.1.1<4.0:devel/rubygem-mixlib-shellout \
 		rubygem-net-sftp>=2.1.2<4.0:security/rubygem-net-sftp \
-		rubygem-net-ssh>=5.1,2<7,2:security/rubygem-net-ssh \
+		rubygem-net-ssh6>=5.1<7:security/rubygem-net-ssh6 \
 		rubygem-net-ssh-multi>=1.2.1<2:security/rubygem-net-ssh-multi \
 		rubygem-ohai>=16.0<17:sysutils/rubygem-ohai \
 		rubygem-pastel>=0:devel/rubygem-pastel \

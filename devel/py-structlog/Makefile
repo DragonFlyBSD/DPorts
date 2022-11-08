@@ -1,5 +1,3 @@
-# Created by: Dave Cottlehuber <dch@skunkwerks.at>
-
 PORTNAME=	structlog
 PORTVERSION=	18.2.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Structured Logging for Python
+WWW=		https://www.structlog.org/
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Pete Fritchman <petef@databits.net>
-
 PORTNAME=	devtodo
 PORTVERSION=	0.1.20
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://swapoff.org/files/devtodo/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to effectively maintain todo lists aimed at developers
+WWW=		https://swapoff.org/devtodo.html
 
 CONFLICTS_INSTALL=	deforaos-todo tdl todo
 

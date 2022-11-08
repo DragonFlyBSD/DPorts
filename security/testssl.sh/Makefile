@@ -1,10 +1,11 @@
 PORTNAME=	testssl.sh
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.0.7
+DISTVERSION=	3.0.8
 CATEGORIES=	security
 
 MAINTAINER=	adamw@FreeBSD.org
 COMMENT=	Analyze and report TLS/SSL configuration/misconfiguration
+WWW=		https://github.com/drwetter/testssl.sh
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

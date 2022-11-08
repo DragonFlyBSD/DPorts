@@ -1,11 +1,10 @@
-# Created by: Eric Anholt <anholt@FreeBSD.org>
-
 PORTNAME=	libXcursor
 PORTVERSION=	1.2.0
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X client-side cursor loading library
+WWW=		https://www.freedesktop.org/Software/xlibs
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

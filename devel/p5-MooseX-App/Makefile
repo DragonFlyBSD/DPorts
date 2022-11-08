@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MooseX-App
 PORTVERSION=	1.42
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Write user-friendly command line apps with even less suffering
+WWW=		https://metacpan.org/release/MooseX-App
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

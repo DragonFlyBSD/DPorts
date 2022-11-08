@@ -1,5 +1,3 @@
-# Created by: buganini@gmail.com
-
 PORTNAME=	ruby-bsdconv
 PORTVERSION=	11.3.1
 CATEGORIES=	converters rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	buganini@gmail.com
 COMMENT=	Ruby wrapper for bsdconv
+WWW=		https://github.com/buganini/ruby-bsdconv
 
 LICENSE=	ISCL
 

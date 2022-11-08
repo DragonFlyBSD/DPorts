@@ -1,11 +1,12 @@
 PORTNAME=	python-dbusmock
-PORTVERSION=	0.28.0
+PORTVERSION=	0.28.4
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Mock D-Bus objects for tests
+WWW=		https://pypi.org/project/python-dbusmock
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING

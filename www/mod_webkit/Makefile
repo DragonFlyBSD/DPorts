@@ -1,11 +1,10 @@
-# Created by: Choe, Cheng-Dae
-
 PORTNAME=	mod_webkit
 PORTVERSION=	1.2.3
 CATEGORIES=	www
 
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Apache module for WebWare WebKit AppServer
+WWW=		https://cito.github.io/w4py/
 
 LICENSE=	PSFL
 

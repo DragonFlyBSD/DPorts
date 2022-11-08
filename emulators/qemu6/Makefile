@@ -1,5 +1,3 @@
-# Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-
 PORTNAME=	qemu
 PORTVERSION=	6.2.0
 CATEGORIES=	emulators
@@ -8,6 +6,7 @@ DIST_SUBDIR=	qemu/${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	QEMU CPU Emulator ${${FLAVOR}_COMMENT} - 6.X
+WWW=		https://wiki.qemu.org/Main_Page
 
 LICENSE=	GPLv2
 

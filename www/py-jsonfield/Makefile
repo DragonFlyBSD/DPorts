@@ -1,5 +1,3 @@
-# Created by: René Ladan <rene@FreeBSD.org>
-
 PORTNAME=	jsonfield
 PORTVERSION=	3.1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Reusable JSONField model for Django to store validated JSON
+WWW=		https://github.com/rpkilby/jsonfield
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

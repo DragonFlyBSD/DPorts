@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	ming
 DISTVERSIONPREFIX=	ming-
 DISTVERSION=	0_4_8
@@ -7,6 +5,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Flash 4/5 movie output library with many languages support
+WWW=		http://www.libming.org/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi

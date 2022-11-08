@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	jaraco.context
-PORTVERSION=	4.1.1
+PORTVERSION=	4.1.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Context managers by jaraco
+WWW=		https://github.com/jaraco/jaraco.context
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -25,6 +24,9 @@ USE_PYTHON=	autoplist concurrent distutils pytest
 NO_ARCH=	yes
 
 POST_PLIST=	trim-jaraco-namespace
+
+post-patch:
+	@${CP} ${FILESDIR}/setup.py ${WRKSRC}/
 
 post-install:
 	@${RM} ${STAGEDIR}${PYTHON_SITELIBDIR}/jaraco/__init__.py*

@@ -1,10 +1,11 @@
 PORTNAME=	gimp-jxl-plugin
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.1
+DISTVERSION=	0.7.0
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	GIMP plugin to read/write JPEG XL images
+WWW=		https://jpeg.org/jpegxl/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC:H:H}/LICENSE

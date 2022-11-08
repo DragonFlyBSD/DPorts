@@ -1,9 +1,8 @@
-# Created by: Motoyuki Kasahara <m-kasahr@sra.co.jp>
-
 PORTNAME=	libtool
 PORTREVISION=	0
 
 COMMENT=	Generic shared library support script
+WWW=		https://www.gnu.org/software/libtool/
 
 .include "${.CURDIR}/../libtool/Makefile.common"
 

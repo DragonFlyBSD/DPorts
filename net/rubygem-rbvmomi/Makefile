@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	rbvmomi
 PORTVERSION=	3.0.0
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby interface to the VMware vSphere API
+WWW=		https://github.com/vmware/rbvmomi
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

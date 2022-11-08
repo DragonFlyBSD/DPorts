@@ -1,5 +1,3 @@
-# Created by: Meikel Brandmeyer <ocaml-ounit-port@kotka.de>
-
 PORTNAME=	ounit
 PORTVERSION=	1.0.3
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OCaml unit test framework
+WWW=		http://home.wanadoo.nl/maas/ocaml
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENCE

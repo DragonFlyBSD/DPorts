@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-Metrics-Any
 PORTVERSION=	0.01
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Assert that code produces metrics via Metrics::Any
+WWW=		https://metacpan.org/release/Test-Metrics-Any
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

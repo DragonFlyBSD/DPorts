@@ -1,5 +1,3 @@
-# Created by: Robert Withrow <witr@rwwa.com>
-
 PORTNAME=	findutils
 PORTVERSION=	4.9.0
 CATEGORIES=	misc
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	aehlig@linta.de
 COMMENT=	GNU find utilities
+WWW=		https://www.gnu.org/software/findutils/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

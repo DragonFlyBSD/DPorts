@@ -1,5 +1,3 @@
-# Created by: frankch@waru.life.nthu.edu.tw
-
 PORTNAME=	seaview
 PORTVERSION=	5.0.5
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Multiple DNA/protein sequence alignment editor
+WWW=		https://doua.prabi.fr/software/seaview
 
 LICENSE=	GPLv3
 

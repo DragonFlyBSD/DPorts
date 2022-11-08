@@ -1,5 +1,3 @@
-# Created by: Matthew Dillon <dillon@backplane.com>
-
 PORTNAME=	jikes
 PORTVERSION=	1.22
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/Jikes/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java source to byte-code compiler made available by IBM
+WWW=		http://jikes.sf.net/
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 GNU_CONFIGURE=	yes

@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	gmanedit
 PORTVERSION=	0.4.2
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}2/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNOME manpages editor
+WWW=		https://sourceforge.net/projects/gmanedit2/
 
 USES=		gettext gmake gnome pathfix pkgconfig
 USE_GNOME=	gtk20

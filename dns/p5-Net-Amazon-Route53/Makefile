@@ -1,5 +1,3 @@
-# Created by: Jui-Nan Lin <jnlin@freebsd.cs.nctu.edu.tw>
-
 PORTNAME=	Net-Amazon-Route53
 PORTVERSION=	0.122310
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	jnlin@freebsd.cs.nctu.edu.tw
 COMMENT=	Manage your DNS entries on Amazon's Route53 service
+WWW=		https://metacpan.org/release/Net-Amazon-Route53
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

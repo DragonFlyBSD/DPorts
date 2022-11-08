@@ -1,5 +1,3 @@
-# Created by: Mark Reidel <ports@mark.reidel.info>
-
 PORTNAME=	cups-pdf
 DISTVERSION=	3.0.1
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Virtual printer for CUPS to produce PDF files
+WWW=		https://www.cups-pdf.de/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

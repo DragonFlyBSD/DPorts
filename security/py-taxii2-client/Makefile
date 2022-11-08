@@ -1,11 +1,12 @@
 PORTNAME=	taxii2-client
-PORTVERSION=	2.2.2
+PORTVERSION=	2.3.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Minimal client implementation for the TAXII 2.0 server
+WWW=		https://github.com/oasis-open/cti-taxii-client
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

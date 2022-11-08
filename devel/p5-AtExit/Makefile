@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	AtExit
 PORTVERSION=	2.05
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perform exit processing for a program or object
+WWW=		https://metacpan.org/release/AtExit
 
 LICENSE=	ART10
 LICENSE_FILE=	${WRKSRC}/LICENSE

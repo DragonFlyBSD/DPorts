@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-
 PORTNAME=	primateplunge
 PORTVERSION=	1.1
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.aelius.com/primateplunge/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Primate Plunge is an arcade game
+WWW=		https://www.aelius.com/primateplunge/
 
 LICENSE=	UDEVGAME
 LICENSE_NAME=	uDevGame license

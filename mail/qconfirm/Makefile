@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	qconfirm
 PORTVERSION=	0.14.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://smarden.org/qconfirm/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Filter spam by requesting confirmation from sender
+WWW=		http://smarden.org/qconfirm/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/package/COPYING

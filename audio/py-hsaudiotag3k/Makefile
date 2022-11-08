@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	hsaudiotag3k
 DISTVERSION=	1.1.3.post1
 CATEGORIES=	audio python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Read metdata (tags) of mp3, mp4, wma, ogg, flac and aiff files
+WWW=		http://hg.hardcoded.net/hsaudiotag
 
 LICENSE=	BSD3CLAUSE
 

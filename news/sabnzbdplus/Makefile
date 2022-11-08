@@ -1,5 +1,5 @@
 PORTNAME=	sabnzbdplus
-DISTVERSION=	3.6.0
+DISTVERSION=	3.6.1
 PORTEPOCH=	1
 CATEGORIES=	news
 MASTER_SITES=	https://github.com/sabnzbd/sabnzbd/releases/download/${DISTVERSION}/
@@ -7,6 +7,7 @@ DISTNAME=	SABnzbd-${DISTVERSION}-src
 
 MAINTAINER=	james@french.id.au
 COMMENT=	Web-interface based binary newsgrabber in python, with nzb support
+WWW=		https://sabnzbd.org/
 
 LICENSE=	BSD2CLAUSE BSD3CLAUSE GPLv2+ ISCL MIT PSFL
 LICENSE_COMB=	multi

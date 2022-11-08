@@ -1,7 +1,5 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	bottleneck
-PORTVERSION=	1.3.4
+PORTVERSION=	1.3.5
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,6 +7,7 @@ DISTNAME=	Bottleneck-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Collection of fast NumPy array functions written in Cython
+WWW=		https://github.com/kwgoodman/bottleneck
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

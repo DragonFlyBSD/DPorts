@@ -1,5 +1,3 @@
-# Created by: Hye-Shik Chang
-
 PORTNAME=	libsigsegv
 PORTVERSION=	2.14
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	gaod@hychen.org
 COMMENT=	Handling page faults in user mode
+WWW=		https://www.gnu.org/software/libsigsegv/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

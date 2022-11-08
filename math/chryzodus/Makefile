@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@email.it>
-
 PORTNAME=	chryzodus
 PORTVERSION=	0.32
 DISTVERSIONSUFFIX=	-src
@@ -9,6 +7,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Chryzode (http//www.chryzode.org) explorer
+WWW=		http://chryzodus.sourceforge.net/
 
 LICENSE=	GPLv2
 

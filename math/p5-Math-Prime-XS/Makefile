@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Math-Prime-XS
 PORTVERSION=	0.27
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Detect and calculate prime numbers with deterministic tests
+WWW=		https://metacpan.org/release/Math-Prime-XS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

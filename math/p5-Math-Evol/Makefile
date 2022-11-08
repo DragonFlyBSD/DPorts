@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	Math-Evol
 PORTVERSION=	1.13
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module implements the evolution search strategy
+WWW=		https://metacpan.org/release/Math-Evol
 
 NO_ARCH=	yes
 USES=		perl5

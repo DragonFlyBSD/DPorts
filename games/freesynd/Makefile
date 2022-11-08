@@ -1,5 +1,3 @@
-# Created by: Lars Engels <lars.engels@0x20.net>
-
 PORTNAME=	freesynd
 PORTVERSION=	0.7.5
 CATEGORIES=	games
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Reimplementation of the classic Bullfrog game Syndicate
+WWW=		http://freesynd.sourceforge.net/
 
 LIB_DEPENDS=	libpng.so:graphics/png
 

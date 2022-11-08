@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-
 PORTNAME=	wmwork
 PORTVERSION=	0.2.5
 PORTREVISION=	3
@@ -9,6 +7,7 @@ MASTER_SITES=	http://people.debian.org/~godisch/wmwork/ \
 
 MAINTAINER=	xride@FreeBSD.org
 COMMENT=	Dockapp that keeps track of time you have spent on something
+WWW=		http://www.godisch.de/debian/wmwork/
 
 LICENSE=	GPLv2
 

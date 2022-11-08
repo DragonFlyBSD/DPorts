@@ -1,5 +1,3 @@
-# Created by: Denis Generalov <gd.workbox@gmail.com>
-
 PORTNAME=	libmongo-client
 PORTVERSION=	0.1.6.3
 DISTVERSIONPREFIX=	${PORTNAME}-
@@ -8,6 +6,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	gd.workbox@gmail.com
 COMMENT=	Alternative C driver for MongoDB
+WWW=		https://github.com/algernon/libmongo-client
 
 LICENSE=	APACHE20
 

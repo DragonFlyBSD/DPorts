@@ -1,5 +1,3 @@
-# Created by: arved
-
 PORTNAME=	Graph-ReadWrite
 PORTVERSION=	2.10
 CATEGORIES=	graphics perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Reading and Writing a variety of graph file formats
+WWW=		https://metacpan.org/release/Graph-ReadWrite
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

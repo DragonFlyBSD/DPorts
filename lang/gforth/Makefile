@@ -1,5 +1,3 @@
-# Created by: Cyrille Lefevre <clefevre@citeweb.net>
-
 PORTNAME=	gforth
 PORTVERSION=	0.7.3
 PORTREVISION=	14
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.complang.tuwien.ac.at/forth/gforth/ \
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Fast and portable Forth system
+WWW=		https://www.gnu.org/software/gforth/gforth.html
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

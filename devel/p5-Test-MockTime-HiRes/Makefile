@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-MockTime-HiRes
 PORTVERSION=	0.08
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Replaces actual time with simulated high resolution time
+WWW=		https://metacpan.org/release/Test-MockTime-HiRes
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

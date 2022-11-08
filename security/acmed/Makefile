@@ -1,11 +1,12 @@
 PORTNAME=	acmed
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.18.0
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	security
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ACME (RFC 8555) client daemon written in Rust
+WWW=		https://github.com/breard-r/acmed
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

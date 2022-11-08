@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@daltons.ca>
-
 PORTNAME=	Tree-Simple-VisitorFactory
 PORTVERSION=	0.16
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Set of visitor objects for traversing Tree::Simple hierarchies
+WWW=		https://metacpan.org/release/Tree-Simple-VisitorFactory
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

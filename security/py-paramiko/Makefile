@@ -1,5 +1,3 @@
-# Created by: Ulf Lilleengen
-
 PORTNAME=	paramiko
 PORTVERSION=	2.11.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Python SSH2 protocol library
+WWW=		https://www.paramiko.org/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

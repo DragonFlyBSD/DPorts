@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	nanoc
 DISTVERSION=	4.12.5
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Simple but flexible static site generator
+WWW=		https://nanoc.ws/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

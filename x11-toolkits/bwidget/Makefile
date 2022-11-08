@@ -1,12 +1,11 @@
-# Created by: Alexander Kabaev <ak03@gte.com>
-
 PORTNAME=	bwidget
-PORTVERSION=	1.9.14
+PORTVERSION=	1.9.15
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	SF/tcllib/BWidget/${PORTVERSION}
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	High-level widget set for Tcl/Tk
+WWW=		https://core.tcl.tk/bwidget/home
 
 LICENSE=	TclTk
 LICENSE_NAME=	Tcl/Tk License

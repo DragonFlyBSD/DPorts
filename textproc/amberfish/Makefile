@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni
-
 PORTNAME=	amberfish
 PORTVERSION=	1.6.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}/Amberfish%20source%20-%20stable/${PORTVERSION}	\
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	General purpose text retrieval Software
+WWW=		http://www.etymon.com/tr.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

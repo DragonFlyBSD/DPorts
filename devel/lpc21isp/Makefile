@@ -1,5 +1,3 @@
-# Created by: Steve Franks <stevefranks@ieee.org>
-
 PORTNAME=	lpc21isp
 PORTVERSION=	1.97
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION:S/.//}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ISP programmer tool for flashing NXP and Analog Devices ARM7 CPUs
+WWW=		http://tech.groups.yahoo.com/group/lpc21isp/
 
 LICENSE=	LGPL3+
 

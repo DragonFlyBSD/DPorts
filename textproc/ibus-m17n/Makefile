@@ -1,11 +1,10 @@
-# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-
 PORTNAME=	ibus-m17n
-DISTVERSION=	1.4.9
+DISTVERSION=	1.4.17
 CATEGORIES=	textproc
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	m17n IM engine for IBus framework
+WWW=		https://github.com/ibus/ibus-m17n
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

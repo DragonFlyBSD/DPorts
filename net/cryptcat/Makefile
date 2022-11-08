@@ -1,5 +1,3 @@
-# Created by: Roman Shterenzon <roman@xpert.com>
-
 PORTNAME=	cryptcat
 PORTVERSION=	1.2.1
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-unix-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Standard netcat enhanced with twofish encryption
+WWW=		https://sourceforge.net/projects/cryptcat/
 
 USES=		tar
 WRKSRC=		${WRKDIR}/unix

@@ -1,12 +1,11 @@
-# Created by Kevin Bowling <kbowling@FreeBSD.org>
-
 PORTNAME=	timescaledb-backup
 DISTVERSION=	0.1.1
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	databases
 
 MAINTAINER=	kbowling@FreeBSD.org
 COMMENT=	Tool for performing TimescaleDB backups across versions
+WWW=		https://github.com/timescale/timescaledb-backup
 
 LICENSE=	TSL
 LICENSE_NAME=	Timescale License Agreement

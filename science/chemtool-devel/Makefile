@@ -1,5 +1,3 @@
-# Created by: NAKATA, Maho <maho@FreeBSD.org>
-
 PORTNAME=	chemtool
 PORTVERSION=	1.7.20050716
 PORTREVISION=	11
@@ -10,6 +8,7 @@ DISTNAME=	ct17a15
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Drawing organic molecules easily and store them (developer version)
+WWW=		http://ruby.chemie.uni-freiburg.de/~martin/chemtool/
 
 LICENSE=	GPLv2
 

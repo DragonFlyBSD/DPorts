@@ -1,13 +1,12 @@
-# Created by: kris@FreeBSD.org
-
 PORTNAME=	libnids
 PORTVERSION=	1.24
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	net security
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT?=	Network monitoring library with TCP/IP reassembly
+WWW=		http://libnids.sf.net
 
 LIB_DEPENDS=	libnet.so:net/libnet
 

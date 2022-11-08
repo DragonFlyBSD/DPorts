@@ -1,5 +1,3 @@
-# Created by: D'Arcy J.M. Cain <darcy@druid.net>
-
 PORTNAME=	generate
 PORTVERSION=	2.8
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.druid.net/darcy/
 
 MAINTAINER=	darcy@druid.net
 COMMENT=	Simple text pre-processor
+WWW=		https://www.druid.net/darcy/readme-generate.html
 
 USES=		gmake tar:tgz
 

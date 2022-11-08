@@ -1,12 +1,11 @@
-# Created by: Palle Girgensohn <girgen@FreeBSD.org>
-
 PORTNAME=	fluent-bit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.5
+DISTVERSION=	1.9.8
 CATEGORIES=	sysutils
 
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	Fast and lightweight data forwarder
+WWW=		https://fluentbit.io/
 
 LICENSE=	APACHE20
 

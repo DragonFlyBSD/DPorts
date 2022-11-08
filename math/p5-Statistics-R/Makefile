@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	Statistics-R
 PORTVERSION=	0.34
 PORTREVISION=	4
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Controls the R interpreter through Perl
+WWW=		https://metacpan.org/release/Statistics-R
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

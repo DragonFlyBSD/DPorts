@@ -1,12 +1,12 @@
-# Created by: Tomasz "CeDeROM" CEDRO (http://www.tomek.cedro.info)
-
 PORTNAME=	openocd
 PORTVERSION=	0.11.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Open On-Chip Debugger
+WWW=		http://openocd.sf.net/
 
 BROKEN_aarch64=	fails to build: src/target/nds32_tlb.h:25:2: error: expected identifier PAGE_SIZE_4K = 0
 

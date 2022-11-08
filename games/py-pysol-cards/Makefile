@@ -1,5 +1,3 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	pysol-cards
 PORTVERSION=	0.14.2
 CATEGORIES=	games python
@@ -9,6 +7,7 @@ DISTNAME=	pysol_cards-${PORTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Deal PySol FC Cards
+WWW=		https://pypi.org/project/pysol-cards/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

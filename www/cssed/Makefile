@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	cssed
 PORTVERSION=	0.4.0
 PORTREVISION=	14
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Application to help CSS style sheets creation and maintenance
+WWW=		http://cssed.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

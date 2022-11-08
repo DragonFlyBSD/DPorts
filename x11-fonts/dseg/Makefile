@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	dseg
 PORTVERSION=	0.46
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ DISTNAME=	fonts-${PORTNAME:tu}_${DISTVERSIONPREFIX}${PORTVERSION:C/\.//g}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Font family that imitates seven and fourteen segment displays
+WWW=		https://www.keshikan.net/fonts-e.html
 
 LICENSE=	OFL11
 LICENSE_FILE=	${WRKSRC}/DSEG-LICENSE.txt

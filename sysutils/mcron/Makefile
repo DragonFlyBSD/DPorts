@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	mcron
 PORTVERSION=	1.2.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	100% compatible replacement for Vixie cron
+WWW=		https://www.gnu.org/software/mcron/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

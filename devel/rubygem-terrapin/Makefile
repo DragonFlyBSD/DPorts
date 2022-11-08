@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	terrapin
 PORTVERSION=	0.6.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Run shell commands safely
+WWW=		https://github.com/thoughtbot/terrapin
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

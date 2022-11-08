@@ -1,5 +1,3 @@
-# Created by: Andreas Fehlner (fehlner@gmx.de)
-
 PORTNAME=	geonext
 PORTVERSION=	1.74
 CATEGORIES+=	math education graphics java
@@ -8,6 +6,7 @@ DISTNAME=	geonext.${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Interactive (dynamic) elementary Geometry Software
+WWW=		http://www.geonext.de
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/license.txt

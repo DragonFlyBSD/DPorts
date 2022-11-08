@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Text-Table-Tiny
 PORTVERSION=	1.03
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple text tables from 2D arrays, with limited templating options
+WWW=		https://metacpan.org/release/Text-Table-Tiny
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

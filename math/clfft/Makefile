@@ -1,5 +1,3 @@
-# Created by: Johannes Dieterich <dieterich@ogolem.org>
-
 PORTNAME=	clfft
 PORTVERSION=	2.12.2
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	math
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Software library containing FFT functions written in OpenCL
+WWW=		https://github.com/clMathLibraries/clFFt
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

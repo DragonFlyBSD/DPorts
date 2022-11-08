@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin <mi@aldan.algebra.com>
-
 PORTNAME=	serviio
 PORTVERSION=	2.2.1
 PORTREVISION=	0
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	-linux.tar.gz
 
 MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	Transcoding DLNA-server implemented in Java
+WWW=		https://www.serviio.org/
 
 # Converted from RESTRICTED
 LICENSE=	serviio

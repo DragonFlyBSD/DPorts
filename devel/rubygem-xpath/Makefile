@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	xpath
 PORTVERSION=	3.2.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	DSL for generating XPath Expressions
+WWW=		https://github.com/teamcapybara/xpath
 
 LICENSE=	MIT
 

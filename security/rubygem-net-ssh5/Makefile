@@ -1,5 +1,3 @@
-# Created by: Roderick van Domburg <r.s.a.vandomburg@student.utwente.nl>
-
 PORTNAME=	net-ssh
 PORTVERSION=	5.2.0
 PORTEPOCH=	2
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	5
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Non-interactive SSH processing
+WWW=		https://github.com/net-ssh/net-ssh
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

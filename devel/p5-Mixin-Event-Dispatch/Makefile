@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Mixin-Event-Dispatch
 PORTVERSION=	2.000
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Mixin methods for simple event/message dispatch framework
+WWW=		https://metacpan.org/release/Mixin-Event-Dispatch
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

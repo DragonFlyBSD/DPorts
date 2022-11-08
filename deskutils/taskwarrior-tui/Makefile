@@ -1,14 +1,17 @@
 PORTNAME=	taskwarrior-tui
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.23.4
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	deskutils
 
-MAINTAINER=	alexis.praga@free.fr
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Terminal User Interface (TUI) for Taskwarrior
+WWW=		https://kdheepak.com/taskwarrior-tui/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+RUN_DEPENDS=	task:deskutils/taskwarrior
 
 USES=		cargo
 USE_GITHUB=	yes

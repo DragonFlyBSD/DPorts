@@ -5,6 +5,7 @@ MASTER_SITES=	http://www.open-mpi.org/software/ompi/v${PORTVERSION:R}/downloads/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High Performance Message Passing Library
+WWW=		https://www.open-mpi.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -102,6 +103,10 @@ SLURM_PLIST_FILES=	${MPIDIR}/lib/openmpi/mca_ess_slurm.la \
 			${MPIDIR}/share/openmpi/help-ras-slurm.txt
 
 .include <bsd.port.options.mk>
+
+.if ${FORTRAN_DEFAULT} == gfortran && ${GCC_DEFAULT} >= 10
+FCFLAGS+=	-fallow-argument-mismatch
+.endif
 
 .if ${ARCH} != aarch64 && ${ARCH} != x86_64 && ${ARCH} != i386 && !${ARCH:Mpowerpc*}
 PLIST_SUB+=	NO_MCA_PATCHER_OVERWRITE="@comment "

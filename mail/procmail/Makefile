@@ -1,5 +1,3 @@
-# Created by: Adam David <adam@FreeBSD.org>
-
 PORTNAME=	procmail
 PORTVERSION=	3.22
 PORTREVISION=	10
@@ -15,6 +13,7 @@ MASTER_SITES=	ftp://ftp.ucsb.edu/pub/mirrors/procmail/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Local mail delivery agent
+WWW=		https://www.procmail.org/
 
 LICENSE=	GPLv2
 

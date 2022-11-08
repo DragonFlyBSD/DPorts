@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale	<nivit@email.it>
-
 PORTNAME=	textogif
 PORTVERSION=	1.1
 PORTREVISION=	4
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Perl script to convert LaTeX formulas into GIFs
+WWW=		https://www.fourmilab.ch/webtools/textogif/
 
 RUN_DEPENDS=	ppmtogif:graphics/netpbm
 

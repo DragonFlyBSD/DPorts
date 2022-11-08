@@ -1,5 +1,3 @@
-# Created by: Kimura Fuyuki <fuyuki@nigredo.org>
-
 PORTNAME=	uuid
 PORTVERSION=	1.6.2
 PORTREVISION=	9
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	ossp-
 
 MAINTAINER=	vd@FreeBSD.org
 COMMENT=	ISO-C API and CLI for generating Universally Unique Identifiers
+WWW=		http://www.ossp.org/pkg/lib/uuid/
 
 LICENSE=	MIT
 .if defined(SLAVEPORT) && ${SLAVEPORT}=="perl"

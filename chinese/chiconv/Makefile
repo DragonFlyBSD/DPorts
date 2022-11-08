@@ -1,11 +1,10 @@
-# Created by: buganini@gmail.com
-
 PORTNAME=	chiconv
 PORTVERSION=	11.3
 CATEGORIES=	chinese converters
 
 MAINTAINER=	buganini@gmail.com
 COMMENT=	Auto chinese encoding converter
+WWW=		https://github.com/buganini/chiconv
 
 LICENSE=	ISCL
 

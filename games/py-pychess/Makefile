@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	pychess
 PORTVERSION=	1.0.2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/pychess/pychess/releases/download/${PORTVERSION
 
 MAINTAINER=	kevinz5000@gmail.com
 COMMENT=	GTK chess client written in Python
+WWW=		https://www.pychess.org/
 
 LICENSE=	GPLv3
 

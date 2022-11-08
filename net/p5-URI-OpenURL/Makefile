@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	URI-OpenURL
 PORTVERSION=	0.4.6
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Parse and construct OpenURL's (NISO Z39.88-2004)
+WWW=		https://metacpan.org/release/URI-OpenURL
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

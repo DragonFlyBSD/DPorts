@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Net-BitTorrent-PeerPacket
 PORTVERSION=	1.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse/Build Peer Packets from BitTorrent
+WWW=		https://metacpan.org/release/Net-BitTorrent-PeerPacket
 
 USES=		perl5
 USE_PERL5=	modbuild

@@ -1,5 +1,3 @@
-# Created by: Stephen Montgomery-Smith <stephen@missouri.edu>
-
 PORTNAME=	octave-forge-dataframe
 PORTVERSION=	1.2.0
 PORTREVISION=	13
@@ -7,6 +5,7 @@ CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
+WWW=		http://octave.sourceforge.net/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKDIR}/${OCTSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ColorThemeBase-Static
 PORTVERSION=	0.008
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Base class for color theme modules with static list of items
+WWW=		https://metacpan.org/release/ColorThemeBase-Static
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

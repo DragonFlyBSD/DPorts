@@ -4,13 +4,14 @@ CATEGORIES=	graphics
 
 MAINTAINER=	adridg@FreeBSD.org
 COMMENT=	Library for QML-based Graph Visualisation
+WWW=		https://cneben.github.io/QuickQanava/index.html
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/licence.txt
 
 USES=		cmake compiler:c++14-lang qt:5
 USE_QT=		core declarative gui network quickcontrols2 \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	cneben

@@ -1,5 +1,3 @@
-# Created by: Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-
 PORTNAME=	xdeview
 PORTVERSION=	0.5.20
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	uudeview-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X11 program for uu/xx/Base64/BinHex/yEnc de-/encoding
+WWW=		http://www.fpx.de/fp/Software/UUDeview/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

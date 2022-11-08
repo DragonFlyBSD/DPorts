@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ptable
 PORTVERSION=	0.9.2
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	PTable-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Display tabular data in an ASCII table format
+WWW=		https://github.com/kxxoling/PTable
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

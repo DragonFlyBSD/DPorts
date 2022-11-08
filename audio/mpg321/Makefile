@@ -1,13 +1,12 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	mpg321
 PORTVERSION=	0.2.10
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Command-line MP3 player, compatible with mpg123
+WWW=		http://mpg321.sourceforge.net/
 
 LIB_DEPENDS=	libao.so:audio/libao \
 		libid3tag.so:audio/libid3tag \

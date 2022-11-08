@@ -1,5 +1,3 @@
-# Created by: Jean-Yves Lefort <jylefort@brutele.be>
-
 PORTNAME=	enscribe
 PORTVERSION=	0.1.0
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.coppercloudmusic.com/enscribe/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Create digital audio watermark images from photographic images
+WWW=		https://www.coppercloudmusic.com/enscribe/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

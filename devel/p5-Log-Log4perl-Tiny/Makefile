@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Log-Log4perl-Tiny
 PORTVERSION=	1.6.4
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Mimic Log::Log4perl in one single module
+WWW=		https://metacpan.org/release/Log-Log4perl-Tiny
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

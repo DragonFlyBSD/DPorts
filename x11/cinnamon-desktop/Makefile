@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	cinnamon-desktop
 PORTVERSION=	4.8.1
 CATEGORIES=	x11 gnome
@@ -7,6 +5,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Additional UI API for cinnamon
+WWW=		http://cinnamon.linuxmint.com/
 
 LICENSE=	GPLv2 LGPL20
 LICENSE_COMB=	multi

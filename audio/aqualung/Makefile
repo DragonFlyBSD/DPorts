@@ -1,13 +1,12 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	aqualung
 PORTVERSION=	1.0
-PORTREVISION=	19
+PORTREVISION=	21
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Music player with rich features
+WWW=		https://aqualung.jeremyevans.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

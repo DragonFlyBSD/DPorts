@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	Filesys-Virtual
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to provide a framework for a virtual filesystem
+WWW=		https://metacpan.org/release/Filesys-Virtual
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Kyle Evans <kevans@FreeBSD.org>
-
 PORTNAME=	zdoom
 PORTVERSION=	2.8.1
 PORTREVISION=	8
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	kevans@FreeBSD.org
 COMMENT=	Source port for Doom-engine games
+WWW=		https://www.zdoom.org/
 
 LICENSE=	DOOM
 LICENSE_NAME=	Limited Use Software License Agreement

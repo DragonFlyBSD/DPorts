@@ -1,5 +1,3 @@
-# Created by: Masahiro Teramoto <markun@onohara.to>
-
 PORTNAME=	WWW-RobotRules-Parser
 PORTVERSION=	0.04001
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	markun@onohara.to
 COMMENT=	Just Parse robots.txt
+WWW=		https://metacpan.org/release/WWW-RobotRules-Parser
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

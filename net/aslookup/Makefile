@@ -1,5 +1,3 @@
-# Created by: janos.mohacsi@bsd.hu
-
 PORTNAME=	aslookup
 PORTVERSION=	0.13d
 CATEGORIES=	net
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-beta${PORTVERSION}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Tool that searches the sequence of AS numbers
+WWW=		http://aslookup.bgpview.org/index-e.html
 
 CFLAGS+=	-DARINDB -DJPNICDB -DAPNICDB
 

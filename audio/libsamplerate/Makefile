@@ -1,5 +1,3 @@
-# Created by: <dmagda+libsamplerate@ee.ryerson.ca>
-
 PORTNAME=	libsamplerate
 DISTVERSION=	0.2.2
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/libsndfile/${PORTNAME}/releases/download/${DIST
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Secret Rabbit Code: a Sample Rate Converter for audio
+WWW=		http://www.mega-nerd.com/SRC/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

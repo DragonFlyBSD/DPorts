@@ -1,5 +1,3 @@
-# Created by: Timothy Redaelli <drizzt@gufi.org>
-
 PORTNAME=	netselect
 PORTVERSION=	0.4
 DISTVERSIONPREFIX=${PORTNAME}-
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Ultrafast implementation of ping
+WWW=		http://apenwarr.ca/netselect/
 
 LICENSE=	BSD3CLAUSE
 

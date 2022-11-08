@@ -1,5 +1,3 @@
-# Created by: Zach Thompson <hideo@lastamericanempire.com>
-
 PORTNAME=	libpbl
 PORTVERSION=	1.04.04
 CATEGORIES=	databases
@@ -8,6 +6,7 @@ DISTNAME=	pbl_${PORTVERSION:S/./_/g}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Peter Graf's Program Base Library
+WWW=		https://mission-base.com/peter/source/
 
 LICENSE=	LGPL21+
 

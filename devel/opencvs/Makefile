@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan <gabor@FreeBSD.org>
-
 PORTNAME=	opencvs
 PORTVERSION=	20151230
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.stack.nl/pub/users/johans/opencvs/ \
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	BSD-licensed CVS implementation
+WWW=		http://www.opencvs.org/
 
 LICENSE=	BSD2CLAUSE
 

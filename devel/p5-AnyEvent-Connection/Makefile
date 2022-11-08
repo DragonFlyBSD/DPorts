@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	AnyEvent-Connection
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Base class for TCP connectful clients
+WWW=		https://metacpan.org/release/AnyEvent-Connection
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

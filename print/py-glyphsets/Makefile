@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	glyphsets
-PORTVERSION=	0.5.1
+PORTVERSION=	0.5.2
 CATEGORIES=	print python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python API for evaluating coverage of glyph sets in font projects
+WWW=		https://github.com/googlefonts/glyphsets
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

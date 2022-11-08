@@ -1,5 +1,3 @@
-# Created by: Seiichirou Hiraoka
-
 PORTNAME=	xhime
 PORTVERSION=	1.51
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTFILES=	xhime151.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Resident Himechan for X Window System
+WWW=		https://www.tcp-ip.or.jp/~shochan/linux/xhime.html
 
 # Converted from NO_CDROM
 LICENSE=	xhime

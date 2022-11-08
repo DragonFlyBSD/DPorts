@@ -1,5 +1,5 @@
 PORTNAME=	openhab-addons
-PORTVERSION=	3.2.0
+PORTVERSION=	3.3.0
 CATEGORIES=	misc java
 MASTER_SITES=	https://openhab.jfrog.io/artifactory/libs-release-local/org/openhab/distro/openhab-addons/${PORTVERSION}/
 DISTNAME=	openhab-addons-${PORTVERSION}
@@ -7,6 +7,7 @@ EXTRACT_SUFX=	.kar
 
 MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	Addons for openhab
+WWW=		https://www.openhab.org/
 
 LICENSE=	EPL
 

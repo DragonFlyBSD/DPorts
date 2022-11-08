@@ -1,5 +1,3 @@
-# Created by: adamw
-
 PORTNAME=	dnshistory
 PORTVERSION=	1.3
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.stedee.id.au/files/ \
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Store DNS lookups to a DB
+WWW=		http://www.stedee.id.au/dnshistory
 
 LICENSE=	GPLv2
 

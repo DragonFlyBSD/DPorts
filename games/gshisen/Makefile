@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	gshisen
 PORTVERSION=	1.3.0
 PORTREVISION=	8
@@ -9,6 +7,7 @@ DISTNAME=	GShisen-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shisen-sho puzzle game for GNUstep
+WWW=		https://gap.nongnu.org/gshisen/index.html
 
 LICENSE=	GPLv2+
 

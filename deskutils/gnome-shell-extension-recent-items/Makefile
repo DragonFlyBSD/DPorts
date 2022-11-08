@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	gnome-shell-extension-recent-items
 PORTVERSION=	40
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Recent items extensions for the GNOME3 shell
+WWW=		https://github.com/bananenfisch/RecentItems
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

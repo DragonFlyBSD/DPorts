@@ -4,6 +4,7 @@ include/librdkafka/rdkafkacpp.h
 lib/librdkafka++.a
 lib/librdkafka++.so
 lib/librdkafka++.so.1
+lib/librdkafka-static.a
 lib/librdkafka.a
 lib/librdkafka.so
 lib/librdkafka.so.1

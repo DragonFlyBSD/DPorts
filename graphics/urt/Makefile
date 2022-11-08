@@ -1,5 +1,3 @@
-# Created by: cfs@ing.puc.cl (original)
-
 PORTNAME=	urt
 PORTVERSION=	3.1b1
 PORTREVISION=	12
@@ -8,6 +6,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/graphics/utah-raster/
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Toolkit and library for raster image processing
+WWW=		https://www.cs.utah.edu/gdc/projects/urt/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/copyright

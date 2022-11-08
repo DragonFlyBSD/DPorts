@@ -1,5 +1,3 @@
-# Created by: Andrej Ebert <andrej@ebert.su>
-
 PORTNAME=	rebulk
 PORTVERSION=	3.1.0
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	andrej@ebert.su
 COMMENT=	Python library that performs advanced searches in strings
+WWW=		https://github.com/Toilal/rebulk
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

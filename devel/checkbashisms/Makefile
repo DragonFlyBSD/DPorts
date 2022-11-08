@@ -6,6 +6,7 @@ DISTNAME=	devscripts_${PORTVERSION}
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Check for the presence of bashisms
+WWW=		https://packages.qa.debian.org/d/devscripts.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -17,6 +18,7 @@ SHEBANG_FILES=	scripts/checkbashisms.pl
 
 NO_ARCH=	yes
 NO_BUILD=	yes
+PORTSCOUT=	limit:^d\.d+\.d
 WRKSRC=		${WRKDIR}/devscripts-${PORTVERSION}
 
 PLIST_FILES=	bin/checkbashisms \

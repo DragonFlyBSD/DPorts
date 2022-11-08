@@ -1,5 +1,3 @@
-# Created by: Philippe Audeoud <jadawin@tuxaco.net>
-
 PORTNAME=	wapiti
 PORTVERSION=	3.0.3
 CATEGORIES=	security
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}3-${DISTVERSIONFULL}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Vulnerability scanner for web applications
+WWW=		http://wapiti.sourceforge.net/
 
 LICENSE=	GPLv2
 

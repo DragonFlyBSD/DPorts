@@ -1,5 +1,3 @@
-# Created by: David Yeske <dyeske@gmail.com>
-
 PORTNAME=	mrxvt
 PORTVERSION=	0.4.2
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/materm/${PORTNAME}%20source/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tabbed version of rxvt
+WWW=		http://materm.sourceforge.net/
 
 LIB_DEPENDS=	libpng.so:graphics/png
 

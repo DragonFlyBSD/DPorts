@@ -1,5 +1,3 @@
-# Created by: Cory R. King <coryking@mozimedia.com>
-
 PORTNAME=	Params-Coerce
 DISTVERSION=	0.15
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Allows your classes to do parameter coercion
+WWW=		https://metacpan.org/release/Params-Coerce
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

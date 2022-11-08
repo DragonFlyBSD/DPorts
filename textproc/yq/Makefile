@@ -1,10 +1,11 @@
 PORTNAME=	yq
-DISTVERSION=	2.14.0
+DISTVERSION=	3.1.0
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Command-line YAML and XML processor, jq wrapper for YAML/XML documents
+WWW=		https://github.com/kislyuk/yq
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

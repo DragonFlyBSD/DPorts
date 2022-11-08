@@ -1,5 +1,3 @@
-# Created by: Kalten <kalten@gmx.at>
-
 PORTNAME=	eureka
 DISTVERSION=	1.27b
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 
 MAINTAINER=	kalten@gmx.at
 COMMENT=	Map editor for various Doom-derived games
+WWW=		http://eureka-editor.sourceforge.net/
 
 LICENSE=	GPLv2+
 

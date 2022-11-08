@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	tightvnc
 PORTVERSION=	1.3.10
 PORTREVISION=	6
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}_unixsrc
 
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	Enhanced version of VNC
+WWW=		https://www.tightvnc.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENCE.TXT

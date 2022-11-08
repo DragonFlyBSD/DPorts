@@ -5,6 +5,7 @@ MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	KDE financial data handling library
+WWW=		https://community.kde.org/Alkimia/libalkimia
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
@@ -20,10 +21,10 @@ USES=		cmake compiler:c++11-lang kde:5 pathfix perl5 qt:5 \
 USE_LDCONFIG=	yes
 USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
 		i18n iconthemes jobwidgets kio newstuff service solid sonnet \
-		textwidgets widgetsaddons windowsystem xmlgui ecm_build
+		textwidgets widgetsaddons windowsystem xmlgui ecm:build
 USE_PERL5=	run
 USE_QT=		concurrent core dbus declarative gui network widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	x11
 
 CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_Doxygen

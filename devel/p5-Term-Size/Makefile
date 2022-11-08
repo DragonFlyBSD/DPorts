@@ -1,5 +1,3 @@
-# Created by: Brad Jones <brad@kazrak.com>
-
 PORTNAME=	Term-Size
 PORTVERSION=	0.207
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	brad@kazrak.com
 COMMENT=	Perl5 module to handle window size changes
+WWW=		https://metacpan.org/release/Term-Size
 
 USES=		perl5
 USE_PERL5=	configure

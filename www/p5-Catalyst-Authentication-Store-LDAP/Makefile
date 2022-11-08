@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Catalyst-Authentication-Store-LDAP
 PORTVERSION=	1.017
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Authentication from an LDAP Directory for Catalyst
+WWW=		https://metacpan.org/release/Catalyst-Authentication-Store-LDAP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Ben Woods <woodsb02@FreeBSD.org>
-
 PORTNAME=	lightdm-gtk-greeter
 PORTVERSION=	2.0.8
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/Xubuntu/${PORTNAME}/releases/download/${PORTNAM
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	GTK+ greeter for LightDM
+WWW=		https://github.com/Xubuntu/lightdm-gtk-greeter
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Jeffrey Baitis <jeff@baitis.net>
-
 PORTNAME=	libsdr
 PORTVERSION=	0.1.0
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	comms hamradio
 
 MAINTAINER=	jeff@baitis.net
 COMMENT=	Simple software defined radio (SDR) library
+WWW=		https://github.com/hmatuschek/libsdr
 
 LICENSE=	GPLv2
 

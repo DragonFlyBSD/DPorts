@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	File-Flock
 PORTVERSION=	2014.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module for file locking with flock
+WWW=		https://metacpan.org/release/File-Flock
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

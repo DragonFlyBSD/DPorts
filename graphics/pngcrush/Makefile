@@ -1,5 +1,3 @@
-# Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-
 PORTNAME=	pngcrush
 PORTVERSION=	1.8.13
 CATEGORIES=	graphics
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-nolib
 
 MAINTAINER=	vsasjason@gmail.com
 COMMENT=	Optimizer for PNG files
+WWW=		http://pmt.sourceforge.net/pngcrush/
 
 LICENSE=	Pngcrush
 LICENSE_NAME=	Pngcrush License

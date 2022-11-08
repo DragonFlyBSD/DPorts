@@ -1,5 +1,3 @@
-# Created by: Nicole Reid <root@cooltrainer.org>
-
 PORTNAME=	elementary
 DISTVERSION=	7.0.0
 CATEGORIES=	x11-themes gnome
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	gnome-icons-
 
 MAINTAINER=	duchateau.olivier@gmail.com
 COMMENT=	Elementary icon set
+WWW=		https://github.com/elementary/icons
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

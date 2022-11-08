@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Net-DNS-Codes
 PORTVERSION=	0.12
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Collection of C library DNS codes
+WWW=		https://metacpan.org/release/Net-DNS-Codes
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual

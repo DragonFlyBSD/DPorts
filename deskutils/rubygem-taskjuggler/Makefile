@@ -1,5 +1,3 @@
-# Created by: Dean Povey <povey@wedgetail.com>
-
 PORTNAME=	taskjuggler
 PORTVERSION=	3.7.1
 CATEGORIES=	deskutils rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Project management tool for UNIX based operating systems
+WWW=		https://taskjuggler.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

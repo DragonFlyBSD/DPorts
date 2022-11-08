@@ -1,5 +1,3 @@
-# Created by: Nakata Maho <maho@FreeBSD.org>
-
 PORTNAME=	ghemical
 PORTVERSION=	3.0.0
 PORTREVISION=	23
@@ -9,6 +7,7 @@ MASTER_SITE_SUBDIR=	release20111012 current
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Computational chemistry software package
+WWW=		https://www.bioinformatics.org/ghemical/ghemical/index.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

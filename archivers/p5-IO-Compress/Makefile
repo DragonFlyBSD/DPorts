@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	IO-Compress
 PORTVERSION=	2.201
 CATEGORIES=	archivers perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl5 compression modules (bzip2, deflate, gzip, zlib, zip)
+WWW=		https://metacpan.org/release/IO-Compress
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

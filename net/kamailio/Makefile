@@ -1,5 +1,3 @@
-# Created by: Oliver Mahmoudi <olivermahmoudi@gmail.com>
-
 PORTNAME=	kamailio
 PORTVERSION=	5.5.4
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}_src
 
 MAINTAINER=	dmitry.wagin@ya.ru
 COMMENT=	Very fast and configurable open source SIP proxy
+WWW=		https://www.kamailio.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

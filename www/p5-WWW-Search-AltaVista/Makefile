@@ -1,5 +1,3 @@
-# Created by: Fanying Jen <fanying@fynet.com>
-
 PORTNAME=	WWW-Search-AltaVista
 PORTVERSION=	2.154
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl WWW::Search class for searching AltaVista
+WWW=		https://metacpan.org/release/WWW-Search-AltaVista
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Date-Manip>=0:devel/p5-Date-Manip \

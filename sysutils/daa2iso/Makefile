@@ -1,5 +1,3 @@
-# Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-
 PORTNAME=	daa2iso
 PORTVERSION=	0.1.7e
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	marcel@herrbischoff.com
 COMMENT=	Convert PowerISO DAA files to ISO9660
+WWW=		https://aluigi.altervista.org/mytoolz.htm
 
 LICENSE=	GPLv2
 

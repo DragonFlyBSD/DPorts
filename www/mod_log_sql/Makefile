@@ -1,5 +1,3 @@
-# Created by: Clement Laforet <clement@FreeBSD.org>
-
 PORTNAME=	mod_log_sql
 PORTVERSION=	1.101
 PORTREVISION=	7
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows Apache to log to a MySQL database
+WWW=		http://www.outoforder.cc/projects/httpd/mod_log_sql/
 
 USES=		apache gmake mysql tar:bzip2
 GNU_CONFIGURE=	yes

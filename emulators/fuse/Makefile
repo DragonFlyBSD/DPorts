@@ -1,5 +1,3 @@
-# Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-
 PORTNAME=	fuse
 PORTVERSION=	1.6.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}-emulator/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	rene@FreeBSD.org
 COMMENT=	Free Unix (Sinclair ZX-)Spectrum Emulator
+WWW=		http://fuse-emulator.sourceforge.net
 
 LICENSE=	GPLv2
 

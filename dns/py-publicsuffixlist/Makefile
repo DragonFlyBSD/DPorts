@@ -1,13 +1,13 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	publicsuffixlist
-PORTVERSION=	0.7.13
+PORTVERSION=	0.7.14
+PORTREVISION=	1
 CATEGORIES=	dns python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Publicsuffixlist implementation
+WWW=		https://github.com/ko-zu/psl
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE

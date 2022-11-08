@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	r18n-rails-api
 PORTVERSION=	5.0.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	R18n backend for Rails
+WWW=		https://github.com/r18n/r18n-rails-api
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE

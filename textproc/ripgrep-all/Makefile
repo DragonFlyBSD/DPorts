@@ -1,13 +1,12 @@
-# Created by: Alexis Praga <alexis.praga@free.fr>
-
 PORTNAME=	ripgrep-all
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.6
-PORTREVISION=	9
+PORTREVISION=	11
 CATEGORIES=	textproc
 
 MAINTAINER=	alexis.praga@free.fr
 COMMENT=	Improved search capacities of ripgrep
+WWW=		https://github.com/phiresky/ripgrep-all/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

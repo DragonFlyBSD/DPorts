@@ -1,5 +1,3 @@
-# Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-
 PORTNAME=	vertex
 PORTVERSION=	0.3.1
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	Vertex-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Implementation of Q2Q protocol
+WWW=		https://launchpad.net/divmod
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

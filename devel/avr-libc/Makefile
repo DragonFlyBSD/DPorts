@@ -1,5 +1,3 @@
-# Created by: Joerg Wunsch <joerg@FreeBSD.org>
-
 PORTNAME=	avr-libc
 PORTVERSION=	2.0.0
 PORTREVISION=	4
@@ -9,6 +7,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	joerg@FreeBSD.org
 COMMENT=	C and math library for the Atmel AVR controller family
+WWW=		https://savannah.nongnu.org/projects/avr-libc
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

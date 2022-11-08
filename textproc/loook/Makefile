@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	loook
 PORTVERSION=	0.9.0
 CATEGORIES=	textproc
@@ -8,6 +6,7 @@ DIST_SUBDIR=	python
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Simple Python tool that search in LibreOffice/OpenOffice files
+WWW=		https://mechtilde.de/Loook/
 
 LICENSE=	GPLv2+
 

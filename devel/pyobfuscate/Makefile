@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	pyobfuscate
 PORTVERSION=	0.3.20131129
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Python source code obfuscator
+WWW=		https://github.com/astrand/pyobfuscate
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

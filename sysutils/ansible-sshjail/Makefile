@@ -1,12 +1,13 @@
 PORTNAME=	ansible-sshjail
-PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.1.0-37
 DISTVERSIONSUFFIX=	-ge712c53
+PORTREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Ansible connector for remote jails
+WWW=		https://github.com/austinhyde/ansible-sshjail
 
 LICENSE=	MIT
 

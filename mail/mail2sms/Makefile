@@ -1,5 +1,3 @@
-# Created by: Gerhard Gonter <g.gonter@ieee.org>
-
 PORTNAME=	mail2sms
 PORTVERSION=	1.3.5
 CATEGORIES=	mail
@@ -8,6 +6,7 @@ MASTER_SITES=	http://daniel.haxx.se/projects/mail2sms/ \
 
 MAINTAINER=	jharris@widomaker.com
 COMMENT=	Mail to SMS converter
+WWW=		https://daniel.haxx.se/projects/mail2sms/
 
 GNU_CONFIGURE=	yes
 

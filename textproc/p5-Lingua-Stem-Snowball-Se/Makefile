@@ -1,5 +1,3 @@
-# Created by: Thorsten Greiner <thorsten.greiner@web.de>
-
 PORTNAME=	Lingua-Stem-Snowball-Se
 PORTVERSION=	1.2
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	Snowball-Swedish-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Stemmer for Swedish
+WWW=		https://metacpan.org/release/Snowball-Swedish
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

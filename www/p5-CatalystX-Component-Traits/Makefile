@@ -1,5 +1,3 @@
-# Created by: Bill Brinzer <bill.brinzer@gmail.com>
-
 PORTNAME=	CatalystX-Component-Traits
 PORTVERSION=	0.19
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	des@FreeBSD.org
 COMMENT=	Automatic Trait Loading and Resolution for Catalyst Components
+WWW=		https://metacpan.org/release/CatalystX-Component-Traits
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

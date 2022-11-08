@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <frederic@culot.org>
-
 PORTNAME=	epte
 PORTVERSION=	2.0.8
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.toddmiller.com/epte/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Electronic Periodic Table of the Elements
+WWW=		http://www.toddmiller.com/epte/
 
 USES=		ncurses
 MAKEFILE=	makefile

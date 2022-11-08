@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	sfm
 PORTVERSION=	0.4
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	misc
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Simple file manager for Unix-like systems
+WWW=		https://git.afify.dev/sfm/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE

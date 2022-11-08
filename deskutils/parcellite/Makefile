@@ -1,5 +1,3 @@
-# Created by: Joey Mingrone <joey@mingrone.org>
-
 PORTNAME=	parcellite
 PORTVERSION=	1.2.1
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	Lightweight GTK+ clipboard manager
+WWW=		http://parcellite.sourceforge.net
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	opencore-amr
 PORTVERSION=	0.1.6
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OpenCORE implementation of AMR Narrowband & Wideband speech codec
+WWW=		https://sourceforge.net/projects/opencore-amr/
 
 LICENSE=	APACHE20
 

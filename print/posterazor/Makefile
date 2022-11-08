@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	posterazor
 PORTVERSION=	1.9.7
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	print graphics
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Cuts an image into pieces which can be printed out as a poster
+WWW=		https://github.com/aportale/posterazor
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,7 +15,7 @@ USES=		compiler:c++11-lang dos2unix gl localbase:ldflags qmake qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	ehaupt
 USE_GL=		gl
-USE_QT=		core gui printsupport widgets buildtools_build
+USE_QT=		core gui printsupport widgets buildtools:build
 
 QMAKE_SOURCE_PATH=	${WRKSRC}/src/posterazor.pro
 

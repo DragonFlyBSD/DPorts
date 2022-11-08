@@ -1,5 +1,3 @@
-# Created by: Michael Moll <kvedulv@kvedulv.de>
-
 PORTNAME=	hammer_cli_foreman_ssh
 PORTVERSION=	0.0.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	SSH host commands for Hammer CLI
+WWW=		https://github.com/theforeman/hammer-cli-foreman-ssh
 
 LICENSE=	GPLv3+
 

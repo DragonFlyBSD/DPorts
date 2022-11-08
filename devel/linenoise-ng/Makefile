@@ -1,5 +1,3 @@
-# Created by: David Thiel <lx@freebsd.org>
-
 PORTNAME=	linenoise-ng
 PORTVERSION=	1.0.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small, portable readline replacement
+WWW=		https://github.com/arangodb/linenoise-ng
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

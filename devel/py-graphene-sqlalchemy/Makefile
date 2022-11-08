@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	graphene-sqlalchemy
 PORTVERSION=	2.3.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Graphene SQLAlchemy integration
+WWW=		https://github.com/graphql-python/graphene-sqlalchemy
 
 LICENSE=	MIT
 

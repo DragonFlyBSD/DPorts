@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	${DICT}-aspell
 SPELLVERSION=	6-mr-0.10-0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Aspell Marathi dictionary
+WWW=		https://www.janabhaaratii.org.in/janabhaaratii/page_gen.php?lang=en&body=/aspell/aspell.html
 
 DICT=	 	mr
 

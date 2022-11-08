@@ -1,12 +1,12 @@
-# Created by: Douglas K. Rand <rand@meridian-enviro.com>
-
 PORTNAME=		mapserver
 PORTVERSION=		7.6.4
+PORTREVISION=	1
 CATEGORIES=		graphics www geography
 MASTER_SITES=		https://download.osgeo.org/mapserver/
 
 MAINTAINER=		wen@FreeBSD.org
 COMMENT=		System for developing web-based GIS applications
+WWW=		https://mapserver.org/
 
 LICENSE=		MIT
 

@@ -1,5 +1,3 @@
-# Created by: Eric Freeman <freebsdports@chillibear.com>
-
 PORTNAME=	File-BOM
 PORTVERSION=	0.18
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl module to handle Unicode byte order marks
+WWW=		https://metacpan.org/release/File-BOM
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

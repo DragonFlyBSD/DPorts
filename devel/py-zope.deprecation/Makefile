@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	zope.deprecation
 PORTVERSION=	4.1.2
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DIST_SUBDIR=	zope
 
 MAINTAINER=	zope@FreeBSD.org
 COMMENT=	Zope 3 Deprecation Infrastructure
+WWW=		https://pypi.org/project/zope.deprecation/
 
 LICENSE=	ZPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

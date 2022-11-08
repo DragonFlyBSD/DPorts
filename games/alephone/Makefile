@@ -1,12 +1,11 @@
-# Created by: Michael Alyn Miller <malyn@strangeGizmo.com>
-
 PORTNAME=	alephone
 DISTVERSION=	20190331
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	games
 
 MAINTAINER=	fiziologus@gmail.com
 COMMENT=	Open source version of Bungies Marathon game
+WWW=		http://source.bungie.org/
 
 LICENSE=	GPLv3
 

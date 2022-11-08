@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	minder
 PORTVERSION=	2.0.2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.alhem.net/project/minder/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small network application for automatic maintenance of peer lists
+WWW=		http://www.alhem.net/project/minder/index.html
 
 LICENSE=	GPLv2+
 

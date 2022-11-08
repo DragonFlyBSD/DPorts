@@ -1,11 +1,12 @@
 PORTNAME=	lucene++
 PORTVERSION=	3.0.8
-PORTREVISION=	2
+PORTREVISION=	3
 DISTVERSIONPREFIX=	rel_
 CATEGORIES=	textproc
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ port of the Lucene library
+WWW=		https://github.com/luceneplusplus/LucenePlusPlus
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LGPL.license

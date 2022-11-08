@@ -1,5 +1,3 @@
-# Created by: Philip Paeps <philip@paeps.cx>
-
 PORTNAME=	Date-Roman
 PORTVERSION=	1.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	philip@FreeBSD.org
 COMMENT=	Perl module to play with Roman dates
+WWW=		https://metacpan.org/release/Date-Roman
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Roman>=0:math/p5-Roman

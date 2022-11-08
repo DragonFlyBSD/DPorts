@@ -1,5 +1,3 @@
-# Created by: Michael Neumann <mneumann@ntecs.de>
-
 PORTNAME=	hatari
 PORTVERSION=	2.3.1
 CATEGORIES=	emulators
@@ -7,6 +5,7 @@ MASTER_SITES=	http://download.tuxfamily.org/hatari/${PORTVERSION}/
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Atari ST emulator
+WWW=		https://hatari.tuxfamily.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/gpl.txt

@@ -1,12 +1,11 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	QComicBook
 PORTVERSION=	0.9.1
-PORTREVISION=	38
+PORTREVISION=	41
 CATEGORIES=	graphics
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Qt-based comic book archive viewer
+WWW=		https://github.com/stolowski/QComicBook
 
 LICENSE=	GPLv2
 
@@ -16,7 +15,7 @@ USES=		cmake compiler:c++11-lang pkgconfig qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	stolowski
 USE_QT=		core gui printsupport widgets x11extras\
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 
 OPTIONS_DEFINE=	7ZIP ACE RAR
 

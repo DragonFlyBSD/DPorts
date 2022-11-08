@@ -1,5 +1,3 @@
-# Created by: David Thiel (lx@redundancy.redundancy.org)
-
 PORTNAME=	glFlow
 PORTVERSION=	0.1.4
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ DISTNAME=	glFlow-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	NetFlow tool for detecting DoS attacks
+WWW=		http://freshmeat.net/projects/glflow/
 
 USES=		ssl tar:tgz
 PLIST_FILES=	bin/glflow

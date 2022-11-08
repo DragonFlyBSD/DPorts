@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	types-toml
-PORTVERSION=	0.10.7
+PORTVERSION=	0.10.8
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Typing stubs for toml
+WWW=		https://github.com/python/typeshed/tree/master/stubs/toml
 
 LICENSE=	APACHE20
 

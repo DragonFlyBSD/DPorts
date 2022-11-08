@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	jeepney
 PORTVERSION=	0.8.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Low-level, pure Python DBus protocol wrapper
+WWW=		https://gitlab.com/takluyver/jeepney
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

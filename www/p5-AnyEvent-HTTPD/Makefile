@@ -1,5 +1,3 @@
-# Created by: Mons Anderson <mons@cpan.org>
-
 PORTNAME=	AnyEvent-HTTPD
 PORTVERSION=	0.93
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	mons@cpan.org
 COMMENT=	Simple lightweight event based web server
+WWW=		https://metacpan.org/release/AnyEvent-HTTPD
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

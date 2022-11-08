@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <william88@gmail.com>
-
 PORTNAME=	enzyme
 PORTVERSION=	0.4.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Python module to parse metadata in video files
+WWW=		https://github.com/Diaoul/enzyme
 
 LICENSE=	APACHE20
 

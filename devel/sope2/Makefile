@@ -1,5 +1,3 @@
-# Created by: Euan Thoms <euan@potensol.com>
-
 PORTNAME=		sope2
 PORTVERSION=		2.4.3
 CATEGORIES=		devel gnustep
@@ -8,6 +6,7 @@ DISTNAME=		SOPE-${PORTVERSION}
 
 MAINTAINER=		acm@FreeBSD.org
 COMMENT=		Extensive set of GNUstep web application frameworks
+WWW=		https://sogo.nu/
 
 LICENSE=		LGPL20
 

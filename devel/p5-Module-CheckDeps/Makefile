@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Module-CheckDeps
 PORTVERSION=	0.08
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Very simple dependencies checker for Perl code
+WWW=		https://metacpan.org/release/ALEXBIO/Module-CheckDeps-0.08
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

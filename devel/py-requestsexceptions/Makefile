@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	requestsexceptions
 PORTVERSION=	1.4.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library to find the correct path to exceptions in the requests library
+WWW=		https://github.com/openstack/requestsexceptions
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

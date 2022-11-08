@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	power_assert
 PORTVERSION=	2.0.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Power Assert for Ruby
+WWW=		https://github.com/ruby/power_assert
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

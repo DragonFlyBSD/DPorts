@@ -1,5 +1,3 @@
-# Created by: Bernhard Froehlich <decke@bluelife.at>
-
 PORTNAME=	phpvirtualbox
 DISTVERSION=	5.2-1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-legacy
 
 MAINTAINER=	vbox@FreeBSD.org
 COMMENT=	AJAX Web Interface for VirtualBox
+WWW=		https://sourceforge.net/projects/phpvirtualbox/
 
 LICENSE=	GPLv3
 

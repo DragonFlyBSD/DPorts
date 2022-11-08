@@ -1,5 +1,3 @@
-# Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-
 PORTNAME=	trafficserver
 PORTVERSION=	9.1.3
 CATEGORIES=	www
@@ -7,6 +5,7 @@ MASTER_SITES=	APACHE/${PORTNAME}
 
 MAINTAINER=	gaod@hychen.org
 COMMENT=	Fast, scalable and extensible HTTP proxy server
+WWW=		https://trafficserver.apache.org/
 
 LICENSE=	APACHE20
 

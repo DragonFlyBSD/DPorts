@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	aspell
 SPELLVERSION=	6-uk-1.4.0-0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	ukrainian textproc
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Aspell Ukrainian dictionaries
+WWW=		https://sourceforge.net/projects/ispell-uk/
 
 DICT=	 	uk
 

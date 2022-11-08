@@ -2,10 +2,12 @@ PORTNAME=	appcsxcad
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.2-9
 DISTVERSIONSUFFIX=	-g97ba30e
+PORTREVISION=	2
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Minimal GUI Application using the QCSXCAD library
+WWW=		https://github.com/thliebig/AppCSXCAD
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -21,7 +23,7 @@ LIB_DEPENDS=	libCSXCAD.so:cad/csxcad \
 		libvtkCommonCore-9.1.so:math/vtk9
 
 USES=		cmake jpeg pkgconfig qt:5 xorg
-USE_QT=		core gui sql widgets xml buildtools_build qmake_build
+USE_QT=		core gui sql widgets xml buildtools:build qmake:build
 USE_XORG=	ice sm x11 xext xt
 USE_LDCONFIG=	yes
 

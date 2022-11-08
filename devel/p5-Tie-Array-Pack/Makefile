@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	Tie-Array-Pack
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Array implemented as a packed string
+WWW=		https://metacpan.org/release/Tie-Array-Pack
 
 USES=		perl5
 USE_PERL5=	configure

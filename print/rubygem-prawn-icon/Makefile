@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	prawn-icon
-PORTVERSION=	3.0.0
+PORTVERSION=	3.1.0
 CATEGORIES=	print rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provide various icon fonts for the Prawn PDF toolkit
+WWW=		https://github.com/jessedoyle/prawn-icon
 
 LICENSE=	GPLv2 GPLv3 RUBY
 LICENSE_COMB=	dual

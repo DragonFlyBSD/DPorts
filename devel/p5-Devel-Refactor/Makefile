@@ -1,5 +1,3 @@
-# Created by: Cezary Morga <cm@therek.net>
-
 PORTNAME=	Devel-Refactor
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl extension for refactoring Perl code
+WWW=		https://metacpan.org/release/Devel-Refactor
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

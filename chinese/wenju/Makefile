@@ -1,5 +1,3 @@
-# Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-
 PORTNAME=	wenju
 PORTVERSION=	1.6
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Collection of writing tools in Chinese
+WWW=		https://sourceforge.net/projects/wenju/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

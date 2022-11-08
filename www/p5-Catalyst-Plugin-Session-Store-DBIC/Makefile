@@ -1,5 +1,3 @@
-# Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-
 PORTNAME=	Catalyst-Plugin-Session-Store-DBIC
 PORTVERSION=	0.14
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Store your sessions via DBIx::Class
+WWW=		https://metacpan.org/release/Catalyst-Plugin-Session-Store-DBIC
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

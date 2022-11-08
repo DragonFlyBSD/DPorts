@@ -1,5 +1,3 @@
-# Created by: smace@FreeBSD.org
-
 PORTNAME=	tcpslice
 PORTVERSION=	1.5
 PORTEPOCH=	1
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Tool for extracting portions of pcap files
+WWW=		https://www.tcpdump.org/related.html
 
 LICENSE=	BSD3CLAUSE
 

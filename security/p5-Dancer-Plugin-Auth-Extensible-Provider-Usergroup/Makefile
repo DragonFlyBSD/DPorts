@@ -1,5 +1,3 @@
-# Created by: Henk van Oers <hvo.pm@xs4all.nl>
-
 PORTNAME=	Dancer-Plugin-Auth-Extensible-Provider-Usergroup
 PORTVERSION=	0.21
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extensible authentication framework for Dancer apps
+WWW=		https://metacpan.org/pod/Dancer::Plugin::Auth::Extensible::Provider::Usergroup
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

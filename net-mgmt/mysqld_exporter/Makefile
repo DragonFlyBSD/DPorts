@@ -1,13 +1,12 @@
-# Created by: Alexey Bobkov <mr.deadlystorm@gmail.com>
-
 PORTNAME=	mysqld_exporter
 PORTVERSION=	0.12.1
 DISTVERSIONPREFIX=v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	mr.deadlystorm@gmail.com
 COMMENT=	Prometheus exporter for MySQL server metrics
+WWW=		https://github.com/prometheus/mysqld_exporter
 
 LICENSE=	APACHE20
 

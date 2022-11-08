@@ -1,5 +1,3 @@
-# Created by: Oleg Ukraincev <oleg@ht-systems.ru>
-
 PORTNAME=	polib
 PORTVERSION=	1.1.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Python library to parse and manage gettext catalogs
+WWW=		https://github.com/izimobil/polib/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

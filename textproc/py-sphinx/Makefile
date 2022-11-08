@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-
 PORTNAME=	sphinx
 PORTVERSION=	4.5.0
 PORTEPOCH=	1
@@ -14,6 +12,7 @@ DIST_SUBDIR=	python
 # discretion.
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python documentation generator
+WWW=		https://www.sphinx-doc.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

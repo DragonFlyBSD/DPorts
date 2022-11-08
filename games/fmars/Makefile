@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	fmars
 PORTVERSION=	0.0.207
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://corewar.co.uk/janeczek/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Fast Memory Array Redcode Simulator
+WWW=		https://corewar.co.uk/janeczek/
 
 LICENSE=	GPLv2
 

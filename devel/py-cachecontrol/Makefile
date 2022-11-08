@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cachecontrol
 PORTVERSION=	0.12.11
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	CacheControl-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	httplib2 caching for requests
+WWW=		https://github.com/ionrock/cachecontrol
 
 LICENSE=	APACHE20
 

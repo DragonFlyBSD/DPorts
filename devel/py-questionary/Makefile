@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	questionary
 PORTVERSION=	1.10.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python library to build pretty command line user prompts
+WWW=		https://github.com/tmbo/questionary
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

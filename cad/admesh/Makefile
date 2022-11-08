@@ -1,5 +1,3 @@
-# Created by: Pedro F. Giffuni <giffunip@asme.org>
-
 PORTNAME=	admesh
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.98.4
@@ -7,6 +5,7 @@ CATEGORIES=	cad
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Program for processing STL triangulated solid meshes
+WWW=		https://launchpad.net/admesh
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	docdiff
 PORTVERSION=	0.6.1
 CATEGORIES=	textproc rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Compares two text files by word, by character, or by line
+WWW=		https://github.com/hisashim/docdiff
 
 LICENSE=	BSD3CLAUSE
 

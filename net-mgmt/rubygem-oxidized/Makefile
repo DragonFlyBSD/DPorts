@@ -1,5 +1,3 @@
-# Created by: Nick Hilliard <nick@foobar.org>
-
 PORTNAME=	oxidized
 PORTVERSION=	0.28.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	nick@foobar.org
 COMMENT=	Network device configuration backup tool
+WWW=		https://github.com/ytti/oxidized
 
 LICENSE=	APACHE20
 

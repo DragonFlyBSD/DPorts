@@ -1,6 +1,3 @@
-# Created by: Alexander Nedotsukov <bland@mail.ru>
-#   $MCom: ports/devel/libglademm24/Makefile,v 1.10 2008/09/22 11:42:53 kwm Exp $
-
 PORTNAME=	libglademm
 PORTVERSION=	2.6.7
 PORTREVISION=	14
@@ -10,6 +7,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	bland@FreeBSD.org
 COMMENT=	C++ wrapper for libglade2 library
+WWW=		http://gtkmm.sourceforge.net/
 
 OPTIONS_DEFINE=	DOCS
 

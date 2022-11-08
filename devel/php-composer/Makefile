@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	composer
 DISTVERSION=	1.10.26
 CATEGORIES=	devel
@@ -11,6 +9,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Dependency Manager for PHP
+WWW=		https://getcomposer.org/
 
 LICENSE=	MIT
 

@@ -1,11 +1,10 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	mod_sql_mysql
 CATEGORIES=	databases ftp
 PKGNAMEPREFIX=	proftpd-
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	MySQL ProFTPD module
+WWW=		http://www.proftpd.org/docs/contrib/mod_sql.html
 
 LICENSE=	GPLv2
 

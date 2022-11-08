@@ -1,11 +1,12 @@
 PORTNAME=	retry2
-DISTVERSION=	0.9.3
+DISTVERSION=	0.9.4
 CATEGORIES=	devel python
 #MASTER_SITES=	CHEESESHOP # no tarball
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Easy to use retry decorator in python
+WWW=		https://github.com/eSAMTrade/retry
 
 LICENSE=	APACHE20
 

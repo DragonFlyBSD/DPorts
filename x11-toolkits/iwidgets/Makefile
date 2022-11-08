@@ -1,5 +1,3 @@
-# Created by: chuckr
-
 PORTNAME=	iwidgets
 PORTVERSION=	4.0.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	iwidgets${PORTVERSION}
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Iwidgets - [incr Widgets] companion to [incr Tk]
+WWW=		https://sourceforge.net/projects/incrtcl/
 
 LIB_DEPENDS=	libitk.so:x11-toolkits/itk
 

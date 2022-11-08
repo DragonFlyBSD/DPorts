@@ -1,10 +1,12 @@
 PORTNAME=	simple-dftd3
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	science # chemistry
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Reimplementation of the DFT-D3 program
+WWW=		https://github.com/awvwgk/simple-dftd3
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

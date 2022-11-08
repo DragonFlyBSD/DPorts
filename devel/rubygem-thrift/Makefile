@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION} # to keep in sync with ../thrift
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	komarov@valerka.net
 COMMENT=	Ruby interface to thrift
+WWW=		https://thrift.apache.org/
 
 LICENSE=	APACHE20
 

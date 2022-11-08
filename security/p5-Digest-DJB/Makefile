@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan
-
 PORTNAME=	Digest-DJB
 PORTVERSION=	1.00
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension for D.J Bernstein's hash algorithm
+WWW=		https://metacpan.org/release/Digest-DJB
 
 USES=		perl5
 USE_PERL5=	configure

@@ -1,5 +1,3 @@
-# Created by: Vladimir Timofeev <vovkasm@gmail.com>
-
 PORTNAME=	Devel-NYTProf
 DISTVERSION=	6.10
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vovkasm@gmail.com
 COMMENT=	Powerful feature-rich Perl source code profiler
+WWW=		https://metacpan.org/release/Devel-NYTProf
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,18 +1,16 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	dry-container
-PORTVERSION=	0.9.0
+PORTVERSION=	0.10.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple container intended for use as an IoC container
+WWW=		https://github.com/dry-rb/dry-container
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	rubygem-concurrent-ruby>=1.0<2:devel/rubygem-concurrent-ruby \
-		rubygem-dry-configurable>=0.13.0<1:devel/rubygem-dry-configurable
+RUN_DEPENDS=	rubygem-concurrent-ruby>=1.0<2:devel/rubygem-concurrent-ruby
 
 USES=		gem
 USE_RUBY=	yes

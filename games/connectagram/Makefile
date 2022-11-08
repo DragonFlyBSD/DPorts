@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	connectagram
 PORTVERSION=	1.2.11
 DISTVERSIONSUFFIX=	-src
@@ -9,13 +7,14 @@ MASTER_SITES=	http://gottcode.org/connectagram/
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Word unscrambling game
+WWW=		https://gottcode.org/connectagram/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		compiler:c++11-lib gl qmake qt:5 tar:bzip2
 USE_GL=		gl
-USE_QT=		buildtools_build core gui linguisttools_build network widgets
+USE_QT=		buildtools:build core gui linguisttools:build network widgets
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 

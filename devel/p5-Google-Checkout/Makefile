@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Google-Checkout
 PORTVERSION=	1.1.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl implementation of Google Checkout (GCO)
+WWW=		https://metacpan.org/release/Google-Checkout
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

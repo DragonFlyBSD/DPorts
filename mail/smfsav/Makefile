@@ -1,5 +1,3 @@
-# Created by: Anton Lysenok <bart@tapolsky.net.ua>
-
 PORTNAME=	smfsav
 PORTVERSION=	1.4.0
 PORTREVISION=	4
@@ -10,6 +8,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	sasaki12@gmail.com
 COMMENT=	Sendmail Sender Address Validator
+WWW=		http://smfs.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

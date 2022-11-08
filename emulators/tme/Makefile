@@ -1,5 +1,3 @@
-# Created by: trasz <trasz@pin.if.uz.zgora.pl>
-
 PORTNAME=	tme
 PORTVERSION=	0.8
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	http://people.csail.mit.edu/fredette/tme/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Emulator for Sun 2/120, 3/150, and SPARCstation 2 machines
+WWW=		https://people.csail.mit.edu/fredette/tme/
 
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

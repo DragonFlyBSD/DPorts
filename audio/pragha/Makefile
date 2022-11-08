@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	pragha
 PORTVERSION=	1.3.3
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/pragha-music-player/${PORTNAME}/releases/downlo
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight music player
+WWW=		https://pragha-music-player.github.io/
 
 LICENSE=	GPLv3
 

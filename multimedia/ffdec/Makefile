@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	ffdec
 DISTVERSION=	14.4.0
 CATEGORIES=	multimedia java
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Flash decompiler
+WWW=		https://github.com/jindrapetrik/jpexs-decompiler
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/license.txt

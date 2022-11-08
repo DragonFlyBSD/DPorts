@@ -1,24 +1,24 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	aws-c-cal
-PORTVERSION=	0.5.12
 DISTVERSIONPREFIX=	v
+DISTVERSION=	0.5.19
 CATEGORIES=	security
 
-MAINTAINER=	danilo@FreeBSD.org
+MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Aws Crypto Abstraction Layer
+WWW=		https://github.com/awslabs/aws-c-cal
 
 LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libaws-c-common.so:devel/aws-c-common
 
-USES=		cmake compiler:c11 ssl
-
+USES=		cmake:testing compiler:c11 ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	awslabs
-
-CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_LIBDIR=${LOCALBASE}/lib
-
 USE_LDCONFIG=	yes
+
+CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=${LOCALBASE}/lib
+CMAKE_ON=	BUILD_SHARED_LIBS
+CMAKE_OFF=	BUILD_TESTING
 
 .include <bsd.port.mk>

@@ -1,5 +1,3 @@
-# Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-
 PORTNAME=	dm-core
 PORTVERSION=	1.2.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Object/Relational Mapper for Ruby
+WWW=		https://github.com/datamapper/dm-core
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

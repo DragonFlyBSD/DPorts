@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	mecab
 PORTVERSION=	0.996
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7cENtOX
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet Another Part-of-Speech and Morphological Analyzer
+WWW=		https://code.google.com/p/mecab/
 
 LICENSE=	BSD3CLAUSE GPLv2 LGPL21
 LICENSE_COMB=	multi

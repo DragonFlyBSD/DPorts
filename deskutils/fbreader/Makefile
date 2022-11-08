@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	fbreader
 PORTVERSION=	0.99.6
 DISTVERSIONSUFFIX=	-freebsdport
@@ -8,6 +6,7 @@ CATEGORIES=	deskutils
 
 MAINTAINER=	johannes@perceivon.net
 COMMENT=	Powerful e-book reader
+WWW=		https://www.fbreader.org/
 
 LICENSE=	GPLv2+
 

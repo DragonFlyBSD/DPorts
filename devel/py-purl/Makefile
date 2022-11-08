@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	purl
 PORTVERSION=	1.6
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Immutable URL class for easy URL-building and manipulation
+WWW=		https://github.com/codeinthehole/purl
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	IO-All-LWP
 PORTVERSION=	0.14
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	IO::All interface to LWP
+WWW=		https://metacpan.org/release/IO-All-LWP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

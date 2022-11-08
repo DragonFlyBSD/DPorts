@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	bandit
 DISTVERSION=	1.7.4
 CATEGORIES=	devel security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Tool for finding common security issues in Python code
+WWW=		https://github.com/openstack-archive/bandit
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

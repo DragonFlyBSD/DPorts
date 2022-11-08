@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	swapper
 PORTVERSION=	1.3.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Unofficial Django swappable models API
+WWW=		https://github.com/openwisp/django-swappable-models
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Piotr Smyrak <smyru@heron.pl>
-
 PORTNAME=	potrace
 DISTVERSION=	1.16
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/potrace/${PORTVERSION}
 
 MAINTAINER=	ps.ports@smyrak.com
 COMMENT=	Transforms bitmaps into vector graphics
+WWW=		http://potrace.sourceforge.net
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

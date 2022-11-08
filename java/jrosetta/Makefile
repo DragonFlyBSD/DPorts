@@ -1,5 +1,3 @@
-# Created by: rfarmer@predatorlabs.net
-
 PORTNAME=	jrosetta
 PORTVERSION=	1.0.4
 PORTREVISION=	1
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	#
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	API for building a graphical console in Swing
+WWW=		http://dev.artenum.com/projects/JRosetta
 
 USES=		zip
 USE_JAVA=	yes

@@ -1,5 +1,3 @@
-# Created by: Michael Hsin <mhsin@mhsin.org>
-
 PORTNAME=	terminus-font
 PORTVERSION=	4.48
 CATEGORIES=	x11-fonts
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Terminus Font - a clean fixed width font
+WWW=		http://terminus-font.sourceforge.net
 
 LICENSE=	OFL11
 

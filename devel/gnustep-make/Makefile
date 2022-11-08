@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	gnustep-make
 PORTVERSION=	2.8.0
 CATEGORIES=	devel gnustep
@@ -7,6 +5,7 @@ MASTER_SITES=	GNUSTEP/core
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNUstep makefile package
+WWW=		http://www.gnustep.org/
 
 LICENSE=	GPLv3
 

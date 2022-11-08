@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni
-
 PORTNAME=	FrF2
 DISTVERSION=	2.2-3
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Statistical Methods for Quality Science
+WWW=		https://CRAN.R-project.org/package=FrF2
 
 LICENSE=	GPLv2+
 

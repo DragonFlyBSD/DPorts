@@ -1,5 +1,3 @@
-# Created by: Sean Chittenden <seanc@FreeBSD.org>
-
 PORTNAME=	rubyinline
 PORTVERSION=	3.12.6
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ DISTNAME=	RubyInline-${PORTVERSION}
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Inline::C allows you to embed C/Ruby directly in ruby scripts
+WWW=		https://www.zenspider.com/projects/rubyinline.html
 
 LICENSE=	MIT
 

@@ -1,14 +1,13 @@
-# Created by: Stephen Hurd <shurd@FreeBSD.org>
-
 PORTNAME=	cqrlog
-PORTVERSION=	2.5.0
+PORTVERSION=	2.5.2
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
 CATEGORIES=	comms hamradio
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Amateur Radio logging application
+WWW=		https://www.cqrlog.com/
 
 LICENSE=	GPLv2
 
@@ -60,5 +59,9 @@ post-patch:
 		${WRKSRC}/src/fTRXControl.pas ${WRKSRC}/src/fPreferences.lfm
 	${REINPLACE_CMD} -e s!%%DATADIR%%!${DATADIR}!g \
 		${WRKSRC}/src/dData.pas ${WRKSRC}/src/fGrayline.pas
+
+post-build:
+	@${RM} ${WRKSRC}/help/cwd.html.*
+	@${RM} ${WRKSRC}/help/h1.html.*
 
 .include <bsd.port.mk>

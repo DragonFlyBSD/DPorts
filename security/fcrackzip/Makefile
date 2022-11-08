@@ -1,5 +1,3 @@
-# Created by: Stefan Walter <sw@gegenunendlich.de>
-
 PORTNAME=	fcrackzip
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://oldhome.schmorp.de/data/marc/ \
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Portable, fast, and featureful ZIP password cracker
+WWW=		http://home.schmorp.de/marc/fcrackzip.html
 
 LICENSE=	GPLv2
 

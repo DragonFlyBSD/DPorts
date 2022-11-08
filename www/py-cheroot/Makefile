@@ -1,5 +1,3 @@
-# Created by: Keith Gaughan <k@stereochro.me>
-
 PORTNAME=	cheroot
 PORTVERSION=	8.6.0
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Highly-optimized, pure-python HTTP server
+WWW=		https://github.com/cherrypy/cheroot
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

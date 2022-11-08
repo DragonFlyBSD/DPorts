@@ -1,14 +1,13 @@
-# Created by: lesi@FreeBSD.org
-
 PORTNAME=	xf86-video-intel
 DISTVERSION=	2.99.917-916
 DISTVERSIONSUFFIX=	-g${GL_COMMIT:C/(.{12}).*/\1/}
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org legacy driver for Intel integrated graphics chipsets
+WWW=		https://01.org/linuxgraphics/
 
 LICENSE=	MIT	# various
 LICENSE_FILE=	${WRKSRC}/COPYING

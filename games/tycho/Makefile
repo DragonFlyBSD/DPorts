@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alepulver@FreeBSD.org>
-
 PORTNAME=	tycho
 PORTVERSION=	0.1
 CATEGORIES=	games
@@ -8,6 +6,7 @@ DISTNAME=	redcoder
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Program to gather data (statistics) on Core War warriors
+WWW=		http://redcoder.sourceforge.net/?p=tycho
 
 USES=		gmake tar:bzip2
 WRKSRC=		${WRKDIR}/${PORTNAME}

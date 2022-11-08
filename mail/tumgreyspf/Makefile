@@ -1,5 +1,3 @@
-# Created by: Marcus Alves Grando <mnag@FreeBSD.org>
-
 PORTNAME=	tumgreyspf
 PORTVERSION=	1.38
 PORTREVISION=	3
@@ -10,6 +8,7 @@ MASTER_SITES=	http://ftp.tummy.com/pub/tummy/tumgreyspf/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	External policy checker for the postfix mail server
+WWW=		https://www.tummy.com/software/tumgreyspf/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

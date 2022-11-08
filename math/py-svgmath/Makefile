@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	svgmath
 PORTVERSION=	0.3.3
 CATEGORIES=	math python
@@ -9,6 +7,7 @@ DISTNAME=	SVGMath-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MathML to SVG Converter in Python
+WWW=		http://svgmath.sf.net
 
 USES=		dos2unix python:3.6+
 USE_PYTHON=	distutils autoplist

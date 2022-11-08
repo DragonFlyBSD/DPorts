@@ -1,11 +1,10 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	wkhtmltopdf
 PORTVERSION=	0.12.6
 CATEGORIES=	converters
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	Convert HTML (or live webpages) to PDF or image
+WWW=		https://github.com/wkhtmltopdf/wkhtmltopdf
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE

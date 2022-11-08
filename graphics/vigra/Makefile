@@ -1,13 +1,12 @@
-# Created by: cartola (Carlos E. G. Carvalho)
-
 PORTNAME=	vigra
 DISTVERSIONPREFIX=v
 DISTVERSION=	1.11.1
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	graphics
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	VIGRA stands for "Vision with Generic Algorithms"
+WWW=		https://ukoethe.github.io/vigra/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -33,6 +32,7 @@ OPTIONS_GROUP=		IMAGEFORMATS
 OPTIONS_GROUP_IMAGEFORMATS=	PNG JPEG TIFF
 OPTIONS_SUB=		yes
 
+HDF5_CFLAGS=		-DH5_USE_110_API=1
 HDF5_CMAKE_BOOL=	WITH_HDF5
 HDF5_LIB_DEPENDS=	libhdf5.so:science/hdf5
 

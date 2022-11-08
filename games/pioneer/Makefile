@@ -1,11 +1,11 @@
-# Created by: lightside <lightside@gmx.com>
-
 PORTNAME=	pioneer
 DISTVERSION=	20220203
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Space adventure game set in the Milky Way galaxy
+WWW=		https://pioneerspacesim.net/
 
 LICENSE=		APACHE20 BSD2CLAUSE CC-BY-SA-3.0 DejaVu GPLv3 IUP \
 			MIT SIL ZLIB

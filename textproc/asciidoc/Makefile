@@ -1,5 +1,3 @@
-# Created by: anholt@FreeBSD.org
-
 PORTNAME=	asciidoc
 PORTVERSION=	10.2.0
 CATEGORIES=	textproc
@@ -7,6 +5,7 @@ MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Text document format for writing short documents and man pages
+WWW=		https://github.com/asciidoc-py/asciidoc-py
 
 LICENSE=	GPLv2+
 

@@ -1,9 +1,10 @@
 PORTNAME=	maltrail
-DISTVERSION=	0.45
+DISTVERSION=	0.48
 CATEGORIES=	security python
 
 MAINTAINER=	m.muenz@gmail.com
 COMMENT=	Malicious traffic detection system, utilizing public (black)lists
+WWW=		https://github.com/stamparm/maltrail
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -21,6 +22,7 @@ NO_BUILD=	yes
 
 do-install:
 		${MKDIR} ${STAGEDIR}${DATADIR} && \
+		${MV} ${WRKSRC}/maltrail.conf ${WRKSRC}/maltrail.conf.sample
 		(cd ${WRKSRC} && ${COPYTREE_SHARE} "*" ${STAGEDIR}${DATADIR})
 
 .include <bsd.port.mk>

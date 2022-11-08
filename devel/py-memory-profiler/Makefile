@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	memory-profiler
 PORTVERSION=	0.60.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	memory_profiler-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module for monitoring memory usage of a python program
+WWW=		https://github.com/pythonprofilers/memory_profiler
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

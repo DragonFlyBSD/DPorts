@@ -1,5 +1,5 @@
 PORTNAME=	plemoljp-hs
-PORTVERSION=	1.2.5
+PORTVERSION=	1.2.7
 PORTREVISION=	0
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	https://github.com/yuru7/PlemolJP/releases/download/v${PORTVERSION}/
@@ -8,6 +8,7 @@ DISTNAME=	PlemolJP_HS_v${DISTVERSION}
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	Plex Mono Language JP (Hidden Space)
+WWW=		https://github.com/yuru7/PlemolJP
 
 LICENSE=	OFL11
 

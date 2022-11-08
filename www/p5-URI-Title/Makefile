@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	URI-Title
 PORTVERSION=	1.902
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Get the titles of things on the web in a sensible way
+WWW=		https://metacpan.org/release/URI-Title
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

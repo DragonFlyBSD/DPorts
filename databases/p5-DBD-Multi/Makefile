@@ -1,5 +1,3 @@
-# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-
 PORTNAME=	DBD-Multi
 PORTVERSION=	0.16
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	snowfly@yuntech.edu.tw
 COMMENT=	Manage Multiple Data Sources with Failover and Load Balancing
+WWW=		https://metacpan.org/release/DBD-Multi
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

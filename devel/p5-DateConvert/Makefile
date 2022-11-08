@@ -1,5 +1,3 @@
-# Created by: Ade Lovett <ade@FreeBSD.org>
-
 PORTNAME=	DateConvert
 PORTVERSION=	0.16
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl5 module to convert dates between any two calendar formats
+WWW=		https://metacpan.org/release/DateConvert
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

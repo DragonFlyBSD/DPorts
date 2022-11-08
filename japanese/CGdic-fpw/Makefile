@@ -1,5 +1,3 @@
-# Created by: Satoshi Taoka <taoka@FreeBSD.org>
-
 PORTNAME=	CGdic-fpw
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	CGdic1.5h-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Japanese dictionary for CG (EPWING V1 format)
+WWW=		http://openlab.ring.gr.jp/edict/fpw/
 
 USES=		zip
 NO_BUILD=	yes

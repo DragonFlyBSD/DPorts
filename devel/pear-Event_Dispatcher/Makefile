@@ -1,11 +1,10 @@
-# Created by: Antonio Carlos Venancio Junior (<antonio@inf.ufsc.br>)
-
 PORTNAME=	Event_Dispatcher
 PORTVERSION=	1.1.0
 CATEGORIES=	devel pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR dispatch notifications using PHP callbacks
+WWW=		https://pear.php.net/package/Event_Dispatcher
 
 LICENSE=	BSD2CLAUSE
 

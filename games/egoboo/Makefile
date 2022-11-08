@@ -1,5 +1,3 @@
-# Created by: Jan Stocker <Jan.Stocker@t-online.de>
-
 PORTNAME=	egoboo
 PORTVERSION=	2.8.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}/Linux%20Source%20Distro/${PORTVERSION}%20(Stable)
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	3D dungeon crawling adventure in the spirit of NetHack
+WWW=		http://egoboo.sourceforge.net/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/license.txt

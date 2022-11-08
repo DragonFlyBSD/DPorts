@@ -1,5 +1,3 @@
-# Created by: dd
-
 PORTNAME=	jarl
 PORTVERSION=	0.5001
 PORTREVISION=	5
@@ -9,6 +7,7 @@ DISTNAME=	Jarl-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl/Tk Jabber client
+WWW=		http://jarl.sourceforge.net/
 
 LICENSE=	GPLv2
 

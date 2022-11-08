@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	ulxmlrpcpp
 PORTVERSION=	1.7.5
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ultra lightweight xml-rpc library written in C++
+WWW=		http://ulxmlrpcpp.sourceforge.net/
 
 LIB_DEPENDS=	libexpat.so:textproc/expat2
 

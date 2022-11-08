@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	notify-osd
 PORTVERSION=	0.9.34
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	https://launchpad.net/notify-osd/precise/0.9.34/+download/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	On-screen-display notification agent using libnotify
+WWW=		https://launchpad.net/notify-osd
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

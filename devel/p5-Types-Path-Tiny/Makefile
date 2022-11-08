@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Types-Path-Tiny
 PORTVERSION=	0.006
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Path::Tiny types and coercions for Moose and Moo
+WWW=		https://metacpan.org/release/Types-Path-Tiny
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

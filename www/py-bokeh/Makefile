@@ -1,5 +1,3 @@
-# Created by: Sergey Kozlov <kozlov.sergey.404@gmail.com>
-
 PORTNAME=	bokeh
 PORTVERSION=	2.4.3
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Interactive Web Plotting for Python
+WWW=		https://bokeh.pydata.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

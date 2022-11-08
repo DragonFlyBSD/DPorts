@@ -1,5 +1,3 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org
-
 PORTNAME=	hamcrest
 PORTVERSION=	1.3
 CATEGORIES=	java devel
@@ -9,6 +7,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library of matchers for building test expressions
+WWW=		https://hamcrest.org/
 
 USE_JAVA=	yes
 NO_ARCH=	yes

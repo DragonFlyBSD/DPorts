@@ -1,5 +1,3 @@
-# Created by: Evgueni V. Gavrilov <aquatique@rusunix.org>
-
 PORTNAME=	silc-toolkit
 PORTVERSION=	1.1.12
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Secure Internet Live Conferencing (SILC) network toolkit
+WWW=		http://www.silcnet.org/
 
 CONFLICTS=	silc-client-1.1.* silc-irssi-client-1.1.*
 

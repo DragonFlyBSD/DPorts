@@ -1,5 +1,3 @@
-# Created by: Tomasz "CeDeROM" CEDRO (http://www.tomek.cedro.info)
-
 PORTNAME=	hackrf
 PORTVERSION=	g${GIT_SRC_DATE}
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	mr@freebsd.org
 COMMENT=	Low cost open source hardware software radio platform
+WWW=		https://greatscottgadgets.com/hackrf/
 
 LICENSE=	GPLv2
 

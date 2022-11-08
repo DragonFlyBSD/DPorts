@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	JSON-Hyper
 PORTVERSION=	0.011
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extract links from JSON objects
+WWW=		https://metacpan.org/release/JSON-Hyper
 
 LICENSE=	MIT
 

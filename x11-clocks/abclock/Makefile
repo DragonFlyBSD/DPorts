@@ -1,5 +1,3 @@
-# Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-
 PORTNAME=	abclock
 PORTVERSION=	1.0d
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	https://www.let.rug.nl/~kleiweg/abclock/
 
 MAINTAINER=	m.ne@gmx.net
 COMMENT=	Clock for X that displays hours and minutes in an analog fashion
+WWW=		https://www.let.rug.nl/~kleiweg/abclock/
 
 LICENSE=	GPLv2+
 

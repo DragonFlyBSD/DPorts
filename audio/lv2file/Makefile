@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	lv2file
 DISTVERSIONPREFIX=	upstream/
 DISTVERSION=	0.95
@@ -7,6 +5,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Simple program that apples LV2 effects to audio files
+WWW=		https://github.com/jeremysalwen/lv2file
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,13 +1,12 @@
-# Created by: Felix Palmen <felix@palmen-it.de>
-
 PORTNAME=	linuxdoc-tools
 PORTVERSION=	0.9.82
 CATEGORIES=	textproc
 # USE_GITLAB requires a commit hash, so construct MASTER_SITES manually
 MASTER_SITES=	https://gitlab.com/agmartin/${PORTNAME}/-/archive/${PORTVERSION}/
 
-MAINTAINER=	felix@palmen-it.de
+MAINTAINER=	zirias@FreeBSD.org
 COMMENT=	Fork of SGML-tools specially tailored for linuxdoc SGMLs
+WWW=		https://gitlab.com/agmartin/linuxdoc-tools
 
 LICENSE=	GPLv3 LinuxdocTools
 LICENSE_COMB=	multi

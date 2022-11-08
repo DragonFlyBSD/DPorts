@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	tuxpaint-config
 PORTVERSION=	0.0.19
 CATEGORIES=	games
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/tuxpaint/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Graphical tool to change TuxPaint settings
+WWW=		https://www.tuxpaint.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/docs/COPYING.txt

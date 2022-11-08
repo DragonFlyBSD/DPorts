@@ -1,5 +1,3 @@
-# Created by: Brooks Davis
-
 PORTNAME=	compiler-rt
 DISTVERSION=	0.r${SVN_REV}
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	LOCAL/brooks
 
 MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	Compiler runtime library with Blocks support
+WWW=		https://compiler-rt.llvm.org/
 
 LICENSE=	BSD3CLAUSE MIT
 LICENSE_COMB=	dual

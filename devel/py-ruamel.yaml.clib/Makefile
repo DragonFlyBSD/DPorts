@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ruamel.yaml.clib
 PORTVERSION=	0.2.6
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	C version of reader, parser and emitter for ruamel.yaml
+WWW=		https://sourceforge.net/projects/ruamel-yaml-clib/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

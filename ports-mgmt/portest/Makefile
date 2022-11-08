@@ -1,5 +1,3 @@
-# Created by: Richard Gallamore <ultima@FreeBSD.org>
-
 PORTNAME=	portest
 PORTVERSION=	0.1.9
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	ports-mgmt
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	Patch file automation for FreeBSD-ports
+WWW=		https://github.com/Ultima1252/portest
 
 LICENSE=	BSD2CLAUSE
 

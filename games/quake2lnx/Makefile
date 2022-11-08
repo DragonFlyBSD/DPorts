@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-
 PORTNAME=	quake2lnx
 PORTVERSION=	0.16.2
 PORTREVISION=	16
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Icculus.org version of the original Quake II
+WWW=		https://www.icculus.org/quake2/
 
 LICENSE=	GPLv2
 

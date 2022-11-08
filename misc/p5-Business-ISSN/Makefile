@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Business-ISSN
 PORTVERSION=	1.005
 CATEGORIES=	misc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl extension for International Standard Serial Numbers
+WWW=		https://metacpan.org/release/Business-ISSN
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	reop
 PORTVERSION=	2.1.1
 CATEGORIES=	security
@@ -7,6 +5,7 @@ MASTER_SITES=	https://humungus.tedunangst.com/r/reop/d/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Reasonable Expectation Of Privacy
+WWW=		https://humungus.tedunangst.com
 
 LICENSE=	ISCL
 

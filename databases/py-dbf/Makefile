@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	dbf
 PORTVERSION=	0.99.2
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Pure python package for reading/writing dbf files
+WWW=		https://pypi.org/project/dbf/
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	XML-XML2JSON
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Convert XML into JSON (and back again) using XML::LibXML
+WWW=		https://metacpan.org/release/XML-XML2JSON
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

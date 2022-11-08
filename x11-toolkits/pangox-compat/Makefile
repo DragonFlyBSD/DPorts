@@ -1,6 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-#   $MCom: ports/trunk/x11-toolkits/pangox-compat/Makefile 18610 2013-06-30 16:33:05Z marcus $
-
 PORTNAME=	pangox-compat
 DISTVERSION=	0.0.2
 PORTREVISION=	3
@@ -10,6 +7,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Deprecated pangoX support
+WWW=		https://www.pango.org/
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	manpages
 PORTVERSION=	0.6.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Detect man pages within gems and exposes them to the man command
+WWW=		https://github.com/bitboxer/manpages
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

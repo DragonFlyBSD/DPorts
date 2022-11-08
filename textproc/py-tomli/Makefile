@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	tomli
 PORTVERSION=	2.0.1
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Lil' TOML parser
+WWW=		https://github.com/hukkin/tomli
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

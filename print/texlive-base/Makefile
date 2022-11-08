@@ -1,6 +1,6 @@
 PORTNAME=	texlive
 PORTVERSION=	${TEXLIVE_VERSION}
-PORTREVISION=	5
+PORTREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	TEX_CTAN/systems/texlive/${TEXLIVE_YEAR}
 PKGNAMESUFFIX=	-base
@@ -9,6 +9,7 @@ DIST_SUBDIR=	TeX
 
 MAINTAINER=	tex@FreeBSD.org
 COMMENT=	TeX Live Typesetting System, base binaries
+WWW=		https://tug.org/texlive/
 
 LIB_DEPENDS=	libicuio.so:devel/icu \
 		libt1.so:devel/t1lib \

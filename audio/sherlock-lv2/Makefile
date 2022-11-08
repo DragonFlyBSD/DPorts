@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	sherlock
 DISTVERSION=	0.28.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-lv2
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Investigative LV2 plugin bundle
+WWW=		https://open-music-kontrollers.ch/lv2/sherlock/
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/COPYING

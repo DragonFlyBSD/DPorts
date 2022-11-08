@@ -1,11 +1,12 @@
 PORTNAME=	scamper
-DISTVERSION=	20211026
+PORTVERSION=	20211212b
 CATEGORIES=	net
 MASTER_SITES=	https://www.caida.org/catalog/software/scamper/code/
 DISTNAME=	${PORTNAME}-cvs-${PORTVERSION}
 
 MAINTAINER=	mjl@luckie.org.nz
 COMMENT=	Tool for parallelised IPv4 and IPv6 measurement
+WWW=		https://www.caida.org/tools/measurement/scamper/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

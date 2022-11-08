@@ -1,10 +1,11 @@
 PORTNAME=	beancount
-PORTVERSION=	2.3.4
+PORTVERSION=	2.3.5
 CATEGORIES=	finance
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Double-Entry Accounting from Text Files
+WWW=		https://github.com/beancount/beancount
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

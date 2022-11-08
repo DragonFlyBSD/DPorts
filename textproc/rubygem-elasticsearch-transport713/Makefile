@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	elasticsearch-transport
 PORTVERSION=	7.13.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	713
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby client for Elasticsearch
+WWW=		https://github.com/elastic/elasticsearch-ruby/tree/master/elasticsearch-transport
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

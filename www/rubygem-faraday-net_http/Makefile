@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	faraday-net_http
-PORTVERSION=	2.0.3
+PORTVERSION=	3.0.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Faraday adapter for Net::HTTP
+WWW=		https://github.com/lostisland/faraday-net_http
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

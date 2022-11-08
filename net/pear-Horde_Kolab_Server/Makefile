@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	Horde_Kolab_Server
 DISTVERSION=	2.0.5
 CATEGORIES=	net www pear
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PEAR_PKGNAMEPREFIX}
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde library for manipulating the Kolab user database
+WWW=		https://pear.horde.org
 
 USES=		horde php cpe
 USE_PHP=	hash

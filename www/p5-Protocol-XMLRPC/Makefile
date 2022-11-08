@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Protocol-XMLRPC
 PORTVERSION=	0.10
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	XML-RPC implementation
+WWW=		https://metacpan.org/release/Protocol-XMLRPC
 
 LICENSE=	ART20
 

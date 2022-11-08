@@ -1,5 +1,3 @@
-# Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-
 PORTNAME=	dnsdiag
 PORTVERSION=	2.0.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	DNS Diagnostics and measurement tools (ping, traceroute)
+WWW=		https://github.com/farrokhi/dnsdiag
 
 LICENSE=	BSD2CLAUSE
 

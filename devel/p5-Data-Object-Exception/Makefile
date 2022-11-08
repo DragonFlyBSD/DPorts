@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Data-Object-Exception
 PORTVERSION=	2.02
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Exception Class for Data::Object
+WWW=		https://metacpan.org/release/Data-Object-Exception
 
 LICENSE=	APACHE20
 

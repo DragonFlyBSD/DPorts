@@ -1,5 +1,3 @@
-# Created by: Hye-Shik Chang
-
 PORTNAME=	lzma
 PORTVERSION=	0.5.0
 CATEGORIES=	archivers python
@@ -9,6 +7,7 @@ DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	sbz@FreeBSD.org
 COMMENT=	Python binding for the LZMA compression library
+WWW=		https://www.joachim-bauch.de/projects/python/pylzma
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

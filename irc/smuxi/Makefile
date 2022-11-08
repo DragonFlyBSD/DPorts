@@ -1,5 +1,3 @@
-# Created by: Romain Tartiere <romain@blogreen.org>
-
 PORTNAME=	smuxi
 PORTVERSION=	1.1
 CATEGORIES=	irc
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.smuxi.org/jaws/data/files/
 
 MAINTAINER=	fox@FreeBSD.org
 COMMENT=	Smart MUltipleXed Irc
+WWW=		https://smuxi.im/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

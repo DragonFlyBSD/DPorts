@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	ruby-readability
 PORTVERSION=	0.7.0
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Readability for Ruby
+WWW=		https://github.com/cantino/ruby-readability
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Leo Vandewoestijne <freebsd@dns.company>
-
 PORTNAME=		fstrm
 DISTVERSION=		0.6.1
 CATEGORIES=		devel
@@ -8,6 +6,7 @@ MASTER_SITES=		https://dl.farsightsecurity.com/dist/${PORTNAME}/ \
 
 MAINTAINER=		freebsd@dns.company
 COMMENT=		Implementation of the Frame Streams data transport protocol in C
+WWW=		https://github.com/farsightsec/fstrm
 
 LICENSE=		APACHE20
 LICENSE_FILE=		${WRKSRC}/LICENSE

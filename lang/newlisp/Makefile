@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-
 PORTNAME=	newlisp
 PORTVERSION=	10.7.5
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.newlisp.org/downloads/
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	LISP like scripting language
+WWW=		http://www.newlisp.org/
 
 LICENSE=	GPLv3
 

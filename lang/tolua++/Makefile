@@ -1,5 +1,3 @@
-# Created by: aaron@FreeBSD.org
-
 PORTNAME=	tolua++
 PORTVERSION=	1.0.93
 PORTREVISION=	3
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.codenix.com/~tolua/ \
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Extended version of tolua, a tool to integrate C/C++ code with Lua
+WWW=		http://www.codenix.com/~tolua/
 
 USES=		scons lua:51 tar:bzip2
 MAKE_ARGS=	prefix=${PREFIX} SONAME="libtolua++-${LUA_VER}.so"

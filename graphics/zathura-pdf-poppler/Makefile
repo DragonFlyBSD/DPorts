@@ -1,5 +1,3 @@
-# Created by: Mike Krutov <neko@takino.org>
-
 PORTNAME=	zathura-pdf-poppler
 DISTVERSION=	0.3.0
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	https://git.pwmt.org/pwmt/${PORTNAME}/-/archive/${DISTVERSION}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Poppler render PDF plugin for Zathura PDF viewer
+WWW=		https://pwmt.org/projects/zathura/plugins/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Hye-Shik Chang
-
 PORTNAME=	pycurl
 PORTVERSION=	7.45.1
 CATEGORIES=	ftp python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python interface to libcurl
+WWW=		http://pycurl.io/
 
 LICENSE=	LGPL21 MIT
 LICENSE_COMB=	dual

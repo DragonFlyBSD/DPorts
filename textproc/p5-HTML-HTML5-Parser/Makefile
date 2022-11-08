@@ -1,5 +1,3 @@
-# Created by: jupengfei <jupengfei@gmail.com>
-
 PORTNAME=	HTML-HTML5-Parser
 PORTVERSION=	0.992
 CATEGORIES=	textproc perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Named entity list for HTML parser
+WWW=		https://metacpan.org/release/HTML-HTML5-Parser
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Richard Neese
-
 PORTNAME=	pocketsphinx
 PORTVERSION=	0.8
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/cmusphinx/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Speech recognition system
+WWW=		http://cmusphinx.sourceforge.net/
 
 LICENSE=	BSD2CLAUSE
 

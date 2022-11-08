@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	Config-Validator
 PORTVERSION=	1.4
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Schema based configuration validation
+WWW=		https://metacpan.org/release/Config-Validator
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

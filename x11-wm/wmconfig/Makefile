@@ -1,5 +1,3 @@
-# Created by: Tommy Scheunemann <net@arrishq.org>
-
 PORTNAME=	wmconfig
 PORTVERSION=	1.5.1
 CATEGORIES=	x11-wm
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.arrishq.net/files/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Menu generation tool for X window managers
+WWW=		https://www.arrishq.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

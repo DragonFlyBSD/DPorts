@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	wsaccel
 PORTVERSION=	0.6.3
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	WebSocket Accelerator for ws4py and AutobahnPython
+WWW=		https://github.com/methane/wsaccel
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

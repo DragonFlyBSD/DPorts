@@ -1,11 +1,12 @@
 PORTNAME=	rearx
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.4
-PORTREVISION=	12
+PORTREVISION=	14
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	TUI client for the Searx meta-search engine, written in Rust
+WWW=		https://github.com/garak92/rearx
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

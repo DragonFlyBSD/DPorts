@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	discordrb-webhooks
 PORTVERSION=	3.4.2
 CATEGORIES=	net-im rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Discord API for Ruby
+WWW=		https://github.com/shardlab/discordrb
 
 LICENSE=	MIT
 

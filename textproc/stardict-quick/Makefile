@@ -1,5 +1,3 @@
-# Created by: Timur I. Bakeyev <timur@gnome.org>
-
 PORTNAME=	stardict-quick
 PORTVERSION=	2.4.2
 PORTREVISION=	9
@@ -9,6 +7,7 @@ DIST_SUBDIR=	stardict
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Dictionaries from Quick for StarDict
+WWW=		http://stardict.sourceforge.net/
 
 NO_BUILD=	yes
 NO_ARCH=	yes

@@ -1,5 +1,3 @@
-# Created by: Ben Hutchinson <benhutch@xfiles.org.uk>
-
 PORTNAME=	epic4
 PORTVERSION=	2.10.10
 CATEGORIES=	irc
@@ -10,6 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	(E)nhanced (P)rogrammable (I)RC-II (C)lient
+WWW=		http://www.epicsol.org/
 
 LICENSE=	BSD3CLAUSE
 

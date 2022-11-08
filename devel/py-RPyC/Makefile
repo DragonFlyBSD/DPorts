@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	rpyc
 PORTVERSION=	5.1.0
 CATEGORIES=	devel python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	skozlov@FreeBSD.org
 COMMENT=	Remote Python Call
+WWW=		https://rpyc.readthedocs.org/
 
 LICENSE=	MIT
 

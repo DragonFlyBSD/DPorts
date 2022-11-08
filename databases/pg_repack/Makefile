@@ -1,5 +1,3 @@
-# Created by: Jov <amutu@amutu.com>
-
 PORTNAME=	pg_repack
 PORTVERSION=	1.4.7
 DISTVERSIONPREFIX=	ver_
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	postgresql${PGSQL_VER:S/.//}-
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	Reorganize tables in PostgreSQL databases with minimal locks
+WWW=		https://github.com/reorg/pg_repack
 
 LICENSE=	BSD3CLAUSE
 

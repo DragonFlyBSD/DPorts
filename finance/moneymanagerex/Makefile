@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	mmex
 PORTVERSION=	1.2.7
 DISTVERSIONPREFIX=	v
@@ -10,6 +8,7 @@ DISTFILES=	bakefile-0.2.9${EXTRACT_SUFX}:bakefile
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free, open-source, easy-to-use personal finance software
+WWW=		https://www.moneymanagerex.org/
 
 LICENSE=	GPLv2
 

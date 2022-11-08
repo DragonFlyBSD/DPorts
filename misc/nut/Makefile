@@ -1,5 +1,3 @@
-# Created by: Kirill Ponomarew <ponomarew@oberon.net>
-
 PORTNAME=	nut
 PORTVERSION=	20.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	health-
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Nutrition software to record what you eat
+WWW=		http://nut.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

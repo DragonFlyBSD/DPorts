@@ -1,5 +1,3 @@
-# Created by: Jeremy Norris <ishmael27@home.com>
-
 PORTNAME=	imlib2
 PORTVERSION=	1.7.0
 PORTEPOCH=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/enlightenment/imlib2-src/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The next generation graphics library for Enlightenment
+WWW=		https://docs.enlightenment.org/api/imlib2/html/
 
 LICENSE=	imlib2
 LICENSE_NAME=	imlib2 license

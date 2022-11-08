@@ -1,5 +1,3 @@
-# Created by: ports@c0decafe.net
-
 PORTNAME=	XML-LibXML-SAX-ChunkParser
 PORTVERSION=	0.00008
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parse XML chunks via LibXML SAX
+WWW=		https://metacpan.org/release/XML-LibXML-SAX-ChunkParser
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

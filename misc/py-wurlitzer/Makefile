@@ -1,5 +1,3 @@
-# Created by: Rainer Hurling <rhurlin@gwdg.de>
-
 PORTNAME=	wurlitzer
 PORTVERSION=	3.0.2
 CATEGORIES=	misc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Capture C-level output in context managers
+WWW=		https://github.com/minrk/wurlitzer
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: hr <holgerrepp@googlemail.com>
-
 PORTNAME=	check_tftp
 PORTVERSION=	1.0.1
 CATEGORIES=	net-mgmt
@@ -10,6 +8,7 @@ EXTRACT_SUFX=
 
 MAINTAINER=	holgerrepp@googlemail.com
 COMMENT=	Nagios plugin to check TFTP servers
+WWW=		https://mathias-kettner.de/download/check_tftp
 
 RUN_DEPENDS=	bash:shells/bash \
 		${LOCALBASE}/bin/tftp:ftp/tftp-hpa

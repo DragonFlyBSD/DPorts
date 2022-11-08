@@ -1,5 +1,3 @@
-# Created by: Eric van Gyzen <vangyzen@stat.duke.edu>
-
 PORTNAME=	libRmath
 DISTVERSION=	4.1.2
 CATEGORIES=	math lang
@@ -8,6 +6,7 @@ DISTNAME=	R-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Standalone math library from R
+WWW=		https://www.R-project.org/
 
 LICENSE=	GPLv2
 

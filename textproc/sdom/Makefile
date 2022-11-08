@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	sdom
 PORTVERSION=	0.5.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Implementation of the W3C DOM recommendation in Scheme
+WWW=		https://www.nongnu.org/sdom/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

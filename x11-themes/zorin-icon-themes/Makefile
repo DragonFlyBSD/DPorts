@@ -1,11 +1,10 @@
-# Created by: Alexander Vereeken <Alexander88207@protonmail.com>
-
 PORTNAME=	zorin-icon-themes
-DISTVERSION=	2.9.7
+DISTVERSION=	2.9.9
 CATEGORIES=	x11-themes
 
 MAINTAINER=	Alexander88207@protonmail.com
 COMMENT=	Zorin OS icon theme
+WWW=		https://github.com/ZorinOS/zorin-icon-themes
 
 LICENSE=	CC-BY-SA-4.0
 LICENSE_FILE=	${WRKSRC}/LICENSE

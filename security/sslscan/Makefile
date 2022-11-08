@@ -1,5 +1,3 @@
-# Created by: Matthieu BOUTHORS <matthieu@labs.fr>
-
 PORTNAME=	sslscan
 DISTVERSION=	1.11.12
 DISTVERSIONSUFFIX=	-${GH_ACCOUNT}
@@ -8,6 +6,7 @@ CATEGORIES=	security
 
 MAINTAINER=	gavin@FreeBSD.org
 COMMENT=	Fast SSL port scanner
+WWW=		https://github.com/rbsec/sslscan/
 
 LICENSE=	GPLv3
 

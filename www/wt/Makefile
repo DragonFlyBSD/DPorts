@@ -1,12 +1,10 @@
-# Created by: Mohammad S. Babaei <info@babaei.net>
-
 PORTNAME=	wt
-DISTVERSION=	4.7.2
-PORTREVISION=	1
+DISTVERSION=	4.8.0
 CATEGORIES=	www
 
 MAINTAINER=	info@babaei.net
 COMMENT=	Widget-centric C++ library for developing web applications
+WWW=		https://www.webtoolkit.eu/wt
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -35,6 +33,7 @@ CMAKE_ARGS=	-DCONFIGDIR:STRING=${LOCALBASE}/etc/${PORTNAME} \
 		-DDESTDIR:STRING=${STAGEDIR}
 
 OPTIONS_DEFINE=	\
+	DEBUG \
 	EXAMPLES \
 	TESTS \
 	RESOURCES \
@@ -116,7 +115,7 @@ POSTGRES_CMAKE_ON=	-DPOSTGRES_PREFIX:STRING=${LOCALBASE} \
 
 QT5_CMAKE_BOOL=		ENABLE_QT5
 QT5_USES=		qt:5
-QT5_USE=                qt=buildtools_build,core
+QT5_USE=                qt=buildtools:build,core
 
 RESOURCES_CMAKE_BOOL=	INSTALL_RESOURCES
 
@@ -143,6 +142,13 @@ PORTEXAMPLES=	*
 PLIST_SUB=	VERSION=${DISTVERSION}
 
 .include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDEBUG} || defined(WITH_DEBUG)
+WITH_DEBUG?=	yes
+PLIST_SUB+=	DEBUG_LIBS_POSTFIX="d"
+.else
+PLIST_SUB+=	DEBUG_LIBS_POSTFIX=""
+.endif
 
 .if ${PORT_OPTIONS:MSQLITE3} || \
     ${PORT_OPTIONS:MPOSTGRES} || \

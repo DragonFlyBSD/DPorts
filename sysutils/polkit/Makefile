@@ -1,5 +1,3 @@
-# Created by: Koop Mast<kwm@FreeBSD.org>
-
 PORTNAME=	polkit
 PORTVERSION=	0.120
 PORTREVISION=	2
@@ -12,6 +10,7 @@ PATCHFILES+=	a2bf5c9c83b6.patch:-p1 # https://gitlab.freedesktop.org/polkit/polk
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Framework for controlling access to system-wide components
+WWW=		https://www.freedesktop.org/wiki/Software/polkit/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

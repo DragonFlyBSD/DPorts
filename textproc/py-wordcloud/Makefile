@@ -1,13 +1,12 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	wordcloud
-DISTVERSION=	1.8.1
+DISTVERSION=	1.8.2.2
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Little word cloud generator in Python
+WWW=		https://amueller.github.io/word_cloud/
 
 LICENSE=	MIT
 
@@ -24,7 +23,6 @@ USES=		python:3.7+
 USE_PYTHON=	distutils
 
 PLIST_SUB+=	VER=${PORTVERSION}
-TEST_TARGET=	test
 
 .if !defined(WITH_DEBUG)
 LDFLAGS+=	-s

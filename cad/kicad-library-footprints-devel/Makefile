@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@FreeBSD.org>
-
 PORTNAME=	kicad
 DISTVERSION=	r${GIT_FP_DATE}
 PORTREVISION=	0
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-footprints-${GL_COMMIT}
 
 MAINTAINER=	mr@FreeBSD.org
 COMMENT=	Official KiCad Footprint Libraries for the future Kicad version 5
+WWW=		https://github.com/KiCad/kicad-footprints
 
 LICENSE=	GPLv2
 

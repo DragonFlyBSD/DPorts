@@ -1,5 +1,3 @@
-# Created by: Mark Pulford <mark@kyne.com.au>
-
 PORTNAME=	nc
 PORTVERSION=	1.0.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	ncat-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Network aware cat
+WWW=		https://www.kyne.com.au/~mark/software/ncat.php
 
 GNU_CONFIGURE=	yes
 

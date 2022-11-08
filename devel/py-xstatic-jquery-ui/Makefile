@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-jquery-ui
 PORTVERSION=	1.13.0.1
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	XStatic-jquery-ui-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	jquery-ui (XStatic packaging standard)
+WWW=		https://jqueryui.com/
 
 LICENSE=	MIT
 

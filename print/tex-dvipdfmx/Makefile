@@ -1,5 +1,3 @@
-# Created by: Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
-
 PORTNAME=	dvipdfmx
 PORTVERSION=	${TEXLIVE_VERSION}
 CATEGORIES=	print
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	tex@FreeBSD.org
 COMMENT=	DVI Previewer(kpathsearch) for X
+WWW=		http://project.ktug.or.kr/dvipdfmx/
 
 LICENSE=	GPLv2
 

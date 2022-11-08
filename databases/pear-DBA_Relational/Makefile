@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	DBA_Relational
 PORTVERSION=	0.2.0
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	databases www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Berkely-style database abstraction class
+WWW=		https://pear.php.net/package/DBA_Relational
 
 LICENSE=	LGPL3
 

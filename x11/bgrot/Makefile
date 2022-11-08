@@ -1,5 +1,3 @@
-# Created by: Matthew Fuller <fullermd@futuresouth.com>
-
 PORTNAME=	bgrot
 PORTVERSION=	1.31
 CATEGORIES=	x11
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.over-yonder.net/~fullermd/projects/bgrot/ \
 
 MAINTAINER=	fullermd@over-yonder.net
 COMMENT=	Program to handle your X background to prevent boredom
+WWW=		https://www.over-yonder.net/~fullermd/projects/bgrot/
 
 LICENSE=	BSD2CLAUSE
 

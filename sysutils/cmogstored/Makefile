@@ -1,5 +1,3 @@
-# Created by: Mikolaj Golub <trociny@FreeBSD.org>
-
 PORTNAME=	cmogstored
 PORTVERSION=	1.8.1
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://yhbt.net/cmogstored/files/
 
 MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Alternative mogstored implementation for MogileFS
+WWW=		https://yhbt.net/cmogstored/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

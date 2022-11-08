@@ -1,5 +1,3 @@
-# Created by: vanilla
-
 PORTNAME=	rump
 PORTVERSION=	20170822
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	misc
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	Virtualized NetBSD kernel components in userspace
+WWW=		https://www.rumpkernel.org
 
 LICENSE=	BSD2CLAUSE
 

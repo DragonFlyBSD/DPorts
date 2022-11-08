@@ -1,5 +1,3 @@
-# Created by: dom@happygiraffe.net
-
 PORTNAME=	SVN-Notify
 PORTVERSION=	2.87
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Subversion activity notification
+WWW=		https://metacpan.org/release/SVN-Notify
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

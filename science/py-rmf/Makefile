@@ -1,10 +1,12 @@
 PORTNAME=	rmf
 DISTVERSION=	1.4
+PORTREVISION=	1
 CATEGORIES=	science graphics
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Library to support reading and writing of Rich Molecular Format files
+WWW=		https://integrativemodeling.org/rmf/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING

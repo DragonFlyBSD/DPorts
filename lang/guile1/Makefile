@@ -1,6 +1,3 @@
-# Created by: jseger@FreeBSD.org
-#    $MCom: ports/lang/guile/Makefile,v 1.1 2006/09/12 14:57:06 ahze Exp $
-
 PORTNAME=	guile
 PORTVERSION=	1.8.8
 CATEGORIES=	lang scheme
@@ -9,6 +6,7 @@ PKGNAMESUFFIX=	1
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	GNU Ubiquitous Intelligent Language for Extension
+WWW=		https://www.gnu.org/software/guile/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER

@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	Net-CIDR-Set
 PORTVERSION=	0.13
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Manipulate sets of IP addresses
+WWW=		https://metacpan.org/release/Net-CIDR-Set
 
 LICENSE=	GPLv2 ART20
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Yen-Ming Lee <leeym@FreeBSD.org>
-
 PORTNAME=	jumpgate
 PORTVERSION=	0.7
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://jumpgate.sourceforge.net/
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	TCP connection forwarder
+WWW=		http://jumpgate.sourceforge.net/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

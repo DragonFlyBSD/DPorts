@@ -1,5 +1,3 @@
-# Created by: Herve Quiroz <hq@FreeBSD.org>
-
 PORTNAME=	commons-jelly
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	apache-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	XML based scripting engine
+WWW=		https://commons.apache.org/proper/commons-jelly/index.html
 
 LICENSE=	APACHE20
 

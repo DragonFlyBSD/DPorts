@@ -1,5 +1,3 @@
-# Created by: Herve Quiroz <hq@FreeBSD.org>
-
 PORTNAME=	groovy
 DISTVERSION=	2.4.21
 CATEGORIES=	lang java
@@ -8,6 +6,7 @@ DISTFILES=	apache-groovy-binary-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Agile dynamic language for the JVM
+WWW=		https://www.groovy-lang.org/
 
 LICENSE=	APACHE20
 

@@ -1,7 +1,5 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Scalar-List-Utils
-PORTVERSION=	1.62
+PORTVERSION=	1.63
 PORTEPOCH=	1
 CATEGORIES=	lang perl5
 MASTER_SITES=	CPAN
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl subroutines that would be nice to have in the perl core
+WWW=		https://metacpan.org/release/Scalar-List-Utils
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	grpc-google-iam-v1
 PORTVERSION=	0.12.4
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GRPC library for the google-iam-v1 service
+WWW=		https://github.com/googleapis/googleapis/tree/master/google/iam
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

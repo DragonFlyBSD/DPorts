@@ -1,11 +1,12 @@
 PORTNAME=	pyocr
-DISTVERSION=	0.8
+DISTVERSION=	0.8.3
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python wrapper for OCR engines (Tesseract, Cuneiform, etc)
+WWW=		https://gitlab.gnome.org/World/OpenPaperwork/pyocr
 
 LICENSE=	GPLv3
 

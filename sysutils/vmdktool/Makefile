@@ -1,5 +1,3 @@
-# Created by: Brian Somers <brian@FreeBSD.org>
-
 PORTNAME=	vmdktool
 PORTVERSION=	1.4
 CATEGORIES=	sysutils
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.Awfulhak.org/vmdktool/ \
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Convert VMDK files to/from raw disk images
+WWW=		http://www.awfulhak.org/vmdktool
 
 LICENSE=	BSD2CLAUSE
 

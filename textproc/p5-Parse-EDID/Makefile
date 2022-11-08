@@ -1,5 +1,3 @@
-# Created by: Xavier Humbert <xavier@amdh.fr>
-
 PORTNAME=	Parse-EDID
 PORTVERSION=	1.0.7
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	xavier@amdh.fr
 COMMENT=	Extended display identification data (EDID) parser
+WWW=		https://metacpan.org/dist/Parse-EDID
 
 LICENSE=	GPLv3
 

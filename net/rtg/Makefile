@@ -1,5 +1,3 @@
-# Created by: Brad Davis <so14k@so14k.com>
-
 PORTNAME=	rtg
 PORTVERSION=	0.7.5
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	ftp://ftpmirror.uk/freebsd-ports/rtg/
 
 MAINTAINER=	freebsd-ports@dan.me.uk
 COMMENT=	Flexible, high-performance SNMP statistics monitoring system
+WWW=		http://rtg.sourceforge.net
 
 LICENSE=	GPLv2
 

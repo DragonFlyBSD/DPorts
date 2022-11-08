@@ -1,5 +1,3 @@
-# Created by: Angel Carpintero <ack@telefonica.net>
-
 # PORTNAME block
 PORTNAME=	motion
 PORTVERSION=	4.3.2
@@ -10,6 +8,7 @@ CATEGORIES=	multimedia
 # Maintainer block
 MAINTAINER=	ports@blievers.net
 COMMENT=	Motion detection application
+WWW=		https://motion-project.github.io/
 
 # License block
 LICENSE=	GPLv2+

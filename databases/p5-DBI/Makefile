@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	DBI
 PORTVERSION=	1.643
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 Database Interface, required for DBD::* modules
+WWW=		https://metacpan.org/release/DBI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

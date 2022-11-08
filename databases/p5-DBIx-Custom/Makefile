@@ -1,5 +1,3 @@
-# Created by: Andrey Kostenko <andrey@kostenko.name>
-
 PORTNAME=	DBIx-Custom
 PORTVERSION=	0.4000
 CATEGORIES=	databases perl5
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/00$//}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Customizable DBI
+WWW=		https://metacpan.org/release/DBIx-Custom
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

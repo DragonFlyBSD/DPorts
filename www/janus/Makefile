@@ -1,11 +1,12 @@
 PORTNAME=	janus
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.3
+DISTVERSION=	1.0.4
 PORTREVISION=	0
 CATEGORIES=	www
 
 MAINTAINER=	vanilla@FreeBSD.org
 COMMENT=	WebRTC gateway
+WWW=		https://github.com/meetecho/janus-gateway
 
 LICENSE=	GPLv3
 

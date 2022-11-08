@@ -1,5 +1,3 @@
-# Created by: antonakis@gmail.com
-
 PORTNAME=	optar
 PORTVERSION=	2015.02.09
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for encoding data on paper
+WWW=		http://ronja.twibright.com/optar/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

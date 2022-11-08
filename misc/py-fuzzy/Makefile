@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	Fuzzy
 DISTVERSION=	1.2.2
 CATEGORIES=	misc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Fast Python phonetic algorithms
+WWW=		https://pypi.org/project/Fuzzy/
 
 LICENSE=	MIT ART20
 LICENSE_COMB=	multi

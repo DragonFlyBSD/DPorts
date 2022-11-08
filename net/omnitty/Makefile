@@ -1,5 +1,3 @@
-# Created by: Rong-En Fan <rafan@infor.org>
-
 PORTNAME=	omnitty
 PORTVERSION=	0.3.0
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/omnitty/omnitty/omnitty-${PORTVERSION}
 
 MAINTAINER=	david@catwhisker.org
 COMMENT=	Curses-based SSH multiplexer
+WWW=		http://omnitty.sourceforge.net/
 
 LIB_DEPENDS=	librote.so:devel/rote
 

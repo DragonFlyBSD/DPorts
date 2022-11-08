@@ -1,5 +1,3 @@
-# Created by: Gustau Perez <gustau.perez@gmail.com>
-
 PORTNAME=	gnome-planner
 PORTVERSION=	0.14.6.20220531
 CATEGORIES=	deskutils gnome
@@ -7,6 +5,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Project management tool based on the Work breakdown structure
+WWW=		https://wiki.gnome.org/Apps/Planner
 
 LICENSE=	GPLv3
 

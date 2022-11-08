@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	tokyotyrant
 PORTVERSION=	1.1.41
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	https://dbmx.net/tokyotyrant/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Network interface of Tokyo Cabinet
+WWW=		https://dbmx.net/tokyotyrant/
 
 BUILD_DEPENDS=	tokyocabinet>=1.4.20:databases/tokyocabinet
 LIB_DEPENDS=	libtokyocabinet.so:databases/tokyocabinet

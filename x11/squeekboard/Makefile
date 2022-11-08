@@ -1,11 +1,12 @@
 PORTNAME=	squeekboard
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.17.1
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	On-screen keyboard for Wayland
+WWW=		https://gitlab.gnome.org/World/Phosh/squeekboard
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

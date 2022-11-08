@@ -1,7 +1,5 @@
-# Created by: Lewis Thompson <purple@lewiz.net>
-
 PORTNAME=	remind
-DISTVERSION=	04.00.03
+DISTVERSION=	04.01.00
 CATEGORIES=	deskutils
 # upstream moves distfiles to OLD once a new release appears
 MASTER_SITES=	https://dianne.skoll.ca/projects/remind/download/ \
@@ -9,13 +7,14 @@ MASTER_SITES=	https://dianne.skoll.ca/projects/remind/download/ \
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Sophisticated calendar and alarm program
+WWW=		https://dianne.skoll.ca/projects/remind/
 
 LICENSE=	GPLv2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-perl-build-artifacts
 MAKE_ARGS=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-INSTALL_TARGET=	${WITH_DEBUG:Dinstall-nostripped:Uinstall}
+INSTALL_TARGET=	${WITH_DEBUG:Dinstall:Uinstall-stripped}
 
 OPTIONS_DEFINE=	A4 TCLTK REM2HTML REM2PDF
 OPTIONS_DEFAULT=	LANG_US REM2HTML REM2PDF

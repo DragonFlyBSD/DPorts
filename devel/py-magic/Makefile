@@ -1,5 +1,3 @@
-# Created by: Alexander Botero-Lowry <alexbl@FreeBSD.org>
-
 PORTNAME=	magic
 PORTVERSION=	5.42
 CATEGORIES=	devel python
@@ -13,6 +11,7 @@ DISTNAME=	file-${PORTVERSION}
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Python module for determining file type
+WWW=		https://www.darwinsys.com/file/
 
 LICENSE=	BSD2CLAUSE
 

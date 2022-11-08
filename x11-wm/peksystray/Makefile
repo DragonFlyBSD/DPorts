@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-
 PORTNAME=	peksystray
 PORTVERSION=	0.4.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	System tray dockapp similar to the GNOME notification area applet
+WWW=		http://peksystray.sourceforge.net/
 
 LICENSE=	GPLv2
 

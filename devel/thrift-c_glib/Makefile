@@ -1,5 +1,3 @@
-# Created by: Valery Komarov <komarov@valerka.net>
-
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION} # to keep in sync with thrift
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ DISTNAME=	thrift-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C glib interface to Thrift
+WWW=		https://thrift.apache.org/
 
 PKGNAMESUFFIX=	-c_glib
 

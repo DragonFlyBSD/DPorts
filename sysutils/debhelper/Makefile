@@ -1,13 +1,12 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	debhelper
-PORTVERSION=	13.7.1
+PORTVERSION=	13.9.1
 CATEGORIES=	sysutils
 MASTER_SITES=	DEBIAN
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Helper programs for debian/rules
+WWW=		https://salsa.debian.org/debian/debhelper
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/GPL

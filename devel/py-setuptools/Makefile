@@ -1,6 +1,5 @@
 PORTNAME=	setuptools
-PORTVERSION=	62.1.0
-PORTREVISION=	1
+PORTVERSION=	63.1.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,6 +10,7 @@ DIST_SUBDIR=	python
 # discretion.
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python packages installer
+WWW=		https://pypi.org/project/setuptools/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

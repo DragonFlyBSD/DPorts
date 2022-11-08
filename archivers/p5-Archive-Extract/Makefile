@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Archive-Extract
 PORTVERSION=	0.88
 CATEGORIES=	archivers perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Generic archive extracting mechanism
+WWW=		https://metacpan.org/release/Archive-Extract
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

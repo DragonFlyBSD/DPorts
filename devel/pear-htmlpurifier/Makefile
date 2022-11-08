@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	htmlpurifier
 PORTVERSION=	4.9.2
 PORTREVISION=	1
@@ -11,6 +9,7 @@ PKGNAMEPREFIX=	${PEAR_PKGNAMEPREFIX}
 
 MAINTAINER=	feld@FreeBSD.org
 COMMENT=	PHP HTML filter library
+WWW=		http://htmlpurifier.org/
 
 LICENSE=	LGPL21
 

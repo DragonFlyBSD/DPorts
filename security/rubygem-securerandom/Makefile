@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	securerandom
 PORTVERSION=	0.2.0
 CATEGORIES=	security rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Interface for secure random number generator
+WWW=		https://github.com/ruby/securerandom
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

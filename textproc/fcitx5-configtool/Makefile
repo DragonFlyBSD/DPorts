@@ -1,11 +1,10 @@
-# Created by: Ka Ho Ng <khng300@gmail.com>
-
 PORTNAME=	fcitx5-configtool
 DISTVERSION=	5.0.8
 CATEGORIES=	textproc x11
 
 MAINTAINER=	khng@FreeBSD.org
 COMMENT=	Fcitx5 IM framework configuration tool
+WWW=		https://github.com/fcitx/fcitx5-configtool
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSES/GPL-2.0-or-later.txt
@@ -28,7 +27,7 @@ GH_ACCOUNT=	fcitx
 
 USE_KDE=	ecm coreaddons kdeclarative i18n itemviews kirigami2 package widgetsaddons
 USE_QT=		concurrent core dbus declarative gui quickcontrols2 widgets x11extras \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_XORG=	x11 xkbfile
 USE_LDCONFIG=	yes
 

@@ -3,8 +3,9 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	1.21.2
 CATEGORIES=	lang
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Functional embeddable lisp with C interop, & performant data types
+WWW=		https://janet-lang.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

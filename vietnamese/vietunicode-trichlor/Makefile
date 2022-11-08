@@ -1,5 +1,3 @@
-# Created by: chinsan
-
 PORTNAME=	vietunicode-trichlor
 PORTVERSION=	2004.04.30
 PORTREVISION=	6
@@ -9,6 +7,7 @@ DISTNAME=	VietFonts_TriChlor_ttf
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	100% Viet Unicode compatible
+WWW=		http://vietunicode.sourceforge.net/
 
 USES=		zip
 DIST_SUBDIR=	VietUnicode

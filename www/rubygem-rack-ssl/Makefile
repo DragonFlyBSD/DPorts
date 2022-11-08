@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	rack-ssl
 PORTVERSION=	1.4.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Rack middleware to force SSL/TLS
+WWW=		https://github.com/josh/rack-ssl
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

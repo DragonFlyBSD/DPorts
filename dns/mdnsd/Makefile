@@ -1,5 +1,3 @@
-# Created by: Dan Pelleg <daniel+mdnsd@pelleg.org>
-
 PORTNAME=	mdnsd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7G-107
@@ -10,6 +8,7 @@ CATEGORIES=	dns
 
 MAINTAINER=	daniel+mdnsd@pelleg.org
 COMMENT=	Advertise a service via Rendezvous
+WWW=		https://github.com/Pro/mdnsd/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

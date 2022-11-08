@@ -1,7 +1,7 @@
 PORTNAME=	cufflinks
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.2.1-89
-PORTREVISION=	2
+PORTREVISION=	3
 DISTVERSIONSUFFIX=	-gdc3b0cb
 CATEGORIES=	biology
 
@@ -10,6 +10,7 @@ PATCHFILES+=	ea4671149f3054c773d99cea521db75bf7b0658f.patch:-p1 # https://github
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Cufflinks assembles transcripts, estimates their abundance, etc
+WWW=		https://cole-trapnell-lab.github.io/cufflinks/
 
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE

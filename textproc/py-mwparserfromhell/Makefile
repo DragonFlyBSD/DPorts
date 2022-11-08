@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	mwparserfromhell
 DISTVERSION=	0.6.4
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Parser for MediaWiki wikicode
+WWW=		https://github.com/earwig/mwparserfromhell
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

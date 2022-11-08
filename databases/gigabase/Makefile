@@ -1,5 +1,3 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org.ru>
-
 PORTNAME=	gigabase
 PORTVERSION=	3.91
 PORTREVISION=	8
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-src/${PORTVERSION} \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Object-Relational Database Management System
+WWW=		http://www.garret.ru/gigabase.html
 
 LICENSE=	MIT
 

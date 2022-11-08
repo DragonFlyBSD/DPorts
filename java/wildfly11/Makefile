@@ -1,5 +1,3 @@
-# Created by: Alexander Yerenkow <yerenkow@gmail.com>
-
 PORTNAME=	wildfly11
 PORTVERSION=	11.0.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	wildfly-${WILDFLY_VERSION}
 
 MAINTAINER=	yerenkow@gmail.com
 COMMENT=	Replacement for JBoss Application Server
+WWW=		https://wildfly.org/
 
 LICENSE=	GPLv2
 

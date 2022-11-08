@@ -1,10 +1,11 @@
 PORTNAME=	lsd
 DISTVERSION=	0.20.1
-PORTREVISION=	11
+PORTREVISION=	13
 CATEGORIES=	sysutils
 
 MAINTAINER=	andoriyu@gmail.com
 COMMENT=	Pretty ls alternative with support for icons
+WWW=		https://github.com/Peltoche/lsd
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

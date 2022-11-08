@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	komposter
 DISTVERSION=	g20201211
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Lightweight music composing system
+WWW=		https://github.com/electronoora/komposter
 
 LICENSE=	GPLv2
 

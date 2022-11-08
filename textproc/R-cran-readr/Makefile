@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	readr
 PORTVERSION=	2.1.2
 CATEGORIES=	textproc
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Read Rectangular Text Data
+WWW=		https://cran.r-project.org/web/packages/readr/
 
 LICENSE=	MIT
 

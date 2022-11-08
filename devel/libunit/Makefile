@@ -1,5 +1,3 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org>
-
 PORTNAME=	libunit
 PORTVERSION=	${UNIT_VERSION}
 MASTER_SITES?=	https://unit.nginx.org/download/
@@ -8,6 +6,7 @@ DISTINFO_FILE=	${.CURDIR}/../../www/unit/distinfo
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Development kit for dynamic web application server
+WWW=		https://unit.nginx.org
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

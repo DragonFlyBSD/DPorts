@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	URI-ParseSearchString
 PORTVERSION=	3.51
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse Apache referer logs and extract search engine query strings
+WWW=		https://metacpan.org/release/URI-ParseSearchString
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

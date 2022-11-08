@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	danger
 PORTVERSION=	8.6.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Code Review
+WWW=		https://github.com/danger/danger
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

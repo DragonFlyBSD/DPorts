@@ -4,8 +4,9 @@ DISTVERSIONPREFIX=	v
 PORTREVISION=	2
 CATEGORIES=	net-p2p
 
-MAINTAINER=	nc@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C/C++ implementation of Ethash and ProgPoW
+WWW=		https://github.com/chfast/ethash
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,11 +1,10 @@
-# Created by: chinsan <chisnan.tw@gmail.com>
-
 PORTNAME=	Services_Delicious
 PORTVERSION=	0.6.0
 CATEGORIES=	www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR Client for the del.icio.us web service
+WWW=		https://pear.php.net/package/Services_Delicious
 
 BUILD_DEPENDS=	${PEARDIR}/XML/Serializer.php:devel/pear-XML_Serializer@${PHP_FLAVOR} \
 		${PEARDIR}/HTTP/Request.php:www/pear-HTTP_Request@${PHP_FLAVOR}

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	isodate
 PORTVERSION=	0.6.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	ISO 8601 date/time/duration parser and formater
+WWW=		https://github.com/gweis/isodate
 
 LICENSE=	BSD3CLAUSE
 

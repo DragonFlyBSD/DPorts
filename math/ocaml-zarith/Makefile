@@ -1,5 +1,3 @@
-# Created by: John Marino <marino@FreeBSD.org>
-
 PORTNAME=	${GH_PROJECT:tl}
 PORTVERSION=	1.12
 DISTVERSIONPREFIX=	release-
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	OCaml arithmetic library for arbitrary precision integers
+WWW=		https://forge.ocamlcore.org/projects/zarith
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE

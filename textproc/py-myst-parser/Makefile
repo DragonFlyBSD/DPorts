@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	myst-parser
 PORTVERSION=	0.18.0
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extended commonmark compliant parser with bridges to docutils & sphinx
+WWW=		https://github.com/executablebooks/MyST-Parser
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

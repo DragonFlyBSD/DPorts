@@ -1,5 +1,3 @@
-# Created by: Carlo Strub <cs@FreeBSD.org>
-
 PORTNAME=	django-otp
 PORTVERSION=	1.0.4
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Adding two-factor authentication to Django
+WWW=		https://bitbucket.org/psagers/django-otp
 
 LICENSE=	BSD2CLAUSE
 

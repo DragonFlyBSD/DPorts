@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	genson
 PORTVERSION=	1.2.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Powerful, user-friendly JSON Schema generator
+WWW=		https://pypi.org/project/genson/
 
 LICENSE=	MIT
 

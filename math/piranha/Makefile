@@ -1,11 +1,12 @@
 PORTNAME=	piranha
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.11
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Piranha computer algebra system
+WWW=		https://github.com/bluescarni/piranha
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	dual

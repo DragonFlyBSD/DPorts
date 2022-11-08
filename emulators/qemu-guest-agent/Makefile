@@ -1,5 +1,3 @@
-# Created by: Kaltashkin Eugene <zhecka@gmail.com>
-
 PORTNAME=	qemu
 DISTVERSION=	5.0.1
 CATEGORIES=	emulators
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-guest-agent
 
 MAINTAINER=	zhecka@gmail.com
 COMMENT=	QEMU guest-agent utilities
+WWW=		https://wiki.qemu.org/Main_Page
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	dpaste
 PORTVERSION=	3.5
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}django-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Django based pastebin for text and code
+WWW=		https://github.com/DarrenOfficial/dpaste
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

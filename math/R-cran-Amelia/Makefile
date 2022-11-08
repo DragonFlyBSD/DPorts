@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	Amelia
 DISTVERSION=	1.8.0
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Program for Missing Data
+WWW=		https://gking.harvard.edu/amelia
 
 LICENSE=	GPLv2+
 

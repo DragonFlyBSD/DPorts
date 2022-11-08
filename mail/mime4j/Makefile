@@ -1,5 +1,3 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	mime4j
 PORTVERSION=	0.7.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	apache-${PORTNAME}-${PORTVERSION}-bin
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Java parser for e-mail message streams
+WWW=		https://james.apache.org/mime4j/
 
 LICENSE=	APACHE20
 

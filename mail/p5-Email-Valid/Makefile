@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@tobez.org>
-
 PORTNAME=	Email-Valid
 PORTVERSION=	1.203
 CATEGORIES=	mail perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Check validity of Internet email addresses
+WWW=		https://metacpan.org/release/Email-Valid
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

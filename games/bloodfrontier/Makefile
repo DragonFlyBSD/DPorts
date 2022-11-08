@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-
 PORTNAME=	bloodfrontier
 DISTVERSION=	B2
 PORTREVISION=	12
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}-linux
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Single- and multi-player first-person shooter based on Cube 2
+WWW=		https://www.bloodfrontier.com/
 
 LICENSE=	ZLIB
 

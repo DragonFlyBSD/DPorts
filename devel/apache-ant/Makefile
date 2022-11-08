@@ -1,5 +1,3 @@
-# Created by: Ernst de Haan <znerd@FreeBSD.org>
-
 PORTNAME=	apache-ant
 DISTVERSION=	1.10.8
 CATEGORIES=	devel java
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${ANT_DISTFILE}
 
 MAINTAINER=	java@FreeBSD.org
 COMMENT=	Java- and XML-based build tool, conceptually similar to make
+WWW=		https://ant.apache.org/
 
 LICENSE=	APACHE20
 

@@ -1,5 +1,3 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	craft
 PORTVERSION=	1.0
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ CATEGORIES=	games
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Simple Minecraft clone written in C using modern OpenGL
+WWW=		https://www.michaelfogleman.com/craft/
 
 LIB_DEPENDS=	libcurl.so:ftp/curl
 

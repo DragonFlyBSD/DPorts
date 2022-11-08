@@ -1,5 +1,3 @@
-# Created by: refugee
-
 PORTNAME=	dungeoncrawl
 PORTVERSION=	4.0.0.b26
 CATEGORIES=	games
@@ -9,6 +7,7 @@ DISTNAME=	dc${PORTVERSION:S/.//g}-src
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Old school roguelike game
+WWW=		http://www.dungeoncrawl.org/
 
 WRKSRC_SUBDIR=	source
 

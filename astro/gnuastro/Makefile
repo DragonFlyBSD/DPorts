@@ -1,12 +1,11 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	gnuastro
-PORTVERSION=	0.17
+PORTVERSION=	0.18
 CATEGORIES=	astro
 MASTER_SITES=	GNU
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	GNU astronomy utilities and library
+WWW=		https://www.gnu.org/software/gnuastro/
 
 LICENSE=	GPLv3+
 

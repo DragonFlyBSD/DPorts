@@ -1,5 +1,3 @@
-# Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-
 PORTNAME=	jid3lib
 PORTVERSION=	0.5.4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/javamusictag/${PORTNAME}/beta-dev6
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java ID3 Tag Library
+WWW=		http://javamusictag.sourceforge.net/index.html
 
 USE_JAVA=	yes
 USE_ANT=	yes

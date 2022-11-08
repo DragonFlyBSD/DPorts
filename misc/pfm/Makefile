@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	pfm
 PORTVERSION=	2.12.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/p-f-m/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Terminal (curses)-based file manager written in Perl
+WWW=		http://p-f-m.sourceforge.net/
 
 LICENSE=	GPLv2
 

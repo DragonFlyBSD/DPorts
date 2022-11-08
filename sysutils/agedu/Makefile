@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	agedu
 PORTVERSION=	20211129.8cd63c5
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ MASTER_SITES=	https://www.chiark.greenend.org.uk/~sgtatham/agedu/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Unix utility for tracking down wasted disk space
+WWW=		https://www.chiark.greenend.org.uk/~sgtatham/agedu/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENCE

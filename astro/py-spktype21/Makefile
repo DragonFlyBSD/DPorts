@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	spktype21
 PORTVERSION=	0.1.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Supporting module for jplephem to handle data type 21
+WWW=		https://github.com/whiskie14142/spktype21
 
 LICENSE=	MIT
 

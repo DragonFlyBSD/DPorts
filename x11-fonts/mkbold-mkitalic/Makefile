@@ -1,5 +1,3 @@
-# Created by: KOMATSU Shinichiro
-
 PORTNAME=	mkbold-mkitalic
 PORTVERSION=	0.11
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://hp.vector.co.jp/authors/VA013651/lib/
 
 MAINTAINER=	koma2@lovepeers.org
 COMMENT=	Programs to make BDF font bold/italic
+WWW=		https://hp.vector.co.jp/authors/VA013651/freeSoftware/mkbold-mkitalic.html
 
 CONFLICTS=	mkbold mkitalic
 

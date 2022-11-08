@@ -1,5 +1,3 @@
-# Created by: Jean-Marc Zucconi <jmz@FreeBSD.org> and David O'Brien <obrien@FreeBSD.org>
-
 PORTNAME=	psutils
 PORTVERSION=	1.17
 PORTREVISION=	5
@@ -11,6 +9,7 @@ DISTNAME=	psutils-p17
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Utilities for manipulating PostScript documents
+WWW=		http://gershwin.ens.fr/vdaniel/Doc-Locale/Outils-Gnu-Linux/PsUtils/
 
 LIB_DEPENDS=	libpaper.so:print/libpaper
 

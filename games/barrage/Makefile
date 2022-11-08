@@ -1,5 +1,3 @@
-# Created by: Kirill Ponomarew <ponomarew@oberon.net>
-
 PORTNAME=	barrage
 PORTVERSION=	1.0.5
 CATEGORIES=	games
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/lgames/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Destroy as many targets as possible
+WWW=		http://lgames.sourceforge.net/index.php?project=Barrage
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <frederic@culot.org>
-
 PORTNAME=	htable
 PORTVERSION=	1.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	LOCAL/culot
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight implementation of hash tables in C
+WWW=		http://culot.org/public/Code/htable.html
 
 LICENSE=	BSD2CLAUSE
 

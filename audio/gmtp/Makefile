@@ -1,11 +1,12 @@
 PORTNAME=	gmtp
 PORTVERSION=	1.3.11
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/gMTP-${PORTVERSION}/
 
 MAINTAINER=	freebsd-ports-local@be-well.ilk.org
 COMMENT=	Media Transfer Protocol (MTP) GUI client
+WWW=		http://gmtp.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

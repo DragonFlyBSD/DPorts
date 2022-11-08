@@ -1,9 +1,10 @@
 PORTNAME=	dnf
-DISTVERSION=	4.13.0
+DISTVERSION=	4.14.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Dandified YUM, the next-generation version of YUM
+WWW=		https://github.com/rpm-software-management/dnf
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

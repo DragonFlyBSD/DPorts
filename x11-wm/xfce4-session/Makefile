@@ -1,5 +1,3 @@
-# Created by: Matt Lancereau <matt@rimasec.net>
-
 PORTNAME=	xfce4-session
 PORTVERSION=	4.16.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Xfce's session manager
+WWW=		https://www.xfce.org/
 
 LICENSE=	GPLv2
 

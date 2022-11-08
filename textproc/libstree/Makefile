@@ -1,5 +1,3 @@
-# Created by: clsung
-
 PORTNAME=	libstree
 PORTVERSION=	0.4.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.icir.org/christian/downloads/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Generic Suffix Tree Library
+WWW=		https://www.icir.org/christian/libstree/
 
 USES=		gmake libtool
 GNU_CONFIGURE=	yes

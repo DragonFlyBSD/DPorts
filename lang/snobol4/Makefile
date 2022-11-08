@@ -1,5 +1,3 @@
-# Created by: Wes Peters <wes@softweyr.com>
-
 PORTNAME=	snobol4
 PORTVERSION=	2.3.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.regressive.org/snobol/
 
 MAINTAINER=	snobol4@regressive.org
 COMMENT=	Full SNOBOL4 language with SPITBOL, BLOCKS, and other extensions
+WWW=		https://www.regressive.org/snobol4/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT

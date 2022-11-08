@@ -1,5 +1,3 @@
-# Created by: Martin Tournoij <martin@arp242.net>
-
 PORTNAME=	nlarn
 DISTVERSIONPREFIX=	NLarn-
 DISTVERSION=	0.7.6
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Roguelike game and as such a remake of the classic game Larn
+WWW=		https://nlarn.github.io/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

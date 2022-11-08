@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	backports.csv
 PORTVERSION=	1.0.7
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Backport of Python 3 csv module
+WWW=		https://pypi.org/project/backports.csv/
 
 LICENSE=	PSFL
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst

@@ -1,9 +1,10 @@
 PORTNAME=	curtail
-DISTVERSION=	1.3.0
+DISTVERSION=	1.3.1
 CATEGORIES=	graphics print
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Simple & useful image compressor
+WWW=		https://github.com/Huluti/Curtail
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

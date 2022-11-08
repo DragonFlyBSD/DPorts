@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <frederic@culot.org>
-
 PORTNAME=	ParseTemplate
 PORTVERSION=	3.08
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Processor for templates containing Perl expressions
+WWW=		https://metacpan.org/release/ParseTemplate
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

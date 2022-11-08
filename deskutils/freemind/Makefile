@@ -1,5 +1,3 @@
-# Created by: cartola (Carlos E. G. Carvalho)
-
 PORTNAME=	freemind
 PORTVERSION=	1.0.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-bin-max-${PORTVERSION}
 
 MAINTAINER=	sergey.v.brunov@gmail.com
 COMMENT=	Free mind-mapping software written in Java
+WWW=		http://freemind.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/license

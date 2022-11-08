@@ -1,5 +1,3 @@
-# Created by: Greg Larkin <glarkin@FreeBSD.org>
-
 PORTNAME=	SVN-Notify-Mirror
 PORTVERSION=	0.040
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Keep a mirrored working copy of a repository path
+WWW=		https://metacpan.org/release/SVN-Notify-Mirror
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

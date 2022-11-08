@@ -1,5 +1,3 @@
-# Created by: Adrian Steinmann <ast@marabu.ch>
-
 PORTNAME=	nostromo
 PORTVERSION=	1.9.6
 CATEGORIES=	www
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.nazgul.ch/dev/
 
 MAINTAINER=	loox@e-shell.net
 COMMENT=	Fast, secure HTTP/1.1 CGI/1.1 SSL IPv4/IPv6 webserver
+WWW=		http://www.nazgul.ch/dev_nostromo.html
 
 LICENSE=	ISCL
 

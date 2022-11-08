@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	goocanvas
 PORTVERSION=	2.0.4
 CATEGORIES=	graphics
@@ -9,6 +7,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Cairo-based canvas widget for GTK+ 3
+WWW=		https://sourceforge.net/projects/goocanvas/
 
 LICENSE=	LGPL20
 

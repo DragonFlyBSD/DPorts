@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni
-
 PORTNAME=	hypre
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.25.0
@@ -7,6 +5,7 @@ CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Scalable Linear Solvers and Multigrid Methods
+WWW=		https://computing.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
@@ -38,7 +37,7 @@ MPICH_CONFIGURE_ENV=	CC=${LOCALBASE}/bin/mpicc CXX=${LOCALBASE}/bin/mpicxx
 OPENMPI_LIB_DEPENDS=	libmpi.so:net/openmpi
 OPENMPI_CONFIGURE_ENV=	CC=${LOCALBASE}/mpi/openmpi/bin/mpicc \
 			CXX=${LOCALBASE}/mpi/openmpi/bin/mpicxx
-OPENMPI_BROKEN=		doesn't switch to openmpi in cmake build
+OPENMPI_BROKEN=		doesn't switch to openmpi in cmake build, see https://github.com/hypre-space/hypre/issues/720
 
 PORTDOCS=	*
 

@@ -1,5 +1,3 @@
-# Created by: roam@FreeBSD.org
-
 PORTNAME=	nonsense
 PORTVERSION=	0.6
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Nonsense text generator
+WWW=		http://nonsense.sourceforge.net/
 
 USES=		shebangfix
 SHEBANG_FILES=	nonsense

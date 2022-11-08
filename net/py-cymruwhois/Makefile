@@ -1,5 +1,3 @@
-# Created by: Babak Farrokhi <farrokhi@FreeBSD.org>
-
 PORTNAME=	cymruwhois
 PORTVERSION=	1.6
 CATEGORIES=	net python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	Python client for the whois.cymru.com service
+WWW=		https://pypi.org/project/cymruwhois/
 
 LICENSE=	MIT
 

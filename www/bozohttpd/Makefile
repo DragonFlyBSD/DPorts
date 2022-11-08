@@ -1,5 +1,3 @@
-# Created by: Janos.Mohacsi@bsd.hu
-
 PORTNAME=	bozohttpd
 PORTVERSION=	20210227
 CATEGORIES=	www
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.eterna.com.au/bozohttpd/ \
 
 MAINTAINER=	jmohacsi@bsd.hu
 COMMENT=	Bozotic HTTP server from NetBSD
+WWW=		http://www.eterna.com.au/bozohttpd/
 
 LICENSE=	BSD2CLAUSE
 

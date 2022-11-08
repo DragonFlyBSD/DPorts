@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Net-OAuth2
 PORTVERSION=	0.67
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	OAuth 2.0 for Perl
+WWW=		https://metacpan.org/release/Net-OAuth2
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

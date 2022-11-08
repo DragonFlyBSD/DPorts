@@ -1,5 +1,3 @@
-# Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-
 PORTNAME=	dbmail
 PORTVERSION=	3.2.6
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	mail
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	SQL database-based mail system (POP3 and IMAP)
+WWW=		http://www.dbmail.org/
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-
 PORTNAME=	uulib
 PORTVERSION=	0.5.20
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	uudeview-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for uu/xx/Base64/BinHex/yEnc de-/encoding
+WWW=		http://www.fpx.de/fp/Software/UUDeview/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

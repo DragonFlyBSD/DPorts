@@ -1,5 +1,3 @@
-# Created by: Max Khon <fjoe@FreeBSD.org>
-
 PORTNAME=	dmucs
 PORTVERSION=	0.6.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Distributed Multi-User Compilation System (for use with distcc)
+WWW=		http://dmucs.sourceforge.net/
 
 BROKEN_armv6=		fails to compile: passing char * to parameter of incompatible type __builtin_va_list
 BROKEN_armv7=		fails to compile: passing char * to parameter of incompatible type __builtin_va_list

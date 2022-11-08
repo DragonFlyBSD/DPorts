@@ -1,5 +1,3 @@
-# Created by: Alan Eldridge <alane@geeksrus.net>
-
 PORTNAME=	l2
 PORTVERSION=	0.9.13
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	ossp-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C library for a flexible and sophisticated Unix logging facility
+WWW=		http://www.ossp.org/pkg/lib/l2/
 
 USES=		libtool
 GNU_CONFIGURE=	yes

@@ -1,5 +1,3 @@
-# Created by: Ken Moore <ken@pcbsd.org>
-
 PORTNAME=	lumina-fileinfo
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.6.2
@@ -7,12 +5,13 @@ CATEGORIES=	deskutils
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	File properties utility from the Lumina Desktop
+WWW=		https://lumina-desktop.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/../../../LICENSE
 
 USES=		compiler:c++11-lang gl qmake qt:5
-USE_QT=		buildtools_build concurrent core gui \
+USE_QT=		buildtools:build concurrent core gui \
 		multimedia network svg widgets x11extras
 USE_GL=		gl
 USE_GITHUB=	yes
@@ -23,7 +22,7 @@ OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
 
 NLS_QMAKE_ON=	CONFIG+=WITH_I18N
-NLS_USE=	QT=linguist_build
+NLS_USE=	QT=linguist:build
 
 CONFLICTS_INSTALL=	lumina-1.2.*
 

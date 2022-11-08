@@ -1,5 +1,3 @@
-# Created by: Tony Maher
-
 PORTNAME=	mummer
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.0.0beta2-2
@@ -9,6 +7,7 @@ CATEGORIES=	biology
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Modular system for rapid whole genome alignment
+WWW=		http://mummer.sourceforge.net/
 
 LICENSE=	ART10
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

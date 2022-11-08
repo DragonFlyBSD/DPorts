@@ -1,5 +1,3 @@
-# Created by: Diederik de Groot
-
 PORTNAME=	chan_sccp
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.3.3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	asterisk-
 
 MAINTAINER=	ddegroot@talon.nl
 COMMENT=	Replacement for the SCCP channel driver in Asterisk
+WWW=		https://sourceforge.net/projects/chan-sccp-b/
 
 LICENSE=	GPLv1
 LICENSE_FILE=	${WRKSRC}/COPYING

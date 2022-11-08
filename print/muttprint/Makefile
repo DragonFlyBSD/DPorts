@@ -1,5 +1,3 @@
-# Created by: Oliver Braun <obraun@informatik.unibw-muenchen.de>
-
 PORTNAME=	muttprint
 PORTVERSION=	0.73
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/muttprint/muttprint/muttprint-${PORTVERSION}
 
 MAINTAINER=	guru@unixarea.de
 COMMENT=	Utility to print mail for most any mail client
+WWW=		http://muttprint.sourceforge.net/
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Christoph Moench-Tegeder <cmt@burggraben.net>
-
 PORTNAME=	rest
 PORTVERSION=	0.8.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	cmt@burggraben.net
 COMMENT=	Easy access to RESTful web services
+WWW=		https://wiki.gnome.org/Projects/Librest
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

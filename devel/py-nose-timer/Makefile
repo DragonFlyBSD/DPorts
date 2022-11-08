@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	nose-timer
 PORTVERSION=	1.0.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Timer plugin for nosetests
+WWW=		https://github.com/mahmoudimus/nose-timer
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: pusto@web.de
-
 PORTNAME=	qhull
 DISTVERSION=	8.0.2
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-2020-src-${DISTVERSION}
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Qhull computes convex hulls, Delaunay triangulations, and halfspaces
+WWW=		http://www.qhull.org
 
 LICENSE=	Qhull
 LICENSE_NAME=	Qhull License

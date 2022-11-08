@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	coffee-rails
 PORTVERSION=	4.2.2
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-rails5
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Coffee Script adapter for the Rails asset pipeline
+WWW=		https://github.com/rails/coffee-rails
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

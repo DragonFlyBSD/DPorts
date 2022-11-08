@@ -1,5 +1,3 @@
-# Created by: Dirk Froemberg <dirk@FreeBSD.org>
-
 PORTNAME=	ddclient
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.9.1
@@ -7,6 +5,7 @@ CATEGORIES=	dns
 
 MAINTAINER=	mjl@luckie.org.nz
 COMMENT=	Update dynamic DNS entries
+WWW=		https://github.com/ddclient/ddclient
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

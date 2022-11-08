@@ -1,5 +1,3 @@
-# Created by: Iblis Lin <iblis@hs.ntnu.edu.tw>
-
 PORTNAME=	marisa-tire
 PORTVERSION=	0.24
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	iblis@hs.ntnu.edu.tw
 COMMENT=	MARISA: Matching Algorithm with Recursively Implemented StorAge
+WWW=		https://github.com/s-yata/marisa-trie
 
 LICENSE=	BSD2CLAUSE LGPL21+
 LICENSE_COMB=	dual

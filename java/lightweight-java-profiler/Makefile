@@ -1,11 +1,10 @@
-# Created by: Johannes Dieterich <jmd@FreeBSD.org>
-
 PORTNAME=	lightweight-java-profiler
 PORTVERSION=	g20170308
 CATEGORIES=	java devel
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Lightweight Java profiler which can be used for flamegraphs
+WWW=		https://github.com/inevity/lightweight-java-profiler
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING

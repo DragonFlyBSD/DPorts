@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	tartiflette
 PORTVERSION=	1.4.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GraphQL Engine for Python
+WWW=		https://github.com/tartiflette/tartiflette
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	tiatracker
 PORTVERSION=	1.3
 DISTVERSIONSUFFIX=	.orig
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}${DISTVERSIONSUFFIX}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Music tracker for making Atari VCS 2600
+WWW=		https://bitbucket.org/kylearan/tiatracker/src/master/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/license.txt
@@ -17,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/license.txt
 USES=		compiler:c++11-lang dos2unix gl qmake qt:5 sdl tar:xz
 DOS2UNIX_GLOB=	*.c *.cpp *.h *.k65 *.pro
 USE_GL=		gl
-USE_QT=		core gui widgets buildtools_build
+USE_QT=		core gui widgets buildtools:build
 USE_SDL=	sdl2
 
 CFLAGS+=	`sdl2-config --cflags`

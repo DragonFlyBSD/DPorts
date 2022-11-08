@@ -1,11 +1,12 @@
 PORTNAME=	python-socketio
-PORTVERSION=	5.6.0
+PORTVERSION=	5.7.1
 CATEGORIES=	devel net python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python implementation of the Socket.IO realtime client and server
+WWW=		https://github.com/miguelgrinberg/python-socketio
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	milkytracker
 PORTVERSION=	1.03.00
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Music creation tool inspired by Fast Tracker 2
+WWW=		https://milkytracker.titandemo.org/
 
 LICENSE=	GPLv3+ BSD3CLAUSE
 LICENSE_COMB=	multi

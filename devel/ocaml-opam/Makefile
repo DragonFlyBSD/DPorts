@@ -1,8 +1,6 @@
-# Created by: J. Giovannangeli
-
 PORTNAME=	opam
-PORTVERSION=	2.0.8
-PORTREVISION=	2
+PORTVERSION=	2.1.2
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/ocaml/opam/releases/download/${DISTVERSION}/
 PKGNAMEPREFIX=	ocaml-
@@ -10,6 +8,7 @@ DISTNAME=	opam-full-${DISTVERSION}
 
 MAINTAINER=	hannes@mehnert.org
 COMMENT=	Source-based package manager for OCaml
+WWW=		https://opam.ocaml.org/
 
 LICENSE=	LGPL21
 
@@ -17,13 +16,12 @@ RUN_DEPENDS=	curl:ftp/curl \
 		gpatch:devel/patch
 
 USES=		gmake
-USE_OCAML=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-checks
 
 MAKE_JOBS_UNSAFE=	yes
-ALL_TARGET=	lib-ext all
+ALL_TARGET=	cold-lib-ext cold-all
 
 OPTIONS_DEFINE=		DARCS GIT MERCURIAL RSYNC
 OPTIONS_DEFAULT=	GIT RSYNC
@@ -36,7 +34,13 @@ GIT_RUN_DEPENDS=	git:devel/git
 MERCURIAL_RUN_DEPENDS=	${PY_MERCURIAL}
 RSYNC_RUN_DEPENDS=	rsync:net/rsync
 
+NOPRECIOUSMAKEVARS=	yes
+
+pre-configure:
+	cd ${WRKSRC} && ${MAKE_CMD} compiler
+
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/opam-installer
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/opam
 
 .include <bsd.port.mk>

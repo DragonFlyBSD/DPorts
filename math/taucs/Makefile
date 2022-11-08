@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni <giffunip@asme.org>
-
 PORTNAME=	taucs
 PORTVERSION=	2.2
 PORTREVISION=	23
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C library of sparse linear solvers
+WWW=		http://www.tau.ac.il/~stoledo/taucs/
 
 LICENSE=	TAUCS
 LICENSE_NAME=	TAUCS License

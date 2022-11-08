@@ -1,5 +1,3 @@
-# Created by: Shinsuke Matsui <smatsui@karashi.org>
-
 PORTNAME=	File-chmod
 PORTVERSION=	0.42
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl module for symbolic and ls(1)-like chmod modes
+WWW=		https://metacpan.org/dist/File-chmod
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

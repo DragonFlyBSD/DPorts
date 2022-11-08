@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@regency.nsu.ru>
-
 PORTNAME=	xmill
 DISTVERSION=	0.8
 CATEGORIES=	archivers
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Efficient compressor for XML
+WWW=		https://sourceforge.net/projects/xmill/
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 

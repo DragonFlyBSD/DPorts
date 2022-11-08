@@ -1,5 +1,3 @@
-# Created by: lon_kamikaze@gmx.de
-
 PORTNAME=	freehdl
 PORTVERSION=	0.0.7
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	http://freehdl.seul.org/~enaroska/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free VHDL simulator
+WWW=		http://www.freehdl.seul.org/
 
 USES=		gmake pathfix libtool makeinfo perl5 pkgconfig
 USE_LDCONFIG=	yes

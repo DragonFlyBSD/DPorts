@@ -10,11 +10,11 @@ USES=		compiler:c++11-lang gl pkgconfig perl5 qmake:outsource,norecursive \
 		qt-dist:5,speech xorg
 USE_GL=		gl
 USE_PERL5=	extract
-USE_QT=		core gui buildtools_build qmake_build
+USE_QT=		core gui buildtools:build qmake:build
 
 OPTIONS_DEFINE=		ALSA
-OPTIONS_RADIO=		BACKEND
-OPTIONS_RADIO_BACKEND=	SPEECHD FLITE
+OPTIONS_GROUP=		BACKEND
+OPTIONS_GROUP_BACKEND=	SPEECHD FLITE
 OPTIONS_DEFAULT=	SPEECHD
 OPTIONS_SUB=		yes
 

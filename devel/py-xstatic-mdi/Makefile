@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-mdi
 PORTVERSION=	1.6.50.2
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	XStatic-mdi-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	mdi (Material Design Icons) (XStatic packaging standard)
+WWW=		https://materialdesignicons.com/
 
 LICENSE=	MIT
 

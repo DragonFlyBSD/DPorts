@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	Crypt-GCrypt
 PORTVERSION=	1.26
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl interface to the GNU Cryptographic library
+WWW=		https://metacpan.org/release/Crypt-GCrypt
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	jupyter-telemetry
 PORTVERSION=	0.1.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	jupyter_telemetry-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Jupyter telemetry library
+WWW=		https://github.com/jupyter/telemetry
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

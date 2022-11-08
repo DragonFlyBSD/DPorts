@@ -1,5 +1,3 @@
-# Created by: gugu
-
 PORTNAME=	MooseX-InsideOut
 PORTVERSION=	0.106
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Inside-out objects with Moose
+WWW=		https://metacpan.org/release/MooseX-InsideOut
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Hash-Util-FieldHash-Compat>=0:devel/p5-Hash-Util-FieldHash-Compat \

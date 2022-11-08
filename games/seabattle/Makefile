@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	seabattle
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.1
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Curses based battleship type game
+WWW=		http://www.deater.net/weave/vmwprod/seabattle.html
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

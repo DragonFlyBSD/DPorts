@@ -1,5 +1,3 @@
-# Created by: Abel Chow <achow@transoft.net>
-
 PORTNAME?=	tidy
 DISTVERSION=	090315-cvs
 PORTREVISION=	3
@@ -12,6 +10,7 @@ PKGNAMESUFFIX?=	-devel
 
 MAINTAINER?=	thierry@FreeBSD.org
 COMMENT?=	Utility to clean up and pretty print HTML/XHTML/XML
+WWW=		http://tidy.sourceforge.net/
 
 BUILD_DEPENDS=	xsltproc:textproc/libxslt
 

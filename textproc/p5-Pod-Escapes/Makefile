@@ -1,5 +1,3 @@
-# Created by: Mathieu Arnold <m@absolight.net>
-
 PORTNAME=	Pod-Escapes
 PORTVERSION=	1.07
 CATEGORIES=	textproc devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	For resolving Pod E<...> sequences
+WWW=		https://metacpan.org/release/Pod-Escapes
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

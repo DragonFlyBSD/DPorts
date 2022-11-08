@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Array-Window
 PORTVERSION=	1.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Calculate windows/subsets/pages of arrays
+WWW=		https://metacpan.org/release/Array-Window
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

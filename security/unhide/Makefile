@@ -1,11 +1,10 @@
-# Created by: ntarmos@cs.uoi.gr
-
 PORTNAME=	unhide
 DISTVERSION=	20210124
 CATEGORIES=	security
 
 MAINTAINER=	ntarmos@ceid.upatras.gr
 COMMENT=	Forensic tool to find hidden processes and TCP/UDP ports
+WWW=		https://www.unhide-forensics.info/
 
 LICENSE=	GPLv3
 

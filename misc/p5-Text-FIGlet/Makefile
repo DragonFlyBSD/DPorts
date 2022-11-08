@@ -1,5 +1,3 @@
-# Created by: Daniel B. Hemmerich <dan@spot.org>
-
 PORTNAME=	Text-FIGlet
 PORTVERSION=	2.19.4
 CATEGORIES=	misc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl module to provide FIGlet abilities, akin to banner
+WWW=		https://metacpan.org/release/Text-FIGlet
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

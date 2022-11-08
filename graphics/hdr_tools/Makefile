@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	hdr_tools
 PORTVERSION=	0.0.2010.11.23	# unspecified by the author, so use the date
 PORTREVISION=	18
@@ -10,6 +8,7 @@ DISTNAME=	hdr_src
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Command-line tools for creating and manipulating HDR images
+WWW=		https://ttic.uchicago.edu/~cotter/projects/hdr_tools/
 
 LICENSE=	GPLv3
 

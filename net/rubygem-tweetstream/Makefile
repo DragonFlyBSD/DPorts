@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	tweetstream
 PORTVERSION=	2.6.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	TweetStream provides simple Ruby access to Twitter Streaming API
+WWW=		https://github.com/tweetstream/tweetstream
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

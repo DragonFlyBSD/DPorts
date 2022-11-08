@@ -1,5 +1,3 @@
-# Created by: Eric Freeman <freebsdports@chillibear.com>
-
 PORTNAME=	sinatra-respond_to
 PORTVERSION=	0.9.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Respond_to style Rails block for Sinatra
+WWW=		https://github.com/cehoffman/sinatra-respond_to
 
 LICENSE=	MIT
 

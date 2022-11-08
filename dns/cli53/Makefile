@@ -1,12 +1,11 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	cli53
 DISTVERSION=	0.8.18
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	dns
 
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	Command line tool for Amazon Route 53
+WWW=		https://github.com/barnybug/cli53
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

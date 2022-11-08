@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <culot@FreeBSD.org>
-
 PORTNAME=	CPAN-Meta-Check
 PORTVERSION=	0.014
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Verify requirements in a CPAN::Meta object
+WWW=		https://metacpan.org/release/CPAN-Meta-Check
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

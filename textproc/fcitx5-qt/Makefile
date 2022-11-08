@@ -1,5 +1,3 @@
-# Created by: Ka Ho Ng <khng300@gmail.com>
-
 PORTNAME=	fcitx5-qt
 DISTVERSION=	5.0.8
 CATEGORIES=	textproc
@@ -9,6 +7,7 @@ PATCHFILES=	f7f983e1e709.patch:-p1
 
 MAINTAINER=	khng@FreeBSD.org
 COMMENT=	Fcitx support for Qt5
+WWW=		https://github.com/fcitx/fcitx5-qt
 
 LICENSE=	LGPL21+ BSD3CLAUSE
 LICENSE_COMB=	multi
@@ -25,7 +24,7 @@ PLIST_SUB=	VER=${PORTVERSION}
 USE_GITHUB=	yes
 GH_ACCOUNT=	fcitx
 USE_KDE=	ecm
-USE_QT=		concurrent core dbus widgets buildtools_build qmake_build
+USE_QT=		concurrent core dbus widgets buildtools:build qmake:build
 USE_XORG=	x11 xcb
 USE_LDCONFIG=	yes
 

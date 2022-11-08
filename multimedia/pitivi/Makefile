@@ -1,5 +1,3 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	pitivi
 PORTVERSION=	0.999
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Gstreamer based non-linear audio/video editor
+WWW=		https://www.pitivi.org
 
 LICENSE=	LGPL21+
 

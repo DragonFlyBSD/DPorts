@@ -1,5 +1,3 @@
-# Created by: Chuck Hein <geekdude@pacbell.net>
-
 PORTNAME=	mpexpr
 PORTVERSION=	1.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Multiple precision math for Tcl
+WWW=		http://mpexpr.sourceforge.net
 
 LICENSE=	TclTk
 LICENSE_NAME=	Tcl/Tk License

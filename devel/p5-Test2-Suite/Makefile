@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test2-Suite
 PORTVERSION=	0.000145
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Distribution with a rich set of tools built upon the Test2 framework
+WWW=		https://metacpan.org/release/Test2-Suite
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

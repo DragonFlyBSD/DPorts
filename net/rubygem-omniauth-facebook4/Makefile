@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	omniauth-facebook
 PORTVERSION=	4.0.0
 CATEGORIES=	net rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	4
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Facebook OAuth2 Strategy for OmniAuth
+WWW=		https://github.com/mkdynamic/omniauth-facebook
 
 LICENSE=	MIT
 

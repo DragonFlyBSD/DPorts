@@ -1,5 +1,3 @@
-# Created by: Brendan Molloy <brendan+freebsd@bbqsrc.net>
-
 PORTNAME=	canonicaljson
 PORTVERSION=	1.6.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Canonical JSON
+WWW=		https://github.com/matrix-org/python-canonicaljson
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	rubygems-mirror
 PORTVERSION=	1.3.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Mirror rubygems
+WWW=		https://github.com/rubygems/rubygems-mirror
 
 LICENSE=	MIT
 

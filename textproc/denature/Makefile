@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	denature
 PORTVERSION=	0.6.5
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HTML to PDF converter
+WWW=		http://denature.sourceforge.net/
 
 LICENSE=	GPLv2
 

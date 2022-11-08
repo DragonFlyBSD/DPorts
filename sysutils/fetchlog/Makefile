@@ -1,5 +1,3 @@
-# Created by: Alexander Haderer <alexander.haderer@loescap.de>
-
 PORTNAME=	fetchlog
 PORTVERSION=	1.4
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	alexander.haderer@loescap.de
 COMMENT=	Fetch and convert new messages of a logfile
+WWW=		http://fetchlog.sourceforge.net/
 
 LICENSE=	GPLv2
 

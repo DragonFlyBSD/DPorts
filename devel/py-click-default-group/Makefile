@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	click-default-group
 PORTVERSION=	1.2.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extend click.Group to invoke a command without explicit subcommand name
+WWW=		https://github.com/click-contrib/click-default-group
 
 LICENSE=	BSD3CLAUSE
 

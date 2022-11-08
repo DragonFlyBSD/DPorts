@@ -1,6 +1,5 @@
-# Created by: Bartek Rutkowski <robak@FreeBSD.org>
-
 PORTNAME=	nginx
+PORTREVISION=	8
 PKGNAMESUFFIX=	-lite
 
 MAINTAINER=	joneum@FreeBSD.org
@@ -15,6 +14,6 @@ CONFLICTS=	nginx-1.* \
 
 OPTIONS_DEFAULT=FILE_AIO HTTP HTTP_CACHE \
 		HTTP_REALIP HTTP_REWRITE \
-		HTTP_SSL THREADS
+		HTTP_SSL THREADS PCRE_ONE
 
 .include "${MASTERDIR}/Makefile"

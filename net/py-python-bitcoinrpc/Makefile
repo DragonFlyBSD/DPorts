@@ -1,5 +1,3 @@
-# Created by: Fukang Chen <loader@FreeBSD.org>
-
 PORTNAME=	python-bitcoinrpc
 PORTVERSION=	1.0
 CATEGORIES=	net finance python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	loader@FreeBSD.org
 COMMENT=	Enhanced version of python-jsonrpc for use with Bitcoin
+WWW=		https://github.com/jgarzik/python-bitcoinrpc
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

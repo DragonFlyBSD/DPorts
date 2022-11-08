@@ -1,5 +1,3 @@
-# Created by: Johannes Jost Meixner <johannes@perceivon.net>
-
 PORTNAME=	adal
 PORTVERSION=	1.2.7
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Authentication to Azure Active Directory for Python applications
+WWW=		https://github.com/AzureAD/azure-activedirectory-library-for-python
 
 LICENSE=	MIT
 

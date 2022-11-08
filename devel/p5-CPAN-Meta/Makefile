@@ -1,5 +1,3 @@
-# Created by: jupengfei <jupengfei@gmail.com>
-
 PORTNAME=	CPAN-Meta
 PORTVERSION=	2.150010
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Distribution metadata for a CPAN dist
+WWW=		https://metacpan.org/release/CPAN-Meta
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

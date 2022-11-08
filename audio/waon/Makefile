@@ -1,5 +1,3 @@
-# Created by: Kengo Ichiki <kichiki@users.sourceforge.net>
-
 PORTNAME=	waon
 PORTVERSION=	0.10
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	kichiki@users.sourceforge.net
 COMMENT=	Wave-to-Notes transcriber and some utility tools
+WWW=		http://waon.sourceforge.net/
 
 LICENSE=	GPLv2
 

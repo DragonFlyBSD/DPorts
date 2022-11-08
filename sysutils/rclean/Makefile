@@ -1,5 +1,3 @@
-# Created by: Lapo Luchini <lapo@lapo.it>
-
 PORTNAME=	rclean
 PORTVERSION=	1.14
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.lapo.it/rclean/
 
 MAINTAINER=	lapo@lapo.it
 COMMENT=	Command-line rc.conf ordering and cleaning tool
+WWW=		https://www.lapo.it/rclean/
 
 PLIST_FILES=	bin/rclean
 USES=	tar:bzip2

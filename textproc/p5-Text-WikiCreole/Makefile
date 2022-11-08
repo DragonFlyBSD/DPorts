@@ -1,5 +1,3 @@
-# Created by: Matthew Fuller <fullermd@over-yonder.net>
-
 PORTNAME=		Text-WikiCreole
 PORTVERSION=		0.07
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=		p5-
 
 MAINTAINER=		fullermd@over-yonder.net
 COMMENT=	Implementation of the Wiki Creole markup language
+WWW=		https://metacpan.org/release/Text-WikiCreole
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

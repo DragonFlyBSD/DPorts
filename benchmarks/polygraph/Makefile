@@ -1,5 +1,3 @@
-# Created by: Dima Sivachenko <dima@chg.ru>
-
 PORTNAME=	polygraph
 DISTVERSION=	4.13.0
 PORTREVISION=	3
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	-src.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Benchmarking tool for Web proxies
+WWW=		https://www.web-polygraph.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

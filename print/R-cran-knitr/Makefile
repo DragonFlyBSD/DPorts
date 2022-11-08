@@ -1,12 +1,11 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	knitr
-PORTVERSION=	1.39
+PORTVERSION=	1.40
 CATEGORIES=	print
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	General-Purpose Package for Dynamic Report Generation in R
+WWW=		https://cran.r-project.org/web/packages/knitr/
 
 LICENSE=	GPLv2+
 

@@ -1,5 +1,3 @@
-# Created by: Bernard Spil <brnrd@FreeBSD.org>
-
 PORTNAME=	soundcloud
 PORTVERSION=	0.5.0
 CATEGORIES=	audio devel www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Friendly wrapper library for the Soundcloud API
+WWW=		https://github.com/soundcloud/soundcloud-python
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

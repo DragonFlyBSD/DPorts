@@ -1,6 +1,4 @@
-# Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-
-PORTREVISION=	5
+PORTREVISION=	0
 CATEGORIES=	textproc gnome python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -28,6 +26,6 @@ PLIST=
 DOCSDIR=	${PREFIX}/share/doc/py-libxml2
 EXAMPLESDIR=	${PREFIX}/share/examples/py-libxml2
 
-do-configure:
+#do-configure:
 
 .include "${MASTERDIR}/Makefile"

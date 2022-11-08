@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	milter-callback
 PORTVERSION=	1.6.0
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	LOCAL/ehaupt
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Milter to perform a envelope-from sender verification on target MX
+WWW=		http://unix.zhegan.in
 
 LICENSE=	GPLv3
 

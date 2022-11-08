@@ -1,5 +1,3 @@
-# Created by: ade@FreeBSD.org
-
 PORTNAME=	autoconf
 PORTVERSION=	2.69
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	${VERSION}
 
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	Generate configure scripts and related files
+WWW=		https://www.gnu.org/software/autoconf/
 
 LICENSE=	EXCEPTION GFDL GPLv2+ GPLv3+
 LICENSE_COMB=	multi

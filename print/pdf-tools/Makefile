@@ -1,12 +1,14 @@
 PORTNAME=	pdf-tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.91
-PORTREVISION=	1
+DISTVERSION=	0.91-54
+DISTVERSIONSUFFIX=	-gbb0b71f
+PORTREVISION=	2
 CATEGORIES=	print elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Emacs support library for PDF files
+WWW=		https://github.com/vedang/pdf-tools
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -33,11 +35,16 @@ do-build:
 	cd ${WRKSRC}/server && ./autogen.sh && ./configure -q && make
 	${EMACS_CMD} -q --batch -L ${WRKSRC}/lisp -f batch-byte-compile \
 		${WRKSRC}/lisp/*.el
+.if ${FLAVOR:U} == devel_full
+	 ${EMACS_CMD} -q --batch -f loaddefs-generate-batch \
+		${WRKSRC}/lisp/${PORTNAME}-loaddefs.el ${WRKSRC}/lisp
+.else
 	${EMACS_CMD} -q --batch \
-		--eval "(setq generated-autoload-file \
-			\"${WRKSRC}/lisp/${PORTNAME}-loaddefs.el\" \
-			backup-inhibited t)" \
-		-f batch-update-autoloads ${WRKSRC}/lisp
+	--eval "(setq generated-autoload-file \
+		\"${WRKSRC}/lisp/${PORTNAME}-loaddefs.el\" \
+		backup-inhibited t)" \
+	-f batch-update-autoloads ${WRKSRC}/lisp
+.endif
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/${PORTNAME}

@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	UDCode
 PORTVERSION=	1.03
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Does a set of code words form a uniquely decodable code?
+WWW=		https://metacpan.org/release/UDCode
 
 USES=		perl5
 USE_PERL5=	configure

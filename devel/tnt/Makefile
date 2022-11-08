@@ -1,5 +1,3 @@
-# Created by: Pedro F. Giffuni <giffunip@asme.org>
-
 PORTNAME=	tnt
 PORTVERSION=	1.2.6
 CATEGORIES=	devel math
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	erik@bz.bzflag.bz
 COMMENT=	Template Numerical Toolkit
+WWW=		https://math.nist.gov/tnt/
 
 USES=		zip:infozip
 NO_BUILD=	yes

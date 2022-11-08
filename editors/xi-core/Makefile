@@ -1,11 +1,12 @@
 PORTNAME=	xi-core
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.0
-PORTREVISION=	24
+PORTREVISION=	26
 CATEGORIES=	editors
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Modern editor backend written in Rust
+WWW=		https://xi-editor.io
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/../LICENSE

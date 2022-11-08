@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Sub-Exporter-Lexical
 PORTVERSION=	0.092292
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Export lexically-available subs with Sub::Exporter
+WWW=		https://metacpan.org/release/Sub-Exporter-Lexical
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Denis Pokataev <catone@cpan.org>
-
 PORTNAME=	AnyEvent-DBI
 PORTVERSION=	3.04
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Asynchronous DBI access
+WWW=		https://metacpan.org/release/AnyEvent-DBI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

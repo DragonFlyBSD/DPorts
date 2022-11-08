@@ -1,11 +1,10 @@
-# Created by: Adrian Chadd
-
 PORTNAME=	intel-pcm
 PORTVERSION=	202112
 CATEGORIES=	sysutils
 
 MAINTAINER=	imp@FreeBSD.org
 COMMENT=	Process Count Monitor (PCM) for Intel processors
+WWW=		https://github.com/opcm/pcm
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

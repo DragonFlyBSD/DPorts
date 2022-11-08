@@ -1,5 +1,3 @@
-# Created by: Pawel Worach
-
 PORTNAME=	font-bitstream-100dpi
 PORTVERSION=	1.0.3
 PORTREVISION=	4
@@ -7,6 +5,7 @@ CATEGORIES=	x11-fonts
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org Bitstream Vera 100dpi font
+WWW=		https://www.x.org/
 
 USES=		xorg-cat:font
 

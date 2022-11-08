@@ -1,5 +1,3 @@
-# Created by: UMENO Takashi <umeno@rr.iij4u.or.jp>
-
 PORTNAME=	zphoto
 PORTVERSION=	1.2
 PORTREVISION=	14
@@ -8,6 +6,7 @@ MASTER_SITES=	http://namazu.org/~satoru/zphoto/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Zooming photo album generator
+WWW=		http://namazu.org/~satoru/zphoto/
 
 LIB_DEPENDS=	libming.so:graphics/ming \
 		libpopt.so:devel/popt \

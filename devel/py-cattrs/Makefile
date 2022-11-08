@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cattrs
 PORTVERSION=	22.1.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Composable complex class support for attrs and dataclasses
+WWW=		https://github.com/python-attrs/cattrs
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

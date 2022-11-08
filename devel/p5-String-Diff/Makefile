@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	String-Diff
 PORTVERSION=	0.07
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple diff to String
+WWW=		https://metacpan.org/release/String-Diff
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

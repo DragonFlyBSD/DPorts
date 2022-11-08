@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@ccca.nctu.edu.tw>
-
 PORTNAME=	mod_limitipconn
 PORTVERSION=	0.24
 PORTREVISION=	1
@@ -11,6 +9,7 @@ DIST_SUBDIR=	apache2
 
 MAINTAINER=	ychsiao@ychsiao.org
 COMMENT=	Allows you to limit the number of simultaneous connexions
+WWW=		https://dominia.org/djao/limitipconn2.html
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

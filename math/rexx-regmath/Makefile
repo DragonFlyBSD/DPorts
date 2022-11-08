@@ -1,5 +1,3 @@
-# Created by: Bob Eager <bob@eager.cx>
-
 PORTNAME=	regmath
 PORTVERSION=	1.00
 PORTREVISION=	1
@@ -11,6 +9,7 @@ DISTNAME=	regmath${PORTVERSION:S/.//}
 
 MAINTAINER=	bob@eager.cx
 COMMENT=	Two mathematics libraries for Rexx
+WWW=		http://pages.interlog.com/~pjtm/
 
 LICENSE=	MPL10
 

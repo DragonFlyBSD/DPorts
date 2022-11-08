@@ -1,16 +1,19 @@
 PORTNAME=	rmagick
-PORTVERSION=	4.2.5
+PORTVERSION=	4.2.6
 CATEGORIES=	graphics rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby binding for ImageMagick
+WWW=		https://github.com/rmagick/rmagick
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		gem pkgconfig
+USES=		gem pkgconfig shebangfix
 USE_RUBY=	yes
+
+SHEBANG_FILES=	.devcontainer/*.sh
 
 OPTIONS_DEFINE=	X11
 OPTIONS_DEFAULT=X11

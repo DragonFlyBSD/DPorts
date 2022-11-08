@@ -1,12 +1,13 @@
 PORTNAME=	nsh
 DISTVERSION=	0.4.2
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	shells
 MASTER_SITES=	CRATESIO
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Command-line shell like fish, but POSIX compatible
+WWW=		https://github.com/nuta/nsh
 
 LICENSE=	MIT
 

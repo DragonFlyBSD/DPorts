@@ -2,8 +2,9 @@ PORTNAME=	retroarch-assets
 DISTVERSION=	g20210802
 CATEGORIES=	games
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphical assets and official branding for RetroArch
+WWW=		https://github.com/libretro/retroarch-assets
 
 LICENSE=	CC-BY-4.0
 LICENSE_FILE=	${WRKSRC}/COPYING

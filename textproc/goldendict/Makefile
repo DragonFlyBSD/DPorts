@@ -1,11 +1,10 @@
-# Created by: Boris Samorodov <bsam@FreeBSD.org>
-
 PORTNAME=	goldendict
 DISTVERSION=	1.5.0-g20220602
 CATEGORIES=	textproc
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Feature-rich dictionary lookup program
+WWW=		http://goldendict.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -22,7 +21,7 @@ USES=		compiler:c++11-lang gnome iconv:wchar_t pkgconfig \
 USE_GITHUB=	yes
 GH_TAGNAME=	99982a1
 USE_XORG=	x11 xtst
-USE_QT=		buildtools_build linguisttools_build core gui help \
+USE_QT=		buildtools:build linguisttools:build core gui help \
 		network printsupport sql svg webkit widgets \
 		x11extras xml
 QMAKE_ARGS=	${PORTNAME}.pro CONFIG+="zim_support"

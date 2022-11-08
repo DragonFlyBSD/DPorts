@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Mail-Box-Parser-C
 PORTVERSION=	3.009
 CATEGORIES=	mail perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parsing folders for Mail::Box with C routines
+WWW=		https://metacpan.org/release/Mail-Box-Parser-C
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

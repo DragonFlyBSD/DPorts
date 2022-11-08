@@ -1,5 +1,3 @@
-# Created by: Pav Lucistnik <pav@FreeBSD.org>
-
 PORTNAME=	libdca
 PORTVERSION=	0.0.7
 CATEGORIES=	multimedia
@@ -7,6 +5,7 @@ MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${PORTVERSIO
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Free DTS Coherent Acoustics decoder
+WWW=		https://www.videolan.org/developers/libdca.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

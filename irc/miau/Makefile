@@ -1,5 +1,3 @@
-# Created by: Oliver Eikemeier
-
 PORTNAME=	miau
 PORTVERSION=	0.6.6
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	freebsd-ports@dan.me.uk
 COMMENT=	Fully featured easy to use IRC-bouncer
+WWW=		http://miau.sourceforge.net/
 
 USES=		iconv tar:bzip2
 GNU_CONFIGURE=	yes

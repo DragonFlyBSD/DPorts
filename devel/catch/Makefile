@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	catch
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.13.9
@@ -8,6 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Header-only test framework for C++
+WWW=		https://github.com/catchorg/Catch2
 
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

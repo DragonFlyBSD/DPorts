@@ -1,5 +1,3 @@
-# Created by: Yen-Ming Lee <leeym@leeym.com>
-
 PORTNAME=	Digest-Nilsimsa
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl version of Nilsimsa code
+WWW=		https://metacpan.org/release/Digest-Nilsimsa
 
 USES=		perl5
 USE_PERL5=	configure

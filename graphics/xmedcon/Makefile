@@ -1,5 +1,3 @@
-# Created by: Paul Everlund
-
 PORTNAME=	xmedcon
 PORTVERSION=	0.17.0
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/XMedCon-Source/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Medical image conversion utility and library
+WWW=		http://xmedcon.sourceforge.net/
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi

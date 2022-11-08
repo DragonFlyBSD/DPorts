@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	Complete-Path
 PORTVERSION=	0.251
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl routine for completing anything path-like
+WWW=		https://metacpan.org/release/Complete-Path
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

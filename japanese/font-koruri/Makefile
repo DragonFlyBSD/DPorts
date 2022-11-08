@@ -1,5 +1,3 @@
-# Created by: Koichiro IWAO <meta@FreeBSD.org>
-
 PORTNAME=	koruri
 PORTVERSION=	20210720
 CATEGORIES=	japanese x11-fonts
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	ja-font-
 
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	Koruri Japanese TrueType fonts
+WWW=		https://koruri.github.io/
 
 LICENSE=	APACHE20
 

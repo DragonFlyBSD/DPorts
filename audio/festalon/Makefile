@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	festalon
 PORTVERSION=	0.5.5
 PORTREVISION=	14
@@ -9,6 +7,7 @@ MASTER_SITES=	http://projects.raphnet.net/festalon/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Command line player for .nsf and .hes audio files
+WWW=		http://projects.raphnet.net/ #festalon
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

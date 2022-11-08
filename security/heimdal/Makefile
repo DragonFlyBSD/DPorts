@@ -1,5 +1,3 @@
-# Created by: nectar@FreeBSD.org
-
 PORTNAME=	heimdal
 PORTVERSION=	7.7.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/heimdal/heimdal/releases/download/${DISTNAME}/
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Popular BSD-licensed implementation of Kerberos 5
+WWW=		https://www.h5l.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

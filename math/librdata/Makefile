@@ -1,11 +1,10 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	librdata
 PORTVERSION=	0.1.0.g20210224
 CATEGORIES=	math
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Read and write R data frames from C
+WWW=		https://github.com/WizardMac/librdata
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

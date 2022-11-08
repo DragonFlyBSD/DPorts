@@ -1,5 +1,3 @@
-# Created by: Manuel Giraud <manuel.giraud@gmail.com>
-
 PORTNAME=	pcl
 PORTVERSION=	1.6
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.xmailserver.org/
 
 MAINTAINER=	manuel.giraud@gmail.com
 COMMENT=	Portable Coroutine Library
+WWW=		http://www.xmailserver.org/libpcl.html
 
 USES=		libtool
 GNU_CONFIGURE=	yes

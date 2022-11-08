@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Tk-ToolBar
 PORTVERSION=	0.12
 CATEGORIES=	x11-toolkits tk perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Toolbar widget for Perl/Tk
+WWW=		https://metacpan.org/release/Tk-ToolBar
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	gettext_i18n_rails_js
 PORTVERSION=	1.3.1
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-rails5
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Make gettext_i18n_rails .po files as JSON
+WWW=		https://github.com/webhippie/gettext_i18n_rails_js
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

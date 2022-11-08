@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	Text-Hyphen-RU
 PORTVERSION=	0.11
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	Determine positions for hyphens inside Russian words
+WWW=		https://metacpan.org/release/Text-Hyphen-RU
 
 LICENSE=	BSD3CLAUSE
 

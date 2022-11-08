@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	pyliblo
 DISTVERSION=	0.10.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python wrapper for the Liblo OSC Library
+WWW=		https://das.nasophon.de/pyliblo/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

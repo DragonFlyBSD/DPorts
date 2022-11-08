@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-tv4
 PORTVERSION=	1.2.7.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	XStatic-tv4-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	tv4 (XStatic packaging standard)
+WWW=		https://geraintluff.github.io/tv4/
 
 LICENSE=	MIT PD
 LICENSE_COMB=	dual

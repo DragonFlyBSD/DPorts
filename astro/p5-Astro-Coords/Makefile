@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Astro-Coords
 PORTVERSION=	0.20
 CATEGORIES=	astro perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Class for handling astronomical coordinates
+WWW=		https://metacpan.org/release/Astro-Coords
 
 LICENSE=	GPLv2+
 

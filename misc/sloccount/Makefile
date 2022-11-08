@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	sloccount
 PORTVERSION=	2.26
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.dwheeler.com/sloccount/
 
 MAINTAINER=	freaky@aagh.net
 COMMENT=	Counts physical Source Lines of Code (SLOC)
+WWW=		https://www.dwheeler.com/sloccount/
 
 USES=		perl5 shebangfix
 SHEBANG_FILES=	asm_count break_filelist cobol_count count_extensions \

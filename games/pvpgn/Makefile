@@ -1,5 +1,3 @@
-# Created by: mek
-
 PORTNAME=	pvpgn
 PORTVERSION=	1.8.5
 PORTREVISION=	1
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free Blizzard Battle.net emulation software
+WWW=		http://pvpgn.berlios.de
 
 PKGINSTALL?=	${WRKDIR}/pkg-install
 PKGDEINSTALL?=	${WRKDIR}/pkg-deinstall

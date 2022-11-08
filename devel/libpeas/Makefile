@@ -1,19 +1,16 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	libpeas
 PORTVERSION=	1.26.0
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	Next evolution of the Gedit plugins engine
+WWW=		http://live.gnome.org/libpeas
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BUILD_DEPENDS=	valac:lang/vala
 
 LIBPEAS_SLAVE?=	no
 
@@ -24,7 +21,7 @@ LIB_DEPENDS+=	libpeas-1.0.so:devel/libpeas
 PORTSCOUT=	ignore:1
 .endif
 
-USES=		cpe gettext gnome meson pkgconfig tar:xz
+USES=		cpe gettext gnome meson pkgconfig tar:xz vala:build
 USE_GNOME=	cairo gtk30 intlhack introspection
 USE_LDCONFIG=	yes
 CPE_VENDOR=	gnome
@@ -38,7 +35,6 @@ DOCS_BUILD_DEPENDS=	gtkdoc-scan:textproc/gtk-doc
 DOCS_MESON_TRUE=	gtk_doc
 
 pre-build:
-# XXX DISABLE_MAKE_JOBS build fails on 12.2/13.0 i386
 	${DO_MAKE_BUILD} -C ${BUILD_WRKSRC} \
 		tests/libpeas/plugins/embedded/embedded-resources.h
 

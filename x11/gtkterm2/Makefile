@@ -1,5 +1,3 @@
-# Created by: michael johnson <ahze@ahze.net>
-
 PORTNAME=	gtkterm2
 PORTVERSION=	0.2.3
 PORTREVISION=	12
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/gtkterm/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple GTK-2 terminal with tabs
+WWW=		http://gtkterm.feige.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

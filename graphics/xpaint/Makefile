@@ -1,5 +1,3 @@
-# Created by: Steven Wallace <swallace@FreeBSD.org>
-
 PORTNAME=	xpaint
 PORTVERSION=	2.9.10.3
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/sf-${PORTNAME}/sf-${PORTNAME}/${PORTNAME}-${PORTVERSION:R}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple paint program
+WWW=		http://sf-xpaint.sourceforge.net/
 
 LICENSE=	GPLv3
 

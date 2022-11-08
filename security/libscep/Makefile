@@ -1,5 +1,3 @@
-# Created by: Sergei Vyshenski <svysh.fbsd@gmail.com>
-
 PORTNAME=	libscep
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.09
@@ -7,6 +5,7 @@ CATEGORIES=	security
 
 MAINTAINER=	svysh.fbsd@gmail.com
 COMMENT=	Client side SCEP library w/o clients
+WWW=		https://github.com/openxpki/libscep
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/README.md

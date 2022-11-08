@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	FAdist
 PORTVERSION=	2.4
 CATEGORIES=	science
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Probability distributions that are sometimes useful in hydrology
+WWW=		https://cran.r-project.org/web/packages/FAdist/index.html
 
 LICENSE=	GPLv2
 

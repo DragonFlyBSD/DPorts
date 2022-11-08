@@ -1,10 +1,11 @@
 PORTNAME=	rex-sslscan
-PORTVERSION=	0.1.6
+PORTVERSION=	0.1.7
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Ruby Exploitation(Rex) library for scanning SSL/TLS capabilities
+WWW=		https://github.com/rapid7/rex-sslscan
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

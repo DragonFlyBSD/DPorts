@@ -1,5 +1,3 @@
-# Created by: Lars Engels <lars.engels@0x20.net>
-
 PORTNAME=	tvbrowser
 PORTVERSION=	4.2.6
 CATEGORIES=	misc java
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}_bin
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Digital TV and radio guide
+WWW=		https://www.tvbrowser.org
 
 LICENSE=	GPLv3
 

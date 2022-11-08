@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	em-twitter
 PORTVERSION=	0.3.5
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Twitter Streaming API client for EventMachine
+WWW=		https://github.com/tweetstream/em-twitter
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

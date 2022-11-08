@@ -1,8 +1,6 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-
 PORTNAME=	libfishsound
 PORTVERSION=	1.0.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	https://downloads.xiph.org/releases/libfishsound/ \
 		https://ftp.osuosl.org/pub/xiph/releases/libfishsound/ \
@@ -10,6 +8,7 @@ MASTER_SITES=	https://downloads.xiph.org/releases/libfishsound/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Programming interface to decode/encode audio data
+WWW=		https://www.xiph.org/fishsound/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

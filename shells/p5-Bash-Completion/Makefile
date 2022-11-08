@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Bash-Completion
 PORTVERSION=	0.008
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extensible system to provide bash completion
+WWW=		https://metacpan.org/release/Bash-Completion
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

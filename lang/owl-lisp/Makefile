@@ -1,5 +1,3 @@
-# Created by: rene@FreeBSD.org
-
 PORTNAME=	owl-lisp
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.23
@@ -7,6 +5,7 @@ CATEGORIES=	lang
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Functional dialect of Scheme
+WWW=		https://github.com/aoh/owl-lisp/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENCE

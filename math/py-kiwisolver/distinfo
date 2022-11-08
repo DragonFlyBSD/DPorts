@@ -1,3 +1,3 @@
-TIMESTAMP = 1641234419
-SHA256 (kiwisolver-1.3.2.tar.gz) = fc4453705b81d03568d5b808ad8f09c77c47534f6ac2e72e733f9ca4714aa75c
-SIZE (kiwisolver-1.3.2.tar.gz) = 54611
+TIMESTAMP = 1664427707
+SHA256 (kiwisolver-1.4.4.tar.gz) = d41997519fcba4a1e46eb4a2fe31bc12f0ff957b2b81bac28db24744f333e955
+SIZE (kiwisolver-1.4.4.tar.gz) = 97093

@@ -1,5 +1,3 @@
-# Created by: Jov <amutu@amutu.com>
-
 PORTNAME=	pyxb
 PORTVERSION=	1.2.6
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	PyXB-${DISTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python XML schema bindings
+WWW=		http://pyxb.sourceforge.net
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

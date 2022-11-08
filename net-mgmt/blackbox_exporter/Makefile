@@ -1,12 +1,12 @@
-# Created by: Boris Samorodov <bsam@FreeBSDD.org>
-
 PORTNAME=	blackbox_exporter
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.21.1
+DISTVERSION=	0.22.0
+PORTREVISION=	3
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Prometheus exporter for endpoints over HTTP(S), DNS, TCP and ICMP
+WWW=		https://github.com/prometheus/blackbox_exporter
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

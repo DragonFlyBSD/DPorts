@@ -1,5 +1,3 @@
-# Created by: Douglas Thrift <douglas@douglasthrift.net>
-
 PORTNAME=	yard-chef
 PORTVERSION=	2.0.0
 CATEGORIES=	textproc devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	YARD plugin for Chef
+WWW=		https://github.com/rightscale/yard-chef
 
 LICENSE=	MIT
 

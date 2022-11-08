@@ -1,5 +1,3 @@
-# Created by: Olivier Tharan <olive@oban.frmug.org>
-
 PORTNAME=	nload
 PORTVERSION=	0.7.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.roland-riegel.de/nload/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Console application which monitors network traffic in real time
+WWW=		http://www.roland-riegel.de/nload/
 
 LICENSE=	GPLv2
 

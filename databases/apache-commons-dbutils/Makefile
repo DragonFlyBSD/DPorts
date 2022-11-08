@@ -1,5 +1,3 @@
-# Created by: Michael Winking <mwfp@foldl.net>
-
 PORTNAME=	commons-dbutils
 PORTVERSION=	1.7
 CATEGORIES=	databases java
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	JDBC helper library
+WWW=		https://commons.apache.org/proper/commons-dbutils/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
-
 PORTNAME=	webby
 PORTVERSION=	0.9.4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Small website management system
+WWW=		https://rubygems.org/gems/webby
 
 LICENSE=	MIT
 

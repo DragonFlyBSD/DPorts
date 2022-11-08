@@ -1,11 +1,13 @@
 PORTNAME=	pynest2d
+# XXX there is no 4.13.1
 DISTVERSION=	4.12.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	y@trombik.org
+MAINTAINER=	db@FreeBSD.org
 COMMENT=	CPython bindings for libnest2d by Ultimaker
+WWW=		https://github.com/Ultimaker/libnest2d
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE

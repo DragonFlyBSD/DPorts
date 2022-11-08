@@ -1,5 +1,3 @@
-# Created by: Xavier Beaudouin <kiwi@oav.net>
-
 PORTNAME=	policyd
 PORTVERSION=	1.82
 PORTREVISION=	1
@@ -11,6 +9,7 @@ PKGNAMESUFFIX=	-sf
 
 MAINTAINER=	mat@FreeBSD.org
 COMMENT=	Anti-spam plugin for Postfix (written in C)
+WWW=		https://wiki.policyd.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

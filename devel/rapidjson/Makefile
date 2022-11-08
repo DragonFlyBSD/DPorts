@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	rapidjson
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.1.0-524
@@ -8,6 +6,7 @@ CATEGORIES=	devel textproc
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Fast JSON parser/generator for C++ with both SAX/DOM style API
+WWW=		https://github.com/miloyip/rapidjson
 
 LICENSE=	unknown
 LICENSE_NAME=	RapidJSON

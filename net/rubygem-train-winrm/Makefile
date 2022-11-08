@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	train-winrm
 PORTVERSION=	0.2.11
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Allow applictaions using Train to speak to Windows using Remote Management
+WWW=		https://github.com/inspec/train-winrm
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

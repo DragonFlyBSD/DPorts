@@ -1,5 +1,3 @@
-# Created by: Andreas Klemm <andreas@klemm.gtn.com>
-
 PORTNAME=	bzip
 PORTVERSION=	0.21
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/archivers/bzip/
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Block-sorting file compressor
+WWW=		https://bsdforge.com/projects/archivers/bzip/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

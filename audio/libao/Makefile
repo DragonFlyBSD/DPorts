@@ -1,5 +1,3 @@
-# Created by: t.vanklaveren@student.utwente.nl
-
 PORTNAME=	libao
 PORTVERSION=	1.2.0
 PORTREVISION=	5
@@ -9,6 +7,7 @@ MASTER_SITES=	https://downloads.xiph.org/releases/ao/ \
 
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Portable audio output library
+WWW=		https://www.xiph.org/ao/
 
 LICENSE=	GPLv2
 

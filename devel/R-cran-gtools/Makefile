@@ -1,12 +1,11 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	gtools
-PORTVERSION=	3.9.2.2
+PORTVERSION=	3.9.3
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Various R programming tools
+WWW=		https://cran.r-project.org/web/packages/gtools/
 
 LICENSE=	GPLv2
 

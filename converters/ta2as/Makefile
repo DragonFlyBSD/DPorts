@@ -1,11 +1,10 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	ta2as
 PORTVERSION=	0.8.2
 CATEGORIES=	converters devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	TASM to AT&T asm syntax converter (GNU AS)
+WWW=		https://github.com/mefistotelis/ta2as
 
 LICENSE=	TA2AS
 LICENSE_NAME=	TA2AS license

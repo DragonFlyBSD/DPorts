@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	NunniMCAX
 PORTVERSION=	1.4.1
 CATEGORIES=	textproc
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C, non validating XML parser with SAX-like API
+WWW=		https://sourceforge.net/projects/nunnimcax/
 
 USES=		uidfix
 USE_LDCONFIG=	YES

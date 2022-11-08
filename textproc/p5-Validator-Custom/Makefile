@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@sunpoet.net>
-
 PORTNAME=	Validator-Custom
 PORTVERSION=	1.0201
 CATEGORIES=	textproc perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Validator::Custom for simple data validation
+WWW=		https://metacpan.org/release/Validator-Custom
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

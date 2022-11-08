@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Math-Prime-Util
 PORTVERSION=	0.73
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utilities related to prime numbers, including fast sieves and factoring
+WWW=		https://metacpan.org/release/Math-Prime-Util
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

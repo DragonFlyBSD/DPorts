@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	elk
 PORTVERSION=	3.99.8
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://sam.zoy.org/elk/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Embeddable Scheme interpreter
+WWW=		http://sam.zoy.org/projects/elk/
 
 LIB_DEPENDS=	libgdbm.so:databases/gdbm \
 		libelf.so:devel/libelf

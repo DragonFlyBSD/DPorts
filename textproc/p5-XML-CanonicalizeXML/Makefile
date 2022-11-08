@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	XML-CanonicalizeXML
 PORTVERSION=	0.10
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extension for inclusive/exclusive canonicalization of XML
+WWW=		https://metacpan.org/release/XML-CanonicalizeXML
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

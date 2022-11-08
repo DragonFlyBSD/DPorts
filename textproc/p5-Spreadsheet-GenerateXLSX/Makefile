@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Spreadsheet-GenerateXLSX
 PORTVERSION=	0.05
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generate XLSX spreadsheet from array ref(s)
+WWW=		https://metacpan.org/release/Spreadsheet-GenerateXLSX
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Will Andrews <andrews@technologist.com>
-
 PORTNAME=	robodoc
 PORTVERSION=	4.99.44
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	http://rfsber.home.xs4all.nl/Robo/archives/
 
 MAINTAINER=	krion@FreeBSD.org
 COMMENT=	Code reference program similar to cxref that produces HTML
+WWW=		https://rfsber.home.xs4all.nl/Robo/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

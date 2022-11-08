@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	minitar-cli
 PORTVERSION=	0.8
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library and command-line utility for tar archives
+WWW=		https://github.com/halostatue/minitar
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

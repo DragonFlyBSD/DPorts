@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	App-CLI-Extension
 PORTVERSION=	1.421
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extension for App::CLI extension module
+WWW=		https://metacpan.org/release/App-CLI-Extension
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

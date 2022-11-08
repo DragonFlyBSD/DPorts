@@ -1,5 +1,3 @@
-# Created by: kuriyama
-
 PORTNAME=	OpenSP
 PORTVERSION=	1.5.2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/openjade/${PORTNAME:tl}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Collection of SGML/XML tools
+WWW=		http://openjade.sourceforge.net/doc/
 
 LICENSE=	JamesClark
 LICENSE_NAME=	License of James Clark's Software

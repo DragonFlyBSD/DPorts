@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	File-Pid
 PORTVERSION=	1.01
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pid File Manipulation
+WWW=		https://metacpan.org/release/File-Pid
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

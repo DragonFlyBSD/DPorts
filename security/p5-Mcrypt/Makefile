@@ -1,5 +1,3 @@
-# Created by: Tatsuki Makino <tatsuki_makino@hotmail.com>
-
 PORTNAME=	Mcrypt
 DISTVERSION=	2.5.7.0
 PORTREVISION=	4
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	tatsuki_makino@hotmail.com
 COMMENT=	Perl extension for the Mcrypt cryptography library
+WWW=		https://metacpan.org/release/Mcrypt
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

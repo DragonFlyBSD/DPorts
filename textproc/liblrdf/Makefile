@@ -1,5 +1,3 @@
-# Created by: Tilman Linneweh <arved@FreeBSD.org>
-
 PORTNAME=	liblrdf
 DISTVERSION=	0.6.1
 CATEGORIES=	textproc
@@ -7,6 +5,7 @@ MASTER_SITES=	GENTOO
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for manipulating RDF files describing LADSPA plugins
+WWW=		https://sourceforge.net/projects/lrdf/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

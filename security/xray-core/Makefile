@@ -1,16 +1,17 @@
 PORTNAME=	xray-core
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.5
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	security
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Set of network penetration tools
+WWW=		https://github.com/XTLS/Xray-core
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules
+USES=		go:1.18,modules
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
 GO_TARGET=	./main:xray

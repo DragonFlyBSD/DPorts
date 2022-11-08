@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Tie-Array-Sorted
 PORTVERSION=	1.41
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl array which is kept sorted
+WWW=		https://metacpan.org/release/Tie-Array-Sorted
 
 LICENSE=	GPLv2+
 

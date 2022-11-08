@@ -1,5 +1,3 @@
-# Created by: yoshiaki Uchikawa
-
 PORTNAME=	lame
 PORTVERSION=	3.100
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/3.100
 
 MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	Fast MP3 encoder kit
+WWW=		http://lame.sourceforge.net/
 
 LICENSE=		LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING

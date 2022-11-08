@@ -5,6 +5,7 @@ MASTER_SITES=	http://www.drumgizmo.org/releases/${PORTNAME}-${DISTVERSION}/
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	DrumGizmo drumkit editor
+WWW=		https://www.drumgizmo.org/
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -13,7 +14,7 @@ LIB_DEPENDS=	libao.so:audio/libao \
 		libsndfile.so:audio/libsndfile
 
 USES=		autoreconf compiler:c++14-lang gmake libtool localbase pkgconfig qt:5
-USE_QT=		buildtools_build core gui linguisttools_build widgets xml
+USE_QT=		buildtools:build core gui linguisttools:build widgets xml
 
 GNU_CONFIGURE=	yes
 

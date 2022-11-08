@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MouseX-Foreign
 PORTVERSION=	1.000
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Extends non-Mouse classes as well as Mouse classes
+WWW=		https://metacpan.org/release/MouseX-Foreign
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

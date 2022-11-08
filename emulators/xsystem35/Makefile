@@ -1,5 +1,3 @@
-# Created by: Seiichirou Hiraoka
-
 PORTNAME=	xsystem35
 DISTVERSION=	1.7.3-pre5
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTFILES=	${DISTNAME:S/-/_/}.orig${EXTRACT_SUFX}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	AliceSoft System 3.5/3.6/3.8/3.9 on X Window System
+WWW=		https://web.archive.org/web/20121222144009/http://8ne.sakura.ne.jp:20008/chika/unitbase/xsys35/
 
 LICENSE=	GPLv2+
 

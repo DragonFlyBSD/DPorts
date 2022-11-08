@@ -1,5 +1,3 @@
-# Created by: Kris Kennaway <kris@FreeBSD.org>
-
 PORTNAME=	cowsay
 PORTVERSION=	3.04
 DISTVERSIONPREFIX=	cowsay-
@@ -8,6 +6,7 @@ CATEGORIES=	games
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Configurable talking characters in ASCII art
+WWW=		https://github.com/tnalpgge/rank-amateur-cowsay
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Cezary Morga <cm@therek.net>
-
 PORTNAME=	Module-Manifest
 PORTVERSION=	1.09
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Parse and examine a Perl distribution MANIFEST file
+WWW=		https://metacpan.org/release/Module-Manifest
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

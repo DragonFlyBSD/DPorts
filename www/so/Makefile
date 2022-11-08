@@ -1,11 +1,12 @@
 PORTNAME=	so
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.6
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	sec.research.2005@gmail.com
 COMMENT=	Terminal interface for Stack Overflow
+WWW=		https://github.com/samtay/so
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,8 +16,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	samtay
 
 PLIST_FILES=	bin/so
-PORTDOCS=	*.md
 PORTDATA=	themes/*.toml
+PORTDOCS=	*.md
 
 OPTIONS_DEFINE=	DOCS
 
@@ -29,5 +30,4 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 
-.include "${.CURDIR}/bsd.so.mk"
 .include <bsd.port.mk>

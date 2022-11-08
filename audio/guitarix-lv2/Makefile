@@ -1,6 +1,6 @@
 PORTNAME=	guitarix
 DISTVERSION=	0.44.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/
 PKGNAMESUFFIX=	-lv2
@@ -8,6 +8,7 @@ DISTNAME=	${PORTNAME}2-${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Virtual versatile amplification for Jack and set of LV2 plugins
+WWW=		https://sourceforge.net/projects/guitarix/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

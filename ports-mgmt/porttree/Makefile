@@ -1,5 +1,3 @@
-# Created by: Vladimir Chukharev
-
 PORTNAME=	porttree
 PORTVERSION=	1.1.r${SVN_REV}
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Show dependencies of FreeBSD port as pseudo graphical tree
+WWW=		https://sourceforge.net/projects/porttree/
 
 LICENSE=	MIT
 

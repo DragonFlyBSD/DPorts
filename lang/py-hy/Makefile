@@ -1,5 +1,3 @@
-# Created by: David Kalliecharan <dave@dal.ca>
-
 PORTNAME=	hy
 PORTVERSION=	0.19.0
 CATEGORIES=	lang python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dave@dal.ca
 COMMENT=	Dialect of Lisp that is embedded in Python
+WWW=		https://docs.hylang.org/en/stable/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

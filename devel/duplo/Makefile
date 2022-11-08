@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	duplo
 PORTVERSION=	0.2.0
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}_src
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Find duplicated code blocks in large C/C++/Java/C#/VB.Net systems
+WWW=		http://duplo.giants.ch/
 
 USES=		gmake
 

@@ -5,6 +5,7 @@ CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Quick, simple but powerful cross-platform image editor
+WWW=		https://photoflare.io/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
@@ -13,7 +14,7 @@ LIB_DEPENDS=	libGraphicsMagick++.so:graphics/GraphicsMagick
 
 USES=		desktop-file-utils gl qmake qt:5 localbase pkgconfig
 USE_GITHUB=	yes
-USE_QT=		core gui network printsupport widgets buildtools_build linguisttools_build
+USE_QT=		core gui network printsupport widgets buildtools:build linguisttools:build
 USE_GL=		gl
 
 CXXFLAGS+=	`pkg-config --cflags GraphicsMagick++`

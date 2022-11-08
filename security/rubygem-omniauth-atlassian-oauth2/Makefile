@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	omniauth-atlassian-oauth2
 PORTVERSION=	0.2.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Atlassian OAuth2 strategy for OmniAuth
+WWW=		https://github.com/aguynamedben/omniauth-atlassian-oauth2
 
 LICENSE=	MIT
 

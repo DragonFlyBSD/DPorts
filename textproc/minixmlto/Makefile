@@ -1,15 +1,17 @@
 PORTNAME=	minixmlto
-PORTVERSION=	0.0.6
+PORTVERSION=	0.0.7
 CATEGORIES=	textproc
 
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Minimalistic alternative to xmlto
+WWW=		https://github.com/bapt/minixmlto
 
 LICENSE=	BSD2CLAUSE
 
 RUN_DEPENDS=	docbook-xsl>0:textproc/docbook-xsl \
 		xsltproc:textproc/libxslt \
-		html2text:textproc/html2text
+		html2text:textproc/html2text \
+		docbook2mdoc:textproc/docbook2mdoc
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	bapt

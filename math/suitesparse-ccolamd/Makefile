@@ -1,10 +1,9 @@
-# Created by: Thierry Thomas (<thierry@pompo.net>)
-
 PORTNAME=	${MPORTNAME:tl}
 PORTVERSION=	2.9.6
 CATEGORIES=	math
 
 COMMENT=	Constrained column approximate minimum degree ordering
+WWW=		https://faculty.cse.tamu.edu/davis/suitesparse.html
 
 LICENSE=	BSD3CLAUSE
 

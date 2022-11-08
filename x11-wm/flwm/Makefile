@@ -1,5 +1,3 @@
-# Created by: Dima Sivachenko <dima@chg.ru>
-
 PORTNAME=	flwm
 PORTVERSION=	1.16
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	x11-wm
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The Fast Light Window Manager
+WWW=		https://github.com/bbidulock/flwm
 
 LICENSE=	GPLv2+
 

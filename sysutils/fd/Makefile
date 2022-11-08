@@ -1,13 +1,13 @@
-# Created by: Andrey Cherkashin <andoriyu@gmail.com>
-
 PORTNAME=	fd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	8.4.0
+PORTREVISION=	2
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-find
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Simple, fast and user-friendly alternative to find
+WWW=		https://github.com/sharkdp/fd
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual

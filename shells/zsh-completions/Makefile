@@ -1,12 +1,10 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	zsh-completions
-PORTVERSION=	0.33.0
-PORTREVISION=	1
+PORTVERSION=	0.34.0
 CATEGORIES=	shells
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Additional completion definitions for Zsh
+WWW=		https://github.com/zsh-users/zsh-completions
 
 LICENSE=	ZSH
 LICENSE_NAME=	ZSH license

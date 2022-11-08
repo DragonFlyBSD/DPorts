@@ -5,6 +5,7 @@ CATEGORIES=	x11-fonts
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Graphical font manager
+WWW=		https://github.com/fcoiffie/fontmatrix
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -16,6 +17,6 @@ USES=		cmake compiler:c++11-lang qt:5
 
 USE_GITHUB=	yes
 USE_QT=		buildtools core gui linguisttools network printsupport \
-		qmake_build sql svg webkit widgets xml
+		qmake:build sql svg webkit widgets xml
 
 .include <bsd.port.mk>

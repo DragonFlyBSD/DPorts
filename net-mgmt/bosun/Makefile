@@ -1,11 +1,12 @@
 PORTNAME=	bosun
 DISTVERSION=	0.9.0
 DISTVERSIONSUFFIX=	-preview
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	langer.markus@gmail.com
 COMMENT=	Time series alerting framework developed by Stack Exchange
+WWW=		https://bosun.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

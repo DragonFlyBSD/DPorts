@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	zbar-py
 PORTVERSION=	1.0.4
 CATEGORIES=	graphics python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Interface to the zbar bar-code reading library
+WWW=		https://pypi.org/project/zbar-py/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

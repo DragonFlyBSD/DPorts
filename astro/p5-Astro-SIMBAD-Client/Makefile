@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	Astro-SIMBAD-Client
 PORTVERSION=	0.046
 CATEGORIES=	astro perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	OO interface to SIMBAD4
+WWW=		https://metacpan.org/release/Astro-SIMBAD-Client
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

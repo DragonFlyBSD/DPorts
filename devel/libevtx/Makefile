@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	libevtx
 DISTVERSION=	alpha-20210525
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/libyal/libevtx/releases/download/${PORTVERSION:
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library and tooling to access the Windows XML Event Log (EVTX) format
+WWW=		https://github.com/libyal/libevtx
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING

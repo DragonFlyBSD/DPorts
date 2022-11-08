@@ -1,5 +1,3 @@
-# Created by: Joshua D. Abraham <jabra@ccs.neu.edu>
-
 PORTNAME=	Test-DatabaseRow
 PORTVERSION=	2.04
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple database tests
+WWW=		https://metacpan.org/release/Test-DatabaseRow
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

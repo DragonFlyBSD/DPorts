@@ -1,5 +1,3 @@
-# Created by: Martin Jackson <mhjacks@swbell.net>
-
 PORTNAME=	pysnmp
 PORTVERSION=	4.4.9
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	mhjacks@swbell.net
 COMMENT=	SNMP framework for Python
+WWW=		https://github.com/etingof/pysnmp
 
 LICENSE=	BSD2CLAUSE
 

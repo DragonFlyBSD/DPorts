@@ -1,5 +1,3 @@
-# Created by: Pierre David <pdagog@gmail.com>, Jean Benoit <jean@unistra.fr>
-
 PORTNAME?=	netmagis
 PORTVERSION?=	2.3.4
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMESUFFIX?=	-common
 
 MAINTAINER?=	pdagog@gmail.com
 COMMENT?=	Netmagis common infrastructure
+WWW=		http://www.netmagis.org/
 
 LICENSE=	CECILL-B
 LICENSE_NAME=	CeCILL-B Free Software License Agreement

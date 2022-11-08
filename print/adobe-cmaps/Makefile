@@ -1,5 +1,3 @@
-# Created by: KATO Tsuguru <tkato@prontomail.com>
-
 PORTNAME=	adobe-cmaps
 PORTVERSION=	20051217
 PORTREVISION=	4
@@ -12,6 +10,7 @@ DIST_SUBDIR=	adobe
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Adobe CMap collection
+WWW=		http://partners.adobe.com/asn/tech/type/ftechnotes.jsp
 
 USES=		fonts
 NO_WRKSUBDIR=	yes

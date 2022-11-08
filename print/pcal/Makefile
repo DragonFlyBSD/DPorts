@@ -1,5 +1,3 @@
-# Created by: mwest@uct.ac.za
-
 PORTNAME=	pcal
 PORTVERSION=	4.11.0
 CATEGORIES=	print
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PostScript calendar program
+WWW=		http://pcal.sourceforge.net/
 
 USES=		cpe shebangfix gmake tar:tgz
 

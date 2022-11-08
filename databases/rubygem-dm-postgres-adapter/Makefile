@@ -1,5 +1,3 @@
-# Created by: stas
-
 PORTNAME=	dm-postgres-adapter
 PORTVERSION=	1.2.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	PostgreSQL Adapter for DataMapper
+WWW=		https://github.com/datamapper/dm-postgres-adapter
 
 LICENSE=	MIT
 

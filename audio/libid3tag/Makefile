@@ -1,11 +1,10 @@
-# Created by: Sergey Akifyev <asa@gascom.ru>
-
 PORTNAME=	libid3tag
 DISTVERSION=	0.16.2
 CATEGORIES=	audio
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ID3 tags library (part of MAD project)
+WWW=		http://mad.sourceforge.net/
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual

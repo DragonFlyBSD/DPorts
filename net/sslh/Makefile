@@ -1,5 +1,3 @@
-# Created by: Jui-Nan Lin <jnlin@csie.nctu.edu.tw>
-
 PORTNAME=	sslh
 PORTVERSION=	1.22c
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	net
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	SSL/SSH multiplexer
+WWW=		https://www.rutschle.net/tech/sslh.shtml
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

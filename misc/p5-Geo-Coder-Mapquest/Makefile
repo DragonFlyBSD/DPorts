@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Geo-Coder-Mapquest
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Geocode addresses with Mapquest
+WWW=		https://metacpan.org/release/Geo-Coder-Mapquest
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

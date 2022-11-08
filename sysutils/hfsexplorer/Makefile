@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	hfsexplorer
 DISTVERSIONPREFIX=	${PORTNAME}-
 DISTVERSION=	0.23.1
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils java
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	HFSExplorer read Mac-formatted harddisks and disk images
+WWW=		https://www.catacombae.org/hfsexplorer/
 
 LICENSE=	GPLv3
 

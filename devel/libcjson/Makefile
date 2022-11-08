@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	libcjson
 PORTVERSION=	1.7.15
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ultralightweight JSON parser in ANSI C
+WWW=		https://github.com/DaveGamble/cJSON
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

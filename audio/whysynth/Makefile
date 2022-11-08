@@ -1,5 +1,3 @@
-# Created by: trasz <trasz@pin.if.uz.zgora.pl>
-
 PORTNAME=	whysynth
 PORTVERSION=	20120903
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	http://smbolton.com/whysynth/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Versatile softsynth implemented as a DSSI plugin
+WWW=		http://smbolton.com/whysynth.html
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi

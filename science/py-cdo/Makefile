@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cdo
 PORTVERSION=	1.5.6
 CATEGORIES=	science python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python binding to CDO (Climate Data Operators)
+WWW=		https://code.mpimet.mpg.de/projects/cdo/wiki/Cdo%7Brbpy%7D
 
 LICENSE=	GPLv2
 

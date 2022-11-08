@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	oauth2
 DISTVERSION=	1.9.0.post1
 CATEGORIES=	net python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python library for OAuth version 1.0
+WWW=		https://github.com/joestump/python-oauth2
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	rack-protection
 PORTVERSION=	1.5.5
 CATEGORIES=	www rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	1
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Collection of Rack middleware to protect against opportunistic attack
+WWW=		https://github.com/sinatra/rack-protection/tree/stable-1.5
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/License

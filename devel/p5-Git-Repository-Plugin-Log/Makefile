@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Git-Repository-Plugin-Log
 PORTVERSION=	1.314
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Add a log() method to Git::Repository
+WWW=		https://metacpan.org/release/Git-Repository-Plugin-Log
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

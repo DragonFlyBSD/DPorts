@@ -1,10 +1,11 @@
 PORTNAME=	zipangu
-PORTVERSION=	0.3.0
+PORTVERSION=	0.3.1
 CATEGORIES=	japanese
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Japanese Utility Functions and Data
+WWW=		https://cran.r-project.org/web/packages/zipangu/
 
 LICENSE=	MIT
 

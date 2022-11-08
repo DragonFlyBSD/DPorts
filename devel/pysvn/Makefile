@@ -1,5 +1,3 @@
-# Created by: bra@fsn.hu
-
 PORTNAME=	pysvn
 PORTVERSION=	1.9.12
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	http://pysvn.barrys-emacs.org/source_kits/
 
 MAINTAINER=	bra@fsn.hu
 COMMENT=	Python binding for Subversion
+WWW=		http://pysvn.tigris.org/
 
 LICENSE=	APACHE11
 LICENSE_FILE=	${WRKSRC}/../LICENSE.txt

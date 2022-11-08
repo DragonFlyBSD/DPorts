@@ -1,5 +1,3 @@
-# Created by: Mathieu Simon <freebsd@simweb.ch>
-
 PORTNAME=	lldpd
 PORTVERSION=	1.0.14
 CATEGORIES=	net-mgmt
@@ -7,6 +5,7 @@ MASTER_SITES=	http://media.luffy.cx/files/${PORTNAME}/
 
 MAINTAINER=	freebsd@simweb.ch
 COMMENT=	LLDP (802.1ab)/CDP/EDP/SONMP/FDP daemon and SNMP subagent
+WWW=		https://lldpd.github.io/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE

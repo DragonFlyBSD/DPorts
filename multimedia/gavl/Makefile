@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@ahze.net>
-
 PORTNAME=	gavl
 PORTVERSION=	1.4.0
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/gmerlin/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Library for handling uncompressed video and audio data
+WWW=		http://gmerlin.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

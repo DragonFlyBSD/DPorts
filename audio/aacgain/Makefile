@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	aacgain
 PORTVERSION=	1.8
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://aacgain.altosdesign.com/alvarez/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Normalizes the volume of MP3 and AAC (MP4/M4A/QuickTime) media files
+WWW=		http://aacgain.altosdesign.com/
 
 LICENSE=	GPLv2
 

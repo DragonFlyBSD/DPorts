@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	bayesian-optimization
 PORTVERSION=	1.2.0
 CATEGORIES=	math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bayesian Optimization package
+WWW=		https://github.com/fmfn/BayesianOptimization
 
 LICENSE=	MIT
 

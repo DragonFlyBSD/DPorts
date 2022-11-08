@@ -1,11 +1,10 @@
-# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-
 PORTNAME=	bsh
 DISTVERSION=	2.1.0
 CATEGORIES=	lang java
 
 MAINTAINER=	pfg@FreeBSD.org
 COMMENT=	Beanshell java scripting language
+WWW=		http://www.beanshell.org/
 
 LICENSE=	APACHE20
 

@@ -1,5 +1,3 @@
-# Created by: Eric Schnoebelen <eric@cirr.com>
-
 PORTNAME=	Getopt-ArgvFile
 PORTVERSION=	1.11
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for processing argument vectors
+WWW=		https://metacpan.org/release/Getopt-ArgvFile
 
 LICENSE=	ART10
 

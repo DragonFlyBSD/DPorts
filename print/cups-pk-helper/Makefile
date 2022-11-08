@@ -1,6 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-#   $MCom: ports/print/cups-pk-helper/Makefile,v 1.1 2009/12/29 16:01:07 ahze Exp $
-
 PORTNAME=	cups-pk-helper
 PORTVERSION=	0.2.6
 CATEGORIES=	print
@@ -8,6 +5,7 @@ MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Helper that makes system-config-printer use PolicyKit
+WWW=		https://www.freedesktop.org/software/cups-pk-helper
 
 LICENSE=	GPLv2
 

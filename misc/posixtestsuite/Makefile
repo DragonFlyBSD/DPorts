@@ -1,5 +1,3 @@
-# Created by: Alexey Zelkin <phantom@FreeBSD.org>
-
 PORTNAME=	posixtestsuite
 PORTVERSION=	1.5.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/posixtest/posixtest/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open POSIX Test Suite
+WWW=		http://posixtest.sourceforge.net/
 
 WRKSRC=		${WRKDIR}/posixtestsuite
 

@@ -1,5 +1,3 @@
-# Created by: Vsevolod Stakhov <vsevolod@highsecure.ru>
-
 PORTNAME=	htpdate
 PORTVERSION=	1.2.3
 CATEGORIES=	net
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.vervest.org/htp/archive/c/ \
 
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Time synchronization over http utility
+WWW=		https://www.vervest.org/htp/
 
 LICENSE=	GPLv2+
 

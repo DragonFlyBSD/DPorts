@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	multicool
 DISTVERSION=	0.1-12
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Permutations of Multisets in Cool-Lex Order
+WWW=		https://cran.r-project.org/package=multicool
 
 LICENSE=	GPLv2
 

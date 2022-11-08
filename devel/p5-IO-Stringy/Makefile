@@ -1,5 +1,3 @@
-# Created by: Eivind Eklund <eivind@FreeBSD.org>
-
 PORTNAME=	IO-Stringy
 PORTVERSION=	2.113
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Use IO handles with non-file objects
+WWW=		https://metacpan.org/release/IO-Stringy
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	ExtUtils-AutoInstall
 PORTVERSION=	0.64
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Automatic install of dependencies via CPAN
+WWW=		https://metacpan.org/release/ExtUtils-AutoInstall
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-
 PORTNAME=	annexlib
 PORTVERSION=	0.13.2
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	OCaml subroutines collection
+WWW=		http://raevnos.pennmush.org/code/extlib/
 
 LICENSE=	LGPL21
 

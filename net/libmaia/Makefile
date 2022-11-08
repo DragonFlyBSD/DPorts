@@ -1,5 +1,3 @@
-# Created by: Pawel Pekala <pawel@FreeBSD.org>
-
 PORTNAME=	libmaia
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.0
@@ -8,11 +6,12 @@ CATEGORIES=	net
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	XML-RPC library for Qt
+WWW=		https://github.com/wiedi/libmaia
 
 USES=		compiler:c++11-lang gmake qmake qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	wiedi
-USE_QT=		buildtools_build network xml
+USE_QT=		buildtools:build network xml
 
 PLIST_FILES=	include/maia/maiaObject.h \
 		include/maia/maiaXmlRpcClient.h \

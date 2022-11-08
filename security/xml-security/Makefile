@@ -1,5 +1,3 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	xml-security
 DISTVERSION=	1_5_5
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-src-${DISTVERSION}
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Java library for XML Signature and Encryption
+WWW=		https://santuario.apache.org/javaindex.html
 
 BUILD_DEPENDS=	${JAVALIBDIR}/commons-logging.jar:java/apache-commons-logging \
 		${JAVALIBDIR}/xalan.jar:textproc/xalan-j

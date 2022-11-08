@@ -1,5 +1,3 @@
-# Created by: Johann Visagie <wjv@FreeBSD.org>
-
 PORTNAME=	recombine
 PORTVERSION=	1.41
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}.src.doc
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Program to fit population models across sites
+WWW=		https://evolution.genetics.washington.edu/lamarc/recombine.html
 
 USES=		shebangfix
 

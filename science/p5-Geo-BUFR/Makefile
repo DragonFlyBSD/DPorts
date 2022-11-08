@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	Geo-BUFR
 PORTVERSION=	1.38
 CATEGORIES=	science perl5 geography
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl extension for handling of WMO BUFR files
+WWW=		https://metacpan.org/release/Geo-BUFR
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENCE

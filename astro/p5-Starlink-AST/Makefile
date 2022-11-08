@@ -1,5 +1,3 @@
-# Created by: Wen Heping<wen@FreeBSD.org>
-
 PORTNAME=	Starlink-AST
 PORTVERSION=	1.05
 CATEGORIES=	astro perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Interface to the Starlink AST library
+WWW=		https://metacpan.org/release/Starlink-AST
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual

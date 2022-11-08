@@ -1,5 +1,3 @@
-# Created by: <hvo.pm@xs4all.nl>
-
 PORTNAME=	Interchange6
 PORTVERSION=	0.120
 CATEGORIES=	www perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Open Source Shop Machine
+WWW=		https://metacpan.org/release/Interchange6
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

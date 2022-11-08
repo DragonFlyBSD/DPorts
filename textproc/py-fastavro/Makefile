@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	fastavro
 PORTVERSION=	0.24.2
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Fast AVRO for Python
+WWW=		https://pypi.python.org/pypi/fastavro
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

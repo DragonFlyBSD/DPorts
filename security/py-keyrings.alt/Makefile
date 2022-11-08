@@ -1,5 +1,3 @@
-# Created by: Douglas Thrift <douglas@douglasthrift.net>
-
 PORTNAME=	keyrings.alt
 PORTVERSION=	3.1.1
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	Alternate Python keyring implementations
+WWW=		https://pypi.org/project/keyrings.alt/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

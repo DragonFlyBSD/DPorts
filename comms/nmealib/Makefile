@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	nmealib
 PORTVERSION=	0.5.3
 CATEGORIES=	comms
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/nmea/NmeaLib/nmea-0.5.x
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Library for working with the NMEA protocol
+WWW=		http://nmea.sourceforge.net/
 
 LICENSE=	LGPL21
 

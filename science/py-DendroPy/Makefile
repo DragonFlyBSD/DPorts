@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	DendroPy
 PORTVERSION=	4.5.2
 CATEGORIES=	science python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Phylogenetic computing library
+WWW=		http://packages.python.org/DendroPy/
 
 LICENSE=	BSD3CLAUSE
 

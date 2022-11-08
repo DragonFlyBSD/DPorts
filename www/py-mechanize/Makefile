@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	mechanize
 PORTVERSION=	0.4.8
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Stateful programmatic web browsing in Python
+WWW=		https://github.com/python-mechanize/mechanize
 
 LICENSE=	BSD3CLAUSE
 

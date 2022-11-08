@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	iconv
 PORTVERSION=	1.0.8
 CATEGORIES=	converters rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	iconv wrapper library
+WWW=		https://github.com/ruby/iconv
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	nghttp2
 PORTVERSION=	1.48.0
 CATEGORIES=	www net
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/nghttp2/nghttp2/releases/download/v${PORTVERSIO
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HTTP/2.0 C Library
+WWW=		https://nghttp2.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

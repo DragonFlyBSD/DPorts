@@ -1,5 +1,3 @@
-# Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
-
 PORTNAME=	dmg2img
 PORTVERSION=	1.6.7
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ MASTER_SITES=	http://vu1tur.eu.org/tools/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	DMG2IMG convert tool
+WWW=		http://vu1tur.eu.org/tools/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

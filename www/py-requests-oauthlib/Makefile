@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	requests-oauthlib
 PORTVERSION=	1.3.1
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	OAuthlib authentication support for Requests
+WWW=		https://github.com/requests/requests-oauthlib
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE

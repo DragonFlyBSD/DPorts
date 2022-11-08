@@ -1,12 +1,11 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	airbrussh
-PORTVERSION=	1.4.0
+PORTVERSION=	1.4.1
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Replacement log formatter for SSHKit
+WWW=		https://github.com/mattbrictson/airbrussh
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

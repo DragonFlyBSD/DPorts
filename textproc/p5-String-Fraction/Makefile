@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	String-Fraction
 PORTVERSION=	0.30
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert fractions into Unicode chars
+WWW=		https://metacpan.org/release/String-Fraction
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

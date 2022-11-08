@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	Net-UPS
 PORTVERSION=	0.16
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl Client library for UPS XML Shipping API
+WWW=		https://metacpan.org/release/Net-UPS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

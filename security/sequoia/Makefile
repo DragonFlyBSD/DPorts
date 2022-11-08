@@ -1,11 +1,12 @@
 PORTNAME=	sequoia
 PORTVERSION=	0.19.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	16
+PORTREVISION=	18
 CATEGORIES=	security
 
 MAINTAINER=	phryk-ports@wzff.de
 COMMENT=	Modern PGP implementation, written in rust
+WWW=		https://sequoia-pgp.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

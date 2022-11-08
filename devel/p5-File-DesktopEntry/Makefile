@@ -1,5 +1,3 @@
-# Created by: Jose Alonso Cardenas Marquez <acardenas@bsd.org.pe>
-
 PORTNAME=	File-DesktopEntry
 PORTVERSION=	0.22
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Object to handle desktop files
+WWW=		https://metacpan.org/release/File-DesktopEntry
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

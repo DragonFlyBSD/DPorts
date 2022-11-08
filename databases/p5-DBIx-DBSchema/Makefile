@@ -1,13 +1,12 @@
-# Created by: Peter Avalos <pavalos@theshell.com>
-
 PORTNAME=	DBIx-DBSchema
-PORTVERSION=	0.45
+PORTVERSION=	0.47
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	OO-interface to database schemas
+WWW=		https://metacpan.org/release/DBIx-DBSchema
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

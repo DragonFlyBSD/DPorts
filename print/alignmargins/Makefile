@@ -1,5 +1,3 @@
-# Created by: Michael Nottebrock <lofi@FreeBSD.org>
-
 PORTNAME=	alignmargins
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTFILES=	alignmargins align.ps
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility script to generate custom margins in PPDs for CUPS
+WWW=		https://www.linuxprinting.org
 
 NO_BUILD=	yes
 USES=		perl5

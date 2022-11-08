@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Data-Object-Vars
 PORTVERSION=	2.01
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Stashable Role for Data::Object
+WWW=		https://metacpan.org/release/Data-Object-Vars
 
 LICENSE=	APACHE20
 

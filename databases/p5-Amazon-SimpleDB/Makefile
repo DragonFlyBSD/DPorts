@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Amazon-SimpleDB
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Low-level perlish interface for working with Amazon SimpleDB service
+WWW=		https://metacpan.org/release/Amazon-SimpleDB
 
 LICENSE=	ART10
 

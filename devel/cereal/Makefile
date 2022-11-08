@@ -1,10 +1,12 @@
 PORTNAME=		cereal
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.3.2
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	teodor@sigaev.ru
 COMMENT=	C++11 library for serialization
+WWW=		https://github.com/USCiLab/cereal
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

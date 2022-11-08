@@ -1,5 +1,3 @@
-# Created by: Bruce M Simpson <bms@FreeBSD.org>
-
 PORTNAME=	openprinting
 PORTVERSION=	1.0
 PORTREVISION=	5
@@ -10,6 +8,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sun's implementation of the OpenPrinting API (PAPI)
+WWW=		http://openprinting.sourceforge.net/
 
 WRKSRC=		${WRKDIR}/papi-${PORTVERSION}_beta
 

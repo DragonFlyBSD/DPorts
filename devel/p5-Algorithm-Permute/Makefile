@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	Algorithm-Permute
 PORTVERSION=	0.16
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to handy and fast permutation
+WWW=		https://metacpan.org/release/Algorithm-Permute
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

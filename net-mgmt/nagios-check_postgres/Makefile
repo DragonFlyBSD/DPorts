@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman <matthew@FreeBSD.org>
-
 PORTNAME=	check_postgres
 PORTVERSION=	2.25.0
 CATEGORIES=	net-mgmt databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	nagios-
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Monitor various attributes of your PostgreSQL database
+WWW=		https://bucardo.org/check_postgres/
 
 LICENSE=	BSD2CLAUSE
 

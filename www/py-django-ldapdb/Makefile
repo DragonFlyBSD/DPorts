@@ -1,5 +1,3 @@
-# Created by: Alexander Kriventsov <avk@vl.ru>
-
 PORTNAME=	django-ldapdb
 DISTVERSION=	1.5.1-7
 DISTVERSIONSUFFIX=	-gd3a0b20
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	avk@vl.ru
 COMMENT=	LDAP database backend for Django
+WWW=		https://github.com/django-ldapdb/django-ldapdb
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

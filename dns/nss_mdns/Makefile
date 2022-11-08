@@ -1,11 +1,10 @@
-# Created by: Bruce M. Simpson <bms@FreeBSD.org>
-
 PORTNAME=	nss_mdns
 PORTVERSION=	0.14.1.20200624
 CATEGORIES=	dns
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	NSS module implementing multicast DNS name resolution
+WWW=		https://github.com/lathiat/nss-mdns
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

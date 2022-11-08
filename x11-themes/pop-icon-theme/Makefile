@@ -1,11 +1,10 @@
-# Created by: Alexander Vereeken <Alexander88207@protonmail.com>
-
 PORTNAME=	pop-icon-theme
 DISTVERSION=	20210111
 CATEGORIES=	x11-themes
 
 MAINTAINER=	Alexander88207@protonmail.com
 COMMENT=	System76 Pop icon Theme
+WWW=		https://github.com/pop-os/icon-theme
 
 LICENSE=	CC-BY-NC-SA-4.0
 LICENSE_FILE=	${WRKSRC}/COPYING

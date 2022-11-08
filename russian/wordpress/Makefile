@@ -1,13 +1,12 @@
-# Created by: Mihail Timofeev <9267096@gmail.com>
-
 PORTNAME=	wordpress
-DISTVERSION=	5.9.3
+DISTVERSION=	6.0.2
 DISTVERSIONSUFFIX=	-ru_RU
 CATEGORIES=	russian www
 MASTER_SITES=	https://ru.wordpress.org/
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	State-of-the-art semantic personal publishing platform
+WWW=		https://ru.wordpress.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/license.txt

@@ -1,10 +1,12 @@
 PORTNAME?=	arcanist
-PORTVERSION?=	20211210
+PORTVERSION?=	20220518
+PORTREVISION?=	1
 CATEGORIES?=	devel
 PKGNAMESUFFIX=	${SLAVE_PKGNAMESUFFIX}${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	grembo@FreeBSD.org
 COMMENT?=	Libraries for the command line interface for Phabricator
+WWW?=		https://secure.phabricator.com/book/arcanist/
 
 SLAVEPORT?=	lib
 
@@ -30,7 +32,7 @@ NO_BUILD=	yes
 NO_ARCH=	yes
 PORTSCOUT=	ignore:1
 GH_ACCOUNT=	phacility
-GH_TAGNAME=	b50a646
+GH_TAGNAME=	85c953e
 PLIST=		${.CURDIR}/pkg-plist
 
 .if ${SLAVEPORT} == lib

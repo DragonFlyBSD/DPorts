@@ -4,6 +4,7 @@ CATEGORIES=	science
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Scientific data analysis and visualization
+WWW=		http://scidavis.sourceforge.net
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,7 +20,7 @@ USES=		cmake compiler:c++17-lang desktop-file-utils gl pkgconfig \
 		qt:5 shared-mime-info
 USE_GL=		gl glu
 USE_QT=		core gui opengl printsupport svg widgets xml \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	highperformancecoder

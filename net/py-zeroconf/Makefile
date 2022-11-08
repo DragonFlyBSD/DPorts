@@ -1,5 +1,3 @@
-# Created by: John Hixson <jhixson@gmail.com>
-
 PORTNAME=	zeroconf
 PORTVERSION=	0.37.0
 CATEGORIES=	net python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jhixson@FreeBSD.org
 COMMENT=	Pure python implementation of multicast DNS service discovery
+WWW=		https://github.com/jstasiak/python-zeroconf
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING

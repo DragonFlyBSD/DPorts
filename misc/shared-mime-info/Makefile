@@ -1,5 +1,3 @@
-# Created by: olgeni@FreeBSD.org
-
 PORTNAME=	shared-mime-info
 DISTVERSION=	2.2
 PORTREVISION=	1
@@ -7,12 +5,12 @@ CATEGORIES=	misc gnome
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	MIME types database from the freedesktop.org project
+WWW=		https://www.freedesktop.org/wiki/Software/shared-mime-info/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	gmake:devel/gmake \
-		minixmlto:textproc/minixmlto
+BUILD_DEPENDS=	gmake:devel/gmake
 
 USES=		gettext gnome localbase meson pathfix pkgconfig python:build shebangfix \
 		tar:xz trigger
@@ -37,8 +35,6 @@ SHEBANG_FILES=	${WRKSRC}/tests/compare_iana.py \
 
 MIMESUBDIRS=	application audio image inode message model multipart \
 		packages text video x-epoc x-content font
-
-BINARY_ALIAS=	xmlto=minixmlto
 
 post-patch:
 	${REINPLACE_CMD} 's|/usr/local|${LOCALBASE}|g' \

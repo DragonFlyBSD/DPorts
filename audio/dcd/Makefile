@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	dcd
 PORTVERSION=	0.99.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}player/${PORTNAME}player/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple, programmable, intelligent CD player
+WWW=		http://dcdplayer.sourceforge.net/
 
 LICENSE=	GPLv2
 

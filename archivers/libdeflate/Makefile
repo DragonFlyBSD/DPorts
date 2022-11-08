@@ -1,12 +1,11 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	libdeflate
-PORTVERSION=	1.12
+PORTVERSION=	1.14
 DISTVERSIONPREFIX=	v
 CATEGORIES=	archivers
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Fast, whole-buffer DEFLATE-based compression library
+WWW=		https://github.com/ebiggers/libdeflate
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

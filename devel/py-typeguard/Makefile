@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	typeguard
 PORTVERSION=	2.13.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Runtime type checker for Python
+WWW=		https://github.com/agronholm/typeguard
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

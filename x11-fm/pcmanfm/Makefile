@@ -1,5 +1,3 @@
-# Created by: Martin Tournoij <carpetsmoker@xs4all.nl>
-
 PORTNAME=	pcmanfm
 PORTVERSION=	1.3.2
 CATEGORIES=	x11-fm
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/PCManFM%20%2B%20Libfm%20%28tarball%20release%29/PCM
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	PCMan File Manager
+WWW=		http://wiki.lxde.org/en/PCManFM
 
 LICENSE=	GPLv2
 

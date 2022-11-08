@@ -1,5 +1,3 @@
-# Created by: Autrijus Tang <autrijus@autrijus.org>
-
 PORTNAME=	Text-Table
 PORTVERSION=	1.134
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Organize Data in Tables
+WWW=		https://metacpan.org/release/Text-Table
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE

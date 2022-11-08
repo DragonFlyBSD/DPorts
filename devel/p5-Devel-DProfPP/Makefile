@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Devel-DProfPP
 PORTVERSION=	1.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse Devel::DProf output
+WWW=		https://metacpan.org/release/SMPETERS/Devel-DProfPP-1.3
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

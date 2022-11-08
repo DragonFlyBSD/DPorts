@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	wheel
 PORTVERSION=	0.36.2
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Built-package format for Python
+WWW=		https://github.com/pypa/wheel
 
 LICENSE=	MIT
 

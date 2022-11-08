@@ -1,5 +1,3 @@
-# Created by: Kevin Golding <ports@caomhin.org>
-
 PORTNAME=	rarfile
 PORTVERSION=	4.0
 CATEGORIES=	archivers python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@caomhin.org
 COMMENT=	Python module for RAR archive reading
+WWW=		https://github.com/markokr/rarfile
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE

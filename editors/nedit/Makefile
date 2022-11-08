@@ -1,5 +1,3 @@
-# Created by: Daniel Eischen <deischen@FreeBSD.org>
-
 PORTNAME=	nedit
 PORTVERSION=	5.7
 CATEGORIES=	editors
@@ -10,6 +8,7 @@ EXTRACT_ONLY=	nedit-${PORTVERSION}-src.tar.gz
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	X11/Motif GUI text editor for programs and plain text files
+WWW=		http://www.nedit.org/
 
 LICENSE=	GPLv1
 

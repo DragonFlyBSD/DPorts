@@ -1,5 +1,3 @@
-# Created by: Matthew West <mwest@uct.ac.za>
-
 PORTNAME=	xmotd
 DISTVERSION=	1.17.3b
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.ee.ryerson.ca/~elf/pub/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Message-of-the-day browser for X11 and dumb-terminals
+WWW=		https://www.ee.ryerson.ca/~elf/xmotd/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/GNU

@@ -1,5 +1,3 @@
-# Created by: Edwin Groothuis <edwin@mavetju.org>
-
 PORTNAME=	phpicalendar
 PORTVERSION=	2.4
 PORTEPOCH=	1
@@ -14,6 +12,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}_20100615
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Webbased calendar with iCal support
+WWW=		https://sourceforge.net/projects/phpicalendar/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

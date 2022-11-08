@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ColorThemes-Standard
 PORTVERSION=	0.003
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Standard collection of generic color themes
+WWW=		https://metacpan.org/release/ColorThemes-Standard
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

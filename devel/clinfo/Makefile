@@ -1,11 +1,10 @@
-# Created by: Koop Mast <kwm@FreeBSD.org>
-
 PORTNAME=	clinfo
 PORTVERSION=	3.0.21.02.21
 CATEGORIES=	devel
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Print information about all available OpenCL platforms/devices
+WWW=		https://github.com/Oblomov/clinfo
 
 LICENSE=	CC0-1.0
 LICENSE_FILE=	${WRKSRC}/LICENSE

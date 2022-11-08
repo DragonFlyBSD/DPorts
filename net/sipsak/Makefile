@@ -1,5 +1,3 @@
-# Created by: jesusr
-
 PORTNAME=	sipsak
 PORTVERSION=	0.9.6
 CATEGORIES=	net
@@ -8,6 +6,7 @@ DISTFILES=	sipsak-0.9.6-1.tar.gz
 
 MAINTAINER=	jesusr@FreeBSD.org
 COMMENT=	Small command line tool for SIP testing
+WWW=		http://sipsak.berlios.de/
 
 BROKEN_FreeBSD_13=	ld: error: duplicate symbol: address
 BROKEN_FreeBSD_14=	ld: error: duplicate symbol: address

@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	Email-Stuffer
 PORTVERSION=	0.018
 CATEGORIES=	mail perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	More casual approach to creating and sending Email
+WWW=		https://metacpan.org/release/Email-Stuffer
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

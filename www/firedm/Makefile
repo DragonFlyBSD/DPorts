@@ -1,11 +1,10 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	firedm
 PORTVERSION=	2022.2.5
 CATEGORIES=	www net python
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Graphical download manager for streaming websites
+WWW=		https://github.com/firedm/FireDM
 
 LICENSE=	GPLv3+
 

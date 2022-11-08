@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	kibana
 PORTVERSION=	7.17.3
 DISTVERSIONSUFFIX=	-darwin-x86_64
@@ -11,6 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	elastic@FreeBSD.org
 COMMENT=	Browser based analytics and search interface to ElasticSearch
+WWW=		https://www.elastic.co/products/kibana
 
 LICENSE=	APACHE20
 

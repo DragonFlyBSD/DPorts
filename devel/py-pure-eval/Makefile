@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pure-eval
 PORTVERSION=	0.2.2
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	pure_eval-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Safely evaluate AST nodes without side effects
+WWW=		https://github.com/alexmojaki/pure_eval
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

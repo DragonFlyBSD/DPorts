@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	Pango
 PORTVERSION=	1.227
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module for layout and render i18n text
+WWW=		https://metacpan.org/release/Pango
 
 LICENSE=	LGPL21
 

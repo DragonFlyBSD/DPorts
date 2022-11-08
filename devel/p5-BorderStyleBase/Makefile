@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	BorderStyleBase
 PORTVERSION=	0.011
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Suitable base class for most BorderStyle::* modules
+WWW=		https://metacpan.org/release/BorderStyleBase
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

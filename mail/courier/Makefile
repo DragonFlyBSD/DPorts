@@ -1,5 +1,3 @@
-# Created by: Yarema <yds@CoolRat.org>
-
 PORTNAME=	courier
 PORTVERSION=	0.65.3
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	bsd@dino.sk
 COMMENT=	Courier SMTP IMAP POP3 HTTP mail server suite
+WWW=		https://www.Courier-MTA.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING.GPL

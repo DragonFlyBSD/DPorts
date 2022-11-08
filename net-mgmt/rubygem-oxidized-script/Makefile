@@ -1,5 +1,3 @@
-# Created by: Nick Hilliard <nick@foobar.org>
-
 PORTNAME=	oxidized-script
 PORTVERSION=	0.6.0
 CATEGORIES=	net-mgmt rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	nick@foobar.org
 COMMENT=	CLI and Library to interface with network devices in rubygems-oxidized
+WWW=		https://github.com/ytti/oxidized-script
 
 LICENSE=	APACHE20
 

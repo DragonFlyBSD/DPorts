@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	sol
 PORTVERSION=	1.0.8
 CATEGORIES=	games
@@ -7,6 +5,7 @@ MASTER_SITES=	http://shh.thathost.com/pub-unix/files/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Solitaire card game for X Window System
+WWW=		http://shh.thathost.com/pub-unix/ #sol
 
 LICENSE=	ART10
 

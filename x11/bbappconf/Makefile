@@ -1,5 +1,3 @@
-# Created by: Gerrit Beine <tux@pinguru.net>
-
 PORTNAME=	bbappconf
 PORTVERSION=	0.0.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/bbtools/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Application configuring tool for the blackbox window manager
+WWW=		http://bbtools.sourceforge.net/
 
 USES=		xorg
 USE_XORG=	x11

@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	duo
 PORTVERSION=	1.12.0
 CATEGORIES=	security
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_unix-${PORTVERSION}
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Duo unix integration package
+WWW=		https://duosecurity.com
 
 LICENSE=	GPLv2
 

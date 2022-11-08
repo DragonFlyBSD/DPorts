@@ -1,11 +1,13 @@
 PORTNAME=	mat2
 DISTVERSION=	0.13.0
+PORTREVISION=	2
 CATEGORIES=	multimedia audio graphics textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Handy tool to trash your metadata
+WWW=		https://0xacab.org/jvoisin/mat2
 
 LICENSE=	LGPL3+
 

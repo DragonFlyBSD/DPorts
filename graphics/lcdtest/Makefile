@@ -1,5 +1,3 @@
-# Created by: Eric P. Scott <eps+pbug0703@ana.com>
-
 PORTNAME=	lcdtest
 PORTVERSION=	1.18
 PORTREVISION=	10
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	LCD monitor test pattern generator
+WWW=		http://www.brouhaha.com/~eric/software/lcdtest/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

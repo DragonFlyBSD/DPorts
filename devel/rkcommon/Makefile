@@ -1,10 +1,12 @@
 PORTNAME=	rkcommon
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.10.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Intel RenderKit common C++/CMake infrastructure
+WWW=		https://github.com/ospray/rkcommon
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

@@ -1,5 +1,3 @@
-# Created by: kuriyama
-
 PORTNAME=	openjade
 PORTVERSION=	1.3.3p1
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S/p/-pre/}
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Object-oriented SGML/XML parser toolkit and DSSSL engine
+WWW=		http://www.netfolder.com/DSSSL/
 
 LIB_DEPENDS=	libosp.so:textproc/opensp
 RUN_DEPENDS=	${XMLCATMGR}:textproc/xmlcatmgr

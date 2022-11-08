@@ -1,11 +1,10 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ds
 PORTVERSION=	1.4.0
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Data Structures for PHP
+WWW=		https://pecl.php.net/package/ds
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

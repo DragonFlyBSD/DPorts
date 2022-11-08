@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	arpack++
 PORTVERSION=	2.3.0
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	math
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Object-oriented version of the ARPACK package
+WWW=		https://www.ime.unicamp.br/~chico/arpack++/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

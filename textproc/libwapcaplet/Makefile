@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	libwapcaplet
 PORTVERSION=	0.4.3
 CATEGORIES=	textproc
@@ -8,6 +6,7 @@ EXTRACT_SUFX=	-src.tar.gz
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	String internment library
+WWW=		https://www.netsurf-browser.org/projects/libwapcaplet/
 
 LICENSE=	MIT
 

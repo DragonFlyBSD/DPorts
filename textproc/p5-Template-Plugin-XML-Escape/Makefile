@@ -1,5 +1,3 @@
-# Created by: kevit
-
 PORTNAME=	Template-Plugin-XML-Escape
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	simarg@gmail.com
 COMMENT=	Escape variables to suit being placed into XML
+WWW=		https://metacpan.org/release/Template-Plugin-XML-Escape
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Template-Toolkit>=2.20:www/p5-Template-Toolkit

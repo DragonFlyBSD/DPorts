@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	BBS-UserInfo-Maple3
 PORTVERSION=	0.01
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Get user information of Maple3-style BBS
+WWW=		https://metacpan.org/release/BBS-UserInfo-Maple3
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

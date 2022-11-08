@@ -1,13 +1,12 @@
-# Created by: ijliao
-
 PORTNAME=	burrtools
 PORTVERSION=	0.6.3
-PORTREVISION=	20
+PORTREVISION=	21
 CATEGORIES=	games
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Puzzle solver
+WWW=		http://burrtools.sourceforge.net/
 
 LICENSE=	GPLv2+ # COPYING is GPLv3
 

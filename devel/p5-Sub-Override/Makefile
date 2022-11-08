@@ -1,5 +1,3 @@
-# Created by: Lars Eggert <lars.eggert@gmx.net>
-
 PORTNAME=	Sub-Override
 PORTVERSION=	0.09
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for easily overriding subroutines
+WWW=		https://metacpan.org/release/Sub-Override
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Fotis Zabaras <fotis@zabaras.eu>
-
 PORTNAME=	pyzabbix
 PORTVERSION=	1.0.0
 CATEGORIES=	net-mgmt python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	otis@FreeBSD.org
 COMMENT=	Zabbix API Python Library
+WWW=		https://github.com/lukecyca/pyzabbix
 
 LICENSE=	LGPL21
 

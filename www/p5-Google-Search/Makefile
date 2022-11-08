@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	Google-Search
 PORTVERSION=	0.028
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Interface to the Google AJAX Search API and suggestion API
+WWW=		https://metacpan.org/release/Google-Search
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

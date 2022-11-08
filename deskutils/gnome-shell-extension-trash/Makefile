@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	gnome-shell-extension-trash
 PORTVERSION=	0.2.0
 CATEGORIES=	deskutils gnome
@@ -7,6 +5,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gnome-shell trash indicator
+WWW=		https://github.com/bertoldia/gnome-shell-trash-extension
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

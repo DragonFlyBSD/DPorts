@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	baikal
 PORTVERSION=	0.9.1
 PORTREVISION=	0
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/fruux/Baikal/releases/download/${PORTVERSION}/
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Lightweight CalDAV/CardDAV server
+WWW=		https://sabre.io/baikal/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

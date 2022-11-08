@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	tidy-html5
 PORTVERSION=	5.8.0
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	www
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Tidy tidies HTML and XML documents
+WWW=		https://www.html-tidy.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/README/LICENSE.md

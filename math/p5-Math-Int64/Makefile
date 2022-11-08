@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Math-Int64
 PORTVERSION=	0.54
 CATEGORIES=	math perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Manipulate 64 bits integers in Perl
+WWW=		https://metacpan.org/release/Math-Int64
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

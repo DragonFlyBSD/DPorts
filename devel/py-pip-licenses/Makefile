@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pip-licenses
 PORTVERSION=	3.5.4
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Dump the software license list of Python packages installed with pip
+WWW=		https://github.com/raimon49/pip-licenses
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

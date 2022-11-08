@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	jojodiff
 PORTVERSION=	0.8.5
 CATEGORIES=	misc devel
@@ -8,6 +6,7 @@ DISTNAME=	jdiff${PORTVERSION:S/.//g}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Diff and patch utilities for binary files
+WWW=		http://jojodiff.sourceforge.net/
 
 LICENSE=	GPLv3+
 

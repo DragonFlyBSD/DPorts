@@ -1,5 +1,3 @@
-# Created by: Shell Hung <shell@shellhung.org>
-
 PORTNAME=	Test-Harness
 PORTVERSION=	3.44
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Run Perl standard test scripts with statistics
+WWW=		https://metacpan.org/release/Test-Harness
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

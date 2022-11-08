@@ -1,5 +1,3 @@
-# Created by: Herve Quiroz <hq@FreeBSD.org>
-
 PORTNAME=	ogmrip
 PORTVERSION=	1.0.1
 PORTREVISION=	14
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTVERSION:R}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Application and libraries for encoding DVDs into DivX/OGM files
+WWW=		http://ogmrip.sourceforge.net/
 
 LICENSE=	GPLv2+  # from source, though COPYING says LGPLv2
 

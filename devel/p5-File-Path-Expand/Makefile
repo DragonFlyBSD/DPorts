@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lars@thegler.dk>
-
 PORTNAME=	File-Path-Expand
 PORTVERSION=	1.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Expand filenames
+WWW=		https://metacpan.org/release/File-Path-Expand
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

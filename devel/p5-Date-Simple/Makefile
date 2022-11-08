@@ -1,5 +1,3 @@
-# Created by: Alexey V. Antipovsky <kemm@in-line.ru>
-
 PORTNAME=	Date-Simple
 PORTVERSION=	3.03
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple date object
+WWW=		https://metacpan.org/release/Date-Simple
 
 LICENSE=	ART10 GPLv2+
 LICENSE_COMB=	dual

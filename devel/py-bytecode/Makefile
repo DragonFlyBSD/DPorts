@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	bytecode
 PORTVERSION=	0.13.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python module to generate and modify bytecode
+WWW=		https://github.com/MatthieuDartiailh/bytecode
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

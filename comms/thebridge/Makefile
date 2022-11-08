@@ -1,5 +1,3 @@
-# Created by: db
-
 PORTNAME=	thebridge
 PORTVERSION=	1.09
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/cqinet/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Amateur Radio Echolink conference bridge
+WWW=		http://cqinet.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

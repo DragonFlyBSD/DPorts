@@ -10,6 +10,7 @@ PATCHFILES=		5abba7f0505e75fceabd4dd8992a7e02bb149d64.patch:-p1
 
 MAINTAINER=		kde@FreeBSD.org
 COMMENT=		Cross-platform multimedia framwork based on Qt and ffmpeg
+WWW=		https://github.com/wang-bin/QtAV
 
 LICENSE=		LGPL21+
 LICENSE_FILE=		${WRKSRC}/lgpl-2.1.txt
@@ -20,7 +21,7 @@ LIB_DEPENDS=		libass.so:multimedia/libass \
 USES=			compiler:c++11-lang gl qmake:outsource qt:5 xorg
 USE_GL=			gl
 USE_QT=			core declarative gui network opengl sql widgets \
-			buildtools_build qmake_build
+			buildtools:build qmake:build
 USE_XORG=		x11 xext xv
 
 OPTIONS_DEFINE=		OPENAL UCHARDET VAAPI PULSEAUDIO

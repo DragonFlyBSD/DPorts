@@ -1,5 +1,3 @@
-# Created by: gurkan@phys.ethz.ch
-
 PORTNAME=	camera
 PORTVERSION=	0.8
 PORTREVISION=	15
@@ -9,6 +7,7 @@ DISTNAME=	Camera-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNUstep application for digital still cameras
+WWW=		http://home.gna.org/gsimageapps/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/Documentation/COPYING

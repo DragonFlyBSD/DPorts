@@ -1,11 +1,13 @@
 PORTNAME=	pyglet
-PORTVERSION=	1.5.26
+PORTVERSION=	1.5.27
 CATEGORIES=	graphics multimedia x11-toolkits python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Cross-platform windowing and multimedia library
+WWW=		https://pypi.org/project/pyglet/ \
+		https://github.com/pyglet/pyglet
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

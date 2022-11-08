@@ -1,5 +1,5 @@
 PORTNAME=	mythes
-PORTVERSION=	2022.06.19
+PORTVERSION=	2022.09.04
 CATEGORIES=	german textproc
 MASTER_SITES=	LOCAL/sunpoet/${PORTNAME}
 DISTNAME=	Deutscher-Thesaurus-${PORTVERSION:C/\.//g}
@@ -8,6 +8,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	German thesaurus
+WWW=		https://www.openthesaurus.de/
 
 LICENSE=	LGPL21
 

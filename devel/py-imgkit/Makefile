@@ -1,5 +1,3 @@
-# Created by: Dan Langille <dvl@FreeBSD.org>
-
 PORTNAME=	imgkit
 PORTVERSION=	1.2.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Python wrapper to convert html to image
+WWW=		https://github.com/jarrekk/imgkit
 
 LICENSE=	MIT
 

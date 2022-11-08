@@ -1,5 +1,3 @@
-# Created by: pst
-
 PORTNAME=	expect
 PORTVERSION=	5.45.4
 PORTREVISION=	4
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Sophisticated scripter based on Tcl/Tk
+WWW=		http://expect.sourceforge.net
 
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/license.terms

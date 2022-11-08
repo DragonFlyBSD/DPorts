@@ -1,5 +1,3 @@
-# Created by: Dennis Herrmann <dhn@FreeBSD.org>
-
 PORTNAME=	termcolor
 PORTVERSION=	1.2.2
 CATEGORIES=	textproc rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for ANSII color formatting like HTML for output in terminal
+WWW=		https://github.com/jugyo/termcolor
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	goattracker
 PORTVERSION=	2.76
 CATEGORIES=	audio
@@ -9,6 +7,7 @@ DISTNAME=	GoatTracker_${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Crossplatform music editor for creating Commodore 64 music
+WWW=		http://covertbitops.c64.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/copying

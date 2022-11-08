@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Tie-Simple
 PORTVERSION=	1.04
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Variable ties made easier: much, much, much easier
+WWW=		https://metacpan.org/release/Tie-Simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Edward Tomasz Napierala <trasz@pin.if.uz.zgora.pl>
-
 PORTNAME=	liblo
 PORTVERSION=	0.31
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Lightweight Open Sound Control implementation
+WWW=		https://github.com/radarsat1/liblo
 
 LICENSE=	LGPL21
 

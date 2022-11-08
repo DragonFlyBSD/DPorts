@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Data-IPV4-Range-Parse
 PORTVERSION=	1.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl extension parsing IPv4 ranges
+WWW=		https://metacpan.org/release/Data-IPV4-Range-Parse
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

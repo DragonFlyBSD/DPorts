@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin <mi@aldan.algebra.com>
-
 PORTNAME=	websh
 PORTVERSION=	3.6.0b5
 PORTREVISION=	6
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	-src.tar.gz
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Embeds a TCL8 interpreter in the Apache server
+WWW=		https://tcl.apache.org/websh/
 
 MAKE_JOBS_UNSAFE=	yes
 

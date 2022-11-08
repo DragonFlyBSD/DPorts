@@ -1,5 +1,3 @@
-# Created by: "Waitman Gobble" <uzimac@da3m0n8t3r.com>
-
 PORTNAME=	chucky
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -7,11 +5,15 @@ CATEGORIES=	ports-mgmt
 
 MAINTAINER=	waitman@waitman.net
 COMMENT=	Port installed version check/report with shar archival
+WWW=		https://dx.burplex.com/bin/chucky.html
 
 LICENSE=	CHUCKY
 LICENSE_NAME=	CHUCKY BSD LICENSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+
+DEPRECATED=		Uses the obsoleted $FreeBSD tag
+EXPIRATION_DATE=	2023-01-01
 
 LIB_DEPENDS=	libpkg.so:${PKG_ORIGIN} \
 		libsqlite3.so:databases/sqlite3

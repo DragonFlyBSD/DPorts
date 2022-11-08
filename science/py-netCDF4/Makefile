@@ -1,8 +1,5 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	netCDF4
-PORTVERSION=	1.5.8
-PORTREVISION=	1
+PORTVERSION=	1.6.0
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	rel
 CATEGORIES=	science python
@@ -10,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Python Interface to the NetCDF Library (versions 3 and 4)
+WWW=		https://unidata.github.io/netcdf4-python/
 
 LICENSE=	MIT
 

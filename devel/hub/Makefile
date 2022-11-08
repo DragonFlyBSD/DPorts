@@ -1,13 +1,12 @@
-# Created by: Simon Olofsson <simon@olofsson.de>
-
 PORTNAME=	hub
 PORTVERSION=	2.14.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	devel sysutils
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Introduces git to GitHub
+WWW=		https://hub.github.com/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

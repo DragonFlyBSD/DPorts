@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	Image-Heatmap
 PORTVERSION=	0.565
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Convert geographic coordinates into a graphical heatmap
+WWW=		https://metacpan.org/release/Image-Heatmap
 
 LICENSE=	ART20 GPLv1
 LICENSE_COMB=	dual

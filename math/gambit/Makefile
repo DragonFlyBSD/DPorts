@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	gambit
 DISTVERSION=	16.0.2
 CATEGORIES=	math
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}${PORTVERSION:R:R}/${PORTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Library of tools for doing computation in game theory
+WWW=		http://www.gambit-project.org
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

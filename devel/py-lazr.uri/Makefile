@@ -1,11 +1,12 @@
 PORTNAME=	lazr.uri
-PORTVERSION=	1.0.5
+DISTVERSION=	1.0.6
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	fullermd@over-yonder.net
 COMMENT=	Library for parsing, manipulating, and generating URIs
+WWW=		https://launchpad.net/lazr.uri
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING.txt

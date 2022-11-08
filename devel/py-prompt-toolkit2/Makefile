@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	prompt-toolkit
 PORTVERSION=	2.0.10
 CATEGORIES=	devel python
@@ -10,6 +8,7 @@ DISTNAME=	prompt_toolkit-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for building powerful interactive command lines in Python
+WWW=		https://github.com/prompt-toolkit/python-prompt-toolkit
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

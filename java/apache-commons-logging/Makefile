@@ -1,5 +1,3 @@
-# Created by: Ernst de Haan <znerd@FreeBSD.org>
-
 PORTNAME=	commons-logging
 PORTVERSION=	1.2
 CATEGORIES=	java devel
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Generic logging wrapper library
+WWW=		https://commons.apache.org/proper/commons-logging/
 
 LICENSE=	APACHE20
 

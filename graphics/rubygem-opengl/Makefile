@@ -1,5 +1,3 @@
-# Created by: Steve Wills <steve@meatwad.mouf.net>
-
 PORTNAME=	opengl
 PORTVERSION=	0.10.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	OpenGL wrapper for Ruby
+WWW=		https://github.com/larskanis/opengl
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

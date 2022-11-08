@@ -1,5 +1,3 @@
-# Created by: Rodrigo Osorio <rodrigo@freebsd.org>
-
 PORTNAME=	libtubo
 PORTVERSION=	5.0.14
 CATEGORIES=	x11-fm
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}0-${PORTVERSION}
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	XFFM Interprocess Communication and Control
+WWW=		http://xffm.sourceforge.net/libtubo.html
 
 LICENSE=	GPLv3
 

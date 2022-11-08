@@ -1,5 +1,3 @@
-# Created by: Jov <amutu@amutu.com>
-
 PORTNAME=	mysql_fdw
 DISTVERSIONPREFIX=	REL-
 DISTVERSION=	2_8_0
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	postgresql${PGSQL_VER:S/.//}-
 
 MAINTAINER=	tz@FreeBSD.org
 COMMENT=	PostgreSQL foreign data wrapper for MySQL
+WWW=		https://github.com/EnterpriseDB/mysql_fdw
 
 LICENSE=	PostgreSQL
 LICENSE_FILE=	${WRKSRC}/LICENSE

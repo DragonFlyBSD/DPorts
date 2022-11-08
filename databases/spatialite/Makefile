@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	spatialite
 PORTVERSION=	5.0.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	lib${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Spatial Extensions for SQLite
+WWW=		https://www.gaia-gis.it/gaia-sins/
 
 LICENSE=	GPLv2 # Only GPLv2 since we enable rttopo and gcp
 LICENSE_FILE=	${WRKSRC}/COPYING

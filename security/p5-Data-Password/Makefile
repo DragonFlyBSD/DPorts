@@ -1,5 +1,3 @@
-# Created by: ports@c0decafe.net
-
 PORTNAME=	Data-Password
 PORTVERSION=	1.12
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Assess password quality
+WWW=		https://metacpan.org/release/Data-Password
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: J Han <hjh@photino.com>
-
 PORTNAME=	lwm
 PORTVERSION=	1.2.4
 CATEGORIES=	x11-wm
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.jfc.org.uk/files/lwm/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight window manager
+WWW=		https://www.jfc.org.uk/software/lwm.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

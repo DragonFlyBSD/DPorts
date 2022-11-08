@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pry-remote
 PORTVERSION=	0.1.8
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Connect to Pry remotely using DRb
+WWW=		https://github.com/Mon-Ouie/pry-remote
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE

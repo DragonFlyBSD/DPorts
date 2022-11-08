@@ -1,5 +1,3 @@
-# Created by: cjr@cruwe.de
-
 PORTNAME=	glassfish
 PORTVERSION=	4.1
 CATEGORIES=	www java
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	4
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Reference implementation of the Java EE application server
+WWW=		https://glassfish.java.net/
 
 USES=		cpe zip
 CPE_VENDOR=	oracle

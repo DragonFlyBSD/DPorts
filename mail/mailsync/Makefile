@@ -1,5 +1,3 @@
-# Created by: Maxim Tulyuk <mt@primats.org.ua>
-
 PORTNAME=	mailsync
 PORTVERSION=	5.2.1
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Keeps collection of mailboxes synchronized
+WWW=		http://mailsync.sourceforge.net/
 
 LICENSE=	GPLv2
 

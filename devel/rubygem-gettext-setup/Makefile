@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	gettext-setup
 PORTVERSION=	0.34
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Set up i18n for Ruby projects
+WWW=		https://github.com/puppetlabs/gettext-setup-gem
 
 LICENSE=	APACHE20
 

@@ -1,5 +1,3 @@
-# Created by: Michael Grünewald <michipili@gmail.com>
-
 PORTNAME=	camlp4
 PORTVERSION=	4.07+1
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	michipili@gmail.com
 COMMENT=	System for writing extensible parsers for OCaml
+WWW=		https://github.com/ocaml/camlp4
 
 LICENSE=	LGPL20
 

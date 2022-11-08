@@ -1,11 +1,12 @@
 PORTNAME=	pg.el
 DISTVERSION=	0.13
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	databases elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	PostgreSQL Elisp interface
+WWW=		https://github.com/cbbrowne/pg.el
 
 LICENSE=	GPLv2+
 

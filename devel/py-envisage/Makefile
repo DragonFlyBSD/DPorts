@@ -1,5 +1,3 @@
-# Created by: Vladimir Chukharev
-
 PORTNAME=	envisage
 PORTVERSION=	4.9.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Enthought extensible application framework
+WWW=		http://code.enthought.com/projects/envisage
 
 LICENSE=	BSD3CLAUSE PSFL LGPL20
 LICENSE_COMB=	multi

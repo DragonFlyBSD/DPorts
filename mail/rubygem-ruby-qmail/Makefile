@@ -1,5 +1,3 @@
-# Created by: Glen Barber <gjb@FreeBSD.org>
-
 PORTNAME=	ruby-qmail
 PORTVERSION=	0.1.1
 CATEGORIES=	mail rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby qmail library
+WWW=		https://github.com/afair/ruby-qmail
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

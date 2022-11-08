@@ -1,5 +1,3 @@
-# Created by: Dominic Marks <dominic.marks@btinternet.com>
-
 PORTNAME=	honeyd
 PORTVERSION=	1.5c
 PORTREVISION=	12
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.honeyd.org/uploads/ \
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Simulate virtual network hosts (honeypots)
+WWW=		http://www.citi.umich.edu/u/provos/honeyd/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

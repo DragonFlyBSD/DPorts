@@ -1,11 +1,12 @@
 PORTNAME=	luabind
 PORTVERSION=	0.9.1
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	devel
 MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library that helps you create bindings between C++ and Lua
+WWW=		https://www.rasterbar.com/products/luabind.html
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

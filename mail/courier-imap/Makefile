@@ -1,5 +1,3 @@
-# Created by: Neil Blakey-Milner
-
 PORTNAME=	courier-imap
 PORTVERSION=	5.1.8
 PORTEPOCH=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/courier/imap/${PORTVERSION}
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	IMAP (and POP3) server that provides access to Maildir mailboxes
+WWW=		https://www.courier-mta.org/imap/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

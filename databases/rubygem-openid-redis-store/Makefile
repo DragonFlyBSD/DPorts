@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	openid-redis-store
 PORTVERSION=	0.0.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Redis store for OpenID
+WWW=		https://github.com/dekart/openid-redis-store
 
 RUN_DEPENDS=	rubygem-redis>=0:databases/rubygem-redis \
 		rubygem-ruby-openid>=0:net/rubygem-ruby-openid

@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	xskat
 PORTVERSION=	4.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.xskat.de/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Play the card game Skat
+WWW=		http://www.xskat.de/xskat.html
 
 LICENSE=	unknown
 LICENSE_NAME=	xskat license clause

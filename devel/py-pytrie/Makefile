@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	pytrie
 PORTVERSION=	0.4.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	PyTrie-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Pure Python implementation of the trie data structure
+WWW=		https://github.com/gsakkis/pytrie
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

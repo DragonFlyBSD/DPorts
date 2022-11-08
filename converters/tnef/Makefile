@@ -1,5 +1,3 @@
-# Created by: Cyrus Rahman <cr@jcmax.com>
-
 PORTNAME=	tnef
 PORTVERSION=	1.4.12
 CATEGORIES=	converters mail
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Unpack data in MS Outlook TNEF format
+WWW=		http://tnef.sourceforge.net/
 
 LICENSE=	GPLv2
 

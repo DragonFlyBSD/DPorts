@@ -4,13 +4,14 @@ CATEGORIES=	editors devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Lightweight and cross-platform code editor for competitive programming
+WWW=		https://github.com/cpeditor/cpeditor
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cmake:noninja compiler:c++14-lang desktop-file-utils qt:5
 USE_QT=		core gui network widgets \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 USE_GITHUB=	yes
 GH_TUPLE=	\
 		cpeditor:QCodeEditor:dbf8b26:cpeditor_QCodeEditor/third_party/QCodeEditor \

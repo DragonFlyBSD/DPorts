@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Xporter
 PORTVERSION=	0.1.2
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Alternative Exporter with persistent defaults and auto-ISA
+WWW=		https://metacpan.org/release/Xporter
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

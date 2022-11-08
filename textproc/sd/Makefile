@@ -1,11 +1,12 @@
 PORTNAME=	sd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.6
-PORTREVISION=	18
+PORTREVISION=	20
 CATEGORIES=	textproc
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Intuitive find and replace tool
+WWW=		https://github.com/chmln/sd
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

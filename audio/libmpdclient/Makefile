@@ -1,5 +1,3 @@
-# Created by: Grzegorz Blach <gblach@FreeBSD.org>
-
 PORTNAME=	libmpdclient
 PORTVERSION=	2.20
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.musicpd.org/download/libmpdclient/2/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	API library for interfacing MPD
+WWW=		https://www.musicpd.org/libs/libmpdclient/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

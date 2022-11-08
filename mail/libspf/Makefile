@@ -1,5 +1,3 @@
-# Created by: Daniel Roethlisberger <daniel@roe.ch>
-
 PORTNAME=	libspf
 DISTVERSION=	1.0.0-p5
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.libspf.org/files/src/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sender Policy Framework (SPF) library and client
+WWW=		http://software.schmorp.de/pkg/libspf.html
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Max Khon <fjoe@FreeBSD.org>
-
 PORTNAME=	upx
 PORTVERSION=	3.96
 MASTER_SITES=	https://github.com/upx/upx/releases/download/v${PORTVERSION}/
@@ -8,6 +6,7 @@ DISTVERSIONSUFFIX=	-src
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ultimate Packer for eXecutables
+WWW=		https://upx.github.io/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	recutils
 PORTVERSION=	1.8
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	zeus@gnu.org.ua
 COMMENT=	Tools and libraries to access human-editable, plain text databases
+WWW=		https://www.gnu.org/software/recutils/
 
 LICENSE=	GPLv3+
 

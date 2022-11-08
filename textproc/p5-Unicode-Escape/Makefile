@@ -1,5 +1,3 @@
-# Created by: Vadim Vatlin
-
 PORTNAME=	Unicode-Escape
 PORTVERSION=	0.0.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Escape and unescape Unicode characters other than ASCII
+WWW=		https://metacpan.org/release/Unicode-Escape
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

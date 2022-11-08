@@ -1,5 +1,3 @@
-# Created by: Russell Jackson <raj@csub.edu>
-
 PORTNAME=	augeas
 PORTVERSION=	1.12.0
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://download.augeas.net/
 
 MAINTAINER=	puppet@FreeBSD.org
 COMMENT=	Configuration editing tool
+WWW=		https://augeas.net/
 
 LICENSE=	LGPL21
 

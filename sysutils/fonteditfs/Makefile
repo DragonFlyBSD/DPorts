@@ -1,5 +1,3 @@
-# Created by: uri@keves.org
-
 PORTNAME=	fonteditfs
 PORTVERSION=	1.2
 CATEGORIES=	sysutils
@@ -9,6 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	uri@keves.org
 COMMENT=	Full screen syscons font editor
+WWW=		http://fonteditfs.sourceforge.net/
 
 USES=		ncurses
 PLIST_FILES=	bin/fnteditfs man/man1/fnteditfs.1.gz

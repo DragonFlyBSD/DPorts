@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	httpx
 PORTVERSION=	0.13.3
 PORTREVISION=	3
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	013
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Next generation HTTP client
+WWW=		https://github.com/encode/httpx
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

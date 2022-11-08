@@ -1,5 +1,3 @@
-# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-
 PORTNAME=	Net-DHCP
 PORTVERSION=	0.700
 CATEGORIES=	net perl5
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:S|00$||}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	DHCP set of classes designed to handle basic DHCP handling
+WWW=		https://metacpan.org/release/Net-DHCP
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

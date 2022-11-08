@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	gitlab_emoji
 PORTVERSION=	0.3.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Provides Gitlab Emoji assets
+WWW=		https://gitlab.com/gitlab-org/gitlab_emoji
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Johan Strom <johna@stromnet.se>
-
 PORTNAME=	openzwave
 PORTVERSION=	1.6.${VERSION_REV}
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	kiwi@oav.net
 COMMENT=	Open-source interface to Z-Wave networks
+WWW=		https://code.google.com/p/open-zwave/
 
 LICENSE=	LGPL20
 

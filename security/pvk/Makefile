@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	pvk
 PORTVERSION=	20070406
 PORTREVISION=	1
@@ -10,8 +8,9 @@ MASTER_SITES=	http://www.drh-consultancy.demon.co.uk/ \
 DISTNAME=	pvksrc
 EXTRACT_SUFX=	.tgz.bin
 
-MAINTAINER=	sobomax@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool to convert a RSA key in PEM format into a PVK file and vice versa
+WWW=		http://www.drh-consultancy.demon.co.uk/pvk.html
 
 USES=		ssl
 MAKE_ARGS=	SSLINC=${OPENSSLINC} SSLLIB=${OPENSSLLIB}

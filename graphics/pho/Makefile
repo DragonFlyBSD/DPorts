@@ -1,5 +1,3 @@
-# Created by: Roland Jesse <roland.jesse@gmx.net>
-
 PORTNAME=	pho
 PORTVERSION=	1.0
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	http://shallowsky.com/software/pho/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Lightweight image viewer
+WWW=		https://shallowsky.com/software/pho/
 
 LICENSE=	GPLv2
 

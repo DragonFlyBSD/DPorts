@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test2-Plugin-DBIProfile
 PORTVERSION=	0.002006
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Plugin to enable and display DBI profiling
+WWW=		https://metacpan.org/release/Test2-Plugin-DBIProfile
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

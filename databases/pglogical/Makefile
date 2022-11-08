@@ -1,5 +1,3 @@
-# Created by: Matthew Seaman
-
 PORTNAME=	pglogical
 DISTVERSIONPREFIX=	REL
 DISTVERSION=	2_4_1
@@ -7,6 +5,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Logical replication system as a PostgreSQL extension
+WWW=		https://www.2ndquadrant.com/en/resources-old/pglogical/
 
 LICENSE=	PostgreSQL
 

@@ -1,11 +1,10 @@
-# Created by: Jake Smith <jake@xz.cx>
-
 PORTNAME=	phpipam
 DISTVERSION=	1.5.0
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	jake@xz.cx
 COMMENT=	PHP IP Address Management IPv4/IPv6
+WWW=		https://phpipam.net/
 
 LICENSE=	GPLv3
 

@@ -1,5 +1,3 @@
-# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-
 PORTNAME=	cingb
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.32
@@ -8,6 +6,7 @@ CATEGORIES=	emulators
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Yet another Nintendo Game Boy emulator
+WWW=		https://github.com/nakal/cingb
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

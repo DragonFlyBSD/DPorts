@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	instabot
 PORTVERSION=	0.117.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Instagram bot scripts and API wrapper
+WWW=		https://github.com/instagrambot/instabot
 
 LICENSE=	APACHE20
 

@@ -1,12 +1,11 @@
-# Created by: Johnny Sorocil <jsorocil@gmail.com>
-
 PORTNAME=	yosys
 DISTVERSIONPREFIX=	yosys-
-DISTVERSION=	0.18
+DISTVERSION=	0.21
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Yosys Open SYnthesis Suite
+WWW=		https://yosyshq.net/yosys/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -24,7 +23,7 @@ USES=		bison compiler:c++11-lang gmake pkgconfig python:3.6+ readline \
 
 SHEBANG_FILES=	backends/smt2/smtbmc.py \
 		misc/yosys-config.in
-SHEBANG_GLOB=	*.sh
+SHEBANG_GLOB=	*.sh *.py
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	YosysHQ

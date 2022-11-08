@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pyhanko-certvalidator
 PORTVERSION=	0.19.4
 CATEGORIES=	security python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Validates X.509 certificates and paths
+WWW=		https://github.com/MatthiasValvekens/certvalidator
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

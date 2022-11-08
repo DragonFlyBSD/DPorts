@@ -1,5 +1,3 @@
-# Created by: Ilya A. Arkhipov <rum1cro@yandex.ru>
-
 PORTNAME=	pyscss
 PORTVERSION=	1.3.7
 CATEGORIES=	textproc python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rum1cro@yandex.ru
 COMMENT=	Compiler for SCSS flavor of the Sass language
+WWW=		https://github.com/Kronuz/pyScss
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

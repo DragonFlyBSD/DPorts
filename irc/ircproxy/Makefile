@@ -1,5 +1,3 @@
-# Created by: Jonas Kvinge <jonas@night-light.net>
-
 PORTNAME=	ircproxy
 PORTVERSION=	1.3.6
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/irc/ircproxy/
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	IRC proxy/bouncer daemon
+WWW=		http://ircproxy.sourceforge.net/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

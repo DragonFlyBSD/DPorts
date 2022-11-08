@@ -1,5 +1,3 @@
-# Created by: Choi Jun Ho <junker@moderato.snu.ac.kr>
-
 PORTNAME=	splay
 PORTVERSION=	0.9.5.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://splay.sourceforge.net/tgz/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Audio player that decodes MPEG Layer 1/2/3 and WAV files
+WWW=		http://splay.sourceforge.net/
 
 LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi

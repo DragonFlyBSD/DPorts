@@ -1,5 +1,3 @@
-# Created by: Sascha Holzleiter <sascha@root-login.org>
-
 PORTNAME=	idesk
 PORTVERSION=	0.7.5
 PORTREVISION=	11
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Place launch icons and background directly on your desktop
+WWW=		http://idesk.sourceforge.net
 
 LIB_DEPENDS=	libXft.so:x11-fonts/libXft \
 		libImlib2.so:graphics/imlib2

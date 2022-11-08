@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	Mock-Quick
 PORTVERSION=	1.111
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Quickly mock objects and classes
+WWW=		https://metacpan.org/release/Mock-Quick
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

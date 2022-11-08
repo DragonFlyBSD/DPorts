@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni <giffunip@asme.org>
-
 PORTNAME=	spooles
 PORTVERSION=	2.2
 PORTREVISION=	15
@@ -14,6 +12,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SParse Object Oriented Linear Equations Solver
+WWW=		https://www.netlib.org/linalg/spooles/spooles.2.2.html
 
 LICENSE=	PD
 

@@ -1,11 +1,10 @@
-# Created by: Oleg Sharoiko <os@rsu.ru>
-
 PORTNAME=	MDB
 PORTVERSION=	1.3.0
 CATEGORIES=	databases www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR unified API for DB access, based on user meta data
+WWW=		https://pear.php.net/package/MDB
 
 LICENSE=	BSD2CLAUSE
 

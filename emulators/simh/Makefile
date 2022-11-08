@@ -1,5 +1,3 @@
-# Created by: jraynard
-
 PORTNAME=	simh
 PORTVERSION=	3.9.0
 PORTREVISION=	5
@@ -13,6 +11,7 @@ DISTFILES=	${PORTNAME}v${PORTVERSION:R:S/.//}-${PORTVERSION:E}.zip:src \
 
 MAINTAINER=	bob@eager.cx
 COMMENT=	Emulates classic DEC, HP, GRI, IBM, Altair, SDS, Honeywell, and others
+WWW=		http://simh.trailing-edge.com
 
 LICENSE=	MIT
 

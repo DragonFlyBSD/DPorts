@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	gsubfn
 DISTVERSION=	0.7
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	R package used for string matching, substitution and parsing
+WWW=		https://code.google.com/p/gsubfn/
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual

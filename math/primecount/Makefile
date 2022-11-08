@@ -1,12 +1,11 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	primecount
 DISTVERSIONPREFIX=	v
-DISTVERSION=	7.3
+DISTVERSION=	7.4
 CATEGORIES=	math
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Fast prime counting function implementations
+WWW=		https://github.com/kimwalisch/primecount
 
 LICENSE=	BSD2CLAUSE
 

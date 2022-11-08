@@ -1,5 +1,3 @@
-# Created by: Takuya Tsuchida <tsucchi@cpan.org>
-
 PORTNAME=	Test-Module-Used
 PORTVERSION=	0.2.3
 PORTREVISION=	3
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	tsucchi@cpan.org
 COMMENT=	Test required module is really used and vice versa
+WWW=		https://metacpan.org/release/Test-Module-Used
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

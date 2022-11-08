@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	google-re2
 PORTVERSION=	0.2.20220601
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	RE2 Python bindings
+WWW=		https://github.com/google/re2/tree/abseil/python
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,14 +1,13 @@
-# Created by: Chad J. Milios <milios@ccsys.com>
-
 PORTNAME=	namecoin
 PORTVERSION=	0.21.0.1
 DISTVERSIONPREFIX=	nc
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	net-p2p dns
 
 MAINTAINER=	milios@ccsys.com
 COMMENT?=	Decentralized, open DNS and general purpose key/value store
+WWW=		https://namecoin.org/
 
 LICENSE=	MIT
 
@@ -27,7 +26,7 @@ SLAVE_PORT?=	no
 
 .if defined(SLAVE_PORT) && ${SLAVE_PORT} == "no"
 USES+=		desktop-file-utils qt:5
-USE_QT=		core buildtools gui linguisttools_build network qmake_build xml widgets
+USE_QT=		core buildtools gui linguisttools:build network qmake:build xml widgets
 
 BUILD_DEPENDS+=	protoc:devel/protobuf \
 		svg2png:graphics/svg2png

@@ -1,16 +1,18 @@
-
 PORTNAME=	wcm
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.0
-CATEGORIES=	x11
+PORTREVISION=	2
+CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Wayfire Config Manager
+WWW=		https://wayfire.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
+		wayland-protocols>0:graphics/wayland-protocols \
 		wayfire>0:x11-wm/wayfire
 LIB_DEPENDS=	libevdev.so:devel/libevdev \
 		libwf-config.so:devel/wf-config \
@@ -24,7 +26,6 @@ USE_GITHUB=	yes
 USE_GNOME=	gtk30 libxml2
 GH_ACCOUNT=	WayfireWM
 DATADIR=	${PREFIX}/share/wayfire
-INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	WFSHELL
 OPTIONS_DEFAULT=WFSHELL

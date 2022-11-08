@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	gapic-common
-PORTVERSION=	0.10.0
+PORTVERSION=	0.11.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Common code for GAPIC-generated API clients
+WWW=		https://github.com/googleapis/gapic-generator-ruby/tree/master/gapic-common
 
 LICENSE=	APACHE20
 

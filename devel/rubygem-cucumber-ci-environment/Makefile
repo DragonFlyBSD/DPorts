@@ -1,12 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cucumber-ci-environment
-PORTVERSION=	9.0.4
+PORTVERSION=	9.1.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Detect CI Environment from environment variables
+WWW=		https://github.com/cucumber/ci-environment
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,13 +1,11 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cucumber-html-formatter
-PORTVERSION=	19.2.0
-PORTREVISION=	1
+PORTVERSION=	20.0.0
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HTML formatter for Cucumber
+WWW=		https://github.com/cucumber/html-formatter
 
 LICENSE=	MIT
 

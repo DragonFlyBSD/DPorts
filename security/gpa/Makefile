@@ -1,5 +1,3 @@
-# Created by: Clive Lin <clive@CirX.ORG>
-
 PORTNAME=	gpa
 PORTVERSION=	0.10.0
 CATEGORIES=	security
@@ -7,6 +5,7 @@ MASTER_SITES=	GNUPG/gpa
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	GTK2+ frontend for the GNU Privacy Guard
+WWW=		https://gpa.wald.intevation.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

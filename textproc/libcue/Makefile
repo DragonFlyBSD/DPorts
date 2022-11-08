@@ -1,5 +1,3 @@
-# Created by: buganini@gmail.com
-
 PORTNAME=	libcue
 PORTVERSION=	2.1.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	textproc
 
 MAINTAINER=	buganini@gmail.com
 COMMENT=	CUE Sheet Parser Library
+WWW=		https://github.com/lipnitsk/libcue
 
 LICENSE=	BSD2CLAUSE GPLv2
 LICENSE_COMB=	multi

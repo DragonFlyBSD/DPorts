@@ -1,5 +1,3 @@
-# Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-
 PORTNAME=	textile
 PORTVERSION=	4.0.2
 CATEGORIES=	www textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Textile markup generator written in Python
+WWW=		https://github.com/textile/python-textile/releases
 
 LICENSE=	BSD2CLAUSE
 

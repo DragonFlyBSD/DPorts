@@ -1,5 +1,3 @@
-# Created by: Douglas Thrift <douglas@douglasthrift.net>
-
 PORTNAME=	phone
 PORTVERSION=	1.2.3
 CATEGORIES=	textproc rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	Phone number parsing, validation and formatting
+WWW=		https://github.com/carr/phone
 
 LICENSE=	MIT
 

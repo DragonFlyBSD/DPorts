@@ -1,5 +1,3 @@
-# Created by: Pawel Pekala <c0rn@o2.pl>
-
 PORTNAME=	clawsker
 PORTVERSION=	1.3.5
 CATEGORIES=	mail perl5
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.claws-mail.org/tools/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Applet to edit Claws Mail's hidden preferences
+WWW=		https://www.claws-mail.org/clawsker.php
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

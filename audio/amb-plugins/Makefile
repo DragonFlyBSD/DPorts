@@ -1,5 +1,3 @@
-# Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-
 PORTNAME=	amb-plugins
 PORTVERSION=	0.8.1
 PORTREVISION=	1
@@ -12,6 +10,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ambisonics LADSPA plugins, mainly to be used within Ardour
+WWW=		https://kokkinizita.linuxaudio.org/linuxaudio/ladspa/index.html
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:audio/ladspa
 RUN_DEPENDS:=	${BUILD_DEPENDS}

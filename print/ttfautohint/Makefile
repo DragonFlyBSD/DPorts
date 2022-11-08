@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ttfautohint
 PORTVERSION=	1.8.4
 CATEGORIES=	print
@@ -8,6 +6,7 @@ MASTER_SITES=	SAVANNAH/freetype \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Automatic font hinting library
+WWW=		https://www.freetype.org/ttfautohint/
 
 LICENSE=	FTL GPLv2+
 LICENSE_COMB=	dual

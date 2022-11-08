@@ -1,5 +1,3 @@
-# Created by: lbr@FreeBSD.org
-
 PORTNAME=	Catalyst-Plugin-ConfigLoader-Environment
 PORTVERSION=	0.07
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Configure your application with environment variables
+WWW=		https://metacpan.org/release/Catalyst-Plugin-ConfigLoader-Environment
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

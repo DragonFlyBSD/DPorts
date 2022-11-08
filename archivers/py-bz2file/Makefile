@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	bz2file
 PORTVERSION=	0.98
 CATEGORIES=	archivers python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Read and write bzip2-compressed files
+WWW=		https://github.com/nvawda/bz2file
 
 LICENSE=	APACHE20
 

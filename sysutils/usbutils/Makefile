@@ -1,5 +1,3 @@
-# Created by: Henrik Brix Andersen <brix@FreeBSD.org>
-
 PORTNAME=	usbutils
 PORTVERSION=	0.91
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utility for listing USB devices
+WWW=		https://github.com/gregkh/usbutils
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

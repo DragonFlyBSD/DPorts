@@ -1,5 +1,3 @@
-# Created by: Geyer Klaus
-
 PORTNAME=	catseye-fm
 PORTVERSION=	4.2.0.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	http://catseye-fm.sourceforge.net/downloads/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Clear, fast, powerful file browser using gtk+2.0
+WWW=		http://catseye-fm-temp.sourceforge.net/
 
 LICENSE=	GPLv3
 

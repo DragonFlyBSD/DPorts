@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	mecab
 PORTVERSION=	0.6.0
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
 MAINTAINER=	gasol.wu@gmail.com
 COMMENT=	PHP bindings of the MeCab
+WWW=		https://github.com/rsky/php-mecab
 
 LICENSE=	MIT
 

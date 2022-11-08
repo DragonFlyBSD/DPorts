@@ -1,5 +1,3 @@
-# Created by: sahne
-
 PORTNAME=	lxde-common
 PORTVERSION=	0.99.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/lxde/${PORTNAME}%20%28default%20config%29/${PORTNAME}%20${PORTV
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	LXDE Common files
+WWW=		https://lxde.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

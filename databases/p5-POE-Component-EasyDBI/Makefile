@@ -1,5 +1,3 @@
-# Created by: Zach Thompson <lin-chi@lastamericanempire.com>
-
 PORTNAME=	POE-Component-EasyDBI
 PORTVERSION=	1.28
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	POE Component for simplified DBI usage
+WWW=		https://metacpan.org/release/POE-Component-EasyDBI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

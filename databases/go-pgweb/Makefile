@@ -1,12 +1,13 @@
 PORTNAME=	pgweb
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.11.7
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=	databases www
 PKGNAMEPREFIX=	go-
 
 MAINTAINER=	daniel@morante.net
 COMMENT=	Web-based database browser for PostgreSQL
+WWW=		https://github.com/sosedoff/pgweb
 
 LICENSE=	MIT
 

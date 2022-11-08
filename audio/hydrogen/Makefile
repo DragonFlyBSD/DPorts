@@ -1,5 +1,3 @@
-# Created by: Jean-Yves Lefort <jylefort@brutele.be>
-
 PORTNAME=	hydrogen
 DISTVERSION=	1.0.1
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	FreeBSD@ShaneWare.Biz
 COMMENT=	Advanced drum machine
+WWW=		http://www.hydrogen-music.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -16,8 +15,8 @@ LIB_DEPENDS=	libsndfile.so:audio/libsndfile \
 
 USES=		cmake compiler:c++11-lang desktop-file-utils pkgconfig \
 		localbase qt:5
-USE_QT=		core gui network widgets xml xmlpatterns buildtools_build \
-		linguisttools_build qmake_build testlib_build
+USE_QT=		core gui network widgets xml xmlpatterns buildtools:build \
+		linguisttools:build qmake:build testlib:build
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes

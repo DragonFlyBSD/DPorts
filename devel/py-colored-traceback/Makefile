@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	colored-traceback
 PORTVERSION=	0.3.0
 CATEGORIES=	devel python
@@ -7,7 +5,8 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ehaupt@FreeBSD.org
-COMMENT=	Automatically color Python’s uncaught exception tracebacks
+COMMENT=	Automatically color Python's uncaught exception tracebacks
+WWW=		https://pypi.org/project/colored-traceback/
 
 LICENSE=	ISCL
 

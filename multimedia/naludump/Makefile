@@ -1,5 +1,3 @@
-# Created by: Juergen Lock <nox@FreeBSD.org>
-
 PORTNAME=	naludump
 PORTVERSION=	0.1.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.udo-richter.de/vdr/files/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Delete NALU fill data from h.264 TS files
+WWW=		https://www.udo-richter.de/vdr/naludump.en.html
 
 LICENSE=	GPLv2
 

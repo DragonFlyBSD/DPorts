@@ -1,5 +1,3 @@
-# Created by: Marwan Burelle <marwan.burelle@lri.fr>
-
 PORTNAME=	ledit
 PORTVERSION=	2.04
 CATEGORIES=	sysutils
@@ -9,6 +7,7 @@ MASTER_SITE_SUBDIR=	~ddr/${PORTNAME}/distrib/src
 
 MAINTAINER=	k@stereochro.me
 COMMENT=	Line editor to be used with interactive commands
+WWW=		http://cristal.inria.fr/~ddr/ledit/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

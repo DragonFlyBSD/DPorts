@@ -1,15 +1,10 @@
-# Created by: Horia Racoviceanu <horia@racoviceanu.com>
-
 PORTNAME=	scrypt
-PORTVERSION=	1.4.2
+PORTVERSION=	2.0.0
 CATEGORIES=	security pear
-
-# https://github.com/DomBlack/php-scrypt/pull/56/
-PATCH_SITES=	https://github.com/DomBlack/php-scrypt/commit/
-PATCHFILES=	5010f9fa0743518d149d994728ca930503adde1e.patch:-p1
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	PHP wrapper to Colin Percival's scrypt implementation
+WWW=		https://pecl.php.net/package/scrypt
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

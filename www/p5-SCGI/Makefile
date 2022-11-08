@@ -1,5 +1,3 @@
-# Created by: Vivek Khera <vivek@khera.org>
-
 PORTNAME=	SCGI
 PORTVERSION=	0.6
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vivek@khera.org
 COMMENT=	SCGI server interface
+WWW=		https://python.ca/nas/scgi/protocol.txt
 
 USES=		perl5
 USE_PERL5=	modbuild

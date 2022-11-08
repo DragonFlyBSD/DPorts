@@ -1,5 +1,3 @@
-# Created by: Autrijus Tang <autrijus@autrijus.org>
-
 PORTNAME=	Module-ScanDeps
 PORTVERSION=	1.31
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Recursively scan Perl code for dependencies
+WWW=		https://metacpan.org/release/Module-ScanDeps
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

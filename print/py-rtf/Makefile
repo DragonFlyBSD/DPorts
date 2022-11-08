@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	rtf
 PORTVERSION=	0.45
 CATEGORIES=	print python
@@ -9,6 +7,7 @@ DISTNAME=	PyRTF-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library to create RTF documents using the Python language
+WWW=		http://pyrtf.sourceforge.net/
 
 LICENSE=	GPLv1
 

@@ -1,13 +1,13 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Geo-GDAL-FFI
 PORTVERSION=	0.09
+PORTREVISION=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Foreign function interface to GDAL
+WWW=		https://metacpan.org/release/Geo-GDAL-FFI
 
 LICENSE=	ART10
 LICENSE_FILE=	${WRKSRC}/LICENSE

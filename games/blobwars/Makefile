@@ -1,5 +1,3 @@
-# Created by: Loren M. Lang <lorenl@alzatex.com>
-
 PORTNAME=	blobwars
 PORTVERSION=	2.00
 CATEGORIES=	games
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Mission and Objective based 2D Platform Game
+WWW=		https://www.parallelrealities.co.uk/p/blob-wars-metal-blob-solid.html
 
 LICENSE=	GPLv2+ CC-BY-3.0 CC-BY-SA-3.0
 LICENSE_COMB=	multi

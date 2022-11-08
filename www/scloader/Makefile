@@ -1,5 +1,3 @@
-# Created by: Radim Kolar <hsn@sanatana.dharma>
-
 PORTNAME=	scloader
 PORTVERSION=	0.32
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	loader${PORTVERSION:C/\.//}
 
 MAINTAINER=	hsn@sendmail.cz
 COMMENT=	Configurable web graber/spider
+WWW=		http://scloader.sourceforge.net
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: elfrink@introcom.nl
-
 PORTNAME=	tractorgen
 PORTVERSION=	0.31.7
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.vergenet.net/~conrad/software/tractorgen/dl/
 
 MAINTAINER=	robin@15augustus.nl
 COMMENT=	Generates ASCII tractors
+WWW=		https://www.vergenet.net/~conrad/software/tractorgen/
 
 GNU_CONFIGURE=	yes
 

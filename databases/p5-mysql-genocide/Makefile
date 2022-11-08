@@ -1,5 +1,3 @@
-# Created by: chinsan
-
 PORTNAME=	mysql-genocide
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parallel operation on MySQL processlist
+WWW=		https://metacpan.org/release/RSOLIV/mysql-genocide-0.03
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-DBD-mysql>=0:databases/p5-DBD-mysql

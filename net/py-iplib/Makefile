@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	iplib
 PORTVERSION=	1.2.1
 CATEGORIES=	net python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Convert amongst many different IPv4 notations
+WWW=		https://pypi.org/project/iplib/
 
 LICENSE=	BSD3CLAUSE
 

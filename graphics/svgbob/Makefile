@@ -1,10 +1,11 @@
 PORTNAME=	svgbob
 DISTVERSION=	g20190412
-PORTREVISION=	29
+PORTREVISION=	31
 CATEGORIES=	graphics
 
 MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Convert ASCII diagrams to SVG
+WWW=		https://github.com/ivanceras/svgbob
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC:H}/LICENSE

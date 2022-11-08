@@ -1,5 +1,3 @@
-# Created by: alex
-
 PORTNAME=	bochs
 PORTVERSION=	2.7
 PORTEPOCH=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	IA-32 (x86) PC emulator that runs DOS, Win 95, and more
+WWW=		http://bochs.sourceforge.net/
 
 LICENSE=	LGPL21
 

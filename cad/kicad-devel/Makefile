@@ -1,14 +1,13 @@
-# Created by: Michael Reifenberger <mr@FreeBSD.org>
-
 PORTNAME=	kicad
 DISTVERSION=	r${GIT_SRC_DATE}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	cad
 PKGNAMESUFFIX=	-devel
 DIST_SUBDIR=		${PORTNAME}
 
 MAINTAINER=		mr@FreeBSD.org
 COMMENT=		Schematic and PCB editing software
+WWW=		http://kicad-pcb.org/
 
 LICENSE=	GPLv3
 

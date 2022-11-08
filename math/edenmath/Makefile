@@ -1,5 +1,3 @@
-# Created by: gurkan@phys.ethz.ch
-
 PORTNAME=	edenmath
 PORTVERSION=	1.1.1
 PORTREVISION=	11
@@ -9,6 +7,7 @@ DISTNAME=	EdenMath_GNUstep-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Scientific calculator for GNUstep
+WWW=		https://www.eskimo.com/~pburns/EdenMath/
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Tsung-Han Yeh <snowfly@yuntech.edu.tw>
-
 PORTNAME=	SMS-Send
 PORTVERSION=	1.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	snowfly@yuntech.edu.tw
 COMMENT=	Driver-based API for sending SMS messages
+WWW=		https://metacpan.org/release/SMS-Send
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

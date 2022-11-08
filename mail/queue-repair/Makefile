@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	queue-repair
 PORTVERSION=	0.9.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://pyropus.ca/software/${PORTNAME}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Qmail queue diagnostic and repair tool
+WWW=		http://pyropus.ca/software/queue-repair/
 
 LICENSE=	GPLv2
 

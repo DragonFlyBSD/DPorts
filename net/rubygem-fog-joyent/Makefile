@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fog-joyent
 PORTVERSION=	0.0.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module for the 'fog' gem to support Joyent
+WWW=		https://github.com/fog/fog-joyent
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	apib
 DISTVERSIONPREFIX=	${PORTNAME:tu}_
 DISTVERSION=	1_2_1
@@ -9,6 +7,7 @@ CATEGORIES=	benchmarks www
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Simple and fast HTTP performance testing tool
+WWW=		https://github.com/apigee/apib
 
 LICENSE=	APACHE20
 

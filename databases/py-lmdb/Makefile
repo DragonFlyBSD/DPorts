@@ -1,5 +1,3 @@
-# Created by: Keith Gaughan <k@sterechro.me>
-
 PORTNAME=	lmdb
 PORTVERSION=	0.97
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	k@stereochro.me
 COMMENT=	Python bindings for LMDB
+WWW=		https://github.com/jnwatson/py-lmdb
 
 LICENSE=	OPENLDAP
 LICENSE_NAME=	OpenLDAP Public LIcense

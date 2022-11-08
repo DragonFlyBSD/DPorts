@@ -1,11 +1,10 @@
-# Created by: Alexander Leidinger
-
 PORTNAME=	fowsr
 PORTVERSION=	${FILEVER}
 CATEGORIES=	astro
 
 MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	Fine Offset Weather Station Reader
+WWW=		https://github.com/apachler/fowsr
 
 LICENSE=	GPLv3
 

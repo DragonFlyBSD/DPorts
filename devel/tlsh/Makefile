@@ -1,11 +1,10 @@
-# Created by: John Hood <cgull@glup.org>
-
 PORTNAME=	tlsh
 DISTVERSION=	4.7.2
 CATEGORIES=	devel
 
 MAINTAINER=	cgull@glup.org
 COMMENT=	Trend Micro Locality Sensitive Hash library and utilities
+WWW=		https://tlsh.org
 
 LICENSE=	APACHE20 BSD3CLAUSE
 LICENSE_COMB=	dual

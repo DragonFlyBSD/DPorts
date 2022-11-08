@@ -1,5 +1,3 @@
-# Created by: gpalmer
-
 PORTNAME=	snmp
 PORTVERSION=	5.9.1
 PORTREVISION=	1
@@ -12,6 +10,7 @@ DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Extendable SNMP implementation
+WWW=		http://net-snmp.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

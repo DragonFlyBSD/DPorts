@@ -1,5 +1,3 @@
-# Created by: Satoshi Taoka <taoka@FreeBSD.org>
-
 PORTNAME=	srd-fpw-package
 PORTVERSION=	1.0.8
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	http://openlab.ring.gr.jp/edict/fpw/dist/srd/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Supplement file for lookup to use "Random House"
+WWW=		http://openlab.ring.gr.jp/edict/srd-fpw/
 
 # Your PC does not have an audio card always.
 #		realplay:multimedia/linux-realplayer

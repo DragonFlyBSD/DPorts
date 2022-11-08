@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	CGI
 PORTVERSION=	4.54
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Handle Common Gateway Interface requests and responses
+WWW=		https://metacpan.org/release/CGI
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

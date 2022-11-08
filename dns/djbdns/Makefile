@@ -1,5 +1,3 @@
-# Created by: Neil Blakey-Milner
-
 PORTNAME?=	djbdns
 PORTVERSION?=	${DJBDNS_VER}
 PORTREVISION?=	22
@@ -13,6 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	Collection of secure and reliable DNS tools
+WWW=		https://cr.yp.to/djbdns.html
 
 # Converted from LEGAL_TEXT
 LICENSE=	djb

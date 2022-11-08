@@ -1,5 +1,3 @@
-# Created by: George Reid <greid@ukug.uk.freebsd.org>
-
 PORTNAME=	xawtv
 PORTVERSION=	3.107
 CATEGORIES=	multimedia
@@ -7,6 +5,7 @@ MASTER_SITES=	http://linuxtv.org/downloads/xawtv/
 
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	TV viewing application and a few TV utilities
+WWW=		https://linuxtv.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

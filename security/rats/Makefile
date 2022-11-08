@@ -1,5 +1,3 @@
-# Created by: Kris Kennaway <kris@FreeBSD.org>
-
 PORTNAME=	rats
 PORTVERSION=	2.4
 CATEGORIES=	security devel
@@ -7,6 +5,7 @@ MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/co
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Source code auditing tool
+WWW=		https://security.web.cern.ch/security/recommendations/en/codetools/rats.shtml
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

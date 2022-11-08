@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	bitcoin
 DISTVERSION=	1.1.42
 CATEGORIES=	finance python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python Bitcoin Tools
+WWW=		https://github.com/vbuterin/pybitcointools
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

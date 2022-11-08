@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Log-Simple
 PORTVERSION=	1.8
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Basic runtime logger
+WWW=		https://metacpan.org/release/Log-Simple
 
 LICENSE=	GPLv2
 

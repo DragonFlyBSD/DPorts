@@ -1,5 +1,3 @@
-# Created by: mp39590@gmail.com
-
 PORTNAME=	tudu
 PORTVERSION=	0.10.3
 CATEGORIES=	misc
@@ -7,6 +5,7 @@ MASTER_SITES=	http://code.meskio.net/tudu/
 
 MAINTAINER=	mp39590@gmail.com
 COMMENT=	Command line program for managing "todo" lists
+WWW=		https://code.meskio.net/tudu/
 
 LICENSE=	GPLv3
 

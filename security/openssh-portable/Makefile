@@ -1,5 +1,3 @@
-# Created by: dwcjr@inethouston.net
-
 PORTNAME=	openssh
 DISTVERSION=	9.0p1
 PORTREVISION=	0
@@ -10,6 +8,7 @@ PKGNAMESUFFIX?=	-portable
 
 MAINTAINER=	bdrewery@FreeBSD.org
 COMMENT=	The portable version of OpenBSD's OpenSSH
+WWW=		https://www.openssh.com/portable.html
 
 LICENSE=	OPENSSH
 LICENSE_NAME=	OpenSSH Licenses

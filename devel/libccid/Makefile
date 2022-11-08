@@ -1,12 +1,11 @@
-# Created by: arved
-
 PORTNAME=	ccid
-PORTVERSION=	1.4.36
+PORTVERSION=	1.5.0
 CATEGORIES=	devel
 MASTER_SITES=	https://ccid.apdu.fr/files/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Generic driver for USB CCID and ICCD
+WWW=		https://ccid.apdu.fr/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,11 +1,10 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	ferrite-core
 PORTVERSION=	2.02
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Geometric shaped font lending it a futurist look
+WWW=		https://github.com/froyotam/ferrite-core
 
 LICENSE=	OFL11
 LICENSE_FILE=	${WRKSRC}/OFL.txt

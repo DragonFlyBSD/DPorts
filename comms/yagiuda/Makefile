@@ -1,5 +1,3 @@
-# Created by: db
-
 PORTNAME=	yagiuda
 PORTVERSION=	1.19
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.g8wrb.org/yagi/ \
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Used to calculate yagi-uda antenna patterns useful to ham radio
+WWW=		http://www.g8wrb.org/yagi/index.html
 
 LICENSE=	GPLv2
 

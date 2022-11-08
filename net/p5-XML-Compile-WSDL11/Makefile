@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	XML-Compile-WSDL11
 PORTVERSION=	3.08
 CATEGORIES=	net www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Create SOAP messages defined by WSDL 1.1
+WWW=		https://metacpan.org/release/XML-Compile-WSDL11
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

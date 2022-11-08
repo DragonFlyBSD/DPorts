@@ -1,11 +1,10 @@
-# Created by: Stefan Grundmann
-
 PORTNAME=	pam_ocra
 DISTVERSION=	1.5
 CATEGORIES=	security
 
 MAINTAINER=	sg2342@googlemail.com
 COMMENT=	RFC6287 (OCRA) PAM module
+WWW=		https://github.com/sg2342/pam_ocra
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

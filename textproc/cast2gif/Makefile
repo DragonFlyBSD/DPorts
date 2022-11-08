@@ -1,11 +1,12 @@
 PORTNAME=	cast2gif
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.0
-PORTREVISION=	14
+PORTREVISION=	16
 CATEGORIES=	textproc
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Tool to render Asciinema cast files to GIFs
+WWW=		https://github.com/katharostech/cast2gif
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

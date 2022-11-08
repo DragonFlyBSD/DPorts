@@ -1,12 +1,12 @@
-# Created by: Muhammad Moinur Rahman <bofh@FreeBSD.org>
-
 PORTNAME=	qmapshack
 PORTVERSION=	1.16.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	V_
 CATEGORIES=	astro
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Ultimate outdoor aficionado's tool
+WWW=		https://github.com/Maproom/qmapshack/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

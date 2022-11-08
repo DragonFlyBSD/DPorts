@@ -1,5 +1,3 @@
-# Created by: bf <bf2006a@yahoo.com>
-
 PORTNAME=	dieharder
 PORTVERSION=	3.31.1
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.phy.duke.edu/~rgb/General/dieharder/ LOCAL/bf
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Random number generator testsuite
+WWW=		http://www.phy.duke.edu/~rgb/General/dieharder.php
 
 LICENSE=	GPLv2
 

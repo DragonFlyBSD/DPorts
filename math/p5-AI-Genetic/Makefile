@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	AI-Genetic
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Pure Perl genetic algorithm implementation
+WWW=		https://metacpan.org/release/AI-Genetic
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	Tk-TableMatrix
 PORTVERSION=	1.26
 CATEGORIES=	x11-toolkits perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Table/matrix extension to perl/tk for displaying table formatted data
+WWW=		https://metacpan.org/release/Tk-TableMatrix
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Tk>=0:x11-toolkits/p5-Tk

@@ -1,8 +1,6 @@
-# Created by: Douglas Thrift <douglas@douglasthrift.net>
-
 PORTNAME=	anyterm
 PORTVERSION=	1.1.29
-PORTREVISION=	23
+PORTREVISION=	24
 CATEGORIES=	www
 MASTER_SITES=	http://anyterm.org/download/ \
 		http://dl1.douglasthrift.net/${PORTNAME}/ \
@@ -10,6 +8,7 @@ MASTER_SITES=	http://anyterm.org/download/ \
 
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	Terminal emulator on a Web page
+WWW=		https://anyterm.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

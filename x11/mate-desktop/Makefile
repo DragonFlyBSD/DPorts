@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	mate-desktop
 PORTVERSION=	1.26.0
 CATEGORIES=	x11 mate
@@ -8,6 +6,7 @@ DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Additional UI API for MATE
+WWW=		https://mate-desktop.org/
 
 LICENSE=	GPLv2 GFDL LGPL21
 LICENSE_COMB=	multi

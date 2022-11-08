@@ -1,5 +1,3 @@
-# Created by: andy@fud.org.nz
-
 PORTNAME=	pamtester
 PORTVERSION=	0.1.2
 CATEGORIES=	security
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command line pam authentication tester
+WWW=		http://pamtester.sourceforge.net/
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	${CFLAGS}

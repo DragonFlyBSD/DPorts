@@ -1,5 +1,3 @@
-# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-
 PORTNAME=	Net-SIP
 PORTVERSION=	0.833
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Framework SIP (Voice Over IP, RFC3261)
+WWW=		https://metacpan.org/release/Net-SIP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

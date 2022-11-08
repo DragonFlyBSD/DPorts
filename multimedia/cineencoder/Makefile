@@ -1,11 +1,10 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	${GH_ACCOUNT:tl}
-PORTVERSION=	3.5.3
+PORTVERSION=	3.5.4
 CATEGORIES=	multimedia
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	HDR-aware multimedia file converter
+WWW=		https://github.com/CineEncoder/cine-encoder
 
 LICENSE=	GPLv3
 
@@ -13,12 +12,13 @@ LIB_DEPENDS=	libmediainfo.so:multimedia/libmediainfo
 RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg \
 		mkvpropedit:multimedia/mkvtoolnix
 
-USES=		qt:5
+USES=		pkgconfig qt:5 xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	CineEncoder
 GH_PROJECT=	cine-encoder
-USE_QT=		buildtools_build qmake_build core gui multimedia \
-		network widgets
+USE_QT=		buildtools:build qmake:build core gui multimedia \
+		network svg widgets x11extras
+USE_XORG=	x11 xext
 
 PLIST_FILES=	bin/cine_encoder man/man1/cine-encoder.1.gz \
 		share/applications/cine-encoder.desktop \
@@ -33,7 +33,8 @@ do-configure:
 		app/cine_encoder.pro CONFIG+=qtquickcompiler
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cine_encoder ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/builddir/cine_encoder \
+		${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/distros/debian/cine-encoder.1 \
 		${STAGEDIR}${MANPREFIX}/man/man1
 	${INSTALL_DATA} ${WRKSRC}/share/cine-encoder.desktop \

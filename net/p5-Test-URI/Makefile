@@ -1,5 +1,3 @@
-# Created by: TAKAHASHI Kaoru <kaoru@kaisei.org>
-
 PORTNAME=	Test-URI
 PORTVERSION=	1.084
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Check Uniform Resource Identifiers
+WWW=		https://metacpan.org/release/Test-URI
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

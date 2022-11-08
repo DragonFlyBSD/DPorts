@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	gpgme
 PORTVERSION=	2.0.20
 CATEGORIES=	security rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby interface to GnuPG Made Easy (GPGME)
+WWW=		https://github.com/ueno/ruby-gpgme
 
 LICENSE=	LGPL21+
 

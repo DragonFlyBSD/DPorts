@@ -1,5 +1,3 @@
-# Created by: Mathieu Arnold <m@absolight.net>
-
 PORTNAME=	DateTime-Format-Pg
 PORTVERSION=	0.16014
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse and format PostgreSQL dates and times
+WWW=		https://metacpan.org/release/DateTime-Format-Pg
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Willem van Engen <wvengen@stack.nl>
-
 PORTNAME=	sword
 PORTVERSION=	1.8.1
 PORTREVISION=	14
@@ -8,6 +6,7 @@ MASTER_SITES=	http://crosswire.org/ftpmirror/pub/sword/source/v${PORTVERSION:R}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Framework for manipulating Bible texts
+WWW=		https://crosswire.org/sword/index.jsp
 
 LICENSE=	GPLv2
 

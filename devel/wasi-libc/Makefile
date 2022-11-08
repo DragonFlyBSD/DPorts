@@ -2,8 +2,9 @@ PORTNAME=	wasi-libc
 DISTVERSION=	g20210923
 CATEGORIES=	devel
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C standard library for WebAssembly System Interface
+WWW=		https://github.com/CraneStation/wasi-libc
 
 LICENSE=	APACHE20 MIT LLVM2
 LICENSE_COMB=	multi

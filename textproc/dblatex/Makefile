@@ -1,5 +1,3 @@
-# Created by: Peter Johnson <johnson.peter@gmail.com>
-
 PORTNAME=	dblatex
 DISTVERSION=	0.3.12
 CATEGORIES=	textproc
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}3-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	DocBook to LaTeX/ConTeXt Publishing
+WWW=		http://dblatex.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT

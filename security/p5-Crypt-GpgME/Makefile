@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	Crypt-GpgME
 PORTVERSION=	0.09
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to libgpgme
+WWW=		https://metacpan.org/dist/Crypt-GpgME
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

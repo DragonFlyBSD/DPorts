@@ -1,5 +1,3 @@
-# Created by: Tim Bishop <tim@bishnet.net>
-
 PORTNAME=	statgrab
 PORTVERSION=	0.7.1
 CATEGORIES=	devel python
@@ -11,6 +9,7 @@ DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	tdb@FreeBSD.org
 COMMENT=	Set of Python bindings for libstatgrab
+WWW=		https://libstatgrab.org/pystatgrab/
 
 LICENSE=	LGPL21
 

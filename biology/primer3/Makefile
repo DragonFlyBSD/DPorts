@@ -1,5 +1,3 @@
-# Created by: Tony Maher <tonym@biolateral.com.au>
-
 PORTNAME=	primer3
 PORTVERSION=	2.3.6
 CATEGORIES=	biology
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Primer3 helps to choose primers for PCR reactions
+WWW=		http://www-genome.wi.mit.edu/genome_software/other/primer3.html
 
 LICENSE=	GPLv2
 

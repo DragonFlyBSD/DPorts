@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov <andy@icc.surw.chel.su>
-
 PORTNAME=	omega
 PORTVERSION=	0.90.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	r7st.guru@gmail.com
 COMMENT=	Complex rogue-style game of dungeon exploration
+WWW=		http://www.alcyone.com/max/projects/omega/
 
 USES=		gmake ncurses
 WRKSRC=		${WRKDIR}/${PORTNAME}

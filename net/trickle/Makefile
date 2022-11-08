@@ -1,5 +1,3 @@
-# Created by: Kirill Ponomarew <ponomarew@oberon.net>
-
 PORTNAME=	trickle
 PORTVERSION=	1.07
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	https://monkey.org/~marius/trickle/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight, portable bandwidth shaper
+WWW=		https://monkey.org/~marius/trickle/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Andreas Klemm <andreas@klemm.gtn.com>
-
 PORTNAME=	arts++
 PORTVERSION=	1.1.a13
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.caida.org/tools/utilities/arts/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Network data storage and analysis library from CAIDA
+WWW=		http://www.caida.org/tools/utilities/arts/
 
 LICENSE=	LGPL21
 

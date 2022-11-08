@@ -1,5 +1,3 @@
-# Created by: George Reid <greid@ukug.uk.freebsd.org>
-
 PORTNAME=	umix
 PORTVERSION=	1.0.2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Advanced tool for adjusting soundcard mixers, replacement for aumix
+WWW=		http://umix.sourceforge.net/
 
 USES=		alias ncurses
 GNU_CONFIGURE=	yes

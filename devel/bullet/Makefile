@@ -1,11 +1,10 @@
-# Created by: Jose Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	bullet
 PORTVERSION=	3.24
 CATEGORIES=	devel
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	3D collision detection and rigid body dynamics library
+WWW=		https://www.bulletphysics.com/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pytest-subtests
 PORTVERSION=	0.8.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	unittest subTest() support and subtests fixture
+WWW=		https://github.com/pytest-dev/pytest-subtests
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,9 +1,11 @@
 PORTNAME=	dune-vtk
 DISTVERSION=	2.8.0
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	DUNE framework: File reader and writer for the VTK XML format
+WWW=		https://www.dune-project.org/
 
 LICENSE=	GPLv2+
 

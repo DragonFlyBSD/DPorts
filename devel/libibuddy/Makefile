@@ -1,11 +1,10 @@
-# Created by: Rodrigo OSORIO <rodrigo@FreeBSD.org>
-
 PORTNAME=	libibuddy
 PORTVERSION=	0.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	C loadable library and CLI tool to control an i-buddy device
+WWW=		https://www.osorio.me/projects/dev/libibbudy/
 
 LICENSE=	BSD2CLAUSE
 

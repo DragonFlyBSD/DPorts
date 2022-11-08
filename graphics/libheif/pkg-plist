@@ -1,3 +1,7 @@
+%%PORTEXAMPLES%%bin/heif-convert
+%%PORTEXAMPLES%%bin/heif-enc
+%%PORTEXAMPLES%%bin/heif-info
+%%PORTEXAMPLES%%bin/heif-thumbnailer
 include/libheif/heif.h
 include/libheif/heif_cxx.h
 include/libheif/heif_plugin.h
@@ -8,8 +12,12 @@ lib/cmake/libheif/libheif-config.cmake
 lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-heif.so
 lib/libheif.so
 lib/libheif.so.1
-lib/libheif.so.1.12.0.0
+lib/libheif.so.1.13.0.0
 libdata/pkgconfig/libheif.pc
+%%PORTEXAMPLES%%share/man/man1/heif-convert.1.gz
+%%PORTEXAMPLES%%share/man/man1/heif-enc.1.gz
+%%PORTEXAMPLES%%share/man/man1/heif-info.1.gz
+%%PORTEXAMPLES%%share/man/man1/heif-thumbnailer.1.gz
 share/mime/packages/avif.xml
 share/mime/packages/heif.xml
 share/thumbnailers/heif.thumbnailer

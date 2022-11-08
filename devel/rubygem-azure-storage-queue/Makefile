@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	azure-storage-queue
 PORTVERSION=	2.0.4
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Microsoft Azure Storage Queue Client Library for Ruby
+WWW=		https://github.com/Azure/azure-storage-ruby/tree/master/queue
 
 LICENSE=	MIT
 

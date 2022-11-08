@@ -1,13 +1,12 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	gotty
 PORTVERSION=	1.0.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	4
+PORTREVISION=	8
 CATEGORIES=	www net
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Command line tool that turns your CLI tools into web applications
+WWW=		https://github.com/yudai/gotty
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

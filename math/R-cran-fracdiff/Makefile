@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	fracdiff
 DISTVERSION=	1.5-1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Fractionally differenced ARIMA aka ARFIMA(p,d,q) models
+WWW=		https://cran.r-project.org/web/packages/fracdiff/
 
 LICENSE=	GPLv2+
 

@@ -1,5 +1,3 @@
-# Created by: Timothy Beyer <beyert@cs.ucr.edu>
-
 PORTNAME=	bam
 PORTVERSION=	0.4.0
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/downloads/matricks/bam/
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Fast and flexible build system using Lua
+WWW=		http://matricks.github.com/bam/
 
 LICENSE=	ZLIB
 

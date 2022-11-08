@@ -1,5 +1,3 @@
-# Created by: Bruce M Simpson
-
 PORTNAME=	PCSC-Card
 PORTVERSION=	1.4.14
 CATEGORIES=	devel perl5
@@ -11,6 +9,7 @@ DISTNAME=	pcsc-perl-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl bindings for the PC/SC Lite Framework
+WWW=		http://ludovic.rousseau.free.fr/softwares/pcsc-perl/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENCE

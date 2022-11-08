@@ -1,5 +1,3 @@
-# Created by: Mykola Dzham <i@levsha.me>
-
 PORTNAME=	bino
 PORTVERSION=	1.6.5
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	https://download.savannah.nongnu.org/releases/bino/
 
 MAINTAINER=	i@levsha.me
 COMMENT=	3D video player with multi-display support
+WWW=		https://bino3d.org
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -20,7 +19,7 @@ USES=		autoreconf compiler:c++11-lang desktop-file-utils gl gmake \
 		gnome iconv pkgconfig qt:5 tar:xz
 USE_GL=		gl glu glew
 GNU_CONFIGURE=	yes
-USE_QT=		buildtools_build core gui opengl widgets
+USE_QT=		buildtools:build core gui opengl widgets
 USE_CXXSTD=	c++11
 
 # no port fow equalizer now, lirc detecting not working

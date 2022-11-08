@@ -1,5 +1,3 @@
-# Created by: Jeremy <karlj000@unbc.ca>
-
 PORTNAME=	avida
 PORTVERSION=	2.12.4
 DISTVERSIONSUFFIX=	-src
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-stable/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Auto-adaptive genetic system designed for ALife research
+WWW=		https://avida.devosoft.org/
 
 LICENSE=	GPLv3
 

@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	scotch
 DISTVERSION=	6.0.4-aster7
 PORTREVISION=	3
@@ -7,6 +5,7 @@ CATEGORIES=	cad science
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Package for graph and mesh partitioning and sparse matrix ordering
+WWW=		https://www.labri.fr/perso/pelegrin/scotch/
 
 LICENSE=	CeCILL_C
 LICENSE_NAME=	CeCILL-C

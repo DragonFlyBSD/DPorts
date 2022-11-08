@@ -1,5 +1,3 @@
-# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-
 PORTNAME=	flightgear-mb339-pan
 PORTVERSION=	2.1
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	mb339pan_${PORTVERSION}
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	Simulation of the MB-339 PAN aerobatic jet
+WWW=		http://hcilab.uniud.it/pan/
 
 # Converted from RESTRICTED
 LICENSE=	mb339

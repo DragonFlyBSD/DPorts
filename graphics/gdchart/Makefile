@@ -1,5 +1,3 @@
-# Created by: Anders Nordby <anders@fix.no>
-
 PORTNAME=	gdchart
 PORTVERSION=	0.11.5
 PORTREVISION=	10
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}dev
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Easy to use fast C API for creating charts and graphs
+WWW=		http://www.fred.net/brv/chart/
 
 LIB_DEPENDS=	libgd.so:graphics/gd \
 		libfreetype.so:print/freetype2

@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	libwps
 PORTVERSION=	0.4.12
 CATEGORIES=	textproc
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	office@FreeBSD.org
 COMMENT=	Microsoft file word processor format import filter library
+WWW=		http://libwps.sourceforge.net/
 
 LICENSE=	LGPL21+ MPL20
 LICENSE_COMB=	dual

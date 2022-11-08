@@ -1,5 +1,3 @@
-# Created by: David Yeske <dyeske@gmail.com>
-
 PORTNAME=	tclxml
 PORTVERSION=	3.3
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	LOCAL/bf SF/tclxml/TclXML/${PORTVERSION}
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	API for parsing XML documents using Tcl
+WWW=		http://tclxml.sourceforge.net/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

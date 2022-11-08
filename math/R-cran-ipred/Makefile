@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	ipred
 DISTVERSION=	0.9-13
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Improved Predictors
+WWW=		https://cran.r-project.org/web/packages/ipred/
 
 LICENSE=	GPLv2+
 

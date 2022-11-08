@@ -1,5 +1,3 @@
-# Created by: Carlo Strub <cs@FreeBSD.org>
-
 PORTNAME=	django-otp-yubikey
 PORTVERSION=	1.0.0
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Plugin that verifies YubiKey OTP tokens
+WWW=		https://pypi.org/project/django-otp-yubikey/
 
 LICENSE=	BSD2CLAUSE
 

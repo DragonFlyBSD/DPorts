@@ -1,5 +1,3 @@
-# Created by: Charlie Kester <corky1951@comcast.net>
-
 PORTNAME=	openshot
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.6.1
@@ -8,6 +6,7 @@ CATEGORIES=	multimedia
 
 MAINTAINER=	tatsuki_makino@hotmail.com
 COMMENT=	OpenShot Video Editor
+WWW=		https://www.openshot.org/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

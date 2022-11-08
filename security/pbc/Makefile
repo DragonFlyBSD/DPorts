@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	pbc
 PORTVERSION=	0.5.14
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://crypto.stanford.edu/pbc/files/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library of pairing-based cryptosystems
+WWW=		https://crypto.stanford.edu/pbc/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING

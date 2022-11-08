@@ -1,11 +1,10 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	spiritvnc
 PORTVERSION=	0.4.6
 CATEGORIES=	net
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Multi-view FLTK-based VNC client
+WWW=		https://www.pismotek.com/brainout/content/spiritvnc.php
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

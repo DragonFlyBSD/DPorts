@@ -1,13 +1,12 @@
-# Created by: Randall Hopper <aa8vb@nc.rr.com>
-
 PORTNAME=	osg
 PORTVERSION=	3.6.5
 DISTVERSIONPREFIX=	OpenSceneGraph-
-PORTREVISION=	41
+PORTREVISION=	44
 CATEGORIES=	graphics
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	C++ OpenGL scene graph library for real-time rendering
+WWW=		https://www.openscenegraph.org/
 
 LICENSE=	OSGPL
 LICENSE_NAME=	OpenSceneGraph Public License

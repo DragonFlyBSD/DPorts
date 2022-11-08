@@ -1,5 +1,3 @@
-# Created by: Gabor Kovesdan
-
 PORTNAME=	Crypt-X509
 PORTVERSION=	0.54
 CATEGORIES=	security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Perl extension to parse X.509 certificates
+WWW=		https://metacpan.org/release/Crypt-X509
 
 RUN_DEPENDS=	p5-Convert-ASN1>=0:converters/p5-Convert-ASN1
 

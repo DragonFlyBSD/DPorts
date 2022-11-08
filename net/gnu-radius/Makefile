@@ -1,14 +1,13 @@
-# Created by: lance@evitel.net
-
 PORTNAME=	gnu-radius
 PORTVERSION=	1.6.1
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	net
 MASTER_SITES=	GNU/radius
 DISTNAME=	radius-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNU RADIUS server
+WWW=		https://www.gnu.org/software/radius/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

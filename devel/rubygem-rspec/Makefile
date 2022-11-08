@@ -1,5 +1,3 @@
-# Created by: Roman Shterenzon <romanbsd@yahoo.com>
-
 PORTNAME=	rspec
 PORTVERSION=	3.11.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Behaviour Driven Development in Ruby
+WWW=		https://github.com/rspec/rspec-metagem
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

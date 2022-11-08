@@ -1,5 +1,3 @@
-# Created by: Niels Kristensen <niels@kristensen.io>
-
 PORTNAME=	IPC-PerlSSH
 PORTVERSION=	0.17
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	niels@kristensen.io
 COMMENT=	Class for executing remote perl code over an SSH link
+WWW=		https://metacpan.org/release/IPC-PerlSSH
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

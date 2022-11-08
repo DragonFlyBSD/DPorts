@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	DBIx-Class-DynamicDefault
 PORTVERSION=	0.04
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Automatically set and update fields
+WWW=		https://metacpan.org/release/DBIx-Class-DynamicDefault
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

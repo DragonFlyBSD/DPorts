@@ -1,5 +1,3 @@
-# Created by: Dan Langille <dvl@FreeBSD.org>
-
 PORTNAME=	requests-kerberos
 PORTVERSION=	0.14.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Kerberos authentication handler for python-requests
+WWW=		https://github.com/requests/requests-kerberos
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE

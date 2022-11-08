@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	tinycbor
 PORTVERSION=	0.6.0
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Concise Binary Object Representation (CBOR) library
+WWW=		https://github.com/intel/tinycbor
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

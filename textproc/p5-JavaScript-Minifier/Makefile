@@ -1,5 +1,3 @@
-# Created by: Kurt Lidl <kurt.lidl@cello.com>
-
 PORTNAME=	JavaScript-Minifier
 PORTVERSION=	1.16
 CATEGORIES=	textproc perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	JavaScript whitespace/comment eliminator
+WWW=		https://metacpan.org/release/JavaScript-Minifier
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

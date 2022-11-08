@@ -1,5 +1,3 @@
-# Created by: Richard Gallamore <ultima@FreeBSD.org>
-
 PORTNAME=	guacamole-client
 DISTVERSION=	1.4.0
 CATEGORIES=	www java
@@ -18,6 +16,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	HTML5 Clientless Remote Desktop
+WWW=		https://guacamole.incubator.apache.org
 
 LICENSE=	APACHE20
 

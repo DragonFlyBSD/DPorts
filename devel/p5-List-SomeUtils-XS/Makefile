@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	List-SomeUtils-XS
 PORTVERSION=	0.58
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	XS implementation for List::SomeUtils
+WWW=		https://metacpan.org/release/List-SomeUtils-XS
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

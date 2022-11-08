@@ -1,5 +1,3 @@
-# Created by: Florian Limberger <flo@snakeoilproductions.net>
-
 PORTNAME=	raleway
 DISTVERSION=	4.101
 CATEGORIES=	x11-fonts
@@ -12,6 +10,7 @@ DISTNAME=	Raleway-${DISTVERSION}
 
 MAINTAINER=	flo@snakeoilproductions.net
 COMMENT=	Elegant sans-serif font, designed in a single thin weight
+WWW=		https://www.theleagueofmoveabletype.com/raleway
 
 LICENSE=	OFL11
 LICENSE_FILE=	${WRKSRC}/OFL.md

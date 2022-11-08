@@ -1,11 +1,10 @@
-# Created by: John Chen <johnpupu@gmail.com>
-
 PORTNAME=	event
 PORTVERSION=	3.0.8
 CATEGORIES=	devel
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Provides interface to libevent library
+WWW=		https://pecl.php.net/package/event
 
 LICENSE=	PHP301
 LICENSE_FILE=	${WRKSRC}/LICENSE

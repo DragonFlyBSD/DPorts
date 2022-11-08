@@ -1,5 +1,3 @@
-# Created by: ache
-
 PORTNAME=	fspclient
 PORTVERSION=	0.93.1
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Ftp-like client for the FSP service
+WWW=		http://fspclient.sourceforge.net/
 
 CONFLICTS_INSTALL=	alliance
 USES=		tar:bzip2 scons

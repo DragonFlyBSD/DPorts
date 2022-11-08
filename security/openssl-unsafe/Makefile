@@ -1,5 +1,3 @@
-# Created by: Dirk Froemberg <dirk@FreeBSD.org>
-
 PORTNAME=	openssl
 PORTVERSION=	1.0.2.20170706
 CATEGORIES=	security devel
@@ -7,6 +5,7 @@ PKGNAMESUFFIX=	-unsafe
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Unsafe SSL and crypto library
+WWW=		https://onwebsecurity.com/pages/openssl.html
 
 LICENSE=	OpenSSL
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Sub-Identify
 PORTVERSION=	0.14
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Retrieve names of code references
+WWW=		https://metacpan.org/release/Sub-Identify
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

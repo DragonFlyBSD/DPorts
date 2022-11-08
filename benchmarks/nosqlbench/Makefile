@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	nosqlbench
 PORTVERSION=	0.0.${DATE}
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	LOCAL/vg
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Micro-benchmarking NoSQL storage
+WWW=		https://github.com/tarantool/nosqlbench
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

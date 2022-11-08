@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	webkit
 DISTVERSION=	2.34.6
 PORTREVISION=	3
@@ -11,6 +9,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Opensource browser engine using the GTK+ 3 toolkit
+WWW=		https://webkitgtk.org/
 
 LICENSE=	GPLv2 BSD2CLAUSE
 LICENSE_COMB=	dual

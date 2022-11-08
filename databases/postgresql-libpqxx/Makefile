@@ -1,5 +1,3 @@
-# Created by: Palle Girgensohn <girgen@pingpong.net>
-
 PORTNAME=	libpqxx
 PORTVERSION=	7.2.0
 CATEGORIES=	databases
@@ -8,6 +6,7 @@ DIST_SUBDIR=	postgresql
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	New C++ interface for PostgreSQL
+WWW=		http://pqxx.org/
 
 LICENSE=	BSD3CLAUSE
 

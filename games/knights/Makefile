@@ -1,11 +1,10 @@
-# Created by: Stefan Jahn <stefan.jahn@nemesis-sektor.de>
-
 PORTNAME=	knights
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE chess interface
+WWW=		https://github.com/KDE/knights
 
 RUN_DEPENDS=	${LOCALBASE}/bin/gnuchess:games/gnuchess
 
@@ -18,7 +17,7 @@ USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		widgetsaddons xmlgui
 USE_QT=		concurrent core dbus declarative gui network speech \
 		svg widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 
 OPTIONS_DEFINE=	DOCS
 

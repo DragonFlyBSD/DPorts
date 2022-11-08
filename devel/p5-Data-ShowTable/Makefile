@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	Data-ShowTable
 PORTVERSION=	4.6
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module to pretty-print arrays of data
+WWW=		https://metacpan.org/release/Data-ShowTable
 
 LICENSE=	GPLv2
 

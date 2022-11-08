@@ -1,5 +1,3 @@
-# Created by: chinsan
-
 PORTNAME=	Acme-GuessNumber
 PORTVERSION=	0.05
 CATEGORIES=	games perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Automatic number guessing game robot
+WWW=		https://metacpan.org/release/Acme-GuessNumber
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

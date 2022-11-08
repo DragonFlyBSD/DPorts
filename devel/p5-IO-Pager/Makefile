@@ -1,5 +1,3 @@
-# Created by: Rong-En Fan <rafan@infor.org>
-
 PORTNAME=	IO-Pager
 PORTVERSION=	2.10
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Select a pager, optionally pipe it output if destination is a TTY
+WWW=		https://metacpan.org/release/IO-Pager
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Petri Totterman <petri.totterman@hmv.fi>
-
 PORTNAME=	log4cplus
 PORTVERSION=	1.1.2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-stable/${PORTVERSION}
 
 MAINTAINER=	reed@reedmedia.net
 COMMENT=	Logging library for C++
+WWW=		http://log4cplus.sourceforge.net/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

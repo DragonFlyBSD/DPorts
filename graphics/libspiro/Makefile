@@ -1,5 +1,3 @@
-# Created by: Naram Qashat <cyberbotx@cyberbotx.com>
-
 PORTNAME=	libspiro
 DISTVERSION=	20200505
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-dist-${DISTVERSION}
 
 MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Library to convert clothoid splines into Bezier splines
+WWW=		https://github.com/fontforge/libspiro
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

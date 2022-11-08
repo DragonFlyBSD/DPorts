@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cucumber-wire
 PORTVERSION=	6.2.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Wire protocol plugin for Cucumber
+WWW=		https://github.com/cucumber/cucumber-ruby-wire
 
 LICENSE=	MIT
 

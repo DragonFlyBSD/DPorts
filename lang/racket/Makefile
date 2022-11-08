@@ -1,5 +1,3 @@
-# Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-
 PORTNAME=	racket
 PORTVERSION=	8.5
 PORTREVISION=	1
@@ -15,6 +13,7 @@ DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Interactive, integrated, graphical Scheme programming environment
+WWW=		https://racket-lang.org/
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
@@ -43,10 +42,12 @@ OPTIONS_DEFINE=		DOCS
 OPTIONS_DEFAULT=	CS
 OPTIONS_SUB=		yes
 
+OPTIONS_DEFAULT_powerpc=	BC
 OPTIONS_DEFAULT_powerpc64=	BC
 OPTIONS_DEFAULT_powerpc64le=	BC
 OPTIONS_DEFINE_x86_64=	FUTURES JIT
 OPTIONS_DEFINE_i386=	FUTURES JIT
+OPTIONS_EXCLUDE_powerpc=	CS
 OPTIONS_EXCLUDE_powerpc64=	CS
 OPTIONS_EXCLUDE_powerpc64le=	CS
 

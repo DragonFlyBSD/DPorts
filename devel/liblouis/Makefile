@@ -1,12 +1,11 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	liblouis
-PORTVERSION=	3.20.0
+PORTVERSION=	3.23.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Open-source Braille Translator And Back-translator
+WWW=		http://www.liblouis.org/
 
 LICENSE=	LGPL3+
 

@@ -1,5 +1,3 @@
-# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-
 PORTNAME=	smtprc
 PORTVERSION=	2.0.3
 CATEGORIES=	mail
@@ -8,6 +6,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Scanner for open SMTP relays
+WWW=		http://smtprc.sourceforge.net
 
 OPTIONS_DEFINE=	DOCS GUI
 

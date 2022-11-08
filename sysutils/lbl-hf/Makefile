@@ -1,5 +1,3 @@
-# Created by: Craig Leres <leres@FreeBSD.org>
-
 PORTNAME=	hf
 PORTVERSION=	1.9
 CATEGORIES=	sysutils
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	lbl-
 
 MAINTAINER=	leres@FreeBSD.org
 COMMENT=	Address to hostname filter
+WWW=		https://ee.lbl.gov/downloads/hf/
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,5 +1,3 @@
-# Created by: Peter Lai <cowbert@gmail.com>
-
 PORTNAME=	mod_rivet
 PORTVERSION=	3.2.0
 CATEGORIES=	www tcl
@@ -8,6 +6,7 @@ DISTNAME=	rivet-${PORTVERSION}
 
 MAINTAINER=	jeff.lawson@flightaware.com
 COMMENT=	Embeds a Tcl interpreter in the Apache server
+WWW=		https://tcl.apache.org/rivet/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Rong-En Fan <rafan@infor.org>
-
 PORTNAME=	File-BaseDir
 PORTVERSION=	0.09
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Use the freedesktop basedir spec
+WWW=		https://metacpan.org/release/File-BaseDir
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

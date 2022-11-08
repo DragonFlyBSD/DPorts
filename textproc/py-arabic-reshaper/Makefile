@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	arabic-reshaper
 PORTVERSION=	2.1.3
 CATEGORIES=	textproc python
@@ -9,6 +7,7 @@ DISTNAME=	arabic_reshaper-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Reconstruct Arabic sentences to be used in applications that do not support Arabic
+WWW=		https://github.com/mpcabd/python-arabic-reshaper
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pglast
 PORTVERSION=	1.2
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	a.wolk@fudosecurity.com
 COMMENT=	PostgreSQL Languages AST and statements prettifier
+WWW=		https://github.com/lelit/pglast
 
 LICENSE=	GPLv3+
 

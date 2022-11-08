@@ -1,7 +1,7 @@
 PORTNAME=	permlib
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -9,6 +9,7 @@ PATCHFILES=	c2c0ae7e078df6c91c16c7326081c483700fde75.patch:-p1 # backport https:
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ header-only library for permutation computations
+WWW=		https://www.math.uni-rostock.de/~rehn/software/permlib.html
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

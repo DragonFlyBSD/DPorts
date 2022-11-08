@@ -1,5 +1,3 @@
-# Created by: Jason Helfman <jgh@FreeBSD.org>
-
 PORTNAME=	xjobs
 PORTVERSION=	20200726
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.maier-komor.de/xjobs/
 
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Utility reads job descriptions line by line and executes in parallel
+WWW=		https://www.maier-komor.de/xjobs.html
 
 LICENSE=	GPLv2
 

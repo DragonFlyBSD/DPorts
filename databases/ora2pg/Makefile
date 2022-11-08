@@ -1,5 +1,3 @@
-# Created by: Jov amutu@amutu.com
-
 PORTNAME=	ora2pg
 PORTVERSION=	23.1
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Oracle to PostgreSQL database schema converter
+WWW=		https://github.com/darold/ora2pg
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

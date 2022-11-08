@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Sphinx-Manager
 PORTVERSION=	0.08
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Sphinx search engine management (start/stop)
+WWW=		https://metacpan.org/release/Sphinx-Manager
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

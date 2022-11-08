@@ -1,5 +1,3 @@
-# Created by: Guangyuan Yang <ygy@FreeBSD.org>
-
 PORTNAME=	thefuck
 DISTVERSION=	3.32
 CATEGORIES=	misc python
@@ -7,6 +5,7 @@ MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	App that corrects your previous console command
+WWW=		https://github.com/nvbn/thefuck
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

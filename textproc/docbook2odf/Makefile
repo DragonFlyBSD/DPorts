@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	docbook2odf
 PORTVERSION=	0.244
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://open.comsultia.com/docbook2odf/dwn/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert docbook document to Oasis Open Document
+WWW=		http://open.comsultia.com/docbook2odf/
 
 LICENSE=	GPLv2
 

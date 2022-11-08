@@ -1,5 +1,3 @@
-# Created by: Piotr Kubaj <pkubaj@anongoth.pl>
-
 PORTNAME=	sdlpop
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.22
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Open-source port of Prince of Persia
+WWW=		https://github.com/NagyD/SDLPoP
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/../doc/gpl-3.0.txt

@@ -1,11 +1,12 @@
 PORTNAME=	pathspec
-PORTVERSION=	0.9.0
+PORTVERSION=	0.10.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	matthew@FreeBSD.org
 COMMENT=	Utility library for pattern matching of file paths
+WWW=		https://pypi.org/project/pathspec/
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE

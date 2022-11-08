@@ -1,11 +1,12 @@
 PORTNAME=	django-mptt
-PORTVERSION=	0.13.4
+PORTVERSION=	0.14.0
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}dj40-
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Utilities for implementing Modified Preorder Tree Traversal in Django
+WWW=		https://github.com/django-mptt/django-mptt
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

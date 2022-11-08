@@ -1,5 +1,3 @@
-# Created by: Shinsuke Matsui <smatsui@karashi.org>
-
 PORTNAME=	HTML-Selector-XPath
 PORTVERSION=	0.26
 CATEGORIES=	www perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CSS selector to XPath compiler Perl module
+WWW=		https://metacpan.org/release/HTML-Selector-XPath
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

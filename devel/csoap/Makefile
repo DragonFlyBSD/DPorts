@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	csoap
 PORTVERSION=	1.1.0
 PORTREVISION=	5
@@ -9,6 +7,7 @@ DISTNAME=	libsoap-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Client/server SOAP library written in pure C
+WWW=		http://csoap.sourceforge.net/
 
 GNU_CONFIGURE=	yes
 USES=		gnome libtool pathfix

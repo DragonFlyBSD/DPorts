@@ -1,5 +1,3 @@
-# Created by: NAKATA, Maho <maho@FreeBSD.org>
-
 PORTNAME=	blacs
 PORTVERSION=	1.7
 PORTREVISION=	38
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	mpiblacs.tgz blacstester.tgz mpiblacs-patch03.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	BLACS (Basic Linear Algebra Communication Subprograms)
+WWW=		https://www.netlib.org/blacs/
 
 # See http://icl.cs.utk.edu/lapack-forum/archives/lapack/msg01200.html
 LICENSE=	BSD3CLAUSE

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-HexDifferences
 PORTVERSION=	1.001
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Test binary as hexadecimal string
+WWW=		https://metacpan.org/release/Test-HexDifferences
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

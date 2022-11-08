@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	selectr
 DISTVERSION=	0.4-2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Translate CSS Selectors to XPath Expressions
+WWW=		https://cran.r-project.org/web/packages/selectr/
 
 LICENSE=	BSD3CLAUSE
 

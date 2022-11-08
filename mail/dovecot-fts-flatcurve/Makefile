@@ -1,11 +1,12 @@
 PORTNAME=	fts-flatcurve
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.0
+DISTVERSION=	0.3.2
 CATEGORIES=	mail
 PKGNAMEPREFIX=	dovecot-
 
 MAINTAINER=	martin@waschbuesch.de
 COMMENT=	Dovecot FTS plugin based on Xapian
+WWW=		https://github.com/slusarz/dovecot-fts-flatcurve
 
 LICENSE=	LGPL21
 

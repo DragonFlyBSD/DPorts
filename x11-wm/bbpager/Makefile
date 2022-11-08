@@ -1,5 +1,3 @@
-# Created by: Patrick Seal <patseal@hyperhost.net>
-
 PORTNAME=	bbpager
 DISTVERSION=	0.4.7
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/bbtools/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	A.J.Caines@halplant.com
 COMMENT=	Pager for the Blackbox window manager
+WWW=		http://bbtools.sourceforge.net/
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 OPTIONS_SUB=	yes

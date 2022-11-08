@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	XML-Parser-Style-EasyTree
 PORTVERSION=	0.09
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse XML to a simple tree
+WWW=		https://metacpan.org/release/XML-Parser-Style-EasyTree
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

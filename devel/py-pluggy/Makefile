@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	pluggy
 PORTVERSION=	1.0.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Plugin and hook calling mechanisms for Python
+WWW=		https://github.com/pytest-dev/pluggy
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

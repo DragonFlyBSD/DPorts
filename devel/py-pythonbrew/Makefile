@@ -1,5 +1,3 @@
-# Created by: Lung-Pin Chang <changlp@cs.nctu.edu.tw>
-
 PORTNAME=	pythonbrew
 PORTVERSION=	1.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	changlp@cs.nctu.edu.tw
 COMMENT=	Python Environment manager
+WWW=		https://github.com/utahta/pythonbrew
 
 LICENSE=	MIT
 

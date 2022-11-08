@@ -1,5 +1,3 @@
-# Created by: Aaron LI <aly@aaronly.me>
-
 PORTNAME=	playerctl
 DISTVERSION=	2.3.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/altdesktop/${PORTNAME}/releases/download/v${DIS
 
 MAINTAINER=	aly@aaronly.me
 COMMENT=	MPRIS command-line controller and library
+WWW=		https://github.com/altdesktop/playerctl
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING

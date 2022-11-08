@@ -1,5 +1,3 @@
-# Created by: Marie Loise Nolden <loise@kde.org>
-
 PORTNAME=	qt5-style-plugins
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.0.0-23
@@ -10,6 +8,7 @@ DIST_SUBDIR=	KDE/Qt/addons
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Additional Styles for Qt 5 and KDE
+WWW=		https://qt-project.org
 
 LICENSE=	LGPL21
 
@@ -22,7 +21,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	qt
 GH_PROJECT=	qtstyleplugins
 USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk20 pango
-USE_QT=		core dbus gui widgets buildtools_build
+USE_QT=		core dbus gui widgets buildtools:build
 USE_GL=		gl
 USE_XORG=	x11 xext
 

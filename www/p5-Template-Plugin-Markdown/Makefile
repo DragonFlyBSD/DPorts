@@ -1,5 +1,3 @@
-# Created by: Fernan Aguero <fernan@iib.unsam.edu.ar>
-
 PORTNAME=	Template-Plugin-Markdown
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	TT plugin for Text::Markdown
+WWW=		https://metacpan.org/release/Template-Plugin-Markdown
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

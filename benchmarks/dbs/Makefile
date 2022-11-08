@@ -1,5 +1,3 @@
-# Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-
 PORTNAME=	dbs
 PORTVERSION=	1.1.5
 PORTREVISION=	7
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.kusa.ac.jp/~yukio-m/dbs/software1.1.5/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Distributed network benchmarking system
+WWW=		http://www.kusa.ac.jp/~yukio-m/dbs/
 
 LICENSE=	BSD3CLAUSE
 

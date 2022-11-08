@@ -1,5 +1,3 @@
-# Created by: Seth Kingsley <sethk@osd.bsdi.com>
-
 PORTNAME=	nosefart
 PORTVERSION=	1.92f
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-mls
 
 MAINTAINER=	sethk@meowfishies.com
 COMMENT=	Player for NES Sound Format (NSF)
+WWW=		http://nosefart.sourceforge.net/
 
 LICENSE=	GPLv2
 

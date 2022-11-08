@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Convert-Color-XTerm
 PORTVERSION=	0.06
 CATEGORIES=	graphics perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Indexed colors used by XTerm
+WWW=		https://metacpan.org/release/Convert-Color-XTerm
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

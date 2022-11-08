@@ -1,12 +1,11 @@
-# Created by: Mikolaj Golub <to.my.trociny@gmail.com>
-
 PORTNAME=	bmake
-PORTVERSION=	20220418
+PORTVERSION=	20220909
 CATEGORIES=	devel
 MASTER_SITES=	https://ftp.netbsd.org/pub/NetBSD/misc/sjg/
 
 MAINTAINER=	trociny@FreeBSD.org
 COMMENT=	Portable version of NetBSD 'make' utility
+WWW=		https://www.crufty.net/help/sjg/bmake.html
 
 LICENSE=	BSD3CLAUSE
 

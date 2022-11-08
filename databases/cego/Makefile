@@ -1,10 +1,11 @@
 PORTNAME=	cego
-PORTVERSION=	2.47.24
+PORTVERSION=	2.47.31
 CATEGORIES=	databases
 MASTER_SITES=	http://www.lemke-it.com/
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	Relational and transactional database system
+WWW=		https://www.lemke-it.com/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,8 +1,6 @@
-# Created by: Naram Qashat <cyberbotx@cyberbotx.com>
-
 PORTNAME=	pHash
 PORTVERSION=	0.9.6
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	multimedia devel
 MASTER_SITES=	http://phash.org/releases/ \
 		http://www.cyberbotx.com/pHash/
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
 MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	PHP extension for the pHash perceptual hash library
+WWW=		https://phash.org/
 
 LICENSE=	PHP30
 LICENSE_FILE=	${WRKSRC}/LICENSE

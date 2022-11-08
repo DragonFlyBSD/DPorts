@@ -1,11 +1,12 @@
 PORTNAME=	libqxp
 PORTVERSION=	0.0.0
-PORTREVISION=	20
+PORTREVISION=	21
 CATEGORIES=	textproc
 MASTER_SITES=	https://dev-www.libreoffice.org/src/${PORTNAME}/
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for parsing QuarkXPress documents
+WWW=		https://wiki.documentfoundation.org/DLP/Libraries/libqxp
 
 LICENSE=	MPL20
 

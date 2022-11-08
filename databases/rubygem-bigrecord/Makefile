@@ -1,5 +1,3 @@
-# Created by: Philip M. Gollucci
-
 PORTNAME=	bigrecord
 PORTVERSION=	0.1.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Intended to work as a drop-in for Rails applications
+WWW=		http://www.bigrecord.org
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	z
 PORTVERSION=	1.11
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Takes you to your most used directories, based on "frecency"
+WWW=		https://github.com/rupa/z/
 
 LICENSE=	WTFPL
 

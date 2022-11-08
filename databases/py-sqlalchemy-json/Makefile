@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	sqlalchemy-json
 PORTVERSION=	0.5.0
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	JSON type with nested change tracking for SQLAlchemy
+WWW=		https://github.com/edelooff/sqlalchemy-json
 
 LICENSE=	BSD2CLAUSE
 

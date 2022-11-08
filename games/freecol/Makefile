@@ -1,5 +1,3 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	freecol
 PORTVERSION=	0.11.6
 CATEGORIES=	games java
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Open source version of Colonization
+WWW=		https://freecol.org/
 
 LICENSE=	GPLv2
 

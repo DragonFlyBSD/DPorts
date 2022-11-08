@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <william88@gmail.com>
-
 PORTNAME=	subliminal
 PORTVERSION=	2.1.0
 CATEGORIES=	multimedia python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Python library to search and download subtitles
+WWW=		https://subliminal.readthedocs.org/en/latest/index.html
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

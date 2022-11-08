@@ -1,11 +1,10 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	PHP_TokenStream
 PORTVERSION=	1.4.11
 CATEGORIES=	devel pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Wrapper around PHP tokenizer extension
+WWW=		https://github.com/sebastianbergmann/php-token-stream
 
 LICENSE=	BSD3CLAUSE
 

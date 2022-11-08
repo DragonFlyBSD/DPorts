@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cairosvg
 PORTVERSION=	2.5.2
 CATEGORIES=	graphics python
@@ -9,6 +7,7 @@ DISTNAME=	CairoSVG-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple SVG Converter based on Cairo
+WWW=		https://www.courtbouillon.org/cairosvg
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE

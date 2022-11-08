@@ -1,5 +1,3 @@
-# Created by: Tony Maher <tonym@biolateral.com.au>
-
 PORTNAME=	wise
 PORTVERSION=	2.4.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Intelligent algorithms for DNA searches
+WWW=		http://www.ebi.ac.uk/Wise2/
 
 BUILD_WRKSRC=	${WRKSRC}/src
 

@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	libassa
 DISTVERSION=	3.5.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION:C/\.[0-9]*$//}
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	C++ networking library and application framework
+WWW=		http://libassa.sourceforge.net/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING

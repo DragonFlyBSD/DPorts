@@ -1,11 +1,10 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	v
 PORTVERSION=	0.1.29
 CATEGORIES=	lang
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	V Programming Language
+WWW=		https://vlang.io/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

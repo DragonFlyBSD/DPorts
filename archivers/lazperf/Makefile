@@ -1,5 +1,3 @@
-# Created by: lbartoletti <lbartoletti@FreeBSD.org>
-
 PORTNAME=	lazperf
 DISTVERSION=	2.0.0
 CATEGORIES=	archivers databases geography
@@ -9,6 +7,7 @@ PATCHFILES=	a003d1ead4afb9a0c61cde8b00340c489f2ce370.patch:-p1
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Alternative LAZ implementation for C++ and JavaScript
+WWW=		https://github.com/hobu/laz-perf
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: cacho@mexicano.gdl.iteso.mx
-
 PORTNAME=	xfractint
 PORTVERSION=	20.04p16
 CATEGORIES=	graphics
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.fractint.net/ftp/current/linux/ \
 
 MAINTAINER=	onemda@gmail.com
 COMMENT=	Unix port of FractInt
+WWW=		https://fractint.net/
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig
 

@@ -1,5 +1,3 @@
-# Created by: dd
-
 PORTNAME=	syck
 PORTVERSION=	0.70
 CATEGORIES=	textproc devel
@@ -7,6 +5,7 @@ MASTER_SITES=	GHC
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for reading and writing YAML 1.0
+WWW=		http://wiki.github.com/indeyets/syck
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	indeyets

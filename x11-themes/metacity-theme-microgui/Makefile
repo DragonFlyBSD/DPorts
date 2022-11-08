@@ -1,5 +1,3 @@
-# Created by: Douglas Thrift <douglas@douglasthrift.net>
-
 PORTNAME=	microgui
 PORTVERSION=	1.0
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	mcitymicrogui-default
 
 MAINTAINER=	douglas@douglasthrift.net
 COMMENT=	MicroGUI Sawfish theme for Metacity
+WWW=		http://themes.freshmeat.net/projects/mcitymicrogui/
 
 LICENSE=	GPLv2
 

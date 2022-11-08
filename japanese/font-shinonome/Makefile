@@ -1,5 +1,3 @@
-# Created by: Yoichi NAKAYAMA <yoichi@eken.phys.nagoya-u.ac.jp>
-
 PORTNAME=	shinonome
 PORTVERSION=	0.9.11.p1
 PORTREVISION=	7
@@ -11,6 +9,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/.p/p/}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Shinonome Japanese fonts, 12/14/16 dots
+WWW=		http://openlab.jp/efont/shinonome/
 
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	constant-lexical
 PORTVERSION=	2.0003
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl pragma to declare lexical compile-time constants
+WWW=		https://metacpan.org/release/constant-lexical
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

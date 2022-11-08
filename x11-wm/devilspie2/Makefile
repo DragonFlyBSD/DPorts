@@ -1,5 +1,3 @@
-# Created by: Jean-Yves Lefort <jylefort@brutele.be>
-
 PORTNAME=	devilspie2
 PORTVERSION=	0.43
 CATEGORIES=	x11-wm
@@ -8,6 +6,7 @@ DISTFILES=	${PORTNAME}_${PORTVERSION}-src.tar.gz
 
 MAINTAINER=	bsd@dino.sk
 COMMENT=	Window manipulation tool
+WWW=		https://www.nongnu.org/devilspie2/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

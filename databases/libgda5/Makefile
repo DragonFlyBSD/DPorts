@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	libgda
 DISTVERSION?=	5.2.10
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Provides uniform access to different kinds of data sources
+WWW=		https://www.gnome-db.org/
 
 LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi

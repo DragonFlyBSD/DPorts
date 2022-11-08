@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Thrift-XS
 PORTVERSION=	1.04
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Faster Thrift binary protocol encoding and decoding
+WWW=		https://metacpan.org/release/Thrift-XS
 
 LICENSE=	APACHE20
 

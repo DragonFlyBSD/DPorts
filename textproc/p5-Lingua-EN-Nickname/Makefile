@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Lingua-EN-Nickname
 PORTVERSION=	1.36
 CATEGORIES=	textproc perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Genealogical nickname matching (Liz=Beth)
+WWW=		https://metacpan.org/release/Lingua-EN-Nickname
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

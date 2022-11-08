@@ -1,5 +1,3 @@
-# Created by: James Howard <howardj@wam.umd.edu>
-
 PORTNAME=	cursive
 PORTVERSION=	0.11
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Create ASCII character cursive handwriting
+WWW=		https://www.unixpapa.com/cursive.html
 
 USES=		tar:tgz
 NO_WRKSUBDIR=	yes

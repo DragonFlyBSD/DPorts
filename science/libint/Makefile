@@ -1,5 +1,3 @@
-# Created by: NAKATA, Maho <maho@FreeBSD.org>
-
 PORTNAME=	libint
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	1-2-1-15
@@ -8,6 +6,7 @@ CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Evaluate the integrals in modern atomic and molecular theory
+WWW=		https://github.com/evaleev/libint
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

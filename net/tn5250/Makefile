@@ -1,5 +1,3 @@
-# Created by: Elias Mandouvalos <ocean@compulink.gr>
-
 PORTNAME=	tn5250
 PORTVERSION=	0.17.4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	5250 Telnet protocol and Terminal
+WWW=		http://tn5250.sourceforge.net/
 
 USES=		libtool ncurses ssl
 GNU_CONFIGURE=	yes

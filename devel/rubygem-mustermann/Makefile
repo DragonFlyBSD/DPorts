@@ -1,12 +1,11 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	mustermann
-PORTVERSION=	1.1.1
+PORTVERSION=	2.0.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library implementing patterns that behave like regular expressions
+WWW=		https://github.com/sinatra/mustermann/tree/master/mustermann
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

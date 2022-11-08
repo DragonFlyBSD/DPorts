@@ -1,5 +1,3 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
-
 PORTNAME=	data
 PORTVERSION=	2.5
 PORTREVISION=	1
@@ -12,6 +10,7 @@ DIST_SUBDIR=	${PKGNAMEPREFIX:S/-//}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	UFO alien invasion data files
+WWW=		https://ufoai.org/
 
 # See http://ufoai.org/wiki/License
 LICENSE=	GPLv2 CC-BY-SA-3.0

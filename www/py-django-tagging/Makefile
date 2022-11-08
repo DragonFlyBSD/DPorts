@@ -1,5 +1,3 @@
-# Created by: Kevin Golding <ports@caomhin.org>
-
 PORTNAME=	django-tagging
 PORTVERSION=	0.5.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@caomhin.org
 COMMENT=	Generic tagging application for Django
+WWW=		https://github.com/Fantomas42/django-tagging
 
 LICENSE=	BSD3CLAUSE MIT
 LICENSE_COMB=	multi

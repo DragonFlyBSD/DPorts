@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-rickshaw
 PORTVERSION=	1.5.1.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	XStatic-Rickshaw-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Rickshaw (XStatic packaging standard)
+WWW=		https://tech.shutterstock.com/rickshaw/
 
 LICENSE=	MIT
 

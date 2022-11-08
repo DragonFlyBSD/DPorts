@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	archive-zip
 PORTVERSION=	0.12.0
 CATEGORIES=	archivers rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provides interface to working with ZIP archives
+WWW=		https://github.com/javanthropus/archive-zip
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

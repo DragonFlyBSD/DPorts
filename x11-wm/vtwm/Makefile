@@ -1,5 +1,3 @@
-# Created by: Bruce A. Mah <bmah@ca.sandia.gov>
-
 PORTNAME=	vtwm
 PORTVERSION=	5.5.0
 CATEGORIES=	x11-wm
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}
 
 MAINTAINER=	ak@FreeBSD.org
 COMMENT=	Twm with a virtual desktop and optional Motif-like features
+WWW=		http://www.vtwm.org/
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: Tillman Hodgson <tillman@seekingfire.com>
-
 PORTNAME=	latd
 PORTVERSION=	1.31
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/linux-decnet/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Linux-DECnet project LAT protocol suite
+WWW=		http://linux-decnet.sourceforge.net/
 
 LICENSE=	GPLv2
 

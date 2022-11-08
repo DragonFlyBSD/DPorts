@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	defusedxml
 PORTVERSION=	0.7.1
 CATEGORIES=	devel python textproc
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	XML bomb protection for Python stdlib modules
+WWW=		https://github.com/tiran/defusedxml
 
 LICENSE=	PSFL
 LICENSE_FILE=	${WRKSRC}/LICENSE

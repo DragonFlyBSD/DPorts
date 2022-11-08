@@ -1,14 +1,12 @@
-# Created by: Chris Piazza <cpiazza@FreeBSD.org>
-
 PORTNAME=	smpeg
 PORTVERSION=	0.4.4
 PORTREVISION=	16
 CATEGORIES=	multimedia
-MASTER_SITES=	ftp://sunsite.auc.dk/pub/os/linux/loki/open-source/smpeg/ \
-		GENTOO
+MASTER_SITES=	GENTOO
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Free MPEG1 video player library with sound support
+WWW=		https://www.lokigames.com/development/smpeg.php3
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING

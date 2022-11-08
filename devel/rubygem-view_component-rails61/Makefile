@@ -1,5 +1,3 @@
-# Created by: mfechner@FreeBSD.org
-
 PORTNAME=	view_component
 PORTVERSION=	2.50.0
 CATEGORIES=	devel rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-rails61
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	View components for Rails
+WWW=		https://github.com/github/view_component
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

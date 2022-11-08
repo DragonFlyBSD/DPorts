@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	MooseX-Types-Structured
 PORTVERSION=	0.36
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Moose Type Constraint classes for Structured Types
+WWW=		https://metacpan.org/release/MooseX-Types-Structured
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

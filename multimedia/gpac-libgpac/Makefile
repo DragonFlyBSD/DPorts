@@ -1,5 +1,3 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	gpac
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.0
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	-libgpac
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Gpac MPEG-4 Systems library and headers
+WWW=		http://gpac.sourceforge.net/
 
 LICENSE=	LGPL21
 

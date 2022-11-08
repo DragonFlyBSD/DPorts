@@ -1,5 +1,3 @@
-# Created by: Gustau Perez <gustau.perez@gmail.com>
-
 PORTNAME=	gnome-weather
 PORTVERSION=	42.0
 CATEGORIES=	deskutils gnome
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Weather application for GNOME
+WWW=		https://wiki.gnome.org/Design/Apps/Weather
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.md

@@ -1,13 +1,12 @@
-# Created by: Pavel Timofeev <timp87@gmail.com>
-
 PORTNAME=	helmfile
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.142.0
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=	sysutils
 
 MAINTAINER=	timp87@gmail.com
 COMMENT=	Helmfile is a declarative spec for deploying helm charts
+WWW=		https://github.com/roboll/helmfile
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: George Reid <greid@ukug.uk.freebsd.org>
-
 PORTNAME=	w9wm
 PORTVERSION=	0.4.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.drieu.org/code/w9wm/src/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Hack of 9wm to give virtual screens
+WWW=		http://www.grassouille.org/code/w9wm.en.html
 
 WRKSRC=		${WRKDIR}/${DISTNAME}.orig
 

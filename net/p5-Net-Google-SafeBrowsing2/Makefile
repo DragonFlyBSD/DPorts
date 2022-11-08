@@ -1,5 +1,3 @@
-# Created by: Alexandre Biancalana <ale@biancalanas.net>
-
 PORTNAME=	Net-Google-SafeBrowsing2
 PORTVERSION=	1.09
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ale@biancalanas.net
 COMMENT=	Perl extension for the Google Safe Browsing v2 API
+WWW=		https://metacpan.org/release/Net-Google-SafeBrowsing2
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-libwww>=5:www/p5-libwww \

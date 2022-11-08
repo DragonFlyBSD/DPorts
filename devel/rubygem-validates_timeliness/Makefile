@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	validates_timeliness
 PORTVERSION=	5.0.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Add validation methods to ActiveModel for validating dates and times
+WWW=		https://github.com/adzap/validates_timeliness
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

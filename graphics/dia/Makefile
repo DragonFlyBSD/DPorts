@@ -1,6 +1,3 @@
-# Created by: saper@system.pl
-#   $MCom: ports/graphics/dia/Makefile,v 1.16 2007/10/11 02:49:12 mezz Exp $
-
 PORTNAME=	dia
 PORTVERSION=	0.97.3
 PORTREVISION=	3
@@ -11,6 +8,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Diagram creation program, similar to Visio
+WWW=		https://live.gnome.org/Dia
 
 OPTIONS_DEFINE=	DOCS
 

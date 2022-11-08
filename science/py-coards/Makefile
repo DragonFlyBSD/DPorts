@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	coards
 PORTVERSION=	1.0.5
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	COARDS compliant time parser
+WWW=		https://pypi.org/project/coards/
 
 LICENSE=	MIT
 

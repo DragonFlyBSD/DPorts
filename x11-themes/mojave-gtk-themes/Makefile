@@ -1,11 +1,10 @@
-# Created by: Alexander Vereeken <Alexander88207@protonmail.com>
-
 PORTNAME=	mojave-gtk-themes
 DISTVERSION=	2022-06-07
 CATEGORIES=	x11-themes
 
 MAINTAINER=	Alexander88207@protonmail.com
 COMMENT=	Macos Mojave theme for GTK 3, GTK 2 and Gnome-Shell
+WWW=		https://github.com/vinceliuice/Mojave-gtk-theme
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

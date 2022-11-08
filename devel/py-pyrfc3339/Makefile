@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pyrfc3339
 PORTVERSION=	1.1
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	pyRFC3339-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generate and parse RFC 3339 timestamps
+WWW=		https://pypi.org/project/pyRFC3339/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

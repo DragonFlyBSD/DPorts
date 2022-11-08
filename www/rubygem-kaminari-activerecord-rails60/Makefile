@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	kaminari-activerecord
 PORTVERSION=	1.2.2
 CATEGORIES=	www rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-rails60
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Kaminari Active Record adapter
+WWW=		https://github.com/kaminari/kaminari/tree/master/kaminari-activerecord
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

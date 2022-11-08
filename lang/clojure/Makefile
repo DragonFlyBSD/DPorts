@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	clojure
 PORTVERSION=	1.10.3.1058
 CATEGORIES=	lang lisp java
@@ -8,6 +6,7 @@ DISTNAME=	clojure-tools-${PORTVERSION}
 
 MAINTAINER=	freebsd-ports@jan0sch.de
 COMMENT=	Dynamic programming language for the JVM
+WWW=		http://clojure.sourceforge.net/
 
 LICENSE=	EPL
 

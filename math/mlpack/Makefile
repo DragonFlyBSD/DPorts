@@ -1,11 +1,12 @@
 PORTNAME=	mlpack
 DISTVERSION=	3.4.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math # machine-learning
 MASTER_SITES=	https://mlpack.org/files/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Fast, flexible machine learning library
+WWW=		https://www.mlpack.org/
 
 LICENSE=	BSD3CLAUSE
 

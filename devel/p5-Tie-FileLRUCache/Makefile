@@ -1,5 +1,3 @@
-# Created by: clsung@dragon2.net
-
 PORTNAME=	Tie-FileLRUCache
 PORTVERSION=	1.06
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Lightweight but robust filesystem based persistent LRU cache
+WWW=		https://metacpan.org/release/Tie-FileLRUCache
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

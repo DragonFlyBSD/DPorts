@@ -1,11 +1,10 @@
-# Created by: koshy@india.hp.com
-
 PORTNAME=	mhonarc
 PORTVERSION=	2.6.24
 CATEGORIES=	www mail
 
 MAINTAINER=	kerndtr@kerndt.com
 COMMENT=	WWW front end for mail archives
+WWW=		https://www.mhonarc.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

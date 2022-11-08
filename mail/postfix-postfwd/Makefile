@@ -1,5 +1,3 @@
-# Created by: Sahil Tandon <sahil@tandon.net>
-
 PORTNAME=	postfwd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.03
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	postfix-
 
 MAINTAINER=	andreas.jobs+freebsdbugs@ruhr-uni-bochum.de
 COMMENT=	Postfix firewall policy daemon
+WWW=		https://www.postfwd.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE

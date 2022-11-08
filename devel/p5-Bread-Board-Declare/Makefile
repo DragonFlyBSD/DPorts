@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Bread-Board-Declare
 PORTVERSION=	0.16
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Create Bread::Board containers as normal Moose objects
+WWW=		https://metacpan.org/release/Bread-Board-Declare
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

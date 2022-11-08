@@ -4,6 +4,7 @@ CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE based library to access google services
+WWW=		https://progdan.cz/category/akonadi-google/
 
 LICENSE=	LGPL21
 
@@ -19,12 +20,12 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		itemmodels itemviews jobwidgets kdelibs4support kio \
 		notifications parts service textwidgets unitconversion \
 		widgetsaddons windowsystem xmlgui solid sonnet wallet \
-		ecm_build
+		ecm:build
 # pim components
 USE_KDE+=	calendarcore contacts
 USE_QT=		concurrent core dbus declarative gui location network \
 		printsupport webchannel webengine widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 
 USE_LDCONFIG=	yes
 

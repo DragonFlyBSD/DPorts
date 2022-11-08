@@ -7,6 +7,7 @@ MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/$
 
 MAINTAINER=	adridg@FreeBSD.org
 COMMENT=	C++/Qt SOAP framework
+WWW=		https://github.com/KDAB/KDSoap
 
 # The software is partly under (LGPL21 | GPL2 | GPL3 ), and partly
 # under AGPLv3. We choose LGPL21 and AGPLv3, since that's easiest
@@ -18,7 +19,7 @@ LICENSE_FILE_AGPLv3=	${WRKSRC}/LICENSE.AGPL3-modified.txt
 
 USES=		cmake compiler:c++11-lang localbase qt:5
 USE_LDCONFIG=	yes
-USE_QT=		qmake_build buildtools_build linguisttools_build \
+USE_QT=		qmake:build buildtools:build linguisttools:build \
 		core network widgets xml
 
 # No USE_GITHUB, but pretty close

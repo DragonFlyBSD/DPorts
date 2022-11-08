@@ -1,5 +1,3 @@
-# Created by: Jean-Yves Lefort <jylefort@FreeBSD.org>
-
 PORTNAME=	icon-slicer
 PORTVERSION=	0.3
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.freedesktop.org/software/icon-slicer/releases/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility for generating icon and cursor themes
+WWW=		https://www.freedesktop.org/wiki/Software/icon-slicer/
 
 LICENSE=	MIT # in readme and sources; COPYING seem to be unrelated
 

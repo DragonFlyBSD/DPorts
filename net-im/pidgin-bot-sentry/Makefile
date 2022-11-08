@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	pidgin-bot-sentry
 PORTVERSION=	1.3.0
 PORTREVISION=	11
@@ -9,6 +7,7 @@ DISTNAME=	bot-sentry-${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Pidgin plugin to prevent instant message spam
+WWW=		https://sourceforge.net/projects/pidgin-bs/
 
 LICENSE=	GPLv3
 

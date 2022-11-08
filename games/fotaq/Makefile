@@ -1,5 +1,3 @@
-# Created by: Alex Trull <freebsd.alex@trull.org>
-
 PORTNAME=	fotaq
 PORTVERSION=	1.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	FOTAQ_Talkie-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Flight of the Amazon Queen: a classic graphical adventure
+WWW=		https://www.scummvm.org/
 
 RUN_DEPENDS=	scummvm:games/scummvm
 

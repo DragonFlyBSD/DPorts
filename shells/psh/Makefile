@@ -1,5 +1,3 @@
-# Created by: Will Andrews <andrews@technologist.com>
-
 PORTNAME=	psh
 PORTVERSION=	1.8.1
 PORTREVISION=	4
@@ -9,6 +7,7 @@ MASTER_SITE_SUBDIR=	CPAN:GREGOR
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	New shell made entirely out of a Perl script
+WWW=		https://metacpan.org/release/psh
 
 RUN_DEPENDS=	${SITE_PERL}/Term/ReadLine/Perl.pm:devel/p5-Term-ReadLine-Perl
 

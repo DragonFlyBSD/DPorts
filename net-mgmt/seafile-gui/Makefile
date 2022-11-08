@@ -1,10 +1,11 @@
 PORTNAME=	seafile-gui
 DISTVERSIONPREFIX=	v
-DISTVERSION=	8.0.7
+DISTVERSION=	8.0.8
 CATEGORIES=	net-mgmt devel
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	Open Source Cloud Storage (Client)
+WWW=		https://github.com/haiwen/seafile
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -26,7 +27,7 @@ GH_PROJECT=	seafile-client
 
 USE_GNOME=	glib20
 USE_QT=		core dbus gui network widgets \
-		qmake_build buildtools_build linguisttools_build
+		qmake:build buildtools:build linguisttools:build
 CMAKE_ARGS=	-DCMAKE_INCLUDE_PATH:PATH=include/glib-2.0 \
 		-DOPENSSL_INCLUDE_DIRS=${OPENSSLINC} \
 		-DOPENSSL_LIBRARIES="-L${OPENSSLLIB} -lcrypto"

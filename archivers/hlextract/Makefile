@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	hlextract
 PORTVERSION=	2.4.6
 CATEGORIES=	archivers games
@@ -8,6 +6,7 @@ DISTNAME=	hllib${PORTVERSION:S/.//g}
 
 MAINTAINER=	kpedersen@disroot.org
 COMMENT=	Utility to extract data from various Half-Life file formats
+WWW=		https://developer.valvesoftware.com/wiki/HLLib
 
 LICENSE=	GPLv2
 

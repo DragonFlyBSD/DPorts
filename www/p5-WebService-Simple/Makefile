@@ -1,5 +1,3 @@
-# Created by: Masahiro Teramoto <markun@onohara.to>
-
 PORTNAME=	WebService-Simple
 PORTVERSION=	0.24
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	markun@onohara.to
 COMMENT=	Simple Interface To Web Services APIs
+WWW=		https://metacpan.org/release/WebService-Simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

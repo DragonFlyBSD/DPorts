@@ -1,5 +1,3 @@
-# Created by: Palle Girgensohn <girgen@FreeBSD.org>
-
 PORTNAME=	powa-archivist
 DISTVERSIONPREFIX=	REL_
 DISTVERSION=	4_1_4
@@ -7,6 +5,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	girgen@FreeBSD.org
 COMMENT=	PostgreSQL workload analyzer background worker
+WWW=		http://powa.readthedocs.org/en/latest/powa-archivist/index.html
 
 LICENSE=	PostgreSQL
 

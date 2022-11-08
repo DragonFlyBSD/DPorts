@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	delaboratory
 PORTVERSION=	0.8
 PORTREVISION=	13
@@ -8,6 +6,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/graphics/delaboratory/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Unique image postprocessing application
+WWW=		https://bsdforge.com/projects/graphics/delaboratory/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	cachy
 PORTVERSION=	0.3.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple yet effective caching library
+WWW=		https://github.com/sdispater/cachy
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

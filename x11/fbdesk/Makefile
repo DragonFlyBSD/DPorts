@@ -1,5 +1,3 @@
-# Created by: Hendrik Scholz <hendrik@scholz.net>
-
 PORTNAME=	fbdesk
 PORTVERSION=	1.4.1
 PORTREVISION=	6
@@ -9,6 +7,7 @@ MASTER_SITES=	http://fluxbox.sourceforge.net/download/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fluxbox utility to create and manage icons on the desktop
+WWW=		http://fluxbox.sourceforge.net/fbdesk/
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: Zane C. Bowers-Hadley <vvelox@vvelox.net>
-
 PORTNAME=	Net-Connection
 PORTVERSION=	0.2.0
 CATEGORIES=	net perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	vvelox@vvelox.net
 COMMENT=	Represents a network connection as a object
+WWW=		https://metacpan.org/release/Net-Connection
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

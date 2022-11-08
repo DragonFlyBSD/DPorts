@@ -1,5 +1,3 @@
-# Created by: wen@FreeBSD.org
-
 PORTNAME=	pymongo
 PORTVERSION=	3.12.3
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	Python driver for MongoDB
+WWW=		https://github.com/mongodb/mongo-python-driver
 
 LICENSE=	APACHE20
 

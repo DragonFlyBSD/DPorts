@@ -1,5 +1,3 @@
-# Created by: Jin-Shan Tseng <tjs@cdpa.nsysu.edu.tw>
-
 PORTNAME=	Net-ARP
 PORTVERSION=	1.0.12
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl extension for creating ARP packets
+WWW=		https://metacpan.org/release/Net-ARP
 
 LICENSE=	GPLv2
 

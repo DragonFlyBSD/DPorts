@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Math-Round-Var
 PORTVERSION=	1.0.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Variations on rounding
+WWW=		https://metacpan.org/release/Math-Round-Var
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

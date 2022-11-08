@@ -1,5 +1,3 @@
-# Created by: TERAMOTO Masahiro <markun@onohara.to>
-
 PORTNAME=	feed-normalizer
 PORTVERSION=	1.5.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	markun@onohara.to
 COMMENT=	Extensible wrapper for Atom and RSS parsers
+WWW=		https://github.com/aasmith/feed-normalizer
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/License.txt

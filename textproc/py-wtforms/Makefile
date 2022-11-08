@@ -1,5 +1,3 @@
-# Created by: Moggie <moggie@elasticmind.net>
-
 PORTNAME=	wtforms
 PORTVERSION=	2.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	WTForms-${DISTVERSION}
 
 MAINTAINER=	rm@FreeBSD.org
 COMMENT=	Flexible forms validation and rendering library for python
+WWW=		http://wtforms.simplecodes.com/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

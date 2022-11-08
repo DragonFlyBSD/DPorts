@@ -1,14 +1,13 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	allegro
 DISTVERSION=	5.2.7.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel games
 MASTER_SITES=	https://github.com/liballeg/${PORTNAME}${PKGNAMESUFFIX}/releases/download/${DISTVERSION}/
 PKGNAMESUFFIX=	5
 
 MAINTAINER=	kpedersen@disroot.org
 COMMENT=	Cross-platform C library for games and multimedia programming
+WWW=		https://liballeg.org/
 
 LICENSE=	ZLIB BSD3CLAUSE
 LICENSE_COMB=	dual

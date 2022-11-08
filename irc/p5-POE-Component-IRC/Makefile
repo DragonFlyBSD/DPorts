@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	POE-Component-IRC
 PORTVERSION=	6.93
 CATEGORIES=	irc devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Fully event-driven IRC client module
+WWW=		https://metacpan.org/release/POE-Component-IRC
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Paul Dlug <paul@aps.org>
-
 PORTNAME=	ldapdns
 PORTVERSION=	2.07
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/dns/ldapdns/
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	LDAP-backed DNS server
+WWW=		https://bsdforge.com/projects/dns/ldapdns/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

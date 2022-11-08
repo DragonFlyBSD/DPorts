@@ -1,5 +1,3 @@
-# Created by: Roman Bogorodskiy <novel@FreeBSD.org>
-
 PORTNAME=	libosinfo
 PORTVERSION=	1.10.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	https://releases.pagure.org/libosinfo/
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Library for managing OS information for virtualization
+WWW=		https://libosinfo.org/
 
 LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup
 BUILD_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:misc/pciids \

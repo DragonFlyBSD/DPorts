@@ -1,5 +1,5 @@
 PORTNAME=	twilio
-PORTVERSION=	7.9.3
+PORTVERSION=	7.14.1
 PORTREVISION=	0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
@@ -7,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Python module for communicating with the Twilio API
+WWW=		https://www.twilio.com/docs/libraries/python
 
 LICENSE=	MIT
 

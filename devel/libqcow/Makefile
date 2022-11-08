@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	libqcow
 DISTVERSION=	alpha-20210419
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/libyal/libqcow/releases/download/${PORTVERSION:
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library and tooling to access the QEMU Copy-On-Write image format
+WWW=		https://github.com/libyal/libqcow
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING

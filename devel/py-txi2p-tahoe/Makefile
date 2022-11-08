@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	txi2p-tahoe
 PORTVERSION=	0.3.5
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	I2P bindings for Twisted
+WWW=		https://github.com/str4d/txi2p
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING

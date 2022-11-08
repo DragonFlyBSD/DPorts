@@ -1,5 +1,3 @@
-# Created by: Gabor Zahemszky
-
 PORTNAME=	ifuse
 PORTVERSION=	1.1.4
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	fusefs-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	FUSE-based filesystem for mounting iOS devices over USB
+WWW=		https://www.libimobiledevice.org
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING

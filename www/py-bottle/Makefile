@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	bottle
 PORTVERSION=	0.12.19
 PORTREVISION=	0
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Fast and simple WSGI-framework for small web-applications
+WWW=		https://bottlepy.org/
 
 LICENSE=	MIT
 

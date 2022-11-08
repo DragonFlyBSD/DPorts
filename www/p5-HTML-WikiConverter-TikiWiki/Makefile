@@ -1,5 +1,3 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	HTML-WikiConverter-TikiWiki
 PORTVERSION=	0.50
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert HTML to TikiWiki markup
+WWW=		https://metacpan.org/release/HTML-WikiConverter-TikiWiki
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

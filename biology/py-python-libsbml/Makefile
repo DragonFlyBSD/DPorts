@@ -6,10 +6,11 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	LibSBML Python API
+WWW=		https://sbml.org/Main_Page
 
 LICENSE=	LGPL21
 
-BUILD_DEPENDS=	cmake:devel/cmake \
+BUILD_DEPENDS=	cmake:devel/cmake-core \
 		swig:devel/swig
 
 USES=		python:3.6-3.9

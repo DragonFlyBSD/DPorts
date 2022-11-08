@@ -1,5 +1,3 @@
-# Created by: Rui Lopes (<rgl ruilopes com>)
-
 PORTNAME=	gem_plugin
 PORTVERSION=	0.2.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Gem Based Plugin System
+WWW=		https://rubygems.org/gems/gem_plugin
 
 LICENSE=	LGPL21 RUBY
 LICENSE_COMB=	dual

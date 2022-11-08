@@ -1,5 +1,3 @@
-# Created by: petef@FreeBSD.org
-
 PORTNAME=	colorize
 PORTVERSION=	0.3.4
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Robust log colorizer
+WWW=		https://github.com/raszi/colorize
 
 LICENSE=	GPLv2+
 

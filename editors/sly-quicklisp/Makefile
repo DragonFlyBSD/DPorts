@@ -1,11 +1,12 @@
 PORTNAME=	sly-quicklisp
 PORTVERSION=	20200707
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	editors elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	olce.freebsd.ports@certner.fr
 COMMENT=	Basic Quicklisp support for SLY
+WWW=		https://github.com/joaotavora/sly-quicklisp
 
 LICENSE=	PD
 

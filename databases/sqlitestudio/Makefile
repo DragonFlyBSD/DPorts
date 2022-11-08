@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	sqlitestudio
 DISTVERSION=	3.3.3
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	SQLite database GUI manager
+WWW=		https://sqlitestudio.pl/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/../LICENSE
@@ -30,8 +29,8 @@ PLUGIN_PRINTING_USE=			QT=printsupport
 USES=		compiler:c++17-lang gl gmake ncurses qmake qt:5 readline sqlite
 USE_GITHUB=	yes
 GH_ACCOUNT=	pawelsalawa
-USE_QT=		core concurrent gui network script sql sql-sqlite3_run svg widgets xml \
-		uitools buildtools_build linguisttools_build
+USE_QT=		core concurrent gui network script sql sql-sqlite3:run svg widgets xml \
+		uitools buildtools:build linguisttools:build
 USE_GL=		gl
 
 WRKSRC_SUBDIR=	SQLiteStudio3

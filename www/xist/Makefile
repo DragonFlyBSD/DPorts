@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	xist
 PORTVERSION=	5.34
 CATEGORIES=	www python
@@ -10,6 +8,7 @@ DISTNAME=	ll-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	XML-based extensible HTML generator
+WWW=		http://www.livinglogic.de/Python/xist/
 
 LICENSE=	MIT
 

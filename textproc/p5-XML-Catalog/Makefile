@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	XML-Catalog
 PORTVERSION=	1.0.3
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-v${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Resolve public identifiers and remap system identifiers
+WWW=		https://metacpan.org/release/XML-Catalog
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

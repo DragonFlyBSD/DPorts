@@ -1,11 +1,12 @@
 PORTNAME=	cacti
-PORTVERSION=	1.2.21
+PORTVERSION=	1.2.22
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	http://www.cacti.net/downloads/ \
 		ftp://ftpmirror.uk/freebsd-ports/cacti/
 
 MAINTAINER=	m.muenz@gmail.com
 COMMENT=	Web-driven graphing interface for RRDTool
+WWW=		https://www.cacti.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

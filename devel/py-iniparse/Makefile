@@ -1,5 +1,3 @@
-# Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-
 PORTNAME=	iniparse
 PORTVERSION=	0.5
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Accessing and Modifying INI files
+WWW=		https://github.com/candlepin/python-iniparse
 
 LICENSE=	MIT PSFL
 LICENSE_COMB=	dual

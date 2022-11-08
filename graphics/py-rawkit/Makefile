@@ -1,5 +1,3 @@
-# Created by: Martin Neubauer <m.ne@gmx.net>
-
 PORTNAME=	rawkit
 PORTVERSION=	0.6.0
 CATEGORIES=	graphics devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	m.ne@gmx.net
 COMMENT=	Ctypes based libraw bindings
+WWW=		https://rawkit.readthedocs.org
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,13 +1,13 @@
-# Created by: William Grzybowski <william88@gmail.com>
-
 PORTNAME=	pytest-runner
-PORTVERSION=	5.3.2
+PORTVERSION=	6.0.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Test support for pytest runner in setup.py
+WWW=		https://github.com/pytest-dev/pytest-runner
 
 LICENSE=	MIT
 

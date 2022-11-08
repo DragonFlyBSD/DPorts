@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Net-VNC
 PORTVERSION=	0.40
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple VNC client
+WWW=		https://metacpan.org/release/Net-VNC
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

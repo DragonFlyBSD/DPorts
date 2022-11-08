@@ -1,5 +1,3 @@
-# Created by: Alexandre Snarskii <snar@snar.spb.ru>
-
 PORTNAME=	bgpq3
 PORTVERSION=	0.1.36
 DISTVERSIONPREFIX=v
@@ -7,6 +5,7 @@ CATEGORIES=	net-mgmt
 
 MAINTAINER=	snar@snar.spb.ru
 COMMENT=	Lightweight prefix-list generator for various routers
+WWW=		https://github.com/snar/bgpq3
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT

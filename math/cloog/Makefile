@@ -1,5 +1,3 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	cloog
 PORTVERSION=	0.20.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	math
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Code generator in the polyhedral model
+WWW=		http://www.cloog.org/
 
 LICENSE=	LGPL21
 

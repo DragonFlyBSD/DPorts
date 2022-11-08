@@ -1,5 +1,3 @@
-# Created by: Vsevolod Stakhov <vsevolod@FreeBSD.org>
-
 PORTNAME=	clasp
 PORTVERSION=	3.3.5
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	math devel
 
 MAINTAINER=	vsevolod@FreeBSD.org
 COMMENT=	Answer set solver for (extended) normal logic programs
+WWW=		http://potassco.sourceforge.net/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

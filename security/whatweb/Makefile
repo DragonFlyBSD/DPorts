@@ -1,5 +1,3 @@
-# Created by: Niels Heinen
-
 PORTNAME=	whatweb
 DISTVERSION=	0.4.8-${GH_TAGNAME}
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	security www
 
 MAINTAINER=	rm@FreeBSD.org
 COMMENT=	Tool to fingerprint web site components
+WWW=		https://www.morningstarsecurity.com/research/whatweb
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

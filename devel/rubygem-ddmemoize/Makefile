@@ -1,5 +1,3 @@
-# Created by: Stéphane D'Alu <sdalu@sdalu.com>
-
 PORTNAME=	ddmemoize
 PORTVERSION=	1.0.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Support for memoizing functions
+WWW=		https://github.com/ddfreyne/ddmemoize
 
 LICENSE=	MIT
 

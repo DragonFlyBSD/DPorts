@@ -1,5 +1,3 @@
-# Created by: Ernst de Haan <znerd@FreeBSD.org>
-
 PORTNAME=	jlint
 PORTVERSION=	3.1.2
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java program analyzer and checker
+WWW=		https://artho.com/jlint/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

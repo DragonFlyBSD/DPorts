@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	rabbiter
 PORTVERSION=	2.0.4
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Twitter client for Rabbit
+WWW=		https://rabbit-shocker.org/en/rabbiter/
 
 LICENSE=	GPLv2+
 

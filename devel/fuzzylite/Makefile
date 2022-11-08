@@ -6,6 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Fuzzy logic control library in C++
+WWW=		https://fuzzylite.com/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -20,7 +21,7 @@ PLIST_SUB=	SHLIB_VER=${DISTVERSION}
 
 .include <bsd.port.pre.mk>
 
-.if ${COMPILER_TYPE} == clang
+.if ${CHOSEN_COMPILER_TYPE} == clang
 CFLAGS+=	-Wno-error=varargs
 .endif
 

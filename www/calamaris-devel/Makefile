@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <mitya@yandex-team.ru>
-
 PORTNAME=	calamaris
 PORTVERSION=	2.99.4.5
 CATEGORIES=	www textproc
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Perl script to produce statistics out of Squid log files
+WWW=		https://Cord.de/tools/squid/calamaris/
 
 LICENSE=	GPLv2
 

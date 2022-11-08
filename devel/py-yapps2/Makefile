@@ -1,5 +1,3 @@
-# Created by: xenophon+fbsdports@irtnog.org
-
 PORTNAME=	yapps2
 PORTVERSION=	2.1.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	yapps${PORTVERSION}
 
 MAINTAINER=	xenophon+fbsdports@irtnog.org
 COMMENT=	Easy-to-use parser generator that generates Python code
+WWW=		https://theory.stanford.edu/~amitp/yapps/
 
 PORTSCOUT=	skipv:2-2.1.1-17.1
 WRKSRC=		${WRKDIR}/Yapps-${PORTVERSION}

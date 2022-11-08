@@ -1,12 +1,11 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	httpuv
-PORTVERSION=	1.6.5
+PORTVERSION=	1.6.6
 CATEGORIES=	www
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	HTTP and WebSocket server library for R
+WWW=		https://cran.r-project.org/web/packages/httpuv/
 
 LICENSE=	GPLv2+
 

@@ -1,13 +1,12 @@
-# Created by: Mirko Zinn <mail@derzinn.de>
-
 PORTNAME=	mongoengine
-PORTVERSION=	0.24.1
+PORTVERSION=	0.24.2
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Object-Document-Mapper for working with MongoDB
+WWW=		http://mongoengine.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Alexander Timoshenko <gonzo@univ.kiev.ua>
-
 PORTNAME=	tkabber
 PORTVERSION=	1.1.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://files.jabber.ru/tkabber/
 
 MAINTAINER=	mp39590@gmail.com
 COMMENT=	Tcl/Tk based jabber client
+WWW=		http://tkabber.jabber.ru/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

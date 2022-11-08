@@ -1,10 +1,11 @@
 PORTNAME=	sentry-cli
 DISTVERSION=	1.71.0
-PORTREVISION=	7
+PORTREVISION=	9
 CATEGORIES=	devel
 
 MAINTAINER=	lcook@FreeBSD.org
 COMMENT=	Command line utility to work with Sentry
+WWW=		https://docs.sentry.io/cli/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

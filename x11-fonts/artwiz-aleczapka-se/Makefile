@@ -1,5 +1,3 @@
-# Created by: Herbert J. Skuhra <herbert.skuhra@gmx.at>
-
 PORTNAME=	artwiz-aleczapka-se
 PORTVERSION=	1.3
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/artwizaleczapka/iso-8859-1/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Set of (improved) artwiz fonts
+WWW=		http://artwizaleczapka.sourceforge.net/
 
 NO_BUILD=	yes
 NO_ARCH=	yes

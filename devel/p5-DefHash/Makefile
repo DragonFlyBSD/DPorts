@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	DefHash
 PORTVERSION=	2.0.0
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Define things according to a specification, using hashes
+WWW=		https://metacpan.org/release/DefHash
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

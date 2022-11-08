@@ -1,5 +1,3 @@
-# Created by: Saulius Menkevicius <bob@nulis.lt>
-
 PORTNAME=	vqcc-gtk
 PORTVERSION=	0.5
 PORTREVISION=	9
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER?=	ports@FreeBSD.org
 COMMENT=	LAN chat client compatible with quickChat and Vypress Chat (TM)
+WWW=		http://vqcc-gtk.sourceforge.net/
 
 LIB_DEPENDS=	libstartup-notification-1.so:x11/startup-notification
 

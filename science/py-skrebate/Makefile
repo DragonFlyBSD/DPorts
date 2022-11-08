@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	skrebate
 PORTVERSION=	0.62
 CATEGORIES=	science python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Relief-based feature selection algorithms
+WWW=		https://github.com/EpistasisLab/scikit-rebate
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -76,6 +76,7 @@ include/php/Zend/zend_list.h
 include/php/Zend/zend_llist.h
 include/php/Zend/zend_long.h
 include/php/Zend/zend_map_ptr.h
+include/php/Zend/zend_mmap.h
 include/php/Zend/zend_modules.h
 include/php/Zend/zend_multibyte.h
 include/php/Zend/zend_multiply.h
@@ -171,6 +172,7 @@ include/php/ext/pcre/pcre2lib/pcre2_jit_neon_inc.h
 include/php/ext/pcre/pcre2lib/pcre2_jit_simd_inc.h
 include/php/ext/pcre/pcre2lib/pcre2_ucp.h
 include/php/ext/pcre/php_pcre.h
+include/php/ext/random/php_random.h
 include/php/ext/spl/php_spl.h
 include/php/ext/spl/spl_array.h
 include/php/ext/spl/spl_directory.h
@@ -199,6 +201,7 @@ include/php/ext/standard/dl.h
 include/php/ext/standard/dl_arginfo.h
 include/php/ext/standard/exec.h
 include/php/ext/standard/file.h
+include/php/ext/standard/file_arginfo.h
 include/php/ext/standard/flock_compat.h
 include/php/ext/standard/fsock.h
 include/php/ext/standard/head.h

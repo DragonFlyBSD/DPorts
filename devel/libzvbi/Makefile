@@ -1,5 +1,3 @@
-# Created by: Oliver Lehmann <oliver@FreeBSD.org>
-
 PORTNAME=	libzvbi
 PORTVERSION=	0.2.35
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME:S/lib//}-${PORTVERSION}
 
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	Routines to access raw VBI capture devices
+WWW=		http://zapping.sourceforge.net/doc/libzvbi/
 
 LICENSE=	GPLv2+
 

@@ -1,5 +1,3 @@
-# Created by: Aragon Gouveia <aragon@phat.za.net>
-
 PORTNAME=	madfufw
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	madfuload-1.2
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	M-Audio DFU Firmware for Transit, Ozone, Sonica, MobilePre
+WWW=		http://usb-midi-fw.sourceforge.net/
 
 RUN_DEPENDS=	${LOCALBASE}/bin/dfu-util:comms/dfu-util
 

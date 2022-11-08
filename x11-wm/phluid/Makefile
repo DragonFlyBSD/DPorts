@@ -1,5 +1,3 @@
-# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-
 PORTNAME=	phluid
 PORTVERSION=	0.0.3
 PORTREVISION=	13
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-src/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Window manager that emphasizes efficiency, speed, and beauty
+WWW=		https://sourceforge.net/projects/phluid/
 
 LIB_DEPENDS=	libImlib2.so:graphics/imlib2
 

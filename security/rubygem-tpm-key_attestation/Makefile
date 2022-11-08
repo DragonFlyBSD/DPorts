@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	tpm-key_attestation
 PORTVERSION=	0.10.0
 CATEGORIES=	security rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	TPM Key Attestation verifier
+WWW=		https://github.com/cedarcode/tpm-key_attestation
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,11 +1,10 @@
-# Created by: sobomax
-
 PORTNAME=	bcg729
 PORTVERSION=	1.1.1
 CATEGORIES=	audio
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Software G729A encoder and decoder library written in C
+WWW=		https://www.linphone.org/technical-corner/bcg729
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

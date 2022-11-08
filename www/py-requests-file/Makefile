@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	requests-file
 PORTVERSION=	1.5.1
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Transport adapter for use with the Requests Python library
+WWW=		https://github.com/dashea/requests-file
 
 LICENSE=	APACHE20
 

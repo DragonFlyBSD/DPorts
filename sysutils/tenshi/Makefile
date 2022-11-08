@@ -1,5 +1,3 @@
-# Created by: Oliver Eikemeier
-
 PORTNAME=	tenshi
 PORTVERSION=	0.17
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PATCHFILES=	1c9c887.patch:-p1 \
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Log monitoring program, designed to watch multiple logs
+WWW=		https://inversepath.com/tenshi.html
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

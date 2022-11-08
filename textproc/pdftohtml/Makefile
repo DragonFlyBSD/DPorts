@@ -1,5 +1,3 @@
-# Created by: Soeren Boll Overgaard <boll@tolkien.dk>
-
 PORTNAME=	pdftohtml
 PORTVERSION=	0.40a
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}/Experimental%20Versions/${PORTNAME}%20${PORTVERSION
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command-line tool for converting pdf-files into html
+WWW=		https://sourceforge.net/projects/pdftohtml/
 
 USES=		cpe ghostscript gmake
 

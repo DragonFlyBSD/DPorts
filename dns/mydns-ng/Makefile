@@ -1,5 +1,3 @@
-# Created by: Simon Dick <simond@irrelevant.org>
-
 PORTNAME=	mydns-ng
 PORTVERSION=	1.2.8.31
 PORTREVISION=	5
@@ -9,6 +7,7 @@ DISTNAME=	mydns-${PORTVERSION}
 
 MAINTAINER=	gaod@hychen.org
 COMMENT=	Next generation DNS server for SQL-based DNS services
+WWW=		https://sourceforge.net/projects/mydns-ng/
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Yoshiro MIHIRA <sanpei@FreeBSD.org>
-
 PORTNAME=	thumbnail_index
 PORTVERSION=	1998.08.10
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_10aug1998
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Make an HTML index file for a bunch of images
+WWW=		https://www.acme.com/software/thumbnail_index/
 
 LICENSE=	BSD2CLAUSE
 

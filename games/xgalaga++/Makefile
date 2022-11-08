@@ -1,5 +1,3 @@
-# Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-
 PORTNAME=	xgalaga++
 PORTVERSION=	0.9
 CATEGORIES=	games
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${PORTNAME}_${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Classic single screen vertical shoot em up
+WWW=		https://marc.mongenet.ch/OSS/XGalaga/
 
 LICENSE=	GPLv2
 

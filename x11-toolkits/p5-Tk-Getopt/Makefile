@@ -1,5 +1,3 @@
-# Created by: vanilla
-
 PORTNAME=	Tk-Getopt
 PORTVERSION=	0.51
 CATEGORIES=	x11-toolkits perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	User configuration window for Tk with interface to Getopt::Long
+WWW=		https://metacpan.org/release/Tk-Getopt
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

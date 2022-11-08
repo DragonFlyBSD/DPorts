@@ -1,18 +1,17 @@
-# Created by: Christer Edwards <christer.edwards@gmail.com>
-
 PORTNAME=	rocinante
-DISTVERSION=	0.1.20220216
+DISTVERSION=	0.1.20220714
 CATEGORIES=	sysutils
 
 MAINTAINER=	christer.edwards@gmail.com
 COMMENT=	Rocinante is a lightweight configuration management software
+WWW=		https://github.com/bastillebsd/rocinante
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	bastillebsd
-GH_TAGNAME=	67b93e4
+GH_TAGNAME=	ace6eea
 
 NO_BUILD=	yes
 NO_ARCH=	yes

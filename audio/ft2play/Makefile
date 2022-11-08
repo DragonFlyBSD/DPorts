@@ -1,11 +1,10 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	ft2play
 DISTVERSION=	g20220407
 CATEGORIES=	audio
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Bit-accurate C port of Fasttracker's XM replayer
+WWW=		https://github.com/8bitbubsy/ft2play
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

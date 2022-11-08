@@ -1,5 +1,3 @@
-# Created by: Herve Quiroz <hq@FreeBSD.org>
-
 PORTNAME=	xom
 PORTVERSION=	1.2.11
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.cafeconleche.org/XOM/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open source (LGPL), tree-based API for processing XML with Java
+WWW=		http://www.xom.nu/
 
 RUN_DEPENDS=	${JAVALIBDIR}/xml-apis.jar:textproc/xerces-j \
 		${JAVALIBDIR}/xalan.jar:textproc/xalan-j

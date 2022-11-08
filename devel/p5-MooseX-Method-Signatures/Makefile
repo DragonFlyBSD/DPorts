@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	MooseX-Method-Signatures
 PORTVERSION=	0.49
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Method declarations with type constraints and no source filter
+WWW=		https://metacpan.org/release/MooseX-Method-Signatures
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

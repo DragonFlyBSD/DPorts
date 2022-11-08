@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pgspecial
 PORTVERSION=	2.0.1
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Meta-commands handler for Postgres Database
+WWW=		https://github.com/dbcli/pgspecial
 
 LICENSE=	BSD3CLAUSE
 

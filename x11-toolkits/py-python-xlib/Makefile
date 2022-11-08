@@ -1,5 +1,3 @@
-# Created by: Mike Meyer <mwm@mired.org>
-
 PORTNAME=	xlib
 DISTVERSION=	0.27
 CATEGORIES=	x11-toolkits python
@@ -9,6 +7,7 @@ DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	fax@nohik.ee
 COMMENT=	X11 library for Python
+WWW=		https://github.com/python-xlib/python-xlib
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE

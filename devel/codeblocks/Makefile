@@ -1,13 +1,12 @@
-# Created by: Matthias Sund <m.sund@arcor.de>
-
 PORTNAME=	codeblocks
 PORTVERSION=	20.03
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/Sources/${PORTVERSION}
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Open source, cross-platform, free C/C++ IDE
+WWW=		https://www.codeblocks.org/
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi

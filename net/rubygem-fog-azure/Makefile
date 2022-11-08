@@ -1,5 +1,3 @@
-# Created by: Torsten Zuehlsdorff <tz@FreeBSD.org>
-
 PORTNAME=	fog-azure
 PORTVERSION=	0.0.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Module for the 'fog' gem to support Microsoft Azure
+WWW=		https://github.com/fog/fog-azure
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

@@ -1,5 +1,3 @@
-# Created by: Hakisho Nukama <nukama@gmail.com>
-
 PORTNAME=	gpgdir
 PORTVERSION=	1.9.5
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	https://www.cipherdyne.org/~cipherdy/gpgdir/download/ \
 
 MAINTAINER=	nukama+maintainer@gmail.com
 COMMENT=	Recursive directory encryption with GnuPG
+WWW=		https://www.cipherdyne.org/gpgdir/
 
 LICENSE=	GPLv2
 

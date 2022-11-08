@@ -1,5 +1,3 @@
-# Created by: Jing-Tang Keith Jang <keith@FreeBSD.org>
-
 PORTNAME=	mmix
 PORTVERSION=	20160804
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://mmix.cs.hm.edu/src/
 
 MAINTAINER=	riggs@FreeBSD.org
 COMMENT=	RISC computer designed by Donald E. Knuth
+WWW=		https://mmix.cs.hm.edu/
 
 LICENSE=	mmix
 LICENSE_NAME=	mmix license

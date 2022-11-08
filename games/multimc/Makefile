@@ -4,6 +4,7 @@ CATEGORIES=	games java
 
 MAINTAINER=	me@tsundoku.ne.jp
 COMMENT=	Minecraft launcher with the ability to manage multiple instances
+WWW=		https://multimc.org
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING.md
@@ -18,8 +19,8 @@ GH_TUPLE=	MultiMC:libnbtplusplus:508eda8:libnbtplusplus/libraries/libnbtplusplus
 		MultiMC:quazip:3691d57:quazip/libraries/quazip
 USE_LDCONFIG=	yes
 USE_JAVA=	1.8+
-USE_QT=		core concurrent gui network testlib_build widgets xml \
-		buildtools_build qmake_build
+USE_QT=		core concurrent gui network testlib:build widgets xml \
+		buildtools:build qmake:build
 
 CMAKE_ARGS=	-DMultiMC_LAYOUT="lin-system"
 CMAKE_OFF=	MultiMC_UPDATER

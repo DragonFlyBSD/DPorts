@@ -1,5 +1,3 @@
-# Created by: Ashish SHUKLA <ashish@FreeBSD.org>
-
 PORTNAME=	mcomix
 PORTVERSION=	1.2.1g20210526
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	shoesoft@gmx.net
 COMMENT=	GTK3 comic book viewer
+WWW=		https://github.com/multiSnow/mcomix3
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

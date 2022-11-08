@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger
-
 PORTNAME=	fluxter
 PORTVERSION=	0.2.0
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.hydrus.org.uk/downloads/
 
 MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Desktop pager for the Fluxbox Slit
+WWW=		https://www.hydrus.org.uk/
 
 LICENSE=	GPLv2
 

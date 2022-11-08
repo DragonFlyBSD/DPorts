@@ -1,6 +1,3 @@
-# Created by: Ade Lovett <ade@FreeBSD.org>
-#   $MCom: ports/devel/libunicode/Makefile,v 1.4 2007/09/10 05:27:38 mezz Exp $
-
 PORTNAME=	libunicode
 PORTVERSION=	0.4
 PORTREVISION=	11
@@ -10,6 +7,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}.gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library for manipulating Unicode characters and strings
+WWW=		https://www.gnome.org/
 
 USES=		iconv libtool
 GNU_CONFIGURE=	yes

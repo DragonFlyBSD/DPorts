@@ -1,5 +1,3 @@
-# Created by: Peter Libassi <peter@libassi.se>
-
 PORTNAME=	mod_defensible
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5
@@ -7,6 +5,7 @@ CATEGORIES=	www
 
 MAINTAINER=	peter@libassi.se
 COMMENT=	Apache 2.4 module aiming to block IP listed in DNSBL
+WWW=		https://github.com/jd/mod_defensible
 
 LICENSE=	APACHE20
 

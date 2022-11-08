@@ -1,5 +1,3 @@
-# Created by: jkoshy
-
 PORTNAME=	rxp
 PORTVERSION=	1.4.4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.cogsci.ed.ac.uk/pub/richard/
 
 MAINTAINER=	mi@aldan.algebra.com
 COMMENT=	Validating XML parser written in C
+WWW=		https://www.cogsci.ed.ac.uk/~richard/rxp.html
 
 LICENSE=	GPLv2
 

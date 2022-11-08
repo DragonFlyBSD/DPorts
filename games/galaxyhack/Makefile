@@ -1,8 +1,6 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	galaxyhack
 PORTVERSION=	1.74
-PORTREVISION=	36
+PORTREVISION=	37
 CATEGORIES=	games
 MASTER_SITES=	SF \
 		SF/${PORTNAME}/Fleet%20packages/020906:fleets
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	AI script based strategy game
+WWW=		http://galaxyhack.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

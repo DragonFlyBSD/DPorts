@@ -1,5 +1,3 @@
-# Created by: Satoshi Taoka <taoka@FreeBSD.org>
-
 PORTNAME=	Wnn7
 PORTVERSION=	2001.10.17
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	Wnn7SDK
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Wnn7 client library
+WWW=		https://www.omronsoft.co.jp/
 
 USES=		imake tar:tgz
 USE_LDCONFIG=	yes

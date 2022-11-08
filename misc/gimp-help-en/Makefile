@@ -1,5 +1,3 @@
-# Created by: SimaMoto,RyoTa <liangtai.s4@gmail.com>
-
 PORTNAME=	gimp-help
 PORTVERSION=	2.10.0
 PORTREVISION=	2
@@ -13,6 +11,7 @@ PKGNAMESUFFIX=	-html
 
 MAINTAINER=	liangtai.s16@gmail.com
 COMMENT?=	GIMP User Manual in English
+WWW=		https://docs.gimp.org/
 
 LICENSE=	GFDL
 

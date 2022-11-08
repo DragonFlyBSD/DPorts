@@ -1,13 +1,13 @@
-# Created by: Brendan Molloy <brendan+freebsd@bbqsrc.net>
-
 PORTNAME=	frozendict
-PORTVERSION=	2.3.2
+PORTVERSION=	2.3.4
 CATEGORIES=	devel python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	CHEESESHOP \
+		https://github.com/Marco-Sulla/python-frozendict/releases/download/v${PORTVERSSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Immutable dictionary implementation for Python
+WWW=		https://github.com/Marco-Sulla/python-frozendict
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

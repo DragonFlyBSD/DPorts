@@ -1,5 +1,3 @@
-# Created by: Michael Vasilenko <acid@stu.cn.ua>
-
 PORTNAME=	links
 PORTVERSION=	2.27
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://links.twibright.com/download/
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Lynx-like text WWW browser
+WWW=		http://links.twibright.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

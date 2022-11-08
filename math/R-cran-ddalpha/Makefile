@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	ddalpha
 PORTVERSION=	1.3.13
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Depth-Based Classification and Calculation of Data Depth
+WWW=		https://cran.r-project.org/web/packages/ddalpha/
 
 LICENSE=	GPLv2
 

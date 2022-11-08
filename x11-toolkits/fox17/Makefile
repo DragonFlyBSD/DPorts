@@ -1,5 +1,3 @@
-# Created by: gahr
-
 PORTNAME=	fox
 PORTVERSION=	1.7.79
 CATEGORIES=	x11-toolkits
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	${PORTVERSION:R:S/.//}
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Fast and extensive C++ GUI toolkit (development version)
+WWW=		http://www.fox-toolkit.org/
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

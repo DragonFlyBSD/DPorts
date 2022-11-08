@@ -1,5 +1,3 @@
-# Created by: Andreas Kohn <andreas@syndrom23.de>
-
 PORTNAME=	freefont-ttf
 PORTVERSION=	20120503
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU/freefont
 
 MAINTAINER=	mbeis@xs4all.nl
 COMMENT=	Free UCS Outline Fonts
+WWW=		https://www.nongnu.org/freefont/
 
 LICENSE=	GPLv3
 

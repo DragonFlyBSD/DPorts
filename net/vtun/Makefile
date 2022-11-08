@@ -1,5 +1,3 @@
-# Created by: Kevin Lo <kevlo@FreeBSD.org>
-
 PORTNAME=	vtun
 PORTVERSION=	3.0.4
 PORTREVISION=	8
@@ -9,6 +7,7 @@ MASTER_SITES=	SF \
 
 MAINTAINER=	mat@FreeBSD.org
 COMMENT=	Virtual Tunnels over TCP/IP networks with traffic shaping
+WWW=		http://vtun.sourceforge.net/
 
 LICENSE=	GPLv2
 

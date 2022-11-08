@@ -1,5 +1,3 @@
-# Created by: dgilbert@velocet.ca
-
 PORTNAME=	gutenprint
 PORTVERSION=	5.3.3
 PORTREVISION?=	0
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/gimp-print/gutenprint-5.3/${PORTVERSION}
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT?=	Gutenprint Printer Drivers
+WWW=		http://gimp-print.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Lingua-EN-NameCase
 PORTVERSION=	1.21
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to fix the case of people's names
+WWW=		https://metacpan.org/release/Lingua-EN-NameCase
 
 LICENSE=	ART20
 

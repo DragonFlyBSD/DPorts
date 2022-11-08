@@ -1,5 +1,3 @@
-# Created by: Cristiano Deana <cris@gufi.org>
-
 PORTNAME=	expiretable
 PORTVERSION=	0.6
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://expiretable.fnord.se/
 
 MAINTAINER=	cris@gufi.org
 COMMENT=	Utility to remove entries from the pf(4) table based on their age
+WWW=		https://expiretable.fnord.se/
 
 USE_RC_SUBR=	expiretable
 

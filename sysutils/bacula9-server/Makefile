@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-
 PORTNAME=	bacula
 PORTVERSION=	9.6.7
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMESUFFIX?=	9-server
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT?=	Network backup solution (server)
+WWW=		https://www.bacula.org/
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

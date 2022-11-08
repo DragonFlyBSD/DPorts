@@ -1,11 +1,11 @@
 PORTNAME=	suricata
-DISTVERSION=	6.0.5
-PORTREVISION=	3
+DISTVERSION=	6.0.8
 CATEGORIES=	security
 MASTER_SITES=	https://www.openinfosecfoundation.org/download/
 
 MAINTAINER=	franco@opnsense.org
 COMMENT=	High Performance Network IDS, IPS and Security Monitoring engine
+WWW=		https://suricata-ids.org
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -18,7 +18,8 @@ LIB_DEPENDS=	libjansson.so:devel/jansson \
 		libyaml.so:textproc/libyaml
 
 USES=		autoreconf cpe gmake iconv:translit libtool localbase pathfix \
-		pkgconfig
+		pkgconfig shebangfix
+SHEBANG_FILES=	python/suricata/sc/suricatasc.py
 
 CPE_VENDOR=	openinfosecfoundation
 
@@ -37,7 +38,6 @@ TEST_TARGET=	check
 CONFLICTS_INSTALL=	libhtp
 
 SUB_FILES=	pkg-message
-PLIST_SUB=	PORTVERSION=${DISTVERSION:C/-/_/g} UPDATEVERSION=1.2.4
 
 OPTIONS_DEFINE=		GEOIP IPFW NETMAP NSS PORTS_PCAP PRELUDE PYTHON REDIS \
 			TESTS
@@ -129,6 +129,10 @@ post-install:
 post-install-PYTHON-on:
 	(cd ${STAGEDIR}${PREFIX} \
 	&& ${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
-	-d ${PYTHONPREFIX_SITELIBDIR} -f ${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;})
+	-d /usr/local/lib/suricata/python -f lib/suricata/python)
+.for f in disable.conf drop.conf enable.conf modify.conf threshold.in update.yaml
+	${INSTALL_DATA} ${WRKSRC}/suricata-update/suricata/update/configs/${f} \
+	${STAGEDIR}${PREFIX}/lib/suricata/python/suricata/update/configs
+.endfor
 
 .include <bsd.port.mk>

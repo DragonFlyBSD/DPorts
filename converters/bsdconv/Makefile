@@ -1,11 +1,10 @@
-# Created by: buganini@gmail.com
-
 PORTNAME=	bsdconv
 PORTVERSION=	11.6
 CATEGORIES=	converters
 
 MAINTAINER=	buganini@gmail.com
 COMMENT=	BSD licensed charset/encoding converter library
+WWW=		https://github.com/buganini/bsdconv
 
 LICENSE=	ISCL
 

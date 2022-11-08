@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	Regexp-Debugger
 PORTVERSION=	0.002006
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Visually debug regexes in-place
+WWW=		https://metacpan.org/release/Regexp-Debugger
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

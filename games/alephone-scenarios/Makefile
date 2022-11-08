@@ -1,5 +1,3 @@
-# Created by: alepulver
-
 PORTNAME=	scenarios
 PORTVERSION=	1.0
 PORTREVISION=	8
@@ -17,6 +15,7 @@ EXTRACT_ONLY=	#
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free scenarios for the Aleph One engine
+WWW=		http://source.bungie.org/get/
 
 RUN_DEPENDS=	alephone:games/alephone
 

@@ -1,5 +1,3 @@
-# Created by: Miguel Mendez <flynn@energyhq.homeip.net>
-
 PORTNAME=	xpk
 PORTVERSION=	0.1.4
 PORTREVISION=	3
@@ -9,6 +7,7 @@ MASTER_SITES=	http://vesuri.jormas.com/xpk/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The eXternal PacKer (XPK) library system
+WWW=		http://www.jormas.com/~vesuri/xpk/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	pysmartdl
 PORTVERSION=	1.3.4
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	pySmartDL-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Smart download manager for Python
+WWW=		https://github.com/iTaybb/pySmartDL
 
 LICENSE=	UNLICENSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

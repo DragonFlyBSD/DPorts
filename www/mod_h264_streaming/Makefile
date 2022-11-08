@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
-
 PORTNAME=	mod_h264_streaming
 PORTVERSION=	2.2.7
 PORTREVISION=	2
@@ -11,6 +9,7 @@ DIST_SUBDIR=	apache2
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Apache H264 streaming module
+WWW=		http://h264.code-shop.com/trac/wiki/Mod-H264-Streaming-Apache-Version2
 
 # Converted from RESTRICTED
 LICENSE=	h264

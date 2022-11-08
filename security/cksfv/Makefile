@@ -1,5 +1,3 @@
-# Created by: Johann Visagie <johann@egenetics.com>
-
 PORTNAME=	cksfv
 PORTVERSION=	1.3.15
 CATEGORIES=	security
@@ -8,6 +6,7 @@ MASTER_SITES=	http://zakalwe.fi/~shd/foss/cksfv/files/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Create or manipulate Simple File Verification (SFV) checksum files
+WWW=		http://freecode.com/projects/cksfv
 
 LICENSE=	GPLv2
 

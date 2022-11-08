@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	iverilog
 PORTVERSION=	11.0
 CATEGORIES=	cad
@@ -8,6 +6,7 @@ DISTNAME=	verilog-${PORTVERSION}
 
 MAINTAINER=	kbowling@FreeBSD.org
 COMMENT=	Verilog simulation and synthesis tool
+WWW=		http://iverilog.icarus.com/
 
 LICENSE=	GPLv2
 

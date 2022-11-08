@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	rhash
 PORTVERSION=	1.4.3
 CATEGORIES=	security
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Utility and library for computing and checking of file hashes
+WWW=		http://rhash.sourceforge.net/
 
 LICENSE=	BSD0CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

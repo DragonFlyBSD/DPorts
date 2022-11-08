@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	farstream
 PORTVERSION=	0.2.9
 CATEGORIES=	net-im devel
@@ -7,6 +5,7 @@ MASTER_SITES=	http://freedesktop.org/software/farstream/releases/farstream/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Collection of GStreamer modules and libraries for videoconferencing
+WWW=		https://www.freedesktop.org/wiki/Software/Farstream/
 
 LICENSE=	LGPL21+
 

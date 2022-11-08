@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pathutil
 PORTVERSION=	0.16.2
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Like Pathname but a little less insane
+WWW=		https://github.com/envygeeks/pathutil
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

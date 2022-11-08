@@ -1,5 +1,5 @@
 PORTNAME=	usermin
-PORTVERSION=	1.840
+PORTVERSION=	1.860
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.webmin.com/uupdates/:up \
 		SF/webadmin/${PORTNAME}/${PORTVERSION}:sf
@@ -9,6 +9,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Web-based interface for performing some user tasks
+WWW=		http://www.usermin.com/
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,12 +1,11 @@
-# Created by: Vsevolod Stakhov <vsevolod@FreeBSD.org>
-
 PORTNAME=	libressl
-PORTVERSION=	3.4.3
+PORTVERSION=	3.5.3
 CATEGORIES=	security devel
 MASTER_SITES=	OPENBSD/LibreSSL
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Free version of the SSL/TLS protocol forked from OpenSSL
+WWW=		https://www.libressl.org/
 
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

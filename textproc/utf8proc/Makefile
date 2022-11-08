@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	utf8proc
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.7.0
@@ -7,6 +5,7 @@ CATEGORIES=	textproc devel
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	UTF-8 processing library
+WWW=		https://juliastrings.github.io/utf8proc/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

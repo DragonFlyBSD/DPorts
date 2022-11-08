@@ -1,5 +1,3 @@
-# Created by: Nicolas Jombart <Nicolas.Jombart@hsc-labs.com>
-
 PORTNAME=	Parallel-ForkManager
 PORTVERSION=	2.02
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple parallel processing fork manager
+WWW=		https://metacpan.org/release/Parallel-ForkManager
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

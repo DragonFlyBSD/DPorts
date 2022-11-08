@@ -4,8 +4,9 @@ PORTREVISION=	2
 DISTVERSIONSUFFIX=	-g37c47a4
 CATEGORIES=	sysutils
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for sharing uinput devices with other machines
+WWW=		https://github.com/Blub/netevent
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

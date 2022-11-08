@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	rabbirack
 PORTVERSION=	2.0.0
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Tool to control Rabbit from web browser
+WWW=		https://rabbit-shocker.org/en/rabbirack/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/GPL

@@ -1,11 +1,10 @@
-# Created by: Nicola Stanislao Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	clipnotify
 DISTVERSION=	1.0.2
 CATEGORIES=	deskutils
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Program to notify on new X clipboard events
+WWW=		https://github.com/cdown/clipnotify
 
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/LICENSE

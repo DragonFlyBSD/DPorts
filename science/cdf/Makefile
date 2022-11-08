@@ -1,5 +1,3 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	cdf3
 PORTVERSION=	3.8.0
 CATEGORIES=	science
@@ -9,6 +7,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Device independent view of the CDF data model
+WWW=		https://cdf.gsfc.nasa.gov/
 
 LICENSE=	NASA-G
 LICENSE_NAME=	NASA/Goddard Space Flight Center

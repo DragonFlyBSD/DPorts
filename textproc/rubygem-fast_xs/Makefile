@@ -1,5 +1,3 @@
-# Created by: Scott Sanders <scott@jssjr.com>
-
 PORTNAME=	fast_xs
 PORTVERSION=	0.8.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Systems integration framework. Expander
+WWW=		http://fast-xs.rubyforge.org/
 
 LICENSE=	MIT
 

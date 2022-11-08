@@ -1,7 +1,5 @@
-# Created by: ijliao
-
 PORTNAME=	cssutils
-PORTVERSION=	2.4.2
+PORTVERSION=	2.6.0
 PORTEPOCH=	1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CSS Cascading Style Sheets library for Python
+WWW=		https://github.com/jaraco/cssutils
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	dual
@@ -21,8 +20,6 @@ USES=		python:3.7+
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
-
-PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	EXAMPLES
 

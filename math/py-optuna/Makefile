@@ -1,11 +1,12 @@
 PORTNAME=	optuna
-DISTVERSION=	2.10.0
+DISTVERSION=	2.10.1
 CATEGORIES=	math # machine-learning
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Hyperparameter optimization framework
+WWW=		https://optuna.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

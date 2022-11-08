@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	tintfu
 PORTVERSION=	0.0.4
 PORTREVISION=	3
@@ -10,6 +8,7 @@ EXTRACT_SUFX=	.jar
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GraphViz .dot file editor
+WWW=		http://tintfu.sourceforge.net/
 
 NO_WRKSUBDIR=	yes
 EXTRACT_CMD=	${CP}

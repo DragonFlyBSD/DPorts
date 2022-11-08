@@ -1,5 +1,3 @@
-# Created by: Mitsuru Yoshida <mitsuru@riken.go.jp>
-
 PORTNAME=	tinyproxy
 PORTVERSION=	1.11.1
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/tinyproxy/tinyproxy/releases/download/${PORTVER
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Small, efficient HTTP proxy server
+WWW=		https://tinyproxy.github.io/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

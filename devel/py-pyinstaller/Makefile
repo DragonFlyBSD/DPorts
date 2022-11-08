@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	pyinstaller
 PORTVERSION=	3.5
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	PyInstaller-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Program to create standalone executables from Python scripts
+WWW=		https://www.pyinstaller.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.txt

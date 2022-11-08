@@ -1,5 +1,5 @@
 PORTNAME=	nextcloud
-PORTVERSION=	24.0.2
+PORTVERSION=	24.0.5
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
@@ -7,6 +7,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	Personal cloud which runs on your own server
+WWW=		https://nextcloud.com
 
 LICENSE=	AGPLv3
 
@@ -14,6 +15,7 @@ USES=		cpe gettext-runtime php:flavors,web tar:bzip2
 USE_PHP=	bcmath bz2 ctype curl dom fileinfo filter gd gmp hash iconv \
 		json mbstring pcntl pdo posix session simplexml xml xmlreader \
 		xmlwriter xsl zip zlib
+IGNORE_WITH_PHP=82
 
 NEXTCLOUD_USERNAME?=	${WWWOWN}
 NEXTCLOUD_GROUPNAME?=	${WWWGRP}

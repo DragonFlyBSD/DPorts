@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	bomns
 PORTVERSION=	0.99.3
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Best old-school Deathmatch game ever (only for two players)
+WWW=		https://github.com/keithfancher/Bomns-for-Linux
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

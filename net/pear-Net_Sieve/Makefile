@@ -1,11 +1,10 @@
-# Created by: Thierry Thomas (<thierry@pompo.net>)
-
 PORTNAME=	Net_Sieve
 PORTVERSION=	1.4.5
 CATEGORIES=	net www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR class to handle talking to timsieved
+WWW=		https://pear.php.net/package/Net_Sieve
 
 LICENSE=	BSD3CLAUSE
 

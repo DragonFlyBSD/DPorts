@@ -1,6 +1,5 @@
 # bsd.ruby.mk - Utility definitions for Ruby related ports.
 #
-# Created by: Akinori MUSHA <knu@FreeBSD.org>
 
 .if !defined(Ruby_Include)
 
@@ -134,7 +133,7 @@ RUBY?=			${LOCALBASE}/bin/ruby${RUBY_SUFFIX}
 # Ruby 2.7
 #
 RUBY_DISTVERSION=	2.7.6
-RUBY_PORTREVISION=	2
+RUBY_PORTREVISION=	3
 RUBY_PORTEPOCH=		1
 
 .      elif ${RUBY_VER} == 3.0
@@ -142,22 +141,22 @@ RUBY_PORTEPOCH=		1
 # Ruby 3.0
 #
 RUBY_DISTVERSION=	3.0.4
-RUBY_PORTREVISION=	2
+RUBY_PORTREVISION=	3
 RUBY_PORTEPOCH=		1
 .      elif ${RUBY_VER} == 3.1
 #
 # Ruby 3.1
 #
 RUBY_DISTVERSION=	3.1.2
-RUBY_PORTREVISION=	1
+RUBY_PORTREVISION=	2
 RUBY_PORTEPOCH=		1
 
 .      elif ${RUBY_VER} == 3.2
 #
 # Ruby 3.2
 #
-RUBY_DISTVERSION=	3.2.0-preview1
-RUBY_PORTREVISION=	2
+RUBY_DISTVERSION=	3.2.0-preview2
+RUBY_PORTREVISION=	1
 RUBY_PORTEPOCH=		1
 
 # When adding a version, please keep the comment in

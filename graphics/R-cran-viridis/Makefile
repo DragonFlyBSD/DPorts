@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	viridis
 PORTVERSION=	0.6.2
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Default Color Maps from 'matplotlib'
+WWW=		https://cran.r-project.org/web/packages/viridis/
 
 LICENSE=	MIT
 

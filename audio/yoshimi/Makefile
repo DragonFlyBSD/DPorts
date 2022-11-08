@@ -1,9 +1,11 @@
 PORTNAME=	yoshimi
-DISTVERSION=	2.2.0
+DISTVERSION=	2.2.2.1
 CATEGORIES=	audio
+MASTER_SITES=	SF/${PORTNAME}/${DISTVERSION:R:R}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Sophisticated software synthesizer
+WWW=		https://yoshimi.github.io/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -17,11 +19,8 @@ LIB_DEPENDS=	libargp.so:devel/argp-standalone \
 		libjack.so:audio/jack \
 		libmxml.so:textproc/mxml
 
-USES=		cmake compiler:c++11-lang gnome ncurses pkgconfig readline
+USES=		cmake compiler:c++14-lang gnome ncurses pkgconfig readline tar:bz2
 USE_GNOME=	cairo
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	Yoshimi
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/src
 LDFLAGS+=		-Wl,--as-needed

@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	Text-Trim
 PORTVERSION=	1.04
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Remove leading and/or trailing whitespace from strings
+WWW=		https://metacpan.org/release/Text-Trim
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

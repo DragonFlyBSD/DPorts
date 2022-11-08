@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	googletest
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	1.12.1
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Framework for writing C++ tests on a variety of platforms
+WWW=		https://github.com/google/googletest
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

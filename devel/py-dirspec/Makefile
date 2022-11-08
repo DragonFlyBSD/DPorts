@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	dirspec
 PORTVERSION=	13.10
 PORTREVISION=	0
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	XDG Base and User directories implementation
+WWW=		https://launchpad.net/dirspec
 
 LICENSE=	GPLv3
 

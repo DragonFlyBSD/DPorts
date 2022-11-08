@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@FreeBSD.org>
-
 PORTNAME=	Pod-Parser
 PORTVERSION=	1.65
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Modules to work with POD (Plain Old Documentation)
+WWW=		https://metacpan.org/release/Pod-Parser
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

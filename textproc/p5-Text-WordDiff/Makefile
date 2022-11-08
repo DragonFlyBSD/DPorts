@@ -1,5 +1,3 @@
-# Created by: Rod Taylor <ports@rbt.ca>
-
 PORTNAME=	Text-WordDiff
 PORTVERSION=	0.09
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Track changes between documents
+WWW=		https://metacpan.org/release/Text-WordDiff
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

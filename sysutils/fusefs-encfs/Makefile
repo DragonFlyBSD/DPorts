@@ -1,5 +1,3 @@
-# Created by: trasz <trasz@pin.if.uz.zgora.pl>
-
 PORTNAME=	encfs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.9.5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	fusefs-
 
 MAINTAINER=	dmgk@FreeBSD.org
 COMMENT=	Encrypted pass-through FUSE filesystem
+WWW=		http://www.arg0.net/encfs
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

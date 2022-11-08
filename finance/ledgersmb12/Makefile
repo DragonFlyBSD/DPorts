@@ -1,5 +1,3 @@
-# Created by: anarcat@anarcat.ath.cx
-
 PORTNAME=	ledgersmb
 PORTVERSION=	1.2.26
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://download.ledgersmb.org/f/Releases/archives/${PORTVERSION:R}
 
 MAINTAINER=	ty@eye-of-odin.com
 COMMENT=	Double entry accounting system
+WWW=		https://www.ledgersmb.org/
 
 BUILD_DEPENDS=	p5-DBD-Pg>=0:databases/p5-DBD-Pg \
 		p5-MIME-Lite>=0:mail/p5-MIME-Lite \

@@ -1,11 +1,10 @@
-# Created by: Sofian Brabez <sbrabez@gmail.com>
-
 PORTNAME=	colorgcc
 PORTVERSION=	1.4.5
 CATEGORIES=	devel misc
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl script to colorize the terminal output of GCC
+WWW=		https://github.com/colorgcc/colorgcc
 
 LICENSE=	GPLv2
 

@@ -1,6 +1,6 @@
 PORTNAME=	ncbi-blast+
 DISTVERSION=	2.12.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	biology perl5 python
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PORTVERSION}/
@@ -8,6 +8,7 @@ DISTNAME=	ncbi-blast-${PORTVERSION}+-src
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	NCBI implementation of Basic Local Alignment Search Tool
+WWW=		http://blast.ncbi.nlm.nih.gov
 
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/scripts/projects/blast/LICENSE

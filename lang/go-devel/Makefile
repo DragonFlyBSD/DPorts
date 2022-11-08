@@ -1,7 +1,5 @@
-# Created by: Devon H. O'Dell <devon.odell@gmail.com>
-
 PORTNAME=	go
-DISTVERSION?=	g20220609
+DISTVERSION?=	g20220802
 PORTREVISION?=	0
 CATEGORIES=	lang
 MASTER_SITES?=	https://github.com/dmgk/go-bootstrap/releases/download/${BOOTSTRAP_TAG}/:bootstrap \
@@ -11,6 +9,7 @@ DISTFILES?=	go-${OPSYS:tl}-${GOARCH_${ARCH}}${GOARM_${ARCH}}-${BOOTSTRAP_TAG}.ta
 
 MAINTAINER=	go@FreeBSD.org
 COMMENT?=	Go programming language (development version)
+WWW=		https://golang.org
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -36,8 +35,8 @@ CPE_VENDOR=	golang
 .ifndef MASTERDIR
 USE_GITHUB=	yes
 GH_ACCOUNT=	golang
-# go1.19beta1
-GH_TAGNAME=	2cfbef438049fd4c3f73d1562773ad1f93900897
+# go1.19
+GH_TAGNAME=	43456202a1e55da55666fac9d56ace7654a65b64
 .endif
 
 SHEBANG_FILES=	misc/wasm/go_js_wasm_exec \
@@ -48,8 +47,21 @@ SHEBANG_GLOB=	*.bash *.pl *.sh
 EXTRACT_CMD=	${SETENV} LC_ALL=en_US.UTF-8 ${TAR}
 
 OPTIONS_DEFINE_i386=	SOFTFLOAT
+OPTIONS_DEFAULT_x86_64=	V1
+OPTIONS_SINGLE=	${OPTIONS_SINGLE_${ARCH}}
+OPTIONS_SINGLE_x86_64=	GOAMD64
+OPTIONS_SINGLE_GOAMD64=	V1 V2 V3 V4
+
 SOFTFLOAT_DESC=	Use soft float on non-SSE2 processors (Pentium 4 and older)
 SOFTFLOAT_VARS=	GO386=softfloat
+V1_DESC=	Use baseline x86-64 instruction set
+V1_VARS=	GOAMD64=v1
+V2_DESC=	V1 instructions plus CMPXCHG16B, LAHF, SAHF, POPCNT, SSE*
+V2_VARS=	GOAMD64=v2
+V3_DESC=	V2 instructions plus AVX*, BMI*, F16C, FMA, LZCNT, MOVBE, OSXSAVE
+V3_VARS=	GOAMD64=v3
+V4_DESC=	V3 instructions plus AVX512*
+V4_VARS=	GOAMD64=v4
 
 BOOTSTRAP_TAG=	go1.17.9
 GO_SUFFIX=	${PKGNAMESUFFIX}
@@ -86,6 +98,7 @@ do-build:
 		GOARCH=${GOARCH_${ARCH}} \
 		GO386=${GO386} \
 		GOARM=${GOARM_${ARCH}} \
+		GOAMD64=${GOAMD64} \
 		CC=${CC} \
 		${SH} make.bash -v
 
@@ -109,6 +122,7 @@ do-test:
 		GOARCH=${GOARCH_${ARCH}} \
 		GO386=${GO386} \
 		GOARM=${GOARM_${ARCH}} \
+		GOAMD64=${GOAMD64} \
 		CC=${CC} \
 		${SH} run.bash -no-rebuild
 

@@ -1,5 +1,3 @@
-# Created by: Ed Schouten <ed@FreeBSD.org>
-
 PORTNAME=	cloudabi
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.19
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	ed@FreeBSD.org
 COMMENT=	Constants, types and data structures used by CloudABI
+WWW=		https://github.com/NuxiNL/cloudabi
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

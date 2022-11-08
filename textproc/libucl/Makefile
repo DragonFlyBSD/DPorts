@@ -1,11 +1,10 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	libucl
 PORTVERSION=	0.8.1
 CATEGORIES=	textproc devel
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Universal configuration library parser
+WWW=		https://github.com/vstakhov/libucl
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

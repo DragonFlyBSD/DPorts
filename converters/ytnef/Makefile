@@ -1,5 +1,3 @@
-# Created by: Rodrigo Graeff <delphus@gmail.com>
-
 PORTNAME=	ytnef
 PORTVERSION=	1.9.3
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	converters mail
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Unpack data in MS Outlook TNEF format
+WWW=		https://github.com/Yeraze/ytnef
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

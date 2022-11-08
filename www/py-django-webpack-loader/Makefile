@@ -1,5 +1,3 @@
-# Created by: Richard Gallamore <ultima@FreeBSD.org>
-
 PORTNAME=	django-webpack-loader
 PORTVERSION=	0.7.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	Transparently use webpack with Django
+WWW=		https://pypi.org/project/django-webpack-loader
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

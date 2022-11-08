@@ -1,5 +1,3 @@
-# Created by: Dominic Marks <dom@wirespeed.org.uk>
-
 # Note to committers: If don't commit a maintainer patch and as a result PKGNAME
 # or user variables (WITH*) changes please add an entry in ${FILESDIR}/UPDATING
 # Thanks.
@@ -12,6 +10,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	danny@dannywarren.com
 COMMENT=	Bayesian spam filter
+WWW=		http://dspam.sourceforge.net/
 
 LICENSE=	AGPLv3
 

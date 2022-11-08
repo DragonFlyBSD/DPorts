@@ -1,5 +1,3 @@
-# Created by: Fukang Chen <loader@FreeBSD.org>
-
 PORTNAME=	semantic-version
 PORTVERSION=	2.10.0
 MASTER_SITES=	CHEESESHOP
@@ -9,6 +7,7 @@ DISTNAME=	semantic_version-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python library provides a few tools to handle SemVer in Python
+WWW=		https://github.com/rbarrois/python-semanticversion
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

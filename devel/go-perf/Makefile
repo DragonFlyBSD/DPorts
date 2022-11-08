@@ -1,11 +1,12 @@
 PORTNAME=	go-perf
 PORTVERSION=	${MODVERSION:S/-/./g:R}
-PORTREVISION=	1
+PORTREVISION=	5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Go performance measurement, storage, and analysis tools
+WWW=		https://golang.org/x/perf
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

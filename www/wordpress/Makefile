@@ -1,13 +1,12 @@
-# Created by: Elvis Chiang <elvis@sslab.cs.ccu.edu.tw>
-
 PORTNAME=	wordpress
-DISTVERSION=	5.9.3
+DISTVERSION=	6.0.2
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	https://wordpress.org/
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	State-of-the-art semantic personal publishing platform
+WWW=		https://wordpress.org/
 
 LICENSE=	GPLv2
 

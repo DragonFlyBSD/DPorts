@@ -1,5 +1,3 @@
-# Created by: Albert Vernon <f3cun3c02@sneakemail.com>
-
 PORTNAME=	zutils
 PORTVERSION=	1.11
 CATEGORIES=	archivers
@@ -7,6 +5,7 @@ MASTER_SITES=	SAVANNAH/zutils
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utilities for searching in bzip2, gzip, lzip, and xz archives
+WWW=		https://www.nongnu.org/zutils/zutils.html
 
 LICENSE=	GPLv2
 

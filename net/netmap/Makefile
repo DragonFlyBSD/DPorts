@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	netmap
 PORTVERSION=	0.1.3
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/NetMap%20${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Make a graphical representation of the surrounding network
+WWW=		http://netmap.sourceforge.net/
 
 LICENSE=	GPLv2
 

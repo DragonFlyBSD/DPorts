@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	redland
 PORTVERSION=	1.0.17
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	http://download.librdf.org/source/
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	High-level interface for RDF
+WWW=		https://librdf.org
 
 # Even though GPLv3 is not explicitly mentioned in the port's LICENSE.html, one
 # of its licenses is "GPLv2 or newer", which includes GPLv3.

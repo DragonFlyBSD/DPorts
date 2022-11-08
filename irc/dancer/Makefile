@@ -1,5 +1,3 @@
-# Created by: Dominic Marks <dom@cus.org.uk>
-
 PORTNAME=	dancer
 PORTVERSION=	4.16
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	IRC bot written in C for UNIX, Windows, and AmigaOS
+WWW=		http://dancer.sourceforge.net/
 
 PATCH_WRKSRC=		${WRKDIR}/${DISTNAME}
 WRKSRC=		${WRKDIR}/${DISTNAME}/src

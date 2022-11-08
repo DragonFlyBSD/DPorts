@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	babelfish
 DISTVERSION=	0.6.0
 CATEGORIES=	devel python
@@ -8,10 +6,13 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Module to work with countries and languages
+WWW=		https://github.com/Diaoul/babelfish/
 
 LICENSE=	BSD3CLAUSE
 
 USES=		python:3.6+
 USE_PYTHON=	autoplist distutils
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

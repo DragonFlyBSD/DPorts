@@ -1,5 +1,3 @@
-# Created by: Patrick Li <pat@databits.net>
-
 PORTNAME=	hnb
 PORTVERSION=	1.9.18
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	editors
 
 MAINTAINER=	fox@FreeBSD.org
 COMMENT=	Hierarchical NoteBook a data organizer
+WWW=		http://hnb.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

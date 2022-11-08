@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	graphillion
 PORTVERSION=	1.5
 CATEGORIES=	math python
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME:S/g/G/}-${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Fast, lightweight graphset operation library in Python
+WWW=		https://github.com/takemaru/graphillion
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

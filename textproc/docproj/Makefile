@@ -1,9 +1,10 @@
 PORTNAME=	docproj
-PORTVERSION=	4.1.1
+PORTVERSION=	4.1.2
 CATEGORIES=	textproc
 
 MAINTAINER=	doceng@FreeBSD.org
 COMMENT=	Meta-port for the FreeBSD Documentation Project
+WWW=		https://www.freebsd.org/docproj
 
 RUN_DEPENDS=	asciidoctor:textproc/rubygem-asciidoctor \
 		hugo:www/gohugo \
@@ -22,6 +23,6 @@ EPUB_RUN_DEPENDS=	asciidoctor-epub3:textproc/rubygem-asciidoctor-epub3
 GIT_RUN_DEPENDS=	git:devel/git
 IGOR_RUN_DEPENDS=	igor:textproc/igor
 PDF_RUN_DEPENDS=	asciidoctor-pdf:textproc/rubygem-asciidoctor-pdf
-TRANSLATOR_RUN_DEPENDS=	po4a>=0.66_1:textproc/po4a
+TRANSLATOR_RUN_DEPENDS=	po4a>=0.67:textproc/po4a
 
 .include <bsd.port.mk>

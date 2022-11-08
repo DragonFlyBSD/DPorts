@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	libscca
 DISTVERSION=	alpha-20210419
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/libyal/libscca/releases/download/${PORTVERSION:
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library and tools to access the Windows Prefetch File (SCCA) format
+WWW=		https://github.com/libyal/libscca
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING

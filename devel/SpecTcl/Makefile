@@ -1,5 +1,3 @@
-# Created by: Andreas Klemm <andreas@klemm.gtn.com>
-
 PORTNAME=	SpecTcl
 PORTVERSION=	1.2.2a
 CATEGORIES=	devel tk
@@ -9,6 +7,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Free drag-and-drop GUI builder for Tk and Java from Sun
+WWW=		http://spectcl.sourceforge.net/
 
 LICENSE=	SUN
 LICENSE_NAME=	SUN

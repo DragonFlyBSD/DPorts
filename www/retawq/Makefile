@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	retawq
 DISTVERSION=	0.2.6c
 PORTREVISION=	11
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-0.2.6c
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Interactive, multi-threaded web browser for text terminals
+WWW=		http://retawq.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

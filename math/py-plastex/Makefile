@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	plastex
 PORTVERSION=	2.1
 CATEGORIES=	math python
@@ -9,6 +7,7 @@ DISTNAME=	plasTeX-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	LaTeX Document Processing Framework
+WWW=		https://github.com/plastex/plastex
 
 LICENSE=	MIT
 

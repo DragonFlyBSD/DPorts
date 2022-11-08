@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	vte
 PORTVERSION=	0.28.2
 PORTREVISION?=	3
@@ -9,6 +7,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Gtk 2 based terminal widget with accessibility and I18N support
+WWW=		https://www.gnome.org/
 
 USES+=		tar:xz
 

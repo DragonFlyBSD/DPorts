@@ -1,5 +1,3 @@
-# Created by: Dominique Goncalves <dominique.goncalves@gmail.com>
-
 PORTNAME=	Ogg-Vorbis-Header-PurePerl
 PORTVERSION=	1.0
 PORTREVISION=	5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dominique.goncalves@gmail.com
 COMMENT=	Manipulate / fetch info from Ogg-Vorbis audio files
+WWW=		https://metacpan.org/release/Ogg-Vorbis-Header-PurePerl
 
 LIB_DEPENDS=	libogg.so:audio/libogg \
 		libvorbis.so:audio/libvorbis

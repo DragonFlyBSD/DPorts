@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	Net-Blogger
 PORTVERSION=	1.03
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	OOP-ish interface for accessing a weblog via the XML-RPC API
+WWW=		https://metacpan.org/release/Net-Blogger
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

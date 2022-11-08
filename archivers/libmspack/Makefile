@@ -1,5 +1,3 @@
-# Created by: Max Khon <fjoe@FreeBSD.org>
-
 PORTNAME=	libmspack
 PORTVERSION=	0.10.1
 DISTVERSIONSUFFIX=	alpha
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.cabextract.org.uk/libmspack/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for Microsoft compression formats
+WWW=		https://www.cabextract.org.uk/libmspack/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB

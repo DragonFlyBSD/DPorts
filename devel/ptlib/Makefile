@@ -1,5 +1,3 @@
-# Created by: Roger Hardiman <roger@freebsd.org>
-
 PORTNAME=	ptlib
 PORTVERSION=	2.10.11
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Cross platform C++ library, used by OPAL
+WWW=		http://www.opalvoip.org
 
 LICENSE=	MPL10
 

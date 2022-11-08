@@ -1,5 +1,3 @@
-# Created by: Ryan Steinmetz (<rpsfa@rit.edu>)
-
 PORTNAME=	launchy
 PORTVERSION=	2.5.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Helper class for launching cross-platform applications
+WWW=		https://github.com/copiousfreetime/launchy
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE

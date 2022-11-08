@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	spreg
 PORTVERSION=	1.2.4
 CATEGORIES=	math python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PySAL Spatial Econometrics Package
+WWW=		https://spreg.readthedocs.io/en/latest/
 
 LICENSE=	BSD3CLAUSE
 

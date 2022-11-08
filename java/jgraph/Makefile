@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	jgraph
 PORTVERSION=	5.13.0.4
 CATEGORIES=	java graphics
@@ -10,6 +8,7 @@ EXTRACT_SUFX=	.jar
 
 MAINTAINER=	crees@FreeBSD.org
 COMMENT=	Java Graph Diagram Component
+WWW=		https://www.jgraph.com/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

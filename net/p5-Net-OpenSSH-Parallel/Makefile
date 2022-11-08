@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Net-OpenSSH-Parallel
 PORTVERSION=	0.14
 CATEGORIES=	net security perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Run SSH jobs in parallel
+WWW=		https://metacpan.org/release/Net-OpenSSH-Parallel
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

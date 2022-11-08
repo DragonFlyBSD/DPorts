@@ -1,5 +1,3 @@
-# Created by: trasz <trasz@pin.if.uz.zgora.pl>
-
 PORTNAME=	qjackctl
 DISTVERSIONPREFIX=	qjackctl_
 DISTVERSION=	0_9_7
@@ -7,6 +5,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Qt interface for JACK Audio Connection Kit
+WWW=		https://qjackctl.sourceforge.io/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libjack.so:audio/jack
 
 USES=		cmake compiler:c++11-lib gl localbase:ldflags pkgconfig qt:5
-USE_QT=		core gui network widgets x11extras xml buildtools_build linguisttools_build qmake_build
+USE_QT=		core gui network widgets x11extras xml buildtools:build linguisttools:build qmake:build
 USE_GL=		gl
 USE_CXXSTD=	c++11
 

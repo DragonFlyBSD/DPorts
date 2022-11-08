@@ -1,18 +1,16 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	tracker-miners
 PORTVERSION=	2.3.5
-PORTREVISION=	26
+PORTREVISION=	30
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Miners for tracker2
+WWW=		https://wiki.gnome.org/Projects/Tracker
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LGPL
 
-BUILD_DEPENDS=	valac:lang/vala
 LIB_DEPENDS=	libicuuc.so:devel/icu \
 		libupower-glib.so:sysutils/upower \
 		libexempi.so:textproc/exempi \
@@ -34,7 +32,7 @@ LIB_DEPENDS=	libicuuc.so:devel/icu \
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gnome jpeg localbase:ldflags meson \
-		pathfix pkgconfig python:3.4+,build sqlite tar:xz
+		pathfix pkgconfig python:3.4+,build sqlite tar:xz vala:build
 USE_GNOME=	cairo intltool libgsf libxml2
 
 MESON_ARGS=	-Dsystemd_user_services=no \

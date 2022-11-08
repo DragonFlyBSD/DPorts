@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	cinnamon-session
 PORTVERSION=	4.8.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Session component for the cinnamon desktop
+WWW=		http://cinnamon.linuxmint.com/
 
 LICENSE=	GPLv2
 

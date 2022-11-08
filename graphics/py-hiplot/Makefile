@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	hiplot
 PORTVERSION=	0.1.33
 CATEGORIES=	graphics python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	High dimensional Interactive Plotting tool
+WWW=		https://github.com/facebookresearch/hiplot
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: James FitzGibbon <jfitz@FreeBSD.org>
-
 PORTNAME=	PGP
 PORTVERSION=	0.3a
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl5 module to work with PGP messages
+WWW=		https://metacpan.org/release/PGP
 
 ONLY_FOR_ARCHS=		amd64 i386 powerpc64 powerpc64le sparc64
 

@@ -1,5 +1,3 @@
-# Created by: Stanislav Svirid <count@211.ru>
-
 PORTNAME=	creole
 PORTVERSION=	1.4.9
 CATEGORIES=	textproc python
@@ -9,6 +7,7 @@ DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	count@211.ru
 COMMENT=	Markup converter in pure Python
+WWW=		https://pypi.org/project/python-creole/
 
 LICENSE=	GPLv3
 

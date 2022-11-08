@@ -1,5 +1,3 @@
-# Created by: Dan Rench <citric@cubicone.tmetic.com>
-
 PORTNAME=	Child
 PORTVERSION=	0.009
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	citric@cubicone.tmetic.com
 COMMENT=	Object oriented simple interface to fork()
+WWW=		https://metacpan.org/release/Child
 
 USES=		perl5
 USE_PERL5=	modbuild

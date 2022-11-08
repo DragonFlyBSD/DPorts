@@ -1,12 +1,11 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	lme4
-DISTVERSION=	1.1-29
+DISTVERSION=	1.1-30
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Linear mixed-effects models using Eigen and S4
+WWW=		https://github.com/lme4/lme4
 
 LICENSE=	GPLv2+
 

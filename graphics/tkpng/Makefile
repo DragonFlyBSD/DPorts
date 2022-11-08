@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	tkpng
 PORTVERSION=	0.9
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	PNG support for Tcl/Tk
+WWW=		https://www.muonics.com/FreeStuff/TkPNG/
 
 LICENSE=	TclTk
 LICENSE_NAME=	Tcl/Tk License

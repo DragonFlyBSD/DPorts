@@ -1,5 +1,3 @@
-# Created by: David O'Brien (obrien@cs.ucdavis.edu)
-
 PORTNAME=	netcat
 PORTVERSION=	1.10
 PORTREVISION=	3
@@ -14,6 +12,7 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple utility which reads and writes data across network connections
+WWW=		http://nc110.sourceforge.net/
 
 USES=		tar:tgz
 NO_WRKSUBDIR=	yes

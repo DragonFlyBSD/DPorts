@@ -1,5 +1,3 @@
-# Created by: Rahul Siddharthan <rsidd@online.fr>
-
 PORTNAME=	vsound
 PORTVERSION=	0.6
 PORTREVISION=	6
@@ -9,6 +7,7 @@ MASTER_SITES=	http://down1.chinaunix.net/distfiles/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility for capturing audio streams from programs with OSS output
+WWW=		http://www.vsound.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: RaRa Rasputin <rasputin@submonkey.net>
-
 PORTNAME=	steghide
 PORTVERSION=	0.5.1
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Steganography tool to hide data in binary files
+WWW=		http://steghide.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	kyototycoon
 PORTVERSION=	0.9.56
 PORTREVISION=	6
@@ -9,6 +7,7 @@ MASTER_SITES=	https://dbmx.net/kyototycoon/pkg/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Handy cache/storage server
+WWW=		https://dbmx.net/kyototycoon/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

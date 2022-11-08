@@ -1,5 +1,3 @@
-# Created by: Jim Mock <jim@FreeBSD.org>
-
 PORTNAME=	wmbiff
 PORTVERSION=	0.4.36
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://www.dockapps.net/download/
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	xbiff-like Window Maker dock app
+WWW=		https://www.dockapps.net/wmbiff
 
 LICENSE=	GPLv2
 

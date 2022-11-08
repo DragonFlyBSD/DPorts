@@ -1,5 +1,3 @@
-# Created by: mahlon
-
 PORTNAME=	volta
 PORTVERSION=	0.3.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	https://bitbucket.org/mahlon/volta/downloads/ \
 
 MAINTAINER=	mahlon@martini.nu
 COMMENT=	High performance, low resource URI rewriter for Squid
+WWW=		http://projects.martini.nu/volta/
 
 LICENSE=	BSD3CLAUSE
 

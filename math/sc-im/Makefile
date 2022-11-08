@@ -1,11 +1,12 @@
 PORTNAME=		sc-im
 DISTVERSIONPREFIX=	v
 DISTVERSION=		0.8.2
-PORTREVISION=		3
+PORTREVISION=		4
 CATEGORIES=		math
 
 MAINTAINER=	bapt@FreeBSD.org
 COMMENT=	Ncurses spreadsheet program for terminal
+WWW=		https://github.com/andmarti1424/sc-im
 
 LICENSE=	BSD4CLAUSE
 

@@ -1,5 +1,3 @@
-# Created by: Sakai Hiroaki <sakai@seki.ee.kagu.sut.ac.jp>
-
 PORTNAME=	xfireworks
 PORTVERSION=	1.4
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://kozos.jp/myfreesoft/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fireworks on X
+WWW=		https://kozos.jp/myfreesoft/
 
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual

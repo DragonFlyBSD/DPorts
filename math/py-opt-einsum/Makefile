@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	opt-einsum
 PORTVERSION=	3.3.0
 CATEGORIES=	math python
@@ -9,6 +7,7 @@ DISTNAME=	opt_einsum-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Optimizing numpys einsum function
+WWW=		https://github.com/dgasmith/opt_einsum
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

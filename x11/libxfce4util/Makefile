@@ -1,5 +1,3 @@
-# Created by: James Earl <jdearl@telus.net>
-
 PORTNAME=	libxfce4util
 PORTVERSION=	4.16.0
 CATEGORIES=	x11 xfce
@@ -8,6 +6,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Extension library for the Xfce desktop environment
+WWW=		https://www.xfce.org/
 
 LICENSE=	GPLv2
 
@@ -35,7 +34,7 @@ GIR_CONFIGURE_OFF=	--enable-introspection=no
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext-runtime
 
-VAPI_BUILD_DEPENDS=	vapigen:lang/vala
+VAPI_USES=		vala:build
 VAPI_CONFIGURE_ENABLE=	vala
 VAPI_IMPLIES=		GIR
 

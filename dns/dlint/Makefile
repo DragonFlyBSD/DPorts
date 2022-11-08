@@ -1,5 +1,3 @@
-# Created by: David O'Brien (obrien@NUXI.com)
-
 PORTNAME=	dlint
 PORTVERSION=	1.4.1
 CATEGORIES=	dns
@@ -7,6 +5,7 @@ MASTER_SITES=	https://BSDforge.com/projects/source/dns/dlint/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lint for DNS zones (Domain Name Server zone verification utility)
+WWW=		https://BSDforge.com/projects/dns/dlint
 
 USES=		shebangfix tar:xz
 NO_ARCH=	yes

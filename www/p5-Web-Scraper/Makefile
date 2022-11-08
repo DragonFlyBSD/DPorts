@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Web-Scraper
 PORTVERSION=	0.38
 CATEGORIES=	www perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Web Scraping Toolkit inspired by Scrapi
+WWW=		https://metacpan.org/release/Web-Scraper
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

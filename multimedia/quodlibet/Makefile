@@ -1,5 +1,3 @@
-# Created by: Byung-Hee HWANG <bh@izb.knu.ac.kr>
-
 PORTNAME=	quodlibet
 DISTVERSION=	4.3.0
 CATEGORIES=	multimedia audio python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	aly@aaronly.me
 COMMENT=	Music library/editor/player written in Python
+WWW=		https://quodlibet.readthedocs.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

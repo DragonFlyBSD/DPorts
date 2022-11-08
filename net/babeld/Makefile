@@ -1,5 +1,3 @@
-# Created by: Hung-Yi Chen <gaod@hychen.org>
-
 PORTNAME=	babeld
 PORTVERSION=	1.10
 DISTVERSIONPREFIX=	${PORTNAME}-
@@ -8,6 +6,7 @@ CATEGORIES=	net
 
 MAINTAINER=	gaod@hychen.org
 COMMENT=	Distance-vector routing protocol
+WWW=		https://www.irif.fr/~jch/software/babel/
 
 LICENSE=	MIT
 

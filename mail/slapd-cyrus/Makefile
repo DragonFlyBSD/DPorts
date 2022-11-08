@@ -1,5 +1,3 @@
-# Created by: Alexey V. Degtyarev
-
 PORTNAME=	slapd-cyrus
 PORTVERSION=	1.00
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	Slapd-Backend-Cyrus-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Slapd backend to translate DIT into Cyrus configuration
+WWW=		http://slapd-cyrus.sourceforge.net
 
 BUILD_DEPENDS=	cyrus-imapd24>=0:mail/cyrus-imapd24 \
 		p5-BerkeleyDB>=0:databases/p5-BerkeleyDB \

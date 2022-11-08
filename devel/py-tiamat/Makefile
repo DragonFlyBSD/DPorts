@@ -1,5 +1,3 @@
-# Created by: Kirill Ponomarev <krion@FreeBSD.org>
-
 PORTNAME=	tiamat
 PORTVERSION=	7.10.3
 CATEGORIES=	devel python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	krion@FreeBSD.org
 COMMENT=	Single binary builder for Python projects
+WWW=		https://gitlab.com/saltstack/pop/tiamat
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

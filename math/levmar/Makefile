@@ -1,5 +1,3 @@
-# Created by: Eijiro Shibusawa <ej-sib@ice.uec.ac.jp>
-
 PORTNAME=	levmar
 PORTVERSION=	2.6
 PORTREVISION=	14
@@ -8,6 +6,7 @@ MASTER_SITES=	http://users.ics.forth.gr/~lourakis/levmar/
 
 MAINTAINER=	phd_kimberlite@yahoo.co.jp
 COMMENT=	GPL-licensed library implementing the Levenberg-Marquardt algorithm
+WWW=		http://www.ics.forth.gr/~lourakis/levmar/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

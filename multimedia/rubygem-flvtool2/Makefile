@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	flvtool2
 PORTVERSION=	1.0.6
 CATEGORIES=	multimedia rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Flash video (FLV) manipulation tool
+WWW=		https://github.com/unnu/flvtool2
 
 LICENSE=	BSD3CLAUSE
 

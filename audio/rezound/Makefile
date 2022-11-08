@@ -1,13 +1,12 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	rezound
 DISTVERSION=	0.13.1beta
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/ReZound/${DISTVERSION}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Graphical audio file editor
+WWW=		http://rezound.sourceforge.net/
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	CGI-Tiny
 PORTVERSION=	1.002
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Common Gateway Interface, with no frills
+WWW=		https://metacpan.org/release/CGI-Tiny
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

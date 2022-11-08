@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	SQUAREM
 DISTVERSION=	2021.1
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Squared Extrapolation Methods for Accelerating EM-Like Algorithms
+WWW=		https://cran.r-project.org/web/packages/SQUAREM/
 
 LICENSE=	GPLv2+
 

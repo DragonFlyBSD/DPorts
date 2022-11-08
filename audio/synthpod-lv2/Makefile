@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	synthpod
 PORTVERSION=	g20190407
 PORTREVISION=	2
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-lv2
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Lightweight Nonlinear LV2 Plugin Container
+WWW=		https://open-music-kontrollers.ch/lv2/synthpod
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/COPYING

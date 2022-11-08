@@ -1,10 +1,12 @@
 PORTNAME=	kalker
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.0
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	Scientific calculator that supports math-like syntax
+WWW=		https://kalker.xyz/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

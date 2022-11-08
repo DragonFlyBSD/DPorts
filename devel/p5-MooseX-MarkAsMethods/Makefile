@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MooseX-MarkAsMethods
 PORTVERSION=	0.15
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Mark overload code symbols as methods
+WWW=		https://metacpan.org/release/MooseX-MarkAsMethods
 
 LICENSE=	LGPL21
 

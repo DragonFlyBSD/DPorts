@@ -1,5 +1,3 @@
-# Created by: Lars Eggert <lars@eggert.org>
-
 PORTNAME=	flowgrind
 PORTVERSION=	0.8.2
 DISTVERSIONPREFIX=	${PORTNAME}-
@@ -8,6 +6,7 @@ CATEGORIES=	benchmarks
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Measure throughput and other metrics for TCP
+WWW=		http://flowgrind.net/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

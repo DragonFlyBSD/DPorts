@@ -1,6 +1,6 @@
 PORTNAME=	arrow
 DISTVERSION=	8.0.0
-PORTREVISION=	3
+PORTREVISION=	6
 CATEGORIES=	databases
 MASTER_SITES=	APACHE/${PORTNAME}/${PORTNAME}-${DISTVERSION} \
 		https://github.com/apache/orc/archive/rel/:orc
@@ -10,6 +10,7 @@ EXTRACT_ONLY=	apache-${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Columnar in-memory analytics layer for big data
+WWW=		https://arrow.apache.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/../LICENSE.txt
@@ -159,7 +160,7 @@ S3_LIB_DEPENDS=			\
 				libaws-c-io.so:devel/aws-c-io \
 				libaws-checksums.so:devel/aws-checksums \
 				libaws-cpp-sdk-s3.so:devel/aws-sdk-cpp \
-				libs2n.so:security/s2n
+				libs2n.so:security/s2n-tls
 S3_IMPLIES=			ZLIB
 
 SKYHOOK_DESC=			Build the Skyhook libraries

@@ -2,11 +2,12 @@ PORTNAME=	neolink
 PORTVERSION=	0.3.0
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	g20210903
-PORTREVISION=	7
+PORTREVISION=	9
 CATEGORIES=	multimedia
 
 MAINTAINER=	kevans@FreeBSD.org
 COMMENT=	RTSP bridge to Reolink IP cameras
+WWW=		https://github.com/thirtythreeforty/neolink
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,11 +1,10 @@
-# Created by: Alex Miller (<asm@asm.kiev.ua>)
-
 PORTNAME=	HTML_Template_PHPLIB
 PORTVERSION=	1.6.1
 CATEGORIES=	devel www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR template API ported from PHPLIB
+WWW=		https://pear.php.net/package/HTML_Template_PHPLIB
 
 LICENSE=	LGPL3
 

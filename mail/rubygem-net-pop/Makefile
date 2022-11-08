@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	net-pop
 PORTVERSION=	0.1.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby client library for POP3
+WWW=		https://github.com/ruby/net-pop
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

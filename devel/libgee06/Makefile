@@ -1,6 +1,3 @@
-# Created by: Frank Steinborn <steinex@nognu.de>
-#    $MCom: ports/devel/libgee/Makefile,v 1.13 2012/10/14 20:47:22 kwm Exp $
-
 PORTNAME=	libgee
 PORTVERSION=	0.6.8
 PORTREVISION=	2
@@ -10,6 +7,7 @@ PKGNAMESUFFIX=	06
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GObject collection library
+WWW=		https://live.gnome.org/Libgee
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-introspection=yes

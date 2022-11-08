@@ -1,7 +1,5 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	geoalchemy2
-PORTVERSION=	0.12.1
+PORTVERSION=	0.12.5
 CATEGORIES=	databases geography python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,6 +7,7 @@ DISTNAME=	GeoAlchemy2-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Using SQLAlchemy with Spatial Databases
+WWW=		https://github.com/geoalchemy/geoalchemy2
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING.rst

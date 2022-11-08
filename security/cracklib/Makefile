@@ -1,5 +1,3 @@
-# Created by: ajk@iu.edu
-
 PORTNAME=	cracklib
 PORTVERSION=	2.9.7
 PORTREVISION=	1
@@ -12,6 +10,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT?=	Password-checking library
+WWW=		https://sourceforge.net/projects/cracklib/
 
 LICENSE=	LGPL21
 

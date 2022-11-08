@@ -5,12 +5,13 @@ CATEGORIES=	graphics devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ binding for the OpenGL API
+WWW=		https://glbinding.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cmake compiler:c++11-lang qt:5
-USE_QT=		core gui widgets buildtools_build qmake_build
+USE_QT=		core gui widgets buildtools:build qmake:build
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes

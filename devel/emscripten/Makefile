@@ -1,9 +1,10 @@
 PORTNAME=	emscripten
-DISTVERSION=	3.1.13
+DISTVERSION=	3.1.18
 CATEGORIES=	devel www
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	LLVM-to-Web Compiler
+WWW=		https://emscripten.org/
 
 LICENSE=	MIT NCSA
 LICENSE_COMB=	dual

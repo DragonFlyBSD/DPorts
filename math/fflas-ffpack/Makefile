@@ -1,5 +1,3 @@
-# Created by: b.f. <bf@FreeBSD.org>
-
 PORTNAME=	fflas-ffpack
 PORTVERSION=	2.4.3
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	math
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for dense linear algebra over word-size finite fields
+WWW=		https://linbox-team.github.io/fflas-ffpack/
 
 LICENSE=	LGPL21
 

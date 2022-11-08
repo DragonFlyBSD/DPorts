@@ -1,5 +1,3 @@
-# Created by: Frank Wall <fw@moov.de>
-
 PORTNAME=	redfish_client
 PORTVERSION=	0.5.4
 CATEGORIES=	sysutils rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	freebsd@moov.de
 COMMENT=	Simple Redfish client library
+WWW=		https://github.com/xlab-steampunk/redfish-client-ruby
 
 LICENSE=	APACHE20
 

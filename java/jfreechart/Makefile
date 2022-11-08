@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	jfreechart
 PORTVERSION=	1.0.17
 CATEGORIES=	java graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/1.%20JFreeChart/${PORTVERSION}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Free Java class library for generating charts
+WWW=		http://www.jfree.org/jfreechart/index.php
 
 LICENSE=	LGPL21
 

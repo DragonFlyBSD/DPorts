@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Pod-WSDL
 PORTVERSION=	0.063
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Create WSDL documents from (extended) pod
+WWW=		https://metacpan.org/release/Pod-WSDL
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

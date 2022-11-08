@@ -1,10 +1,11 @@
 PORTNAME=	xorg-drivers
 PORTVERSION=	7.7
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.org drivers meta-port
+WWW=		https://www.x.org/
 
 VIDEODIR=	${LOCALBASE}/lib/xorg/modules/drivers
 INPUTDIR=	${LOCALBASE}/lib/xorg/modules/input
@@ -25,23 +26,20 @@ VIDEO_DRIVERS=		apm \
 			ark \
 			ast \
 			dummy \
-			glint \
 			i128 \
 			i740 \
 			mga \
-			s3 \
+			nv \
 			scfb \
 			tdfx \
-			trident \
 			tseng \
-			vesa \
-			vmware
+			vesa
 
-VIDEO_DRIVERS_REMOVED=	libinput \
-			mach64 \
+VIDEO_DRIVERS_REMOVED=	mach64 \
 			chips \
 			cirrus \
 			neomagic \
+			openchrome \
 			r128 \
 			rendition \
 			s3virge \
@@ -72,7 +70,7 @@ OPTIONS_DEFINE_sparc64=	SUNFFB
 OPTIONS_DEFAULT_sparc64=SUNFFB
 
 AMDGPU_DESC=		Install amdgpu video driver
-ATI_DESC=		Install ati (radeon) video driver 
+ATI_DESC=		Install ati (radeon) video driver
 GEODE_DESC=		Install geode video driver
 INTEL_DESC=		Install intel video driver
 SUNFFB_DESC=		Install sunffb video driver

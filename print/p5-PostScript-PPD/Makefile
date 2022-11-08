@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	PostScript-PPD
 PORTVERSION=	0.0300
 CATEGORIES=	print perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Read PostScript Printer Definition files
+WWW=		https://metacpan.org/release/PostScript-PPD
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

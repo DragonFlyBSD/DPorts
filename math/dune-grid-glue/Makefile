@@ -1,9 +1,11 @@
 PORTNAME=	dune-grid-glue
 DISTVERSION=	2.8.0
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	DUNE framework: infrastructure for coupling of unrelated Dune grids
+WWW=		https://www.dune-project.org/
 
 LICENSE=	GPLv2
 

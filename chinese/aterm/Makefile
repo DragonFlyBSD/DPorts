@@ -1,5 +1,3 @@
-# Created by: gugod@gugod.org
-
 PORTNAME=	aterm
 PORTVERSION=	1.0.1
 CATEGORIES=	chinese x11
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	gugod@gugod.org
 COMMENT=	Color vt102 terminal emulator with transparency support
+WWW=		http://aterm.sourceforge.net/
 
 USES=		cpe xorg
 USE_XORG=	xpm

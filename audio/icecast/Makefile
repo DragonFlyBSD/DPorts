@@ -1,5 +1,3 @@
-# Created by: Chip Marshall <chip@eboai.org>
-
 PORTNAME=	icecast
 PORTVERSION=	2.4.4
 PORTREVISION=	2
@@ -16,6 +14,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Streaming mp3/ogg-vorbis audio server
+WWW=		https://icecast.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

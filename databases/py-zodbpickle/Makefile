@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	zodbpickle
 PORTVERSION=	2.3
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python pickling interface for ZODB
+WWW=		https://github.com/zopefoundation/zodbpickle
 
 LICENSE=	PSFL ZPL21
 LICENSE_COMB=	multi

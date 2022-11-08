@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pylev
 PORTVERSION=	1.4.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pure Python Levenshtein implementation
+WWW=		https://github.com/toastdriven/pylev
 
 LICENSE=	BSD3CLAUSE
 

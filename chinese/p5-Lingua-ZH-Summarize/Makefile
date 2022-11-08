@@ -1,5 +1,3 @@
-# Created by: clsung
-
 PORTNAME=	Lingua-ZH-Summarize
 PORTVERSION=	0.01
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Chinese Text Summarization
+WWW=		https://metacpan.org/release/Lingua-ZH-Summarize
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Lingua-ZH-Toke>=0:chinese/p5-Lingua-ZH-Toke \

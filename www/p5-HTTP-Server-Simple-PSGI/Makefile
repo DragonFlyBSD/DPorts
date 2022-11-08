@@ -1,5 +1,3 @@
-# Created by: ports@c0decafe.net
-
 PORTNAME=	HTTP-Server-Simple-PSGI
 PORTVERSION=	0.16
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PSGI handler for HTTP::Server::Simple
+WWW=		https://metacpan.org/release/HTTP-Server-Simple-PSGI
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

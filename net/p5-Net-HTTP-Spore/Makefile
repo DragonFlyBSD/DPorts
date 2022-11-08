@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Net-HTTP-Spore
 PORTVERSION=	0.09
 CATEGORIES=	net www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	SPORE client
+WWW=		https://metacpan.org/release/Net-HTTP-Spore
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,13 +1,12 @@
-# Created by: ijliao
-
 PORTNAME=	gspoof
 PORTVERSION=	3.2
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/Gspoof-3/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Console/GTK+ TCP/IP Packets Forger
+WWW=		http://gspoof.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

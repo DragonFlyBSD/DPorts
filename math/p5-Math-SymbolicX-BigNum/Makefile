@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Math-SymbolicX-BigNum
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Big number support for the Math::Symbolic parser
+WWW=		https://metacpan.org/release/Math-SymbolicX-BigNum
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

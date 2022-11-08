@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	HTML-Tidy5
 PORTVERSION=	1.06
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HTML validation in a Perl object
+WWW=		https://metacpan.org/release/HTML-Tidy5
 
 LICENSE=	ART20
 

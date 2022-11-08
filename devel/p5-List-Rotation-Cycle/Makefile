@@ -1,5 +1,3 @@
-# Created by: chinsan
-
 PORTNAME=	List-Rotation-Cycle
 PORTVERSION=	1.009
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Cycle through a list of values
+WWW=		https://metacpan.org/release/List-Rotation-Cycle
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

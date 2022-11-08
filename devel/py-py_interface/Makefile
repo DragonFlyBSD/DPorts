@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	py_interface
 PORTVERSION=	2.3
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python implementation of an Erlang node
+WWW=		https://www.lysator.liu.se/~tab/erlang/py_interface/
 
 LICENSE=	LGPL20
 

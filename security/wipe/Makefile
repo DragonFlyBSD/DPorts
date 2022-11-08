@@ -1,5 +1,3 @@
-# Created by: Edson Brandi <ebrandi@fugspbr.org>
-
 PORTNAME=	wipe
 PORTVERSION=	2.3.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	File and block device wiping utility
+WWW=		http://wipe.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

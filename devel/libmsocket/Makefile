@@ -1,5 +1,3 @@
-# Created by: Matt Harris <mattdharris@users.sourceforge.net>
-
 PORTNAME=	libmsocket
 PORTVERSION=	0.4
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/kageki/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Socket abstraction library for C programmers
+WWW=		https://sourceforge.net/projects/kageki/
 
 LICENSE=	BSD2CLAUSE
 

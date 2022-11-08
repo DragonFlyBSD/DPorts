@@ -1,5 +1,3 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	certsrv
 PORTVERSION=	2.1.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python client for the Microsoft Certificate Authority
+WWW=		https://github.com/magnuswatn/certsrv
 
 LICENSE=	MIT
 

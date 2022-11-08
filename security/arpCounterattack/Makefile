@@ -1,5 +1,3 @@
-# Created by: Boris Kochergin <spawk@acm.poly.edu>
-
 PORTNAME=	arpCounterattack
 PORTVERSION=	1.2.0
 PORTREVISION=	8
@@ -9,6 +7,7 @@ MASTER_SITES=	http://isis.poly.edu/~bk/${PORTNAME}/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Detects and remedies ARP attacks
+WWW=		http://acm.poly.edu/wiki/ARP_Counterattack
 
 LIB_DEPENDS=	libdnet.so:net/libdnet \
 		

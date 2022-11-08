@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	AwesomeTkinter
 PORTVERSION=	2021.11.8
 CATEGORIES=	x11-toolkits python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Pretty Tkinter widgets for Python
+WWW=		https://pypi.org/project/AwesomeTkinter/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

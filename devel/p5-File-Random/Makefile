@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@daltons.ca>
-
 PORTNAME=	File-Random
 PORTVERSION=	0.21
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Perl module for random selecting of a file
+WWW=		https://metacpan.org/release/File-Random
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

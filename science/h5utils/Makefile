@@ -1,12 +1,11 @@
-# Created by: Klaus Aehlig <aehlig@linta.de>
-
 PORTNAME=	h5utils
 DISTVERSION=	1.13.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	science
 
 MAINTAINER=	aehlig@linta.de
 COMMENT=	Set of utilities for visualization and conversion of HDF5 format
+WWW=		https://github.com/stevengj/h5utils
 
 LICENSE=	MIT GPLv2
 LICENSE_COMB=	multi

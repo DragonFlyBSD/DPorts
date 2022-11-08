@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	derailed_benchmarks
 PORTVERSION=	1.7.0
 CATEGORIES=	benchmarks rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Benchmarks for your whole Rails app
+WWW=		https://github.com/schneems/derailed_benchmarks
 
 LICENSE=	MIT
 

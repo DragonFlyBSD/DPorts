@@ -1,5 +1,3 @@
-# Created by: Guangyuan Yang <ygy@FreeBSD.org>
-
 PORTNAME=	sessioninfo
 DISTVERSION=	1.2.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	R Session Information
+WWW=		https://github.com/r-lib/sessioninfo #readme
 
 LICENSE=	GPLv2
 

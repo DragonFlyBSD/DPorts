@@ -1,5 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	pangomm
 PORTVERSION=	2.40.1
 PORTREVISION?=	6
@@ -9,6 +7,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for Pango
+WWW=		http://gtkmm.sourceforge.net/
 
 LICENSE=	LGPL21
 

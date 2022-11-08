@@ -1,5 +1,3 @@
-# Created by: asami
-
 PORTNAME=	nethack33
 PORTVERSION=	3.3.1
 PORTREVISION=	11
@@ -9,6 +7,7 @@ DISTNAME=	${TRUEPORTNAME}-${PORTVERSION:S/.//g}
 
 MAINTAINER=	glewis@FreeBSD.org
 COMMENT=	Dungeon explorin', slashin', hackin' game
+WWW=		https://www.nethack.org/
 
 WRKSRC=		${WRKDIR}/${TRUEPORTNAME}-${PORTVERSION}
 

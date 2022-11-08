@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <william88@gmail.com>
-
 PORTNAME=	django-tastypie
 PORTVERSION=	0.14.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Create REST API for Django apps
+WWW=		https://github.com/django-tastypie/django-tastypie
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,5 +1,3 @@
-# Created by: Kuan-Chung Chiu <buganini@gmail.com>
-
 PORTNAME=	khmer
 PORTVERSION=	1.0
 CATEGORIES=	textproc
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	kmfl-
 
 MAINTAINER=	buganini@gmail.com
 COMMENT=	KMFL SCIM IMEngine keyboard for Khmer language
+WWW=		https://github.com/buganini/kmfl-khmer/
 
 RUN_DEPENDS=	kmflcomp:textproc/kmflcomp
 

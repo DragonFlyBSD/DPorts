@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	klystrack
 DISTVERSION=	1.7.6-make-fix-12
 DISTVERSIONSUFFIX=	-gfe6e746
@@ -8,6 +6,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Tracker for making C64/NES/Amiga-style chiptunes
+WWW=		https://kometbomb.github.io/klystrack/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

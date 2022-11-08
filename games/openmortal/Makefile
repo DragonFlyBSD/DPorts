@@ -1,5 +1,3 @@
-# Created by: krion@FreeBSD.org
-
 PORTNAME=	openmortal
 PORTVERSION=	0.7
 PORTREVISION=	13
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Parody of the once popular coin-up fighting game, Mortal Kombat
+WWW=		http://apocalypse.rulez.org/~upi/Mortal/
 
 LIB_DEPENDS=	libfreetype.so:print/freetype2
 

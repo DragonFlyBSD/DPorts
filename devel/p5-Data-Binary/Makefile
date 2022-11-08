@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Data-Binary
 PORTVERSION=	0.01
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple detection of binary versus text in strings
+WWW=		https://metacpan.org/release/Data-Binary
 
 LICENSE=	ART20
 

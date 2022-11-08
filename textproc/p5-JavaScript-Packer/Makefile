@@ -1,13 +1,12 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	JavaScript-Packer
-PORTVERSION=	2.08
+PORTVERSION=	2.09
 CATEGORIES=	textproc www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl version of Dean Edwards' Packer.js
+WWW=		https://metacpan.org/release/JavaScript-Packer
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

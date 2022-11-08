@@ -1,5 +1,3 @@
-# Created by: Chris D. Faulhaber <jedgar@FreeBSD.org>
-
 PORTNAME=	pxtools
 PORTVERSION=	0.0.20
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	http://jan.kneschke.de/downloads/pxtools/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Collection of tools to work with Paradox databases
+WWW=		https://jan.kneschke.de/projects/pxtools/
 
 LICENSE=	GPLv2
 

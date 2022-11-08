@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	lark
 PORTVERSION=	1.1.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Modern parsing library
+WWW=		https://github.com/lark-parser/lark
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

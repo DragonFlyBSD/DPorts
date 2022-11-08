@@ -1,5 +1,3 @@
-# Created by: Foxfair Hu <foxfair@FreeBSD.org>
-
 PORTNAME=	XML-RSS-JavaScript
 PORTVERSION=	0.65
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to serialize your RSS as JavaScript
+WWW=		https://metacpan.org/release/XML-RSS-JavaScript
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

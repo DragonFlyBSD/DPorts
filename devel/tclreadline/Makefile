@@ -1,5 +1,3 @@
-# Created by: darius@dons.net.au
-
 PORTNAME=	tclreadline
 PORTVERSION=	2.3.8
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	devel tcl
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	GNU readline for TCL
+WWW=		http://tclreadline.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 

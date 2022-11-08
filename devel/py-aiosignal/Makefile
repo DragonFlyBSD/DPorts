@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	aiosignal
 PORTVERSION=	1.2.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	List of registered asynchronous callbacks
+WWW=		https://github.com/aio-libs/aiosignal
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

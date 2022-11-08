@@ -1,5 +1,3 @@
-# Created by: lab@fnurt.net
-
 PORTNAME=	larswm
 PORTVERSION=	7.5.3
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tiling Window Manager for X
+WWW=		https://sourceforge.net/projects/larswm/
 
 USES=		imake xorg
 USE_XORG=	ice sm x11 xext xmu xt

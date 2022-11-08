@@ -1,5 +1,3 @@
-# Created by: will
-
 PORTNAME=	String-Random
 PORTVERSION=	0.32
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to generate "random" strings
+WWW=		https://metacpan.org/release/String-Random
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

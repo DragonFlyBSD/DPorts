@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	nexuiz
 PORTVERSION=	2.5.2
 PORTREVISION=	20
@@ -11,6 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Fast-paced, chaotic, and intense multiplayer first person shooter
+WWW=		https://www.alientrap.org/games/nexuiz
 
 LIB_DEPENDS=	libcurl.so:ftp/curl
 

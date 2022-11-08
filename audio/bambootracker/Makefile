@@ -1,14 +1,13 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	bambootracker
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.0
+DISTVERSION=	0.5.3
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/BambooTracker/BambooTracker/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/
 DISTNAME=	BambooTracker-src-${DISTVERSIONPREFIX}${DISTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Music tracker for the Yamaha YM2608 (OPNA) sound chip
+WWW=		https://github.com/rerrahkr/BambooTracker
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -21,7 +20,7 @@ USES=		compiler:c++14-lang desktop-file-utils gl qmake qt:5 \
 
 USE_GL=		gl
 USE_QT=		buildtools core gui multimedia network widgets \
-		linguisttools_build
+		linguisttools:build
 
 DATADIR=	${PREFIX}/share/BambooTracker
 DOCSDIR=	${PREFIX}/share/doc/BambooTracker

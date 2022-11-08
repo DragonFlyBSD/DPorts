@@ -1,5 +1,3 @@
-# Created by: Eric Anholt
-
 PORTNAME=	tuxracer
 PORTVERSION=	0.61
 PORTREVISION=	15
@@ -11,6 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	3D penguin racing game using OpenGL
+WWW=		http://tuxracer.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

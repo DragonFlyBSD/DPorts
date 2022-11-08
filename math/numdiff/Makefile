@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	numdiff
 PORTVERSION=	5.9.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Compare putatively similar files, ignoring small numeric differences
+WWW=		https://www.nongnu.org/numdiff/
 
 LICENSE=	GPLv3
 

@@ -1,11 +1,10 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	liberasurecode
 PORTVERSION=	1.6.3
 CATEGORIES=	devel
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	Unified Erasure Coding interface for common storage workloads
+WWW=		https://github.com/openstack/liberasurecode
 
 LICENSE=	BSD2CLAUSE
 

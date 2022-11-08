@@ -1,5 +1,3 @@
-# Created by: thierry@pompo.net
-
 PORTNAME=	mined
 PORTVERSION=	2015.25
 CATEGORIES=	editors
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Text mode editor with Unicode support
+WWW=		http://towo.net/mined/
 
 LICENSE=	GPLv3
 

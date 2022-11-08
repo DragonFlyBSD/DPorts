@@ -1,5 +1,3 @@
-# Created by: Craig Leres <leres@FreeBSD.org>
-
 PORTNAME=	spfmilter
 PORTVERSION=	2.001
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://acme.com/software/spfmilter/
 
 MAINTAINER=	leres@FreeBSD.org
 COMMENT=	SPF milter for sendmail
+WWW=		https://acme.com/software/spfmilter/
 
 LICENSE=	BSD2CLAUSE
 

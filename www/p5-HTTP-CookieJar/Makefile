@@ -1,13 +1,12 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	HTTP-CookieJar
-PORTVERSION=	0.012
+PORTVERSION=	0.014
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Minimalist HTTP user agent cookie jar
+WWW=		https://metacpan.org/release/HTTP-CookieJar
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

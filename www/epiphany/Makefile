@@ -1,13 +1,13 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	epiphany
-PORTVERSION=	42.2
+PORTVERSION=	42.4
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Extremely lightweight and simple web browser for GNOME
+WWW=		https://www.gnome.org/projects/epiphany/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -41,7 +41,7 @@ USES=		compiler:c++11-lib cpe desktop-file-utils gettext gnome \
 		shebangfix sqlite tar:xz xorg
 
 CPE_VENDOR=	gnome
-USE_GNOME=	cairo gnomedesktop3 intlhack libwnck3 libxml2 libxslt
+USE_GNOME=	cairo gdkpixbuf2 gnomedesktop3 intlhack libwnck3 libxml2 libxslt
 USE_XORG=	x11
 USE_LDCONFIG=	yes
 MESON_ARGS=	-Db_lundef=false \

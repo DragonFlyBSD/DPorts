@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@FreeBSD.org>
-
 PORTNAME=	ttyrec
 PORTVERSION=	1.0.8
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://0xcc.net/ttyrec/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tty recorder
+WWW=		http://0xcc.net/ttyrec/index.html
 
 LICENSE=	BSD4CLAUSE
 

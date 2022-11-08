@@ -1,5 +1,3 @@
-# Created by: mi@aldan.algebra.com
-
 PORTNAME=	incron
 DISTVERSION=	2017-11-13
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	joh.hendriks@gmail.com
 COMMENT=	Handle filesystem-events the way cron handles time ones
+WWW=		https://inotify.aiken.cz/?section=incron&page=about
 
 LICENSE=	GPLv2 LGPL21 MIT
 LICENSE_COMB=	dual

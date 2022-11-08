@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	open-beagle
 PORTVERSION=	3.0.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	beagle-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Evolutionary Computation Framework
+WWW=		http://beagle.sourceforge.net/
 
 CONFLICTS=	beagle
 

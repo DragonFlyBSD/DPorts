@@ -1,13 +1,12 @@
-# Created by: wcarey
-
 PORTNAME=	ledger
 PORTVERSION=	3.2.1
-PORTREVISION=	2
+PORTREVISION=	3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	finance
 
 MAINTAINER=	woodycarey@hotmail.com
 COMMENT=	John Wiegley's command line accounting program
+WWW=		https://ledger-cli.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	HTTP-Tiny-SPDY
 PORTVERSION=	0.020
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Subclass of HTTP::Tiny with SPDY support
+WWW=		https://metacpan.org/release/HTTP-Tiny-SPDY
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

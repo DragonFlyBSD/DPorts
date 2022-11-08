@@ -1,5 +1,3 @@
-# Created by: Jaap Boender <jaapb@kerguelen.org>
-
 PORTNAME=	ssl
 PORTVERSION=	0.5.9
 CATEGORIES=	security devel
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	OpenSSL bindings for OCaml
+WWW=		https://github.com/savonet/ocaml-ssl
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING

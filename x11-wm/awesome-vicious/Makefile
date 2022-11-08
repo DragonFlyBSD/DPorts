@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	awesome-vicious
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.5.1
@@ -7,6 +5,7 @@ CATEGORIES=	x11-wm
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Widgets for the awesome window manager
+WWW=		https://vicious.readthedocs.io/en/latest/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

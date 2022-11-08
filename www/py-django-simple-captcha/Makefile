@@ -1,5 +1,3 @@
-# Created by: John Hixson <john@ixsystems.com>
-
 PORTNAME=	django-simple-captcha
 PORTVERSION=	0.5.14
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	jhixson@FreeBSD.org
 COMMENT=	Simple, yet powerful, Django captcha application
+WWW=		https://pypi.org/project/django-simple-captcha/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

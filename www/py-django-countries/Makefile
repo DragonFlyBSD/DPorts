@@ -1,5 +1,3 @@
-# Created by: Alfred Perlstein <alfred@freebsd.org>
-
 PORTNAME=	django-countries
 PORTVERSION=	5.3
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	alfred@FreeBSD.org
 COMMENT=	Provides country choices for use with django
+WWW=		https://pypi.org/project/django-countries/
 
 LICENSE=	BSD2CLAUSE
 

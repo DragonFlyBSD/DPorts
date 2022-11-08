@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	parver
 PORTVERSION=	0.3.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Parse and manipulate version numbers
+WWW=		https://github.com/RazerM/parver
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

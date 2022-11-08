@@ -1,5 +1,3 @@
-# Created by: matusita@jp.FreeBSD.org
-
 PORTNAME=	jwhois
 PORTVERSION=	4.0
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Improved WHOIS client capable of selecting server to query
+WWW=		https://www.gnu.org/software/jwhois/
 
 LICENSE=	GPLv3
 

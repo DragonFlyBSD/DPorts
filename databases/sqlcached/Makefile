@@ -1,5 +1,3 @@
-# Created by: ivoras
-
 PORTNAME=	sqlcached
 PORTVERSION=	r6
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ivoras@FreeBSD.org
 COMMENT=	Cache daemon using SQL for data manipulation
+WWW=		http://sqlcached.sourceforge.net/
 
 USES=		localbase:ldflags ncurses readline sqlite tar:tgz
 

@@ -1,8 +1,6 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	cairo
 DISTVERSION=	1.17.4
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://cairographics.org/releases/ \
@@ -13,6 +11,7 @@ PATCHFILES=	ebbaebdec12878836fc84d31c59ee324e67abc05.patch:-p1 # cairo-script-in
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Vector graphics library with cross-device output support
+WWW=		https://www.cairographics.org/
 
 LICENSE=	LGPL21 MPL11
 LICENSE_COMB=	dual
@@ -46,6 +45,7 @@ OPTIONS_SUB=	yes
 
 DOCS_BUILD_DEPENDS=	gtkdocize:textproc/gtk-doc
 DOCS_CONFIGURE_ON=	--with-html-dir=${DOCSDIR}
+DOCSDIR=		${PREFIX}/share/gtk-doc/html
 
 X11_USES=	xorg
 X11_USE=	xorg=x11,xext,xorgproto,xrender

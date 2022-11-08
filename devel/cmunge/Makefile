@@ -1,5 +1,3 @@
-# Created by: Frerich Raabe <frerich.raabe@gmx.de>
-
 PORTNAME=	cmunge
 PORTVERSION=	1.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for encrypting and compacting C source code
+WWW=		http://www.vcpc.univie.ac.at/~jhm/cmunge/
 
 WRKSRC=		${WRKDIR}/cmunger
 MAKE_ARGS=	CC="${CC} ${CFLAGS}"

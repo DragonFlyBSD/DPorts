@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	ipynbdiff
 PORTVERSION=	0.4.7
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Human readable Jupyter Notebook diffs
+WWW=		https://gitlab.com/gitlab-org/incubation-engineering/mlops/rb-ipynbdiff
 
 LICENSE=	MIT
 

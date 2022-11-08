@@ -1,5 +1,3 @@
-# Created by: Kurt Lidl <kurt.lidl@cello.com>
-
 PORTNAME=	Data-Rx
 PORTVERSION=	0.200007
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl implementation of Rx schema system
+WWW=		https://metacpan.org/release/Data-Rx
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

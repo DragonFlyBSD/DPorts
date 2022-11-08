@@ -1,5 +1,3 @@
-# Created by: Markus Brueffer <markus@FreeBSD.org>
-
 PORTNAME=	cfitsio
 PORTVERSION=	4.1.0
 PORTREVISION=	1
@@ -12,6 +10,7 @@ MASTER_SITES=	https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for reading and writing files in FITS data format
+WWW=		https://heasarc.gsfc.nasa.gov/docs/software/fitsio/
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libf2c.so:lang/f2c

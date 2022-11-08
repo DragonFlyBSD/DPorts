@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	btcheck
 PORTVERSION=	2.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	BitTorrent data checker and torrent file content viewer
+WWW=		https://sourceforge.net/projects/btcheck/
 
 LICENSE=	GPLv3
 

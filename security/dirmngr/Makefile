@@ -1,5 +1,3 @@
-# Created by: michaelnottebrock@gmx.net
-
 PORTNAME=	dirmngr
 PORTVERSION=	1.1.0
 PORTREVISION=	15
@@ -10,6 +8,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	umq@ueo.co.jp
 COMMENT=	Client for managing and downloading certificate revocation lists
+WWW=		https://www.gnupg.org/aegypten2
 
 LICENSE=	GPLv2
 

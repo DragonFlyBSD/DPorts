@@ -3,8 +3,9 @@ PORTVERSION=	0.1
 CATEGORIES=	x11
 MASTER_SITES=	https://dl.suckless.org/tools/
 
-MAINTAINER=	kfv@kfv.io
+MAINTAINER=	antranigv@freebsd.am
 COMMENT=	Simple X property utility
+WWW=		https://tools.suckless.org/x/sprop
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

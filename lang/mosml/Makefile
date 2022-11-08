@@ -1,5 +1,3 @@
-# Created by: Chuck Robey <chuckr@FreeBSD.org>
-
 PORTNAME=	mosml
 PORTVERSION=	2.10.1
 DISTVERSIONPREFIX=	ver-
@@ -8,6 +6,7 @@ CATEGORIES=	lang
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight implementation of Standard ML
+WWW=		https://mosml.org/
 
 # Converted from RESTRICTED
 LICENSE=	mosml

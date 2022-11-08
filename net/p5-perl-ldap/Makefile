@@ -1,5 +1,3 @@
-# Created by: scrappy@FreeBSD.org
-
 PORTNAME=	perl-ldap
 PORTVERSION=	0.6800
 CATEGORIES=	net perl5
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION:C/00$//}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Client interface to LDAP (includes Net::LDAP)
+WWW=		https://metacpan.org/release/perl-ldap
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

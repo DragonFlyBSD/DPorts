@@ -1,5 +1,3 @@
-# Created by: Edwin Groothuis (edwin@mavetju.org)
-
 PORTNAME=	smm++
 PORTVERSION=	6.1.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	smm611
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphical mudclient with mapper
+WWW=		http://smm.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/../docu/GPL

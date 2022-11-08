@@ -1,5 +1,3 @@
-# Created by: bf <bf2006a@yahoo.com>
-
 PORTNAME=	paq
 PORTVERSION=	20140131
 PORTREVISION=	6
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${DISTFILES:M*.zip}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Family of archivers with extremely high compression ratios
+WWW=		http://mattmahoney.net/dc/zpaq.html
 
 LICENSE=	GPLv3 MIT
 LICENSE_COMB=	multi

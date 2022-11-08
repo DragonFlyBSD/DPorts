@@ -1,7 +1,5 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	tomcat
-PORTVERSION=	9.0.65
+PORTVERSION=	9.0.67
 CATEGORIES=	www java
 MASTER_SITES=	APACHE/${PORTNAME}/${PORTNAME}-${PORTVERSION:C/([0-9])(.*)/\1/}/v${PORTVERSION}/bin
 PKGNAMESUFFIX=	9
@@ -9,6 +7,7 @@ DISTNAME=	apache-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	vvd@unislabs.com
 COMMENT=	Open-source Java web server by Apache, 9.0.x branch
+WWW=		https://tomcat.apache.org/
 
 LICENSE=	APACHE20
 

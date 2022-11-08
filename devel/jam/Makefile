@@ -1,5 +1,3 @@
-# Created by: Jeffrey Hsu <hsu@FreeBSD.org>
-
 PORTNAME=	jam
 PORTVERSION=	2.6
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	https://swarm.workshop.perforce.com/projects/perforce_software-jam
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Build utility like make(1)
+WWW=		https://www.perforce.com/jam/jam.html
 
 USES=		zip
 

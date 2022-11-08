@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Number-Format
 PORTVERSION=	1.75
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for formatting numbers
+WWW=		http://www.bayview.com/software/perl.shtml
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

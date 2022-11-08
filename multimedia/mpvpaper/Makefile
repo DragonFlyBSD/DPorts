@@ -1,10 +1,10 @@
 PORTNAME=	mpvpaper
-DISTVERSION=	1.2.1
-PORTREVISION=	1
+DISTVERSION=	1.3
 CATEGORIES=	multimedia wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Video wallpaper for wlroots compositors
+WWW=		https://github.com/GhostNaN/mpvpaper
 
 LICENSE=	GPLv3
 

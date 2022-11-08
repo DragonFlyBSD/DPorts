@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	reshape
 PORTVERSION=	0.8.9
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	R package for flexibly restructuring and aggregating data
+WWW=		http://had.co.nz/reshape/
 
 LICENSE=	MIT
 

@@ -1,11 +1,10 @@
-# Created by: Lukasz Stelmach <lukasz.stelmach@iem.pw.edu.pl>
-
 PORTNAME=	MathJax
 DISTVERSION=	2.7.8
 CATEGORIES=	www
 
 MAINTAINER=	marko.cupac@mimar.rs
 COMMENT=	Cross-browser JavaScript display engine for mathematics
+WWW=		https://www.mathjax.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

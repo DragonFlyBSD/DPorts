@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	django-hashid-field
 PORTVERSION=	3.3.5
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Hashids obfuscated Django Model Field
+WWW=		https://github.com/nshafer/django-hashid-field
 
 LICENSE=	MIT
 

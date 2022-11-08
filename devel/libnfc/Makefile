@@ -1,5 +1,3 @@
-# Created by: Romain Tartiere <romain@blogreen.org>
-
 PORTNAME=	libnfc
 PORTVERSION=	1.7.1
 PORTREVISION=	5
@@ -9,6 +7,7 @@ MASTER_SITES=	http://dl.bintray.com/nfc-tools/sources/ \
 
 MAINTAINER=	romain@FreeBSD.org
 COMMENT=	Near Field Communication (NFC) library
+WWW=		http://www.libnfc.org
 
 LICENSE=	LGPL3+
 

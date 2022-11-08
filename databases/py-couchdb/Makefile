@@ -1,5 +1,3 @@
-# Created by: Andrei Antoukh <niwi@niwi.be>
-
 PORTNAME=	CouchDB
 PORTVERSION=	1.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DIST_SUBDIR=	python
 
 MAINTAINER=	niwi@niwi.be
 COMMENT=	Simple Library to Allow Python Applications to Use CouchDB
+WWW=		https://code.google.com/p/couchdb-python/
 
 LICENSE=	BSD3CLAUSE
 

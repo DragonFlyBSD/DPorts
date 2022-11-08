@@ -1,5 +1,3 @@
-# Created by: Alejandro Pulver <alejandro@varnet.biz>
-
 PORTNAME=	freedoom
 DISTVERSION=	0.12.1
 CATEGORIES=	games
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${DMPKGNAMEPREFIX}
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Complete Doom-based game IWAD that is Free Software
+WWW=		https://freedoom.github.io/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING.txt

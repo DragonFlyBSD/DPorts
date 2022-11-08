@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	kafo_wizards
 PORTVERSION=	0.0.2
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Create wizard like interfaces in terminal applications
+WWW=		https://github.com/theforeman/kafo_wizards
 
 LICENSE=	GPLv3+
 

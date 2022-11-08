@@ -1,11 +1,10 @@
-# Created by: Thierry Thomas (<thierry@pompo.net>)
-
 PORTNAME=	Crypt_CBC
 PORTVERSION=	1.0.1
 CATEGORIES=	security www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Class to emulate Perl's Crypt::CBC module
+WWW=		https://pear.php.net/package/Crypt_CBC
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

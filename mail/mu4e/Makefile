@@ -1,10 +1,12 @@
 PORTNAME=	mu4e
 PORTVERSION=	1.6.10
+PORTREVISION=	1
 CATEGORIES=	mail
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Emacs frontend for Mu
+WWW=		http://www.djcbsoftware.nl/code/mu/
 
 LICENSE=	GPLv3
 

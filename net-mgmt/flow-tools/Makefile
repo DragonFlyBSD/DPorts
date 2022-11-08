@@ -1,5 +1,3 @@
-# Created by: @BABOLO <.@babolo.ru>
-
 PORTNAME=	flow-tools
 PORTVERSION=	0.68.6
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	net-mgmt
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Suite of tools and library to work with netflow data
+WWW=		https://github.com/5u623l20/flow-tools/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

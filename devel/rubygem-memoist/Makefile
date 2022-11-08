@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	memoist
 PORTVERSION=	0.16.2
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Memoize methods invocation
+WWW=		https://github.com/matthewrudy/memoist
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

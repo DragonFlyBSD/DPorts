@@ -1,5 +1,3 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	le
 PORTVERSION=	1.16.8
 CATEGORIES=	editors
@@ -9,6 +7,7 @@ MASTER_SITE_SUBDIR=	. old
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Text editor with block and binary operations
+WWW=		http://freshmeat.net/projects/leeditor/
 
 LICENSE=	GPLv3
 

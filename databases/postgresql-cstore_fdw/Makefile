@@ -1,5 +1,3 @@
-# Created by: Jov <amutu@amutu.com>
-
 PORTNAME=	cstore_fdw
 PORTVERSION=	1.7.0
 DISTVERSIONPREFIX=	v
@@ -11,6 +9,7 @@ PATCHFILES+=	2b6bf67ca60faf5a3ebe914fad53257a634ae48a.patch:-p1
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	Columnar store for analytics with PostgreSQL
+WWW=		https://github.com/citusdata/cstore_fdw
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

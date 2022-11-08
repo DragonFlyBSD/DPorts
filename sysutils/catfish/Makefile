@@ -1,14 +1,13 @@
-# Created by: jpaetzel@FreeBSD.org
-
 PORTNAME=	catfish
-PORTVERSION=	4.16.3
-PORTREVISION=	3
+PORTVERSION=	4.16.4
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	GTK search utility
+WWW=		https://docs.xfce.org/apps/catfish/start
 
 LICENSE=	GPLv3
 

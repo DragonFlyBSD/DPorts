@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	libxmp
 PORTVERSION=	4.5.0
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/xmp/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Module rendering library for xmp
+WWW=		http://xmp.sourceforge.net/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/docs/COPYING.LIB

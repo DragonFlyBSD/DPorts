@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	ordereddict
 PORTVERSION=	1.1
 PORTREVISION=	3
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Drop-in substitute for Py2.7's new collections
+WWW=		https://pypi.org/project/ordereddict/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

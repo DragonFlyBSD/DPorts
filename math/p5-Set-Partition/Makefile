@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Set-Partition
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Enumerate all arrangements of a set in fixed subsets
+WWW=		https://metacpan.org/release/Set-Partition
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

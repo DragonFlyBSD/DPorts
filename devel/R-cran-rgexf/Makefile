@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	rgexf
 PORTVERSION=	0.16.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Build, Import and Export GEXF Graph Files
+WWW=		https://cran.r-project.org/web/packages/rgexf/
 
 LICENSE=	MIT
 

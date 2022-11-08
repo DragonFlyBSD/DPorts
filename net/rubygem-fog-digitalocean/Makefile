@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	fog-digitalocean
 PORTVERSION=	0.4.0
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module for the 'fog' gem to support DigitalOcean
+WWW=		https://github.com/fog/fog-digitalocean
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

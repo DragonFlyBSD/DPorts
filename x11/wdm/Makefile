@@ -1,5 +1,3 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-
 PORTNAME=	wdm
 PORTVERSION=	1.28
 PORTREVISION=	16
@@ -15,6 +13,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	xride@FreeBSD.org
 COMMENT=	WINGs Display Manager; an xdm replacement
+WWW=		https://github.com/voins/wdm
 
 LICENSE=	GPLv2+
 

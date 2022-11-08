@@ -1,10 +1,12 @@
 PORTNAME=	snapcast
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.26.0
+PORTREVISION=	2
 CATEGORIES=	multimedia audio
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Multiroom client-server audio player
+WWW=		https://github.com/badaix/snapcast
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	highwayhash
 PORTVERSION=	g20201021
 PORTREVISION=	1
@@ -8,6 +6,7 @@ CATEGORIES=	security
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Fast strong hash functions: SipHash/HighwayHash
+WWW=		https://github.com/google/highwayhash
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

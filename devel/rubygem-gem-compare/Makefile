@@ -1,10 +1,11 @@
 PORTNAME=	gem-compare
-PORTVERSION=	1.1.0
+PORTVERSION=	1.2.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	RubyGems plugin for comparing gem versions
+WWW=		https://github.com/fedora-ruby/gem-compare
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Class-Measure
 PORTVERSION=	0.09
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Create, compare, and convert units of measurement
+WWW=		https://metacpan.org/release/Class-Measure
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

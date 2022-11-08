@@ -1,5 +1,3 @@
-# Created by: Zach Zurflu <zach@pabst.bendnet.com>
-
 PORTNAME=	libshout
 PORTVERSION=	2.4.6
 CATEGORIES=	audio net
@@ -9,6 +7,7 @@ MASTER_SITES=	https://downloads.xiph.org/releases/libshout/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Connect and transmit data to an Icecast media streaming server
+WWW=		https://gitlab.xiph.org/xiph/icecast-libshout
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING

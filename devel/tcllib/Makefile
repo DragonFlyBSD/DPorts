@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin <mi@aldan.algebra.com>
-
 PORTNAME=	tcllib
 PORTVERSION=	1.21
 CATEGORIES=	devel tcl
@@ -7,6 +5,7 @@ MASTER_SITES=	https://core.tcl.tk/tcllib/uv/
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Collection of utility modules for Tcl
+WWW=		http://tcllib.sourceforge.net/
 
 LICENSE=	TclTk
 LICENSE_NAME=	Tcl/Tk License

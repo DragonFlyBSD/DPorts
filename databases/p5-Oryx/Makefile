@@ -1,5 +1,3 @@
-# Created by: Zach Thompson <hideo@lastamericanempire.com>
-
 PORTNAME=	Oryx
 PORTVERSION=	0.24
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Meta-Model Driven Object Persistance with Multiple Inheritance
+WWW=		https://metacpan.org/release/Oryx
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-SQL-Abstract>=0:databases/p5-SQL-Abstract \

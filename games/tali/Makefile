@@ -1,13 +1,12 @@
-# Created by: FreeBSD GNOME Team <gnome@freebsd.org>
-
 PORTNAME=	tali
-PORTVERSION=	40.7
+PORTVERSION=	40.8
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gnome tali
+WWW=		https://wiki.gnome.org/Apps/Tali
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

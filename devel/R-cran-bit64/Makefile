@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	bit64
 DISTVERSION=	4.0.5
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	S3 Class for Vectors of 64bit Integers
+WWW=		https://cran.r-project.org/web/packages/bit64/
 
 LICENSE=	GPLv2+
 

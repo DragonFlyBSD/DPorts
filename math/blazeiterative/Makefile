@@ -1,10 +1,11 @@
 PORTNAME=	blazeiterative
 PORTVERSION=	g20180409
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Set of iterative linear system solvers for use with the Blaze library
+WWW=		https://github.com/tjolsen/BlazeIterative
 
 #LICENSE=	https://github.com/tjolsen/BlazeIterative/issues/9
 

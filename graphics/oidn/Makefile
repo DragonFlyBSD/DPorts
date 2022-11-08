@@ -1,12 +1,14 @@
 PORTNAME=	oidn
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.4.3
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://freebsd.org/:weights # bogus URL to make the framework happy, the fetch uses Git URL below
 DISTFILES=	${PORTNAME}-weights-${WEIGHTS_GIT_HASH}${EXTRACT_SUFX}:weights
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Intel(R) Open Image Denoise library
+WWW=		https://www.openimagedenoise.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

@@ -1,5 +1,3 @@
-# Created by: Michael L. Hostbaek (mich@freebsdcluster.org)
-
 PORTNAME=	bitedit
 PORTVERSION=	0.9.4
 CATEGORIES=	editors
@@ -7,6 +5,7 @@ MASTER_SITES=	http://freebsdcluster.org/~mich/software/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple ncurses file editing program
+WWW=		http://ledge.co.za/bitedit/
 
 LICENSE=	GPLv2
 

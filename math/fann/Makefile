@@ -1,5 +1,3 @@
-# Created by: Tz-Huan Huang <tzhuan@csie.org>
-
 PORTNAME=	fann
 PORTVERSION=	2.2.0
 CATEGORIES=	math science
@@ -8,6 +6,7 @@ DISTNAME=	FANN-2.2.0-Source
 
 MAINTAINER=	tzhuan@csie.org
 COMMENT=	Free open source neural network library
+WWW=		https://leenissen.dk/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING.txt

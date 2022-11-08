@@ -1,5 +1,3 @@
-# Created by: Matthias Andree <matthias.andree@gmx.de>
-
 PORTNAME=	bogofilter
 DISTVERSION=	1.2.5
 PORTREVISION?=	3
@@ -9,6 +7,7 @@ PKGNAMESUFFIX?=	-bdb
 
 MAINTAINER?=	mandree@FreeBSD.org
 COMMENT=	Fast, teachable, learning spam detector
+WWW=		https://bogofilter.sourceforge.io/
 
 LICENSE=	GPLv2
 

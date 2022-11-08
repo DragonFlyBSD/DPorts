@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	tarantool
 PORTVERSION=	0.9.0
 CATEGORIES=	databases python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Client library for Tarantool Database
+WWW=		https://github.com/tarantool/tarantool-python
 
 LICENSE=	BSD3CLAUSE
 

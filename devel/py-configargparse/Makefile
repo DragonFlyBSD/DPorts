@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	configargparse
 PORTVERSION=	1.5.3
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	ConfigArgParse-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Drop-in replacement for argparse
+WWW=		https://github.com/bw2/ConfigArgParse
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

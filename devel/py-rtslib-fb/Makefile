@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	rtslib-fb
 PORTVERSION=	2.1.75
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	API for Linux kernel SCSI target (aka LIO)
+WWW=		https://github.com/open-iscsi/rtslib-fb
 
 LICENSE=	APACHE20
 

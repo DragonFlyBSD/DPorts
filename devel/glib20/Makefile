@@ -1,7 +1,5 @@
-# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-
 PORTNAME=	glib
-DISTVERSION=	2.72.2
+DISTVERSION=	2.74.0
 PORTEPOCH=	2
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
@@ -9,16 +7,17 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Some useful routines of C programming (current stable version)
+WWW=		https://www.gtk.org/
 
 LICENSE=	LGPL20
 
 LIB_DEPENDS=	libffi.so:devel/libffi \
-		libpcre.so:devel/pcre
+		libpcre2-8.so:devel/pcre2
 
 # iconv:wchar_t - our iconv in base doesn't support utf-8 -> wchar_t (boooo)
 # (wchar_t is used by glibmm, rawtherapee triggered this)
 USES=		compiler:c11 cpe gettext gnome iconv:wchar_t localbase:ldflags \
-		meson perl5 pkgconfig python:3.6+ tar:xz trigger
+		meson perl5 pkgconfig python:3.7+ tar:xz trigger
 TRIGGERS=	gio-modules glib-schemas
 USE_LDCONFIG=	yes
 USE_PERL5=	build
@@ -36,7 +35,7 @@ CPE_VENDOR=	gnome
 
 CONFLICTS_INSTALL=	p5-Giovanni
 
-_LIBVERSION=	0.7200.2
+_LIBVERSION=	0.7400.0
 PLIST_SUB=	LIBVERSION=${_LIBVERSION}
 
 OPTIONS_DEFINE=		DEBUG DOCS FAM_ALTBACKEND MANPAGES NLS TEST
@@ -61,13 +60,6 @@ TEST_MESON_TRUE=	tests
 
 # doesn't build yet
 MESON_ARGS+=	-Ddtrace=false
-
-.if empty(ICONV_LIB)
-# native?
-MESON_ARGS+=	-Diconv=libc
-.else
-MESON_ARGS+=	-Diconv=external
-.endif
 
 pre-configure-FAM_ALTBACKEND-on:
 	@${REINPLACE_CMD} -e 's|kqueue-helper.c|kqueue_fnm.c|g ; \

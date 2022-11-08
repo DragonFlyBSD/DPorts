@@ -1,5 +1,3 @@
-# Created by: Bill Brinzer <bill.brinzer@gmail.com>
-
 PORTNAME=	autobox
 PORTVERSION=	2.84
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bill.brinzer@gmail.com
 COMMENT=	Call methods on native Perl types
+WWW=		https://metacpan.org/release/autobox
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

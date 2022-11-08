@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	activemodel
 PORTVERSION=	6.0.5.1
 CATEGORIES=	databases rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	60
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Toolkit for building modeling frameworks
+WWW=		https://github.com/rails/rails/tree/main/activemodel
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/MIT-LICENSE

@@ -1,10 +1,11 @@
 PORTNAME=	ruby_smb
-PORTVERSION=	2.0.11
+PORTVERSION=	3.1.7
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Message creator and parser for the SMB protocol family
+WWW=		https://github.com/rapid7/ruby_smb
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

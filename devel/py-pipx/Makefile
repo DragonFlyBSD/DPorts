@@ -1,13 +1,13 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pipx
 PORTVERSION=	1.1.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Install and Run Python Applications in Isolated Environments
+WWW=		https://github.com/pypa/pipx
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

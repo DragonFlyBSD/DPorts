@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@plab.ku.dk>
-
 PORTNAME=	PDL
 PORTVERSION=	2.019
 PORTREVISION=	5
@@ -8,6 +6,7 @@ MASTER_SITES=	CPAN
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl Data Language
+WWW=		https://metacpan.org/release/PDL
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

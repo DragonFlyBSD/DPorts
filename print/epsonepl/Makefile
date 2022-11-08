@@ -1,5 +1,3 @@
-# Created by: Simon 'corecode' Schubert <corecode@corecode.ath.cx>
-
 PORTNAME=	epsonepl
 PORTVERSION=	0.2.2
 PORTREVISION=	6
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}ijs-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Printer filter for EPSON EPL-5700L etc
+WWW=		http://epsonepl.sourceforge.net/
 
 LIB_DEPENDS=	libijs.so:print/libijs
 

@@ -1,5 +1,3 @@
-# Created by: David Thiel (lx@redundancy.redundancy.org)
-
 PORTNAME=	sbd
 PORTVERSION=	1.37
 CATEGORIES=	net security
@@ -8,6 +6,7 @@ MASTER_SITES=	http://tigerteam.se/dl/sbd/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Netcat clone with more features and crypto
+WWW=		http://tigerteam.se/dl/sbd/
 
 ALL_TARGET=	unix
 

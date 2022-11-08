@@ -1,7 +1,5 @@
-# Created by: gahr
-
 PORTNAME=	dbus-tcl
-PORTVERSION=	2.2
+PORTVERSION=	3.0
 PORTREVISION=	0
 CATEGORIES=	devel
 MASTER_SITES=	https://chiselapp.com/user/schelte/repository/dbus/uv/
@@ -9,6 +7,7 @@ DISTNAME=	dbus-${PORTVERSION}
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	Tcl interface to the D-Bus messaging system
+WWW=		http://chiselapp.com/user/schelte/repository/dbus/home
 
 LICENSE=	ISCL
 

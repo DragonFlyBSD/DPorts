@@ -1,5 +1,3 @@
-# Created by: NAKATA, Maho <maho@FreeBSD.org>
-
 PORTNAME=	lapack95
 PORTVERSION=	1.0
 PORTREVISION=	19
@@ -10,6 +8,7 @@ DIST_SUBDIR=	lapack95
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	LAPACK95, Fortran90/95 wrapper for LAPACK
+WWW=		https://www.netlib.org/lapack95/
 
 USES=		fortran tar:tgz
 

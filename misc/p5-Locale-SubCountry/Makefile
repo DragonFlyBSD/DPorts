@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Locale-SubCountry
 PORTVERSION=	2.07
 CATEGORIES=	misc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert state, province, county etc. names to/from code
+WWW=		https://metacpan.org/release/Locale-SubCountry
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: rpsfa@rit.edu
-
 PORTNAME=	jammit
 PORTVERSION=	0.7.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Industrial strength asset packaging library for Rails
+WWW=		https://documentcloud.github.io/jammit/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

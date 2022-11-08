@@ -1,5 +1,3 @@
-# Created by: dglo@ssec.wisc.edu
-
 PORTNAME=	nslint
 PORTVERSION=	3.1
 CATEGORIES=	dns
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.ee.lbl.gov/ \
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Perform consistency checks on DNS zone files
+WWW=		https://ee.lbl.gov/ftp.html
 
 GNU_CONFIGURE=	yes
 

@@ -1,5 +1,3 @@
-# Created by: Tatsuki Makino <tatsuki_makino@hotmail.com>
-
 PORTNAME=	libamrnb
 DISTVERSION=	11.0.0.0
 PORTREVISION=	2
@@ -14,6 +12,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	tatsuki_makino@hotmail.com
 COMMENT=	3GPP floating-point Adaptive Multi-Rate (AMR) Speech Codec
+WWW=		http://www.penguin.cz/~utx/amr
 
 LICENSE=	BSD3CLAUSE 3GPP
 LICENSE_COMB=	multi

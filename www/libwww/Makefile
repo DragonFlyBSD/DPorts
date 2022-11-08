@@ -1,5 +1,3 @@
-# Created by: torstenb
-
 PORTNAME=	libwww
 PORTVERSION=	5.4.2
 CATEGORIES=	www devel
@@ -9,6 +7,7 @@ DISTNAME=	w3c-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	W3C Reference Library
+WWW=		https://www.w3.org/Library/
 
 LICENSE=	W3C
 LICENSE_NAME=	W3C IPR SOFTWARE NOTICE

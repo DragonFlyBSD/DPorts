@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	doParallel
 PORTVERSION=	1.0.17
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Foreach parallel adaptor for the parallel package
+WWW=		https://cran.r-project.org/web/packages/doParallel/
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	RPC-Simple
 PORTVERSION=	1.002
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl classes to handle simple asynchronous RPC calls with call-back
+WWW=		https://metacpan.org/release/RPC-Simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

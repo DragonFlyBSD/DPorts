@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-
 PORTNAME=	Term-Screen
 PORTVERSION=	1.06
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Basic screen + input class
+WWW=		https://metacpan.org/release/Term-Screen
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

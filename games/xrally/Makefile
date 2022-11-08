@@ -1,5 +1,3 @@
-# Created by: Edwin Groothuis
-
 PORTNAME=	xrally
 PORTVERSION=	1.1.1
 PORTREVISION=	6
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-1.1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Clone of the classic Rally X arcade game
+WWW=		http://www.linuxgames.com/xrally/
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 HAS_CONFIGURE=	yes

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	HTTP-Simple
 PORTVERSION=	0.004
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple procedural interface to HTTP::Tiny
+WWW=		https://metacpan.org/release/HTTP-Simple
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

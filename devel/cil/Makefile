@@ -1,5 +1,3 @@
-# Created by: Alexander Leidinger <netchild@FreeBSD.org>
-
 PORTNAME=	cil
 PORTVERSION=	1.7.3
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Infrastructure for C Program Analysis and Transformation
+WWW=		http://kerneis.github.com/cil/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	faraday_middleware-aws-sigv4
 PORTVERSION=	0.3.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	03
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Faraday middleware for AWS Signature Version 4
+WWW=		https://github.com/winebarrel/faraday_middleware-aws-sigv4
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

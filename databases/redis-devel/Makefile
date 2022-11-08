@@ -1,12 +1,11 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	redis
-DISTVERSION=	7.0.0.20220531
+DISTVERSION=	7.0.5.20220930
 CATEGORIES=	databases
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Persistent key-value database with built-in net interface
+WWW=		https://redis.io/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -14,12 +13,14 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES+=		compiler:c11 cpe gmake
 CPE_VENDOR=	redislabs
 USE_GITHUB=	yes
-GH_TUPLE=	redis:redis:42fbf06
+GH_TAGNAME=	ed4c432ec
 
 MAKE_ENV=	OPTIMIZATION= \
 		V=yo
 
 CONFLICTS_INSTALL=	redis redis6 # etc/rc.d/redis
+
+PORTSCOUT=	ignore:1
 
 OPTIONS_DEFINE=		JEMALLOC TESTS TLS TRIB
 OPTIONS_DEFAULT=	TLS

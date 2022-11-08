@@ -1,5 +1,3 @@
-# Created by: petef@FreeBSD.org
-
 PORTNAME=	peps
 PORTVERSION=	2.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	x
 
 MAINTAINER=	doceng@FreeBSD.org
 COMMENT=	Converts EPS images to anti-aliased bitmaps with X11 support
+WWW=		http://peps.redprince.net/peps/
 
 LICENSE=	BSD2CLAUSE
 

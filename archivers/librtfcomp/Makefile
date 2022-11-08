@@ -1,5 +1,3 @@
-# Created by: Alexander Logvinov <ports@logvinov.com>
-
 PORTNAME=	librtfcomp
 PORTVERSION=	1.3
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/synce/SynCE/librtfcomp
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for handling compressed RTF documents
+WWW=		https://sourceforge.net/projects/synce/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENCE

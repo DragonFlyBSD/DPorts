@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-
 PORTNAME=	capitalization
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Perl module which allows you to use familiar style on method naming
+WWW=		https://metacpan.org/release/capitalization
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

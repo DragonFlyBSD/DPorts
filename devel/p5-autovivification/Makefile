@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	autovivification
 PORTVERSION=	0.18
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Lexically disable autovivification
+WWW=		https://metacpan.org/release/autovivification
 
 LICENSE=	MIT
 

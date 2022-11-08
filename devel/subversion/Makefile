@@ -1,9 +1,8 @@
-# Created by: rooneg@electricjellyfish.net
-
 PORTREVISION=	2
 
 MAINTAINER=	lev@FreeBSD.org
 COMMENT=	Version control system
+WWW=		https://subversion.apache.org/
 
 CONFLICTS_INSTALL=	subversion-lts
 
@@ -86,7 +85,6 @@ WITH_REPOSITORY_CREATION=	yes
 .if defined(WITH_REPOSITORY_CREATION)
 MKREPOS_TARGET=	_mkrepos
 .endif
-
 
 BINS_TO_STRIP= svn svnadmin svnbench svndumpfilter svnfsfs svnlook svnmucc \
 		svnrdump svnserve${SVNSERVE_EXT} svnsync svnversion
@@ -178,7 +176,6 @@ post-install-TOOLS-on:
 	for F in ${TOOLS_TO_STRIP} ; do \
 	 ${STRIP_CMD} "${STAGEDIR}${PREFIX}/bin/$${F}" ; \
 	done
- 
 
 # ===============================================================================
 repository:	_mkrepos

@@ -1,5 +1,3 @@
-# Created by: Henrik Brix Andersen <brix@FreeBSD.org>
-
 PORTNAME=	xapian-omega
 PORTVERSION=	1.2.25
 CATEGORIES=	www
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	12
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CGI search application built on Xapian
+WWW=		https://xapian.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

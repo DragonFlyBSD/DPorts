@@ -1,5 +1,3 @@
-# Created by: bf <bf2006a@yahoo.com>
-
 PORTNAME=	unuran
 PORTVERSION=	1.9.0
 CATEGORIES=	math
@@ -8,6 +6,7 @@ MASTER_SITES=	http://statmath.wu-wien.ac.at/unuran/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Universal Non-Uniform RANdom number generators
+WWW=		http://statmath.wu-wien.ac.at/unuran/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

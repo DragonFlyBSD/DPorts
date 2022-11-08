@@ -1,5 +1,3 @@
-# Created by: Olivier Cochard-Labbe <olivier@FreeBSD.org>
-
 PORTNAME=	desktop
 PORTVERSION=	0.1
 PORTREVISION=	6
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	deforaos-
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	Deforaos distribution metaport
+WWW=		https://www.defora.org/
 
 RUN_DEPENDS=	${LOCALBASE}/bin/keyboard:x11/deforaos-keyboard \
 		${LOCALBASE}/bin/panel:x11/deforaos-panel \

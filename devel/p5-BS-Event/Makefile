@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	BS-Event
 PORTVERSION=	0.3
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Class that provides an event callback interface
+WWW=		https://metacpan.org/release/ELMEX/BS-Event-0.3
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

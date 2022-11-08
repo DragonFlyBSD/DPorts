@@ -1,5 +1,3 @@
-# Created by: Jesse Smith
-
 PORTNAME=	swapexd
 PORTVERSION=	0.4
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://makeapbi.sourceforge.net/${PORTNAME}/
 
 MAINTAINER=	jessefrgsmith@yahoo.ca
 COMMENT=	Tool for growing and shrinking on-disk swap space
+WWW=		http://makeapbi.sourceforge.net/
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
 

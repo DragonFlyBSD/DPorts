@@ -1,5 +1,3 @@
-# Created by: Janni <jannisan@t-online.de>
-
 PORTNAME=	Atlas
 PORTVERSION=	0.6.4
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-C++-${PORTVERSION:S/.r/rc/}
 
 MAINTAINER=	oliver@FreeBSD.org
 COMMENT=	C++ reference implementation of the Atlas protocol
+WWW=		https://www.worldforge.org/index.php/components/atlas-cpp/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

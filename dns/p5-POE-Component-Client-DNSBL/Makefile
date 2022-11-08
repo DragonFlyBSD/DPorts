@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	POE-Component-Client-DNSBL
 PORTVERSION=	1.08
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl POE component that provides non-blocking DNSBL lookups
+WWW=		https://metacpan.org/release/POE-Component-Client-DNSBL
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-POE>=1.004:devel/p5-POE \

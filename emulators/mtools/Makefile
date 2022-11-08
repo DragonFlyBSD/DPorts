@@ -1,5 +1,3 @@
-# Created by: jmz
-
 PORTNAME=	mtools
 PORTVERSION=	4.0.26
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Collection of tools for manipulating MS-DOS files
+WWW=		https://www.gnu.org/software/mtools/intro.html
 
 LICENSE=	GPLv3
 

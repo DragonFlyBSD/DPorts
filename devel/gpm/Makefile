@@ -1,13 +1,12 @@
-# Created by: Luke Jee <lukejee@gmail.com>
-
 PORTNAME=	gpm
 PORTVERSION=	1.4.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	lukejee@gmail.com
 COMMENT=	Go Package Manager
+WWW=		https://github.com/pote/gpm
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

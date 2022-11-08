@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	sorted_set
 PORTVERSION=	1.0.3
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Implements a variant of Set
+WWW=		https://github.com/knu/sorted_set
 
 LICENSE=	MIT
 

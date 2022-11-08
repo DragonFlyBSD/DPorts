@@ -1,5 +1,3 @@
-# Created by: Dave Cottlehuber <dch@skunkwerks.at>
-
 PORTNAME=	firacode
 DISTVERSIONPREFIX=	v
 DISTVERSION=	6.2
@@ -9,6 +7,7 @@ DISTNAME=	Fira_Code_${DISTVERSIONPREFIX}${PORTVERSION}
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Monospaced font with programming ligatures derived from Fira
+WWW=		https://github.com/tonsky/FiraCode
 
 LICENSE=	OFL11
 

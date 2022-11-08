@@ -1,11 +1,10 @@
-# Created by: Autrijus Tang <autrijus@autrijus.org>
-
 PORTNAME=	sympa
 DISTVERSION=	6.2.68
 CATEGORIES=	mail
 
 MAINTAINER=	dgeo@centrale-marseille.fr
 COMMENT=	Electronic mailing list manager
+WWW=		https://www.sympa.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

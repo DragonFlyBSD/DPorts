@@ -1,5 +1,3 @@
-# Created by: Scott Flatman <sf@dsinw.com>
-
 PORTNAME=	stream
 PORTVERSION=	5.10
 CATEGORIES=	benchmarks
@@ -9,6 +7,7 @@ DIST_SUBDIR=	${PORTNAME}-1.0/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Synthetic benchmark program that measures sustainable memory bandwidth
+WWW=		https://www.cs.virginia.edu/stream/
 
 NO_WRKSUBDIR=	yes
 

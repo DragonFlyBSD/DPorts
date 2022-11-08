@@ -1,13 +1,13 @@
-# Created by: ijliao@FreeBSD.org
-
 PORTNAME=	tables
 PORTVERSION=	3.7.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Hierarchical database for Python
+WWW=		https://www.pytables.org/
 
 LICENSE=	BSD3CLAUSE
 

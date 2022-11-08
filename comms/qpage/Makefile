@@ -1,5 +1,3 @@
-# Created by: joes@seaport.net
-
 PORTNAME=	qpage
 PORTVERSION=	3.3
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	http://tomiii.com/qpage/qpage.org/download/
 
 MAINTAINER=	rand@iteris.com
 COMMENT=	SNPP client/server for sending messages to an alphanumeric pager
+WWW=		http://www.qpage.org/
 
 USES=tar:Z
 USE_RC_SUBR=	qpage

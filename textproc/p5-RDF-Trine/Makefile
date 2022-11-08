@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	RDF-Trine
 PORTVERSION=	1.019
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	RDF Framework for Perl
+WWW=		https://metacpan.org/release/RDF-Trine
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

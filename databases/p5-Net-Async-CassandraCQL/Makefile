@@ -1,5 +1,3 @@
-# Created by: Denis Shaposhnikov <dsh@bamus.cz>
-
 PORTNAME=	Net-Async-CassandraCQL
 PORTVERSION=	0.11
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	admins@perceptyx.com
 COMMENT=	Use Cassandra databases with IO::Async using CQL
+WWW=		https://metacpan.org/release/Net-Async-CassandraCQL
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

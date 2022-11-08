@@ -1,5 +1,3 @@
-# Created by: Uffe Jakobsen <uffe@uffe.org>
-
 PORTNAME=	dxa
 PORTVERSION=	0.1.4
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	65
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Disassembler for MOS 6502 and compatible CPUs
+WWW=		http://www.floodgap.com/retrotech/xa #dxa
 
 LICENSE=	GPLv2+
 

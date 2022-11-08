@@ -1,12 +1,13 @@
 PORTNAME=	picpas
 PORTVERSION=	0.9.0
-PORTREVISION=	6
+PORTREVISION=	7
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Multi-platform Pascal for Microchip PIC16F microcontrollers
+WWW=		https://github.com/t-edson/PicPas
 
 LICENSE=	GPLv2
 

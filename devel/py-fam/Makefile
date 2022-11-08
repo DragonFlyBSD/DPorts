@@ -1,5 +1,3 @@
-# Created by: Hye-Shik Chang
-
 PORTNAME=	fam
 PORTVERSION=	1.1.1
 PORTREVISION=	3
@@ -10,6 +8,7 @@ DISTNAME=	python-fam-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python Interface to the File Alteration Monitor
+WWW=		http://python-fam.sourceforge.net/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING

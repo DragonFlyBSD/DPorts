@@ -1,5 +1,3 @@
-# Created by: Petr Rehor <rx@rx.cz>
-
 PORTNAME=	amavisd-milter
 PORTVERSION=	1.7.0
 CATEGORIES=	security mail
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/prehor/${PORTNAME}/releases/download/${PORTVERS
 
 MAINTAINER=	rx@rx.cz
 COMMENT=	Milter for amavisd-new
+WWW=		http://amavisd-milter.sourceforge.net
 
 RUN_DEPENDS=	amavisd:security/amavisd-new
 

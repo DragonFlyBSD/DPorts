@@ -1,5 +1,3 @@
-# Created by: Yuan-Chung Hsiao <ychsiao@ychsiao.org>
-
 PORTNAME=	NetAddr-IP-Lite
 PORTVERSION=	1.01
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ychsiao@ychsiao.org
 COMMENT=	IPv4/6 and 128 bit number utilities
+WWW=		https://metacpan.org/release/MIKER/NetAddr-IP-Lite-1.01
 
 LICENSE=	ART10
 

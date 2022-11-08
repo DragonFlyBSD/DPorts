@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	openid_connect
 PORTVERSION=	1.2.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	OpenID Connect Server & Client Library
+WWW=		https://github.com/nov/openid_connect
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

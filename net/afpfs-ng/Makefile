@@ -1,5 +1,3 @@
-# Created by: Manuel Creach <manuel.creach@icloud.com>
-
 PORTNAME=	afpfs-ng
 PORTVERSION=	0.8.1
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	manuel.creach@icloud.com
 COMMENT=	Apple Filing Protocol client library
+WWW=		https://sourceforge.net/projects/afpfs-ng/
 
 LICENSE=	GPLv2
 

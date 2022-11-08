@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	represent
 PORTVERSION=	1.6.0
 DISTVERSIONSUFFIX=	.post0
@@ -11,6 +9,7 @@ DISTNAME=	Represent-${DISTVERSIONFULL}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Create __repr__ automatically or declaratively
+WWW=		https://github.com/RazerM/represent
 
 LICENSE=	BSD3CLAUSE MIT
 LICENSE_COMB=	dual

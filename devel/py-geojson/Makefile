@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	geojson
 PORTVERSION=	2.3.0
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Python's Encoder/decoder for simple GIS features
+WWW=		https://pypi.org/project/geojson/
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,10 +1,11 @@
 PORTNAME=	quiche
 PORTVERSION=	0.12.0
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	net
 
 MAINTAINER=	junho.choi@gmail.com
 COMMENT=	Savoury implementation of the QUIC transport protocol and HTTP/3
+WWW=		https://crates.io/crates/quiche
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

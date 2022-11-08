@@ -1,5 +1,3 @@
-# Created by: Ilya Bakulin <webmaster@kibab.com>
-
 PORTNAME=	wpa_supplicant_gui
 DISTVERSION=	2.10
 CATEGORIES=	net
@@ -11,13 +9,14 @@ DISTFILES=	${DISTNAME}.tar.gz \
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Qt-based frontend for wpa_supplicant
+WWW=		https://w1.fi/wpa_supplicant/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/../COPYING
 
 USES=		gl gmake qt:5 xorg
-USE_QT=		qmake_build buildtools_build linguisttools_build core gui \
-		widgets svg_run
+USE_QT=		qmake:build buildtools:build linguisttools:build core gui \
+		widgets svg:run
 USE_GL=		gl
 
 ALL_TARGET=	wpa_gui-qt4

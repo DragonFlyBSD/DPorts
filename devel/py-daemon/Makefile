@@ -1,5 +1,3 @@
-# Created by: jessekempf@gmail.com
-
 PORTNAME=	daemon
 PORTVERSION=	2.3.0
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ DISTNAME=	python-daemon-${PORTVERSION}
 
 MAINTAINER=	jessekempf@gmail.com
 COMMENT=	Well-behaved daemon framework for Python
+WWW=		https://pypi.org/project/python-daemon/
 
 LICENSE=	APACHE20
 

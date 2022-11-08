@@ -1,5 +1,3 @@
-# Created by: Ryo MIYAMOTO <rmiya@cc.hirosaki-u.ac.jp>
-
 PORTNAME=	mopac
 PORTVERSION=	7.${MOPAC_SUBVERSION}
 PORTREVISION=	8
@@ -11,6 +9,7 @@ DISTNAME=	mopac7-${MOPAC_SUBVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Semi-empirical (MNDO, etc.) molecular orbital calculation
+WWW=		https://bioinformatics.org/ghemical/
 
 LICENSE=	GPLv2+
 

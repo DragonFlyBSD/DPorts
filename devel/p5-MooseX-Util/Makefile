@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	MooseX-Util
 PORTVERSION=	0.006
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Moose::Util extensions
+WWW=		https://metacpan.org/release/MooseX-Util
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE

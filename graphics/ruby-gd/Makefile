@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	gd
 PORTVERSION=	0.8.0
 PORTREVISION=	8
@@ -12,6 +10,7 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Ruby extension library to use Thomas Boutell's gd library
+WWW=		https://github.com/Spakman/ruby-gd
 
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libgd.so:graphics/gd \

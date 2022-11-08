@@ -1,10 +1,11 @@
 PORTNAME=	gstreamer1-plugins-rust
 DISTVERSION=	0.7.2
-PORTREVISION=	9
+PORTREVISION=	11
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Various GStreamer plugins written in Rust
+WWW=		https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs
 
 LICENSE=	LGPL21+ MIT
 LICENSE_COMB=	multi
@@ -400,6 +401,7 @@ CARGO_TEST=	no
 OPTIONS_DEFINE=	CSOUND DAV1D PANGO SODIUM
 OPTIONS_DEFAULT=CSOUND DAV1D PANGO SODIUM
 OPTIONS_EXCLUDE_aarch64=	CSOUND # https://github.com/neithanmo/csound-rs/commit/8962b89d7bda
+OPTIONS_EXCLUDE_armv7=	CSOUND # https://github.com/neithanmo/csound-rs/commit/8962b89d7bda
 OPTIONS_EXCLUDE_powerpc64le=	CSOUND
 OPTIONS_EXCLUDE_powerpc64=	CSOUND
 OPTIONS_EXCLUDE_powerpc=	CSOUND DAV1D

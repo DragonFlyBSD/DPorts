@@ -1,5 +1,3 @@
-# Created by: Alexandros Kosiaris <akosiaris+ports@gmail.com>
-
 PORTNAME=	jira
 PORTVERSION=	2.0.0
 PORTREVISION=	4
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Library to ease use of the JIRA 5 REST APIs
+WWW=		https://bitbucket.org/bspeakmon/jira-python
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

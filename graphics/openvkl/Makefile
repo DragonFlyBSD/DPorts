@@ -1,11 +1,12 @@
 PORTNAME=	openvkl
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.3.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	graphics devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Intel Open Volume Kernel Library for graphics applications
+WWW=		https://github.com/openvkl/openvkl
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

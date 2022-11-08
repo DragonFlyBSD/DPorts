@@ -1,11 +1,10 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	Horde_Editor
 PORTVERSION=	2.0.5
 CATEGORIES=	www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde Editor API
+WWW=		https://pear.horde.org
 
 CONFLICTS=	horde-3*
 

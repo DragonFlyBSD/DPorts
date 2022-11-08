@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	squirrel
 DISTVERSION=	3_1
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}_stable
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High level imperative/OO programming language
+WWW=		http://squirrel-lang.org/
 
 CONFLICTS=	squsq
 

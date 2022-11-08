@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	mailfactory
 PORTVERSION=	1.4.0
 CATEGORIES=	mail rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Simple to use module for generating RGC compliant MIME mail
+WWW=		https://github.com/tmm1/mailfactory
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: fenner
-
 PORTNAME=	dnstop
 PORTVERSION=	20140915
 CATEGORIES=	dns
@@ -7,6 +5,7 @@ MASTER_SITES=	http://dns.measurement-factory.com/tools/dnstop/src/
 
 MAINTAINER=	mark@foster.cc
 COMMENT=	Captures and analyzes DNS traffic (or analyzes libpcap dump)
+WWW=		http://dnstop.measurement-factory.com/
 
 LICENSE=	BSD2CLAUSE
 

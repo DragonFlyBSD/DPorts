@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	qiniu
 PORTVERSION=	6.9.1
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Qiniu Resource (Cloud) Storage SDK for Ruby
+WWW=		https://github.com/qiniu/ruby-sdk
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

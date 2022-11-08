@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lars@thegler.dk>
-
 PORTNAME=	Class-DBI-Loader-Relationship
 PORTVERSION=	1.3
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Easier relationship specification in CDBI::L
+WWW=		https://metacpan.org/release/Class-DBI-Loader-Relationship
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Class-DBI-Loader>=0:databases/p5-Class-DBI-Loader \

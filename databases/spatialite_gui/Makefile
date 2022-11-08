@@ -1,5 +1,3 @@
-# Created by: lbartoletti <lbartoletti@FreeBSD.org>
-
 PORTNAME=	spatialite_gui
 DISTVERSION=	2.1.0
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/spatialite-gui-sources/
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Graphical User Interface (GUI) tool supporting SpatiaLite
+WWW=		https://www.gaia-gis.it/fossil/spatialite_gui/index
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Eric Freeman <freebsdports@chillibear.com>
-
 PORTNAME=	tty-clock
 PORTVERSION=	2.3
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Terminal based clock
+WWW=		https://github.com/xorg62/tty-clock
 
 LICENSE=	BSD3CLAUSE
 

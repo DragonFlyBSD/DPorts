@@ -1,5 +1,3 @@
-# Created by: Janos Mohacsi <janos.mohacsi@bsd.hu>
-
 PORTNAME=	denyhosts
 PORTVERSION=	3.1.2
 CATEGORIES=	security
@@ -9,6 +7,7 @@ DISTNAME=	DenyHosts-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Script to thwart ssh and imap attacks
+WWW=		https://github.com/denyhosts/denyhosts
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

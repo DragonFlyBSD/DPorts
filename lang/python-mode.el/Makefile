@@ -1,5 +1,3 @@
-# Created by: Dario Freni <saturnero@gufi.org>
-
 PORTNAME=	python-mode.el
 PORTVERSION=	1.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	python-mode-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Emacs lisp module for the Python language
+WWW=		http://python-mode.sourceforge.net/
 
 NO_BUILD=	yes
 

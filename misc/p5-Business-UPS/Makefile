@@ -1,5 +1,3 @@
-# Created by: Seamus Venasse <svenasse@polaris.ca>
-
 PORTNAME=	Business-UPS
 PORTVERSION=	2.02
 CATEGORIES=	misc perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	UPS Interface Module
+WWW=		https://metacpan.org/release/Business-UPS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Shaun Amott <shaun@inerd.com>
-
 PORTNAME=	ircd-ratbox
 PORTVERSION=	3.0.7
 PORTREVISION=	3
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	moggie@elasticmind.net
 COMMENT=	Advanced, stable IRC daemon, used widely on EFnet ('testing' release)
+WWW=		http://www.ircd-ratbox.org/
 
 LICENSE=	GPLv2
 

@@ -1,11 +1,10 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	mustache
 PORTVERSION=	0.9.2
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Mustache templating language
+WWW=		https://github.com/jbboehr/php-mustache
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

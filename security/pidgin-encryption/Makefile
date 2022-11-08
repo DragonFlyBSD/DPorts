@@ -1,5 +1,3 @@
-# Created by: ports@c0decafe.net
-
 PORTNAME=	pidgin
 PORTVERSION=	3.1
 PORTREVISION=	6
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
 
 MAINTAINER=	perlfu@gmail.com
 COMMENT=	Encryption Plugin for the Pidgin instant messenger client
+WWW=		http://pidgin-encrypt.sf.net
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/pidgin:net-im/pidgin
 RUN_DEPENDS=	${LOCALBASE}/bin/pidgin:net-im/pidgin

@@ -1,13 +1,12 @@
-# Created by: ijliao
-
 PORTNAME=	css-parser
-PORTVERSION=	1.0.7
+PORTVERSION=	1.0.8
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	CSS related utilities (parsing, serialization, etc) for python
+WWW=		https://github.com/ebook-utils/css-parser
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	dual

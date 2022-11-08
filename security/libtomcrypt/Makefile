@@ -1,5 +1,3 @@
-# Created by: Yonatan <Yonatan@Xpert.com>
-
 PORTNAME=	libtomcrypt
 PORTVERSION=	1.18.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	crypt-${PORTVERSION}
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Comprehensive, modular, and portable cryptographic toolkit
+WWW=		https://libtom.net/
 
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/LICENSE

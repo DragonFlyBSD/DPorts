@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	xstatic-jsencrypt
 PORTVERSION=	2.3.1.1
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	XStatic-JSEncrypt-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	JSEncrypt (XStatic packaging standard)
+WWW=		https://travistidwell.com/jsencrypt/
 
 LICENSE=	MIT
 

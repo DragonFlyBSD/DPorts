@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	faraday
 PORTVERSION=	1.4.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	14
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	HTTP/REST API client library in Ruby
+WWW=		https://github.com/lostisland/faraday
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md

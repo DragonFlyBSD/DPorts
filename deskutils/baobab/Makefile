@@ -1,25 +1,23 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-
 PORTNAME=	baobab
-PORTVERSION=	42.0
+PORTVERSION=	43.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME graphical directory tree analyzer
+WWW=		https://wiki.gnome.org/Apps/Baobab
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 PORTSCOUT=	limitw:1,even
 
-BUILD_DEPENDS=	valac:lang/vala \
-		itstool:textproc/itstool
+BUILD_DEPENDS=	itstool:textproc/itstool
 LIB_DEPENDS=	libhandy-1.so:x11-toolkits/libhandy
 
 USES=		desktop-file-utils gettext gnome meson pkgconfig \
-		python:3.5+,build tar:xz
+		python:3.5+,build tar:xz vala:build
 USE_GNOME=	cairo gtk40 libadwaita
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}

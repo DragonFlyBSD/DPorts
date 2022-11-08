@@ -1,5 +1,3 @@
-# Created by: Kirill Ponomarev <krion@FreeBSD.org>
-
 PORTNAME=	dict-toolbox
 PORTVERSION=	2.1.2
 CATEGORIES=	sysutils python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	krion@FreeBSD.org
 COMMENT=	Collection of python dictionary management tools
+WWW=		https://gitlab.com/saltstack/open/dict-toolbox/
 
 LICENSE=	APACHE20
 

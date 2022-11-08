@@ -1,11 +1,11 @@
-# Created by: Boris Samorodov <bsam@FreeBSD.org>
-
 .include "${.CURDIR}/../../devel/eric6/bsd.eric6.mk"
 
 PKGNAMESUFFIX=	-qt5-${FLAVOR:U:S/_/-/}
 DISTNAME=	${PORTNAME}-nolang-${DISTVERSION}
 PORTREVISION=	1
 CATEGORIES=	devel python
+
+WWW=		https://eric-ide.python-projects.org/index.html
 
 BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}toml>=0:textproc/py-toml@${PY_FLAVOR} \

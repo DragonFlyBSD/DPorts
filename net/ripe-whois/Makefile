@@ -1,5 +1,3 @@
-# Created by: Lars Erik Gullerud <lerik@nolink.net>
-
 PORTNAME=	ripe-whois
 PORTVERSION=	3.2.2
 CATEGORIES=	net
@@ -8,6 +6,7 @@ DISTNAME=	whois3-${PORTVERSION}
 
 MAINTAINER=	lerik@nolink.net
 COMMENT=	The RIPE whois client version 3
+WWW=		http://whois.sf.net
 
 USES=		perl5 gmake
 USE_PERL5=	build

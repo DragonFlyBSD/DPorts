@@ -1,11 +1,10 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	jsond
 DISTVERSION=	1.4.0
 CATEGORIES=	devel
 
 MAINTAINER=	gasol.wu@gmail.com
 COMMENT=	JavaScript Object Notation in PHP
+WWW=		https://pecl.php.net/package/jsond
 
 LICENSE=	PHP301
 

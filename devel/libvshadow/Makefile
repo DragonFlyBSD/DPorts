@@ -1,5 +1,3 @@
-# Created by: MANTANI Nobutaka <nobutaka@FreeBSD.org>
-
 PORTNAME=	libvshadow
 PORTVERSION=	20210425
 CATEGORIES=	devel
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-alpha-${PORTVERSION}
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library to support the Volume Service Snapshot (VSS) format
+WWW=		https://github.com/libyal/libvshadow
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING

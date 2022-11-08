@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	JSON-Schema
 PORTVERSION=	0.016
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Validate JSON against a schema
+WWW=		https://metacpan.org/release/JSON-Schema
 
 LICENSE=	MIT
 

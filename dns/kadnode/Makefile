@@ -1,5 +1,3 @@
-# Created by: Moritz Warning <moritzwarning@web.de>
-
 PORTNAME=	kadnode
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.3.0
@@ -8,6 +6,7 @@ CATEGORIES=	dns
 
 MAINTAINER=	moritzwarning@web.de
 COMMENT=	P2P name resolution daemon
+WWW=		https://github.com/mwarning/KadNode
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

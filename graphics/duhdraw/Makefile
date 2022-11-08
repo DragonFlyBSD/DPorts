@@ -1,5 +1,3 @@
-# Created by: Kyle Martin <mkm@ieee.org>
-
 PORTNAME=	duhdraw
 PORTVERSION=	2.8.13
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.cs.helsinki.fi/u/penberg/duhdraw/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ANSI graphic drawing program
+WWW=		https://www.cs.helsinki.fi/u/penberg/duhdraw/
 
 USES=		ncurses
 

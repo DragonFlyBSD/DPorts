@@ -1,10 +1,12 @@
 PORTNAME=	compat.el
-DISTVERSION=	28.1.1.2
+DISTVERSION=	28.1.2.2
+PORTREVISION=	1
 CATEGORIES=	misc elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Compatibility library for Emacs Lisp
+WWW=		https://sr.ht/~pkal/compat/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -18,7 +20,7 @@ ALL_TARGET=	all compat.info
 NO_ARCH=	yes
 
 INFO=		compat
-PORTDOCS=	MANUAL NEWS.org README.md
+PORTDOCS=	NEWS.org README.md
 
 OPTIONS_DEFINE=	DOCS
 
@@ -26,7 +28,7 @@ ELISP_FILES=	compat-24.el compat-24.elc compat-25.el compat-25.elc \
 		compat-26.el compat-26.elc compat-27.el compat-27.elc \
 		compat-28.el compat-28.elc compat-font-lock.el \
 		compat-font-lock.elc compat-help.el compat-help.elc \
-		compat-macs.el compat-macs.elc compat.el compat.elc
+		compat-macs.el compat.el compat.elc
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/compat

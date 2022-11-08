@@ -1,10 +1,11 @@
 PORTNAME=	mctc-lib
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.0
+DISTVERSION=	0.3.1
 CATEGORIES=	science # chemistry
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Computation tool chain library to work with molecular structure data
+WWW=		https://grimme-lab.github.io/mctc-lib/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,7 +18,7 @@ GH_ACCOUNT=	grimme-lab
 
 CMAKE_ON=	BUILD_SHARED_LIBS
 
-post-patch: # see https://github.com/toml-f/toml-f/issues/51
-	@${REINPLACE_CMD} -e 's|$${CMAKE_Fortran_COMPILER_ID}-$${CMAKE_Fortran_COMPILER_VERSION}||' ${WRKSRC}/config/CMakeLists.txt ${WRKSRC}/CMakeLists.txt
+post-patch: # same as https://github.com/grimme-lab/mctc-lib/pull/55
+	@${REINPLACE_CMD} -e 's|$${CMAKE_Fortran_COMPILER_ID}-$${CMAKE_Fortran_COMPILER_VERSION}||' ${WRKSRC}/config/CMakeLists.txt
 
 .include <bsd.port.mk>

@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	libpeak
 PORTVERSION=	0.1.2
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/peak/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Parallel Events and Asynchronous tasKing Library
+WWW=		http://peak.sourceforge.net/
 
 LICENSE=	BSD2CLAUSE
 

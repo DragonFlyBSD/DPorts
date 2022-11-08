@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@tobez.org>
-
 PORTNAME=	DelimMatch
 PORTVERSION=	1.06
 DISTVERSIONSUFFIX=	a
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension to find regexp delimited strings with proper nesting
+WWW=		https://metacpan.org/release/DelimMatch
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

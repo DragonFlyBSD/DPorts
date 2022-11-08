@@ -1,5 +1,3 @@
-# Created by: Johannes M Dieterich <jmd@FreeBSD.org>
-
 PORTNAME=	f18
 DISTVERSION=	g20191019
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Fortran compiler targeting LLVM
+WWW=		https://github.com/flang-compiler/f18
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

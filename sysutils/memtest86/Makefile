@@ -1,5 +1,3 @@
-# Created by: Radim Kolar
-
 PORTNAME=	memtest86
 PORTVERSION=	4.3.7
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.memtest86.com/downloads/
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Stand-alone memory test for x86 architecture computers
+WWW=		https://www.memtest86.com/
 
 NO_WRKSUBDIR=	yes
 

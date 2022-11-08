@@ -1,6 +1,3 @@
-# Created by: giffunip
-#    $MCom: ports/devel/lasi/Makefile,v 1.1 2006/10/04 20:25:40 ahze Exp $
-
 PORTNAME=	lasi
 PORTVERSION=	1.1.3
 CATEGORIES=	devel
@@ -9,6 +6,7 @@ DISTNAME=	libLASi-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ stream output interface for creating Postscript documents
+WWW=		https://www.unifont.org/lasi/
 
 LIB_DEPENDS=	libltdl.so:devel/libltdl
 

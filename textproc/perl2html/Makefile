@@ -1,5 +1,3 @@
-# Created by: Martin Kammerhofer
-
 PORTNAME=	perl2html
 PORTVERSION=	0.9.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SUNSITE/apps/www/converters
 
 MAINTAINER=	mkamm@gmx.net
 COMMENT=	Perl sources to HTML converter
+WWW=		http://user.cs.tu-berlin.de/~schintke/x2html/
 
 LICENSE=	GPLv2
 

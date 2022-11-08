@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	Jinja2
 PORTVERSION=	3.0.1
 PORTREVISION=	0
@@ -10,6 +8,7 @@ PKGNAMESUFFIX?=
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT?=	Fast and easy to use stand-alone template engine
+WWW?=		http://jinja.pocoo.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst

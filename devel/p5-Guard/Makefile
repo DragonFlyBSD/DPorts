@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Guard
 PORTVERSION=	1.023
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Safe cleanup blocks
+WWW=		https://metacpan.org/release/Guard
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

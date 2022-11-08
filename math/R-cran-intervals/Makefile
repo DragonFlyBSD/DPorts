@@ -1,5 +1,3 @@
-# Created by: Guangyuan Yang <ygy@FreeBSD.org>
-
 PORTNAME=	intervals
 DISTVERSION=	0.15.2
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ygy@FreeBSD.org
 COMMENT=	Tools for Working with Points and Intervals
+WWW=		https://github.com/edzer/intervals
 
 LICENSE=	ART20
 

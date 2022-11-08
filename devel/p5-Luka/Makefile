@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Luka
 PORTVERSION=	1.08
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Exception handling and reporting framework
+WWW=		https://metacpan.org/release/Luka
 
 LICENSE=	GPLv2+
 

@@ -1,11 +1,12 @@
 PORTNAME=	YAML-PP
-PORTVERSION=	0.032
+PORTVERSION=	0.034
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	YAML which aims to parse YAML 1.2 & conform to the spec
+WWW=		https://github.com/perlpunk/YAML-PP-p5
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,11 +1,11 @@
-# Created by: Ka Ho Ng <khng300@gmail.com>
-
 PORTNAME=	rime-pinyin-simp
 DISTVERSION=	g20210627
+PORTREVISION=	1
 CATEGORIES=	chinese textproc
 
 MAINTAINER=	khng@FreeBSD.org
 COMMENT=	Rime pinyin-simp schema support
+WWW=		https://github.com/rime/rime-pinyin-simp
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

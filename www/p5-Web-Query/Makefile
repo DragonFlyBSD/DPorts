@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Web-Query
 PORTVERSION=	0.39
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Yet another scraping library like jQuery
+WWW=		https://metacpan.org/release/Web-Query
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

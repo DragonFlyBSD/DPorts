@@ -1,5 +1,3 @@
-# Created by: Carlos J Puga Medina <cpm@fbsd.es>
-
 PORTNAME=	sphinxcontrib-programoutput
 PORTVERSION=	0.11
 CATEGORIES=	textproc
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Sphinx extension to include program output
+WWW=		https://pythonhosted.org/sphinxcontrib-programoutput/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

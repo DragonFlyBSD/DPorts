@@ -1,5 +1,3 @@
-# Created by: Mike Bristow <mike@urgle.com>
-
 PORTNAME=	XML-TokeParser
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	mike@urgle.com
 COMMENT=	Simplified interface to XML::Parser
+WWW=		https://metacpan.org/release/XML-TokeParser
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

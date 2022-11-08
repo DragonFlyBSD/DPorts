@@ -1,11 +1,12 @@
 PORTNAME=	epl.el
 PORTVERSION=	0.8
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Emacs Package Library
+WWW=		https://github.com/cask/epl
 
 LICENSE=	GPLv3
 

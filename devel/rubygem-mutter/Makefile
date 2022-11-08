@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	mutter
 PORTVERSION=	0.5.3
 PORTREVISION=	0
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Tiny command-line interface library
+WWW=		https://github.com/cloudhead/mutter
 
 NO_ARCH=	yes
 

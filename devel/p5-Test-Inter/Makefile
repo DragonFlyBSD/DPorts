@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <culot@FreeBSD.org>
-
 PORTNAME=	Test-Inter
 PORTVERSION=	1.09
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Framework for more readable interactive test scripts
+WWW=		https://metacpan.org/release/Test-Inter
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

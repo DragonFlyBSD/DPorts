@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	Mango
 PORTVERSION=	1.30
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Pure-Perl non-blocking I/O MongoDB driver
+WWW=		https://metacpan.org/release/Mango
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

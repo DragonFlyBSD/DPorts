@@ -1,11 +1,10 @@
-# Created by: Hannes Hauswedell <h2+fbsdports@fsfe.org>
-
 PORTNAME=	ugene
 PORTVERSION=	40.1
 CATEGORIES=	biology science
 
 MAINTAINER=	h2+fbsdports@fsfe.org
 COMMENT=	Integrated bioinformatics toolkit
+WWW=		https://ugene.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -21,10 +20,10 @@ GH_ACCOUNT=	ugeneunipro
 
 USES=		desktop-file-utils gl qmake qt:5 shared-mime-info sqlite xorg
 USE_GL=		gl glu
-USE_QT=		buildtools_build linguisttools_build \
+USE_QT=		buildtools:build linguisttools:build \
 		core gui network opengl printsupport scripttools script \
 		sql svg testlib widgets xml \
-		imageformats_run
+		imageformats:run
 USE_XORG=	x11 xtst
 
 QMAKE_ARGS=	INSTALL_PREFIX="${PREFIX}" UGENE_INSTALL_DATA="${DATADIR}" \

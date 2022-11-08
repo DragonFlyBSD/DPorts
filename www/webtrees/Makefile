@@ -1,5 +1,3 @@
-# Created by: J.R. Oldroyd <fbsd@opal.com>
-
 PORTNAME=	webtrees
 PORTVERSION=	1.7.18
 CATEGORIES=	www
@@ -7,6 +5,7 @@ MASTER_SITES=	http://github.com/fisharebest/${PORTNAME}/releases/download/${PORT
 
 MAINTAINER=	fbsd@opal.com
 COMMENT=	Online genealogy viewer (for PHP 5.3-7.3)
+WWW=		https://webtrees.net/
 
 LICENSE=	GPLv3+
 

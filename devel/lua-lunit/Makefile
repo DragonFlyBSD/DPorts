@@ -1,5 +1,3 @@
-# Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-
 PORTNAME=	lunit
 PORTVERSION=	0.5
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	sergey.dyatko@gmail.com
 COMMENT=	Unit Testing Framework for Lua
+WWW=		https://www.mroth.net/lunit/
 
 LICENSE=	MIT
 

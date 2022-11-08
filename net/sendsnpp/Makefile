@@ -1,5 +1,3 @@
-# Created by: Ion-Mihai "IOnut" Tetcu <itetcu@people.tecnik93.com>
-
 PORTNAME=	sendSNPP
 DISTVERSION=	v1.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://caspian.dotconf.net/menu/Software/SendSNPP/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tool for sending messages through a RFC1861 compliant SNPP server
+WWW=		http://caspian.dotconf.net/menu/Software/SendSNPP/
 
 NO_BUILD=	yes
 USES=		perl5 shebangfix

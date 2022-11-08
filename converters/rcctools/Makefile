@@ -1,5 +1,3 @@
-# Created by: Alex Keda <admin@lissyara.su>
-
 PORTNAME=	rcctools
 PORTVERSION=	0.1.1
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/rusxmms/${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Charset conversion utility with language and encoding autodetection
+WWW=		http://rusxmms.sourceforge.net
 
 LIB_DEPENDS=	librcc.so:devel/librcc
 

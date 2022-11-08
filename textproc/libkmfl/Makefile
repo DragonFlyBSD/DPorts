@@ -1,5 +1,3 @@
-# Created by: Nikola Lecic <nikola.lecic@anthesphoria.net>
-
 PORTNAME=	libkmfl
 PORTVERSION=	0.9.9
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DIST_SUBDIR=	kmfl
 
 MAINTAINER=	nikola.lecic@anthesphoria.net
 COMMENT=	Engine to interpret compiled KMFL keyboard tables
+WWW=		http://kmfl.sourceforge.net/
 
 LIB_DEPENDS=	libkmflcomp.so:textproc/kmflcomp
 

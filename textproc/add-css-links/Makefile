@@ -1,5 +1,3 @@
-# Created by: Aaron Straup Cope
-
 PORTNAME=	add-css-links
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://aaronland.info/xsl/xhtml/add-css-links/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Add one or more CSS <link> elements to an XHTML document
+WWW=		https://aaronland.info/xsl/xhtml/add-css-links
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/xhtml

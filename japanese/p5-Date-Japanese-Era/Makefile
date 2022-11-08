@@ -1,5 +1,3 @@
-# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-
 PORTNAME=	Date-Japanese-Era
 PORTVERSION=	0.08
 CATEGORIES=	japanese perl5
@@ -7,6 +5,7 @@ MASTER_SITES=	CPAN
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Conversion between Japanese Era / Gregorian calendar
+WWW=		https://metacpan.org/release/Date-Japanese-Era
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

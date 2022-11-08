@@ -1,22 +1,23 @@
 PORTNAME=	spectral
 PORTVERSION=	817
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	net-im
 
 MAINTAINER=	adridg@FreeBSD.org
 COMMENT=	Glossy Matrix IM client based on Qt technologies
+WWW=		https://gitlab.com/spectral-im/spectral
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libqt5keychain.so:security/qtkeychain \
+LIB_DEPENDS=	libqt5keychain.so:security/qtkeychain@qt5 \
 		libcmark.so:textproc/cmark
 
 USES=		cmake compiler:c++17-lang gl pkgconfig qt:5 tar:bz2
 USE_GL=		gl
 USE_QT=		core dbus declarative graphicaleffects gui imageformats \
 		multimedia network quickcontrols quickcontrols2 svg widgets \
-		buildtools_build linguist_build qmake_build testlib_build
+		buildtools:build linguist:build qmake:build testlib:build
 
 CMAKE_ON=	USE_INTREE_LIBQMC
 

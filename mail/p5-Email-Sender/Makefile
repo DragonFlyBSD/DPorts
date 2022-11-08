@@ -1,5 +1,3 @@
-# Created by: Bill Brinzer <bill.brinzer@gmail.com>
-
 PORTNAME=	Email-Sender
 PORTVERSION=	1.300031
 PORTREVISION=	2
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bill.brinzer@gmail.com
 COMMENT=	Library for sending email
+WWW=		https://metacpan.org/release/Email-Sender
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Sergei Kolobov <sergei@kolobov.com>
-
 PORTNAME=	execline
 PORTVERSION=	2.9.0.0
 CATEGORIES=	lang shells
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.skarnet.org/software/${PORTNAME}/
 
 MAINTAINER=	crest@rlwinm.de
 COMMENT=	Lightweight non-interactive sh(1)-like scripting language
+WWW=		https://www.skarnet.org/software/execline/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Bill Fenner <fenner@FreeBSD.org>
-
 PORTNAME=	shntool
 DISTVERSION=	3.0.10
 PORTREVISION=	3
@@ -11,6 +9,7 @@ PATCHFILES=	cfd06e4ed.patch:-p1
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Multi-purpose WAVE data processing and reporting utility
+WWW=		http://www.etree.org/shnutils/shntool/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

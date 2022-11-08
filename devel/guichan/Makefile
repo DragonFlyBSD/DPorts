@@ -1,5 +1,3 @@
-# Created by: Tobias Gion <freebsd@gionet.de>
-
 PORTNAME=	guichan
 PORTVERSION=	0.8.2
 PORTREVISION=	15
@@ -8,6 +6,7 @@ MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/guichan/${DISTFILES}/af535
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small, efficient C++ GUI library designed for games
+WWW=		http://guichan.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING

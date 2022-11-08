@@ -1,5 +1,3 @@
-# Created by: Babak Farrokhi <babak@farrokhi.net>
-
 PORTNAME=	gtk-gray-theme
 PORTVERSION=	1.7
 PORTREVISION=	7
@@ -9,6 +7,7 @@ DISTNAME=	34132-Gray
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Gray theme for GTK+ 2.0
+WWW=		http://www.gnome-look.org/content/show.php?content=34132
 
 RUN_DEPENDS=	icons-tango>0:x11-themes/icons-tango
 

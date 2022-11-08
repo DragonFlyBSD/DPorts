@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	hashids
 PORTVERSION=	1.3.1
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Implement the hashids algorithm in python
+WWW=		https://github.com/davidaurelio/hashids-python
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

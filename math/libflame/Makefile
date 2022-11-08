@@ -1,11 +1,10 @@
-# Created by: bf@FreeBSD.org
-
 PORTNAME=	libflame
 DISTVERSION=	5.2.0
 CATEGORIES=	math
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	FLAME dense linear algebra library
+WWW=		https://github.com/flame/libflame
 
 LICENSE=	BSD3CLAUSE
 

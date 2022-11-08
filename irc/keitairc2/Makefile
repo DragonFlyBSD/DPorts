@@ -1,5 +1,3 @@
-# Created by: Makoto Matsushita <matusita@FreeBSD.org>
-
 PORTNAME=	keitairc
 PORTVERSION=	2.0
 CATEGORIES=	irc
@@ -7,6 +5,7 @@ MASTER_SITES=	OSDN/${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	IRC proxy for mobilephone that have a web interface
+WWW=		https://sourceforge.jp/projects/keitairc/
 
 RUN_DEPENDS=	p5-POE-Component-IRC>=0:irc/p5-POE-Component-IRC \
 		p5-URI>=0:net/p5-URI \

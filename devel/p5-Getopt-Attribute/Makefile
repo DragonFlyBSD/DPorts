@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Getopt-Attribute
 PORTVERSION=	2.101700
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Attribute wrapper for Getopt::Long
+WWW=		https://metacpan.org/release/Getopt-Attribute
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

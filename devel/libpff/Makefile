@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	libpff
 # If/When moving from experimental to alpha, switch to DISTVERSIONPREFIX to prevent PORTEPOCH
 DISTVERSION=	experimental-20180714
@@ -10,6 +8,7 @@ MASTER_SITES=	https://github.com/libyal/libpff/releases/download/${PORTVERSION:E
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library and tools to access the PFF and the OFF formats
+WWW=		https://github.com/libyal/libpff
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING

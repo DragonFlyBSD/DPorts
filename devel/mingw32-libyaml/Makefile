@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	libyaml
 PORTVERSION=	0.1.6
 PORTREVISION=	2
@@ -11,6 +9,7 @@ DIST_SUBDIR=	repacked
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The libyaml library cross-compiled for MinGW32
+WWW=		https://pyyaml.org/wiki/LibYAML
 
 BUILD_DEPENDS=	${PKGNAMEPREFIX}gcc:devel/${PKGNAMEPREFIX}gcc \
 		${LOCALBASE}/mingw32/include/stdlib.h:devel/${PKGNAMEPREFIX}bin-msvcrt

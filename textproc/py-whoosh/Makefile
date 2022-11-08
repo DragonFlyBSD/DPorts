@@ -1,5 +1,3 @@
-# Created by: gugabsd <gugabsd@mundounix.com.br>
-
 PORTNAME=	whoosh
 PORTVERSION=	2.7.4
 CATEGORIES=	textproc www python
@@ -9,6 +7,7 @@ DISTNAME=	Whoosh-${PORTVERSION}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Featureful full-text indexing and searching in Python
+WWW=		http://bitbucket.org/mchaput/whoosh
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

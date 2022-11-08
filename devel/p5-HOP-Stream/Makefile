@@ -1,5 +1,3 @@
-# Created by: Steve Wills <steve@mouf.net>
-
 PORTNAME=	HOP-Stream
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Higher Order Perl Streams
+WWW=		https://metacpan.org/release/HOP-Stream
 
 USES=		perl5
 USE_PERL5=	modbuild

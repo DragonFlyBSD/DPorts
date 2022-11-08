@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	DR-Tarantool
 PORTVERSION=	0.44
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Perl driver for Tarantool
+WWW=		https://metacpan.org/release/DR-Tarantool
 
 LICENSE=	ART10
 

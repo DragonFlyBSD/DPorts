@@ -1,5 +1,3 @@
-# Created by: Koop Mast <einekoai@chello.nl>
-
 PORTNAME=	tsclient
 PORTVERSION=	0.150
 PORTREVISION=	11
@@ -8,9 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@thepentagon.org
 COMMENT=	GNOME 2 frontend for rdesktop and vncviewer
-
-BROKEN_FreeBSD_13=	ld: error: duplicate symbol: gConnect
-BROKEN_FreeBSD_14=	ld: error: duplicate symbol: gConnect
+WWW=		https://sourceforge.net/projects/tsclient/
 
 RUN_DEPENDS=	rdesktop:net/rdesktop
 
@@ -34,7 +30,7 @@ RUN_DEPENDS+=	vncviewer:net/tightvnc
 .endif
 
 .if ${PORT_OPTIONS:MXNEST}
-RUN_DEPENDS+=	Xnest:x11-servers/xorg-nestserver
+RUN_DEPENDS+=	Xnest:x11-servers/xorg-server@xnest
 .endif
 
 .include <bsd.port.pre.mk>

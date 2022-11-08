@@ -1,10 +1,12 @@
 PORTNAME=	libepubgen
 PORTVERSION=	0.1.1
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for generating documents in ePub format
+WWW=		http://libepubgen.sourceforge.net/
 
 LICENSE=	MPL20
 

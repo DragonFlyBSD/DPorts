@@ -1,5 +1,3 @@
-# Created by: David Barksdale <amatus@gnu.org>
-
 PORTNAME=	libmicrohttpd
 DISTVERSION=	0.9.75
 CATEGORIES=	www
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	gaod@hychen.org
 COMMENT=	C library for embedding HTTP server functionality
+WWW=		https://www.gnu.org/software/libmicrohttpd/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING

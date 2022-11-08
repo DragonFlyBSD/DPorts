@@ -1,5 +1,3 @@
-# Created by: Dmitry Semkin <lslarry@gmail.com>
-
 PORTNAME=	srg
 PORTVERSION=	1.3.6
 CATEGORIES=	www
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Squid Report Generator
+WWW=		http://www.crc.net.nz/software/srg.php
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

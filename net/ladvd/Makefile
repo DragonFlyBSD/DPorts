@@ -1,5 +1,3 @@
-# Created by: sten@blinkenlights.nl
-
 PORTNAME=	ladvd
 PORTVERSION=	1.1.2
 DISTVERSIONPREFIX=v
@@ -8,6 +6,7 @@ CATEGORIES=	net
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Minimal LLDP/CDP/EDP/FDP/NDP sender daemon
+WWW=		https://github.com/sspans/ladvd
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE

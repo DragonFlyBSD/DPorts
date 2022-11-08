@@ -1,11 +1,13 @@
 PORTNAME=	PySCIPOpt
 DISTVERSION=	4.2.0
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python interface and modeling environment for SCIP
+WWW=		https://github.com/SCIP-Interfaces/PySCIPOpt
 
 LICENSE=	MIT
 

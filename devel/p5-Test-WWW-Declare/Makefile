@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	Test-WWW-Declare
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Declarative testing for your web app
+WWW=		https://metacpan.org/release/Test-WWW-Declare
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Greg Lewis <glewis@FreeBSD.org>
-
 PORTNAME=	udunits
 PORTVERSION=	2.2.28
 CATEGORIES=	science math
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.unidata.ucar.edu/pub/udunits/ \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for manipulating units of physical quantities
+WWW=		https://www.unidata.ucar.edu/software/udunits/
 
 LICENSE=	UCAR_UNIDATA
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT

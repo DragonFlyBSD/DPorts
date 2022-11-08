@@ -1,5 +1,3 @@
-# Created by: Rainer Hurling <rhurlin@gwdg.de>
-
 PORTNAME=	pyls-black
 PORTVERSION=	0.4.7
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Black plugin for the Python Language Server
+WWW=		https://github.com/rupert/pyls-black
 
 LICENSE=	MIT
 

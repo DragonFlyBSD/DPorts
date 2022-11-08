@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pypdf3
 PORTVERSION=	1.0.6
 CATEGORIES=	print python
@@ -9,6 +7,7 @@ DISTNAME=	PyPDF3-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pure Python PDF toolkit
+WWW=		https://github.com/sfneal/PyPDF3
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

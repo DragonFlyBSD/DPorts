@@ -1,5 +1,3 @@
-# Created by: James E Keenan <jkeenan@cpan.org>
-
 PORTNAME=	CPAN-Testers-Common-Client
 PORTVERSION=	0.14
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	jkeenan@cpan.org
 COMMENT=	Common class for CPAN::Testers clients
+WWW=		https://metacpan.org/release/CPAN-Testers-Common-Client
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: John Marino <marino@FreeBSD.org>
-
 PORTNAME=	sphinxcontrib-adadomain
 PORTVERSION=	0.2
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Sphinx Adadomain Extension
+WWW=		https://bitbucket.org/tkoskine/sphinxcontrib-adadomain
 
 LICENSE=	BSD2CLAUSE
 

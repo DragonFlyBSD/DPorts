@@ -2,10 +2,12 @@ PORTNAME=	openems
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.0.35-76
 DISTVERSIONSUFFIX=	-gd4448fa
+PORTREVISION=	2
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Electromagnetic field solver using the EC-FDTD method
+WWW=		https://openems.de/start/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -31,7 +33,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	thliebig
 GH_PROJECT=	openEMS
 
-CMAKE_ARGS=	-DVTK_DIR=${LOCALBASE}/lib/cmake/vtk-9.1
+CMAKE_ARGS=	-DVTK_DIR=${LOCALBASE}/lib/cmake/vtk-9.1 \
+		-DLOCALBASE=${LOCALBASE}
 
 CXXFLAGS+=	-I${LOCALBASE}/include/fparser # fparser.pc probably returns a wrong value
 

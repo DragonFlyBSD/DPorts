@@ -1,5 +1,3 @@
-# Created by: Antoine Brodin <antoine@FreeBSD.org>
-
 PORTNAME=	libsigscan
 # If/When moving from experimental to alpha, switch to DISTVERSIONPREFIX to prevent PORTEPOCH
 DISTVERSION=	experimental-20210419
@@ -9,6 +7,7 @@ MASTER_SITES=	https://github.com/libyal/libsigscan/releases/download/${PORTVERSI
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Library for binary signature scanning
+WWW=		https://github.com/libyal/libsigscan
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING

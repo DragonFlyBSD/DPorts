@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	Net-OpenID-Common
 PORTVERSION=	1.20
 CATEGORIES=	security net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Libraries shared between Net::OpenID::Consumer and Net::OpenID::Server
+WWW=		https://metacpan.org/release/Net-OpenID-Common
 
 LICENSE=	ARTPERL10
 

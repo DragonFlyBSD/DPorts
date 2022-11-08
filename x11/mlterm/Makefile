@@ -1,11 +1,10 @@
-# Created by: MANTANI Nobutaka <nobutaka@nobutaka.com>
-
 PORTNAME=	mlterm
 PORTVERSION=	3.9.2
 CATEGORIES=	x11
 
 MAINTAINER=	nobutaka@FreeBSD.org
 COMMENT=	Multilingual X11 terminal emulator
+WWW=		http://mlterm.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 

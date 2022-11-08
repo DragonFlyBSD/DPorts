@@ -1,5 +1,3 @@
-# Created by: Sir l33tname <sirl33tname@gmail.com>
-
 PORTNAME=	libevent
 PORTVERSION=	0.4.6
 DISTVERSIONPREFIX=v
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	sirl33tname@gmail.com
 COMMENT=	Lua libevent binding
+WWW=		https://github.com/harningt/luaevent
 
 LICENSE=	MIT
 

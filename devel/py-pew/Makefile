@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pew
 PORTVERSION=	1.2.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ MASTER_SITES=	CHEESESHOP
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tool to manage multiple virtualenvs
+WWW=		https://pypi.org/project/pew/
 
 LICENSE=	MIT
 

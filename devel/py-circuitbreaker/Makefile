@@ -1,11 +1,12 @@
 PORTNAME=	circuitbreaker
-DISTVERSION=	1.3.2
+DISTVERSION=	1.4.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ale_sagra@hotmail.com
 COMMENT=	Python Circuit Breaker pattern implementation
+WWW=		https://github.com/fabfuel/circuitbreaker
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst

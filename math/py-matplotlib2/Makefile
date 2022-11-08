@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	matplotlib
 DISTVERSION=	2.2.4
 PORTREVISION=	3
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	mainland@apeiron.net
 COMMENT=	Plotting library uses a syntax familiar to MATLAB users (legacy)
+WWW=		https://matplotlib.org/
 
 LICENSE=	PSFL
 

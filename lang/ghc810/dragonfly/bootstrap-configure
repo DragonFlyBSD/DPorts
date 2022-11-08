@@ -1,0 +1,23 @@
+#!/bin/sh
+# BOOTDIR, and LBASE provided by ports makefile
+
+filelist="bin/ghc-%GVER% bin/ghc-pkg-%GVER% bin/ghci-%GVER% bin/hsc2hs bin/runghc-%GVER% bin/hpc"
+pkgcdb=lib/%PKGNAME%/package.conf.d
+
+for f in ${filelist}; do
+rm -f ${f}.tmp
+cat ${f} | sed -e "s|%WRKDIR%|${BOOTDIR}|g" -e "s|%LBASE%|${LBASE}|g" > ${f}.tmp
+mv ${f}.tmp ${f}
+chmod +x ${f}
+done
+
+pclist=$(cd ${pkgcdb} && grep -l '%WRKDIR%' *)
+for f in ${pclist}; do
+rm -f ${pkgcdb}/${f}.tmp
+cat ${pkgcdb}/${f} | sed -e "s|%WRKDIR%|${BOOTDIR}|g" > ${f}.tmp
+mv ${f}.tmp ${pkgcdb}/${f}
+chmod +x ${pkgcdb}/${f}
+done
+
+bin/ghc-pkg check
+bin/ghc-pkg recache

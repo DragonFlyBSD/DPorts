@@ -1,5 +1,3 @@
-# Created by: Leland Wang <llwang@infor.org>
-
 PORTNAME=	dvorak7min
 PORTVERSION=	1.6.1
 DISTVERSIONSUFFIX=%2Brepack
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}${DISTVERSIONSUFFIX}.orig
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Ncurses-based Dvorak typing tutor
+WWW=		https://packages.qa.debian.org/d/dvorak7min.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

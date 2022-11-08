@@ -1,14 +1,12 @@
-# Created by: Martin Wilke (miwi@FreeBSD.org)
-
 PORTNAME=	xfce4-datetime-plugin
-PORTVERSION=	0.8.1
-PORTREVISION=	1
+PORTVERSION=	0.8.2
 CATEGORIES=	x11-clocks xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Datetime panel plugin for the Xfce desktop
+WWW=		https://goodies.xfce.org/projects/panel-plugins/xfce4-datetime-plugin
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-
 PORTNAME=	cvc3
 PORTVERSION=	2.4.1
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.cs.nyu.edu/acsys/cvc3/download/${PORTVERSION}/
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Automatic theorem prover for the SMT problem
+WWW=		https://www.cs.nyu.edu/acsys/cvc3/
 
 LIB_DEPENDS=	libgmp.so:math/gmp
 

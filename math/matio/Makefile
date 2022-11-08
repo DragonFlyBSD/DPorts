@@ -1,12 +1,12 @@
-# Created by: rfarmer@predatorlabs.net
-
 PORTNAME=	matio
 PORTVERSION=	1.5.23
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	SF
 
 MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Library for reading and writing Matlab MAT files
+WWW=		https://sourceforge.net/projects/matio/
 
 LICENSE=	BSD2CLAUSE
 

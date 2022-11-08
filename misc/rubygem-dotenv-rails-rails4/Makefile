@@ -1,13 +1,12 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	dotenv-rails
-PORTVERSION=	2.7.6
+PORTVERSION=	2.8.1
 CATEGORIES=	misc rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	-rails4
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Autoload dotenv in Rails
+WWW=		https://github.com/bkeepers/dotenv
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

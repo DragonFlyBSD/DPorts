@@ -1,5 +1,3 @@
-# Created by: Jeff Burchell <toxic@doobie.com>
-
 PORTNAME=	libpar2
 PORTVERSION=	0.4
 PORTREVISION=	6
@@ -10,6 +8,7 @@ LICENSE=	GPLv2
 
 MAINTAINER=	toxic@doobie.com
 COMMENT=	Library for manipulating PAR2 files, extracted from par2cmdline
+WWW=		http://parchive.sourceforge.net/
 
 LIB_DEPENDS=	libsigc-2.0.so:devel/libsigc++20
 

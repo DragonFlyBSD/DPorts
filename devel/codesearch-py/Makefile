@@ -1,5 +1,3 @@
-# Created by: Carlos J. Puga Medina <cpm@FreeBSD.org>
-
 PORTNAME=	codesearch-py
 DISTVERSION=	g20190528
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	chromium@FreeBSD.org
 COMMENT=	Python library for accessing Chromium CodeSearch
+WWW=		https://github.com/chromium/codesearch-py
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

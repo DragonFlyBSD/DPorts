@@ -1,5 +1,3 @@
-# Created by: Zeus Panchenko <zeus@gnu.org.ua>
-
 PORTNAME=	Config-Parser
 PORTVERSION=	1.05
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Base class for configuration file parsers
+WWW=		https://metacpan.org/release/Config-Parser
 
 LICENSE=	GPLv3+
 

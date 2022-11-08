@@ -1,5 +1,3 @@
-# Created by: John Merryweather Cooper et al
-
 PORTNAME=	fpc
 PORTVERSION=	3.2.2
 PORTREVISION?=	3
@@ -20,6 +18,7 @@ DIST_SUBDIR=	freepascal
 
 MAINTAINER?=	acm@FreeBSD.org
 COMMENT?=	Free Pascal compiler with Turbo and Delphi compatibility
+WWW=		https://www.freepascal.org/
 
 RUN_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils@native
 

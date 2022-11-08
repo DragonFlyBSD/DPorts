@@ -1,10 +1,11 @@
 PORTNAME=	rex-socket
-PORTVERSION=	0.1.33
+PORTVERSION=	0.1.41
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	antoine@FreeBSD.org
 COMMENT=	Ruby Exploitation(Rex) socket abstraction library
+WWW=		https://github.com/rapid7/rex-socket
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

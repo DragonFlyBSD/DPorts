@@ -1,5 +1,3 @@
-# Created by: Matthew Hunt <mph@pobox.com>
-
 PORTNAME=	angband
 DISTVERSION=	4.2.2
 DISTNAME=	Angband-${DISTVERSION}
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/${DIS
 
 MAINTAINER=	adridg@FreeBSD.org
 COMMENT=	Rogue-like game with color, X11 support
+WWW=		https://rephial.org/
 
 LICENSE=	GPLv2
 

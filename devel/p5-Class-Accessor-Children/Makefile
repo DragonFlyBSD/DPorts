@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	Class-Accessor-Children
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Automated child-class/accessor generation
+WWW=		https://metacpan.org/release/Class-Accessor-Children
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

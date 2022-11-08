@@ -1,5 +1,3 @@
-# Created by: chinsan
-
 PORTNAME=	Pod-Coverage-Moose
 PORTVERSION=	0.07
 CATEGORIES=	devel textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Pod::Coverage extension for Moose
+WWW=		https://metacpan.org/release/Pod-Coverage-Moose
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,11 +1,10 @@
-# Created by: Alexander Vereeken <Alexander88207@protonmail.com>
-
 PORTNAME=	canta-gtk-themes
 DISTVERSION=	2021-09-08
 CATEGORIES=	x11-themes
 
 MAINTAINER=	Alexander88207@protonmail.com
 COMMENT=	Flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell
+WWW=		https://github.com/vinceliuice/Canta-theme
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

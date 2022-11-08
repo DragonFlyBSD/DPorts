@@ -1,5 +1,3 @@
-# Created by: Joseph Koshy <jkoshy@FreeBSD.org>
-
 PORTNAME=	ocamlgraph
 PORTVERSION=	1.8.8
 CATEGORIES=	math
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graph manipulation library for OCaml
+WWW=		https://ocamlgraph.lri.fr/
 
 USES=		gmake
 USE_OCAML=	yes

@@ -1,5 +1,3 @@
-# Created by: Darren Pilgrim <ports.maintainer@evilphi.com>
-
 PORTNAME=	postfix-policyd-spf-perl
 PORTVERSION=	2.010
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://launchpadlibrarian.net/107864701/
 
 MAINTAINER=	ports.maintainer@evilphi.com
 COMMENT=	SPF policy service for Postfix written in Perl
+WWW=		https://launchpad.net/postfix-policyd-spf-perl/
 
 LICENSE=	GPLv2
 

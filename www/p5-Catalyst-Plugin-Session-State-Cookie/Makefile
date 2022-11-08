@@ -1,5 +1,3 @@
-# Created by: Lars Balker Rasmussen <lbr@FreeBSD.org>
-
 PORTNAME=	Catalyst-Plugin-Session-State-Cookie
 PORTVERSION=	0.18
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Stores a Catalyst Session in a Cookie
+WWW=		https://metacpan.org/release/Catalyst-Plugin-Session-State-Cookie
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Matteo Cypriani <mcy@lm7.fr>
-
 PORTNAME=	renameutils
 PORTVERSION=	0.12.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	mcy@lm7.fr
 COMMENT=	Rename files faster and more easily
+WWW=		https://www.nongnu.org/renameutils/
 
 LICENSE=	GPLv3
 

@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	lxqt-session
 PORTVERSION=	1.1.0
 CATEGORIES=	x11-wm
@@ -7,6 +5,7 @@ MASTER_SITES=	LXQT
 
 MAINTAINER=	jsm@FreeBSD.org
 COMMENT=	Session manager component for LXQt
+WWW=		https://github.com/lxqt/lxqt-session/
 
 LICENSE=	LGPL21+
 
@@ -14,7 +13,7 @@ BUILD_DEPENDS=	xdg-user-dirs-update:devel/xdg-user-dirs
 
 USES=	cmake compiler:c++14-lang kde:5 lxqt qt:5 \
 	pkgconfig tar:xz xorg gnome
-USE_QT=	buildtools_build qmake_build core dbus gui linguisttools \
+USE_QT=	buildtools:build qmake:build core dbus gui linguisttools \
 	svg widgets x11extras xml
 USE_KDE=	windowsystem
 USE_LXQT=	buildtools lxqt qtxdg

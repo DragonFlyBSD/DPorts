@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	fig2sxd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.22.1-3
@@ -8,6 +6,7 @@ CATEGORIES=	graphics converters
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Convert .xfig files to the OpenOffice draw format
+WWW=		https://gitlab.com/acfbuerger/fig2sxd
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

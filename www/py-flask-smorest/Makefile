@@ -1,11 +1,12 @@
 PORTNAME=	flask-smorest
-PORTVERSION=	0.38.1
+DISTVERSION=	0.39.0
 CATEGORIES=	www devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	meka@tilda.center
 COMMENT=	Flask/Marshmallow-based REST API framework
+WWW=		https://github.com/marshmallow-code/flask-smorest
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,12 +17,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}apispec>=3.0.0:devel/py-apispec@${PY_FLAVOR}
 		${PYTHON_PKGNAMEPREFIX}webargs>=6.0.0:www/py-webargs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}werkzeug>=0.15:www/py-werkzeug@${PY_FLAVOR}
 
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=4.0.0:devel/py-pytest@${PY_FLAVOR}
-
 USES=		python:3.6+
 USE_PYTHON=	autoplist concurrent distutils pytest
-
-TEST_ENV=	PYTHONPATH=${WRKSRC}/src
 
 NO_ARCH=	yes
 

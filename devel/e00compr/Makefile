@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	e00compr
 PORTVERSION=	1.0.1
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ MASTER_SITES=	http://avce00.maptools.org/dl/
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Library to Read/Write Compressed E00 Files
+WWW=		http://avce00.maptools.org/e00compr/
 
 OPTIONS_DEFINE=	DOCS
 

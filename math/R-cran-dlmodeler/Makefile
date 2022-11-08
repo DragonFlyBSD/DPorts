@@ -1,5 +1,3 @@
-# Created by: Cyrille Szymanski <cnszym@gmail.com>
-
 PORTNAME=	dlmodeler
 DISTVERSION=	1.4-2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	cnszym@gmail.com
 COMMENT=	Generalized Dynamic Linear Modeler
+WWW=		https://www.rdocumentation.org/packages/dlmodeler/
 
 LICENSE=	GPLv2 GPLv3 BSD2CLAUSE
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Pavel Novikov
-
 PORTNAME=	jtop
 PORTVERSION=	1.0
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://ext.by/jtop/
 
 MAINTAINER=	pavel@ext.by
 COMMENT=	Wrapper to top(1) that maps pids to jails
+WWW=		http://ext.by/jtop/
 
 BUILD_DEPENDS=	p5-Term-ReadKey>=0:devel/p5-Term-ReadKey
 RUN_DEPENDS:=	${BUILD_DEPENDS}

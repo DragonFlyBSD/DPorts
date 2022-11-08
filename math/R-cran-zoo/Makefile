@@ -1,12 +1,11 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	zoo
-DISTVERSION=	1.8-10
+DISTVERSION=	1.8-11
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	S3 Infrastructure for Regular and Irregular Time Series
+WWW=		https://cran.r-project.org/web/packages/zoo/
 
 LICENSE=	GPLv2+
 

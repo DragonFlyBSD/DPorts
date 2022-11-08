@@ -1,5 +1,3 @@
-# Created by: James E Keenan <jkeenan@cpan.org>
-
 PORTNAME=	B-Debug
 PORTVERSION=	1.26
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	jkeenan@cpan.org
 COMMENT=	Walk Perl syntax tree, printing debug info about ops
+WWW=		https://metacpan.org/release/B-Debug
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

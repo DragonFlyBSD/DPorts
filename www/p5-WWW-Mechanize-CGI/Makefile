@@ -1,5 +1,3 @@
-# Created by: Lars Thegler <lth@FreeBSD.org>
-
 PORTNAME=	WWW-Mechanize-CGI
 PORTVERSION=	0.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Use WWW::Mechanize with CGI applications
+WWW=		https://metacpan.org/release/WWW-Mechanize-CGI
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-HTTP-Request-AsCGI>=0.2:www/p5-HTTP-Request-AsCGI \

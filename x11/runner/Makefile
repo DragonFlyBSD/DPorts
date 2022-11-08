@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	runner
 PORTVERSION=	1.1
 CATEGORIES=	x11
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.boomerangsworld.de/cms/tools/downloads/
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Fast program launch menu for X Window System
+WWW=		http://www.boomerangsworld.de/cms/tools/runner.html
 
 LICENSE=	GPLv2+
 

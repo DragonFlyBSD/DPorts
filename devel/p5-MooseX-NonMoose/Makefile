@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	MooseX-NonMoose
 PORTVERSION=	0.26
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Easy subclassing of non-Moose classes
+WWW=		https://metacpan.org/release/MooseX-NonMoose
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

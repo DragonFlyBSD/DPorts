@@ -1,5 +1,3 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-
 PORTNAME=	yaz++
 PORTVERSION=	1.6.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	yazpp-${PORTVERSION}
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	C++ toolkit for development of Z39.50v3 clients and servers
+WWW=		https://www.indexdata.dk/yazplusplus/
 
 LIB_DEPENDS=	libyaz.so:net/yaz
 

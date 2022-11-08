@@ -6,6 +6,7 @@ PKGNAMESUFFIX=	-qt5
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Library to manage JSON objects with Qt
+WWW=		http://qjson.sourceforge.net/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.lib
@@ -14,7 +15,7 @@ USES=		cmake compiler:c++11-lang pathfix qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	flavio
 USE_LDCONFIG=	yes
-USE_QT=		core buildtools_build qmake_build
+USE_QT=		core buildtools:build qmake:build
 CMAKE_OFF=	QT4_BUILD
 QT_SUFFIX=	-qt5
 

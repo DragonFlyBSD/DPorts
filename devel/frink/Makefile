@@ -1,5 +1,3 @@
-# Created by: Mikhail Teterin
-
 PORTNAME=	frink
 PORTVERSION=	2.2.2p4
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	https://BSDforge.COM/projects/source/devel/frink/
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	Tcl formatter and static tester
+WWW=		https://catless.ncl.ac.uk/Programs/Frink/
 
 LICENSE=	COPYRIGHT
 LICENSE_NAME=	The University of Newcastle upon Tyne

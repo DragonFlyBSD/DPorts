@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	message_bus
 PORTVERSION=	4.2.0
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Message bus for rack
+WWW=		https://github.com/discourse/message_bus
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

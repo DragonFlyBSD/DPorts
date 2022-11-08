@@ -1,5 +1,3 @@
-# Created by: Ying-Chieh Liao <ijliao@csie.nctu.edu.tw>
-
 PORTNAME=	xdialog
 PORTVERSION=	2.3.1
 PORTREVISION=	8
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME:S/x/X/}-${PORTVERSION}
 
 MAINTAINER=	ler@FreeBSD.org
 COMMENT=	Drop in replacement for the "dialog" or "cdialog" programs
+WWW=		http://xdialog.free.fr/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

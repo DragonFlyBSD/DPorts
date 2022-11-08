@@ -1,5 +1,3 @@
-# Created by: Hye-Shik Chang <perky@fallin.lv>
-
 PORTNAME=	wordnet
 PORTVERSION=	2.0.1
 PORTREVISION=	1
@@ -13,6 +11,7 @@ DISTFILES=	pywordnet-${PORTVERSION}.tar.gz:pywn \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Python Interface to WordNet
+WWW=		http://osteele.com/projects/pywordnet/
 
 USES=		dos2unix python:3.6+
 USE_PYTHON=	distutils autoplist

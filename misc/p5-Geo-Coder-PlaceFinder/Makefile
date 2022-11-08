@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Geo-Coder-PlaceFinder
 PORTVERSION=	0.05
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Geocode addresses with Yahoo PlaceFinder
+WWW=		https://metacpan.org/release/FRIFFIN/Geo-Coder-PlaceFinder-0.1
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

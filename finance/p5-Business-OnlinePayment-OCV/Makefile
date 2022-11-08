@@ -1,5 +1,3 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	Business-OnlinePayment-OCV
 PORTVERSION=	0.01
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Business::OnlinePayment backend module for OCV
+WWW=		https://metacpan.org/release/Business-OnlinePayment-OCV
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

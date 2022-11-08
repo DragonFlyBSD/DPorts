@@ -1,5 +1,3 @@
-# Created by: Mykola Dzham <i@levsha.me>
-
 PORTNAME=	pdsh
 PORTVERSION=	2.34
 DISTVERSIONPREFIX=	${PORTNAME}-
@@ -8,6 +6,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	i@levsha.me
 COMMENT=	Parallel Distributed Shell
+WWW=		https://github.com/chaos/pdsh
 
 LICENSE=	GPLv2
 

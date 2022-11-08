@@ -1,5 +1,3 @@
-# Created by: cjr@cruwe.de
-
 PORTNAME=	glassfish
 PORTVERSION=	5.1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	eclipse-
 
 MAINTAINER=	jmd@FreeBSD.org
 COMMENT=	Eclipse Jakarta EE Platform
+WWW=		https://projects.eclipse.org/projects/ee4j.glassfish
 
 LICENSE=	EPL
 

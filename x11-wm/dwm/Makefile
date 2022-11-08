@@ -1,5 +1,3 @@
-# Created by: Jeroen Schot <schot@a-eskwadraat.nl>
-
 PORTNAME=	dwm
 DISTVERSION=	6.3
 CATEGORIES=	x11-wm
@@ -7,6 +5,7 @@ MASTER_SITES=	http://dl.suckless.org/${PORTNAME}/
 
 MAINTAINER=	0mp@FreeBSD.org
 COMMENT=	Dynamic, small, fast and simple window manager
+WWW=		https://dwm.suckless.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

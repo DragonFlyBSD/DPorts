@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	Router-R3
 PORTVERSION=	0.011001
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	gasol.wu@gmail.com
 COMMENT=	XS wrapper around a C library R3
+WWW=		https://metacpan.org/release/Router-R3
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

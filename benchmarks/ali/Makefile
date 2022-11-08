@@ -1,11 +1,12 @@
 PORTNAME=	ali
 PORTVERSION=	0.7.5
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	benchmarks
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Load testing tool aimed to perform real-time analysis
+WWW=		https://github.com/nakabonne/ali
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

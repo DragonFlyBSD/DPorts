@@ -1,5 +1,3 @@
-# Created by: Hung-Yi Chen <gaod@hychen.org>
-
 PORTNAME=	mod_memcache_block
 PORTVERSION=	1.0
 PORTEPOCH=	1
@@ -8,6 +6,7 @@ DIST_SUBDIR=	apache2
 
 MAINTAINER=	gaod@hychen.org
 COMMENT=	Apache 2.2 module to block IPs from lists stored in memcache
+WWW=		https://github.com/netik/mod_memcache_block
 
 LIB_DEPENDS+=	libmemcached.so:databases/libmemcached
 

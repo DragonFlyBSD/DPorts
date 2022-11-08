@@ -1,5 +1,3 @@
-# Created by: Philippe Rocques <phil@teaser.fr>
-
 PORTNAME=	gtkpasman
 PORTVERSION=	0.12.1
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK+ passwords manager for system and network administrators
+WWW=		http://gtkpasman.sourceforge.net/
 
 RUN_DEPENDS+=	gpgv2:security/gnupg
 

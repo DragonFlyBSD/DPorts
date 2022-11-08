@@ -1,11 +1,10 @@
-# Created by: Thierry Thomas <thierry@pompo.net>
-
 PORTNAME=	File_Find
 PORTVERSION=	1.3.3
 CATEGORIES=	sysutils www pear
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PEAR class that facilitates the search of filesystems
+WWW=		https://pear.php.net/package/File_Find
 
 LICENSE=	PHP301
 

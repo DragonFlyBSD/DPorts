@@ -1,13 +1,12 @@
-# Created by: Anton Berezin <tobez@tobez.org>
-
 PORTNAME=	DBIx-SearchBuilder
-PORTVERSION=	1.68
+PORTVERSION=	1.71
 CATEGORIES=	databases perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	michelle@sorbs.net
 COMMENT=	Perl extension for easy SQL SELECT Statement generation
+WWW=		https://metacpan.org/release/DBIx-SearchBuilder
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

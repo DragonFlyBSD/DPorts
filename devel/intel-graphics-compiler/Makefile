@@ -1,27 +1,26 @@
 PORTNAME=	intel-graphics-compiler
 DISTVERSIONPREFIX=	igc-
-DISTVERSION=	1.0.11485
+DISTVERSION=	1.0.12149.1
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-${FLAVOR}
 
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	12c99343388e.patch:-p1 # opencl-c.h
-
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Intel Graphics Compiler for OpenCL
+WWW=		https://01.org/compute-runtime
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 ONLY_FOR_ARCHS_REASON=	only Intel GPUs on x86 are supported
+BROKEN_FreeBSD_12_i386=	clang crashes during build
 
 BUILD_DEPENDS=	vc-intrinsics-${FLAVOR}>=0.4.0:devel/vc-intrinsics@${FLAVOR}
 LIB_DEPENDS=	libLLVM-${FLAVOR:S/llvm//}.so:devel/${FLAVOR} \
 		libopencl-clang.so.${FLAVOR:S/llvm//}:devel/opencl-clang@${FLAVOR} \
 		libLLVMSPIRVLib.so.${FLAVOR:S/llvm//}:devel/spirv-llvm-translator@${FLAVOR}
 
-FLAVORS=	${13 12 11:L:S/^/llvm/}
+FLAVORS=	${14 13 12 11:L:S/^/llvm/}
 
 CONFLICTS_INSTALL=	${PORTNAME}-llvm*
 

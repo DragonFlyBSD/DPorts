@@ -1,5 +1,3 @@
-# Created by: Anders Nordby <anders@fix.no>
-
 PORTNAME=	spread4
 PORTVERSION=	4.2.0
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ DISTNAME=	spread-src-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Spread Group Communication System, a network toolkit
+WWW=		http://www.spread.org/
 
 BROKEN_FreeBSD_13=	ld: error: duplicate symbol: yyin
 BROKEN_FreeBSD_14=	ld: error: duplicate symbol: yyin

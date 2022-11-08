@@ -1,5 +1,3 @@
-# Created by: Alex Pesternikov <ap@page2rss.com>
-
 PORTNAME=	ctemplate
 PORTVERSION=	0.5
 CATEGORIES=	www textproc
@@ -7,6 +5,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ap@page2rss.com
 COMMENT=	Template system for C
+WWW=		http://ctemplate.sourceforge.net/
 
 LICENSE=	NONE
 

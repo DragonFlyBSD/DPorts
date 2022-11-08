@@ -1,12 +1,13 @@
 PORTNAME=	python-poppler-qt5
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.75.0
-PORTREVISION=	24
+PORTREVISION=	25
 CATEGORIES=	graphics python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	m.ne@gmx.net
 COMMENT=	Python bindings for the Poppler-Qt PDF rendering library
+WWW=		https://pypi.org/project/python-poppler-qt5/
 
 LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual
@@ -18,7 +19,8 @@ USES=		compiler:c++11-lang gl pkgconfig pyqt:5 python:3.7-3.9 qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	frescobaldi
 USE_GL=		gl
-USE_PYQT=	pyqt5 sip_build
+USE_PYQT=	pyqt5 sip:build
+USE_PYTHON=	flavors
 USE_QT=		core gui xml
 
 PLIST_SUB=	_PY_SONAME=${_PY_SONAME}

@@ -1,5 +1,5 @@
 PORTNAME=	twofactor_webauthn
-PORTVERSION=	0.3.1
+PORTVERSION=	0.3.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/nextcloud-releases/${PORTNAME}/releases/download/${DISTVERSIONPREFIX}${PORTVERSION}/
@@ -9,6 +9,7 @@ DIST_SUBDIR=	nextcloud
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	U2F webauthn app for Nextcloud
+WWW=		https://apps.nextcloud.com/apps/twofactor_webauthn
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -16,6 +17,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 RUN_DEPENDS=	nextcloud${PHP_PKGNAMESUFFIX}>=21:www/nextcloud@${PHP_FLAVOR}
 
 USES=		php:flavors
+IGNORE_WITH_PHP=	82
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 

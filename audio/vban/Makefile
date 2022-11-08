@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	vban
 DISTVERSION=	g20201011
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-tools
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Command-line VBAN (audio over UDP protocol) tools
+WWW=		https://github.com/quiniouben/vban
 
 LICENSE=	GPLv3+
 

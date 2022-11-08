@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	DBIx-Admin-CreateTable
 PORTVERSION=	2.11
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Create and drop tables, primary indexes, and sequences
+WWW=		https://metacpan.org/release/DBIx-Admin-CreateTable
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

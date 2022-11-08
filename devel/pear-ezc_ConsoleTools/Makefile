@@ -1,5 +1,3 @@
-# Created by: Gasol Wu <gasol.wu@gmail.com>
-
 PORTNAME=	ConsoleTools
 PORTVERSION=	1.6.1
 CATEGORIES=	devel pear
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PEAR_PKGNAMEPREFIX}${PEAR_CHANNEL}_
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Set of classes to do different actions with the console
+WWW=		https://ezcomponents.org/
 
 LICENSE=	BSD3CLAUSE
 

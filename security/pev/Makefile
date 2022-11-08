@@ -1,5 +1,3 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	pev
 PORTVERSION=	0.80
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${PORTVERSION}/
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	PE analysis toolkit
+WWW=		https://sourceforge.net/projects/pev/
 
 LICENSE=	GPLv3
 

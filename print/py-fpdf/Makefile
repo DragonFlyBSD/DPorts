@@ -1,5 +1,3 @@
-# Created by: Fabiano Sidler <fabianosidler@swissonline.ch>
-
 PORTNAME=	fpdf
 PORTVERSION=	1.7.2
 CATEGORIES=	print python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	fabianosidler@swissonline.ch
 COMMENT=	Simple PDF generation for Python
+WWW=		https://code.google.com/p/pyfpdf/
 
 LICENSE=	LGPL3
 

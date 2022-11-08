@@ -1,9 +1,11 @@
 PORTNAME=	k3b
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	sysutils multimedia kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE CD/DVD writing suite
+WWW=		https://www.k3b.org/
 
 LIB_DEPENDS=	libFLAC.so:audio/flac \
 		libKF5Cddb.so:audio/libkcddb \
@@ -20,15 +22,16 @@ RUN_DEPENDS=	cdrecord:sysutils/cdrtools
 BUILD_DEPENDS=	cdrecord:sysutils/cdrtools
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext iconv \
-		kde:5 pkgconfig qt:5 shared-mime-info tar:xz
+		kde:5 pkgconfig qt:5 shared-mime-info tar:xz xorg
 
 USE_KDE=	archive attica auth bookmarks codecs completion config \
 		configwidgets coreaddons filemetadata i18n iconthemes \
 		itemviews jobwidgets kcmutils kio newstuff notifications \
 		notifyconfig service solid widgetsaddons windowsystem xmlgui \
-		ecm_build
+		ecm:build
 USE_QT=		concurrent core dbus gui network webkit widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
+USE_XORG=	x11
 
 # The ffmpeg-plugin needs patching
 CMAKE_ARGS=	-DK3B_BUILD_FFMPEG_DECODER_PLUGIN:BOOL=FALSE

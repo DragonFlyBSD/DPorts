@@ -1,5 +1,3 @@
-# Created by: Johannes Meixner <johannes@perceivon.net>
-
 PORTNAME=	tapi
 PORTVERSION=	0.1.7
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	Tapi-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Framework for testing APIs
+WWW=		https://pypi.org/project/Tapi/
 
 LICENSE=	MIT
 

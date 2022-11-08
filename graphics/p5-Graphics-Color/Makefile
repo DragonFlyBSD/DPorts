@@ -1,5 +1,3 @@
-# Created by: chinsan
-
 PORTNAME=	Graphics-Color
 PORTVERSION=	0.31
 CATEGORIES=	graphics perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Device and library agnostic color spaces
+WWW=		https://metacpan.org/release/Graphics-Color
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

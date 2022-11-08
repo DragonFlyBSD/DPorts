@@ -1,5 +1,3 @@
-# Created by: Sahil Tandon <sahil@FreeBSD.org>
-
 PORTNAME=	AnyEvent-Twitter-Stream
 PORTVERSION=	0.28
 CATEGORIES=	net perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to receive Twitter streaming API in an event loop
+WWW=		https://metacpan.org/release/AnyEvent-Twitter-Stream
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

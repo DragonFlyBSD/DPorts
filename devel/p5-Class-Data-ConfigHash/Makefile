@@ -1,5 +1,3 @@
-# Created by: Masahiro Teramoto <markun@onohara.to>
-
 PORTNAME=	Class-Data-ConfigHash
 PORTVERSION=	0.00002
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	markun@onohara.to
 COMMENT=	Add Catalyst-Style Config To Your Class
+WWW=		https://metacpan.org/release/Class-Data-ConfigHash
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,11 +1,12 @@
 PORTNAME=	handlr
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.1
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	sysutils
 
 MAINTAINER=	sec.research.2005@gmail.com
 COMMENT=	Manage mimeapps.list and default applications with ease
+WWW=		https://github.com/Anomalocaridid/handlr
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

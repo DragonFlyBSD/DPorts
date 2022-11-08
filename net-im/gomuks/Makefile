@@ -1,13 +1,12 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	gomuks
 PORTVERSION=	0.2.4
 DISTVERSIONPREFIX=	v
-PORTREVISION=	4
+PORTREVISION=	8
 CATEGORIES=	net-im
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Terminal Matrix client written in Go
+WWW=		https://github.com/tulir/gomuks
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

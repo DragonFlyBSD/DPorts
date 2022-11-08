@@ -1,13 +1,12 @@
-# Created by: Michael Fausten <ports@michael-fausten.de>
-
 PORTNAME=	smarty
 DISTVERSIONPREFIX=	v
-PORTVERSION=	3.1.45
+PORTVERSION=	3.1.46
 CATEGORIES=	www
 PKGNAMESUFFIX=	3${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PHP compiling template engine
+WWW=		https://www.smarty.net/
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

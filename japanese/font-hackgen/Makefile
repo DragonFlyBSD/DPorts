@@ -1,5 +1,5 @@
 PORTNAME=	hackgen
-PORTVERSION=	2.6.3
+PORTVERSION=	2.7.1
 PORTREVISION=	0
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	https://github.com/yuru7/HackGen/releases/download/v${PORTVERSION}/
@@ -8,6 +8,7 @@ DISTNAME=	HackGen_v${DISTVERSION}
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	HackGen is a composite font of Hack and GenJyuu-Gothic
+WWW=		https://github.com/yuru7/HackGen
 
 LICENSE=	OFL11
 

@@ -1,5 +1,3 @@
-# Created by: arved
-
 PORTNAME=	x2goclient
 PORTVERSION=	4.1.2.2
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://code.x2go.org/releases/source/x2goclient/
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Qt client for the X2Go system
+WWW=		https://www.x2go.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -23,7 +22,7 @@ USES=		compiler:c++11-lang gl pkgconfig qmake qt:5 xorg
 USE_GL=		gl
 USE_XORG=	x11 xpm
 USE_QT=		core gui network svg widgets x11extras  \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 QMAKE_ARGS=	QMAKE_LRELEASE="${LRELEASE}"
 
 OPTIONS_DEFINE=		DOCS LDAP

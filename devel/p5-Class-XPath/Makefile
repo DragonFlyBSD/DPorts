@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@dragon2.net>
-
 PORTNAME=	Class-XPath
 PORTVERSION=	1.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Base class to add xpath matching to object trees
+WWW=		https://metacpan.org/release/Class-XPath
 
 USES=		perl5
 USE_PERL5=	configure

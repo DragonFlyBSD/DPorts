@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	snack
 PORTVERSION=	2.2.10
 PORTREVISION=	7
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sound toolkit for scripting languages
+WWW=		https://www.speech.kth.se/snack/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/../COPYING

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Term-App-Util-Size
 PORTVERSION=	0.002
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Determine the sane terminal size (width, height)
+WWW=		https://metacpan.org/release/Term-App-Util-Size
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

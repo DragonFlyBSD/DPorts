@@ -1,5 +1,3 @@
-# Created by: Joseph Koshy <koshy@india.hp.com>
-
 PORTNAME=	xaos
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	4.2.1
@@ -8,6 +6,7 @@ CATEGORIES=	graphics math
 
 MAINTAINER=	joerg.preiss@slesa.de
 COMMENT=	Real-time interactive fractal browser
+WWW=		https://xaos-project.github.io/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -19,7 +18,7 @@ GH_ACCOUNT=	xaos-project
 GH_PROJECT=	XaoS
 
 USE_GL=		gl
-USE_QT=		core gui opengl widgets buildtools_build linguisttools_build
+USE_QT=		core gui opengl widgets buildtools:build linguisttools:build
 
 QMAKE_ARGS+=	INCLUDEPATH+=${LOCALBASE}/include \
 		LIBS+=-L${LOCALBASE}/lib

@@ -1,5 +1,3 @@
-# Created by: Kay Lehmann
-
 PORTNAME=	gocr
 PORTVERSION=	0.52
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www-e.uni-magdeburg.de/jschulen/ocr/
 
 MAINTAINER=	freebsd-ports@dan.me.uk
 COMMENT=	OCR (Optical Character Recognition) program
+WWW=		http://jocr.sourceforge.net/
 
 LICENSE=	GPLv2
 

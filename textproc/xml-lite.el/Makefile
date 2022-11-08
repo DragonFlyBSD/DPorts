@@ -1,8 +1,6 @@
-# Created by: Kimura Fuyuki <fuyuki@mj.0038.net>
-
 PORTNAME=	xml-lite.el
 PORTVERSION=	1.1
-PORTREVISION=	17
+PORTREVISION=	18
 PORTEPOCH=	1
 CATEGORIES=	textproc elisp
 MASTER_SITES=	http://dogbiscuit.org/mdub/software/
@@ -12,6 +10,7 @@ EXTRACT_SUFX=	# empty
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple XML-editing for GNU Emacs
+WWW=		https://www.dogbiscuit.org/mdub/software/
 
 LICENSE=	GPLv2+
 

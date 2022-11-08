@@ -1,5 +1,3 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	fs-uae
 PORTVERSION=	3.1.35
 CATEGORIES=	emulators
@@ -7,6 +5,7 @@ MASTER_SITES=	http://fs-uae.net/stable/${PORTVERSION}/
 
 MAINTAINER=	sirdice@gmail.com
 COMMENT=	Amiga emulator
+WWW=		https://fs-uae.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

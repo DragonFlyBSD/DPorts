@@ -1,5 +1,3 @@
-# Created by: Peter Hawkins <thepish@FreeBSD.org>
-
 PORTNAME=	XmHTML
 PORTVERSION=	1.1.10
 CATEGORIES=	x11-toolkits www
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/${PORTNAME:tl}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Motif widget set for displaying HTML 3.2 documents
+WWW=		https://sourceforge.net/projects/xmhtml/
 
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB

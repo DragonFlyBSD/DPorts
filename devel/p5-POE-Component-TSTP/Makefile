@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	POE-Component-TSTP
 PORTVERSION=	0.02
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	POE component to correctly handle Ctrl-Z in your program
+WWW=		https://metacpan.org/release/POE-Component-TSTP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

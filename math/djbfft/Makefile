@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	djbfft
 PORTVERSION=	0.76
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://cr.yp.to/djbfft/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Extremely fast library for floating-point convolution
+WWW=		https://cr.yp.to/djbfft.html
 
 # Converted from LEGAL_TEXT
 LICENSE=	djb

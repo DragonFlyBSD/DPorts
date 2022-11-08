@@ -1,7 +1,5 @@
-# Created by: Joe Horn <joehorn@gmail.com>
-
 PORTNAME=	wordpress
-DISTVERSION=	5.9.3
+DISTVERSION=	6.0.2
 DISTVERSIONSUFFIX=	-zh_CN
 CATEGORIES=	chinese www
 MASTER_SITES=	https://cn.wordpress.org/
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	-zh_CN
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	State-of-the-art semantic personal publishing platform
+WWW=		https://cn.wordpress.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/license.txt

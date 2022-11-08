@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	nbsphinx
 PORTVERSION=	0.8.9
 CATEGORIES=	textproc python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Jupyter Notebook Tools for Sphinx
+WWW=		https://github.com/spatialaudio/nbsphinx
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

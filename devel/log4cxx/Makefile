@@ -1,5 +1,3 @@
-# Created by: Thaddeus Covert <tcovert@grimmy.sahuagin.net>
-
 PORTNAME=	log4cxx
 PORTVERSION=	0.11.0
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ DISTNAME=	apache-${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ port of the Log4j project
+WWW=		https://logging.apache.org/log4cxx/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Igor Vinokurov <igor@zynaps.ru>
-
 PORTNAME=	xruskb
 PORTVERSION=	1.15.4
 PORTREVISION=	3
@@ -9,6 +7,7 @@ MASTER_SITES=	ftp://ftp.yars.free.net/pub/source/xruskb/ \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Keyboard layout switcher and indicator
+WWW=		http://lav.yar.ru/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

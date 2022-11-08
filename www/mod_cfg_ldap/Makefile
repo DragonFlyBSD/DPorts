@@ -1,5 +1,3 @@
-# Created by: Clement Laforet <sheepkiller@cultdeadsheep.org>
-
 PORTNAME=	mod_cfg_ldap
 PORTVERSION=	1.2
 PORTREVISION=	5
@@ -9,6 +7,7 @@ DIST_SUBDIR=	apache2
 
 MAINTAINER=	apache@FreeBSD.org
 COMMENT=	Allows you to keep your virtual host configuration in a LDAP directory
+WWW=		https://sourceforge.net/projects/modcfgldap/
 
 LICENSE=	BSD3CLAUSE
 

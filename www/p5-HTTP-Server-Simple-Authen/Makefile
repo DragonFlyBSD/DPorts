@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	HTTP-Server-Simple-Authen
 PORTVERSION=	0.04
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Authentication plugin for HTTP::Server::Simple
+WWW=		https://metacpan.org/release/HTTP-Server-Simple-Authen
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

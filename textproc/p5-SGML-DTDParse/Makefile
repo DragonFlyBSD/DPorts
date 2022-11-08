@@ -1,5 +1,3 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	SGML-DTDParse
 PORTVERSION=	2.00
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Parse an SGML or XML DTD
+WWW=		https://metacpan.org/release/SGML-DTDParse
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-DelimMatch>=1.05:textproc/p5-DelimMatch \

@@ -1,5 +1,3 @@
-# Created by: Paul Chvostek <paul@it.ca>
-
 PORTNAME=	proxycheck
 PORTVERSION=	0.49a
 CATEGORIES=	security
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.corpit.ru/mjt/proxycheck/ \
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Check for open proxy servers
+WWW=		https://www.corpit.ru/mjt/proxycheck.html
 
 PORTSCOUT=	skipv:0.49
 

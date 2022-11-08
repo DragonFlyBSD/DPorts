@@ -1,5 +1,3 @@
-# Created by: Emmanuel Vadot <manu@FreeBSD.org>
-
 PORTNAME=	VVVVVV
 DISTVERSION=	2.3.6
 CATEGORIES=	games
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${GH_ACCOUNT}-${GH_PROJECT}-${DISTVERSION}_GH0.tar.gz
 
 MAINTAINER=	manu@FreeBSD.org
 COMMENT=	2D Platformer game
+WWW=		https://thelettervsixtim.es/
 
 LICENSE=	VVVVVV BSD3CLAUSE
 LICENSE_COMB=	multi

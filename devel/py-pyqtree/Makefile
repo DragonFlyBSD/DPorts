@@ -1,5 +1,3 @@
-# Created by: Loïc BARTOLETTI <lbartoletti@FreeBSD.org>
-
 PORTNAME=	pyqtree
 PORTVERSION=	0.24
 CATEGORIES=	devel python geography
@@ -9,6 +7,7 @@ DISTNAME=	Pyqtree-${PORTVERSION}
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Pure Python quad tree spatial index for GIS or rendering usage
+WWW=		https://github.com/karimbahgat/Pyqtree
 
 LICENSE=	MIT
 

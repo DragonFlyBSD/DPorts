@@ -1,5 +1,3 @@
-# Created by: pauls@utdallas.edu
-
 PORTNAME=	CIF-Client
 PORTVERSION=	0.21
 PORTREVISION=	3
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Extends REST::Client for use with the CI-Framework REST interface
+WWW=		https://metacpan.org/release/SAXJAZMAN/CIF-Client-0.21
 
 LICENSE=	ART10 GPLv2
 LICENSE_COMB=	dual

@@ -1,11 +1,13 @@
 PORTNAME=	Fiona
 DISTVERSION=	1.8.21
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	OGR's neat and nimble API for Python programmers
+WWW=		https://pypi.org/project/Fiona/
 
 LICENSE=	BSD3CLAUSE
 

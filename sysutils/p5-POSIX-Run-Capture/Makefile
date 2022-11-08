@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	POSIX-Run-Capture
 PORTVERSION=	1.03
 CATEGORIES=	sysutils perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Run command and capture its output
+WWW=		https://metacpan.org/dist/POSIX-Run-Capture
 
 LICENSE=	GPLv3+
 

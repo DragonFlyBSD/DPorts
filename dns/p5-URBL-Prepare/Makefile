@@ -1,5 +1,3 @@
-# Created by: Kurt Jaeger <fbsd-ports@opsec.eu>
-
 PORTNAME=	URBL-Prepare
 PORTVERSION=	0.09
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	pi@FreeBSD.org
 COMMENT=	Prepare hostname for URBL domain lookup
+WWW=		https://metacpan.org/release/URBL-Prepare
 
 USES=		perl5
 USE_PERL5=	configure

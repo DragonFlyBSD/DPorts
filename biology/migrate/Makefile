@@ -1,5 +1,3 @@
-# Created by: Johann Visagie <wjv@FreeBSD.org>
-
 PORTNAME=	migrate
 PORTVERSION=	3.6.11
 CATEGORIES=	biology
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}.src
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Program to estimate population sizes and migration rates
+WWW=		https://popgen.sc.fsu.edu/Migrate/Migrate-n.html
 
 BROKEN_armv6=		fails to build: make[2]: cannot open makefile
 BROKEN_armv7=		fails to build: make[2]: cannot open makefile

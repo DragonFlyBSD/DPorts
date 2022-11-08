@@ -1,5 +1,3 @@
-# Created by: frankch@waru.life.nthu.edu.tw
-
 PORTNAME=	aview
 DISTVERSION=	1.3.0rc1
 PORTREVISION=	6
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/aa-project/${PORTNAME}/${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphics viewer for viewing netpbm format on console or X using aalib
+WWW=		http://aa-project.sourceforge.net/aview/
 
 RUN_DEPENDS=	anytopnm:graphics/netpbm
 LIB_DEPENDS=	libaa.so:graphics/aalib

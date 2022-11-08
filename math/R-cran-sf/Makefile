@@ -1,12 +1,12 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	sf
-DISTVERSION=	1.0-7
+DISTVERSION=	1.0-8
+PORTREVISION=	1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Simple Features for R
+WWW=		https://cran.r-project.org/web/packages/sf/
 
 LICENSE=	GPLv2 MIT
 LICENSE_COMB=	dual

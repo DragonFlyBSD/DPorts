@@ -1,5 +1,3 @@
-# Created by: Thierry Dussuet <dussuett@wigwam.ethz.ch>
-
 PORTNAME=	ods2
 PORTVERSION=	1.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	ods2
 
 MAINTAINER=	pzn.unixbsd@gmail.com
 COMMENT=	Utility for manipulating ODS-2 filesystems
+WWW=		https://www.goatley.com/hunter/
 
 USES=		zip
 NO_WRKSUBDIR=	yes

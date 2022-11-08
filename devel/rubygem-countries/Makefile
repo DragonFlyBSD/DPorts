@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	countries
 PORTVERSION=	3.0.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	All sorts of useful information about every country
+WWW=		https://github.com/hexorx/countries
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

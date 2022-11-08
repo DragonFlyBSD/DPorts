@@ -1,5 +1,3 @@
-# Created by: Anton Karpov <toxa@toxahost.ru>
-
 PORTNAME=	simscan
 PORTVERSION=	1.4.0
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast Content/Anti-virus Scanner for qmail Written in C
+WWW=		https://www.inter7.com/?page=simscan
 
 USES=		qmail:build
 

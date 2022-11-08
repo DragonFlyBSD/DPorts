@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	graphql-client
 PORTVERSION=	0.16.0
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Ruby library for declaring, composing and executing GraphQL queries
+WWW=		https://github.com/github/graphql-client
 
 LICENSE=	MIT
 

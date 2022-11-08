@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	Data-Serializer
 PORTVERSION=	0.65
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Modules that serialize data structures
+WWW=		https://metacpan.org/release/Data-Serializer
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

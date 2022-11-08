@@ -1,6 +1,3 @@
-# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-#   $MCom$
-
 PORTNAME=	libwnck
 PORTVERSION=	2.30.7
 PORTREVISION?=	2
@@ -10,6 +7,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library used for writing pagers and taskslists
+WWW=		https://www.gnome.org/
 
 USES=		tar:xz
 

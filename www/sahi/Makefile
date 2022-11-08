@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	sahi
 PORTVERSION=	3.5.${SAHI_BUILD}
 PORTREVISION=	2
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${SAHI_BUILD:S,.,,g}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Web automation and testing tool
+WWW=		http://www.sahi.co.in/w/sahi
 
 LICENSE=	APACHE20 MPL11
 LICENSE_COMB=	multi

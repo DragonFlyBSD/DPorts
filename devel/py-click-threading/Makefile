@@ -1,5 +1,3 @@
-# Created by: Christian Geier <geier@lostpackets.de>
-
 PORTNAME=	click-threading
 DISTVERSION=	0.5.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rigoletto@FreeBSD.org
 COMMENT=	Multithreaded Click apps made easy
+WWW=		https://github.com/click-contrib/click-threading
 
 LICENSE=	MIT
 

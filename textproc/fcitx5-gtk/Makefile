@@ -1,11 +1,10 @@
-# Created by: Ka Ho Ng <khng300@gmail.com>
-
 PORTNAME=	fcitx5-gtk
 DISTVERSION=	5.0.10
 CATEGORIES=	textproc
 
 MAINTAINER=	khng@FreeBSD.org
 COMMENT=	Fcitx support for GTK+ 2/3
+WWW=		https://github.com/fcitx/fcitx5-gtk
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSES/LGPL-2.1-or-later.txt

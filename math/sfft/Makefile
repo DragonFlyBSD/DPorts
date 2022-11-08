@@ -1,5 +1,3 @@
-# Created by: bf@FreeBSD.org
-
 PORTNAME=	sfft
 PORTVERSION=	0.1.0
 PORTREVISION=	11
@@ -10,6 +8,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Optimized Sparse Fast Fourier Transform
+WWW=		https://spiral.net/software/sfft.html
 
 LICENSE=	GPLv2
 

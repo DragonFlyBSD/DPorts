@@ -1,5 +1,3 @@
-# Created by: MIHIRA Yoshiro <sanpei@FreeBSD.org>
-
 PORTNAME=	domain_name
 PORTVERSION=	0.5.20190701
 CATEGORIES=	net rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Domain Name manipulation library for ruby
+WWW=		https://github.com/knu/ruby-domain_name
 
 LICENSE=	BSD2CLAUSE BSD3CLAUSE MPL20
 LICENSE_COMB=	multi

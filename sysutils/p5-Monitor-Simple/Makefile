@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Monitor-Simple
 PORTVERSION=	0.2.8
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple monitoring of applications and services
+WWW=		https://metacpan.org/release/Monitor-Simple
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

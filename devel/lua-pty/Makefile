@@ -1,5 +1,3 @@
-# Created by: Andrew Turner <andrew+ports@fubar.geek.nz>
-
 PORTNAME=	pty
 DISTVERSION=	1.26
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Pty (pseudo-terminal) bindings for Lua 5+
+WWW=		https://gitlab.com/ports1/lua-pty/
 
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

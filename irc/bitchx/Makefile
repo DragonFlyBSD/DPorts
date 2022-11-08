@@ -1,5 +1,3 @@
-# Created by: Jimbo Bahooli <griffin@blackhole.iceworld.org>
-
 PORTNAME=	bitchx
 PORTVERSION=	1.2.1
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	SF/${PORTNAME}/ircii-pana/${PORTNAME}-${DISTVERSION}
 
 MAINTAINER=	freebsd@bitchx.org
 COMMENT=	Feature-rich scriptable IRC client
+WWW=		http://www.bitchx.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT

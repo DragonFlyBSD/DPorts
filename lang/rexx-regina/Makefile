@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	regina
 PORTVERSION=	3.9.3
 CATEGORIES=	lang
@@ -13,6 +11,7 @@ EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
 MAINTAINER=	bob@eager.cx
 COMMENT=	Rexx interpreter
+WWW=		http://regina-rexx.sourceforge.net/
 
 LICENSE=	LGPL21+
 

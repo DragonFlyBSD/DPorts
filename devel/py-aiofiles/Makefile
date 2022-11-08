@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	aiofiles
 PORTVERSION=	0.8.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	File support for asyncio
+WWW=		https://github.com/Tinche/aiofiles
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	Module-ExtractUse
 PORTVERSION=	0.344
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Find out what CPAN modules are used
+WWW=		https://metacpan.org/release/Module-ExtractUse
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

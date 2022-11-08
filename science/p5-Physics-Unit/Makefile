@@ -1,5 +1,3 @@
-# Created by: Frederic Culot <frederic@culot.org>
-
 PORTNAME=	Physics-Unit
 PORTVERSION=	0.54
 CATEGORIES=	science perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Manipulate Physics units and dimensions
+WWW=		https://metacpan.org/release/Physics-Unit
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

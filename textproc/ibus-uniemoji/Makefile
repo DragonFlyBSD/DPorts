@@ -4,8 +4,9 @@ DISTVERSION=	0.6.0-16
 DISTVERSIONSUFFIX=	-ga26c364
 CATEGORIES=	textproc
 
-MAINTAINER=	greg@unrelenting.technology
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Input method for entering unicode symbols and emoji by name
+WWW=		https://github.com/salty-horseibus-uniemoji
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

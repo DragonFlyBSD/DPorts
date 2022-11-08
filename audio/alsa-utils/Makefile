@@ -1,5 +1,3 @@
-# Created by: Aragon Gouveia <aragon@phat.za.net>
-
 PORTNAME=	alsa-utils
 PORTVERSION=	1.2.2
 DISTVERSIONPREFIX=	v
@@ -9,6 +7,7 @@ MASTER_SITES=	GH
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ALSA compatibility utilities
+WWW=		https://www.alsa-project.org/
 
 LICENSE=	GPLv2+
 

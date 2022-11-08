@@ -1,5 +1,3 @@
-# Created by: arved
-
 PORTNAME=	netio
 PORTVERSION=	1.33
 CATEGORIES=	benchmarks net
@@ -7,6 +5,7 @@ DISTNAME=	netio133
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Network benchmark
+WWW=		https://web.ars.de/netio/
 
 USES=		dos2unix gmake
 

@@ -1,11 +1,10 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	hw-probe
-PORTVERSION=	1.6.4
+PORTVERSION=	1.6.5
 CATEGORIES=	sysutils perl5
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Probe for hardware, check operability, and find drivers
+WWW=		https://bsd-hardware.info/
 
 LICENSE=	LGPL21+ BSD4CLAUSE
 LICENSE_COMB=	dual

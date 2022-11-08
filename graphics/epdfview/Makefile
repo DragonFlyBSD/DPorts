@@ -1,8 +1,6 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	epdfview
 PORTVERSION=	0.1.8
-PORTREVISION=	53
+PORTREVISION=	56
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	FRUGALWARE/xapps-extra/${PORTNAME} \
 		ftp://ftp.slackware.com/.1/blfs/conglomeration/${PORTNAME}/ \
@@ -11,6 +9,7 @@ MASTER_SITES=	FRUGALWARE/xapps-extra/${PORTNAME} \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight PDF document viewer
+WWW=		http://www.emma-soft.com/projects/epdfview/
 
 LICENSE=	GPLv2
 

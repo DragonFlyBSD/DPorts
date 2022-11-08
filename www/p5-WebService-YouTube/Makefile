@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	WebService-YouTube
 PORTVERSION=	1.0.3
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl interface to YouTube
+WWW=		https://metacpan.org/release/WebService-YouTube
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: crwhipp@gmail.com
-
 PORTNAME=	foxtrotgps
 PORTVERSION=	1.2.2
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.foxtrotgps.org/releases/
 
 MAINTAINER=	crwhipp@gmail.com
 COMMENT=	Lightweight opensource gps moving map application
+WWW=		https://www.foxtrotgps.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

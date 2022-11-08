@@ -1,5 +1,3 @@
-# Created by: Masahiro Teramoto <markun@onohara.to>
-
 PORTNAME=	WWW-MobileCarrierJP
 PORTVERSION=	0.65
 CATEGORIES=	japanese www perl5
@@ -7,6 +5,7 @@ MASTER_SITES=	CPAN
 
 MAINTAINER=	markun@onohara.to
 COMMENT=	Scrape Japanese mobile carrier information
+WWW=		https://metacpan.org/release/WWW-MobileCarrierJP
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -6,8 +6,9 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	41
 DIST_SUBDIR=	python
 
-MAINTAINER=	python@FreeBSD.org
+MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	GUI toolkit for the Python programming language
+WWW=		https://www.wxpython.org
 
 LICENSE=	WXWINDOWS LGPL21+ GPLv2+
 LICENSE_COMB=	multi

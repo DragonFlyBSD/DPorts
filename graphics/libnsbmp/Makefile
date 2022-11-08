@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	libnsbmp
 PORTVERSION=	0.1.6
 CATEGORIES=	graphics
@@ -8,6 +6,7 @@ EXTRACT_SUFX=	-src.tar.gz
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	NetSurf BMP decoder
+WWW=		https://www.netsurf-browser.org/projects/libnsbmp/
 
 LICENSE=	MIT
 

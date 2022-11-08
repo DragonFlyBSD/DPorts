@@ -1,5 +1,3 @@
-# Created by: brett@peloton.physics.montana.edu
-
 PORTNAME=	latex2html
 PORTVERSION=	2016
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	TEX_CTAN/support/${PORTNAME}
 
 MAINTAINER=	hrs@FreeBSD.org
 COMMENT=	Convert LaTeX documents to HTML
+WWW=		https://www.latex2html.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

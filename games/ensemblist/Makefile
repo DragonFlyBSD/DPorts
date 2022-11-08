@@ -1,5 +1,3 @@
-# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-
 PORTNAME=	ensemblist
 PORTVERSION=	040126
 PORTREVISION=	12
@@ -8,6 +6,7 @@ MASTER_SITES=	SAVANNAH
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Assemble given shapes from primitives
+WWW=		https://www.nongnu.org/ensemblist/index_en.html
 
 LIB_DEPENDS=	libmikmod.so:audio/libmikmod \
 		libpng.so:graphics/png

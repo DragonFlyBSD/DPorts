@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	IO-Async-Resolver-DNS
 PORTVERSION=	0.06
 CATEGORIES=	dns perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Resolve DNS queries using IO::Async
+WWW=		https://metacpan.org/release/IO-Async-Resolver-DNS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

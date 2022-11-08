@@ -1,5 +1,3 @@
-# Created by: Edwin Groothuis
-
 PORTNAME=	circuslinux
 PORTVERSION=	1.0.3
 PORTREVISION=	14
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.tuxpaint.org/unix/x/circus-linux/src/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	"Circus Linux!" is a clone of the Atari 2600 game "Circus Atari"
+WWW=		http://www.newbreedsoftware.com/circus-linux/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.txt

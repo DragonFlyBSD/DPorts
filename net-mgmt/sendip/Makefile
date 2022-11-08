@@ -1,5 +1,3 @@
-# Created by: joseph@randomnetworks.com
-
 PORTNAME=	sendip
 PORTVERSION=	2.5
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.earth.li/projectpurple/files/
 
 MAINTAINER=	coco@executive-computing.de
 COMMENT=	Command-line tool for sending arbitrary IP packets
+WWW=		https://www.earth.li/projectpurple/progs/sendip.html
 
 LICENSE=	GPLv2
 

@@ -1,11 +1,10 @@
-# Created by: Victor Yagofarov <xnasx@yandex.ru>
-
 PORTNAME=	kcat
 DISTVERSION=	1.7.0
 CATEGORIES=	net
 
 MAINTAINER=	sergey@akhmatov.ru
 COMMENT=	Generic command line non-JVM Apache Kafka producer and consumer
+WWW=		https://github.com/edenhill/kcat/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

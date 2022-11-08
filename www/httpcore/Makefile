@@ -1,5 +1,3 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	httpcore
 DISTVERSION=	4.4.13
 CATEGORIES=	www java
@@ -8,6 +6,7 @@ DISTNAME=	httpcomponents-core-${DISTVERSION}-bin
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Java components implementing the base HTTP protocol
+WWW=		https://hc.apache.org/httpcomponents-core-4.4.x/
 
 LICENSE=	APACHE20
 

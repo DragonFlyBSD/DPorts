@@ -1,10 +1,11 @@
 PORTNAME=	tortoisehg
-DISTVERSION=	6.1.2
+DISTVERSION=	6.2.2
 CATEGORIES=	devel
 MASTER_SITES=	https://www.mercurial-scm.org/release/tortoisehg/targz/
 
 MAINTAINER=	arrowd@FreeBSD.org
 COMMENT=	GUI for Mercurial VCS
+WWW=		https://tortoisehg.bitbucket.io/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
@@ -28,7 +29,7 @@ NO_ARCH=	yes
 SUB_FILES=	pkg-message
 
 # Do not conflict with devel/mercurial, which also installs hgext3rd/__init__.py
-EXTRACT_AFTER_ARGS=	--exclude ${PORTNAME}-${DISTVERSION}/hgext3rd/__init__.py
+EXTRACT_AFTER_ARGS=    --exclude ${PORTNAME}-${DISTVERSION}/hgext3rd/__init__.py
 
 .include <bsd.port.pre.mk>
 

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Template-Plugin-Filter-Minify-JavaScript
 PORTVERSION=	0.94
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	JavaScript::Minifier filter for Template Toolkit
+WWW=		https://metacpan.org/release/Template-Plugin-Filter-Minify-JavaScript
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

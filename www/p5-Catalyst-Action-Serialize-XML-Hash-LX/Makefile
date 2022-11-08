@@ -1,5 +1,3 @@
-# Created by: Anes Mukhametov <anes@anes.su>
-
 PORTNAME=	Catalyst-Action-Serialize-XML-Hash-LX
 PORTVERSION=	0.06
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	anes@anes.su
 COMMENT=	XML::Hash::LX serializer for Catalyst::Action::Serialize
+WWW=		https://metacpan.org/release/Catalyst-Action-Serialize-XML-Hash-LX
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Sub-Exporter-Progressive
 PORTVERSION=	0.001013
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Only use Sub::Exporter if you need it
+WWW=		https://metacpan.org/release/Sub-Exporter-Progressive
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

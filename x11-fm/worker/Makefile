@@ -1,12 +1,11 @@
-# Created by: Simon Dick <simond@irrelevant.org>
-
 PORTNAME=	worker
-PORTVERSION=	4.10.1
+PORTVERSION=	4.11.0
 CATEGORIES=	x11-fm
 MASTER_SITES=	http://www.boomerangsworld.de/cms/worker/downloads/
 
 MAINTAINER=	mp39590@gmail.com
 COMMENT=	X11 file manager based on Directory Opus of AmigaOS
+WWW=		http://www.boomerangsworld.de/cms/worker/
 
 LICENSE=	GPLv2+
 

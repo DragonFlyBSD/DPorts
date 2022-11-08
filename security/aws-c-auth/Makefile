@@ -1,31 +1,31 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	aws-c-auth
-PORTVERSION=	0.6.10
 DISTVERSIONPREFIX=	v
+DISTVERSION=	0.6.17
 CATEGORIES=	security
 
-MAINTAINER=	danilo@FreeBSD.org
+MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	C99 library implementation of AWS client-side authentication
+WWW=		https://github.com/awslabs/aws-c-auth
 
 LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libaws-c-common.so:devel/aws-c-common \
-		libaws-c-cal.so:security/aws-c-cal \
-		libaws-c-io.so:devel/aws-c-io \
+LIB_DEPENDS=	libaws-c-cal.so:security/aws-c-cal \
+		libaws-c-common.so:devel/aws-c-common \
 		libaws-c-compression.so:devel/aws-c-compression \
 		libaws-c-http.so:devel/aws-c-http \
+		libaws-c-io.so:devel/aws-c-io \
 		libaws-c-sdkutils.so:devel/aws-c-sdkutils \
-		libs2n.so:security/s2n
+		libs2n.so:security/s2n-tls
 
-USES=		cmake compiler:c11 ssl
+USES=		cmake:testing compiler:c11 ssl
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	awslabs
-
-CMAKE_ARGS+=	-DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=ON \
-		-DCMAKE_PREFIX_PATH=${LOCALBASE}
-
 USE_LDCONFIG=	yes
+
+CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH=${LOCALBASE}
+CMAKE_ON=	BUILD_SHARED_LIBS
+CMAKE_OFF=	BUILD_TESTING
 
 .include <bsd.port.mk>

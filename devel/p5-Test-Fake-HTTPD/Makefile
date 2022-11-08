@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Test-Fake-HTTPD
 PORTVERSION=	0.09
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fake HTTP server
+WWW=		https://metacpan.org/release/Test-Fake-HTTPD
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

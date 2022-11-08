@@ -8,6 +8,7 @@ DISTNAME=	pyside-setup-opensource-src-${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python binding generator for C++ libraries
+WWW=		https://wiki.qt.io/PySide2
 
 LICENSE=	GPLv2 LGPL21 LGPL3
 LICENSE_COMB=	multi
@@ -23,7 +24,7 @@ USES=		cmake compiler:c++11-lang gnome python:3.5-3.9 qt:5 shebangfix tar:xz
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 USE_PYTHON=	flavors
-USE_QT=		buildtools_build core gui network qmake_build testlib \
+USE_QT=		buildtools:build core gui network qmake:build testlib \
 		xml xmlpatterns
 
 SHEBANG_FILES=	shiboken_tool.py

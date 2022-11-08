@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	tvnamer
 PORTVERSION=	3.0.4
 CATEGORIES=	multimedia python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Automatically names downloaded/recorded TV-episode
+WWW=		https://pypi.org/project/tvnamer/
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Syntax-Keyword-Dynamically
 PORTVERSION=	0.10
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Dynamically change the value of a variable
+WWW=		https://metacpan.org/dist/Syntax-Keyword-Dynamically
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

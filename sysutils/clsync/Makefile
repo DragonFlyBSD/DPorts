@@ -1,5 +1,3 @@
-# Created by: Dmitry Yu Okunev dyokunev@ut.mephi.ru
-
 PORTNAME=	clsync
 DISTVERSION=	0.4~rc2
 PORTREVISION=	2
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	dyokunev@ut.mephi.ru
 COMMENT=	Live file sync daemon based on inotify, written in GNU C
+WWW=		https://github.com/xaionaro/clsync
 
 LICENSE=	GPLv3
 

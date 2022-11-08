@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	xml2
 PORTVERSION=	1.3.3
 PORTREVISION=	2
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Parse XML
+WWW=		https://cran.r-project.org/web/packages/xml2/
 
 LICENSE=	MIT
 

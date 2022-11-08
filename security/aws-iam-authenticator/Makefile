@@ -1,13 +1,12 @@
-# Created by: Danilo Egea Gondolfo <danilo@FreeBSD.org>
-
 PORTNAME=	aws-iam-authenticator
 PORTVERSION=	0.5.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	security
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Use AWS IAM credentials to authenticate to a Kubernetes cluster
+WWW=		https://github.com/kubernetes-sigs/aws-iam-authenticator
 
 LICENSE=	APACHE20
 

@@ -1,5 +1,3 @@
-# Created by: Clement Laforet <clement@FreeBSD.org>
-
 PORTNAME=	dnsproxy
 PORTVERSION=	1.17
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.wolfermann.org/
 
 MAINTAINER=	krion@FreeBSD.org
 COMMENT=	Proxy for DNS queries
+WWW=		https://www.wolfermann.org/dnsproxy.html
 
 LICENSE=	MIT
 

@@ -1,5 +1,3 @@
-# Created by: Fraser Tweedale <frase@frase.id.au>
-
 PORTNAME=	asunder
 PORTVERSION=	2.9.6
 CATEGORIES=	audio
@@ -7,6 +5,7 @@ MASTER_SITES=	http://littlesvr.ca/asunder/releases/
 
 MAINTAINER=	frase@frase.id.au
 COMMENT=	Lightweight GTK+ CD ripper
+WWW=		http://littlesvr.ca/asunder/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

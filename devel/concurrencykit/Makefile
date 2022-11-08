@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	concurrencykit
 PORTVERSION=	0.6.0
 CATEGORIES=	devel
@@ -12,6 +10,7 @@ PATCHFILES=	999d4612e873bb19867ad1d7043c9c18c7c4d3b9.patch:-p1
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Lock-free data structures for high performance concurrent systems
+WWW=		http://concurrencykit.org
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,11 +1,10 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	udpt
 DISTVERSION=	g20200202
 CATEGORIES=	net-p2p
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Lightweight UDP torrent tracker
+WWW=		https://github.com/troydm/udpt
 
 LICENSE=	GPLv3+
 

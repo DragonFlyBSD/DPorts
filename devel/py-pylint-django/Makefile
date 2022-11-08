@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pylint-django
 PORTVERSION=	2.5.3
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pylint plugin to understand the Django web framework
+WWW=		https://github.com/PyCQA/pylint-django
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE

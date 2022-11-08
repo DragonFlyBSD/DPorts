@@ -1,5 +1,3 @@
-# Created by: Tobias Rehbein <tobias.rehbein@web.de>
-
 PORTNAME=	nanoblogger-extra
 PORTVERSION=	3.4.2
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://nanoblogger.sourceforge.net/downloads/
 
 MAINTAINER=	tobias.rehbein@web.de
 COMMENT=	Extras for nanoblogger, a small weblog engine
+WWW=		http://nanoblogger.sourceforge.net/
 
 LICENSE=	GPLv2
 

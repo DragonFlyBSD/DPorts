@@ -1,5 +1,3 @@
-# Created by: wen@FreeBSD.org
-
 PORTNAME=	markupsafe
 PORTVERSION=	2.1.1
 CATEGORIES=	textproc python
@@ -9,6 +7,7 @@ DISTNAME=	MarkupSafe-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Implements XML/HTML/XHTML Markup safe string for Python
+WWW=		https://github.com/pallets/markupsafe
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst

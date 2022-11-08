@@ -1,5 +1,3 @@
-# Created by: Thomas Zander <riggs@FreeBSD.org>
-
 PORTNAME=	appdirs
 PORTVERSION=	1.4.4
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python module for determining platform-specific dirs
+WWW=		https://github.com/ActiveState/appdirs
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

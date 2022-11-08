@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	python-crontab
 PORTVERSION=	2.4.0
 CATEGORIES=	sysutils python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Read and write crontab files using a direct API
+WWW=		https://gitlab.com/doctormo/python-crontab
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

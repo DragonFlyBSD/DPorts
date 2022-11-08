@@ -1,11 +1,12 @@
 PORTNAME=	BTrees
-DISTVERSION=	4.10.0
+DISTVERSION=	4.10.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Scalable persistent object containers
+WWW=		https://github.com/zopefoundation/BTrees
 
 LICENSE=	ZPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

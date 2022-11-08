@@ -1,5 +1,3 @@
-# Created by: Jeremy Chadwick <freebsd@jdc.parodius.com>
-
 PORTNAME=	mcelog
 PORTVERSION=	178
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	Collects and decodes Machine Check Exception data
+WWW=		http://mcelog.org/
 
 LICENSE=	GPLv2
 

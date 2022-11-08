@@ -1,5 +1,3 @@
-# Created by: Choe, Cheng-Dae
-
 PORTNAME=	nevow
 PORTVERSION=	0.14.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	Nevow-${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Web application templating system, based on the Twisted Woven
+WWW=		https://pypi.org/project/Nevow/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

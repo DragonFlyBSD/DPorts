@@ -1,5 +1,3 @@
-# Created by: Hokan
-
 PORTNAME=	modules
 PORTVERSION=	4.6.0
 CATEGORIES=	sysutils tcl
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/cea-hpc/modules/releases/download/v${PORTVERSIO
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Dynamic modification of a user environment
+WWW=		http://modules.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.GPLv2

@@ -1,5 +1,3 @@
-# Created by: Ulrich Spoerlein <uspoerlein@gmail.com>
-
 PORTNAME=	symon
 PORTVERSION=	2.88
 CATEGORIES=	sysutils
@@ -8,6 +6,7 @@ MASTER_SITES=	https://wpd.home.xs4all.nl/symon/philes/ \
 
 MAINTAINER=	uqs@FreeBSD.org
 COMMENT=	Performance and information monitoring tool
+WWW=		https://wpd.home.xs4all.nl/symon/
 
 SUB_FILES=	pkg-message
 

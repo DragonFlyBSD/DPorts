@@ -1,5 +1,3 @@
-# Created by: Gerrit Beine <gerrit.beine@gmx.de>
-
 PORTNAME=	sasql
 PORTVERSION=	3.2.0
 PORTREVISION=	3
@@ -7,6 +5,7 @@ CATEGORIES=	mail www
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Edit SpamAssassin settings stored in an SQL DB
+WWW=		https://www.squirrelmail.org
 
 RUN_DEPENDS=	${LOCALBASE}/share/pear/DB.php:databases/pear-DB@${PHP_FLAVOR}
 

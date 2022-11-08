@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	yconalyzer
 PORTVERSION=	1.0.4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	TCP Traffic Analyzer
+WWW=		http://yconalyzer.sourceforge.net/
 
 GNU_CONFIGURE=	yes
 USES=		gmake tar:bzip2

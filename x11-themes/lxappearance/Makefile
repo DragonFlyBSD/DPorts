@@ -1,5 +1,3 @@
-# Created by: chinsan
-
 PORTNAME=	lxappearance
 PORTVERSION=	0.6.3
 CATEGORIES=	x11-themes gnome
@@ -7,6 +5,7 @@ MASTER_SITES=	SF/lxde/LXAppearance
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Desktop-independent theme switcher for GTK+
+WWW=		https://lxde.org/
 
 LICENSE=	GPLv2
 

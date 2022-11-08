@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	uget
 PORTVERSION=	2.2.1
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/urlget/${PORTNAME}%20%28stable%29/${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight and full-featured graphical download manager
+WWW=		https://ugetdm.com/
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING

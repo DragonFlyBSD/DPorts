@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	sphinx-book-theme
 PORTVERSION=	0.3.2
 CATEGORIES=	textproc python
@@ -11,6 +9,7 @@ DISTFILES=	sphinx_book_theme-${PORTVERSION}${EXTRACT_SUFX} \
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bootstrap-based Sphinx theme from the PyData community
+WWW=		https://github.com/executablebooks/sphinx-book-theme
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

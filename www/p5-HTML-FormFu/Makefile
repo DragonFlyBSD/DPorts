@@ -1,5 +1,3 @@
-# Created by: Andrej Zverev <andrey.zverev@electro-com.ru>
-
 PORTNAME=	HTML-FormFu
 PORTVERSION=	2.07
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	HTML Form Creation, Rendering and Validation Framework
+WWW=		https://metacpan.org/release/HTML-FormFu
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Muhammad Moinur Rahmanh <5u623l20@gmail.com>
-
 PORTNAME=	commons-math
 PORTVERSION=	3.6.1
 PORTREVISION=	1
@@ -14,6 +12,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Java library of self-contained mathematics and statistics components
+WWW=		https://commons.apache.org/proper/commons-math/
 
 LICENSE=	APACHE20
 

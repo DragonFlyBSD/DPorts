@@ -1,5 +1,3 @@
-# Created by: Matthias Fechner <mfechner@FreeBSD.org>
-
 PORTNAME=	js_regex
 PORTVERSION=	3.7.1
 CATEGORIES=	textproc rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Convert ruby native regular expressions for JavaScript
+WWW=		https://github.com/jaynetics/js_regex
 
 LICENSE=	MIT
 

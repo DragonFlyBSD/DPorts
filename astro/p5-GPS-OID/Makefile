@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	GPS-OID
 PORTVERSION=	0.07
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Package for GPS PRN - Object ID conversions
+WWW=		https://metacpan.org/release/GPS-OID
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

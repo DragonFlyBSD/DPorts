@@ -1,5 +1,3 @@
-# Created by: Radim Kolar
-
 PORTNAME=	fltk
 PORTVERSION=	1.3.4.1
 CATEGORIES=	x11-toolkits python
@@ -9,6 +7,7 @@ DISTNAME=	pyFltk-${PORTVERSION}_py3
 
 MAINTAINER=	python@FreeBSD.org
 COMMENT=	Python interface to FLTK window toolkit
+WWW=		http://pyfltk.sourceforge.net/
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING

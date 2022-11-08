@@ -1,5 +1,3 @@
-# Created by: Paul Chvostek <paul@it.ca>
-
 PORTNAME=	rotorouter
 PORTVERSION=	1.0
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTFILES=	# nil
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Traceroute attempt logger and result spoofer
+WWW=		http://www.ussrback.com/UNIX/loggers/fakeroute.c
 
 NO_WRKSUBDIR=	yes
 

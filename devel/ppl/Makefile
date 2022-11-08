@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	ppl
 PORTVERSION=	1.2
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ MASTER_SITES=	ftp://ftp.cs.unipr.it/pub/ppl/releases/${PORTVERSION}/ \
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ library for the manipulation of convex polyhedra
+WWW=		https://bugseng.com/products/ppl
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

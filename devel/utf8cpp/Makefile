@@ -1,5 +1,3 @@
-# Created by: Keith Gaughan <k@stereochro.me>
-
 PORTNAME=	utf8cpp
 PORTVERSION=	3.1.2
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	k@stereochro.me
 COMMENT=	Simple, portable, lightweight library for handling UTF-8 strings
+WWW=		http://utfcpp.sourceforge.net/
 
 LICENSE=	BSL
 

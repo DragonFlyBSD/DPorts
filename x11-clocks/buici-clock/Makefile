@@ -1,5 +1,3 @@
-# Created by: Hendrik Scholz <hscholz@raisdorf.net>
-
 PORTNAME=	buici-clock
 PORTVERSION=	0.4.9.4
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Xlib implementation of an attractive, configurable clock
+WWW=		https://packages.qa.debian.org/b/buici-clock.html
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

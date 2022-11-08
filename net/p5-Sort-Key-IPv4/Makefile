@@ -1,5 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-
 PORTNAME=	Sort-Key-IPv4
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for sorting IPv4 addresses
+WWW=		https://metacpan.org/release/Sort-Key-IPv4
 
 BUILD_DEPENDS=	p5-Sort-Key>=0:devel/p5-Sort-Key
 RUN_DEPENDS=	p5-Sort-Key>=0:devel/p5-Sort-Key

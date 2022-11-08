@@ -1,5 +1,3 @@
-# Created by: clsung@dragon2.net
-
 PORTNAME=	Search-InvertedIndex
 PORTVERSION=	1.17
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Manager for inverted index maps
+WWW=		https://metacpan.org/release/Search-InvertedIndex
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

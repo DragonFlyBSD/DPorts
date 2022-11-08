@@ -1,5 +1,3 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	xine
 PORTVERSION=	1.0.2
 PORTREVISION=	13
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	npapi-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Embed Xine player into browser
+WWW=		http://www.xinehq.de/
 
 BROKEN_aarch64=		fails to build: ../include/prcpucfg.h:604:2: Unknown CPU architecture
 

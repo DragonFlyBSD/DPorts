@@ -1,5 +1,3 @@
-# Created by: James Elstone <james@elstone.net>
-
 PORTNAME=	stomp.py
 PORTVERSION=	4.1.17
 CATEGORIES=	net python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	james@elstone.net
 COMMENT=	Python STOMP client, supporting >=1.0 and <=1.2 of the protocol
+WWW=		https://github.com/jasonrbriggs/stomp.py
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

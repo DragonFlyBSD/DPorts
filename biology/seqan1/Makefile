@@ -1,5 +1,3 @@
-# Created by: h2
-
 PORTNAME=	seqan
 PORTVERSION=	1.3.1
 PORTREVISION=	4
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	1
 
 MAINTAINER=	h2+fbsdports@fsfe.org
 COMMENT=	C++ Sequence Analysis Library
+WWW=		https://www.seqan.de/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE_BSD3CLAUSE=	${WRKSRC}/seqan/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	TheSchwartz
 PORTVERSION=	1.12
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Reliable job queue
+WWW=		https://metacpan.org/release/TheSchwartz
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

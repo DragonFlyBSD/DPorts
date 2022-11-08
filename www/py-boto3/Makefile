@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	boto3
 PORTVERSION=	1.18.61
 PORTREVISION=	1
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	AWS SDK for Python
+WWW=		https://github.com/boto/boto3
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,12 +1,11 @@
-# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
-
 PORTNAME=	nss
-PORTVERSION=	3.82
+PORTVERSION=	3.83
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Libraries to support development of security-enabled applications
+WWW=		https://developer.mozilla.org/docs/Mozilla/Projects/NSS
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYING

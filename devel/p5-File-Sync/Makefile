@@ -1,5 +1,3 @@
-# Created by: Jun Kuriyama <kuriyama@opt.phys.waseda.ac.jp>
-
 PORTNAME=	File-Sync
 PORTVERSION=	0.11
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module interface to the UNIX sync(2) and POSIX.1b fsync(2)
+WWW=		https://metacpan.org/release/File-Sync
 
 USES=		perl5
 USE_PERL5=	configure

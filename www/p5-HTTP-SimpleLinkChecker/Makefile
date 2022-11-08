@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	HTTP-SimpleLinkChecker
 PORTVERSION=	1.168
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Check the HTTP response code for a link
+WWW=		https://metacpan.org/release/HTTP-SimpleLinkChecker
 
 LICENSE=	ART20
 LICENSE_FILE=	${WRKSRC}/LICENSE

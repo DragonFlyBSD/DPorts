@@ -1,8 +1,5 @@
-# Created by: Scott Blachowicz <scott+ports@sabami.seaslug.org>
-
 PORTNAME=	nmh
 PORTVERSION=	${NMH_COMMIT_DATE}
-PORTREVISION=	2
 MASTER_SITES=	#
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-devel
@@ -10,9 +7,10 @@ DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${NMH_COMMIT_DATE}-${GIT_TAGNAME}
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Cleaned up MH mailer suite
+WWW=		https://savannah.nongnu.org/projects/nmh/
 
-GIT_TAGNAME=	9159514
-NMH_COMMIT_DATE=	2022.02.04
+GIT_TAGNAME=	17734c9
+NMH_COMMIT_DATE=	2022.07.04
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${GIT_TAGNAME}
 

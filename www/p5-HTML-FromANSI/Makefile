@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	HTML-FromANSI
 PORTVERSION=	2.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Mark up ANSI sequences as HTML
+WWW=		https://metacpan.org/release/HTML-FromANSI
 
 LICENSE=	ART10 GPLv1 MIT
 LICENSE_COMB=	dual

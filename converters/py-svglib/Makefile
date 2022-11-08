@@ -1,11 +1,12 @@
 PORTNAME=	svglib
-DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.0
+DISTVERSION=	1.4.1
 CATEGORIES=	converters python
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Pure-Python library for reading and converting SVG
+WWW=		https://github.com/deeplook/svglib
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -17,8 +18,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cssselect2>=0.2.0:textproc/py-cssselect2@${P
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
 USES=		cpe python:3.7+
-USE_GITHUB=	yes
-GH_ACCOUNT=	deeplook
 USE_PYTHON=	autoplist concurrent distutils
 CPE_VENDOR=	svglib_project
 

@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@tobez.org>
-
 PORTNAME=	Schedule-Cron
 PORTVERSION=	1.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Cron-like scheduler for Perl subroutines
+WWW=		https://metacpan.org/release/Schedule-Cron
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Time-modules>=0:devel/p5-Time-modules

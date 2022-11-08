@@ -5,6 +5,7 @@ CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	OBS Studio Plugin: Output as Video4Linux2 device
+WWW=		https://github.com/CatxFish/obs-v4l2sink
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,7 +16,7 @@ LIB_DEPENDS=	libobs.so:multimedia/obs-studio
 USES=		cmake compiler:c++11-lang qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	CatxFish
-USE_QT=		core gui widgets buildtools_build qmake_build
+USE_QT=		core gui widgets buildtools:build qmake:build
 
 CMAKE_ARGS=	-DLIBOBS_INCLUDE_DIR=${LOCALBASE}/include/obs
 

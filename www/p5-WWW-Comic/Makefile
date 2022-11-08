@@ -1,5 +1,3 @@
-# Created by: chinsan <chinsan.tw@gmail.com>
-
 PORTNAME=	WWW-Comic
 PORTVERSION=	1.06
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Retrieve comic strip images
+WWW=		https://metacpan.org/release/WWW-Comic
 
 LICENSE=	APACHE20
 

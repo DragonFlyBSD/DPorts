@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Data-Path
 PORTVERSION=	1.4.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	XPath-like access to complex data structures
+WWW=		https://metacpan.org/release/ZAPHAR/Data-Path-1.4.1
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

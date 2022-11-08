@@ -1,5 +1,3 @@
-# Created by: Igor Pokrovsky <ip@unixway.org>
-
 PORTNAME=	wmforecast
 DISTVERSION=	1.8.1
 CATEGORIES=	misc windowmaker geography
@@ -7,6 +5,7 @@ MASTER_SITES=	https://github.com/d-torrance/${PORTNAME}/releases/download/v${DIS
 
 MAINTAINER=	obscenum999@gmail.com
 COMMENT=	Weather dockapp for Window Maker using the Yahoo Weather API
+WWW=		https://wmforecast.friedcheese.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

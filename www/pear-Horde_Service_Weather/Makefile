@@ -1,11 +1,10 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	Horde_Service_Weather
 PORTVERSION=	2.5.5
 CATEGORIES=	www pear
 
 MAINTAINER=	horde@FreeBSD.org
 COMMENT=	Horde Weather Provider
+WWW=		https://pear.horde.org
 
 USES=	horde cpe
 USE_HORDE_BUILD=	Horde_Role

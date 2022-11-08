@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Log-Dispatch-Configurator-Any
 PORTVERSION=	1.122640
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Configurator implementation with Config::Any
+WWW=		https://metacpan.org/release/Log-Dispatch-Configurator-Any
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

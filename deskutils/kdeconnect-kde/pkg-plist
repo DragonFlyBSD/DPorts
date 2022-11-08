@@ -46,6 +46,7 @@ lib/libkdeconnectpluginkcm.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_sms.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_systemvolume.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_telephony.so
+%%QT_PLUGINDIR%%/kdeconnect/kdeconnect_virtualmonitor.so
 %%QT_PLUGINDIR%%/kf5/kfileitemaction/kdeconnectfileitemaction.so
 %%QT_PLUGINDIR%%/kf5/kio/kdeconnect.so
 %%QT_QMLDIR%%/org/kde/kdeconnect/libkdeconnectdeclarativeplugin.so
@@ -411,6 +412,21 @@ share/locale/id/LC_MESSAGES/kdeconnect-settings.mo
 share/locale/id/LC_MESSAGES/kdeconnect-sms.mo
 share/locale/id/LC_MESSAGES/kdeconnect-urlhandler.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.kdeconnect.mo
+share/locale/is/LC_MESSAGES/kdeconnect-app.mo
+share/locale/is/LC_MESSAGES/kdeconnect-cli.mo
+share/locale/is/LC_MESSAGES/kdeconnect-core.mo
+share/locale/is/LC_MESSAGES/kdeconnect-fileitemaction.mo
+share/locale/is/LC_MESSAGES/kdeconnect-indicator.mo
+share/locale/is/LC_MESSAGES/kdeconnect-interfaces.mo
+share/locale/is/LC_MESSAGES/kdeconnect-kcm.mo
+share/locale/is/LC_MESSAGES/kdeconnect-kded.mo
+share/locale/is/LC_MESSAGES/kdeconnect-kio.mo
+share/locale/is/LC_MESSAGES/kdeconnect-nautilus-extension.mo
+share/locale/is/LC_MESSAGES/kdeconnect-plugins.mo
+share/locale/is/LC_MESSAGES/kdeconnect-settings.mo
+share/locale/is/LC_MESSAGES/kdeconnect-sms.mo
+share/locale/is/LC_MESSAGES/kdeconnect-urlhandler.mo
+share/locale/is/LC_MESSAGES/plasma_applet_org.kde.kdeconnect.mo
 share/locale/it/LC_MESSAGES/kdeconnect-app.mo
 share/locale/it/LC_MESSAGES/kdeconnect-cli.mo
 share/locale/it/LC_MESSAGES/kdeconnect-core.mo
@@ -731,6 +747,7 @@ share/plasma/plasmoids/org.kde.kdeconnect/contents/ui/RemoteCommands.qml
 share/plasma/plasmoids/org.kde.kdeconnect/contents/ui/SMS.qml
 share/plasma/plasmoids/org.kde.kdeconnect/contents/ui/Sftp.qml
 share/plasma/plasmoids/org.kde.kdeconnect/contents/ui/Share.qml
+share/plasma/plasmoids/org.kde.kdeconnect/contents/ui/VirtualMonitor.qml
 share/plasma/plasmoids/org.kde.kdeconnect/contents/ui/main.qml
 share/plasma/plasmoids/org.kde.kdeconnect/metadata.desktop
 share/plasma/plasmoids/org.kde.kdeconnect/metadata.json

@@ -1,5 +1,3 @@
-# Created by: Pedro Giffuni
-
 PORTNAME=	CoinMP
 DISTVERSIONPREFIX=	releases/
 DISTVERSION=	1.8.4
@@ -8,6 +6,7 @@ CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Optimization library with support for COIN-OR CLP, CBC, and CGL
+WWW=		https://projects.coin-or.org/CoinMP
 
 LICENSE=	CPL
 LICENSE_NAME=	Common Public License, Version 1.0

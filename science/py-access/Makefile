@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	access
 PORTVERSION=	1.1.8
 CATEGORIES=	science python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Calculate spatial accessibility metrics
+WWW=		https://access.readthedocs.io/en/latest/
 
 LICENSE=	BSD3CLAUSE
 

@@ -1,5 +1,3 @@
-# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-
 PORTNAME=	gngb
 PORTVERSION=	20060309
 PORTREVISION=	10
@@ -8,6 +6,7 @@ MASTER_SITES=	http://m.peponas.free.fr/gngb/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GameBoy(tm) emulator
+WWW=		http://m.peponas.free.fr/gngb/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,11 +1,10 @@
-# Created by: Jamie Hermans <jamie@hermans.ca>
-
 PORTNAME=	jhead
 PORTVERSION=	3.06.0.1
 CATEGORIES=	graphics
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	EXIF JPEG header manipulation tool
+WWW=		https://github.com/Matthias-Wandel/jhead
 
 LICENSE=	PD
 

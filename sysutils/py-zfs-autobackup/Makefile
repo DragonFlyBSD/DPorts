@@ -1,5 +1,3 @@
-# Created by: Sergey Kozlov <skozlov@FreeBSD.org>
-
 PORTNAME=	zfs-autobackup
 DISTVERSION=	3.1.2
 CATEGORIES=	sysutils python
@@ -9,6 +7,7 @@ DISTNAME=	zfs_autobackup-${DISTVERSION}
 
 MAINTAINER=	skozlov@FreeBSD.org
 COMMENT=	Periodicly backup zfs filesystems to other locations
+WWW=		https://github.com/psy0rz/zfs_autobackup
 
 LICENSE=	GPLv3
 

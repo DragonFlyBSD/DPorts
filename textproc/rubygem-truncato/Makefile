@@ -1,10 +1,11 @@
 PORTNAME=	truncato
-PORTVERSION=	0.7.11
+PORTVERSION=	0.7.12
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Truncating HTML strings keeping a valid HTML markup
+WWW=		https://github.com/jorgemanrubia/truncato
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

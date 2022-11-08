@@ -1,5 +1,3 @@
-# Created by: Henry Hu <henry.hu.sh@gmail.com>
-
 PORTNAME=	pyzy
 PORTVERSION=	0.1.0
 PORTREVISION=	9
@@ -7,6 +5,7 @@ CATEGORIES=	chinese
 
 MAINTAINER=	henry.hu.sh@gmail.com
 COMMENT=	Chinese PinYin and Bopomofo conversion library
+WWW=		https://github.com/pyzy/pyzy
 
 LICENSE=	LGPL21
 

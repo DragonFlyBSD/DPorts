@@ -1,5 +1,3 @@
-# Created by: Sandro Sigala
-
 PORTNAME=	cutils
 PORTVERSION=	1.6
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.sigala.it/sandro/files/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Miscellaneous C programmer's utilities
+WWW=		http://www.sigala.it/sandro/software.php #cutils
 
 USES=		makeinfo
 GNU_CONFIGURE=	yes

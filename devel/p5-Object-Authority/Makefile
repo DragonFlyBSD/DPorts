@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Object-AUTHORITY
 PORTVERSION=	0.004
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module that adds an AUTHORITY method to your class
+WWW=		https://metacpan.org/release/TOBYINK/Object-AUTHORITY-0.004
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Object-Role>=0:devel/p5-Object-Role

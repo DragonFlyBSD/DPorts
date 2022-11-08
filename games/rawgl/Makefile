@@ -1,5 +1,3 @@
-# Created by: Piotr Kubaj <pkubaj@FreeBSD.org>
-
 PORTNAME=	rawgl
 PORTVERSION=	g20180321
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Another World engine reimplementation
+WWW=		https://github.com/cyxx/rawgl
 
 LICENSE=	NONE
 

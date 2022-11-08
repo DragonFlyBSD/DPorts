@@ -1,13 +1,12 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org>
-
 PORTNAME=	redisjson
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.8
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	databases
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	JSON data type for Redis
+WWW=		https://oss.redislabs.com/redisjson/
 
 LICENSE=	UNKNOWN
 LICENSE_NAME=	Redis Source Available License Agreement

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Data-Object-Types
 PORTVERSION=	0.04
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Data-Object Type Constraints for Data::Object
+WWW=		https://metacpan.org/release/Data-Object-Types
 
 LICENSE=	APACHE20
 

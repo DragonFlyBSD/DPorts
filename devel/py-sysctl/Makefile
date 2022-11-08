@@ -1,5 +1,3 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	sysctl
 PORTVERSION=	0.3.3.20210928
 CATEGORIES=	devel python
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	freqlabs@FreeBSD.org
 COMMENT=	Wrapper for the sysctl system functions
+WWW=		https://github.com/truenas/py-sysctl
 
 LICENSE=	BSD2CLAUSE
 

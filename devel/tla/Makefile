@@ -1,5 +1,3 @@
-# Created by: Sean Chittenden <seanc@FreeBSD.org>
-
 PORTNAME=	tla
 PORTVERSION=	1.3.5
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	GNU/gnu-arch \
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Original arch source control management CLI written in C
+WWW=		https://www.gnu.org/software/gnu-arch/
 
 LICENSE=	GPLv2+
 

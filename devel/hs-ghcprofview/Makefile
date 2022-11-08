@@ -1,13 +1,16 @@
 PORTNAME=	ghcprofview
 PORTVERSION=	0.1.0.2
+PORTREVISION=	1
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Graphical viewer for GHC profile files
+WWW=		https://github.com/portnov/ghcprofview-hs
 
 LICENSE=	BSD3CLAUSE
 
-LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
+LIB_DEPENDS=	libfreetype.so:print/freetype2 \
+		libharfbuzz.so:print/harfbuzz
 
 USES=		cabal gnome pkgconfig
 
@@ -24,7 +27,8 @@ USE_CABAL=	OneTuple-0.3.1_2 \
 		base-compat-0.12.1 \
 		base-compat-batteries-0.12.1_2 \
 		base-orphans-0.8.6 \
-		bifunctors-5.5.12 \
+		bifunctors-5.5.12_1 \
+		bitvec-1.1.3.0 \
 		blaze-builder-0.4.2.2_1 \
 		blaze-html-0.9.1.2_2 \
 		blaze-markup-0.8.2.8_2 \
@@ -68,7 +72,7 @@ USE_CABAL=	OneTuple-0.3.1_2 \
 		primitive-0.7.4.0 \
 		random-1.2.1.1 \
 		regex-base-0.94.0.2_1 \
-		regex-tdfa-1.3.1.2_1 \
+		regex-tdfa-1.3.2 \
 		resourcet-1.2.6 \
 		safe-0.3.19 \
 		scientific-0.3.7.0_2 \
@@ -78,9 +82,9 @@ USE_CABAL=	OneTuple-0.3.1_2 \
 		splitmix-0.1.0.4 \
 		streaming-commons-0.2.2.4 \
 		strict-0.4.0.1_4 \
-		tagged-0.8.6.1_2 \
+		tagged-0.8.6.1_3 \
 		text-short-0.1.5 \
-		th-abstraction-0.4.3.0 \
+		th-abstraction-0.4.4.0 \
 		these-1.1.1.1_5 \
 		time-compat-1.9.6.1_3 \
 		transformers-compat-0.7.2 \
@@ -88,8 +92,9 @@ USE_CABAL=	OneTuple-0.3.1_2 \
 		unliftio-core-0.2.0.1_2 \
 		unordered-containers-0.2.19.1 \
 		uuid-types-1.0.5_2 \
-		vector-0.12.3.1_2 \
-		vector-algorithms-0.8.0.4_2 \
+		vector-0.13.0.0 \
+		vector-algorithms-0.9.0.1 \
+		vector-stream-0.1.0.0 \
 		witherable-0.4.2_3 \
 		xdg-basedir-0.2.2 \
 		xml-conduit-1.9.1.1_1 \

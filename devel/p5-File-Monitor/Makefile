@@ -1,5 +1,3 @@
-# Created by: Masahiro Teramoto <markun@onohara.to>
-
 PORTNAME=	File-Monitor
 PORTVERSION=	1.00
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	markun@onohara.to
 COMMENT=	Monitor files and directories for changes
+WWW=		https://metacpan.org/release/File-Monitor
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

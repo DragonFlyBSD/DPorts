@@ -1,11 +1,10 @@
-# Created by: Andrey Zakhvatov
-
 PORTNAME=	frotz
 PORTVERSION=	2.51
 CATEGORIES=	games
 
 MAINTAINER=	dave@661.org
 COMMENT=	Infocom Z-machine games interpreter
+WWW=		https://gitlab.com/DavidGriffith/frotz
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

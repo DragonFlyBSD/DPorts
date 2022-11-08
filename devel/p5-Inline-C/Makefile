@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Inline-C
 PORTVERSION=	0.82
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Write Perl Subroutines in C
+WWW=		https://metacpan.org/release/Inline-C
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

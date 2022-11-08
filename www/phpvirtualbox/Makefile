@@ -1,11 +1,10 @@
-# Created by: Bernhard Froehlich <decke@bluelife.at>
-
 PORTNAME=	phpvirtualbox
 DISTVERSION=	6.1
 CATEGORIES=	www
 
 MAINTAINER=	vbox@FreeBSD.org
 COMMENT=	AJAX Web Interface for VirtualBox
+WWW=		https://sourceforge.net/projects/phpvirtualbox/
 
 LICENSE=	GPLv3
 

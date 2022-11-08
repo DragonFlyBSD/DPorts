@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	brotli
 PORTVERSION=	1.0.9
 CATEGORIES=	archivers python
@@ -9,6 +7,7 @@ DISTNAME=	Brotli-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generic-purpose lossless compression algorithm
+WWW=		https://github.com/google/brotli
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

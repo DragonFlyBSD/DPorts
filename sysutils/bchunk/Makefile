@@ -1,5 +1,3 @@
-# Created by: bsdx
-
 PORTNAME=	bchunk
 DISTVERSION=	1.2.2
 CATEGORIES=	sysutils
@@ -7,6 +5,7 @@ MASTER_SITES=	http://he.fi/bchunk/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Converts .bin/.cue files to .iso/audio
+WWW=		http://he.fi/bchunk/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

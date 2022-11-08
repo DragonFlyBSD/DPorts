@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	mutex_m
 PORTVERSION=	0.1.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Mixin to extend objects to be handled like a Mutex
+WWW=		https://github.com/ruby/mutex_m
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual

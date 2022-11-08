@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	Perl-Critic
 PORTVERSION=	1.140
 CATEGORIES=	textproc devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Critique Perl source for style and standards
+WWW=		https://metacpan.org/release/Perl-Critic
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

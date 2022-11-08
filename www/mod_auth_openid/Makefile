@@ -1,14 +1,13 @@
-# Created by: Sutra Zhou <zhoushuqun@gmail.com>
-
 PORTNAME=	mod_auth_openid
 PORTVERSION=	0.8
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Authentication module for the Apache 2 webserver with OpenID
+WWW=		https://findingscience.com/mod_auth_openid/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

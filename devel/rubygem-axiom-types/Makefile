@@ -1,5 +1,3 @@
-# Created by: Michael Moll <kvedulv at kvedulv.de>
-
 PORTNAME=	axiom-types
 PORTVERSION=	0.1.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Abstract types for logic programming in Ruby
+WWW=		https://github.com/dkubb/axiom-types
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

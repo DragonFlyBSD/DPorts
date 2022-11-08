@@ -1,15 +1,16 @@
 PORTNAME=	lumina-pdf
 DISTVERSION=	1.6.2
-PORTREVISION=	4
+PORTREVISION=	7
 CATEGORIES=	deskutils
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	PDF viewer from the Lumina Desktop
+WWW=		https://lumina-desktop.org
 
 LICENSE=	BSD3CLAUSE
 
 USES=		compiler:c++11-lang desktop-file-utils gl qmake qt:5
-USE_QT=		buildtools_build concurrent core gui \
+USE_QT=		buildtools:build concurrent core gui \
 		multimedia network printsupport \
 		svg widgets x11extras
 USE_GL=		gl
@@ -33,7 +34,7 @@ MUPDF_QMAKE_ON=		USE_MUPDF=true
 MUPDF_LIB_DEPENDS=	libmupdf.so:graphics/mupdf
 
 NLS_QMAKE_ON=		CONFIG+=WITH_I18N
-NLS_USE=		qt=linguist_build
+NLS_USE=		qt=linguist:build
 
 POPPLER_QMAKE_ON=	USE_POPPLER=true
 POPPLER_LIB_DEPENDS=	libpoppler-qt5.so:graphics/poppler-qt5

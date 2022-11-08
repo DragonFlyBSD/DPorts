@@ -1,5 +1,3 @@
-# Created by: trevor
-
 PORTNAME=	jewel
 PORTVERSION=	0.12.41
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	http://mjr.towers.org.uk/comp/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Window manager based on aewm++
+WWW=		http://www.mjr.dsl.pipex.com/xwinman.html #jewel
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE

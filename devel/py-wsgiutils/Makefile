@@ -1,5 +1,3 @@
-# Created by: Jordi Haarman
-
 PORTNAME=	wsgiutils
 PORTVERSION=	0.7.2
 CATEGORIES=	devel textproc www python
@@ -9,6 +7,7 @@ DISTNAME=	WSGIUtils-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utility libraries for development of simple WSGI programs
+WWW=		https://github.com/davidfraser/WSGIUtils
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

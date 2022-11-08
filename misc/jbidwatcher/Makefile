@@ -1,5 +1,3 @@
-# Created by: Jose Rodriguez <king@v2project.com>
-
 PORTNAME=	jbidwatcher
 PORTVERSION=	2.5.6
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.jbidwatcher.com/download/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java-based application allowing you to monitor eBay auctions
+WWW=		https://www.jbidwatcher.com/
 
 USES=	tar:bzip2
 USE_JAVA=	yes

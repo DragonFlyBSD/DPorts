@@ -1,5 +1,3 @@
-# Created by: stas@FreeBSD.org
-
 PORTNAME=	libunwind
 PORTVERSION=	20211201	# This is the release date on https://download.savannah.gnu.org/releases/libunwind/
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}-1.6.2
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generic stack unwinding library
+WWW=		https://www.nongnu.org/libunwind/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

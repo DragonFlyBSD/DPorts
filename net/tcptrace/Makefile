@@ -1,5 +1,3 @@
-# Created by: fenner
-
 PORTNAME=	tcptrace
 PORTVERSION=	6.6.8
 CATEGORIES=	net
@@ -7,6 +5,7 @@ CATEGORIES=	net
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	TCP dump file analysis tool
+WWW=		https://sourceforge.net/projects/open-tcptrace/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,13 +1,13 @@
-# Created by: Adam David <adam@FreeBSD.org>
-
 PORTNAME=	procmail
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.24
+PORTREVISION=	1
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-bgrb
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	BuGlessRB fork of the procmail local mail delivery agent
+WWW=		https://github.com/BuGlessRB/procmail
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	BuGlessRB

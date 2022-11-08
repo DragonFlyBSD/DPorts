@@ -1,5 +1,3 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org>
-
 PORTNAME=	brotli
 PORTVERSION=	1.0.9
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=	archivers devel
 
 MAINTAINER=	osa@FreeBSD.org
 COMMENT=	Generic-purpose lossless compression algorithm
+WWW=		https://github.com/google/brotli
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

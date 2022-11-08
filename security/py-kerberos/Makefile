@@ -1,5 +1,3 @@
-# Created by: Roland van Laar <roland@micite.net>
-
 PORTNAME=	kerberos
 PORTVERSION=	1.3.1
 PORTREVISION=	0
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	Kerberos bindings for python
+WWW=		https://github.com/apple/ccs-pykerberos
 
 LICENSE=	APACHE20
 

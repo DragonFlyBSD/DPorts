@@ -1,13 +1,12 @@
-# Created by: Mikhail Teterin <mi@aldan.algebra.com>
-
 PORTNAME=	minidlna
 PORTVERSION=	1.3.0
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	net multimedia www
 
 MAINTAINER=	glebius@FreeBSD.org
 COMMENT=	Media-server compatible with "Digital Life Network Alliance"
+WWW=		http://minidlna.sourceforge.net
 
 LICENSE=	GPLv2
 

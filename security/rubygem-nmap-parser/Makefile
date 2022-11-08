@@ -1,5 +1,3 @@
-# Created by: Daniel Roethlisberger <daniel@roe.ch>
-
 PORTNAME=	nmap-parser
 PORTVERSION=	0.3.5
 CATEGORIES=	security rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby interface to Nmap scan data
+WWW=		http://rubynmap.sourceforge.net
 
 LICENSE=	MIT
 

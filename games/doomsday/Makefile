@@ -1,13 +1,12 @@
-# Created by: Igor Pokrovsky <ip@doom.homeunix.org>
-
 PORTNAME=	doomsday
 PORTVERSION=	2.3.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	SF/deng/Doomsday%20Engine/${PORTVERSION}
 
 MAINTAINER=	danilo@FreeBSD.org
 COMMENT=	Enhanced Doom, Heretic, and Hexen source port
+WWW=		https://www.dengine.net/
 
 LICENSE=	GPLv2
 
@@ -23,7 +22,7 @@ USE_GL=		gl glu
 USE_LDCONFIG=	yes
 USE_SDL=	sdl2 mixer2
 USE_XORG=	x11 sm ice xext xrandr xxf86vm
-USE_QT=		buildtools_build core gui network widgets qmake_build opengl x11extras
+USE_QT=		buildtools:build core gui network widgets qmake:build opengl x11extras
 CMAKE_ARGS+=	-DDENG_ENABLE_COTIRE=OFF -DDENG_ASSIMP_EMBEDDED=OFF
 LDFLAGS+=	-lexecinfo
 

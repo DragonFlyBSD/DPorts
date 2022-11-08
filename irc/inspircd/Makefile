@@ -1,12 +1,11 @@
-# Created by: Craig Edwards <brain@mail1.chatspike.net>
-
 PORTNAME=	inspircd
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.13.0
+DISTVERSION=	3.14.0
 CATEGORIES=	irc
 
 MAINTAINER=	driesm@FreeBSD.org
 COMMENT=	Modular C++ IRC daemon
+WWW=		https://www.inspircd.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/docs/LICENSE.txt

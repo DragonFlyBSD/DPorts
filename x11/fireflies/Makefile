@@ -1,5 +1,3 @@
-# Created by: UMENO Takashi <umeno@rr.iij4u.or.jp>
-
 PORTNAME=	fireflies
 PORTVERSION=	2.07
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	http://somewhere.fscked.org/proj/fireflies/files/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extension of xscreensaver
+WWW=		http://somewhere.fscked.org/fireflies/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

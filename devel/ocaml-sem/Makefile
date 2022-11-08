@@ -1,5 +1,3 @@
-# Created by: asmith
-
 PORTNAME=	sem
 PORTVERSION=	0.0.2
 PORTREVISION=	3
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	POSIX semaphores for OCaml
+WWW=		http://ocaml-sem.sourceforge.net/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

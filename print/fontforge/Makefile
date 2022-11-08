@@ -1,5 +1,3 @@
-# Created by: KANOU Hiroki <kanou@khdd.net>
-
 PORTNAME=	fontforge
 DISTVERSION=	20201107
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/${DIS
 
 MAINTAINER=	cyberbotx@cyberbotx.com
 COMMENT=	Type 1/TrueType/OpenType/bitmap font editor
+WWW=		https://fontforge.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

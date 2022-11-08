@@ -1,11 +1,10 @@
-# Created by: Vladimir Kotal <vlada@devnull.cz>
-
 PORTNAME=	ipv6gen
 PORTVERSION=	1.0
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	vlada@devnull.cz
 COMMENT=	IPv6 prefix generator
+WWW=		https://github.com/vladak/ipv6gen/wiki/IPv6-prefix-generator
 
 LICENSE=	GPLv2
 

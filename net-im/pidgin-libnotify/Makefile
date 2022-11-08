@@ -1,5 +1,3 @@
-# Created by: Meethune Bhowmick <meethune@gmail.com>
-
 PORTNAME=	libnotify
 PORTVERSION=	0.14
 PORTREVISION=	14
@@ -10,6 +8,7 @@ DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	meethune@gmail.com
 COMMENT=	This plugin adds a libnotify interface to Pidgin
+WWW=		http://gaim-libnotify.sourceforge.net/
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/pidgin:net-im/pidgin \
 		${LOCALBASE}/libdata/pkgconfig/libnotify.pc:devel/libnotify

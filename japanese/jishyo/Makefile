@@ -1,5 +1,3 @@
-# Created by: gurkan@phys.ethz.ch
-
 PORTNAME=	jishyo
 PORTVERSION=	0.1
 PORTREVISION=	11
@@ -9,6 +7,7 @@ DISTNAME=	Jishyo-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	English to Japanese dictionary for GNUstep
+WWW=		https://www.eskimo.com/~pburns/Dictionaries/
 
 LICENSE=	GPLv2+
 

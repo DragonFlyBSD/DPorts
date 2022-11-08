@@ -1,5 +1,3 @@
-# Created by: Olivier Duchateau
-
 PORTNAME=	waitress
 PORTVERSION=	2.1.2
 CATEGORIES=	www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python WSGI server
+WWW=		https://github.com/Pylons/waitress
 
 LICENSE=	ZPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

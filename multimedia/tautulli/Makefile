@@ -1,12 +1,11 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME=	tautulli
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.9.7
+DISTVERSION=	2.10.3
 CATEGORIES=	multimedia python
 
 MAINTAINER=	christer.edwards@gmail.com
 COMMENT=	Monitoring, analytics, and notifications for Plex Media Server
+WWW=		https://github.com/Tautulli/Tautulli
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE

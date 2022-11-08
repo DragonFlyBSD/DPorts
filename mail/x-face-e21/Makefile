@@ -1,8 +1,6 @@
-# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-
 PORTNAME=	x-face-e21
 PORTVERSION=	20070306
-PORTREVISION=	23
+PORTREVISION=	24
 CATEGORIES=	mail elisp
 MASTER_SITES=	http://www.jpl.org/elips/
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
@@ -11,6 +9,7 @@ EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	X-Face utilities for Emacs
+WWW=		https://www.jpl.org/elips/
 
 RUN_DEPENDS=	uncompface:mail/faces
 

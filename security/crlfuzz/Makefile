@@ -1,13 +1,12 @@
-# Created by: Gabriel M. Dutra <0xdutra@gmail.com>
-
 PORTNAME=	crlfuzz
 PORTVERSION=	1.4.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	security
 
 MAINTAINER=	0xdutra@gmail.com
 COMMENT=	Fast tool to scan CRLF vulnerability written in Go
+WWW=		https://github.com/dwisiswant0/crlfuzz
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

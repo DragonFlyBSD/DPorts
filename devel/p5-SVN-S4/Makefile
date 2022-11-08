@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	SVN-S4
 PORTVERSION=	1.062
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	gary@hayers.org
 COMMENT=	Wrapper for subversion program
+WWW=		https://metacpan.org/release/SVN-S4
 
 LICENSE=	ART20 LGPL3
 LICENSE_COMB=	dual

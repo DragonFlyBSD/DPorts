@@ -1,5 +1,3 @@
-# Created by: Alexander Logvinov <ports@logvinov.com>
-
 PORTNAME=	gxneur
 PORTVERSION=	0.20.0
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
 
 MAINTAINER=	mizhka@gmail.com
 COMMENT=	GTK frontend for XNeur keyboard layout switcher
+WWW=		https://launchpad.net/xneur
 
 LICENSE=	GPLv2
 

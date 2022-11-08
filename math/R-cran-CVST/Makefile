@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	CVST
 DISTVERSION=	0.2-3
 CATEGORIES=	math
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Fast Cross-Validation via Sequential Testing
+WWW=		https://cran.r-project.org/web/packages/CVST/
 
 LICENSE=	GPLv2+
 

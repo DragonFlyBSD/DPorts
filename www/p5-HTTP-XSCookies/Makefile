@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	HTTP-XSCookies
 PORTVERSION=	0.000021
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast XS cookie mangling for Perl
+WWW=		https://metacpan.org/release/HTTP-XSCookies
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

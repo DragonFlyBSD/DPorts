@@ -1,5 +1,3 @@
-# Created by: Steve Wills <steve@mouf.net>
-
 PORTNAME=	Chemistry-Isotope
 PORTVERSION=	0.11
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Table of the isotopes exact mass data
+WWW=		https://metacpan.org/release/Chemistry-Isotope
 
 USES=		perl5
 USE_PERL5=	configure

@@ -1,5 +1,3 @@
-# Created by: Clement Laforet
-
 PORTNAME=	haproxy
 DISTVERSION=	1.8.30
 CATEGORIES=	net www
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	18
 
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Reliable, high performance TCP/HTTP load balancer
+WWW=		https://www.haproxy.org
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi

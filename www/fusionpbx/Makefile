@@ -1,11 +1,10 @@
-# Created by: Richard Neese <r.neese@gmail.com>
-
 PORTNAME=	fusionpbx
 PORTVERSION=	4.4.1
 CATEGORIES=	www
 
 MAINTAINER=	richard2891@gmail.com
 COMMENT=	Web/PHP Interface for FreeSwitch
+WWW=		https://www.fusionpbx.com
 
 LICENSE=	MPL11
 

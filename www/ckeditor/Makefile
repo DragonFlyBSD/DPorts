@@ -1,5 +1,3 @@
-# Created by: Joe Horn <joehorn@gmail.com>
-
 PORTNAME=	ckeditor
 PORTVERSION=	4.18.0
 CATEGORIES=	www
@@ -8,6 +6,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}_full
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	WYSIWYG editor to be used inside web page
+WWW=		https://ckeditor.com/
 
 LICENSE=	GPLv2+ LGPL21+ MPL11 MPL20
 LICENSE_COMB=	dual

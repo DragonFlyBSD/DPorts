@@ -1,5 +1,3 @@
-# Created by: Kimo <kimor79@yahoo.com>
-
 PORTNAME=	pry-remote-em
 PORTVERSION=	1.1.2
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Connect to Pry remotely using EventMachine
+WWW=		https://github.com/gruis/pry-remote-em
 
 LICENSE=	MIT
 

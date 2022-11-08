@@ -1,5 +1,3 @@
-# Created by: clsung@dragon2.net
-
 PORTNAME=	Class-ParmList
 PORTVERSION=	1.06
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Module for processing named parameter lists for method calls
+WWW=		https://metacpan.org/release/Class-ParmList
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	Complete-Util
 PORTVERSION=	0.611
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	General completion Perl routines
+WWW=		https://metacpan.org/release/Complete-Util
 
 RUN_DEPENDS=	p5-Complete-Common>=0.22:devel/p5-Complete-Common
 

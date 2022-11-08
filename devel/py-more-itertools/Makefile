@@ -1,13 +1,12 @@
-# Created by: William Grzybowski <wg@FreeBSD.org>
-
 PORTNAME=	more-itertools
-PORTVERSION=	8.13.0
+PORTVERSION=	8.14.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	More routines for operating on iterables, beyond itertools
+WWW=		https://github.com/more-itertools/more-itertools
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

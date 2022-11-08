@@ -1,5 +1,3 @@
-# Created by: Dan Langille <dvl@FreeBSD.org>
-
 PORTNAME=	elasticsearch-curator
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.8.4
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	elastic@FreeBSD.org
 COMMENT=	Python index manager for Elasticsearch
+WWW=		https://curator.readthedocs.org/en/master/
 
 LICENSE=	APACHE20
 

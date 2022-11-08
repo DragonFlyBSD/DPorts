@@ -1,5 +1,3 @@
-# Created by: Alexander Nusov <alexander.nusov@nfvexpress.com>
-
 PORTNAME=	tenacity
 PORTVERSION=	8.0.1
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Retry code until it succeeds
+WWW=		https://github.com/jd/tenacity
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

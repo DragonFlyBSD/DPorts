@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	fastjar
 PORTVERSION=	0.93.20060808
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	LOCAL/maho/fastjar
 
 MAINTAINER=	java@FreeBSD.org
 COMMENT=	Version of JDK's `jar' command written entirely in C
+WWW=		http://fastjar.sourceforge.net/
 
 LICENSE=	GPLv2
 

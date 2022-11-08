@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	self
 PORTVERSION=	0.36
 CATEGORIES=	devel perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Provides "self" and "args" keywords in your OO program
+WWW=		https://metacpan.org/release/self
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

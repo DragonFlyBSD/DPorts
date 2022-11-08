@@ -1,5 +1,3 @@
-# Created by: Harald Wille <harald.wille@students.jku.at>
-
 PORTNAME=	wmweather+
 PORTVERSION=	2.18
 CATEGORIES=	misc windowmaker geography
@@ -11,6 +9,7 @@ EXTRACT_ONLY=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Displays current conditions and forecasts with icons and text
+WWW=		https://sourceforge.net/projects/wmweatherplus/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

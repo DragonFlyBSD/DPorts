@@ -1,5 +1,3 @@
-# Created by: Foxfair Hu <foxfair@FreeBSD.org>
-
 PORTNAME=		cryptlib
 PORTVERSION=		3.4.3
 CATEGORIES=		security
@@ -8,6 +6,7 @@ DISTNAME=		cl${PORTVERSION:S/.//g}
 
 MAINTAINER=		ale@FreeBSD.org
 COMMENT=		Powerful security programming toolkit
+WWW=		http://www.cs.auckland.ac.nz/~pgut001/cryptlib/
 
 ONLY_FOR_ARCHS=		amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
 

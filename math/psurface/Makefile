@@ -1,10 +1,12 @@
 PORTNAME=	psurface
 DISTVERSION=	2.0.0-13
 DISTVERSIONSUFFIX=	-gb5b6825
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Piecewise linear bijections between triangulated surfaces
+WWW=		https://github.com/psurface/psurface
 
 LICENSE=	GPLv3+
 

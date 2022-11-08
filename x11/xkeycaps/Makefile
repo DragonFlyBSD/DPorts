@@ -1,5 +1,3 @@
-# Created by: jmz
-
 PORTNAME=	xkeycaps
 PORTVERSION=	2.46
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.jwz.org/xkeycaps/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graphically display and edit the keyboard mapping
+WWW=		https://www.jwz.org/xkeycaps/
 
 LICENSE=	MIT
 

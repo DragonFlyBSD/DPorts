@@ -1,12 +1,13 @@
 PORTNAME=	gmt
 DISTVERSION=	6.3.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/GenericMappingTools/${PORTNAME}/releases/download/${DISTVERSION}/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-src
 
 MAINTAINER=	lbartoletti@FreeBSD.org
 COMMENT=	Generic Mapping Tools - data processing and display software package
+WWW=		https://www.generic-mapping-tools.org/
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi

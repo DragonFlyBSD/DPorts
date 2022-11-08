@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	pydicom
 PORTVERSION=	2.3.0
 DISTVERSIONPREFIX=v
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Read, modify, and write DICOM files with Python code
+WWW=		https://github.com/pydicom/pydicom
 
 LICENSE=	MIT
 

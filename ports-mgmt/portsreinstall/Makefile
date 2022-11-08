@@ -1,5 +1,3 @@
-# Created by: Mamoru Sakaue / MwGhennndo
-
 PORTNAME=	portsreinstall
 PORTVERSION=	4.1.0
 CATEGORIES=	ports-mgmt
@@ -8,6 +6,7 @@ MASTER_SITES=	OSDN/${PORTNAME} \
 
 MAINTAINER=	sakaue.mamoru@mwghennndo.com
 COMMENT=	Ports upgrading utility for massive forced reinstall
+WWW=		http://www.mwghennndo.com/software/portsreinstall/
 
 LICENSE=	BSD2CLAUSE
 

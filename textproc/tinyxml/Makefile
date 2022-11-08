@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	tinyxml
 PORTVERSION=	2.6.2
 PORTREVISION=	4
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION:S/./_/g}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Small C++ XML parser
+WWW=		https://sourceforge.net/projects/tinyxml/
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 

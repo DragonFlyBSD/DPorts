@@ -1,5 +1,3 @@
-# Created by: John Hay
-
 PORTNAME=	gpsmanshp
 PORTVERSION=	1.2.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Shapelib support for gpsman
+WWW=		http://gpsmanshp.sourceforge.net/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/doc/gpl-3_0.txt

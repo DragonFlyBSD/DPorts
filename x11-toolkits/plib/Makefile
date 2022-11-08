@@ -1,5 +1,3 @@
-# Created by: Brian Buchanan <brian@CSUA.Berkeley.EDU>
-
 PORTNAME=	plib
 PORTVERSION=	1.8.5
 PORTREVISION=	8
@@ -8,6 +6,7 @@ MASTER_SITES=	http://plib.sourceforge.net/dist/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Portable library for joystick/sound/OpenGL GUI/3D math
+WWW=		http://plib.sourceforge.net/
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING

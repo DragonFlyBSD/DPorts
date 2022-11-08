@@ -1,5 +1,3 @@
-# Created by: Muhammad Moinur Rahman <bofh@FreeBSD.org>
-
 PORTNAME=	aggregate6
 PORTVERSION=	1.0.12
 CATEGORIES=	net-mgmt python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Compress an unsorted list of IPv4 and IPv6 prefixes
+WWW=		https://github.com/job/aggregate6
 
 LICENSE=	BSD2CLAUSE
 

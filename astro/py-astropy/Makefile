@@ -1,5 +1,3 @@
-# Created by: nwhitehorn
-
 PORTNAME=	astropy
 DISTVERSION=	5.1
 PORTEPOCH=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Community-developed python astronomy tools
+WWW=		https://www.astropy.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst

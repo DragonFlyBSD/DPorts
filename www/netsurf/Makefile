@@ -1,14 +1,13 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-
 PORTNAME=	netsurf
 PORTVERSION=	3.10
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://download.netsurf-browser.org/netsurf/releases/source/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
 MAINTAINER=	nc@FreeBSD.org
 COMMENT=	Lightweight web browser
+WWW=		https://www.netsurf-browser.org/
 
 LICENSE=	GPLv2 MIT
 LICENSE_COMB=	multi

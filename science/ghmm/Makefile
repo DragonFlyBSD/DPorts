@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@FreeBSD.org>
-
 PORTNAME=	ghmm
 DISTVERSION=	0.9-rc3
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	General Hidden Markov Model Library in C
+WWW=		http://ghmm.sourceforge.net/
 
 LICENSE=	GPLv3
 

@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	jupyterlab-pygments
 PORTVERSION=	0.2.2
 CATEGORIES=	textproc python
@@ -9,6 +7,7 @@ DISTNAME=	jupyterlab_pygments-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Pygments theme using JupyterLab CSS variables
+WWW=		https://github.com/jupyterlab/jupyterlab_pygments
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

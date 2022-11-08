@@ -1,12 +1,11 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	dplyr
-DISTVERSION=	1.0.9
+DISTVERSION=	1.0.10
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Grammar of Data Manipulation
+WWW=		https://github.com/hadley/dplyr
 
 LICENSE=	MIT
 

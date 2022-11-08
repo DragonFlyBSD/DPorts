@@ -1,5 +1,3 @@
-# Created by: Gustau Perez <gustau.perez@gmail.com>
-
 PORTNAME=	libgxps
 PORTVERSION=	0.3.2
 CATEGORIES=	graphics gnome
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GObject based library for rendering XPS documents
+WWW=		https://wiki.gnome.org/action/show/Projects/libgxps
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	rack-attack
 PORTVERSION=	6.6.1
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Rack middleware for throttling and blocking abusive requests
+WWW=		https://github.com/kickstarter/rack-attack
 
 LICENSE=	MIT
 

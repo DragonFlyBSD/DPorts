@@ -1,5 +1,3 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	corsixth
 PORTVERSION=	0.66
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Open source clone of Theme Hospital
+WWW=		https://github.com/CorsixTH/CorsixTH
 
 LICENSE=	MIT
 

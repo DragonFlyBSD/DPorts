@@ -1,5 +1,3 @@
-# Created by: Jim Mock <jim@FreeBSD.org>
-
 PORTNAME=	libdockapp
 PORTVERSION=	0.7.2
 CATEGORIES=	x11-wm
@@ -7,6 +5,7 @@ MASTER_SITES=	https://www.dockapps.net/download/
 
 MAINTAINER=	xride@FreeBSD.org
 COMMENT=	Standard library for Window Maker dock apps
+WWW=		http://solfertje.student.utwente.nl/~dalroi/libdockapp/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

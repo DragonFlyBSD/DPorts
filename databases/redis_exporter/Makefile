@@ -1,13 +1,12 @@
-# Created by: Jev Björsell <ports@ecadlabs.com>
-
 PORTNAME=	redis_exporter
 PORTVERSION=	1.33.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	databases
 
 MAINTAINER=	arcade@b1t.name
 COMMENT=	Prometheus exporter for redis stats
+WWW=		https://github.com/oliver006/redis_exporter
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

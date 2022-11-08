@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ufoprocessor
 PORTVERSION=	1.9.0
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DISTNAME=	ufoProcessor-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Read, write and generate UFOs with designspace data
+WWW=		https://github.com/LettError/ufoProcessor
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

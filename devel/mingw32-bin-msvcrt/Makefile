@@ -1,5 +1,3 @@
-# Created by: Lev A. Serebryakov <lev@serebryakov.spb.ru>
-
 PORTNAME=	bin-msvcrt
 PORTVERSION=	r${RUNTIMEVERSION:S/-/./}.a${APIVERSION:S/-/./}
 CATEGORIES=	devel
@@ -13,6 +11,7 @@ DIST_SUBDIR=	mingw
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Headers and Libraries for Windows cross-development
+WWW=		http://mingw.sourceforge.net
 
 CONFLICTS=	mingw-bin-msvcrt
 

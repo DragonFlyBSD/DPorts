@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	gupnp-tools
 PORTVERSION=	0.10.3
 CATEGORIES=	net
@@ -7,6 +5,7 @@ MASTER_SITES=	GNOME
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Set of utilities and demos to work with UPnP
+WWW=		https://gitlab.gnome.org/GNOME/gupnp-tools
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING

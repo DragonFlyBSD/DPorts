@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Data-Phrasebook-Loader-YAML
 PORTVERSION=	0.13
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Loader class for phrasebook implementations using YAML
+WWW=		https://metacpan.org/release/Data-Phrasebook-Loader-YAML
 
 LICENSE=	ART20
 

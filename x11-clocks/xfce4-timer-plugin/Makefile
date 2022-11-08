@@ -1,5 +1,3 @@
-# Created by: Martin Wilke (miwi@FreeBSD.org)
-
 PORTNAME=	xfce4-timer-plugin
 PORTVERSION=	1.7.1
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Timer plugin for Xfce
+WWW=		https://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin
 
 LICENSE=	GPLv2
 

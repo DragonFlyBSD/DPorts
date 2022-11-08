@@ -1,5 +1,3 @@
-# Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-
 PORTNAME=	projectx
 PORTVERSION=	0.91.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	ProjectX_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DVB (mpeg) cutting/demux tool
+WWW=		https://sourceforge.net/projects/project-x/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/Copying

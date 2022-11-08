@@ -1,5 +1,3 @@
-# Created by: Emanuel Haupt <ehaupt@critical.ch>
-
 PORTNAME=	libbinio
 PORTVERSION=	1.5
 DISTVERSIONPREFIX=	${PORTNAME}-
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Binary I/O stream class library
+WWW=		https://adplug.github.io/libbinio/
 
 LICENSE=	LGPL21
 

@@ -1,5 +1,3 @@
-# Created by: Sergey Skvortsov <skv@protey.ru>
-
 PORTNAME=	XML-SAX
 PORTVERSION=	1.02
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple API for XML
+WWW=		https://metacpan.org/release/XML-SAX
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

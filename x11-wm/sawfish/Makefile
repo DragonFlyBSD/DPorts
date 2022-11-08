@@ -1,13 +1,13 @@
-# Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-
 PORTNAME=	sawfish
 DISTVERSION=	1.13.0
+PORTREVISION=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://download.tuxfamily.org/sawfish/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extensible window manager using Lisp-based scripting language
+WWW=		https://sawfish.tuxfamily.org/
 
 LICENSE=	ART20 GPLv2
 LICENSE_COMB=	multi
@@ -24,7 +24,7 @@ RUN_DEPENDS=	rep-gtk2>=0.90:x11-toolkits/rep-gtk2
 USES=		autoreconf gmake gnome libtool localbase makeinfo pathfix \
 		pkgconfig tar:xz xorg
 USE_XORG=	ice sm x11 xft xinerama xrandr xtst xrender xext
-USE_GNOME=	cairo gdkpixbuf2 gtk20
+USE_GNOME=	cairo gdkpixbuf2 gdkpixbuf2xlib gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=${PREFIX}/share \
 		--datadir=${PREFIX}/share

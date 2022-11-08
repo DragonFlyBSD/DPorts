@@ -1,5 +1,3 @@
-# Created by: Gea-Suan Lin <gslin@gslin.org>
-
 PORTNAME=	MooseX-App-Cmd
 PORTVERSION=	0.34
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Mashes up MooseX::Getopt and App::Cmd
+WWW=		https://metacpan.org/release/MooseX-App-Cmd
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

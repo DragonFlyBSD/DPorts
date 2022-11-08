@@ -1,16 +1,16 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
 #
 # Please update update atril-lite also
 
 PORTNAME=	atril
 PORTVERSION=	1.26.0
-PORTREVISION=	9
+PORTREVISION=	12
 CATEGORIES=	graphics print mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	MATE multi-format document viewer
+WWW=		https://mate-desktop.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

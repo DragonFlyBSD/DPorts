@@ -1,14 +1,13 @@
-# Created by: Rodrigo Osorio <rodrigo@freebsd.org>
-
 PORTNAME=	librfm
 PORTVERSION=	5.3.16.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-fm
 MASTER_SITES=	SF/xffm/5.3.16.3
 DISTNAME=	${PORTNAME}5-${PORTVERSION}
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Basic library used by some rfm applications
+WWW=		http://xffm.sourceforge.net/libxffm.html
 
 LICENSE=	GPLv3
 

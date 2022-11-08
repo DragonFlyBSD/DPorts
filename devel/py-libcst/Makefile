@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	libcst
 PORTVERSION=	0.3.23
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Concrete syntax tree with AST-like properties
+WWW=		https://github.com/Instagram/LibCST
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

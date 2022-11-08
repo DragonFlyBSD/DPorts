@@ -1,5 +1,3 @@
-# Created by: simonm@dcs.gla.ac.uk
-
 PORTNAME=	cgoban
 PORTVERSION=	1.9.14
 PORTREVISION=	4
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}1/${PORTNAME}1/${PORTVERSION}
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Internet Go Server client and game editor
+WWW=		http://cgoban1.sourceforge.net/
 
 GNU_CONFIGURE=	yes
 USES=		xorg

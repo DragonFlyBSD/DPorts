@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	Browser-Open
 PORTVERSION=	0.04
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Open a browser in a given URL
+WWW=		https://metacpan.org/release/Browser-Open
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

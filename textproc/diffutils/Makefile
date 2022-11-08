@@ -1,5 +1,3 @@
-# Created by: Garrett Rooney <rooneg@electricjellyfish.net>
-
 PORTNAME=	diffutils
 PORTVERSION=	3.8
 CATEGORIES=	textproc
@@ -9,6 +7,7 @@ LICENSE=	GPLv3+
 
 MAINTAINER=	schaiba@gmail.com
 COMMENT=	GNU differential compare utilities
+WWW=		https://www.gnu.org/software/diffutils/diffutils.html
 
 LIB_DEPENDS=	libsigsegv.so:devel/libsigsegv
 

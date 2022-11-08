@@ -1,5 +1,3 @@
-# Created by: Adam Weinberger <adamw@FreeBSD.org>
-
 PORTNAME=	Toadfarm
 PORTVERSION=	0.83
 CATEGORIES=	www perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	One Mojolicious app to rule them all
+WWW=		https://metacpan.org/pod/Toadfarm
 
 LICENSE=	ART20
 

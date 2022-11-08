@@ -1,5 +1,3 @@
-# Created by: Mark Pulford <mark@kyne.com.au>
-
 PORTNAME=	burgerspace
 PORTVERSION=	1.9.4
 CATEGORIES=	games
@@ -8,6 +6,7 @@ MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/ \
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	BurgerTime clone
+WWW=		http://sarrazip.com/dev/burgerspace.html
 
 LICENSE=	GPLv2
 

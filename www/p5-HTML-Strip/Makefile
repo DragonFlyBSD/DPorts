@@ -1,5 +1,3 @@
-# Created by: vanilla
-
 PORTNAME=	HTML-Strip
 PORTVERSION=	2.10
 CATEGORIES=	www perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 module for strip HTML tag
+WWW=		https://metacpan.org/release/HTML-Strip
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

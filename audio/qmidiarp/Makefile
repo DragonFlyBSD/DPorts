@@ -1,5 +1,3 @@
-# Created by: Yuri Victorovich <yuri@rawbw.com>
-
 PORTNAME=	qmidiarp
 DISTVERSIONPREFIX=	qmidiarp-
 DISTVERSION=	0.6.5
@@ -8,6 +6,7 @@ CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	MIDI arpeggiator, sequencer and LFO for JACK
+WWW=		http://qmidiarp.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -23,8 +22,8 @@ USES=		autoreconf compiler:c++11-lib desktop-file-utils \
 		gmake gnome localbase libtool pkgconfig qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	emuse
-USE_QT=		core gui network widgets buildtools_build \
-		linguisttools_build
+USE_QT=		core gui network widgets buildtools:build \
+		linguisttools:build
 USE_CXXSTD=	c++11
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-qt5 --enable-translations=yes

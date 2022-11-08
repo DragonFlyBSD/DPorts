@@ -1,5 +1,3 @@
-# Created by: Jyun-Yan You <jyyou@cs.nctu.edu.tw>
-
 PORTNAME=	innate
 PORTVERSION=	2015.10.28
 CATEGORIES=	www rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Powerful web-framework wrapper for Rack
+WWW=		https://github.com/manveru/innate
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

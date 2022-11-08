@@ -1,5 +1,3 @@
-# Created by: Veniamin Gvozdikov <vg@FreeBSD.org>
-
 PORTNAME=	cityhash
 PORTVERSION=	1.1.1
 PORTREVISION=	1
@@ -7,6 +5,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Family of hash functions
+WWW=		https://code.google.com/p/cityhash/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

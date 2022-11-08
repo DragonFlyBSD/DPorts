@@ -1,5 +1,3 @@
-# Created by: Travis Poppe <tlp@liquidx.org>
-
 PORTNAME=	ctris
 PORTVERSION=	0.42.1
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	games
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Colorized, small, and flexible Tetris(TM)-clone for the console
+WWW=		https://github.com/dominikhackl/ctris
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

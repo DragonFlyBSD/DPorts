@@ -1,5 +1,3 @@
-# Created by: Ultima
-
 PORTNAME=	django-statici18n
 PORTVERSION=	2.2.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	Helper for generating Javascript catalog to static files
+WWW=		https://github.com/zyegfryed/django-statici18n
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

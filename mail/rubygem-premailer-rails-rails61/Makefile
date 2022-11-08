@@ -1,5 +1,3 @@
-# Created by: Torsten Zuehlsdorff <ports@toco-domains.de>
-
 PORTNAME=	premailer-rails
 PORTVERSION=	1.10.3
 CATEGORIES=	mail rubygems
@@ -8,6 +6,7 @@ PKGNAMESUFFIX=	-rails61
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Improve the rendering of HTML emails
+WWW=		https://github.com/fphilipe/premailer-rails
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

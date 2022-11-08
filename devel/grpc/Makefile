@@ -1,13 +1,12 @@
-# Created by: vanilla@
-
 PORTNAME=	grpc
-PORTVERSION=	1.47.0
+PORTVERSION=	1.48.1
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	2
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HTTP/2-based RPC framework
+WWW=		https://grpc.io/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -23,7 +22,7 @@ USES=		cmake compiler:c++17-lang cpe localbase:ldflags pkgconfig ssl
 
 USE_GITHUB=	yes
 GH_TUPLE=	census-instrumentation:opencensus-proto:v0.3.0:census_instrumentation_opencensus_proto/third_party/opencensus-proto/src \
-		cncf:xds:cb28da3:cncf_xds/third_party/xds
+		cncf:xds:1e77728:cncf_xds/third_party/xds
 
 CMAKE_ARGS=	-DCMAKE_CXX_STANDARD=17 \
 		-DgRPC_ABSL_PROVIDER=package \

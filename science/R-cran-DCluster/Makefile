@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	DCluster
 DISTVERSION=	0.2-8
 CATEGORIES=	science
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Functions for the detection of spatial clusters of diseases
+WWW=		https://cran.r-project.org/web/packages/DCluster/
 
 LICENSE=	GPLv2+
 

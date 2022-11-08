@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	metalink
 PORTVERSION=	0.3.6
 PORTREVISION=	9
@@ -9,6 +7,7 @@ PKGNAMESUFFIX?=	-tools
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Metalink generation tool
+WWW=		http://metalinks.sourceforge.net/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

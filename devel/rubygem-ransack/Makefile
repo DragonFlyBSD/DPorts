@@ -1,5 +1,3 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	ransack
 PORTVERSION=	3.2.1
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Successor to the MetaSearch gem
+WWW=		https://github.com/activerecord-hackery/ransack
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

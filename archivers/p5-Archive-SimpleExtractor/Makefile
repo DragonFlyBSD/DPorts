@@ -1,5 +1,3 @@
-# Created by: Andrey Kostenko <andrey@kostenko.name>
-
 PORTNAME=	Archive-SimpleExtractor
 PORTVERSION=	0.11
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Simple module for extract archives
+WWW=		https://metacpan.org/release/Archive-SimpleExtractor
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

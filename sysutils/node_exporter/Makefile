@@ -1,13 +1,12 @@
-# Created by: Jev Björsell <ports@ecadlabs.com>
-
 PORTNAME=	node_exporter
 PORTVERSION=	1.3.1
 DISTVERSIONPREFIX=v
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	sysutils
 
 MAINTAINER=	dor.bsd@xm0.uk
 COMMENT=	Prometheus exporter for machine metrics
+WWW=		https://github.com/prometheus/node_exporter
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

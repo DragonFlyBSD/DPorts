@@ -1,5 +1,3 @@
-# Created by: kamikaze@bsdforen.de
-
 PORTNAME=	libbdplus
 DISTVERSION=	0.2.0
 CATEGORIES=	multimedia
@@ -7,6 +5,7 @@ MASTER_SITES=	https://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSI
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	BD+ System research implementation
+WWW=		https://www.videolan.org/developers/libbdplus.html
 
 LICENSE=	LGPL21
 

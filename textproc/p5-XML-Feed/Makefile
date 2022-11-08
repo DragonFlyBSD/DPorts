@@ -1,5 +1,3 @@
-# Created by: Cheng-Lung Sung <clsung@dragon2.net>
-
 PORTNAME=	XML-Feed
 PORTVERSION=	0.63
 CATEGORIES=	textproc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl5 modules for Syndication feed parser and auto-discovery
+WWW=		https://metacpan.org/release/XML-Feed
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

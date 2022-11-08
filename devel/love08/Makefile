@@ -1,6 +1,6 @@
 PORTNAME=	love
 PORTVERSION=	0.8.0
-PORTREVISION=	19
+PORTREVISION=	20
 CATEGORIES=	devel games
 MASTER_SITES=	http://cdn.bitbucket.org/rude/love/downloads/ \
 		http://mirror.amdmi3.ru/distfiles/
@@ -9,6 +9,7 @@ DISTNAME=	${PORTNAME}-${PORTVERSION}-linux-src
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Open-source 2D game engine
+WWW=		https://www.love2d.org/
 
 LIB_DEPENDS=	libIL.so:graphics/devil \
 		libmodplug.so:audio/libmodplug \

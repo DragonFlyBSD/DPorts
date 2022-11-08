@@ -1,5 +1,3 @@
-# Created by: Brendan Molloy <brendan+freebsd@bbqsrc.net>
-
 PORTNAME=	daemonize
 PORTVERSION=	2.5.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Enables code to run as a daemon process on Unix-like systems
+WWW=		https://github.com/thesharp/daemonize
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,12 +1,11 @@
-# Created by: Petteri Valkonen <petteri.valkonen@iki.fi>
-
 PORTNAME=	ripgrep
 DISTVERSION=	13.0.0
-PORTREVISION=	11
+PORTREVISION=	13
 CATEGORIES=	textproc
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Command line search tool
+WWW=		https://blog.burntsushi.net/ripgrep/
 
 LICENSE=	MIT UNLICENSE
 LICENSE_COMB=	dual
@@ -59,7 +58,7 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		memmap2-0.3.0 \
 		num_cpus-1.13.0 \
 		once_cell-1.7.2 \
-		packed_simd_2-0.3.7 \
+		packed_simd_2-0.3.8 \
 		pcre2-0.2.3 \
 		pcre2-sys-0.2.5 \
 		pkg-config-0.3.19 \

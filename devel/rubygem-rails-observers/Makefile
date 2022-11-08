@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	rails-observers
 PORTVERSION=	0.1.5
 CATEGORIES=	devel rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Observer classes for Rails
+WWW=		https://github.com/rails/rails-observers
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

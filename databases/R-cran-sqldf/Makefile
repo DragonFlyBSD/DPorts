@@ -1,5 +1,3 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	sqldf
 DISTVERSION=	0.4-11
 CATEGORIES=	databases
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	SQL select on R data frames
+WWW=		https://cran.r-project.org/web/packages/sqldf/
 
 LICENSE=	GPLv2
 

@@ -1,5 +1,3 @@
-# Created by: Herbert J. Skuhra <h.skuhra@gmail.com>
-
 PORTNAME=	gst123
 PORTVERSION=	0.3.3
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://space.twc.de/~stefan/gst123/
 
 MAINTAINER=	h.skuhra@gmail.com
 COMMENT=	Command-line tool to play audio and video files
+WWW=		https://space.twc.de/~stefan/gst123.php
 
 LICENSE=	LGPL20
 

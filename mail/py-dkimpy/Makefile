@@ -1,5 +1,3 @@
-# Created by: Kevin Golding <ports@caomhin.org>
-
 PORTNAME=	dkimpy
 DISTVERSION=	1.0.5
 CATEGORIES=	mail python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	ports@caomhin.org
 COMMENT=	Python library for DKIM email signing and verification
+WWW=		https://launchpad.net/dkimpy
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE

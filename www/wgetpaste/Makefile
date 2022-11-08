@@ -1,5 +1,3 @@
-# Created by: Anonymous
-
 PORTNAME=	wgetpaste
 PORTVERSION=	2.30
 CATEGORIES=	www
@@ -10,6 +8,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Paste to several pastebin services via bash script
+WWW=		http://wgetpaste.zlin.dk/
 
 RUN_DEPENDS=	bash:shells/bash \
 		wget:ftp/wget

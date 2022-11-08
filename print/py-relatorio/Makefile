@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	relatorio
 PORTVERSION=	0.10.1
 CATEGORIES=	print python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Templating library able to output odt and pdf files
+WWW=		https://hg.tryton.org/relatorio
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

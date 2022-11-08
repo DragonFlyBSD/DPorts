@@ -1,5 +1,3 @@
-# Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-
 PORTNAME=	xkbset
 PORTVERSION=	0.8
 DISTVERSIONPREFIX=	v
@@ -7,6 +5,7 @@ CATEGORIES=	x11
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Manage various XKB features of X Window
+WWW=		http://www.math.missouri.edu/~stephen/software/ #xkbset
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT

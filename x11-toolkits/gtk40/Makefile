@@ -1,5 +1,5 @@
 PORTNAME=	gtk
-PORTVERSION=	4.6.3
+PORTVERSION=	4.8.0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	4
@@ -7,6 +7,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Gimp Toolkit for X11 GUI (current stable version)
+WWW=		https://www.gtk.org/
 
 LICENSE=	LGPL20
 
@@ -35,7 +36,7 @@ LDFLAGS+=	-lexecinfo
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
-LIBVERSION=	1.600.3
+LIBVERSION=	1.800.0
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
 
 GLIB_SCHEMAS=	org.gtk.Demo4.gschema.xml \

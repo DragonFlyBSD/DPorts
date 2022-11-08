@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Graph-Writer-GraphViz
 PORTVERSION=	0.12
 CATEGORIES=	graphics perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GraphViz Writer for Graph object
+WWW=		https://metacpan.org/release/Graph-Writer-GraphViz
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

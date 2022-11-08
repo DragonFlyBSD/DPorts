@@ -1,13 +1,12 @@
-# Created by: Hye-Shik Chang
-
 PORTNAME=	irc
-PORTVERSION=	20.0.0
+PORTVERSION=	20.1.0
 CATEGORIES=	irc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	IRC protocol client library for Python
+WWW=		https://github.com/jaraco/irc
 
 LICENSE=	MIT
 

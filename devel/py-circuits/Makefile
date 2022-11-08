@@ -1,5 +1,3 @@
-# Created by: Kubilay Kocak <koobs@FreeBSD.org>
-
 PORTNAME=	circuits
 PORTVERSION=	3.2
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Asynchronous Component-based Event Application Framework
+WWW=		https://bitbucket.org/prologic/circuits/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

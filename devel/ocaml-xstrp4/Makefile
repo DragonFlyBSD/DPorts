@@ -1,5 +1,3 @@
-# Created by: Stanislav Sedov <ssedov@mbsd.msk.ru>
-
 PORTNAME=	xstrp4
 PORTVERSION=	1.8.2
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	ocaml-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OCaml extension to expands brace expansions
+WWW=		https://www.ocaml-programming.de/packages/
 
 LICENSE=	MIT
 

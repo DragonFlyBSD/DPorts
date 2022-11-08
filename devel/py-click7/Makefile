@@ -1,5 +1,3 @@
-# Created by: Bartek Rutkowski <ports@robakdesign.com>
-
 PORTNAME=	click
 PORTVERSION=	7.1.2
 CATEGORIES=	devel python
@@ -9,6 +7,7 @@ PKGNAMESUFFIX=	7
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python package for creating command line interfaces
+WWW=		https://github.com/mitsuhiko/click
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst

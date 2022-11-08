@@ -1,5 +1,3 @@
-# Created by: Russell Cloran <russell@rucus.ru.ac.za>
-
 PORTNAME=	redland-bindings
 PORTVERSION=	1.0.17.1
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	http://download.librdf.org/source/
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Language bindings for the Redland package
+WWW=		https://librdf.org/bindings/
 
 # Even though GPLv3 is not explicitly mentioned in the port's LICENSE.html, one
 # of its licenses is "GPLv2 or newer", which includes GPLv3.

@@ -1,5 +1,3 @@
-# Created by: Yarema <yds@Necessitu.de>
-
 PORTNAME=	lyaml
 PORTVERSION=	6.2.4
 DISTVERSIONPREFIX=v
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	yds@Necessitu.de
 COMMENT=	LibYAML binding for Lua
+WWW=		https://GVVaughan.GitHub.io/lyaml/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

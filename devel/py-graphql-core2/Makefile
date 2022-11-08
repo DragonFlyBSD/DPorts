@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	graphql-core
 PORTVERSION=	2.2.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GraphQL implementation for Python
+WWW=		https://github.com/graphql-python/graphql-core
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

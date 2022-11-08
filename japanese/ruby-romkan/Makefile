@@ -1,5 +1,3 @@
-# Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-
 PORTNAME=	romkan
 PORTVERSION=	0.4
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Romaji <-> Kana conversion library for Ruby
+WWW=		http://0xcc.net/ruby-romkan/index.html.en
 
 USE_RUBY=	yes
 

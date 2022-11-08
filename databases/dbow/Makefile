@@ -1,5 +1,3 @@
-# Created by: Dermot Tynan <dtynan@kalopa.com>
-
 PORTNAME=	dbow
 PORTVERSION=	0.7
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	dtynan@kalopa.com
 COMMENT=	Database object generator for C, Perl, PHP, etc.
+WWW=		http://dbow.sf.net/
 
 USES=		mysql
 MAKE_ENV+=	MYSQL_INC=${LOCALBASE}/include/mysql \

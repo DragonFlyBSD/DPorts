@@ -1,5 +1,3 @@
-# Created by: Pete Fritchman <petef@FreeBSD.org>
-
 PORTNAME=	synaesthesia
 PORTVERSION=	2.4
 PORTREVISION=	7
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.logarithmic.net/pfh-files/synaesthesia/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Real-time graphical music representation program
+WWW=		https://www.logarithmic.net/pfh/synaesthesia
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

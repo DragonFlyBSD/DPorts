@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	swftools
 PORTVERSION=	0.9.2
 PORTREVISION=	11
@@ -9,6 +7,7 @@ MASTER_SITES=	http://www.swftools.org/ \
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	SWF manipulation and generation utilities
+WWW=		http://www.swftools.org/
 
 LICENSE=	GPLv2
 

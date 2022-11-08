@@ -1,5 +1,3 @@
-# Created by: Jim Mock <jim@FreeBSD.org>
-
 PORTNAME=	rtfreader
 PORTVERSION=	1.0
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DISTNAME=	ms-rtf
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Portable application/ms-rtf parser
+WWW=		http://www.fiction.net/blong/programs/ #rtf
 
 ALL_TARGET=	rtfreader
 MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"

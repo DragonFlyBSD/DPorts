@@ -1,10 +1,11 @@
 PORTNAME=	sameboy
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.14.7
+DISTVERSION=	0.15.6
 CATEGORIES=	emulators games
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Game Boy and Game Boy Color emulator written in C
+WWW=		https://sameboy.github.io/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,8 +20,11 @@ GH_PROJECT=	SameBoy
 USE_GL=		gl
 USE_SDL=	sdl2
 
-MAKE_ARGS=	FREEDESKTOP=true
+MAKE_ARGS=	FREEDESKTOP=true \
+		WARNINGS="-Wno-error"
 ALL_TARGET=	sdl
+
+PORTSCOUT=	limit:^d\.d+\.
 
 OPTIONS_DEFINE=		LIBRETRO
 OPTIONS_DEFAULT=	LIBRETRO
@@ -30,6 +34,9 @@ LIBRETRO_DESC=	Build libretro core
 
 post-build-LIBRETRO-on:
 	@${DO_MAKE_BUILD} -C ${WRKSRC} libretro
+
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 post-install-LIBRETRO-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/libretro

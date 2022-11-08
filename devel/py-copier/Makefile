@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	copier
 PORTVERSION=	6.1.0
 CATEGORIES=	devel python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for rendering project templates
+WWW=		https://github.com/copier-org/copier
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

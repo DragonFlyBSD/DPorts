@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	gnome-shell-extension-dashtodock
 PORTVERSION=	65
 PORTREVISION=	1
@@ -9,6 +7,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Convert the dash into a dock
+WWW=		https://micheleg.github.io/dash-to-dock/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

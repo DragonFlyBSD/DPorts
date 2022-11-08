@@ -1,5 +1,3 @@
-# Created by: Andrew L. Neporada <andrew@chg.ru>
-
 PORTNAME=	gsl
 PORTVERSION=	2.7.1
 CATEGORIES=	math
@@ -7,6 +5,7 @@ MASTER_SITES=	GNU
 
 MAINTAINER=	tcberner@FreeBSD.org
 COMMENT=	The GNU Scientific Library - mathematical libs
+WWW=		https://www.gnu.org/software/gsl
 
 LICENSE=	GPLv3
 

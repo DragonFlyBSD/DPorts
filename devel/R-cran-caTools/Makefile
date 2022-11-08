@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	caTools
 PORTVERSION=	1.18.2
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Tools: moving window statistics, GIF, Base64, ROC AUC, etc
+WWW=		https://cran.r-project.org/web/packages/caTools/
 
 LICENSE=	GPLv3
 

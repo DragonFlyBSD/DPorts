@@ -1,5 +1,3 @@
-# Created by: Li-Wen Hsu <lwhsu@lwhsu.org>
-
 PORTNAME=	Data-RoundRobin
 PORTVERSION=	0.03
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Serve data in a round robin manner
+WWW=		https://metacpan.org/release/Data-RoundRobin
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Andrew T. Bennett <potatosaladx@gmail.com>
-
 PORTNAME=	mod_xsendfile
 PORTVERSION=	0.12
 PORTREVISION=	3
@@ -8,6 +6,7 @@ MASTER_SITES=	https://tn123.org/mod_xsendfile/ GHC
 
 MAINTAINER=	potatosaladx@gmail.com
 COMMENT=	Apache2 module that processes X-SENDFILE headers
+WWW=		https://tn123.org/mod_xsendfile/
 
 LICENSE=	APACHE20
 

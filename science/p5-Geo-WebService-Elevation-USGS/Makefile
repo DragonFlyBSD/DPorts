@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wen@FreeBSD.org>
-
 PORTNAME=	Geo-WebService-Elevation-USGS
 PORTVERSION=	0.120
 CATEGORIES=	science perl5
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl extension for elevation queries against USGS web services
+WWW=		https://metacpan.org/release/Geo-WebService-Elevation-USGS
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

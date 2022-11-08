@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	ttfunk
 PORTVERSION=	1.7.0
 CATEGORIES=	print rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Font Metrics Parser for the Prawn PDF generator
+WWW=		https://github.com/prawnpdf/ttfunk
 
 LICENSE=	RUBY GPLv2 GPLv3
 LICENSE_COMB=	dual

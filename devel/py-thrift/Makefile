@@ -1,5 +1,3 @@
-# Created by: Jon M. Dugan <jdugan@x1024.net>
-
 PORTNAME=	thrift
 PORTVERSION=	${THRIFT_PORTVERSION} # to keep in sync with thrift
 PORTEPOCH=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	komarov@valerka.net
 COMMENT=	Python interface to Thrift
+WWW=		https://thrift.apache.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/../../LICENSE

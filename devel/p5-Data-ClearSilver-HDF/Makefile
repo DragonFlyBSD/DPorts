@@ -1,5 +1,3 @@
-# Created by: Denis Pokataev <catone@cpan.org>
-
 PORTNAME=	Data-ClearSilver-HDF
 PORTVERSION=	0.04
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Convert from Perl Data Structure to ClearSilver HDF
+WWW=		https://metacpan.org/release/Data-ClearSilver-HDF
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-ClearSilver>=0:www/p5-ClearSilver \

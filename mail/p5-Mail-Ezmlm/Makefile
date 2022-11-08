@@ -1,5 +1,3 @@
-# Created by: Guy Antony Halse <guy@rucus.ru.za.za>
-
 PORTNAME=	Mail-Ezmlm
 PORTVERSION=	0.08.2
 PORTREVISION=	2
@@ -10,6 +8,7 @@ DISTNAME=	Ezmlm-${PORTVERSION}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Perl module to allow object methods for ezmlm-idx mailing lists
+WWW=		https://metacpan.org/release/Ezmlm
 
 LICENSE=	BSD3CLAUSE GPLv2 GPLv3
 LICENSE_COMB=	dual

@@ -1,13 +1,12 @@
-# Created by: Emanuel Haupt <ehaupt@FreeBSD.org>
-
 PORTNAME=	nagstamon
 PORTVERSION=	3.8.0
-PORTREVISION=	1
 DISTVERSIONPREFIX=	v
+PORTREVISION=	2
 CATEGORIES=	net-mgmt python
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Nagios status monitor for your desktop
+WWW=		https://nagstamon.ifw-dresden.de/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -19,6 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.2.1:www/py-beautifulsoup@${
 		${PYTHON_PKGNAMEPREFIX}importlib-metadata>0:devel/py-importlib-metadata@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}keyring>0:security/py-keyring@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}requests-gssapi>0:www/py-requests-gssapi@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests-kerberos>0:security/py-requests-kerberos@${PY_FLAVOR}
 
 USES=		cpe pyqt:5 python:3.6+
@@ -26,7 +26,7 @@ CPE_VENDOR=	henri_wahl
 USE_GITHUB=	yes
 GH_ACCOUNT=	HenriWahl
 GH_PROJECT=	Nagstamon
-USE_PYQT=	pyqt5_run sip_run
+USE_PYQT=	pyqt5:run sip:run
 USE_PYTHON=	autoplist distutils noflavors
 
 NO_ARCH=	yes

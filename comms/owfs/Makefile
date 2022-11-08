@@ -1,5 +1,3 @@
-# Created by: Johan Strom <johan@stromnet.se>
-
 PORTNAME=	owfs
 PORTVERSION=	3.2p4
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/owfs/owfs/releases/download/v${PORTVERSION}/
 
 MAINTAINER=	johan@stromnet.se
 COMMENT=	1-wire file system implementation
+WWW=		https://www.owfs.org/
 
 LICENSE=	GPLv2
 

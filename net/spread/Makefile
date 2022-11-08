@@ -1,5 +1,3 @@
-# Created by: Anders Nordby <anders@fix.no>
-
 PORTNAME=	spread
 PORTVERSION=	3.17.4
 PORTREVISION=	7
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	portmaster@bsdforge.com
 COMMENT=	The Spread Group Communication System, a network toolkit
+WWW=		http://www.spread.org/
 
 LICENSE=	SPREAD_OPEN-SOURCE_LICENSE
 LICENSE_NAME=	Spread Open-Source License

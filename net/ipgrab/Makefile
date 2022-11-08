@@ -1,5 +1,3 @@
-# Created by: Aaron Zauner <az_mail@gmx.at>
-
 PORTNAME=	ipgrab
 PORTVERSION=	0.9.10
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Verbose packet sniffer for Unix hosts
+WWW=		http://ipgrab.sourceforge.net/
 
 BUILD_DEPENDS=	${LOCALBASE}/include/pcap.h:net/libpcap
 

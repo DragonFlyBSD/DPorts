@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	DBIx-Tracer
 PORTVERSION=	0.03
 CATEGORIES=	databases perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Easy tracer for DBI
+WWW=		https://metacpan.org/dist/DBIx-Tracer
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

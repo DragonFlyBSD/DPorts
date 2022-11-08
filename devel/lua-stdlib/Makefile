@@ -1,5 +1,3 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	stdlib
 PORTVERSION=	41.2.2
 DISTVERSIONPREFIX=	release-v
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Standard Lua Libraries
+WWW=		https://github.com/lua-stdlib/lua-stdlib
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

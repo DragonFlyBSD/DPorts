@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	IPC-Locker
 PORTVERSION=	1.502
 CATEGORIES=	devel perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Provide a server for locks and clients to access that server
+WWW=		https://metacpan.org/release/IPC-Locker
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

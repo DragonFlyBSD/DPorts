@@ -1,5 +1,3 @@
-# Created by: sada
-
 PORTNAME=	mikachan
 PORTVERSION=	9.1
 CATEGORIES=	japanese x11-fonts
@@ -11,6 +9,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	TsurutaniNaoki@gmail.com
 COMMENT=	Handwritten Japanese TrueType fonts by Mika-chan
+WWW=		http://mikachan-font.com/
 
 # Converted from NO_CDROM
 LICENSE=	mikachan

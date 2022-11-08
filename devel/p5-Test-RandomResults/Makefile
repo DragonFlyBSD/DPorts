@@ -1,5 +1,3 @@
-# Created by: Aaron Dalton <aaron@FreeBSD.org>
-
 PORTNAME=	Test-RandomResults
 PORTVERSION=	0.03
 PORTREVISION=	2
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Test non-deterministic functions
+WWW=		https://metacpan.org/release/Test-RandomResults
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

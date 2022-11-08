@@ -1,5 +1,3 @@
-# Created by: Steve Wills <swills@FreeBSD.org>
-
 PORTNAME=	Catalyst-ActionRole-ACL
 PORTVERSION=	0.07
 PORTREVISION=	1
@@ -10,6 +8,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	User role-based authorization action class
+WWW=		https://metacpan.org/release/Catalyst-ActionRole-ACL
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

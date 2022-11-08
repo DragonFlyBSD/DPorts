@@ -1,5 +1,3 @@
-# Created by: Thomas Hurst <tom@hur.st>
-
 PORTNAME=	terminator
 PORTVERSION=	2.1.1
 PORTREVISION=	1
@@ -10,6 +8,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	Multiple GNOME terminals in one window
+WWW=		https://github.com/gnome-terminator/terminator
 
 LICENSE=	GPLv2
 

@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2022-10-15 11:06:27.202941000 +0200
++++ CMakeLists.txt	2022-10-15 11:09:28.488828000 +0200
+@@ -279,7 +279,7 @@
+   LINK_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/hwy/hwy.version)
+ if(UNIX AND NOT APPLE)
+   # For GCC __atomic_store_8, see #887
+-  if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND NOT HWY_EMSCRIPTEN)
++  if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND NOT HWY_EMSCRIPTEN AND NOT ${CMAKE_SYSTEM_NAME} STREQUAL "DragonFly")
+     target_link_libraries(hwy atomic)
+   endif()
+   # not supported by MSVC/Clang, safe to skip (we use DLLEXPORT annotations)

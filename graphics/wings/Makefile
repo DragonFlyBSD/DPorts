@@ -1,5 +1,3 @@
-# Created by: olgeni@FreeBSD.org
-
 PORTNAME=	wings
 DISTVERSION=	2.2.9
 CATEGORIES=	graphics
@@ -7,6 +5,7 @@ DIST_SUBDIR=	erlang
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	Polygon mesh modeler written in Erlang
+WWW=		http://www.wings3d.com/
 
 LICENSE=	Wings3D
 LICENSE_NAME=	Wings 3D License # similar to TclTk license

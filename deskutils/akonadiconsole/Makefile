@@ -1,9 +1,11 @@
 PORTNAME=	akonadiconsole
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Akonadi management and debugging console
+WWW=		https://www.kde.org/
 
 LICENSE=	LGPL21
 
@@ -15,20 +17,20 @@ LIB_DEPENDS=	libassuan.so:security/libassuan  \
 		libical.so:devel/libical \
 		libxapian.so:databases/xapian-core
 
-USES=		cmake compiler:c++11-lib gettext kde:5 qt:5 tar:xz
+USES=		cmake compiler:c++11-lib gettext grantlee:5 kde:5 qt:5 tar:xz
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons crash dbusaddons guiaddons i18n iconthemes \
 		itemmodels itemviews jobwidgets kdelibs4support kio \
 		notifications parts service solid sonnet textwidgets \
 		unitconversion widgetsaddons windowsystem xmlgui \
-		ecm_build
+		ecm:build
 # pim components
 USE_KDE+=	akonadi akonadicalendar akonadicontacts akonadimime \
 		akonadisearch calendarcore calendarsupport contacts \
 		grantleetheme identitymanagement libkdepim libkleo messagelib mime \
 		pimcommon pimtextedit
 USE_QT=		concurrent core dbus gui network printsupport sql widgets xml \
-		buildtools_build qmake_build
+		buildtools:build qmake:build
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr

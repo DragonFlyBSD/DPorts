@@ -1,5 +1,3 @@
-# Created by: Pawel Pekala <pawel@FreeBSD.org>
-
 PORTNAME=	smplayer-skins
 DISTVERSION=	20.11.0
 PORTREVISION=	1
@@ -9,9 +7,10 @@ MASTER_SITES=	SF/smplayer/SMPlayer-skins/${PORTVERSION}
 
 MAINTAINER=	vvd@unislabs.com
 COMMENT=	Skins for SMPlayer (Skinnable GUI)
+WWW=		http://smplayer.sourceforge.net/
 
 USES=		qt:5 tar:bzip2
-USE_QT=		buildtools_build
+USE_QT=		buildtools:build
 
 NO_ARCH=	yes
 

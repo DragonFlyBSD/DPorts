@@ -1,5 +1,3 @@
-# Created by: Brendan Molloy <brendan+freebsd@bbqsrc.net>
-
 PORTNAME=	responses
 PORTVERSION=	0.21.0
 CATEGORIES=	devel www python
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utility library for mocking out the requests Python library
+WWW=		https://github.com/getsentry/responses
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,5 +1,3 @@
-# Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-
 PORTNAME=	repr
 PORTVERSION=	1.1.4
 CATEGORIES=	devel
@@ -7,6 +5,7 @@ DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Serializable Reprensentations
+WWW=		https://cran.r-project.org/web/packages/repr/
 
 LICENSE=	GPLv3
 

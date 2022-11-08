@@ -1,14 +1,13 @@
-# Created by: KIMURA Yasuhiro <yasu@utahime.org>
-
 PORTNAME=	with-editor
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.2.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	editors elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	yasu@FreeBSD.org
 COMMENT=	Use the Emacsclient as the $$EDITOR of child processes
+WWW=		https://github.com/magit/with-editor
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -18,6 +17,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	magit
 
 ALL_TARGET=	lisp info
+
+CONFLICTS_INSTALL=	with-editor-devel-emacs*
 
 NO_ARCH=	yes
 

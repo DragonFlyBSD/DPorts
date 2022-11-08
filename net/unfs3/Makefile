@@ -1,5 +1,3 @@
-# Created by: Clement Laforet <clement@FreeBSD.org>
-
 PORTNAME=	unfs3
 DISTVERSION=	0.9.22
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	https://github.com/unfs3/unfs3/releases/download/unfs3-${DISTVERSI
 
 MAINTAINER=	fuz@fuz.su
 COMMENT=	User-space implementation of the NFSv3 server specification
+WWW=		https://unfs3.github.io/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

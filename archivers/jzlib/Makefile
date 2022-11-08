@@ -1,5 +1,3 @@
-# Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-
 PORTNAME=	jzlib
 PORTVERSION=	1.1.1
 CATEGORIES=	archivers java
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.jcraft.com/jzlib/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Reimplementation of zlib in pure Java
+WWW=		http://www.jcraft.com/jzlib/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

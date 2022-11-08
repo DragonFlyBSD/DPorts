@@ -1,5 +1,3 @@
-# Created by: Wen Heping <wenheping@gmail.com>
-
 PORTNAME=	ruby-graphviz
 PORTVERSION=	1.2.5
 CATEGORIES=	graphics ruby rubygems
@@ -7,6 +5,7 @@ MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Ruby Interface to the GraphViz Graphing Tool
+WWW=		https://github.com/glejeune/Ruby-Graphviz
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING.md

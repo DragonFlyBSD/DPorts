@@ -1,5 +1,3 @@
-# Created by: Corey Smith <corsmith@gmail.com>
-
 PORTNAME=	torrus
 PORTVERSION=	2.09
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	SF/torrus/torrus/
 
 MAINTAINER=	corsmith@gmail.com
 COMMENT=	Data Series Processing Framework - think mrtg with xml configs
+WWW=		http://torrus.org
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING

@@ -1,5 +1,3 @@
-# Created by: Tatsuki Makino <tatsuki_makino@hotmail.com>
-
 PORTNAME=	geographiclib
 DISTVERSION=	1.52
 CATEGORIES=	astro
@@ -12,6 +10,7 @@ DIST_SUBDIR=	GeographicLib
 
 MAINTAINER=	tatsuki_makino@hotmail.com
 COMMENT=	Library for geographic projections
+WWW=		https://geographiclib.sourceforge.io/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

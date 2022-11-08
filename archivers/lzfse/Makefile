@@ -1,11 +1,10 @@
-# Created by: Steven Kreuzer <skreuzer@FreeBSD.org>
-
 PORTNAME=	lzfse
 PORTVERSION=	20160707
 CATEGORIES=	archivers
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Lempel-Ziv style data compression algorithm
+WWW=		https://github.com/lzfse/lzfse
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE

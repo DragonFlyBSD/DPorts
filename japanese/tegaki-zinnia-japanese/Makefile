@@ -1,5 +1,3 @@
-# Created by: Timothy Beyer <beyert@cs.ucr.edu>
-
 PORTNAME=	tegaki
 PORTVERSION=	0.3
 CATEGORIES=	japanese python
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
 
 MAINTAINER=	beyert@cs.ucr.edu
 COMMENT=	Handwriting Recognition Models for Tegaki
+WWW=		http://www.tegaki.org/
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING

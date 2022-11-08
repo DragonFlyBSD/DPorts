@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	Chatbot-Eliza
 PORTVERSION=	1.08
 CATEGORIES=	misc perl5
@@ -8,6 +6,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Clone of the classic Eliza program
+WWW=		https://metacpan.org/release/Chatbot-Eliza
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual

@@ -1,5 +1,3 @@
-# Created by: Anton Berezin <tobez@FreeBSD.org>
-
 PORTNAME=	Commands-Guarded
 PORTVERSION=	1.01
 PORTREVISION=	1
@@ -9,6 +7,7 @@ PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Deterministic guarded commands for Perl
+WWW=		https://metacpan.org/release/Commands-Guarded
 
 USES=		perl5
 USE_PERL5=	configure

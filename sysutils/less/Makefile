@@ -1,5 +1,3 @@
-# Created by: Andrey A. Chernov <ache@FreeBSD.org>
-
 PORTNAME=	less
 PORTVERSION=	551
 PORTREVISION=	1
@@ -8,6 +6,7 @@ MASTER_SITES=	http://www.greenwoodsoftware.com/less/
 
 MAINTAINER=	jharris@widomaker.com
 COMMENT=	Better pager utility
+WWW=		https://www.greenwoodsoftware.com/less/
 
 LICENSE=	GPLv3+ MIT
 LICENSE_COMB=	dual
