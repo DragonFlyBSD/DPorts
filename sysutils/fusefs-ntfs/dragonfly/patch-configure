@@ -1,19 +1,11 @@
---- configure.intermediate	2019-05-16 16:34:25 UTC
-+++ configure
-@@ -12882,14 +12882,14 @@ else
+--- configure.orig	2022-11-05 15:41:24.623933000 +0100
++++ configure	2022-11-05 15:42:16.002790000 +0100
+@@ -13372,7 +13372,7 @@
  fi
  
  		;;
 -	darwin*|netbsd*|kfreebsd*-gnu)
-+	darwin*|netbsd*|kfreebsd*-gnu|dragonfly*)
- 		with_fuse="external"
- 		;;
- 	freebsd*)
++	darwin*|dragonfly*|netbsd*|kfreebsd*-gnu)
  		with_fuse="external"
  		;;
  	*)
--		as_fn_error $? "ntfs-3g can be built for Linux, FreeBSD, Mac OS X, NetBSD, and Solaris only." "$LINENO" 5
-+		as_fn_error $? "ntfs-3g can be built for Linux, FreeBSD, Mac OS X, NetBSD, DragonFly BSD and Solaris only." "$LINENO" 5
- 		;;
- 	esac
- 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ${with_fuse}" >&5
