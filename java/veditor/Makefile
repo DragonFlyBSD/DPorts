@@ -1,5 +1,3 @@
-# Created by: lon_kamikaze@gmx.de
-
 PORTNAME=	veditor
 PORTVERSION=	1.2.2
 PORTREVISION=	3
@@ -11,6 +9,7 @@ EXTRACT_ONLY=
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Verilog and VHDL editor plugin for eclipse
+WWW=		http://veditor.sourceforge.net/
 
 RUN_DEPENDS=	eclipse:java/eclipse
 
