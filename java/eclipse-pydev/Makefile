@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@FreeBSD.org>
-
 PORTNAME=	pydev
 PORTVERSION=	8.2.0
 CATEGORIES=	java devel python
@@ -9,6 +7,7 @@ DISTNAME=	PyDev.${PORTVERSION}
 
 MAINTAINER=	mizhka@FreeBSD.org
 COMMENT=	Eclipse plugin for Python and Jython development
+WWW=		https://www.pydev.org/
 
 LICENSE=	EPL
 
