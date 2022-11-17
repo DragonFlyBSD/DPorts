@@ -1,5 +1,3 @@
-# Created by: Nicola Vitale <nivit@email.it>
-
 PORTNAME=	drjava
 PORTVERSION=	0.9.8
 PORTREVISION=	6
@@ -10,6 +8,7 @@ DISTNAME=	drjava-eclipse-${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	DrJava plugin for Eclipse
+WWW=		http://www.drjava.org/eclipse.shtml
 
 RUN_DEPENDS=	${LOCALBASE}/bin/eclipse:java/eclipse
 
