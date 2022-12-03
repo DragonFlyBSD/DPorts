@@ -69,8 +69,9 @@ MESON_ARGS+=	-D${f}=false
 .endfor
 
 .if ${FLAVOR} == xorg
-LIB_DEPENDS+=	libxcvt.so:x11/libxcvt
-MESON_ARGS+=	-Dudev=false \
+LIB_DEPENDS+=	libudev.so:devel/libudev-devd \
+		libxcvt.so:x11/libxcvt
+MESON_ARGS+=	-Dudev=true \
 		-Dlog_dir=/var/log \
 		-Dsuid_wrapper=true
 .else
