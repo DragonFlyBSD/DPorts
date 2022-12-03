@@ -1,0 +1,9 @@
+[
+{ type: install
+  message: <<EOM
+This OpenJDK implementation requires procfs(5) mounted on /proc.
+
+	mount -t procfs proc /proc
+EOM
+}
+]
