@@ -1,0 +1,11 @@
+--- lib/Makefile.orig	2022-11-08 14:00:35.577022000 +0100
++++ lib/Makefile	2022-11-08 14:00:51.306673000 +0100
+@@ -14,7 +14,7 @@
+ CFLAGS += -D_XOPEN_SOURCE_EXTENDED -fPIC -Wall -Wextra
+ LDFLAGS += -fstack-protector-strong -shared -Wl,-x -Wl,--fatal-warnings \
+ 	-Wl,--warn-shared-textrel -Wl,-soname,${LIBRARY_SO}.${VERSION} \
+-	-L/usr/lib -lncursesw -ltinfow
++	-L/usr/local/lib -lncursesw -ltinfo
+ 
+ .if defined(DEBUG)
+ # `make -DDEBUG`

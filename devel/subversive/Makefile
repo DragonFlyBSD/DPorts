@@ -1,5 +1,3 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	subversive
 PORTVERSION=	2.0.0
 PORTREVISION=	1
@@ -11,6 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:core ${CONNECTORS}:connectors
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Eclipse plug-in that provides Subversion support
+WWW=		http://www.polarion.org/index.php?page=overview&project=subversive
 
 LICENSE=	EPL
 

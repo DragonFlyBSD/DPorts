@@ -1,5 +1,5 @@
 PORTNAME=	qmmp-plugin-pack
-PORTVERSION=	1.5.3
+PORTVERSION=	1.6.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://qmmp.ylsoftware.com/files/${PORTNAME}/${PORTVERSION:R}/ \
 	SF/qmmp-dev/${PORTNAME}/${PORTVERSION:R}/
@@ -7,26 +7,27 @@ PKGNAMESUFFIX=	-qt5
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Additional plug-ins for QMMP (Qt5)
+WWW=		https://qmmp.ylsoftware.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libqmmpui.so:multimedia/qmmp-qt5
+LIB_DEPENDS=	libqmmpui-1.so:multimedia/qmmp-qt5
 BUILD_DEPENDS=	qmmp-qt5>=1.5.0:multimedia/qmmp-qt5
 
-CONFLICTS=	${PORTNAME}-0.*
+CONFLICTS=	${PORTNAME}-qt6
 PORTSCOUT=	limit:^1\..*
 
 USES=		cmake pkgconfig qt:5 tar:bzip2
 USE_QT=		core gui widgets \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 USE_LDCONFIG=	yes
 
 OPTIONS_SUB=	yes
 
 OPTIONS_MULTI=	PLUGINS
-OPTIONS_MULTI_PLUGINS=	FFAP FFVIDEO GOOM SRCONV XMP YTB
-OPTIONS_DEFAULT=	FFAP FFVIDEO GOOM XMP YTB
+OPTIONS_MULTI_PLUGINS=	FFAP FFVIDEO GOOM MODPLUG SRCONV YTB
+OPTIONS_DEFAULT=	FFAP FFVIDEO GOOM MODPLUG YTB
 OPTIONS_DEFINE_i386=	FFAPASM GOOMASM
 OPTIONS_DEFAULT_i386=	FFAPASM GOOMASM
 OPTIONS_DEFINE_x86_64=	FFAPASM GOOMASM
@@ -50,13 +51,12 @@ GOOMASM_DESC=		Optimize Goom spectacle using devel/yasm
 GOOMASM_BUILD_DEPENDS=	yasm:devel/yasm
 GOOMASM_CMAKE_BOOL=	GOOM_ASM
 
+MODPLUG_LIB_DEPENDS=	libmodplug.so:audio/libmodplug
+MODPLUG_CMAKE_BOOL=	USE_MODPLUG
+
 SRCONV_DESC=		Support the sample rate converter
 SRCONV_LIB_DEPENDS=	libsamplerate.so:audio/libsamplerate
 SRCONV_CMAKE_BOOL=	USE_SRC
-
-XMP_DESC=		Support various module formats using libxmp
-XMP_LIB_DEPENDS=	libxmp.so:audio/libxmp
-XMP_CMAKE_BOOL=	USE_XMP
 
 YTB_DESC=		YouTube plugin
 YTB_USE=		QT=network

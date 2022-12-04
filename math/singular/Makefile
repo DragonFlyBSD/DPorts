@@ -1,11 +1,13 @@
 PORTNAME=	singular
 DISTVERSIONPREFIX=	Release-
-DISTVERSION=	4-3-0
+DISTVERSION=	4-3-1
+PORTREVISION=	1
 CATEGORIES=	math
 #MASTER_SITES=	ftp://jim.mathematik.uni-kl.de/pub/Math/Singular/SOURCES/${PORTVERSION:C/\./-/g}/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Computer algebra system for polynomial computations
+WWW=		https://www.singular.uni-kl.de/
 
 LICENSE=	GPLv3RLE
 LICENSE_FILE=	${WRKSRC}/COPYING

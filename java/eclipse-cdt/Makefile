@@ -1,5 +1,3 @@
-# Created by: gldisater@gldis.ca
-
 PORTNAME=	cdt
 PORTVERSION=	9.0.1
 CATEGORIES=	java devel
@@ -11,6 +9,7 @@ DISTFILES=	${BUNDLES} \
 
 MAINTAINER=	mizhka@gmail.com
 COMMENT=	C/C++ plugin for Eclipse IDE
+WWW=		https://www.eclipse.org/cdt/
 
 LICENSE=	EPL
 
