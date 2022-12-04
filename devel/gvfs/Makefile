@@ -1,14 +1,13 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	gvfs
-PORTVERSION=	1.46.2
-PORTREVISION=	2
+PORTVERSION=	1.50.2
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME virtual file system
+WWW=		https://www.gnome.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -17,11 +16,10 @@ BUILD_DEPENDS=	docbook-xsl>=0:textproc/docbook-xsl
 LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
 		libdbus-1.so:devel/dbus \
 		libgcr-base-3.so:security/gcr \
-		libsoup-2.4.so:devel/libsoup \
+		libsoup-3.0.so:devel/libsoup3 \
 		libgudev-1.0.so:devel/libgudev \
 		libudisks2.so:sysutils/libudisks \
 		libsecret-1.so:security/libsecret
-
 RUN_DEPENDS=	bsdisks>0:sysutils/bsdisks
 PORTSCOUT=	limitw:1,even
 
