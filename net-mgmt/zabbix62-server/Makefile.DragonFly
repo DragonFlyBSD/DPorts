@@ -1,0 +1,12 @@
+USES+=	autoreconf
+
+CFLAGS+=        -I${OPENSSLINC}
+LDFLAGS+=       -L${OPENSSLLIB}
+
+pre-patch:
+	${CP} -rv ${WRKSRC}/src/libs/zbxsysinfo/freebsd \
+	      ${WRKSRC}/src/libs/zbxsysinfo/dragonfly
+	${MV} -v ${WRKSRC}/src/libs/zbxsysinfo/dragonfly/freebsd.c \
+		${WRKSRC}/src/libs/zbxsysinfo/dragonfly/dragonfly.c
+	${REINPLACE_CMD} -e 's|freebsd|dragonfly|g' \
+		${WRKSRC}/src/libs/zbxsysinfo/dragonfly/Makefile.am
