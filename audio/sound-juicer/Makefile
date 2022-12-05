@@ -1,5 +1,3 @@
-# Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-
 PORTNAME=	sound-juicer
 PORTVERSION=	3.38.0
 CATEGORIES=	audio gnome
@@ -11,6 +9,7 @@ PATCHFILES+=	9f97ca1faca3.patch:-p1 # https://gitlab.gnome.org/GNOME/sound-juice
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Clean, mean, and lean CD ripper for GNOME
+WWW=		http://www.burtonini.com/blog/computers/sound-juicer/
 
 LICENSE=	GPLv3
 
