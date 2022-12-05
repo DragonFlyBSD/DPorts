@@ -1,14 +1,12 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	sushi
-PORTVERSION=	41.2
-PORTREVISION=	1
+PORTVERSION=	42.0
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Tool similar to Gloobus Preview that provides quick file previews
+WWW=		http://www.ubuntugeek.com/gnome-sushi-quick-previewer-for-nautilus.html
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
