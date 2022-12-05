@@ -1,5 +1,3 @@
-# Created by: Oliver Lehmann <oliver@FreeBSD.org>
-
 PORTNAME=	thunar
 DISTVERSION=	4.16.11
 CATEGORIES=	x11-fm xfce
@@ -8,6 +6,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Xfce file manager
+WWW=		https://docs.xfce.org/xfce/thunar/Start
 
 LICENSE=	GPLv2 LGPL20
 LICENSE_COMB=	multi
