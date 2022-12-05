@@ -1,13 +1,12 @@
-# Created by: ade, archie
-
 PORTNAME=	nautilus
-PORTVERSION=	42.1
+PORTVERSION=	42.2
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	File manager for the GNOME desktop
+WWW=		https://wiki.gnome.org/Apps/Nautilus
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE

@@ -1,7 +1,5 @@
-# Created by: James Earl <jdearl@telus.net>
-
 PORTNAME=	xfce4-desktop
-PORTVERSION=	4.16.0
+PORTVERSION=	4.16.1
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	XFCE
 DISTNAME=	xfdesktop-${DISTVERSIONFULL}
@@ -9,6 +7,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Xfce's desktop manager
+WWW=		https://www.xfce.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

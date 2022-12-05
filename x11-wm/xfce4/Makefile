@@ -1,11 +1,10 @@
-# Created by: James Earl <jdearl@telus.net>
-
 PORTNAME=	xfce
 PORTVERSION=	4.16
 CATEGORIES=	x11-wm xfce
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Meta-port for the Xfce Desktop Environment
+WWW=		https://www.xfce.org/
 
 RUN_DEPENDS=	xfwm4:x11-wm/xfce4-wm \
 		xfce4-session:x11-wm/xfce4-session \

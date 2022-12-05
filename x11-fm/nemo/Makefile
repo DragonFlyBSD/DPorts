@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	nemo
 PORTVERSION=	4.8.3
 PORTREVISION=	3
@@ -8,6 +6,7 @@ DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	File manager for the Cinnamon desktop
+WWW=		http://cinnamon.linuxmint.com/
 
 LICENSE=	GPLv2 LGPL20
 LICENSE_COMB=	multi

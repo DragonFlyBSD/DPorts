@@ -1,5 +1,3 @@
-# Created by: ports@c0decafe.net <ports@c0decafe.net>
-
 PORTNAME=	thunar-archive-plugin
 PORTVERSION=	0.5.0
 CATEGORIES=	archivers xfce
@@ -8,6 +6,7 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Archive plugin for the Thunar File Manager
+WWW=		https://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

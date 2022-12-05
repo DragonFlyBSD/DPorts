@@ -1,28 +1,34 @@
-# Created by: Ben Woods <woodsb02@FreeBSD.org>
-
 PORTNAME=	xfce4-goodies
 PORTVERSION=	4.16
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Meta-port for software and artwork from the Xfce4 Goodies Project
+WWW=		https://goodies.xfce.org/
 
 USES=		metaport
 
-OPTIONS_DEFAULT=	ARCHIVE BATTERY CALCULATOR CLIPMAN CPUGRAPH DASHBOARD \
+OPTIONS_DEFAULT=	ARCHIVE BSDCPUFREQ CALCULATOR CLIPMAN CPUGRAPH DASHBOARD \
 			DATETIME DICTIONARY DISKPERF FSGUARD GENMON GIGOLO \
 			MAILWATCH MEDIATAGS MENULIBRE MOUNT NETLOAD NOTES PAROLE \
 			POWERMANAGER RISTRETTO SCREENSAVER SCREENSHOOTER \
 			SMARTBOOKMARK STOPWATCH SYSTEMLOAD TASKMANAGER TERMINAL \
 			THEMES TIMEOUT TIMER VCS VERVE WAVELAN WEATHER WHISKERMENU \
 			XFBURN XKB
-# Removed from defaults due to ports being broken.
-# BSDCPUFREQ
 
+OPTIONS_DEFAULT_x86_64=	BATTERY
+OPTIONS_DEFAULT_i386=	BATTERY
+
+OPTIONS_EXCLUDE_aarch64=	BATTERY
+OPTIONS_EXCLUDE_armv6=		BATTERY
+OPTIONS_EXCLUDE_armv7=		BATTERY
 OPTIONS_EXCLUDE_powerpc=	BATTERY
 OPTIONS_EXCLUDE_powerpc64=	BATTERY
 OPTIONS_EXCLUDE_powerpc64le=	BATTERY
 OPTIONS_EXCLUDE_powerpcspe=	BATTERY
+OPTIONS_EXCLUDE_riscv64=	BATTERY
+OPTIONS_EXCLUDE_riscv64sf=	BATTERY
 
 OPTIONS_GROUP=	APPLICATIONS PANELPLUGINS THUNARPLUGINS UNOFFICIAL
 
@@ -65,7 +71,7 @@ OPTIONS_GROUP_PANELPLUGINS=	BATTERY CALCULATOR CLIPMAN CPUGRAPH DATETIME \
 				MAILWATCH MOUNT MPC NETLOAD NOTES PULSEAUDIO \
 				SMARTBOOKMARK STOPWATCH SYSTEMLOAD TIMER \
 				TIMEOUT VERVE WAVELAN WEATHER WHISKERMENU \
-				XKB
+				WINDOWCK XKB
 BATTERY_DESC=			Battery monitor panel plugin for Xfce4
 CALCULATOR_DESC=		Simple calculator for the Xfce panel
 CLIPMAN_DESC=			Clipboard manager for the Xfce panel
@@ -90,6 +96,7 @@ VERVE_DESC=			Command line plugin for the Xfce Desktop
 WAVELAN_DESC=			Displays information about a WaveLAN device
 WEATHER_DESC=			Weather plugin for the Xfce panel
 WHISKERMENU_DESC=		Alternate menu for the Xfce Desktop
+WINDOWCK_DESC=			Add window buttons to Xfce panel
 XKB_DESC=			Keyboard layout switching plugin for Xfce panel
 
 BATTERY_RUN_DEPENDS=		xfce4-battery-plugin>=0:sysutils/xfce4-battery-plugin
@@ -116,6 +123,7 @@ VERVE_RUN_DEPENDS=		xfce4-verve-plugin>=0:x11/xfce4-verve-plugin
 WAVELAN_RUN_DEPENDS=		xfce4-wavelan-plugin>=0:sysutils/xfce4-wavelan-plugin
 WEATHER_RUN_DEPENDS=		xfce4-weather-plugin>=0:misc/xfce4-weather-plugin
 WHISKERMENU_RUN_DEPENDS=	xfce4-whiskermenu-plugin>=0:x11/xfce4-whiskermenu-plugin
+WINDOWCK_RUN_DEPENDS=		xfce4-windowck-plugin>=0:x11/xfce4-windowck-plugin
 XKB_RUN_DEPENDS=		xfce4-xkb-plugin>=0:deskutils/xfce4-xkb-plugin
 
 OPTIONS_GROUP_THUNARPLUGINS=	ARCHIVE MEDIATAGS VCS
