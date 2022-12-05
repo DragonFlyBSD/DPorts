@@ -1,12 +1,12 @@
 PORTNAME=	xfce4-places-plugin
-PORTVERSION=	1.8.1
-PORTREVISION=	1
+PORTVERSION=	1.8.2
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	File browser launcher for Xfce4 panel plugin
+WWW=		https://goodies.xfce.org/projects/panel-plugins/xfce4-places-plugin
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
