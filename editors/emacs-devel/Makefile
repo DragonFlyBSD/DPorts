@@ -1,14 +1,12 @@
-# Created by: Kenneth Vestergaard Schmidt <kvs@pil.dk>
-
 PORTNAME=	emacs
-DISTVERSION=	29.0.50.20220331
-PORTREVISION=	1
+DISTVERSION=	29.0.50.20220831
 PORTEPOCH=	2
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	emacs@FreeBSD.org
 COMMENT=	GNU editing macros ${COMMENT_${FLAVOR}}
+WWW=		https://www.gnu.org/software/emacs/
 COMMENT_nox=	(No X flavor)
 
 LICENSE=	GPLv3+
@@ -26,13 +24,14 @@ USES=		autoreconf:build cpe gmake localbase:ldflags ncurses pkgconfig
 CPE_VENDOR=	gnu
 USE_GITHUB=	yes
 GH_ACCOUNT=	emacs-mirror
-GH_TAGNAME=	c5af19c
+GH_TAGNAME=	136495f
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-build-details \
 			--localstatedir=/var \
 			--without-libsystemd \
-			--without-selinux
+			--without-selinux \
+			--without-gconf
 .if ${FLAVOR:U} == nox
 CONFIGURE_ARGS+=	--with-sound=no \
 			--with-x-toolkit=no \
@@ -64,8 +63,10 @@ CONFIGURE_ENV=		ac_cv_header_sys_sysinfo_h=no
 
 CONFLICTS_INSTALL=	emacs emacs-canna emacs-nox
 
-SUB_FILES=	sources.el
-SUB_LIST=	EMACS_VER=${DISTVERSION:R}
+SUB_FILES=	pkg-message sources.el
+SUB_LIST=	EMACS_VER=${DISTVERSION:R} \
+		NATIVECOMP_COMMENT_END=${NATIVECOMP_COMMENT_END} \
+		NATIVECOMP_COMMENT_START=${NATIVECOMP_COMMENT_START}
 
 INFO=		auth autotype bovine calc ccmode cl dbus dired-x ebrowse ede \
 		ediff edt efaq eieio eintr elisp emacs emacs-gnutls emacs-mime \
@@ -79,14 +80,14 @@ INFO_PATH=	${DATADIR_REL}/info
 PLIST_SUB=	EMACS_VER=${DISTVERSION:R} \
 		GNU_HOST=${CONFIGURE_TARGET}
 
-OPTIONS_DEFINE=			ACL DBUS GCONF GNUTLS GSETTINGS HARFBUZZ JSON \
+OPTIONS_DEFINE=			ACL DBUS GNUTLS GSETTINGS HARFBUZZ JSON \
 				LCMS2 M17N MAILUTILS MODULES NATIVECOMP OTF \
 				PGTK SCROLLBARS SOURCES SQLITE3 THREADS XFT XIM \
 				XML XWIDGETS
 OPTIONS_DEFAULT=		ACL CAIRO DBUS GIF GNUTLS GSETTINGS GTK3 \
 				HARFBUZZ JPEG JSON KQUEUE LCMS2 MAILUTILS \
-				MODULES OSS PGTK PNG SCROLLBARS SOURCES SQLITE3 \
-				SVG THREADS TIFF WEBP XML
+				MODULES NATIVECOMP OSS PGTK PNG SCROLLBARS \
+				SOURCES SQLITE3 SVG THREADS TIFF WEBP XML
 OPTIONS_GROUP=			GRAPHICS
 OPTIONS_GROUP_GRAPHICS=		CAIRO GIF JPEG MAGICK PNG SVG TIFF WEBP XPM
 OPTIONS_RADIO=			FILENOTIFY SOUND X11TOOLKIT
@@ -94,7 +95,7 @@ OPTIONS_RADIO_FILENOTIFY=	GFILE KQUEUE
 OPTIONS_RADIO_SOUND=		ALSA OSS
 OPTIONS_RADIO_X11TOOLKIT=	GTK2 GTK3 XAW XAW3D
 .if ${FLAVOR:U} == nox
-OPTIONS_EXCLUDE=		ALSA CAIRO DBUS GCONF GFILE GIF GSETTINGS GTK2 \
+OPTIONS_EXCLUDE=		ALSA CAIRO DBUS GFILE GIF GSETTINGS GTK2 \
 				GTK3 HARFBUZZ JPEG LCMS2 M17N MAGICK OSS OTF \
 				PGTK PNG SCROLLBARS SVG TIFF WEBP XAW XAW3D XFT \
 				XIM XPM XWIDGETS
@@ -134,8 +135,6 @@ CAIRO_USE=			GNOME=cairo
 CAIRO_CONFIGURE_WITH=		cairo
 DBUS_LIB_DEPENDS=		libdbus-1.so:devel/dbus
 DBUS_CONFIGURE_WITH=		dbus
-GCONF_USE=			GNOME=gconf2
-GCONF_CONFIGURE_WITH=		gconf
 GFILE_USE=			GNOME=glib20
 GFILE_CONFIGURE_ON=		--with-file-notification=gfile
 GIF_LIB_DEPENDS=		libgif.so:graphics/giflib
@@ -223,6 +222,14 @@ XWIDGETS_CONFIGURE_WITH=	xwidgets
 USE_GCC=	yes
 .endif
 
+.if ${PORT_OPTIONS:MNATIVECOMP}
+NATIVECOMP_COMMENT_END=
+NATIVECOMP_COMMENT_START=
+.else
+NATIVECOMP_COMMENT_END=		'*/'
+NATIVECOMP_COMMENT_START=	'/*'
+.endif
+
 .if ${PORT_OPTIONS:MNATIVECOMP} && !defined(_GCC_PORT_CHOSEN)
 _GCC_PORT!=	${BSDMAKE} -V_GCC_PORT USE_GCC=11+ _GCC_PORT_CHOSEN=yes
 .endif
@@ -231,7 +238,8 @@ _GCC_PORT!=	${BSDMAKE} -V_GCC_PORT USE_GCC=11+ _GCC_PORT_CHOSEN=yes
 USES+=		desktop-file-utils gnome
 .if !${PORT_OPTIONS:MPGTK}
 USES+=		xorg
-USE_XORG+=	ice sm x11 xcb xext xfixes xinerama xmu xrandr xrender xt
+USE_XORG+=	ice sm x11 xcb xcomposite xext xfixes xi xinerama xmu xrandr \
+		xrender xt
 .endif
 .endif
 
@@ -243,7 +251,7 @@ CONFIGURE_ARGS+=	--with-x-toolkit=no
 # Schema generation is dependent on both PGTK, and GSETTINGS options
 # as per https://git.savannah.gnu.org/cgit/emacs.git/commit/?id=183936ee8e5
 .if ${PORT_OPTIONS:MGSETTINGS} && ${PORT_OPTIONS:MPGTK}
-GLIB_SCHEMAS+=		org.gnu.emacs.defaults.gschema.xml
+GLIB_SCHEMAS+=	org.gnu.emacs.defaults.gschema.xml
 .endif
 
 .if ${FLAVOR} == nox
