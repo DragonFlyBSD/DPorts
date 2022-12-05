@@ -1,14 +1,13 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
-
 PORTNAME=	brasero
 PORTVERSION=	3.12.3
 PORTREVISION=	2
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CD/DVD mastering tool for the GNOME desktop
+WWW=		https://projects.gnome.org/brasero/
 
 BUILD_DEPENDS=	itstool:textproc/itstool
 LIB_DEPENDS=	libnotify.so:devel/libnotify \
