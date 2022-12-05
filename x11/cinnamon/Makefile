@@ -1,5 +1,3 @@
-# Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-
 PORTNAME=	cinnamon
 PORTVERSION=	4.8.6
 PORTREVISION=	3
@@ -11,6 +9,7 @@ PATCHFILES+=	aa0bf5b13078.patch:-p1 # https://github.com/linuxmint/cinnamon/pull
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Fork of GNOME Shell with layout similar to GNOME 2
+WWW=		http://cinnamon.linuxmint.com/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
