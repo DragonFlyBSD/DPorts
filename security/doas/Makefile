@@ -1,9 +1,10 @@
 PORTNAME=	doas
-PORTVERSION=	6.3p6
+PORTVERSION=	6.3p9
 CATEGORIES=	security
 
 MAINTAINER=	jsmith@resonatingmedia.com
 COMMENT=	Simple sudo alternative to run commands as another user
+WWW=		https://github.com/slicer69/doas/
 
 LICENSE=	BSD2CLAUSE ISCL
 LICENSE_COMB=	multi
