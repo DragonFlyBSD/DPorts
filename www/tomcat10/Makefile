@@ -1,9 +1,12 @@
 PORTNAME=	tomcat
-PORTVERSION=	10.0.26
+PORTVERSION=	10.0.27
 CATEGORIES=	www java
 MASTER_SITES=	APACHE/${PORTNAME}/${PORTNAME}-${PORTVERSION:C/([0-9]+)(.*)/\1/}/v${PORTVERSION}/bin
 PKGNAMESUFFIX=	10
 DISTNAME=	apache-${PORTNAME}-${PORTVERSION}
+
+DEPRECATED=	EOLd, potential security issues (https://tomcat.apache.org/tomcat-10.0-eol.html), use www/tomcat101 instead
+EXPIRATION_DATE=2023-06-30
 
 MAINTAINER=	vvd@unislabs.com
 COMMENT=	Open-source Java web server by Apache, 10.0.x branch
