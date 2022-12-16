@@ -1,5 +1,5 @@
---- src/sysdeps/dragonfly.c.orig	2014-10-15 03:46:47.000000000 +0300
-+++ src/sysdeps/dragonfly.c
+--- src/sysdeps/dragonfly.c.orig	2022-12-10 17:29:43.546769000 +0100
++++ src/sysdeps/dragonfly.c	2022-12-10 17:29:37.826659000 +0100
 @@ -29,7 +29,7 @@ char	errbuf[_POSIX2_LINE_MAX];
  
  
@@ -89,7 +89,7 @@
 +#define UTMP_FILE	_PATH_UTMP
 +#else
 +	struct utmpx	*utmp;
-+#define UTMP_FILE	"/var/run/utx.active"
++#define UTMP_FILE	"/var/run/utmpx"
 +#endif
  	static time_t	utmp_mtime;
  
