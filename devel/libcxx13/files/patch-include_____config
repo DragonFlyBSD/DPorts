@@ -1,0 +1,67 @@
+--- libcxx/include/__config.orig	2022-01-20 21:31:59 UTC
++++ libcxx/include/__config
+@@ -127,7 +127,7 @@
+ #  endif
+ // Feature macros for disabling pre ABI v1 features. All of these options
+ // are deprecated.
+-#  if defined(__FreeBSD__)
++#  if defined(__FreeBSD__) || defined(__DragonFly__)
+ #    define _LIBCPP_DEPRECATED_ABI_DISABLE_PAIR_TRIVIAL_COPY_CTOR
+ #  endif
+ #endif
+@@ -257,7 +257,7 @@
+ #  endif // __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
+ #endif // __BYTE_ORDER__
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__)
+ #  include <sys/endian.h>
+ #  include <osreldate.h>
+ #  if _BYTE_ORDER == _LITTLE_ENDIAN
+@@ -365,7 +365,7 @@
+ # define _LIBCPP_HAS_ALIGNED_ALLOC
+ #else
+ #if (defined(__ISO_C_VISIBLE) && (__ISO_C_VISIBLE >= 2011)) || __cplusplus >= 201103L
+-#  if defined(__FreeBSD__)
++#  if defined(__FreeBSD__) || defined(__DragonFly__)
+ #    define _LIBCPP_HAS_ALIGNED_ALLOC
+ #    define _LIBCPP_HAS_QUICK_EXIT
+ #    if __FreeBSD_version >= 1300064 || \
+@@ -940,11 +940,12 @@ typedef unsigned int   char32_t;
+ #endif
+ 
+ #if defined(__APPLE__) || defined(__FreeBSD__) || defined(_LIBCPP_MSVCRT_LIKE) || \
+-    defined(__sun__) || defined(__NetBSD__) || defined(__CloudABI__)
++    defined(__sun__) || defined(__NetBSD__) || defined(__CloudABI__) ||  \
++    defined(__DragonFly__)
+ #define _LIBCPP_LOCALE__L_EXTENSIONS 1
+ #endif
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #define _DECLARE_C99_LDBL_MATH 1
+ #endif
+ 
+@@ -972,11 +973,12 @@ typedef unsigned int   char32_t;
+ #  define _LIBCPP_HAS_NO_ALIGNED_ALLOCATION
+ #endif
+ 
+-#if defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ #define _LIBCPP_HAS_DEFAULTRUNELOCALE
+ #endif
+ 
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__sun__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__sun__) || \
++  defined(__DragonFly__)
+ #define _LIBCPP_WCTYPE_IS_MASK
+ #endif
+ 
+@@ -1137,6 +1139,7 @@ extern "C" _LIBCPP_FUNC_VIS void __sanit
+     !defined(_LIBCPP_HAS_THREAD_API_WIN32) && \
+     !defined(_LIBCPP_HAS_THREAD_API_EXTERNAL)
+ #  if defined(__FreeBSD__) || \
++      defined(__DragonFly__) || \
+       defined(__wasi__) || \
+       defined(__NetBSD__) || \
+       defined(__OpenBSD__) || \
