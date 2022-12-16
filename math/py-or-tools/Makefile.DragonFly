@@ -1,8 +1,3 @@
-# Use GCC9 because < 9 produces:
-# error: braces around scalar initializer for type [...]
-# https://gcc.gnu.org/git/?p=gcc.git&a=commit;h=cb13308543771f56bbc932933b9ec7bbb95d37ac
-USE_GCC_VERSION=	9
-
 # Required to find abseil
 USES+=     localbase:ldflags
 
