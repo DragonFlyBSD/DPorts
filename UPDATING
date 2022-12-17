@@ -832,17 +832,3 @@ you update your ports collection, before attempting any port upgrades.
   # cd /usr/ports/net-im/openfire
   # make config
 
-20211213:
-  AFFECTS: users of emulators/qemu-utils
-  AUTHOR: bofh@FreeBSD.org
-
-  New port emulators/qemu@tools has been introduced which is similar to
-  emulators/qemu-utils. qemu-utils has also been DEPRECATED in favor for
-  this as it's MASTER port has also been marked DEPRECATED and set to
-  expire on 2022-01-09. For updating to qemu-tools please use one of
-  the following command:
-
-  # pkg install qemu-tools
-    or
-  # portmaster -o emulators/qemu-utils emulators/qemu@tools
-
