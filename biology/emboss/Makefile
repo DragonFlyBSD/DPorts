@@ -1,5 +1,3 @@
-# Created by: Johann Visagie <johann@egenetics.com>
-
 PORTNAME=	emboss
 PORTVERSION=	6.6.0
 PORTREVISION=	6
@@ -10,6 +8,7 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Collection of open source tools for genetic sequence analysis
+WWW=		http://www.emboss.org/
 
 LICENSE=	GPLv2
 
