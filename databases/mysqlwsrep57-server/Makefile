@@ -1,9 +1,8 @@
-# Created by: Vasil Dimov <vd@FreeBSD.org>
-
 PORTNAME=	mysqlwsrep
-PORTVERSION?=	5.7.35
+PORTVERSION?=	5.7.38
 DISTVERSIONPREFIX?=	wsrep_
-DISTVERSIONSUFFIX?=	-25.27
+DISTVERSIONSUFFIX?=	-25.30
+PORTREVISION=	0
 CATEGORIES=	databases
 MASTER_SITES+=	SF/boost/boost/1.59.0:boost
 PKGNAMESUFFIX=	57-server
@@ -11,6 +10,7 @@ DISTFILES+=	boost_1_59_0${EXTRACT_SUFX}:boost
 
 MAINTAINER=	devel@galeracluster.com
 COMMENT=	MySQL database enhanced with Galera replication (server package)
+WWW=		https://galeracluster.com/
 
 LICENSE=	GPLv2
 
@@ -50,7 +50,7 @@ CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
 		-DINSTALL_INFODIR="info" \
 		-DINSTALL_LDCONFIGDIR="${LOCALBASE}/libdata/ldconfig" \
 		-DINSTALL_LIBDIR="lib/mysql" \
-		-DINSTALL_MANDIR="man" \
+		-DINSTALL_MANDIR="share/man" \
 		-DINSTALL_MYSQLDATADIR="${MY_DBDIR}" \
 		-DINSTALL_MYSQLKEYRINGDIR="etc/mysql/keyring" \
 		-DINSTALL_MYSQLSHAREDIR="share/mysql" \
@@ -85,8 +85,8 @@ PLIST_SUB=	MY_DBDIR=${MY_DBDIR} \
 		MY_TMPDIR=${MY_TMPDIR}
 
 CONFLICTS_INSTALL=	mariadb*-server \
-			mysql*-server \
-			mysqlwsrep*-server \
+			mysql??-server \
+			mysqlwsrep56-server \
 			percona*-server
 
 USE_RC_SUBR=	mysql-server
