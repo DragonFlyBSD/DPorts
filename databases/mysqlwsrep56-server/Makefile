@@ -1,15 +1,14 @@
-# Created by: Philip Stoev <philip.stoev@galeracluster.com>
-
 PORTNAME=	mysqlwsrep
 PORTVERSION?=	5.6.51
 DISTVERSIONPREFIX?=	wsrep_
 DISTVERSIONSUFFIX?=	-25.33
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	databases
 PKGNAMESUFFIX=	56-server
 
 MAINTAINER=	devel@galeracluster.com
 COMMENT=	MySQL database enhanced with Galera replication (server package)
+WWW=		https://galeracluster.com/
 
 LICENSE=	GPLv2
 
@@ -53,7 +52,7 @@ CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
 		-DINSTALL_INCLUDEDIR="include/mysql" \
 		-DINSTALL_INFODIR="info" \
 		-DINSTALL_LIBDIR="lib/mysql" \
-		-DINSTALL_MANDIR="man" \
+		-DINSTALL_MANDIR="share/man" \
 		-DINSTALL_MYSQLDATADIR="${MY_DBDIR}" \
 		-DINSTALL_MYSQLKEYRINGDIR="etc/mysql/keyring" \
 		-DINSTALL_MYSQLSHAREDIR="share/mysql" \
