@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <martin@matuska.org>
-
 PORTNAME=	mysqltcl
 PORTVERSION=	3.052
 CATEGORIES=	databases tcl
@@ -7,6 +5,7 @@ MASTER_SITES=	http://www.xdobry.de/mysqltcl/
 
 MAINTAINER=	tcltk@FreeBSD.org
 COMMENT=	TCL module for accessing MySQL databases based on msqltcl
+WWW=		http://www.xdobry.de/mysqltcl/
 
 USES=		mysql tcl
 USE_LDCONFIG=	yes
