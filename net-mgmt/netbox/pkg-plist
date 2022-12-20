@@ -582,6 +582,7 @@
 %%DATADIR%%/netbox/configuration_example.py
 %%DATADIR%%/netbox/configuration_testing.py
 %%DATADIR%%/netbox/constants.py
+%%DATADIR%%/netbox/context.py
 %%DATADIR%%/netbox/context_processors.py
 %%DATADIR%%/netbox/denormalized.py
 %%DATADIR%%/netbox/filtersets.py
@@ -599,7 +600,6 @@
 %%DATADIR%%/netbox/models/features.py
 %%DATADIR%%/netbox/navigation_menu.py
 %%DATADIR%%/netbox/preferences.py
-%%DATADIR%%/netbox/request_context.py
 %%DATADIR%%/netbox/search.py
 %%DATADIR%%/netbox/settings.py
 %%DATADIR%%/netbox/signals.py
@@ -638,9 +638,13 @@
 %%DATADIR%%/project-static/dist/lldp.js
 %%DATADIR%%/project-static/dist/lldp.js.map
 %%DATADIR%%/project-static/dist/materialdesignicons-webfont-2ZY4X5WS.woff
+%%DATADIR%%/project-static/dist/materialdesignicons-webfont-DWVXV5L5.woff
 %%DATADIR%%/project-static/dist/materialdesignicons-webfont-EH3JD4GG.ttf
+%%DATADIR%%/project-static/dist/materialdesignicons-webfont-ER2MFQKM.woff2
 %%DATADIR%%/project-static/dist/materialdesignicons-webfont-KSYPMDN6.woff2
 %%DATADIR%%/project-static/dist/materialdesignicons-webfont-LWDVGUDX.eot
+%%DATADIR%%/project-static/dist/materialdesignicons-webfont-UHEFFMSX.eot
+%%DATADIR%%/project-static/dist/materialdesignicons-webfont-WM6M6ZHQ.ttf
 %%DATADIR%%/project-static/dist/netbox-dark.css
 %%DATADIR%%/project-static/dist/netbox-external.css
 %%DATADIR%%/project-static/dist/netbox-light.css
@@ -659,6 +663,7 @@
 %%DATADIR%%/project-static/img/netbox_touch-icon-180.png
 %%DATADIR%%/project-static/img/rest-api.ico
 %%DATADIR%%/project-static/img/tint_20.png
+%%DATADIR%%/project-static/js/setmode.js
 %%DATADIR%%/project-static/netbox-graphiql/graphiql.scss
 %%DATADIR%%/project-static/netbox-graphiql/index.ts
 %%DATADIR%%/project-static/netbox-graphiql/package.json
@@ -1024,6 +1029,7 @@
 %%DATADIR%%/users/api/serializers.py
 %%DATADIR%%/users/api/urls.py
 %%DATADIR%%/users/api/views.py
+%%DATADIR%%/users/apps.py
 %%DATADIR%%/users/constants.py
 %%DATADIR%%/users/filtersets.py
 %%DATADIR%%/users/forms.py
@@ -1036,6 +1042,7 @@
 %%DATADIR%%/users/migrations/__init__.py
 %%DATADIR%%/users/models.py
 %%DATADIR%%/users/preferences.py
+%%DATADIR%%/users/signals.py
 %%DATADIR%%/users/tables.py
 %%DATADIR%%/users/tests/__init__.py
 %%DATADIR%%/users/tests/test_api.py
@@ -1043,6 +1050,7 @@
 %%DATADIR%%/users/tests/test_models.py
 %%DATADIR%%/users/tests/test_preferences.py
 %%DATADIR%%/users/urls.py
+%%DATADIR%%/users/utils.py
 %%DATADIR%%/users/views.py
 %%DATADIR%%/utilities/__init__.py
 %%DATADIR%%/utilities/api.py
@@ -1077,6 +1085,7 @@
 %%DATADIR%%/utilities/query_functions.py
 %%DATADIR%%/utilities/querysets.py
 %%DATADIR%%/utilities/request.py
+%%DATADIR%%/utilities/serializers/json.py
 %%DATADIR%%/utilities/tables.py
 %%DATADIR%%/utilities/templates/builtins/badge.html
 %%DATADIR%%/utilities/templates/builtins/checkmark.html

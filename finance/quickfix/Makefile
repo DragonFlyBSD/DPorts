@@ -1,5 +1,3 @@
-# Created by: Mikhail T. <m.tsatsenko@gmail.com>
-
 PORTNAME=	quickfix
 PORTVERSION=	1.15.1
 PORTREVISION=	2
@@ -8,6 +6,7 @@ CATEGORIES=	finance devel
 
 MAINTAINER=	m.tsatsenko@gmail.com
 COMMENT=	Free FIX Protocol Implementation
+WWW=		https://www.quickfixengine.org/
 
 LICENSE=	GPLv3+
 

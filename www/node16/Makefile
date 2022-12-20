@@ -1,6 +1,6 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
-DISTVERSION=	16.16.0
+DISTVERSION=	16.18.1
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${DISTVERSION}/
 PKGNAMESUFFIX=	16
@@ -21,7 +21,6 @@ USES=		compiler:c++11-lib gmake python:3.6-3.10,build pkgconfig \
 
 OPTIONS_DEFINE=		BUNDLED_SSL DOCS NLS DTRACE COREPACK
 OPTIONS_DEFAULT=	DTRACE COREPACK
-OPTIONS_DEFAULT+=	${OPTIONS_DEFAULT_${OPSYS}_${OSREL:R}}
 OPTIONS_SUB=		yes
 
 .if !exists(/usr/sbin/dtrace)
@@ -112,5 +111,9 @@ post-configure:
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/node
+
+post-install-DTRACE-on:
+	${MKDIR} ${STAGEDIR}${PREFIX}/lib/dtrace
+	${INSTALL_DATA} ${WRKSRC}/out/Release/node.d ${STAGEDIR}${PREFIX}/lib/dtrace
 
 .include <bsd.port.mk>

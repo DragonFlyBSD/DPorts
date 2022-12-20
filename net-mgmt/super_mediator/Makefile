@@ -1,5 +1,3 @@
-# Created by: Inacio <nacho319+freebsdZilla@gmail.com>
-
 PORTNAME=	super_mediator
 PORTVERSION=	1.6.0
 PORTREVISION=	2
@@ -8,6 +6,7 @@ MASTER_SITES=	http://tools.netsa.cert.org/releases/
 
 MAINTAINER=	nacho319+freebsdZilla@gmail.com
 COMMENT=	IPFIX mediator by CMU CERT generally used with YAF
+WWW=		https://tools.netsa.cert.org/super_mediator/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

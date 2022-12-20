@@ -1,14 +1,14 @@
---- content/zygote/zygote_linux.cc.orig	2022-08-31 12:19:35 UTC
+--- content/zygote/zygote_linux.cc.orig	2022-11-30 08:12:58 UTC
 +++ content/zygote/zygote_linux.cc
 @@ -1,6 +1,7 @@
- // Copyright (c) 2012 The Chromium Authors. All rights reserved.
+ // Copyright 2012 The Chromium Authors
  // Use of this source code is governed by a BSD-style license that can be
  // found in the LICENSE file.
 +#if 0
  
  #include "content/zygote/zygote_linux.h"
  
-@@ -653,3 +654,4 @@ bool Zygote::HandleGetSandboxStatus(int fd, base::Pick
+@@ -696,3 +697,4 @@ void Zygote::HandleReinitializeLoggingRequest(base::Pi
  }
  
  }  // namespace content

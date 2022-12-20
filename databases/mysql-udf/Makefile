@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	mysql-udf
 PORTVERSION=	0.3
 PORTREVISION=	3
@@ -8,17 +6,12 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Set of user-defined functions for the MySQL server
+WWW=		http://mysql-udf.sourceforge.net/
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USES=		mysql
-CFLAGS_aarch64=	-fPIC
-CFLAGS_x86_64=	-fPIC
-CFLAGS_i386=	-fPIC
-CFLAGS_powerpc=	-fPIC
-CFLAGS_powerpc64=	-fPIC
-CFLAGS_powerpc64le=	-fPIC
-CFLAGS_riscv64=	-fPIC
+CFLAGS+=	-fPIC
 
 MODULES=	colwidth confidence_higher confidence_lower correlation \
 		faculty geomean intercept kurtosis longest median noverm \

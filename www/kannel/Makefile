@@ -1,5 +1,3 @@
-# Created by: Domas Mituzas <midom@dammit.lt>
-
 PORTNAME=	kannel
 PORTVERSION=	1.4.4
 PORTREVISION=	11
@@ -10,6 +8,7 @@ DISTNAME=	gateway-${PORTVERSION}
 
 MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	WAP/SMS gateway
+WWW=		http://www.kannel.org/
 
 LICENSE=	The_Kannel_Software_License
 LICENSE_NAME=	The Kannel Software License, Version 1.0

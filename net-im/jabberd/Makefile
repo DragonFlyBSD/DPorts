@@ -1,14 +1,13 @@
-# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-
 PORTNAME=	jabberd
 PORTVERSION=	2.7.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/jabberd2/jabberd2/releases/download/${PORTNAME}-${DISTVERSION}/ \
 		LOCAL/matthew/${PORTNAME}
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	Online presence and instant messaging server
+WWW=		https://jabberd2.org/
 
 LICENSE=	GPLv2
 

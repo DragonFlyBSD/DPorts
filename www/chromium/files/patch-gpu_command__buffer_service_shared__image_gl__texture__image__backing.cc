@@ -1,6 +1,6 @@
---- gpu/command_buffer/service/shared_image/gl_texture_image_backing.cc.orig	2022-08-31 12:19:35 UTC
+--- gpu/command_buffer/service/shared_image/gl_texture_image_backing.cc.orig	2022-11-30 08:12:58 UTC
 +++ gpu/command_buffer/service/shared_image/gl_texture_image_backing.cc
-@@ -254,7 +254,7 @@ void GLTextureImageBacking::InitializeGLTexture(
+@@ -345,7 +345,7 @@ void GLTextureImageBacking::InitializeGLTexture(
  }
  
  void GLTextureImageBacking::CreateEGLImage() {

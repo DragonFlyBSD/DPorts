@@ -1,11 +1,13 @@
 PORTNAME=	gr-osmosdr
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.3
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	comms hamradio
 
 MAINTAINER=	martymac@FreeBSD.org
 COMMENT=	GNU Radio OsmoSDR module
+WWW=		http://sdr.osmocom.org/trac
 
 LICENSE=	GPLv3
 

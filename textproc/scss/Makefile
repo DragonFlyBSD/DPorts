@@ -1,5 +1,3 @@
-# Created by: ijliao
-
 PORTNAME=	scss
 PORTVERSION=	0.4.2
 PORTREVISION=	2
@@ -9,6 +7,7 @@ MASTER_SITES=	SAVANNAH \
 
 MAINTAINER=	cs@FreeBSD.org
 COMMENT=	Scheme module for W3C Cascading Stylesheets recommendation
+WWW=		https://www.nongnu.org/scss/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING

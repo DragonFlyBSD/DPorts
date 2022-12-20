@@ -1,10 +1,12 @@
 PORTNAME=	gnuradio
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.8.4.0
+PORTREVISION=	5
 CATEGORIES=	comms astro hamradio
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Amateur Radio Software defined radio
+WWW=		https://www.gnuradio.org/
 
 LICENSE=	GPLv3
 
@@ -67,10 +69,10 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH:STRING="${LOCALBASE}/lib/gcc${_GCC_VER}" \
 #CMAKE_ARGS+=	--debug-output --trace
 USE_CXXSTD=	c++11
 USE_GITHUB=	yes
-USE_PYQT=	core gui opengl
-USE_WX=		3.0
+USE_PYQT=	pyqt5
+USE_WX=		3.1
 USE_QT=		buildtools core gui xml qmake widgets
-WX_COMPS=	wx wx:build wx:run python:build python:run
+WX_COMPS=	wx python:run
 USE_LDCONFIG=	yes
 LIBSTRIP_FILES=	analog audio blocks channels digital dtv fec fft\
 		filter pmt qtgui runtime trellis video-sdl\

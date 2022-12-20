@@ -1,11 +1,12 @@
 PORTNAME=	amarok
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.9.71
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	audio kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE music player
+WWW=		https://amarok.kde.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -24,7 +25,7 @@ USES=		cmake compiler:c++11-lang cpe desktop-file-utils \
 USE_QT=		core concurrent declarative dbus gui location network phonon4 \
 		quickcontrols2 script scripttools sql svg webchannel \
 		webkit widgets xml \
-		buildtools_build qmake_build testlib_build
+		buildtools:build qmake:build testlib:build
 
 USE_KDE=	archive auth attica bookmarks codecs config configwidgets \
 		completion coreaddons crash dbusaddons dnssd globalaccel \
@@ -32,7 +33,7 @@ USE_KDE=	archive auth attica bookmarks codecs config configwidgets \
 		kcmutils kio kirigami2 newstuff notifications notifyconfig \
 		package parts service solid sonnet texteditor textwidgets \
 		threadweaver wallet widgetsaddons windowsystem xmlgui \
-		doctools_build ecm_build
+		doctools:build ecm:build
 USE_XORG=	ice sm x11 xext
 USE_LDCONFIG=	yes
 

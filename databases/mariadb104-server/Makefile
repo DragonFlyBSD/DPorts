@@ -1,7 +1,5 @@
-# Created by: Bernard Spil <brnrd@FreeBSD.org>
-
 PORTNAME?=	mariadb
-PORTVERSION=	10.4.25
+PORTVERSION=	10.4.26
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	https://mirror.nodesdirect.com/${SITESDIR}/ \
@@ -20,6 +18,7 @@ PKGNAMESUFFIX?=	104-server
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT?=	Multithreaded SQL database (server)
+WWW=		https://mariadb.org/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

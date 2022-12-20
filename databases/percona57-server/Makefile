@@ -1,7 +1,5 @@
-# Created by: Mark Felder <feld@FreeBSD.org>
-
 PORTNAME?=	percona
-DISTVERSION=	5.7.36-39
+DISTVERSION=	5.7.39-42
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	http://www.percona.com/downloads/Percona-Server-5.7/Percona-Server-${DISTVERSION}/source/tarball/:percona \
@@ -13,6 +11,7 @@ DISTFILES=	percona-server-${DISTVERSION}${EXTRACT_SUFX}:percona \
 
 MAINTAINER=	fluffy@FreeBSD.org
 COMMENT?=	Multithreaded SQL database (server)
+WWW?=		https://www.percona.com/software/percona-server
 
 LICENSE?=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -44,7 +43,7 @@ CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
 		-DINSTALL_INCLUDEDIR="include/mysql" \
 		-DINSTALL_INFODIR="${INFO_PATH}" \
 		-DINSTALL_LIBDIR="lib/mysql" \
-		-DINSTALL_MANDIR="man" \
+		-DINSTALL_MANDIR="share/man" \
 		-DINSTALL_MYSQLDATADIR="/var/db/mysql" \
 		-DINSTALL_SECURE_FILE_PRIVDIR="${MY_SECDIR}" \
 		-DINSTALL_MYSQLSHAREDIR="share/mysql" \
@@ -86,6 +85,7 @@ USES+=		libedit
 # For building plugins (percona-pam-for-mysql, etc)
 # Currently do nothing special
 USES+=		libedit
+LIB_DEPENDS+=	libcurl.so:ftp/curl
 .else
 LIB_DEPENDS+=	libcurl.so:ftp/curl
 

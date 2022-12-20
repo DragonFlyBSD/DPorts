@@ -1,13 +1,12 @@
 PORTNAME=	putty
 PORTVERSION=	0.78~pre20220922
 DISTVERSIONSUFFIX=	.9fcfd67
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	security
 #MASTER_SITES=	http://the.earth.li/~sgtatham/putty/${PORTVERSION}/ \
 #		ftp://ftp.chiark.greenend.org.uk/users/sgtatham/putty-latest/
 MASTER_SITES=	https://tartarus.org/~simon/putty-prerel-snapshots/ \
 		LOCAL/mandree/
-PATCH_STRIP=	-p1
 
 MAINTAINER=	mandree@FreeBSD.org
 COMMENT=	Secure shell and telnet client including xterm emulator

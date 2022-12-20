@@ -1,5 +1,3 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME?=	mysql
 PORTVERSION=	5.6.51
 PORTREVISION?=	0
@@ -9,6 +7,7 @@ PKGNAMESUFFIX?=	56-server
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT?=	Multithreaded SQL database (server)
+WWW=		https://www.mysql.com/
 
 LICENSE=	GPLv2
 
