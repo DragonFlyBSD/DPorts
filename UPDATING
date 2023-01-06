@@ -798,37 +798,3 @@ you update your ports collection, before attempting any port upgrades.
   users / can not login, you forgot to upgrade it):
     java -jar %%PREFIX%%/jetty_bastillion/upgrade/bastillion-upgrade-4.00.00.jar %%PREFIX%%/jetty_bastillion/bastillion/WEB-INF/classes/BastillionConfig.properties
 
-20220102:
-  AFFECTS: users of sysutils/py-azure-cli
-  AUTHOR: dbaio@FreeBSD.org
-
-  When upgrading to Azure CLI v2.31.0, you will need to re-authenticate on
-  Azure services.
-
-    $ az login --use-device-code
-
-  Starting in version 2.30.0, Azure CLI uses MSAL as the underlying
-  authentication library. MSAL uses AAD v2.0 authentication flow to provide more
-  functionality and increases security for token cache.
-  More info: https://docs.microsoft.com/en-us/cli/azure/msal-based-azure-cli
-
-20211220:
-  AFFECTS: users of devel/notcurses
-  AUTHOR: nickblack@linux.com
-
-  Notcurses 3 introduces a new SONAME and significant API/ABI changes.
-  Dependent applications must be recompiled at a minimum. A complete
-  guide to updating for the new API is available under "Porting API2
-  Applications to API3" at
-  https://github.com/dankamongmen/notcurses/releases/tag/v3.0.0
-
-20211220:
-  AFFECTS: users of net-im/openfire
-  AUTHOR: nikita@druba.su
-
-  The port options have been renamed to be more readable.
-  When not using the default options, they have to be regenerated.
-
-  # cd /usr/ports/net-im/openfire
-  # make config
-
