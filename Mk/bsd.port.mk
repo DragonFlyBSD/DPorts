@@ -340,6 +340,11 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  can be used in Makefiles by port maintainers
 #				  if a port breaks with it (it should be
 #				  extremely rare).
+# PIE_CFLAGS	- Defaults to -fPIE -fPIC. This value
+#				  is added to CFLAGS and the necessary flags
+#				  are added to LDFLAGS. Note that PIE_UNSAFE
+#				  can be used in Makefiles by port maintainers
+#				  if a port breaks with it.
 ##
 # USE_LOCALE	- LANG and LC_ALL are set to the value of this variable in
 #				  CONFIGURE_ENV and MAKE_ENV.  Example: USE_LOCALE=en_US.UTF-8
@@ -1019,9 +1024,8 @@ LC_ALL=		C
 # These need to be absolute since we don't know how deep in the ports
 # tree we are and thus can't go relative.  They can, of course, be overridden
 # by individual Makefiles or local system make configuration.
-#
 # TODO(tuxillo): Find out why ssp needs to be removed from the list.
-_LIST_OF_WITH_FEATURES=	debug lto
+_LIST_OF_WITH_FEATURES=	debug lto pie relro bind_now
 _DEFAULT_WITH_FEATURES=	ssp
 WITH_PKGNG?=		yes
 WITHOUT_FBSD10_FIX?=	yes
@@ -1407,10 +1411,6 @@ USE_APACHE:=	${USE_APACHE:S/common/server,/}
 USES+=	apache:${USE_APACHE:C/2([0-9])/2.\1/g}
 .    endif
 
-.    if defined(USE_TEX)
-.include "${PORTSDIR}/Mk/bsd.tex.mk"
-.    endif
-
 .    if defined(USE_GECKO)
 .include "${PORTSDIR}/Mk/bsd.gecko.mk"
 .    endif
@@ -1432,7 +1432,11 @@ USES+=mysql:${USE_MYSQL}
 .    endif
 
 .    if !defined(UID)
+.      if defined(.MAKE.UID)
+UID=	${.MAKE.UID}
+.      else
 UID!=	${ID} -u
+.      endif
 .    endif
 
 DESTDIRNAME?=	DESTDIR
@@ -1789,8 +1793,6 @@ CFLAGS:=	${CFLAGS:C/${_CPUCFLAGS}//}
 .      endif
 .    endfor
 
-# XXX PIE support to be added here
-MAKE_ENV+=	NO_PIE=yes
 # We will control debug files.  Don't let builds that use /usr/share/mk
 # split out debug symbols since the plist won't know to expect it.
 MAKE_ENV+=	MK_DEBUG_FILES=no
@@ -1979,7 +1981,10 @@ ERROR+=	"Unknown USES=${f:C/\:.*//}"
 .    endfor
 
 .    if defined(PORTNAME)
+.      if !defined(PACKAGE_BUILDING) || empty(.TARGETS) || make(all) || \
+	      make(check-sanity) || make(show*-errors) || make(show*-warnings)
 .include "${PORTSDIR}/Mk/bsd.sanity.mk"
+.      endif
 .    endif
 
 .    if defined(USE_LOCALE)
@@ -3923,6 +3928,7 @@ makesum: check-sanity
 	@cd ${.CURDIR} && ${MAKE} fetch NO_CHECKSUM=yes \
 			DISABLE_SIZE=yes DISTFILES="${DISTFILES}" \
 			MASTER_SITES="${MASTER_SITES}" \
+			MASTER_SITE_SUBDIR="${MASTER_SITE_SUBDIR}" \
 			PATCH_SITES="${PATCH_SITES}"
 	@${SETENV} \
 			${_CHECKSUM_INIT_ENV} \

@@ -75,18 +75,18 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Current KDE desktop.
-KDE_PLASMA_VERSION?=		5.24.6
+KDE_PLASMA_VERSION?=		5.24.7
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS_VERSION?=	5.98.0
+KDE_FRAMEWORKS_VERSION?=	5.101.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	22.08.1
-KDE_APPLICATIONS_SHLIB_VER?=	5.21.1
+KDE_APPLICATIONS_VERSION?=	22.12.0
+KDE_APPLICATIONS_SHLIB_VER?=	5.22.0
 # G as in KDE Gear, and as in "don't make the variable name longer than required"
-KDE_APPLICATIONS_SHLIB_G_VER?=	22.8.1
+KDE_APPLICATIONS_SHLIB_G_VER?=	22.12.0
 KDE_APPLICATIONS_BRANCH?=	stable
 
 # Extended KDE universe applications.

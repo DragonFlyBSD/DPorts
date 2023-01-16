@@ -49,7 +49,7 @@ _GST1_PLUGINS_ftp=	curl
 _GST1_PLUGINS_graphics= aalib cairo gdkpixbuf gl jpeg kms libcaca libvisual \
 			opencv openexr openjpeg png qt rsvg vulkan webp zbar
 _GST1_PLUGINS_multimedia=	aom assrender bad dash dts dv dvdread \
-			editing-services gnonlin good hls kate libav libde265 \
+			editing-services gnonlin good hls libav libde265 \
 			mpeg2dec mpeg2enc mplex mm openh264 resindvd rtmp \
 			smoothstreaming theora ttml ugly v4l2 vpx x264 x265
 _GST1_PLUGINS_net=	srtp
@@ -57,7 +57,7 @@ _GST1_PLUGINS_security=	dtls
 _GST1_PLUGINS_sysutils=	cdio
 _GST1_PLUGINS_www=	neon
 _GST1_PLUGINS_x11=	x ximagesrc
-_GST1_PLUGINS_x11-toolkits=	gtk gtk4 pango
+_GST1_PLUGINS_x11-toolkits=	gtk pango
 
 # == Unversioned information
 
@@ -297,9 +297,6 @@ gst-gnonlin_VERSION=	1.4.0
 gst-hls_PORT=		multimedia/gstreamer${_GST_VER}-plugins-hls
 gst-hls_IMPL=		bad
 
-gst-kate_PORT=		multimedia/gstreamer${_GST_VER}-plugins-kate
-gst-kate_IMPL=		bad
-
 gst-libav_PORT=		multimedia/gstreamer${_GST_VER}-libav
 gst-libav_SUFFIX=	#
 gst-libav_IMPL=		#
@@ -387,9 +384,6 @@ gst-ximagesrc_IMPL=	good
 
 gst-gtk_PORT=		x11-toolkits/gstreamer${_GST_VER}-plugins-gtk
 gst-gtk_IMPL=		bad
-
-gst-gtk4_PORT=		x11-toolkits/gstreamer${_GST_VER}-plugins-gtk4
-gst-gtk4_IMPL=		good
 
 gst-pango_PORT=		x11-toolkits/gstreamer${_GST_VER}-plugins-pango
 gst-pango_IMPL=		#
