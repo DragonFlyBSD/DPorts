@@ -1,12 +1,12 @@
---- ext/sqlite3/extconf.rb.orig	2022-09-10 15:17:36 UTC
+--- ext/sqlite3/extconf.rb.orig	2022-11-27 23:59:11 UTC
 +++ ext/sqlite3/extconf.rb
 @@ -1,5 +1,4 @@
  require "mkmf"
 -require "mini_portile2"
+ require "yaml"
  
  module Sqlite3
-   module ExtConf
-@@ -48,33 +47,6 @@ module Sqlite3
+@@ -49,42 +48,6 @@ module Sqlite3
        end
  
        def configure_packaged_libraries
@@ -27,32 +27,45 @@
 -          end
 -          recipe.activate
 -
--          ENV["PKG_CONFIG_ALLOW_SYSTEM_CFLAGS"] = "t" # on macos, pkg-config will not return --cflags without this
--          pcfile = File.join(recipe.path, "lib", "pkgconfig", "sqlite3.pc")
--          if pkg_config(pcfile)
--            # see https://bugs.ruby-lang.org/issues/18490
--            libs = xpopen(["pkg-config", "--libs", "--static", pcfile], err: [:child, :out], &:read)
--            libs.split.each { |lib| append_ldflags(lib) } if $?.success?
--          else
--            abort("\nCould not configure the build properly. Please install either the `pkg-config` utility or the `pkg-config` rubygem.\n\n")
+-          # on macos, pkg-config will not return --cflags without this
+-          ENV["PKG_CONFIG_ALLOW_SYSTEM_CFLAGS"] = "t"
+-
+-          lib_path = File.join(recipe.path, "lib")
+-          pcfile = File.join(lib_path, "pkgconfig", "sqlite3.pc")
+-          abort_pkg_config("pkg_config") unless pkg_config(pcfile)
+-
+-          # see https://bugs.ruby-lang.org/issues/18490
+-          flags = xpopen(["pkg-config", "--libs", "--static", pcfile], err: [:child, :out], &:read)
+-          abort_pkg_config("xpopen") unless $?.success?
+-          flags = flags.split
+-
+-          # see https://github.com/flavorjones/mini_portile/issues/118
+-          "-L#{lib_path}".tap do |lib_path_flag|
+-            flags.prepend(lib_path_flag) unless flags.include?(lib_path_flag)
 -          end
+-
+-          flags.each { |flag| append_ldflags(flag) }
 -        end
        end
  
        def configure_extension
-@@ -115,11 +87,6 @@ module Sqlite3
+@@ -125,15 +88,6 @@ module Sqlite3
        end
  
        def minimal_recipe
 -        MiniPortile.new(libname, sqlite3_config[:version]).tap do |recipe|
--          recipe.files = sqlite3_config[:files]
--          recipe.target = File.join(package_root_dir, "ports")
--          recipe.patch_files = Dir[File.join(package_root_dir, "patches", "*.patch")].sort
+-          if sqlite_source_dir
+-            recipe.source_directory = sqlite_source_dir
+-          else
+-            recipe.files = sqlite3_config[:files]
+-            recipe.target = File.join(package_root_dir, "ports")
+-            recipe.patch_files = Dir[File.join(package_root_dir, "patches", "*.patch")].sort
+-          end
 -        end
        end
  
        def package_root_dir
-@@ -127,27 +94,9 @@ module Sqlite3
+@@ -141,12 +95,9 @@ module Sqlite3
        end
  
        def sqlite3_config
@@ -60,33 +73,23 @@
        end
  
        def mini_portile_config
--        {
--          sqlite3: {
--            # checksum verified by first checking the published sha3(256) checksum against https://sqlite.org/download.html:
--            #
--            # $ sha3sum -a 256 ports/archives/sqlite-autoconf-3390300.tar.gz
--            # dfa055c70724cd63f0b7da6e9f53530d8da51fe021e3f864d58c7c847d590e1d  ports/archives/sqlite-autoconf-3390300.tar.gz
--            #
--            # $ sha256sum ports/archives/sqlite-autoconf-3390300.tar.gz
--            # 7868fb3082be3f2cf4491c6fba6de2bddcbc293a35fefb0624ee3c13f01422b9  ports/archives/sqlite-autoconf-3390300.tar.gz
--            #
--            version: "3.39.3",
--            files: [{
--                      url: "https://www.sqlite.org/2022/sqlite-autoconf-3390300.tar.gz",
--                      sha256: "7868fb3082be3f2cf4491c6fba6de2bddcbc293a35fefb0624ee3c13f01422b9",
--                    }],
--          }
--        }
+-        # TODO: once Ruby 2.7 is no longer supported, use symbolize_names: true
+-        YAML.load_file(File.join(package_root_dir, "dependencies.yml"))
        end
  
        def abort_could_not_find(missing)
-@@ -156,10 +105,6 @@ module Sqlite3
+@@ -158,7 +109,6 @@ module Sqlite3
+       end
  
        def cross_build?
-         enable_config("cross-build")
--      end
--
--      def download
+-        enable_config("cross-build")
+       end
+ 
+       def sqlite_source_dir
+@@ -166,7 +116,6 @@ module Sqlite3
+       end
+ 
+       def download
 -        minimal_recipe.download
        end
  
