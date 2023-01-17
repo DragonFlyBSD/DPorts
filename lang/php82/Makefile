@@ -1,8 +1,8 @@
 PORTNAME=	php82
-DISTVERSION=	8.2.0RC2
+DISTVERSION=	8.2.0
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
-MASTER_SITES=	https://downloads.php.net/~sergey/
+MASTER_SITES=	PHP/distributions
 DISTNAME=	php-${DISTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -180,7 +180,7 @@ COMMENT=	The ${PHP_MODNAME} shared extension for php
 USES+=		php:ext,noflavors
 PHP_MODNAME=	${PKGNAMESUFFIX:S/-//}
 PHP_VER=	82
-IGNORE_WITH_PHP=	74 80 81
+IGNORE_WITH_PHP=	80 81
 
 EXTSUBDIR=	${DISTNAME}/ext/${PHP_MODNAME}
 WRKSRC=		${WRKDIR}/${EXTSUBDIR}
