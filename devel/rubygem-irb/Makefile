@@ -1,11 +1,11 @@
 PORTNAME=	irb
-PORTVERSION=	1.4.1
+PORTVERSION=	1.6.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Interactive Ruby
-WWW=		https://rubygems.org/gems/irb
+WWW=		https://github.com/ruby/irb
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
