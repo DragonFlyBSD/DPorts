@@ -1,4 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e '/CXX/s@\(WARNINGS\)@\1 -Wno-narrowing@'	\
-		${WRKSRC}/build.sh

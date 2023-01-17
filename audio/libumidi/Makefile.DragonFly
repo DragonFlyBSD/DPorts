@@ -1,3 +1,0 @@
-
-# error: 'register' is not at beginning of declaration
-CFLAGS+=	-Wno-error=old-style-declaration

@@ -1,3 +1,0 @@
-.if defined(DPORTS_BUILDER)
-.undef NO_PACKAGE
-.endif
