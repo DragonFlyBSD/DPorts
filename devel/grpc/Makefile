@@ -1,16 +1,18 @@
 PORTNAME=	grpc
-PORTVERSION=	1.48.1
+PORTVERSION=	1.50.1
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	2
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HTTP/2-based RPC framework
-WWW=		https://grpc.io/
+WWW=		https://grpc.io/ \
+		https://github.com/grpc/grpc
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	${LOCALBASE}/include/xxhash.h:devel/xxhash
 LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libbenchmark.so:devel/benchmark \
 		libcares.so:dns/c-ares \
@@ -59,6 +61,7 @@ post-patch:
 	@${RM} -r ${WRKSRC}/third_party/cares/
 	@${RM} -r ${WRKSRC}/third_party/protobuf/
 	@${RM} -r ${WRKSRC}/third_party/re2/
+	@${RM} -r ${WRKSRC}/third_party/xxhash/
 	@${RM} -r ${WRKSRC}/third_party/zlib/
 
 .include <bsd.port.post.mk>
