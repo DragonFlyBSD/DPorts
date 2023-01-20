@@ -1,7 +1,7 @@
 PORTNAME=	vulkan-tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.230
-CATEGORIES=	graphics wayland
+DISTVERSION=	1.3.237
+CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Tools and demos for the Vulkan graphics API
@@ -20,11 +20,17 @@ GH_PROJECT=	Vulkan-Tools
 CMAKE_OFF=	BUILD_CUBE BUILD_ICD
 CMAKE_ARGS=	-DGLSLANG_INSTALL_DIR:PATH="${LOCALBASE}"
 
+.if ${DISTVERSION:E} < 238
+GH_TUPLE+=	KhronosGroup:Vulkan-Headers:v1.3.237:vkheaders/Vulkan-Headers
+CFLAGS+=	-I${WRKSRC_vkheaders}/include
+.endif
+
 OPTIONS_DEFINE=		WAYLAND XCB XLIB
 OPTIONS_DEFAULT=	WAYLAND XCB XLIB
 OPTIONS_SLAVE=		DISPLAY
 OPTIONS_SUB=		yes
 
+WAYLAND_CATEGORIES=	wayland
 WAYLAND_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 			wayland-protocols>0:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
