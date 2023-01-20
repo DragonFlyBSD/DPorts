@@ -1,12 +1,13 @@
 PORTNAME=	nextcloud
-PORTVERSION=	24.0.5
+PORTVERSION=	25.0.2
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	brnrd@FreeBSD.org
-COMMENT=	Personal cloud which runs on your own server
+COMMENT=	Collaboration platform which runs on your own server
 WWW=		https://nextcloud.com
 
 LICENSE=	AGPLv3
@@ -48,7 +49,7 @@ REDIS_DESC=	Distributed data caching using Redis
 
 APCU_RUN_DEPENDS=	${PECL_PKGNAMEPREFIX}APCu>0:devel/pecl-APCu@${PHP_FLAVOR}
 EXIF_USE=	PHP=exif
-IMAGICK_RUN_DEPENDS=	${PECL_PKGNAMEPREFIX}imagick>=2.2.2:graphics/pecl-imagick@${PHP_FLAVOR}
+IMAGICK_RUN_DEPENDS=	${IMAGEMAGICK_DEPENDS}
 INTL_USE=	PHP=intl
 LDAP_USE=	PHP=ldap
 MYSQL_USE=	PHP=pdo_mysql
@@ -60,6 +61,16 @@ SMB_RUN_DEPENDS=	${PECL_PKGNAMEPREFIX}smbclient>=0.9.0:net/pecl-smbclient@${PHP_
 SQLITE_USE=	PHP=pdo_sqlite,sqlite3
 SSL_USE=	PHP=openssl
 
+.include <bsd.port.options.mk>
+
+.if !empty(IMAGEMAGICK_DEFAULT:M6) || !empty(IMAGEMAGICK_DEFAULT:M6-*)
+IMAGEMAGICK_DEPENDS=	${PECL_PKGNAMEPREFIX}imagick>=2.2.2:graphics/pecl-imagick@${PHP_FLAVOR}
+.elif !empty(IMAGEMAGICK_DEFAULT:M7) || !empty(IMAGEMAGICK_DEFAULT:M7-*)
+IMAGEMAGICK_DEPENDS=	${PECL_PKGNAMEPREFIX}imagick-im7>=2.2.2:graphics/pecl-imagick-im7@${PHP_FLAVOR}
+.else
+# notreached
+.endif
+
 post-extract:
 	@${MV} ${WRKSRC}/config/config.sample.php ${WRKSRC}/config/config.documented.php
 	@${MV} ${WRKSRC}/.htaccess ${WRKSRC}/.htaccess.dist
@@ -69,6 +80,7 @@ post-patch:
 		${WRKSRC}/config/config.documented.php
 	@${RM} ${WRKSRC}/config/config.documented.php.* \
 		 ${WRKSRC}/updater/updater.phar
+	@${RMDIR} ${WRKSRC}/apps/suspicious_login/vendor/amphp/*/docs/.shared
 	@${MV} ${WRKSRC}/apps ${WRKSRC}/apps-pkg
 
 do-install:
