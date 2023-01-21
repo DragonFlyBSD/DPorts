@@ -1,5 +1,5 @@
 PORTNAME=	texstudio
-DISTVERSION=	4.3.1
+DISTVERSION=	4.4.1
 PORTREVISION=	1
 CATEGORIES=	editors
 
@@ -17,17 +17,19 @@ LIB_DEPENDS=	libhunspell-1.7.so:textproc/hunspell \
 		libquazip1-qt5.so:archivers/quazip
 
 USES=		compiler:c++11-lang desktop-file-utils dos2unix \
-		ghostscript:run gl pkgconfig qmake qt:5 xorg
-USE_QT	=	core declarative gui network script svg widgets \
-		xml printsupport concurrent uitools \
+		ghostscript:run gl pkgconfig qmake qt:5 tex xorg
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	${PORTNAME}-org
+
+USE_QT	=	concurrent core declarative gui linguisttools network \
+		printsupport script svg uitools widgets xml \
 		buildtools:build
 QTVER_SUFFIX=	5
 
 USE_XORG=	x11
 USE_GL=		gl
 USE_TEX=	latex dvipsk
-USE_GITHUB=	yes
-GH_ACCOUNT=	${PORTNAME}-org
 
 DOS2UNIX_FILES=	${PORTNAME}.pro \
 		src/manhattanstyle.cpp \
