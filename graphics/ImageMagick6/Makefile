@@ -1,5 +1,5 @@
 PORTNAME=	ImageMagick
-DISTVERSION=	6.9.12-63
+DISTVERSION=	6.9.12-65
 PORTEPOCH=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/releases/ \
@@ -340,8 +340,6 @@ post-install:
 	@${MV} ${STAGEDIR}${PREFIX}/etc/ImageMagick-6/${i} \
 		${STAGEDIR}${PREFIX}/etc/ImageMagick-6/${i}.sample
 .endfor
-
-post-install-TESTS-on: test
 
 do-test:
 	-cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} limits -m 20m ${MAKE} ${_MAKE_JOBS} check
