@@ -1,7 +1,5 @@
 PORTNAME=	rustworkx
-DISTVERSION=	0.11.0-51
-DISTVERSIONSUFFIX=	-ge9edfdc
-PORTREVISION=	1
+DISTVERSION=	0.12.1
 CATEGORIES=	math python
 #MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,9 +13,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools-rust>0:devel/py-setuptools-rust@${PY_FLAVOR}
 RUN_DEPENDS=	${PYNUMPY}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}matplotlib>=3.0:math/py-matplotlib@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pillow>=5.4:graphics/py-pillow@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}tox>0:devel/py-tox@${PY_FLAVOR}
 
 USES=		cargo python:3.7+
-USE_PYTHON=	autoplist distutils pytest # all tests fail to run, see https://github.com/Qiskit/rustworkx/issues/655
+USE_PYTHON=	autoplist distutils
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Qiskit
@@ -52,18 +53,19 @@ CARGO_CRATES=	ahash-0.7.6 \
 		num-integer-0.1.45 \
 		num-traits-0.2.15 \
 		num_cpus-1.13.1 \
-		numpy-0.16.2 \
+		numpy-0.17.2 \
 		once_cell-1.12.0 \
 		parking_lot-0.11.2 \
 		parking_lot_core-0.8.5 \
 		petgraph-0.6.2 \
 		ppv-lite86-0.2.16 \
+		priority-queue-1.2.0 \
 		proc-macro2-1.0.39 \
-		pyo3-0.16.5 \
-		pyo3-build-config-0.16.5 \
-		pyo3-ffi-0.16.5 \
-		pyo3-macros-0.16.5 \
-		pyo3-macros-backend-0.16.5 \
+		pyo3-0.17.3 \
+		pyo3-build-config-0.17.3 \
+		pyo3-ffi-0.17.3 \
+		pyo3-macros-0.17.3 \
+		pyo3-macros-backend-0.17.3 \
 		quick-xml-0.22.0 \
 		quote-1.0.18 \
 		rand-0.8.5 \
@@ -76,9 +78,9 @@ CARGO_CRATES=	ahash-0.7.6 \
 		redox_syscall-0.2.13 \
 		ryu-1.0.10 \
 		scopeguard-1.1.0 \
-		serde-1.0.142 \
-		serde_derive-1.0.142 \
-		serde_json-1.0.83 \
+		serde-1.0.145 \
+		serde_derive-1.0.145 \
+		serde_json-1.0.89 \
 		smallvec-1.8.0 \
 		syn-1.0.96 \
 		target-lexicon-0.12.4 \
@@ -105,5 +107,8 @@ BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/rustworkx/rustworkx.cpython-${PYTHON_SUFFIX}.so
+
+do-test:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} tox -epy
 
 .include <bsd.port.mk>
