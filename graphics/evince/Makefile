@@ -1,5 +1,6 @@
 PORTNAME=	evince
-DISTVERSION=	43.0
+DISTVERSION=	43.1
+PORTREVISION=	1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -75,6 +76,7 @@ DBUS_MESON_TRUE=	dbus
 DBUS_LIB_DEPENDS=	libdbus-1.so:devel/dbus
 
 DVI_DESC=		DVI viewer support
+DVI_USES=		tex
 DVI_USE=		TEX=kpathsea,latex
 DVI_MESON_ENABLED=	dvi
 
