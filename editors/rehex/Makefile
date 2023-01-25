@@ -1,5 +1,5 @@
 PORTNAME=	rehex
-DISTVERSION=	0.5.3
+DISTVERSION=	0.5.4
 CATEGORIES=	editors
 
 MAINTAINER=	fuz@fuz.su
