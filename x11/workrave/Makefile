@@ -1,6 +1,6 @@
 PORTNAME=	workrave
-PORTVERSION=	1.10.44
-PORTREVISION=	3
+PORTVERSION=	1.10.50
+DISTVERSIONPREFIX=	v
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/rcaelers/workrave/releases/download/v${PORTVERSION:S/./_/g}/
 
@@ -10,12 +10,13 @@ WWW=		https://www.workrave.org/
 
 LICENSE=	GPLv3+
 
-LIB_DEPENDS=	libgdome.so:textproc/gdome2
+LIB_DEPENDS=	libgdome.so:textproc/gdome2 \
+		libharfbuzz.so:print/harfbuzz
 
-USES=		compiler:c++11-lang gettext gmake gnome libtool localbase \
-		pkgconfig xorg
+USES=		compiler:c++11-lang gmake gnome libtool localbase pkgconfig \
+		xorg
 USE_CXXSTD=	c++11
-USE_GNOME=	gtkmm30 intlhack intltool introspection:build
+USE_GNOME=	gdkpixbuf2 gtkmm30 intlhack intltool introspection:build
 USE_LDCONFIG=	yes
 USE_XORG=	ice sm x11 xext xmu xorgproto xscrnsaver xtst
 
@@ -29,7 +30,9 @@ CONFIGURE_ARGS=	--disable-gconf \
 		--disable-xfce
 INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=		DBUS DISTRIBUTION GSTREAMER
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
+OPTIONS_DEFINE=		DBUS DISTRIBUTION GSTREAMER NLS
 OPTIONS_DEFAULT=	DBUS GSTREAMER
 OPTIONS_SUB=		yes
 
@@ -45,5 +48,8 @@ DISTRIBUTION_CONFIGURE_ENABLE=	distribution
 GSTREAMER_USES=			gstreamer
 GSTREAMER_USE=			GSTREAMER=good
 GSTREAMER_CONFIGURE_ENABLE=	gstreamer
+
+NLS_USES=		gettext
+NLS_CONFIGURE_ENABLE=	nls
 
 .include <bsd.port.mk>
