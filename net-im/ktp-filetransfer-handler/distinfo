@@ -1,3 +1,3 @@
-TIMESTAMP = 1662479876
-SHA256 (KDE/release-service/22.08.1/ktp-filetransfer-handler-22.08.1.tar.xz) = ee6a45599dbe5b4bd02ac6675bdb16b1a45c1af8224bb9010a3d2f99951e7a21
-SIZE (KDE/release-service/22.08.1/ktp-filetransfer-handler-22.08.1.tar.xz) = 46632
+TIMESTAMP = 1670513008
+SHA256 (KDE/release-service/22.12.0/ktp-filetransfer-handler-22.12.0.tar.xz) = 2aa4b821e3bbe0c8baa8efb5a2e2c9af3e208ac8283cc7abe6d555cb0cc75cd1
+SIZE (KDE/release-service/22.12.0/ktp-filetransfer-handler-22.12.0.tar.xz) = 47972
