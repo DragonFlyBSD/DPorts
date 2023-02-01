@@ -1,8 +1,8 @@
 diff --git base/BUILD.gn base/BUILD.gn
-index 2dff31e8b4d..0b799901dc2 100644
+index 6f8b662c1bb..eee739f0610 100644
 --- base/BUILD.gn
 +++ base/BUILD.gn
-@@ -2265,7 +2265,7 @@ mixed_component("base") {
+@@ -2284,7 +2284,7 @@ mixed_component("base") {
        "process/process_metrics_openbsd.cc",
        "system/sys_info_openbsd.cc",
      ]
@@ -12,10 +12,10 @@ index 2dff31e8b4d..0b799901dc2 100644
        "process/process_handle_freebsd.cc",
        "process/process_iterator_freebsd.cc",
 diff --git base/allocator/partition_allocator/partition_alloc_config.h base/allocator/partition_allocator/partition_alloc_config.h
-index 51d702a893c..0eb0e6442d8 100644
+index a43c86b19ed..cae69a268ae 100644
 --- base/allocator/partition_allocator/partition_alloc_config.h
 +++ base/allocator/partition_allocator/partition_alloc_config.h
-@@ -76,7 +76,7 @@ static_assert(sizeof(void*) != 8, "");
+@@ -84,7 +84,7 @@ static_assert(sizeof(void*) != 8, "");
  
  // POSIX is not only UNIX, e.g. macOS and other OSes. We do use Linux-specific
  // features such as futex(2).
@@ -490,7 +490,7 @@ index ae67c8855e3..3ba94ee0b54 100644
  
  FilePath GetProcessExecutablePath(ProcessHandle process) {
 diff --git base/process/process_iterator.h base/process/process_iterator.h
-index db1799f3ab4..578ae448ec8 100644
+index 5ffab38c0fe..17392ee4dae 100644
 --- base/process/process_iterator.h
 +++ base/process/process_iterator.h
 @@ -25,7 +25,7 @@
@@ -795,7 +795,7 @@ index 04df5e08bf5..37df5f7b675 100644
  #endif
  
 diff --git build/build_config.h build/build_config.h
-index 8f90f474efb..c39797ab2ed 100644
+index 6811872a2dc..0b6073feebf 100644
 --- build/build_config.h
 +++ build/build_config.h
 @@ -94,6 +94,8 @@
@@ -840,10 +840,10 @@ index 8f90f474efb..c39797ab2ed 100644
  #define BUILDFLAG_INTERNAL_IS_POSIX() (1)
  #else
 diff --git build/config/BUILDCONFIG.gn build/config/BUILDCONFIG.gn
-index 37174251ca5..2d7ecb7d470 100644
+index c3d37d01a84..57bdce2567f 100644
 --- build/config/BUILDCONFIG.gn
 +++ build/config/BUILDCONFIG.gn
-@@ -225,6 +225,8 @@ if (host_toolchain == "") {
+@@ -230,6 +230,8 @@ if (host_toolchain == "") {
      host_toolchain = "//build/toolchain/openbsd:clang_$host_cpu"
    } else if (host_os == "freebsd") {
      host_toolchain = "//build/toolchain/freebsd:clang_$host_cpu"
@@ -852,7 +852,7 @@ index 37174251ca5..2d7ecb7d470 100644
    } else {
      assert(false, "Unsupported host_os: $host_os")
    }
-@@ -269,7 +271,7 @@ if (target_os == "android") {
+@@ -273,7 +275,7 @@ if (target_os == "android") {
    _default_toolchain = "//build/toolchain/aix:$target_cpu"
  } else if (target_os == "zos") {
    _default_toolchain = "//build/toolchain/zos:$target_cpu"
@@ -861,7 +861,7 @@ index 37174251ca5..2d7ecb7d470 100644
    _default_toolchain = host_toolchain
  } else {
    assert(false, "Unsupported target_os: $target_os")
-@@ -306,10 +308,11 @@ is_chromeos = current_os == "chromeos"
+@@ -310,10 +312,11 @@ is_chromeos = current_os == "chromeos"
  is_fuchsia = current_os == "fuchsia"
  is_ios = current_os == "ios"
  is_linux = current_os == "linux" || current_os == "openbsd" ||
@@ -876,10 +876,10 @@ index 37174251ca5..2d7ecb7d470 100644
  is_nacl = current_os == "nacl"
  is_win = current_os == "win" || current_os == "winuwp"
 diff --git build/config/compiler/BUILD.gn build/config/compiler/BUILD.gn
-index ea317b2e551..daf244045bd 100644
+index 6b656ec31e0..37bc22b645b 100644
 --- build/config/compiler/BUILD.gn
 +++ build/config/compiler/BUILD.gn
-@@ -1756,7 +1756,7 @@ config("no_chromium_code") {
+@@ -1786,7 +1786,7 @@ config("no_chromium_code") {
        # third-party libraries.
        "-Wno-c++11-narrowing",
      ]
@@ -943,7 +943,7 @@ index b126f4fff0f..9b4f517d2d2 100644
  
  def IsMac():
 diff --git chrome/browser/media/webrtc/webrtc_log_uploader.cc chrome/browser/media/webrtc/webrtc_log_uploader.cc
-index a0e335f8938..587fae43a3f 100644
+index f76e12e8cff..cef2794f24f 100644
 --- chrome/browser/media/webrtc/webrtc_log_uploader.cc
 +++ chrome/browser/media/webrtc/webrtc_log_uploader.cc
 @@ -366,6 +366,8 @@ void WebRtcLogUploader::SetupMultipart(
@@ -993,224 +993,23 @@ index 4dba08d8bdf..64a6d9f780f 100644
  #include <sys/param.h>
  #define HOST_NAME_MAX MAXHOSTNAMELEN
  #endif
-diff --git components/policy/resources/policy_templates.json components/policy/resources/policy_templates.json
-index e9ebdb14e8f..ec365005a71 100644
---- components/policy/resources/policy_templates.json
-+++ components/policy/resources/policy_templates.json
-@@ -1454,7 +1454,7 @@
-       'owners': ['file://components/policy/resources/OWNERS', 'pastarmovj@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.win7:11-', 'chrome.mac:11-', 'chrome.linux:11-', 'chrome.openbsd:11-', 'chrome.freebsd:11-'],
-+      'supported_on': ['chrome.win7:11-', 'chrome.mac:11-', 'chrome.linux:11-', 'chrome.openbsd:11-', 'chrome.freebsd:11-', 'chrome.dragonfly:11-'],
-       'future_on': ['fuchsia'],
-       'features': {
-         'dynamic_refresh': True,
-@@ -2604,7 +2604,7 @@
-       'owners': ['file://remoting/OWNERS', 'jamiewalch@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.linux:25-', 'chrome.mac:25-', 'chrome.openbsd:25-', 'chrome.freebsd:25-'],
-+      'supported_on': ['chrome.linux:25-', 'chrome.mac:25-', 'chrome.openbsd:25-', 'chrome.freebsd:25-', 'chrome.dragonfly:25-'],
-       'features': {
-         'dynamic_refresh': True,
-         'per_profile': False,
-@@ -4455,7 +4455,7 @@
-       'owners': ['file://components/policy/resources/OWNERS', 'pastarmovj@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.win:57-', 'chrome.mac:88-', 'chrome.linux:88-', 'chrome.openbsd:88-', 'chrome.freebsd:88-'],
-+      'supported_on': ['chrome.win:57-', 'chrome.mac:88-', 'chrome.linux:88-', 'chrome.openbsd:88-', 'chrome.freebsd:88-', 'chrome.dragonfly:88-'],
-       'future_on': ['fuchsia'],
-       'features': {
-         'dynamic_refresh': False,
-@@ -4485,7 +4485,7 @@
-       'owners': ['file://components/policy/resources/OWNERS', 'pastarmovj@chromium.org'],
-       'type': 'string',
-       'schema': { 'type': 'string' },
--      'supported_on': ['chrome.win:57-', 'chrome.mac:88-', 'chrome.linux:88-', 'chrome.openbsd:88-', 'chrome.freebsd:88-'],
-+      'supported_on': ['chrome.win:57-', 'chrome.mac:88-', 'chrome.linux:88-', 'chrome.openbsd:88-', 'chrome.freebsd:88-', 'chrome.dragonfly:88-'],
-       'features': {
-         'dynamic_refresh': False,
-         'per_profile': False,
-@@ -5469,7 +5469,7 @@
-       'owners': ['file://components/policy/resources/OWNERS', 'rsorokin@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.linux:74-','chrome.mac:74-','chrome_os:74-','chrome.openbsd:74-','chrome.freebsd:74-'],
-+      'supported_on': ['chrome.linux:74-','chrome.mac:74-','chrome_os:74-','chrome.openbsd:74-','chrome.freebsd:74-', 'chrome.dragonfly:74-'],
-       'features': {
-         'dynamic_refresh': True,
-         'per_profile': False,
-@@ -5531,7 +5531,7 @@
-       'owners': ['file://components/policy/resources/OWNERS', 'rsorokin@chromium.org'],
-       'type': 'string',
-       'schema': { 'type': 'string' },
--      'supported_on': ['chrome.linux:9-','chrome.openbsd:9-','chrome.freebsd:9-'],
-+      'supported_on': ['chrome.linux:9-','chrome.openbsd:9-','chrome.freebsd:9-', 'chrome.dragonfly:9-'],
-       'features': {
-         'dynamic_refresh': False,
-         'per_profile': False,
-@@ -5598,7 +5598,7 @@
-       'owners': ['file://components/policy/resources/OWNERS', 'rsorokin@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.linux:63-','chrome.mac:63-','chrome_os:63-','android:63-','webview_android:63-','chrome.openbsd:63-','chrome.freebsd:63-'],
-+      'supported_on': ['chrome.linux:63-','chrome.mac:63-','chrome_os:63-','android:63-','webview_android:63-','chrome.openbsd:63-','chrome.freebsd:63-', 'chrome.dragonfly:63-'],
-       'features': {
-         'dynamic_refresh': True,
-         'per_profile': False,
-@@ -11250,7 +11250,7 @@
-       'owners': ['file://net/cert/OWNERS', 'rsleevi@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome_os:30-', 'chrome.linux:30-', 'chrome.win:30-', 'chrome.openbsd:30-', 'chrome.freebsd:30-'],
-+      'supported_on': ['chrome_os:30-', 'chrome.linux:30-', 'chrome.win:30-', 'chrome.openbsd:30-', 'chrome.freebsd:30-', 'chrome.dragonfly:30-'],
-       'future_on': ['fuchsia'],
-       'features': {
-         'dynamic_refresh': True,
-@@ -11375,7 +11375,7 @@
-       'owners': ['file://components/policy/resources/OWNERS', 'pmarko@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome_os:77-83', 'chrome.linux:79-83', 'chrome.mac:83-106', 'chrome.openbsd:79-83', 'chrome.freebsd:79-83'],
-+      'supported_on': ['chrome_os:77-83', 'chrome.linux:79-83', 'chrome.mac:83-106', 'chrome.openbsd:79-83', 'chrome.freebsd:79-83','chrome.dragonfly:79-83'],
-       'deprecated': True,
-       'features': {
-         'dynamic_refresh': False,
-@@ -13901,7 +13901,7 @@
-       'owners': ['file://components/policy/resources/OWNERS', 'pmarko@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.win:19-', 'chrome.linux:19-', 'chrome.openbsd:19-', 'chrome.freebsd:19-'],
-+      'supported_on': ['chrome.win:19-', 'chrome.linux:19-', 'chrome.openbsd:19-', 'chrome.freebsd:19-', 'chrome.dragonfly:19-'],
-       'features': {
-         'can_be_recommended': True,
-         'dynamic_refresh': True,
-@@ -14970,7 +14970,7 @@
-       'owners': ['file://components/policy/resources/OWNERS', 'bartfab@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.win:31-', 'chrome.linux:31-', 'chrome_os:31-', 'chrome.openbsd:31-', 'chrome.freebsd:31-'],
-+      'supported_on': ['chrome.win:31-', 'chrome.linux:31-', 'chrome_os:31-', 'chrome.openbsd:31-', 'chrome.freebsd:31-', 'chrome.dragonfly:31-'],
-       'future_on': ['fuchsia'],
-       'features': {
-         'dynamic_refresh': True,
-@@ -18548,7 +18548,7 @@
-       'deprecated': True,
-       'schema': { 'type': 'boolean' },
-       'supported_on': ['chrome.win:64-', 'chrome.mac:66-', 'android:65-'],
--      'future_on': ['chrome.linux','chrome.openbsd','chrome.freebsd'],
-+      'future_on': ['chrome.linux','chrome.openbsd','chrome.freebsd','chrome.dragonfly'],
-       'features': {
-         'dynamic_refresh': False,
-         'per_profile': False,
-@@ -23132,7 +23132,7 @@
-         'items': { 'type': 'string' }
-       },
-       # Spell checking is provided by macOS, so can't be controlled on Mac.
--      'supported_on': ['chrome.win:65-', 'chrome.linux:65-', 'chrome_os:65-', 'chrome.openbsd:65-', 'chrome.freebsd:65-'],
-+      'supported_on': ['chrome.win:65-', 'chrome.linux:65-', 'chrome_os:65-', 'chrome.openbsd:65-', 'chrome.freebsd:65-','chrome.dragonfly:65-'],
-       'features': {
-         'can_be_recommended': False,
-         'dynamic_refresh': True,
-@@ -23163,7 +23163,7 @@
-         'items': { 'type': 'string' }
-       },
-       # Spell checking is provided by macOS, so can't be controlled on Mac.
--      'supported_on': ['chrome.win:75-100', 'chrome.linux:75-100', 'chrome_os:75-100', 'chrome.openbsd:75-100', 'chrome.freebsd:75-100'],
-+      'supported_on': ['chrome.win:75-100', 'chrome.linux:75-100', 'chrome_os:75-100', 'chrome.openbsd:75-100', 'chrome.freebsd:75-100','chrome.dragonfly:75-100'],
-       'deprecated': True,
-       'features': {
-         'can_be_recommended': False,
-@@ -23197,7 +23197,7 @@
-         'items': { 'type': 'string' }
-       },
-       # Spell checking is provided by macOS, so can't be controlled on Mac.
--      'supported_on': ['chrome.win:86-', 'chrome.linux:86-', 'chrome_os:86-', 'chrome.openbsd:86-', 'chrome.freebsd:86-'],
-+      'supported_on': ['chrome.win:86-', 'chrome.linux:86-', 'chrome_os:86-', 'chrome.openbsd:86-', 'chrome.freebsd:86-','chrome.dragonfly:86-'],
-       'features': {
-         'can_be_recommended': False,
-         'dynamic_refresh': True,
-@@ -24076,7 +24076,7 @@
-       'owners': ['fbeaufort@chromium.org', 'beccahughes@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.win:66-', 'chrome.linux:66-', 'chrome.mac:66-', 'chrome_os:66-', 'chrome.openbsd:66-', 'chrome.freebsd:66-'],
-+      'supported_on': ['chrome.win:66-', 'chrome.linux:66-', 'chrome.mac:66-', 'chrome_os:66-', 'chrome.openbsd:66-', 'chrome.freebsd:66-','chrome.dragonfly:66-'],
-       'future_on': ['fuchsia'],
-       'features': {
-         'dynamic_refresh': True,
-@@ -29297,7 +29297,7 @@
-       'owners': ['file://services/audio/OWNERS', 'dalecurtis@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.win:79-', 'chrome.linux:79-', 'chrome.mac:79-', 'chrome.openbsd:79-', 'chrome.freebsd:79-'],
-+      'supported_on': ['chrome.win:79-', 'chrome.linux:79-', 'chrome.mac:79-', 'chrome.openbsd:79-', 'chrome.freebsd:79-','chrome.dragonfly:79-'],
-       'features': {
-         'dynamic_refresh': False,
-         'per_profile': False,
-@@ -30795,7 +30795,7 @@ If this policy is left unset, privacy screen is disabled initially but can be co
-       'owners': ['file://chrome/browser/notifications/OWNERS', 'knollr@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.linux:83-100','chrome.openbsd:83-100','chrome.freebsd:83-100'],
-+      'supported_on': ['chrome.linux:83-100','chrome.openbsd:83-100','chrome.freebsd:83-100','chrome.dragonfly:83-100'],
-       'features': {
-         'dynamic_refresh': True,
-         'per_profile': True,
-@@ -30819,7 +30819,7 @@ If set to False, <ph name="PRODUCT_NAME">$1<ex>Google Chrome</ex></ph> will not
-       'owners': ['file://chrome/browser/notifications/OWNERS'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.linux:90-','chrome.openbsd:90-','chrome.freebsd:90-'],
-+      'supported_on': ['chrome.linux:90-','chrome.openbsd:90-','chrome.freebsd:90-','chrome.dragonfly:90-'],
-       'features': {
-         'dynamic_refresh': True,
-         'per_profile': True,
-@@ -32044,7 +32044,7 @@ If you disable this policy, web page scrolling to specific text fragments via UR
-       'owners': ['asumaneev@google.com'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.linux:91-92', 'chrome_os:91-', 'chrome.openbsd:91-', 'chrome.freebsd:91-'],
-+      'supported_on': ['chrome.linux:91-92', 'chrome_os:91-', 'chrome.openbsd:91-', 'chrome.freebsd:91-','chrome.dragonfly:91-'],
-       'features': {
-         'dynamic_refresh': True,
-         'per_profile': False,
-@@ -33402,7 +33402,7 @@ This is the same behavior as <ph name="POLICY_VALUE_PRIMARY_ACCOUNT_KEEP_EXISTIN
-         },
-       ],
-       'default': True,
--      'supported_on': ['chrome.win:93-', 'chrome.linux:93-', 'chrome.mac:93-', 'chrome.openbsd:93-', 'chrome.freebsd:93-'],
-+      'supported_on': ['chrome.win:93-', 'chrome.linux:93-', 'chrome.mac:93-', 'chrome.openbsd:93-', 'chrome.freebsd:93-','chrome.dragonfly:93-'],
-       'future_on': ['fuchsia'],
-       'features': {
-         'dynamic_refresh': True,
-@@ -33536,7 +33536,7 @@ This is the same behavior as <ph name="POLICY_VALUE_PRIMARY_ACCOUNT_KEEP_EXISTIN
-       'owners': ['mattm@chromium.org'],
-       'type': 'main',
-       'schema': { 'type': 'boolean' },
--      'supported_on': ['chrome.win:104-', 'chrome.mac:104-', 'chrome.linux:104-', 'chrome.openbsd:104-', 'chrome.freebsd:104-'],
-+      'supported_on': ['chrome.win:104-', 'chrome.mac:104-', 'chrome.linux:104-', 'chrome.openbsd:104-', 'chrome.freebsd:104-','chrome.dragonfly:104-'],
-       'future_on': ['fuchsia'],
-       'features': {
-         'dynamic_refresh': True,
 diff --git components/policy/tools/generate_policy_source.py components/policy/tools/generate_policy_source.py
-index ca27979b484..b8e7a6ddedd 100755
+index c1a8325e79c..272495183ba 100755
 --- components/policy/tools/generate_policy_source.py
 +++ components/policy/tools/generate_policy_source.py
-@@ -52,8 +52,9 @@ PLATFORM_STRINGS = {
-     'chrome.linux': ['linux'],
-     'chrome.openbsd': ['openbsd'],
-     'chrome.freebsd': ['freebsd'],
-+    'chrome.dragonfly': ['dragonfly'],
+@@ -49,9 +49,9 @@ PLATFORM_STRINGS = {
+     'ios': ['ios'],
+     'fuchsia': ['fuchsia'],
+     'chrome.win': ['win'],
+-    'chrome.linux': ['linux', 'openbsd', 'freebsd'],
++    'chrome.linux': ['linux', 'openbsd', 'freebsd', 'dragonfly'],
      'chrome.mac': ['mac'],
 -    'chrome.*': ['win', 'mac', 'linux', 'openbsd', 'freebsd'],
 +    'chrome.*': ['win', 'mac', 'linux', 'openbsd', 'freebsd', 'dragonfly'],
      'chrome.win7': ['win'],
  }
  
-@@ -151,7 +152,6 @@ class PolicyDetails:
+@@ -149,7 +149,6 @@ class PolicyDetails:
          ['chrome_os']):
        raise RuntimeError('device_only is only allowed for Chrome OS: "%s"' %
                           self.name)
@@ -1278,10 +1077,10 @@ index c5b6a9ea17b..7fc6e5a226e 100644
    return "Solaris";
  #elif BUILDFLAG(IS_FUCHSIA)
 diff --git content/browser/utility_process_host.cc content/browser/utility_process_host.cc
-index 1bb75bb14aa..c3b399b576b 100644
+index 893a9026215..f1df0dafeed 100644
 --- content/browser/utility_process_host.cc
 +++ content/browser/utility_process_host.cc
-@@ -284,7 +284,7 @@ bool UtilityProcessHost::StartProcess() {
+@@ -277,7 +277,7 @@ bool UtilityProcessHost::StartProcess() {
        switches::kMuteAudio,
        switches::kUseFileForFakeAudioCapture,
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
@@ -1291,10 +1090,10 @@ index 1bb75bb14aa..c3b399b576b 100644
        switches::kAlsaOutputDevice,
  #endif
 diff --git content/renderer/render_thread_impl.cc content/renderer/render_thread_impl.cc
-index c43806e5de1..cbb3fb5d492 100644
+index f6c8da965e7..c853ede6eee 100644
 --- content/renderer/render_thread_impl.cc
 +++ content/renderer/render_thread_impl.cc
-@@ -193,7 +193,7 @@
+@@ -194,7 +194,7 @@
  
  #if BUILDFLAG(IS_MAC)
  #include <malloc/malloc.h>
@@ -1304,7 +1103,7 @@ index c43806e5de1..cbb3fb5d492 100644
  #endif
  
 diff --git extensions/common/api/runtime.json extensions/common/api/runtime.json
-index b638baff541..89caf789990 100644
+index ed9fe4db09e..651f82addc8 100644
 --- extensions/common/api/runtime.json
 +++ extensions/common/api/runtime.json
 @@ -87,7 +87,8 @@
@@ -1318,10 +1117,10 @@ index b638baff541..89caf789990 100644
        },
        {
 diff --git media/base/media_switches.cc media/base/media_switches.cc
-index fb19c37c085..3f6790b4193 100644
+index 5b2f733e316..ae338a6be3c 100644
 --- media/base/media_switches.cc
 +++ media/base/media_switches.cc
-@@ -52,7 +52,7 @@ const char kReportVp9AsAnUnsupportedMimeType[] =
+@@ -54,7 +54,7 @@ const char kReportVp9AsAnUnsupportedMimeType[] =
      "report-vp9-as-an-unsupported-mime-type";
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \
@@ -1331,7 +1130,7 @@ index fb19c37c085..3f6790b4193 100644
  const char kAlsaInputDevice[] = "alsa-input-device";
  // The Alsa device to use when opening an audio stream.
 diff --git media/base/media_switches.h media/base/media_switches.h
-index 1b938b935cd..3473ec1b207 100644
+index 90e03f1903f..aee0686fa6d 100644
 --- media/base/media_switches.h
 +++ media/base/media_switches.h
 @@ -42,7 +42,7 @@ MEDIA_EXPORT extern const char kDisableBackgroundMediaSuspend[];
@@ -1486,10 +1285,10 @@ index 52a0c81bef2..4dc9fa483be 100644
  #endif
  
 diff --git sandbox/policy/BUILD.gn sandbox/policy/BUILD.gn
-index 9ade2e24d00..90eeef35a04 100644
+index f6ef622b63a..a112908541b 100644
 --- sandbox/policy/BUILD.gn
 +++ sandbox/policy/BUILD.gn
-@@ -117,6 +117,16 @@ component("policy") {
+@@ -124,6 +124,16 @@ component("policy") {
        "//ui/gfx/x",
      ]
    }
@@ -1507,7 +1306,7 @@ index 9ade2e24d00..90eeef35a04 100644
      sources += [
        "linux/bpf_ime_policy_linux.cc",
 diff --git sandbox/policy/mojom/sandbox.mojom sandbox/policy/mojom/sandbox.mojom
-index 12950962f34..145414e4dd5 100644
+index c769ad8f90c..53f701eebed 100644
 --- sandbox/policy/mojom/sandbox.mojom
 +++ sandbox/policy/mojom/sandbox.mojom
 @@ -78,6 +78,8 @@ enum Sandbox {
@@ -2956,19 +2755,19 @@ index 2308aad13e6..df123cd0bbe 100644
  #endif
  
 diff --git third_party/libsync/src/sync.c third_party/libsync/src/sync.c
-index 30152e4a5a5..b9c679c6536 100644
+index fdba143868a..75a2d57d74a 100644
 --- third_party/libsync/src/sync.c
 +++ third_party/libsync/src/sync.c
 @@ -17,7 +17,7 @@
   */
  
  #include <fcntl.h>
--#if !defined(__OpenBSD__)
-+#if !defined(__OpenBSD__) && !defined(__DragonFly__)
+-#if defined(__OpenBSD__)
++#if defined(__OpenBSD__) || defined(__DragonFly__)
+ #include <stdlib.h>
+ #else
  #include <malloc.h>
- #endif
- #include <stdint.h>
-@@ -31,7 +31,7 @@
+@@ -33,7 +33,7 @@
  
  #include <sync/sync.h>
  
@@ -3063,7 +2862,7 @@ index cb330c2d2ba..47154fe513a 100755
    }[platform.system()])
  
 diff --git third_party/pdfium/fxjs/fx_date_helpers.cpp third_party/pdfium/fxjs/fx_date_helpers.cpp
-index 897fce1ae0c..9dc8af10691 100644
+index 91d7acd730f..7f54eefab13 100644
 --- third_party/pdfium/fxjs/fx_date_helpers.cpp
 +++ third_party/pdfium/fxjs/fx_date_helpers.cpp
 @@ -37,7 +37,7 @@ double GetLocalTZA() {
@@ -3085,7 +2884,7 @@ index 897fce1ae0c..9dc8af10691 100644
  
  int GetDaylightSavingTA(double d) {
 diff --git third_party/pdfium/fxjs/js_define.cpp third_party/pdfium/fxjs/js_define.cpp
-index 4a5044230e1..73d5461b1a4 100644
+index b19c2e2054c..15251b3c023 100644
 --- third_party/pdfium/fxjs/js_define.cpp
 +++ third_party/pdfium/fxjs/js_define.cpp
 @@ -16,6 +16,7 @@
@@ -3160,10 +2959,10 @@ index 4a2de950e3f..93dc566eb52 100644
  #else
    // Determine if CLOCK_BOOTTIME is available on the first call.
 diff --git third_party/perfetto/src/base/file_utils.cc third_party/perfetto/src/base/file_utils.cc
-index ce4584c7fe0..f30917c2af3 100644
+index 945350fb9e2..f807e53c528 100644
 --- third_party/perfetto/src/base/file_utils.cc
 +++ third_party/perfetto/src/base/file_utils.cc
-@@ -163,7 +163,8 @@ bool FlushFile(int fd) {
+@@ -185,7 +185,8 @@ bool FlushFile(int fd) {
  #if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
      PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
    return !PERFETTO_EINTR(fdatasync(fd));
@@ -3195,6 +2994,29 @@ index b428ec4eaf0..e1636fc1b28 100644
      PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
  #if PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)
    struct sockpeercred user_cred;
+diff --git third_party/skia/src/core/SkContainers.cpp third_party/skia/src/core/SkContainers.cpp
+index 498fc30b8ca..dcc39fe79a3 100644
+--- third_party/skia/src/core/SkContainers.cpp
++++ third_party/skia/src/core/SkContainers.cpp
+@@ -13,7 +13,8 @@
+ 
+ #if defined(SK_BUILD_FOR_MAC) || defined(SK_BUILD_FOR_IOS)
+ #include <malloc/malloc.h>
+-#elif defined(SK_BUILD_FOR_ANDROID) || defined(SK_BUILD_FOR_UNIX) && !defined(__OpenBSD__)
++#elif defined(SK_BUILD_FOR_ANDROID) || defined(SK_BUILD_FOR_UNIX) && \
++  !defined(__OpenBSD__) && !defined(__DragonFly__)
+ #include <malloc.h>
+ #elif defined(SK_BUILD_FOR_WIN)
+ #include <malloc.h>
+@@ -37,7 +38,7 @@ SkSpan<std::byte> complete_size(void* ptr, size_t size) {
+     #elif defined(SK_BUILD_FOR_ANDROID) && __ANDROID_API__ >= 17
+         completeSize = malloc_usable_size(ptr);
+         SkASSERT(completeSize >= size);
+-    #elif defined(SK_BUILD_FOR_UNIX) && !defined(__OpenBSD__)
++    #elif defined(SK_BUILD_FOR_UNIX) && !defined(__OpenBSD__) && !defined(__DragonFly__)
+         completeSize = malloc_usable_size(ptr);
+         SkASSERT(completeSize >= size);
+     #elif defined(SK_BUILD_FOR_WIN)
 diff --git third_party/sqlite/BUILD.gn third_party/sqlite/BUILD.gn
 index 6ac7df9eb44..ce8f0bd2bdc 100644
 --- third_party/sqlite/BUILD.gn
@@ -3310,7 +3132,7 @@ index d1958fbdccc..22e3076e003 100644
  #elif defined(_WIN32)
  #define loader_stack_alloc(size) _alloca(size)
 diff --git third_party/vulkan-deps/vulkan-loader/src/loader/vk_loader_platform.h third_party/vulkan-deps/vulkan-loader/src/loader/vk_loader_platform.h
-index 798130145e8..c594e7ef95a 100644
+index 059f3717c76..1ad640e73ad 100644
 --- third_party/vulkan-deps/vulkan-loader/src/loader/vk_loader_platform.h
 +++ third_party/vulkan-deps/vulkan-loader/src/loader/vk_loader_platform.h
 @@ -24,7 +24,7 @@
@@ -3322,34 +3144,34 @@ index 798130145e8..c594e7ef95a 100644
  #include <sys/types.h>
  #include <sys/select.h>
  #endif
-@@ -43,7 +43,7 @@
- #include "dlopen_fuchsia.h"
+@@ -44,7 +44,7 @@
  #endif  // defined(__Fuchsia__)
  
--#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__QNXNTO__) || defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__QNXNTO__) || defined(__FreeBSD__) || defined(__OpenBSD__) ||  defined(__DragonFly__)
+ #if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__QNXNTO__) || defined(__FreeBSD__) || \
+-    defined(__OpenBSD__)
++    defined(__OpenBSD__) ||  defined(__DragonFly__)
  #include <unistd.h>
  // Note: The following file is for dynamic loading:
  #include <dlfcn.h>
-@@ -98,7 +98,7 @@
- #define LAYERS_PATH_ENV "VK_LAYER_PATH"
+@@ -111,7 +111,7 @@
  #define ENABLED_LAYERS_ENV "VK_INSTANCE_LAYERS"
  
--#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__QNXNTO__) || defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__QNXNTO__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__QNXNTO__) || defined(__FreeBSD__) || \
+-    defined(__OpenBSD__)
++    defined(__OpenBSD__) || defined(__DragonFly__)
  /* Linux-specific common code: */
  
  // VK Library Filenames, Paths, etc.:
-@@ -219,7 +219,7 @@ static inline void loader_platform_thread_once_fn(pthread_once_t *ctl, void (*fu
- 
+@@ -233,7 +233,7 @@ static inline void loader_platform_thread_once_fn(pthread_once_t *ctl, void (*fu
  #endif
  
--#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__QNXNTO__) || defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__QNXNTO__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #if defined(__linux__) || defined(__APPLE__) || defined(__Fuchsia__) || defined(__QNXNTO__) || defined(__FreeBSD__) || \
+-    defined(__OpenBSD__)
++    defined(__OpenBSD__) || defined(__DragonFly__)
  
  // File IO
  static inline bool loader_platform_file_exists(const char *path) {
-@@ -259,7 +259,7 @@ static inline char *loader_platform_executable_path(char *buffer, size_t size) {
+@@ -273,7 +273,7 @@ static inline char *loader_platform_executable_path(char *buffer, size_t size) {
      buffer[ret] = '\0';
      return buffer;
  }
@@ -3553,7 +3375,7 @@ index 5d246cff4f1..c6aba7500ab 100755
  
  _form_factors = [
 diff --git ui/base/x/x11_util.cc ui/base/x/x11_util.cc
-index c48000bcf46..0da115cb3a6 100644
+index 06f88472106..96c57313817 100644
 --- ui/base/x/x11_util.cc
 +++ ui/base/x/x11_util.cc
 @@ -53,7 +53,7 @@
@@ -3636,7 +3458,7 @@ index 9efb7269b9b..29115e7113a 100644
    __u64 flags;
  };
 diff --git v8/BUILD.gn v8/BUILD.gn
-index 53460202e76..698395e340c 100644
+index f66f8d1c677..7c32212149f 100644
 --- v8/BUILD.gn
 +++ v8/BUILD.gn
 @@ -1250,6 +1250,10 @@ config("toolchain") {
@@ -3650,7 +3472,7 @@ index 53460202e76..698395e340c 100644
    }
  
    # TODO(infra): Support v8_enable_prof on Windows.
-@@ -3797,7 +3801,7 @@ v8_header_set("v8_internal_headers") {
+@@ -3813,7 +3817,7 @@ v8_header_set("v8_internal_headers") {
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -3659,7 +3481,7 @@ index 53460202e76..698395e340c 100644
          sources += [ "src/trap-handler/handler-inside-posix.h" ]
        } else if (is_win) {
          sources += [ "src/trap-handler/handler-inside-win.h" ]
-@@ -4882,7 +4886,7 @@ v8_source_set("v8_base_without_compiler") {
+@@ -4901,7 +4905,7 @@ v8_source_set("v8_base_without_compiler") {
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -3668,7 +3490,7 @@ index 53460202e76..698395e340c 100644
          sources += [
            "src/trap-handler/handler-inside-posix.cc",
            "src/trap-handler/handler-outside-posix.cc",
-@@ -5506,7 +5510,7 @@ v8_component("v8_libbase") {
+@@ -5525,7 +5529,7 @@ v8_component("v8_libbase") {
        "src/base/platform/platform-openbsd.cc",
      ]
      libs = [ "execinfo" ]
@@ -3678,10 +3500,10 @@ index 53460202e76..698395e340c 100644
        "src/base/debug/stack_trace_posix.cc",
        "src/base/platform/platform-freebsd.cc",
 diff --git v8/src/api/api.cc v8/src/api/api.cc
-index 7bad0c9ddcd..c5b9640e53e 100644
+index 98cbb533d7c..0d6b24e6d30 100644
 --- v8/src/api/api.cc
 +++ v8/src/api/api.cc
-@@ -140,7 +140,8 @@
+@@ -141,7 +141,8 @@
  #include "src/wasm/wasm-serialization.h"
  #endif  // V8_ENABLE_WEBASSEMBLY
  
@@ -3691,7 +3513,7 @@ index 7bad0c9ddcd..c5b9640e53e 100644
  #include <signal.h>
  
  #if V8_ENABLE_WEBASSEMBLY
-@@ -6206,7 +6207,8 @@ bool v8::V8::Initialize(const int build_config) {
+@@ -6210,7 +6211,8 @@ bool v8::V8::Initialize(const int build_config) {
    return true;
  }
  
@@ -3830,7 +3652,7 @@ index 1a947dc0d53..7f3b419a167 100644
    state->pc = reinterpret_cast<void*>(mcontext.mc_eip);
    state->sp = reinterpret_cast<void*>(mcontext.mc_esp);
 diff --git v8/src/trap-handler/handler-inside-posix.cc v8/src/trap-handler/handler-inside-posix.cc
-index e23844e9a53..057c9690504 100644
+index 05a325dc224..a8ea5fdc8fc 100644
 --- v8/src/trap-handler/handler-inside-posix.cc
 +++ v8/src/trap-handler/handler-inside-posix.cc
 @@ -27,7 +27,7 @@
@@ -3842,7 +3664,7 @@ index e23844e9a53..057c9690504 100644
  #include <ucontext.h>
  #elif V8_OS_DARWIN
  #include <sys/ucontext.h>
-@@ -51,7 +51,7 @@ namespace trap_handler {
+@@ -53,7 +53,7 @@ namespace trap_handler {
  #define CONTEXT_REG(reg, REG) &uc->uc_mcontext.gregs[REG_##REG]
  #elif V8_OS_DARWIN
  #define CONTEXT_REG(reg, REG) &uc->uc_mcontext->__ss.__##reg
@@ -3865,7 +3687,7 @@ index ef2f4ee84da..0526be5e418 100644
  #elif V8_OS_DARWIN
  constexpr int kOobSignal = SIGBUS;
 diff --git v8/src/trap-handler/trap-handler.h v8/src/trap-handler/trap-handler.h
-index 833b4514ee4..36a4673aed3 100644
+index 0bf12cba658..0abf2583aad 100644
 --- v8/src/trap-handler/trap-handler.h
 +++ v8/src/trap-handler/trap-handler.h
 @@ -20,7 +20,7 @@ namespace trap_handler {
