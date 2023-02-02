@@ -1,6 +1,5 @@
 PORTNAME=	kirigami2
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	x11-toolkits kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
@@ -13,4 +12,12 @@ USE_QT=		core concurrent dbus declarative graphicaleffects gui \
 		linguisttools network quickcontrols2 svg widgets \
 		buildtools:build qmake:build testlib:build
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 1300016
+# src/imagecolors.cpp:317:9: error: statement after '#pragma omp parallel for'
+# must be a for loop
+CFLAGS+=	-fopenmp-version=50
+.endif
+
+.include <bsd.port.post.mk>
