@@ -1,6 +1,5 @@
 PORTNAME=	kalendar
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -19,7 +18,7 @@ USE_QT=		concurrent core dbus declarative gui location multimedia \
 USE_KDE=	akonadi akonadicalendar akonadicontacts auth calendarcore \
 		calendarsupport calendarutils codecs config configwidgets \
 		contacts coreaddons dbusaddons eventviews grantleetheme i18n \
-		identitymanagement itemmodels kio kirigami2 mime notifications \
+		identitymanagement itemmodels kio kirigami2 mailcommon mime notifications \
 		people pimtextedit qqc2-desktop-style service sonnet \
 		textwidgets widgetsaddons windowsystem xmlgui \
 		ecm:build
