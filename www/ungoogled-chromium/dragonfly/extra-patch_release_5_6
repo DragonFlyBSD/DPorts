@@ -1,0 +1,13 @@
+--- third_party/dav1d/libdav1d/src/thread.h.orig	2020-01-16 21:52:22.000000000 +0000
++++ third_party/dav1d/libdav1d/src/thread.h	2020-01-31 21:15:12.000000000 +0000
+@@ -155,6 +155,10 @@
+ #define _SYS_PARAM_H_
+ #include <sys/types.h>
+ #endif
++#if DragonFly_version < 500709
++typedef cpumask_t               cpu_set_t;
++typedef cpumask_t               cpuset_t;       /* FreeBSD compat */
++#endif
+ #include <pthread_np.h>
+ 
+ static inline void dav1d_set_thread_name(const char *const name) {

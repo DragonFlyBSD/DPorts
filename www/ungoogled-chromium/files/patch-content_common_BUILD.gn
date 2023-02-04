@@ -1,0 +1,12 @@
+--- content/common/BUILD.gn.orig	2023-01-13 08:56:02 UTC
++++ content/common/BUILD.gn
+@@ -433,6 +433,9 @@ if (is_linux || is_chromeos) {
+     public = [ "set_process_title_linux.h" ]
+     sources = [ "set_process_title_linux.cc" ]
+     deps = [ "//base" ]
++    if (is_bsd) {
++      sources -= [ "set_process_title_linux.cc" ]
++    }
+   }
+ }
+ 
