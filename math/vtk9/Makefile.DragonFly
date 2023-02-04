@@ -14,7 +14,6 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g' \
 		${WRKSRC}/ThirdParty/diy2/vtkdiy2/include/vtkdiy2/fmt/posix.h \
 		${WRKSRC}/ThirdParty/eigen/vtkeigen/eigen/src/Core/util/Memory.h \
-		${WRKSRC}/ThirdParty/libproj/vtklibproj/src/pj_mutex.c \
 		${WRKSRC}/IO/LSDyna/LSDynaFamily.cxx \
 		${WRKSRC}/Utilities/KWSys/vtksys/ProcessUNIX.c \
 		${WRKSRC}/Utilities/KWSys/vtksys/SharedForward.h.in
