@@ -1,10 +1,12 @@
 PORTNAME=	ospray
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.9.0
+DISTVERSION=	2.10.0
+PORTREVISION=	3
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Ray tracing based rendering engine for high-fidelity visualization
+WWW=		https://www.ospray.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -20,7 +22,7 @@ LIB_DEPENDS=	libbenchmark.so:devel/benchmark \
 USES=		cmake:testing compiler:c++11-lang gl pkgconfig readline qt:5
 USE_GITHUB=	yes
 USE_GL=		gl glu
-USE_QT=		core gui opengl qmake_build
+USE_QT=		core gui opengl qmake:build
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	VERSION=${PORTVERSION}
