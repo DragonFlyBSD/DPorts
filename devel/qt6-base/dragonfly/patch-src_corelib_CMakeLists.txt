@@ -1,0 +1,13 @@
+--- src/corelib/CMakeLists.txt.orig	2022-11-16 07:54:24 UTC
++++ src/corelib/CMakeLists.txt
+@@ -475,6 +475,10 @@ qt_internal_extend_target(Core CONDITION
+     LINK_OPTIONS
+       "LINKER:--warn-unresolved-symbols"
+ )
++qt_internal_extend_target(Core CONDITION DRAGONFLY
++    LINK_OPTIONS
++      "LINKER:--warn-unresolved-symbols"
++)
+ 
+ qt_internal_extend_target(Core CONDITION QT_FEATURE_animation
+     SOURCES
