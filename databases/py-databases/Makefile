@@ -1,5 +1,7 @@
 PORTNAME=	databases
-DISTVERSION=	0.6.1
+DISTVERSION=	0.6.2
+# XXX DONT FORGET TO REMOVE PATCHES FOR 0.7.0
+PORTREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,7 +12,7 @@ WWW=		https://github.com/encode/databases
 
 LICENSE=	BSD3CLAUSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlalchemy14>=0:databases/py-sqlalchemy14@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlalchemy14<=1.4.41:databases/py-sqlalchemy14@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiomysql>0:databases/py-aiomysql@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}aiopg>0:databases/py-aiopg@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}async_timeout>0:devel/py-async_timeout@${PY_FLAVOR} \
