@@ -1,15 +1,18 @@
-# Created by: Rainer Hurling <rhurlin@gwdg.de>
-
 PORTNAME=	saga
-PORTVERSION=	8.2.3
+PORTVERSION=	8.5.1
 CATEGORIES=	math
 MASTER_SITES=	SF/saga-gis/SAGA%20-%20${PORTVERSION:C/\.[[:digit:]]\.[[:digit:]]*$//}/SAGA%20-%20${PORTVERSION}
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	System for Automated Geoscientific Analyses
+WWW=		http://www.saga-gis.org/en/index.html
 
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
+
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
 BUILD_DEPENDS=	\
 		swig:devel/swig
@@ -18,7 +21,6 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libgdal.so:graphics/gdal \
 		libhdf5.so:science/hdf5 \
 		libhpdf.so:print/libharu \
-		libjasper.so:graphics/jasper \
 		libodbc.so:databases/unixODBC \
 		libopencv_core.so:graphics/opencv \
 		libpdal_base.so:math/pdal \
@@ -33,11 +35,14 @@ USES=		cmake compiler:c++11-lib dos2unix gnome \
 		iconv:wchar_t libtool localbase pkgconfig python
 DOS2UNIX_GLOB=	*.cpp *.h
 USE_LDCONFIG=	yes
-USE_WX=		3.1+
+USE_WX=		3.2+
 
-CMAKE_ARGS+=	-DSVM_INCLUDE:PATH=${LOCALBASE}/include/svm.h
+GIT_TAGNAME=	570fadfa8
+
+CMAKE_ARGS=	-DSVM_INCLUDE:PATH=${LOCALBASE}/include/svm.h
 CMAKE_ON=	WITH_DEV_TOOLS WITH_EXCERCISES WITH_MRMR WITH_SYSTEM_SVM
 CMAKE_ON+=	CMAKE_VERBOSE_MAKEFILE
+CMAKE_OFF=	WITH_CLIPPER_ONE
 CMAKE_OFF+=	WITH_TOOLS_LAS WITH_TRIANGLE
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/saga-gis
@@ -70,7 +75,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|typedef unsigned long	DWORD;|typedef unsigned int	DWORD;|' \
 		${WRKSRC}/src/saga_core/saga_api/api_core.h
 .endif
-	@${REINPLACE_CMD} -e 's|PORTVERSION|${PORTVERSION}|' \
+	@${REINPLACE_CMD} -e 's|GIT_TAGNAME|${GIT_TAGNAME}|g' \
+		${WRKSRC}/src/saga_core/saga_gui/CMakeLists.txt \
 		${WRKSRC}/src/saga_core/saga_gui/dlg_about.cpp
 
 post-install:
