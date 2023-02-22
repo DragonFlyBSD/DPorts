@@ -1,6 +1,4 @@
-
-.if !${FLAVOR:Mnative}
-IGNORE=	FreeBSD specific
 dfly-patch:
-	(cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/zzz-patch-targets)
-.endif
+	(cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-ld_configure.tgt)
+	(cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-gas_configure)
+	(cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-config.bfd)
