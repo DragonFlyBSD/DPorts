@@ -1,3 +1,5 @@
+USE_CLANG_FALLBACK=	default
+
 USES+=	gmake
 
 dfly-patch:

@@ -1,10 +1,10 @@
 PORTNAME=	quagga
 PORTVERSION=	1.2.4
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/Quagga/quagga/releases/download/${DISTNAME}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	eugen@FreeBSD.org
 COMMENT=	Free RIPv1, RIPv2, OSPFv2, BGP4, IS-IS route software
 WWW=		https://www.quagga.net/
 

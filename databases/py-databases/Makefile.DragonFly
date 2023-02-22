@@ -1,0 +1,1 @@
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlalchemy14<=1.4.44:databases/py-sqlalchemy14@${PY_FLAVOR}

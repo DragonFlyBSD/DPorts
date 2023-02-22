@@ -1,10 +1,15 @@
+# Fix python3 references
+SHEBANG_FILES+=	tools/virt-qemu-sev-validate tools/virt-qemu-qmp-proxy
 
 # DragonFly BSD does not have ZFS support.
 # Enable QEMU support by default since we have no other emulation method.
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NZFS} QEMU
 
 # deal with orphans
-PLIST_FILES+=	lib/libvirt/storage-backend/libvirt_storage_backend_logical.so
+PLIST_FILES+=	lib/libvirt/storage-backend/libvirt_storage_backend_logical.so \
+		bin/virt-qemu-qmp-proxy bin/virt-qemu-sev-validate \
+		man/man1/virt-qemu-qmp-proxy.1.gz man/man1/virt-qemu-sev-validate.1.gz
+
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's|fdatasync|fsync|' \

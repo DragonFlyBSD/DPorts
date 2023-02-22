@@ -1,3 +1,7 @@
+# fix env python3 issues
+USES+=  shebangfix
+SHEBANG_FILES+= scripts/signrom.py
+
 USES+= ncurses
 
 CONFIGURE_ARGS+=	--disable-netmap --disable-stack-protector --enable-curses

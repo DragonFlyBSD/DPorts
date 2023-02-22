@@ -1,8 +1,6 @@
 PORTNAME=	libinput
-DISTVERSION=	1.19.4
-PORTREVISION=	1
+DISTVERSION=	1.22.0
 CATEGORIES=	x11 wayland
-MASTER_SITES=	https://freedesktop.org/software/${PORTNAME}/
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Generic input library
@@ -18,8 +16,12 @@ LIB_DEPENDS=	libevdev.so:devel/libevdev \
 		libudev.so:devel/libudev-devd \
 		libmtdev.so:devel/libmtdev
 
-USES=		cpe localbase meson pkgconfig python:run shebangfix tar:xz
+USES=		cpe localbase meson pkgconfig python:run shebangfix tar:bz2
 USE_LDCONFIG=	yes
+
+USE_GITLAB=	yes
+GL_SITE=	https://gitlab.freedesktop.org
+GL_COMMIT=	fc59e574e050c502c9a3adefacf97babf3d09c7a
 
 CPE_VENDOR=	freedesktop
 
@@ -46,8 +48,9 @@ OPTIONS_SUB=	yes
 DEBUG_GUI_DESC=	Build the GUI event viewer
 LIBWACOM_DESC=	Libwacom support
 
-DEBUG_GUI_USES=		gnome
-DEBUG_GUI_USE=		GNOME=gtk30,glib20,cairo
+DEBUG_GUI_USES=		gnome xorg
+DEBUG_GUI_USE=		GNOME=gtk30,glib20,cairo xorg=x11
+DEBUG_GUI_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 DEBUG_GUI_MESON_TRUE=	debug-gui
 LIBWACOM_LIB_DEPENDS=	libwacom.so:x11/libwacom
 LIBWACOM_MESON_TRUE=	libwacom

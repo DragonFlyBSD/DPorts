@@ -1,9 +1,7 @@
 PORTNAME=	flac
-PORTVERSION=	1.4.1
-PORTREVISION=	1
+PORTVERSION=	1.4.2
 CATEGORIES=	audio
-MASTER_SITES=	https://downloads.xiph.org/releases/flac/ \
-		https://ftp.osuosl.org/pub/xiph/releases/flac/
+MASTER_SITES=	https://downloads.xiph.org/releases/flac/
 
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Free lossless audio codec
@@ -27,7 +25,6 @@ EXTRACT_CMD=	${SETENV} LC_ALL=C.UTF-8 ${TAR}
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static \
-		--disable-sse \
 		--with-ogg="${LOCALBASE}" \
 		--disable-doxygen-docs \
 		--disable-thorough-tests \
@@ -37,14 +34,17 @@ TEST_TARGET=	check
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
-
-.if ${ARCH} == "i386"
-BUILD_DEPENDS+=	nasm:devel/nasm
-.endif
+.include <bsd.port.pre.mk>
 
 .if ${ARCH} != powerpc64le
 CONFIGURE_ARGS+=--disable-vsx
 .endif
 
-.include <bsd.port.mk>
+# test_libFLAC:
+# "iterator claims file is writable when tester thinks it should not be"
+.if ${UID} == 0
+do-test:
+	@${ECHO_MSG} "The tests cannot be run as root, skipping."
+.endif
+
+.include <bsd.port.post.mk>

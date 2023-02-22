@@ -63,7 +63,7 @@ NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	17
 JDK_MINOR_VERSION=	0
-JDK_PATCH_VERSION=	4
+JDK_PATCH_VERSION=	5
 JDK_BUILD_NUMBER=	8
 BSD_JDK_VERSION=	1
 
@@ -94,7 +94,6 @@ CONFIGURE_ARGS=	--with-boot-jdk=${BOOTSTRAPJDKDIR} \
 		--with-lcms=system \
 		--x-includes=${LOCALBASE}/include \
 		--x-libraries=${LOCALBASE}/lib \
-		--with-cacerts-file=${FILESDIR}/cacerts \
 		--with-version-string=${JDK_MAJOR_VERSION}.${JDK_MINOR_VERSION}.${JDK_PATCH_VERSION}+${JDK_BUILD_NUMBER}-${BSD_JDK_VERSION} \
 		--with-native-debug-symbols=none \
 		--with-debug-level=release \
@@ -146,6 +145,9 @@ MAKE_ENV+=	USE_CLANG=true
 EXTRA_CFLAGS+=		-Wno-unused-but-set-parameter
 .if ${COMPILER_VERSION} >= 140
 EXTRA_CFLAGS+=		-Wno-bitwise-instead-of-logical
+.endif
+.if ${COMPILER_VERSION} >= 150
+EXTRA_CFLAGS+=		-Wno-deprecated-non-prototype
 .endif
 CONFIGURE_ARGS+=	--with-extra-cflags="${EXTRA_CFLAGS}"
 CONFIGURE_ARGS+=	--with-extra-cxxflags="${EXTRA_CFLAGS}"

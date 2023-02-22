@@ -1,13 +1,14 @@
 ######################################################################
 # Anytime PORTVERSION changes please bump PORTREVISION of:           #
 # - mail/dovecot-pigeonhole. See ports/146029 for an explanation.    #
+# - mail/dovecot-fts-flatcurve.                                         #
 # - mail/dovecot-fts-xapian.                                         #
 # - mail/dovecot-fts-elastic.                                        #
 # - mail/dovecot-coi.                                                #
 ######################################################################
 
 PORTNAME=	dovecot
-PORTVERSION=	2.3.19.1
+PORTVERSION=	2.3.20
 CATEGORIES=	mail
 MASTER_SITES=	https://dovecot.org/releases/2.3/
 

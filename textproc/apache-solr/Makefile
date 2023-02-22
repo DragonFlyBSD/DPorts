@@ -1,6 +1,7 @@
 PORTNAME=	apache-solr
 PORTVERSION=	8.11.2
 PORTREVISION=	0
+PORTEPOCH=	1
 CATEGORIES=	textproc java
 MASTER_SITES=	https://archive.apache.org/dist/lucene/solr/${PORTVERSION}/
 DISTNAME=	solr-${PORTVERSION}

@@ -1,5 +1,5 @@
 PORTNAME?=	mysql
-PORTVERSION=	5.7.39
+PORTVERSION=	5.7.40
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	MYSQL/MySQL-5.7
@@ -32,9 +32,6 @@ LIB_DEPENDS+=	libcurl.so:ftp/curl \
 		libprotobuf.so:devel/protobuf
 
 CMAKE_BUILD_TYPE=	Release
-
-CFLAGS+=	-DNDEBUG
-CXXFLAGS+=	-DNDEBUG
 
 CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
 		-DINSTALL_LDCONFIGDIR="${LOCALBASE}/libdata/ldconfig" \
@@ -167,6 +164,8 @@ post-patch:
 	# issue 220865: MySQL developers forgot that FreeBSD != Linux
 	@${REINPLACE_CMD} -e 's|%%FREEBSD_LOCAL_LIB%%|${LOCALBASE}/lib|g' \
 	    ${WRKSRC}/configure.cmake
+	@${REINPLACE_CMD} -e 's|__clang__|__undefined__|g' \
+	    ${WRKSRC}/boost/boost_1_59_0/boost/atomic/detail/ops_gcc_x86_dcas.hpp
 
 .if !defined(CLIENT_ONLY)
 post-install:

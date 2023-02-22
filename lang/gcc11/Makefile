@@ -1,6 +1,6 @@
 PORTNAME=	gcc
 PORTVERSION=	11.3.0
-PORTREVISION=	1
+PORTREVISION=	7
 CATEGORIES=	lang
 MASTER_SITES=	GCC
 PKGNAMESUFFIX=	${SUFFIX}
@@ -114,6 +114,7 @@ INFO=		gcc${SUFFIX}/cpp \
 		gcc${SUFFIX}/gcc \
 		gcc${SUFFIX}/gccinstall \
 		gcc${SUFFIX}/gccint \
+		gcc${SUFFIX}/gdc \
 		gcc${SUFFIX}/gfortran \
 		gcc${SUFFIX}/libgccjit \
 		gcc${SUFFIX}/libgomp

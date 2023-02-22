@@ -1,5 +1,5 @@
 PORTNAME=	gcc
-PORTVERSION=	11.3.1.s20220923
+PORTVERSION=	11.3.1.s20221230
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -120,6 +120,7 @@ INFO=		gcc${SUFFIX}/cpp \
 		gcc${SUFFIX}/gcc \
 		gcc${SUFFIX}/gccinstall \
 		gcc${SUFFIX}/gccint \
+		gcc${SUFFIX}/gdc \
 		gcc${SUFFIX}/gfortran \
 		gcc${SUFFIX}/libgccjit \
 		gcc${SUFFIX}/libgomp

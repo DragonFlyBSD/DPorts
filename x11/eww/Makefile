@@ -1,6 +1,7 @@
 PORTNAME=	eww
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.0
+PORTREVISION=	3
 CATEGORIES=	x11 wayland
 PKGNAMESUFFIX=	-${FLAVOR}
 
@@ -10,6 +11,8 @@ WWW=		https://elkowar.github.io/eww
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_armv7=	mismatched types: expected \`i32\`, found \`i64\`
 
 FLAVORS=			x11 wayland
 wayland_LIB_DEPENDS=		libgtk-layer-shell.so:x11-toolkits/gtk-layer-shell

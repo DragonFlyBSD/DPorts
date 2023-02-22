@@ -1,7 +1,6 @@
 PORTNAME=	gopass
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.14.9
-PORTREVISION=	1
+DISTVERSION=	1.15.2
 CATEGORIES=	security
 
 MAINTAINER=	eduardo@FreeBSD.org
@@ -9,6 +8,7 @@ COMMENT=	Rewrite of the pass password manager in Go
 WWW=		https://www.gopass.pw/
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=	upstream only supports amd64

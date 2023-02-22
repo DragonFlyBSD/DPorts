@@ -1,5 +1,5 @@
 PORTNAME=	hplip
-PORTVERSION=	3.22.4
+PORTVERSION=	3.22.10
 CATEGORIES=	print
 MASTER_SITES=	SF
 
@@ -119,9 +119,5 @@ post-install-X11-on:
 	${LN} ${STAGEDIR}${DATADIR}/data/images/${s}x${s}/hp_logo.png \
 		${STAGEDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps
 .endfor
-
-post-install-X11-off:
-	${RMDIR} ${STAGEDIR}${DATADIR}/data/images/* \
-		${STAGEDIR}${DATADIR}/data/images
 
 .include <bsd.port.mk>

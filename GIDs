@@ -252,7 +252,7 @@ cardano:*:310:
 _arti:*:311:
 _sphinx:*:312:
 _fastdfs:*:313:
-# free: 314
+promscale:*:314:
 # free: 315
 # free: 316
 # free: 317
@@ -436,7 +436,7 @@ datadog:*:480:
 # free: 495
 # free: 496
 # free: 497
-# free: 498
+rustypaste:*:498:
 # free: 499
 # free: 500
 # free: 501
@@ -627,7 +627,7 @@ riak:*:667:
 # free: 685
 # free: 686
 # free: 687
-# free: 688
+darkhttpd:*:688:
 # free: 689
 # free: 690
 # free: 691
@@ -927,7 +927,7 @@ tvheadend:*:984:
 puppetdb:*:985:
 kamailio:*:986:
 spark:*:987:
-# free: 988
+pot:*:988:
 emby:*:989:
 oozie:*:990:
 sguil:*:991:

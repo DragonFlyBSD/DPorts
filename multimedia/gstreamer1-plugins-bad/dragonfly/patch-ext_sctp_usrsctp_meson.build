@@ -1,0 +1,13 @@
+--- ext/sctp/usrsctp/meson.build.orig	2022-12-19 23:34:46 UTC
++++ ext/sctp/usrsctp/meson.build
+@@ -79,6 +79,10 @@ elif system == 'windows'
+             '-D_WIN32_WINNT=0x601',  # Enables inet_ntop and friends
+         ])]
+     endif
++elif system == 'dragonfly'
++    compile_args += [
++            '-D__Userspace_os_DragonFly'
++    ]
+ else
+     warning('Unknown system: @0@'.format(system))
+     usrsctp_dep = dependency('', required: false)

@@ -7,7 +7,10 @@ setup(
     maintainer = 'Chris Holdgraf',
     maintainer_email = 'choldgraf@gmail.com',
     url = None,
-    packages = ['sphinx_book_theme'],
+    packages = [
+        'sphinx_book_theme',
+        'sphinx_book_theme.header_buttons',
+    ],
     package_dir = {'': 'src'},
     package_data = {'': ['*']},
     install_requires = [
@@ -26,13 +29,14 @@ setup(
             'numpy',
             'matplotlib',
             'numpydoc',
-            'myst-nb~=0.13',
+            'myst-nb~=0.13.2',
             'nbclient',
             'pandas',
             'plotly',
             'sphinx~=4.0',  # Force Sphinx to be the latest version
-            'sphinx-design',
             'sphinx-copybutton',
+            'sphinx-design',
+            'sphinx-examples',
             'sphinx-tabs',
             'sphinx-togglebutton>=0.2.1',
             'sphinx-thebe>=0.1.1',
@@ -43,7 +47,7 @@ setup(
         'test': [
             'beautifulsoup4>=4.6.1,<5',
             'coverage',
-            'myst_nb~=0.13',
+            'myst_nb~=0.13.2',
             'pytest~=6.0.1',
             'pytest-cov',
             'pytest-regressions~=2.0.1',

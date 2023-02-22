@@ -17,9 +17,10 @@ _INCLUDE_BSD_DEFAULT_VERSIONS_MK=	yes
 
 LOCALBASE?=	/usr/local
 
-.  for lang in APACHE BDB COROSYNC EMACS FIREBIRD FORTRAN FPC GCC GHOSTSCRIPT GL \
-	IMAGEMAGICK JAVA LAZARUS LIBRSVG2 LINUX LLVM LUA MYSQL NINJA NODEJS PERL5 \
-	PGSQL PHP PYTHON PYTHON2 PYTHON3 RUBY RUST SAMBA SSL TCLTK VARNISH
+.  for lang in APACHE BDB COROSYNC EMACS FIREBIRD FORTRAN FPC GCC \
+	GHOSTSCRIPT GL GO IMAGEMAGICK JAVA LAZARUS LIBRSVG2 LINUX LLVM \
+	LUA LUAJIT MONO MYSQL NINJA NODEJS PERL5 PGSQL PHP PYTHON \
+	PYTHON2 PYTHON3 RUBY RUST SAMBA SSL TCLTK VARNISH
 .    if defined(${lang}_DEFAULT)
 ERROR+=	"The variable ${lang}_DEFAULT is set and it should only be defined through DEFAULT_VERSIONS+=${lang:tl}=${${lang}_DEFAULT} in /etc/make.conf"
 .    endif
@@ -42,9 +43,9 @@ BDB_DEFAULT?=		5
 COROSYNC_DEFAULT?=	2
 # Possible_values: full canna nox devel_full devel_nox
 #EMACS_DEFAULT?=	let the flavor be the default if not explicitly set
-# Possible values: 2.5, 3.0, 4.0
-FIREBIRD_DEFAULT?=	2.5
-# Possible values: flang (experimental), gfortran
+# Possible values: 3.0, 4.0
+FIREBIRD_DEFAULT?=	3.0
+# Possible values: gfortran
 FORTRAN_DEFAULT?=	gfortran
 # Possible values: 3.2.2
 FPC_DEFAULT?=		3.2.2
@@ -53,21 +54,21 @@ FPC_DEFAULT?=		3.2.2
 .  if ${ARCH} == "powerpcspe"
 GCC_DEFAULT?=		8
 .  else
-GCC_DEFAULT?=		11
+GCC_DEFAULT?=		12
 .  endif
-# Possible values: mesa-libs, mesa-devel
-GL_DEFAULT?=		mesa-libs
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
+# Possible values: mesa-libs, mesa-devel
+GL_DEFAULT?=		mesa-libs
 # Possible values: 1.18, 1.19, 1.20-devel
 GO_DEFAULT?=		1.19
 # Possible values: 6, 6-nox11, 7, 7-nox11
 IMAGEMAGICK_DEFAULT?=	7
 # Possible values: 7, 8, 11, 17, 18
 JAVA_DEFAULT?=		8
-# Possible values: 2.2.2, 2.3.0
+# Possible values: 2.2.4, 2.3.0
 .  if !defined(WANT_LAZARUS_DEVEL)
-LAZARUS_DEFAULT?=       2.2.2
+LAZARUS_DEFAULT?=       2.2.4
 .  else
 LAZARUS_DEFAULT?=       2.3.0
 .  endif
@@ -88,13 +89,21 @@ LLVM_DEFAULT?=		10
 LLVM_DEFAULT?=		10
 .  endif
 # Possible values: 5.1, 5.2, 5.3, 5.4
-LUA_DEFAULT?=		5.2
+LUA_DEFAULT?=		5.4
+# Possible values: luajit, luajit-devel, luajit-openresty
+.  if ${ARCH:Mpowerpc64*}
+LUAJIT_DEFAULT?=	luajit-openresty
+.  else
+LUAJIT_DEFAULT?=	luajit-devel
+.  endif
 # Possible values: 5.10, 5.20, 6.8
 MONO_DEFAULT=		5.10
 # Possible values: 5.6, 5.7, 8.0, 10.3m, 10.4m, 10.5m, 5.7p, 5.7w
 MYSQL_DEFAULT?=		5.7
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
+# Possible value: 14, 16, 18, lts, current
+NODEJS_DEFAULT?=    lts
 # Possible values: 5.32, 5.34, 5.36, devel
 .  if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
@@ -112,8 +121,8 @@ PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
 # Possible values: 10, 11, 12, 13, 14, 15
 PGSQL_DEFAULT?=		13
-# Possible values: 7.4, 8.0, 8.1
-PHP_DEFAULT?=		8.0
+# Possible values: 8.0, 8.1, 8.2
+PHP_DEFAULT?=		8.1
 # Possible values: 2.7, 3.7, 3.8, 3.9, 3.10, 3.11
 PYTHON_DEFAULT?=	3.9
 # Possible values: 2.7
@@ -124,8 +133,8 @@ PYTHON3_DEFAULT?=	3.9
 RUBY_DEFAULT?=		3.0
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
-# Possible values: 4.12, 4.13
-SAMBA_DEFAULT?=		4.12
+# Possible values: 4.13, 4.16
+SAMBA_DEFAULT?=		4.13
 # Possible values: base, openssl, libressl, libressl-devel
 .  if !defined(SSL_DEFAULT)
 #	If no preference was set, check for an installed base version
@@ -164,11 +173,7 @@ SSL_DEFAULT?=	base
 .  endif
 # Possible values: 8.5, 8.6, 8.7
 TCLTK_DEFAULT?=		8.6
-
-# Possible values: 4, 6
-VARNISH_DEFAULT?=	4
-
-# Possible value: 14, 16, 18, lts, current
-NODEJS_DEFAULT?=    lts
+# Possible values: 4, 6, 7
+VARNISH_DEFAULT?=	6
 
 .endif

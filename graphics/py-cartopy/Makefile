@@ -1,9 +1,10 @@
 PORTNAME=	cartopy
 PORTVERSION=	0.21.0
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	Cartopy-${DISTVERSIONFULL}
+DISTNAME=	Cartopy-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Cartographic library with Matplotlib support for visualisation
