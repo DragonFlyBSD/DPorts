@@ -12,6 +12,7 @@ DIST_SUBDIR=	u-boot
 
 MAINTAINER?=	uboot@FreeBSD.org
 COMMENT=	Cross-build das u-boot for model ${MODEL}
+WWW?=		https://www.denx.de/wiki/U-Boot
 
 LICENSE=	GPLv2
 
@@ -31,7 +32,8 @@ UBOOT_DIR=	share/u-boot/${PORTNAME}${PKGNAMESUFFIX}
 INST=		${PREFIX}/${UBOOT_DIR}
 DESCR?=		${.CURDIR}/pkg-descr
 
-MAKE_ARGS+=	V=1 CROSS_COMPILE=${CROSS_COMPILE} PYTHON=${PYTHON_CMD} ${ARCHFLAGS}
+MAKE_ENV+=	V=1 CROSS_COMPILE=${CROSS_COMPILE} PYTHON=${PYTHON_CMD} CC=clang
+MAKE_ARGS+=	${ARCHFLAGS}
 
 NO_ARCH=	yes
 
@@ -117,7 +119,7 @@ UBOOT_PLIST_QEMU=	u-boot.bin
 .if !defined(UBOOT_VERSION) && defined(UBOOT_VERSION_${FAMILY:tu})
 UBOOT_VERSION=${UBOOT_VERSION_${FAMILY:tu}}
 .endif
-UBOOT_VERSION?=	2021.07
+UBOOT_VERSION?=	2022.10
 
 # If a slave port defines a PORTREVISION use it
 .if defined(U_BOOT_SLAVE_PORTREVISION_${UBOOT_VERSION})
@@ -227,10 +229,10 @@ CONFIG_FRAGMENT=	${FILESDIR}/${FRAGMENT_NAME}
 .if defined(CONFIG_FRAGMENT)
 do-configure:
 	${CP} ${CONFIG_FRAGMENT} ${WRKSRC}/configs/
-	(cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} scripts/kconfig/merge_config.sh configs/${BOARD_CONFIG} configs/${FRAGMENT_NAME})
+	(cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${MAKE_ENV} scripts/kconfig/merge_config.sh configs/${BOARD_CONFIG} configs/${FRAGMENT_NAME})
 .else
 do-configure:
-	(cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${MAKE_CMD} ${BOARD_CONFIG})
+	(cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${BOARD_CONFIG})
 .endif
 
 post-build:

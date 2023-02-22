@@ -11,8 +11,8 @@ Content-Type: text/plain; charset=UTF-8
 
 diff --git a/common/bootm.c b/common/bootm.c
 index b3377490b3..22476fc7c9 100644
---- common/bootm.c
-+++ common/bootm.c
+--- boot/bootm.c
++++ boot/bootm.c
 @@ -458,7 +458,12 @@ ulong bootm_disable_interrupts(void)
  	 * updated every 1 ms within the HCCA structure in SDRAM! For more
  	 * details see the OpenHCI specification.
