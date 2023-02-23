@@ -1,9 +1,8 @@
 MASTERDIR=	${.CURDIR}/../u-boot-master
 
-U_BOOT_SLAVE_PORTREVISION_2021.07=	1
+PATCHFILES+=	939129/raw
 
-PATCHFILES+=	939129/raw \
-		1547145/raw
+WWW=		https://wiki.freebsd.org/FreeBSD/arm/Raspberry%20Pi
 
 MODEL=		rpi
 BOARD_CONFIG=	rpi_defconfig
