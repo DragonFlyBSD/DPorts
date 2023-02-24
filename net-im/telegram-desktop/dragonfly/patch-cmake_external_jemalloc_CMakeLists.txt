@@ -1,11 +1,15 @@
---- cmake/external/jemalloc/CMakeLists.txt.orig	2022-03-09 18:25:57 UTC
+--- cmake/external/jemalloc/CMakeLists.txt.orig	2022-12-28 11:35:51 UTC
 +++ cmake/external/jemalloc/CMakeLists.txt
-@@ -34,8 +34,6 @@ include(ExternalProject)
+@@ -34,10 +34,8 @@ include(ExternalProject)
  ExternalProject_Add(jemalloc
      URL ${third_party_loc}/jemalloc
      CONFIGURE_COMMAND env
 -        CC=clang
 -        CXX=clang++
-         "EXTRA_CFLAGS=-fstack-protector-all -D_FORTIFY_SOURCE=2"
-         "EXTRA_CXXFLAGS=-fstack-protector-all -D_FORTIFY_SOURCE=2"
+-        "$<IF:$<OR:$<NOT:$<BOOL:${DESKTOP_APP_USE_PACKAGED}>>,$<BOOL:${DESKTOP_APP_SPECIAL_TARGET}>>,EXTRA_CFLAGS=$<$<BOOL:${DESKTOP_APP_SPECIAL_TARGET}>:-Ofast> -fstack-protector-all -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS,=>"
+-        "$<IF:$<OR:$<NOT:$<BOOL:${DESKTOP_APP_USE_PACKAGED}>>,$<BOOL:${DESKTOP_APP_SPECIAL_TARGET}>>,EXTRA_CXXFLAGS=$<$<BOOL:${DESKTOP_APP_SPECIAL_TARGET}>:-Ofast> -fstack-protector-all -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS,=>"
++        CC=cc
++        CXX=c++
          ./autogen.sh --disable-shared
+     BUILD_IN_SOURCE 1
+     STEP_TARGETS build
