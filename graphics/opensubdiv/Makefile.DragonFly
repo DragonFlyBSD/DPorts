@@ -1,3 +1,5 @@
+# to fix plist, do not want stringify
+USES+=	python:3.7+,build
 
 # disable tbb and doxygen for now
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NTBB}

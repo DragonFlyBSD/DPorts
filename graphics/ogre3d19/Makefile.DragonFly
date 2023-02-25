@@ -1,3 +1,4 @@
+USE_CLANG_FALLBACK=	default
 
 dfly-patch:
 	${REINPLACE_CMD} -e '/latomic/d' ${WRKSRC}/OgreMain/CMakeLists.txt
