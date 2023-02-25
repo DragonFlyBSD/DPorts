@@ -1,5 +1,8 @@
 USES+=	autoreconf
 
+# workaround, see: https://github.com/curl/curl/issues/10148
+CFLAGS+=	-DCURL_DISABLE_TYPECHECK
+
 CFLAGS+=        -I${OPENSSLINC}
 LDFLAGS+=       -L${OPENSSLLIB}
 
