@@ -1,6 +1,6 @@
---- sandbox/policy/switches.cc.orig	2023-01-11 09:17:16 UTC
+--- sandbox/policy/switches.cc.orig	2023-03-09 06:31:50 UTC
 +++ sandbox/policy/switches.cc
-@@ -54,10 +54,10 @@ const char kWindowsSystemProxyResolverSandbox[] = "pro
+@@ -54,10 +54,10 @@ const char kFileUtilSandbox[] = "file_util";
  const char kMirroringSandbox[] = "mirroring";
  #endif  // BUILDFLAG(IS_MAC)
  
