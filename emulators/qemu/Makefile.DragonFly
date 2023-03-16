@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--disable-netmap \
 			--disable-stack-protector \
 			--enable-curses
 
-.if ${FLAVOR:U} != tools
+.if ${FLAVOR:U} == default
 OPTIONS_DEFAULT+=	SPICE
 .endif
 
