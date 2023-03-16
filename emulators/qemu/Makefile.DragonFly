@@ -4,7 +4,24 @@ SHEBANG_FILES+= scripts/signrom.py
 
 USES+= ncurses
 
-CONFIGURE_ARGS+=	--disable-netmap --disable-stack-protector --enable-curses
+# Make SPICE option available
+OPTIONS_DEFINE+=	SPICE
+
+SPICE_DESC=		SPICE protocol support
+SPICE_LIB_DEPENDS=	libspice-server.so:devel/libspice-server
+SPICE_BUILD_DEPENDS=	spice-protocol>0:devel/spice-protocol
+SPICE_CONFIGURE_ON=	--enable-spice
+SPICE_CONFIGURE_OFF=	--disable-spice
+
+# slirp is required for vhost-net
+LIB_DEPENDS+=		libslirp.so:net/libslirp
+CONFIGURE_ARGS+=	--disable-netmap \
+			--disable-stack-protector \
+			--enable-curses
+
+.if ${FLAVOR:U} != tools
+OPTIONS_DEFAULT+=	SPICE
+.endif
 
 # dance a bit for making meson work w/ hacked up devel/ncurses
 dfly-patch:
@@ -26,5 +43,4 @@ dfly-install:
 	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 \
 		${STAGEDIR}${PREFIX}/bin/qemu-x86_64 \
 		${STAGEDIR}${PREFIX}/bin/qemu-arm
-	
 .endif
