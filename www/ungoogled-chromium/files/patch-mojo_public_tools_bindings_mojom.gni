@@ -1,6 +1,6 @@
---- mojo/public/tools/bindings/mojom.gni.orig	2023-01-13 08:56:02 UTC
+--- mojo/public/tools/bindings/mojom.gni.orig	2023-03-10 11:01:21 UTC
 +++ mojo/public/tools/bindings/mojom.gni
-@@ -699,6 +699,16 @@ template("mojom") {
+@@ -703,6 +703,16 @@ template("mojom") {
        enabled_features += [ "is_win" ]
      }
  

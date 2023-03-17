@@ -1,6 +1,15 @@
---- hw/xfree86/os-support/meson.build.orig	2022-12-14 09:13:12.921805000 +0100
-+++ hw/xfree86/os-support/meson.build	2022-12-14 09:14:23.442977000 +0100
-@@ -128,7 +128,7 @@ elif host_machine.system().endswith('bsd
+--- hw/xfree86/os-support/meson.build.orig	2023-02-25 19:35:35.539871000 +0100
++++ hw/xfree86/os-support/meson.build	2023-02-25 19:40:49.084709000 +0100
+@@ -91,7 +91,7 @@
+         error('Unknown CPU family for Solaris build')
+     endif
+ 
+-elif host_machine.system().endswith('bsd')
++elif host_machine.system().endswith('bsd') or host_machine.system() == 'dragonfly'
+     srcs_xorg_os_support += [
+         'bsd/bsd_VTsw.c',
+         'bsd/bsd_bell.c',
+@@ -128,7 +128,7 @@
          endif
      endif
  
