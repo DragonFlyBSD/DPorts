@@ -1,1 +1,2 @@
-USES+= localbase
+# We don't have elfctl
+USES:= ${USES:Nelfctl}
