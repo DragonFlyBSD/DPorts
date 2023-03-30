@@ -5,7 +5,7 @@ MANUAL_PACKAGE_BUILD=   huge (399M packaged)
 # LLDB needs to be ported to dragonfly
 # FLANG needs to be a separate thing
 # OPENMP force disable offloading target support
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLLDB:NFLANG:NCOMPILER_RT}
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLLDB:NFLANG:NCOMPILER_RT:NOPENMP}
 OPTIONS_DEFINE+=	LLD_LINK
 
 dfly-patch:
