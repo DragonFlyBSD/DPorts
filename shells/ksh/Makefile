@@ -14,13 +14,10 @@ PORTVERSION=	1.0.4
 CATEGORIES=	shells
 
 MAINTAINER=	cy@FreeBSD.org
-COMMENT=	Development branch of AT&T KornShell 93
+COMMENT=	ksh93u+m is the renewed development of ksh93 based on AT&T ksh93u+m (stable)
 WWW=		http://www.kornshell.com/
 
 LICENSE=	EPL
-
-BROKEN_aarch64=		Fails to link: missing sbrk
-BROKEN_riscv64=		Fails to link: missing sbrk
 
 USES=		compiler:c11
 
@@ -32,7 +29,7 @@ GH_PROJECT=	ksh
 #		arcane build failures due to already installed ksh/ksh93 in
 #		$PATH.
 KSH_CONFLICTS=		pdksh
-KSH93_CONFLICTS=	ksh2020 ksh93 ast-ksh ksh-devel
+KSH93_CONFLICTS=	ksh93 ast-ksh ksh-devel
 
 OPTIONS_DEFAULT=	KSH93 EXAMPLES
 OPTIONS_DEFINE=		EXAMPLES STATIC
@@ -44,7 +41,7 @@ KSH93N_DESC=		Install to ${PREFIX}/bin/ksh93n (new)
 
 CFLAGS+=	-DMAP_TYPE
 LDFLAGS+=	-lm
-MAKE_ENV=	CCFLAGS="-Wno-unused-value -Wno-parentheses -Wno-logical-op-parentheses -Wno-int-conversion" CFLAGS="${CFLAGS}"
+MAKE_ENV=	CCFLAGS="-Wno-unused-value -Wno-parentheses -Wno-logical-op-parentheses" CFLAGS="${CFLAGS}"
 
 STATIC_MAKE_ENV=	LDFLAGS+=-static
 
