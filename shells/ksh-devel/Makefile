@@ -14,17 +14,15 @@ CATEGORIES=	shells
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	cy@FreeBSD.org
-COMMENT=	Development branch of AT&T KornShell 93
+COMMENT=	ksh93u+m is the development branch ksh93 based on AT&T ksh93u+ (stable)
 WWW=		http://www.kornshell.com/
 
 LICENSE=	EPL
 
-BROKEN_aarch64=		Fails to link: missing sbrk
-BROKEN_riscv64=		Fails to link: missing sbrk
 BROKEN_FreeBSD_12=	exit code 139 making lib/libcmd
 
-HASH=		4ec93745
-AST_COMMIT_DATE=	2022.11.04
+HASH=		ceae1e44
+AST_COMMIT_DATE=	2023.03.30
 
 USES=		compiler:c11
 
@@ -37,8 +35,8 @@ GH_TAGNAME=	${HASH}
 #		arcane build failures due to already installed ksh/ksh93 in
 #		$PATH.
 KSH_CONFLICTS=		pdksh
-KSH93_CONFLICTS=	ksh2020 ksh93 ast-ksh
-KSH93D_CONFLICTS=	ksh2020 ksh93 ast-ksh
+KSH93_CONFLICTS=	ksh93 ast-ksh
+KSH93D_CONFLICTS=	ksh93 ast-ksh
 
 OPTIONS_DEFAULT=	KSH93 EXAMPLES
 OPTIONS_DEFINE=		EXAMPLES STATIC
@@ -50,7 +48,7 @@ KSH93D_DESC=		Install to ${PREFIX}/bin/ksh93d (development)
 
 CFLAGS+=	-DMAP_TYPE
 LDFLAGS+=	-lm
-MAKE_ENV=	CCFLAGS="-Wno-unused-value -Wno-parentheses -Wno-logical-op-parentheses -Wno-int-conversion" CFLAGS="${CFLAGS}"
+MAKE_ENV=	CCFLAGS="-Wno-unused-value -Wno-parentheses -Wno-logical-op-parentheses" CFLAGS="${CFLAGS}"
 
 STATIC_MAKE_ENV=	LDFLAGS+=-static
 
