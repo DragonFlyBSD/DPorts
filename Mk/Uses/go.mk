@@ -60,7 +60,7 @@ _INCLUDE_USES_GO_MK=	yes
 
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
-GO_VALID_VERSIONS=	1.18 1.19 1.20-devel
+GO_VALID_VERSIONS=	1.18 1.19 1.20 1.21-devel
 
 # Check arguments sanity
 .  if !empty(go_ARGS:N[1-9].[0-9][0-9]:N*-devel:Nmodules:Nno_targets:Nrun)
@@ -220,7 +220,7 @@ do-build:
 		pkg=$$(${ECHO_CMD} $${t} | \
 			${SED} -Ee 's/^([^:]*).*$$/\1/' -e 's/^${PORTNAME}$$/./'); \
 		${ECHO_MSG} "===>  Building $${out} from $${pkg}"; \
-		${SETENV} ${MAKE_ENV} ${GO_ENV} GOPROXY=off ${GO_CMD} build ${GO_BUILDFLAGS} \
+		${SETENV} ${MAKE_ENV} ${GO_ENV} GOMAXPROCS=${MAKE_JOBS_NUMBER} GOPROXY=off ${GO_CMD} build ${GO_BUILDFLAGS} \
 			-o ${GO_WRKDIR_BIN}/$${out} \
 			$${pkg}; \
 	done)

@@ -258,11 +258,11 @@ _arti:*:311:311::0:0:Arti Daemon:/nonexistent:/usr/sbin/nologin
 _sphinx:*:312:312::0:0:Sphinxsearch Owner:/nonexistent:/usr/sbin/nologin
 _fastdfs:*:313:313::0:0:FastDFS Owner:/nonexistent:/usr/sbin/nologin
 promscale:*:314:314::0:0:Promscale:/nonexistent:/usr/sbin/nologin
-# free: 315
-# free: 316
-# free: 317
-# free: 318
-# free: 319
+lavinmq:*:315:315::0:0:LavinMQ user:/nonexistent:/usr/sbin/nologin
+nut:*:316:316::0:0:Network UPS Tools user:/nonexistent:/usr/sbin/nologin
+hedgedoc:*:317:317::0:0:HedgeDoc user:/nonexistent:/usr/sbin/nologin
+icingadirector:*:318:183::0:0:icingadirector user:/nonexistent:/usr/sbin/nologin
+rustdesk:*:319:319::0:0:rustdesk-server user:/nonexistent:/usr/sbin/nologin
 # free: 320
 # free: 321
 # free: 322
@@ -270,7 +270,7 @@ promscale:*:314:314::0:0:Promscale:/nonexistent:/usr/sbin/nologin
 # free: 324
 dkfilter:*:325:325::0:0:DK Filter Owner:/nonexistent:/usr/sbin/nologin
 smfs:*:326:326::0:0:SMFSAV Owner:/nonexistent:/usr/sbin/nologin
-# free: 327
+_reticulum:*:327:327::0:0:Reticulum Daemon:/nonexistent:/usr/sbin/nologin
 # free: 328
 # free: 329
 orthanc:*:330:330::0:0:Orthanc Daemon:/nonexistent:/usr/sbin/nologin
@@ -569,7 +569,7 @@ taskd:*:616:616::0:0:taskd user:/nonexistent:/usr/sbin/nologin
 # free: 622
 # free: 623
 # free: 624
-# free: 625
+xapsd:*:625:625::0:0:xapsd:/var/lib/xapsd:/usr/sbin/nologin
 # free: 626
 # free: 627
 # free: 628
@@ -812,7 +812,7 @@ opensearch:*:855:855::0:0:opensearch user:/nonexistent:/usr/sbin/nologin
 # free: 865
 # free: 866
 # free: 867
-# free: 868
+jellyfin:*:868:868::0:0:Jellyfin:/nonexistent:/usr/sbin/nologin
 keyd:*:869:869::0:0:Key remapping daemon for evdev:/nonexistent:/usr/sbin/nologin
 buildbot:*:870:870::0:0:Buildbot user:/var/db/buildbot:/usr/sbin/nologin
 archiva:*:871:871::0:0:Apache Archiva Daemon:/nonexistent:/usr/sbin/nologin

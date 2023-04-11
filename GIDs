@@ -253,11 +253,11 @@ _arti:*:311:
 _sphinx:*:312:
 _fastdfs:*:313:
 promscale:*:314:
-# free: 315
-# free: 316
-# free: 317
-# free: 318
-# free: 319
+lavinmq:*:315:
+nut:*:316:
+hedgedoc:*:317:
+# free: 318, UID used by icingadirector
+rustdesk:*:319:
 # free: 320
 # free: 321
 # free: 322
@@ -265,7 +265,7 @@ promscale:*:314:
 # free: 324
 dkfilter:*:325:
 smfs:*:326:
-# free: 327
+_reticulum:*:327:
 # free: 328
 # free: 329
 orthanc:*:330:
@@ -564,7 +564,7 @@ taskd:*:616:
 # free: 622
 # free: 623
 # free: 624
-# free: 625
+xapsd:*:625:
 # free: 626
 # free: 627
 # free: 628
@@ -807,7 +807,7 @@ opensearch:*:855:
 # free: 865
 # free: 866
 # free: 867
-# free: 868
+jellyfin:*:868:
 keyd:*:869:
 buildbot:*:870:
 # free: 871

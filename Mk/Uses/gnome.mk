@@ -63,7 +63,7 @@ _USE_GNOME_ALL+= atk cairo \
 		gtk-update-icon-cache gtk20 \
 		gtksharp20 gtksourceview2 gvfs libartlgpl2 \
 		libglade2 libgnomecanvas \
-		libgsf libidl librsvg2 libwnck \
+		libgsf libidl librsvg2 \
 		libxml2 libxslt \
 		pango pangox-compat \
 		vte
@@ -148,7 +148,7 @@ gnomemimedata_RUN_DEPENDS=${LOCALBASE}/libdata/pkgconfig/gnome-mime-data-2.0.pc:
 glib20_LIB_DEPENDS=	libglib-2.0.so:devel/glib20 \
 					libintl.so:devel/gettext-runtime
 
-atk_LIB_DEPENDS=	libatk-1.0.so:accessibility/atk
+atk_LIB_DEPENDS=	libatk-1.0.so:accessibility/at-spi2-core
 atk_USE_GNOME_IMPL=	glib20
 
 dconf_BUILD_DEPENDS=	dconf:devel/dconf
@@ -214,9 +214,6 @@ libartlgpl2_LIB_DEPENDS=	libart_lgpl_2.so:graphics/libart_lgpl
 
 gnomedesktop3_LIB_DEPENDS=	libgnome-desktop-3.so:x11/gnome-desktop
 gnomedesktop3_USE_GNOME_IMPL=	gtk30
-
-libwnck_LIB_DEPENDS=	libwnck-1.so:x11-toolkits/libwnck
-libwnck_USE_GNOME_IMPL=	gtk20
 
 libwnck3_LIB_DEPENDS=	libwnck-3.so:x11-toolkits/libwnck3
 libwnck3_USE_GNOME_IMPL=gtk30

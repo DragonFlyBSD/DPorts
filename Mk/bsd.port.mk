@@ -40,9 +40,9 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  makefile is being used on.  Automatically set to
 #				  "FreeBSD," "NetBSD," or "OpenBSD" as appropriate.
 # OSREL			- The release version of the operating system as a text
-#				  string (e.g., "12.3").
+#				  string (e.g., "12.4").
 # OSVERSION		- 9999999 - try to ignore FreeBSD version check
-#				  the value of __FreeBSD_version (e.g., 1203000).
+#				  the value of __FreeBSD_version (e.g., 1204000).
 # DFLYVERSION	- The value of __DragonFly_version.
 #
 # This is the beginning of the list of all variables that need to be
@@ -372,9 +372,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # USE_OCAML		- If set, this port relies on the OCaml language.
 #				  Implies inclusion of bsd.ocaml.mk.  (Also see
 #				  that file for more information on USE_OCAML*).
-# USE_RUBY		- If set, this port relies on the Ruby language.
-#				  Implies inclusion of bsd.ruby.mk.  (Also see
-#				  that file for more information on USE_RUBY_*).
 ##
 # USE_GECKO		- If set, this port uses the Gecko/Mozilla product.
 #				  See bsd.gecko.mk for more details.
@@ -1070,6 +1067,11 @@ _PORTS_DIRECTORIES+=	${PKG_DBDIR} ${PREFIX} ${WRKDIR} ${EXTRACT_WRKDIR} \
 # make -C /usr/ports/category/port/.
 .CURDIR:=		${.CURDIR:tA}
 
+# Ensure .CURDIR doesn't contain a colon, which breaks makefile targets
+.if ${.CURDIR:S/:/\:/g} != ${.CURDIR}
+.error The current directory path contains ':', this is not supported
+.endif
+
 # make sure bmake treats -V as expected
 .MAKE.EXPAND_VARIABLES= yes
 
@@ -1198,7 +1200,7 @@ OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*1000
 .endif
 _EXPORTED_VARS+=	DFLYVERSION OSREL
 
-.    if ${OPSYS} == FreeBSD && (${OSVERSION} < 1203000 || (${OSVERSION} >= 1300000 && ${OSVERSION} < 1301000))
+.    if ${OPSYS} == FreeBSD && (${OSVERSION} < 1204000 || (${OSVERSION} >= 1300000 && ${OSVERSION} < 1301000))
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
 .      if defined(ALLOW_UNSUPPORTED_SYSTEM)
@@ -1392,10 +1394,6 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 
 .    if defined(USE_JAVA)
 .include "${PORTSDIR}/Mk/bsd.java.mk"
-.    endif
-
-.    if defined(USE_RUBY)
-.include "${PORTSDIR}/Mk/bsd.ruby.mk"
 .    endif
 
 .    if defined(USE_OCAML)
@@ -1643,8 +1641,7 @@ QA_ENV+=		STAGEDIR=${STAGEDIR} \
 				DISABLE_LICENSES="${DISABLE_LICENSES:Dyes}" \
 				PORTNAME=${PORTNAME} \
 				NO_ARCH=${NO_ARCH} \
-				"NO_ARCH_IGNORE=${NO_ARCH_IGNORE}" \
-				USE_RUBY=${USE_RUBY}
+				"NO_ARCH_IGNORE=${NO_ARCH_IGNORE}"
 .    if !empty(USES:Mssl)
 QA_ENV+=		USESSSL=yes
 .    endif
@@ -1886,10 +1883,6 @@ MAKE_ENV+=	${b}="${${b}}"
 .      endfor
 .    endif
 
-.    if defined(USE_OPENLDAP) || defined(WANT_OPENLDAP_VER)
-.include "${PORTSDIR}/Mk/bsd.ldap.mk"
-.    endif
-
 .    if defined(USE_RC_SUBR)
 SUB_FILES+=	${USE_RC_SUBR}
 .    endif
@@ -2071,7 +2064,7 @@ _MAKE_JOBS_NUMBER:=	${MAKE_JOBS_NUMBER}
 .      else
 .        if !defined(_SMP_CPUS)
 _SMP_CPUS!=		${SYSCTL} -n hw.ncpu
-.      endif
+.        endif
 _EXPORTED_VARS+=	_SMP_CPUS
 _MAKE_JOBS_NUMBER=	${_SMP_CPUS}
 .      endif
@@ -2589,7 +2582,7 @@ check-categories:
 .    else
 
 VALID_CATEGORIES+= accessibility afterstep arabic archivers astro audio \
-	benchmarks biology cad chinese comms converters \
+	benchmarks biology budgie cad chinese comms converters \
 	databases deskutils devel dns docs \
 	editors education elisp emulators enlightenment finance french ftp \
 	games geography german gnome gnustep graphics \
