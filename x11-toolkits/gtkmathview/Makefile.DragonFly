@@ -1,9 +1,0 @@
-USE_CXXSTD=	c++98
-
-# to fix linking with gold
-LIBS+= -lt1
-# zrj: taken from archlinux
-dfly-patch:
-	${REINPLACE_CMD} -e '/"T1_FontDataBase.hh"/d'			\
-		${WRKSRC}/src/backend/ps/PS_StreamRenderingContext.cc	\
-		${WRKSRC}/src/backend/ps/PS_StreamRenderingContext.hh
