@@ -1,11 +1,11 @@
 PORTNAME=	jschema-to-python
 DISTVERSION=	1.2.3
 CATEGORIES=	devel python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	jschema_to_python-${DISTVERSION}
 
-MAINTAINER=	nork@ninth-nine.com
+MAINTAINER=	nork@FreeBSD.org
 COMMENT=	Generate Python classes from a JSON schema
 WWW=		https://pypi.org/project/jschema-to-python/
 
