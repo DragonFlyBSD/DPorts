@@ -1,7 +1,6 @@
 PORTNAME=	verilator
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.006
-PORTREVISION=	1
+DISTVERSION=	5.008
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -32,12 +31,15 @@ SHEBANG_FILES=	bin/verilator_ccache_report \
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	INSTALL_PROGRAM="${INSTALL_SCRIPT}"
-CONFIGURE_ARGS=	AR=${LOCALBASE}/bin/ar
+CONFIGURE_ARGS=	AR=${LOCALBASE}/bin/ar \
+		PYTHON3=${PYTHON_CMD}
 CONFIGURE_SHELL=	${LOCALBASE}/bin/bash # see https://github.com/verilator/verilator/issues/3132
 
 TEST_TARGET=	test
 
 BINARY_ALIAS=	make=${GMAKE} python3=${PYTHON_CMD} # aliasas are only for tests
+
+#MAKE_JOBS_UNSAFE=	yes # build on 1 CPU because many compile jobs are over 10GB and they can likely cause out-of-memory issues
 
 OPTIONS_DEFINE=			INSTALL_DBG_EXECUTABLES LEAK_CHECKS
 OPTIONS_SUB=			yes
@@ -49,8 +51,6 @@ LEAK_CHECKS_CXXFLAGS=		-DVL_LEAK_CHECKS
 LEAK_CHECKS_BROKEN=		compilation will be fixed in the next release
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|AC_PATH_PROG(PYTHON3,python3)|AC_PATH_PROG(PYTHON3,${PYTHON_VERSION})|' \
-		${WRKSRC}/configure.ac # hack-workaround for https://github.com/verilator/verilator/issues/3970
 	@${REINPLACE_CMD} -e 's|@pkgconfigdir@|${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.in
 
