@@ -1,5 +1,5 @@
 PORTNAME=	simple_form
-PORTVERSION=	5.1.0
+PORTVERSION=	5.2.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	-rails61
@@ -16,7 +16,6 @@ RUN_DEPENDS=	rubygem-actionpack61>=5.2:www/rubygem-actionpack61 \
 
 USES=		cpe gem
 CPE_VENDOR=	plataformatec
-USE_RUBY=	yes
 
 NO_ARCH=	yes
 
