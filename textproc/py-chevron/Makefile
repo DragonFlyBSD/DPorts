@@ -1,10 +1,10 @@
 PORTNAME=	chevron
 PORTVERSION=	0.14.0
 CATEGORIES=	textproc python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	nork@ninth-nine.com
+MAINTAINER=	nork@FreeBSD.org
 COMMENT=	Mustache templating language renderer
 WWW=		https://pypi.org/project/chevron/
 
