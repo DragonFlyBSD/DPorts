@@ -1,10 +1,10 @@
 PORTNAME=	aiodns
 PORTVERSION=	3.0.0
 CATEGORIES=	dns python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	nork@ninth-nine.com
+MAINTAINER=	nork@FreeBSD.org
 COMMENT=	Simple DNS resolver for asyncio
 WWW=		https://pypi.org/project/aiodns/
 
