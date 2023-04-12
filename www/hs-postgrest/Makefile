@@ -1,9 +1,9 @@
 PORTNAME=	postgrest
-DISTVERSION=	10.1.0
 DISTVERSIONPREFIX=	v
+DISTVERSION=	10.1.2
 CATEGORIES=	www databases haskell
 
-MAINTAINER=	dmitry.wagin@ya.ru
+MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	PostgREST create a REST API to an existing Postgres database
 WWW=		https://postgrest.org
 
