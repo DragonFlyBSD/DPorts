@@ -1,5 +1,5 @@
 PORTNAME=	blurhash
-PORTVERSION=	0.1.6
+PORTVERSION=	0.1.7
 CATEGORIES=	graphics rubygems
 MASTER_SITES=	RG
 
@@ -12,7 +12,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	rubygem-ffi>0:devel/rubygem-ffi
 
-USE_RUBY=	yes
 USES=		gem
 
 .include <bsd.port.mk>
