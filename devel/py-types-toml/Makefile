@@ -1,12 +1,12 @@
 PORTNAME=	types-toml
 PORTVERSION=	0.10.8
 CATEGORIES=	devel python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Typing stubs for toml
-WWW=		https://github.com/python/typeshed/tree/master/stubs/toml
+WWW=		https://github.com/python/typeshed/tree/main/stubs/toml
 
 LICENSE=	APACHE20
 
