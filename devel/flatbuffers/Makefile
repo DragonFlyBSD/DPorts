@@ -1,15 +1,15 @@
 PORTNAME=	flatbuffers
 DISTVERSIONPREFIX=	v
-DISTVERSION=	22.12.06
+DISTVERSION=	23.3.3
 PORTEPOCH=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Memory efficient serialization library
-WWW=		https://google.github.io/flatbuffers/
+WWW=		https://flatbuffers.dev/
 
 LICENSE=	APACHE20
-LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cmake:testing compiler:c++14-lang cpe python:build
 CPE_VENDOR=	google
