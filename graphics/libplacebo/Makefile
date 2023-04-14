@@ -1,7 +1,6 @@
 PORTNAME=	libplacebo
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.229.2
-PORTREVISION=	1
+DISTVERSION=	5.264.1
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -15,7 +14,7 @@ USES=		compiler:c11 localbase:ldflags meson pkgconfig python:3.6+,build
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	haasn
-MESON_ARGS=	-Ddemos=false
+MESON_ARGS=	-Dd3d11=disabled -Dlibdovi=disabled -Ddemos=false
 
 OPTIONS_DEFINE=	LCMS2 LIBUNWIND OPENGL TEST VULKAN
 OPTIONS_DEFAULT=LCMS2 LIBUNWIND OPENGL SHADERC
