@@ -1,7 +1,7 @@
 PORTNAME=	nbclassic
-PORTVERSION=	0.4.8
+PORTVERSION=	0.5.2
 CATEGORIES=	devel python
-MASTER_SITES=	CHEESESHOP \
+MASTER_SITES=	PYPI \
 		https://github.com/jupyter/nbclassic/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
