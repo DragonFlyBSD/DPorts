@@ -1,6 +1,7 @@
 PORTNAME=	cawbird
 PORTVERSION=	1.5
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	net-im
 
 MAINTAINER=	ports@FreeBSD.org
@@ -36,4 +37,3 @@ VIDEO_USES=		gstreamer
 VIDEO_MESON_OFF=	-Dvideo=false
 
 .include <bsd.port.mk>
-
