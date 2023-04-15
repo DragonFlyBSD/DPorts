@@ -1,10 +1,8 @@
 PORTNAME=	graylog
-DISTVERSION=	4.3.9
-PORTREVISION=	1
+DISTVERSION=	5.0.5
 CATEGORIES=	sysutils java
 MASTER_SITES=	https://downloads.graylog.org/releases/
-DISTFILES=	graylog/${DISTNAME}${EXTRACT_SUFX} \
-		graylog-integrations/graylog-integrations-plugins-${DISTVERSION}${EXTRACT_SUFX}
+DISTFILES=	graylog/${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Tool for centralized log collection
@@ -19,7 +17,7 @@ LICENSE_PERMS_SSPLv1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 USES=		cpe tar:tgz
 USE_JAVA=	yes
 
-JAVA_VERSION=	8+
+JAVA_VERSION=	17+
 JAVA_EXTRACT=	yes
 JAVA_RUN=	yes
 
@@ -55,7 +53,6 @@ post-extract:
 		-e 's,^data_dir .+,data_dir = /var/db/graylog,' \
 		-e 's,^message_journal_dir .+,message_journal_dir = ${GRAYLOG_DATA_DIR}/journal,' \
 		-e 's,^node_id_file .+,node_id_file = ${ETCDIR}/server/node-id,' \
-		-e 's,^plugin_dir .+,plugin_dir = ${LOCALBASE}/share/graylog/plugin,' \
 	${WRKSRC}/graylog.conf.example
 
 do-install:
@@ -68,8 +65,6 @@ do-install:
 		${STAGEDIR}${ETCDIR}/graylog.conf.sample
 	${INSTALL_DATA} ${WRKDIR}/log4j2.xml \
 		${STAGEDIR}${ETCDIR}/log4j2.xml.sample
-	cd ${WRKDIR}/graylog-integrations-plugins-${DISTVERSION}/plugin && \
-	    ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/plugin/
 	cd ${WRKSRC}/plugin && \
 	    ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/plugin/
 
