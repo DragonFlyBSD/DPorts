@@ -1,5 +1,5 @@
 PORTNAME=	rust
-PORTVERSION?=	1.66.0
+PORTVERSION?=	1.68.2
 PORTREVISION?=	0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
@@ -8,9 +8,9 @@ MASTER_SITES=	https://static.rust-lang.org/dist/:src \
 		https://static.rust-lang.org/dist/:bootstrap
 DISTNAME?=	${PORTNAME}c-${PORTVERSION}-src
 DISTFILES?=	${NIGHTLY_DATE:D${NIGHTLY_DATE}/}${DISTNAME}${EXTRACT_SUFX}:src \
-		${_RUSTC_BOOTSTRAP}${BOOTSTRAPS_SUFFIX}${EXTRACT_SUFX}:bootstrap \
-		${_RUST_STD_BOOTSTRAP}${BOOTSTRAPS_SUFFIX}${EXTRACT_SUFX}:bootstrap \
-		${_CARGO_BOOTSTRAP}${BOOTSTRAPS_SUFFIX}${EXTRACT_SUFX}:bootstrap
+		${_RUSTC_BOOTSTRAP}${EXTRACT_SUFX}:bootstrap \
+		${_RUST_STD_BOOTSTRAP}${EXTRACT_SUFX}:bootstrap \
+		${_CARGO_BOOTSTRAP}${EXTRACT_SUFX}:bootstrap
 DIST_SUBDIR?=	rust
 
 MAINTAINER=	rust@FreeBSD.org
@@ -23,8 +23,8 @@ LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 
 IGNORE_FreeBSD_12_powerpc=	is missing a bootstrap for FreeBSD 12.x powerpc
-ONLY_FOR_ARCHS?=	aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le \
-			powerpc riscv64
+ONLY_FOR_ARCHS?=	aarch64 amd64 armv7 i386 powerpc64 powerpc64le powerpc \
+			riscv64
 ONLY_FOR_ARCHS_REASON?=	requires prebuilt bootstrap compiler
 
 BUILD_DEPENDS=	cmake:devel/cmake-core
@@ -69,11 +69,8 @@ WASM_VARS=		_COMPONENTS+="rust-analysis-${_PACKAGE_VERS}-wasm32-unknown-unknown 
 WASM_VARS_OFF=		_RUST_BUILD_WASM=false
 
 # See WRKSRC/src/stage0.json for the date and version values
-BOOTSTRAPS_DATE?=		2022-11-03
-RUST_BOOTSTRAP_VERSION?=	1.65.0
-
-BOOTSTRAPS_SUFFIX?=		${BOOTSTRAPS_SUFFIX_${ARCH}}
-BOOTSTRAPS_SUFFIX_powerpc64?=	-${PPC_ABI:tl}
+BOOTSTRAPS_DATE?=		2023-02-09
+RUST_BOOTSTRAP_VERSION?=	1.67.1
 
 CARGO_VENDOR_DIR?=		${WRKSRC}/vendor
 
@@ -104,6 +101,10 @@ SHEBANG_FILES=		compiler/rustc_codegen_cranelift/scripts/* \
 
 .include <bsd.port.pre.mk>
 
+.if ${OPSYS} != FreeBSD && ${OPSYS} != DragonFly
+IGNORE=		is only for FreeBSD and DragonFly BSD
+.endif
+
 .if ${ARCH} == powerpc
 # bfd to link rustc_driver; lld currently can't
 BUILD_DEPENDS+=	ld.bfd:devel/binutils
@@ -126,10 +127,6 @@ _COMPONENTS+=	rls-${_PACKAGE_VERS}-${_RUST_TARGET}
 _COMPONENTS+=	rustc-dev-${_PACKAGE_VERS}-${_RUST_TARGET}
 .endif
 
-.if exists(${PATCHDIR}/${ARCH}${BOOTSTRAPS_SUFFIX})
-EXTRA_PATCHES+=	${PATCHDIR}/${ARCH}${BOOTSTRAPS_SUFFIX}
-.endif
-
 # If the kernel does not return sane kern.proc.pathname values
 # for hardlinks then disable hardlinks in the build to avoid
 # intermittent "can't find crate for `std`" build failures,
@@ -140,19 +137,9 @@ EXTRA_PATCHES+=	${PATCHDIR}/${ARCH}${BOOTSTRAPS_SUFFIX}
 # anyway...
 .if exists(${PATCHDIR}/no-hardlinks)
 _KERN_OSRELDATE!=	${SYSCTL} -n kern.osreldate 2>/dev/null || echo 0
-.  if ${_KERN_OSRELDATE} >= 1400040
-.  elif ${_KERN_OSRELDATE} >= 1300521
-.  else
+.  if ${_KERN_OSRELDATE} < 1300521
 EXTRA_PATCHES+=		${PATCHDIR}/no-hardlinks
 .  endif
-.endif
-
-.if defined(PPC_ABI) && ${PPC_ABI} == ELFv1
-# The bootstrap is hardcoded to use gcc9
-# but we can build with a newer or older compiler as provided by USE_GCC=yes
-BUILD_DEPENDS+=	gcc9:lang/gcc9
-USE_GCC=	yes
-STRIP_CMD=	${LOCALBASE}/bin/strip # unsupported e_type with base strip
 .endif
 
 .ifdef QEMU_EMULATING
@@ -161,8 +148,7 @@ IGNORE=	fails to build with qemu-user-static
 
 .if make(makesum)
 DISTFILES:=	${DISTFILES:M*\:src} \
-		${ONLY_FOR_ARCHS:O:@_arch@${:!${MAKE} ARCH=${_arch} PPC_ABI=ELFv1 -V'DISTFILES:N*\:src'!}@} \
-		${ONLY_FOR_ARCHS:Mpowerpc64:@_arch@${:!${MAKE} ARCH=${_arch} PPC_ABI=ELFv2 -V'DISTFILES:N*\:src'!}@}
+		${ONLY_FOR_ARCHS:O:@_arch@${:!${MAKE} ARCH=${_arch} -V'DISTFILES:N*\:src'!}@}
 .endif
 
 post-patch:
@@ -173,16 +159,6 @@ post-patch:
 # Disable vendor checksums
 	@${REINPLACE_CMD} 's,"files":{[^}]*},"files":{},' \
 		${CARGO_VENDOR_DIR}/*/.cargo-checksum.json
-.if defined(PPC_ABI) && ${PPC_ABI} == ELFv1
-	@${REINPLACE_CMD} 's,%CC%,${CC},g' \
-		${WRKSRC}/compiler/rustc_llvm/build.rs \
-		${WRKSRC}/src/bootstrap/native.rs
-.if ${LOCALBASE} != /usr/local
-	@${REINPLACE_CMD} 's,/usr/local/,${LOCALBASE}/,g' \
-		${WRKSRC}/compiler/rustc_llvm/build.rs \
-		${WRKSRC}/src/bootstrap/native.rs
-.endif
-.endif
 
 do-configure:
 # Check that the running kernel has COMPAT_FREEBSD11 required by lang/rust post-ino64
@@ -226,7 +202,6 @@ do-configure:
 	@${ECHO_CMD} 'ccache=false' >> ${WRKSRC}/config.toml
 .endif
 	@${ECHO_CMD} 'ninja=true' >> ${WRKSRC}/config.toml
-	@${ECHO_CMD} 'static-libstdcpp=false' >> ${WRKSRC}/config.toml
 .if ${ARCH} == powerpc
 # Rust doesn't call the system compiler with the full version of the target.
 # This makes powerpc miscompile due to the secure-plt ABI change.
