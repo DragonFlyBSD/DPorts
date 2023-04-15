@@ -1,4 +1,5 @@
 PORTNAME=	claws-mail
+PORTREVISION=	1
 CATEGORIES=	mail news
 
 COMMENT=	Lightweight and featureful GTK+ based e-mail and news client
@@ -51,7 +52,7 @@ ENCHANT_CONFIGURE_ENABLE=	enchant
 
 IPV6_CONFIGURE_ENABLE=	ipv6
 
-LDAP_USE=		OPENLDAP=yes
+LDAP_USES=		ldap
 LDAP_CONFIGURE_ENABLE=	ldap
 
 NLS_USES=		gettext-tools
