@@ -1,6 +1,7 @@
 PORTNAME=	tokio-console
 DISTVERSIONPREFIX=	tokio-console-v
 DISTVERSION=	0.1.7
+PORTREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -210,6 +211,8 @@ CARGO_CRATES=	addr2line-0.17.0 \
 		windows_x86_64_msvc-0.34.0
 
 PLIST_FILES=	bin/${PORTNAME}
+
+PORTSCOUT=	limit:^tokio-console-v[0-9].*
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
