@@ -1,6 +1,5 @@
 PORTNAME=	libheif
-DISTVERSION=	1.14.0
-PORTREVISION=	1
+DISTVERSION=	1.15.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/strukturag/${PORTNAME}/releases/download/v${DISTVERSION}/
 
@@ -12,14 +11,14 @@ LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		cmake compiler:c++11-lang cpe gettext-runtime gnome \
-		localbase:ldflags pkgconfig shared-mime-info
+		localbase:ldflags pkgconfig
 CPE_VENDOR=	struktur
 USE_GNOME=	gdkpixbuf2 glib20
 USE_LDCONFIG=	yes
-PLIST_SUB=	LIB_VER=${DISTVERSION}.0
+PLIST_SUB=	LIB_VER=${DISTVERSION}
 
 OPTIONS_DEFINE=		AOM DAV1D EXAMPLES LIBDE265 SVTAV1 RAV1E X265
-OPTIONS_DEFAULT=	AOM DAV1D LIBDE265 X265
+OPTIONS_DEFAULT=	AOM DAV1D LIBDE265 SVTAV1 X265
 OPTIONS_SUB=	yes
 
 AOM_DESC=		AV1 encoding/decoding via libaom
@@ -44,7 +43,6 @@ LIBDE265_CMAKE_BOOL=	WITH_LIBDE265
 
 SVTAV1_LIB_DEPENDS=	libSvtAv1Enc.so:multimedia/svt-av1
 SVTAV1_CMAKE_BOOL=	WITH_SvtEnc
-SVTAV1_BROKEN=		breaks some dependent ports
 
 RAV1E_LIB_DEPENDS=	librav1e.so:multimedia/librav1e
 RAV1E_CMAKE_BOOL=	WITH_RAV1E
