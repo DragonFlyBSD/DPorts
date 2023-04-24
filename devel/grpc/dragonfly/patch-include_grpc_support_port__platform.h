@@ -1,6 +1,6 @@
---- include/grpc/impl/codegen/port_platform.h.orig	2021-01-19 18:07:57 UTC
-+++ include/grpc/impl/codegen/port_platform.h
-@@ -335,6 +335,27 @@
+--- include/grpc/support/port_platform.h.orig	2023-04-17 11:36:47.673566000 +0200
++++ include/grpc/support/port_platform.h	2023-04-17 11:37:48.364482000 +0200
+@@ -252,6 +252,27 @@
  #else /* _LP64 */
  #define GPR_ARCH_32 1
  #endif /* _LP64 */
@@ -25,6 +25,6 @@
 +#define GPR_GETPID_IN_UNISTD_H 1
 +#define GPR_SUPPORT_CHANNELS_FROM_FD 1
 +#define GPR_ARCH_64 1
- #elif defined(__native_client__)
- #define GPR_PLATFORM_STRING "nacl"
+ #elif defined(__FreeBSD__)
+ #define GPR_PLATFORM_STRING "freebsd"
  #ifndef _BSD_SOURCE
