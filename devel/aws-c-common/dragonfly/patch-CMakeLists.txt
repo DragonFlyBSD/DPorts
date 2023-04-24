@@ -1,20 +1,20 @@
---- CMakeLists.txt.intermediate	2021-03-05 19:32:22.000000000 +0000
-+++ CMakeLists.txt
-@@ -97,6 +97,8 @@ else ()
-         list(APPEND PLATFORM_LIBS dl m Threads::Threads rt)
+--- CMakeLists.txt.orig	2023-04-17 20:59:48.173262000 +0200
++++ CMakeLists.txt	2023-04-17 21:00:07.603269000 +0200
+@@ -111,6 +111,8 @@ else ()
+         list (APPEND AWS_COMMON_OS_SRC "source/linux/*.c") # OS specific includes
      elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
          list(APPEND PLATFORM_LIBS dl m thr execinfo)
 +    elseif(CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
 +        list(APPEND PLATFORM_LIBS dl m Threads::Threads execinfo)
      elseif(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
          list(APPEND PLATFORM_LIBS dl m Threads::Threads execinfo)
-     elseif(CMAKE_SYSTEM_NAME STREQUAL "Android")
-@@ -159,7 +161,7 @@ aws_check_headers(${PROJECT_NAME} ${AWS_
+     elseif(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
+@@ -181,7 +183,7 @@ aws_check_headers(${PROJECT_NAME} ${AWS_
  
  #apple source already includes the definitions we want, and setting this posix source
  #version causes it to revert to an older version. So don't turn it on there, we don't need it.
--if (UNIX AND NOT APPLE AND NOT ${CMAKE_SYSTEM_NAME} MATCHES FreeBSD)
-+if (UNIX AND NOT APPLE AND NOT ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+-if (UNIX AND NOT APPLE AND NOT ${CMAKE_SYSTEM_NAME} MATCHES FreeBSD|OpenBSD)
++if (UNIX AND NOT APPLE AND NOT ${CMAKE_SYSTEM_NAME} MATCHES DragonFly|FreeBSD|OpenBSD)
      #this only gets applied to aws-c-common (not its consumers).
      target_compile_definitions(${PROJECT_NAME} PRIVATE -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=500)
  endif()
