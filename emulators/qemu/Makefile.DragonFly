@@ -38,9 +38,10 @@ dfly-patch:
 		${WRKSRC}/Makefile
 
 dfly-install:
-.if ${FLAVOR:U} != tools
+.if ${FLAVOR:U} != tools && ${FLAVOR:U} != guestagent
     	# TODO(tuxillo): Make user-mode to work with dfly
 	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 \
 		${STAGEDIR}${PREFIX}/bin/qemu-x86_64 \
 		${STAGEDIR}${PREFIX}/bin/qemu-arm
 .endif
+
