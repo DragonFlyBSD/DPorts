@@ -1,5 +1,6 @@
 PORTNAME=	seahorse
 PORTVERSION=	41.0
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -50,7 +51,7 @@ LDAP_DESC=	LDAP keyserver support (for gpg)
 
 AVAHI_LIB_DEPENDS=	libavahi-client.so:net/avahi-app
 AVAHI_MESON_TRUE=	key-sharing
-LDAP_USE=		OPENLDAP=yes
+LDAP_USES=		ldap
 LDAP_MESON_TRUE=	ldap-support
 
 .include <bsd.port.mk>
