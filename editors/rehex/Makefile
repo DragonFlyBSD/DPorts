@@ -1,8 +1,9 @@
 PORTNAME=	rehex
 DISTVERSION=	0.5.4
+PORTREVISION=	1
 CATEGORIES=	editors
 
-MAINTAINER=	fuz@fuz.su
+MAINTAINER=	fuz@FreeBSD.org
 COMMENT=	Hex editor for reverse engineering
 WWW=		https://github.com/solemnwarning/rehex
 
