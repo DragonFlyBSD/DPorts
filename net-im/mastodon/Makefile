@@ -1,6 +1,6 @@
 PORTNAME=	mastodon
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.0.2
+DISTVERSION=	4.1.1
 CATEGORIES=	net-im www
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -26,7 +26,6 @@ RUN_DEPENDS=	autoconf>=2.71:devel/autoconf \
 USES=		magick:7,run pgsql
 USE_GITHUB=	yes
 USE_RC_SUBR=	mastodon_sidekiq mastodon_streaming mastodon_web
-USE_RUBY=	yes
 
 NO_ARCH=	yes
 NO_BUILD=	yes
@@ -36,8 +35,11 @@ GROUPS=		${PORTNAME}
 
 RM_MASTODONFILES=	.dockerignore dist/mastodon-web.service \
 			dist/mastodon-sidekiq.service \
-			dist/mastodon-streaming.service
-RM_MASTODONDIRS=	.circleci .github
+			dist/mastodon-streaming.service \
+			docker-compose.yml \
+			Dockerfile \
+			Vagrantfile
+RM_MASTODONDIRS=	.circleci .devcontainer .github
 
 post-extract:
 .for _F in ${RM_MASTODONFILES}
