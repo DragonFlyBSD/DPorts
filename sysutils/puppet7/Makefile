@@ -1,5 +1,6 @@
 PORTNAME=	puppet
-PORTVERSION=	7.21.0
+PORTVERSION=	7.23.0
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=   https://forge.puppet.com/v3/files/:forge
 PKGNAMESUFFIX=	7
@@ -11,9 +12,9 @@ WWW=		https://puppet.com/docs/puppet/latest/puppet_index.html
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	rubygem-concurrent-ruby>1.0:devel/rubygem-concurrent-ruby \
+RUN_DEPENDS=	rubygem-concurrent-ruby11>1.0:devel/rubygem-concurrent-ruby11 \
 		rubygem-deep_merge>1.0:devel/rubygem-deep_merge \
-		rubygem-fast_gettext1>=1.1:devel/rubygem-fast_gettext1 \
+		rubygem-fast_gettext>=2.1:devel/rubygem-fast_gettext \
 		rubygem-hiera>=3.2.1:sysutils/rubygem-hiera \
 		rubygem-locale>=2.1:devel/rubygem-locale \
 		rubygem-multi_json>=1.10:devel/rubygem-multi_json \
@@ -22,7 +23,7 @@ RUN_DEPENDS=	rubygem-concurrent-ruby>1.0:devel/rubygem-concurrent-ruby \
 		rubygem-scanf>=1:devel/rubygem-scanf \
 		rubygem-semantic_puppet>=1:devel/rubygem-semantic_puppet
 
-USES=		cpe
+USES=		cpe ruby
 USE_GITHUB=	yes
 GH_ACCOUNT=	puppetlabs
 
@@ -30,7 +31,6 @@ CONFLICTS_INSTALL=	puppet6
 PLIST_SUB=	PORTVERSION="${PORTVERSION}"
 NO_ARCH=	yes
 NO_BUILD=	yes
-USE_RUBY=	yes
 USE_RC_SUBR=	puppet
 PORTDOCS=	LICENSE README.md
 PORTEXAMPLES=	*
