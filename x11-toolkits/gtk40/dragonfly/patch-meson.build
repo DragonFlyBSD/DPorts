@@ -1,0 +1,11 @@
+--- meson.build.orig	2023-04-28 14:40:41.170106000 +0200
++++ meson.build	2023-04-28 14:41:39.401019000 +0200
+@@ -155,6 +155,8 @@
+ check_headers = [
+   'crt/externs.h',
+   'dev/evdev/input.h',
++  'dev/misc/evdev/input.h',
++  'dev/misc/evdev/input-event-codes.h',
+   'dlfcn.h',
+   'ftw.h',
+   'inttypes.h',
