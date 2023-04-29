@@ -1,6 +1,6 @@
 PORTNAME=	mailslurper
-PORTVERSION=	1.14.1
-PORTREVISION=	3
+PORTVERSION=	1.14.2.g20201217
+PORTREVISION=	4
 CATEGORIES=	mail
 
 MAINTAINER=	einar@isnic.is
@@ -14,6 +14,8 @@ USES=		go:modules
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mailslurper
+GH_TAGNAME=	3231e9f9
+
 GH_TUPLE=	\
 		adampresley:webframework:0c93acb6716f:adampresley_webframework/vendor/github.com/adampresley/webframework \
 		denisenkom:go-mssqldb:bbfc9a55622e:denisenkom_go_mssqldb/vendor/github.com/denisenkom/go-mssqldb \
@@ -22,7 +24,7 @@ GH_TUPLE=	\
 		golang-sql:civil:cb61b32ac6fe:golang_sql_civil/vendor/github.com/golang-sql/civil \
 		golang:crypto:2aa609cf4a9d:golang_crypto/vendor/golang.org/x/crypto \
 		golang:net:0de0cce0169b:golang_net/vendor/golang.org/x/net \
-		golang:sys:04cbcbbfeed8:golang_sys/vendor/golang.org/x/sys \
+		golang:sys:v0.6.0:golang_sys/vendor/golang.org/x/sys \
 		golang:text:v0.3.2:golang_text/vendor/golang.org/x/text \
 		gorilla:context:v1.1.1:gorilla_context/vendor/github.com/gorilla/context \
 		gorilla:securecookie:v1.1.1:gorilla_securecookie/vendor/github.com/gorilla/securecookie \
@@ -30,7 +32,7 @@ GH_TUPLE=	\
 		jinzhu:copier:b57f9002281a:jinzhu_copier/vendor/github.com/jinzhu/copier \
 		konsorten:go-windows-terminal-sequences:v1.0.1:konsorten_go_windows_terminal_sequences/vendor/github.com/konsorten/go-windows-terminal-sequences \
 		labstack:echo-contrib:v0.8.0:labstack_echo_contrib/vendor/github.com/labstack/echo-contrib \
-		labstack:echo:v4.1.14:labstack_echo/vendor/github.com/labstack/echo/v4 \
+		labstack:echo:v4.1.14:labstack_echo_v4/vendor/github.com/labstack/echo/v4 \
 		labstack:gommon:v0.3.0:labstack_gommon/vendor/github.com/labstack/gommon \
 		mattn:go-colorable:v0.1.4:mattn_go_colorable/vendor/github.com/mattn/go-colorable \
 		mattn:go-isatty:v0.0.11:mattn_go_isatty/vendor/github.com/mattn/go-isatty \
