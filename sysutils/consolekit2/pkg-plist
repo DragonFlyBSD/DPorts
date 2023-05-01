@@ -7,6 +7,7 @@ etc/dbus-1/system.d/ConsoleKit.conf
 etc/logrotate.d/consolekit
 include/ConsoleKit/ck-connector/ck-connector.h
 include/ConsoleKit/libconsolekit.h
+include/ConsoleKit/sd-login.h
 lib/girepository-1.0/libconsolekit-1.0.typelib
 lib/libck-connector.so
 lib/libck-connector.so.0
