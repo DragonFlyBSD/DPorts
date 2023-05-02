@@ -1,5 +1,6 @@
 PORTNAME=	instead
 PORTVERSION=	3.5.0
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -42,5 +43,11 @@ LUAJIT_USE_OFF=		lua:51
 LUAJIT_CMAKE_BOOL=	WITH_LUAJIT
 HARFBUZZ_CMAKE_BOOL=	WITH_HARFBUZZ
 HARFBUZZ_LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH:Mpowerpc64*}
+LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
+.endif
 
 .include <bsd.port.mk>
