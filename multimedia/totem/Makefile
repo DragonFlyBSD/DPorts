@@ -1,6 +1,6 @@
 PORTNAME=	totem
 PORTVERSION=	3.38.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -16,7 +16,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:misc/iso-codes \
-		pylint:devel/pylint \
+		pylint:devel/pylint@${PY_FLAVOR} \
 		appstream-glib>=0:devel/appstream-glib \
 		itstool:textproc/itstool \
 		grilo-plugins>=0:net/grilo-plugins
