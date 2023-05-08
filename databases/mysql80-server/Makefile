@@ -1,5 +1,5 @@
 PORTNAME?=		mysql
-PORTVERSION=		8.0.31
+PORTVERSION=		8.0.32
 PORTREVISION?=		0
 CATEGORIES=		databases
 MASTER_SITES=		MYSQL/MySQL-8.0
@@ -12,13 +12,11 @@ WWW=		https://www.mysql.com/
 
 LICENSE=		GPLv2
 
-BROKEN_i386=	--yplg_out: protoc-gen-yplg: Plugin killed by signal 11.
-
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}${DISTVERSIONSUFFIX}
 
 SLAVEDIRS=	databases/mysql80-client
-USES=		bison:build cmake:noninja compiler:c++17-lang cpe \
-		groff:run libedit localbase ncurses perl5 pkgconfig shebangfix ssl
+USES=		bison:build cmake:noninja cpe groff:run libedit localbase \
+		ncurses perl5 pkgconfig shebangfix ssl
 
 CPE_VENDOR=	oracle
 
@@ -55,7 +53,7 @@ BUILD_DEPENDS_powerpc64=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_powerpc64le=	libunwind>0:devel/libunwind
 
 CMAKE_BUILD_TYPE=	Release
-CFLAGS+=		-fPIC -malign-double
+CFLAGS+=		-fPIC
 CFLAGS_aarch64?=	-march=armv8-a+crc+crypto
 
 CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
@@ -86,7 +84,7 @@ CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
 		-DWITH_ICU=system \
 		-DWITH_CURL=system \
 		-DWITH_ZSTD=system \
-		-DWITH_PROTOBUF=system \
+		-DWITH_PROTOBUF=bundled \
 		-DWITH_SSL=system \
 		-DWITH_AUTHENTICATION_FIDO=1 \
 		-DBUILD_BUNDLED_ZLIB=0 \
@@ -184,6 +182,14 @@ FEDERATED_SUB_LIST_OFF+=	FEDER=""
 .if ${ARCH} == i386
 #CMAKE_ARGS+=	-DDISABLE_PSI_MEMORY=1
 SSP_UNSAFE=	yes
+.endif
+
+.if ${ARCH} == powerpc
+LDFLAGS+=	-latomic
+USES+=		compiler:gcc-c++11-lib
+.else
+CXXFLAGS+=	-malign-double
+USES+=		compiler:c++17-lang
 .endif
 
 post-extract:
