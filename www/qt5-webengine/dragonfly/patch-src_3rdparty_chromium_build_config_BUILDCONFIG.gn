@@ -1,0 +1,25 @@
+--- src/3rdparty/chromium/build/config/BUILDCONFIG.gn.intermediate	2023-05-08 22:32:41 UTC
++++ src/3rdparty/chromium/build/config/BUILDCONFIG.gn
+@@ -131,7 +131,7 @@ declare_args() {
+   is_official_build = false
+ 
+   # Whether we're a traditional desktop unix.
+-  is_desktop_linux = current_os == "linux" || current_os == "freebsd"
++  is_desktop_linux = current_os == "linux" || current_os == "freebsd" || current_os == "dragonfly"
+ 
+   # Set to true when compiling with the Clang compiler.
+   is_clang = current_os != "linux" || current_os == "freebsd" ||
+@@ -290,11 +290,11 @@ if (custom_toolchain != "") {
+ # current_os value directly.
+ 
+ is_android = current_os == "android"
+-is_bsd = current_os == "freebsd"
++is_bsd = current_os == "freebsd" || current_os == "dragonfly"
+ is_chromeos = current_os == "chromeos"
+ is_fuchsia = current_os == "fuchsia"
+ is_ios = current_os == "ios"
+-is_linux = current_os == "linux" || current_os == "freebsd"
++is_linux = current_os == "linux" || current_os == "freebsd" || current_os == "dragonfly"
+ is_mac = current_os == "mac"
+ is_nacl = current_os == "nacl"
+ is_win = current_os == "win" || current_os == "winuwp"
