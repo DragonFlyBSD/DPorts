@@ -5,6 +5,7 @@ MAKE_ENV+=	GRPC_PYTHON_BUILD_EXT_COMPILER_JOBS=${MAKE_JOBS_NUMBER}
 dfly-patch:
 	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
 		${WRKSRC}/Makefile \
+		${WRKSRC}/include/grpc/support/port_platform.h \
 		${WRKSRC}/third_party/abseil-cpp/absl/debugging/internal/elf_mem_image.h \
 		${WRKSRC}/third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc \
 		${WRKSRC}/third_party/abseil-cpp/absl/debugging/symbolize_elf.inc \
