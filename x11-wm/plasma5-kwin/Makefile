@@ -1,5 +1,6 @@
 PORTNAME=	kwin
 DISTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	2
 CATEGORIES=	x11-wm kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -22,10 +23,14 @@ LIB_DEPENDS=	libXcursor.so:x11/libXcursor \
 		libxcb-icccm.so:x11/xcb-util-wm \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-keysyms.so:x11/xcb-util-keysyms \
-		libxkbcommon.so:x11/libxkbcommon
+		libxkbcommon.so:x11/libxkbcommon \
+		libxcvt.so:x11/libxcvt
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
-		xwayland-devel>0:x11-servers/xwayland-devel
-RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel
+		xwayland-devel>0:x11-servers/xwayland-devel \
+		wayland-protocols>0:graphics/wayland-protocols \
+		hwdata>0:misc/hwdata
+RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel \
+		hwdata>0:misc/hwdata
 
 CONFLICTS_INSTALL=	kwinft # bin/kwin_wayland
 
@@ -34,10 +39,10 @@ USES=		cmake compiler:c++11-lib gettext gl gnome kde:5 pkgconfig \
 USE_GL=		egl gbm
 USE_GNOME=	glib20
 USE_KDE=	activities attica auth breeze codecs completion config \
-		configwidgets coreaddons crash dbusaddons decoration globalaccel i18n \
-		iconthemes idletime init jobwidgets kcmutils kdeclarative kio \
-		kscreenlocker kwayland-integration kwayland-server newstuff \
-		notifications package plasma-framework \
+		configwidgets coreaddons crash dbusaddons decoration \
+		globalaccel i18n iconthemes idletime init itemviews jobwidgets \
+		kcmutils kdeclarative kio kscreenlocker kwayland-integration \
+		newstuff notifications package plasma-framework \
 		plasma-wayland-protocols runner service sonnet textwidgets \
 		wayland widgetsaddons windowsystem xmlgui \
 		doctools:build ecm:build
@@ -48,6 +53,14 @@ USE_QT=		concurrent core dbus declarative gui multimedia network script \
 		quickcontrols2:run virtualkeyboard:run
 USE_XORG=	ice sm x11 xcb xext xi
 SHEBANG_FILES=	kconf_update/*.py \
-		kconf_update/*.pl
+		kconf_update/*.pl \
+		src/effects/strip-effect-metadata.py
+
+# A (hopefully) temporary workaround for
+# https://gitlab.freedesktop.org/gstreamer/gstreamer/-/issues/2026
+post-patch:
+	${REINPLACE_CMD} -E \
+		's|https://files.kde.org/plasma/kwin/effect-videos/([a-z_]+)\.ogv|https://arrowd.name/kwin-effect-videos/\1\.webm|' \
+		${WRKSRC}/src/effects/*/metadata.json
 
 .include <bsd.port.mk>
