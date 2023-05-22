@@ -1,1 +1,4 @@
 USES+=	gmake
+
+USE_GCC_VERSION=	12
+LDFLAGS+= -pthread
