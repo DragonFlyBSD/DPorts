@@ -131,7 +131,6 @@ bin/sancov%%LLVM_SUFFIX%%
 %%MLIR%%bin/mlir-tblgen%%LLVM_SUFFIX%%
 %%MLIR%%bin/mlir-translate%%LLVM_SUFFIX%%
 %%MLIR%%bin/tblgen-lsp-server%%LLVM_SUFFIX%%
-%%OPENMP%%bin/llvm-omp-device-info%%LLVM_SUFFIX%%
 %%OPENMP%%bin/llvm-omp-kernel-replay%%LLVM_SUFFIX%%
 %%LIT%%bin/FileCheck%%LLVM_SUFFIX%%
 %%LIT%%llvm%%LLVM_SUFFIX%%/bin/FileCheck
@@ -203,7 +202,6 @@ llvm%%LLVM_SUFFIX%%/bin/dsymutil
 %%CLANG%%llvm%%LLVM_SUFFIX%%/bin/git-clang-format
 %%CLANG%%llvm%%LLVM_SUFFIX%%/bin/hmaptool
 %%CLANG%%llvm%%LLVM_SUFFIX%%/bin/intercept-build
-%%LLD%%llvm%%LLVM_SUFFIX%%/bin/ld
 %%LLD%%llvm%%LLVM_SUFFIX%%/bin/ld.lld
 %%LLD%%llvm%%LLVM_SUFFIX%%/bin/ld64.lld
 llvm%%LLVM_SUFFIX%%/bin/llc
@@ -258,8 +256,6 @@ llvm%%LLVM_SUFFIX%%/bin/llvm-mt
 llvm%%LLVM_SUFFIX%%/bin/llvm-nm
 llvm%%LLVM_SUFFIX%%/bin/llvm-objcopy
 llvm%%LLVM_SUFFIX%%/bin/llvm-objdump
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/bin/llvm-omp-device-info
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/bin/llvm-omp-kernel-replay
 llvm%%LLVM_SUFFIX%%/bin/llvm-opt-report
 llvm%%LLVM_SUFFIX%%/bin/llvm-otool
 llvm%%LLVM_SUFFIX%%/bin/llvm-pdbutil
@@ -5946,12 +5942,6 @@ llvm%%LLVM_SUFFIX%%/lib/libRemarks.so.%%LLVM_MAJOR%%
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_runner_utils.so
 %%MLIR%%llvm%%LLVM_SUFFIX%%/lib/libmlir_runner_utils.so.%%LLVM_MAJOR%%
 %%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomp.so
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomptarget.rtl.amdgpu.nextgen.so
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomptarget.rtl.amdgpu.nextgen.so.%%LLVM_MAJOR%%
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomptarget.rtl.amdgpu.so
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomptarget.rtl.amdgpu.so.%%LLVM_MAJOR%%
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomptarget.so
-%%OPENMP%%llvm%%LLVM_SUFFIX%%/lib/libomptarget.so.%%LLVM_MAJOR%%
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libscanbuild/__init__.py
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libscanbuild/analyze.py
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/libscanbuild/arguments.py
