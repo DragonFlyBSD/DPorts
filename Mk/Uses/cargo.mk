@@ -146,8 +146,8 @@ CARGO_ENV+=	RUST_BACKTRACE=1
 #      This is likely a bug and we have to sort it out before this can be
 #      enabled.
 #
-_CARGO_MSG=	"===>   Additional optimization to port applied (no-LTO for DragonFly BSD)"
-WITH_LTO=	no
+_CARGO_MSG=	"===>   Additional optimization to port applied (non-LTO for DragonFly BSD)"
+#WITH_LTO=
 .  endif
 
 # Adjust -C target-cpu if -march/-mcpu is set by bsd.cpu.mk
