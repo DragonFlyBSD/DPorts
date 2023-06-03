@@ -140,8 +140,14 @@ CARGO_ENV+=	RUST_BACKTRACE=1
 .  endif
 
 .  if !defined(LTO_UNSAFE) || (defined(LTO_DISABLE_CHECK) && ${ARCH} == powerpc64) || (defined(LTO_DISABLE_CHECK) && ${ARCH} == riscv64)
-_CARGO_MSG=	"===>   Additional optimization to port applied"
-WITH_LTO=	yes
+#
+# XXX: We cannot enable LTO optimizations here for rust because it ignores
+#      libraries at link time (possibly due to --as-needed being specified).
+#      This is likely a bug and we have to sort it out before this can be
+#      enabled.
+#
+_CARGO_MSG=	"===>   Additional optimization to port applied (no-LTO for DragonFly BSD)"
+WITH_LTO=	no
 .  endif
 
 # Adjust -C target-cpu if -march/-mcpu is set by bsd.cpu.mk
