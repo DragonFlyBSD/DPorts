@@ -1,0 +1,2 @@
+# XXX (tuxillo): Really stuck here so disable NLS
+CONFIGURE_ARGS+=   --disable-nls
