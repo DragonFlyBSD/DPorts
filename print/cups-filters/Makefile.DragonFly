@@ -1,2 +1,4 @@
+# For string_view
+CXXFLAGS+=     -std=c++17
 
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPSHYBRID} PSPOPPLER

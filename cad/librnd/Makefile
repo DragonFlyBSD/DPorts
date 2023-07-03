@@ -1,9 +1,10 @@
 PORTNAME=	librnd
 DISTVERSION=	3.2.2
+PORTREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://repo.hu/projects/${PORTNAME}/releases/
 
-MAINTAINER=	fuz@fuz.su
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Flexible, modular two-dimensional CAD engine
 WWW=		http://www.repo.hu/projects/librnd/
 

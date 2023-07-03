@@ -1,6 +1,6 @@
 PORTNAME=	php80
-DISTVERSION=	8.0.26
-PORTREVISION?=	0
+DISTVERSION=	8.0.28
+PORTREVISION?=	1
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP
 DISTNAME=	php-${DISTVERSION}
@@ -11,6 +11,9 @@ COMMENT=	PHP Scripting Language
 WWW=		https://www.php.net/
 
 LICENSE=	PHP301
+
+DEPRECATED=	Upstream support ends on 2023-11-26
+EXPIRATION_DATE=	2023-12-31
 
 USES+=		compiler:c11 tar:xz cpe gnome pkgconfig
 CPE_PRODUCT=	php
@@ -31,10 +34,9 @@ CONFIGURE_ARGS+=	\
 		--with-openssl \
 		--with-password-argon2=${LOCALBASE}
 
-USES+=		autoreconf:build ssl
+USES+=		autoreconf:build localbase ssl
 USE_GNOME=	libxml2
 
-CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${OPENSSLLIB} -lcrypto -lssl
 # PR230207 Allow relocations against read-only segments (override lld default)
 LDFLAGS_i386=	-Wl,-z,notext
@@ -88,25 +90,19 @@ ZTS_CONFIGURE_ENV=	pthreads_working="yes"
 
 DESTDIRNAME=	INSTALL_ROOT
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == riscv64
-CONFIGURE_ARGS+=--without-pcre-jit
-.endif
-
 .if defined(PKGNAMEPREFIX)
-USES+=		apache:2.2+
-.include "${PORTSDIR}/Mk/Uses/apache.mk"
-.if ${PORT_OPTIONS:MAP2FILTER}
-CONFIGURE_ARGS+=--with-apxs2filter=${APXS}
-.else
-CONFIGURE_ARGS+=--with-apxs2=${APXS}
-.endif
+USES+=		apache
 PLIST=		${PKGDIR}/pkg-plist.mod
 PKGMESSAGE=	${PKGDIR}/pkg-message.mod
 MODULENAME=	libphp
 SHORTMODNAME=	php
 WARNING=	"!!! If you have a threaded Apache, you must build ${PHP_PORT} with ZTS support to enable thread-safety in extensions !!!"
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == riscv64
+CONFIGURE_ARGS+=--without-pcre-jit
 .endif
 
 .if ${PORT_OPTIONS:MPHPDBG} && ${PORT_OPTIONS:MDEBUG}

@@ -1,7 +1,7 @@
 PORTNAME=	writefreely
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.13.2
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	www textproc
 MASTER_SITES=	https://code.as/core/socks/archive/v1.0.0.tar.gz?dummy=/:core_socks
 DISTFILES=	core-socks-v1.0.0.tar.gz:core_socks
@@ -10,11 +10,7 @@ DIST_SUBDIR=	writeas
 PATCH_SITES=	https://github.com/writefreely/writefreely/commit/
 PATCHFILES=	99d72881cf833326f02d86a8896bbd2b8156327b.diff:-p1
 
- MAINTAINER=	fuz@fuz.su
- COMMENT=	Clean, Markdown-based publishing platform made for writers
- WWW=		https://writefreely.org
-
-MAINTAINER=	fuz@fuz.su
+MAINTAINER=	fuz@FreeBSD.org
 COMMENT=	Clean, Markdown-based publishing platform made for writers
 WWW=		https://writefreely.org
 
@@ -115,7 +111,7 @@ OPTIONS_SINGLE_CSS=	CSS_DIST CSS_LESSC
 CSS_DESC=			Stylesheets
 CSS_DIST_DESC=			Use pre-generated stylesheets
 CSS_LESSC_DESC=			Generate stylesheets with lessc (requires npm)
-CSS_DIST_MASTER_SITES=		http://fuz.su/~fuz/distfiles/writefreely/:css
+CSS_DIST_MASTER_SITES=		LOCAL/fuz:css
 CSS_DIST_DISTFILES=		writefreely-css-${DISTVERSION}.tar.gz:css
 CSS_LESSC_BUILD_DEPENDS=	npm:www/npm
 CSS_LESSC_VARS=			LEGAL_PACKAGE=yes \

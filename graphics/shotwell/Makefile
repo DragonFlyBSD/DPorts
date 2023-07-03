@@ -1,7 +1,11 @@
 PORTNAME=	shotwell
 PORTVERSION=	0.30.17
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
+
+PATCH_SITES=	https://gitlab.gnome.org/GNOME/shotwell/-/commit/
+PATCHFILES=	cd82759231e5ece2fa0dea40397c9051d15fd5c2.diff:-p1
 
 MAINTAINER=	cmt@FreeBSD.org
 COMMENT=	Open source photo manager for GNOME

@@ -3,4 +3,5 @@ dfly-patch:
 		${WRKSRC}/corec/corec/portab.h \
 		${WRKSRC}/libmatroska2/minilzo/minilzo.c \
 		${WRKSRC}/libmatroska2/minilzo/lzodefs.h \
-		${WRKSRC}/corec/corec/helpers/file/file_libc.c
+		${WRKSRC}/corec/corec/helpers/file/file_libc.c \
+		${WRKSRC}/corec/corec/helpers/file/file_bctbx.c

@@ -97,7 +97,7 @@ WRKSRC_crate_${_crate}=	${WRKDIR}/${_wrksrc}
 
 CARGO_BUILDDEP?=	yes
 .  if ${CARGO_BUILDDEP:tl} == "yes"
-BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.66.0:lang/${RUST_DEFAULT}
+BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.68.0:lang/${RUST_DEFAULT}
 .  elif ${CARGO_BUILDDEP:tl} == "any-version"
 BUILD_DEPENDS+=	${RUST_DEFAULT}>=0:lang/${RUST_DEFAULT}
 .  endif
@@ -137,6 +137,17 @@ CARGO_ENV+= \
 
 .  if ${ARCH} != powerpc
 CARGO_ENV+=	RUST_BACKTRACE=1
+.  endif
+
+.  if !defined(LTO_UNSAFE) || (defined(LTO_DISABLE_CHECK) && ${ARCH} == powerpc64) || (defined(LTO_DISABLE_CHECK) && ${ARCH} == riscv64)
+#
+# XXX: We cannot enable LTO optimizations here for rust because it ignores
+#      libraries at link time (possibly due to --as-needed being specified).
+#      This is likely a bug and we have to sort it out before this can be
+#      enabled.
+#
+_CARGO_MSG=	"===>   Additional optimization to port applied (non-LTO for DragonFly BSD)"
+#WITH_LTO=
 .  endif
 
 # Adjust -C target-cpu if -march/-mcpu is set by bsd.cpu.mk
@@ -295,6 +306,9 @@ cargo-configure:
 # Check that the running kernel has COMPAT_FREEBSD11 required by lang/rust post-ino64
 	@${SETENV} CC="${CC}" OPSYS="${OPSYS}" OSVERSION="${OSVERSION}" WRKDIR="${WRKDIR}" \
 		${SH} ${SCRIPTSDIR}/rust-compat11-canary.sh
+.    if defined(_CARGO_MSG)
+	@${ECHO_MSG} ${_CARGO_MSG}
+.    endif
 	@${ECHO_MSG} "===>   Cargo config:"
 	@${MKDIR} ${WRKDIR}/.cargo
 	@: > ${WRKDIR}/.cargo/config.toml

@@ -1,5 +1,5 @@
 PORTNAME=	fpm
-PORTVERSION=	1.15.0
+PORTVERSION=	1.15.1
 CATEGORIES=	archivers rubygems
 MASTER_SITES=	RG
 
@@ -19,7 +19,6 @@ RUN_DEPENDS=	rubygem-arr-pm>=0.0.11<0.1:devel/rubygem-arr-pm \
 		rubygem-stud>=0:devel/rubygem-stud
 
 USES=		gem
-USE_RUBY=	yes
 
 NO_ARCH=	yes
 

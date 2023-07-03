@@ -8,7 +8,7 @@ CATEGORIES=	games
 PATCH_SITES=	https://github.com/AquariaOSE/Aquaria/commit/
 PATCHFILES=	021512337ea0bee698e950e44222fb391ae7cb91.patch:-p1
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Underwater 2D fantasy action-adventure (game engine)
 WWW=		https://github.com/AquariaOSE/Aquaria
 
@@ -39,7 +39,7 @@ CMAKE_OFF=	AQUARIA_INTERNAL_FREETYPE \
 		AQUARIA_INTERNAL_TINYXML2 \
 		AQUARIA_INTERNAL_ZLIB
 LDFLAGS+=	-Wl,--as-needed # avoid overlinking (vorbis deps)
-LDFLAGS_i386=	-Wl,-z,notext
+LDFLAGS_i386=	-Wl,-z,notext -Wl,--no-check-dynamic-relocations
 SUB_FILES=	pkg-message
 PLIST_FILES=	bin/aquaria
 PORTDATA=	*

@@ -1,0 +1,15 @@
+--- CMakeLists.txt.orig	2023-03-04 10:04:48 UTC
++++ CMakeLists.txt
+@@ -119,12 +119,6 @@ if (UNIX AND NOT ANDROID AND NOT(APPLE)
+     add_definitions(-DKIRIGAMI_ENABLE_DBUS)
+ endif()
+ 
+-find_package(OpenMP)
+-set_package_properties(OpenMP
+-    PROPERTIES DESCRIPTION "Multi-platform shared-memory parallel programming in C/C++ and Fortran"
+-    TYPE OPTIONAL
+-    PURPOSE "Accelerates palette generation in Kirigami.ImageColors"
+-)
+ if(OpenMP_CXX_FOUND)
+     set(HAVE_OpenMP TRUE)
+     set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")

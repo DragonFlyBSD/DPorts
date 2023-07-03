@@ -1,7 +1,7 @@
 PORTNAME=	pyglet
-PORTVERSION=	2.0.2.1
+PORTVERSION=	2.0.5
 CATEGORIES=	graphics multimedia x11-toolkits python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -12,7 +12,7 @@ WWW=		https://pypi.org/project/pyglet/ \
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		display:test gl python:3.6+ zip
+USES=		display:test gl python:3.8+ zip
 USE_GL=		gl glu
 USE_PYTHON=	autoplist distutils pytest
 NO_ARCH=	yes

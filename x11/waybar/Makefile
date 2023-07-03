@@ -1,7 +1,7 @@
 PORTNAME=	waybar
-DISTVERSION=	0.9.16
-PORTREVISION=	2
+DISTVERSION=	0.9.18
 CATEGORIES=	x11 wayland
+PKGNAMESUFFIX=	${FLAVOR:N${FLAVORS:[1]}:C/.+/-${FLAVOR}/}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Highly customizable Wayland bar for Sway and wlroots-based compositors
@@ -19,20 +19,23 @@ LIB_DEPENDS=	libdate-tz.so:devel/date \
 		libxkbregistry.so:x11/libxkbcommon
 TEST_DEPENDS=	catch>0:devel/catch
 
-FLAVORS=	default nopulse
-default_CONFLICTS_INSTALL=	${PORTNAME}-nopulse
-nopulse_CONFLICTS_INSTALL=	${PORTNAME}
-nopulse_PKGNAMESUFFIX=		-nopulse
+FLAVORS=	default hyprland hyprland_nopulse nopulse
+CONFLICTS_INSTALL=	${PORTNAME}*
 
 USES=		compiler:c++17-lang gnome meson pkgconfig
 USE_GITHUB=	yes
 USE_GNOME=	gtkmm30
 GH_ACCOUNT=	Alexays
 GH_PROJECT=	Waybar
-MESON_ARGS=	-Dtests=disabled
+MESON_ARGS=	${libnl systemd wireplumber tests:L:C/.*/-D&=disabled/}
 PLIST_FILES=	bin/${PORTNAME} \
 		etc/xdg/${PORTNAME}/config \
 		etc/xdg/${PORTNAME}/style.css
+
+.if ${FLAVOR:U:Mhyprland*}
+# https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/40
+MESON_ARGS+=	-Dexperimental=true
+.endif
 
 # XXX Add pkg-config support to devel/date
 .if exists(${.CURDIR}/files/date.pc.in)
@@ -40,11 +43,15 @@ CONFIGURE_ENV+=	PKG_CONFIG_PATH="${WRKDIR}"
 SUB_FILES+=	date.pc
 .endif
 
-OPTIONS_DEFINE=	DBUS EVDEV GLS ICONSFONT JACK MANPAGES MPD PULSEAUDIO SNDIO UDEV UPOWER
-OPTIONS_DEFAULT=DBUS EVDEV GLS ICONSFONT JACK MANPAGES MPD PULSEAUDIO SNDIO UDEV UPOWER
-.if ${FLAVOR:U} == nopulse
-OPTIONS_EXCLUDE=PULSEAUDIO
+OPTIONS_DEFINE=		CAVA DBUS EVDEV GLS ICONSFONT JACK MANPAGES MPD MPRIS PULSEAUDIO SNDIO UDEV UPOWER
+OPTIONS_DEFAULT=	CAVA DBUS EVDEV GLS ICONSFONT JACK MANPAGES MPD MPRIS PULSEAUDIO SNDIO UDEV UPOWER
+OPTIONS_EXCLUDE+=	CAVA # https://github.com/karlstav/cava/issues/487
+.if ${FLAVOR:U:M*nopulse}
+OPTIONS_EXCLUDE+=	PULSEAUDIO
 .endif
+
+CAVA_LIB_DEPENDS=	libcava.so:audio/cava
+CAVA_MESON_ENABLED=	cava
 
 DBUS_LIB_DEPENDS=	libdbusmenu-gtk3.so:devel/libdbusmenu
 DBUS_MESON_ENABLED=	dbusmenu-gtk
@@ -75,14 +82,18 @@ MANPAGES_PLIST_FILES=	man/man5/${PORTNAME}-backlight.5.gz \
 			man/man5/${PORTNAME}-cpu.5.gz \
 			man/man5/${PORTNAME}-custom.5.gz \
 			man/man5/${PORTNAME}-disk.5.gz \
+			man/man5/${PORTNAME}-dwl-tags.5.gz \
 			man/man5/${PORTNAME}-gamemode.5.gz \
 			man/man5/${PORTNAME}-idle-inhibitor.5.gz \
+			man/man5/${PORTNAME}-image.5.gz \
 			man/man5/${PORTNAME}-inhibitor.5.gz \
 			man/man5/${PORTNAME}-keyboard-state.5.gz \
 			man/man5/${PORTNAME}-memory.5.gz \
 			man/man5/${PORTNAME}-mpd.5.gz \
+			man/man5/${PORTNAME}-mpris.5.gz \
 			man/man5/${PORTNAME}-network.5.gz \
 			man/man5/${PORTNAME}-pulseaudio.5.gz \
+			man/man5/${PORTNAME}-river-layout.5.gz \
 			man/man5/${PORTNAME}-river-mode.5.gz \
 			man/man5/${PORTNAME}-river-tags.5.gz \
 			man/man5/${PORTNAME}-river-window.5.gz \
@@ -96,6 +107,7 @@ MANPAGES_PLIST_FILES=	man/man5/${PORTNAME}-backlight.5.gz \
 			man/man5/${PORTNAME}-temperature.5.gz \
 			man/man5/${PORTNAME}-tray.5.gz \
 			man/man5/${PORTNAME}-upower.5.gz \
+			man/man5/${PORTNAME}-wireplumber.5.gz \
 			man/man5/${PORTNAME}-wlr-taskbar.5.gz \
 			man/man5/${PORTNAME}-wlr-workspaces.5.gz \
 			man/man5/${PORTNAME}.5.gz \
@@ -104,6 +116,10 @@ MANPAGES_PLIST_FILES=	man/man5/${PORTNAME}-backlight.5.gz \
 MPD_DESC=		Music Player Daemon support
 MPD_LIB_DEPENDS=	libmpdclient.so:audio/libmpdclient
 MPD_MESON_ENABLED=	mpd
+
+MPRIS_DESC=		Media Player Remote Interfacing Specification via playerctl
+MPRIS_LIB_DEPENDS=	libplayerctl.so:multimedia/playerctl
+MPRIS_MESON_ENABLED=	mpris
 
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 PULSEAUDIO_MESON_ENABLED=	pulseaudio
@@ -135,6 +151,11 @@ post-patch:
 # Respect PREFIX for icons
 	@${REINPLACE_CMD} 's,/usr/share,${DATADIR:H},' \
 		${WRKSRC}/src/modules/wlr/taskbar.cpp
+.if ${FLAVOR:U:Mhyprland*}
+# Use hyprctl to switch workspaces
+	@${REINPLACE_CMD} 's/zext_workspace_handle_v1_activate(workspace_handle_);/const std::string command = "hyprctl dispatch workspace " + name_;\n\tsystem(command.c_str());/g' \
+		${WRKSRC}/src/modules/wlr/workspace_manager.cpp
+.endif
 
 pre-test:
 	@if [ ! -e ${WRKDIR}/.meson_build_tests ]; then \

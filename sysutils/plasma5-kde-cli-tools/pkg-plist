@@ -60,6 +60,8 @@ share/doc/HTML/es/kdesu/index.cache.bz2
 share/doc/HTML/es/kdesu/index.docbook
 share/doc/HTML/et/kdesu/index.cache.bz2
 share/doc/HTML/et/kdesu/index.docbook
+share/doc/HTML/fr/kcontrol5/filetypes/index.cache.bz2
+share/doc/HTML/fr/kcontrol5/filetypes/index.docbook
 share/doc/HTML/fr/kdesu/index.cache.bz2
 share/doc/HTML/fr/kdesu/index.docbook
 share/doc/HTML/id/kcontrol5/filetypes/index.cache.bz2
@@ -106,6 +108,7 @@ share/locale/af/LC_MESSAGES/kcm5_filetypes.mo
 share/locale/af/LC_MESSAGES/kcmshell5.mo
 share/locale/af/LC_MESSAGES/kdesu5.mo
 share/locale/af/LC_MESSAGES/kstart5.mo
+share/locale/ar/LC_MESSAGES/kbroadcastnotification.mo
 share/locale/ar/LC_MESSAGES/kcm5_filetypes.mo
 share/locale/ar/LC_MESSAGES/kcmshell5.mo
 share/locale/ar/LC_MESSAGES/kdesu5.mo
@@ -113,9 +116,8 @@ share/locale/ar/LC_MESSAGES/kioclient.mo
 share/locale/ar/LC_MESSAGES/kmimetypefinder5.mo
 share/locale/ar/LC_MESSAGES/kstart5.mo
 share/locale/ar/LC_MESSAGES/ktraderclient5.mo
-share/locale/ast/LC_MESSAGES/kcm5_filetypes.mo
-share/locale/ast/LC_MESSAGES/kdesu5.mo
-share/locale/ast/LC_MESSAGES/kmimetypefinder5.mo
+share/locale/ar/LC_MESSAGES/plasma-open-settings.mo
+share/locale/ast/LC_MESSAGES/plasma-open-settings.mo
 share/locale/az/LC_MESSAGES/kbroadcastnotification.mo
 share/locale/az/LC_MESSAGES/kcm5_filetypes.mo
 share/locale/az/LC_MESSAGES/kcmshell5.mo
@@ -413,6 +415,15 @@ share/locale/ja/LC_MESSAGES/kmimetypefinder5.mo
 share/locale/ja/LC_MESSAGES/kstart5.mo
 share/locale/ja/LC_MESSAGES/ktraderclient5.mo
 share/locale/ja/LC_MESSAGES/plasma-open-settings.mo
+share/locale/ka/LC_MESSAGES/kbroadcastnotification.mo
+share/locale/ka/LC_MESSAGES/kcm5_filetypes.mo
+share/locale/ka/LC_MESSAGES/kcmshell5.mo
+share/locale/ka/LC_MESSAGES/kdesu5.mo
+share/locale/ka/LC_MESSAGES/kioclient.mo
+share/locale/ka/LC_MESSAGES/kmimetypefinder5.mo
+share/locale/ka/LC_MESSAGES/kstart5.mo
+share/locale/ka/LC_MESSAGES/ktraderclient5.mo
+share/locale/ka/LC_MESSAGES/plasma-open-settings.mo
 share/locale/kk/LC_MESSAGES/kcm5_filetypes.mo
 share/locale/kk/LC_MESSAGES/kcmshell5.mo
 share/locale/kk/LC_MESSAGES/kdesu5.mo
@@ -715,6 +726,7 @@ share/locale/tr/LC_MESSAGES/kioclient.mo
 share/locale/tr/LC_MESSAGES/kmimetypefinder5.mo
 share/locale/tr/LC_MESSAGES/kstart5.mo
 share/locale/tr/LC_MESSAGES/ktraderclient5.mo
+share/locale/tr/LC_MESSAGES/plasma-open-settings.mo
 share/locale/ug/LC_MESSAGES/kcm5_filetypes.mo
 share/locale/ug/LC_MESSAGES/kcmshell5.mo
 share/locale/ug/LC_MESSAGES/kdesu5.mo
@@ -773,3 +785,4 @@ share/locale/zh_TW/LC_MESSAGES/kioclient.mo
 share/locale/zh_TW/LC_MESSAGES/kmimetypefinder5.mo
 share/locale/zh_TW/LC_MESSAGES/kstart5.mo
 share/locale/zh_TW/LC_MESSAGES/ktraderclient5.mo
+share/locale/zh_TW/LC_MESSAGES/plasma-open-settings.mo

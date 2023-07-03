@@ -1,5 +1,5 @@
---- aws-cpp-sdk-core/source/platform/linux-shared/Security.cpp.orig	2019-05-29 19:03:58 UTC
-+++ aws-cpp-sdk-core/source/platform/linux-shared/Security.cpp
+--- src/aws-cpp-sdk-core/source/platform/linux-shared/Security.cpp.orig	2019-05-29 19:03:58 UTC
++++ src/aws-cpp-sdk-core/source/platform/linux-shared/Security.cpp
 @@ -24,8 +24,10 @@ namespace Security
  
  void SecureMemClear(unsigned char *data, size_t length)

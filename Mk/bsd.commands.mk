@@ -67,6 +67,7 @@ MOUNT_DEVFS?=		${MOUNT} -t devfs devfs
 # a make target
 MOUNT_NULLFS?=		/sbin/mount_null
 MV?=			/bin/mv
+NPROC?=			/bin/nproc
 OBJCOPY?=		/usr/bin/objcopy
 OBJDUMP?=		/usr/bin/objdump
 PASTE?=			/usr/bin/paste

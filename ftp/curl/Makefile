@@ -1,5 +1,5 @@
 PORTNAME=	curl
-PORTVERSION=	7.88.1
+PORTVERSION=	8.1.1
 CATEGORIES=	ftp net www
 MASTER_SITES=	https://curl.se/download/ \
 		https://github.com/curl/curl/releases/download/curl-${PORTVERSION:S|.|_|g}/
@@ -16,7 +16,15 @@ USES=		cpe libtool localbase pathfix perl5 shebangfix tar:xz
 USE_PERL5=	build
 
 CONFIGURE_ARGS=	--disable-werror \
+		--enable-dateparse \
+		--enable-dnsshuffle \
 		--enable-headers-api \
+		--enable-hsts \
+		--enable-http-auth \
+		--enable-mime \
+		--enable-netrc \
+		--enable-openssl-auto-load-config \
+		--enable-progress-meter \
 		--with-fish-functions-dir=${LOCALBASE}/share/fish/completions \
 		--with-zsh-functions-dir=${LOCALBASE}/share/zsh/site-functions
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE} \
@@ -104,13 +112,13 @@ IDN_LIB_DEPENDS=	libidn2.so:dns/libidn2
 IMAP_CONFIGURE_ENABLE=	imap
 IPV6_CONFIGURE_ENABLE=	ipv6
 LDAP_CONFIGURE_ENABLE=	ldap
-LDAP_USE=		OPENLDAP=yes
+LDAP_USES=		ldap
 LDAPS_CONFIGURE_ENABLE=	ldaps
 LIBSSH2_CONFIGURE_WITH=	libssh2
 LIBSSH2_LIB_DEPENDS=	libssh2.so:security/libssh2
 MQTT_CONFIGURE_ENABLE=	mqtt
 NTLM_CONFIGURE_ENABLE=	ntlm
-OPENSSL_CONFIGURE_WITH=	ssl=${OPENSSLBASE}
+OPENSSL_CONFIGURE_WITH=	openssl=${OPENSSLBASE}
 OPENSSL_CPPFLAGS=	-I${OPENSSLINC}
 OPENSSL_LDFLAGS=	-L${OPENSSLLIB}
 OPENSSL_USES=		ssl

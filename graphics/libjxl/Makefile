@@ -1,6 +1,6 @@
 PORTNAME=	libjxl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.0
+DISTVERSION=	0.8.2
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -18,10 +18,12 @@ USES=		cmake:testing compiler:c++11-lib cpe localbase:ldflags pkgconfig shared-m
 CPE_VENDOR=	${PORTNAME}_project
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
-GH_TUPLE=	jbeich:skcms:6437475:skcms/third_party/skcms \
-		libjxl:testdata:d81acac:testdata/testdata \
+GH_TUPLE=	jbeich:skcms:b25b07b:skcms/third_party/skcms \
+		libjxl:testdata:d6168ff:testdata/testdata \
 		webmproject:sjpeg:868ab55:sjpeg/third_party/sjpeg \
 		${NULL}
+CFLAGS_powerpc64=	-DHWY_DISABLE_PPC8_CRYPTO
+CFLAGS_powerpc=	-DHWY_DISABLE_PPC8_CRYPTO
 CMAKE_ON=	JPEGXL_ENABLE_PLUGINS
 CMAKE_OFF=	${BENCHMARK FUZZERS TCMALLOC:L:S/^/JPEGXL_ENABLE_/}
 CMAKE_OFF+=	${OpenGL GLUT:L:S/^/CMAKE_DISABLE_FIND_PACKAGE_/} # sjpeg

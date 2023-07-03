@@ -1,5 +1,5 @@
 PORTNAME=	debug
-DISTVERSION=	1.7.1
+DISTVERSION=	1.7.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -14,7 +14,6 @@ RUN_DEPENDS=	rubygem-irb>=1.5.0:devel/rubygem-irb \
 		rubygem-reline>=0.3.1:devel/rubygem-reline
 
 USES=		gem
-USE_RUBY=	yes
 
 PLIST_FILES=	bin/rdbg
 

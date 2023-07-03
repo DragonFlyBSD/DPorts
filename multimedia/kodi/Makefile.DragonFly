@@ -1,6 +1,8 @@
 # don't know how to make ... /progress/p\. Stop
 USES+=	gmake
 
+CXXFLAGS+=	-Wno-double-promotion
+
 # Replace OPSYS
 PLIST_SUB +=	OPSYS=${OPSYS:tl}
 
@@ -30,8 +32,7 @@ dfly-patch:
 		${WRKSRC}/xbmc/platform/posix/network/NetworkPosix.cpp
 	${REINPLACE_CMD} -e 's@defined(TARGET_FREEBSD)@(&||defined(TARGET_DRAGONFLY))@g' \
 			 -e 's@#ifdef \(TARGET_FREEBSD\)@#if defined(TARGET_FREEBSD) || defined(TARGET_DRAGONFLY)@g' \
-		${WRKSRC}/xbmc/platform/linux/peripherals/PeripheralBusUSBLibUSB.cpp \
-		${WRKSRC}/xbmc/threads/platform/pthreads/ThreadImpl.cpp
+		${WRKSRC}/xbmc/platform/linux/peripherals/PeripheralBusUSBLibUSB.cpp
 	${REINPLACE_CMD} -e 's@defined(TARGET_FREEBSD)@(&||defined(TARGET_DRAGONFLY))@g' \
 		${WRKSRC}/tools/depends/native/TexturePacker/src/XBTFWriter.cpp \
 		${WRKSRC}/xbmc/LangInfo.cpp \
@@ -56,6 +57,5 @@ dfly-patch:
 		${WRKSRC}/xbmc/storage/MediaManager.cpp \
 		${WRKSRC}/xbmc/system_gl.h \
 		${WRKSRC}/xbmc/utils/CharsetConverter.cpp \
-		${WRKSRC}/xbmc/utils/Stopwatch.cpp \
 		${WRKSRC}/xbmc/utils/test/TestCPUInfo.cpp \
 		${WRKSRC}/xbmc/windowing/X11/XRandR.cpp

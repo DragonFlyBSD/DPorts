@@ -5,6 +5,10 @@ USES+=	libarchive
 CONFIGURE_ARGS+=	--no-system-jsoncpp \
 			--bootstrap-system-libuv
 
+# baselibs QA check fails because our soname is < 7
+# so ignore for now
+QA_ENV+=   IGNORE_QA_baselibs=1
+
 .if exists(/usr/lib/priv/libprivate_ncursesw.so)
 dfly-patch:
 	${REINPLACE_CMD} -e "s@CYGWIN@true@g" \

@@ -1,1 +1,7 @@
 USES+= alias
+
+LIB_DEPENDS+=libnghttp2.so:www/libnghttp2 \
+             libssh2.so:security/libssh2 \
+             libpsl.so:dns/libpsl \
+             libidn2.so:dns/libidn2 \
+             libunistring.so:devel/libunistring

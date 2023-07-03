@@ -14,7 +14,8 @@ PLIST=		${.CURDIR}/pkg-plist
 PATCHDIR=	${.CURDIR}/files
 NO_GSTREAMER_COMMON=	yes
 
-GOOD_GST_ENABLED_PLUGINS=	alpha \
+GOOD_GST_ENABLED_PLUGINS=	adaptivedemux2 \
+				alpha \
 				apetag \
 				audiofx \
 				audioparsers \
@@ -59,6 +60,7 @@ GOOD_GST_ENABLED_PLUGINS=	alpha \
 				videomixer \
 				wavenc \
 				wavparse \
+				xingmux \
 				y4m
 
 .include "${MASTERDIR}/Makefile"

@@ -1,8 +1,4 @@
-
-# really wants this
-BUILD_DEPENDS+=	cxxfs_gcc8>0:misc/cxxfs_gcc8
-CXXFLAGS+=	-isystem ${LOCALBASE}/cxxfs_gcc8
-LDFLAGS+=	-L${LOCALBASE}/cxxfs_gcc8
+USE_GCC_VERSION=	12
 
 # zrj: too noisy on gcc80
 CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess \

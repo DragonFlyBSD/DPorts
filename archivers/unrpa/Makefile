@@ -1,9 +1,9 @@
 PORTNAME=	unrpa
 PORTVERSION=	2.3.0
 CATEGORIES=	archivers
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Extract RenPy Archives
 WWW=		https://pypi.org/project/unrpa/
 

@@ -1,5 +1,5 @@
 PORTNAME=	riemann-tools
-DISTVERSION=	1.6.0
+DISTVERSION=	1.8.1
 CATEGORIES=	net-mgmt rubygems
 MASTER_SITES=	RG
 
@@ -12,10 +12,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	rubygem-json>=1.8:devel/rubygem-json \
 		rubygem-optimist>=3.0:devel/rubygem-optimist \
-		rubygem-riemann-client>=1.0:net-mgmt/rubygem-riemann-client
+		rubygem-riemann-client>=1.1:net-mgmt/rubygem-riemann-client
 
 USES=		gem
-USE_RUBY=	yes
 
 NO_ARCH=	yes
 

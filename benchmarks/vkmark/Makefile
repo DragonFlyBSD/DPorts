@@ -1,13 +1,14 @@
 PORTNAME=	vkmark
-DISTVERSION=	2017.08-29
-DISTVERSIONSUFFIX=	-gd872846
-CATEGORIES=	benchmarks wayland
+DISTVERSION=	2017.08-36
+DISTVERSIONSUFFIX=	-gab6e6f3
+CATEGORIES=	benchmarks
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	27fa846e34ed.patch:-p1 # https://github.com/vkmark/vkmark/pull/29
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Vulkan benchmark
+WWW=		https://github.com/vkmark/vkmark
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING-LGPL2.1
@@ -22,16 +23,15 @@ USE_GITHUB=	yes
 
 OPTIONS_DEFINE=	DRM WAYLAND X11
 OPTIONS_DEFAULT=DRM WAYLAND X11
-OPTIONS_EXCLUDE=DRM # https://github.com/vkmark/vkmark/issues/33
 OPTIONS_SUB=	yes
 
 DRM_DESC=		KMS console support
-DRM_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan_intel.h:graphics/mesa-dri
 DRM_LIB_DEPENDS=	libdrm.so:graphics/libdrm
 DRM_USES=		gl
 DRM_USE=		GL=gbm
 DRM_MESON_TRUE=		kms
 
+WAYLAND_CATEGORIES=	wayland
 WAYLAND_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 			wayland-protocols>=1.12:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland

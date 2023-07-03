@@ -1,5 +1,5 @@
 PORTNAME=	redmine
-PORTVERSION=	5.0.4
+PORTVERSION=	5.0.5
 PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://www.redmine.org/releases/
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/doc/COPYING
 RUN_DEPENDS=	rubygem-bundler>=1.12.0:sysutils/rubygem-bundler \
 		rubygem-globalid-rails61>0:databases/rubygem-globalid-rails61 \
 		rubygem-rails61>=6.1:www/rubygem-rails61 \
-		rubygem-rouge>=3.28.0:textproc/rubygem-rouge \
+		rubygem-rouge3>=3.28.0:textproc/rubygem-rouge3 \
 		rubygem-request_store>=1.5.0:devel/rubygem-request_store \
 		rubygem-mini_mime>=1.0.1:mail/rubygem-mini_mime \
 		rubygem-actionpack-xml_parser-rails61>=0:textproc/rubygem-actionpack-xml_parser-rails61 \
@@ -45,8 +45,7 @@ RUN_DEPENDS+=	rubygem-redcarpet>=3.5.1:textproc/rubygem-redcarpet \
 		rubygem-sanitize>=6.0:textproc/rubygem-sanitize \
 		rubygem-deckar01-task_list>=2.3.1:www/rubygem-deckar01-task_list
 
-USES=		cpe
-USE_RUBY=	yes
+USES=		cpe ruby
 
 CONFLICTS_INSTALL=	redmine42
 

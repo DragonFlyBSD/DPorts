@@ -4,7 +4,7 @@ DISTVERSION=	2.13.9
 PORTREVISION=	0
 CATEGORIES=	devel
 
-MAINTAINER=	gahr@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Header-only test framework for C++
 WWW=		https://github.com/catchorg/Catch2
 
@@ -22,6 +22,8 @@ PORTDOCS=	*
 NO_ARCH=	yes
 
 OPTIONS_DEFINE=	DOCS
+
+PORTSCOUT=	limit:2.*
 
 do-test:
 	${BUILD_WRKSRC}/projects/SelfTest

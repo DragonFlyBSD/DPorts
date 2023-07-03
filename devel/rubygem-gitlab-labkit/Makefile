@@ -1,5 +1,6 @@
 PORTNAME=	gitlab-labkit
-PORTVERSION=	0.29.0
+PORTVERSION=	0.31.1
+PORTREVISION=	1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -12,14 +13,13 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	rubygem-actionpack61>=5<8:www/rubygem-actionpack61 \
 		rubygem-activesupport61>=5<8:devel/rubygem-activesupport61 \
-		rubygem-grpc142>=1.37:net/rubygem-grpc142 \
+		rubygem-grpc>=1.37:net/rubygem-grpc \
 		rubygem-jaeger-client>=1.1.0<1.2:devel/rubygem-jaeger-client \
 		rubygem-opentracing>=0.4<1.0:devel/rubygem-opentracing \
 		rubygem-pg_query>=2.1<3:databases/rubygem-pg_query \
 		rubygem-redis4>3.0.0<6.0.0:databases/rubygem-redis4
 
 USES=		gem
-USE_RUBY=	yes
 
 NO_ARCH=	yes
 

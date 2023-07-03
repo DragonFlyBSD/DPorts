@@ -1,6 +1,9 @@
-dflypri_args1= enable_basic_printing=true enable_print_preview=true use_dbus=true use_udev=false
+dflypri_args1=	enable_basic_printing=true enable_print_preview=true use_dbus=true use_udev=false
+dflypri_args1+=	extra_ldflags=\\\"-L${LOCALBASE}/lib\\\"
 # not needed here: use_system_yasm only if bundled jpeg_turbo and use_system_libusb no longer available
 #dflypri_args2= use_system_yasm=true #use_system_libusb=true
+
+USES+= localbase:ldflags
 
 # zrj: first remove some crud then create config and patch
 dfly-patch:

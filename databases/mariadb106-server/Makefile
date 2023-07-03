@@ -1,5 +1,5 @@
 PORTNAME?=	mariadb
-PORTVERSION=	10.6.11
+PORTVERSION=	10.6.13
 PORTREVISION?=	0
 CATEGORIES=	databases
 MASTER_SITES=	https://mirror.nodesdirect.com/${SITESDIR}/ \
@@ -120,6 +120,7 @@ DATADIR=	${PREFIX}/share/mysql
 ETCDIR=		${PREFIX}/etc/mysql
 
 CONFLICTS_INSTALL=	mariadb10[0-57-9]-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
+			mariadb1011-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
 			mysql[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//}-* \
 			mysqlwsrep* \
 			percona[0-9]*-${PKGNAMESUFFIX:C/^[0-9]*-//}-*
@@ -163,7 +164,7 @@ ${ENGINE}_CMAKE_OFF=	-DPLUGIN_${ENGINE}=NO
 ${ENGINE}_CMAKE_ON=	-DPLUGIN_${ENGINE}=DYNAMIC
 .endfor
 INNOBASE_VARS_OFF=	disabled_plugins+=INNOBASE
-#COLUMNSTORE_BROKEN=	fatal error: 'sys/sysinfo.h' file not found
+COLUMNSTORE_BROKEN=	error: __float128 is not supported on this target
 CONNECT_EXTRA_LIB_DEPENDS=	libodbc.so:databases/unixODBC
 CONNECT_EXTRA_USE=		gnome=libxml2
 CONNECT_EXTRA_USES=		gnome
@@ -266,6 +267,7 @@ post-install:
 	${RM} -r ${STAGEDIR}${PREFIX}/share/mysql/policy \
 		${STAGEDIR}${PREFIX}/include/mysql/server/private \
 		${STAGEDIR}${PREFIX}/lib/mysql/pkgconfig \
+		${STAGEDIR}${PREFIX}/libexec/rcmysql \
 		${STAGEDIR}/suite \
 		${STAGEDIR}${ETCDIR}/init.d \
 		${STAGEDIR}${ETCDIR}/logrotate.d \

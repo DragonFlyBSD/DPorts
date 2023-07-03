@@ -9,13 +9,17 @@ LTO_Include_MAINTAINER=	pkubaj@FreeBSD.org
 
 .  if !defined(LTO_UNSAFE) || defined(LTO_DISABLE_CHECK)
 .    if "${ARCH}" == "powerpc64" || "${ARCH}" == "riscv64" && !defined(LTO_DISABLE_CHECK)
-       IGNORE=	LTO is currently broken on ${ARCH}, to override set LTO_DISABLE_CHECK=yes
+       DEV_WARNING+=	"LTO is currently broken on powerpc64 and riscv64, to override set LTO_DISABLE_CHECK=yes"
 .    elif defined(_INCLUDE_USES_CARGO_MK)
    CARGO_ENV+=	CARGO_PROFILE_RELEASE_LTO="true" \
 		CARGO_PROFILE_RELEASE_PANIC="abort" \
 		CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
 .    elif defined(_INCLUDE_USES_MESON_MK)
    MESON_ARGS+=	-Db_lto=true
+.    elif defined(_INCLUDE_USES_CABAL_MK)
+   CABAL_LTO_ARGS=	--ghc-options=-split-sections \
+			--gcc-options="-fdata-sections -ffunction-sections" \
+			--ld-options=-Wl,--gc-sections,--build-id,--icf=all
 .    else
 # Overridable as a user may want to use -flto
    LTO_FLAGS?=	-flto=thin

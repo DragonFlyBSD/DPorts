@@ -1,6 +1,6 @@
 PORTNAME=	openexr
-PORTVERSION=	3.1.6
-PORTREVISION=	1
+PORTVERSION=	3.1.9
+PORTREVISION=	0
 CATEGORIES=	graphics devel
 
 MAINTAINER=	mandree@FreeBSD.org
@@ -10,7 +10,7 @@ WWW=		https://www.openexr.com/
 LICENSE=	BSD3CLAUSE
 
 # exact version required to avoid hard-to-debug issues
-LIB_DEPENDS=	libImath-3_1.so.29:math/Imath
+LIB_DEPENDS=	libImath-3_1.so.30:math/Imath
 
 USES=		cmake compiler:c++14-lang cpe pathfix pkgconfig
 
@@ -27,7 +27,7 @@ PATCH_STRIP=	-p1
 
 _MAJORVER=	3_1
 _VER=		30
-_MINVER=	6
+_MINVER=	9
 _PLVER=		1
 
 PLIST_SUB+=	MAJORVER=${_MAJORVER} \
@@ -42,9 +42,9 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 OPTIONS_SUB=	yes
 DOCS_BUILD_DEPENDS=breathe-apidoc:devel/py-breathe \
 		${PYTHON_PKGNAMEPREFIX}sphinx_press_theme>=0:textproc/py-sphinx_press_theme
+DOCS_USES=	python:build
 DOCS_CMAKE_BOOL=BUILD_DOCS
 DOCS_CMAKE_ON=	-DPython_EXECUTABLE:STRING=${PYTHON_CMD}
-DOCS_USES=	python:build
 
 _DOCSRCDIR1=	${WRKSRC}
 _DOC_FILES1=	CHANGES.md CONTRIBUTING.md GOVERNANCE.md LICENSE.md SECURITY.md \

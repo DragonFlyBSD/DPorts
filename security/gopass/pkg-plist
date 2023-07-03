@@ -24,7 +24,7 @@ etc/bash_completion.d/gopass.sh
 %%PORTDOCS%%%%DOCSDIR%%/commands/insert.md
 %%PORTDOCS%%%%DOCSDIR%%/commands/link.md
 %%PORTDOCS%%%%DOCSDIR%%/commands/list.md
-%%PORTDOCS%%%%DOCSDIR%%/commands/mount.md
+%%PORTDOCS%%%%DOCSDIR%%/commands/mounts.md
 %%PORTDOCS%%%%DOCSDIR%%/commands/move.md
 %%PORTDOCS%%%%DOCSDIR%%/commands/otp.md
 %%PORTDOCS%%%%DOCSDIR%%/commands/process.md
@@ -41,6 +41,7 @@ etc/bash_completion.d/gopass.sh
 %%PORTDOCS%%%%DOCSDIR%%/faq.md
 %%PORTDOCS%%%%DOCSDIR%%/features.md
 %%PORTDOCS%%%%DOCSDIR%%/hacking.md
+%%PORTDOCS%%%%DOCSDIR%%/hooks.md
 %%PORTDOCS%%%%DOCSDIR%%/logo-small.png
 %%PORTDOCS%%%%DOCSDIR%%/logo.ico
 %%PORTDOCS%%%%DOCSDIR%%/logo.png

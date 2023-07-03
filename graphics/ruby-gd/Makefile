@@ -16,9 +16,7 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libgd.so:graphics/gd \
 		libpng.so:graphics/png
 
-USES=		jpeg
-USE_RUBY=	yes
-USE_RUBY_EXTCONF=	yes
+USES=		jpeg ruby:extconf
 
 RUBY_MODNAME=	${PORTNAME:tl}
 
@@ -67,6 +65,7 @@ post-patch:
 post-configure:
 	${REINPLACE_CMD} -e 's|^V = 0|V = 1|' \
 		-e 's|^libdir = .*|libdir = ${PREFIX}/lib|' \
+		-e 's|-O2 |-O2 -Wno-int-conversion |' \
 		${WRKSRC}/Makefile
 
 post-install:

@@ -1,5 +1,5 @@
 PORTNAME=	zabbix62
-DISTVERSION=	6.2.6
+DISTVERSION=	6.2.9
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${DISTVERSION:R}/
 PKGNAMESUFFIX?=	-server
@@ -12,9 +12,10 @@ WWW=		https://www.zabbix.com/
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-CONFLICTS_INSTALL=	${PORTNAME}[0-9]${PKGNAMESUFFIX} \
-			zabbix5[0-9]${PKGNAMESUFFIX} \
-			zabbix[0-57-9]${PKGNAMESUFFIX}
+DEPRECATED=	Will reach end of life on 2023-05-31
+EXPIRATION_DATE=	2023-05-31
+
+CONFLICTS_INSTALL=	zabbix[0-9]${PKGNAMESUFFIX}
 
 ZABBIX_BUILD=	${PKGNAMESUFFIX:S/^-//:S/-$//}
 
@@ -105,7 +106,7 @@ IPMI_CONFIGURE_WITH=	openipmi
 IPMI_LIB_DEPENDS=	libOpenIPMI.so:sysutils/openipmi
 
 LDAP_CONFIGURE_WITH=	ldap
-LDAP_USE=		OPENLDAP=yes
+LDAP_USES=		ldap
 
 MYSQL_CONFIGURE_ON=	--with-mysql
 MYSQL_USES+=		compiler:c11 mysql:80

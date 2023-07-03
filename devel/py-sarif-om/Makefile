@@ -1,11 +1,11 @@
 PORTNAME=	sarif-om
 DISTVERSION=	1.0.4
 CATEGORIES=	devel python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	sarif_om-${DISTVERSION}
 
-MAINTAINER=	nork@ninth-nine.com
+MAINTAINER=	nork@FreeBSD.org
 COMMENT=	Python classes for the SARIF 2.1.0 object model
 WWW=		https://pypi.org/project/sarif-om/
 

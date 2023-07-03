@@ -587,6 +587,7 @@
 %%WWWDIR%%/app/Model/TaskReorderModel.php
 %%WWWDIR%%/app/Model/TaskStatusModel.php
 %%WWWDIR%%/app/Model/TaskTagModel.php
+%%WWWDIR%%/app/Model/ThemeModel.php
 %%WWWDIR%%/app/Model/TimezoneModel.php
 %%WWWDIR%%/app/Model/TransitionModel.php
 %%WWWDIR%%/app/Model/UserLockingModel.php
@@ -606,6 +607,7 @@
 %%WWWDIR%%/app/Pagination/TaskPagination.php
 %%WWWDIR%%/app/Pagination/UserPagination.php
 %%WWWDIR%%/app/Schema/Migration.php
+%%WWWDIR%%/app/Schema/Mssql.php
 %%WWWDIR%%/app/Schema/Mysql.php
 %%WWWDIR%%/app/Schema/Postgres.php
 %%WWWDIR%%/app/Schema/Sql/mysql.sql
@@ -866,6 +868,7 @@
 %%WWWDIR%%/app/Template/project_user_overview/tasks.php
 %%WWWDIR%%/app/Template/project_user_overview/tooltip_users.php
 %%WWWDIR%%/app/Template/project_view/duplicate.php
+%%WWWDIR%%/app/Template/project_view/importTasks.php
 %%WWWDIR%%/app/Template/project_view/integrations.php
 %%WWWDIR%%/app/Template/project_view/notifications.php
 %%WWWDIR%%/app/Template/project_view/share.php
@@ -1019,7 +1022,8 @@
 %%WWWDIR%%/app/common.php
 %%WWWDIR%%/app/constants.php
 %%WWWDIR%%/app/functions.php
-%%WWWDIR%%/assets/css/app.min.css
+%%WWWDIR%%/assets/css/auto.min.css
+%%WWWDIR%%/assets/css/dark.min.css
 %%WWWDIR%%/assets/css/images/ui-bg_flat_0_aaaaaa_40x100.png
 %%WWWDIR%%/assets/css/images/ui-bg_flat_75_ffffff_40x100.png
 %%WWWDIR%%/assets/css/images/ui-bg_glass_55_fbf9ee_1x400.png
@@ -1039,6 +1043,7 @@
 %%WWWDIR%%/assets/css/images/ui-icons_cc0000_256x240.png
 %%WWWDIR%%/assets/css/images/ui-icons_cd0a0a_256x240.png
 %%WWWDIR%%/assets/css/images/ui-icons_ffffff_256x240.png
+%%WWWDIR%%/assets/css/light.min.css
 %%WWWDIR%%/assets/css/print.min.css
 %%WWWDIR%%/assets/css/vendor.min.css
 %%WWWDIR%%/assets/fonts/FontAwesome.otf
@@ -1995,14 +2000,13 @@
 %%WWWDIR%%/vendor/symfony/polyfill-php73/bootstrap.php
 %%WWWDIR%%/vendor/symfony/polyfill-php80/LICENSE
 %%WWWDIR%%/vendor/symfony/polyfill-php80/Php80.php
+%%WWWDIR%%/vendor/symfony/polyfill-php80/PhpToken.php
 %%WWWDIR%%/vendor/symfony/polyfill-php80/Resources/stubs/Attribute.php
+%%WWWDIR%%/vendor/symfony/polyfill-php80/Resources/stubs/PhpToken.php
 %%WWWDIR%%/vendor/symfony/polyfill-php80/Resources/stubs/Stringable.php
 %%WWWDIR%%/vendor/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php
 %%WWWDIR%%/vendor/symfony/polyfill-php80/Resources/stubs/ValueError.php
 %%WWWDIR%%/vendor/symfony/polyfill-php80/bootstrap.php
-%%WWWDIR%%/vendor/symfony/service-contracts/Attribute/Required.php
-%%WWWDIR%%/vendor/symfony/service-contracts/Attribute/SubscribedService.php
-%%WWWDIR%%/vendor/symfony/service-contracts/CHANGELOG.md
 %%WWWDIR%%/vendor/symfony/service-contracts/LICENSE
 %%WWWDIR%%/vendor/symfony/service-contracts/ResetInterface.php
 %%WWWDIR%%/vendor/symfony/service-contracts/ServiceLocatorTrait.php

@@ -1,3 +1,5 @@
+USE_CLANG_FALLBACK=	15
+
 USES+=	ncurses
 
 # no point

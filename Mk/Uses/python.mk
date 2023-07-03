@@ -86,6 +86,8 @@
 #
 #	cython_run	- Depend on lang/cython at run-time.
 #
+#	cython_test	- Depend on lang/cython for tests.
+#
 #	flavors		- Force creation of flavors for Python 2 and 3 default
 #			  versions, where applicable.
 #
@@ -102,6 +104,9 @@
 #
 #	distutils	- Use distutils as do-configure, do-build and
 #			  do-install targets. implies flavors.
+#
+#	pep517		- Follow the PEP-517 standard to build and install wheels
+#			  as do-build and do-install targets. implies flavors.
 #
 #	autoplist	- Automatically generates the packaging list for a
 #			  port that uses distutils when defined.
@@ -134,6 +139,24 @@
 # PYTHON_CMD		- Python's command line file name, including the
 #			  version number (used for dependencies).
 #			  default: ${PYTHONBASE}/bin/${PYTHON_VERSION}
+#
+# PEP517_BUILD_CMD	- Command sequence for a PEP-517 build frontend that builds a wheel.
+#			  default: ${PYTHON_CMD} -m build --no-isolation --wheel ${PEP517_BUILD_CONFIG_SETTING}
+#			  Python 3.7: gpep517-${PYTHON_VER} build-wheel --output-fd 1 --wheel-dir ${BUILD_WRKSRC}/dist
+#
+# PEP517_BUILD_DEPEND	- Port needed to execute ${PEP517_BUILD_CMD}.
+#			  default: ${PYTHON_PKGNAMEPREFIX}build>=0:devel/py-build@${PY_FLAVOR}
+#			  Python 3.7: ${PYTHON_PKGNAMEPREFIX}gpep517>=0:devel/py-gpep517@${PY_FLAVOR}
+#
+# PEP517_BUILD_CONFIG_SETTING
+#			- Options for the build backend. Must include -C or --config-setting per option.
+#			  default: <empty>
+#
+# PEP517_INSTALL_CMD	- Command sequence for a PEP-517 install frontend that installs a wheel.
+#			  default: ${PYTHON_CMD} -m installer --destdir ${STAGEDIR} --no-compile-bytecode --prefix ${PREFIX} ${BUILD_WRKSRC}/dist/${PORTNAME:C|[-_]+|_|g}-${DISTVERSION}*.whl
+#
+# PEP517_INSTALL_DEPEND	- Port needed to execute ${PEP517_INSTALL_CMD}.
+#			  default: ${PYTHON_PKGNAMEPREFIX}installer>=0:devel/py-installer@${PY_FLAVOR}
 #
 # PYSETUP		- Name of the setup script used by the distutils
 #			  package.
@@ -242,23 +265,35 @@
 #			  packages for different Python versions.
 #			  default: -py${PYTHON_SUFFIX}
 #
-# Using USES=python also will add some useful entries to PLIST_SUB:
+# Using USES=python also will add some useful entries to SUB_LIST and PLIST_SUB:
 #
-#	PYTHON_INCLUDEDIR=${PYTHONPREFIX_INCLUDEDIR:S;${PREFIX}/;;}
-#	PYTHON_LIBDIR=${PYTHONPREFIX_LIBDIR:S;${PREFIX}/;;}
+#	PYTHON_INCLUDEDIR=${PYTHONPREFIX_INCLUDEDIR}
+#	PYTHON_LIBDIR=${PYTHONPREFIX_LIBDIR}
 #	PYTHON_PLATFORM=${PYTHON_PLATFORM}
-#	PYTHON_SITELIBDIR=${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;}
+#	PYTHON_SITELIBDIR=${PYTHONPREFIX_SITELIBDIR}
 #	PYTHON_SUFFIX=${PYTHON_SUFFIX}
 #	PYTHON_VER=${PYTHON_VER}
 #	PYTHON_VERSION=${PYTHON_VERSION}
 #
-# and PYTHON2 and PYTHON3 will be set according to the Python version:
+# where PYTHON_INCLUDEDIR, PYTHON_LIBDIR and PYTHON_SITELIBDIR have their PREFIX
+# stripped for PLIST_SUB.
+#
+# PYTHON2 and PYTHON3 will also be set according to the Python version:
 #
 #	PYTHON2="" PYTHON3="@comment " for Python 2.x
 #	PYTHON2="@comment " PYTHON3="" for Python 3.x
 #
 # PYDISTUTILS_INSTALLNOSINGLE
 #			- Deprecated without replacement
+#
+# Dependency lines of selected Python modules:
+#
+# PY_SETUPTOOLS			- setuptools port based on USE_PYTHON=distutils
+# PYGAME			- pygame port
+# PYNUMPY			- NumPy port
+# PY_MERCURIAL			- mercurial port, PKGNAME varies based on default
+#				  Python version
+# PY_BOOST			- Boost Python libraries port
 #
 # The following variables may be set by the user:
 #
@@ -281,9 +316,9 @@ _PYTHON_BASECMD=		${LOCALBASE}/bin/python
 _PYTHON_RELPORTDIR=		lang/python
 
 # List all valid USE_PYTHON features here
-_VALID_PYTHON_FEATURES=	allflavors autoplist concurrent cython cython_run \
+_VALID_PYTHON_FEATURES=	allflavors autoplist concurrent cython cython_run cython_test \
 			distutils flavors noegginfo noflavors nose nose2 \
-			optsuffix py3kplist pytest pytest4 pythonprefix \
+			optsuffix pep517 py3kplist pytest pytest4 pythonprefix \
 			unittest unittest2
 _INVALID_PYTHON_FEATURES=
 .  for var in ${USE_PYTHON}
@@ -306,6 +341,12 @@ IGNORE=		uses either USE_PYTHON=pytest or USE_PYTHON=pytest4, not both of them
 # distutils automatically generates flavors depending on the supported
 # versions.
 .  if defined(_PYTHON_FEATURE_DISTUTILS)
+_PYTHON_FEATURE_FLAVORS=	yes
+.  endif
+
+# pep517 automatically generates flavors depending on the supported
+# versions.
+.  if defined(_PYTHON_FEATURE_PEP517)
 _PYTHON_FEATURE_FLAVORS=	yes
 .  endif
 
@@ -493,7 +534,7 @@ PYTHON_REL=	${PYTHON_DISTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/:C/\.([0-9])$/
 
 # Might be overridden by calling ports
 PYTHON_CMD?=		${_PYTHON_BASECMD}${_PYTHON_VERSION}
-.  if ${PYTHON_VER} != 2.7
+.  if ${PYTHON_MAJOR_VER} > 2
 .    if exists(${PYTHON_CMD}-config)
 PYTHON_ABIVER!=		${PYTHON_CMD}-config --abiflags
 .    elif ${PYTHON_REL} < 30800
@@ -508,7 +549,7 @@ PYTHON_EXT_SUFFIX=	.cpython-${PYTHON_SUFFIX}
 PYTHON_EXT_SUFFIX=	# empty
 .  endif
 
-.  if ${PYTHON_MAJOR_VER} == 2
+.  if ${PYTHON_MAJOR_VER} < 3
 DEPRECATED?=	Uses Python 2.7 which is EOLed upstream
 .  endif
 
@@ -553,6 +594,10 @@ BUILD_DEPENDS+=	cython-${PYTHON_VER}:lang/cython@${PY_FLAVOR}
 RUN_DEPENDS+=	cython-${PYTHON_VER}:lang/cython@${PY_FLAVOR}
 .  endif
 
+.  if defined(_PYTHON_FEATURE_CYTHON_TEST)
+TEST_DEPENDS+=	cython-${PYTHON_VER}:lang/cython@${PY_FLAVOR}
+.  endif
+
 .  if defined(_PYTHON_FEATURE_CONCURRENT)
 .    if !defined(_PYTHON_FEATURE_FLAVORS) && (${_PYTHON_VERSION_MINIMUM:M3*} || ${_PYTHON_VERSION_MAXIMUM:M2*})
 DEV_WARNING+=	"USE_PYTHON=concurrent when only one of Python 2 or 3 is supported AND not using flavors does not make any sense"
@@ -584,7 +629,8 @@ UNIQUE_FIND_SUFFIX_MAN_FILES+=	${_UNIQUE_FIND_SUFFIX_FILES} | \
 
 _CURRENTPORT:=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 .  if defined(_PYTHON_FEATURE_DISTUTILS) && \
-	${_CURRENTPORT} != ${PYTHON_PKGNAMEPREFIX}setuptools &&\
+	${_CURRENTPORT} != ${PYTHON_PKGNAMEPREFIX}setuptools && \
+	${_CURRENTPORT} != ${PYTHON_PKGNAMEPREFIX}setuptools58 && \
 	${_CURRENTPORT} != ${PYTHON_PKGNAMEPREFIX}setuptools44
 .    if ${PYTHON_VER} == 2.7
 BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools44>0:devel/py-setuptools44@${PY_FLAVOR}
@@ -592,6 +638,21 @@ RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools44>0:devel/py-setuptools44@${PY_
 .    else
 BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools>=63.1.0:devel/py-setuptools@${PY_FLAVOR}
 RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools>=63.1.0:devel/py-setuptools@${PY_FLAVOR}
+.    endif
+.  endif
+
+.  if defined(_PYTHON_FEATURE_PEP517)
+.    if ${PYTHON_MAJOR_VER} < 3
+DEV_ERROR+=		"USES=python:2.7 is incompatible with USE_PYTHON=pep517"
+.    endif
+.    if defined(_PYTHON_FEATURE_DISTUTILS)
+DEV_ERROR+=		"USE_PYTHON=distutils is incompatible with USE_PYTHON=pep517"
+.    endif
+.    if defined(_PYTHON_FEATURE_PY3KPLIST)
+DEV_ERROR+=		"USE_PYTHON=py3kplist is incompatible with USE_PYTHON=pep517"
+.    endif
+.    if defined(_PYTHON_FEATURE_NOEGGINFO)
+DEV_ERROR+=		"USE_PYTHON=noegginfo is incompatible with USE_PYTHON=pep517"
 .    endif
 .  endif
 
@@ -617,6 +678,17 @@ PYDISTUTILS_PKGNAME?=	${PORTNAME}
 PYDISTUTILS_PKGVERSION?=${PORTVERSION}
 PYDISTUTILS_EGGINFO?=	${PYDISTUTILS_PKGNAME:C/[^A-Za-z0-9.]+/_/g}-${PYDISTUTILS_PKGVERSION:C/[^A-Za-z0-9.]+/_/g}-py${PYTHON_VER}.egg-info
 PYDISTUTILS_EGGINFODIR?=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+
+# PEP-517 support
+.  if ${PYTHON_REL} < 30800
+PEP517_BUILD_CMD?=	gpep517-${PYTHON_VER} build-wheel --output-fd 1 --wheel-dir ${BUILD_WRKSRC}/dist
+PEP517_BUILD_DEPEND?=	${PYTHON_PKGNAMEPREFIX}gpep517>=0:devel/py-gpep517@${PY_FLAVOR}
+.  else
+PEP517_BUILD_CMD?=	${PYTHON_CMD} -m build --no-isolation --wheel ${PEP517_BUILD_CONFIG_SETTING}
+PEP517_BUILD_DEPEND?=	${PYTHON_PKGNAMEPREFIX}build>=0:devel/py-build@${PY_FLAVOR}
+.  endif
+PEP517_INSTALL_CMD?=	${PYTHON_CMD} -m installer --destdir ${STAGEDIR} --no-compile-bytecode --prefix ${PREFIX} ${BUILD_WRKSRC}/dist/${PORTNAME:C|[-_]+|_|g}-${DISTVERSION}*.whl
+PEP517_INSTALL_DEPEND?=	${PYTHON_PKGNAMEPREFIX}installer>=0:devel/py-installer@${PY_FLAVOR}
 
 # nose support
 .  if defined(_PYTHON_FEATURE_NOSE)
@@ -669,7 +741,7 @@ add-plist-egginfo:
 .    endfor
 .  endif
 
-.  if defined(_PYTHON_FEATURE_AUTOPLIST) && defined(_PYTHON_FEATURE_DISTUTILS)
+.  if defined(_PYTHON_FEATURE_AUTOPLIST) && (defined(_PYTHON_FEATURE_DISTUTILS) || defined(_PYTHON_FEATURE_PEP517))
 _RELSITELIBDIR=	${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;}
 _RELLIBDIR=		${PYTHONPREFIX_LIBDIR:S;${PREFIX}/;;}
 
@@ -701,7 +773,7 @@ add-plist-python:
 		${TMPPLIST} > ${TMPPLIST}.pyc_tmp
 	@${MV} ${TMPPLIST}.pyc_tmp ${TMPPLIST}
 .    endif # ${PYTHON_REL} >= 30200 && defined(_PYTHON_FEATURE_PY3KPLIST)
-.  endif # defined(_PYTHON_FEATURE_AUTOPLIST) && defined(_PYTHON_FEATURE_DISTUTILS)
+.  endif # defined(_PYTHON_FEATURE_AUTOPLIST) && (defined(_PYTHON_FEATURE_DISTUTILS) || defined(_PYTHON_FEATURE_PEP517))
 
 # Fix for programs that build python from a GNU auto* environment
 CONFIGURE_ENV+=	PYTHON="${PYTHON_CMD}"
@@ -712,7 +784,18 @@ CMAKE_ARGS+=	-DPython_ADDITIONAL_VERSIONS=${PYTHON_VER}
 
 # Python 3rd-party modules
 PYGAME=		${PYTHON_PKGNAMEPREFIX}game>0:devel/py-game@${PY_FLAVOR}
-PYNUMPY=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16,1<1.24,1:math/py-numpy@${PY_FLAVOR}
+PYNUMPY=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16,1<1.25,1:math/py-numpy@${PY_FLAVOR}
+
+.  if defined(_PYTHON_FEATURE_DISTUTILS)
+.    if ${PYTHON_MAJOR_VER} < 3
+PY_SETUPTOOLS=	${PYTHON_PKGNAMEPREFIX}setuptools44>0:devel/py-setuptools44@${PY_FLAVOR}
+.    else
+#PY_SETUPTOOLS=	${PYTHON_PKGNAMEPREFIX}setuptools58>0:devel/py-setuptools58@${PY_FLAVOR}
+PY_SETUPTOOLS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR}
+.    endif
+.  else
+PY_SETUPTOOLS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR}
+.  endif
 
 # Common Python modules that can be needed but only for some versions of Python.
 .  if ${PYTHON_REL} < 30500
@@ -742,6 +825,16 @@ ${_stage}_DEPENDS+=	${PYTHON_CMD}:${PYTHON_PORTSDIR}
 PREFIX=		${PYTHONBASE}
 .  endif
 
+# Substitutions for SUB_FILES
+SUB_LIST+=	PYTHON_INCLUDEDIR=${PYTHONPREFIX_INCLUDEDIR} \
+		PYTHON_LIBDIR=${PYTHONPREFIX_LIBDIR} \
+		PYTHON_PLATFORM=${PYTHON_PLATFORM} \
+		PYTHON_SITELIBDIR=${PYTHONPREFIX_SITELIBDIR} \
+		PYTHON_SUFFIX=${PYTHON_SUFFIX} \
+		PYTHON_EXT_SUFFIX=${PYTHON_EXT_SUFFIX} \
+		PYTHON_VER=${PYTHON_VER} \
+		PYTHON_VERSION=${PYTHON_VERSION}
+
 # Substitutions for pkg-plist
 # Use a short form of the PYTHONPREFIX_*DIR variables; we don't need the
 # base directory in the plist file.
@@ -753,9 +846,11 @@ PLIST_SUB+=	PYTHON_INCLUDEDIR=${PYTHONPREFIX_INCLUDEDIR:S;${PREFIX}/;;} \
 		PYTHON_EXT_SUFFIX=${PYTHON_EXT_SUFFIX} \
 		PYTHON_VER=${PYTHON_VER} \
 		PYTHON_VERSION=${PYTHON_VERSION}
-.  if ${PYTHON_REL} < 30000
+.  if ${PYTHON_MAJOR_VER} < 3
+SUB_LIST+=	PYTHON2="" PYTHON3="@comment "
 PLIST_SUB+=	PYTHON2="" PYTHON3="@comment "
 .  else
+SUB_LIST+=	PYTHON2="@comment " PYTHON3=""
 PLIST_SUB+=	PYTHON2="@comment " PYTHON3=""
 .  endif
 
@@ -789,6 +884,44 @@ do-install:
 	@(cd ${INSTALL_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} ${PYDISTUTILS_SETUP} ${PYDISTUTILS_INSTALL_TARGET} ${PYDISTUTILS_INSTALLARGS})
 .    endif
 .  endif # defined(_PYTHON_FEATURE_DISTUTILS)
+
+.  if defined(_PYTHON_FEATURE_PEP517)
+.    if !empty(PEP517_BUILD_DEPEND)
+BUILD_DEPENDS+=	${PEP517_BUILD_DEPEND}
+.    endif
+.    if !empty(PEP517_INSTALL_DEPEND)
+BUILD_DEPENDS+=	${PEP517_INSTALL_DEPEND}
+.    endif
+
+.    if !target(do-configure)
+do-configure:
+	@${DO_NADA}
+.    endif
+
+.    if !target(do-build)
+do-build:
+	@cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PEP517_BUILD_CMD}
+.    endif
+
+.    if !target(do-install)
+do-install:
+	@${MKDIR} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+	@cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PEP517_INSTALL_CMD}
+	@${PYTHON_CMD} -B ${PORTSDIR}/Mk/Scripts/strip_RECORD.py \
+		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/${PORTNAME:C|[-_]+|_|g}-${DISTVERSION}*.dist-info/RECORD >> ${_PYTHONPKGLIST}
+	@${REINPLACE_CMD} -e 's|^|${PYTHONPREFIX_SITELIBDIR}/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../etc/|etc/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../bin/|bin/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../include/|include/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../lib/|lib/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../libdata/|libdata/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../libexec/|libexec/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../man/|man/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../sbin/|sbin/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../share/|share/|' \
+		${_PYTHONPKGLIST}
+.    endif
+.  endif # defined(_PYTHON_FEATURE_PEP517)
 
 .  if defined(_PYTHON_FEATURE_NOSE)
 .    if !target(do-test)

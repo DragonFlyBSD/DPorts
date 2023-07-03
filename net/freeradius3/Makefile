@@ -1,7 +1,5 @@
-# Created by: Ryan Steinmetz <zi@FreeBSD.org>
-
 PORTNAME=	freeradius
-DISTVERSION=	3.2.1
+DISTVERSION=	3.2.2
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/FreeRADIUS/freeradius-server/releases/download/release_${DISTVERSION:S/./_/g}/ \
 		https://freeradius.org/ftp/pub/radius/%SUBDIR%/ \
@@ -26,10 +24,10 @@ LIB_DEPENDS=	libgdbm.so:databases/gdbm \
 
 FLAVORS=	default ldap mysql pgsql sqlite3
 FLAVOR?=	${FLAVORS:[1]}
-ldap_PKGNAMESUFFIX=	-ldap
-mysql_PKGNAMESUFFIX=	-mysql
-pgsql_PKGNAMESUFFIX=	-pgsql
-sqlite3_PKGNAMESUFFIX=	-sqlite3
+ldap_PKGNAMESUFFIX=	3-ldap
+mysql_PKGNAMESUFFIX=	3-mysql
+pgsql_PKGNAMESUFFIX=	3-pgsql
+sqlite3_PKGNAMESUFFIX=	3-sqlite3
 
 LOGDIR?=	/var/log
 KRB5_CONFIG?=	/usr/bin/krb5-config --libs
@@ -108,7 +106,7 @@ FIREBIRD_CONFIGURE_WITH=	rlm_sql_firebird
 FIREBIRD_USES=			firebird
 LDAP_CONFIGURE_WITH=		rlm_ldap
 LDAP_LIB_DEPENDS=		libsasl2.so:security/cyrus-sasl2
-LDAP_USE=			OPENLDAP
+LDAP_USES=			ldap
 LDAP_VARS=			_REQUIRE+=slapd
 MITKRB_PORT_CONFIGURE_ON=	--with-rlm-krb5-dir=${LOCALBASE}
 MITKRB_PORT_LIB_DEPENDS=	libkrb5support.so:security/krb5
@@ -142,7 +140,7 @@ REST_CONFIGURE_ON=		--with-libcurl=${LOCALBASE} \
 REST_LIB_DEPENDS=		libcurl.so:ftp/curl \
 				libjson-c.so:devel/json-c
 RUBY_CONFIGURE_WITH=		rlm_ruby
-RUBY_USE=			RUBY
+RUBY_USES=			ruby
 RUBY_IGNORE=			with ruby support leaks memory, breaks signal handling.  Please disable RUBY support
 SQLITE3_CONFIGURE_WITH=		rlm_sql_sqlite
 SQLITE3_LIB_DEPENDS=		libsqlite3.so:databases/sqlite3
@@ -314,6 +312,6 @@ post-build:
 	@${FIND} ${WRKSRC}/build/bin -type f -exec ${STRIP_CMD} {} \;
 
 post-install:
-	${MKDIR} ${STAGEDIR}/var/run/radiusd
+	${MKDIR} ${STAGEDIR}/var/run/radiusd ${STAGEDIR}/var/log/radacct
 
 .include <bsd.port.post.mk>

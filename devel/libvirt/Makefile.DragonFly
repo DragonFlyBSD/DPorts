@@ -6,9 +6,11 @@ SHEBANG_FILES+=	tools/virt-qemu-sev-validate tools/virt-qemu-qmp-proxy
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NZFS} QEMU
 
 # deal with orphans
-PLIST_FILES+=	lib/libvirt/storage-backend/libvirt_storage_backend_logical.so \
-		bin/virt-qemu-qmp-proxy bin/virt-qemu-sev-validate \
-		man/man1/virt-qemu-qmp-proxy.1.gz man/man1/virt-qemu-sev-validate.1.gz
+PLIST_FILES+=	bin/virt-qemu-qmp-proxy \
+		bin/virt-qemu-sev-validate \
+		man/man1/virt-qemu-qmp-proxy.1.gz \
+		man/man1/virt-qemu-sev-validate.1.gz \
+		"@dir /var/run/libvirt/qemu/passt"
 
 
 dfly-patch:

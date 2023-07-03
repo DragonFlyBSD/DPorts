@@ -33,6 +33,7 @@ BAD_GST_ENABLED_PLUGINS=accurip \
 			codecalpha \
 			codecparsers \
 			codecs \
+			codectimestamper \
 			coloreffects \
 			data \
 			debugutils \
@@ -115,4 +116,3 @@ BUILD_DEPENDS+=	v4l_compat>=1.0.20100321:multimedia/v4l_compat \
 	gtk3>=3.10:x11-toolkits/gtk30
 
 LIB_DEPENDS+=libnice.so:net-im/libnice
-

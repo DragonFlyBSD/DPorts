@@ -1,17 +1,14 @@
-# Created by: Thomas Gellekum <tg@FreeBSD.org>
-# $FreeBSD$
-
 PORTNAME=	gnumail
-PORTVERSION=	1.3.0
-PORTREVISION=	1
+PORTVERSION=	1.4.0
 CATEGORIES=	mail gnustep
 MASTER_SITES=	SAVANNAH/gnustep-nonfsf/
 DISTNAME=	GNUMail-${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNUstep mail client
+WWW=		https://www.nongnu.org/gnustep-nonfsf/gnumail/
 
-LICENSE=	GPLv2
+LICENSE=	GPLv2+
 
 LIB_DEPENDS=	libPantomime.so:mail/pantomime \
 		libAddresses.so:mail/addresses

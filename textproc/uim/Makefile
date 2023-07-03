@@ -1,5 +1,6 @@
 PORTNAME=	uim
 PORTVERSION=	1.9.0.b.${SNAPDATE}
+PORTREVISION=	1
 CATEGORIES?=	textproc
 .if !defined(UIM_SLAVE) && defined(WITHOUT_X11)
 PKGNAMESUFFIX=	-nox11
@@ -43,11 +44,9 @@ CONFIGURE_ARGS+=	--with-x --with-xft
 .endif
 
 .if !defined(UIM_SLAVE)
-USES+=		perl5
+USES+=		perl5 ruby:build
 USE_GNOME+=	librsvg2:build
 USE_PERL5=	build
-USE_RUBY=	yes
-RUBY_NO_RUN_DEPENDS=	yes
 .if ${PORT_OPTIONS:MX11}
 USE_GNOME+=	cairo gdkpixbuf2 gtk30
 LIB_DEPENDS+=	libfreetype.so:print/freetype2 \

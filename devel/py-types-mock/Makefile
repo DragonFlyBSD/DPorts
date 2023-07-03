@@ -1,12 +1,12 @@
 PORTNAME=	types-mock
 PORTVERSION=	4.0.15
 CATEGORIES=	devel python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Typing stubs for mock
-WWW=		https://github.com/python/typeshed/tree/master/stubs/mock
+WWW=		https://github.com/python/typeshed/tree/main/stubs/mock
 
 LICENSE=	APACHE20
 

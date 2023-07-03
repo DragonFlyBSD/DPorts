@@ -79,7 +79,7 @@ PLIST_SUB+=	PULSEAUDIO="@comment "
 
 .if ${PORT_OPTIONS:MJABBER}
 CONFIGURE_ARGS+=--enable-jabber
-PLLIB_VIDEO=1
+PTLIB_VIDEO=1
 .endif
 
 .if ${PORT_OPTIONS:MODBC}
@@ -135,7 +135,7 @@ CONFIGURE_ARGS+=--disable-sdl
 .endif
 
 .if ${PORT_OPTIONS:MLDAP}
-USE_OPENLDAP=	yes
+USES+=	ldap
 CONFIGURE_ARGS+=--enable-openldap
 .else
 CONFIGURE_ARGS+=--disable-openldap

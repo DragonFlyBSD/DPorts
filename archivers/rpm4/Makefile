@@ -17,7 +17,7 @@ LIB_DEPENDS=	libpopt.so:devel/popt \
 		libzstd.so:archivers/zstd \
 		libgcrypt.so:security/libgcrypt
 RUN_DEPENDS=	bash:shells/bash \
-		gxargs:misc/findutils
+		gxargs:misc/findutils \
 
 USES=		alias bdb sqlite cpe gmake iconv libarchive libtool \
 		lua pathfix pkgconfig shebangfix tar:bzip2

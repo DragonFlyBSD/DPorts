@@ -1,6 +1,6 @@
 PORTNAME=	verilator
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.006
+DISTVERSION=	5.010
 PORTREVISION=	1
 CATEGORIES=	cad
 
@@ -32,12 +32,15 @@ SHEBANG_FILES=	bin/verilator_ccache_report \
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	INSTALL_PROGRAM="${INSTALL_SCRIPT}"
-CONFIGURE_ARGS=	AR=${LOCALBASE}/bin/ar
+CONFIGURE_ARGS=	AR=${LOCALBASE}/bin/ar \
+		PYTHON3=${PYTHON_CMD}
 CONFIGURE_SHELL=	${LOCALBASE}/bin/bash # see https://github.com/verilator/verilator/issues/3132
 
-TEST_TARGET=	test
+TEST_TARGET=	test # tests fail, see https://github.com/verilator/verilator/issues/4158
 
 BINARY_ALIAS=	make=${GMAKE} python3=${PYTHON_CMD} # aliasas are only for tests
+
+#MAKE_JOBS_UNSAFE=	yes # build on 1 CPU because many compile jobs are over 10GB and they can likely cause out-of-memory issues
 
 OPTIONS_DEFINE=			INSTALL_DBG_EXECUTABLES LEAK_CHECKS
 OPTIONS_SUB=			yes
@@ -49,8 +52,6 @@ LEAK_CHECKS_CXXFLAGS=		-DVL_LEAK_CHECKS
 LEAK_CHECKS_BROKEN=		compilation will be fixed in the next release
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|AC_PATH_PROG(PYTHON3,python3)|AC_PATH_PROG(PYTHON3,${PYTHON_VERSION})|' \
-		${WRKSRC}/configure.ac # hack-workaround for https://github.com/verilator/verilator/issues/3970
 	@${REINPLACE_CMD} -e 's|@pkgconfigdir@|${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.in
 
@@ -60,6 +61,9 @@ pre-configure:
 
 post-build:
 	@${STRIP_CMD} ${WRKSRC}/bin/verilator_bin
+
+post-install: # workaround for https://github.com/verilator/verilator/issues/4213: share/verilator/include/verilated.mk contains non-existent AR=/usr/local/bin/ar
+	@${REINPLACE_CMD} -i '' -e 's|^AR = .*|AR = /usr/bin/ar|' ${STAGEDIR}${PREFIX}/share/verilator/include/verilated.mk
 
 post-install-INSTALL_DBG_EXECUTABLES-off:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/verilator_bin
