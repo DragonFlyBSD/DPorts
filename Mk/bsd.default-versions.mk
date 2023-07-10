@@ -81,7 +81,7 @@ LIBRSVG2_DEFAULT?=	legacy
 # Possible values: c7
 LINUX_DEFAULT?=		c7
 # Possible values: 10, 11, 12, 13, 14, 15, -devel (to be used when non-base compiler is required)
-LLVM_DEFAULT?=		10
+LLVM_DEFAULT?=		15
 # Possible values: 5.1, 5.2, 5.3, 5.4
 LUA_DEFAULT?=		5.4
 # Possible values: luajit, luajit-devel, luajit-openresty
