@@ -1,9 +1,9 @@
-TIMESTAMP = 1683615486
-SHA256 (chromium-113.0.5672.92.tar.xz) = a4520b53c824d75bcbc80bcf5da0c3d6f213038c8e31904b8a3bfbe415893ba5
-SIZE (chromium-113.0.5672.92.tar.xz) = 1556728164
-SHA256 (chrome-linux-113.0.5672.92-llvm13.profdata.tar.xz) = e484a562a12ef01e4ec360090443302de3f3a15d90d220b9fc388724649c49b8
-SIZE (chrome-linux-113.0.5672.92-llvm13.profdata.tar.xz) = 27022892
-SHA256 (chromium-113.0.5672.92-testdata.tar.xz) = e2e085a5014f4dde9c1ea904213f9985d8ed8b5b227cf35bcc6afb656630d51f
-SIZE (chromium-113.0.5672.92-testdata.tar.xz) = 263959532
+TIMESTAMP = 1687851726
+SHA256 (chromium-114.0.5735.198.tar.xz) = a9f3440feeab51f56b199797b83b458ca545bf67e114c62b21470fadd5a41dea
+SIZE (chromium-114.0.5735.198.tar.xz) = 1570630092
+SHA256 (chrome-linux-114.0.5735.198-llvm13.profdata.tar.xz) = b6e17600f30c3478e68b17afffae11182b8fc76b03bc6d462690c00cd7416586
+SIZE (chrome-linux-114.0.5735.198-llvm13.profdata.tar.xz) = 27294248
+SHA256 (chromium-114.0.5735.198-testdata.tar.xz) = 2c244b76c21c298e07719107e421b56715f020eb2c14aea1bafa90bd84c06887
+SIZE (chromium-114.0.5735.198-testdata.tar.xz) = 263496592
 SHA256 (test_fonts-336e775eec536b2d785cc80eff6ac39051931286.tar.gz) = a2ca2962daf482a8f943163541e1c73ba4b2694fabcd2510981f2db4eda493c8
 SIZE (test_fonts-336e775eec536b2d785cc80eff6ac39051931286.tar.gz) = 32624734

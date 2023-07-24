@@ -11,9 +11,6 @@ LIB_DEPENDS+=  	libc++.so.1:devel/libcxx${LLVM_DEFAULT}
 # we don't support libcuse so no audio/virtual_oss
 RUN_DEPENDS:=	${RUN_DEPENDS:Nvirtual_oss*}
 
-# chromium-legacy installs files in the same path as this port
-CONFLICTS_INSTALL=      chromium-legacy
-
 # FreeBSD has kerberos in base but we don't
 KERBEROS_LIB_DEPENDS+=	libkrb5.so:security/krb5
 .endif
