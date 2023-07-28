@@ -1,8 +1,0 @@
-
-# zrj: add missing link against -lc and -lm in libcdcl.so
-# NOTYPE  GLOBAL DEFAULT  UND {acos, tan}
-# fixes science/cdcl build (binutils 2.27 ld.gold is unhappy)
-dfly-patch:
-	${REINPLACE_CMD} -e 's@Linux\|\*BSD)@Linux|DragonFly|*BSD)@g'	\
-			 -e '/--whole-archive/s/"$$/ -lm -lc"/g'	\
-		${WRKSRC}/configure

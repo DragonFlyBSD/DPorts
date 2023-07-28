@@ -1,3 +1,0 @@
-
-USES+=	alias
-LDFLAGS+= -lutil

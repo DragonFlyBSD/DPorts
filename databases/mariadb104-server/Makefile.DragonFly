@@ -1,8 +1,0 @@
-USES+=	gettext-runtime
-
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSSAPI_BASE} GSSAPI_MIT
-
-# workaround plist issues
-dfly-install:
-	${RM} ${STAGEDIR}${DATADIR}/JavaWrappers.jar
-	${RM} ${STAGEDIR}${DATADIR}/JdbcInterface.jar
