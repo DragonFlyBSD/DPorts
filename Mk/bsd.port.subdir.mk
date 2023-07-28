@@ -153,8 +153,6 @@ UID!=	${ID} -u
 .  endif
 _EXPORTED_VARS+=	UID
 
-.endif
-
 INDEXDIR?=	${PORTSDIR}
 INDEXFILE?=	INDEX
 
