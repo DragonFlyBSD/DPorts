@@ -1,6 +1,5 @@
 PORTNAME=	installer
-PORTVERSION=	0.6.0
-PORTREVISION=	1
+PORTVERSION=	0.7.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +11,7 @@ WWW=		https://github.com/pypa/installer
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	allflavors autoplist concurrent pep517
 
 MAKE_ENV=	PYTHONPATH=${WRKSRC}/src
