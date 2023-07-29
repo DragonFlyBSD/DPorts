@@ -1,5 +1,5 @@
 PORTNAME=	nox
-PORTVERSION=	2022.11.21
+PORTVERSION=	2023.4.22
 CATEGORIES=	devel python
 #MASTER_SITES=	PYPI # no tests
 
@@ -15,14 +15,16 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}argcomplete>=1.9.4<3.0:devel/py-argcomplete@$
 		${PYTHON_PKGNAMEPREFIX}packaging>=20.9:devel/py-packaging@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}virtualenv>=14:devel/py-virtualenv@${PY_FLAVOR}
 BUILD_DEPENDS=	${PY_DEPENDS} \
+		${PYTHON_PKGNAMEPREFIX}hatchling>0:devel/py-hatchling@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python:3.8+
+USES=		python
 USE_PYTHON=	pep517 autoplist pytest # tests fail to run, see https://github.com/wntrblm/nox/issues/689
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	wntrblm
+GH_TAGNAME=	2023.04.22
 
 NO_ARCH=	yes
 
