@@ -1,12 +1,13 @@
 PORTNAME=	python-openstackclient
-PORTVERSION=	6.1.0
+PORTVERSION=	6.2.0
 CATEGORIES=	net python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	OpenStack Command-line Client
-WWW=		https://docs.openstack.org/python-openstackclient/latest/
+WWW=		https://docs.openstack.org/python-openstackclient/latest/ \
+		https://github.com/openstack/python-openstackclient
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -24,7 +25,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cliff>=3.5.0:devel/py-cliff@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}python-novaclient>=18.1.0:net/py-python-novaclient@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}stevedore>=2.0.1:devel/py-stevedore@${PY_FLAVOR}
 
-USES=		python:3.8+ shebangfix
+USES=		python shebangfix
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
