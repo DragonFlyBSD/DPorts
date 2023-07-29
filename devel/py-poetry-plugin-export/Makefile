@@ -1,5 +1,5 @@
 PORTNAME=	poetry-plugin-export
-DISTVERSION=	1.2.0
+DISTVERSION=	1.3.1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,8 +16,8 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}poetry-core>=1.3.0<2.0.0:devel/py-poetry-core
 BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python:3.7+
-USE_PYTHON=	pep517 concurrent autoplist
+USES=		python
+USE_PYTHON=	pep517 concurrent autoplist pytest
 
 NO_ARCH=	yes
 
