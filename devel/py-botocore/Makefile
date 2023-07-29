@@ -1,5 +1,5 @@
 PORTNAME=	botocore
-PORTVERSION=	1.29.79
+PORTVERSION=	1.29.150
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,9 +17,14 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jmespath>=0.7.1<2.0.0:devel/py-jmespath@${PY
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}awscrt>=0.16.9:devel/py-awscrt@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonschema>=0:devel/py-jsonschema@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils pytest
 
 NO_ARCH=	yes
+
+OPTIONS_DEFINE=	CRT
+CRT_DESC=	Common runtime support
+
+CRT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}awscrt>=0.16.9:devel/py-awscrt@${PY_FLAVOR}
 
 .include <bsd.port.mk>
