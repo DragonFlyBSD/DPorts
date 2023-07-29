@@ -6,7 +6,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python interface to libcurl
-WWW=		http://pycurl.io/
+WWW=		http://pycurl.io/ \
+		https://github.com/pycurl/pycurl
 
 LICENSE=	LGPL21 MIT
 LICENSE_COMB=	dual
@@ -15,7 +16,7 @@ LICENSE_FILE_MIT=	${WRKSRC}/COPYING-MIT
 
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
-USES=		python:3.6+ ssl
+USES=		python ssl
 USE_PYTHON=	autoplist concurrent distutils
 
 PORTDOCS=	AUTHORS INSTALL.rst README.rst RELEASE-NOTES.rst
