@@ -1,5 +1,5 @@
 PORTNAME=	nim
-DISTVERSION=	1.6.12
+DISTVERSION=	1.6.14
 CATEGORIES=	lang
 MASTER_SITES=	https://nim-lang.org/download/
 
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/copying.txt
 BROKEN_sparc64=	fails to build: build.sh: clang: not found
 
 LIB_DEPENDS=	libpcre.so:devel/pcre
-TEST_DEPENDS=	node>=0:www/node
+TEST_DEPENDS=	node18>=0:www/node
 
 USES=		compiler:c11 cpe tar:xz
 
@@ -81,6 +81,7 @@ do-install:
 	# Install nim lib files
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}
 	(cd ${WRKSRC}/lib && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/lib/${PORTNAME} "! -name libnimrtl.so")
+	${REINPLACE_CMD} 's|\.\.\/doc|/usr/local/share/doc/nim|g' ${WRKSRC}/compiler/commands.nim
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/compiler
 	(cd ${WRKSRC}/compiler && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/compiler "! -name nim ! -name nim1")
 	# Configuration files
