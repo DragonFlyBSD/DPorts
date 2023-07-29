@@ -1,7 +1,6 @@
 PORTNAME=	maxminddb
-PORTVERSION=	2.2.0
+PORTVERSION=	2.3.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	net python geography
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libmaxminddb.so:net/libmaxminddb
 
-USES=		compiler:c11 localbase python:3.7+
+USES=		compiler:c11 localbase python
 USE_GITHUB=	yes
 GH_ACCOUNT=	maxmind
 GH_PROJECT=	MaxMind-DB-Reader-python
