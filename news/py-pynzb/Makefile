@@ -11,8 +11,10 @@ WWW=		https://pypi.org/project/pynzb/
 
 LICENSE=	BSD3CLAUSE
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	distutils autoplist
+
+NO_ARCH=	yes
 
 OPTIONS_DEFINE=	LXML
 LXML_DESC=	Add support for py-lxml
