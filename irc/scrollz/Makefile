@@ -7,7 +7,7 @@ CATEGORIES=	irc
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES=	c0dfa140341cf9a848a6e5f926392623d03d2c28.patch:-p1
 
-MAINTAINER=	freebsd@bitchx.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Enhanced ircII client that supports scripts, colors, and more
 WWW=		https://www.scrollz.info/
 
@@ -36,6 +36,10 @@ OPENSSL_CONFIGURE_ON=	--with-openssl=${OPENSSLBASE}
 UTF8_CONFIGURE_ENABLE=	utf8
 
 .include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CFLAGS+=       -Wno-error=int-conversion
+.endif
 
 .if !empty(ICONV_LIB)
 CONFIGURE_ENV+=ac_cv_func_iconv_open=yes
