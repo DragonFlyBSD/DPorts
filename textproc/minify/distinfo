@@ -1,7 +1,5 @@
-TIMESTAMP = 1679677770
-SHA256 (go/textproc_minify/minify-v2.12.4/v2.12.4.mod) = fe00f21802a89a1cd961e26bd58a95fc9c9833adfd640b1bd9923b99a6f560a4
-SIZE (go/textproc_minify/minify-v2.12.4/v2.12.4.mod) = 401
-SHA256 (go/textproc_minify/minify-v2.12.4/v2.12.4.zip) = 6f76f152c15fee3a36b0496175d7e075046c3b47b50327428b10d32af6549f5f
-SIZE (go/textproc_minify/minify-v2.12.4/v2.12.4.zip) = 7090880
-SHA256 (go/textproc_minify/minify-v2.12.4/golang-sys-v0.6.0_GH0.tar.gz) = b4f6d17c7a128f76169964b437cb66b3f2dbf9a33361928ec19dfecf7b03fc54
-SIZE (go/textproc_minify/minify-v2.12.4/golang-sys-v0.6.0_GH0.tar.gz) = 1434234
+TIMESTAMP = 1685792188
+SHA256 (go/textproc_minify/minify-v2.12.6/v2.12.6.mod) = c8d4e9e9b3c0448daa9c876b3d93f3b59575a92e225dcb543a828260fe4baac2
+SIZE (go/textproc_minify/minify-v2.12.6/v2.12.6.mod) = 438
+SHA256 (go/textproc_minify/minify-v2.12.6/v2.12.6.zip) = 8d56845ede9806243deabd7cec14f7bb76568d6e1d3cbff600e3a797607d4eaf
+SIZE (go/textproc_minify/minify-v2.12.6/v2.12.6.zip) = 7092808
