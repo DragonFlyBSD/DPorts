@@ -1,5 +1,5 @@
 PORTNAME=	phpldapadmin
-PORTVERSION=	1.2.6.5
+DISTVERSION=	1.2.6.6
 CATEGORIES=	net www
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
@@ -15,7 +15,7 @@ CPE_VENDOR=	phpldapadmin_project
 USE_GITHUB=	yes
 GH_ACCOUNT=	leenooks
 GH_PROJECT=	phpLDAPadmin
-USE_PHP=	gettext hash iconv ldap openssl pcre session xml
+USE_PHP=	gettext iconv ldap session xml
 
 NO_ARCH=	yes
 NO_BUILD=	yes
