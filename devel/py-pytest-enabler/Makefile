@@ -1,6 +1,5 @@
 PORTNAME=	pytest-enabler
-PORTVERSION=	2.1.0
-PORTREVISION=	1
+PORTVERSION=	2.1.1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -25,7 +24,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest-black>=0.3.7:devel/py-pytest-black@$
 		${PYTHON_PKGNAMEPREFIX}pytest-mypy>=0.9.1:devel/py-pytest-mypy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}types-toml>=0:devel/py-types-toml@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist concurrent pep517 pytest
 
 NO_ARCH=	yes
