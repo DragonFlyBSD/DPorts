@@ -1,5 +1,5 @@
 PORTNAME=	gcc
-PORTVERSION=	11.3.1.s20230324
+PORTVERSION=	11.4.1.s20230629
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -43,9 +43,9 @@ CFLAGS:=	${CFLAGS:N-mretpoline}
 CXXFLAGS:=	${CXXFLAGS:N-mretpoline}
 
 OPTIONS_DEFINE=		GRAPHITE
-OPTIONS_DEFAULT_aarch64=LTO_BOOTSTRAP
-OPTIONS_DEFAULT_x86_64=	LTO_BOOTSTRAP
-OPTIONS_DEFAULT_i386=	LTO_BOOTSTRAP
+OPTIONS_DEFAULT_aarch64=STANDARD_BOOTSTRAP
+OPTIONS_DEFAULT_x86_64=	STANDARD_BOOTSTRAP
+OPTIONS_DEFAULT_i386=	STANDARD_BOOTSTRAP
 OPTIONS_DEFAULT_powerpc=LTO_BOOTSTRAP
 OPTIONS_DEFAULT_powerpc64=LTO_BOOTSTRAP
 OPTIONS_DEFAULT_powerpc64le=LTO_BOOTSTRAP
@@ -64,6 +64,11 @@ MULTILIB_DESC=		Build support for 32-bit and 64-bit targets
 MULTILIB_CONFIGURE_ENABLE=	multilib
 .else
 CONFIGURE_ARGS+=	--disable-multilib
+.endif
+
+.if defined(CPUTYPE) && ${CPUTYPE:Mg[3-5]}
+CFLAGS:=	${CFLAGS:S/mcpu=g/mcpu=G/}
+CXXFLAGS:=	${CFLAGS:S/mcpu=g/mcpu=G/}
 .endif
 
 .include <bsd.port.pre.mk>
@@ -127,8 +132,10 @@ INFO=		gcc${SUFFIX}/cpp \
 		gcc${SUFFIX}/libgccjit \
 		gcc${SUFFIX}/libgomp
 .if ${ARCH} == x86_64 || ${ARCH} == i386
-INFO+=		gcc${SUFFIX}/libquadmath \
-		gcc${SUFFIX}/libitm
+INFO+=		gcc${SUFFIX}/libquadmath
+.endif
+.if ${ARCH} == x86_64 || ${ARCH} == i386 || ${ARCH} == aarch64
+INFO+=		gcc${SUFFIX}/libitm
 .endif
 SUB_FILES=	pkg-message
 SUB_LIST+=	TARGLIB=${TARGLIB}
