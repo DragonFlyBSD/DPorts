@@ -6,7 +6,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Text progressbar library for python
-WWW=		https://pypi.org/project/progressbar/
+WWW=		https://github.com/niltonvolpato/python-progressbar
 
 LICENSE=	BSD3CLAUSE LGPL21+
 LICENSE_COMB=	dual
@@ -14,7 +14,7 @@ LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/LICENSE.txt
 
 NO_ARCH=	yes
 USE_PYTHON=	autoplist concurrent distutils
-USES=		python:3.6+
+USES=		python
 
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}progressbar231
 
