@@ -1,6 +1,5 @@
 PORTNAME=	storj
-PORTVERSION=	1.71.2
-PORTREVISION=	3
+PORTVERSION=	1.80.10
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 
@@ -10,12 +9,12 @@ WWW=		https://storj.io/
 
 LICENSE=	AGPLv3
 
-USES=		go:1.19,modules
+USES=		go:modules
 USE_GITHUB=	yes
 
 .include "${.CURDIR}/Makefile.deps"
 
-STORJ_CMDS=	certificates crashcollect identity inspector metric-receiver \
+STORJ_CMDS=	certificates crashcollect identity metric-receiver \
 		multinode satellite storagenode storagenode-updater \
 		storj-admin storj-sim uplink versioncontrol
 
