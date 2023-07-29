@@ -15,6 +15,7 @@ WWW=		https://github.com/knu/ruby-bdb
 LICENSE=	RUBY
 
 BROKEN_RUBY32=	yes
+BROKEN_RUBY33=	yes
 
 BUILD_DEPENDS=	rubygem-rdoc>=0.a:devel/rubygem-rdoc
 
@@ -42,6 +43,12 @@ PORTDOCS=	*
 PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+CONFIGURE_ARGS+=	--with-cflags="-Wno-error=incompatible-function-pointer-types"
+.endif
 
 post-patch:
 	@${RM} ${WRKSRC}/docs/*.orig
