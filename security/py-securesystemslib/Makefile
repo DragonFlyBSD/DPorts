@@ -1,5 +1,5 @@
 PORTNAME=	securesystemslib
-PORTVERSION=	0.27.0
+PORTVERSION=	0.28.0
 CATEGORIES=	security python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +16,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=3.3.2:security/py-cryptography
 		${PYTHON_PKGNAMEPREFIX}pynacl>1.2.0:security/py-pynacl@${PY_FLAVOR}
 TEST_DEPENDS=	${LOCALBASE}/bin/gpg:security/gnupg
 
-USES=		python:3.7+ pytest shebangfix
+USES=		python pytest shebangfix
 USE_PYTHON=	autoplist pep517
 PYTEST_ARGS=	tests
 
