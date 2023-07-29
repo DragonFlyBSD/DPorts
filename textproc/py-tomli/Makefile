@@ -1,6 +1,6 @@
 PORTNAME=	tomli
 PORTVERSION=	2.0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +12,7 @@ WWW=		https://github.com/hukkin/tomli
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	allflavors autoplist concurrent pep517
 
 NO_ARCH=	yes
