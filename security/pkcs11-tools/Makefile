@@ -1,6 +1,6 @@
 PORTNAME=	pkcs11-tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.5.0
+DISTVERSION=	2.5.1
 CATEGORIES=	security
 
 MAINTAINER=	eric.devolder@gmail.com
@@ -9,8 +9,10 @@ WWW=		https://github.com/Mastercard/pkcs11-tools
 
 LICENSE=	APACHE20
 
-BROKEN_SSL=	libressl
+BROKEN_SSL=	libressl openssl30 openssl31
 BROKEN_SSL_REASON_libressl=	error: use of undeclared identifier 'EVP_PKEY_X25519' (LibreSSL has no support for Edwards curves)
+BROKEN_SSL_REASON_openssl30=	error: undefined symbol: EVP_PKEY_*
+BROKEN_SSL_REASON_openssl31=	error: undefined symbol: EVP_PKEY_*
 
 BUILD_DEPENDS=	autoconf-archive>0:devel/autoconf-archive \
 		flex:textproc/flex
