@@ -37,6 +37,7 @@ STACKPROTECTOR_DESC=	Build with stack-protector
 USES+=		ssl
 SSL_SUFFIX=	-ssl
 CFLAGS+=	-I${OPENSSLINC}
+CFLAGS+=	-Wno-deprecated-declarations
 LDFLAGS+=	-L${OPENSSLLIB}
 .endif
 
