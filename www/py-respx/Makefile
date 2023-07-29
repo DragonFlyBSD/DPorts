@@ -6,14 +6,15 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Utility for mocking out the Python HTTPX and HTTP Core libraries
-WWW=		https://lundberg.github.io/respx/
+WWW=		https://lundberg.github.io/respx/ \
+		https://github.com/lundberg/respx
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}httpx>=0.21.0:www/py-httpx@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
