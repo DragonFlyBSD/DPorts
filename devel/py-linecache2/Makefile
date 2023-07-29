@@ -7,13 +7,13 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	New features in linecache backported to Python 2
-WWW=		https://pypi.org/project/linecache2/
+WWW=		https://github.com/testing-cabal/linecache2
 
 LICENSE=	PSFL
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pbr>0:devel/py-pbr@${PY_FLAVOR}
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
