@@ -1,5 +1,5 @@
 PORTNAME=	spf-engine
-DISTVERSION=	3.0.3
+DISTVERSION=	3.0.4
 CATEGORIES=	mail python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}authres>0:mail/py-authres@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}milter>0:mail/py-milter@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyspf>0:mail/py-pyspf@${PY_FLAVOR}
 
-USES=		python:3.3+ shebangfix
+USES=		python shebangfix
 USE_PYTHON=	autoplist pep517
 USE_RC_SUBR=	pyspf-milter
 
