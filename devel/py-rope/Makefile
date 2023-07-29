@@ -1,5 +1,6 @@
 PORTNAME=	rope
 DISTVERSION=	1.7.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,7 +23,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytoolconfig>=0:devel/py-pytoolconfig@${PY_F
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest-timeout>=0:devel/py-pytest-timeout@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytoolconfig>=0:devel/py-pytoolconfig@${PY_FLAVOR}
 
-USES=		cpe python:3.6+ pytest
+USES=		cpe python pytest
 USE_PYTHON=	autoplist pep517
 
 CPE_VENDOR=	rope_project
