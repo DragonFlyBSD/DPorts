@@ -1,5 +1,5 @@
 PORTNAME=	pycoin
-PORTVERSION=	0.92.20220529
+PORTVERSION=	0.92.20230326
 CATEGORIES=	finance
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,7 +11,7 @@ WWW=		https://github.com/richardkiss/pycoin
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 CONFLICTS_INSTALL=	block keychain
