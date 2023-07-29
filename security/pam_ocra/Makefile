@@ -1,5 +1,5 @@
 PORTNAME=	pam_ocra
-DISTVERSION=	1.5
+DISTVERSION=	1.6
 CATEGORIES=	security
 
 MAINTAINER=	sg2342@googlemail.com
