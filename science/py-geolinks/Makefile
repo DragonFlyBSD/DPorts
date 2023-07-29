@@ -1,5 +1,5 @@
 PORTNAME=	geolinks
-PORTVERSION=	0.2.0
+PORTVERSION=	0.2.1
 CATEGORIES=	science python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,7 +10,10 @@ WWW=		https://github.com/geopython/geolinks
 
 LICENSE=	MIT
 
-USES=		python:3.6+
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}click>=0:devel/py-click@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}click>=0:devel/py-click@${PY_FLAVOR}
+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
