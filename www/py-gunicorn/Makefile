@@ -1,5 +1,6 @@
 PORTNAME=	gunicorn
 PORTVERSION=	20.1.0
+PORTREVISION=	1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MASTER_SITES=	PYPI
@@ -11,10 +12,13 @@ WWW=		https://gunicorn.org/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+PATCH_SITES=	https://github.com/benoitc/${PORTNAME}/commit/
+PATCHFILES=	1299ea9e967a61ae2edebe191082fd169b864c64.patch:-p1
+
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiohttp>0:www/py-aiohttp@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		cpe python:3.6+
+USES=		cpe python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
