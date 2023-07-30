@@ -1,6 +1,6 @@
 PORTNAME=	eclib
-PORTVERSION=	20220621
-PORTREVISION=	2
+PORTVERSION=	20230424
+DISTVERSIONPREFIX=	v
 CATEGORIES=	math
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -21,6 +21,7 @@ USES=		autoreconf compiler:c++11-lang libtool localbase
 
 OPTIONS_DEFINE=	DOCS
 
+CXXFLAGS+=	-std=c++11
 LIBS+=		"-lm"
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-flint=${LOCALBASE} --with-boost=${LOCALBASE}
