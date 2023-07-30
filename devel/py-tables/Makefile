@@ -1,6 +1,6 @@
 PORTNAME=	tables
 PORTVERSION=	3.7.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,7 +23,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 
 CONFLICTS_BUILD=	zstd # conflicting version of zstd is bundled
 
-USES=		fortran localbase python:3.6+
+USES=		fortran localbase python
 USE_PYTHON=	autoplist concurrent distutils cython
 
 PORTEXAMPLES=	*
