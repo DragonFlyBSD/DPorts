@@ -1,6 +1,7 @@
 PORTNAME=	node
 DISTVERSIONPREFIX=	v
 DISTVERSION=	16.20.0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${DISTVERSION}/
 PKGNAMESUFFIX=	16
@@ -24,7 +25,7 @@ LIB_DEPENDS+=	libbrotlidec.so:archivers/brotli \
 		libnghttp2.so:www/libnghttp2 \
 		libuv.so:devel/libuv
 
-USES=		compiler:c++11-lib gmake localbase pkgconfig python:3.6+,build \
+USES=		compiler:c++11-lib gmake localbase pkgconfig python:build \
 		shebangfix
 
 BROKEN_SSL=	libressl libressl-devel
@@ -105,6 +106,10 @@ EXTRA_PATCHES=	${PATCHDIR}/extra-patch-tools_v8__gypfiles_v8.gyp
 
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != x86_64
 CONFIGURE_ARGS+=	--openssl-no-asm
+.endif
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+CXXFLAGS+=	-Wno-error=enum-constexpr-conversion
 .endif
 
 post-patch:
