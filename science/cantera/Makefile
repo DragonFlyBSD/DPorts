@@ -1,7 +1,7 @@
 PORTNAME=	cantera
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.6.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	science # chemistry physics
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	googletest>0:devel/googletest \
 LIB_DEPENDS=	libfmt.so:devel/libfmt \
 		libyaml-cpp.so:devel/yaml-cpp
 
-USES=		compiler:c++11-lang eigen:3 scons
+USES=		compiler:c++11-lang eigen:3 localbase scons
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -49,7 +49,7 @@ OCTAVE_LIB_DEPENDS=	liboctave.so:math/octave
 OCTAVE_SUB_FILES=	pkg-message-octave
 OCTAVE_USES=		octave:env
 
-PYTHON_USES=		python:3.6+
+PYTHON_USES=		python
 PYTHON_USE=		PYTHON=cython
 PYTHON_MAKE_ARGS=	python_cmd=${PYTHON_CMD} python_package=full
 PYTHON_MAKE_ARGS_OFF=	python_package="none"
