@@ -1,6 +1,7 @@
 PORTNAME=	pyjacklib
 DISTVERSIONPREFIX=	v
 DISTVERSION=		0.1.1
+PORTREVISION=	1
 CATEGORIES=	audio
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING.md
 
 LIB_DEPENDS=	libjack.so:audio/jack
 
-USES=		localbase python:3.6+
+USES=		localbase python
 USE_PYTHON=	autoplist distutils
 
 USE_GITHUB=	yes
