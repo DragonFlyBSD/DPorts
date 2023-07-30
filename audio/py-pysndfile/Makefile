@@ -1,5 +1,6 @@
 PORTNAME=	pysndfile
 DISTVERSION=	1.4.4
+PORTREVISION=	2
 CATEGORIES=	audio python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +15,7 @@ BUILD_DEPENDS=	${PYNUMPY}
 LIB_DEPENDS=	libsndfile.so:audio/libsndfile
 RUN_DEPENDS=	${PYNUMPY}
 
-USES=		python:3.6+ localbase
+USES=		python localbase
 USE_PYTHON=	distutils autoplist cython
 
 .include <bsd.port.mk>
