@@ -1,5 +1,5 @@
 PORTNAME=	rdiff-backup
-DISTVERSION=	2.2.4
+DISTVERSION=	2.2.5
 CATEGORIES=	sysutils python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	${RUN_DEPENDS} \
 LIB_DEPENDS=	librsync.so:net/librsync
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR}
 
-USES=		localbase:ldflags python:3.5+
+USES=		localbase:ldflags python
 USE_LDCONFIG=	yes
 USE_PYTHON=	autoplist concurrent distutils
 
