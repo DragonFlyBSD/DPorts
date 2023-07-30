@@ -1,6 +1,6 @@
 PORTNAME=	pipewire
 DISTVERSION=	0.3.62
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gitlab.freedesktop.org/pipewire/media-session/-/archive/${MEDIA_SESSION_VERSION}/:media_session
 DISTFILES=	media-session-${MEDIA_SESSION_VERSION}${EXTRACT_SUFX}:media_session
@@ -21,7 +21,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libwebrtc_audio_processing.so:audio/webrtc-audio-processing0
 
 USES=		compiler:c11 gettext-tools gnome localbase:ldflags meson \
-		ncurses pkgconfig python:3.6+,build readline ssl
+		ncurses pkgconfig python:build readline ssl
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 
