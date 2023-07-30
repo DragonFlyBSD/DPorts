@@ -1,6 +1,7 @@
 PORTNAME=	cyipopt
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.2.0
+PORTREVISION=	1
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -20,7 +21,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}
 
-USES=		fortran python:3.6+ pkgconfig # fortran because ipopt's pkg-config returns gcc libs
+USES=		fortran python pkgconfig # fortran because ipopt's pkg-config returns gcc libs
 USE_PYTHON=	distutils cython autoplist pytest
 
 USE_GITHUB=	yes
