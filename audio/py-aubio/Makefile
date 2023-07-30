@@ -1,4 +1,4 @@
-PORTREVISION=	0
+PORTREVISION=	2
 CATEGORIES=	audio python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -10,7 +10,7 @@ BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY}
 TEST_DEPENDS=	sox:audio/sox
 
-USES+=		python:3.7+
+USES+=		python
 USE_PYTHON=	autoplist concurrent distutils pytest
 
 MASTERDIR=	${.CURDIR}/../../audio/aubio
