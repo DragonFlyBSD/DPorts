@@ -1,5 +1,6 @@
 PORTNAME=	libime
 DISTVERSION=	1.0.17
+PORTREVISION=	1
 CATEGORIES=	chinese textproc
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/${PORTNAME}/ \
 		https://download.fcitx-im.org/data/:opengram_lm,opengram_dict,table_dict
@@ -34,6 +35,17 @@ MAKE_ENV=	FCITX5_DOWNLOAD_DISALLOWED=TRUE
 OPENGRAM_LM_TAR=	lm_sc.arpa-20220810.tar.xz
 OPENGRAM_DICT_TAR=	dict-20220810.tar.xz
 TABLE_DICT_TAR=		table.tar.gz
+
+.include <bsd.port.options.mk>
+
+post-patch:
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+	@${REINPLACE_CMD} -e 's|std::binary_function|std::__binary_function|' \
+		${WRKSRC}/src/libime/core/kenlm/lm/trie_sort.hh \
+		${WRKSRC}/src/libime/core/kenlm/util/joint_sort.hh \
+		${WRKSRC}/src/libime/core/kenlm/util/sized_iterator.hh
+.endif
+
 
 post-extract:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/${OPENGRAM_LM_TAR} ${WRKSRC}/data
