@@ -1,6 +1,5 @@
 PORTNAME=	scikit-sparse
-DISTVERSION=	0.4.6
-PORTREVISION=	3
+DISTVERSION=	0.4.8
 CATEGORIES=	science python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +17,7 @@ LIB_DEPENDS=	libumfpack.so:math/suitesparse-umfpack	\
 RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR}
 
-USES=		fortran python:3.6+
+USES=		fortran python
 USE_PYTHON=	distutils cython autoplist
 
 CFLAGS+=	-I${LOCALBASE}/include/suitesparse
