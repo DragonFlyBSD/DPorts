@@ -1,5 +1,5 @@
 PORTNAME=	polytope
-DISTVERSION=	0.7.0
+DISTVERSION=	0.7.3
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
