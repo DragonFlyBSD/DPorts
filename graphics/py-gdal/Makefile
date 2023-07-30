@@ -1,5 +1,5 @@
 PORTNAME=	gdal
-PORTVERSION=	3.6.2
+PORTVERSION=	3.7.0
 CATEGORIES=	graphics python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +14,7 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	libgdal.so:graphics/gdal
 
-USES=		compiler:c++11-lang cpe python:3.8+
+USES=		compiler:c++11-lang cpe python
 USE_PYTHON=	autoplist concurrent distutils
 
 CPE_VENDOR=	osgeo
