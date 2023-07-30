@@ -13,13 +13,13 @@ WWW=		https://typo3.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-IGNORE_WITH_MYSQL=	56 57 101m 102m
-IGNORE_WITH_PHP=	80 82
+IGNORE_WITH_MYSQL=	57
+IGNORE_WITH_PHP=	80 82 83
 
 USES=		cpe php:web,flavors shebangfix
-USE_PHP=	ctype dom fileinfo filter gd hash intl json \
-		mbstring openssl pcre pdo session simplexml \
-		spl tokenizer xml zip zlib
+USE_PHP=	ctype dom fileinfo filter gd intl \
+		mbstring openssl pdo session simplexml \
+		tokenizer xml zip zlib
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_src-${PORTVERSION}
 SHEBANG_GLOB=	*.sh *.php
@@ -33,11 +33,11 @@ SUB_LIST+=	PREFIX=${PREFIX} \
 
 PORT_V_MAJOR=	12
 PORT_V_MINOR=	4
-PORT_V_PATCH=	1
+PORT_V_PATCH=	2
 
 TYPO3DIR=	www/${PORTNAME}-${PORT_V_MAJOR}
 
-OPTIONS_DEFINE=	CURL GMP IMAGICK MYSQL POSTGRES SQLSRV SQLITE
+OPTIONS_DEFINE=	CURL GMP IMAGICK MYSQL POSTGRES SQLITE
 OPTIONS_DEFAULT=MYSQL
 
 IMAGICK_DESC=	${IMAGEMAGICK_DESC}
@@ -45,13 +45,11 @@ MBSTRING_DESC=	${MULTIBYTE_DESC}
 MYSQL_DESC=	Use MySQL as DBMS
 POSTGRES_DESC=	Use PostgreSQL as DBMS
 SQLITE_DESC=	Use SQLite as DBMS
-SQLSRV_DESC=	Use MSSQL as DBMS
 
 CURL_USE=	PHP=curl
 GMP_USE=	PHP=gmp
 MYSQL_USE=	PHP=mysqli
-POSTGRES_USE=	PHP=postgresql
-SQLSRV_USE=	PHP=sqlsrv
+POSTGRES_USE=	PHP=pgsql
 SQLITE_USE=	PHP=sqlite3
 
 .include <bsd.port.options.mk>
