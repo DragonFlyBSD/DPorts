@@ -1,6 +1,6 @@
 PORTNAME=	biosig
 DISTVERSION=	2.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	SF/${PORTNAME}/BioSig%20for%20C_C%2B%2B/src/
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
@@ -28,9 +28,15 @@ CFLAGS+=	-D__BYTE_ORDER=BYTE_ORDER -D__LITTLE_ENDIAN=LITTLE_ENDIAN -D__BIG_ENDIA
 		-Dbswap_16=bswap16 -Dbswap_32=bswap32 -Dbswap_64=bswap64
 LDFLAGS+=	-liconv
 
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=int-conversion
+.endif
+
 post-install:
 .for f in bin/biosig_fhir bin/biosig2gdf bin/physicalunits bin/save2gdf lib/libbiosig.so.3
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/${f}
 .endfor
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
