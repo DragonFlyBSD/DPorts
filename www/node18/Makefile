@@ -1,5 +1,5 @@
 PORTNAME=	node
-PORTVERSION=	18.14.0
+PORTVERSION=	18.16.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${PORTVERSION}/
@@ -27,7 +27,7 @@ LIB_DEPENDS=	libbrotlidec.so:archivers/brotli \
 		libnghttp2.so:www/libnghttp2 \
 		libuv.so:devel/libuv
 
-USES=		compiler:c++11-lib gmake localbase pkgconfig python:3.6+,build shebangfix
+USES=		compiler:c++11-lib gmake localbase pkgconfig python:build shebangfix
 
 CONFIGURE_ARGS=	--prefix=${PREFIX:S|^${DESTDIR}||} \
 		--shared-brotli \
