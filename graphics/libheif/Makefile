@@ -1,5 +1,5 @@
 PORTNAME=	libheif
-DISTVERSION=	1.15.1
+DISTVERSION=	1.16.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/strukturag/${PORTNAME}/releases/download/v${DISTVERSION}/
 
@@ -9,6 +9,8 @@ WWW=		https://github.com/strukturag/libheif
 
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+LIB_DEPENDS=	libsharpyuv.so:graphics/webp
 
 USES=		cmake compiler:c++11-lang cpe gettext-runtime gnome \
 		localbase:ldflags pkgconfig
