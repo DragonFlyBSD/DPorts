@@ -1,8 +1,9 @@
 PORTNAME=	limesurvey
-PORTVERSION=	5.6.11
+PORTVERSION=	5.6.23
 CATEGORIES=	www
-MASTER_SITES=	http://download.limesurvey.org/latest-stable-release/
-DISTNAME=	${PORTNAME}${PORTVERSION}+230320
+MASTER_SITES=	http://download.limesurvey.org/latest-5.x/ \
+		LOCAL/flo
+DISTNAME=	${PORTNAME}${PORTVERSION}+230524
 
 MAINTAINER=	flo@FreeBSD.org
 COMMENT=	PHP-based survey building and runing system
@@ -37,7 +38,7 @@ USE_PHP+=	ldap
 .if ${PORT_OPTIONS:MIMAP}
 USE_PHP+=	imap
 .endif
-USE_PHP+=	ctype dom hash iconv json mbstring openssl pcre session \
+USE_PHP+=	ctype dom iconv mbstring session \
 		simplexml xmlwriter zip zlib
 
 WWWDOCROOT?=		www
