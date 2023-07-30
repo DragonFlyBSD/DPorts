@@ -1,5 +1,6 @@
 PORTNAME=	pivy
 PORTVERSION=	0.6.8
+PORTREVISION=	1
 CATEGORIES=	graphics python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -14,7 +15,7 @@ BUILD_DEPENDS=	cmake:devel/cmake-core \
 LIB_DEPENDS=	libCoin.so:graphics/Coin \
 		libSoQt.so:x11-toolkits/soqt
 
-USES=		compiler:c11 python:3.6+ qt:5
+USES=		compiler:c11 python qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	coin3d
 USE_PYTHON=	distutils
