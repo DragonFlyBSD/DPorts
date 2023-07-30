@@ -1,5 +1,5 @@
-TIMESTAMP = 1676992088
-SHA256 (go/textproc_gitlab-elasticsearch-indexer/gitlab-org-gitlab-elasticsearch-indexer-c33cd08b6239fb9e3bc86302f27037d00c647049_GL0/go.mod) = c456b10b1ea442ca1d9a9cdb1f7e21dc11f67c659ba43930dcae78fd5e7ec439
-SIZE (go/textproc_gitlab-elasticsearch-indexer/gitlab-org-gitlab-elasticsearch-indexer-c33cd08b6239fb9e3bc86302f27037d00c647049_GL0/go.mod) = 2318
-SHA256 (go/textproc_gitlab-elasticsearch-indexer/gitlab-org-gitlab-elasticsearch-indexer-c33cd08b6239fb9e3bc86302f27037d00c647049_GL0/gitlab-org-gitlab-elasticsearch-indexer-c33cd08b6239fb9e3bc86302f27037d00c647049_GL0.tar.gz) = be6d6c7663e4be0705c9936e18c802a72a4e1ecbfd6a5519f93285dfbdfd60ea
-SIZE (go/textproc_gitlab-elasticsearch-indexer/gitlab-org-gitlab-elasticsearch-indexer-c33cd08b6239fb9e3bc86302f27037d00c647049_GL0/gitlab-org-gitlab-elasticsearch-indexer-c33cd08b6239fb9e3bc86302f27037d00c647049_GL0.tar.gz) = 87541
+TIMESTAMP = 1687452869
+SHA256 (go/textproc_gitlab-elasticsearch-indexer/gitlab-org-gitlab-elasticsearch-indexer-f5b02c19bc905e7759ffd3466c4daca0c1f22fbc_GL0/go.mod) = f426f5095d83a3f5cb9fa766a348525c94adce509e3d39fd50539e1778517ad6
+SIZE (go/textproc_gitlab-elasticsearch-indexer/gitlab-org-gitlab-elasticsearch-indexer-f5b02c19bc905e7759ffd3466c4daca0c1f22fbc_GL0/go.mod) = 4465
+SHA256 (go/textproc_gitlab-elasticsearch-indexer/gitlab-org-gitlab-elasticsearch-indexer-f5b02c19bc905e7759ffd3466c4daca0c1f22fbc_GL0/gitlab-org-gitlab-elasticsearch-indexer-f5b02c19bc905e7759ffd3466c4daca0c1f22fbc_GL0.tar.gz) = 12e33074b5175409064a5278e73a91073d616712b798befcff4b2fcba18090a6
+SIZE (go/textproc_gitlab-elasticsearch-indexer/gitlab-org-gitlab-elasticsearch-indexer-f5b02c19bc905e7759ffd3466c4daca0c1f22fbc_GL0/gitlab-org-gitlab-elasticsearch-indexer-f5b02c19bc905e7759ffd3466c4daca0c1f22fbc_GL0.tar.gz) = 56351
