@@ -1,6 +1,6 @@
 PORTNAME=	recoll
 PORTVERSION=	1.33.1
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	deskutils
 MASTER_SITES=	https://www.lesbonscomptes.com/recoll/
 
@@ -20,7 +20,7 @@ RUN_DEPENDS=	antiword:textproc/antiword \
 		wpd2html:textproc/libwpd010
 
 USES=		bison compiler:c++11-lang gmake gnome iconv libtool localbase \
-		pkgconfig python:3.5+ shebangfix
+		pkgconfig python shebangfix
 USE_GNOME=	libxslt
 USE_LDCONFIG=	yes
 USE_PYTHON=	py3kplist
