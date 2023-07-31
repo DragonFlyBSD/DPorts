@@ -1,6 +1,7 @@
 PORTNAME=	PySCIPOpt
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.3.0
+PORTREVISION=	1
 CATEGORIES=	math python
 #MASTER_SITES=	PYPI # no tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +14,7 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	libscip.so:math/SCIP
 
-USES=		localbase python:3.6+
+USES=		localbase python
 USE_PYTHON=	distutils cython autoplist pytest
 
 USE_GITHUB=	yes
