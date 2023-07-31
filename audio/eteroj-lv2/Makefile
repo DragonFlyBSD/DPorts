@@ -1,5 +1,6 @@
 PORTNAME=	eteroj
 DISTVERSION=	0.10.0
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://git.open-music-kontrollers.ch/lv2/eteroj.lv2/snapshot/
 PKGNAMESUFFIX=	-lv2
@@ -25,4 +26,10 @@ PLIST_FILES=	lib/lv2/eteroj.lv2/eteroj.so \
 		lib/lv2/eteroj.lv2/eteroj.ttl \
 		lib/lv2/eteroj.lv2/manifest.ttl
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=int-conversion
+.endif
+
+.include <bsd.port.post.mk>
