@@ -1,5 +1,6 @@
 PORTNAME=	fvcore
 PORTVERSION=	0.1.5.post20220512
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}iopath>0:devel/py-iopath@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yacs>0:devel/py-yacs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
