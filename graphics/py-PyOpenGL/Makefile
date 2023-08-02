@@ -1,5 +1,6 @@
 PORTNAME=	PyOpenGL
 PORTVERSION=	3.1.6
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,7 +24,7 @@ OPTIONS_DEFINE=	TKINTER
 OPTIONS_DEFAULT=	TKINTER
 TKINTER_DESC=	Build with tkinter for X support
 
-USES=		dos2unix gl python:3.6+
+USES=		dos2unix gl python
 USE_GL=		glut
 USE_PYTHON=	distutils autoplist
 
