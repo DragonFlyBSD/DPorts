@@ -23,7 +23,11 @@ BUILD_DEPENDS+=		${_VALA_BINARY}:${_VALA_PORT}
 .    endif
 .  endif
 
+# tuxillo: Only enable this flag for clang
+_CCVERSION!=    ${CC} --version
+.  if ${_CCVERSION:Mclang}
 # remove after https://gitlab.gnome.org/GNOME/vala/-/issues/1408 is fixed
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
+.  endif
 
 .endif
