@@ -1,6 +1,6 @@
 PORTNAME=	rust
-PORTVERSION?=	1.68.2
-PORTREVISION?=	0
+PORTVERSION?=	1.70.0
+PORTREVISION?=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
 		https://dev-static.rust-lang.org/dist/:src \
@@ -30,7 +30,7 @@ ONLY_FOR_ARCHS_REASON?=	requires prebuilt bootstrap compiler
 BUILD_DEPENDS=	cmake:devel/cmake-core
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
-USES=		cpe ninja:build pkgconfig python:3.7+,build shebangfix ssl tar:xz
+USES=		cpe ninja:build pkgconfig python:build ssl tar:xz
 
 CPE_VENDOR=	rust-lang
 
@@ -50,15 +50,14 @@ TMPDIR?=	${WRKDIR}
 
 OPTIONS_DEFINE=		DOCS GDB SOURCES WASM
 OPTIONS_DEFAULT=	SOURCES WASM
-.if !defined(NIGHTLY_DATE)
-OPTIONS_EXCLUDE=	DOCS # https://github.com/rust-lang/rust/issues/76526
-.endif
 
 GDB_DESC=	Install ports gdb (necessary for debugging rust programs)
 SOURCES_DESC=	Install source files
 WASM_DESC=	Build the WebAssembly target (wasm32-unknown-unknown)
 
-DOCS_VARS=		_RUST_BUILD_DOCS=true
+DOCS_VARS=		_RUST_BUILD_DOCS=true \
+			_COMPONENTS+="rust-docs-${_PACKAGE_VERS}-${_RUST_TARGET} rust-docs-json-${_PACKAGE_VERS}-${_RUST_TARGET}" \
+			_RUST_TOOLS+=rustdoc
 DOCS_VARS_OFF=		_RUST_BUILD_DOCS=false
 GDB_RUN_DEPENDS=	${LOCALBASE}/bin/gdb:devel/gdb
 SOURCES_VARS=		_COMPONENTS+=rust-src-${_PACKAGE_VERS} \
@@ -69,8 +68,8 @@ WASM_VARS=		_COMPONENTS+="rust-analysis-${_PACKAGE_VERS}-wasm32-unknown-unknown 
 WASM_VARS_OFF=		_RUST_BUILD_WASM=false
 
 # See WRKSRC/src/stage0.json for the date and version values
-BOOTSTRAPS_DATE?=		2023-02-09
-RUST_BOOTSTRAP_VERSION?=	1.67.1
+BOOTSTRAPS_DATE?=		2023-04-20
+RUST_BOOTSTRAP_VERSION?=	1.69.0
 
 CARGO_VENDOR_DIR?=		${WRKSRC}/vendor
 
@@ -80,7 +79,7 @@ _RUST_ARCH_i386=	i686
 _RUST_ARCH_riscv64=	riscv64gc
 _RUST_TARGET=		${_RUST_ARCH_${ARCH}:U${ARCH}}-unknown-${OPSYS:tl}
 _RUST_TARGETS=		${_RUST_TARGET}
-_RUST_TOOLS=		analysis cargo clippy rustfmt
+_RUST_TOOLS=		analysis cargo clippy rust-analyzer rustdoc rustfmt
 
 _RUSTC_BOOTSTRAP=	${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}/rustc-${RUST_BOOTSTRAP_VERSION_${ARCH}:U${RUST_BOOTSTRAP_VERSION}}-${_RUST_TARGET}
 _RUST_STD_BOOTSTRAP=	${BOOTSTRAPS_DATE_${ARCH}:U${BOOTSTRAPS_DATE}}/rust-std-${RUST_BOOTSTRAP_VERSION_${ARCH}:U${RUST_BOOTSTRAP_VERSION}}-${_RUST_TARGET}
@@ -94,11 +93,6 @@ _COMPONENTS+=		cargo-${_PACKAGE_VERS}-${_RUST_TARGET} \
 			rust-analysis-${_PACKAGE_VERS}-${_RUST_TARGET} \
 			rust-std-${_PACKAGE_VERS}-${_RUST_TARGET}
 
-# https://github.com/bjorn3/rustc_codegen_cranelift/commit/83d470d91c15d0cb5890705291e6ee9e5be8a842
-# https://github.com/rust-lang/rustc_codegen_gcc/pull/160
-SHEBANG_FILES=		compiler/rustc_codegen_cranelift/scripts/* \
-			compiler/rustc_codegen_gcc/*.sh compiler/rustc_codegen_gcc/build_sysroot/*.sh
-
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} != FreeBSD && ${OPSYS} != DragonFly
@@ -106,8 +100,6 @@ IGNORE=		is only for FreeBSD and DragonFly BSD
 .endif
 
 .if ${ARCH} == powerpc
-# bfd to link rustc_driver; lld currently can't
-BUILD_DEPENDS+=	ld.bfd:devel/binutils
 LIB_DEPENDS+=	libatomic.so:lang/gcc${GCC_DEFAULT}
 MAKE_ENV+=	RUSTFLAGS="-L/usr/local/lib/gcc${GCC_DEFAULT}"
 .else
@@ -125,6 +117,10 @@ _COMPONENTS+=	rls-${_PACKAGE_VERS}-${_RUST_TARGET}
 # rustc-dev is only usefull on nightly
 .if defined(NIGHTLY_DATE)
 _COMPONENTS+=	rustc-dev-${_PACKAGE_VERS}-${_RUST_TARGET}
+.endif
+
+.if ${PORT_OPTIONS:MWASM} && ${PORT_OPTIONS:MDOCS}
+_COMPONENTS+=	rust-docs-${_PACKAGE_VERS}-wasm32-unknown-unknown rust-docs-json-${_PACKAGE_VERS}-wasm32-unknown-unknown
 .endif
 
 # If the kernel does not return sane kern.proc.pathname values
