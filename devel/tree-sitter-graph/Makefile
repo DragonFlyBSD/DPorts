@@ -1,7 +1,6 @@
 PORTNAME=	tree-sitter-graph
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.0
-PORTREVISION=	3
+DISTVERSION=	0.10.5
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -20,59 +19,62 @@ GH_ACCOUNT=	tree-sitter
 
 CARGO_FEATURES=	cli
 CARGO_CRATES=	ahash-0.4.7 \
-		aho-corasick-0.7.20 \
-		anyhow-1.0.68 \
+		aho-corasick-1.0.2 \
+		anyhow-1.0.71 \
 		atty-0.2.14 \
 		autocfg-1.1.0 \
 		bitflags-1.3.2 \
-		cc-1.0.78 \
+		cc-1.0.79 \
 		cfg-if-1.0.0 \
-		clap-3.2.23 \
+		clap-3.2.25 \
 		clap_lex-0.2.4 \
 		colored-2.0.0 \
 		dirs-3.0.2 \
 		dirs-sys-0.3.7 \
 		env_logger-0.9.3 \
-		getrandom-0.2.8 \
+		equivalent-1.0.0 \
+		getrandom-0.2.10 \
 		hashbrown-0.9.1 \
 		hashbrown-0.12.3 \
+		hashbrown-0.14.0 \
 		hermit-abi-0.1.19 \
 		humantime-2.1.0 \
-		indexmap-1.9.2 \
-		indoc-1.0.8 \
-		itoa-1.0.5 \
+		indexmap-1.9.3 \
+		indexmap-2.0.0 \
+		indoc-1.0.9 \
+		itoa-1.0.6 \
 		lazy_static-1.4.0 \
-		libc-0.2.139 \
+		libc-0.2.147 \
 		libloading-0.7.4 \
-		log-0.4.17 \
+		log-0.4.19 \
 		memchr-2.5.0 \
-		once_cell-1.17.0 \
-		os_str_bytes-6.4.1 \
-		proc-macro2-1.0.49 \
-		quote-1.0.23 \
+		once_cell-1.18.0 \
+		os_str_bytes-6.5.1 \
+		proc-macro2-1.0.63 \
+		quote-1.0.28 \
 		redox_syscall-0.2.16 \
 		redox_users-0.4.3 \
-		regex-1.7.0 \
-		regex-syntax-0.6.28 \
-		ryu-1.0.12 \
-		serde-1.0.152 \
-		serde_derive-1.0.152 \
-		serde_json-1.0.91 \
+		regex-1.8.4 \
+		regex-syntax-0.7.2 \
+		ryu-1.0.13 \
+		serde-1.0.164 \
+		serde_derive-1.0.164 \
+		serde_json-1.0.99 \
 		smallvec-1.10.0 \
 		string-interner-0.12.2 \
 		strsim-0.10.0 \
-		syn-1.0.107 \
-		termcolor-1.1.3 \
+		syn-2.0.22 \
+		termcolor-1.2.0 \
 		textwrap-0.16.0 \
-		thiserror-1.0.38 \
-		thiserror-impl-1.0.38 \
-		tree-sitter-0.20.9 \
+		thiserror-1.0.40 \
+		thiserror-impl-1.0.40 \
+		tree-sitter-0.20.10 \
 		tree-sitter-config-0.19.0 \
 		tree-sitter-highlight-0.20.1 \
 		tree-sitter-loader-0.19.0 \
 		tree-sitter-python-0.19.1 \
 		tree-sitter-tags-0.20.2 \
-		unicode-ident-1.0.6 \
+		unicode-ident-1.0.9 \
 		wasi-0.11.0+wasi-snapshot-preview1 \
 		winapi-0.3.9 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
