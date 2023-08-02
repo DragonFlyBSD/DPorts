@@ -1,5 +1,6 @@
 PORTNAME=	minorminer
 DISTVERSION=	0.2.11
+PORTREVISION=	1
 CATEGORIES=	math python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -20,7 +21,7 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fasteners>=0.15:devel/py-fasteners@${PY_FLAVO
 BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	distutils cython autoplist pytest # 9 tests fail, see https://github.com/dwavesystems/minorminer/issues/231
 
 USE_GITHUB=	yes
