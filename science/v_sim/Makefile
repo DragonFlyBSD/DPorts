@@ -1,6 +1,6 @@
 PORTNAME=	v_sim
 DISTVERSION=	3.8.0
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	science
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -32,7 +32,7 @@ RUN_DEPENDS=	${PYNUMPY}	\
 		${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR}
 
 USES=		autoreconf blaslapack compiler:c11 fortran gl gmake gnome	\
-		libtool:keepla localbase:ldflags pkgconfig python:3.7+		\
+		libtool:keepla localbase:ldflags pkgconfig python		\
 		shebangfix tar:bzip2 xorg
 SHEBANG_GLOB=	*.py
 USE_XORG=	x11
