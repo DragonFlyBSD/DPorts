@@ -1,5 +1,5 @@
 PORTNAME=	waybar
-DISTVERSION=	0.9.18
+DISTVERSION=	0.9.20
 CATEGORIES=	x11 wayland
 PKGNAMESUFFIX=	${FLAVOR:N${FLAVORS:[1]}:C/.+/-${FLAVOR}/}
 
@@ -145,9 +145,11 @@ post-patch:
 # Temporarily use ConsoleKit2 like sysutils/gnome-settings-daemon
 	@${REINPLACE_CMD} -e 's,/login1,/ConsoleKit/Manager,' \
 		-e 's,login1\([".]\),ConsoleKit\1,g' \
+		${WRKSRC}/src/modules/backlight.cpp \
 		${WRKSRC}/src/modules/gamemode.cpp \
 		${WRKSRC}/src/modules/inhibitor.cpp \
-		${WRKSRC}/src/modules/upower/upower.cpp
+		${WRKSRC}/src/modules/upower/upower.cpp \
+		${WRKSRC}/src/util/prepare_for_sleep.cpp
 # Respect PREFIX for icons
 	@${REINPLACE_CMD} 's,/usr/share,${DATADIR:H},' \
 		${WRKSRC}/src/modules/wlr/taskbar.cpp
