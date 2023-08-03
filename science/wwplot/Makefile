@@ -1,6 +1,7 @@
 PORTNAME=	wwplot
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.0.9
+PORTREVISION=	2
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -20,7 +21,7 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}pyside2>0:devel/pyside2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR}
 
-USES=		desktop-file-utils gettext meson python:3.7+ shebangfix
+USES=		desktop-file-utils gettext meson python shebangfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	wwmm
