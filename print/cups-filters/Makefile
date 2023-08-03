@@ -1,6 +1,6 @@
 PORTNAME=	cups-filters
 PORTVERSION=	1.28.16
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	https://www.openprinting.org/download/cups-filters/
 
@@ -132,6 +132,12 @@ PSPOPPLER_BUILD_DEPENDS=	pdftops:graphics/poppler-utils
 PSPOPPLER_RUN_DEPENDS=		pdftops:graphics/poppler-utils
 PSPOPPLER_CONFIGURE_ON=		--with-pdftops=pdftops
 PSPOPPLER_DESC=			Poppler pdftops(1)
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+CFLAGS+=	-Wno-error=dynamic-exception-spec
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|' \
