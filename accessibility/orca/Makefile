@@ -1,6 +1,6 @@
 PORTNAME=	orca
 PORTVERSION=	43.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -28,7 +28,7 @@ PORTSCOUT=	limitw:1,even
 
 NO_ARCH=	yes
 USES=		cpe gettext gmake gnome localbase pathfix pkgconfig \
-		python:3.4+ tar:xz
+		python tar:xz
 USE_GNOME=	gtk30 pygobject3
 GNU_CONFIGURE=	yes
 CPE_VENDOR=	gnome
