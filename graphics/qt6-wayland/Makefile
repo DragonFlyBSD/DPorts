@@ -1,5 +1,6 @@
 PORTNAME=	wayland
 DISTVERSION=	${QT6_VERSION}
+PORTREVISION=	1
 CATEGORIES=	graphics wayland
 PKGNAMEPREFIX=	qt6-
 
@@ -28,7 +29,6 @@ USES=		cmake compiler:c++17-lang gettext-runtime gl gnome pkgconfig xorg \
 		qt-dist:6 xorg
 USE_GL=		gl egl
 USE_GNOME=	glib20
-USE_XORG=	xcomposite
 USE_QT=		base declarative
 USE_XORG=	x11 xau xcb xcomposite xdmcp
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
