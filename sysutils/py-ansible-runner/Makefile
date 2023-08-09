@@ -1,5 +1,5 @@
 PORTNAME=	ansible-runner
-DISTVERSION=	2.3.1
+DISTVERSION=	2.3.2
 CATEGORIES=	sysutils python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,7 +23,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ansible>2.0:sysutils/ansible@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR}
 
-USES=		cpe python:3.6+
+USES=		cpe python
 USE_PYTHON=	autoplist concurrent distutils
 
 CPE_VENDOR=	redhat
