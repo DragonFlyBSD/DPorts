@@ -1,7 +1,7 @@
 PORTNAME=	code_saturne
 PORTVERSION=	7.1.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	6
+PORTREVISION=	11
 CATEGORIES=	science parallel
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -25,7 +25,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	code-saturne
 
 USES=		autoreconf bison compiler:c11 fortran gettext gnome gmake \
-		iconv localbase libtool pyqt:5 python:3.7+ shebangfix xorg
+		iconv localbase libtool pyqt:5 python shebangfix xorg
 USE_GNOME=	libxml2
 USE_PYQT=	pyqt5 sip
 USE_XORG=	x11
@@ -115,6 +115,7 @@ DOCS=		AUTHORS ChangeLog README
 pre-configure:
 	${REINPLACE_CMD} -e 's|/usr/bin/env python|${PYTHON_CMD}|'	\
 		${WRKSRC}/Makefile.am
+	${REINPLACE_CMD} -e 's|make -s|${GMAKE} -s|' ${WRKSRC}/m4/cs_petsc.m4
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/code_saturne/cs_solver
