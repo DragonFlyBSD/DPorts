@@ -1,10 +1,10 @@
 PORTNAME=	qtconsole
-DISTVERSION=	5.3.2
+DISTVERSION=	5.4.3
 CATEGORIES=	devel python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	swills@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Qt-based console for Jupyter with support for rich media output
 WWW=		https://qtconsole.readthedocs.io/en/stable/
 
@@ -22,9 +22,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ipykernel>=4.1:devel/py-ipykernel@${PY_FLAVO
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flaky>0:devel/py-flaky@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest-qt>0:devel/py-pytest-qt@${PY_FLAVOR}
 
-USES=		pyqt:5 python:3.7+
-
-USE_PYQT=	sip pyqt5
+USES=		pyqt:5 python
+USE_PYQT=	pyqt5 sip
 USE_PYTHON=	autoplist distutils pytest
 
 NO_ARCH=	yes
