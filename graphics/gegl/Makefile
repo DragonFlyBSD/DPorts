@@ -1,6 +1,6 @@
 PORTNAME=	gegl
-PORTVERSION=	0.4.42
-PORTREVISION=	2
+PORTVERSION=	0.4.44
+PORTREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	GIMP
 
@@ -35,7 +35,7 @@ MESON_ARGS=	-Ddocs=false \
 		-Dpygobject=disabled \
 		-Dlua=disabled
 
-GEGL_SHLIB=	0.441.1
+GEGL_SHLIB=	0.443.1
 GEGL_VER=	0.4
 PLIST_SUB+=	GEGL_SHLIB=${GEGL_SHLIB} GEGL_VER=${GEGL_VER}
 
@@ -95,7 +95,7 @@ SPIRO_MESON_ENABLED=	libspiro
 
 V4L_BUILD_DEPENDS=	v4l_compat>=0:multimedia/v4l_compat
 V4L_LIB_DEPENDS=	libv4l2.so:multimedia/libv4l
-V4L_MESON_ENABLED=	libv4l2
+V4L_MESON_ENABLED=	libv4l libv4l2
 V4L_VARS=		LICENSE+=LGPL20+
 
 WEBP_LIB_DEPENDS=	libwebp.so:graphics/webp
