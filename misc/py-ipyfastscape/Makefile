@@ -1,5 +1,6 @@
 PORTNAME=	ipyfastscape
 DISTVERSION=	0.2.0
+PORTREVISION=	1
 CATEGORIES=	misc
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -19,7 +20,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_scm>0:devel/py-setuptools_scm@$
 		${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	distutils autoplist pytest
 
 USE_GITHUB=	yes
