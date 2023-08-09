@@ -1,6 +1,6 @@
 PORTNAME=	efl
 DISTVERSION=	1.26.3
-PORTREVISION=	5
+PORTREVISION=	8
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.org/rel/libs/${PORTNAME}/
 DIST_SUBDIR=	enlightenment
@@ -27,7 +27,7 @@ CONFLICTS_INSTALL=	libeio
 
 USES=		compiler:c++14-lang gettext-tools gnome iconv \
 		jpeg libtool localbase:ldflags meson ninja ssl pathfix pkgconfig \
-		python:3.5+ shared-mime-info shebangfix tar:xz xorg
+		python shared-mime-info shebangfix tar:xz xorg
 SHEBANG_FILES=	src/tests/elementary/spec/generator.py \
 		src/bin/exactness/exactness_play.in \
 		src/bin/exactness/exactness_record.in
@@ -213,7 +213,7 @@ MESON_ARGS+=		-Dbindings="${EFL_BINDINGS:ts,}"
 MESON_ARGS+=	-Db_asneeded=false
 .endif
 
-.if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
+.if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
 LIB_DEPENDS+=  libunwind.so:devel/libunwind
 .endif
 
