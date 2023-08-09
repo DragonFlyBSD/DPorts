@@ -1,6 +1,7 @@
 PORTNAME=	ponscripter
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.0.2
+PORTREVISION=	1
 CATEGORIES=	games
 PKGNAMESUFFIX=	-${GH_ACCOUNT}
 
@@ -24,6 +25,7 @@ GH_ACCOUNT=	07th-mod
 GH_PROJECT=	${PORTNAME}-fork
 
 USES=		compiler:c++11-lang gmake pkgconfig sdl shebangfix
+USE_CXXSTD=	gnu++98
 USE_SDL=	image2 mixer2
 EXTRACT_AFTER_ARGS=--exclude src/extlib
 SHEBANG_FILES=	util/xml-template
