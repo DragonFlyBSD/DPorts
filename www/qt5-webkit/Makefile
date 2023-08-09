@@ -1,6 +1,6 @@
 PORTNAME=		webkit
 DISTVERSION=		5.212.0-alpha4
-PORTREVISION=		11
+PORTREVISION=	13
 CATEGORIES=		www
 MASTER_SITES=		https://github.com/qt${PORTNAME}/qt${PORTNAME}/releases/download/${DISTNAME}/
 PKGNAMEPREFIX=		qt5-
@@ -21,7 +21,7 @@ LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
 			libwoff2dec.so:devel/woff2
 
 USES=			bison cmake compiler:c++11-lang gnome gperf jpeg \
-	pathfix perl5 pkgconfig python:3.5+,build qt:5 ruby:build \
+	pathfix perl5 pkgconfig python:build qt:5 ruby:build \
 	sqlite:3 tar:xz xorg
 USE_GNOME=		glib20 libxml2 libxslt
 USE_PERL5=		build
