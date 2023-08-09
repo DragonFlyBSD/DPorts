@@ -1,5 +1,5 @@
 PORTNAME=	yt
-DISTVERSION=	4.1.4
+DISTVERSION=	4.2.0
 CATEGORIES=	math astro python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,10 +12,12 @@ LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
 
 # dependencies are in setup.cfg
-BUILD_DEPENDS=	${PYNUMPY}
+BUILD_DEPENDS=	${PYNUMPY} \
+		${PYTHON_PKGNAMEPREFIX}ewah-bool-utils>=1.0.2:devel/py-ewah-bool-utils@${PY_FLAVOR}
 RUN_DEPENDS=	\
 		${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}cmyt>=0.2.2:math/py-cmyt@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}ewah-bool-utils>=1.0.2:devel/py-ewah-bool-utils@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ipywidgets>0:devel/py-ipywidgets@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ipython>=1.0:devel/ipython@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR} \
@@ -30,7 +32,7 @@ RUN_DEPENDS=	\
 		${PYTHON_PKGNAMEPREFIX}tqdm>=3.4.0:misc/py-tqdm@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}unyt>=2.8.0:math/py-unyt@${PY_FLAVOR}
 
-USES=		dos2unix localbase python:3.8+
+USES=		dos2unix localbase python
 USE_PYTHON=	distutils cython autoplist concurrent
 
 post-patch:
