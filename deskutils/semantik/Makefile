@@ -1,5 +1,6 @@
 PORTNAME=	semantik
 DISTVERSION=	1.2.8
+PORTREVISION=	1
 CATEGORIES=	deskutils kde
 MASTER_SITES=	https://waf.io/
 
@@ -10,7 +11,7 @@ WWW=		https://waf.io/semantik.html
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		kde:5 pkgconfig python:3.6+ qt:5 shebangfix tar:bzip2 waf \
+USES=		kde:5 pkgconfig python qt:5 shebangfix tar:bzip2 waf \
 		desktop-file-utils gettext shared-mime-info
 USE_KDE=	auth config configwidgets coreaddons i18n iconthemes \
 		kdelibs4support kio sonnet widgetsaddons xmlgui
