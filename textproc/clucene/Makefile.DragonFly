@@ -1,3 +1,4 @@
+USE_CLANG_FALLBACK=	default
 pre-patch:
 	${ECHO_CMD} 'SET(CMAKE_NO_BUILTIN_CHRPATH OFF CACHE BOOL "" FORCE)' \
 	>> ${WRKSRC}/CMakeLists.txt
