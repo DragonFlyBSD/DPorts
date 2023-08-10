@@ -1,3 +1,4 @@
+USES:= ${USES:Nelfctl}
 
 # for now avoid javadoc "issues", too frequent in bulk
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NJAVA}
