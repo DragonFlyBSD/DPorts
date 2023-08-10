@@ -1,5 +1,6 @@
 PORTNAME=	pygmsh
 DISTVERSION=	7.1.17
+PORTREVISION=	2
 CATEGORIES=	cad python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +18,7 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gmsh>0:cad/py-gmsh@${PY_FLAVOR} \
 BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	distutils autoplist pytest # 1 error and many warnings in tests, see https://github.com/meshpro/pygmsh/issues/564
 
 NO_ARCH=	yes
