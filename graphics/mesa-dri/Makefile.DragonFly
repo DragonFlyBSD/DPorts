@@ -2,6 +2,8 @@
 # include message about gallium split
 PKGMESSAGE=	${.CURDIR}/dragonfly/pkg-mess
 
+MESON_ARGS+=   -Dmicrosoft-clc=disabled
+
 .if ${PORTNAME} == mesa-dri
 OPTIONS_DEFINE+=	CLASSIC
 OPTIONS_DEFAULT+=	CLASSIC
