@@ -1,6 +1,5 @@
 PORTNAME=	kwin
 DISTVERSION=	${KDE_PLASMA_VERSION}
-PORTREVISION=	2
 CATEGORIES=	x11-wm kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -35,7 +34,7 @@ RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel \
 CONFLICTS_INSTALL=	kwinft # bin/kwin_wayland
 
 USES=		cmake compiler:c++11-lib gettext gl gnome kde:5 pkgconfig \
-		python:3.7+,run qt:5 shebangfix tar:xz xorg
+		python:run qt:5 shebangfix tar:xz xorg
 USE_GL=		egl gbm
 USE_GNOME=	glib20
 USE_KDE=	activities attica auth breeze codecs completion config \
@@ -59,8 +58,9 @@ SHEBANG_FILES=	kconf_update/*.py \
 # A (hopefully) temporary workaround for
 # https://gitlab.freedesktop.org/gstreamer/gstreamer/-/issues/2026
 post-patch:
-	${REINPLACE_CMD} -E \
-		's|https://files.kde.org/plasma/kwin/effect-videos/([a-z_]+)\.ogv|https://arrowd.name/kwin-effect-videos/\1\.webm|' \
-		${WRKSRC}/src/effects/*/metadata.json
+	${FIND} ${WRKSRC}/src/effects -name metadata.json -exec \
+		${REINPLACE_CMD} -E \
+			's|https://files.kde.org/plasma/kwin/effect-videos/([a-z_]+)\.ogv|https://arrowd.name/kwin-effect-videos/\1\.webm|' \
+			{} \;
 
 .include <bsd.port.mk>
