@@ -1,6 +1,8 @@
 
 # llvm dependent version moved to graphics/libosmesa-gallium overlay
 MESON_ARGS+=    -Dosmesa=classic
+MESON_ARGS+=	-Dmicrosoft-clc=disabled
+
 PKGMESSAGE:=	${.CURDIR}/dragonfly/pkg-mess
 
 .if 0
