@@ -1,5 +1,6 @@
 PORTNAME=	degiro-connector
 DISTVERSION=	2.0.22
+PORTREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	PYPI # no tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,7 +21,7 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}grpcio>=1.49.1:devel/py-grpcio@${PY_FLAVOR} \
 BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	distutils autoplist
 
 #USE_GITHUB=	yes
