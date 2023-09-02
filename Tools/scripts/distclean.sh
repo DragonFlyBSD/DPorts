@@ -24,14 +24,14 @@ cleanup() {
 	exit 1
 }
 
-PORTSDIR=${PORTSDIR:-/usr/ports}
+PORTSDIR=${PORTSDIR:-/usr/dports}
 if [ ! -d ${PORTSDIR} ]; then
 	echo "Ports directory ${PORTSDIR} does not exist."
 	exit 1
 fi
 
 DISTDIR=`(make -V DISTDIR -f ${PORTSDIR}/Mk/bsd.port.mk) 2>/dev/null`
-DISTDIR=${DISTDIR:-/usr/ports/distfiles}
+DISTDIR=${DISTDIR:-/usr/distfiles}
 
 echo "Assumes that your ports are in ${PORTSDIR} and distfiles in ${DISTDIR}."
 echo ""
@@ -63,13 +63,13 @@ P_SHA256_COUNT=`wc -l $FN_PORTS | sed "s| $FN_PORTS|| ; s| ||g"`
 echo "Found $P_SHA256_COUNT sha256 entries in your ports directory."
 
 echo -n "Building distfiles sha256 index..."
-find ${DISTDIR}/ -type f | xargs sha256 | sed 's|'${DISTDIR}'/||' | sort > $FN_DISTFILES
+find ${DISTDIR}/ -type f -print0 | xargs -0 sha256 | sed 's|'${DISTDIR}'/||' | sort > $FN_DISTFILES
 echo "Done."
 D_SHA256_COUNT=`wc -l $FN_DISTFILES | sed "s| $FN_DISTFILES|| ; s| ||g"`
 echo "Found $D_SHA256_COUNT distfile(s) in your distfiles directory."
 
 echo -n "Comparing results..."
-diff -d $FN_DISTFILES $FN_PORTS | grep "^<" | sed 's|.*(|rm '$RM_FLAG' '${DISTDIR}'/| ; s|).*||' > $FN_RESULTS_SCRIPT
+diff -d $FN_DISTFILES $FN_PORTS | grep "^<" | sed 's|.*(|rm '$RM_FLAG' "'${DISTDIR}'/| ; s|).*|"|' > $FN_RESULTS_SCRIPT
 echo "Done."
 R_SHA256_COUNT=`wc -l $FN_RESULTS_SCRIPT | sed "s| $FN_RESULTS_SCRIPT|| ; s| ||g"`
 echo "$R_SHA256_COUNT distfile(s) doesn't have corresponding sha256 entries in ports directory."
