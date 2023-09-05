@@ -2,6 +2,9 @@
 # so no large address space for us.
 CONFIGURE_ARGS+=	--disable-large-address-space
 
+# pkg-plist.hadrian contains freebsd instead of OPSYS
+PLIST_SUB+=		OPSYS=${OPSYS:tl}
+
 # zrj: when making bootstrap compile w/o DINAMIC (libffi) and --with-intree-gmp
 MAKE_ENV+=	LDVER=ld.bfd
 
