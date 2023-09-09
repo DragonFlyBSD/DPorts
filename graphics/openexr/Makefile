@@ -1,5 +1,5 @@
 PORTNAME=	openexr
-PORTVERSION=	3.1.9
+PORTVERSION=	3.1.11
 PORTREVISION=	0
 CATEGORIES=	graphics devel
 
@@ -23,11 +23,9 @@ CPPFLAGS+=	-I.
 # must be linked with -l{thr|pthread} explicitly
 LDFLAGS+=	-lpthread
 
-PATCH_STRIP=	-p1
-
 _MAJORVER=	3_1
 _VER=		30
-_MINVER=	9
+_MINVER=	11
 _PLVER=		1
 
 PLIST_SUB+=	MAJORVER=${_MAJORVER} \
