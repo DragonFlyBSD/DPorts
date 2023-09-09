@@ -1,6 +1,7 @@
 PORTNAME=	zgrab2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.7
+PORTREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +10,8 @@ WWW=		https://github.com/zmap/zgrab2
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_aarch64=	compilation fails: ztypes_freebsd_arm64.go:400:12: undefined: uint128
 
 USES=		go:modules
 
