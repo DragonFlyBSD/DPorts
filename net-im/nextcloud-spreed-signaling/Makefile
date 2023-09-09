@@ -1,6 +1,7 @@
 PORTNAME=	nextcloud-spreed-signaling
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.1.2
+PORTREVISION=	2
 CATEGORIES=	net-im
 
 MAINTAINER=	jsm@FreeBSD.org
