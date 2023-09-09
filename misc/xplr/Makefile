@@ -1,7 +1,6 @@
 PORTNAME=	xplr
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.21.2
-PORTREVISION=	2
+DISTVERSION=	0.21.3
 CATEGORIES=	misc
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -10,6 +9,8 @@ WWW=		https://xplr.dev
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+RUN_DEPENDS=	bash:shells/bash
 
 USES=		cargo compiler desktop-file-utils gmake luajit
 USE_GITHUB=	yes
