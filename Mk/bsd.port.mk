@@ -1200,7 +1200,7 @@ OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*1000
 .endif
 _EXPORTED_VARS+=	DFLYVERSION OSREL
 
-.    if ${OPSYS} == FreeBSD && (${OSVERSION} < 1204000 || (${OSVERSION} >= 1300000 && ${OSVERSION} < 1301000))
+.    if ${OPSYS} == FreeBSD && (${OSVERSION} < 1204000 || (${OSVERSION} >= 1300000 && ${OSVERSION} < 1302000))
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
 .      if defined(ALLOW_UNSUPPORTED_SYSTEM)
