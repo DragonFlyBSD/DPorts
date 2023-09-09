@@ -1,6 +1,7 @@
 PORTNAME=	terraform
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.2
+PORTREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	nulldutra@proton.me
