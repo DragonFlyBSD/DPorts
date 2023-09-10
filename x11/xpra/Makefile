@@ -1,5 +1,5 @@
 PORTNAME=	xpra
-PORTVERSION=	4.4.4
+PORTVERSION=	4.4.5
 CATEGORIES=	x11
 MASTER_SITES=	https://xpra.org/src/
 
@@ -34,7 +34,7 @@ RUN_DEPENDS=	${PY_PILLOW} \
 		Xvfb:x11-servers/xorg-server@xvfb
 
 USES=		desktop-file-utils gettext-runtime gnome localbase pkgconfig \
-		python:3.6+ shared-mime-info shebangfix tar:xz xorg
+		python shared-mime-info shebangfix tar:xz xorg
 
 USE_GNOME=	cairo gdkpixbuf2 gtk30 pygobject3
 USE_PYTHON=	cython distutils noflavors
