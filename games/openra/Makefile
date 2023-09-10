@@ -1,7 +1,7 @@
 PORTNAME=	openra
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	20200503
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	https://download.ip2location.com/lite/:ip2location
 DISTFILES=	IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP:ip2location
@@ -52,7 +52,7 @@ MAKE_ENV=	prefix="${PREFIX}" \
 		gameinstalldir="${DATADIR}"
 ALL_TARGET=	all
 INSTALL_TARGET=	install install-man-page \
-		install-linux-mime install-linux-shortcuts
+		install-linux-appdata install-linux-mime install-linux-shortcuts
 PORTDATA=	*
 
 .include <bsd.port.pre.mk>
@@ -81,6 +81,6 @@ post-patch:
 do-test:
 	@(cd ${TEST_WRKSRC} && mono \
 		${NUGET_PACKAGEDIR}/NUnit.ConsoleRunner/tools/nunit3-console.exe \
-		--noresult OpenRA.Test.nunit)
+		--noresult OpenRA.Test.dll)
 
 .include <bsd.port.post.mk>
