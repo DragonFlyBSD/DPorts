@@ -1,5 +1,6 @@
 PORTNAME=	haskell-language-server
-DISTVERSION=	1.9.1.0
+DISTVERSION=	2.0.0.0
+PORTREVISION=	1
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -10,7 +11,7 @@ LICENSE=	APACHE20
 
 BROKEN_aarch64=	compiler crashes
 
-FLAVORS=	default ghc810
+FLAVORS=	default ghc810 ghc92
 FLAVOR?=	${FLAVORS:[1]}
 .if ${FLAVOR:U} != default
 PKGNAMESUFFIX=	-${FLAVOR}
@@ -20,6 +21,9 @@ PKGNAMESUFFIX=	-${FLAVOR}
 .if ${FLAVOR:U} == ghc810
 BUILD_DEPENDS=	ghc-8.10.7:lang/ghc810
 GHC_VERSION=	8.10.7
+.elif ${FLAVOR:U} == ghc92
+BUILD_DEPENDS=	ghc-9.2.8:lang/ghc92
+GHC_VERSION=	9.2.8
 .endif
 
 USES=		cabal
