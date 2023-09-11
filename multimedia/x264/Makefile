@@ -16,7 +16,7 @@
 
 PORTNAME=	x264
 PORTVERSION=	0.${X264_BUILD}.${X264_REV}
-PORTREVISION?=	0
+PORTREVISION?=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	https://samples.mplayerhq.hu/yuv4mpeg2/:pgo
 DIST_SUBDIR=	x264
@@ -127,6 +127,12 @@ post-patch:
 .if !target(pre-build)
 pre-build:
 	@(${RM} ${WRKSRC}/x264_config.h)
+.endif
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
 .include <bsd.port.mk>
