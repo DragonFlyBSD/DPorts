@@ -1,5 +1,5 @@
 PORTNAME=	firefox
-DISTVERSION=	116.0
+DISTVERSION=	117.0
 PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	www wayland
@@ -11,11 +11,11 @@ MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 WWW=		https://www.mozilla.com/firefox
 
+# 2023Q3 harfbuzz is too old, use embedded
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.91:security/nss \
+		nss>=3.92:security/nss \
 		icu>=73.1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
-		harfbuzz>=7.3.0:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \
 		png>=1.6.39:graphics/png \
 		dav1d>=1.0.0:multimedia/dav1d \
@@ -29,7 +29,7 @@ BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
 
 USE_GECKO=	gecko
 CONFLICTS_INSTALL=	firefox-esr
-USE_MOZILLA=	-sqlite
+USE_MOZILLA=	-sqlite -harfbuzz
 CFLAGS_powerpc64le=	-DSQLITE_BYTEORDER=1234
 # work around bindgen not finding ICU, e.g.
 # dist/include/mozilla/intl/ICU4CGlue.h:8:10: fatal error: 'unicode/uenum.h' file not found, err: true
