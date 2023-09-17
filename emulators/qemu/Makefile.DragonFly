@@ -19,8 +19,17 @@ CONFIGURE_ARGS+=	--disable-netmap \
 			--disable-stack-protector \
 			--enable-curses
 
+# for find-lib
+LIB_DIRS+=	${LOCALBASE}/lib/elfutils
+
 .if ${FLAVOR:U} == default
 OPTIONS_DEFAULT+=	SPICE
+#
+# XXX: We have an issue with Elf64_Lib. DragonFly's base elftoolchain
+# and elf definitions should be updated at the very least.
+#
+OPTIONS_DEFAULT+=	X86_TARGETS
+X86_TARGETS_CONFIGURE_ON:=	--target-list='i386-softmmu x86_64-softmmu'
 .endif
 
 # dance a bit for making meson work w/ hacked up devel/ncurses
