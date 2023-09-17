@@ -1,0 +1,29 @@
+--- configure.ac.intermediate	2023-09-17 23:10:56 UTC
++++ configure.ac
+@@ -247,7 +247,7 @@ case "$host" in
+       scsilib_objs="ScsiIf-linux.o sg_err.o"
+       ;;
+ 
+-  *-freebsd*)
++  *-freebsd*| *-dragonfly*)
+       scsilib_libs="-lcam"
+       scsilib_objs="ScsiIf-freebsd-cam.o"
+       ;;
+@@ -287,7 +287,7 @@ esac
+ 
+ dnl Additional operating system dependent selections
+ case "$host" in
+-  *-freebsd*)
++  *-freebsd*| *-dragonfly*)
+ 	      if test "$use_pthreads" = yes; then
+ 		LDFLAGS="-pthread $LDFLAGS"
+ dnl -lc_r is automatically done by the linker
+@@ -304,7 +304,7 @@ esac
+ 
+ dnl Sound device selection for xcdrdao
+ case "$host" in
+-  *-linux* | *-freebsd* | *-solaris*)
++  *-linux* | *-freebsd* | *-solaris*| *-dragonfly*)
+ 	     sound_if_obj=SoundIF-ao.o
+ 	     ;;
+ 
