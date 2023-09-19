@@ -1,24 +1,15 @@
---- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2023-05-31 08:12:17 UTC
+--- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2023-09-13 12:11:42 UTC
 +++ chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc
-@@ -406,7 +406,7 @@ std::string GetFileExtension(FileExtension file_extens
+@@ -416,7 +416,7 @@ std::string GetFileExtension(FileExtension file_extens
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD) || BUILDFLAG(IS_BSD)
  SiteConfig GetSiteConfigurationFromAppName(const std::string& app_name) {
    SiteConfig config;
    bool is_app_found = false;
-@@ -872,7 +872,7 @@ void WebAppIntegrationTestDriver::TearDownOnMainThread
-   LOG(INFO) << "TearDownOnMainThread: Deleting dangling shortcuts.";
-   // TODO(crbug.com/1273568): Investigate the true source of flakiness instead
-   // of papering over it here.
--#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   ASSERT_TRUE(override_registration_->test_override->ForceDeleteAllShortcuts());
- #endif
-   LOG(INFO)
-@@ -1812,7 +1812,7 @@ void WebAppIntegrationTestDriver::DeletePlatformShortc
+@@ -1862,7 +1862,7 @@ void WebAppIntegrationTestDriver::DeletePlatformShortc
    if (app_name.empty()) {
      app_name = GetSiteConfiguration(site).app_name;
    }
@@ -27,7 +18,7 @@
    ASSERT_TRUE(override_registration_->test_override->IsShortcutCreated(
        profile(), app_id, app_name));
    ASSERT_TRUE(
-@@ -2992,7 +2992,7 @@ void WebAppIntegrationTestDriver::CheckRunOnOsLoginEna
+@@ -3106,7 +3106,7 @@ void WebAppIntegrationTestDriver::CheckRunOnOsLoginEna
            app_state->id, app_state->name);
    ASSERT_TRUE(icon_color.has_value());
    ASSERT_THAT(site_config.icon_color, testing::Eq(icon_color.value()));
@@ -36,7 +27,7 @@
    ASSERT_TRUE(override_registration_->test_override->IsRunOnOsLoginEnabled(
        profile(), app_state->id, app_state->name));
  #endif
-@@ -3007,7 +3007,7 @@ void WebAppIntegrationTestDriver::CheckRunOnOsLoginDis
+@@ -3121,7 +3121,7 @@ void WebAppIntegrationTestDriver::CheckRunOnOsLoginDis
        GetAppBySiteMode(after_state_change_action_state_.get(), profile(), site);
    ASSERT_TRUE(app_state);
    base::ScopedAllowBlockingForTesting allow_blocking;
@@ -45,7 +36,7 @@
    ASSERT_FALSE(override_registration_->test_override->IsRunOnOsLoginEnabled(
        profile(), app_state->id, app_state->name));
  #endif
-@@ -3017,7 +3017,7 @@ void WebAppIntegrationTestDriver::CheckRunOnOsLoginDis
+@@ -3131,7 +3131,7 @@ void WebAppIntegrationTestDriver::CheckRunOnOsLoginDis
  void WebAppIntegrationTestDriver::CheckSiteHandlesFile(
      Site site,
      FileExtension file_extension) {
@@ -54,7 +45,7 @@
    if (!BeforeStateCheckAction(__FUNCTION__)) {
      return;
    }
-@@ -3033,7 +3033,7 @@ void WebAppIntegrationTestDriver::CheckSiteHandlesFile
+@@ -3147,7 +3147,7 @@ void WebAppIntegrationTestDriver::CheckSiteHandlesFile
  void WebAppIntegrationTestDriver::CheckSiteNotHandlesFile(
      Site site,
      FileExtension file_extension) {
@@ -63,7 +54,7 @@
    if (!BeforeStateCheckAction(__FUNCTION__)) {
      return;
    }
-@@ -3759,7 +3759,7 @@ base::FilePath WebAppIntegrationTestDriver::GetShortcu
+@@ -3939,7 +3939,7 @@ base::FilePath WebAppIntegrationTestDriver::GetShortcu
      base::FilePath shortcut_dir,
      const std::string& app_name,
      const AppId& app_id) {
@@ -72,7 +63,7 @@
    return override_registration_->test_override->GetShortcutPath(
        profile(), shortcut_dir, app_id, app_name);
  #else
-@@ -3938,7 +3938,7 @@ bool WebAppIntegrationTestDriver::IsShortcutAndIconCre
+@@ -4126,7 +4126,7 @@ bool WebAppIntegrationTestDriver::IsShortcutAndIconCre
      const AppId& id) {
    base::ScopedAllowBlockingForTesting allow_blocking;
    bool is_shortcut_and_icon_correct = false;
@@ -81,7 +72,7 @@
    bool is_shortcut_correct =
        override_registration_->test_override->IsShortcutCreated(profile, id,
                                                                 name);
-@@ -3982,7 +3982,7 @@ bool WebAppIntegrationTestDriver::DoIconColorsMatch(Pr
+@@ -4170,7 +4170,7 @@ bool WebAppIntegrationTestDriver::DoIconColorsMatch(Pr
      do_icon_colors_match =
          (expected_icon_pixel_color == shortcut_pixel_color_apps_folder.value());
    }

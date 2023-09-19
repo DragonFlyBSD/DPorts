@@ -1,6 +1,6 @@
---- chrome/browser/web_applications/commands/install_app_locally_command.cc.orig	2023-04-05 11:05:06 UTC
+--- chrome/browser/web_applications/commands/install_app_locally_command.cc.orig	2023-08-17 07:33:31 UTC
 +++ chrome/browser/web_applications/commands/install_app_locally_command.cc
-@@ -71,7 +71,7 @@ void InstallAppLocallyCommand::StartWithLock(
+@@ -80,7 +80,7 @@ void InstallAppLocallyCommand::StartWithLock(
    options.os_hooks[OsHookType::kUninstallationViaOsSettings] =
        web_app->CanUserUninstallWebApp();
  
