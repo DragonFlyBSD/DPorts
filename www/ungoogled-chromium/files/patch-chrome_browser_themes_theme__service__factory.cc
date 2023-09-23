@@ -1,6 +1,6 @@
---- chrome/browser/themes/theme_service_factory.cc.orig	2022-10-29 17:50:56 UTC
+--- chrome/browser/themes/theme_service_factory.cc.orig	2023-09-17 07:59:53 UTC
 +++ chrome/browser/themes/theme_service_factory.cc
-@@ -23,11 +23,11 @@
+@@ -27,11 +27,11 @@
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -14,7 +14,7 @@
  #include "ui/linux/linux_ui_factory.h"
  #endif
  
-@@ -81,7 +81,7 @@ ThemeServiceFactory::~ThemeServiceFactory() = default;
+@@ -103,7 +103,7 @@ ThemeServiceFactory::~ThemeServiceFactory() = default;
  
  KeyedService* ThemeServiceFactory::BuildServiceInstanceFor(
      content::BrowserContext* profile) const {
@@ -23,7 +23,7 @@
    using ThemeService = ThemeServiceAuraLinux;
  #endif
  
-@@ -95,9 +95,9 @@ void ThemeServiceFactory::RegisterProfilePrefs(
+@@ -117,9 +117,9 @@ void ThemeServiceFactory::RegisterProfilePrefs(
      user_prefs::PrefRegistrySyncable* registry) {
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

@@ -1,0 +1,13 @@
+diff --git base/BUILD.gn base/BUILD.gn
+index 376f8cc0e8b..1d2888604d0 100644
+--- base/BUILD.gn
++++ base/BUILD.gn
+@@ -2094,7 +2094,7 @@ component("base") {
+       "process/process_metrics_openbsd.cc",
+       "system/sys_info_openbsd.cc",
+     ]
+-  } else if (is_freebsd) {
++  } else if (is_freebsd || is_dragonfly) {
+     sources += [
+       "process/process_handle_freebsd.cc",
+       "process/process_iterator_freebsd.cc",
