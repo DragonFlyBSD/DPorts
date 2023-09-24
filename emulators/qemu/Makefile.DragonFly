@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--disable-netmap \
 # for find-lib
 LIB_DIRS+=	${LOCALBASE}/lib/elfutils
 
-.if ${FLAVOR:U} == default
+.if ${FLAVOR:U} == default || ${FLAVOR:U} == nox11
 OPTIONS_DEFAULT+=	SPICE
 #
 # XXX: We have an issue with Elf64_Lib. DragonFly's base elftoolchain
