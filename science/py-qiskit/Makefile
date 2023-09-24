@@ -1,5 +1,5 @@
 PORTNAME=	qiskit
-DISTVERSION=	0.37.2
+DISTVERSION=	0.43.2
 CATEGORIES=	science python # quantum-computing
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -23,11 +23,13 @@ BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS} \
 		${OPT_DEPENDS}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	distutils autoplist pytest
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Qiskit
+
+WRKSRC=		${WRKDIR}/qiskit-metapackage-${PORTVERSION}
 
 NO_ARCH=	yes
 
