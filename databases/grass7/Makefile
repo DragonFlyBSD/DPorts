@@ -1,6 +1,6 @@
 PORTNAME=	grass
 PORTVERSION=	7.8.7
-PORTREVISION=	5
+PORTREVISION=	8
 CATEGORIES=	databases geography
 MASTER_SITES=	https://grass.osgeo.org/%SUBDIR%/ \
 		http://grass.cict.fr/%SUBDIR%/ \
@@ -39,7 +39,7 @@ RUN_DEPENDS=	${PY_NUMPY} \
 		${PYTHON_SITELIBDIR}/six.py:devel/py-six@${PY_FLAVOR}
 
 USES=		blaslapack compiler:c11 gl gmake gnome iconv \
-		jpeg perl5 pkgconfig python:3.6+ readline shebangfix xorg
+		jpeg perl5 pkgconfig python readline shebangfix xorg
 SHEBANG_GLOB=	*.py
 SHEBANG_LANG=	nviz
 nviz_OLD_CMD=	nviz
