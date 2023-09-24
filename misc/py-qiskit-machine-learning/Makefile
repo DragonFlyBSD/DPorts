@@ -1,5 +1,5 @@
 PORTNAME=	qiskit-machine-learning
-DISTVERSION=	0.5.0
+DISTVERSION=	0.6.1
 CATEGORIES=	misc python # quantum-computing, machine-learning
 #MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,7 +21,7 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dill>=0.3.4:devel/py-dill@${PY_FLAVOR} \
 BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	distutils autoplist pytest # several tests fail with "No module named 'threadpoolctl'", see https://reviews.freebsd.org/D35513
 
 USE_GITHUB=	yes
