@@ -1,5 +1,5 @@
 PORTNAME=	dwave-ocean-sdk
-DISTVERSION=	6.2.0
+DISTVERSION=	6.4.0
 CATEGORIES=	science python # quantum-computing
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -28,7 +28,7 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dimod>=0.12.3:science/py-dimod@${PY_FLAVOR} \
 BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	distutils autoplist unittest
 
 USE_GITHUB=	yes
