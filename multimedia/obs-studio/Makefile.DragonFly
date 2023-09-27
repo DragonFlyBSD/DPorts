@@ -1,6 +1,17 @@
-USES+=	alias
-
 # no pulse
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO}
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO:NWAYLAND}
 
 .undef PULSEAUDIO_BROKEN_OFF
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,OS_FREEBSD,OS_DRAGONFLY,g' \
+		-e 's,FreeBSD,DragonFly,g' \
+		${WRKSRC}/cmake/Modules/*.cmake \
+		${WRKSRC}/cmake/finders/*.cmake \
+		${WRKSRC}/cmake/common/*.cmake \
+		${WRKSRC}/cmake/external/*.cmake \
+		${WRKSRC}/deps/obs-scripting/cmake/python.cmake \
+		${WRKSRC}/deps/obs-scripting/obslua/CMakeLists.txt \
+		${WRKSRC}/deps/obs-scripting/obspython/CMakeLists.txt \
+		${WRKSRC}/UI/CMakeLists.txt \
+		${WRKSRC}/libobs/CMakeLists.txt
