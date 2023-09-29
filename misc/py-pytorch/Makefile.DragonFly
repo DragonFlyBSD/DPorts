@@ -1,0 +1,2 @@
+USE_GCC_VERSION= 12
+CFLAGS+=	 -Wno-maybe-uninitialized -Wno-uninitialized

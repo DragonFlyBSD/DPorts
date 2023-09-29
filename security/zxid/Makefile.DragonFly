@@ -1,6 +1,0 @@
-USES+=	alias
-
-.if ${PORTVERSION} == 1.42
-BROKEN_SSL=	openssl
-BROKEN_SSL_REASON_openssl=  struct x509_st
-.endif

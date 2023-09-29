@@ -1,5 +1,6 @@
 PORTNAME=	astroML
 PORTVERSION=	1.0.2
+PORTREVISION=	1
 CATEGORIES=	astro
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +19,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scikit-learn>=0.18:science/py-scikit-learn@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}astropy>=3.0:astro/py-astropy@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist distutils
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.post1

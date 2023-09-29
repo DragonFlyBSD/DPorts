@@ -1,5 +1,5 @@
---- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2021-01-20 00:41:17 UTC
-+++ hotspot/src/os/bsd/vm/os_bsd.cpp
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2023-07-31 09:58:34.951083000 +0200
++++ hotspot/src/os/bsd/vm/os_bsd.cpp	2023-07-31 09:58:56.321419000 +0200
 @@ -104,13 +104,18 @@
  # include <sys/ioctl.h>
  # include <sys/syscall.h>
@@ -44,7 +44,7 @@
  
    for (i = 0, free_pages = 0; i < sizeof(vm_stats) / sizeof(vm_stats[0]); i++) {
      size = sizeof(npages);
-@@ -1274,8 +1283,8 @@ pid_t os::Bsd::gettid() {
+@@ -1276,8 +1285,8 @@ pid_t os::Bsd::gettid() {
    guarantee(retval != 0, "just checking");
    return retval;
  
@@ -55,16 +55,16 @@
    return ::pthread_getthreadid_np();
  #else
    long tid;
-@@ -2436,7 +2445,7 @@ static char* anon_mmap(char* requested_a
+@@ -2438,7 +2447,7 @@ static char* anon_mmap(char* requested_a
    if (fixed) {
      assert((uintptr_t)requested_addr % os::Bsd::page_size() == 0, "unaligned address");
      flags |= MAP_FIXED;
--#ifndef __OpenBSD__
-+#if !defined(__OpenBSD__) && !defined(__DragonFly__)
+-#if !defined(__OpenBSD__) && !defined(__APPLE__)
++#if !defined(__OpenBSD__) && !defined(__APPLE__) && !defined(__DragonFly__)
    } else if (alignment_hint > 0) {
      flags |= MAP_ALIGNED(ffs(alignment_hint) - 1);
  #endif
-@@ -4049,6 +4058,10 @@ int os::active_processor_count() {
+@@ -4053,6 +4062,10 @@ int os::active_processor_count() {
      return online_cpus;
  #endif
  
@@ -75,7 +75,7 @@
    return _processor_count;
  }
  
-@@ -4060,7 +4073,7 @@ void os::set_native_thread_name(const ch
+@@ -4064,7 +4077,7 @@ void os::set_native_thread_name(const ch
      char buf[MAXTHREADNAMESIZE];
      snprintf(buf, sizeof(buf), "Java: %s", name);
      pthread_setname_np(buf);

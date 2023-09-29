@@ -4,7 +4,7 @@ CATEGORIES=	java devel
 MASTER_SITES=	https://github.com/oracle/visualvm/releases/download/${PORTVERSION}/
 DISTNAME=	visualvm_${PORTVERSION:S/.//g}
 
-MAINTAINER=	swills@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	GUI tool combining CLI JDK tools and profiling capabilities
 WWW=		https://visualvm.github.io/
 
@@ -16,7 +16,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 USES=		desktop-file-utils zip:infozip
 NO_BUILD=	yes
 USE_JAVA=	yes
-JAVA_VERSION=	1.8+
+JAVA_VERSION=	8+
 WRKSRC=		${WRKDIR}/visualvm_${PORTVERSION:S/.//g}
 SUB_FILES=	visualvm.desktop
 

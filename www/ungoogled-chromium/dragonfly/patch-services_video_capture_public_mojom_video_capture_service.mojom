@@ -1,0 +1,12 @@
+diff --git services/video_capture/public/mojom/video_capture_service.mojom services/video_capture/public/mojom/video_capture_service.mojom
+index 04c9e93515b..49a602db38d 100644
+--- services/video_capture/public/mojom/video_capture_service.mojom
++++ services/video_capture/public/mojom/video_capture_service.mojom
+@@ -28,6 +28,7 @@ interface AcceleratorFactory {
+ [EnableIf=is_openbsd]
+ const sandbox.mojom.Sandbox kVideoCaptureSandbox
+   = sandbox.mojom.Sandbox.kVideoCapture;
++
+ [EnableIfNot=is_openbsd]
+ const sandbox.mojom.Sandbox kVideoCaptureSandbox
+   = sandbox.mojom.Sandbox.kNoSandbox;

@@ -1,5 +1,5 @@
 PORTNAME=	gnucash
-PORTVERSION=	4.13
+PORTVERSION=	5.3
 CATEGORIES=	finance gnome
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28stable%29/${PORTVERSION}
 
@@ -24,7 +24,7 @@ LIB_DEPENDS=	libgnome-keyring.so:security/libgnome-keyring \
 		libicudata.so:devel/icu\
 		libharfbuzz.so:print/harfbuzz
 RUN_DEPENDS=	p5-libwww>=0:www/p5-libwww \
-		p5-Date-Manip>=0:devel/p5-Date-Manip \
+		p5-JSON-Parse>=0:devel/p5-JSON-Parse \
 		p5-Finance-Quote>=0:finance/p5-Finance-Quote \
 		p5-LWP-Protocol-https>=0:www/p5-LWP-Protocol-https
 
@@ -86,7 +86,7 @@ OFX_CMAKE_BOOL=		WITH_OFX
 OFX_LIB_DEPENDS=	libofx.so:finance/libofx
 OFX_VARS=		GLIB_SCHEMAS+=org.gnucash.GnuCash.dialogs.import.ofx.gschema.xml
 PYTHON_CMAKE_BOOL=	WITH_PYTHON
-PYTHON_USES=		python:3.3+
+PYTHON_USES=		python
 
 post-install-PYTHON-on:
 	@(cd ${STAGEDIR}${PREFIX} \

@@ -1,0 +1,13 @@
+diff --git build/config/compiler/BUILD.gn build/config/compiler/BUILD.gn
+index a4ff89c404e..15ff1f4e0c2 100644
+--- build/config/compiler/BUILD.gn
++++ build/config/compiler/BUILD.gn
+@@ -1980,7 +1980,7 @@ config("no_chromium_code") {
+       # third-party libraries.
+       "-Wno-c++11-narrowing",
+     ]
+-    if (!is_nacl && !is_freebsd) {
++    if (!is_nacl && !is_freebsd && !is_dragonfly) {
+       cflags += [
+         # Disabled for similar reasons as -Wunused-variable.
+         "-Wno-unused-but-set-variable",

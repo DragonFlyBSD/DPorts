@@ -33,6 +33,10 @@ OPTIONS_SUB=		yes
 
 .include <bsd.port.pre.mk>
 
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CFLAGS+=       -Wno-error=int-conversion
+.endif
+
 .if ${ARCH}=="i386"
 PLIST_ARCH=	i386
 USE_GCC=	yes

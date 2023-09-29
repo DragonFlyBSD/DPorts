@@ -1,11 +1,11 @@
 PORTNAME=	fidogate
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.10-3
-DISTVERSIONSUFFIX=	-g1c1fd41
+DISTVERSION=	5.12
 CATEGORIES=	news mail
 
 MAINTAINER=	admin@5034.ru
 COMMENT=	Fido-Internet Gateway and Tosser
+WWW=		https://github.com/ykaliuta/fidogate
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING

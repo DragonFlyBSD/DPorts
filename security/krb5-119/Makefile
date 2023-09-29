@@ -6,6 +6,9 @@ MASTER_SITES=		http://web.mit.edu/kerberos/dist/${PORTNAME}/${PORTVERSION:C/^[0-
 PKGNAMESUFFIX=		-119
 .endif
 
+DEPRECATED=		Desupported by MIT following 1.21
+EXPIRATION_DATE=	2024-06-06
+
 PATCH_SITES=		http://web.mit.edu/kerberos/advisories/
 PATCH_DIST_STRIP=	-p2
 
@@ -15,13 +18,16 @@ WWW=			https://web.mit.edu/kerberos/
 
 LICENSE=		MIT
 
-CONFLICTS=		heimdal krb5 krb5-118 krb5-120
+CONFLICTS=		heimdal krb5 krb5-118 krb5-12*
 CONFLICTS_BUILD=	boringssl
 
 KERBEROSV_URL=		http://web.mit.edu/kerberos/
-USES=			compiler:c++11-lang cpe gmake gettext-runtime \
+USES=			autoreconf compiler:c++11-lang cpe gmake gettext-runtime \
 			gssapi:bootstrap,mit libtool:build localbase \
 			perl5 pkgconfig ssl
+BROKEN_SSL=	openssl30 openssl31
+BROKEN_SSL_REASON=	Requires OpenSSL 3.0.0 deprecated RSA_ routines
+BROKEN_FreeBSD_14=	Incompatible with OpenSSL 3.0 in 14-CURRENT
 USE_CSTD=		gnu99
 USE_LDCONFIG=		yes
 USE_PERL5=		build
@@ -39,7 +45,7 @@ CPE_PRODUCT=		kerberos
 OPTIONS_DEFINE=		EXAMPLES NLS KRB5_PDF KRB5_HTML DNS_FOR_REALM LDAP LMDB
 OPTIONS_DEFAULT=	KRB5_PDF KRB5_HTML READLINE
 OPTIONS_RADIO=		CMD_LINE_EDITING
-OPTIONS_RADIO_CMD_LINE_EDITING=	READLINE LIBEDIT
+OPTIONS_RADIO_CMD_LINE_EDITING=	READLINE LIBEDIT LIBEDIT_BASE
 CMD_LINE_EDITING_DESC=	Command line editing for kadmin and ktutil
 KRB5_PDF_DESC=		Install krb5 PDF documentation
 KRB5_HTML_DESC=		Install krb5 HTML documentation
@@ -53,10 +59,13 @@ LMDB_CONFIGURE_WITH=	lmdb
 LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
 LMDB_IMPLIES=		LDAP
 NLS_USES=		gettext
+NLS_CONFIGURE_OFF=	--disable-nls
 READLINE_USES=		readline
 READLINE_CONFIGURE_WITH=readline
 LIBEDIT_USES=		libedit
 LIBEDIT_CONFIGURE_WITH=	libedit
+LIBEDIT_BASE_CONFIGURE_WITH=	libedit
+LIBEDIT_BASE_DESC=	Use libedit in FreeBSD base
 
 .if defined(KRB5_HOME)
 PREFIX=			${KRB5_HOME}

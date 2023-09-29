@@ -1,5 +1,5 @@
 PORTNAME=	kodi
-DISTVERSION=	20.1
+DISTVERSION=	20.2
 CATEGORIES=	multimedia java
 # do not forget to fix devel/kodi-platform when updating kodi
 
@@ -42,7 +42,7 @@ LIB_DEPENDS=	libass.so:multimedia/libass \
 
 USES=		autoreconf:build cmake:noninja compiler:c++17-lang cpe \
 		desktop-file-utils gettext gmake gnome iconv jpeg libtool \
-		pkgconfig python:3.7+ sqlite ssl
+		pkgconfig python sqlite ssl
 
 KODI_CODENAME=		Nexus
 LIBDVDCSS_VERSION=	1.4.3-Next-Nexus-Alpha2-2
@@ -112,7 +112,6 @@ GL_DESC=	OpenGL
 GLES_DESC=	OpenGL ES
 
 GBM_DESC=	GBM support
-PIPEWIRE_DESC=	PipeWire support
 
 SSE2_DESC=	Use SSE2 optimized routines
 SSE3_DESC=	Use SSE3 optimized routines

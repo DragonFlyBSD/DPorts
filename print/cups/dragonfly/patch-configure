@@ -1,6 +1,6 @@
---- configure.orig	2022-05-31 17:14:58 UTC
-+++ configure
-@@ -6696,7 +6696,7 @@ fi
+--- configure.orig	2023-07-30 11:44:36.940174000 +0200
++++ configure	2023-07-30 11:45:30.161079000 +0200
+@@ -6698,7 +6698,7 @@ fi
  PKGCONFIG_LIBS_STATIC="$PKGCONFIG_LIBS_STATIC $LIBZ"
  
  case host_os_name in #(
@@ -9,25 +9,25 @@
  
      ARFLAGS="-rcv"
   ;; #(
-@@ -7466,7 +7466,7 @@ if test "$localedir" = "\${datarootdir}/
+@@ -7468,7 +7468,7 @@ if test "$localedir" = "\${datarootdir}/
  then :
  
      case "$host_os_name" in #(
--  linux* | gnu* | *bsd* | darwin*) :
-+  linux* | gnu* | *bsd* | darwin* | dragonfly*) :
+-  linux* | gnu* | *bsd* | darwin* | solaris*) :
++  linux* | gnu* | *bsd* | darwin* | solaris* | dragonfly*) :
  
  	CUPS_LOCALEDIR="$datarootdir/locale"
       ;; #(
-@@ -7568,7 +7568,7 @@ case "$host_os_name" in #(
+@@ -7570,7 +7570,7 @@ case "$host_os_name" in #(
      INSTALL_SYSV="install-sysv"
      CUPS_SERVERBIN="$exec_prefix/lib/cups"
   ;; #(
 -  *bsd* | darwin*) :
-+  *bsd* | darwin* | dragonfly*) :
++  *bsd* | darwin* | dragonfly* ) :
  
      # *BSD and Darwin (macOS)
      INSTALL_SYSV=""
-@@ -7643,7 +7643,7 @@ if test "$mandir" = "\${prefix}/man" -a
+@@ -7658,7 +7658,7 @@ if test "$mandir" = "\${prefix}/man" -a
  then :
  
      case "$host_os_name" in #(
@@ -36,16 +36,16 @@
  
  	# Darwin, macOS, Linux, GNU HURD, and *BSD
  	mandir="/usr/share/man"
-@@ -7693,7 +7693,7 @@ fi
+@@ -7708,7 +7708,7 @@ fi
  	DSOXX="\$(CXX)"
  	DSOFLAGS="$DSOFLAGS -Wl,-h\`basename \$@\` -G"
       ;; #(
--  linux* | gnu* | *bsd*) :
-+  linux* | gnu* | *bsd* | dragonfly*) :
+-  linux* | gnu* | *bsd* | solaris*) :
++  linux* | gnu* | *bsd* | solaris* | dragonfly*) :
  
  	LIBCUPS="lib$cupsbase.so.2"
  	if test "x$cupsimagebase" != x
-@@ -7812,7 +7812,7 @@ then :
+@@ -7833,7 +7833,7 @@ then :
  
  fi
       ;; #(

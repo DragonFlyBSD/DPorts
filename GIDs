@@ -258,10 +258,10 @@ nut:*:316:
 hedgedoc:*:317:
 # free: 318, UID used by icingadirector
 rustdesk:*:319:
-# free: 320
-# free: 321
-# free: 322
-# free: 323
+teleirc:*:320:
+caldera:*:321:
+tlsc:*:322:
+soju:*:323:
 # free: 324
 dkfilter:*:325:
 smfs:*:326:
@@ -696,7 +696,7 @@ c-lightning:*:735:
 # free: 754
 # free: 755
 # free: 756
-# free: 757
+sopel:*:757:
 # free: 758
 # free: 759
 # free: 760
@@ -715,7 +715,7 @@ postgrest:*:772:
 # free: 773
 # free: 774
 # free: 775
-# free: 776
+namecoin:*:776:
 openxpki:*:777:
 litecoin:*:778:
 bitcoin:*:779:
@@ -766,7 +766,7 @@ dotlrn:*:821:
 selenium:*:824:
 polw:*:825:
 statsd:*:826:
-# free: 827
+_tuptime:*:827:
 # free: 828
 # free: 829
 # free: 830
@@ -799,7 +799,7 @@ opensearch:*:855:
 # free: 857
 # free: 858
 # free: 859
-# free: 860
+plocate:*:860:
 # free: 861
 # free: 862
 # free: 863

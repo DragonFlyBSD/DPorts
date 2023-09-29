@@ -1,6 +1,6 @@
 PORTNAME=	sonarqube
-DISTVERSION=	9.9.0.65466
-PORTREVISION=	2
+DISTVERSION=	10.0.0.68432
+PORTREVISION=	3
 CATEGORIES=	devel security www java
 MASTER_SITES=	https://binaries.sonarsource.com/Distribution/sonarqube/:m_core \
 		https://binaries.sonarsource.com/Distribution/sonar-csharp-plugin/:m_csharp \
@@ -28,13 +28,13 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 #BUILD_DEPENDS=	jna>0:devel/jna
 RUN_DEPENDS=	bash:shells/bash #\
-		#jna>0:devel/jna
+#		jna>0:devel/jna
 
 USES=		cpe shebangfix zip
 CPE_VENDOR=	sonarsource
 USE_JAVA=	yes
 
-SHEBANG_FILES=	elasticsearch/bin/elasticsearch \
+SHEBANG_FILES=	elasticsearch/bin/elasticsearch-cli \
 		elasticsearch/bin/elasticsearch-env
 
 NO_ARCH=	yes
@@ -52,11 +52,11 @@ DBBASE_DIR=	/var/db/${PORTNAME}
 DATA_DIR=	${DBBASE_DIR}/data
 TEMP_DIR=	${DBBASE_DIR}/temp
 
-SONARCSHARP_VER=	8.54.0.64047
-SONARJAVA_VER=		7.17.0.31219
-SONARJAVASCRIPT_VER=	10.0.1.20755
-SONARPHP_VER=		3.28.0.9490
-SONARPYTHON_VER=	4.1.0.11333
+SONARCSHARP_VER=	9.2.0.71021
+SONARJAVA_VER=		7.20.0.31692
+SONARJAVASCRIPT_VER=	10.2.0.21568
+SONARPHP_VER=		3.30.0.9766
+SONARPYTHON_VER=	4.3.0.11660
 SONARVBNET_VER=		${SONARCSHARP_VER}
 
 USERS=		sonarqube

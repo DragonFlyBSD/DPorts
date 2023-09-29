@@ -1,0 +1,11 @@
+--- libobs-opengl/CMakeLists.txt.orig	2023-06-18 22:05:22 UTC
++++ libobs-opengl/CMakeLists.txt
+@@ -40,7 +40,7 @@ elseif(OS_MACOS)
+   target_compile_definitions(libobs-opengl PRIVATE GL_SILENCE_DEPRECATION)
+ 
+   target_link_libraries(libobs-opengl PRIVATE ${COCOA} ${IOSURF})
+-elseif(OS_LINUX OR OS_FREEBSD)
++elseif(OS_LINUX OR OS_FREEBSD OR OS_DRAGONFLY)
+   find_package(X11 REQUIRED)
+   find_package(
+     xcb

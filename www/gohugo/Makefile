@@ -1,12 +1,13 @@
 PORTNAME=	hugo
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.111.3
-PORTREVISION=	1
+PORTREVISION=	3
+PORTEPOCH=	1
 CATEGORIES=	www
 PKGNAMEPREFIX=	go
 DIST_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}
 
-MAINTAINER=	0xdutra@gmail.com
+MAINTAINER=	doceng@FreeBSD.org
 COMMENT=	Fast and Flexible Static Site Generator built with love in GoLang
 WWW=		https://gohugo.io
 

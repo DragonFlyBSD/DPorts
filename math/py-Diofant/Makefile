@@ -1,5 +1,6 @@
 PORTNAME=	Diofant
 DISTVERSION=	0.13.0
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -24,7 +25,7 @@ RUN_DEPENDS=	\
 		${PYTHON_PKGNAMEPREFIX}theano>=0.9.0:math/py-theano@${PY_FLAVOR} \
 		${PYNUMPY}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	distutils cython autoplist
 NO_ARCH=	yes
 

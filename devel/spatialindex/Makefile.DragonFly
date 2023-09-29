@@ -1,7 +1,0 @@
-
-# zrj: add missing link against -lm in libspatialindex.so
-# NOTYPE  GLOBAL DEFAULT  UND {atan ceil floor log pow sqrt}
-# fixes graphics/qgis build (binutils 2.27 ld.gold is unhappy)
-dfly-patch:
-	${REINPLACE_CMD} -e "/libspatialindex_la_LINK) -rpath/s/$$/ -lm/g"	\
-		${WRKSRC}/Makefile.in

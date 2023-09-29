@@ -1,5 +1,5 @@
 PORTNAME=	drupal10
-PORTVERSION=	10.0.5
+PORTVERSION=	10.0.9
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 DISTNAME=	drupal-${PORTVERSION}
@@ -12,7 +12,7 @@ WWW=		https://www.drupal.org/
 LICENSE=	GPLv2+
 
 USES=		php:web shebangfix
-USE_PHP=	dom filter gd hash json mbstring opcache pcre pdo session \
+USE_PHP=	dom filter gd mbstring opcache pdo session \
 		simplexml tokenizer xml
 IGNORE_WITH_PHP=80
 SHEBANG_FILES=	core/scripts/password-hash.sh

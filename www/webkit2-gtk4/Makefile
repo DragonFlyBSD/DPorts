@@ -1,11 +1,14 @@
 PORTNAME=	webkit
 DISTVERSION=	2.38.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk4
 DISTNAME=	${PORTNAME}gtk-${PORTVERSION}
 DIST_SUBDIR=	gnome
+
+PATCH_SITES=	https://github.com/WebKit/WebKit/commit/
+PATCHFILES=	285ff73b5f6d46d6e502aca30061667e41a3114b.diff:-p1
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Opensource browser engine using the GTK+ 4 toolkit
@@ -13,6 +16,8 @@ WWW=		https://webkitgtk.org/
 
 LICENSE=	BSD2CLAUSE GPLv2
 LICENSE_COMB=	dual
+
+BROKEN_riscv64=	error: Unknown Architecture
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/ar:devel/binutils \
 		${PYTHON_PKGNAMEPREFIX}gi-docgen>0:textproc/py-gi-docgen@${PY_FLAVOR}
@@ -93,6 +98,12 @@ WAYLAND_BUILD_DEPENDS=	wayland-protocols>=1.12:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=	libwayland-egl.so:graphics/wayland \
 			libwpe-1.0.so:www/libwpe \
 			libWPEBackend-fdo-1.0.so:www/wpebackend-fdo
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+CXXFLAGS+=	-Wno-error=enum-constexpr-conversion
+.endif
 
 pre-configure:
 # .if !exists() evaluates too early before cairo has a chance to be installed

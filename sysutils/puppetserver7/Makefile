@@ -1,5 +1,5 @@
 PORTNAME=	puppetserver
-PORTVERSION=	7.9.5
+PORTVERSION=	7.12.0
 CATEGORIES=	sysutils java
 MASTER_SITES=	https://downloads.puppetlabs.com/puppet/
 PKGNAMESUFFIX=	7
@@ -26,9 +26,9 @@ USE_RC_SUBR=	puppetserver
 USE_JAVA=	yes
 NO_ARCH=	yes
 NO_BUILD=	yes
-JAVA_VERSION=	1.8+
+JAVA_VERSION=	8+
 
-CONFLICTS_INSTALL=	puppetserver5 puppetserver6
+CONFLICTS_INSTALL=	puppetserver[0-9]
 
 SHEBANG_FILES=	ext/bin/puppetserver
 

@@ -5,12 +5,228 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20230620:
+  AFFECTS: users of lang/elixir-devel
+  AUTHOR: dch@FreeBSD.org
+
+	Note that Elixir now *requires* OTP25+ or better at runtime.
+	For the -devel flavour you are still free to choose OTP25 or
+	OTP26, but the default OTP24 from lang/erlang will *not* work.
+
+20230618:
+  AFFECTS: users of devel/soft-serve
+  AUTHOR: ashish@FreeBSD.org
+
+  soft-serve no longer uses config repository for configuration. To migrate
+  configuration from 0.4.x to 0.5.x, please review the upgrade documentation at:
+
+      https://github.com/charmbracelet/soft-serve/releases/tag/v0.5.0
+
+  The migration process has been incorporated in rc.d script's migrate command,
+  and can be performed using following instructions:
+
+  0. Please make sure to backup repository data
+
+  1. Stop existing process:
+
+      # /usr/local/etc/rc.d/soft-serve stop
+
+  2. Run the rc.d script to migrate, e.g.
+
+      # /usr/local/etc/rc.d/soft-serve migrate
+      INFO Setting SSH listen address...
+      INFO Copying SSH host key...
+      INFO Reading config repository...
+      INFO Setting server settings...
+      INFO Copying repos...
+      INFO   Copying repo ports
+      INFO   Copying readme from "config" to ".soft-serve"
+      INFO Setting repos metadata & collabs...
+      INFO Creating users & collabs...
+      INFO Creating user "ashish"
+      INFO Writing config...
+      INFO Done!
+
+  Another variable is introduced in rc.d script, soft_serve_data_path,
+  indicating the path to data directory used by soft-serve.
+
+20230618:
+  AFFECTS: textproc/apache-solr*
+  AUTHOR: mfechner@FreeBSD.org
+
+  Apache solr is upgraded to version 9.
+  Data migration is required, examples for dovecot data can be found here:
+  https://dovecot.org/pipermail/dovecot/2022-May/124701.html
+  https://dovecot.org/pipermail/dovecot/2022-May/124711.html
+
+  If you like to stay on version8:
+  # pkg delete apache-solr
+  # pkg install apache-solr8
+
+20230609:
+  AFFECTS: users of security/sequoia
+  AUTHOR: vishwin@FreeBSD.org
+
+  sq has been split to security/sequoia-sq; security/sequoia becomes
+  a meta-port, where security/sequoia-sq is currently the only
+  dependency. As other programs are individually ported over, they
+  will become OPTIONS in the meta-port.
+
+  Per upstream, FFI is deprecated in favour of point solutions.
+
+20230602:
+  AFFECTS: users of net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  1. If the plugin security/py-netbox-secretstore is used, which is no
+     longer maintained by upstream, the following steps must be done before
+     upgrading to NetBox 3.5:
+
+     * Migrate from security/py-netbox-secretstore (= 1.4.2_2) to
+       security/py-netbox-secrets (= 1.7.6) with a NetBox 3.4.x instance.
+
+       It is very important that the versions of py-netbox-secretstore and
+       py-netbox-secrets match as specified otherwise the migration will not
+       be successful.
+
+       The reason for this is that py-netbox-secrets 1.8.x is not backwards
+       compatible with Netbox 3.4.  For further details please see the
+       updating instructions of py-netbox-secretstore or the UPDATING entry
+       of 2023-05-11.
+
+  2. Please also check the pkg-message and the changelogs for further info.
+
+20230531:
+  AFFECTS: users of net-mgmt/netdisco
+  AUTHOR: dgeo@centrale-marseille.fr
+
+  The netdisco user now needs a HOME and a shell.
+  For existing installs you will need to set
+  HOME to /usr/local/etc/netdisco and shell to /bin/sh.
+
+  For example in one shell line:
+  pw user mod netdisco -d /usr/local/etc/netdisco -s /bin/sh
+
+20230526:
+  AFFECTS: users of mail/exim
+  AUTHOR: pi@FreeBSD.org
+
+  The port changes from USE_DB to USE_NDBM. Any existing configuration like
+  ${lookup{$needle}dbm{haystack.db}}
+  will need to change to
+  ${lookup{$needle}dbm{haystack}}.
+
+  Please also rename your old DBM files while the exim daemon is stopped:
+  find /var/spool/exim/db/* -not -name \*.lockfile -exec mv -i {} {}.db \;
+
+20230513:
+  AFFECTS: users of www/tt-rss
+  AUTHOR: dereks@lifeofadishwasher.com
+
+  www/tt-rss now expects the user to install the database drivers by hand
+  allowing the port to be database independent however it would be best if you
+  mark the php driver packages as a non-automatic package such that
+  pkg-autoremove doesn't uninstall them.
+
+  Change 80 to your corresponding php version (80, 81, 82)
+
+  mysql: pkg set -yA 0 php80-mysqli php80-pdo_mysql;
+  pgsql: pkg set -yA 0 php80-pgsql php80-pdo_pgsql;
+
+20230511:
+  AFFECTS: users of net-mgmt/py-netbox-secretstore
+  AUTHOR: kai@FreeBSD.org
+
+  Upstream no longer maintains py-netbox-secretstore which it is not
+  compatible with NetBox 3.5 or newer.  To ensure compatibility with newer
+  releases of NetBox, the py-netbox-secrets plugin should be used instead.
+
+  To migrate from security/py-netbox-secretstore to
+  security/py-netbox-secrets please do following steps:
+
+   1. Make a backup.
+
+   2. Install security/py-netbox-secrets
+
+   3. Enable both plugins by updating the following line in the netbox
+      configuration (e.g. /usr/local/share/netbox/netbox/configuration.py):
+
+      PLUGINS = ['netbox_secretstore', 'netbox_secrets']
+
+   4. Run NetBox migrations:
+
+      # cd /usr/local/share/netbox
+      # python3.9 manage.py migrate
+
+   5. Re-adjust the indices for the netbox-secrets plugin:
+
+      # python3.9 manage.py sqlsequencereset netbox_secrets > output.sql
+
+   6. Run the output of the previous command in the database, e.g.:
+
+      # psql -d NETBOXDB < output.sql
+
+   7. You can now remove netbox-secretstore from the application by removing
+      it from the PLUGINS line in the netbox configuration:
+
+      PLUGINS = ['netbox_secrets']
+
+   8. Collect static files of the netbox-secrets plugin:
+
+      # python3.9 manage.py collectstatic --no-input
+
+   9. Restart WSGI/httpd environment (supervisord/apache/nginx/etc.).
+
+  10. You may have clean up your database of the old tables manually, e.g.:
+
+      DROP TABLE netbox_secretstore_secret;
+      DROP TABLE netbox_secretstore_secretrole;
+      DROP TABLE netbox_secretstore_sessionkey;
+      DROP TABLE netbox_secretstore_userkey;
+
+  11. Uninstall security/py-netbox-secretstore.
+
+20230505:
+  AFFECTS: users of mail/mutt
+  AUTHOR: dereks@lifeofadishwasher.com
+
+  The patches included in the mail/mutt port will be removed in approximately a
+  month making the port more inline with upstream. If you require any of these
+  features most are available in mail/neomutt or it's possible to use
+  EXTRA_PATCH_TREE to patch a port when building locally.
+
+20230504:
+  AFFECTS: users of sysutils/py-mqttwarn
+  AUTHOR: dvl@FreeBSD.org
+
+  The redis optoin REISPUB has been renamed to REDISPUB
+  You should update any make.conf setting etc which refer to this.
+  e.g. change sysutils_py-mqttwarn_REISPUB to sysutils_py-mqttwarn_REDISPUB
+
+20230416:
+  AFFECTS: users of databases/mongodb50, databases/mongodb44 and databases/mongodb60
+  AUTHOR: ronald@FreeBSD.org
+
+  MongoDB removed the settings 'fork' and 'pidFilePath' from the default
+  etc/mongodb.conf file.
+  This does not affect mongod started by etc/rc.d/mongod as the settings are
+  passed as arguments. Please verify custom uses of mongod.
+
 20230414:
   AFFECTS: users of www/gitea
   AUTHOR: fernape@FreeBSD.org
 
   Gitea 1.19.1 contains a breaking change.
   actions unit has ben renamed to to repo.actions.
+
+20230407:
+  AFFECTS: users of devel/sonarqube-community
+  AUTHOR: netchild@FreeBSD.org
+
+  You need to make sure to update missing and changed values in
+     PREFIX/libexec/sonarqube/conf/sonar.properties
+  from
+     PREFIX/libexec/sonarqube/conf/sonar.properties.sample
 
 20230318:
   AFFECTS: users of security/libressl
@@ -58,7 +274,7 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: brnrd@FreeBSD.org
 
   Users using DEFAULT_VERSIONS=ssl=openssl-devel must update their
-  configuration to DEFAULT_VERSIUONS=ssl=openssl30 or openssl31.
+  configuration to DEFAULT_VERSIONS=ssl=openssl30 or openssl31.
 
 20230313:
   AFFECTS: users of databases/sqlite3
@@ -155,7 +371,7 @@ you update your ports collection, before attempting any port upgrades.
   quotes around string literals if enabled.  Users who rely on this quirk
   need to manually build databases/sqlite3 with the DQS option enabled.
 
-  See also: https://sqlite.org/quirks.html#dblquote  
+  See also: https://sqlite.org/quirks.html#dblquote
 
 20230227:
   AFFECTS: users of mail/py-spf-engine
@@ -511,197 +727,4 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOR: takefu@airport.fm
 
   The executable name has been changed from this edition from bmpp to bitmap2pp
-
-20220925:
-  AFFECTS: users of security/libressl
-  AUTHOR: brnrd@FreeBSD.org
-
-  The port has been updated to the latest stable version 3.5 of LibreSSL.
-  The shared library versions of the libraries have been bumped.
-
-  After upgrading, manually update all packages that depend on any of the
-  libraries provided by LibreSSL (libssl, libcrypto and libtls) since the
-  versions of these libraries have changed. Normally, you can obtain the
-  list of dependent software by running the following command:
-
-  # pkg info -r libressl
-
-  Then you should rebuild all ports depending on libressl to avoid dangling
-  shared library dependencies.
-
-20220919:
-  AFFECTS: users of audio/strawberry
-  AUTHOR: mandree@FreeBSD.org
-
-  strawberry now uses FLAVORs based on the qt version, offering -qt5 and
-  -qt6, with -qt5 the default.
-
-  You may need to explicitly install either of the new flavors.
-
-20220919:
-  AFFECTS: users of sysutils/schilyutils
-  AUTHOR: fuz@fuz.su
-
-  Schilyutils has been split up into two ports. If you want the bosh shell,
-  the new port is shells/bosh, which can be installed with:
-
-  # pkg install bosh
-    or
-  # portmaster -o shells/bosh
-
-20220918:
-  AFFECTS: users of mail/roundcube
-  AUTHOR: brnrd@FreeBSD.org
-
-  Roundcube has been upgraded to 1.6.0 and introduces breaking changes to
-  configuration options of remote services (imap, smtp, ldap, sieve). Check
-  https://roundcube.net/news/2022/07/28/roundcube-1.6.0-released for details.
-
-  Version 1.6 no longer includes the Classic and Larry skins, which are now
-  available as separate mail/roundcube-classic and mail/roundcube-larry ports.
-
-20220910:
-  AFFECTS: users of devel/cmake
-  AUTHOR: diizzy@FreeBSD.org
-
-  CMake has been converted to a meta-port and new CMake packages created causes
-  conflicts with old binary packages prior to this change.
-
-  If CMake was installed using binary packages via pkg it needs to be
-  uninstalled using pkg delete before installing CMake and related packages
-  after this change.
-
-    pkg delete cmake
-    pkg install cmake-core
-
-  If you're using portmaster you also need to delete the old CMake package
-  before upgrading.
-
-20220909:
-  AFFECTS: users of emulators/qemu
-  AUTHOR: bofh@FreeBSD.org
-
-  emulators/qemu has been updated to 7.1.0. Previous 7.0.X branch has
-  been repocopied to emulators/qemu70. If someone wants to stick with 7.0.X
-  branch please use one of the following command:
-
-  # pkg install qemu70/qemu70-nox11(based on flavor used)
-    or
-  # portmaster -o emulators/qemu70 emulators/qemu
-    or
-  # portupgrade -o emulators/qemu70 emulators/qemu
-
-20220903:
-  AFFECTS: users of editors/vim
-  AUTHOR: adamw@FreeBSD.org
-
-  The Vim port no longer installs a system-wide vimrc. It drastically affected
-  config loading order, and led to various settings being clobbered, duplicated,
-  or ignored.
-
-  Vim's provided defaults.vim (/usr/local/share/vim/vim90/defaults.vim) continues
-  to be read just as before, but its settings are no longer clobbered. Take a look
-  in there for any settings you may want to change, and do ':h initialization' to
-  see where Vim looks for config files.
-
-20220903:
-  AFFECTS: users of archivers/py-borgbackup
-  AUTHOR: mandree@FreeBSD.org
-
-  Borgbackup has been upgraded to version 1.2.  For users who you wish to
-  continue using version 1.1, use either of these commands for upgrading:
-
-  With binary packages through pkg:
-    pkg set -o archivers/py-borgbackup:archivers/py-borgbackup11
-    pkg upgrade
-  With portmaster or portupgrade (replace the command accordingly):
-    portmaster -o archivers/py-borgbackup11 archivers/py-borgbackup
-
-20220901:
-  AFFECTS: users of mail/rainloop-community
-  AUTHOR: yasu@FreeBSD.org
-
-  Since 1.17.0 upstream distributes only one "legacy" edition under MIT license
-  and mail/rainloop-community is removed as a result. So please uninstall
-  mail/rainloop-community (rainloop-community-phpXY) and install mail/rainloop
-  (rainloop-phpXY) instead.
-
-20220831:
-  AFFECTS: users of x11/xscreensaver on 13.1-RELEASE
-  AUTHOR: zirias@FreeBSD.org
-
-  With the update to 6.04, xscreensaver now uses security/unix-selfauth-helper
-  for PAM authentication. This relies on pam_exec.so, which had a bug causing
-  a segfault on authentication attempts prior to 13.1-RELEASE-p1. For details,
-  please see
-  https://www.freebsd.org/security/advisories/FreeBSD-EN-22:19.pam_exec.asc
-
-  Make sure your system is fully upgraded, otherwise you might be unable to
-  unlock your screen.
-
-20220825:
-  AFFECTS: users of net/xrdp or net/xrdp-devel
-  AUTHOR: meta@FreeBSD.org
-
-  After xorg upgrade to 21.1.4, xorgxrdp session doesn't start as before
-  This is because bin/Xorg has been replaced with X server binary wrapper.
-  You must manually edit the Xorg section in etc/xrdp/sesman.ini to get it
-  working again.
-
-  The following is a short example of where, how to modify sesman.ini.
-  Make sure to replace LOCALBASE with your actual path.
-
-   [Xorg]
-   ; Specify the path of non-suid Xorg executable. It might differ depending
-   ; on your distribution and version. Find out the appropreate path for your
-   ; environment. The typical path is known as follows:
-   ;
-   ; Fedora 26 or later    :  param=/usr/libexec/Xorg
-   ; Debian 9 or later     :  param=/usr/lib/xorg/Xorg
-   ; Ubuntu 16.04 or later :  param=/usr/lib/xorg/Xorg
-   ; Arch Linux            :  param=/usr/lib/Xorg
-   ; CentOS 7              :  param=/usr/bin/Xorg or param=Xorg
-   ; CentOS 8              :  param=/usr/libexec/Xorg
-   ;
-  -param=Xorg
-  +param=LOCALBASE/libexec/Xorg
-
-20220815:
-  AFFECTS: users of net/keycloak
-  AUTHOR: fernape@FreeBSD.org
-
-  The flavors -mysql and -postgres were removed, the necessary configuration
-  for those database backends was rolled into the base release by upstream.
-  The configuration files changed completely, so they need to be rebuilt from
-  scratch.
-
-20220807:
-  AFFECTS: users of news/inn
-  AUTHOR: kbowling@FreeBSD.org
-
-  The inn port has been updated to 2.7 release.  Users upgrading from
-  prior versions should read through the announcement for any manual
-  upgrading steps that apply to your environment.
-
-  https://lists.isc.org/pipermail/inn-announce/2022-July/000015.html
-
-20220711:
-  AFFECTS: users of security/stunnel
-  AUTHOR: zi@FreeBSD.org
-
-  The stunnel port has been updated to drop privileges to the stunnel
-  user by default.
-
-  As a result of this change, the pid file location has changed.  If
-  you have a running copy of stunnel, you should stop the process
-  before performing the upgrade.  Alternatively, you will need to
-  # pkill stunnel;service stunnel start
-  after the upgrade has been completed.
-
-202207XYZ:
-  AFFECTS: users of devel/maven-wrapper and devel/maven
-  AUTHOR: michaelo@apache.org
-
-  The environment variable M2_HOME has been replaced with more common
-  MAVEN_HOME which can be used to pass a custom Maven home directory.
 

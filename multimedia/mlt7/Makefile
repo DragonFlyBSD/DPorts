@@ -1,6 +1,6 @@
 PORTNAME=		${_MLT_PORTNAME}
 DISTVERSION=		${_MLT_VERSION}
-PORTREVISION=		0
+PORTREVISION?=		1
 CATEGORIES?=		multimedia
 # Don't use GitHub "fake" downloads that are auto-generated from a
 # tag; the project uploads tarballs for each release.
@@ -8,6 +8,9 @@ CATEGORIES?=		multimedia
 MASTER_SITES=		https://github.com/mltframework/mlt/releases/download/v${DISTVERSION}/
 DISTFILES=		mlt-${DISTVERSION}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}/mlt-${DISTVERSION}
+
+PATCH_SITES=		https://github.com/mltframework/mlt/commit/
+PATCHFILES=		77be3ee97453c194006df9080504492a67c8915b.patch:-p1 # Shotcut export bug #1442
 
 MAINTAINER=		kde@FreeBSD.org
 COMMENT?=		Multimedia framework for TV broadcasting
@@ -31,8 +34,8 @@ CMAKE_ON=		MOD_XML
 
 # Explicitly disabled modules that are ouddated, unnecessary, or have
 # their own port.
-CMAKE_OFF=		MOD_GLAXNIMATE MOD_SDL1 MOD_QT \
-			MOD_NDI \
+CMAKE_OFF=		MOD_GLAXNIMATE MOD_GLAXNIMATE_QT6 MOD_SDL1 MOD_QT \
+			MOD_QT6 MOD_NDI \
 			SWIG_CSHARP SWIG_JAVA SWIG_LUA SWIG_NODEJS SWIG_PERL \
 			SWIG_PHP SWIG_PYTHON SWIG_RUBY SWIG_TCL
 

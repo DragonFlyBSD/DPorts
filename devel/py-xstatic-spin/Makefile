@@ -1,5 +1,6 @@
 PORTNAME=	xstatic-spin
 PORTVERSION=	1.2.5.3
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,13 +8,13 @@ DISTNAME=	XStatic-Spin-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Spin (XStatic packaging standard)
-WWW=		https://spin.js.org/
+WWW=		https://spin.js.org/ \
+		https://github.com/openstack/xstatic-spin \
+		https://github.com/fgnass/spin.js
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xstatic>=0:devel/py-xstatic@${PY_FLAVOR}
-
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

@@ -1,5 +1,5 @@
 PORTNAME=	ijson
-PORTVERSION=	3.1.4
+PORTVERSION=	3.2.0.post0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,7 +11,7 @@ WWW=		https://github.com/ICRAR/ijson
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 OPTIONS_DEFINE=	YAJL

@@ -1,0 +1,3 @@
+# gstreamer1 checks is disabled because it requires posix_timers and
+# hence tests have to be disabled here
+MESON_ARGS+=	-Dtests=disabled

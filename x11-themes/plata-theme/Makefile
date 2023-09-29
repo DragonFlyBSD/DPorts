@@ -1,10 +1,11 @@
 PORTNAME=	plata-theme
 PORTVERSION=	0.9.9
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	x11-themes
 
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Gtk theme based on Material Design Refresh
+WWW=		https://gitlab.com/tista500/plata-theme
 
 LICENSE=	GPLv2 CC-BY-SA-4.0
 LICENSE_COMB=	multi

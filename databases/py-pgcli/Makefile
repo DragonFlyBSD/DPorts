@@ -6,7 +6,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	CLI for Postgres Database with auto-completion and syntax highlighting
-WWW=		https://www.pgcli.com/
+WWW=		https://www.pgcli.com/ \
+		https://github.com/dbcli/pgcli
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -25,7 +26,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mock>=1.0.1:devel/py-mock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pexpect>=0:misc/py-pexpect@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sshtunnel>=0:net/py-sshtunnel@${PY_FLAVOR}
 
-USES=		pgsql python:3.7+
+USES=		pgsql python
 USE_PYTHON=	autoplist concurrent distutils pytest
 
 NO_ARCH=	yes

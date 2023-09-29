@@ -1,6 +1,7 @@
 PORTNAME=	lightgbm
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.3.5
+PORTREVISION=	1
 CATEGORIES=	misc # machine-learning
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -10,6 +11,8 @@ WWW=		https://lightgbm.readthedocs.io/en/latest/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../LICENSE
+
+NOT_FOR_ARCHS=	armv6 armv7 i386 # Exception: Cannot install LightGBM in 32-bit Python, please use 64-bit Python instead
 
 PY_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR} \

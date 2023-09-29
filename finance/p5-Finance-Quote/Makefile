@@ -1,5 +1,5 @@
 PORTNAME=	Finance-Quote
-PORTVERSION=	1.54
+PORTVERSION=	1.56
 CATEGORIES=	finance perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -46,4 +46,11 @@ USE_PERL5=	configure
 
 NO_ARCH=	yes
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 503400
+BUILD_DEPENDS+=	p5-Module-Load>=0.36:devel/p5-Module-Load
+RUN_DEPENDS+=	p5-Module-Load>=0.36:devel/p5-Module-Load
+.endif
+
+.include <bsd.port.post.mk>

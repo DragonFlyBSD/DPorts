@@ -1,5 +1,5 @@
 PORTNAME=	nmap
-DISTVERSION=	7.93
+DISTVERSION=	7.94
 CATEGORIES=	security
 MASTER_SITES=	https://nmap.org/dist/ \
 		LOCAL/ohauer
@@ -52,10 +52,6 @@ CONFIGURE_ARGS+=--without-localdirs \
 		--without-nmap-update
 
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MPCAP}
-BROKEN_FreeBSD_14=	Conflicts with pcap in base
-.endif
 
 # XXX limit results if we do a grep in the sources!
 post-extract:

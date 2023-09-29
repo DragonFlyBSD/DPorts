@@ -1,6 +1,7 @@
 PORTNAME=	tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.0
+DISTVERSION=	0.10.0
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	devel
 PKGNAMEPREFIX=	go-
@@ -17,6 +18,7 @@ GO_MODULE=	golang.org/x/tools
 GO_TARGET=	./cmd/auth/cookieauth \
 		./cmd/auth/gitauth \
 		./cmd/auth/netrcauth \
+		./cmd/bisect \
 		./cmd/bundle \
 		./cmd/callgraph \
 		./cmd/compilebench \

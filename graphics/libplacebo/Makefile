@@ -10,7 +10,7 @@ WWW=		https://code.videolan.org/videolan/libplacebo
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		compiler:c11 localbase:ldflags meson pkgconfig python:3.6+,build
+USES=		compiler:c11 localbase:ldflags meson pkgconfig python:build
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	haasn
@@ -58,7 +58,8 @@ post-patch:
 	@${REINPLACE_CMD} "s,static:,dirs: '${LOCALBASE}/lib'\, &," \
 		${WRKSRC}/src/glsl/meson.build
 # Extract (snapshot) version from port version instead of meson.build
-	@${REINPLACE_CMD} "s/version_pretty/'${DISTVERSIONFULL}'/" \
+	@${REINPLACE_CMD} -e "s/'git'/'${FALSE}'/" \
+		-e "s/version_pretty/'${DISTVERSIONFULL}'/" \
 		${WRKSRC}/src/meson.build
 
 pre-install-TEST-on:	do-test

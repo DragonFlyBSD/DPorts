@@ -1,0 +1,26 @@
+--- libraries/base/configure.ac.orig	2022-07-27 07:27:59 UTC
++++ libraries/base/configure.ac
+@@ -196,23 +196,6 @@ FP_CHECK_CONST([O_BINARY], [#include <fc
+ if test "$WINDOWS" = "NO"
+ then
+ 
+-# We can't just use AC_SEARCH_LIBS for this, as on OpenBSD the iconv.h
+-# header needs to be included as iconv_open is #define'd to something
+-# else. We therefore use our own FP_SEARCH_LIBS_PROTO, which allows us
+-# to give prototype text.
+-FP_SEARCH_LIBS_PROTO(iconv,
+-                     [
+-#include <stddef.h>
+-#include <iconv.h>
+-                      ],
+-                     [iconv_t cd;
+-                      cd = iconv_open("", "");
+-                      iconv(cd,NULL,NULL,NULL,NULL);
+-                      iconv_close(cd);],
+-                     iconv,
+-                     [EXTRA_LIBS="$EXTRA_LIBS $ac_lib"],
+-                     [AC_MSG_ERROR([iconv is required on non-Windows platforms])])
+-
+ # If possible, we use libcharset instead of nl_langinfo(CODESET) to
+ # determine the current locale's character encoding.  Allow the user
+ # to disable this with --without-libcharset if they don't want a

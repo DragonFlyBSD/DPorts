@@ -10,6 +10,11 @@ WWW=		https://github.com/jiangwenyuan/nuster
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
 
+DEPRECATED=	Do not support OpenSSL 3 and upstream last release was in 2020
+EXPIRATION_DATE=	2023-07-08
+BROKEN_SSL=	openssl30 openssl31
+BROKEN_SSL_REASON=	Requires deprecated OpenSSL routines
+
 USES=		compiler:c++11-lang gmake
 USE_RC_SUBR=	nuster
 USE_GITHUB=	yes
@@ -41,6 +46,8 @@ DEVICEATLAS_MAKE_ARGS=		USE_DEVICEATLAS=1 DEVICEATLAS_LIB=${LOCALBASE}/lib DEVIC
 PROMEX_MAKE_ARGS=	EXTRA_OBJS="contrib/prometheus-exporter/service-prometheus.o"
 OPENSSL_USES=		ssl
 OPENSSL_MAKE_ARGS=	USE_OPENSSL=1 SSL_LIB=${OPENSSLLIB} SSL_INC=${OPENSSLINC}
+OPENSSL_VARS=	BROKEN_SSL="openssl30 openssl31" \
+		BROKEN_SSL_REASON="error: token is not a valid binary operator in a preprocessor subexpression"
 LUA_USES=		lua:53
 LUA_MAKE_ARGS=		USE_LUA=1 LUA_INC=${LUA_INCDIR} LUA_LIB=${LUA_LIBDIR} LUA_LIB_NAME=lua-${LUA_VER}
 

@@ -1,7 +1,10 @@
 PORTNAME=	opencv
 DISTVERSION=	4.6.0
-PORTREVISION=	5
+PORTREVISION=	10
 CATEGORIES=	graphics
+
+PATCH_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/commit/
+PATCHFILES=	496eed950f6d0e7fd92619d47e3cec8f06e96ace.patch:-p1
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT=	Open Source Computer Vision library
@@ -16,7 +19,7 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
 		libhdf5.so:science/hdf5
 
-USES=		cmake compiler:c++14-lang cpe localbase:ldflags pkgconfig
+USES=		cmake cpe localbase:ldflags pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	WeChatCV:wechat
 GH_PROJECT=	opencv_contrib:contrib \
@@ -104,7 +107,7 @@ PROTOBUF_LIB_DEPENDS=	libprotobuf.so:devel/protobuf
 PYTHON_DESC=		Enable Python Support 3.6 or greater
 PYTHON_BUILD_DEPENDS=	${PYNUMPY}
 PYTHON_RUN_DEPENDS=	${PYNUMPY}
-PYTHON_USES=		python:3.6+
+PYTHON_USES=		python
 PYTHON_CMAKE_BOOL=	BUILD_opencv_python3
 PYTHON_CMAKE_ON=	-DOPENCV_PYTHON3_INSTALL_PATH=${PYTHON_SITELIBDIR}
 
@@ -186,11 +189,13 @@ XINE_LIB_DEPENDS=	libxine.so:multimedia/libxine
 # BLAS group options (ATLAS OPENBLAS NOBLAS)
 ATLAS_DESC=		ATLAS blas implementation with lapacke
 ATLAS_USES=		blaslapack:atlas
-ATLAS_LIB_DEPENDS=	liblapacke.so:math/lapacke
+ATLAS_BUILD_DEPENDS=	cblas>0:math/cblas \
+			lapacke>0:math/lapacke
 
 OPENBLAS_DESC=		OpenBLAS blas implementation with lapacke
 OPENBLAS_USES=		blaslapack:openblas
-OPENBLAS_LIB_DEPENDS=	liblapacke.so:math/lapacke
+OPENBLAS_BUILD_DEPENDS=	cblas>0:math/cblas \
+			lapacke>0:math/lapacke
 
 NOBLAS_DESC=		Disable support for lapack/blas
 NOBLAS_CMAKE_BOOL_OFF=	WITH_LAPACK
@@ -208,6 +213,15 @@ OPENJPEG_LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg
 
 _IPPICV_i386=		ippicv/ippicv_2020_lnx_ia32_20191018_general.tgz
 _IPPICV_x86_64=		ippicv/ippicv_2020_lnx_intel64_20191018_general.tgz
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64le && defined(MACHINE_CPU) && ${MACHINE_CPU:Mvsx3}
+CMAKE_ARGS+=		-DCPU_BASELINE:STRING="VSX;VSX3;"
+USES+=			compiler:gcc-c++11-lib
+.else
+USES+=			compiler:c++14-lang
+.endif
 
 post-extract:
 	# Handle contrib

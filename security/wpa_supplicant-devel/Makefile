@@ -1,5 +1,6 @@
 PORTNAME=	wpa_supplicant
 PORTVERSION=	${COMMIT_DATE}
+PORTREVISION=	4
 CATEGORIES=	security net
 PKGNAMESUFFIX=	-devel
 
@@ -10,8 +11,8 @@ WWW=		https://w1.fi/wpa_supplicant/
 USE_GITHUB=	yes
 GH_ACCOUNT=	cschuber
 GH_PROJECT=	hostap
-GH_TAGNAME=	bb945b98f
-COMMIT_DATE=	2023.03.29
+GH_TAGNAME=	b46c4b9a9
+COMMIT_DATE=	2023.09.05
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/README
@@ -21,6 +22,7 @@ BUILD_WRKSRC=	${WRKSRC}/wpa_supplicant
 INSTALL_WRKSRC=	${WRKSRC}/src
 CFLAGS+=	${CPPFLAGS} # USES=readline only augments CPPFLAGS and LDFLAGS
 CFLAGS+=	-I${OPENSSLINC}
+CFLAGS+=	-Wno-deprecated-declarations
 LDFLAGS+=	-L${OPENSSLLIB} -lutil
 MAKE_ENV=	V=1
 

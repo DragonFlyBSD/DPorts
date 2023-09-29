@@ -1,5 +1,5 @@
 PORTNAME=	openexr
-PORTVERSION=	3.1.9
+PORTVERSION=	3.1.11
 PORTREVISION=	0
 CATEGORIES=	graphics devel
 
@@ -10,7 +10,7 @@ WWW=		https://www.openexr.com/
 LICENSE=	BSD3CLAUSE
 
 # exact version required to avoid hard-to-debug issues
-LIB_DEPENDS=	libImath-3_1.so.30:math/Imath
+LIB_DEPENDS=	libImath-3_1.so.29:math/Imath
 
 USES=		cmake compiler:c++14-lang cpe pathfix pkgconfig
 
@@ -23,11 +23,9 @@ CPPFLAGS+=	-I.
 # must be linked with -l{thr|pthread} explicitly
 LDFLAGS+=	-lpthread
 
-PATCH_STRIP=	-p1
-
 _MAJORVER=	3_1
 _VER=		30
-_MINVER=	9
+_MINVER=	11
 _PLVER=		1
 
 PLIST_SUB+=	MAJORVER=${_MAJORVER} \

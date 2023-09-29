@@ -1,0 +1,15 @@
+diff --git build/config/ozone.gni build/config/ozone.gni
+index dfcb83c689a..f8cac94d058 100644
+--- build/config/ozone.gni
++++ build/config/ozone.gni
+@@ -99,6 +99,10 @@ declare_args() {
+       ozone_platform = "x11"
+       ozone_platform_wayland = true
+       ozone_platform_x11 = true
++    } else if (is_dragonfly) {
++      ozone_platform = "x11"
++      ozone_platform_wayland = true
++      ozone_platform_x11 = true
+     } else if (is_fuchsia) {
+       ozone_platform = "flatland"
+       ozone_platform_scenic = true

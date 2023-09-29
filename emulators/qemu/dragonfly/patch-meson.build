@@ -1,15 +1,15 @@
---- meson.build.orig	2023-04-17 22:10:39.247708000 +0200
-+++ meson.build	2023-04-18 14:40:09.921911000 +0200
-@@ -75,7 +75,7 @@
+--- meson.build.orig	2023-09-17 14:43:06 UTC
++++ meson.build
+@@ -85,7 +85,7 @@ have_tools = get_option('tools') \
    .allowed()
  have_ga = get_option('guest_agent') \
    .disable_auto_if(not have_system and not have_tools) \
--  .require(targetos in ['sunos', 'linux', 'windows', 'freebsd'],
-+  .require(targetos in ['sunos', 'linux', 'windows', 'freebsd', 'dragonfly'],
+-  .require(targetos in ['sunos', 'linux', 'windows', 'freebsd', 'netbsd', 'openbsd'],
++  .require(targetos in ['sunos', 'linux', 'windows', 'freebsd', 'netbsd', 'openbsd', 'dragonfly'],
             error_message: 'unsupported OS for QEMU guest agent') \
    .allowed()
  have_block = have_system or have_tools
-@@ -444,7 +444,7 @@
+@@ -441,7 +441,7 @@ if get_option('hax').allowed()
      accelerators += 'CONFIG_HAX'
    endif
  endif

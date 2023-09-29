@@ -1,6 +1,6 @@
 PORTNAME?=		mysql
 PORTVERSION=		8.0.32
-PORTREVISION?=		0
+PORTREVISION?=		3
 CATEGORIES=		databases
 MASTER_SITES=		MYSQL/MySQL-8.0
 PKGNAMESUFFIX?=		80-server
@@ -32,7 +32,6 @@ LIB_DEPENDS+=	libcurl.so:ftp/curl \
 		libicutu.so:devel/icu \
 		liblz4.so:archivers/liblz4 \
 		libzstd.so:archivers/zstd \
-		libprotobuf.so:devel/protobuf \
 		libfido2.so:security/libfido2 \
 		libhidapi.so:comms/hidapi \
 		${LIB_DEPENDS_${ARCH}}
@@ -40,6 +39,7 @@ LIB_DEPENDS_aarch64=	libunwind.so:devel/libunwind
 LIB_DEPENDS_x86_64=	libunwind.so:devel/libunwind
 LIB_DEPENDS_armv7=	libunwind.so:devel/libunwind
 LIB_DEPENDS_i386=	libunwind.so:devel/libunwind
+LIB_DEPENDS_powerpc=		libunwind.so:devel/libunwind
 LIB_DEPENDS_powerpc64=		libunwind.so:devel/libunwind
 LIB_DEPENDS_powerpc64le=	libunwind.so:devel/libunwind
 
@@ -49,6 +49,7 @@ BUILD_DEPENDS_aarch64=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_x86_64=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_armv7=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_i386=	libunwind>0:devel/libunwind
+BUILD_DEPENDS_powerpc=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_powerpc64=	libunwind>0:devel/libunwind
 BUILD_DEPENDS_powerpc64le=	libunwind>0:devel/libunwind
 
@@ -64,6 +65,7 @@ CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
 		-DINSTALL_INCLUDEDIR="include/mysql" \
 		-DINSTALL_INFODIR="${INFO_PATH}" \
 		-DINSTALL_LIBDIR="lib/mysql" \
+		-DINSTALL_PRIV_LIBDIR="lib/mysql/private" \
 		-DINSTALL_MANDIR="share/man" \
 		-DINSTALL_MYSQLDATADIR="${MY_DBDIR}" \
 		-DINSTALL_MYSQLKEYRINGDIR="etc/mysql/keyring" \
@@ -192,8 +194,15 @@ CXXFLAGS+=	-malign-double
 USES+=		compiler:c++17-lang
 .endif
 
+.include <bsd.port.pre.mk>
+
 post-extract:
 	@${RM} -rv ${WRKSRC}/sql/sql_hints.yy.cc ${WRKSRC}/sql/sql_hints.yy.h
+
+# This can be removed after FreeBSD 12.4 and 13.1 EoL
+.if defined(CLIENT_ONLY) && !exists(${OPENSSLBASE}/libdata/pkgconfig/openssl.pc)
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-scripts_CMakeLists.txt
+.endif
 
 .if !defined(CLIENT_ONLY)
 post-install:
@@ -204,4 +213,4 @@ post-install:
 	${MKDIR} ${STAGEDIR}${MY_TMPDIR}
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

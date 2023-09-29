@@ -1,6 +1,6 @@
 PORTNAME=	novelwriter
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.0.6
+DISTVERSION=	2.0.7
 PORTREVISION=	1
 CATEGORIES=	editors python
 MASTER_SITES=	PYPI
@@ -16,7 +16,7 @@ PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 BUILD_DEPENDS=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python:3.7+ pyqt:5
+USES=		python pyqt:5
 USE_PYQT=	pyqt5
 USE_PYTHON=	distutils concurrent autoplist
 

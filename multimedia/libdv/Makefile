@@ -24,6 +24,12 @@ USE_LDCONFIG=	yes
 
 LDFLAGS_i386=	-Wl,-znotext
 
-MESON_ARGS=	-Dpopt=enabled -Dtools=enabled
+MESON_ARGS=	-Dtools=enabled
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} != x86_64 && ${ARCH} != i386
+MESON_ARGS+=	-Dasm=disabled
+.endif
 
 .include <bsd.port.mk>

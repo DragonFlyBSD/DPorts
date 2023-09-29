@@ -1,6 +1,5 @@
 PORTNAME=	qemu
-PORTVERSION=	7.2.0
-PORTREVISION=	3
+PORTVERSION=	8.0.2
 PORTREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
@@ -30,9 +29,9 @@ LIB_DEPENDS+=	libepoxy.so:graphics/libepoxy
 FLAVORS=			default nox11 tools guestagent
 FLAVOR?=			${FLAVORS:[1]}
 default_CONFLICTS_INSTALL=	qemu-devel qemu-nox11 qemu-tools qemu-utils \
-				qemu6* qemu70*
+				qemu6* qemu7*
 nox11_PKGNAMESUFFIX=		-nox11
-nox11_CONFLICTS_INSTALL=	qemu qemu-devel qemu6* qemu70* qemu-guest-agent
+nox11_CONFLICTS_INSTALL=	qemu qemu-devel qemu6* qemu7* qemu-guest-agent
 nox11_COMMENT=			(without X11)
 tools_PKGNAMESUFFIX=		-tools
 tools_COMMENT=			(tools only)
@@ -45,7 +44,7 @@ guestagent_COMMENT=			(guest agent)
 guestagent_DESCR=		${.CURDIR}/pkg-descr-ga
 guestagent_PLIST=		${.CURDIR}/pkg-plist-ga
 guestagent_CONFLICTS_INSTALL=	qemu qemu-devel qemu-nox11 qemu-tools qemu-utils qemu6* \
-				qemu70* qemu-guest-agent
+				qemu7* qemu-guest-agent
 
 USES=		cpe gmake gnome ninja perl5 pkgconfig python:build tar:xz
 USE_GNOME=	glib20
@@ -82,7 +81,7 @@ CONFIGURE_ARGS+=	--enable-fdt=system \
 .endif
 .if ${FLAVOR:U} == tools || ${FLAVOR:U} == guestagent
 CONFIGURE_ARGS+=	--disable-attr \
-			--disable-blobs \
+			--disable-install-blobs \
 			--disable-brlapi \
 			--disable-bzip2 \
 			--disable-cap-ng \
@@ -129,7 +128,7 @@ OPTIONS_DEFAULT=		CDROM_DMA CURL GNUTLS GTK3 JPEG NCURSES_DEFAULT \
 OPTIONS_SINGLE=			NCURSES
 OPTIONS_SINGLE_NCURSES=		NCURSES_BASE NCURSES_DEFAULT NCURSES_PORT
 .if ${FLAVOR:U} == nox11
-OPTIONS_EXCLUDE:=		GTK3 X11
+OPTIONS_EXCLUDE:=		GTK3 OPENGL X11
 .endif
 .if ${FLAVOR:U} == tools || ${FLAVOR:U} == guestagent
 OPTIONS_EXCLUDE:=		CAPSTONE CDROM_DMA CURL DEBUG GNUTLS GTK3 ISCSI \
@@ -203,6 +202,7 @@ X11_USE=			GNOME=gdkpixbuf2 \
 X11_CONFIGURE_ENABLE=		sdl
 .if (empty(FLAVOR) || ${FLAVOR:U} == default || ${FLAVOR:U} == nox11) && \
 	(${FLAVOR:U} != tools || ${PKGNAMESUFFIX} != "-guest-agent")
+X86_TARGETS_LIB_DEPENDS_OFF=	libdw.so:devel/elfutils
 X86_TARGETS_USES_OFF=		xorg
 X86_TARGETS_USE_OFF=		XORG=pixman,x11
 X86_TARGETS_CONFIGURE_ON=	--target-list='i386-softmmu i386-bsd-user x86_64-softmmu x86_64-bsd-user'

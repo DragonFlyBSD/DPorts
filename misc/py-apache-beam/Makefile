@@ -1,5 +1,6 @@
 PORTNAME=	apache-beam
 DISTVERSION=	2.43.0
+PORTREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -51,7 +52,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>=36.0.0:security/py-cryptograp
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.12:devel/py-yaml@${PY_FLAVOR}
 		# testcontainers[mysql]>=3.0.3 is also required
 
-USES=		python:3.6+ zip
+USES=		python zip
 USE_PYTHON=	distutils cython concurrent autoplist pytest # 5 tests fail, depending on pyarrow, MySqlContainer, threadpoolctl
 
 post-install:

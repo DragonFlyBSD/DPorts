@@ -1,5 +1,6 @@
 PORTNAME=	xarray-simlab
 DISTVERSION=	0.5.0-5
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-g33a4c83
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,7 +12,7 @@ WWW=		https://xarray-simlab.readthedocs.io/en/latest/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python:3.8+
+USES=		python
 USE_PYTHON=	distutils autoplist pytest # 1 test fails, see https://github.com/xarray-contrib/xarray-simlab/issues/192
 
 USE_GITHUB=	yes

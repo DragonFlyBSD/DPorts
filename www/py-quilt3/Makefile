@@ -1,5 +1,5 @@
 PORTNAME=	quilt3
-PORTVERSION=	5.1.1
+PORTVERSION=	5.3.1
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,15 +22,14 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aws-requests-auth>=0.4.2:devel/py-aws-reques
 		${PYTHON_PKGNAMEPREFIX}tenacity>=5.1.1:devel/py-tenacity@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tqdm>=4.32:misc/py-tqdm@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 
-.include <bsd.port.pre.mk>
+OPTIONS_DEFINE=	ANNDATA
+ANNDATA_DESC=	Annotated data support
 
-.if ${PYTHON_REL} < 30800
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>=0:devel/py-importlib-metadata@${PY_FLAVOR}
-.endif
+ANNDATA_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}anndata>=0.8.0:devel/py-anndata@${PY_FLAVOR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

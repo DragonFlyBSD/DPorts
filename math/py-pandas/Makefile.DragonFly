@@ -1,1 +1,0 @@
-PLIST_FILES+=	%%PYTHON_SITELIBDIR%%/pandas/_libs/src/headers/cmath

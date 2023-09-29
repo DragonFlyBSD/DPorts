@@ -1,6 +1,6 @@
 PORTNAME=	qtile
 PORTVERSION=	0.18.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-wm
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -27,7 +27,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xcffib>=0.5.0:x11/py-xcffib@${PY_FLAVOR} \
 
 USE_GNOME=	pygobject3
 
-USES=		gnome python:3.7+ localbase
+USES=		gnome python localbase
 USE_PYTHON=	distutils autoplist noflavors
 NO_ARCH=	yes
 

@@ -1,5 +1,5 @@
 PORTNAME=	QtBitcoinTrader
-DISTVERSION=	1.42.10
+DISTVERSION=	1.42.21
 CATEGORIES=	finance
 MASTER_SITES=	SF/bitcointrader/SRC/
 

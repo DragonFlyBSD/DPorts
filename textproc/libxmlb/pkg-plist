@@ -24,8 +24,6 @@ lib/libxmlb.so
 lib/libxmlb.so.2
 lib/libxmlb.so.2.0.0
 libdata/pkgconfig/xmlb.pc
-libexec/installed-tests/libxmlb/test.xml.gz.gz.gz
-libexec/installed-tests/libxmlb/xb-self-test
 man/man1/xb-tool.1.gz
 share/gir-1.0/Xmlb-2.0.gir
 share/gtk-doc/html/libxmlb/annotation-glossary.html
@@ -60,4 +58,3 @@ share/gtk-doc/html/libxmlb/right.png
 share/gtk-doc/html/libxmlb/style.css
 share/gtk-doc/html/libxmlb/up-insensitive.png
 share/gtk-doc/html/libxmlb/up.png
-share/installed-tests/libxmlb/libxmlb.test

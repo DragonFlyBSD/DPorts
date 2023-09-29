@@ -1,9 +1,10 @@
 PORTNAME=	pyTooling
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.0.1
+PORTREVISION=	1
 CATEGORIES=	devel
 #MASTER_SITES=	PYPI # requirements.txt is missing
-eKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Collection of arbitrary classes, decorators, meta-classes, exceptions

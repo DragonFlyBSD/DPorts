@@ -1,5 +1,6 @@
 PORTNAME=	arviz
 DISTVERSION=	0.15.1
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,7 +24,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}matplotlib>=3.2:math/py-matplotlib@${PY_FLAV
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}cloudpickle>0:devel/py-cloudpickle@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numba>0:devel/py-numba@${PY_FLAVOR}
 
-USES=		python:3.8+
+USES=		python
 USE_PYTHON=	distutils autoplist pytest # tests have 13 warnings, 1 error, see https://github.com/arviz-devs/arviz/issues/2084
 
 NO_ARCH=	yes

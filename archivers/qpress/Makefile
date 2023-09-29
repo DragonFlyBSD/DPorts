@@ -11,14 +11,12 @@ LICENSE=	GPLv2
 USES=		dos2unix
 USE_GITHUB=	yes
 GH_ACCOUNT=	PierreLvx
-GH_TAGNAME=	${PORTVERSION}
 
 PLIST_FILES=	bin/qpress
 
 do-build:
 	cd ${WRKSRC} && \
-	${CXX} ${CXXFLAGS} -o qpress qpress.cpp aio.cpp quicklz.c utilities.cpp -lpthread
-
+	${CXX} ${CXXFLAGS} -o qpress -x c quicklz.c -x c++ qpress.cpp aio.cpp utilities.cpp -lpthread
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qpress ${STAGEDIR}${PREFIX}/bin
 

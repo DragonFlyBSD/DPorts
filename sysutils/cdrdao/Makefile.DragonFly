@@ -1,5 +1,4 @@
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
-		${WRKSRC}/dao/ScsiIf-freebsd-cam.cc \
-		${WRKSRC}/scsilib/libscg/scsi-bsd.c
+		${WRKSRC}/dao/ScsiIf-freebsd-cam.cc

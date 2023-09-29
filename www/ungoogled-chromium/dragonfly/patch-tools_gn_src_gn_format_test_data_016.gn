@@ -1,0 +1,7 @@
+diff --git tools/gn/src/gn/format_test_data/016.gn tools/gn/src/gn/format_test_data/016.gn
+index 00a79922828..e0e08f864c5 100644
+--- tools/gn/src/gn/format_test_data/016.gn
++++ tools/gn/src/gn/format_test_data/016.gn
+@@ -1 +1 @@
+-something = !is_win && is_linux || is_mac && !(is_freebsd || is_ios)
++something = !is_win && is_linux || is_mac && !(is_freebsd || is_ios || is_dragonfly)

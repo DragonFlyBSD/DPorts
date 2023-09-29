@@ -97,7 +97,7 @@ WRKSRC_crate_${_crate}=	${WRKDIR}/${_wrksrc}
 
 CARGO_BUILDDEP?=	yes
 .  if ${CARGO_BUILDDEP:tl} == "yes"
-BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.68.0:lang/${RUST_DEFAULT}
+BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.70.0:lang/${RUST_DEFAULT}
 .  elif ${CARGO_BUILDDEP:tl} == "any-version"
 BUILD_DEPENDS+=	${RUST_DEFAULT}>=0:lang/${RUST_DEFAULT}
 .  endif
@@ -155,6 +155,8 @@ _CARGO_MSG=	"===>   Additional optimization to port applied (non-LTO for DragonF
 RUSTFLAGS+=	${CFLAGS:M-march=*:S/-march=/-C target-cpu=/}
 .  elif ${ARCH:Mpowerpc*}
 RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/:S/power/pwr/}
+.  elif ${ARCH} == aarch64 || ${ARCH} == armv7
+RUSTFLAGS+=	-C target-cpu=${CPUTYPE:C/\+.+//g}
 .  else
 RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/}
 .  endif
@@ -209,7 +211,7 @@ CARGO_INSTALL_ARGS+=	--debug
 .  endif
 
 .  if ${_CARGO_CRATES:Mcmake}
-BUILD_DEPENDS+=	cmake:devel/cmake
+BUILD_DEPENDS+=	cmake:devel/cmake-core
 .  endif
 
 .  if ${_CARGO_CRATES:Mgettext-sys}
@@ -253,6 +255,11 @@ CARGO_ENV+=	OPENSSL_LIB_DIR=${OPENSSLLIB} \
 
 .  if ${_CARGO_CRATES:Mpkg-config}
 .include "${USESDIR}/pkgconfig.mk"
+.  endif
+
+.  if ${_CARGO_CRATES:Mzstd-sys}
+# Use the system's zstd instead of building the bundled version
+CARGO_ENV+=	ZSTD_SYS_USE_PKG_CONFIG=1
 .  endif
 
 .  for _index _crate _name _version in ${_CARGO_CRATES}

@@ -1,5 +1,5 @@
 PORTNAME=	xapsd
-DISTVERSION=	g20230220
+DISTVERSION=	g20230329
 PORTREVISION=	2
 CATEGORIES=	net
 
@@ -15,7 +15,7 @@ USE_RC_SUBR=	xapsd
 USE_GITHUB=	yes
 GH_ACCOUNT=	freswa
 GH_PROJECT=	dovecot-xaps-daemon
-GH_TAGNAME=	e579559
+GH_TAGNAME=	f6d5733
 
 GH_TUPLE=	freswa:go-plist:900e8a7d907d:freswa_go_plist/vendor/github.com/freswa/go-plist \
 		fsnotify:fsnotify:v1.6.0:fsnotify_fsnotify/vendor/github.com/fsnotify/fsnotify \

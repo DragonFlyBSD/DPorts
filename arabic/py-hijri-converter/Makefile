@@ -1,5 +1,5 @@
 PORTNAME=	hijri-converter
-DISTVERSION=	2.2.4
+DISTVERSION=	2.3.1
 CATEGORIES=	arabic python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,7 +11,7 @@ WWW=		https://hijri-converter.readthedocs.io/en/stable/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	distutils autoplist pytest
 
 NO_ARCH=	yes

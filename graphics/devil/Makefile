@@ -1,7 +1,7 @@
 PORTNAME=	devil
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.8.0
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	graphics
 
@@ -61,6 +61,12 @@ SQUISH_CMAKE_BOOL=	IL_USE_DXTC_SQUISH
 #NVTT_LIB_DEPENDS=	libnvtt.so:graphics/nvidia-texture-tools
 #NVTT_CMAKE_BOOL=	IL_USE_DXTC_NVIDIA
 CMAKE_ARGS+=		-DIL_USE_DXTC_NVIDIA=0
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+CXXFLAGS+=  -Dregister=
+.endif
 
 post-install-DOCS-on:
 	cd ${WRKSRC}/DevIL-docs && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/

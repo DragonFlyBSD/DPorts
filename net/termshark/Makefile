@@ -1,7 +1,7 @@
 PORTNAME=	termshark
 PORTVERSION=	2.4.0
 DISTVERSIONPREFIX=v
-PORTREVISION=	10
+PORTREVISION=	12
 CATEGORIES=	net
 
 MAINTAINER=	zi@FreeBSD.org
@@ -22,5 +22,8 @@ GO_MODULE=	github.com/gcla/termshark/v2
 GO_TARGET=	./cmd/${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
+
+post-extract:
+	${RM} ${WRKSRC}/pkg/system/dumpcapext_arm64.go
 
 .include <bsd.port.mk>

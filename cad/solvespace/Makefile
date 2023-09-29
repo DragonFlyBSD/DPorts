@@ -1,7 +1,7 @@
 PORTNAME=	solvespace
 PORTVERSION=	3.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	cad
 
 PATCH_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/commit/
@@ -30,8 +30,6 @@ GH_ACCOUNT=	microsoft:mimalloc
 GH_PROJECT=	libdxfrw:libdxfrw mimalloc:mimalloc
 GH_TAGNAME=	0b7b7b7:libdxfrw 38a0322:mimalloc
 GH_SUBDIR=	extlib/libdxfrw:libdxfrw extlib/mimalloc:mimalloc
-
-INSTALLS_ICONS=	YES
 
 post-patch:
 	${REINPLACE_CMD} -e '/-stdlib=libc++/d' ${WRKSRC}/CMakeLists.txt

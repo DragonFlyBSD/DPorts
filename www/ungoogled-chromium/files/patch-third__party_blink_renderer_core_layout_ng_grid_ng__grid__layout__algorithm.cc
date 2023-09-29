@@ -1,49 +1,30 @@
---- third_party/blink/renderer/core/layout/ng/grid/ng_grid_layout_algorithm.cc.orig	2023-06-05 19:39:05 UTC
+--- third_party/blink/renderer/core/layout/ng/grid/ng_grid_layout_algorithm.cc.orig	2023-09-17 07:59:53 UTC
 +++ third_party/blink/renderer/core/layout/ng/grid/ng_grid_layout_algorithm.cc
-@@ -520,8 +520,15 @@ wtf_size_t NGGridLayoutAlgorithm::BuildGridSizingSubtr
-                                 row_auto_repetitions);
+@@ -3431,7 +3431,13 @@ void NGGridLayoutAlgorithm::PlaceGridItems(
+   DCHECK(out_row_break_between);
  
-   bool has_nested_subgrid = false;
+   const auto& container_space = ConstraintSpace();
 +#if defined(__clang__) && (__clang_major__ >= 16)
-   auto& [grid_items, layout_data, subtree_size] =
-       sizing_tree->CreateSizingData(opt_subgrid_data);
+   const auto& [grid_items, layout_data, tree_size] = sizing_tree.TreeRootData();
 +#else
-+  auto& sizing_data = sizing_tree->CreateSizingData(opt_subgrid_data);
-+  auto& layout_data = sizing_data.layout_data;
-+  auto& grid_items = sizing_data.grid_items;
-+  auto& subtree_size = sizing_data.subtree_size;
++  const auto& [g_i, l_d, t_s] = sizing_tree.TreeRootData();
++  const auto& grid_items = g_i;
++  const auto& layout_data = l_d;
 +#endif
  
-   if (!must_ignore_children) {
-     // Construct grid items that are not subgridded.
-@@ -650,8 +657,14 @@ NGGridSizingTree NGGridLayoutAlgorithm::BuildGridSizin
-   NGGridSizingTree sizing_tree;
+   const auto* cached_layout_subtree = container_space.GridLayoutSubtree();
+   const auto container_writing_direction =
+@@ -3595,7 +3601,13 @@ void NGGridLayoutAlgorithm::PlaceGridItemsForFragmenta
  
-   if (const auto* layout_subtree = ConstraintSpace().GridLayoutSubtree()) {
+   // TODO(ikilpatrick): Update |SetHasSeenAllChildren| and early exit if true.
+   const auto& constraint_space = ConstraintSpace();
 +#if defined(__clang__) && (__clang_major__ >= 16)
-     auto& [grid_items, layout_data, subtree_size] =
-         sizing_tree.CreateSizingData();
+   const auto& [grid_items, layout_data, tree_size] = sizing_tree.TreeRootData();
 +#else
-+    auto& sizing_data = sizing_tree.CreateSizingData();
-+    auto& layout_data = sizing_data.layout_data;
-+    auto& grid_items = sizing_data.grid_items;
++  const auto& [g_i, l_d, t_s] = sizing_tree.TreeRootData();
++  const auto& grid_items = g_i;
++  const auto& layout_data = l_d;
 +#endif
  
-     const auto& node = Node();
-     grid_items =
-@@ -1640,8 +1653,15 @@ void NGGridLayoutAlgorithm::InitializeTrackSizes(
-     const absl::optional<GridTrackSizingDirection>& opt_track_direction) const {
-   DCHECK(sizing_subtree);
- 
-+#if defined(__clang__) && (__clang_major__ >= 16)
-   auto& [grid_items, layout_data, subtree_size] =
-       sizing_subtree.SubtreeRootData();
-+#else
-+  auto& sizing_data = sizing_subtree.SubtreeRootData();
-+  auto& layout_data = sizing_data.layout_data;
-+  auto& grid_items = sizing_data.grid_items;
-+  auto& subtree_size = sizing_data.subtree_size;
-+#endif
- 
-   auto InitAndCacheTrackSizes = [&](GridTrackSizingDirection track_direction) {
-     InitializeTrackCollection(opt_subgrid_data, track_direction, &layout_data);
+   const auto* cached_layout_subtree = constraint_space.GridLayoutSubtree();
+   const auto container_writing_direction =

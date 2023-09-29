@@ -1,5 +1,6 @@
 PORTNAME=	tflite-support
 DISTVERSION=	0.1.0a1
+PORTREVISION=	1
 CATEGORIES=	misc # machine-learning
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +16,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}absl>=0.7.0:devel/py-absl@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pybind11>=2.4:devel/py-pybind11@${PY_FLAVOR}
 
-USES=		compiler:c++14-lang python:3.6+
+USES=		compiler:c++14-lang python
 USE_PYTHON=	distutils concurrent autoplist
 
 post-install:

@@ -1,0 +1,6 @@
+# This is WRONG, just a hack. We need to find out why importing isnan from libc
+# isn't enough to add the std:: in cython
+post-configure:
+	${REINPLACE_CMD} -e 's,isnan,std::isnan,g' \
+		${WRKSRC}/sklearn/preprocessing/_target_encoder_fast.cpp \
+		${WRKSRC}/sklearn/tree/_tree.cpp

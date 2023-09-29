@@ -1,6 +1,6 @@
 PORTNAME=	aws-c-io
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.13.19
+DISTVERSION=	0.13.26
 CATEGORIES=	devel
 
 MAINTAINER=	eduardo@FreeBSD.org
@@ -15,10 +15,8 @@ LIB_DEPENDS=	libaws-c-cal.so:security/aws-c-cal \
 		libs2n.so:security/s2n-tls
 
 USES=		cmake:testing compiler:c11 ssl
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	awslabs
-
 USE_LDCONFIG=	yes
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=${LOCALBASE}/lib

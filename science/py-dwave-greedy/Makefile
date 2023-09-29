@@ -1,5 +1,6 @@
 PORTNAME=	dwave-greedy
 DISTVERSION=	0.3.0
+PORTREVISION=	1
 CATEGORIES=	science python # quantum-computing
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -19,7 +20,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dimod>0:science/py-dimod@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dwave-system>0:science/py-dwave-system@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}parameterized>0:devel/py-parameterized@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	distutils cython autoplist unittest
 
 USE_GITHUB=	yes

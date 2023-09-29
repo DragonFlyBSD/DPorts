@@ -3,7 +3,7 @@
 
 PORTNAME?=	AppStream
 DISTVERSION=	0.16.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.freedesktop.org/software/${PORTNAME:tl}/releases/
 
@@ -25,7 +25,7 @@ LIB_DEPENDS?=	libcurl.so:ftp/curl \
 		libyaml.so:textproc/libyaml
 
 USES+=		gettext gnome localbase:ldflags meson pkgconfig \
-		python:3.6+,build tar:xz vala:build
+		python:build tar:xz vala:build
 
 USE_GNOME+=	glib20 introspection:build libxml2 libxslt
 USE_LDCONFIG=	yes

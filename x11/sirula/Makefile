@@ -1,7 +1,7 @@
 PORTNAME=	sirula
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.0
-PORTREVISION=	14
+PORTREVISION=	16
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	ports@FreeBSD.org
@@ -23,6 +23,6 @@ post-patch:
 # Respect PREFIX for system config
 	@${REINPLACE_CMD} -e 's,/usr/share,${DATADIR:H},' \
 		-e 's,/etc,${PREFIX}&,' \
-		${WRKSRC}/cargo-crates/xdg-*/src/lib.rs
+		${WRKSRC_crate_xdg}/src/lib.rs
 
 .include <bsd.port.mk>

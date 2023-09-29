@@ -1,5 +1,6 @@
 PORTNAME=	mpi4py
 DISTVERSION=	3.1.4
+PORTREVISION=	1
 CATEGORIES=	net parallel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,7 +12,7 @@ WWW=		https://bitbucket.org/mpi4py/mpi4py/
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.rst
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	distutils cython autoplist concurrent
 LDFLAGS+=	${MPI_LIBS}
 

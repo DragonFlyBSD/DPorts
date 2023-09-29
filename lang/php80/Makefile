@@ -1,6 +1,6 @@
 PORTNAME=	php80
-DISTVERSION=	8.0.28
-PORTREVISION?=	1
+DISTVERSION=	8.0.29
+PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP
 DISTNAME=	php-${DISTVERSION}
@@ -97,6 +97,13 @@ PKGMESSAGE=	${PKGDIR}/pkg-message.mod
 MODULENAME=	libphp
 SHORTMODNAME=	php
 WARNING=	"!!! If you have a threaded Apache, you must build ${PHP_PORT} with ZTS support to enable thread-safety in extensions !!!"
+.endif
+
+.include <bsd.port.options.mk>
+
+.if ( ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400092 && ${SSL_DEFAULT} == base ) || ${SSL_DEFAULT:Mopenssl3*}
+IGNORE_SSL=	openssl30 openssl31
+IGNORE_SSL_REASON=	Missing upstream support for OpenSSL 3.0.0 and later
 .endif
 
 .include <bsd.port.pre.mk>

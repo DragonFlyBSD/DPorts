@@ -1,10 +1,13 @@
 PORTNAME=	vte
 PORTVERSION=	0.70.2
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome
+
+PATCH_SITES=	https://gitlab.gnome.org/GNOME/vte/-/commit/
+PATCHFILES+=	9b41cd101429.patch:-p1 #https://gitlab.gnome.org/GNOME/vte/-/issues/2618
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Terminal widget with improved accessibility and I18N support
@@ -21,7 +24,7 @@ LIB_DEPENDS=	libgnutls.so:security/gnutls \
 PORTSCOUT=	limitw:1,even
 
 USES=		compiler:c++11-lang gettext gnome localbase meson \
-		pkgconfig python:3.6+ tar:xz vala:build
+		pkgconfig python tar:xz vala:build
 USE_LDCONFIG=	yes
 USE_GNOME=	cairo gdkpixbuf2 gtk30 gtk40 introspection:build
 

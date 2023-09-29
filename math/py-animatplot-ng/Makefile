@@ -1,5 +1,6 @@
 PORTNAME=	animatplot-ng
 DISTVERSION=	0.4.3
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +18,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_scm>0:devel/py-setuptools_scm@$
 		${PY_DEPENDS}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}matplotlib>=2.2:math/py-matplotlib@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

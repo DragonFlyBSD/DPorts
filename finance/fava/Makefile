@@ -1,6 +1,5 @@
 PORTNAME=	fava
-PORTVERSION=	1.23.1
-PORTREVISION=	1
+PORTVERSION=	1.24.4
 CATEGORIES=	finance
 MASTER_SITES=	PYPI
 
@@ -26,11 +25,12 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Babel>=2.7:devel/py-babel@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}werkzeug>2:www/py-werkzeug@${PY_FLAVOR} \
 		beancount>=2.1.3:finance/beancount
 
-USES=		python:3.5+ # same as finance/beancount
+USES=		python # same as finance/beancount
 USE_PYTHON=	autoplist distutils noflavors
 
 # Upstream archive contains files with UTF-8 names
 EXTRACT_CMD=	${SETENV} LC_ALL=en_US.UTF-8 /usr/bin/bsdtar
+NO_ARCH=	yes
 
 post-patch:
 	@${ECHO_CMD} "from setuptools import setup" > ${WRKSRC}/setup.py

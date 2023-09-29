@@ -12,7 +12,7 @@ LIB_DEPENDS=	libassuan.so:security/libassuan  \
 		libgpg-error.so:security/libgpg-error \
 		libgpgme.so:security/gpgme \
 		libgpgmepp.so:security/gpgme-cpp \
-		libqgpgme.so:security/gpgme-qt5 \
+		libqgpgme.so:security/gpgme-qt@qt5 \
 		libical.so:devel/libical \
 		libxapian.so:databases/xapian-core
 

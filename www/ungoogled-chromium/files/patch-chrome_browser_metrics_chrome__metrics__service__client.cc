@@ -1,6 +1,6 @@
---- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2023-06-05 19:39:05 UTC
+--- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2023-09-17 07:59:53 UTC
 +++ chrome/browser/metrics/chrome_metrics_service_client.cc
-@@ -178,7 +178,7 @@
+@@ -183,7 +183,7 @@
  #include "chrome/notification_helper/notification_helper_constants.h"
  #endif
  
@@ -9,7 +9,7 @@
  #include "components/metrics/motherboard_metrics_provider.h"
  #endif
  
-@@ -204,7 +204,7 @@
+@@ -209,7 +209,7 @@
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -18,7 +18,7 @@
  #include "chrome/browser/metrics/family_link_user_metrics_provider.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || (BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS_LACROS))||BUILDFLAG(IS_ANDROID))
-@@ -770,7 +770,7 @@ void ChromeMetricsServiceClient::RegisterMetricsServic
+@@ -809,7 +809,7 @@ void ChromeMetricsServiceClient::RegisterMetricsServic
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::CPUMetricsProvider>());
  
@@ -27,7 +27,7 @@
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<metrics::MotherboardMetricsProvider>());
  #endif
-@@ -849,7 +849,7 @@ void ChromeMetricsServiceClient::RegisterMetricsServic
+@@ -891,7 +891,7 @@ void ChromeMetricsServiceClient::RegisterMetricsServic
  
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
@@ -36,16 +36,7 @@
      (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
    metrics_service_->RegisterMetricsProvider(
        std::make_unique<DesktopPlatformFeaturesMetricsProvider>());
-@@ -858,7 +858,7 @@ void ChromeMetricsServiceClient::RegisterMetricsServic
- 
- #if BUILDFLAG(ENABLE_SUPERVISED_USERS) &&                             \
-     (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--     BUILDFLAG(IS_CHROMEOS_LACROS))
-+     BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
-   if (base::FeatureList::IsEnabled(
-           kExtendFamilyLinkUserLogSegmentToAllPlatforms)) {
-     metrics_service_->RegisterMetricsProvider(
-@@ -966,7 +966,7 @@ void ChromeMetricsServiceClient::RegisterMetricsServic
+@@ -1007,7 +1007,7 @@ void ChromeMetricsServiceClient::RegisterMetricsServic
        std::make_unique<PowerMetricsProvider>());
  #endif
  
@@ -54,7 +45,7 @@
    metrics_service_->RegisterMetricsProvider(
        metrics::CreateDesktopSessionMetricsProvider());
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || (BUILDFLAG(IS_LINUX)
-@@ -1163,7 +1163,7 @@ bool ChromeMetricsServiceClient::RegisterForProfileEve
+@@ -1206,7 +1206,7 @@ bool ChromeMetricsServiceClient::RegisterForProfileEve
  #endif
  // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.

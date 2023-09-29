@@ -1,0 +1,11 @@
+--- mDNSPosix/Makefile.intermediate	2023-09-28 22:42:29 UTC
++++ mDNSPosix/Makefile
+@@ -133,7 +133,7 @@ CFLAGS_OS =
+ LDCONFIG = ldconfig
+ else
+ 
+-ifeq ($(os),freebsd)
++ifeq (${os},$(filter ${os}, freebsd dragonfly))
+ # If not already defined, set LOCALBASE to /usr/local
+ LOCALBASE ?= /usr/local
+ INSTBASE ?= $(DESTDIR)$(LOCALBASE)

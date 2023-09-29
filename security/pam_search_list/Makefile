@@ -1,6 +1,6 @@
 PORTNAME=	pam_search_list
 PORTVERSION=	0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME:S/_/-/g}
 DISTNAME=	${PORTNAME:S/_/-/g}-${PORTVERSION}
@@ -15,6 +15,11 @@ PLIST_FILES=	lib/libpam_search_list.a \
 		lib/pam_search_list.so \
 		lib/pam_search_list.so.0 \
 		man/man8/pam_search_list.8.gz
+
+OPTIONS_DEFINE=	PROFILE
+
+PROFILE_MAKE_ENV=	MK_PROFILE=yes
+PROFILE_PLIST_FILES=	lib/libpam_search_list_p.a
 
 MAKE_ARGS+=	SHLIB=pam_search_list
 

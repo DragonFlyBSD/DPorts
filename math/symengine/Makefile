@@ -1,6 +1,7 @@
 PORTNAME=	symengine
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.10.1
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -48,7 +49,6 @@ MPC_DESC=		Build with MPC
 MPC_CMAKE_BOOL=		WITH_MPC
 MPC_LIB_DEPENDS=	libmpc.so:math/mpc
 
-TCMALLOC_DESC=		Use tcmalloc from google-perftools (improves performance)
 TCMALLOC_CMAKE_BOOL=	WITH_TCMALLOC
 TCMALLOC_LIB_DEPENDS=	libtcmalloc.so:devel/google-perftools
 TCMALLOC_BROKEN=	associated with a suspected memory corruption problem, see https://github.com/symengine/symengine.py/issues/412

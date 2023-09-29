@@ -1,5 +1,5 @@
 PORTNAME=	extract-msg
-DISTVERSION=	0.40.0
+DISTVERSION=	0.41.5
 CATEGORIES=	textproc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,9 +22,15 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.11.1:www/py-beautifulsoup@$
 		${PYTHON_PKGNAMEPREFIX}RTFDE>=0.0.2:textproc/py-RTFDE@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tzlocal>=4.2:devel/py-tzlocal@${PY_FLAVOR}
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes
+
+OPTIONS_DEFINE=		WKHTMLTOPDF
+OPTIONS_DEFAULT=	WKHTMLTOPDF
+
+WKHTMLTOPDF_DESC=		Enable support for converting the body as PDF
+WKHTMLTOPDF_RUN_DEPENDS=	wkhtmltopdf>0:converters/wkhtmltopdf
 
 .include <bsd.port.mk>
