@@ -1,5 +1,5 @@
---- src/kqueue.c.orig	2021-11-16 14:10:32.570280000 +0100
-+++ src/kqueue.c	2021-11-16 14:21:07.946068000 +0100
+--- src/kqueue.c.orig	2023-01-22 12:57:53 UTC
++++ src/kqueue.c
 @@ -14,6 +14,11 @@
   * PERFORMANCE OF THIS SOFTWARE.
   */
@@ -12,17 +12,17 @@
  #include "aml.h"
  #include "backend.h"
  
-@@ -181,7 +186,12 @@
+@@ -181,7 +186,12 @@ static int kq_set_deadline(void* state,
  
  	struct kevent event;
  	EV_SET(&event, 0, EVFILT_TIMER, EV_ADD | EV_ONESHOT,
--			NOTE_MSECONDS | NOTE_ABSTIME, deadline, NULL);
+-			NOTE_USECONDS | NOTE_ABSTIME, deadline, NULL);
 +#if defined(__FreeBSD__)
-+	    NOTE_MSECONDS | NOTE_ABSTIME,
++			NOTE_USECONDS | NOTE_ABSTIME,
 +#else
-+	    0,
++			0,
 +#endif
-+          deadline, NULL);
++			deadline, NULL);
  
  	return kevent(self->fd, &event, 1, NULL, 0, NULL);
  }
