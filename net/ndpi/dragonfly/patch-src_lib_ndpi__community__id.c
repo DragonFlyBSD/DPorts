@@ -1,6 +1,6 @@
---- src/lib/ndpi_community_id.c.orig	2020-07-20 22:46:37 UTC
+--- src/lib/ndpi_community_id.c.orig	2023-05-10 13:20:33 UTC
 +++ src/lib/ndpi_community_id.c
-@@ -37,7 +37,7 @@
+@@ -34,7 +34,7 @@
  #include <unistd.h>
  #endif
  
@@ -14,7 +14,7 @@
    case IPPROTO_ICMP:
    case IPPROTO_ICMPV6:
 +#ifndef __DragonFly__
-   case IPPROTO_SCTP:
+   case NDPI_SCTP_PROTOCOL_TYPE:
 +#endif
    case IPPROTO_UDP:
    case IPPROTO_TCP:
@@ -24,7 +24,7 @@
      dst_port = ndpi_community_id_icmp_type_to_code_v4(icmp_type, icmp_code, &icmp_one_way);
      break;
 +#ifndef __DragonFly__
-   case IPPROTO_SCTP:
+   case NDPI_SCTP_PROTOCOL_TYPE:
 +#endif
    case IPPROTO_UDP:
    case IPPROTO_TCP:
@@ -34,7 +34,7 @@
      dst_port = ndpi_community_id_icmp_type_to_code_v6(icmp_type, icmp_code, &icmp_one_way);
      break;
 +#ifndef __DragonFly__
-   case IPPROTO_SCTP:
+   case NDPI_SCTP_PROTOCOL_TYPE:
 +#endif
    case IPPROTO_UDP:
    case IPPROTO_TCP:
