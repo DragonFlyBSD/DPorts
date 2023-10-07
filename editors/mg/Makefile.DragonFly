@@ -1,4 +1,2 @@
+CFLAGS+=	-DSLIST_FOREACH_SAFE=SLIST_FOREACH_MUTABLE
 
-dfly-patch:
-	${REINPLACE_CMD} -e 's@-lncursesw@-ltinfo@g' \
-		${WRKSRC}/configure
