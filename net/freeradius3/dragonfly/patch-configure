@@ -1,11 +1,11 @@
---- configure.orig	2019-12-26 19:08:12 UTC
+--- configure.orig	2023-05-26 13:56:52 UTC
 +++ configure
-@@ -13145,7 +13145,7 @@ gethostbyaddrrstyle=""
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking gethostbyaddr_r() syntax" >&5
- $as_echo_n "checking gethostbyaddr_r() syntax... " >&6; }
+@@ -14156,7 +14156,7 @@ gethostbyaddrrstyle=""
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking gethostbyaddr_r() syntax" >&5
+ printf %s "checking gethostbyaddr_r() syntax... " >&6; }
  case "$host" in
 -  *-freebsd*)
 +  *-freebsd*|*-dragonfly*)
-                             ac_fn_c_check_decl "$LINENO" "gethostbyaddr_r" "ac_cv_have_decl_gethostbyaddr_r" "
-         #ifdef HAVE_NETDB_H
-         #include <netdb.h>
+                             { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for $CC options needed to detect all undeclared functions" >&5
+ printf %s "checking for $CC options needed to detect all undeclared functions... " >&6; }
+ if test ${ac_cv_c_undeclared_builtin_options+y}
