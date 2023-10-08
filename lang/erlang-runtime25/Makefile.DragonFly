@@ -2,4 +2,4 @@
 LDFLAGS:=	"-L/usr/local/lib -rpath=/usr/local/lib -rpath,/usr/local/lib"
 
 # gcc8 not enough?
-USE_CLANG_FALLBACK=	default
+USE_CLANG_FALLBACK=	14
