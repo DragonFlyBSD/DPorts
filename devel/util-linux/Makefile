@@ -17,13 +17,15 @@ RUN_DEPENDS=	bash:shells/bash
 
 USES=		autoreconf gettext-tools gmake libtool ncurses pkgconfig \
 		shebangfix tar:xz
+
 USE_LDCONFIG=	yes
 
 SHEBANG_FILES=	misc-utils/getopt-parse.bash
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-nls --disable-ipcrm --disable-ipcs \
-		--disable-makeinstall-chown --disable-makeinstall-setuid
+		--disable-makeinstall-chown --disable-makeinstall-setuid \
+		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 
 INSTALL_TARGET=	install-strip
 
