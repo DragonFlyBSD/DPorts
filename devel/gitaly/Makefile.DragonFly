@@ -1,4 +1,4 @@
 # XXX This is a hack, please help me finding a better way
 dfly-patch:
 	${REINPLACE_CMD} -e 's,freebsd,dragonfly,g' \
-		${GO_GOPATH}/pkg/mod/github.com/?azure/azure-sdk-for-go/sdk/storage/azblob@v0.6.1/blockblob/mmf_unix.go
+		${GO_GOPATH}/pkg/mod/github.com/?azure/azure-sdk-for-go/sdk/storage/azblob@v1.0.0/blockblob/mmf_unix.go
