@@ -1,8 +1,11 @@
 PORTNAME=	sdbus-cpp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.0
-PORTREVISION=	1
+DISTVERSION=	1.3.0
+PORTREVISION=	2
 CATEGORIES=	devel
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	1e2d13a04a98.patch:-p1 # https://github.com/Kistler-Group/sdbus-cpp/pull/358
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	High-level C++ D-Bus library

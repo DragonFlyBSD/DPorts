@@ -5,7 +5,6 @@ CFLAGS+=	-Wundef
 dfly-patch:
 	${REINPLACE_CMD} -e 's@-D_BIG_ENDIAN@-DPS_BIG_ENDIAN@g' \
 			 -e 's@-D_LITTLE_ENDIAN@-DPS_LITTLE_ENDIAN@g' \
-		${WRKSRC}/configure.ac \
 		${WRKSRC}/configure
 	${REINPLACE_CMD} -e 's@[[:<:]]_BIG_ENDIAN[[:>:]]@PS_BIG_ENDIAN@g' \
 		${WRKSRC}/src/drvsvm.cpp \

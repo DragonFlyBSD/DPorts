@@ -1,29 +1,20 @@
---- CMakeLists.txt.orig	2020-07-10 17:32:25.016681000 +0200
-+++ CMakeLists.txt	2020-07-13 10:47:56.730000000 +0200
-@@ -429,7 +429,7 @@
+--- CMakeLists.txt.intermediate	2023-09-29 16:33:34 UTC
++++ CMakeLists.txt
+@@ -449,7 +449,7 @@ CHECK_INCLUDE_FILE (execinfo.h HAVE_EXEC
  
  IF(HAVE_EXECINFO_H)
    # FreeBSD has to include libexecinfo
 -  IF(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-+  IF(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
++  IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
      find_library(EXECINFO_LIBRARIES NAMES libexecinfo.so)
      IF(EXECINFO_LIBRARIES)
        ADD_DEFINITIONS(-DHAVE_EXECINFO_H)
-@@ -709,7 +709,7 @@
- 
-   find_path(OPENZWAVE_INCLUDE_DIRS NAMES openzwave/Manager.h)
-   if (OPENZWAVE_INCLUDE_DIRS)
--    IF(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-+    IF(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
-       include_directories(${OPENZWAVE_INCLUDE_DIRS})
-     ELSE()
-       include_directories(${OPENZWAVE_INCLUDE_DIRS}/openzwave)
-@@ -750,7 +750,7 @@
+@@ -765,7 +765,7 @@ IF(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
    target_link_libraries(domoticz -lresolv)
- elseif(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
+ ELSEIF(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
    target_link_libraries(domoticz ${EXECINFO_LIBRARIES})
--elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-+elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
+-ELSEIF(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++ELSEIF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
    target_link_libraries(domoticz ${EXECINFO_LIBRARIES})
- else()
+ ELSE()
    target_link_libraries(domoticz -lrt -lresolv ${EXECINFO_LIBRARIES})

@@ -1,0 +1,13 @@
+--- makefile.intermediate	2023-09-29 17:29:29 UTC
++++ makefile
+@@ -203,6 +203,10 @@ ifeq ($(firstword $(filter FreeBSD,$(UNA
+ OS := freebsd
+ GENIEOS := bsd
+ endif
++ifeq ($(firstword $(filter DragonFly,$(UNAME))),DragonFly)
++OS := dragonfly
++GENIEOS := bsd
++endif
+ ifeq ($(firstword $(filter GNU/kFreeBSD,$(UNAME))),GNU/kFreeBSD)
+ OS := freebsd
+ GENIEOS := freebsd

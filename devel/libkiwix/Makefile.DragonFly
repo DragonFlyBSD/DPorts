@@ -1,0 +1,5 @@
+dfly-patch:
+	${REINPLACE_CMD} -e 's,FreeBSD,DragonFly,g' \
+		${WRKSRC}/src/server/internalServer.cpp
+	${REINPLACE_CMD} -e 's,freebsd,dragonfly,g' \
+		${WRKSRC}/meson.build

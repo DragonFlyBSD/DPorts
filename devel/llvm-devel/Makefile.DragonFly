@@ -1,3 +1,5 @@
+USE_CLANG_FALLBACK=	default
+
 .if !defined(DPORTS_BUILDER)
 MANUAL_PACKAGE_BUILD=   huge (399M packaged)
 .endif

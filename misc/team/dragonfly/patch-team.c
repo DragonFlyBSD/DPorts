@@ -1,6 +1,6 @@
---- team.c.intermediate	2019-11-08 19:05:41.000000000 +0000
+--- team.c.orig	2023-10-04 06:12:35 UTC
 +++ team.c
-@@ -86,6 +86,10 @@ static char Notice[] =
+@@ -91,6 +91,10 @@ static char Notice[] =
  #include <sys/file.h>
  #include <sys/stat.h>
  #include <fcntl.h>
@@ -11,20 +11,16 @@
  #ifdef HAVE_WAIT_H
  #include <sys/wait.h>
  #endif
-@@ -176,16 +180,7 @@ local bool		verbose = false;
+@@ -186,12 +190,8 @@ local bool		verbose = false;
  local bool		report = true;
  local bool		guyhaderror = false;
  
 -extern int		errno;
  local time_t		origin;
--
+ 
 -extern time_t		time of((time_t *));
 -extern int		atoi of((const char *));
--extern char		*malloc of((unsigned));
--extern char		*calloc of((address,unsigned));
--extern char		*strchr of((const char *,int));
 -
--extern int		getopt of((int,char *[],const char *));
- extern char		*optarg;
- extern int		optind;
- 
+ /*
+   The  regular Unix read and write calls are not guaranteed to process
+   all  the  bytes  requested.  These  procedures guarantee that if the
