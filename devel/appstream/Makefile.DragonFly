@@ -1,0 +1,2 @@
+# fix ../appstream-qt build which uses -Wno-error=c++20-compat
+USE_GCC_VERSION=	12
