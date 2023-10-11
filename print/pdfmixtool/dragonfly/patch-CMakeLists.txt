@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2023-10-08 13:22:04 UTC
++++ CMakeLists.txt
+@@ -5,7 +5,7 @@ project (PDFMixTool VERSION 1.1.1)
+ include(GNUInstallDirs)
+ include(FindPkgConfig)
+ 
+-set(CMAKE_CXX_STANDARD 11)
++set(CMAKE_CXX_STANDARD 17)
+ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+ set(CMAKE_AUTOMOC ON)
+ set(CMAKE_AUTORCC ON)
