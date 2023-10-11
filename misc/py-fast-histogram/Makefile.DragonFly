@@ -1,0 +1,2 @@
+# GCC bug was fixed in 10.x which prevents compilation
+USE_GCC_VERSION=12
