@@ -1,5 +1,5 @@
 PORTNAME=	gchromium
-PORTVERSION=	1.0.a
+PORTVERSION=	2.0.a
 CATEGORIES=	www
 
 MAINTAINER=	zrj@efnet.irc
@@ -7,6 +7,6 @@ COMMENT=	"meta-port" for chromium selection
 
 USES=		metaport
 
-RUN_DEPENDS=	chrome:www/chromium-legacy
+RUN_DEPENDS=	ungoogled-chromium:www/ungoogled-chromium
 
 .include <bsd.port.mk>
