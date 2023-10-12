@@ -1,12 +1,12 @@
---- nginx/config.make.orig	2021-12-28 13:55:44 UTC
+--- nginx/config.make.orig	2023-04-10 16:50:19 UTC
 +++ nginx/config.make
 @@ -3,7 +3,7 @@ cat << END
  $ngx_addon_dir/../build/libnjs.a: $NGX_MAKEFILE
  	cd $ngx_addon_dir/.. \\
  	&& if [ -f build/Makefile ]; then \$(MAKE) clean; fi \\
--	&& CFLAGS="\$(CFLAGS)" CC="\$(CC)" ./configure --no-openssl --no-pcre \\
+-	&& CFLAGS="\$(CFLAGS)" CC="\$(CC)" ./configure --no-openssl --no-libxml2 --no-zlib --no-pcre \\
 -	&& \$(MAKE) libnjs
-+	&& CFLAGS="\$(CFLAGS)" CC="\$(CC)" ./configure --no-openssl \\
++	&& CFLAGS="\$(CFLAGS)" CC="\$(CC)" ./configure --no-openssl --no-libxml2 --no-zlib \\
 +	&& \$(MAKE) libnjs njs
  
  END
