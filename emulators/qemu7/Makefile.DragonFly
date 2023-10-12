@@ -1,0 +1,56 @@
+# fix env python3 issues
+USES+=  shebangfix
+SHEBANG_FILES+= scripts/signrom.py
+
+USES+= ncurses
+
+# Make SPICE option available
+OPTIONS_DEFINE+=	SPICE
+
+SPICE_DESC=		SPICE protocol support
+SPICE_LIB_DEPENDS=	libspice-server.so:devel/libspice-server
+SPICE_BUILD_DEPENDS=	spice-protocol>0:devel/spice-protocol
+SPICE_CONFIGURE_ON=	--enable-spice
+SPICE_CONFIGURE_OFF=	--disable-spice
+
+# slirp is required for vhost-net
+LIB_DEPENDS+=		libslirp.so:net/libslirp
+CONFIGURE_ARGS+=	--disable-netmap \
+			--disable-stack-protector \
+			--enable-curses
+
+# for find-lib
+LIB_DIRS+=	${LOCALBASE}/lib/elfutils
+
+.if ${FLAVOR:U} == default || ${FLAVOR:U} == nox11
+OPTIONS_DEFAULT+=	SPICE
+#
+# XXX: We have an issue with Elf64_Lib. DragonFly's base elftoolchain
+# and elf definitions should be updated at the very least.
+#
+OPTIONS_DEFAULT+=	X86_TARGETS
+X86_TARGETS_CONFIGURE_ON:=	--target-list='i386-softmmu x86_64-softmmu'
+.endif
+
+# dance a bit for making meson work w/ hacked up devel/ncurses
+dfly-patch:
+	${REINPLACE_CMD} -e "/find_library/s@'iconv',@& dirs: '${LOCALBASE}/lib',@g" \
+			 -e "/dirs =/s@'/usr/include/ncursesw'@&, '${LOCALBASE}/include/ncurses', '${LOCALBASE}/lib'@g" \
+			 -e "s@'ncursesw', 'ncurses', 'cursesw', 'pdcurses'@'ncurses'@" \
+			 -e "s@dependency(curses_libname,@dependency('ncurses_xxx',@g" \
+			 -e "s@links(curses_test,@& args: '-DNCURSES_WIDECHAR',@g" \
+		${WRKSRC}/meson.build
+
+	# TODO(tuxillo): Not sure why it's not picking MAKE_JOBS_NUMBER to build with all cpus
+	# but any -j specification is filtered-out in the Makefile which defaults to -j1
+	${REINPLACE_CMD} -e "s,-j1,-j${MAKE_JOBS_NUMBER},g" \
+		${WRKSRC}/Makefile
+
+dfly-install:
+.if ${FLAVOR:U} != tools && ${FLAVOR:U} != guestagent
+    	# TODO(tuxillo): Make user-mode to work with dfly
+	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 \
+		${STAGEDIR}${PREFIX}/bin/qemu-x86_64 \
+		${STAGEDIR}${PREFIX}/bin/qemu-arm
+.endif
+
