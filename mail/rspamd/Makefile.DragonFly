@@ -1,3 +1,4 @@
+USE_GCC_VERSION=	12
 
 # use standard lua by default, see DP issues/1042
 OPTIONS_DEFAULT:=		${OPTIONS_DEFAULT:NLUAJIT}
