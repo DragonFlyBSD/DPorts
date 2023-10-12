@@ -1,0 +1,11 @@
+--- configure.intermediate	2023-10-12 09:04:42 UTC
++++ configure
+@@ -18628,7 +18628,7 @@ _ACEOF
+ 
+ if test x$ac_compiler_gnu = "xyes"; then
+ 
+-  for stp_ac_arg in -Wall -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Wwrite-strings -Werror-implicit-function-declaration -Winline -Wformat=2 -finline-limit=131072 -Wformat -Werror=format-security -D_POSIX_C_SOURCE=200809L ; do
++  for stp_ac_arg in -Wall -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Wwrite-strings -Werror-implicit-function-declaration -Winline -Wformat=2 -finline-limit=131072 -Wformat -Werror=format-security ; do
+ 
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking if ${CC} supports ${stp_ac_arg}" >&5
+ $as_echo_n "checking if ${CC} supports ${stp_ac_arg}... " >&6; }
