@@ -1,0 +1,32 @@
+OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO}
+OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NLTO}
+
+# Apparently webrtc can't be built without sctp anymore, so
+# turn it off again
+MOZ_OPTIONS+=	--disable-webrtc
+# clang to generate C/c++ bindings...  assume default llvm
+MOZ_OPTIONS+=	--with-clang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang \
+		--with-libclang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
+CXXFLAGS+=	-Wno-multistatement-macros -Wno-class-memaccess
+
+# wasm unable to find clang and c;ang++ and wasm-ld
+BINARY_ALIAS=	clang=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang \
+		clang++=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang++ \
+		wasm-ld=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/wasm-ld
+
+# alsa headers use 'u_int32_t' and other BerkeleyDB/nvi fixed types (_XOPEN_SOURCE)
+# fix error: 'snprintf' was not declared in this scope
+# disable finding of wayland components, depends on eventfd.h from libepoll-shim
+dfly-patch:
+	# disable SCTP
+	${REINPLACE_CMD} -e 's|MOZ_SCTP|MOZ_DISABLE_SCTP|' \
+		${WRKSRC}/netwerk/moz.build
+	(cd ${WRKSRC}/gfx/angle/checkout/src/compiler/translator && \
+		${REINPLACE_CMD} -e 's|<math.h>|<cmath>|' \
+		InfoSink.h IntermNode.cpp)
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
+		${WRKSRC}/media/libcubeb/src/cubeb_alsa.c
+	${REINPLACE_CMD} -e 's@_POSIX_SOURCE@&___@g' \
+		${WRKSRC}/media/libcubeb/src/cubeb_jack.cpp
+	${REINPLACE_CMD} -e 's@gtk+-wayland@&z@g' \
+		${WRKSRC}/toolkit/moz.configure
