@@ -354,3 +354,15 @@ share/icons/hicolor/48x48/apps/brightnesssettings.svg
 share/man/man1/lxqt-config-appearance.1.gz
 share/man/man1/lxqt-config-mouse.1.gz
 share/man/man1/lxqt-config.1.gz
+%%LXQT_TRANSLATIONS%%/lxqt-config-appearance/lxqt-config-appearance_kk.qm
+%%LXQT_TRANSLATIONS%%/lxqt-config-brightness/lxqt-config-brightness_oc.qm
+%%LXQT_TRANSLATIONS%%/lxqt-config-cursor/lxqt-config-cursor_kk.qm
+%%LXQT_TRANSLATIONS%%/lxqt-config-cursor/lxqt-config-cursor_oc.qm
+%%LXQT_TRANSLATIONS%%/lxqt-config-file-associations/lxqt-config-file-associations_kk.qm
+%%LXQT_TRANSLATIONS%%/lxqt-config-file-associations/lxqt-config-file-associations_oc.qm
+%%LXQT_TRANSLATIONS%%/lxqt-config-input/lxqt-config-input_kk.qm
+%%LXQT_TRANSLATIONS%%/lxqt-config-locale/lxqt-config-locale_kk.qm
+%%LXQT_TRANSLATIONS%%/lxqt-config-monitor/lxqt-config-monitor_kk.qm
+%%LXQT_TRANSLATIONS%%/lxqt-config-monitor/lxqt-config-monitor_oc.qm
+%%LXQT_TRANSLATIONS%%/lxqt-config/lxqt-config_hi.qm
+%%LXQT_TRANSLATIONS%%/lxqt-config/lxqt-config_kk.qm
