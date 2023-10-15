@@ -1,6 +1,6 @@
---- include/grpc/impl/codegen/port_platform.h.orig	2019-04-23 17:59:32 UTC
-+++ include/grpc/impl/codegen/port_platform.h
-@@ -244,12 +244,20 @@
+--- include/grpc/support/port_platform.h.orig	2023-10-09 21:31:11 UTC
++++ include/grpc/support/port_platform.h
+@@ -252,12 +252,20 @@
  #else /* _LP64 */
  #define GPR_ARCH_32 1
  #endif /* _LP64 */
@@ -21,4 +21,4 @@
 +#endif
  #define GPR_CPU_POSIX 1
  #define GPR_GCC_ATOMIC 1
- #define GPR_GCC_TLS 1
+ #define GPR_POSIX_LOG 1
