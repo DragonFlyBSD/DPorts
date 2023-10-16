@@ -1,5 +1,5 @@
 PORTNAME=	lxqt-runner
-PORTVERSION=	1.2.0
+PORTVERSION=	1.3.0
 CATEGORIES=	x11
 MASTER_SITES=	LXQT
 
@@ -13,7 +13,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libmuparser.so:math/muparser
 
 USES=		cmake compiler:c++14-lang gettext-runtime kde:5 qt:5 \
-		gnome localbase lxqt pkgconfig tar:xz xorg
+		gnome localbase lxqt perl5 pkgconfig tar:xz xorg
+USE_PERL5=	build
 USE_QT=		buildtools:build qmake:build core dbus gui linguisttools \
 		script svg widgets x11extras xml
 USE_KDE=	windowsystem

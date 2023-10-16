@@ -1,0 +1,17 @@
+--- Makefile.orig	2023-05-17 20:57:30 UTC
++++ Makefile
+@@ -298,6 +298,14 @@ ifdef ENABLE_NLS
+ endif
+ endif
+ 
++ifeq (dragonfly,$(D2U_OS))
++ifdef ENABLE_NLS
++        CFLAGS_OS     = -I/usr/local/include
++        LDFLAGS_EXTRA = -L/usr/local/lib
++        LIBS_EXTRA    = -lintl
++endif
++endif
++
+ ifeq (darwin,$(D2U_OS))
+ ifdef ENABLE_NLS
+         CFLAGS_OS     = -I/usr/local/include

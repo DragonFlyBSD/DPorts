@@ -1,0 +1,8 @@
+USES+=	ncurses
+
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NQUOTAS:NGSSAPI_BUILTIN} GSSAPI_MIT
+
+.if defined(DEVELOPER)
+dfly-build:
+	${RM} -v ${LOCALBASE}/lib/python3.7/site-packages/__pycache__/tevent.cpython-37.pyc
+.endif

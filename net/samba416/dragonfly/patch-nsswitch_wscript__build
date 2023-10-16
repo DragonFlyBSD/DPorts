@@ -1,0 +1,11 @@
+--- nsswitch/wscript_build.intermediate	2023-10-12 09:50:42 UTC
++++ nsswitch/wscript_build
+@@ -47,7 +47,7 @@ if (Utils.unversioned_sys_platform() ==
+                       realname='libnss_wins.so.2',
+                       soname='libnss_wins.so.2',
+                       vnum='2')
+-elif (host_os.rfind('freebsd') > -1):
++elif (host_os.rfind('freebsd') > -1 or host_os.rfind('dragonfly') > -1):
+ 	# FreeBSD winbind client is implemented as a wrapper around
+ 	# the Linux version.
+ 	bld.SAMBA_PLUGIN('nss_winbind',

@@ -1,12 +1,13 @@
 PORTNAME=	prosody-modules
-PORTVERSION=	20210605
+PORTVERSION=	20220319
 CATEGORIES=	net-im
 MASTER_SITES=	https://hg.prosody.im/${PORTNAME}/archive/
-DISTNAME=	bb8459c220c9
+DISTNAME=	5dffb85e62c4
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	rozhuk.im@gmail.com
 COMMENT=	Prosody Community modules repository snapshot
+WWW=		https://modules.prosody.im/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -17,7 +18,6 @@ NO_ARCH=	yes
 NO_BUILD=	yes
 SUB_FILES=	pkg-message
 SUB_LIST=	INSTALLPATH=${INSTALLPATH}
-PLIST_SUB=	INSTALLPATH=${INSTALLPATH}
 WRKSRC=		${WRKDIR}/Community-Modules-${DISTNAME}
 INSTALLPATH=	${PREFIX}/lib/${PORTNAME}
 

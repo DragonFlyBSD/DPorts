@@ -1,6 +1,8 @@
-
 USES+=	ncurses
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@-fstack-protector-strong -Qunused-arguments@-Wno-implicit-fallthrough@g' \
 		${WRKSRC}/lib/Makefile
+	${REINPLACE_CMD} -e 's@-Werror@@g' \
+			 -e 's@-ltinfow@-ltinfo@g' \
+		${WRKSRC}/Makefile

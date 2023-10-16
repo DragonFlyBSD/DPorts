@@ -1,0 +1,11 @@
+--- wscript.orig	2022-01-24 10:27:00 UTC
++++ wscript
+@@ -407,7 +407,7 @@ def configure(conf):
+     # If not, we have to use '-Wl,--allow-shlib-undefined' instead
+     # and remove all instances of '-Wl,-no-undefined'.
+ 
+-    if sys.platform.startswith('freebsd'):
++    if sys.platform.startswith('freebsd') or sys.platform.startswith('dragonfly'):
+         # Do we have Wl,--ignore-unresolved-symbol,environ ?
+         flag_added = conf.ADD_LDFLAGS('-Wl,--ignore-unresolved-symbol,environ', testflags=True)
+         if not flag_added:

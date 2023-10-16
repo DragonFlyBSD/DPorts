@@ -2,8 +2,6 @@
 dfly-patch:
 	cands=`grep -rl __FreeBSD__ ${WRKSRC}`; \
 	${REINPLACE_CMD} 's|__FreeBSD__|__DragonFly__|g' $${cands}
-	${REINPLACE_CMD} -e 's@BOOST_LIBSTDCXX_VERSION@&__z@g' \
-		${WRKSRC}/src/cxx_supportlib/vendor-modified/boost/align/align.hpp
 
 dfly-install:
 	${RM} -fv ${STAGEDIR}${PREFIX}/bin/passenger-install-apache2-module
