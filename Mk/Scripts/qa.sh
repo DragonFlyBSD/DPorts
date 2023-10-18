@@ -664,11 +664,11 @@ proxydeps_suggest_uses() {
 }
 
 proxydeps() {
-	local file dep_file dep_file_pkg already rc zfor
+	local file dep_file dep_file_pkg already rc dep_lib_file dep_lib_files zfor
 
 	rc=0
 
-	# Check all dynamicaly linked ELF files
+	# Check all dynamically linked ELF files
 	# Some .so are not executable, but we want to check them too.
 	while read -r file; do
 		# No results presents a blank line from heredoc.
@@ -718,6 +718,8 @@ proxydeps() {
 				rc=1
 			fi
 			already="${already} ${dep_file}"
+			dep_lib_file=$(basename ${dep_file})
+			dep_lib_files="${dep_lib_files} ${dep_lib_file%%.so*}.so"
 		done <<-EOT
 		$(env LD_LIBMAP_DISABLE=1 ldd -a "${STAGEDIR}${file}" | \
 			awk '
@@ -732,6 +734,13 @@ proxydeps() {
 		cut -f 1 -d $'\1'| \
 		sed -e 's/^\.//')
 	EOT
+
+	# Check whether all files in LIB_DPEENDS are actually linked against
+	for _library in ${WANTED_LIBRARIES} ; do
+		if ! listcontains ${_library} "${dep_lib_files}" ; then
+			warn "you might not need LIB_DEPENDS on ${_library}"
+		fi
+	done
 
 	[ -z "${PROXYDEPS_FATAL}" ] && return 0
 
@@ -1002,14 +1011,11 @@ depends_blacklist()
 			lang/go)
 				instead="USES=go"
 				;;
-			lang/julia)
-				instead="a dependency on lang/julia\${JULIA_DEFAULT:S/.//}"
+			lang/mono)
+				instead="USES=mono"
 				;;
 			devel/llvm)
-				instead="a dependency on devel/llvm\${LLVM_DEFAULT}"
-				;;
-			www/py-django)
-				instead="one of the www/py-djangoXYZ port"
+				instead="USES=llvm"
 				;;
 		esac
 
