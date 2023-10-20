@@ -1,7 +1,7 @@
 PORTNAME=	exercism
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.1.0
-PORTREVISION=	3
+DISTVERSION=	3.2.0
+PORTREVISION=	2
 CATEGORIES=	misc
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		go:modules
 USE_GITHUB=	yes
 # golang:sys was bumped to 0.9.0 to fix the build on riscv64
-GH_TUPLE=	exercism:cli:v${PORTVERSION}:DEFAULT \
+GH_TUPLE=	exercism:cli:v${DISTVERSION}:DEFAULT \
 		blang:semver:v3.5.1:blang_semver/vendor/github.com/blang/semver \
 		davecgh:go-spew:v1.1.0:davecgh_go_spew/vendor/github.com/davecgh/go-spew \
 		fsnotify:fsnotify:v1.4.2:fsnotify_fsnotify/vendor/github.com/fsnotify/fsnotify \
