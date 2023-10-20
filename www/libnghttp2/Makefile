@@ -1,12 +1,13 @@
 PORTNAME=	nghttp2
-PORTVERSION=	1.53.0
+PORTVERSION=	1.57.0
 CATEGORIES=	www net
 MASTER_SITES=	https://github.com/nghttp2/nghttp2/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	lib
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	HTTP/2.0 C Library
-WWW=		https://nghttp2.org/
+WWW=		https://nghttp2.org/ \
+		https://github.com/nghttp2/nghttp2
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
