@@ -39,6 +39,7 @@
 %%WWWDIR%%/core/Layers.js
 %%WWWDIR%%/core/Object3D.js
 %%WWWDIR%%/core/Raycaster.js
+%%WWWDIR%%/core/RenderTarget.js
 %%WWWDIR%%/core/Uniform.js
 %%WWWDIR%%/core/UniformsGroup.js
 %%WWWDIR%%/extras/DataUtils.js
@@ -99,11 +100,9 @@
 %%WWWDIR%%/helpers/SkeletonHelper.js
 %%WWWDIR%%/helpers/SpotLightHelper.js
 %%WWWDIR%%/lights/AmbientLight.js
-%%WWWDIR%%/lights/AmbientLightProbe.js
 %%WWWDIR%%/lights/DirectionalLight.js
 %%WWWDIR%%/lights/DirectionalLightShadow.js
 %%WWWDIR%%/lights/HemisphereLight.js
-%%WWWDIR%%/lights/HemisphereLightProbe.js
 %%WWWDIR%%/lights/Light.js
 %%WWWDIR%%/lights/LightProbe.js
 %%WWWDIR%%/lights/LightShadow.js
@@ -358,6 +357,7 @@
 %%WWWDIR%%/scenes/Scene.js
 %%WWWDIR%%/textures/CanvasTexture.js
 %%WWWDIR%%/textures/CompressedArrayTexture.js
+%%WWWDIR%%/textures/CompressedCubeTexture.js
 %%WWWDIR%%/textures/CompressedTexture.js
 %%WWWDIR%%/textures/CubeTexture.js
 %%WWWDIR%%/textures/Data3DTexture.js
