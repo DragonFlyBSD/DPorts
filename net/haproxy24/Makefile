@@ -1,5 +1,5 @@
 PORTNAME=	haproxy
-DISTVERSION=	2.4.23
+DISTVERSION=	2.4.24
 CATEGORIES=	net www
 PKGNAMESUFFIX=	24
 MASTER_SITES=	http://www.haproxy.org/download/2.4/src/
@@ -53,12 +53,6 @@ LUA_MAKE_ARGS=		USE_LUA=1 LUA_INC=${LUA_INCDIR} LUA_LIB=${LUA_LIBDIR} LUA_LIB_NA
 
 .if ${FLAVOR:U} == lua
 OPTIONS_DEFAULT+=	LUA
-.endif
-
-.include <bsd.port.options.mk>
-
-.if ${ARCH} == powerpc
-MAKE_ARGS+=	USE_LIBATOMIC=
 .endif
 
 .include <bsd.port.pre.mk>
