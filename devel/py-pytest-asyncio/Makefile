@@ -1,5 +1,5 @@
 PORTNAME=	pytest-asyncio
-PORTVERSION=	0.21.0
+PORTVERSION=	0.21.1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,13 +22,7 @@ NO_ARCH=	yes
 USES=		python
 USE_PYTHON=	autoplist distutils pytest
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 30800
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}typing-extensions>=0:devel/py-typing-extensions@${PY_FLAVOR}
-.endif
-
 post-patch:
 	@${ECHO_CMD} 'from setuptools import setup; setup()' > ${WRKSRC}/setup.py
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
