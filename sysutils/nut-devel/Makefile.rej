@@ -1,0 +1,9 @@
+@@ -78,7 +78,7 @@
+ 		--without-python2 \
+ 		--with-python3=${PYTHON_CMD} \
+ 		--with-dev \
+-		--with-ltdl --with-nut-scanner
++		--with-libltdl --with-nut-scanner
+ 
+ CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
+ LIB_DEPENDS+=	libltdl.so:devel/libltdl
