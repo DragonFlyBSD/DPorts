@@ -17,7 +17,6 @@ RUN_DEPENDS=	bash:shells/bash \
 		${PYTHON_PKGNAMEPREFIX}attrs>0:devel/py-attrs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}bcrypt>0:security/py-bcrypt@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}configparser>0:devel/py-configparser@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}cryptography>0:security/py-cryptography@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dateutil>0:devel/py-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}incremental>0:devel/py-incremental@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}openssl>0:security/py-openssl@${PY_FLAVOR} \
@@ -31,7 +30,7 @@ RUN_DEPENDS=	bash:shells/bash \
 USES=		python shebangfix
 SHEBANG_FILES=	bin/cowrie
 USE_GITHUB=	yes
-USE_PYTHON=	distutils noflavors autoplist
+USE_PYTHON=	autoplist cryptography noflavors distutils
 
 CONFLICTS_INSTALL=	py*-asciinema # bin/asciinema
 
