@@ -1,3 +1,3 @@
-TIMESTAMP = 1685792634
-SHA256 (rubygem/aws-sdk-glue-1.140.0.gem) = 873765dfb7fcfa5bdb18e7fb7572362a8174361abb6c192172d5dfebb323d2c9
-SIZE (rubygem/aws-sdk-glue-1.140.0.gem) = 276992
+TIMESTAMP = 1696001700
+SHA256 (rubygem/aws-sdk-glue-1.156.0.gem) = 47640e63b0cf1ba17cce1551cca5e19f3522f63473ebb306563718173a7f1f6a
+SIZE (rubygem/aws-sdk-glue-1.156.0.gem) = 286208
