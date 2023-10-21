@@ -13,6 +13,7 @@ LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
 DEPRECATED=	Unsupported by upstream. Use GCC 10 or newer instead.
+EXPIRATION_DATE=	2024-07-15
 ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpcspe
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
@@ -61,7 +62,6 @@ CXXFLAGS:=	${CFLAGS:S/mcpu=g/mcpu=G/}
 CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 
 .elif ${ARCH} == powerpc64
-CONFIGURE_ENV+=	UNAME_m="powerpc64"
 . if defined(PPC_ABI) && ${PPC_ABI} == ELFv2
 CONFIGURE_ARGS+=	--with-abi=elfv2
 . else
