@@ -12,6 +12,9 @@
 %%MANPAGES%%man/man1/gh-auth-token.1.gz
 %%MANPAGES%%man/man1/gh-auth.1.gz
 %%MANPAGES%%man/man1/gh-browse.1.gz
+%%MANPAGES%%man/man1/gh-cache-delete.1.gz
+%%MANPAGES%%man/man1/gh-cache-list.1.gz
+%%MANPAGES%%man/man1/gh-cache.1.gz
 %%MANPAGES%%man/man1/gh-codespace-code.1.gz
 %%MANPAGES%%man/man1/gh-codespace-cp.1.gz
 %%MANPAGES%%man/man1/gh-codespace-create.1.gz
@@ -29,6 +32,7 @@
 %%MANPAGES%%man/man1/gh-codespace-view.1.gz
 %%MANPAGES%%man/man1/gh-codespace.1.gz
 %%MANPAGES%%man/man1/gh-completion.1.gz
+%%MANPAGES%%man/man1/gh-config-clear-cache.1.gz
 %%MANPAGES%%man/man1/gh-config-get.1.gz
 %%MANPAGES%%man/man1/gh-config-list.1.gz
 %%MANPAGES%%man/man1/gh-config-set.1.gz
@@ -110,6 +114,7 @@
 %%MANPAGES%%man/man1/gh-project-item-edit.1.gz
 %%MANPAGES%%man/man1/gh-project-item-list.1.gz
 %%MANPAGES%%man/man1/gh-project-list.1.gz
+%%MANPAGES%%man/man1/gh-project-mark-template.1.gz
 %%MANPAGES%%man/man1/gh-project-view.1.gz
 %%MANPAGES%%man/man1/gh-project.1.gz
 %%MANPAGES%%man/man1/gh-release-create.1.gz
@@ -138,6 +143,10 @@
 %%MANPAGES%%man/man1/gh-repo-unarchive.1.gz
 %%MANPAGES%%man/man1/gh-repo-view.1.gz
 %%MANPAGES%%man/man1/gh-repo.1.gz
+%%MANPAGES%%man/man1/gh-ruleset-check.1.gz
+%%MANPAGES%%man/man1/gh-ruleset-list.1.gz
+%%MANPAGES%%man/man1/gh-ruleset-view.1.gz
+%%MANPAGES%%man/man1/gh-ruleset.1.gz
 %%MANPAGES%%man/man1/gh-run-cancel.1.gz
 %%MANPAGES%%man/man1/gh-run-delete.1.gz
 %%MANPAGES%%man/man1/gh-run-download.1.gz
