@@ -1,4 +1,0 @@
-dfly-patch:
-	# DF bc doesn't recognize -v switch
-	${REINPLACE_CMD} -e '/bc -v/d; /sed --version/d' \
-	${WRKSRC}/bootstrap
