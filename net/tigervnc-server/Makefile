@@ -1,3 +1,4 @@
+PORTREVISION=	2
 PKGNAMESUFFIX=	-server
 
 COMMENT=	TigerVNC Server
