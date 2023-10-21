@@ -1,5 +1,5 @@
 PORTNAME=	cool.io
-PORTVERSION=	1.7.1
+PORTVERSION=	1.8.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -13,11 +13,5 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	rubygem-iobuffer>=1.0.0:devel/rubygem-iobuffer
 
 USES=		gem
-
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
-CONFIGURE_ARGS+=	--with-cflags="-Wno-error=incompatible-function-pointer-types"
-.endif
 
 .include <bsd.port.mk>
