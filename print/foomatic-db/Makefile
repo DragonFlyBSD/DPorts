@@ -1,5 +1,5 @@
 PORTNAME=	foomatic-db
-PORTVERSION=	20230330
+PORTVERSION=	20230902
 CATEGORIES=	print
 
 MAINTAINER=	danilo@FreeBSD.org
@@ -13,7 +13,7 @@ USES=		gmake tar:xz autoreconf
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenPrinting
-GH_TAGNAME=	d883a215dc062e478c64d4e2eee9b0e39e6c629d
+GH_TAGNAME=	4e6ab90da63afddee33d80115acb44149d2d292b
 
 GNU_CONFIGURE=	yes
 
