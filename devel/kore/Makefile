@@ -1,5 +1,5 @@
 PORTNAME=	kore
-PORTVERSION=	4.1.0
+PORTVERSION=	4.2.3
 CATEGORIES=	devel www
 MASTER_SITES=	https://kore.io/releases/
 
@@ -49,7 +49,11 @@ PYTHON_BINARY_ALIAS=	python3-config=${PYTHON_CMD}-config
 TASKS_MAKE_ARGS=	TASKS=1
 TLS_MAKE_ARGS_OFF=	NOTLS=1
 
-.include <bsd.port.options.mk>
+.include <bsd.port.pre.mk>
+
+.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
+CFLAGS+=	-Wno-error=deprecated-declarations -Wno-error=incompatible-pointer-types-discards-qualifiers
+.endif
 
 post-patch:
 .if ${LOCALBASE} != /usr/local
@@ -67,4 +71,4 @@ post-install-EXAMPLES-on:
 	@cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
 	@cd ${WRKSRC}/conf && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
