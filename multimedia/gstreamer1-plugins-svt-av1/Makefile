@@ -18,7 +18,6 @@ USE_GITLAB=	yes
 USE_GNOME=	glib20
 GL_ACCOUNT=	AOMediaCodec
 GL_PROJECT=	SVT-AV1
-GL_COMMIT=	6d5f2b4e1f04db677cdd4ab2b0d6831ab06a849c
 WRKSRC_SUBDIR=	gstreamer-plugin
 PLIST_FILES=	lib/gstreamer-1.0/libgstsvtav1enc.so
 
