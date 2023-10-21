@@ -11,10 +11,10 @@ WWW=		https://pypi.org/project/mysqlclient
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=49.2.0:devel/py-setuptools@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0.37:devel/py-wheel@${PY_FLAVOR}
 
-USES=		compiler:c11 iconv mysql pkgconfig python ssl
+USES=		compiler:c11 dos2unix iconv mysql pkgconfig python ssl
 USE_PYTHON=	autoplist concurrent pep517
 
 PORTDOCS=	*
