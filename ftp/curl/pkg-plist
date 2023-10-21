@@ -28,6 +28,7 @@ man/man3/CURLINFO_CERTINFO.3.gz
 man/man3/CURLINFO_CONDITION_UNMET.3.gz
 man/man3/CURLINFO_CONNECT_TIME.3.gz
 man/man3/CURLINFO_CONNECT_TIME_T.3.gz
+man/man3/CURLINFO_CONN_ID.3.gz
 man/man3/CURLINFO_CONTENT_LENGTH_DOWNLOAD.3.gz
 man/man3/CURLINFO_CONTENT_LENGTH_DOWNLOAD_T.3.gz
 man/man3/CURLINFO_CONTENT_LENGTH_UPLOAD.3.gz
@@ -88,6 +89,7 @@ man/man3/CURLINFO_TLS_SESSION.3.gz
 man/man3/CURLINFO_TLS_SSL_PTR.3.gz
 man/man3/CURLINFO_TOTAL_TIME.3.gz
 man/man3/CURLINFO_TOTAL_TIME_T.3.gz
+man/man3/CURLINFO_XFER_ID.3.gz
 man/man3/CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE.3.gz
 man/man3/CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE.3.gz
 man/man3/CURLMOPT_MAXCONNECTS.3.gz
@@ -181,6 +183,7 @@ man/man3/CURLOPT_FTP_USE_PRET.3.gz
 man/man3/CURLOPT_GSSAPI_DELEGATION.3.gz
 man/man3/CURLOPT_HAPPY_EYEBALLS_TIMEOUT_MS.3.gz
 man/man3/CURLOPT_HAPROXYPROTOCOL.3.gz
+man/man3/CURLOPT_HAPROXY_CLIENT_IP.3.gz
 man/man3/CURLOPT_HEADER.3.gz
 man/man3/CURLOPT_HEADERDATA.3.gz
 man/man3/CURLOPT_HEADERFUNCTION.3.gz
@@ -223,7 +226,7 @@ man/man3/CURLOPT_LOW_SPEED_TIME.3.gz
 man/man3/CURLOPT_MAIL_AUTH.3.gz
 man/man3/CURLOPT_MAIL_FROM.3.gz
 man/man3/CURLOPT_MAIL_RCPT.3.gz
-man/man3/CURLOPT_MAIL_RCPT_ALLLOWFAILS.3.gz
+man/man3/CURLOPT_MAIL_RCPT_ALLOWFAILS.3.gz
 man/man3/CURLOPT_MAXAGE_CONN.3.gz
 man/man3/CURLOPT_MAXCONNECTS.3.gz
 man/man3/CURLOPT_MAXFILESIZE.3.gz
@@ -298,6 +301,7 @@ man/man3/CURLOPT_PROXY_TLSAUTH_TYPE.3.gz
 man/man3/CURLOPT_PROXY_TLSAUTH_USERNAME.3.gz
 man/man3/CURLOPT_PROXY_TRANSFER_MODE.3.gz
 man/man3/CURLOPT_PUT.3.gz
+man/man3/CURLOPT_QUICK_EXIT.3.gz
 man/man3/CURLOPT_QUOTE.3.gz
 man/man3/CURLOPT_RANDOM_FILE.3.gz
 man/man3/CURLOPT_RANGE.3.gz
@@ -332,6 +336,8 @@ man/man3/CURLOPT_SOCKS5_GSSAPI_NEC.3.gz
 man/man3/CURLOPT_SOCKS5_GSSAPI_SERVICE.3.gz
 man/man3/CURLOPT_SSH_AUTH_TYPES.3.gz
 man/man3/CURLOPT_SSH_COMPRESSION.3.gz
+man/man3/CURLOPT_SSH_HOSTKEYDATA.3.gz
+man/man3/CURLOPT_SSH_HOSTKEYFUNCTION.3.gz
 man/man3/CURLOPT_SSH_HOST_PUBLIC_KEY_MD5.3.gz
 man/man3/CURLOPT_SSH_HOST_PUBLIC_KEY_SHA256.3.gz
 man/man3/CURLOPT_SSH_KEYDATA.3.gz
@@ -439,6 +445,7 @@ man/man3/curl_global_cleanup.3.gz
 man/man3/curl_global_init.3.gz
 man/man3/curl_global_init_mem.3.gz
 man/man3/curl_global_sslset.3.gz
+man/man3/curl_global_trace.3.gz
 man/man3/curl_mime_addpart.3.gz
 man/man3/curl_mime_data.3.gz
 man/man3/curl_mime_data_cb.3.gz
@@ -456,6 +463,7 @@ man/man3/curl_multi_add_handle.3.gz
 man/man3/curl_multi_assign.3.gz
 man/man3/curl_multi_cleanup.3.gz
 man/man3/curl_multi_fdset.3.gz
+man/man3/curl_multi_get_handles.3.gz
 man/man3/curl_multi_info_read.3.gz
 man/man3/curl_multi_init.3.gz
 man/man3/curl_multi_perform.3.gz
@@ -469,6 +477,8 @@ man/man3/curl_multi_strerror.3.gz
 man/man3/curl_multi_timeout.3.gz
 man/man3/curl_multi_wait.3.gz
 man/man3/curl_multi_wakeup.3.gz
+man/man3/curl_pushheader_byname.3.gz
+man/man3/curl_pushheader_bynum.3.gz
 man/man3/curl_share_cleanup.3.gz
 man/man3/curl_share_init.3.gz
 man/man3/curl_share_setopt.3.gz
@@ -490,6 +500,7 @@ man/man3/curl_ws_meta.3.gz
 man/man3/curl_ws_recv.3.gz
 man/man3/curl_ws_send.3.gz
 man/man3/libcurl-easy.3.gz
+man/man3/libcurl-env-dbg.3.gz
 man/man3/libcurl-env.3.gz
 man/man3/libcurl-errors.3.gz
 man/man3/libcurl-multi.3.gz
@@ -499,6 +510,7 @@ man/man3/libcurl-symbols.3.gz
 man/man3/libcurl-thread.3.gz
 man/man3/libcurl-tutorial.3.gz
 man/man3/libcurl-url.3.gz
+man/man3/libcurl-ws.3.gz
 man/man3/libcurl.3.gz
 share/aclocal/libcurl.m4
 %%PORTDOCS%%%%DOCSDIR%%/ALTSVC.md
@@ -541,7 +553,6 @@ share/aclocal/libcurl.m4
 %%PORTDOCS%%%%DOCSDIR%%/ROADMAP.md
 %%PORTDOCS%%%%DOCSDIR%%/RUSTLS.md
 %%PORTDOCS%%%%DOCSDIR%%/SECURITY-ADVISORY.md
-%%PORTDOCS%%%%DOCSDIR%%/SECURITY-PROCESS.md
 %%PORTDOCS%%%%DOCSDIR%%/SSL-PROBLEMS.md
 %%PORTDOCS%%%%DOCSDIR%%/SSLCERTS.md
 %%PORTDOCS%%%%DOCSDIR%%/THANKS
@@ -549,6 +560,7 @@ share/aclocal/libcurl.m4
 %%PORTDOCS%%%%DOCSDIR%%/TheArtOfHttpScripting.md
 %%PORTDOCS%%%%DOCSDIR%%/URL-SYNTAX.md
 %%PORTDOCS%%%%DOCSDIR%%/VERSIONS.md
+%%PORTDOCS%%%%DOCSDIR%%/VULN-DISCLOSURE-POLICY.md
 %%PORTDOCS%%%%DOCSDIR%%/WEBSOCKET.md
 %%PORTDOCS%%%%DOCSDIR%%/libcurl/ABI.md
 %%PORTDOCS%%%%DOCSDIR%%/libcurl/libcurl.m4
@@ -565,9 +577,11 @@ share/aclocal/libcurl.m4
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/cacertinmem.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/certinfo.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/chkspeed.c
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/connect-to.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/cookie_interface.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/crawler.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/debug.c
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/default-scheme.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/ephiperfifo.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/evhiperfifo.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/externalsocket.c
@@ -588,8 +602,10 @@ share/aclocal/libcurl.m4
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/headerapi.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/hiperfifo.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/href_extractor.c
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/hsts-preload.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/htmltidy.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/htmltitle.cpp
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/http-options.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/http-post.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/http2-download.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/http2-pushinmemory.c
@@ -616,6 +632,8 @@ share/aclocal/libcurl.m4
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/imap-ssl.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/imap-store.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/imap-tls.c
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/ipv6.c
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/maxconnects.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/multi-app.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/multi-debugcallback.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/multi-double.c
@@ -626,7 +644,6 @@ share/aclocal/libcurl.m4
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/multi-single.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/multi-uv.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/multithread.c
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/opensslthreadlock.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/parseurl.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/persistent.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/pop3-authzid.c
@@ -668,8 +685,11 @@ share/aclocal/libcurl.m4
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/sslbackend.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/synctime.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/threaded-ssl.c
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/unixsocket.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/url2file.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/urlapi.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/usercertinmem.c
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/websocket-cb.c
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/websocket.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/xmlstream.c
 share/zsh/site-functions/_curl
