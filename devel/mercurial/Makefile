@@ -1,5 +1,5 @@
 PORTNAME=	mercurial
-PORTVERSION=	6.4.5
+PORTVERSION=	6.5.2
 CATEGORIES=	devel python
 MASTER_SITES=	https://www.mercurial-scm.org/release/
 
@@ -63,8 +63,8 @@ PKGNAMEPREFIX=		${PYTHON_PKGNAMEPREFIX}
 .endif
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${STAGEDIR}${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/doc/*.5 ${STAGEDIR}${PREFIX}/man/man5/
+	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${STAGEDIR}${PREFIX}/share/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/doc/*.5 ${STAGEDIR}${PREFIX}/share/man/man5/
 	${FIND} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/ -name '*.so' -exec ${STRIP_CMD} {} +
 
 post-install-DATA-on:
