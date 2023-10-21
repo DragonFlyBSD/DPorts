@@ -15,13 +15,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyserial>=3.0:comms/py-pyserial@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ecdsa>=0.16.0:security/py-ecdsa@${PY_FLAVOR}\
 		${PYTHON_PKGNAMEPREFIX}bitstring>=3.1.6,<4:devel/py-bitstring@${PY_FLAVOR}\
-		${PYTHON_PKGNAMEPREFIX}cryptography>=2.1.4:security/py-cryptography@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}reedsolo>=1.5.3,<=1.6.0:devel/py-reedsolo@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyelftools>0:devel/py-pyelftools@${PY_FLAVOR}
 
 USES=		python
 USE_GITHUB=	yes
-USE_PYTHON=	autoplist concurrent distutils pytest
+USE_PYTHON=	autoplist concurrent cryptography distutils pytest
 
 GH_ACCOUNT=	espressif
 NO_ARCH=	yes
