@@ -1,10 +1,10 @@
 PORTNAME=	lumina-core
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.6.2
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Lumina Desktop Environment
 WWW=		https://lumina-desktop.org/
 
