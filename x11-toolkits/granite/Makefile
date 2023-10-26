@@ -4,7 +4,7 @@ PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 
 MAINTAINER=	desktop@FreeBSD.org
-COMMENT=	Extensions of GTK+3 toolkit
+COMMENT=	Extensions of GTK 3 toolkit
 WWW=		https://github.com/elementary/granite
 
 LICENSE=	LGPL3
@@ -26,7 +26,7 @@ PLIST_SUB=	DISTVERSION=${DISTVERSION}
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
