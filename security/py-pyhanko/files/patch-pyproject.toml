@@ -1,0 +1,27 @@
+--- pyproject.toml.orig	2023-09-17 17:59:16 UTC
++++ pyproject.toml
+@@ -1,12 +1,12 @@
+ [build-system]
+ requires = [
+-    "setuptools>=67.4",
+-    "wheel", "pytest-runner",
++    "setuptools>=61",
++    "wheel",
+ ]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+-name = "pyHanko"
++name = "pyhanko"
+ description = "Tools for stamping and signing PDF files"
+ authors = [{name = "Matthias Valvekens", email = "dev@mvalvekens.be"}]
+ maintainers = [{name = "Matthias Valvekens", email = "dev@mvalvekens.be"}]
+@@ -36,7 +36,7 @@ requires-python = ">=3.7"
+ dependencies = [
+     "asn1crypto>=1.5.1",
+     "qrcode>=6.1",
+-    "tzlocal>=4.3",
++    "tzlocal>=4.2",
+     "pyhanko-certvalidator==0.24.*",
+     "click>=7.1.2",
+     "requests>=2.24.0",
