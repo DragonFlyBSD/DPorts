@@ -1,6 +1,7 @@
 PORTNAME=	ilias
 DISTVERSIONPREFIX=	v
-DISTVERSION=	8.3
+DISTVERSION=	8.5
+PORTREVISION=	1
 CATEGORIES=	www education
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
@@ -22,7 +23,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/pear/Auth/Auth.php:security/pear-Auth@${PHP_FLAV
 		${LOCALBASE}/share/pear/MDB2.php:databases/pear-MDB2@${PHP_FLAVOR} \
 		${LOCALBASE}/share/pear/PEAR.php:devel/pear@${PHP_FLAVOR} \
 		${UNZIP_CMD}:archivers/unzip \
-		composer:devel/php-composer2@${PHP_FLAVOR} \
+		composer:devel/php-composer@${PHP_FLAVOR} \
 		sudo:security/sudo \
 		zip:archivers/zip
 
@@ -89,7 +90,7 @@ EXTRA_FILES=	%%WWWDIR%%/Modules/Chatroom/chat/node_modules/.bin/mime \
 		%%WWWDIR%%/node_modules/.bin/parser \
 		%%WWWDIR%%/node_modules/.bin/prebuild \
 		%%WWWDIR%%/node_modules/.bin/regjsparser \
-		%%WWWDIR%%/node_modules/.bin/rimraf \
+		%%WWWDIR%%/node_modules/.bin/resolve \
 		%%WWWDIR%%/node_modules/.bin/rc \
 		%%WWWDIR%%/node_modules/.bin/rollup \
 		%%WWWDIR%%/node_modules/.bin/semver \
