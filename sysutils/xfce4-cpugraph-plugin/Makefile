@@ -1,5 +1,5 @@
 PORTNAME=	xfce4-cpugraph-plugin
-PORTVERSION=	1.2.7
+PORTVERSION=	1.2.8
 PORTREVISION=	1
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/panel-plugins
@@ -11,11 +11,13 @@ WWW=		https://goodies.xfce.org/projects/panel-plugins/xfce4-cpugraph-plugin
 
 LICENSE=	GPLv2
 
+LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
+
 USES=		compiler:c11 gettext-tools gmake gnome libtool pkgconfig \
 		tar:bzip2 xfce
 USE_CSTD=	c99
-USE_GNOME=	cairo gtk30 intltool
-USE_XFCE=	panel
+USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool
+USE_XFCE=	libmenu panel xfconf
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
