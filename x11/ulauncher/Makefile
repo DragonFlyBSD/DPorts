@@ -1,5 +1,5 @@
 PORTNAME=	ulauncher
-PORTVERSION=	5.15.2
+PORTVERSION=	5.15.3
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/Ulauncher/Ulauncher/releases/download/${PORTVERSION}/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -13,7 +13,7 @@ LICENSE=	GPLv3
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}python-distutils-extra>=2.18:devel/py-python-distutils-extra@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>=0:devel/py-dbus@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyinotify>=0:devel/py-pyinotify@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}python-Levenshtein>=0:devel/py-python-Levenshtein@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}Levenshtein>=0:devel/py-Levenshtein@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}websocket-client>=0:www/py-websocket-client@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}xdg>=0:devel/py-xdg@${PY_FLAVOR} \
