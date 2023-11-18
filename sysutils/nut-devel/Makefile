@@ -82,7 +82,7 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/nut \
 		--with-python=${PYTHON_CMD} \
 		--without-python2 \
 		--with-python3=${PYTHON_CMD} \
-		--with-ltdl --with-nut-scanner
+		--with-libltdl --with-nut-scanner
 
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib -lpthread
 LIB_DEPENDS+=	libltdl.so:devel/libltdl
