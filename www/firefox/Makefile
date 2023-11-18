@@ -1,9 +1,11 @@
 PORTNAME=	firefox
-DISTVERSION=	119.0
+DISTVERSION=	120.0
+PORTREVISION=	1
 PORTEPOCH=	2
+PORTREVISION=	1
 CATEGORIES=	www wayland
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build1/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build2/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
@@ -14,11 +16,11 @@ BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
 		nss>=3.94:security/nss \
 		icu>=73.1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
-		harfbuzz>=8.2.1:print/harfbuzz \
+		harfbuzz>=8.2.2:print/harfbuzz \
 		graphite2>=1.3.14:graphics/graphite2 \
 		png>=1.6.39:graphics/png \
 		dav1d>=1.0.0:multimedia/dav1d \
-		libvpx>=1.13.0:multimedia/libvpx \
+		libvpx>=1.13.1:multimedia/libvpx \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
 		autoconf2.13:devel/autoconf2.13 \
