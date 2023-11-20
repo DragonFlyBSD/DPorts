@@ -1,13 +1,11 @@
---- src/corelib/CMakeLists.txt.orig	2022-11-16 07:54:24 UTC
+--- src/corelib/CMakeLists.txt.intermediate	2023-11-20 00:27:05 UTC
 +++ src/corelib/CMakeLists.txt
-@@ -475,6 +475,10 @@ qt_internal_extend_target(Core CONDITION
-     LINK_OPTIONS
-       "LINKER:--warn-unresolved-symbols"
+@@ -910,7 +910,7 @@ qt_internal_extend_target(Core CONDITION
+         io/qfilesystemwatcher_inotify.cpp io/qfilesystemwatcher_inotify_p.h
  )
-+qt_internal_extend_target(Core CONDITION DRAGONFLY
-+    LINK_OPTIONS
-+      "LINKER:--warn-unresolved-symbols"
-+)
  
- qt_internal_extend_target(Core CONDITION QT_FEATURE_animation
+-qt_internal_extend_target(Core CONDITION QT_FEATURE_filesystemwatcher AND UNIX AND NOT MACOS AND NOT QT_FEATURE_inotify AND (APPLE OR FREEBSD OR NETBSD OR OPENBSD)
++qt_internal_extend_target(Core CONDITION QT_FEATURE_filesystemwatcher AND UNIX AND NOT MACOS AND NOT QT_FEATURE_inotify AND (APPLE OR FREEBSD OR NETBSD OR OPENBSD OR DRAGONFLY)
      SOURCES
+         io/qfilesystemwatcher_kqueue.cpp io/qfilesystemwatcher_kqueue_p.h
+ )
