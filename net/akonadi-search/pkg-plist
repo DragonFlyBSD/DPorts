@@ -27,10 +27,6 @@ include/KPim5/AkonadiSearch/core/resultiterator.h
 include/KPim5/AkonadiSearch/core/searchstore.h
 include/KPim5/AkonadiSearch/core/term.h
 include/KPim5/AkonadiSearch/search_core_export.h
-lib/cmake/KF5AkonadiSearch/KF5AkonadiSearchConfig.cmake
-lib/cmake/KF5AkonadiSearch/KF5AkonadiSearchConfigVersion.cmake
-lib/cmake/KF5AkonadiSearch/KPim5AkonadiSearchTargets-%%CMAKE_BUILD_TYPE%%.cmake
-lib/cmake/KF5AkonadiSearch/KPim5AkonadiSearchTargets.cmake
 lib/cmake/KPim5AkonadiSearch/KPim5AkonadiSearchConfig.cmake
 lib/cmake/KPim5AkonadiSearch/KPim5AkonadiSearchConfigVersion.cmake
 lib/cmake/KPim5AkonadiSearch/KPim5AkonadiSearchTargets-%%CMAKE_BUILD_TYPE%%.cmake
@@ -75,6 +71,7 @@ share/locale/hi/LC_MESSAGES/akonadi_search.mo
 share/locale/hsb/LC_MESSAGES/akonadi_search.mo
 share/locale/hu/LC_MESSAGES/akonadi_search.mo
 share/locale/ia/LC_MESSAGES/akonadi_search.mo
+share/locale/id/LC_MESSAGES/akonadi_search.mo
 share/locale/it/LC_MESSAGES/akonadi_search.mo
 share/locale/ja/LC_MESSAGES/akonadi_search.mo
 share/locale/ka/LC_MESSAGES/akonadi_search.mo
