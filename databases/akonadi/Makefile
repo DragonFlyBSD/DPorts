@@ -8,7 +8,9 @@ WWW=		https://community.kde.org/KDE_PIM/Akonadi
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
+		libkaccounts.so:net-im/kaccounts-integration \
+		libaccounts-qt5.so:net-im/libaccounts-qt5
 # Let process generate meaningful backtrace on core dump.
 BUILD_DEPENDS=	xsltproc:textproc/libxslt
 
