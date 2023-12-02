@@ -1,20 +1,19 @@
---- setup.py.orig	2022-11-16 16:07:03.897578000 +0100
-+++ setup.py	2022-11-16 16:10:22.393206000 +0100
-@@ -244,7 +244,7 @@
- 
-         if len(self.init_system) == 0 and not platform.system().endswith(
-             "BSD"
--        ):
-+        ) and not platform.system().endswith('DragonFly'):
-             self.init_system = ["systemd"]
- 
-         bad = [f for f in self.init_system if f not in INITSYS_TYPES]
-@@ -302,7 +302,7 @@
+--- setup.py.orig	2023-11-12 16:49:17.721874000 +0100
++++ setup.py	2023-11-12 16:51:30.774143000 +0100
+@@ -154,6 +154,7 @@ INITSYS_FILES = {
+ }
+ INITSYS_ROOTS = {
+     "sysvinit": "etc/rc.d/init.d",
++    "sysvinit_dragonfly": "usr/local/etc/rc.d",
+     "sysvinit_freebsd": "usr/local/etc/rc.d",
+     "sysvinit_netbsd": "usr/local/etc/rc.d",
+     "sysvinit_deb": "etc/init.d",
+@@ -295,7 +296,7 @@ data_files = [
          [f for f in glob("doc/examples/seed/*") if is_f(f)],
      ),
  ]
 -if not platform.system().endswith("BSD"):
-+if not platform.system().endswith("BSD") and not platform.system().endswith('DragonFly'): 
- 
-     RULES_PATH = LIB
-     if os.path.isfile("/etc/redhat-release"):
++if not platform.system().endswith("BSD") and not platform.system().endswith("DragonFly"):
+     RULES_PATH = pkg_config_read("udev", "udevdir")
+     if not in_virtualenv():
+         RULES_PATH = "/" + RULES_PATH
