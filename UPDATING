@@ -814,21 +814,3 @@ you update your ports collection, before attempting any port upgrades.
   See /usr/local/etc/rc.d/unbound_exporter for possible options and adjust
   your rc.conf accordingly.
 
-20221215:
-  AFFECTS: users of security/clamav
-  AUTHOR: yasu@FreeBSD.org
-
-  Many users report that after updating ClamAV to 1.0.0 clamd and
-  freshclam fails to start with integrity check error of
-  databases. According to the result of investigation it happens with
-  following conditions.
-
-  1. ClamAV is built on non-cleanroom environment (that is, neither
-     FreeBSD official ClamAV package is used nor the package is built
-     by user with poudriere).
-  2. math/tomsfastmath is installed in the system that ClamAV is
-     built.
-
-  So if the errror happens on you system, uninstall TomsFastMath first
-  and then rebuild and reinstall ClamAV. The problem should disappear.
-
