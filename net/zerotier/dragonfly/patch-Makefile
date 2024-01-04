@@ -1,4 +1,4 @@
---- Makefile.intermediate	2019-09-22 22:10:30 UTC
+--- Makefile.orig	2023-12-16 13:38:38 UTC
 +++ Makefile
 @@ -14,6 +14,10 @@ ifeq ($(OSTYPE),FreeBSD)
  	ZT_BUILD_PLATFORM=7
@@ -9,5 +9,5 @@
 +       include make-bsd.mk
 +endif
  ifeq ($(OSTYPE),OpenBSD)
- 	CC=egcc
- 	CXX=eg++
+ 	CC=clang
+ 	CXX=clang++

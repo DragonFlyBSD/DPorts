@@ -32,6 +32,7 @@ start_precmd="install -o root /dev/null ${pidfile}"
 command=/usr/sbin/daemon
 command_args=" \
 	-c \
+	-t ${name} \
 	-r \
 	-P ${pidfile} \
 	%%ZEROTIER_SYSLOG%% \

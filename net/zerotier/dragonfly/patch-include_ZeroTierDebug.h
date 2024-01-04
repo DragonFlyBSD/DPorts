@@ -1,4 +1,4 @@
---- include/ZeroTierDebug.h.orig	2020-12-01 00:33:39 UTC
+--- include/ZeroTierDebug.h.orig	2023-09-14 19:09:26 UTC
 +++ include/ZeroTierDebug.h
 @@ -63,7 +63,7 @@
  #ifdef __APPLE__
