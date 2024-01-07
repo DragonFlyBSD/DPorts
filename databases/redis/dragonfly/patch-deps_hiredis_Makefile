@@ -1,12 +1,20 @@
---- deps/hiredis/Makefile.orig	2022-09-04 15:06:23.913140000 +0200
-+++ deps/hiredis/Makefile	2022-09-04 17:33:36.074898000 +0200
-@@ -97,6 +97,9 @@
-     else
-       SSL_LDFLAGS=-lssl -lcrypto
-     endif
-+  else ifeq ($(uname_S),DragonFly)
-+    CFLAGS+=-I/usr/local/include
-+    LDFLAGS+=-L/usr/local/lib -lssl -lcrypto
-   else
-     OPENSSL_PREFIX?=/usr/local/opt/openssl
-     CFLAGS+=-I$(OPENSSL_PREFIX)/include
+--- deps/hiredis/Makefile.orig	2024-01-07 13:14:42 UTC
++++ deps/hiredis/Makefile
+@@ -112,7 +112,7 @@ ifeq ($(USE_SSL),1)
+   SSL_LDFLAGS+=-lssl -lcrypto
+ endif
+ 
+-ifeq ($(uname_S),FreeBSD)
++ifeq ($(uname_S), $(filter $(uname_S),FreeBSD DragonFly))
+   LDFLAGS+=-lm
+   IS_GCC=$(shell sh -c '$(CC) --version 2>/dev/null |egrep -i -c "gcc"')
+   ifeq ($(IS_GCC),1)
+@@ -121,7 +121,7 @@ ifeq ($(uname_S),FreeBSD)
+ else
+   REAL_CFLAGS+=-pedantic
+ endif
+-ifeq ($(uname_S),FreeBSD)
++ifeq ($(uname_S), $(filter $(uname_S),FreeBSD DragonFly))
+   CFLAGS?=$(CFLAGS)
+   CCLINK?=pthread
+   LDFLAGS?=-L. -Wl,-rpath,.
