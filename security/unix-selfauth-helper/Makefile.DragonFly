@@ -1,0 +1,7 @@
+PLIST_SUB+=	PREFIX=${PREFIX}
+
+dfly-install:
+	# PLIST_SUB not picking this up, why?
+	${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},g' \
+		${WRKSRC}/unix-selfauth.in
+	${INSTALL_DATA} ${WRKSRC}/unix-selfauth.in ${STAGEDIR}${PREFIX}/etc/pam.d/unix-selfauth

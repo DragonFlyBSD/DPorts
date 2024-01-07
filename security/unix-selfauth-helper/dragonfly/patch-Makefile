@@ -1,0 +1,10 @@
+--- Makefile.orig	2023-07-13 18:59:16 UTC
++++ Makefile
+@@ -22,7 +22,4 @@ MK_INSTALL_AS_USER=	yes
+ {${MAN},${CONFS}}: $@.in
+ 	sed -e 's|%%PREFIX%%|${PREFIX}|g' <$> >$@
+ 
+-beforeinstall:	installdirs
+-afterinstall:	installconfig
+-
+ .include <bsd.prog.mk>
