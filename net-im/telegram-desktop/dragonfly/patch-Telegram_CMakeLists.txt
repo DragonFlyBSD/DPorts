@@ -1,6 +1,6 @@
---- Telegram/CMakeLists.txt.intermediate	2020-09-27 16:32:03 UTC
+--- Telegram/CMakeLists.txt.orig	2023-11-13 08:24:29 UTC
 +++ Telegram/CMakeLists.txt
-@@ -1304,6 +1304,11 @@ endif()
+@@ -1728,6 +1728,11 @@ endif()
  
  set_target_properties(Telegram PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${output_folder})
  
@@ -9,6 +9,6 @@
 +    target_link_options(Telegram PRIVATE -lstdc++)
 +endif()
 +
- if ((NOT DESKTOP_APP_DISABLE_AUTOUPDATE OR APPLE) AND NOT build_macstore AND NOT build_winstore)
-     add_executable(Updater WIN32)
-     init_target(Updater)
+ if (WIN32)
+     target_link_options(Telegram
+     PRIVATE
