@@ -3,6 +3,9 @@
 # with the previous one and this is going to bite us sooner than later.
 BOOTVER:=   3.0.4
 
+# TODO(tuxillo): produces binaries with OS unknown, checked by QA
+#DFLY_ALLOW_FOREIGN_BINARIES=yes
+
 #MAKE_ENV+=	LDVER=ld.bfd
 
 # zrj: fix up path, now can call directly
