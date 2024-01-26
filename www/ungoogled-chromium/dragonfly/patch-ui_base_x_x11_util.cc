@@ -1,5 +1,5 @@
 diff --git ui/base/x/x11_util.cc ui/base/x/x11_util.cc
-index 08e278ba267..7b35025e3e2 100644
+index 8743c881033..81e88e50939 100644
 --- ui/base/x/x11_util.cc
 +++ ui/base/x/x11_util.cc
 @@ -51,7 +51,7 @@

@@ -1,5 +1,5 @@
 diff --git third_party/ffmpeg/chromium/scripts/build_ffmpeg.py third_party/ffmpeg/chromium/scripts/build_ffmpeg.py
-index 81762ff2325..a41f5609157 100755
+index c073807f8b5..1918244c37c 100755
 --- third_party/ffmpeg/chromium/scripts/build_ffmpeg.py
 +++ third_party/ffmpeg/chromium/scripts/build_ffmpeg.py
 @@ -47,6 +47,7 @@ ARCH_MAP = {
@@ -45,7 +45,7 @@ index 81762ff2325..a41f5609157 100755
      parser.print_help()
      return 1
  
-@@ -752,7 +756,7 @@ def ConfigureAndBuild(target_arch, target_os, host_os, host_arch, parallel_jobs,
+@@ -750,7 +754,7 @@ def ConfigureAndBuild(target_arch, target_os, host_os, host_arch, parallel_jobs,
          '--enable-parser=vp3,vp8',
      ])
  
@@ -54,7 +54,7 @@ index 81762ff2325..a41f5609157 100755
      if target_arch == 'x64':
        if target_os == 'android':
          configure_flags['Common'].extend([
-@@ -853,7 +857,7 @@ def ConfigureAndBuild(target_arch, target_os, host_os, host_arch, parallel_jobs,
+@@ -851,7 +855,7 @@ def ConfigureAndBuild(target_arch, target_os, host_os, host_arch, parallel_jobs,
                '--extra-cflags=-mfpu=vfpv3-d16',
            ])
      elif target_arch == 'arm64':
@@ -63,7 +63,7 @@ index 81762ff2325..a41f5609157 100755
          if host_arch != 'arm64':
            configure_flags['Common'].extend([
              '--enable-cross-compile',
-@@ -944,7 +948,7 @@ def ConfigureAndBuild(target_arch, target_os, host_os, host_arch, parallel_jobs,
+@@ -942,7 +946,7 @@ def ConfigureAndBuild(target_arch, target_os, host_os, host_arch, parallel_jobs,
          '--disable-inline-asm',
      ])
  
@@ -72,7 +72,7 @@ index 81762ff2325..a41f5609157 100755
      configure_flags['Common'].extend([
          '--enable-pic',
          '--cc=clang',
-@@ -1069,7 +1073,7 @@ def ConfigureAndBuild(target_arch, target_os, host_os, host_arch, parallel_jobs,
+@@ -1067,7 +1071,7 @@ def ConfigureAndBuild(target_arch, target_os, host_os, host_arch, parallel_jobs,
          'Chrome', configure_flags['Common'] + configure_flags['ChromeAndroid'] +
          configure_args)
  

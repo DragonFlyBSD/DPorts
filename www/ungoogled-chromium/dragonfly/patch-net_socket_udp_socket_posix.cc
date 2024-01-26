@@ -1,5 +1,5 @@
 diff --git net/socket/udp_socket_posix.cc net/socket/udp_socket_posix.cc
-index 5e8edb292c2..e8cf1a2e31c 100644
+index 725c97a1cde..b504a8edcaf 100644
 --- net/socket/udp_socket_posix.cc
 +++ net/socket/udp_socket_posix.cc
 @@ -75,6 +75,34 @@ const int kActivityMonitorBytesThreshold = 65535;
@@ -37,7 +37,7 @@ index 5e8edb292c2..e8cf1a2e31c 100644
  #if BUILDFLAG(IS_APPLE) && !BUILDFLAG(CRONET_BUILD)
  
  // On macOS, the file descriptor is guarded to detect the cause of
-@@ -888,9 +916,21 @@ int UDPSocketPosix::SetMulticastOptions() {
+@@ -919,9 +947,21 @@ int UDPSocketPosix::SetMulticastOptions() {
    if (multicast_interface_ != 0) {
      switch (addr_family_) {
        case AF_INET: {
@@ -59,7 +59,7 @@ index 5e8edb292c2..e8cf1a2e31c 100644
          int rv = setsockopt(socket_, IPPROTO_IP, IP_MULTICAST_IF,
                              reinterpret_cast<const char*>(&mreq), sizeof(mreq));
          if (rv)
-@@ -953,9 +993,17 @@ int UDPSocketPosix::JoinGroup(const IPAddress& group_address) const {
+@@ -984,9 +1024,17 @@ int UDPSocketPosix::JoinGroup(const IPAddress& group_address) const {
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;

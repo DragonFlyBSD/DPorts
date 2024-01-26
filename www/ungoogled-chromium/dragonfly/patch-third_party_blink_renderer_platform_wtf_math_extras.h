@@ -1,5 +1,5 @@
 diff --git third_party/blink/renderer/platform/wtf/math_extras.h third_party/blink/renderer/platform/wtf/math_extras.h
-index 7473f4cfdc0..f7f9af6f6d2 100644
+index af423f4b964..e7b8af67ba2 100644
 --- third_party/blink/renderer/platform/wtf/math_extras.h
 +++ third_party/blink/renderer/platform/wtf/math_extras.h
 @@ -128,7 +128,7 @@ constexpr float Grad2turn(float g) {

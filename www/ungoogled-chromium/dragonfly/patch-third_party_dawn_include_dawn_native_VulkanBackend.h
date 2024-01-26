@@ -1,8 +1,8 @@
 diff --git third_party/dawn/include/dawn/native/VulkanBackend.h third_party/dawn/include/dawn/native/VulkanBackend.h
-index 41042331c64..56545d84830 100644
+index 4eee9ee3a65..20fd01afe56 100644
 --- third_party/dawn/include/dawn/native/VulkanBackend.h
 +++ third_party/dawn/include/dawn/native/VulkanBackend.h
-@@ -80,7 +80,8 @@ struct ExternalImageExportInfoVk : ExternalImageExportInfo {
+@@ -83,7 +83,8 @@ struct ExternalImageExportInfoVk : ExternalImageExportInfo {
  };
  
  // Can't use DAWN_PLATFORM_IS(LINUX) since header included in both Dawn and Chrome

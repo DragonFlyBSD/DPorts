@@ -1,5 +1,5 @@
 diff --git v8/src/trap-handler/trap-handler.h v8/src/trap-handler/trap-handler.h
-index a59e5e35cd9..ee373ec7161 100644
+index 624467c043d..7e2621adba6 100644
 --- v8/src/trap-handler/trap-handler.h
 +++ v8/src/trap-handler/trap-handler.h
 @@ -20,7 +20,7 @@ namespace trap_handler {

@@ -1,5 +1,5 @@
 diff --git base/threading/platform_thread_internal_posix.h base/threading/platform_thread_internal_posix.h
-index 120abaeb311..a3d5200335f 100644
+index 1f724c19b4d..28760369639 100644
 --- base/threading/platform_thread_internal_posix.h
 +++ base/threading/platform_thread_internal_posix.h
 @@ -9,6 +9,9 @@

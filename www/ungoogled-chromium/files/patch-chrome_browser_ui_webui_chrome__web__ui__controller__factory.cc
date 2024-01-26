@@ -1,7 +1,7 @@
---- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2023-09-17 07:59:53 UTC
+--- chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc.orig	2023-12-23 12:33:28 UTC
 +++ chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-@@ -214,7 +214,7 @@
- #include "chrome/browser/ui/webui/app_launcher_page_ui.h"
+@@ -211,7 +211,7 @@
+ #include "chrome/browser/ui/webui/chromeos/chrome_url_disabled/chrome_url_disabled_ui.h"
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -9,7 +9,7 @@
  #include "chrome/browser/ui/webui/webui_js_error/webui_js_error_ui.h"
  #endif
  
-@@ -240,17 +240,17 @@
+@@ -237,17 +237,17 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -30,7 +30,7 @@
  #include "chrome/browser/ui/webui/connectors_internals/connectors_internals_ui.h"
  #endif
  
-@@ -403,7 +403,7 @@ bool IsAboutUI(const GURL& url) {
+@@ -404,7 +404,7 @@ bool IsAboutUI(const GURL& url) {
  #if !BUILDFLAG(IS_ANDROID)
            || url.host_piece() == chrome::kChromeUITermsHost
  #endif
@@ -48,7 +48,7 @@
    if (url.host_piece() == chrome::kChromeUIWebUIJsErrorHost)
      return &NewWebUI<WebUIJsErrorUI>;
  #endif
-@@ -730,7 +730,7 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* we
+@@ -731,7 +731,7 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* we
    if (url.host_piece() == chrome::kChromeUINaClHost)
      return &NewWebUI<NaClUI>;
  #endif
@@ -57,7 +57,7 @@
       defined(TOOLKIT_VIEWS)) ||                         \
      defined(USE_AURA)
    if (url.host_piece() == chrome::kChromeUITabModalConfirmDialogHost)
-@@ -797,27 +797,27 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* we
+@@ -792,27 +792,27 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* we
    }
  #endif
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

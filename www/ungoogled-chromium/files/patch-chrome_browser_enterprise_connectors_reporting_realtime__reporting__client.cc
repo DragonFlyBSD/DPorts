@@ -1,6 +1,6 @@
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2023-09-17 07:59:53 UTC
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2023-12-23 12:33:28 UTC
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc
-@@ -54,7 +54,7 @@
+@@ -58,7 +58,7 @@
  #include "base/strings/utf_string_conversions.h"
  #endif
  
@@ -9,7 +9,7 @@
  #include "chrome/browser/enterprise/signals/signals_aggregator_factory.h"
  #include "components/device_signals/core/browser/signals_aggregator.h"
  #include "components/device_signals/core/common/signals_constants.h"
-@@ -139,7 +139,7 @@ void UploadSecurityEventReport(base::Value::Dict event
+@@ -132,7 +132,7 @@ void UploadSecurityEventReport(base::Value::Dict event
        std::move(upload_callback));
  }
  

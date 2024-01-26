@@ -1,8 +1,8 @@
 diff --git sandbox/policy/BUILD.gn sandbox/policy/BUILD.gn
-index 12c41abf7e9..254a20bd8fb 100644
+index 8bf14eebd9e..145a98709da 100644
 --- sandbox/policy/BUILD.gn
 +++ sandbox/policy/BUILD.gn
-@@ -129,6 +129,16 @@ component("policy") {
+@@ -142,6 +142,16 @@ component("policy") {
        "//ui/gfx/x",
      ]
    }
