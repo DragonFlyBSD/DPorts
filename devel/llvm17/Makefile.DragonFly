@@ -1,0 +1,18 @@
+USE_CLANG_FALLBACK=	default
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=   huge (399M packaged)
+.endif
+
+# LLDB needs to be ported to dragonfly
+# FLANG needs to be a separate thing
+# OPENMP force disable offloading target support
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLLDB:NFLANG:NCOMPILER_RT:NOPENMP}
+OPTIONS_DEFINE+=	LLD_LINK
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,set(ENABLE_LIBOMPTARGET ON),set(ENABLE_LIBOMPTARGET OFF),g' \
+		${WRKSRC}/openmp/CMakeLists.txt
+
+dfly-install:
+	-${RM} -fv ${STAGEDIR}${PREFIX}/bin/llvm-omp-device-info${LLVM_SUFFIX}
