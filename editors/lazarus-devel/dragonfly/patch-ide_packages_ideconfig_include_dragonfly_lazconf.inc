@@ -1,12 +1,12 @@
---- /dev/null	2021-12-17 07:20:12 UTC
-+++ ide/include/dragonfly/lazconf.inc
+--- /dev/null	2024-01-26 00:27:55 UTC
++++ ide/packages/ideconfig/include/dragonfly/lazconf.inc
 @@ -0,0 +1,37 @@
 +// included by lazconf.pp
 +
 +{***************************************************************************
 +                               lazconf.inc
 +
-+  dragonfly specific include file for the IDE
++  freebsd specific include file for the IDE
 +
 + ***************************************************************************
 +
