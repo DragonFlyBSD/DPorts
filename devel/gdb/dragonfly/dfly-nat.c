@@ -48,7 +48,7 @@
 /* Return the name of a file that can be opened to get the symbols for
    the child process identified by PID.  */
 
-char *
+const char *
 dfly_nat_target::pid_to_exec_file (int pid)
 {
   ssize_t len;
@@ -122,7 +122,7 @@ dfly_nat_target::find_memory_regions (find_memory_region_ftype func,
     error (_("Couldn't open %s."), mapfilename.c_str ());
 
   if (info_verbose)
-    fprintf_filtered (gdb_stdout, 
+    gdb_printf (gdb_stdout, 
 		      "Reading memory regions from %s\n", mapfilename.c_str ());
 
   /* Now iterate until end-of-file.  */
@@ -136,7 +136,7 @@ dfly_nat_target::find_memory_regions (find_memory_region_ftype func,
 
       if (info_verbose)
 	{
-	  fprintf_filtered (gdb_stdout, 
+	  gdb_printf (gdb_stdout, 
 			    "Save segment, %ld bytes at %s (%c%c%c)\n",
 			    size, paddress (target_gdbarch (), start),
 			    read ? 'r' : '-',
@@ -146,7 +146,7 @@ dfly_nat_target::find_memory_regions (find_memory_region_ftype func,
 
       /* Invoke the callback function to create the corefile segment.
 	 Pass MODIFIED as true, we do not know the real modification state.  */
-      func (start, size, read, write, exec, 1, obfd);
+      func (start, size, read, write, exec, 1, false, obfd);
     }
 
   return 0;
@@ -166,8 +166,9 @@ dfly_nat_add_target (struct target_ops *t)
 /* Provide a prototype to silence -Wmissing-prototypes.  */
 extern initialize_file_ftype _initialize_dfly_nat;
 
+void _initialize_dfly_nat ();
 void
-_initialize_dfly_nat (void)
+_initialize_dfly_nat ()
 {
 /* XXX: todo add_setshow_boolean_cmd() */
 }

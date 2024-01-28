@@ -56,15 +56,7 @@ struct kld_info {
 struct target_so_ops kld_so_ops;
 
 /* Per-program-space data key.  */
-static const struct program_space_data *kld_pspace_data;
-
-static void
-kld_pspace_data_cleanup (struct program_space *pspace, void *arg)
-{
-  struct kld_info *info = (struct kld_info *)arg;
-
-  xfree (info);
-}
+static const registry<program_space>::key<kld_info> kld_pspace_data;
 
 /* Get the current kld data.  If none is found yet, add it now.  This
    function always returns a valid object.  */
@@ -74,13 +66,10 @@ get_kld_info (void)
 {
   struct kld_info *info;
 
-  info = (struct kld_info *)
-    program_space_data (current_program_space, kld_pspace_data);
-  if (info != NULL)
-    return info;
+  info = kld_pspace_data.get (current_program_space);
+  if (info == nullptr)
+    info = kld_pspace_data.emplace (current_program_space);
 
-  info = XCNEW (struct kld_info);
-  set_program_space_data (current_program_space, kld_pspace_data, info);
   return info;
 }
 
@@ -272,7 +261,7 @@ load_kld (const char *path, CORE_ADDR base_addr, int from_tty)
 	symfile_add_flags add_flags = 0;
 	if (from_tty)
 		add_flags |= SYMFILE_VERBOSE;
-	symbol_file_add_from_bfd(bfd.get(), path, add_flags, &sap,
+	symbol_file_add_from_bfd(bfd, path, add_flags, &sap,
 	    OBJF_USERLOADED, NULL);
 }
 
@@ -377,17 +366,17 @@ kld_solib_create_inferior_hook (int from_tty)
 			    "Unable to find struct linker_file symbol"));
 
 			info->off_address =
-			    lookup_struct_elt (SYMBOL_TYPE (linker_file_sym),
+			    lookup_struct_elt (linker_file_sym->type (),
 				"address", 0).offset / 8;
 			info->off_filename =
-			    lookup_struct_elt (SYMBOL_TYPE (linker_file_sym),
+			    lookup_struct_elt (linker_file_sym->type (),
 				"filename", 0).offset / 8;
 			info->off_pathname =
-			    lookup_struct_elt (SYMBOL_TYPE (linker_file_sym),
+			    lookup_struct_elt (linker_file_sym->type (),
 				"pathname", 0).offset / 8;
 
 			struct type *link_type =
-			    lookup_struct_elt_type (SYMBOL_TYPE (linker_file_sym),
+			    lookup_struct_elt_type (linker_file_sym->type (),
 				"link", 0);
 			if (link_type == NULL)
 				error (_("Unable to find link type"));
@@ -544,7 +533,4 @@ _initialize_kld_target ()
 	   "Usage: add-kld FILE\n\
 Load the symbols from the kernel loadable module FILE.");
 	set_cmd_completer(c, filename_completer);
-
-	kld_pspace_data = register_program_space_data_with_cleanup (NULL,
-	    kld_pspace_data_cleanup);
 }
