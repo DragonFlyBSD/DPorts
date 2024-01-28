@@ -13,10 +13,6 @@ LDFLAGS+=	-L/usr/lib/priv -R/lib/priv
 # zrj: our base libs do not fetch any deps on -lpthread (even -larchive, -lzma)
 
 dfly-patch:
-	${REINPLACE_CMD} -e 's@openssl@wolfssl@g' \
-		${WRKSRC}/external/libcurl/Makefile.autosetup
-	${REINPLACE_CMD} -e '/USE_OPENSSL/d' \
-		${WRKSRC}/external/libcurl/curl_config.h
 
 .if defined(PACKAGE_BUILDING)
 	@${REINPLACE_CMD} -e "s|/usr/ports|/usr/dports|g" ${PROBLEM_FILES}
