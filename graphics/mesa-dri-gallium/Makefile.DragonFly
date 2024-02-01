@@ -1,3 +1,4 @@
+MESON_ARGS+=   -Dmicrosoft-clc=disabled
 
 .if 0 # XXX
 # zrj: justdoitTM will avoid installing llvmX0 for all Xorg ports.
