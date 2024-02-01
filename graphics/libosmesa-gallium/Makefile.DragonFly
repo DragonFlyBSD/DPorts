@@ -1,3 +1,4 @@
+MESON_ARGS+=   -Dmicrosoft-clc=disabled
 
 # zrj: use overlay
 LIB_DEPENDS+=	libOSMesa.so:graphics/libosmesa
