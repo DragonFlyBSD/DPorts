@@ -10,3 +10,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e "/define CC_FLAGS/s@-fdata-sections@& -I${LOCALBASE}/include@g" \
 			 -e "s@^SYSTEM_LIBS =@& -L${LOCALBASE}/lib -lncurses@g" \
 		${WRKSRC}/mk_freebsd.mk
+IGNORE=   unmaintained, please request fixing to users mailing list
