@@ -1,10 +1,10 @@
 PORTNAME=	ebusd
-PORTVERSION=	21.3
-DISTVERSIONPREFIX=	v
+PORTVERSION=	23.2
 CATEGORIES=	comms
 
 MAINTAINER=	samm@FreeBSD.org
 COMMENT=	Daemon for communication with eBUS heating systems
+WWW=		https://github.com/john30/ebusd/wiki
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -25,6 +25,7 @@ LOGDIR=		/var/log/${PORTNAME}
 RUNDIR=		/var/run/${PORTNAME}
 CPPFLAGS+=	-I${LOCALBASE}/include
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-ebusfeed
 
 PLIST_SUB=	USER=${USERS} GROUP=${GROUPS} \
 		LOGDIR=${LOGDIR} \
@@ -32,6 +33,7 @@ PLIST_SUB=	USER=${USERS} GROUP=${GROUPS} \
 
 OPTIONS_DEFINE=	MQTT
 OPTIONS_DEFAULT=MQTT
+OPTIONS_SUB=	yes
 MQTT_DESC=	MQTT protocol support
 
 MQTT_CONFIGURE_WITH=	mqtt
