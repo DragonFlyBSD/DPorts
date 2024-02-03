@@ -10,3 +10,4 @@ dfly-patch:
 		${WRKSRC}/src/colorpicker/Makefile \
 		${WRKSRC}/src/pclock-*/src/Makefile \
 		${WRKSRC}/src/XOverrideFontCursor/Makefile
+IGNORE=   unmaintained, please request fixing to users mailing list
