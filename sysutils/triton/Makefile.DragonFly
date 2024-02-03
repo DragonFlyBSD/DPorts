@@ -5,3 +5,4 @@ dfly-patch:
 		${WRKSRC}/src/scripts/extract_syscall.py \
 		${WRKSRC}/src/libtriton/includes/triton/syscalls.hpp \
 		${WRKSRC}/src/libtriton/CMakeLists.txt
+IGNORE=   unmaintained, please request fixing to users mailing list
