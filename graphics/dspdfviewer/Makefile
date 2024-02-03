@@ -1,11 +1,12 @@
 PORTNAME=	dspdfviewer
 PORTVERSION=	1.15.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	53
+PORTREVISION=	64
 CATEGORIES=	graphics
 
 MAINTAINER=	fox@FreeBSD.org
 COMMENT=	Dual-screen PDF viewer for LaTeX-beamer
+WWW=		https://github.com/dannyedel/dspdfviewer
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -13,8 +14,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libboost_program_options.so:devel/boost-libs \
 		libpoppler-qt5.so:graphics/poppler-qt5
 
-USES=		cmake:insource compiler:c++11-lang pkgconfig qt:5
-USE_QT=		core gui linguisttools widgets xml buildtools_build qmake_build
+USES=		cmake:insource compiler:c++14-lang pkgconfig qt:5
+USE_QT=		core gui linguisttools widgets xml buildtools:build qmake:build
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -50,7 +51,7 @@ CFLAGS+=	-Wno-error=extra-semi-stmt
 .endif
 
 # Fixes build failure for Clang 11.0.0
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1300111 && ${CHOSEN_COMPILER_TYPE} == clang
+.if ${OPSYS} == FreeBSD && ${CHOSEN_COMPILER_TYPE} == clang
 CFLAGS+=	-Wno-error=suggest-destructor-override
 CFLAGS+=	-Wno-error=suggest-override
 .endif
@@ -58,6 +59,11 @@ CFLAGS+=	-Wno-error=suggest-override
 # Fixes build failure for Clang 14.0.3
 .if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400059 && ${CHOSEN_COMPILER_TYPE} == clang
 CFLAGS+=       -Wno-error=bitwise-instead-of-logical
+.endif
+
+# Fixes build failure for Clang 16.0.6
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400059 && ${CHOSEN_COMPILER_TYPE} == clang
+CFLAGS+=       -Wno-error=unsafe-buffer-usage
 .endif
 
 # Prepare for Qt5-5.15
