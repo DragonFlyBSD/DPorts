@@ -1,1 +1,2 @@
 LDFLAGS+=	-L${LOCALBASE}/lib
+IGNORE=   unmaintained, please request fixing to users mailing list
