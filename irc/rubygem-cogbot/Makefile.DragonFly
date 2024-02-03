@@ -5,3 +5,4 @@ dfly-patch:
 			 -e '/json/s@~>@>=@g'	\
 			 -e '/daemon/s@~>@>=@g'	\
 		${WRKSRC}/cogbot.gemspec
+IGNORE=   unmaintained, please request fixing to users mailing list
