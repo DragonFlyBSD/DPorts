@@ -14,3 +14,4 @@ dfly-patch:
 		${WRKSRC}/src/openrct2/CMakeLists.txt
 	${REINPLACE_CMD} -e '/ -Wnull-dereference)/d' \
 		${WRKSRC}/CMakeLists.txt
+IGNORE=   unmaintained, please request fixing to users mailing list
