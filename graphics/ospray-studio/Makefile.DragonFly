@@ -1,3 +1,4 @@
 
 # -disable-new-dtag
 MAKE_ENV+=	LDVER=ld.bfd
+IGNORE=   unmaintained, please request fixing to users mailing list
