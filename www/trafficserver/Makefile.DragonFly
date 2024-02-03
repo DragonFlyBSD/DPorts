@@ -8,3 +8,4 @@ LDFLAGS+= -pthread
 dfly-patch:
 	${REINPLACE_CMD} -e 's@configs include tests@configs include@g' \
 		${WRKSRC}/Makefile.in
+IGNORE=   unmaintained, please request fixing to users mailing list
