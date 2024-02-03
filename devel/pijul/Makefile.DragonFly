@@ -2,3 +2,4 @@
 MAKE_ENV+=	LIBCLANG_PATH=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
 
 USES:= ${USES:S/cargo/cargo:extra/}
+IGNORE=   unmaintained, please request fixing to users mailing list
