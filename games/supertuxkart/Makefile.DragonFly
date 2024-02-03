@@ -3,3 +3,4 @@ MANUAL_PACKAGE_BUILD=	405M package (too big for mirrors)
 .endif
 
 LDFLAGS+= -L${LOCALBASE}/lib
+IGNORE=   unmaintained, please request fixing to users mailing list
