@@ -11,3 +11,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e '/SUBDIR/s@ tests@@g'	\
 			 -e '/SUBDIR_TARGETS/d'	\
 		${WRKSRC}/Makefile
+IGNORE=   unmaintained, please request fixing to users mailing list
