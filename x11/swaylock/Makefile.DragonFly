@@ -5,3 +5,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's@#ifdef __SSE2__@#if defined(__SSE2__) \&\& __GNUC__ \!= 8@g' \
 		${WRKSRC}/fade.c
 .endif
+IGNORE=   unmaintained, please request fixing to users mailing list
