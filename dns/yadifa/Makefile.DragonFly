@@ -9,3 +9,4 @@ dfly-patch:
 			 -e 's@FreeBSD)@FreeBSD|DragonFly)@g' \
 			 -e 's@defined __FreeBSD__@& || defined __DragonFly__@g' \
 		${WRKSRC}/configure
+IGNORE=   unmaintained, please request fixing to users mailing list
