@@ -1,21 +1,20 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	xenv
-PORTVERSION=	1.2
+PORTVERSION=	4.0
 CATEGORIES=	textproc
 MASTER_SITES=	https://download.gnu.org.ua/release/xenv/
 
 MAINTAINER=	zeus@gnu.org.ua
 COMMENT=	Text preprocessor for environment variable expansion
+WWW=		https://gnu.org.ua/software/xenv/
 
 LICENSE=	GPLv3+
 
-MAKE_ARGS=	CFLAGS="${CFLAGS} -Wall"
-ALL_TARGET=	${PORTNAME}
+GNU_CONFIGURE=	yes
 TEST_TARGET=	check
 
-PLIST_FILES=	bin/xenv share/man/man1/xenv.1.gz
+PLIST_FILES=	bin/xenv man/man1/xenv.1.gz
 PORTDOCS=	NEWS README
+INFO=		${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS
 
