@@ -1,3 +1,4 @@
 
 # ld.gold: error: p/../arch/hexagon/hexagon_disas.o: file is empty
 MAKE_JOBS_UNSAFE=yes
+IGNORE=   unmaintained, please request fixing to users mailing list
