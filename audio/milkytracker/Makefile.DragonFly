@@ -1,3 +1,4 @@
 dfly-patch:
 	${REINPLACE_CMD} -e 's|"BSD"|"DragonFly"|g' \
 		${WRKSRC}/docs/CMakeLists.txt
+IGNORE=   unmaintained, please request fixing to users mailing list
