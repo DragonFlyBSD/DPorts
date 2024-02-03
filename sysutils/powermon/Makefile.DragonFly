@@ -3,3 +3,4 @@
 dfly-patch:
 	${REINPLACE_CMD} -e 's@lnncursesw@lncursesw@' \
 		${WRKSRC}/Makefile
+IGNORE=   unmaintained, please request fixing to users mailing list
