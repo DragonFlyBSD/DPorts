@@ -4,3 +4,4 @@ USES+= localbase:ldflags
 dfly-patch:
 	${REINPLACE_CMD} -e 's@"FreeBSD@&|DragonFly@g' \
 		${WRKSRC}/cmake/Modules/Findlibusb-1.0.cmake
+IGNORE=   unmaintained, please request fixing to users mailing list
