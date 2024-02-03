@@ -1,3 +1,4 @@
 
 # deal with orphans (plist)
 PLIST_FILES+=	%%WWWDIR%%/templates/cloud_trial_ended_email.html
+IGNORE=   unmaintained, please request fixing to users mailing list
