@@ -9,3 +9,4 @@ IRRLICHT_BROKEN:= needs cascade
 MUMPS_BROKEN:= implicit mpi
 SYNCHRONO_BROKEN:= needs mpi
 VEHICLE_BROKEN:= needs mpi
+IGNORE=   unmaintained, please request fixing to users mailing list
