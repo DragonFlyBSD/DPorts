@@ -1,6 +1,11 @@
---- src/klayout_main/klayout_main/klayout_main.pro.orig	2021-08-28 16:11:14 UTC
+--- src/klayout_main/klayout_main/klayout_main.pro.orig	2022-12-22 22:17:08 UTC
 +++ src/klayout_main/klayout_main/klayout_main.pro
-@@ -27,39 +27,39 @@ DEPENDPATH += $$QTBASIC_INC
+@@ -24,52 +24,52 @@ win32 {
+ INCLUDEPATH += $$DOC_INC $$ICONS_INC $$QTBASIC_INC
+ DEPENDPATH += $$DOC_INC $$ICONS_INC $$QTBASIC_INC
+ 
+-LIBS += -lklayout_doc -lklayout_icons
++LIBS += $$DESTDIR/libklayout_doc.so $$DESTDIR/libklayout_icons.so
  
  equals(HAVE_QTBINDINGS, "1") {
  
@@ -28,7 +33,7 @@
 +    LIBS += $$DESTDIR/libklayout_QtUiTools.so
    }
  
-   equals(HAVE_QT5, "1") {
+   greaterThan(QT_MAJOR_VERSION, 4) {
  
 -    LIBS += -lklayout_QtWidgets
 +    LIBS += $$DESTDIR/libklayout_QtWidgets.so
@@ -51,3 +56,15 @@
      }
  
    }
+ 
+   greaterThan(QT_MAJOR_VERSION, 5) {
+ 
+-    LIBS += -lklayout_QtCore5Compat
+-    LIBS -= -lklayout_QtXmlPatterns
+-    LIBS -= -lklayout_QtDesigner
++    LIBS += $$DESTDIR/libklayout_QtCore5Compat.so
++    LIBS -= $$DESTDIR/libklayout_QtXmlPatterns.so
++    LIBS -= $$DESTDIR/libklayout_QtDesigner.so
+ 
+   }
+ 
