@@ -4,3 +4,4 @@ BUILD_DEPENDS:=	${BUILD_DEPENDS:N*binutils}
 dfly-patch:
 	${REINPLACE_CMD} -e 's@freebsd@dragonfly@' \
 		${WRKSRC}/SConstruct
+IGNORE=   unmaintained, please request fixing to users mailing list
