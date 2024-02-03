@@ -1,12 +1,12 @@
-# Created by: Bernhard Froehlich <decke@FreeBSD.org>
-
 PORTNAME=	minisatip
-PORTVERSION=	1.1.90
+PORTVERSION=	1.3.0
 DISTVERSIONPREFIX=	v
+PORTEPOCH=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	decke@FreeBSD.org
 COMMENT=	Multi-threaded SATIP server that supports DVB cards
+WWW=		https://github.com/catalinii/minisatip
 
 LICENSE=	GPLv2+
 
