@@ -1,11 +1,12 @@
 PORTNAME=	dynare
-DISTVERSION=	5.1
-PORTREVISION=	1
+DISTVERSION=	5.4
+PORTREVISION=	3
 CATEGORIES=	science # economics
 MASTER_SITES=	https://www.dynare.org/release/source/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Software platform for handling a wide class of economic models
+WWW=		https://www.dynare.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -22,10 +23,8 @@ RUN_DEPENDS=	epstool:graphics/epstool \
 		pstoedit:graphics/pstoedit \
 		xfig:graphics/xfig # README says that these executables are required for the test suite
 
-USES=		bison compiler:c++17-lang fortran gmake localbase tar:xz
+USES=		bison compiler:c++17-lang fortran gmake localbase tar:xz tex
 USE_TEX=	pdftex
-USE_GCC=	yes # clang-11 fails: error: reference to local binding 'ii1' declared in enclosing function 'ss2Iteration_pruning'
-		# Clang still doesn't support this c++20 feature, see https://bugs.llvm.org/show_bug.cgi?id=49238
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-matlab \
@@ -47,7 +46,8 @@ OCTAVE_LIB_DEPENDS=		libfftw3.so:math/fftw3 \
 				libfftw3f.so:math/fftw3-float \
 				libgsl.so:math/gsl \
 				libumfpack.so:math/suitesparse-umfpack
-OCTAVE_RUN_DEPENDS=		octave:math/octave
+OCTAVE_RUN_DEPENDS=		octave:math/octave \
+				octave-forge-statistics>0:math/octave-forge-statistics
 
 post-install:
 	# remove empty directories, see https://git.dynare.org/Dynare/dynare/-/issues/1835
