@@ -1,7 +1,7 @@
 PORTNAME=	sdr-wspr
 PORTVERSION=	0.1.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	10
+PORTREVISION=	12
 CATEGORIES=	comms hamradio
 
 MAINTAINER=	jeff@baitis.net
@@ -9,6 +9,8 @@ COMMENT=	WSPR receiver/decoder using libsdr
 WWW=		https://github.com/hmatuschek/sdr-wspr
 
 LICENSE=	GPLv3
+
+BROKEN_FreeBSD_14=	fails to build: non-floating-point argument in call to function '__builtin_isfinite'
 
 LIB_DEPENDS=	libsdr-gui.so:comms/libsdr-gui
 
