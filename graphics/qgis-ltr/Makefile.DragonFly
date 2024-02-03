@@ -14,3 +14,4 @@ dfly-patch:
 		${WRKSRC}/src/plugins/grass/CMakeLists.txt
 	${REINPLACE_CMD} -e 's@txt2tags --encoding=utf-8@txt2tags@g' \
 		${WRKSRC}/scripts/release.pl
+IGNORE=   unmaintained, please request fixing to users mailing list

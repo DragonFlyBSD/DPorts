@@ -1,5 +1,5 @@
 PORTNAME=	qgis
-DISTVERSION=	3.22.15
+DISTVERSION=	3.28.12
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://qgis.org/downloads/
 PKGNAMESUFFIX=	-ltr
@@ -17,10 +17,11 @@ BUILD_DEPENDS=	gpsbabel>=1.7.0:astro/gpsbabel \
 		${PYTHON_PKGNAMEPREFIX}dateutil>=2.8.2:devel/py-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}future>=0.18.2:devel/py-future@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}httplib2>=0.20.2:www/py-httplib2@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}jedi>=0.18.1:devel/py-jedi@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>=3.1.2:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}markupsafe>=2.1.1:textproc/py-markupsafe@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}matplotlib>=3.4.3:math/py-matplotlib@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}mock>=3.0.5:devel/py-mock@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}mock>=4.0.3:devel/py-mock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}OWSLib>=0.27.2:graphics/py-OWSLib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pbr>=5.10.0:devel/py-pbr@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pip>=22.2.2:devel/py-pip@${PY_FLAVOR} \
@@ -38,7 +39,6 @@ LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
 		libgeos.so:graphics/geos \
 		libgsl.so:math/gsl \
 		libhdf5.so:science/hdf5 \
-		liblazperf.so:archivers/lazperf \
 		libmdal.so:math/mdal \
 		libnetcdf.so:science/netcdf \
 		libOpenCL.so:devel/ocl-icd \
@@ -72,6 +72,7 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		${PYTHON_PKGNAMEPREFIX}matplotlib>=3.4.3:math/py-matplotlib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mock>=4.0.3:devel/py-mock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}nbformat>=5.7.0:devel/py-nbformat@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}netCDF4>=1.6.2:science/py-netCDF4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}networkx>=2.8.8:math/py-networkx@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}nltk>=3.7:textproc/py-nltk@${PY_FLAVOR} \
 		${PYNUMPY} \
@@ -91,16 +92,17 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		${PYTHON_PKGNAMEPREFIX}requests>=2.28.0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scikit-image>=0.19.3:graphics/py-scikit-image@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scikit-learn>=1.1.3:science/py-scikit-learn@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}Shapely>=1.8.5:devel/py-shapely@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}shapely>=1.8.5:devel/py-shapely@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>=1.16.0:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=3.7.16:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}termcolor>=2.1.0:devel/py-termcolor@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}xcffib>=0.11.1:x11/py-xcffib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}xlrd>=2.0.1:textproc/py-xlrd@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=5.4.1:devel/py-yaml@${PY_FLAVOR}
 
 ### Fortran is needed by numpy, GRASS, etc.
 USES=		bison cmake compiler:features desktop-file-utils \
-		fortran gl gmake gnome pgsql pyqt:5 python:3.8+ qca qt:5 \
+		fortran gl gmake gnome pgsql pyqt:5 python qca qt:5 \
 		shebangfix sqlite:3 tar:bz2
 USE_GL=		gl
 USE_GNOME=	libxml2
@@ -114,18 +116,20 @@ USE_QT=		3d buildtools:build core concurrent dbus declarative \
 
 SHEBANG_FILES=	src/plugins/grass/scripts/*.py
 
+# Python_EXECUTABLE: Use the default version if multiple Pythons are available
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE:STRING=Release \
-		-DLazPerf_INCLUDE_DIR:PATH=${LOCALBASE}/include/lazperf \
+		-DHAVE_PGCONFIG=1 \
 		-DWITH_INTERNAL_MDAL:BOOL=false \
 		-DPYRCC_PROGRAM:FILEPATH=${LOCALBASE}/bin/pyrcc5-${PYTHON_VER} \
 		-DPYUIC_PROGRAM:FILEPATH=${LOCALBASE}/bin/pyuic5-${PYTHON_VER} \
+		-DPython_EXECUTABLE=${PYTHON_CMD} \
 		-DQSCI_SIP_DIR:PATH=${PYQT_SIPDIR}/Qsci \
 		-DQWT_INCLUDE_DIR:PATH=${LOCALBASE}/include/qt5/qwt6 \
 		-DQWT_LIBRARY:FILEPATH=${LOCALBASE}/lib/qt5/libqwt6.so \
 		-DQGIS_MANUAL_SUBDIR:PATH=share/man
 CMAKE_ON=	USE_OPENCL WITH_3D WITH_ASTYLE \
-		WITH_BINDINGS WITH_CUSTOM_WIDGETS WITH_EPT WITH_POSTGRESQL \
-		WITH_PDAL
+		WITH_BINDINGS WITH_COPC WITH_CUSTOM_WIDGETS WITH_EPT \
+		WITH_PDAL WITH_POSTGRESQL
 CMAKE_OFF=	ENABLE_TESTS WITH_QWTPOLAR
 
 CONFLICTS_INSTALL=	qgis
@@ -158,6 +162,11 @@ SERVER_CMAKE_BOOL=	WITH_SERVER WITH_SERVER_PLUGINS WITH_QSPATIALITE
 BUILD_DEPENDS+=	${LOCALBASE}/bin/flex:textproc/flex
 CMAKE_ARGS+=	-DFLEX_EXECUTABLE:FILEPATH=${LOCALBASE}/bin/flex
 .endif
+
+pre-patch:
+	# Only PostgreSQL Client headers, not Server
+	@${REINPLACE_CMD} -e 's|set(POSTGRES_INCLUDE_DIR \$${PostgreSQL_INCLUDE_DIRS})|set(POSTGRES_INCLUDE ${LOCALBASE}/include)|g' \
+		${WRKSRC}/cmake/FindPostgres.cmake
 
 post-patch:
 # On i386, '-mllvm -inline-threshold=128' does not build under all circumstances
