@@ -3,3 +3,4 @@
 LIB_DEPENDS:=	${LIB_DEPENDS:Nlibmpich*}
 
 CMAKE_OFF+=	QMC_MPI ENABLE_OFFLOAD
+IGNORE=   unmaintained, please request fixing to users mailing list
