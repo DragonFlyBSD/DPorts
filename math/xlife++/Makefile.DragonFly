@@ -3,3 +3,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's/[[:<:]]isnan[[:>:]]/std::isnan/g' \
 			 -e 's/[[:<:]]isinf[[:>:]]/std::isinf/g' \
 		${WRKSRC}/src/mathsResources/specialFunctions/erfFunction.cpp
+IGNORE=   unmaintained, please request fixing to users mailing list
