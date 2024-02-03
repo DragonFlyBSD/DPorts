@@ -1,3 +1,4 @@
 USES+=	alias
 
 CFLAGS+=	-Wno-deprecated-declarations
+IGNORE=   unmaintained, please request fixing to users mailing list
