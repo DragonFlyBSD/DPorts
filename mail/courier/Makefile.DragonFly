@@ -7,3 +7,4 @@ dfly-install:
 WITH_OPENSSL_PORT= da
 #BROKEN= version updated, clean MD
 .endif
+IGNORE=   unmaintained, please request fixing to users mailing list
