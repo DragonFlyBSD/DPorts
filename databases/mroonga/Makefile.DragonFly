@@ -4,3 +4,4 @@
 BUILD_DEPENDS+=	bison>=0:devel/bison
 BUILD_DEPENDS+=	cmake>=0:devel/cmake
 #.endif
+IGNORE=   unmaintained, please request fixing to users mailing list
