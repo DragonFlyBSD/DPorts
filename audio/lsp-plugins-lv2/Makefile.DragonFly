@@ -8,3 +8,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's@[[:<:]]BSD[[:>:]]@DragonFly@g' \
 		${WRKSRC}/src/container/Makefile \
 		${WRKSRC}/src/utils/Makefile
+IGNORE=   unmaintained, please request fixing to users mailing list
