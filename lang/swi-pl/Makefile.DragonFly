@@ -9,3 +9,4 @@ dfly-patch:
 		${WRKSRC}/cmake/Config.cmake
 	${REINPLACE_CMD} -e 's@\(defined( __FreeBSD__ )\)@(\1||defined(__DragonFly__))@g'	\
 		${WRKSRC}/packages/clib/sha1/brg_endian.h
+IGNORE=   unmaintained, please request fixing to users mailing list
