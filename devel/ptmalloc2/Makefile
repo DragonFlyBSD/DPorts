@@ -1,5 +1,3 @@
-# Created by: is grammatically incorrect in this context.
-
 PORTNAME=	ptmalloc2
 PORTVERSION=	20060605
 PORTREVISION=	3
@@ -9,6 +7,7 @@ DISTNAME=	${PORTNAME}-current
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Alternative threads-aware malloc
+WWW=		http://www.malloc.de/en/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
