@@ -1,2 +1,3 @@
 # libgcc_pic.a + ld.gold + pthread issue
 MAKE_ENV+= LDVER=ld.bfd
+IGNORE=   unmaintained, please request fixing to users mailing list
