@@ -16,3 +16,4 @@ dfly-patch:
 		${WRKSRC}/Externals/cubeb/src/cubeb_alsa.c
 	${REINPLACE_CMD} -e 's@_POSIX_SOURCE@&___@g' \
                 ${WRKSRC}/Externals/cubeb/src/cubeb_jack.cpp
+IGNORE=   unmaintained, please request fixing to users mailing list
