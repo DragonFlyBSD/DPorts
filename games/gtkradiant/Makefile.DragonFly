@@ -1,3 +1,4 @@
 USES+= alias
 
 CFLAGS+=	-Wno-deprecated-declarations -Wno-int-to-pointer-cast
+IGNORE=   unmaintained, please request fixing to users mailing list
