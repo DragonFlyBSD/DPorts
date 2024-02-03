@@ -11,3 +11,4 @@ dfly-patch:
 
 dfly-install:
 	${RM} -rfv ${STAGEDIR}${LOCALBASE}/share/nls
+IGNORE=   unmaintained, please request fixing to users mailing list
