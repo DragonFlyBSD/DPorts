@@ -1,5 +1,5 @@
 PORTNAME=	qemu
-PORTVERSION=	8.0.2
+PORTVERSION=	8.1.1
 PORTREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
@@ -25,6 +25,9 @@ LIB_DEPENDS+=	libfdt.so:sysutils/dtc \
 .if (${FLAVOR:U} != nox11 && ${FLAVOR:U} != tools && ${FLAVOR:U} != guestagent)
 LIB_DEPENDS+=	libepoxy.so:graphics/libepoxy
 .endif
+.if (${FLAVOR:U} != nox11 && ${FLAVOR:U} != tools && ${FLAVOR:U} != default)
+PKGMESSAGE=	${.CURDIR}/pkg-message.guest-agent
+.endif
 
 FLAVORS=			default nox11 tools guestagent
 FLAVOR?=			${FLAVORS:[1]}
@@ -46,7 +49,8 @@ guestagent_PLIST=		${.CURDIR}/pkg-plist-ga
 guestagent_CONFLICTS_INSTALL=	qemu qemu-devel qemu-nox11 qemu-tools qemu-utils qemu6* \
 				qemu7* qemu-guest-agent
 
-USES=		cpe gmake gnome ninja perl5 pkgconfig python:build tar:xz
+USES=		cpe gmake gnome ninja perl5 pkgconfig python:build shebangfix tar:xz
+SHEBANG_FILES=	scripts/xml-preprocess.py
 USE_GNOME=	glib20
 USE_PERL5=	build
 .if ${FLAVOR:U} != tools && ${FLAVOR:U} != guestagent

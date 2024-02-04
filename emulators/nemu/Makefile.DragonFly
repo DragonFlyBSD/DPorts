@@ -8,3 +8,4 @@ dfly-patch:
 		${WRKSRC}/src/nm_ncurses.h
 	${REINPLACE_CMD} -e 's@STREQUAL FreeBSD@MATCHES "FreeBSD|DragonFly"@g' \
 		${WRKSRC}/CMakeLists.txt
+IGNORE=   unmaintained, please request fixing to users mailing list

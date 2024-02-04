@@ -67,7 +67,7 @@ amd64fbsd_sigtramp_p (struct frame_info *this_frame)
    address of the associated sigcontext structure.  */
 
 static CORE_ADDR
-amd64dfly_sigcontext_addr (struct frame_info *this_frame)
+amd64dfly_sigcontext_addr (struct frame_info_ptr this_frame)
 {
   struct gdbarch *gdbarch = get_frame_arch (this_frame);
   enum bfd_endian byte_order = gdbarch_byte_order (gdbarch);
@@ -81,7 +81,7 @@ amd64dfly_sigcontext_addr (struct frame_info *this_frame)
   sp = extract_unsigned_integer (buf, 8, byte_order);
   return sp + 16;
 }
-
+
 /* Mapping between the general-purpose registers in `struct reg'
    format and GDB's register cache layout.
 
@@ -175,7 +175,7 @@ static int amd64dfly_jmp_buf_reg_offset[] =
 static void
 amd64dfly_init_abi (struct gdbarch_info info, struct gdbarch *gdbarch)
 {
-  struct gdbarch_tdep *tdep = gdbarch_tdep (gdbarch);
+  i386_gdbarch_tdep *tdep = gdbarch_tdep<i386_gdbarch_tdep> (gdbarch);
 
   /* Generic DragonFly support. */
   dfly_init_abi (info, gdbarch);
@@ -222,8 +222,9 @@ amd64dfly_init_abi (struct gdbarch_info info, struct gdbarch *gdbarch)
 #endif
 }
 
+void _initialize_amd64dfly_tdep ();
 void
-_initialize_amd64dfly_tdep (void)
+_initialize_amd64dfly_tdep ()
 {
   gdbarch_register_osabi (bfd_arch_i386, bfd_mach_x86_64,
 			  GDB_OSABI_DRAGONFLY, amd64dfly_init_abi);

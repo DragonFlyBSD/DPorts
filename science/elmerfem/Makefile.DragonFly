@@ -16,3 +16,4 @@ dfly-patch:
 		${WRKSRC}/CMakeLists.txt
 	${REINPLACE_CMD} -e 's@binio arpack@binio@g' \
 		${WRKSRC}/fem/src/CMakeLists.txt
+IGNORE=   unmaintained, please request fixing to users mailing list

@@ -6,3 +6,4 @@ dfly-patch:
 		${WRKSRC}/src/usr.sbin/httpd/server.c \
 		${WRKSRC}/src/usr.sbin/httpd/logger.c \
 		${WRKSRC}/src/usr.sbin/httpd/parse.y
+IGNORE=   unmaintained, please request fixing to users mailing list

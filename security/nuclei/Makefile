@@ -1,10 +1,10 @@
 PORTNAME=	nuclei
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.9.0
-PORTREVISION=	1
+DISTVERSION=	2.9.11
+PORTREVISION=	2
 CATEGORIES=	security
 
-MAINTAINER=	0xdutra@gmail.com
+MAINTAINER=	nulldutra@proton.me
 COMMENT=	Fast vulnerability scanner
 WWW=		https://github.com/projectdiscovery/nuclei
 

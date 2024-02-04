@@ -3,3 +3,4 @@
 USES+=	fortran
 
 DFLY_CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER:STRING="g++8"
+IGNORE=   unmaintained, please request fixing to users mailing list

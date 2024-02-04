@@ -1,0 +1,11 @@
+--- configure.orig	2023-10-20 23:11:20 UTC
++++ configure
+@@ -35319,7 +35319,7 @@ then :
+              # On Solaris 10 or newer, this test is no longer needed, because
+              # libc contains the fully functional pthread functions.
+              case "$host_os" in
+-               solaris | solaris2.[1-9] | solaris2.[1-9].* | hpux* | freebsd*)
++               solaris | solaris2.[1-9] | solaris2.[1-9].* | hpux* | freebsd*| dragonfly*)
+ 
+ printf "%s\n" "#define PTHREAD_IN_USE_DETECTION_HARD 1" >>confdefs.h
+ 

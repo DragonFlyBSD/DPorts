@@ -1,5 +1,5 @@
---- node/Constants.hpp.orig	2022-10-05 21:34:42.374552000 +0200
-+++ node/Constants.hpp	2022-10-05 21:35:39.363267000 +0200
+--- node/Constants.hpp.orig	2023-09-14 19:09:26 UTC
++++ node/Constants.hpp
 @@ -73,7 +73,7 @@
  #include <machine/endian.h>
  #endif

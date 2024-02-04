@@ -1,5 +1,6 @@
 PORTNAME=	ddtrace
-PORTVERSION=	1.12.0
+PORTVERSION=	1.14.0
+PORTREVISION=	1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -13,8 +14,8 @@ LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE.Apache
 LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/LICENSE.BSD3
 
 RUN_DEPENDS=	rubygem-debase-ruby_core_source>=3.2.1<3.2.1_99:devel/rubygem-debase-ruby_core_source \
-		rubygem-libdatadog>=2.0.0.1.0<2.0.0.2:devel/rubygem-libdatadog \
-		rubygem-libddwaf>=1.9.0.0.0<1.9.0.1:devel/rubygem-libddwaf \
+		rubygem-libdatadog>=3.0.0.1.0<3.0.0.2:devel/rubygem-libdatadog \
+		rubygem-libddwaf>=1.11.0.0.0<1.11.0.1:devel/rubygem-libddwaf \
 		rubygem-msgpack>=0:devel/rubygem-msgpack
 
 USES=		gem

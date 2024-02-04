@@ -10,3 +10,4 @@ dfly-patch:
 		${WRKSRC}/_cabal_deps/glib-*/glib.cabal \
 		${WRKSRC}/_cabal_deps/gtk-*/gtk.cabal \
 		${WRKSRC}/_cabal_deps/pango-*/pango.cabal
+IGNORE=   unmaintained, please request fixing to users mailing list

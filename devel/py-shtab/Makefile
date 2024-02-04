@@ -1,12 +1,13 @@
 PORTNAME=	shtab
-PORTVERSION=	1.6.1
+PORTVERSION=	1.6.4
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Automagic shell tab completion for Python CLI applications
-WWW=		https://github.com/iterative/shtab
+WWW=		https://docs.iterative.ai/shtab/ \
+		https://github.com/iterative/shtab
 
 LICENSE=	APACHE20
 

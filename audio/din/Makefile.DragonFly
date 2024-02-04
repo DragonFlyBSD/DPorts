@@ -5,3 +5,4 @@ PLIST_FILES+=	%%DATADIR%%/factory/dummy.crv \
 		%%DATADIR%%/factory/gravmod.crv \
 		%%DATADIR%%/factory/gravmod.ed \
 		%%DATADIR%%/factory/spinners
+IGNORE=   unmaintained, please request fixing to users mailing list

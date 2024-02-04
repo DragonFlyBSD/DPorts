@@ -1,5 +1,5 @@
 PORTNAME=	ffmpeg
-PORTVERSION=	6.0
+PORTVERSION=	6.0.1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio net
 MASTER_SITES=	https://ffmpeg.org/releases/
@@ -215,6 +215,7 @@ DEBUG_CONFIGURE_OFF=	--disable-debug
 # docs
 DOCS_BUILD_DEPENDS=	texi2html:textproc/texi2html
 DOCS_CONFIGURE_ENABLE=	htmlpages
+DOCS_BINARY_ALIAS=	makeinfo=${FALSE} # force texi2html
 
 # drm
 DRM_LIB_DEPENDS=	libdrm.so:graphics/libdrm
@@ -665,16 +666,10 @@ LICENSE_TEXT_NONFREE=	enabling OPENSSL or FDK_AAC restricts redistribution
 LICENSE_PERMS_NONFREE=	auto-accept
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == powerpc64 && ${PORT_OPTIONS:MLTO} && ${CHOSEN_COMPILER_TYPE} == clang
-USE_GCC=	yes
-.endif
-
 post-install:
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} \
 		"${DOC_FILES}" ${STAGEDIR}${DOCSDIR})
 	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} \
 		"${DOC_DOCFILES}" ${STAGEDIR}${DOCSDIR})
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

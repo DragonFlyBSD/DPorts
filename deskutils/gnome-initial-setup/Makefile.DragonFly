@@ -1,3 +1,4 @@
 
 # missing dep
 USES+=	gssapi:mit
+IGNORE=   unmaintained, please request fixing to users mailing list

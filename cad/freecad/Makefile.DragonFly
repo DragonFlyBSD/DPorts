@@ -2,3 +2,4 @@
 # filter mpi
 LIB_DEPENDS:=	${LIB_DEPENDS:Nlibmpi*}
 CMAKE_ARGS:=	${CMAKE_ARGS:N-DOPENMPI_INCLUDE_DIRS*}
+IGNORE=   unmaintained, please request fixing to users mailing list

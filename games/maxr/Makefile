@@ -1,18 +1,19 @@
 PORTNAME=	maxr
-PORTVERSION=	0.2.9
-PORTREVISION=	3
+DISTVERSIONPREFIX=	release-
+DISTVERSION=	0.2.12
 CATEGORIES=	games
-MASTER_SITES=	https://www.maxr.org/downloads/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Mechanized Assault and Exploration Reloaded
-WWW=		https://www.maxr.org/
+WWW=		https://www.maxr.org/ \
+		https://github.com/maxr-dot-org/maxr/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/data/COPYING
 
-USES=		cmake compiler:c++11-lib dos2unix sdl
-DOS2UNIX_FILES=	src/config/selectplatformconfig.h
+USES=		cmake compiler:c++17-lang sdl
+USE_GITHUB=	yes
+GH_ACCOUNT=	maxr-dot-org
 USE_SDL=	sdl2 mixer2 net2
 
 PLIST_FILES=	bin/${PORTNAME}

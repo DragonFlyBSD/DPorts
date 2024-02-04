@@ -1,8 +1,17 @@
 diff --git base/BUILD.gn base/BUILD.gn
-index 376f8cc0e8b..1d2888604d0 100644
+index 8afda7a59cf..3578f0e7c31 100644
 --- base/BUILD.gn
 +++ base/BUILD.gn
-@@ -2094,7 +2094,7 @@ component("base") {
+@@ -957,7 +957,7 @@ component("base") {
+     #"system/sys_info_openbsd.cc",
+   ]
+ 
+-  if (is_apple || current_os == "freebsd" || current_os == "openbsd") {
++  if (is_apple || current_os == "freebsd" || current_os == "openbsd" || current_os == "dragonfly") {
+     sources += [
+       "posix/sysctl.cc",
+       "posix/sysctl.h",
+@@ -2107,7 +2107,7 @@ component("base") {
        "process/process_metrics_openbsd.cc",
        "system/sys_info_openbsd.cc",
      ]

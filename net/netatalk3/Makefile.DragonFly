@@ -2,3 +2,4 @@ OPTIONS_EXCLUDE+=	KERBEROS
 
 CONFIGURE_ARGS+=	--with-lockfile=/var/spool/lock/netatalk
 
+IGNORE=   unmaintained, please request fixing to users mailing list

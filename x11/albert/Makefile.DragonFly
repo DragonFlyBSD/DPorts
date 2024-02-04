@@ -5,3 +5,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
 		${WRKSRC}/CMakeLists.txt \
 		${WRKSRC}/lib/globalshortcut/CMakeLists.txt
+IGNORE=   unmaintained, please request fixing to users mailing list

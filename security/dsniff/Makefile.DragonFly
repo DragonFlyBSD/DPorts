@@ -12,3 +12,4 @@ USES+=	ssl
 dfly-patch:
 	${REINPLACE_CMD} -e "s@-lmd@-L${LOCALBASE}/lib -lcrypto@g" \
 		${WRKSRC}/Makefile.in
+IGNORE=   unmaintained, please request fixing to users mailing list

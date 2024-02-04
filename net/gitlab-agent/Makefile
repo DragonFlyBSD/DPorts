@@ -1,7 +1,7 @@
 PORTNAME=	gitlab-agent
-PORTVERSION=	16.1.3
-PORTREVISION=	2
+PORTVERSION=	16.4.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -21,7 +21,7 @@ _BUILD_DATE=	$$(date -u "+%Y-%m-%d-%H%M UTC")
 GO_BUILDFLAGS= -tags="tracer_static,tracer_static_jaeger" \
 		-ldflags=" \
 		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v16/cmd.Version=v${PORTVERSION}' \
-		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v16/cmd.Commit=${GL_COMMIT:C/^(........).*/\1/}' \
+		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v16/cmd.Commit=${GL_TAGNAME:C/^(........).*/\1/}' \
 		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v16/cmd.BuildTime=${_BUILD_DATE}'"
 GO_TARGET=     ./cmd/kas
 

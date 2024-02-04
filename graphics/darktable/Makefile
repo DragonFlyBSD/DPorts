@@ -1,13 +1,12 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	darktable
-PORTVERSION=	3.8.1
-PORTREVISION=	6
+PORTVERSION=	4.4.2
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/darktable-org/${PORTNAME}/releases/download/release-${PORTVERSION:C/\.rc/rc/}/
 
 MAINTAINER=	dumbbell@FreeBSD.org
 COMMENT=	Virtual lighttable and darkroom for photographers
+WWW=		https://www.darktable.org/
 
 LICENSE=	GPLv3
 
@@ -19,30 +18,33 @@ BUILD_DEPENDS=	iso-codes>=0:misc/iso-codes \
 		po4a-translate:textproc/po4a \
 		xsltproc:textproc/libxslt \
 		bash:shells/bash
-LIB_DEPENDS=	libcolord-gtk.so:graphics/colord-gtk \
+LIB_DEPENDS=	libavif.so:graphics/libavif \
+		libcolord-gtk.so:graphics/colord-gtk \
 		libcolord.so:graphics/colord \
 		libcurl.so:ftp/curl \
 		libexiv2.so:graphics/exiv2 \
+		libgphoto2.so:graphics/libgphoto2 \
 		libharfbuzz.so:print/harfbuzz \
 		libheif.so:graphics/libheif \
 		libicui18n.so:devel/icu \
+		libImath.so:math/Imath \
 		libjasper.so:graphics/jasper \
 		libjson-glib-1.0.so:devel/json-glib \
+		libjxl_threads.so:graphics/libjxl \
 		liblcms2.so:graphics/lcms2 \
 		liblensfun.so:graphics/lensfun \
+		libOpenEXR.so:graphics/openexr \
+		libopenjp2.so:graphics/openjpeg \
+		libosmgpsmap-1.0.so:x11-toolkits/osm-gps-map \
 		libpng.so:graphics/png \
 		libpugixml.so:textproc/pugixml \
 		libsoup-2.4.so:devel/libsoup \
-		libtiff.so:graphics/tiff
+		libtiff.so:graphics/tiff \
+		libwebp.so:graphics/webp
 
-# Fix build against cmake-3.21: the ninja generator in 3.21 suffers a
-# regression (see https://gitlab.kitware.com/cmake/cmake/-/issues/22487)
-# appending an invalid "-Wl,--no-as-needed" to the linker arguments for static
-# libraries.  Once this regression has been fixed upstream, this can be
-# switched back to USES=cmake, and LTO can be re-enabled.
-USES=		cmake compiler:c++14-lang desktop-file-utils gl gnome jpeg \
-		perl5 pkgconfig sdl shebangfix sqlite tar:xz xorg
-OPTIONS_EXCLUDE=LTO
+USES=		cmake compiler:gcc-c++11-lib desktop-file-utils gl gnome jpeg \
+		llvm:15,build lua:54 perl5 pkgconfig sdl shebangfix sqlite \
+		tar:xz xorg
 USE_GL=		gl
 USE_GNOME=	cairo gtk30 intltool librsvg2 libxml2
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
@@ -51,46 +53,33 @@ USE_XORG=	ice sm x11 xext xrandr
 
 SHEBANG_FILES=	tools/*.sh
 
-CMAKE_ARGS+=	-DBINARY_PACKAGE_BUILD=1 \
-		-DBUILD_CMSTEST:BOOL=ON \
-		-DUSE_KWALLET:BOOL=ON
+CMAKE_ARGS+=	-DBINARY_PACKAGE_BUILD=1 -DUSE_PORTMIDI:BOOL=OFF
 
-CFLAGS+=	-fopenmp
+CMAKE_BOOL+=	BUILD_CMSTEST USE_AVIF USE_CAMERA_SUPPORT USE_HEIF \
+		USE_KWALLET USE_LUA USE_MAP USE_OPENEXR USE_OPENJPEG \
+		USE_WEBP RAWSPEED_ENABLE_LTO
+
+CFLAGS+=	-fopenmp -I${LOCALBASE}/include/Imath
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:C/\.rc/~rc/}
 
-OPTIONS_DEFINE=		AVIF DOCS GEO GPHOTO GMIC GRAPHMAGICK HEIF LIBSECRET LTO \
-			LUA NLS OPENEXR OPENJPEG PRINT TOOLS WEBP
-OPTIONS_DEFAULT=	AVIF GEO GPHOTO HEIF LUA OPENEXR OPENJPEG PRINT WEBP
+OPTIONS_DEFINE=		DOCS GMIC GRAPHMAGICK LIBSECRET NLS PRINT TOOLS
+OPTIONS_DEFAULT=	PRINT
 OPTIONS_SUB=		yes
 
-GEO_DESC=		Support geotagging
 GMIC_DESC=		Support G'Mic-compressed LUT in lut3d
 LIBSECRET_DESC=		Support libsecret as password backend
-
-GEO_LIB_DEPENDS=	libosmgpsmap-1.0.so:x11-toolkits/osm-gps-map
-GEO_CMAKE_BOOL=		USE_MAP
+TOOLS_DESC=		Install additional scripts
 
 GMIC_LIB_DEPENDS=	libgmic.so:graphics/gmic
 GMIC_CMAKE_BOOL=	USE_GMIC
 
-GPHOTO_LIB_DEPENDS=	libgphoto2.so:graphics/libgphoto2
-GPHOTO_CMAKE_BOOL=	USE_CAMERA_SUPPORT
-
 GRAPHMAGICK_LIB_DEPENDS=libGraphicsMagick.so:graphics/GraphicsMagick
 GRAPHMAGICK_CMAKE_BOOL=	USE_GRAPHICSMAGICK
 
-AVIF_LIB_DEPENDS=	libavif.so:graphics/libavif
-AVIF_CMAKE_BOOL=	USE_AVIF
-
 LIBSECRET_LIB_DEPENDS=	libsecret-1.so:security/libsecret
 LIBSECRET_CMAKE_BOOL=	USE_LIBSECRET
-
-LTO_CMAKE_BOOL=		RAWSPEED_ENABLE_LTO
-
-LUA_USES=		lua:54
-LUA_CMAKE_BOOL=		USE_LUA
 
 # FIXME: Even with NLS turned off, darktable(1) is still linked to
 # libintl.so.
@@ -99,27 +88,41 @@ NLS_USES_OFF=		gettext-runtime
 NLS_CMAKE_BOOL=		USE_NLS
 NLS_LDFLAGS=		-L${LOCALBASE}/lib -lintl
 
-OPENEXR_LIB_DEPENDS=	libOpenEXR.so:graphics/openexr \
-			libImath.so:math/Imath
-OPENEXR_CFLAGS=		-I${LOCALBASE}/include/Imath
-OPENEXR_CMAKE_BOOL=	USE_OPENEXR
-
-OPENJPEG_LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg
-OPENJPEG_CMAKE_BOOL=	USE_OPENJPEG
-
 PRINT_LIB_DEPENDS=	libcups.so:print/cups
 PRINT_CMAKE_BOOL=	BUILD_PRINT
 
-TOOLS_DESC=		Install additional scripts
 TOOLS_BUILD_DEPENDS=	exiftool:graphics/p5-Image-ExifTool
 TOOLS_RUN_DEPENDS=	exiftool:graphics/p5-Image-ExifTool
 
-WEBP_LIB_DEPENDS=	libwebp.so:graphics/webp
-WEBP_CMAKE_BOOL=	USE_WEBP
-
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == aarch64
+.if ${OPSYS}_${OSREL:R} == FreeBSD_12
+# Darktable fails to compile with GCC 13+ on FreeBSD 12.x with the following
+# error:
+#
+#   In file included from /usr/include/c++/v1/__functional/weak_result_type.h:16,
+#                    from /usr/include/c++/v1/__functional/invoke.h:14,
+#                    from /usr/include/c++/v1/__functional_base:15,
+#                    from /usr/include/c++/v1/string:520,
+#                    from .../work/darktable-4.4.2/src/external/rawspeed/src/librawspeed/common/ChecksumFile.h:23,
+#                    from .../work/darktable-4.4.2/src/external/rawspeed/src/librawspeed/common/ChecksumFile.cpp:21:
+#   /usr/include/c++/v1/type_traits:1770:8: error: expected identifier before '__is_convertible'
+#    1770 | struct __is_convertible
+#         |        ^~~~~~~~~~~~~~~~
+#
+# This seems to be an incompatibility between GCC 13+ and libcxx provided with
+# FreeBSD 12.x. The workarounbd is to force the use of GCC 12 on this version
+# of FreeBSD.
+#
+# See:
+#   https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=273397
+#   https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=273681
+USE_GCC=	12
+.else
+USE_GCC=	yes
+.endif
+
+.if ${ARCH} == aarch64 || ${ARCH} == powerpc64le
 CMAKE_ARGS+=	-DUSE_OPENCL:BOOL=OFF
 CXXFLAGS+=	-DGDK_DISABLE_DEPRECATED
 PLIST_SUB+=	NO_OPENCL="@comment "
@@ -128,17 +131,6 @@ PLIST_SUB+=	NO_OPENCL=""
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${CHOSEN_COMPILER_TYPE} == clang && ${OPSYS} == FreeBSD || ${ARCH} == "i386"
-LLVM_DEFAULT=	13
-BUILD_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
-CC=		${LOCALBASE}/bin/clang${LLVM_DEFAULT}
-CPP=		${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT}
-CXX=		${LOCALBASE}/bin/clang++${LLVM_DEFAULT}
-LD=		${LOCALBASE}/bin/ld.lld${LLVM_DEFAULT}
-BINARY_ALIAS+=	ld.lld=${LOCALBASE}/bin/ld.lld${LLVM_DEFAULT}
-BINARY_ALIAS+=	llvm-objcopy=${LOCALBASE}/bin/llvm-objcopy${LLVM_DEFAULT}
-.endif
 
 # work around CMAKE/CCACHE flaw (cmake stomps over ccache)
 .if "${WITH_CCACHE_BUILD}" == "yes" && !defined(NO_CCACHE)

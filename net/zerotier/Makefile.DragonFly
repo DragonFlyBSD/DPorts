@@ -1,5 +1,4 @@
-
 BUILD_DEPENDS:=	${BUILD_DEPENDS:N*binutils}
 
-SUB_LIST+=     ZEROTIER_SYSLOG=""
-SUB_LIST+=     ZEROTIER_IF_TAP="if_tap"
+SUB_LIST+=	ZEROTIER_SYSLOG="-s debug -T zerotier"
+SUB_LIST+=	ZEROTIER_IF_TAP="if_tap"

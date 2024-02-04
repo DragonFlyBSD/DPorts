@@ -5,3 +5,4 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 dfly-patch:
 	${REINPLACE_CMD} -e 's@/usr/include/[^[:space:]]*\.h@@g'	\
 		${WRKSRC}/surf/Makefile
+IGNORE=   unmaintained, please request fixing to users mailing list

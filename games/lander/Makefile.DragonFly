@@ -2,3 +2,4 @@
 dfly-patch:
 	${REINPLACE_CMD} -e '/using namespace std::tr1;/d' \
 		${WRKSRC}/src/Platform.hpp
+IGNORE=   unmaintained, please request fixing to users mailing list

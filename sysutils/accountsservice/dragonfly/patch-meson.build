@@ -1,11 +1,11 @@
---- meson.build.orig	2021-06-10 09:28:35.600462000 +0200
-+++ meson.build	2021-06-10 09:28:55.820008000 +0200
-@@ -79,7 +79,7 @@
+--- meson.build.orig	2024-01-06 17:51:36 UTC
++++ meson.build
+@@ -91,7 +91,7 @@ if cc.has_header_symbol('utmpx.h', 'WTMP
+   path_wtmp = result.stdout().strip()
  
- if cc.has_header_symbol('utmpx.h', 'WTMPX_FILENAME', prefix: '#define _GNU_SOURCE')
    config_h.set('PATH_WTMP', 'WTMPX_FILENAME')
 -elif cc.has_header_symbol('paths.h', '_PATH_WTMPX')
 +elif cc.has_header_symbol('utmpx.h', '_PATH_WTMPX')
-   config_h.set('PATH_WTMP', '_PATH_WTMPX')
- else
-   # Ugly hack for jails builders!
+   code = '''#include <paths.h>
+   #include <stdio.h>
+   int main (int argc, char **argv) {

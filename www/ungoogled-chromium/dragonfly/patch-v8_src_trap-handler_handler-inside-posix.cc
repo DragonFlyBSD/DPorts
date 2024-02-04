@@ -1,5 +1,5 @@
 diff --git v8/src/trap-handler/handler-inside-posix.cc v8/src/trap-handler/handler-inside-posix.cc
-index f7b241920fd..60672b36043 100644
+index e20835e289a..6b83624b628 100644
 --- v8/src/trap-handler/handler-inside-posix.cc
 +++ v8/src/trap-handler/handler-inside-posix.cc
 @@ -27,7 +27,7 @@
@@ -11,8 +11,8 @@ index f7b241920fd..60672b36043 100644
  #include <ucontext.h>
  #elif V8_OS_DARWIN
  #include <sys/ucontext.h>
-@@ -57,7 +57,7 @@ namespace trap_handler {
- #define CONTEXT_REG(reg, REG) &uc->uc_mcontext.gregs[REG_##REG]
+@@ -59,7 +59,7 @@ namespace trap_handler {
+ #define CONTEXT_REG(reg, REG) &uc->uc_mcontext->__ss.__x[REG]
  #elif V8_OS_DARWIN
  #define CONTEXT_REG(reg, REG) &uc->uc_mcontext->__ss.__##reg
 -#elif V8_OS_FREEBSD

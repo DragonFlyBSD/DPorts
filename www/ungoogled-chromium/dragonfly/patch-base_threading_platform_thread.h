@@ -1,8 +1,8 @@
 diff --git base/threading/platform_thread.h base/threading/platform_thread.h
-index 88714870a2c..ce3fc199b88 100644
+index f0740c11906..8c76e252919 100644
 --- base/threading/platform_thread.h
 +++ base/threading/platform_thread.h
-@@ -44,6 +44,8 @@ typedef zx_handle_t PlatformThreadId;
+@@ -47,6 +47,8 @@ typedef zx_handle_t PlatformThreadId;
  typedef mach_port_t PlatformThreadId;
  #elif BUILDFLAG(IS_POSIX)
  typedef pid_t PlatformThreadId;

@@ -4,3 +4,4 @@ LIB_DEPENDS:=	${LIB_DEPENDS:Nlibfabric*:Nlibmpi*}
 OPTIONS_DEFINE+=	MPI
 MPI_LIB_DEPENDS+=	libfabric.so:net/libfabric libmpi.so:net/openmpi
 PLIST_SUB+=	MPI="@comment "
+IGNORE=   unmaintained, please request fixing to users mailing list

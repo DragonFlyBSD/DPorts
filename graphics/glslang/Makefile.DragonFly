@@ -1,1 +1,2 @@
 USES+= python:build
+USE_GCC_VERSION=12

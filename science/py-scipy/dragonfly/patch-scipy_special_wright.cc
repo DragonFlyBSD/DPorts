@@ -1,10 +1,9 @@
---- scipy/special/wright.cc.orig	2023-05-01 18:37:44 UTC
+--- scipy/special/wright.cc.orig	2023-10-22 02:07:16 UTC
 +++ scipy/special/wright.cc
-@@ -73,6 +73,7 @@
- /**********************************************************************/
- 
+@@ -1,5 +1,6 @@
  #include <Python.h>
+ #include "wright.hh"
 +using namespace std;
- extern "C" {
- #include <math.h>
- #include "sf_error.h"
+ 
+ /**********************************************************************/
+ /* wrightomega is the simple routine for evaluating the wright omega  */

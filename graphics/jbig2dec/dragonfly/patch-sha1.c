@@ -1,4 +1,4 @@
---- sha1.c.intermediate	2019-04-22 17:03:22 UTC
+--- sha1.c.orig	2023-10-24 09:27:08 UTC
 +++ sha1.c
 @@ -87,7 +87,7 @@ A million repetitions of "a"
  
@@ -40,7 +40,7 @@
  
  /* Add padding and return the message digest. */
  void
--SHA1_Final(SHA1_CTX *context, uint8_t digest[SHA1_DIGEST_SIZE])
+-SHA1_Final(uint8_t digest[SHA1_DIGEST_SIZE], SHA1_CTX *context)
 +SHA1_Final(uint8_t digest[SHA1_DIGEST_SIZE], SHA_CTX *context)
  {
      uint32_t i;
@@ -63,21 +63,3 @@
      uint8_t digest[20];
      char output[80];
  
-@@ -350,7 +350,7 @@ main(int argc, char **argv)
-     for (k = 0; k < 2; k++) {
-         SHA1_Init(&context);
-         SHA1_Update(&context, (uint8_t *) test_data[k], strlen(test_data[k]));
--        SHA1_Final(&context, digest);
-+        SHA1_Final(digest, &context);
-         digest_to_hex(digest, output);
- 
-         if (strcmp(output, test_results[k])) {
-@@ -365,7 +365,7 @@ main(int argc, char **argv)
-     SHA1_Init(&context);
-     for (k = 0; k < 1000000; k++)
-         SHA1_Update(&context, (uint8_t *) "a", 1);
--    SHA1_Final(&context, digest);
-+    SHA1_Final(digest, &context);
-     digest_to_hex(digest, output);
-     if (strcmp(output, test_results[2])) {
-         fprintf(stdout, "FAIL\n");

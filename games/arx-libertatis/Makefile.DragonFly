@@ -7,3 +7,4 @@ dfly-patch:
 			 -e 's@$${VERSION_4}@Rhaa Movis Z@g'	\
 			 -e 's@$${AUTHORS}@ARX LIBERTATIS CONTRIBUTORS@g'	\
 		${WRKSRC}/src/core/Version.cpp.in
+IGNORE=   unmaintained, please request fixing to users mailing list

@@ -1,5 +1,5 @@
 diff --git base/threading/platform_thread_posix.cc base/threading/platform_thread_posix.cc
-index d17fcfa838d..61bb797b4f1 100644
+index 97a8940101a..faeaacd1a00 100644
 --- base/threading/platform_thread_posix.cc
 +++ base/threading/platform_thread_posix.cc
 @@ -14,6 +14,10 @@

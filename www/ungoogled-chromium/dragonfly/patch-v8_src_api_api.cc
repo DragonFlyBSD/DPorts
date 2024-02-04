@@ -1,5 +1,5 @@
 diff --git v8/src/api/api.cc v8/src/api/api.cc
-index 20b3c004a0d..a4987c51b46 100644
+index 9f74cd03940..f31ad24743b 100644
 --- v8/src/api/api.cc
 +++ v8/src/api/api.cc
 @@ -141,7 +141,8 @@
@@ -12,7 +12,7 @@ index 20b3c004a0d..a4987c51b46 100644
  #include <signal.h>
  #include <unistd.h>
  
-@@ -6336,7 +6337,8 @@ bool v8::V8::Initialize(const int build_config) {
+@@ -6356,7 +6357,8 @@ bool v8::V8::Initialize(const int build_config) {
    return true;
  }
  

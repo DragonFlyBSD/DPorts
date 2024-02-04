@@ -1,5 +1,5 @@
 PORTNAME=	mongo
-PORTVERSION=	2.18.2
+PORTVERSION=	2.19.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -19,6 +19,9 @@ NO_ARCH=	yes
 PLIST_FILES=	bin/mongo_console
 
 post-patch:
-	@${RM} ${WRKSRC}/spec/support/ocsp
+	@${TOUCH} ${WRKSRC}/spec/support/ocsp
+
+post-install:
+	@${RM} ${STAGEDIR}${PREFIX}${GEM_LIB_DIR}/spec/support/ocsp
 
 .include <bsd.port.mk>

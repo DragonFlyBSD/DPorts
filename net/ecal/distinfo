@@ -1,0 +1,11 @@
+TIMESTAMP = 1691649141
+SHA256 (eclipse-ecal-ecal-v5.12.0_GH0.tar.gz) = 5a0e575a73ab54b4ec2e48815af13860ce9fda43c9fa46341e244a543ccb1dd5
+SIZE (eclipse-ecal-ecal-v5.12.0_GH0.tar.gz) = 9898695
+SHA256 (eclipse-ecal-tcp_pubsub-f59da78_GH0.tar.gz) = 710aa091c5ee97336f37d9bcfacfc7618a3b5b0bd2aec174475aba26988c1f7f
+SIZE (eclipse-ecal-tcp_pubsub-f59da78_GH0.tar.gz) = 33431
+SHA256 (brofield-simpleini-9b3ed7e_GH0.tar.gz) = e938e6e2db34bc545275b8c7f5808b45f18f33dd752a21d3621b9b1ba1e0385f
+SIZE (brofield-simpleini-9b3ed7e_GH0.tar.gz) = 62804
+SHA256 (steinwurf-recycle-c542570_GH0.tar.gz) = b39306b685538a18e6b817e030c30250b3ee21e2cec1e58b745bd7de2f23f1ee
+SIZE (steinwurf-recycle-c542570_GH0.tar.gz) = 133558
+SHA256 (xguerin-tclap-349170a_GH0.tar.gz) = 80d1708611f7964d798202025b82c8f9aef99db06c8dfc603b412a53d54e3837
+SIZE (xguerin-tclap-349170a_GH0.tar.gz) = 127841

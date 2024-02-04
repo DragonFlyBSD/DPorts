@@ -1,15 +1,18 @@
---- cmake/external/jemalloc/CMakeLists.txt.orig	2022-12-28 11:35:51 UTC
+--- cmake/external/jemalloc/CMakeLists.txt.orig	2023-11-13 07:22:58 UTC
 +++ cmake/external/jemalloc/CMakeLists.txt
-@@ -34,10 +34,8 @@ include(ExternalProject)
+@@ -37,12 +37,10 @@ include(ExternalProject)
  ExternalProject_Add(jemalloc
      URL ${third_party_loc}/jemalloc
      CONFIGURE_COMMAND env
 -        CC=clang
 -        CXX=clang++
--        "$<IF:$<OR:$<NOT:$<BOOL:${DESKTOP_APP_USE_PACKAGED}>>,$<BOOL:${DESKTOP_APP_SPECIAL_TARGET}>>,EXTRA_CFLAGS=$<$<BOOL:${DESKTOP_APP_SPECIAL_TARGET}>:-Ofast> -fstack-protector-all -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS,=>"
--        "$<IF:$<OR:$<NOT:$<BOOL:${DESKTOP_APP_USE_PACKAGED}>>,$<BOOL:${DESKTOP_APP_SPECIAL_TARGET}>>,EXTRA_CXXFLAGS=$<$<BOOL:${DESKTOP_APP_SPECIAL_TARGET}>:-Ofast> -fstack-protector-all -DNDEBUG -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS,=>"
+-        "$<IF:$<OR:$<NOT:$<BOOL:${DESKTOP_APP_USE_PACKAGED}>>,$<BOOL:${DESKTOP_APP_SPECIAL_TARGET}>>,EXTRA_CFLAGS=-fno-omit-frame-pointer -fstack-protector-all -fstack-clash-protection -fcf-protection -DNDEBUG -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS,=>"
+-        "$<IF:$<OR:$<NOT:$<BOOL:${DESKTOP_APP_USE_PACKAGED}>>,$<BOOL:${DESKTOP_APP_SPECIAL_TARGET}>>,EXTRA_CXXFLAGS=-fno-omit-frame-pointer -fstack-protector-all -fstack-clash-protection -fcf-protection -DNDEBUG -D_FORTIFY_SOURCE=3 -D_GLIBCXX_ASSERTIONS,=>"
 +        CC=cc
 +        CXX=c++
          ./autogen.sh --disable-shared
+-    BUILD_COMMAND make $<$<NOT:$<EQUAL:${N},0>>:-j${N}>
++    BUILD_COMMAND gmake -j${N}
      BUILD_IN_SOURCE 1
      STEP_TARGETS build
+     EXCLUDE_FROM_ALL TRUE

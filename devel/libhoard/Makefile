@@ -1,5 +1,3 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org>
-
 PORTNAME=	libhoard
 PORTVERSION=	3.13
 CATEGORIES=	devel
@@ -8,6 +6,7 @@ DISTNAME=	hoard-release
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast, scalable, and memory-efficient allocator for MP
+WWW=		http://www.hoard.org/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/../COPYING

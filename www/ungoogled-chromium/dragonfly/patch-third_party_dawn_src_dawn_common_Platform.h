@@ -1,8 +1,8 @@
 diff --git third_party/dawn/src/dawn/common/Platform.h third_party/dawn/src/dawn/common/Platform.h
-index 6faa850ed58..78dff81a9e7 100644
+index 7833c5322f9..2fca89f0383 100644
 --- third_party/dawn/src/dawn/common/Platform.h
 +++ third_party/dawn/src/dawn/common/Platform.h
-@@ -46,7 +46,7 @@
+@@ -59,7 +59,7 @@
  #error "Unsupported Windows platform."
  #endif
  

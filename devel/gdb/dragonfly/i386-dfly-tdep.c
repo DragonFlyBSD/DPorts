@@ -77,7 +77,13 @@ int i386dfly_sc_reg_offset[] =
 static void
 i386dfly_init_abi (struct gdbarch_info info, struct gdbarch *gdbarch)
 {
-  struct gdbarch_tdep *tdep = gdbarch_tdep (gdbarch);
+  i386_gdbarch_tdep *tdep = gdbarch_tdep<i386_gdbarch_tdep> (gdbarch);
+
+  /* Generic DragonFly support. */
+  dfly_init_abi (info, gdbarch);
+
+  /* Obviously DragonFly is BSD-based.  */
+  i386bsd_init_abi (info, gdbarch);
 
   i386_elf_init_abi(info, gdbarch);
 
@@ -94,10 +100,9 @@ i386dfly_init_abi (struct gdbarch_info info, struct gdbarch *gdbarch)
 
 
 /* Provide a prototype to silence -Wmissing-prototypes.  */
-void _initialize_i386dfly_tdep (void);
-
+void _initialize_i386dfly_tdep ();
 void
-_initialize_i386dfly_tdep (void)
+_initialize_i386dfly_tdep ()
 {
   gdbarch_register_osabi (bfd_arch_i386, 0, GDB_OSABI_DRAGONFLY,
 			  i386dfly_init_abi);

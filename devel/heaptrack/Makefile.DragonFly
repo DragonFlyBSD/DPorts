@@ -10,3 +10,4 @@ dfly-patch:
 		${WRKSRC}/tests/auto/CMakeLists.txt \
 		${WRKSRC}/src/track/heaptrack.sh.cmake \
 		${WRKSRC}/CMakeLists.txt
+IGNORE=   unmaintained, please request fixing to users mailing list

@@ -1,3 +1,6 @@
 USE_GCC_VERSION=    11
 
+# bmake not handling escaped spaces correctly?
+USES+=		gmake
+
 LDFLAGS+=	"-Wl,-z,origin"

@@ -1,1 +1,2 @@
 CXXFLAGS+=	-Wno-narrowing
+USE_GCC_VERSION=12

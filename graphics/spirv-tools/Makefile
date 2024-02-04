@@ -1,14 +1,13 @@
 PORTNAME=	spirv-tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2023.2
-PORTREVISION=	3
+DISTVERSION=	2023.4.rc2
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	d4c0abdcad60.patch:-p1 # https://github.com/KhronosGroup/SPIRV-Tools/pull/5178
-PATCHFILES+=	0ce36ad7856e.patch:-p1 # https://github.com/KhronosGroup/SPIRV-Tools/pull/5178
-PATCHFILES+=	d33bea584707.patch:-p1 # https://github.com/KhronosGroup/SPIRV-Tools/pull/5257
-PATCHFILES+=	daee1e7d3470.patch:-p1 # https://github.com/KhronosGroup/SPIRV-Tools/pull/5274
+PATCHFILES+=	6520d83effb2.patch:-p1 # https://github.com/KhronosGroup/SPIRV-Tools/pull/5376
+PATCHFILES+=	714966003d58.patch:-p1 # https://github.com/KhronosGroup/SPIRV-Tools/pull/5375
+PATCHFILES+=	ee7598d49798.patch:-p1 # https://github.com/KhronosGroup/SPIRV-Tools/pull/5355
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Tools for processing SPIR-V intermediate shader language modules
@@ -23,7 +22,7 @@ SHEBANG_FILES=	tools/lesspipe/spirv-lesspipe.sh
 USE_GITHUB=	yes
 GH_ACCOUNT=	KhronosGroup
 GH_PROJECT=	SPIRV-Tools
-GH_TUPLE=	KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-245-g1feaf44:headers/external/spirv-headers
+GH_TUPLE=	KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-292-gf1ba373:headers/external/spirv-headers
 
 CMAKE_ON=	SPIRV_SKIP_TESTS
 

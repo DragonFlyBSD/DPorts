@@ -1,6 +1,6 @@
 PORTNAME=	snmp
 PORTVERSION=	5.9.1
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/net-${PORTNAME}/net-${PORTNAME}/${PORTVERSION} \
@@ -78,8 +78,8 @@ TLS_CONFIGURE_ON=	--with-security-modules=tsm --with-transports=TLSTCP,DTLSUDP
 PYDISTUTILS_PKGNAME?=		netsnmp-python
 PYDISTUTILS_PKGVERSION?=	1.0a1
 USES+=		python
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR}
-BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR}
+RUN_DEPENDS+=	${PY_SETUPTOOLS}
+BUILD_DEPENDS+=	${PY_SETUPTOOLS}
 CONFIGURE_ARGS+=--with-python-modules
 CONFIGURE_ENV+=	PYTHONPROG="${PYTHON_CMD}"
 MAKE_ENV+=	PYDISTUTILS_INSTALLARGS="${PYDISTUTILS_INSTALLARGS}" STAGEDIR="${STAGEDIR}"
@@ -246,6 +246,8 @@ post-patch:
 .endif
 	@${CP} ${WRKSRC}/include/net-snmp/system/freebsd12.h \
 		${WRKSRC}/include/net-snmp/system/freebsd13.h
+	@${CP} ${WRKSRC}/include/net-snmp/system/freebsd14.h \
+		${WRKSRC}/include/net-snmp/system/freebsd15.h
 .for header in darwin7.h darwin8.h darwin9.h darwin10.h darwin11.h darwin12.h \
 	darwin13.h darwin14.h darwin15.h darwin16.h darwin17.h
 	@${CP} ${WRKSRC}/include/net-snmp/system/darwin.h \

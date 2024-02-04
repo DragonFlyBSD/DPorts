@@ -2,7 +2,7 @@ PORTNAME=	anope
 PORTVERSION=	2.0.14
 CATEGORIES=	irc
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	devnull@apt322.org
 COMMENT=	Set of IRC services for IRC networks
 WWW=		https://www.anope.org/
 

@@ -6,3 +6,4 @@ LDFLAGS+=	-L${LOCALBASE}/cxxfs_gcc8
 
 # missing dep
 LDFLAGS+=	-lexecinfo
+IGNORE=   unmaintained, please request fixing to users mailing list

@@ -1,5 +1,5 @@
 PORTNAME=	powder-toy
-DISTVERSION=	snapshot-257
+DISTVERSION=	snapshot-260
 CATEGORIES=	games
 PKGNAMESUFFIX=	-devel
 
@@ -28,6 +28,8 @@ USE_SDL=	sdl2
 MESON_ARGS=	-Dapp_exe="${PORTNAME}"
 
 CONFLICTS_INSTALL=powder-toy
+
+PORTSCOUT=	limit:^snapshot
 
 PORTDOCS=	README.md changelog.txt
 

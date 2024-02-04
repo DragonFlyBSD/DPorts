@@ -4,3 +4,4 @@ dfly-patch:
 		${WRKSRC}/plugin/seq/load.link.in
 	${REINPLACE_CMD} -e 's@|FreeBSD@|DragonFly&@g' \
 		${WRKSRC}/plugin/seq/mkdll-ff.sh
+IGNORE=   unmaintained, please request fixing to users mailing list

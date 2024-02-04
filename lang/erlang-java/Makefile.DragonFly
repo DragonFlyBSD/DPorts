@@ -1,1 +1,2 @@
 USES+=	ncurses
+IGNORE=   unmaintained, please request fixing to users mailing list

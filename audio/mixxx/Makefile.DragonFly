@@ -1,3 +1,4 @@
 
 # no ninja
 USES:=	${USES:Nninja} gmake
+IGNORE=   unmaintained, please request fixing to users mailing list

@@ -5,3 +5,4 @@ USE_CLANG_FALLBACK=	default
 dfly-patch:
 	${REINPLACE_CMD} -e 's@CRASH_HANDLER_ENABLED 1@NOCRASH@g' \
 		${WRKSRC}/platform/x11/crash_handler_x11.cpp
+IGNORE=   unmaintained, please request fixing to users mailing list

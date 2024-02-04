@@ -1,1 +1,2 @@
 CFLAGS+=	-std=c++98
+IGNORE=   unmaintained, please request fixing to users mailing list

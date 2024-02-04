@@ -1,9 +1,11 @@
 PORTNAME=	tcping
-PORTVERSION=	1.22.1
-PORTREVISION=	2
+PORTVERSION=	2.4.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	net
+MASTER_SITES=	https://raw.githubusercontent.com/${GH_ACCOUNT}/${PORTNAME}/${DISTVERSIONFULL}/:gomod
 PKGNAMEPREFIX=	go-
+DISTFILES=	go.mod:gomod
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Command-line utility to ping TCP ports written in Go

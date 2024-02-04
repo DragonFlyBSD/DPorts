@@ -6,3 +6,4 @@ PLIST= ${WRKDIR}/pulseless-plist
 # gut it out
 dfly-patch:
 	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/pulseaudio/d' > ${PLIST}
+IGNORE=   unmaintained, please request fixing to users mailing list

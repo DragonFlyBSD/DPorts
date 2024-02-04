@@ -1,7 +1,10 @@
 PORTNAME=	audacity
 DISTVERSIONPREFIX=	Audacity-
-DISTVERSION=	3.2.4
+DISTVERSION=	3.4.2
 CATEGORIES=	audio
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	4c833569fb12.patch:-p1
 
 MAINTAINER=	xxjack12xx@gmail.com
 COMMENT=	GUI editor for digital audio waveforms
@@ -14,11 +17,13 @@ BUILD_DEPENDS=	conan:sysutils/conan
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libcurl.so:ftp/curl \
 		libexpat.so:textproc/expat2 \
+		libopenjp2.so:graphics/openjpeg \
 		libmp3lame.so:audio/lame \
 		libmpg123.so:audio/mpg123 \
 		libopus.so:audio/opus \
 		libportaudio.so:audio/portaudio \
 		libportmidi.so:audio/portmidi \
+		libpng.so:graphics/png \
 		libsndfile.so:audio/libsndfile \
 		libsoxr.so:audio/libsoxr \
 		libsqlite3.so:databases/sqlite3 \
@@ -33,11 +38,12 @@ USE_GNOME=	cairo gdkpixbuf2 gtk30
 USE_WX=		3.2+
 CPE_VENDOR=	audacityteam
 WX_COMPS=	wx
-PORTDOCS=	README.txt
+PORTDOCS=	README.md
 
 CMAKE_ARGS=	-Daudacity_lib_preference:STRING=system \
 		-Daudacity_use_curl:STRING=system \
 		-Daudacity_use_expat:STRING=system \
+		-Daudacity_use_jpeg:STRING=system \
 		-Daudacity_use_libmp3lame:STRING=system \
 		-Daudacity_use_libmpg123:STRING=system \
 		-Daudacity_use_libopus:STRING=system \
@@ -47,9 +53,9 @@ CMAKE_ARGS=	-Daudacity_lib_preference:STRING=system \
 		-Daudacity_use_portaudio:STRING=system \
 		-Daudacity_use_portmixer:STRING=local \
 		-Daudacity_use_portsmf:STRING=local \
+		-Daudacity_use_png:STRING=system \
 		-Daudacity_use_soxr:STRING=system \
 		-Daudacity_use_sqlite:STRING=system \
-		-Daudacity_use_uuid:STRING=system \
 		-Daudacity_use_wavpack=system \
 		-Daudacity_use_wxwidgets:STRING=system \
 		-Daudacity_use_zlib:STRING=system
@@ -147,6 +153,13 @@ VST_CMAKE_BOOL=		audacity_use_vst
 CMAKE_ARGS+=	-DHAVE_MMX:BOOL=OFF \
 		-DHAVE_SSE:BOOL=OFF \
 		-DHAVE_SSE2:BOOL=OFF
+.endif
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1302508
+# Workarounds for buggy libc++ std::conjunction
+EXTRA_PATCHES=	${PATCHDIR}/extra-libraries_lib-utility_TypeList.cpp \
+		${PATCHDIR}/extra-libraries_lib-utility_TypeList.h \
+		${PATCHDIR}/extra-libraries_lib-utility_TypeSwitch.h
 .endif
 
 post-install:

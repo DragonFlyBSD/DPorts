@@ -1,1 +1,2 @@
 USE_CLANG_FALLBACK=	default
+IGNORE=   unmaintained, please request fixing to users mailing list

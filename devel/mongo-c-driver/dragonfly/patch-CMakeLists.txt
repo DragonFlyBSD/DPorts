@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2024-02-04 10:42:19 UTC
++++ CMakeLists.txt
+@@ -374,7 +374,7 @@ add_definitions (-D_XOPEN_SOURCE=700 -D_
+ list (APPEND CMAKE_REQUIRED_DEFINITIONS -D_XOPEN_SOURCE=700 -D_BSD_SOURCE -D_DEFAULT_SOURCE)
+ 
+ # Enable non-standard features on FreeBSD with __BSD_VISIBLE=1
+-if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+    add_definitions (-D__BSD_VISIBLE=1)
+    list (APPEND CMAKE_REQUIRED_DEFINITIONS -D__BSD_VISIBLE=1)
+ endif ()

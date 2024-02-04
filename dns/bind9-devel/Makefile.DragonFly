@@ -2,3 +2,4 @@
 # to avoid bad orphans
 dfly-install:
 	${RM} -rfv ${STAGEDIR}/construction
+IGNORE=   unmaintained, please request fixing to users mailing list

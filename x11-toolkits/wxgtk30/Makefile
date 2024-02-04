@@ -1,14 +1,14 @@
 PORTNAME=	wx
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.0.5.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	https://github.com/wxWidgets/wxWidgets/releases/download/v${DISTVERSION}/
 PKGNAMESUFFIX=	${_SHORT_WX_VER}-${FLAVOR}
 DISTNAME=	wxWidgets-${DISTVERSION}
 
 MAINTAINER=	desktop@FreeBSD.org
-COMMENT=	The wxWidgets GUI toolkit with GTK+ bindings
+COMMENT=	The wxWidgets GUI toolkit with GTK bindings
 WWW=		https://www.wxwidgets.org/
 
 LICENSE=	GPLv2+

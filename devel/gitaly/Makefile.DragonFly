@@ -2,3 +2,5 @@
 dfly-patch:
 	${REINPLACE_CMD} -e 's,freebsd,dragonfly,g' \
 		${GO_GOPATH}/pkg/mod/github.com/?azure/azure-sdk-for-go/sdk/storage/azblob@v1.0.0/blockblob/mmf_unix.go
+	${REINPLACE_CMD} -e 's,sha1sum,sha1,g' \
+		${WRKSRC}/Makefile

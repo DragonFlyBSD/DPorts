@@ -2,3 +2,4 @@
 # properly handled by compiler
 OPENMP_LIB_DEPENDS:=
 OPENMP_LDFLAGS:=
+IGNORE=   unmaintained, please request fixing to users mailing list

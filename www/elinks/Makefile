@@ -1,6 +1,7 @@
 PORTNAME=	elinks
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.16.1.1
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	jailbird@fdf.net
@@ -46,7 +47,7 @@ BROTLI_MESON_TRUE=	brotli
 NLS_USES=		gettext
 NLS_MESON_TRUE=		nls
 
-GUILE_LIB_DEPENDS=	libguile-3.0.so:lang/guile
+GUILE_USES=		guile:3.0
 GUILE_MESON_TRUE=	guile
 
 LUA_USES=		lua:52-53
@@ -116,6 +117,7 @@ ZSTD_USES=		localbase
 ZSTD_MESON_TRUE=	zstd
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|%%OPENSSLLIB%%|${OPENSSLLIB}|g' ${WRKSRC}/meson.build
 	@${REINPLACE_CMD} -e 's|/usr/bin/perl|${PERL}|g' ${WRKSRC}/doc/tools/help2xml
 	@${REINPLACE_CMD} -e 's|/usr/bin/env python3|${PYTHON_CMD}|g' ${WRKSRC}/doc/tools/asciidoc/asciidoc.py
 

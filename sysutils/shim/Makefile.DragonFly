@@ -12,3 +12,4 @@ dfly-patch:
 	${LN} -sv /usr/include/machine/int_const.h ${WRKSRC}/Cryptlib/Include/machine/int_const.h
 	${LN} -sv /usr/include/machine/int_limits.h ${WRKSRC}/Cryptlib/Include/machine/int_limits.h
 	${TOUCH} ${WRKSRC}/Cryptlib/Include/machine/wchar_limits.h
+IGNORE=   unmaintained, please request fixing to users mailing list

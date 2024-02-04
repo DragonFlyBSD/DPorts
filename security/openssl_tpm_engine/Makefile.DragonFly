@@ -1,6 +1,0 @@
-
-BROKEN_SSL=	libressl
-BROKEN_SSL_REASON_libressl=	RAND_METHOD structure unsupported
-
-# orphan
-PLIST_FILES+=	lib/engines-1.1/tpm.so

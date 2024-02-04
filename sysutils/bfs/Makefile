@@ -1,9 +1,10 @@
 PORTNAME=	bfs
-DISTVERSION=	2.5
+DISTVERSION=	3.0.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	driesm@FreeBSD.org
 COMMENT=	Breadth-first version of the UNIX find command
+WWW=		https://github.com/tavianator/bfs
 
 LICENSE=	BSD0CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -11,11 +12,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	bash:shells/bash
 TEST_DEPENDS=	bash:shells/bash
 
-USES=		compiler:c11 gmake shebangfix
+USES=		compiler:c++17-lang gmake shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	tavianator
 
-SHEBANG_FILES=	tests.sh tests/*.sh
+MAKEFILE=	GNUmakefile
 TEST_TARGET=	check
 
 OPTIONS_DEFINE=		ONIGURUMA

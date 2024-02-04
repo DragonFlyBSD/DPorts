@@ -1,6 +1,5 @@
 PORTNAME=	xorg
-PORTVERSION=	21.1.8
-PORTREVISION=	2
+PORTVERSION=	21.1.9
 PORTEPOCH=	1
 CATEGORIES=	x11-servers
 MASTER_SITES=	XORG/individual/xserver
@@ -24,9 +23,6 @@ USE_GL=		gl
 PORTNAME=	xephyr
 .elif  ${FLAVOR} == xorg
 PKGNAMESUFFIX=	-server
-SUB_FILES=	pkg-post-deinstall pkg-post-install
-PKGPOSTINSTALL= ${WRKDIR}/pkg-post-install
-PKGPOSTDEINSTALL=	${WRKDIR}/pkg-post-deinstall
 .elif ${FLAVOR} == xnest
 PORTEPOCH=	2
 PKGNAMESUFFIX= -nestserver
@@ -137,10 +133,6 @@ PLIST_SUB+=	SPARC64="@comment "
 
 .if ${FLAVOR} == xorg
 post-install:
-	# Avoid conflict with nvidia-driver, move libglx.so into .xorg directory
-	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/xorg/modules/extensions/.xorg
-	${MV} ${STAGEDIR}${PREFIX}/lib/xorg/modules/extensions/libglx.so \
-		${STAGEDIR}${PREFIX}/lib/xorg/modules/extensions/.xorg/
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/X11/xorg.conf.d
 	@${MKDIR} ${STAGEDIR}${FONTPATHD}
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/X11/xorg.conf.d

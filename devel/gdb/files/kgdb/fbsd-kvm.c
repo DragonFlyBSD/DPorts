@@ -30,7 +30,7 @@
 #include "filenames.h"
 #include "gdbcore.h"
 #include "gdbthread.h"
-#include "gdb_obstack.h"
+#include "gdbsupport/gdb_obstack.h"
 #include "inferior.h"
 #include "objfiles.h"
 #include "osabi.h"
@@ -39,7 +39,9 @@
 #include "target.h"
 #include "value.h"
 #include "readline/tilde.h"
+#include "gdbsupport/buildargv.h"
 #include "gdbsupport/pathstuff.h"
+#include "gdbsupport/gdb_tilde_expand.h"
 
 #include <sys/user.h>
 #include <fcntl.h>
@@ -50,26 +52,26 @@
 static CORE_ADDR stoppcbs;
 static LONGEST pcb_size;
 
-static char *vmcore;
-
-/* Per-architecture data key.  */
-static struct gdbarch_data *fbsd_vmcore_data;
+static std::string vmcore;
 
 struct fbsd_vmcore_ops
 {
   /* Supply registers for a pcb to a register cache.  */
-  void (*supply_pcb)(struct regcache *, CORE_ADDR);
+  void (*supply_pcb)(struct regcache *, CORE_ADDR) = nullptr;
 
   /* Return address of pcb for thread running on a CPU. */
-  CORE_ADDR (*cpu_pcb_addr)(u_int);
+  CORE_ADDR (*cpu_pcb_addr)(u_int) = nullptr;
 };
 
-static void *
-fbsd_vmcore_init (struct obstack *obstack)
-{
-  struct fbsd_vmcore_ops *ops;
+/* Per-architecture data key.  */
+static const registry<gdbarch>::key<struct fbsd_vmcore_ops> fbsd_vmcore_data;
 
-  ops = OBSTACK_ZALLOC (obstack, struct fbsd_vmcore_ops);
+static struct fbsd_vmcore_ops *
+get_fbsd_vmcore_ops (struct gdbarch *gdbarch)
+{
+  struct fbsd_vmcore_ops *ops = fbsd_vmcore_data.get (gdbarch);
+  if (ops == nullptr)
+    ops = fbsd_vmcore_data.emplace (gdbarch);
   return ops;
 }
 
@@ -81,8 +83,7 @@ fbsd_vmcore_set_supply_pcb (struct gdbarch *gdbarch,
 			    void (*supply_pcb) (struct regcache *,
 						CORE_ADDR))
 {
-  struct fbsd_vmcore_ops *ops = (struct fbsd_vmcore_ops *)
-    gdbarch_data (gdbarch, fbsd_vmcore_data);
+  struct fbsd_vmcore_ops *ops = get_fbsd_vmcore_ops (gdbarch);
   ops->supply_pcb = supply_pcb;
 }
 
@@ -94,8 +95,7 @@ void
 fbsd_vmcore_set_cpu_pcb_addr (struct gdbarch *gdbarch,
 			      CORE_ADDR (*cpu_pcb_addr) (u_int))
 {
-  struct fbsd_vmcore_ops *ops = (struct fbsd_vmcore_ops *)
-    gdbarch_data (gdbarch, fbsd_vmcore_data);
+  struct fbsd_vmcore_ops *ops = get_fbsd_vmcore_ops (gdbarch);
   ops->cpu_pcb_addr = cpu_pcb_addr;
 }
 
@@ -241,7 +241,6 @@ public:
 
   void files_info () override;
   bool thread_alive (ptid_t ptid) override;
-  void update_thread_list () override;
   std::string pid_to_str (ptid_t) override;
   const char *extra_thread_info (thread_info *) override;
 
@@ -264,7 +263,7 @@ kgdb_resolve_symbol(const char *name, kvaddr_t *kva)
 	ms = lookup_minimal_symbol (name, NULL, NULL);
 	if (ms.minsym == NULL)
 		return (1);
-	*kva = BMSYMBOL_VALUE_ADDRESS (ms);
+	*kva = ms.value_address ();
 	return (0);
 }
 #endif
@@ -272,15 +271,15 @@ kgdb_resolve_symbol(const char *name, kvaddr_t *kva)
 static void
 fbsd_kvm_target_open (const char *args, int from_tty)
 {
-	struct fbsd_vmcore_ops *ops = (struct fbsd_vmcore_ops *)
-	    gdbarch_data (target_gdbarch(), fbsd_vmcore_data);
+	struct fbsd_vmcore_ops *ops = get_fbsd_vmcore_ops (target_gdbarch ());
 	char kvm_err[_POSIX2_LINE_MAX];
 	struct inferior *inf;
 	struct cleanup *old_chain;
 	struct kthr *kt;
 	kvm_t *nkvm;
 	const char *kernel;
-	char *temp, *filename;
+	std::string filename;
+	int osreldate;
 	bool writeable;
 
 	if (ops == NULL || ops->supply_pcb == NULL || ops->cpu_pcb_addr == NULL)
@@ -292,7 +291,6 @@ fbsd_kvm_target_open (const char *args, int from_tty)
 		error ("Can't open a vmcore without a kernel");
 
 	writeable = false;
-	filename = NULL;
 	if (args != NULL) {
 		gdb_argv built_argv (args);
 
@@ -303,29 +301,24 @@ fbsd_kvm_target_open (const char *args, int from_tty)
 				else
 					error (_("Invalid argument"));
 			} else {
-				if (filename != NULL)
+				if (!filename.empty ())
 					error (_("Invalid argument"));
 
-				filename = tilde_expand (*argv);
-				if (filename[0] != '/') {
-					gdb::unique_xmalloc_ptr<char> temp (gdb_abspath (filename));
-
-					xfree (filename);
-					filename = temp.release ();
-				}
+				filename = gdb_tilde_expand (*argv);
+				if (!IS_ABSOLUTE_PATH (filename))
+					filename = gdb_abspath (filename.c_str ());
 			}
 		}
 	}
 
 #ifdef HAVE_KVM_OPEN2
-	nkvm = kvm_open2(kernel, filename,
+	nkvm = kvm_open2(kernel, filename.c_str (),
 	    writeable ? O_RDWR : O_RDONLY, kvm_err, kgdb_resolve_symbol);
 #else
-	nkvm = kvm_openfiles(kernel, filename, NULL,
+	nkvm = kvm_openfiles(kernel, filename.c_str (), NULL,
 	    writeable ? O_RDWR : O_RDONLY, kvm_err);
 #endif
 	if (nkvm == NULL) {
-		xfree (filename);
 		error ("Failed to open vmcore: %s", kvm_err);
 	}
 
@@ -337,7 +330,7 @@ fbsd_kvm_target_open (const char *args, int from_tty)
 	struct objfile *symfile_objfile =
 	  current_program_space->symfile_object_file;
 	if (symfile_objfile != nullptr &&
-	    (bfd_get_file_flags(symfile_objfile->obfd) &
+	    (bfd_get_file_flags(symfile_objfile->obfd.get ()) &
 	      (EXEC_P | DYNAMIC)) != 0) {
 		CORE_ADDR displacement = kvm_kerndisp(nkvm);
 		if (displacement != 0) {
@@ -347,6 +340,14 @@ fbsd_kvm_target_open (const char *args, int from_tty)
 		}
 	}
 #endif
+
+	kvm = nkvm;
+	vmcore = std::move(filename);
+	current_inferior()->push_target (&fbsd_kvm_ops);
+
+	/* Pop the target automatically upon failure. */
+	target_unpush_up unpusher;
+	unpusher.reset (&fbsd_kvm_ops);
 
 	/*
 	 * Determine the first address in KVA.  Newer kernels export
@@ -361,11 +362,29 @@ fbsd_kvm_target_open (const char *args, int from_tty)
 		kernstart = kgdb_lookup("kernbase");
 	}
 
+	try {
+		CORE_ADDR osreldatesym = kgdb_lookup("osreldate");
+		osreldate = read_memory_unsigned_integer(osreldatesym, 4,
+		    gdbarch_byte_order (target_gdbarch ()));
+	} catch (const gdb_exception_error &e) {
+		error ("Failed to look up osreldate");
+	}
+
 	/*
-	 * Lookup symbols needed for stoppcbs[] handling, but don't
+	 * Look up symbols needed for stoppcbs handling, but don't
 	 * fail if they aren't present.
 	 */
 	stoppcbs = kgdb_lookup("stoppcbs");
+	if (osreldate > 1400088) {
+		/* stoppcbs is now a pointer rather than an array. */
+		try {
+			stoppcbs = read_memory_typed_address(stoppcbs,
+			    builtin_type(target_gdbarch())->builtin_data_ptr);
+		} catch (const gdb_exception_error &e) {
+			stoppcbs = 0;
+		}
+	}
+
 	try {
 		pcb_size = parse_and_eval_long("pcb_size");
 	} catch (const gdb_exception_error &e) {
@@ -386,10 +405,6 @@ fbsd_kvm_target_open (const char *args, int from_tty)
 #endif
 		}
 	}
-
-	kvm = nkvm;
-	vmcore = filename;
-	current_inferior()->push_target (&fbsd_kvm_ops);
 
 	kgdb_dmesg();
 
@@ -414,6 +429,9 @@ fbsd_kvm_target_open (const char *args, int from_tty)
 
 	reinit_frame_cache ();
 	print_stack_frame (get_selected_frame (NULL), 0, SRC_AND_LOC, 1);
+
+	/* Keep the target pushed. */
+	unpusher.release ();
 }
 
 void
@@ -426,11 +444,10 @@ fbsd_kvm_target::close()
 
 		clear_solib();
 		if (kvm_close(kvm) != 0)
-			warning("cannot close \"%s\": %s", vmcore,
+			warning("cannot close \"%s\": %s", vmcore.c_str (),
 			    kvm_geterr(kvm));
 		kvm = NULL;
-		xfree(vmcore);
-		vmcore = NULL;
+		vmcore.clear ();
 	}
 
 }
@@ -445,7 +462,7 @@ kgdb_trgt_detach(struct target_ops *ops, const char *args, int from_tty)
 	unpush_target(&kgdb_trgt_ops);
 	reinit_frame_cache();
 	if (from_tty)
-		printf_filtered("No vmcore file now.\n");
+		gdb_printf("No vmcore file now.\n");
 }
 #endif
 
@@ -478,33 +495,9 @@ void
 fbsd_kvm_target::files_info()
 {
 
-	printf_filtered ("\t`%s', ", vmcore);
-	wrap_here ("        ");
-	printf_filtered ("file type %s.\n", "FreeBSD kernel vmcore");
-}
-
-void
-fbsd_kvm_target::update_thread_list()
-{
-	/*
-	 * XXX: We should probably rescan the thread list here and update
-	 * it if there are any changes.  One nit though is that we'd have
-	 * to detect exited threads.
-	 */
-	gdb_assert(kvm != NULL);
-#if 0
-	prune_threads();
-#endif
-#if 0
-	struct target_ops *tb;
-	
-	if (kvm != NULL)
-		return;
-
-	tb = find_target_beneath(ops);
-	if (tb->to_update_thread_list != NULL)
-		tb->to_update_thread_list(tb);
-#endif
+	gdb_printf ("\t`%s', ", vmcore.c_str ());
+	gdb_stdout->wrap_here (8);
+	gdb_printf ("file type %s.\n", "FreeBSD kernel vmcore");
 }
 
 std::string
@@ -522,8 +515,7 @@ fbsd_kvm_target::thread_alive(ptid_t ptid)
 void
 fbsd_kvm_target::fetch_registers(struct regcache *regcache, int regnum)
 {
-	struct fbsd_vmcore_ops *ops = (struct fbsd_vmcore_ops *)
-	    gdbarch_data (target_gdbarch(), fbsd_vmcore_data);
+	struct fbsd_vmcore_ops *ops = get_fbsd_vmcore_ops (target_gdbarch ());
 	struct kthr *kt;
 
 	if (ops->supply_pcb == NULL)
@@ -564,24 +556,6 @@ fbsd_kvm_target::xfer_partial(enum target_object object,
 		return TARGET_XFER_E_IO;
 	}
 }
-
-#if 0
-static int
-kgdb_trgt_insert_breakpoint(struct target_ops *ops, struct gdbarch *gdbarch,
-    struct bp_target_info *bp_tgt)
-{
-
-	return 0;
-}
-
-static int
-kgdb_trgt_remove_breakpoint(struct target_ops *ops, struct gdbarch *gdbarch,
-    struct bp_target_info *bp_tgt, enum remove_bp_reason reason)
-{
-
-	return 0;
-}
-#endif
 
 static void
 kgdb_switch_to_thread(const char *arg, int tid)
@@ -647,8 +621,6 @@ _initialize_kgdb_target ()
 
 	add_target(fbsd_kvm_target_info, fbsd_kvm_target_open,
 	    filename_completer);
-
-	fbsd_vmcore_data = gdbarch_data_register_pre_init(fbsd_vmcore_init);
 
 	add_com ("proc", class_obscure, kgdb_set_proc_cmd,
 	   "Set current process context");

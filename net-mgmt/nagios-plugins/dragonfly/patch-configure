@@ -1,0 +1,33 @@
+--- configure.orig	2024-01-07 11:14:36 UTC
++++ configure
+@@ -18865,20 +18865,18 @@ if (test -n "$PATH_TO_SWAPINFO")
+ then
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $PATH_TO_SWAPINFO format" >&5
+ $as_echo_n "checking for $PATH_TO_SWAPINFO format... " >&6; }
+-if $PATH_TO_SWAPINFO -k 2>&1 | egrep -i "^Device" >/dev/null
+-then
+-	ac_cv_have_swap=yes
+-	ac_cv_swap_command="$PATH_TO_SWAPINFO -k"
++#
++# Assume swapinfo works because under dsynth reading /dev/mem is not allowed.
++#
++ac_cv_have_swap=yes
++ac_cv_swap_command="$PATH_TO_SWAPINFO -k"
+ 
+-	if $PATH_TO_SWAPINFO -k 2>/dev/null | egrep -i "^Device +1K-blocks +Used +Avail" >/dev/null
+-	then
+-		ac_cv_swap_format="%*s %lf %*d %lf"
+-		ac_cv_swap_conv=1024
+-		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: using FreeBSD format swapinfo" >&5
+-$as_echo "using FreeBSD format swapinfo" >&6; }
+-	fi
++ac_cv_swap_format="%*s %lf %*d %lf"
++ac_cv_swap_conv=1024
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: using FreeBSD format swapinfo" >&5
++  $as_echo "using FreeBSD format swapinfo" >&6; }
+ 
+-elif $PATH_TO_SWAPINFO -dfM 2>/dev/null | egrep -i "^TYPE +AVAIL +USED +FREE" >/dev/null
++if $PATH_TO_SWAPINFO -dfM 2>/dev/null | egrep -i "^TYPE +AVAIL +USED +FREE" >/dev/null
+ then
+ 	ac_cv_have_swap=yes
+ 	ac_cv_swap_command="$PATH_TO_SWAPINFO -dfM"

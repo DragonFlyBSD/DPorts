@@ -1,2 +1,0 @@
-# plist woes
-PLIST_FILES+=	bin/ortp_tester

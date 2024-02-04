@@ -6,3 +6,4 @@ dfly-patch:
 		${WRKSRC}/cmake/EthCompilerSettings.cmake
 	${REINPLACE_CMD} -e '/add_compile_options(-Qunused-arguments)/d' \
 		${WRKSRC}/cmake/EthCompilerSettings.cmake
+IGNORE=   unmaintained, please request fixing to users mailing list

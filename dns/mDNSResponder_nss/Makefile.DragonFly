@@ -1,0 +1,2 @@
+IGNORE= FreeBSD specific (nsswitch)
+IGNORE=   unmaintained, please request fixing to users mailing list

@@ -1,13 +1,11 @@
---- gio/meson.build.orig	2023-04-14 17:06:27 UTC
+--- gio/meson.build.orig	2023-10-25 11:33:59 UTC
 +++ gio/meson.build
-@@ -928,23 +928,7 @@ else
-   libgiounix_dep = libgio_dep
- endif
+@@ -934,20 +934,6 @@ endif
  
--# Dependencies used by executables below
+ # Dependencies used by executables below
  have_libelf = false
 -libelf = dependency('libelf', version : '>= 0.8.12', required : false)
--if libelf.found()
+-if libelf.found() and get_option('libelf').allowed()
 -  have_libelf = true
 -else
 -  # This fallback is necessary on *BSD. elfutils isn't the only libelf
@@ -20,7 +18,6 @@
 -  have_libelf = have_libelf and cc.has_function('elf_getshdrnum', dependencies : libelf)
 -  have_libelf = have_libelf and cc.has_header('libelf.h')
 -endif
--
+ 
  if have_libelf
    glib_conf.set('HAVE_LIBELF', 1)
- else

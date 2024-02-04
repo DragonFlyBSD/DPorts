@@ -6,3 +6,4 @@ OPTIONS_EXCLUDE+=	DOCS
 dfly-patch:
 	${REINPLACE_CMD} -e 's@ki_flag@kp_flags@' \
 		${WRKSRC}/components/crashcatcher/crashcatcher.cpp
+IGNORE=   unmaintained, please request fixing to users mailing list

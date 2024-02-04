@@ -1,3 +1,5 @@
+USE_GCC_VERSION=	12
+
 USES:= ${USES:Nelfctl}
 
 # for now avoid javadoc "issues", too frequent in bulk
@@ -28,7 +30,6 @@ REPLACE_LIST= \
 	vcl/qa/cppunit/BitmapTest.cxx \
 	vcl/unx/generic/app/saldata.cxx \
 	vcl/unx/generic/dtrans/X11_selection.cxx \
-	vcl/unx/generic/gdi/salbmp.cxx \
 	vcl/unx/generic/printer/printerinfomanager.cxx \
 	desktop/unx/source/start.c \
 	sal/osl/unx/process_impl.cxx \
@@ -52,11 +53,11 @@ PERCENT_BSD_LIST= \
 # So let's just hardcode it for now
 
 dfly-patch:
-	${CP} -v ${DFLY_FILESDIR}/skia-cmath.patch ${WRKSRC}/external/skia
-	${REINPLACE_CMD} -e 's,skia_patches := ,& skia-cmath.patch ,g' \
+	${CP} -v ${DFLY_FILESDIR}/skia-01.patch ${WRKSRC}/external/skia
+	${REINPLACE_CMD} -e 's,skia_patches := ,& skia-01.patch ,g' \
 		${WRKSRC}/external/skia/UnpackedTarball_skia.mk
 	${CP} -v ${DFLY_FILESDIR}/pdfium-build__config.patch ${WRKSRC}/external/pdfium
-	${REINPLACE_CMD} -e 's,pdfium_patches :=,& pdfium-build__config.patch ,g' \
+	${REINPLACE_CMD} -e 's,pdfium_patches += pdfium-bsd.patch,& pdfium-build__config.patch ,g' \
 		${WRKSRC}/external/pdfium/UnpackedTarball_pdfium.mk
 	${REINPLACE_CMD} -e 's|$$ENV{TMPDIR};|"${WRKDIR}";|' \
 		${WRKSRC}/solenv/bin/ooinstall

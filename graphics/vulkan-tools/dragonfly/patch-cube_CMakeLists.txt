@@ -1,0 +1,29 @@
+--- cube/CMakeLists.txt.orig	2023-09-29 19:59:09 UTC
++++ cube/CMakeLists.txt
+@@ -20,7 +20,7 @@ set(CUBE_INCLUDE_DIRS ${CMAKE_CURRENT_SO
+ set(SCRIPTS_DIR "${PROJECT_SOURCE_DIR}/scripts")
+ 
+ 
+-if (CMAKE_SYSTEM_NAME MATCHES "Linux|BSD")
++if (CMAKE_SYSTEM_NAME MATCHES "Linux|BSD|DragonFly")
+     option(BUILD_WSI_XCB_SUPPORT "Build XCB WSI support" ON)
+     option(BUILD_WSI_XLIB_SUPPORT "Build Xlib WSI support" ON)
+     option(BUILD_WSI_WAYLAND_SUPPORT "Build Wayland WSI support" ON)
+@@ -97,7 +97,7 @@ elseif(ANDROID)
+     add_definitions(-DVK_USE_PLATFORM_ANDROID_KHR)
+ elseif(APPLE)
+     add_definitions(-DVK_USE_PLATFORM_METAL_EXT)
+-elseif(CMAKE_SYSTEM_NAME MATCHES "Linux|BSD")
++elseif(CMAKE_SYSTEM_NAME MATCHES "Linux|BSD|DragonFly")
+     if(NOT CUBE_WSI_SELECTION)
+         set(CUBE_WSI_SELECTION "XCB")
+     endif()
+@@ -269,7 +269,7 @@ endif()
+ # ----------------------------------------------------------------------------
+ # vkcube-wayland
+ 
+-if (CMAKE_SYSTEM_NAME MATCHES "Linux|BSD")
++if (CMAKE_SYSTEM_NAME MATCHES "Linux|BSD|DragonFly")
+     if(BUILD_WSI_WAYLAND_SUPPORT AND EXISTS ${WAYLAND_PROTOCOLS_PATH}/unstable/xdg-decoration/xdg-decoration-unstable-v1.xml)
+         set(CUBE_INCLUDE_DIRS ${WAYLAND_CLIENT_INCLUDE_DIR} ${CUBE_INCLUDE_DIRS})
+         link_libraries(${WAYLAND_CLIENT_LIBRARIES})

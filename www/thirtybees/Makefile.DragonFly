@@ -13,3 +13,4 @@ dfly-install:
 	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/sendtoafriend
 	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/trackingfront
 	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/vatnumber
+IGNORE=   unmaintained, please request fixing to users mailing list

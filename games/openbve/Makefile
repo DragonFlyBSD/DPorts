@@ -1,5 +1,5 @@
 PORTNAME=	${GH_PROJECT:tl}
-PORTVERSION=	1.9.1.1
+PORTVERSION=	1.9.2.2
 CATEGORIES=	games
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -18,7 +18,7 @@ GH_PROJECT=	OpenBVE
 USES=		gmake mono:nuget openal:soft sdl
 USE_SDL=	sdl2
 MAKEFILE=	makefile
-ALL_TARGET=	all-release
+ALL_TARGET=	all-${WITH_DEBUG:?debug:release}
 
 NUGET_DEPENDS=	CS-Script.lib=3.30.3 \
 		DotNetZip=1.16.0 \
@@ -53,8 +53,8 @@ OPTIONS_DEFINE=	DOCS
 
 .include <bsd.port.pre.mk>
 
-.if defined(MONO_DEFAULT) && ${MONO_DEFAULT} > 5.10
-BROKEN=		fails to build with Mono version ${MONO_DEFAULT}: The imported project "/usr/local/lib/mono/msbuild/15.0/bin/Roslyn/Microsoft.CSharp.Core.targets" was not found
+.if defined(MONO_DEFAULT) && ${MONO_DEFAULT} > 6
+BROKEN=		fails to build with Mono version ${MONO_DEFAULT}: error MSB4184: The expression ""Program.cs".GetPathsOfAllDirectoriesAbove()" cannot be evaluated. Method 'System.String.GetPathsOfAllDirectoriesAbove' not found.
 .endif
 
 post-patch:

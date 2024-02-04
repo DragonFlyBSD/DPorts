@@ -1,8 +1,8 @@
 diff --git media/base/media_switches.h media/base/media_switches.h
-index c857046a5bf..af422232369 100644
+index 670a89d70e2..708198d43de 100644
 --- media/base/media_switches.h
 +++ media/base/media_switches.h
-@@ -42,7 +42,7 @@ MEDIA_EXPORT extern const char kDisableBackgroundMediaSuspend[];
+@@ -45,7 +45,7 @@ MEDIA_EXPORT extern const char kDisableBackgroundMediaSuspend[];
  MEDIA_EXPORT extern const char kReportVp9AsAnUnsupportedMimeType[];
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FREEBSD) || \

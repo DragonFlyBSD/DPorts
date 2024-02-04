@@ -1,5 +1,5 @@
 diff --git base/files/dir_reader_linux.h base/files/dir_reader_linux.h
-index 8d7284b37cf..72dace32254 100644
+index 8ebf97840b4..8edaf95e875 100644
 --- base/files/dir_reader_linux.h
 +++ base/files/dir_reader_linux.h
 @@ -62,7 +62,7 @@ class DirReaderLinux {

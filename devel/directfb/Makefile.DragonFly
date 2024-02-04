@@ -1,2 +1,0 @@
-CFLAGS+=	-Wno-int-conversion
-LDFLAGS+= -L${LOCALBASE}/lib

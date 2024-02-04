@@ -1,6 +1,6 @@
 PORTNAME=	neovim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.1
+DISTVERSION=	0.9.2
 CATEGORIES=	editors
 
 MAINTAINER=	adamw@FreeBSD.org
@@ -41,12 +41,6 @@ PYNVIM_DESC=	Enable support for plugins written in python
 NLS_CMAKE_BOOL=		ENABLE_LIBINTL
 PYNVIM_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pynvim>=0.3.0:editors/py-pynvim@${PY_FLAVOR}
 PYNVIM_USES=		python:run
-
-.include <bsd.port.options.mk>
-
-.if ${ARCH} == powerpc64
-USES+=		compiler:gcc-c++11-lib
-.endif
 
 post-patch-NLS-off:
 	${REINPLACE_CMD} -e '/add_subdirectory(po)/d' ${WRKSRC}/src/nvim/CMakeLists.txt

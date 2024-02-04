@@ -1,5 +1,5 @@
 diff --git components/policy/core/common/cloud/cloud_policy_util.cc components/policy/core/common/cloud/cloud_policy_util.cc
-index e758fc4b1b7..42ade35cae4 100644
+index b791e192509..74d08dc5a90 100644
 --- components/policy/core/common/cloud/cloud_policy_util.cc
 +++ components/policy/core/common/cloud/cloud_policy_util.cc
 @@ -39,7 +39,7 @@

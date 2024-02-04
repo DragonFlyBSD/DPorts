@@ -1,11 +1,10 @@
-# Created by: Alexander Vereeken <Alexander88207@protonmail.com>
-
 PORTNAME=	yaru-icon-theme
-DISTVERSION=	22.04.3.1
+DISTVERSION=	22.10.3
 CATEGORIES=	x11-themes
 
 MAINTAINER=	Alexander88207@protonmail.com
 COMMENT=	Default icon theme for Ubuntu
+WWW=		https://github.com/ubuntu/yaru
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING

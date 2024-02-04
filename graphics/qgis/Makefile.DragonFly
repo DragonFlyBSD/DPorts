@@ -14,3 +14,4 @@ dfly-patch:
 		${WRKSRC}/src/app/CMakeLists.txt
 	${REINPLACE_CMD} -e '/-lulog/d' \
 		${WRKSRC}/src/plugins/grass/CMakeLists.txt
+IGNORE=   unmaintained, please request fixing to users mailing list

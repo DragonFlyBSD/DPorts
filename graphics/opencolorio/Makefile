@@ -5,7 +5,7 @@ DISTVERSION=	2.2.1
 # py-opencolorio's PORTREVISION.
 # Also, just to be on the safe side, when resetting,
 # best keep PORTREVISION?=	0.
-PORTREVISION?=	2
+PORTREVISION?=	4
 CATEGORIES=	graphics multimedia
 
 MAINTAINER?=	FreeBSD@Shaneware.biz
@@ -19,10 +19,9 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libImath.so:math/Imath \
 		libpystring.so:devel/pystring \
 		libyaml-cpp.so:devel/yaml-cpp \
-		libminizip-ng.so:archivers/minizip-ng \
 		libzstd.so:archivers/zstd
 USES=		alias cmake compiler:c++14-lang localbase:ldflags \
-		pkgconfig
+		pkgconfig minizip:ng
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	AcademySoftwareFoundation

@@ -1,5 +1,5 @@
 PORTNAME=	ungoogled-chromium
-PORTVERSION=	117.0.5938.132
+PORTVERSION=	120.0.6099.129
 UGVERSION=	${DISTVERSION}-1
 CATEGORIES=	www wayland
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
@@ -99,7 +99,8 @@ BINARY_ALIAS=	python3=${PYTHON_CMD} \
 # Some parts don't have use_system_* flag, and can be turned on/off by using
 # replace_gn_files.py script, some parts just turned on/off for target host
 # OS "target_os == is_bsd", like libusb, libpci.
-GN_ARGS+=	fatal_linker_warnings=false \
+GN_ARGS+=	enable_widevine=true \
+		fatal_linker_warnings=false \
 		icu_use_data_file=false \
 		is_clang=true \
 		optimize_webui=true \
@@ -150,8 +151,8 @@ GN_BOOTSTRAP_FLAGS=	--no-clean --no-rebuild --skip-generate-buildfiles
 SUB_FILES=	ungoogled-chromium.desktop ungoogled-chromium
 SUB_LIST+=	COMMENT="${COMMENT}"
 
-OPTIONS_DEFINE=		CODECS CUPS DEBUG DRIVER KERBEROS LTO TEST
-OPTIONS_DEFAULT=	CODECS CUPS DRIVER KERBEROS SNDIO
+OPTIONS_DEFINE=		CODECS CUPS DEBUG DRIVER KERBEROS LTO PIPEWIRE TEST WIDEVINE
+OPTIONS_DEFAULT=	CODECS CUPS DRIVER KERBEROS PIPEWIRE SNDIO
 OPTIONS_EXCLUDE_aarch64=LTO
 OPTIONS_GROUP=		AUDIO
 OPTIONS_GROUP_AUDIO=	ALSA PULSEAUDIO SNDIO
@@ -205,6 +206,14 @@ LTO_VARS=		GN_ARGS+=use_thin_lto=true \
 LTO_VARS_OFF=		GN_ARGS+=use_thin_lto=false
 
 MIT_LIB_DEPENDS=	libkrb.so.3:security/krb5
+
+PIPEWIRE_DESC=		Screen capture via PipeWire
+PIPEWIRE_LIB_DEPENDS=	libpipewire-0.3.so:multimedia/pipewire
+PIPEWIRE_VARS=		GN_ARGS+=rtc_use_pipewire=true \
+			GN_ARGS+=rtc_link_pipewire=true
+PIPEWIRE_VARS_OFF=	GN_ARGS+=rtc_use_pipewire=false \
+			GN_ARGS+=rtc_link_pipewire=false
+
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 PULSEAUDIO_VARS=	GN_ARGS+=use_pulseaudio=true
 PULSEAUDIO_VARS_OFF=	GN_ARGS+=use_pulseaudio=false
@@ -216,6 +225,9 @@ SNDIO_PREVENTS=		ALSA PULSEAUDIO
 SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
 SNDIO_VARS=		GN_ARGS+=use_sndio=true
 SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
+
+WIDEVINE_DESC=		Depend on foreign-cdm to enable playback of DRM content
+WIDEVINE_RUN_DEPENDS=	foreign-cdm>0:www/foreign-cdm
 
 .include "Makefile.tests"
 TEST_DISTFILES=		chromium-${DISTVERSION}-testdata${EXTRACT_SUFX} \

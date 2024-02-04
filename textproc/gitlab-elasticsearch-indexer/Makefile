@@ -1,7 +1,7 @@
 PORTNAME=	gitlab-elasticsearch-indexer
-PORTVERSION=	4.3.6
-PORTREVISION=	2
+PORTVERSION=	4.3.10
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -20,8 +20,6 @@ USES=		gmake go:modules,no_targets pkgconfig
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
-# Find the commit hash here: https://gitlab.com/gitlab-org/gitlab-elasticsearch-indexer/-/tags
-GL_COMMIT=	f5b02c19bc905e7759ffd3466c4daca0c1f22fbc
 
 MAKE_ENV=	GOFLAGS="${GO_BUILDFLAGS}"
 # make sure to pass go build options into make process

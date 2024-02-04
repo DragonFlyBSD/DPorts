@@ -5,3 +5,4 @@ NO_ARCH_IGNORE+=	libsetuid-linux.so libsetuid-osx.so
 # to avoid orphans
 dfly-install:
 	${RMDIR} ${STAGEDIR}${LOCALBASE}/jetty_bastillion/resources
+IGNORE=   unmaintained, please request fixing to users mailing list

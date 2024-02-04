@@ -4,3 +4,4 @@ USES+=	pkgconfig
 # deal with empty orphans
 dfly-install:
 	${RM} -rfv ${STAGEDIR}${PREFIX}/share/cr3/hyph/obsolete
+IGNORE=   unmaintained, please request fixing to users mailing list

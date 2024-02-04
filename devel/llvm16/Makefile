@@ -1,6 +1,6 @@
 PORTNAME=	llvm
 DISTVERSION=	16.0.6
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
 		https://${PRE_}releases.llvm.org/${LLVM_RELEASE}${RCDIR}/
@@ -82,7 +82,6 @@ CMAKE_ARGS+=	-DLLVM_PARALLEL_LINK_JOBS=1
 CMAKE_ARGS+=	-DLLVM_ENABLE_Z3_SOLVER=OFF
 CMAKE_ARGS+=	-DLLVM_ENABLE_LIBXML2=OFF
 CMAKE_ARGS+=	-DLLVM_ENABLE_LIBEDIT=OFF
-CMAKE_ARGS+=	-DPython3_EXECUTABLE=${PYTHON_CMD}
 # LLVM likes to pick up ${LOCALBASE}/lib/libtinfo.so.*
 CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=OFF
 
@@ -102,7 +101,7 @@ OPTIONS_SUB=	yes
 .if ${FLAVOR:Mlite}
 OPTIONS_DEFAULT+=	BE_FREEBSD
 .else
-OPTIONS_DEFINE+=	EXTRAS FLANG LIT LLDB MLIR OPENMP PYCLANG
+OPTIONS_DEFINE+=	EXTRAS FLANG LIT LLDB MLIR OPENMP PYCLANG POLLY
 OPTIONS_DEFINE_x86_64=	GOLD
 OPTIONS_DEFINE_powerpc=	GOLD
 OPTIONS_DEFINE_powerpc64=	GOLD
@@ -123,7 +122,8 @@ OPTIONS_EXCLUDE_FreeBSD_12=	OPENMP
 .endif
 
 # All non-backend options
-_ALL_OPTIONS=	CLANG COMPILER_RT DOCS EXTRAS FLANG GOLD LIT LLD LLDB MLIR OPENMP PYCLANG STATIC_LIBS
+_ALL_OPTIONS=	CLANG COMPILER_RT DOCS EXTRAS FLANG GOLD LIT LLD LLDB MLIR \
+		OPENMP POLLY PYCLANG STATIC_LIBS
 
 BE_AMDGPU_DESC=		AMD GPU backend (required by mesa)
 BE_FREEBSD_DESC=	Backends for FreeBSD architectures
@@ -152,16 +152,19 @@ CLANG_USES=		perl5
 CLANG_USE=		PERL5=build
 .endif
 COMPILER_RT_DESC=	Sanitizer libraries
-COMPILER_RT_CMAKE_ON=	-DCOMPILER_RT_INSTALL_PATH=${LLVM_PREFIX}/lib/clang/${LLVM_RELEASE}
+COMPILER_RT_CMAKE_ON= \
+	-DCOMPILER_RT_INSTALL_PATH=${LLVM_PREFIX}/lib/clang/${LLVM_RELEASE}
 COMPILER_RT_PLIST_FILES=${_COMPILER_RT_LIBS}
-DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx-markdown-tables>=0:textproc/py-sphinx-markdown-tables@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}recommonmark>=0.0.20180530:textproc/py-recommonmark@${PY_FLAVOR}
+DOCS_BUILD_DEPENDS= \
+	${PYTHON_PKGNAMEPREFIX}sphinx-markdown-tables>=0:textproc/py-sphinx-markdown-tables@${PY_FLAVOR} \
+	${PYTHON_PKGNAMEPREFIX}recommonmark>=0.0.20180530:textproc/py-recommonmark@${PY_FLAVOR}
 DOCS_CONFLICTS_BUILD=	cmark
 DOCS_PORTDOCS=		llvm
-DOCS_CMAKE_ON=		-DLLVM_ENABLE_SPHINX=ON \
-			-DSPHINX_EXECUTABLE=${LOCALBASE}/bin/sphinx-build-${PYTHON_VER} \
-			-DSPHINX_WARNINGS_AS_ERRORS=OFF \
-			-DLLVM_BUILD_DOCS=ON
+DOCS_CMAKE_ON= \
+	-DLLVM_ENABLE_SPHINX=ON \
+	-DSPHINX_EXECUTABLE=${LOCALBASE}/bin/sphinx-build-${PYTHON_VER} \
+	-DSPHINX_WARNINGS_AS_ERRORS=OFF \
+	-DLLVM_BUILD_DOCS=ON
 DOCS_PLIST_FILES=	${MAN1SRCS:S|^|man/man1/|:S|.1$|${LLVM_SUFFIX}.1.gz|}
 EXTRAS_DESC=		Extra clang tools
 EXTRAS_IMPLIES=		CLANG
@@ -178,13 +181,14 @@ LIT_DESC=		Install lit and FileCheck test tools
 LIT_VARS=		_USES_PYTHON=python
 LLD_DESC=		Install lld, the LLVM linker
 LLDB_BUILD_DEPENDS=	swig:devel/swig
-LLDB_CMAKE_ON=		-DLUA_INCLUDE_DIR=${LOCALBASE}/include/lua${LUA_VER_STR} \
-			-DLUA_LIBRARY=${LOCALBASE}/lib/liblua-${LUA_VER}.so \
-			-DCURSES_INCLUDE_PATH=/usr/include \
-			-DCURSES_CURSES_LIBRARY=/usr/lib/libcurses.so \
-			-DCURSES_FORM_LIBRARY=/usr/lib/libform.so \
-			-DCURSES_NCURSES_LIBRARY=/usr/lib/libncurses.so \
-			-DPANEL_LIBRARIES=/usr/lib/libpanel.so
+LLDB_CMAKE_ON= \
+	-DLUA_INCLUDE_DIR=${LOCALBASE}/include/lua${LUA_VER_STR} \
+	-DLUA_LIBRARY=${LOCALBASE}/lib/liblua-${LUA_VER}.so \
+	-DCURSES_INCLUDE_PATH=/usr/include \
+	-DCURSES_CURSES_LIBRARY=/usr/lib/libcurses.so \
+	-DCURSES_FORM_LIBRARY=/usr/lib/libform.so \
+	-DCURSES_NCURSES_LIBRARY=/usr/lib/libncurses.so \
+	-DPANEL_LIBRARIES=/usr/lib/libpanel.so
 LLDB_DESC=		Install lldb, the LLVM debugger
 LLDB_IMPLIES=		CLANG
 LLDB_PLIST_SUB=		PYTHON_ABIVER=${PYTHON_ABIVER}
@@ -192,12 +196,17 @@ LLDB_USES=		lua:53 libedit
 LLDB_VARS=		_USES_PYTHON=python
 MLIR_DESC=		Multi-Level Intermediate Representation
 OPENMP_DESC=		Install libomp, the LLVM OpenMP runtime library
-OPENMP_CMAKE_ON=	-DLIBOMPTARGET_BUILD_DEVICERTL_BCLIB=OFF
+OPENMP_CMAKE_ON= \
+	-DLIBOMPTARGET_BUILD_DEVICERTL_BCLIB=OFF \
+	-DLIBOMPTARGET_DEP_LIBFFI_INCLUDE_DIR="" \
+	-DLIBOMPTARGET_DEP_LIBFFI_LIBRARIES=""
 OPENMP_PORTDOCS=	openmp
 PYCLANG_DESC=		Install python bindings to libclang
 PYCLANG_IMPLIES=	CLANG
 PYCLANG_VARS=		_USES_PYTHON=python
 PYCLANG_CMAKE_ON=	-DCLANG_PYTHON_BINDINGS_VERSIONS=${PYTHON_VER}
+POLLY_DESC=		Polyhedral loop and data-locality optimizer
+POLLY_PORTDOCS=		polly
 STATIC_LIBS_DESC=	Install static libraries (does not effect sanitizers)
 
 CONFLICTS_INSTALL=	${PORTNAME}${LLVM_SUFFIX} ${PORTNAME}${LLVM_SUFFIX}-lite
@@ -326,6 +335,12 @@ MAN1SRCS+=	${OPENMP_MAN1SRCS}
 COMMANDS+=	${OPENMP_COMMANDS}
 .endif
 OPENMP_PATTERN=	${OPENMP_COMMANDS:tW:C/  */|/g}|cmake\/openmp|libarcher|lib[ig]*omp|omp.h|ompt.h|ompt-multiplex.h|omp-tools.h
+
+.if ${PORT_OPTIONS:MPOLLY}
+LLVM_ENABLE_PROJECTS+=	polly
+MAN1SRCS+=	${POLLY_MAN1SRCS}
+.endif
+POLLY_PATTERN=	include\/polly|cmake\/polly|LLVMPolly.so|libPolly
 
 .if ${PORT_OPTIONS:MPYCLANG}
 PYCLANG_PATTERN=	(clang\/(__init__|cindex|enumerations).py)$$
@@ -622,6 +637,7 @@ build-plist:
 	    if ($$0 ~ /(argdumper|lldb|six.py)/) {printf "%%%%LLDB%%%%"} \
 	    if ($$0 ~ /(${MLIR_PATTERN})/) {printf "%%%%MLIR%%%%"} \
 	    if ($$0 ~ /(${OPENMP_PATTERN})/) {printf "%%%%OPENMP%%%%"} \
+	    if ($$0 ~ /(${POLLY_PATTERN})/) {printf "%%%%POLLY%%%%"} \
 	    if ($$0 ~ /${PYCLANG_PATTERN}/) {printf "%%%%PYCLANG%%%%"} \
 	    if ($$0 !~ /(lib[a-z]*_rt|LLVMgold)/ && $$0 !~ /(${BE_PATTERN})$$/) {print}}' ${PLIST}.tmp >> ${PLIST}
 	${ECHO_CMD} '@postexec if type ccache-update-links >/dev/null 2>&1; then ccache-update-links -v; fi' >> ${PLIST}

@@ -2,3 +2,4 @@
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NNETMAP}
 
 LDFLAGS+=	-lm
+IGNORE=   unmaintained, please request fixing to users mailing list

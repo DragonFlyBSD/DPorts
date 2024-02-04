@@ -9,3 +9,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e '/HAVE_ST_BIRTHTIME/s@__BSD_VISIBLE@&__z@g' \
 		${WRKSRC}/src/listing.c \
 		${WRKSRC}/src/properties.c
+IGNORE=   unmaintained, please request fixing to users mailing list

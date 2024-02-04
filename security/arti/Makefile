@@ -1,5 +1,6 @@
 PORTNAME=	arti
-DISTVERSION=	1.1.6
+DISTVERSION=	1.1.8
+PORTREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	cs@FreeBSD.org
@@ -8,6 +9,8 @@ WWW=		https://arti.torproject.org/
 
 LICENSE=	MIT
 
+NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS_REASON=Zeroize crate does not support i386
 LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 USES=		cargo sqlite ssl
@@ -19,7 +22,7 @@ PLIST_SUB=	USERS="${USERS}" GROUPS="${GROUPS}"
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.torproject.org
 GL_ACCOUNT=	tpo/core
-GL_COMMIT=	6843093052d00f5fce00d2ae677379a811e36ab1
+GL_TAGNAME=	6b63b8fb9aee489dba086ee82fa1c6bf0dc4e526
 CARGO_FEATURES=	tokio rustls
 CARGO_INSTALL=	no
 

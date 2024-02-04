@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/v8/src/trap-handler/handler-inside-posix.cc.orig	2019-12-20 19:21:59 UTC
+--- src/3rdparty/chromium/v8/src/trap-handler/handler-inside-posix.cc.orig	2023-07-14 13:25:01 UTC
 +++ src/3rdparty/chromium/v8/src/trap-handler/handler-inside-posix.cc
 @@ -27,7 +27,7 @@
  
@@ -9,12 +9,12 @@
  #include <ucontext.h>
  #elif V8_OS_MACOSX
  #include <sys/ucontext.h>
-@@ -112,7 +112,7 @@ bool TryHandleSignal(int signum, siginfo
-     auto* context_rip = &uc->uc_mcontext.gregs[REG_RIP];
- #elif V8_OS_MACOSX
-     auto* context_rip = &uc->uc_mcontext->__ss.__rip;
--#elif V8_OS_FREEBSD
-+#elif defined(V8_OS_FREEBSD) || defined(V8_OS_DRAGONFLYBSD)
-     auto* context_rip = &uc->uc_mcontext.mc_rip;
- #else
- #error Unsupported platform
+@@ -116,7 +116,7 @@ bool TryHandleSignal(int signum, siginfo
+     auto* context_ip = &uc->uc_mcontext->__ss.__pc;
+ #elif V8_OS_MACOSX && V8_HOST_ARCH_X64
+     auto* context_ip = &uc->uc_mcontext->__ss.__rip;
+-#elif V8_OS_FREEBSD && V8_HOST_ARCH_X64
++#elif (V8_OS_FREEBSD || V8_OS_DRAGONFLYBSD) && V8_HOST_ARCH_X64
+     auto* context_ip = &uc->uc_mcontext.mc_rip;
+ #elif V8_OS_FREEBSD && V8_HOST_ARCH_ARM64
+     auto* context_ip = &uc->uc_mcontext.mc_pc;

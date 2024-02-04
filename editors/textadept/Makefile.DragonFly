@@ -6,3 +6,4 @@ dfly-patch:
 	${CP} -v ${WRKSRC}/src/cdk/menu.h ${WRKSRC}/src/cdk/cdkmenu.h
 	${REINPLACE_CMD} -e 's,<menu.h>,<cdkmenu.h>,g' \
 		${WRKSRC}/src/cdk/cdk.h
+IGNORE=   unmaintained, please request fixing to users mailing list

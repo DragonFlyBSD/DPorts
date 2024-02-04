@@ -9,3 +9,4 @@ dfly-patch:
 		${WRKSRC}/library/virtty.lsp
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
 		${WRKSRC}/function.c
+IGNORE=   unmaintained, please request fixing to users mailing list

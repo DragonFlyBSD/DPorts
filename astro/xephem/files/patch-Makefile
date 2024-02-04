@@ -1,0 +1,54 @@
+--- Makefile.orig	2022-05-03 02:30:02 UTC
++++ Makefile
+@@ -22,18 +22,18 @@ MOTIFI = $(MOTIF)
+ MOTIFL = $(MOTIF)
+ endif
+ ifndef MOTIFI
+-MOTIFI = /usr/include
++MOTIFI = %%LOCALBASE%%/include
+ endif
+ ifndef MOTIFL
+-MOTIFL = /usr/lib
++MOTIFL = %%LOCALBASE%%/lib
+ endif
+ 
+ # for linux and Apple OS X
+-CC = gcc
+-CLDFLAGS = -g
+-CFLAGS = $(LIBINC) $(CLDFLAGS) -O2 -Wall -I$(MOTIFI) -I/opt/X11/include
+-LDFLAGS = $(LIBLNK) $(CLDFLAGS) -L$(MOTIFL) -L/opt/X11/lib
+-XLIBS = -lXm -lXt -lXext -lXmu -lX11
++CC? = cc
++CLDFLAGS += -g
++CFLAGS += $(LIBINC) $(CLDFLAGS) -O2 -Wall -I$(MOTIFI) -I%%LOCALBASE%%/include
++LDFLAGS += $(LIBLNK) $(CLDFLAGS) -L$(MOTIFL) -L%%LOCALBASE%%/lib
++XLIBS = -lXm -lXt -lXext -lXmu -lX11 -lXft
+ LIBS = $(XLIBS) $(LIBLIB) -lm -lssl
+ 
+ # static linking on Apple using X11 libs from ports
+@@ -188,18 +188,18 @@ OBJS =			\
+ all: libs xephem xephem.1
+ 
+ xephem: $(INCS) $(OBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+ 
+ xephem.1: xephem.man
+ 	nroff -man $? > $@
+ 
+ libs:
+-	cd ../../libastro; make
+-	cd ../../libip; make
+-	cd ../../libjpegd; make
+-	cd ../../liblilxml; make
+-	cd ../../libpng; make
+-	cd ../../libz; make
++	cd ../../libastro; $(MAKE)
++	cd ../../libip; $(MAKE)
++	cd ../../libjpegd; $(MAKE)
++	cd ../../liblilxml; $(MAKE)
++	cd ../../libpng; $(MAKE)
++	cd ../../libz; $(MAKE)
+ 
+ clean:
+ 	rm -fr *.o ../../lib*/*.[ao]

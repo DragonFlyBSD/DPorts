@@ -1,6 +1,6 @@
 PORTNAME=	casadi
-DISTVERSION=	3.5.5
-PORTREVISION=	6
+DISTVERSION=	3.6.0
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +9,8 @@ WWW=		https://web.casadi.org/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+
+LIB_DEPENDS=	libcoinmumps.so:math/coin-or-mumps
 
 USES=		cmake compiler:c++11-lang pkgconfig
 USE_GITHUB=	yes
@@ -46,8 +48,10 @@ BONMIN_LIB_DEPENDS=	libbonmin.so:math/bonmin \
 			libOsi.so:math/osi
 
 CLANG_DESC=		Build with clang for JIT
+CLANG_USES=		llvm:16,build,run
 CLANG_CMAKE_BOOL=	WITH_CLANG
-CLANG_BROKEN=		Fails to find clang
+CLANG_CMAKE_ON=		-DLLVM_INSTALL_PREFIX=${LLVM_PREFIX} -DOLD_LLVM=ON
+CLANG_BROKEN=		fails to find clang, see https://github.com/casadi/casadi/issues/3089
 
 IPOPT_DESC=		Build with IPopt
 IPOPT_CMAKE_BOOL=	WITH_IPOPT
@@ -62,17 +66,6 @@ QPOASES_DESC=		Build with qpOASES
 QPOASES_CMAKE_BOOL=	WITH_QPOASES
 QPOASES_LIB_DEPENDS=	libopenblas.so:math/openblas
 QPOASES_IMPLIES=	LAPACK
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MCLANG}
-# use clang from ports because cmake can't find base llvm for JIT
-BUILD_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
-RUN_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
-CPP=		clang-cpp${LLVM_DEFAULT}
-CC=		clang${LLVM_DEFAULT}
-CXX=		clang++${LLVM_DEFAULT}
-.endif
 
 PORTSCOUT=	limit:^.*[1-9]\..* # prevent tags like ge2
 

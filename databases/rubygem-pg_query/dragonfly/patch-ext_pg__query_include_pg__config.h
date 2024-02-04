@@ -1,10 +1,11 @@
---- ext/pg_query/include/pg_config.h.orig	2023-09-30 23:25:58 UTC
+--- ext/pg_query/include/pg_config.h.orig	2024-02-03 17:30:10 UTC
 +++ ext/pg_query/include/pg_config.h
-@@ -1032,6 +1032,6 @@
- #undef HAVE__GET_CPUID
- #undef USE_ARMV8_CRC32C
- #undef USE_SSE42_CRC32C_WITH_RUNTIME_CHECK
--#if defined(__FreeBSD__) || defined(__NetBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
- #define HAVE_STRCHRNUL
- #endif
+@@ -525,7 +525,7 @@
+ #define HAVE_STDLIB_H 1
+ 
+ /* Define to 1 if you have the `strchrnul' function. */
+-/* #undef HAVE_STRCHRNUL */
++#define HAVE_STRCHRNUL 1
+ 
+ /* Define to 1 if you have the `strerror_r' function. */
+ #define HAVE_STRERROR_R 1

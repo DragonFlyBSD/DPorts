@@ -4,3 +4,4 @@ CFLAGS+=	-Wno-error=format-extra-args
 dfly-patch:
 	${REINPLACE_CMD} -e 's@c_std=c11@c_std=gnu11@g' \
 		${WRKSRC}/meson.build
+IGNORE=   unmaintained, please request fixing to users mailing list

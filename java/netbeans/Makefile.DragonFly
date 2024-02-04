@@ -78,3 +78,4 @@ dfly-install:
 	@${RM} -f ${STAGEDIR}${DATADIR}/profiler/lib/deployed/${F}
 	@${TOUCH} ${STAGEDIR}${DATADIR}/profiler/lib/deployed/${F}
 .endfor
+IGNORE=   unmaintained, please request fixing to users mailing list

@@ -1,4 +1,4 @@
---- chrome/browser/web_applications/os_integration/os_integration_test_override.h.orig	2023-05-31 08:12:17 UTC
+--- chrome/browser/web_applications/os_integration/os_integration_test_override.h.orig	2023-12-10 06:10:27 UTC
 +++ chrome/browser/web_applications/os_integration/os_integration_test_override.h
 @@ -92,7 +92,7 @@ class OsIntegrationTestOverride
    virtual const base::FilePath& chrome_apps_folder() = 0;

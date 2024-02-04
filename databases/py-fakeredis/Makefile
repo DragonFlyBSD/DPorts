@@ -1,5 +1,5 @@
 PORTNAME=	fakeredis
-PORTVERSION=	2.14.1
+PORTVERSION=	2.19.0
 CATEGORIES=	databases python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}poetry-core>=0:devel/py-poetry-core@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}redis>=4:databases/py-redis@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}sortedcontainers>=2.3<3:devel/py-sortedcontainers@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}sortedcontainers>=2<3:devel/py-sortedcontainers@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hypothesis>=0:devel/py-hypothesis@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonpath-ng>=1.5<2:devel/py-jsonpath-ng@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}lupa>=1.14<2:lang/py-lupa@${PY_FLAVOR} \
@@ -31,6 +31,6 @@ OPTIONS_DEFINE=	JSON LUA
 LUA_DESC=	Lua support
 
 JSON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jsonpath-ng>=1.5<2:devel/py-jsonpath-ng@${PY_FLAVOR}
-LUA_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lupa>=1.14<2:lang/py-lupa@${PY_FLAVOR}
+LUA_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lupa>=1.14<3.0:lang/py-lupa@${PY_FLAVOR}
 
 .include <bsd.port.mk>

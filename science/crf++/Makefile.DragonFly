@@ -1,4 +1,0 @@
-
-# feature_index.cpp:174:74: error: no matching function for call to 'make_pair<int, int>(int&, int&)'
-dfly-patch:
-	${REINPLACE_CMD} -e 's@\(CXXFLAGS="\)@\1-std=c++98 @g' ${WRKSRC}/configure
