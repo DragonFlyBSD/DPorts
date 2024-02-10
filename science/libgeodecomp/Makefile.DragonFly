@@ -1,3 +1,0 @@
-
-# filter out everything cause reasons
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI:NSILO:NSCOTCH}

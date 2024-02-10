@@ -1,4 +1,0 @@
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGNU_COMPAT}
-
-dfly-patch:
-	${REINPLACE_CMD} -e '/bsd.opts.mk/d' ${WRKSRC}/Makefile
