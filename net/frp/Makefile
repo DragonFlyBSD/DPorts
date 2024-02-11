@@ -1,7 +1,6 @@
 PORTNAME=	frp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.51.3
-PORTREVISION=	2
+DISTVERSION=	0.53.2
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -42,6 +41,8 @@ pre-patch:
 .endfor
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/conf/frps.ini ${STAGEDIR}${PREFIX}/etc/frps.ini.sample
+.for f in frpc.toml frps.toml
+	${INSTALL_DATA} ${WRKSRC}/conf/${f} ${STAGEDIR}${PREFIX}/etc/${f}.sample
+.endfor
 
 .include <bsd.port.mk>
