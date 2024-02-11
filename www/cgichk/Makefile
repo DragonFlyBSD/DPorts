@@ -9,6 +9,9 @@ LICENSE=	GPLv2
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Web site vulnerability scanner
 
+DEPRECATED=	Deprecated utility that checks a list of URLs and lacks HTTPS support
+EXPIRATION_DATE=2024-02-29
+
 WRKSRC=		${WRKDIR}/${PORTNAME}
 ALL_TARGET=	cgichk
 
