@@ -3,6 +3,8 @@ PKGNAMESUFFIX=	-daemon
 
 COMMENT=	Bitmark distributed property system daemon
 
+# license section (for portlint)
+
 CONFLICTS=	bitmark
 
 DISTINFO_FILE=	${.CURDIR}/distinfo
