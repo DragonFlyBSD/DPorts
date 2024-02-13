@@ -3,6 +3,8 @@ PKGNAMESUFFIX=	-recorder
 
 COMMENT=	Bitmark distributed property system recorder
 
+# license section (for portlint)
+
 CONFLICTS=	bitmark
 
 DISTINFO_FILE=	${.CURDIR}/distinfo
