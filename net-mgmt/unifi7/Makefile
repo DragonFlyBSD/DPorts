@@ -1,5 +1,5 @@
 PORTNAME=	unifi7
-PORTVERSION=	7.3.83
+PORTVERSION=	7.5.187
 PORTREVISION=	2
 CATEGORIES=	net-mgmt java
 MASTER_SITES=	http://dl.ubnt.com/unifi/%SUBDIR%/:unifi \
@@ -15,20 +15,26 @@ MAINTAINER=	otis@FreeBSD.org
 COMMENT=	UniFi Controller v7
 WWW=		https://help.ui.com/hc/en-us/categories/200320654-UniFi-Wireless
 
+DEPRECATED=	EOLed upstream, switch to newer version
+EXPIRATION_DATE=	2024-02-29
+
 RUN_DEPENDS=	snappyjava>0:archivers/snappy-java
+
+FLAVORS=	default externaldb
+FLAVOR?=	${FLAVORS:[1]}
+
+externaldb_PKGNAMESUFFIX=	-externaldb
 
 USES=		cpe
 
 CPE_VENDOR=	ui
 CPE_PRODUCT=	unifi_controller
 USE_JAVA=	yes
-JAVA_VERSION=	11
-JAVA_OS=	native
-JAVA_VENDOR=	openjdk bsdjava
-JAVA_RUN=	yes
+JAVA_VERSION=	17
+JAVA_RUN=	jre
 USE_RC_SUBR=	unifi
 
-CONFLICTS_INSTALL=	unifi6
+CONFLICTS_INSTALL=	unifi8
 
 EXTRACT_CMD=	${AR}
 EXTRACT_BEFORE_ARGS=	-p
@@ -50,6 +56,10 @@ USERS=		unifi
 GROUPS=		unifi
 
 OPTIONS_DEFINE=	EXTERNALDB
+
+.if ${FLAVOR:U} == externaldb
+OPTIONS_DEFAULT+=	EXTERNALDB
+.endif
 
 EXTERNALDB_DESC=	Use external MongoDB server
 EXTERNALDB_VARS=	PKGMESSAGE+=${WRKSRC}/pkg-message.extdb \
