@@ -1,12 +1,12 @@
 PORTNAME=	pdm
-PORTVERSION=	2.9.3
+PORTVERSION=	2.11.1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python Development Master
-WWW=		https://pdm.fming.dev/latest/ \
+WWW=		https://pdm-project.org/ \
 		https://github.com/pdm-project/pdm
 
 LICENSE=	MIT
@@ -27,7 +27,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}blinker>=0:devel/py-blinker@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}rich>=12.3.0:textproc/py-rich@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}shellingham>=1.3.2:devel/py-shellingham@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tomlkit>=0.11.1<1:textproc/py-tomlkit@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}unearth>=0.10.0:devel/py-unearth@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}unearth>=0.12.1:devel/py-unearth@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}virtualenv>=20:devel/py-virtualenv@${PY_FLAVOR}
 
 USES=		python
