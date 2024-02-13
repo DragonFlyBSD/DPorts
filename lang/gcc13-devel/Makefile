@@ -1,5 +1,6 @@
 PORTNAME=	gcc
-PORTVERSION=	13.2.1.s20230923
+PORTVERSION=	13.2.1.s20231230
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -12,7 +13,7 @@ WWW=		https://gcc.gnu.org
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
-ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le
+ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
@@ -46,7 +47,6 @@ OPTIONS_DEFINE=		GRAPHITE
 OPTIONS_DEFAULT_aarch64=STANDARD_BOOTSTRAP
 OPTIONS_DEFAULT_x86_64=	STANDARD_BOOTSTRAP
 OPTIONS_DEFAULT_i386=	STANDARD_BOOTSTRAP
-OPTIONS_DEFAULT_powerpc=LTO_BOOTSTRAP
 OPTIONS_DEFAULT_powerpc64=LTO_BOOTSTRAP
 OPTIONS_DEFAULT_powerpc64le=LTO_BOOTSTRAP
 OPTIONS_RADIO=	BOOTSTRAP
@@ -166,6 +166,10 @@ full-regression-test: build
 post-stage:
 	${RM} ${STAGEDIR}${PREFIX}/man/man7/*
 	${RM} -r ${STAGEDIR}${TARGLIB}/gcc/*/${GCC_VERSION}/include-fixed/
+	# Install ISO_Fortran_binding.h in an easily findable directory
+	${MKDIR} ${STAGEDIR}${PREFIX}/include/gcc${SUFFIX}
+	${INSTALL_DATA} ${STAGEDIR}${PREFIX}/lib/gcc${SUFFIX}/gcc/${CONFIGURE_TARGET}/${GCC_VERSION}/include/ISO_Fortran_binding.h	\
+		${STAGEDIR}${PREFIX}/include/gcc${SUFFIX}
 	# Add target libraries and include files to packaging list.
 	${RM} ${WRKDIR}/PLIST.lib
 
