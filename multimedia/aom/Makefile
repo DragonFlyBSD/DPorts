@@ -1,6 +1,6 @@
 PORTNAME=	aom
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.7.1
+DISTVERSION=	3.8.1
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -24,6 +24,7 @@ CMAKE_OFF=	ENABLE_DOCS ENABLE_TESTS
 
 OPTIONS_DEFINE=	JXL VMAF
 OPTIONS_DEFAULT=JXL VMAF
+OPTIONS_EXCLUDE=JXL # https://bugs.chromium.org/p/aomedia/issues/detail?id=3457
 
 JXL_DESC=		Encoding tuning for Butteraugli
 JXL_LIB_DEPENDS=	libjxl.so:graphics/libjxl
