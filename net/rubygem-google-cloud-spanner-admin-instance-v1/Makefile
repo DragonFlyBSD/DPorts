@@ -1,11 +1,12 @@
 PORTNAME=	google-cloud-spanner-admin-instance-v1
-PORTVERSION=	0.11.0
+PORTVERSION=	0.12.0
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby Client for the Cloud Spanner Instance Admin V1 API
-WWW=		https://github.com/googleapis/google-cloud-ruby/tree/main/google-cloud-spanner-admin-instance-v1 \
+WWW=		https://cloud.google.com/ruby/docs/reference/google-cloud-spanner-admin-instance-v1/latest/ \
+		https://github.com/googleapis/google-cloud-ruby/tree/main/google-cloud-spanner-admin-instance-v1 \
 		https://github.com/googleapis/google-cloud-ruby
 
 LICENSE=	APACHE20
