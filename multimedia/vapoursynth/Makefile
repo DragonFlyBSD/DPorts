@@ -1,6 +1,8 @@
 PORTNAME=	vapoursynth
-DISTVERSION=	R63
+DISTVERSION=	R65
 CATEGORIES=	multimedia
+
+PATCH_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/commit/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Video processing framework with simplicity in mind
