@@ -1,6 +1,6 @@
 PORTNAME=	open-motif
 PORTVERSION=	2.3.8
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=	x11-toolkits
 # MASTER_SITES=	SF/${PORTNAME}/Motif%202.3.4%20Source%20Code/
 MASTER_SITES=	SF/motif/Motif%20${PORTVERSION}%20Source%20Code/
@@ -21,7 +21,8 @@ USES=		autoreconf gmake iconv jpeg libtool:keepla pkgconfig xorg
 USE_XORG=	x11 xaw xbitmaps xext xft xt xmu xrender sm ice
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
-		libpng.so:graphics/png
+		libpng.so:graphics/png \
+		libXmu.so:x11-toolkits/libXmu
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-printing=no
