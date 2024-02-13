@@ -1,0 +1,31 @@
+--- Makefile.in.orig	2024-02-13 00:31:36 UTC
++++ Makefile.in
+@@ -261,15 +261,7 @@ check_PROGRAMS = test/run-tests$(EXEEXT)
+ @DRAGONFLY_TRUE@                    src/unix/posix-hrtime.c
+ 
+ @DRAGONFLY_TRUE@am__append_33 = -lutil
+-@FREEBSD_TRUE@am__append_34 = include/uv/bsd.h
+-@FREEBSD_TRUE@am__append_35 = src/unix/bsd-ifaddrs.c \
+-@FREEBSD_TRUE@                    src/unix/bsd-proctitle.c \
+-@FREEBSD_TRUE@                    src/unix/freebsd.c \
+-@FREEBSD_TRUE@                    src/unix/kqueue.c \
+-@FREEBSD_TRUE@                    src/unix/posix-hrtime.c \
+-@FREEBSD_TRUE@                    src/unix/random-getrandom.c
+ 
+-@FREEBSD_TRUE@am__append_36 = -lutil
+ @HAIKU_TRUE@am__append_37 = include/uv/posix.h
+ @HAIKU_TRUE@am__append_38 = -D_BSD_SOURCE
+ @HAIKU_TRUE@am__append_39 = src/unix/bsd-ifaddrs.c \
+@@ -504,12 +496,6 @@ am__dirstamp = $(am__leading_dot)dirstam
+ @DRAGONFLY_TRUE@	src/unix/libuv_la-freebsd.lo \
+ @DRAGONFLY_TRUE@	src/unix/libuv_la-kqueue.lo \
+ @DRAGONFLY_TRUE@	src/unix/libuv_la-posix-hrtime.lo
+-@FREEBSD_TRUE@am__objects_8 = src/unix/libuv_la-bsd-ifaddrs.lo \
+-@FREEBSD_TRUE@	src/unix/libuv_la-bsd-proctitle.lo \
+-@FREEBSD_TRUE@	src/unix/libuv_la-freebsd.lo \
+-@FREEBSD_TRUE@	src/unix/libuv_la-kqueue.lo \
+-@FREEBSD_TRUE@	src/unix/libuv_la-posix-hrtime.lo \
+-@FREEBSD_TRUE@	src/unix/libuv_la-random-getrandom.lo
+ @HAIKU_TRUE@am__objects_9 = src/unix/libuv_la-bsd-ifaddrs.lo \
+ @HAIKU_TRUE@	src/unix/libuv_la-haiku.lo \
+ @HAIKU_TRUE@	src/unix/libuv_la-no-fsevents.lo \
