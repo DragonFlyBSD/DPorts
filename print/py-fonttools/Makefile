@@ -1,5 +1,5 @@
 PORTNAME=	fonttools
-PORTVERSION=	4.43.0
+PORTVERSION=	4.47.0
 CATEGORIES=	print python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -29,7 +29,8 @@ UNICODE_DESC=	Use latest Unicode Character Database
 WOFF_DESC=	Compress/uncompress WOFF webfonts
 
 GRAPHITE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lz4>=1.7.4.2:archivers/py-lz4@${PY_FLAVOR}
-INTERPOLATABLE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}scipy>=0:science/py-scipy@${PY_FLAVOR}
+INTERPOLATABLE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cairo>=0:graphics/py-cairo@${PY_FLAVOR} \
+				${PYTHON_PKGNAMEPREFIX}scipy>=0:science/py-scipy@${PY_FLAVOR}
 LXML_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=4.0<5:devel/py-lxml@${PY_FLAVOR}
 PLOT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}matplotlib>=0:math/py-matplotlib@${PY_FLAVOR}
 REPACKER_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}uharfbuzz>=0.23.0:print/py-uharfbuzz@${PY_FLAVOR}
@@ -40,8 +41,8 @@ WOFF_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}brotli>=1.0.1:archivers/py-brotli@${PY_
 
 .include <bsd.port.pre.mk>
 
-.if ${PORT_OPTIONS:UNICODE} && ${PYTHON_REL} < 31200
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}unicodedata2>=15.0.0:devel/py-unicodedata2@${PY_FLAVOR}
+.if ${PORT_OPTIONS:UNICODE} && ${PYTHON_REL} < 31299
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}unicodedata2>=15.1.0:devel/py-unicodedata2@${PY_FLAVOR}
 .endif
 
 post-install:
