@@ -1,0 +1,6 @@
+@@ -486,4 +486,4 @@
+ %%DATADIR%%/materials/winter/winter7.h
+ %%DATADIR%%/materials/winter/winter8.h
+ %%DATADIR%%/materials/winter/winter9.h
+-share/info/SoQt1/build-options.txt
++info/SoQt1/build-options.txt
