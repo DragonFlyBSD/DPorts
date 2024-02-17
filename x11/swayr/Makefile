@@ -1,5 +1,5 @@
 PORTNAME=	swayr
-DISTVERSION=	0.27.1
+DISTVERSION=	0.27.3
 CATEGORIES=	x11
 MASTER_SITES=	CRATESIO
 # XXX Teach USES=cargo to have proper default
