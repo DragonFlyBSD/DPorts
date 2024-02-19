@@ -1,5 +1,5 @@
 PORTNAME=	gromit-mpx
-DISTVERSION=	1.4.3
+DISTVERSION=	1.5.1
 PORTREVISION=	1
 CATEGORIES=	x11 wayland
 
@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libappindicator3.so:devel/libappindicator
 
-USES=		cmake gnome pkgconfig xorg
+USES=		cmake gettext gnome pkgconfig xorg
 USE_CSTD=	gnu99
 USE_GITHUB=	yes
 USE_GNOME=	cairo gdkpixbuf2 gtk30
