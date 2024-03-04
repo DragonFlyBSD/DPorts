@@ -2,12 +2,14 @@ PORTNAME=	momepy
 PORTVERSION=	0.5.4
 PORTREVISION=	2
 CATEGORIES=	graphics python
-MASTER_SITES=	PYPI
+MASTER_SITES=	PYPI \
+		https://github.com/pysal/momepy/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Urban Morphology Measuring Toolkit
-WWW=		https://github.com/pysal/momepy
+WWW=		https://docs.momepy.org/en/stable/ \
+		https://github.com/pysal/momepy
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
