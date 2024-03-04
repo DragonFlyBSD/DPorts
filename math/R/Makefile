@@ -1,5 +1,5 @@
 PORTNAME=	R
-DISTVERSION=	4.3.1
+DISTVERSION=	4.3.2
 PORTREVISION=	1
 CATEGORIES=	math lang
 MASTER_SITES=	CRAN/src/base/R-${PORTVERSION:C|\..*||}
@@ -123,6 +123,10 @@ X11_CONFIGURE_WITH=		x
 _MAJORVER=	${DISTVERSION:R:R}
 
 .include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc
+LLD_UNSAFE=	yes
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|/usr/local|${LOCALBASE}|g" ${WRKSRC}/configure
