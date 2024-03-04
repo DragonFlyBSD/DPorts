@@ -1,12 +1,13 @@
 PORTNAME=	impressive
 DISTVERSION=	0.13.2
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	SF/${PORTNAME}/Impressive/${DISTVERSION}/
 DISTNAME=	Impressive-${DISTVERSION}
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Stylish way of giving presentations
-WWW=		http://impressive.sourceforge.net/
+WWW=		https://impressive.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/license.txt
