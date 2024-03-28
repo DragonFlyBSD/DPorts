@@ -1,2 +1,0 @@
-# zrj: 2.27 ld.gold ICE
-MAKE_ENV+=	LDVER=ld.bfd
