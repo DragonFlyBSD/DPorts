@@ -1,7 +1,6 @@
 PORTNAME=	node
 PORTVERSION=	${NODEJS_PORTVERSION}
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${PORTVERSION}/
 PKGNAMESUFFIX=	20
@@ -66,10 +65,6 @@ NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 
 .include "Makefile.version"
 .include <bsd.port.options.mk>
-
-.if (defined(PPC_ABI) && ${PPC_ABI} == ELFv2) || ${ARCH} == powerpc64le
-EXTRA_PATCHES=	${PATCHDIR}/extra-patch-common.gypi
-.endif
 
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != x86_64
 CONFIGURE_ARGS+=--openssl-no-asm
