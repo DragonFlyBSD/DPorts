@@ -1,5 +1,5 @@
 PORTNAME=	onetbb
-PORTVERSION=	2021.10.0
+PORTVERSION=	2021.11.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
@@ -17,6 +17,11 @@ CMAKE_ARGS+=	-DTBB_STRICT:BOOL=FALSE \
 		-DCMAKE_INSTALL_DOCDIR:PATH="${DOCSDIR}" \
 		-DCMAKE_HWLOC_2_LIBRARY_PATH:PATH="${LOCALBASE}/lib/libhwloc.so" \
 		-DCMAKE_HWLOC_2_INCLUDE_PATH:PATH="${LOCALBASE}/include"
+
+# Many symbols in the linker version scripts are undefined because link time
+# optimization (-flto=thin) removes them. Suppress errors with lld >= 17 due to
+# these undefined symbols.
+LDFLAGS+=	-Wl,--undefined-version
 
 CONFLICTS=	tbb
 
