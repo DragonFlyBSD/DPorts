@@ -1,11 +1,11 @@
 PORTNAME=	kdiff3
-DISTVERSION=	1.10.6
+DISTVERSION=	1.10.7
 CATEGORIES=	textproc kde
 MASTER_SITES=	KDE/stable/${PORTNAME}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE graphical frontend for diff
-WWW=		http://kdiff3.sourceforge.net/
+WWW=		https://kdiff3.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
