@@ -1,12 +1,12 @@
 PORTNAME=	tomcat
-DISTVERSION=	11.0.0-M6
+DISTVERSION=	11.0.0-M18
 CATEGORIES=	www java
 MASTER_SITES=	APACHE/${PORTNAME}/${PORTNAME}-${DISTVERSION:C/([0-9]+)(.*)/\1/}/v${DISTVERSION}/bin
 PKGNAMESUFFIX=	-devel
 DISTNAME=	apache-${PORTNAME}-${DISTVERSION}
 
 MAINTAINER=	vvd@FreeBSD.org
-COMMENT=	Open-source Java web server by Apache, 10.1.x branch
+COMMENT=	Open-source Java web server by Apache, 11.0.x branch
 WWW=		https://tomcat.apache.org/
 
 LICENSE=	APACHE20
@@ -48,7 +48,6 @@ post-patch:
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${TOMCAT_HOME}/logs
-	@${MKDIR} ${STAGEDIR}${TOMCAT_HOME}/endorsed
 	@${CP} -R ${WRKSRC}/* ${STAGEDIR}${TOMCAT_HOME}
 
 post-install:
