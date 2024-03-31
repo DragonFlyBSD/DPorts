@@ -1,6 +1,6 @@
 PORTNAME=	ghcprofview
 PORTVERSION=	0.1.0.2
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -8,6 +8,8 @@ COMMENT=	Graphical viewer for GHC profile files
 WWW=		https://github.com/portnov/ghcprofview-hs
 
 LICENSE=	BSD3CLAUSE
+
+BROKEN_aarch64=	error: incompatible pointer to integer conversion assigning to 'ffi_arg' (aka 'unsigned long') from 'HsPtr' (aka 'void *')
 
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz
