@@ -653,28 +653,3 @@ you update your ports collection, before attempting any port upgrades.
   You should update any make.conf setting etc which refer to this.
   e.g. change sysutils_py-mqttwarn_REISPUB to sysutils_py-mqttwarn_REDISPUB
 
-20230416:
-  AFFECTS: users of databases/mongodb50, databases/mongodb44 and databases/mongodb60
-  AUTHOR: ronald@FreeBSD.org
-
-  MongoDB removed the settings 'fork' and 'pidFilePath' from the default
-  etc/mongodb.conf file.
-  This does not affect mongod started by etc/rc.d/mongod as the settings are
-  passed as arguments. Please verify custom uses of mongod.
-
-20230414:
-  AFFECTS: users of www/gitea
-  AUTHOR: fernape@FreeBSD.org
-
-  Gitea 1.19.1 contains a breaking change.
-  actions unit has ben renamed to to repo.actions.
-
-20230407:
-  AFFECTS: users of devel/sonarqube-community
-  AUTHOR: netchild@FreeBSD.org
-
-  You need to make sure to update missing and changed values in
-     PREFIX/libexec/sonarqube/conf/sonar.properties
-  from
-     PREFIX/libexec/sonarqube/conf/sonar.properties.sample
-
