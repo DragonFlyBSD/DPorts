@@ -1,12 +1,12 @@
 PORTNAME=	pioneers
 PORTVERSION=	15.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games gnome
 MASTER_SITES=	SF/pio/Source
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Internet playable version of the Settlers of Catan
-WWW=		http://pio.sourceforge.net/
+WWW=		https://pio.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
