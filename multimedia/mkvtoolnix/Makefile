@@ -1,5 +1,5 @@
 PORTNAME=	mkvtoolnix
-PORTVERSION=	80.0
+PORTVERSION=	81.0
 CATEGORIES=	multimedia audio
 MASTER_SITES=	https://www.bunkus.org/videotools/mkvtoolnix/sources/ \
 		https://mkvtoolnix.download/sources/
@@ -11,15 +11,13 @@ WWW=		https://www.bunkus.org/videotools/mkvtoolnix/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_sparc64=	does not install
-
 BUILD_DEPENDS=	rake:devel/rubygem-rake \
 		docbook-xsl>=0:textproc/docbook-xsl \
 		xsltproc:textproc/libxslt
 LIB_DEPENDS=	libvorbis.so:audio/libvorbis \
 		libogg.so:audio/libogg \
 		libebml.so:textproc/libebml \
-		libboost_regex.so:devel/boost-libs \
+		libboost_system.so:devel/boost-libs \
 		libpugixml.so:textproc/pugixml \
 		libmatroska.so:multimedia/libmatroska \
 		libcmark.so:textproc/cmark \
