@@ -1,0 +1,13 @@
+diff --git base/BUILD.gn base/BUILD.gn
+index 2dff31e8b4d..0b799901dc2 100644
+--- src/3rdparty/chromium/base/BUILD.gn
++++ src/3rdparty/chromium/base/BUILD.gn
+@@ -2265,7 +2265,7 @@ mixed_component("base") {
+       "process/process_metrics_openbsd.cc",
+       "system/sys_info_openbsd.cc",
+     ]
+-  } else if (is_freebsd) {
++  } else if (is_freebsd || is_dragonfly) {
+     sources += [
+       "process/process_handle_freebsd.cc",
+       "process/process_iterator_freebsd.cc",

@@ -1,0 +1,15 @@
+diff --git build/config/ozone.gni build/config/ozone.gni
+index 186f9f8aca3..e470ecc24e8 100644
+--- src/3rdparty/chromium/build/config/ozone.gni
++++ src/3rdparty/chromium/build/config/ozone.gni
+@@ -99,6 +99,10 @@ declare_args() {
+       ozone_platform = "x11"
+       ozone_platform_wayland = true
+       ozone_platform_x11 = true
++    } else if (is_dragonfly) {
++      ozone_platform = "x11"
++      ozone_platform_wayland = true
++      ozone_platform_x11 = true
+     } else if (is_fuchsia) {
+       ozone_platform = "scenic"
+       ozone_platform_scenic = true

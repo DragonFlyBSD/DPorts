@@ -1,0 +1,13 @@
+diff --git third_party/sqlite/BUILD.gn third_party/sqlite/BUILD.gn
+index 6ac7df9eb44..ce8f0bd2bdc 100644
+--- src/3rdparty/chromium/third_party/sqlite/BUILD.gn
++++ src/3rdparty/chromium/third_party/sqlite/BUILD.gn
+@@ -198,7 +198,7 @@ component("chromium_sqlite3") {
+   if (is_linux || is_chromeos || is_android) {
+     defines += [
+       # Linux provides fdatasync(), a faster equivalent of fsync().
+-      "fdatasync=fdatasync",
++      "fdatasync=fsync",
+     ]
+   }
+ 

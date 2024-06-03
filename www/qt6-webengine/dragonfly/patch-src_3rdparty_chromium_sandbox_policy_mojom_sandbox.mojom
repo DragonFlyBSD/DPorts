@@ -1,0 +1,13 @@
+diff --git sandbox/policy/mojom/sandbox.mojom sandbox/policy/mojom/sandbox.mojom
+index 12950962f34..145414e4dd5 100644
+--- src/3rdparty/chromium/sandbox/policy/mojom/sandbox.mojom
++++ src/3rdparty/chromium/sandbox/policy/mojom/sandbox.mojom
+@@ -78,6 +78,8 @@ enum Sandbox {
+   [EnableIf=is_freebsd]
+   kVideoCapture,
+ 
++  kVideoCapture,
++
+   // Allows access to file contents and Windows APIs for parsing icons from PE
+   // files.
+   [EnableIf=is_win]

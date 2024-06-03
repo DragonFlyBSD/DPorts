@@ -1,0 +1,11 @@
+--- src/3rdparty/chromium/build/config/ui.gni.orig	2023-09-07 16:02:00 UTC
++++ src/3rdparty/chromium/build/config/ui.gni
+@@ -37,7 +37,7 @@ declare_args() {
+       is_linux && !is_castos &&
+       # Avoid the need for glib when Android is building things via secondary
+       # toolchains.
+-      target_os != "android"
++      target_os != "android" && target_os != "dragonfly"
+ }
+ 
+ assert(!use_glib || (is_linux && !is_castos))
