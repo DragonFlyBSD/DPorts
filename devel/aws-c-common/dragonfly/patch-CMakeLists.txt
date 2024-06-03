@@ -1,15 +1,16 @@
---- CMakeLists.txt.orig	2023-04-17 20:59:48.173262000 +0200
-+++ CMakeLists.txt	2023-04-17 21:00:07.603269000 +0200
-@@ -111,6 +111,8 @@ else ()
+--- CMakeLists.txt.orig	2024-05-26 17:19:55.794513000 +0200
++++ CMakeLists.txt	2024-05-26 17:34:05.949701000 +0200
+@@ -116,6 +116,9 @@ else ()
+     elseif (${CMAKE_SYSTEM_NAME} STREQUAL "Linux") # Android does not link to libpthread nor librt, so this is fine
+         list(APPEND PLATFORM_LIBS dl m Threads::Threads rt)
          list (APPEND AWS_COMMON_OS_SRC "source/linux/*.c") # OS specific includes
-     elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-         list(APPEND PLATFORM_LIBS dl m thr execinfo)
 +    elseif(CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
 +        list(APPEND PLATFORM_LIBS dl m Threads::Threads execinfo)
-     elseif(CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
-         list(APPEND PLATFORM_LIBS dl m Threads::Threads execinfo)
-     elseif(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
-@@ -181,7 +183,7 @@ aws_check_headers(${PROJECT_NAME} ${AWS_
++        list (APPEND AWS_COMMON_OS_SRC "source/platform_fallback_stubs/system_info.c")
+     elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+         list(APPEND PLATFORM_LIBS dl m thr execinfo)
+         list (APPEND AWS_COMMON_OS_SRC "source/platform_fallback_stubs/system_info.c")
+@@ -194,7 +197,7 @@ aws_check_headers(${PROJECT_NAME} ${AWS_
  
  #apple source already includes the definitions we want, and setting this posix source
  #version causes it to revert to an older version. So don't turn it on there, we don't need it.
