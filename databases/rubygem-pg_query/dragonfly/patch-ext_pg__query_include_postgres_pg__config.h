@@ -1,6 +1,6 @@
---- ext/pg_query/include/pg_config.h.orig	2024-02-03 17:30:10 UTC
-+++ ext/pg_query/include/pg_config.h
-@@ -525,7 +525,7 @@
+--- ext/pg_query/include/postgres/pg_config.h.orig	2024-06-05 21:05:24 UTC
++++ ext/pg_query/include/postgres/pg_config.h
+@@ -414,7 +414,7 @@
  #define HAVE_STDLIB_H 1
  
  /* Define to 1 if you have the `strchrnul' function. */
