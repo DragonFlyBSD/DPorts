@@ -1,0 +1,3 @@
+# deal with thread 'main' panicked at 'Unable to find libclang.so'
+# since it's build via gem, it has to go to gem env
+GEM_ENV+=     LIBCLANG_PATH=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
