@@ -1,8 +1,6 @@
 PORTNAME=	node
 PORTVERSION=	${NODEJS_PORTVERSION}
-PORTREVISION=	1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${PORTVERSION}/
 PKGNAMESUFFIX=	18
@@ -70,10 +68,6 @@ NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 
 .if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160 && (${ARCH} == aarch64 || ${ARCH} == armv7 || ${ARCH:Mpowerpc64*})
 CXXFLAGS+=	-Wno-error=enum-constexpr-conversion
-.endif
-
-.if (defined(PPC_ABI) && ${PPC_ABI} == ELFv2) || ${ARCH} == powerpc64le
-EXTRA_PATCHES=	${PATCHDIR}/extra-patch-common.gypi
 .endif
 
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != x86_64
