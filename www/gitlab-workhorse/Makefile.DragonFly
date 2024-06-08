@@ -1,4 +1,4 @@
-BUILD_DEPENDS=     ca_root_nss>=0:security/ca_root_nss
+BUILD_DEPENDS+=     ca_root_nss>=0:security/ca_root_nss
 
 # XXX This is a hack, please help me finding a better way
 dfly-patch:
