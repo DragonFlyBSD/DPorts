@@ -8,7 +8,7 @@ BINARY_ALIAS+=		cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} \
 			nm=${LOCALBASE}/bin/llvm-nm${LLVM_DEFAULT}
 
 # XXX - This is a hack to force llvm to use libc++ C++ includes instead of base's gcc
-CXXFLAGS+=	-nostdlib++ -stdlib=libc++ -I${LOCALBASE}/include -I${LOCALBASE}/include/cxxrt
+CXXFLAGS+=	-nostdlib++ -nostdinc++ -stdlib=libc++ -I${LOCALBASE}/include -I${LOCALBASE}/include/cxxrt
 CXXFLAGS+=	-cxx-isystem ${LOCALBASE}/llvm${LLVM_DEFAULT}/libcxx/include/c++/v1
 LDFLAGS=	-L /usr/lib -L${LOCALBASE}/llvm${LLVM_DEFAULT}/libcxx/lib/c++ -L /lib
 
