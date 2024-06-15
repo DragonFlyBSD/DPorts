@@ -1,5 +1,5 @@
 --- /dev/null	2015-12-21 17:33:42.530292415 +0200
-+++ ide/include/dragonfly/lazconf.inc
++++ ide/packages/ideconfig/include/dragonfly/lazconf.inc
 @@ -0,0 +1,37 @@
 +// included by lazconf.pp
 +

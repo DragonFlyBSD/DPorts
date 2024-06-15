@@ -1,6 +1,6 @@
---- ide/include/unix/lazbaseconf.inc.orig	2013-09-05 13:24:48.000000000 +0300
-+++ ide/include/unix/lazbaseconf.inc
-@@ -79,6 +79,9 @@ begin
+--- ide/packages/ideconfig/include/unix/lazbaseconf.inc.orig	2023-12-17 10:23:58 UTC
++++ ide/packages/ideconfig/include/unix/lazbaseconf.inc
+@@ -72,6 +72,9 @@ begin
    {$ELSE}
    Result:=FindDefaultExecutablePath('make');
    {$ENDIF}
