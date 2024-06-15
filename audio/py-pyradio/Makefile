@@ -1,5 +1,5 @@
 PORTNAME=	pyradio
-DISTVERSION=	0.9.2.13
+DISTVERSION=	0.9.2.21
 PORTREVISION=	0
 CATEGORIES=	audio python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,7 +9,7 @@ COMMENT=	Curses based Internet radio player
 WWW=		https://github.com/coderholic/pyradio
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENCE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PKGNAMEPREFIX}dateutil>=2.8.2:devel/py-dateutil@${PY_FLAVOR} \
 		${PKGNAMEPREFIX}dnspython>=2.2.1:dns/py-dnspython@${PY_FLAVOR} \
@@ -30,24 +30,29 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}dateutil>=2.8.2:devel/py-dateutil@${PY_FLAVOR} \
 USES=		python
 USE_GITHUB=	yes
 GH_ACCOUNT=	coderholic
-USE_PYTHON=	autoplist distutils
+USE_PYTHON=	autoplist pep517
+
+NO_ARCH=	yes
 
 PLIST_FILES=	share/applications/${PORTNAME}.desktop \
 		share/pixmaps/${PORTNAME}.png
 PORTDOCS=	*
 
-OPTIONS_DEFINE=			DOCS
-OPTIONS_DEFAULT=		MPV
+OPTIONS_DEFINE=			DOCS METADATA
+OPTIONS_DEFAULT=		METADATA MPV
 OPTIONS_SINGLE=			MEDIA_PLAYER
 OPTIONS_SINGLE_MEDIA_PLAYER=	MPLAYER MPV VLC
 
+METADATA_DESC=	Insert tags, chapters and cover into recordings
 # override predefined
 MPV_DESC=	Mpv media player support
 VLC_DESC=	VLC media player support
 
 DOCS_PLIST_FILES=	man/man1/pyradio.1.gz \
 			man/man1/pyradio_rb.1.gz \
+			man/man1/pyradio_rec.1.gz \
 			man/man1/pyradio_server.1.gz
+METADATA_RUN_DEPENDS+=	mkvinfo:multimedia/mkvtoolnix
 MPLAYER_RUN_DEPENDS+=	mplayer:multimedia/mplayer
 MPV_RUN_DEPENDS+=	mpv:multimedia/mpv
 VLC_RUN_DEPENDS+=	vlc:multimedia/vlc
@@ -65,7 +70,7 @@ post-install:
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_MAN} ${WRKSRC}/pyradio*.1 ${STAGEDIR}${MANPREFIX}/man/man1
-	${INSTALL_DATA} ${WRKSRC}/*.html ${WRKSRC}/*.md ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_MAN} ${WRKSRC}/docs/pyradio*.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${WRKSRC}/*.md ${STAGEDIR}${DOCSDIR}/
 
 .include <bsd.port.mk>
