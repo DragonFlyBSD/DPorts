@@ -1,0 +1,10 @@
+--- libbutl/tests/backtrace/testscript.orig	2020-06-18 13:03:34 UTC
++++ libbutl/tests/backtrace/testscript
+@@ -9,6 +9,7 @@ tsys   = $cxx.target.system
+ if ($tclass == 'linux'  || \
+     $tclass == 'macos'  || \
+     $tsys == 'freebsd'  || \
++    $tsys == 'dragonflybsd'  || \
+     $tsys == 'netbsd')
+ {
+   # The stack frame line format varies among OSes. The only common thing is

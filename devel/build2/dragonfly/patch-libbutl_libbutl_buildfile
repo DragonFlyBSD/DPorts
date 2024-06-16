@@ -1,0 +1,11 @@
+--- libbutl/libbutl/buildfile.orig	2022-10-03 10:38:31 UTC
++++ libbutl/libbutl/buildfile
+@@ -38,7 +38,7 @@ lib{butl}: file{**.c **.h}
+ lib{butl}: cxx{uuid-linux}:   include = ($tclass == 'linux')
+ lib{butl}: cxx{uuid-macos}:   include = ($tclass == 'macos')
+ lib{butl}: cxx{uuid-windows}: include = $windows
+-lib{butl}: cxx{uuid-freebsd}: include = ($tsys == 'freebsd' || $tsys == 'netbsd')
++lib{butl}: cxx{uuid-freebsd}: include = ($tsys == 'freebsd' || $tsys == 'netbsd' || $tsys == 'dragonflybsd')
+ lib{butl}: cxx{uuid-openbsd}: include = ($tsys == 'openbsd')
+ 
+ # GCC prior to version 6 has flaky `#pragma GCC diagnostic` so we have to
