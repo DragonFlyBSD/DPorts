@@ -1908,6 +1908,7 @@ lib/python2.7/lib-dynload/_curses.so
 lib/python2.7/lib-dynload/_curses_panel.so
 lib/python2.7/lib-dynload/_elementtree.so
 lib/python2.7/lib-dynload/_functools.so
+lib/python2.7/lib-dynload/_hashlib.so
 lib/python2.7/lib-dynload/_heapq.so
 lib/python2.7/lib-dynload/_hotshot.so
 lib/python2.7/lib-dynload/_io.so
