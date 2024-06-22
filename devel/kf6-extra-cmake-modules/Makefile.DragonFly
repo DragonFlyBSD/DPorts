@@ -1,11 +1,3 @@
 dfly-patch:
 	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
 		${WRKSRC}/metainfo.yaml
-
-	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|g' \
-		 -e 's|Q_OS_FREEBSD|Q_OS_DRAGONFLY|g' \
-		 ${WRKSRC}/kde-modules/KDEMetaInfoPlatformCheck.cmake \
-		 ${WRKSRC}/kde-modules/KDECompilerSettings.cmake \
-		 ${WRKSRC}/kde-modules/KDEInstallDirsCommon.cmake \
-		 ${WRKSRC}/modules/ECMGeneratePkgConfigFile.cmake \
-		 ${WRKSRC}/modules/ECMQchDoxygen.config.in
