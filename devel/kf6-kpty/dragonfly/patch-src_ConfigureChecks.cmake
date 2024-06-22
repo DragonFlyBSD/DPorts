@@ -1,0 +1,18 @@
+--- src/ConfigureChecks.cmake.orig	2023-12-20 10:57:53 UTC
++++ src/ConfigureChecks.cmake
+@@ -27,11 +27,11 @@ if (UNIX)
+         set(UTIL_LIBRARY util)
+       endif (login_in_libutil)
+     endif (NOT login_in_libc)
+-    if (CMAKE_SYSTEM_NAME MATCHES Linux OR CMAKE_SYSTEM_NAME MATCHES Darwin OR CMAKE_SYSTEM_NAME MATCHES kFreeBSD OR CMAKE_SYSTEM_NAME STREQUAL GNU)
+-      set (HAVE_UTMPX)
+-    else (CMAKE_SYSTEM_NAME MATCHES Linux OR CMAKE_SYSTEM_NAME MATCHES Darwin OR CMAKE_SYSTEM_NAME MATCHES kFreeBSD OR CMAKE_SYSTEM_NAME STREQUAL GNU)
++    set (HAVE_UTMPX)
++    if (CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin|kFreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL GNU)
++    else (CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin|kFreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL GNU)
+       check_function_exists(getutxent HAVE_UTMPX)
+-    endif (CMAKE_SYSTEM_NAME MATCHES Linux OR CMAKE_SYSTEM_NAME MATCHES Darwin OR CMAKE_SYSTEM_NAME MATCHES kFreeBSD OR CMAKE_SYSTEM_NAME STREQUAL GNU)
++    endif (CMAKE_SYSTEM_NAME MATCHES "Linux|Darwin|kFreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL GNU)
+     if (HAVE_UTMPX)
+       set(utmp utmpx)
+       if (login_in_libutil)
