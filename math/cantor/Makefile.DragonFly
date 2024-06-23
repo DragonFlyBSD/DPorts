@@ -1,0 +1,2 @@
+MAKE_JOBS_UNSAFE=1
+USES+=	gmake
