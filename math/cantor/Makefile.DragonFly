@@ -1,2 +1,2 @@
-MAKE_JOBS_UNSAFE=1
-USES+=	gmake
+MAKE_JOBS_UNSAFE=	yes
+USES+=  gmake
