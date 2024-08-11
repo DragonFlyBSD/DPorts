@@ -18,4 +18,5 @@ dfly-patch:
 		${WRKSRC}/src/iop/filmicrgb.c \
 		${WRKSRC}/src/iop/negadoctor.c \
 		${WRKSRC}/src/iop/toneequal.c
-IGNORE=   unmaintained, please request fixing to users mailing list
+
+USE_GCC_VERSION=	12
