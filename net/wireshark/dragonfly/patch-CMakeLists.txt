@@ -1,11 +1,11 @@
---- CMakeLists.txt.intermediate	2019-10-28 13:08:42.000000000 +0000
-+++ CMakeLists.txt
-@@ -195,7 +195,7 @@ if(NOT (WIN32 OR APPLE))
- 		# Some systems support $ORIGIN in RPATH to enable relocatable
- 		# binaries. In other cases, only absolute paths can be used.
- 		# https://www.lekensteyn.nl/rpath.html
+--- CMakeLists.txt.orig	2024-08-09 22:42:49.510578000 +0200
++++ CMakeLists.txt	2024-08-09 22:43:05.591169000 +0200
+@@ -319,7 +319,7 @@ if(NOT (WIN32 OR APPLE OR USE_STATIC))
+ 		# silently ignore $ORIGIN in RPATH for binaries that are
+ 		# setuid root or use privileged capabilities.
+ 		#
 -		if(CMAKE_SYSTEM_NAME MATCHES "^(Linux|SunOS|FreeBSD)$")
-+		if(CMAKE_SYSTEM_NAME MATCHES "^(Linux|SunOS|FreeBSD|DragonFly)$")
++		if(CMAKE_SYSTEM_NAME MATCHES "^(Linux|SunOS|DragonFly|FreeBSD)$")
  			set(_enable_rpath_origin TRUE)
- 			if(BUILD_dumpcap)
- 				# dumpcap will most likely be installed with
+ 		else()
+ 			set(_enable_rpath_origin FALSE)
