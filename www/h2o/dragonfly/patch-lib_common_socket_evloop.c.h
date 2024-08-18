@@ -1,7 +1,7 @@
---- lib/common/socket/evloop.c.h.orig	2016-06-01 04:03:13.000000000 +0300
+--- lib/common/socket/evloop.c.h.orig	2019-08-12 14:11:53 UTC
 +++ lib/common/socket/evloop.c.h
-@@ -33,6 +33,8 @@
- #define H2O_USE_ACCEPT4 1
+@@ -38,6 +38,8 @@
+ #endif
  #elif __FreeBSD__ >= 10
  #define H2O_USE_ACCEPT4 1
 +#elif defined(__DragonFly__)
@@ -9,7 +9,7 @@
  #else
  #define H2O_USE_ACCEPT4 0
  #endif
-@@ -70,7 +72,7 @@ static void evloop_do_on_socket_export(s
+@@ -76,7 +78,7 @@ static void evloop_do_on_socket_export(s
  #if H2O_USE_POLL || H2O_USE_EPOLL || H2O_USE_KQUEUE
  /* explicitly specified */
  #else
