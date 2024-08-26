@@ -1,0 +1,7 @@
+[
+{ type: install
+  message: <<EOM
+net/megacmd requires a machine-id to be generated to work properly on DragonFlyBSD, to achieve so, please run `dbus-uuidgen --ensure` as root.
+EOM
+}
+]
