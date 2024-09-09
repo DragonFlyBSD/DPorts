@@ -1,6 +1,6 @@
 PORTNAME=	mpsolve
 DISTVERSION=	3.2.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	https://numpi.dm.unipi.it/_media/software/mpsolve/
 
@@ -10,8 +10,6 @@ WWW=		https://numpi.dm.unipi.it/software/mpsolve
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN_FreeBSD_14=	fails to compile: expected unqualified-id, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=273338
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libtcmalloc_minimal.so:devel/google-perftools

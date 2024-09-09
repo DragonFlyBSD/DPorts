@@ -9,7 +9,6 @@ dfly-patch:
 		${WRKSRC}/cmake/Modules/*.cmake \
 		${WRKSRC}/cmake/finders/*.cmake \
 		${WRKSRC}/cmake/common/*.cmake \
-		${WRKSRC}/cmake/external/*.cmake \
 		${WRKSRC}/deps/obs-scripting/cmake/python.cmake \
 		${WRKSRC}/deps/obs-scripting/obslua/CMakeLists.txt \
 		${WRKSRC}/deps/obs-scripting/obspython/CMakeLists.txt \

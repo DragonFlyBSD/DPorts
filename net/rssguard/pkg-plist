@@ -3,6 +3,7 @@ include/librssguard/services/abstract/accountcheckmodel.h
 include/librssguard/services/abstract/cacheforserviceroot.h
 include/librssguard/services/abstract/category.h
 include/librssguard/services/abstract/feed.h
+include/librssguard/services/abstract/gui/accountdetails.h
 include/librssguard/services/abstract/gui/authenticationdetails.h
 include/librssguard/services/abstract/gui/custommessagepreviewer.h
 include/librssguard/services/abstract/gui/formaccountdetails.h
@@ -10,6 +11,7 @@ include/librssguard/services/abstract/gui/formaddeditlabel.h
 include/librssguard/services/abstract/gui/formaddeditprobe.h
 include/librssguard/services/abstract/gui/formcategorydetails.h
 include/librssguard/services/abstract/gui/formfeeddetails.h
+include/librssguard/services/abstract/gui/multifeededitcheckbox.h
 include/librssguard/services/abstract/importantnode.h
 include/librssguard/services/abstract/label.h
 include/librssguard/services/abstract/labelsnode.h

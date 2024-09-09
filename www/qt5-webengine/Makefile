@@ -19,7 +19,7 @@
 
 PORTNAME=	webengine
 DISTVERSION=	${QT5_VERSION}${QT5_KDE_PATCH}
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	www
 PKGNAMEPREFIX=	qt5-
 
@@ -51,13 +51,6 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 
 DISTINFO_FILE=	${.CURDIR}/distinfo
 QT5_VERSION=	${_KDE_webengine_VERSION}
-
-# Add extra-patch-no-mempcpy-nasm only when there's no mempcpy() in base.
-# Nested variable expansion avoids executing the test when not needed for
-# expanding EXTRA_PATCHES.
-# mempcpy was introduced in ee37f64cf875255338f917a9da76c643cf59786c
-EXTRA_PATCHES+=	${"${:!${GREP} mempcpy ${CROSS_SYSROOT}/usr/include/string.h \
-		|| ${TRUE}!}" == "":?${PATCHDIR}/extra-patch-no-mempcpy-nasm:}
 
 OPTIONS_SINGLE=		AUDIO
 OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO SNDIO
@@ -117,7 +110,7 @@ QT_BINARIES=	yes
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH:Mmips*} || ${ARCH:Mpowerpc*} || ${ARCH} == sparc64
+.if ${ARCH:Mmips*} || ${ARCH:Mpowerpc*}
 PLIST_SUB+=	BE="" LE="@comment "
 .else
 PLIST_SUB+=	BE="@comment " LE=""
@@ -145,7 +138,7 @@ post-patch:
 	@${REINPLACE_CMD} -E -e 's|^(MODULE_VERSION = ).*|\1${QT5_VERSION}|' \
 		${WRKSRC}/.qmake.conf
 
-.if ${ARCH:Mmips*} || ${ARCH:Mpowerpc*} || ${ARCH} == sparc64
+.if ${ARCH:Mmips*} || ${ARCH:Mpowerpc*}
 	@${REINPLACE_CMD} -e 's/icudtl.dat/icudtb.dat/' \
 		${WRKSRC}/src/core/core_module.pro
 .endif

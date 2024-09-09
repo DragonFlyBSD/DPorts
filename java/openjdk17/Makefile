@@ -1,7 +1,6 @@
 PORTNAME=	openjdk
 DISTVERSIONPREFIX=	jdk-
 DISTVERSION=	${JDK_MAJOR_VERSION}.${JDK_MINOR_VERSION}.${JDK_PATCH_VERSION}+${JDK_BUILD_NUMBER}-${BSD_JDK_VERSION}
-PORTREVISION=	1
 CATEGORIES=	java devel
 PKGNAMESUFFIX?=	${JDK_MAJOR_VERSION}
 
@@ -63,8 +62,8 @@ NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	17
 JDK_MINOR_VERSION=	0
-JDK_PATCH_VERSION=	8
-JDK_BUILD_NUMBER=	7
+JDK_PATCH_VERSION=	9
+JDK_BUILD_NUMBER=	9
 BSD_JDK_VERSION=	1
 
 JDK_BUG_URL=	https://bugs.freebsd.org/bugzilla/enter_bug.cgi?product=Ports%20%26%20Packages&component=Individual%20Port(s)&short_desc=java/${PORTNAME}${JDK_MAJOR_VERSION}%3A%20
@@ -161,9 +160,6 @@ CONFIGURE_ARGS+=	--disable-warnings-as-errors
 .if ${ARCH} == aarch64 || (defined(PPC_ABI) && ${PPC_ABI} == ELFv1)
 CONFIGURE_ARGS+=	--disable-dtrace
 .endif
-.if ${ARCH} == powerpc64 && ${OSREL:C/\.[0-9]//} == 12
-EXTRA_PATCHES=		${PATCHDIR}/extra-patch-src_hotspot_cpu_ppc_vm__version__ppc.hpp
-.endif
 .if ${ARCH} == aarch64
 CONFIGURE_ARGS+=	--with-boot-jdk-jvmargs=-XX:-UseCompressedClassPointers
 MAKE_ENV+=		JAVA_TOOL_OPTIONS="-XX:-UseCompressedClassPointers"
@@ -191,7 +187,9 @@ post-patch:
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${INSTALLDIR}
+.if !defined(BUILD_JRE)
 	${CP} -rv ${JDK_IMAGEDIR}/include/freebsd ${JDK_IMAGEDIR}/include/dragonfly
+.endif
 	@cd ${JDK_IMAGEDIR} && ${COPYTREE_SHARE} . ${STAGEDIR}${INSTALLDIR}
 	@cd ${STAGEDIR}${INSTALLDIR} && \
 		${FIND} bin -type f -exec ${CHMOD} ${BINMODE} {} \;

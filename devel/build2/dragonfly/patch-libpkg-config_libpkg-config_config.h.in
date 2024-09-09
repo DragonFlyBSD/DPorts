@@ -1,0 +1,10 @@
+--- libpkg-config/libpkg-config/config.h.in.orig	2022-07-05 10:40:03 UTC
++++ libpkg-config/libpkg-config/config.h.in
+@@ -16,6 +16,7 @@
+ #if defined(__FreeBSD__) || \
+     defined(__OpenBSD__) || \
+     defined(__NetBSD__)  || \
++    defined(__DragonFly__)  || \
+     defined(__APPLE__)
+ #  define HAVE_STRLCPY 1
+ #  define HAVE_STRLCAT 1

@@ -103,7 +103,6 @@ MASTER_SITE_CRAN+= \
 	https://cloud.r-project.org/%SUBDIR%/ \
 	https://stat.ethz.ch/CRAN/%SUBDIR%/ \
 	http://cran.utstat.utoronto.ca/%SUBDIR%/ \
-	https://cran.cnr.berkeley.edu/%SUBDIR%/ \
 	https://cran.csiro.au/%SUBDIR%/ \
 	https://mirrors.tuna.tsinghua.edu.cn/CRAN/%SUBDIR%/ \
 	http://camoruco.ing.uc.edu.ve/cran/%SUBDIR%/ \
@@ -578,8 +577,7 @@ MASTER_SITE_GNOME+= \
 	http://www.gtlib.gatech.edu/pub/gnome/%SUBDIR%/ \
 	ftp://ftp.kddlabs.co.jp/pub/GNOME/%SUBDIR%/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.gnome.org/pub/GNOME/%SUBDIR%/ \
-	ftp://ftp.nara.wide.ad.jp/pub/X11/GNOME/%SUBDIR%/ \
-	https://ftp.gnome.org/pub/GNOME/%SUBDIR%/
+	ftp://ftp.nara.wide.ad.jp/pub/X11/GNOME/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_GIMP)
@@ -642,16 +640,6 @@ MASTER_SITE_HACKAGE+= \
 	http://hackage.haskell.org/package/
 .endif
 
-.if !defined(IGNORE_MASTER_SITE_HORDE)
-MASTER_SITE_HORDE+= \
-	https://ftp.horde.org/pub/%SUBDIR%/ \
-	ftp://ftp.horde.org/pub/%SUBDIR%/ \
-	ftp://ftp.at.horde.org/infosys/webapps/horde/%SUBDIR%/ \
-	ftp://ftp.se.horde.org/mirror/horde/pub/%SUBDIR%/ \
-	ftp://ftp.tw.horde.org/pub/%SUBDIR%/ \
-	ftp://ftp.us.horde.org/pub/software/horde//%SUBDIR%/
-.endif
-
 .if !defined(IGNORE_MASTER_SITE_IDSOFTWARE)
 MASTER_SITE_IDSOFTWARE+= \
 	ftp://ftp.gwdg.de/pub/misc2/ftp.idsoftware.com/idstuff/%SUBDIR%/ \
@@ -702,13 +690,11 @@ MASTER_SITE_MOZDEV+= \
 	http://ftp.scarlet.be/pub/mozdev/%SUBDIR%/ \
 	http://ftp.rz.tu-bs.de/pub/mirror/downloads.mozdev.org/%SUBDIR%/ \
 	http://ftp.ntua.gr/pub/www/mozdev/%SUBDIR%/ \
-	https://ftp.heanet.ie/pub/mozdev/%SUBDIR%/ \
 	http://mozdev.oregonstate.edu/%SUBDIR%/ \
 	http://ftp.ntua.gr/pub/www/mozdev/%SUBDIR%/ \
 	http://www.devlib.org/mozdev/%SUBDIR%/ \
 	ftp://ftp.heanet.ie/pub/mozdev/%SUBDIR%/ \
-	http://mirrors.ibiblio.org/mozdev.org/%SUBDIR%/ \
-	https://ftp.osuosl.org/pub/mozdev/%SUBDIR%/
+	http://mirrors.ibiblio.org/mozdev.org/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_MOZILLA)
@@ -742,8 +728,6 @@ MASTER_SITE_NETBSD+= \
 .if !defined(IGNORE_MASTER_SITE_NETLIB)
 MASTER_SITE_NETLIB+= \
 	http://www.netlib.org/%SUBDIR%/ \
-	https://ftp.mirrorservice.org/sites/ftp.netlib.org/%SUBDIR%/ \
-	https://www.mirrorservice.org/sites/ftp.netlib.org/%SUBDIR%/ \
 	ftp://ftp.irisa.fr/pub/netlib/%SUBDIR%/ \
 	http://netlib.sandia.gov/%SUBDIR%/
 .endif
@@ -754,7 +738,7 @@ MASTER_SITE_NVIDIA+= \
 	http://us.download.nvidia.com/%SUBDIR%/ \
 	https://tw.download.nvidia.com/%SUBDIR%/ \
 	http://download.nvidia.com/%SUBDIR%/ \
-	https://download1.nvidia.com/%SUBDIR%/ \
+	https://http.download.nvidia.com/%SUBDIR%/ \
 	ftp://download.nvidia.com/%SUBDIR%/ \
 	ftp://download1.nvidia.com/%SUBDIR%/
 .endif
@@ -869,7 +853,6 @@ MASTER_SITE_PYTHON+= \
 MASTER_SITE_QMAIL+= \
 	http://qmail.glasswings.com.au/%SUBDIR%/ \
 	http://qmail.psshee.com/%SUBDIR%/ \
-	https://mirrors.sunsite.dk/qmailwww/%SUBDIR%/ \
 	http://www.agria.hu/qmail/%SUBDIR%/ \
 	http://qmail.netvisao.pt/%SUBDIR%/ \
 	http://qmail.ipg.sk/%SUBDIR%/ \
@@ -1002,46 +985,38 @@ MASTER_SITE_TEX_CTAN+= \
 .endif
 
 # Derived from: https://www.torproject.org/getinvolved/mirrors.html.en
+# Please do not blindly follow and add URLs from the above list
 .if !defined(IGNORE_MASTER_SITE_TOR)
 MASTER_SITE_TOR+= \
 		https://dist.torproject.org/%SUBDIR%/ \
 		https://archive.torproject.org/tor-package-archive/%SUBDIR%/ \
 		ftp://ftp.bit.nl/mirror/tor/%SUBDIR%/ \
-		https://cyberside.net.ee/tor/%SUBDIR%/ \
+		https://cyberside.net.ee/sibul/dist/%SUBDIR%/ \
 		https://ftp.bit.nl/mirror/tor/%SUBDIR%/ \
 		http://mirror.hessmo.com/tor/dist/%SUBDIR%/ \
 		http://mirror.host4site.co.il/torproject.org/dist/%SUBDIR%/ \
 		http://mirror.open-networx.org/torproject.org/dist/%SUBDIR%/ \
 		http://mirror.tor.hu/dist/%SUBDIR%/ \
-		https://mirror.torland.me/torproject.org/dist/%SUBDIR%/ \
 		http://mirrors.chaos-darmstadt.de/tor-mirror/dist/%SUBDIR%/ \
 		http://theonionrouter.com/dist/%SUBDIR%/ \
 		http://tor.amorphis.eu/dist/%SUBDIR%/ \
 		http://tor.askapache.com/dist/%SUBDIR%/ \
 		http://tor.beme-it.de/dist/%SUBDIR%/ \
 		http://tor.borgmann.tv/dist/%SUBDIR%/ \
-		https://tor.ccc.de/dist/%SUBDIR%/ \
 		http://tor.cyberarmy.at/dist/%SUBDIR%/ \
 		http://tor.dont-know-me.at/dist/%SUBDIR%/ \
 		http://tor.factor.cc/dist/%SUBDIR%/ \
 		http://tor.homosu.net/dist/%SUBDIR%/ \
 		http://tor.idnr.ws/dist/%SUBDIR%/ \
-		https://tor.myrl.net/dist/%SUBDIR%/ \
 		http://tor.kamagurka.org/dist/%SUBDIR%/ \
 		http://tor.spline.de/dist/%SUBDIR%/ \
 		http://tor.vesta.nu/dist/%SUBDIR%/ \
 		http://torproj.xpdm.us/dist/%SUBDIR%/ \
-		https://torproject.antagonism.org/dist/%SUBDIR%/ \
-		https://torproject.crypto.is/dist/%SUBDIR%/ \
-		https://torproject.is/dist/%SUBDIR%/ \
 		http://torproject.nwlinux.us/dist/%SUBDIR%/ \
 		https://torproject.ph3x.at/dist/%SUBDIR%/ \
-		https://www.coevoet.nl/tor/dist/%SUBDIR%/ \
 		http://www.oignon.net/dist/%SUBDIR%/ \
-		https://www.torproject.nl/dist/%SUBDIR%/ \
 		http://www.torproject.org.nyud.net/dist/%SUBDIR%/ \
-		http://www.torproject.us/dist/%SUBDIR%/ \
-		https://www.torservers.net/mirrors/torproject.org/dist/%SUBDIR%/
+		http://www.torproject.us/dist/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_WINDOWMAKER)
@@ -1073,10 +1048,8 @@ MASTER_SITE_XORG+= \
 	https://mirror.csclub.uwaterloo.ca/x.org/%SUBDIR%/ \
 	https://artfiles.org/x.org/pub/%SUBDIR%/ \
 	https://ftp.gwdg.de/pub/x11/x.org/pub/%SUBDIR%/ \
-	https://mi.mirror.garr.it/mirrors/x.org/%SUBDIR%/ \
 	https://mirrors.ircam.fr/pub/x.org/%SUBDIR%/ \
 	https://www.mirrorservice.org/sites/ftp.x.org/pub/%SUBDIR%/ \
-	https://mirror.nl.leaseweb.net/xorg/%SUBDIR%/ \
 	https://ftp.yz.yamagata-u.ac.jp/pub/X11/x.org/%SUBDIR%/ \
 	http://piotrkosoft.net/pub/mirrors/ftp.x.org/pub/%SUBDIR%/ \
 	http://xorg.mirrors.pair.com/%SUBDIR%/ \
@@ -1097,7 +1070,7 @@ MASTER_SITE_KERNEL_ORG+= \
 
 .if !defined(IGNORE_MASTER_SITE_ZI)
 MASTER_SITE_ZI+= \
-	https://ftpmirror.your.org/zi/%SUBDIR%/ \
+	https://ftpmirror.your.org/pub/zi/%SUBDIR%/ \
 	https://mirrors.rit.edu/zi/%SUBDIR%/ \
 	https://www.zi0r.com/mirrors/%SUBDIR%/ \
 	${MASTER_SITE_LOCAL:S/%SUBDIR%/zi/}
@@ -1111,8 +1084,7 @@ MASTER_SITES_ABBREVS=	CPAN:PERL_CPAN \
 			LODEV:LIBREOFFICE_DEV \
 			NL:NETLIB \
 			RG:RUBYGEMS \
-			SF:SOURCEFORGE \
-			CHEESESHOP:PYPI
+			SF:SOURCEFORGE
 MASTER_SITES_SUBDIRS=	APACHE_COMMONS_BINARIES:${PORTNAME:S,commons-,,} \
 			APACHE_COMMONS_SOURCE:${PORTNAME:S,commons-,,} \
 			APACHE_JAKARTA:${PORTNAME:S,-,/,}/source \
@@ -1130,7 +1102,6 @@ MASTER_SITES_SUBDIRS=	APACHE_COMMONS_BINARIES:${PORTNAME:S,commons-,,} \
 			GNU:${PORTNAME} \
 			GNUPG:${PORTNAME} \
 			GNU_ALPHA:${PORTNAME} \
-			HORDE:${PORTNAME} \
 			LIBREOFFICE_DEV:${PORTNAME} \
 			MATE:${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/} \
 			MOZDEV:${PORTNAME:tl} \

@@ -1,0 +1,767 @@
+--- /dev/null
++++ src/3rdparty/chromium/base/message_loop/message_loop_task_runner.cc
+@@ -0,0 +1,185 @@
++// Copyright (c) 2012 The Chromium Authors. All rights reserved.
++// Use of this source code is governed by a BSD-style license that can be
++// found in the LICENSE file.
++
++#include "base/message_loop/message_loop_task_runner.h"
++
++#include <utility>
++
++#include "base/location.h"
++#include "base/logging.h"
++#include "base/metrics/histogram_macros.h"
++#include "build/build_config.h"
++
++namespace base {
++namespace internal {
++
++namespace {
++
++#if DCHECK_IS_ON()
++// Delays larger than this are often bogus, and a warning should be emitted in
++// debug builds to warn developers.  http://crbug.com/450045
++constexpr TimeDelta kTaskDelayWarningThreshold = TimeDelta::FromDays(14);
++#endif
++
++TimeTicks CalculateDelayedRuntime(const Location& from_here, TimeDelta delay) {
++  DLOG_IF(WARNING, delay > kTaskDelayWarningThreshold)
++      << "Requesting super-long task delay period of " << delay.InSeconds()
++      << " seconds from here: " << from_here.ToString();
++
++  DCHECK_GE(delay, TimeDelta()) << "delay should not be negative";
++
++  return delay > TimeDelta() ? TimeTicks::Now() + delay : TimeTicks();
++}
++
++}  // namespace
++
++MessageLoopTaskRunner::MessageLoopTaskRunner(
++    std::unique_ptr<SequencedTaskSource::Observer> task_source_observer)
++    : task_source_observer_(std::move(task_source_observer)) {}
++
++void MessageLoopTaskRunner::BindToCurrentThread() {
++  AutoLock lock(valid_thread_id_lock_);
++  DCHECK_EQ(kInvalidThreadId, valid_thread_id_);
++  valid_thread_id_ = PlatformThread::CurrentId();
++}
++
++void MessageLoopTaskRunner::Shutdown() {
++  AutoLock lock(incoming_queue_lock_);
++  accept_new_tasks_ = false;
++}
++
++bool MessageLoopTaskRunner::PostDelayedTask(const Location& from_here,
++                                            OnceClosure task,
++                                            base::TimeDelta delay) {
++  return AddToIncomingQueue(from_here, std::move(task), delay,
++                            Nestable::kNestable);
++}
++
++bool MessageLoopTaskRunner::PostNonNestableDelayedTask(
++    const Location& from_here,
++    OnceClosure task,
++    base::TimeDelta delay) {
++  return AddToIncomingQueue(from_here, std::move(task), delay,
++                            Nestable::kNonNestable);
++}
++
++bool MessageLoopTaskRunner::RunsTasksInCurrentSequence() const {
++  AutoLock lock(valid_thread_id_lock_);
++  return valid_thread_id_ == PlatformThread::CurrentId();
++}
++
++PendingTask MessageLoopTaskRunner::TakeTask() {
++  // Must be called on execution sequence, unless clearing tasks from an unbound
++  // MessageLoop.
++  DCHECK(RunsTasksInCurrentSequence() || valid_thread_id_ == kInvalidThreadId);
++
++  // HasTasks() will reload the queue if necessary (there should always be
++  // pending tasks by contract).
++  const bool has_tasks = HasTasks();
++  DCHECK(has_tasks);
++
++  PendingTask pending_task = std::move(outgoing_queue_.front());
++  outgoing_queue_.pop();
++  return pending_task;
++}
++
++bool MessageLoopTaskRunner::HasTasks() {
++  // Must be called on execution sequence, unless clearing tasks from an unbound
++  // MessageLoop.
++  DCHECK(RunsTasksInCurrentSequence() || valid_thread_id_ == kInvalidThreadId);
++
++  if (outgoing_queue_.empty()) {
++    AutoLock lock(incoming_queue_lock_);
++    incoming_queue_.swap(outgoing_queue_);
++    outgoing_queue_empty_ = outgoing_queue_.empty();
++  }
++
++  return !outgoing_queue_.empty();
++}
++
++void MessageLoopTaskRunner::InjectTask(OnceClosure task) {
++  // Must be called on execution sequence, unless clearing tasks from an unbound
++  // MessageLoop.
++  DCHECK(RunsTasksInCurrentSequence() || valid_thread_id_ == kInvalidThreadId);
++
++  bool success = this->PostTask(FROM_HERE, std::move(task));
++  DCHECK(success) << "Injected a task in a dead task runner.";
++}
++
++void MessageLoopTaskRunner::SetAddQueueTimeToTasks(bool enable) {
++  base::subtle::NoBarrier_Store(&add_queue_time_to_tasks_, enable ? 1 : 0);
++}
++
++MessageLoopTaskRunner::~MessageLoopTaskRunner() = default;
++
++bool MessageLoopTaskRunner::AddToIncomingQueue(const Location& from_here,
++                                               OnceClosure task,
++                                               TimeDelta delay,
++                                               Nestable nestable) {
++  DCHECK(task_source_observer_)
++      << "SetObserver() must be called before posting tasks";
++
++  // Use CHECK instead of DCHECK to crash earlier. See http://crbug.com/711167
++  // for details.
++  CHECK(task);
++
++  PendingTask pending_task(from_here, std::move(task),
++                           CalculateDelayedRuntime(from_here, delay), nestable);
++
++  if (base::subtle::NoBarrier_Load(&add_queue_time_to_tasks_)) {
++    if (pending_task.delayed_run_time.is_null()) {
++      pending_task.queue_time = base::TimeTicks::Now();
++    } else {
++      pending_task.queue_time = pending_task.delayed_run_time - delay;
++    }
++  }
++
++#if defined(OS_WIN) || defined(OS_DRAGONFLY)
++  // We consider the task needs a high resolution timer if the delay is
++  // more than 0 and less than 32ms. This caps the relative error to
++  // less than 50% : a 33ms wait can wake at 48ms since the default
++  // resolution on Windows is between 10 and 15ms.
++  if (delay > TimeDelta() &&
++      delay.InMilliseconds() < (2 * Time::kMinLowResolutionThresholdMs)) {
++    pending_task.is_high_res = true;
++  }
++#endif
++
++  bool did_queue_task = false;
++  bool was_empty;
++  {
++    AutoLock auto_lock(incoming_queue_lock_);
++    if (accept_new_tasks_) {
++      // Initialize the sequence number. The sequence number is used for delayed
++      // tasks (to facilitate FIFO sorting when two tasks have the same
++      // delayed_run_time value) and for identifying the task in about:tracing.
++      pending_task.sequence_num = next_sequence_num_++;
++
++      task_source_observer_->WillQueueTask(&pending_task);
++
++      was_empty = outgoing_queue_empty_ && incoming_queue_.empty();
++      incoming_queue_.push(std::move(pending_task));
++
++      did_queue_task = true;
++    }
++  }
++
++  if (!did_queue_task) {
++    // Clear the pending task outside of |incoming_queue_lock_| to prevent any
++    // chance of self-deadlock if destroying a task also posts a task to this
++    // queue.
++    pending_task.task.Reset();
++    return false;
++  }
++
++  // Let |task_source_observer_| know about the task just queued. It's important
++  // to do this outside of |incoming_queue_lock_| to avoid blocking tasks
++  // incoming from other threads on the resolution of DidQueueTask().
++  task_source_observer_->DidQueueTask(was_empty);
++  return true;
++}
++
++}  // namespace internal
++
++}  // namespace base
+--- /dev/null
++++ src/3rdparty/chromium/third_party/boringssl/src/include/stdatomic.h
+@@ -0,0 +1,190 @@
++/*===---- stdatomic.h - Standard header for atomic types and operations -----===
++ *
++ * Permission is hereby granted, free of charge, to any person obtaining a copy
++ * of this software and associated documentation files (the "Software"), to deal
++ * in the Software without restriction, including without limitation the rights
++ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++ * copies of the Software, and to permit persons to whom the Software is
++ * furnished to do so, subject to the following conditions:
++ *
++ * The above copyright notice and this permission notice shall be included in
++ * all copies or substantial portions of the Software.
++ *
++ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
++ * THE SOFTWARE.
++ *
++ *===-----------------------------------------------------------------------===
++ */
++
++#ifndef __CLANG_STDATOMIC_H
++#define __CLANG_STDATOMIC_H
++
++/* If we're hosted, fall back to the system's stdatomic.h. FreeBSD, for
++ * example, already has a Clang-compatible stdatomic.h header.
++ */
++#if __STDC_HOSTED__ && __has_include_next(<stdatomic.h>)
++# include_next <stdatomic.h>
++#else
++
++#include <stddef.h>
++#include <stdint.h>
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++
++/* 7.17.1 Introduction */
++
++#define ATOMIC_BOOL_LOCK_FREE       __CLANG_ATOMIC_BOOL_LOCK_FREE
++#define ATOMIC_CHAR_LOCK_FREE       __CLANG_ATOMIC_CHAR_LOCK_FREE
++#define ATOMIC_CHAR16_T_LOCK_FREE   __CLANG_ATOMIC_CHAR16_T_LOCK_FREE
++#define ATOMIC_CHAR32_T_LOCK_FREE   __CLANG_ATOMIC_CHAR32_T_LOCK_FREE
++#define ATOMIC_WCHAR_T_LOCK_FREE    __CLANG_ATOMIC_WCHAR_T_LOCK_FREE
++#define ATOMIC_SHORT_LOCK_FREE      __CLANG_ATOMIC_SHORT_LOCK_FREE
++#define ATOMIC_INT_LOCK_FREE        __CLANG_ATOMIC_INT_LOCK_FREE
++#define ATOMIC_LONG_LOCK_FREE       __CLANG_ATOMIC_LONG_LOCK_FREE
++#define ATOMIC_LLONG_LOCK_FREE      __CLANG_ATOMIC_LLONG_LOCK_FREE
++#define ATOMIC_POINTER_LOCK_FREE    __CLANG_ATOMIC_POINTER_LOCK_FREE
++
++/* 7.17.2 Initialization */
++
++#define ATOMIC_VAR_INIT(value) (value)
++#define atomic_init __c11_atomic_init
++
++/* 7.17.3 Order and consistency */
++
++typedef enum memory_order {
++  memory_order_relaxed = __ATOMIC_RELAXED,
++  memory_order_consume = __ATOMIC_CONSUME,
++  memory_order_acquire = __ATOMIC_ACQUIRE,
++  memory_order_release = __ATOMIC_RELEASE,
++  memory_order_acq_rel = __ATOMIC_ACQ_REL,
++  memory_order_seq_cst = __ATOMIC_SEQ_CST
++} memory_order;
++
++#define kill_dependency(y) (y)
++
++/* 7.17.4 Fences */
++
++/* These should be provided by the libc implementation. */
++void atomic_thread_fence(memory_order);
++void atomic_signal_fence(memory_order);
++
++#define atomic_thread_fence(order) __c11_atomic_thread_fence(order)
++#define atomic_signal_fence(order) __c11_atomic_signal_fence(order)
++
++/* 7.17.5 Lock-free property */
++
++#define atomic_is_lock_free(obj) __c11_atomic_is_lock_free(sizeof(*(obj)))
++
++/* 7.17.6 Atomic integer types */
++
++#ifdef __cplusplus
++typedef _Atomic(bool)               atomic_bool;
++#else
++typedef _Atomic(_Bool)              atomic_bool;
++#endif
++typedef _Atomic(char)               atomic_char;
++typedef _Atomic(signed char)        atomic_schar;
++typedef _Atomic(unsigned char)      atomic_uchar;
++typedef _Atomic(short)              atomic_short;
++typedef _Atomic(unsigned short)     atomic_ushort;
++typedef _Atomic(int)                atomic_int;
++typedef _Atomic(unsigned int)       atomic_uint;
++typedef _Atomic(long)               atomic_long;
++typedef _Atomic(unsigned long)      atomic_ulong;
++typedef _Atomic(long long)          atomic_llong;
++typedef _Atomic(unsigned long long) atomic_ullong;
++typedef _Atomic(uint_least16_t)     atomic_char16_t;
++typedef _Atomic(uint_least32_t)     atomic_char32_t;
++typedef _Atomic(wchar_t)            atomic_wchar_t;
++typedef _Atomic(int_least8_t)       atomic_int_least8_t;
++typedef _Atomic(uint_least8_t)      atomic_uint_least8_t;
++typedef _Atomic(int_least16_t)      atomic_int_least16_t;
++typedef _Atomic(uint_least16_t)     atomic_uint_least16_t;
++typedef _Atomic(int_least32_t)      atomic_int_least32_t;
++typedef _Atomic(uint_least32_t)     atomic_uint_least32_t;
++typedef _Atomic(int_least64_t)      atomic_int_least64_t;
++typedef _Atomic(uint_least64_t)     atomic_uint_least64_t;
++typedef _Atomic(int_fast8_t)        atomic_int_fast8_t;
++typedef _Atomic(uint_fast8_t)       atomic_uint_fast8_t;
++typedef _Atomic(int_fast16_t)       atomic_int_fast16_t;
++typedef _Atomic(uint_fast16_t)      atomic_uint_fast16_t;
++typedef _Atomic(int_fast32_t)       atomic_int_fast32_t;
++typedef _Atomic(uint_fast32_t)      atomic_uint_fast32_t;
++typedef _Atomic(int_fast64_t)       atomic_int_fast64_t;
++typedef _Atomic(uint_fast64_t)      atomic_uint_fast64_t;
++typedef _Atomic(intptr_t)           atomic_intptr_t;
++typedef _Atomic(uintptr_t)          atomic_uintptr_t;
++typedef _Atomic(size_t)             atomic_size_t;
++typedef _Atomic(ptrdiff_t)          atomic_ptrdiff_t;
++typedef _Atomic(intmax_t)           atomic_intmax_t;
++typedef _Atomic(uintmax_t)          atomic_uintmax_t;
++
++/* 7.17.7 Operations on atomic types */
++
++#define atomic_store(object, desired) __c11_atomic_store(object, desired, __ATOMIC_SEQ_CST)
++#define atomic_store_explicit __c11_atomic_store
++
++#define atomic_load(object) __c11_atomic_load(object, __ATOMIC_SEQ_CST)
++#define atomic_load_explicit __c11_atomic_load
++
++#define atomic_exchange(object, desired) __c11_atomic_exchange(object, desired, __ATOMIC_SEQ_CST)
++#define atomic_exchange_explicit __c11_atomic_exchange
++
++#define atomic_compare_exchange_strong(object, expected, desired) __c11_atomic_compare_exchange_strong(object, expected, desired, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST)
++#define atomic_compare_exchange_strong_explicit __c11_atomic_compare_exchange_strong
++
++#define atomic_compare_exchange_weak(object, expected, desired) __c11_atomic_compare_exchange_weak(object, expected, desired, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST)
++#define atomic_compare_exchange_weak_explicit __c11_atomic_compare_exchange_weak
++
++#define atomic_fetch_add(object, operand) __c11_atomic_fetch_add(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_add_explicit __c11_atomic_fetch_add
++
++#define atomic_fetch_sub(object, operand) __c11_atomic_fetch_sub(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_sub_explicit __c11_atomic_fetch_sub
++
++#define atomic_fetch_or(object, operand) __c11_atomic_fetch_or(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_or_explicit __c11_atomic_fetch_or
++
++#define atomic_fetch_xor(object, operand) __c11_atomic_fetch_xor(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_xor_explicit __c11_atomic_fetch_xor
++
++#define atomic_fetch_and(object, operand) __c11_atomic_fetch_and(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_and_explicit __c11_atomic_fetch_and
++
++/* 7.17.8 Atomic flag type and operations */
++
++typedef struct atomic_flag { atomic_bool _Value; } atomic_flag;
++
++#define ATOMIC_FLAG_INIT { 0 }
++
++/* These should be provided by the libc implementation. */
++#ifdef __cplusplus
++bool atomic_flag_test_and_set(volatile atomic_flag *);
++bool atomic_flag_test_and_set_explicit(volatile atomic_flag *, memory_order);
++#else
++_Bool atomic_flag_test_and_set(volatile atomic_flag *);
++_Bool atomic_flag_test_and_set_explicit(volatile atomic_flag *, memory_order);
++#endif
++void atomic_flag_clear(volatile atomic_flag *);
++void atomic_flag_clear_explicit(volatile atomic_flag *, memory_order);
++
++#define atomic_flag_test_and_set(object) __c11_atomic_exchange(&(object)->_Value, 1, __ATOMIC_SEQ_CST)
++#define atomic_flag_test_and_set_explicit(object, order) __c11_atomic_exchange(&(object)->_Value, 1, order)
++
++#define atomic_flag_clear(object) __c11_atomic_store(&(object)->_Value, 0, __ATOMIC_SEQ_CST)
++#define atomic_flag_clear_explicit(object, order) __c11_atomic_store(&(object)->_Value, 0, order)
++
++#ifdef __cplusplus
++}
++#endif
++
++#endif /* __STDC_HOSTED__ */
++#endif /* __CLANG_STDATOMIC_H */
++
+--- /dev/null
++++ src/3rdparty/chromium/third_party/dav1d/libdav1d/include/stdatomic.h
+@@ -0,0 +1,190 @@
++/*===---- stdatomic.h - Standard header for atomic types and operations -----===
++ *
++ * Permission is hereby granted, free of charge, to any person obtaining a copy
++ * of this software and associated documentation files (the "Software"), to deal
++ * in the Software without restriction, including without limitation the rights
++ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++ * copies of the Software, and to permit persons to whom the Software is
++ * furnished to do so, subject to the following conditions:
++ *
++ * The above copyright notice and this permission notice shall be included in
++ * all copies or substantial portions of the Software.
++ *
++ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
++ * THE SOFTWARE.
++ *
++ *===-----------------------------------------------------------------------===
++ */
++
++#ifndef __CLANG_STDATOMIC_H
++#define __CLANG_STDATOMIC_H
++
++/* If we're hosted, fall back to the system's stdatomic.h. FreeBSD, for
++ * example, already has a Clang-compatible stdatomic.h header.
++ */
++#if __STDC_HOSTED__ && __has_include_next(<stdatomic.h>)
++# include_next <stdatomic.h>
++#else
++
++#include <stddef.h>
++#include <stdint.h>
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++
++/* 7.17.1 Introduction */
++
++#define ATOMIC_BOOL_LOCK_FREE       __CLANG_ATOMIC_BOOL_LOCK_FREE
++#define ATOMIC_CHAR_LOCK_FREE       __CLANG_ATOMIC_CHAR_LOCK_FREE
++#define ATOMIC_CHAR16_T_LOCK_FREE   __CLANG_ATOMIC_CHAR16_T_LOCK_FREE
++#define ATOMIC_CHAR32_T_LOCK_FREE   __CLANG_ATOMIC_CHAR32_T_LOCK_FREE
++#define ATOMIC_WCHAR_T_LOCK_FREE    __CLANG_ATOMIC_WCHAR_T_LOCK_FREE
++#define ATOMIC_SHORT_LOCK_FREE      __CLANG_ATOMIC_SHORT_LOCK_FREE
++#define ATOMIC_INT_LOCK_FREE        __CLANG_ATOMIC_INT_LOCK_FREE
++#define ATOMIC_LONG_LOCK_FREE       __CLANG_ATOMIC_LONG_LOCK_FREE
++#define ATOMIC_LLONG_LOCK_FREE      __CLANG_ATOMIC_LLONG_LOCK_FREE
++#define ATOMIC_POINTER_LOCK_FREE    __CLANG_ATOMIC_POINTER_LOCK_FREE
++
++/* 7.17.2 Initialization */
++
++#define ATOMIC_VAR_INIT(value) (value)
++#define atomic_init __c11_atomic_init
++
++/* 7.17.3 Order and consistency */
++
++typedef enum memory_order {
++  memory_order_relaxed = __ATOMIC_RELAXED,
++  memory_order_consume = __ATOMIC_CONSUME,
++  memory_order_acquire = __ATOMIC_ACQUIRE,
++  memory_order_release = __ATOMIC_RELEASE,
++  memory_order_acq_rel = __ATOMIC_ACQ_REL,
++  memory_order_seq_cst = __ATOMIC_SEQ_CST
++} memory_order;
++
++#define kill_dependency(y) (y)
++
++/* 7.17.4 Fences */
++
++/* These should be provided by the libc implementation. */
++void atomic_thread_fence(memory_order);
++void atomic_signal_fence(memory_order);
++
++#define atomic_thread_fence(order) __c11_atomic_thread_fence(order)
++#define atomic_signal_fence(order) __c11_atomic_signal_fence(order)
++
++/* 7.17.5 Lock-free property */
++
++#define atomic_is_lock_free(obj) __c11_atomic_is_lock_free(sizeof(*(obj)))
++
++/* 7.17.6 Atomic integer types */
++
++#ifdef __cplusplus
++typedef _Atomic(bool)               atomic_bool;
++#else
++typedef _Atomic(_Bool)              atomic_bool;
++#endif
++typedef _Atomic(char)               atomic_char;
++typedef _Atomic(signed char)        atomic_schar;
++typedef _Atomic(unsigned char)      atomic_uchar;
++typedef _Atomic(short)              atomic_short;
++typedef _Atomic(unsigned short)     atomic_ushort;
++typedef _Atomic(int)                atomic_int;
++typedef _Atomic(unsigned int)       atomic_uint;
++typedef _Atomic(long)               atomic_long;
++typedef _Atomic(unsigned long)      atomic_ulong;
++typedef _Atomic(long long)          atomic_llong;
++typedef _Atomic(unsigned long long) atomic_ullong;
++typedef _Atomic(uint_least16_t)     atomic_char16_t;
++typedef _Atomic(uint_least32_t)     atomic_char32_t;
++typedef _Atomic(wchar_t)            atomic_wchar_t;
++typedef _Atomic(int_least8_t)       atomic_int_least8_t;
++typedef _Atomic(uint_least8_t)      atomic_uint_least8_t;
++typedef _Atomic(int_least16_t)      atomic_int_least16_t;
++typedef _Atomic(uint_least16_t)     atomic_uint_least16_t;
++typedef _Atomic(int_least32_t)      atomic_int_least32_t;
++typedef _Atomic(uint_least32_t)     atomic_uint_least32_t;
++typedef _Atomic(int_least64_t)      atomic_int_least64_t;
++typedef _Atomic(uint_least64_t)     atomic_uint_least64_t;
++typedef _Atomic(int_fast8_t)        atomic_int_fast8_t;
++typedef _Atomic(uint_fast8_t)       atomic_uint_fast8_t;
++typedef _Atomic(int_fast16_t)       atomic_int_fast16_t;
++typedef _Atomic(uint_fast16_t)      atomic_uint_fast16_t;
++typedef _Atomic(int_fast32_t)       atomic_int_fast32_t;
++typedef _Atomic(uint_fast32_t)      atomic_uint_fast32_t;
++typedef _Atomic(int_fast64_t)       atomic_int_fast64_t;
++typedef _Atomic(uint_fast64_t)      atomic_uint_fast64_t;
++typedef _Atomic(intptr_t)           atomic_intptr_t;
++typedef _Atomic(uintptr_t)          atomic_uintptr_t;
++typedef _Atomic(size_t)             atomic_size_t;
++typedef _Atomic(ptrdiff_t)          atomic_ptrdiff_t;
++typedef _Atomic(intmax_t)           atomic_intmax_t;
++typedef _Atomic(uintmax_t)          atomic_uintmax_t;
++
++/* 7.17.7 Operations on atomic types */
++
++#define atomic_store(object, desired) __c11_atomic_store(object, desired, __ATOMIC_SEQ_CST)
++#define atomic_store_explicit __c11_atomic_store
++
++#define atomic_load(object) __c11_atomic_load(object, __ATOMIC_SEQ_CST)
++#define atomic_load_explicit __c11_atomic_load
++
++#define atomic_exchange(object, desired) __c11_atomic_exchange(object, desired, __ATOMIC_SEQ_CST)
++#define atomic_exchange_explicit __c11_atomic_exchange
++
++#define atomic_compare_exchange_strong(object, expected, desired) __c11_atomic_compare_exchange_strong(object, expected, desired, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST)
++#define atomic_compare_exchange_strong_explicit __c11_atomic_compare_exchange_strong
++
++#define atomic_compare_exchange_weak(object, expected, desired) __c11_atomic_compare_exchange_weak(object, expected, desired, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST)
++#define atomic_compare_exchange_weak_explicit __c11_atomic_compare_exchange_weak
++
++#define atomic_fetch_add(object, operand) __c11_atomic_fetch_add(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_add_explicit __c11_atomic_fetch_add
++
++#define atomic_fetch_sub(object, operand) __c11_atomic_fetch_sub(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_sub_explicit __c11_atomic_fetch_sub
++
++#define atomic_fetch_or(object, operand) __c11_atomic_fetch_or(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_or_explicit __c11_atomic_fetch_or
++
++#define atomic_fetch_xor(object, operand) __c11_atomic_fetch_xor(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_xor_explicit __c11_atomic_fetch_xor
++
++#define atomic_fetch_and(object, operand) __c11_atomic_fetch_and(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_and_explicit __c11_atomic_fetch_and
++
++/* 7.17.8 Atomic flag type and operations */
++
++typedef struct atomic_flag { atomic_bool _Value; } atomic_flag;
++
++#define ATOMIC_FLAG_INIT { 0 }
++
++/* These should be provided by the libc implementation. */
++#ifdef __cplusplus
++bool atomic_flag_test_and_set(volatile atomic_flag *);
++bool atomic_flag_test_and_set_explicit(volatile atomic_flag *, memory_order);
++#else
++_Bool atomic_flag_test_and_set(volatile atomic_flag *);
++_Bool atomic_flag_test_and_set_explicit(volatile atomic_flag *, memory_order);
++#endif
++void atomic_flag_clear(volatile atomic_flag *);
++void atomic_flag_clear_explicit(volatile atomic_flag *, memory_order);
++
++#define atomic_flag_test_and_set(object) __c11_atomic_exchange(&(object)->_Value, 1, __ATOMIC_SEQ_CST)
++#define atomic_flag_test_and_set_explicit(object, order) __c11_atomic_exchange(&(object)->_Value, 1, order)
++
++#define atomic_flag_clear(object) __c11_atomic_store(&(object)->_Value, 0, __ATOMIC_SEQ_CST)
++#define atomic_flag_clear_explicit(object, order) __c11_atomic_store(&(object)->_Value, 0, order)
++
++#ifdef __cplusplus
++}
++#endif
++
++#endif /* __STDC_HOSTED__ */
++#endif /* __CLANG_STDATOMIC_H */
++
+--- /dev/null
++++ src/3rdparty/chromium/third_party/ffmpeg/stdatomic.h
+@@ -0,0 +1,190 @@
++/*===---- stdatomic.h - Standard header for atomic types and operations -----===
++ *
++ * Permission is hereby granted, free of charge, to any person obtaining a copy
++ * of this software and associated documentation files (the "Software"), to deal
++ * in the Software without restriction, including without limitation the rights
++ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++ * copies of the Software, and to permit persons to whom the Software is
++ * furnished to do so, subject to the following conditions:
++ *
++ * The above copyright notice and this permission notice shall be included in
++ * all copies or substantial portions of the Software.
++ *
++ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
++ * THE SOFTWARE.
++ *
++ *===-----------------------------------------------------------------------===
++ */
++
++#ifndef __CLANG_STDATOMIC_H
++#define __CLANG_STDATOMIC_H
++
++/* If we're hosted, fall back to the system's stdatomic.h. FreeBSD, for
++ * example, already has a Clang-compatible stdatomic.h header.
++ */
++#if __STDC_HOSTED__ && __has_include_next(<stdatomic.h>)
++# include_next <stdatomic.h>
++#else
++
++#include <stddef.h>
++#include <stdint.h>
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++
++/* 7.17.1 Introduction */
++
++#define ATOMIC_BOOL_LOCK_FREE       __CLANG_ATOMIC_BOOL_LOCK_FREE
++#define ATOMIC_CHAR_LOCK_FREE       __CLANG_ATOMIC_CHAR_LOCK_FREE
++#define ATOMIC_CHAR16_T_LOCK_FREE   __CLANG_ATOMIC_CHAR16_T_LOCK_FREE
++#define ATOMIC_CHAR32_T_LOCK_FREE   __CLANG_ATOMIC_CHAR32_T_LOCK_FREE
++#define ATOMIC_WCHAR_T_LOCK_FREE    __CLANG_ATOMIC_WCHAR_T_LOCK_FREE
++#define ATOMIC_SHORT_LOCK_FREE      __CLANG_ATOMIC_SHORT_LOCK_FREE
++#define ATOMIC_INT_LOCK_FREE        __CLANG_ATOMIC_INT_LOCK_FREE
++#define ATOMIC_LONG_LOCK_FREE       __CLANG_ATOMIC_LONG_LOCK_FREE
++#define ATOMIC_LLONG_LOCK_FREE      __CLANG_ATOMIC_LLONG_LOCK_FREE
++#define ATOMIC_POINTER_LOCK_FREE    __CLANG_ATOMIC_POINTER_LOCK_FREE
++
++/* 7.17.2 Initialization */
++
++#define ATOMIC_VAR_INIT(value) (value)
++#define atomic_init __c11_atomic_init
++
++/* 7.17.3 Order and consistency */
++
++typedef enum memory_order {
++  memory_order_relaxed = __ATOMIC_RELAXED,
++  memory_order_consume = __ATOMIC_CONSUME,
++  memory_order_acquire = __ATOMIC_ACQUIRE,
++  memory_order_release = __ATOMIC_RELEASE,
++  memory_order_acq_rel = __ATOMIC_ACQ_REL,
++  memory_order_seq_cst = __ATOMIC_SEQ_CST
++} memory_order;
++
++#define kill_dependency(y) (y)
++
++/* 7.17.4 Fences */
++
++/* These should be provided by the libc implementation. */
++void atomic_thread_fence(memory_order);
++void atomic_signal_fence(memory_order);
++
++#define atomic_thread_fence(order) __c11_atomic_thread_fence(order)
++#define atomic_signal_fence(order) __c11_atomic_signal_fence(order)
++
++/* 7.17.5 Lock-free property */
++
++#define atomic_is_lock_free(obj) __c11_atomic_is_lock_free(sizeof(*(obj)))
++
++/* 7.17.6 Atomic integer types */
++
++#ifdef __cplusplus
++typedef _Atomic(bool)               atomic_bool;
++#else
++typedef _Atomic(_Bool)              atomic_bool;
++#endif
++typedef _Atomic(char)               atomic_char;
++typedef _Atomic(signed char)        atomic_schar;
++typedef _Atomic(unsigned char)      atomic_uchar;
++typedef _Atomic(short)              atomic_short;
++typedef _Atomic(unsigned short)     atomic_ushort;
++typedef _Atomic(int)                atomic_int;
++typedef _Atomic(unsigned int)       atomic_uint;
++typedef _Atomic(long)               atomic_long;
++typedef _Atomic(unsigned long)      atomic_ulong;
++typedef _Atomic(long long)          atomic_llong;
++typedef _Atomic(unsigned long long) atomic_ullong;
++typedef _Atomic(uint_least16_t)     atomic_char16_t;
++typedef _Atomic(uint_least32_t)     atomic_char32_t;
++typedef _Atomic(wchar_t)            atomic_wchar_t;
++typedef _Atomic(int_least8_t)       atomic_int_least8_t;
++typedef _Atomic(uint_least8_t)      atomic_uint_least8_t;
++typedef _Atomic(int_least16_t)      atomic_int_least16_t;
++typedef _Atomic(uint_least16_t)     atomic_uint_least16_t;
++typedef _Atomic(int_least32_t)      atomic_int_least32_t;
++typedef _Atomic(uint_least32_t)     atomic_uint_least32_t;
++typedef _Atomic(int_least64_t)      atomic_int_least64_t;
++typedef _Atomic(uint_least64_t)     atomic_uint_least64_t;
++typedef _Atomic(int_fast8_t)        atomic_int_fast8_t;
++typedef _Atomic(uint_fast8_t)       atomic_uint_fast8_t;
++typedef _Atomic(int_fast16_t)       atomic_int_fast16_t;
++typedef _Atomic(uint_fast16_t)      atomic_uint_fast16_t;
++typedef _Atomic(int_fast32_t)       atomic_int_fast32_t;
++typedef _Atomic(uint_fast32_t)      atomic_uint_fast32_t;
++typedef _Atomic(int_fast64_t)       atomic_int_fast64_t;
++typedef _Atomic(uint_fast64_t)      atomic_uint_fast64_t;
++typedef _Atomic(intptr_t)           atomic_intptr_t;
++typedef _Atomic(uintptr_t)          atomic_uintptr_t;
++typedef _Atomic(size_t)             atomic_size_t;
++typedef _Atomic(ptrdiff_t)          atomic_ptrdiff_t;
++typedef _Atomic(intmax_t)           atomic_intmax_t;
++typedef _Atomic(uintmax_t)          atomic_uintmax_t;
++
++/* 7.17.7 Operations on atomic types */
++
++#define atomic_store(object, desired) __c11_atomic_store(object, desired, __ATOMIC_SEQ_CST)
++#define atomic_store_explicit __c11_atomic_store
++
++#define atomic_load(object) __c11_atomic_load(object, __ATOMIC_SEQ_CST)
++#define atomic_load_explicit __c11_atomic_load
++
++#define atomic_exchange(object, desired) __c11_atomic_exchange(object, desired, __ATOMIC_SEQ_CST)
++#define atomic_exchange_explicit __c11_atomic_exchange
++
++#define atomic_compare_exchange_strong(object, expected, desired) __c11_atomic_compare_exchange_strong(object, expected, desired, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST)
++#define atomic_compare_exchange_strong_explicit __c11_atomic_compare_exchange_strong
++
++#define atomic_compare_exchange_weak(object, expected, desired) __c11_atomic_compare_exchange_weak(object, expected, desired, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST)
++#define atomic_compare_exchange_weak_explicit __c11_atomic_compare_exchange_weak
++
++#define atomic_fetch_add(object, operand) __c11_atomic_fetch_add(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_add_explicit __c11_atomic_fetch_add
++
++#define atomic_fetch_sub(object, operand) __c11_atomic_fetch_sub(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_sub_explicit __c11_atomic_fetch_sub
++
++#define atomic_fetch_or(object, operand) __c11_atomic_fetch_or(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_or_explicit __c11_atomic_fetch_or
++
++#define atomic_fetch_xor(object, operand) __c11_atomic_fetch_xor(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_xor_explicit __c11_atomic_fetch_xor
++
++#define atomic_fetch_and(object, operand) __c11_atomic_fetch_and(object, operand, __ATOMIC_SEQ_CST)
++#define atomic_fetch_and_explicit __c11_atomic_fetch_and
++
++/* 7.17.8 Atomic flag type and operations */
++
++typedef struct atomic_flag { atomic_bool _Value; } atomic_flag;
++
++#define ATOMIC_FLAG_INIT { 0 }
++
++/* These should be provided by the libc implementation. */
++#ifdef __cplusplus
++bool atomic_flag_test_and_set(volatile atomic_flag *);
++bool atomic_flag_test_and_set_explicit(volatile atomic_flag *, memory_order);
++#else
++_Bool atomic_flag_test_and_set(volatile atomic_flag *);
++_Bool atomic_flag_test_and_set_explicit(volatile atomic_flag *, memory_order);
++#endif
++void atomic_flag_clear(volatile atomic_flag *);
++void atomic_flag_clear_explicit(volatile atomic_flag *, memory_order);
++
++#define atomic_flag_test_and_set(object) __c11_atomic_exchange(&(object)->_Value, 1, __ATOMIC_SEQ_CST)
++#define atomic_flag_test_and_set_explicit(object, order) __c11_atomic_exchange(&(object)->_Value, 1, order)
++
++#define atomic_flag_clear(object) __c11_atomic_store(&(object)->_Value, 0, __ATOMIC_SEQ_CST)
++#define atomic_flag_clear_explicit(object, order) __c11_atomic_store(&(object)->_Value, 0, order)
++
++#ifdef __cplusplus
++}
++#endif
++
++#endif /* __STDC_HOSTED__ */
++#endif /* __CLANG_STDATOMIC_H */
++

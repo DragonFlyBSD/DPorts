@@ -1,11 +1,13 @@
 PORTNAME=	xrdp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.23.1
+DISTVERSION=	0.9.24
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net
 DIST_SUBDIR?=	${PORTNAME}
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
+PATCHFILES=	ba2202e.patch:-p1 84a747c.patch:-p1
 
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	Open source Remote Desktop Protocol (RDP) server
@@ -29,8 +31,8 @@ USE_GITHUB=	yes
 
 GNU_CONFIGURE=	yes
 GH_ACCOUNT=	neutrinolabs
-GH_TUPLE=	neutrinolabs:librfxcodec:v0.1.6:librfxcodec/librfxcodec \
-		neutrinolabs:libpainter:v0.1.1:libpainter/libpainter
+GH_TUPLE=	neutrinolabs:librfxcodec:c537401a:librfxcodec/librfxcodec \
+		neutrinolabs:libpainter:b44f2fa:libpainter/libpainter
 
 CONFIGURE_ARGS=	--enable-imlib2 \
 		--enable-jpeg \

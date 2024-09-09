@@ -1,0 +1,11 @@
+--- configure.ac.orig	2023-07-10 17:06:59 UTC
++++ configure.ac
+@@ -214,7 +214,7 @@ case "$host_os" in
+ 		AC_DEFINE_UNQUOTED([KNET_LINUX], [1], [Compiling for Linux platform])
+ 		AC_MSG_RESULT([Linux])
+ 		;;
+-	*bsd*)
++	*bsd*|dragonfly*)
+ 		AC_DEFINE_UNQUOTED([KNET_BSD], [1], [Compiling for BSD platform])
+ 		AC_MSG_RESULT([BSD])
+ 		;;

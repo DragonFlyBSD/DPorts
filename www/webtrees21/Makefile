@@ -1,5 +1,5 @@
 PORTNAME=	webtrees
-PORTVERSION=	2.1.17
+PORTVERSION=	2.1.18
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/fisharebest/${PORTNAME}/releases/download/${PORTVERSION}/
 PKGNAMESUFFIX=	21
@@ -11,8 +11,8 @@ WWW=		https://webtrees.net/
 LICENSE=	GPLv3+
 
 USES=		cpe php shebangfix zip
-
-USE_PHP=	calendar dom filter gd pdo_mysql session simplexml xml
+# php pcre extension is required but it's statically linked in default php
+USE_PHP=	calendar curl dom filter gd iconv pdo_mysql session xml
 
 SHEBANG_FILES=	webtrees/vendor/tecnickcom/tcpdf/tools/tcpdf_addfont.php
 

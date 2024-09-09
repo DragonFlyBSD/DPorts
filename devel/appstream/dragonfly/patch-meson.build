@@ -1,0 +1,11 @@
+--- meson.build.orig	2023-11-11 18:48:36 UTC
++++ meson.build
+@@ -129,7 +129,7 @@ add_project_arguments(
+ )
+ 
+ # Vendor extensions in system headers
+-if host_machine.system() != 'netbsd'
++if host_machine.system() not in [ 'netbsd', 'dragonfly' ]
+     # on NetBSD, defining POSIX_C_SOURCE *removes* non-POSIX symbols from namespace,
+     # while on all other systems it adds them. Hence we only define this when not on NetBSD.
+     add_project_arguments('-D_POSIX_C_SOURCE=201710L', language: 'c')

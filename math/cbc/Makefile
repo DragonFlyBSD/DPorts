@@ -1,7 +1,7 @@
 PORTNAME=	cbc
 DISTVERSIONPREFIX=	releases/
-DISTVERSION=	2.10.10
-PORTREVISION=	2
+DISTVERSION=	2.10.11
+PORTREVISION=	1
 CATEGORIES=	math
 PKGNAMEPREFIX=	coin-or-
 
@@ -12,14 +12,11 @@ WWW=		https://projects.coin-or.org/Cbc
 LICENSE=	EPL
 LICENSE_FILE=	${WRKSRC}/Cbc/LICENSE
 
-LIB_DEPENDS=	libblas.so:math/blas \
-		libCgl.so:math/cgl \
+LIB_DEPENDS=	libCgl.so:math/cgl \
 		libClp.so:math/clp \
 		libcoinasl.so:math/asl \
-		libipopt.so:math/ipopt \
 		libcoinmumps.so:math/coin-or-mumps \
 		libCoinUtils.so:math/coinutils \
-		liblapack.so:math/lapack \
 		libnauty.so:math/nauty \
 		libopenblas.so:math/openblas \
 		libOsi.so:math/osi

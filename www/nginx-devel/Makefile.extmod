@@ -2,7 +2,7 @@
 
 OPTIONS_GROUP+=	THIRDPARTYGRP
 # External modules (arrayvar MUST appear after devel_kit for build-dep)
-OPTIONS_GROUP_THIRDPARTYGRP=	AJP AWS_AUTH BROTLI CACHE_PURGE COOKIE_FLAG CT \
+OPTIONS_GROUP_THIRDPARTYGRP=	AJP AWS_AUTH BROTLI CACHE_PURGE CT \
 	DEVEL_KIT ARRAYVAR DRIZZLE DYNAMIC_UPSTREAM ECHO ENCRYPTSESSION \
 	FIPS_CHECK FORMINPUT GRIDFS HEADERS_MORE HTTP_ACCEPT_LANGUAGE HTTP_AUTH_DIGEST \
 	HTTP_AUTH_KRB5 HTTP_AUTH_LDAP HTTP_AUTH_PAM HTTP_DAV_EXT HTTP_EVAL \
@@ -33,9 +33,6 @@ BROTLI_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-ngx_brotli_filter_config
 CACHE_PURGE_GH_TUPLE=	nginx-modules:ngx_cache_purge:a84b0f3:cache_purge
 CACHE_PURGE_VARS=	DSO_EXTMODS+=cache_purge
 
-COOKIE_FLAG_GH_TUPLE=	AirisX:nginx_cookie_flag_module:c4ff449:cookie_flag
-COOKIE_FLAG_VARS=	DSO_EXTMODS+=cookie_flag
-
 CT_IMPLIES=		HTTP_SSL
 CT_GH_TUPLE=		grahamedgecombe:nginx-ct:93e9884:ct
 CT_VARS=		DSO_EXTMODS+=ct
@@ -55,7 +52,7 @@ DYNAMIC_UPSTREAM_IMPLIES=	STREAM
 DYNAMIC_UPSTREAM_GH_TUPLE=	ZigzagAK:ngx_dynamic_upstream:960eef2:dynamic_upstream
 DYNAMIC_UPSTREAM_VARS=		DSO_EXTMODS+=dynamic_upstream
 
-DEVEL_KIT_GH_TUPLE=		vision5:ngx_devel_kit:v0.3.2:devel_kit
+DEVEL_KIT_GH_TUPLE=		vision5:ngx_devel_kit:v0.3.3:devel_kit
 DEVEL_KIT_VARS=			FIRST_DSO_EXTMODS+=devel_kit
 
 ENCRYPTSESSION_IMPLIES=		DEVEL_KIT
@@ -74,7 +71,7 @@ GRIDFS_LIB_DEPENDS=	libbson-1.0.so:devel/libbson \
 			libmongoc-1.0.so:devel/mongo-c-driver
 GRIDFS_VARS=		DSO_EXTMODS+=gridfs GRIDFS_SUBDIR=/nginx-gridfs
 
-HEADERS_MORE_GH_TUPLE=		openresty:headers-more-nginx-module:33b646d:headers_more
+HEADERS_MORE_GH_TUPLE=		openresty:headers-more-nginx-module:3fb97bc:headers_more
 HEADERS_MORE_VARS=		DSO_EXTMODS+=headers_more
 
 HTTP_ACCEPT_LANGUAGE_GH_TUPLE=	dvershinin:nginx_accept_language_module:5683967:accept_language
@@ -216,7 +213,7 @@ LUA_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 LUA_RUN_DEPENDS=	lua-resty-core>0:www/lua-resty-core
 LUA_CONFIGURE_ENV=	LUAJIT_INC=${LOCALBASE}/include/luajit-2.1 \
 			LUAJIT_LIB=${LOCALBASE}/lib
-LUA_GH_TUPLE=		openresty:lua-nginx-module:v0.10.25:lua
+LUA_GH_TUPLE=		openresty:lua-nginx-module:v0.10.26rc2:lua
 LUA_VARS=		DSO_EXTMODS+=lua
 
 LINK_GH_TUPLE=		Taymindis:nginx-link-function:3.2.4:link
@@ -232,14 +229,14 @@ MODSECURITY3_LIB_DEPENDS=	libmodsecurity.so:security/modsecurity3
 MODSECURITY3_GH_TUPLE=		SpiderLabs:ModSecurity-nginx:v1.0.3:modsecurity3
 MODSECURITY3_VARS=		DSO_EXTMODS+=modsecurity3
 
-NAXSI_NGINX_VER=	1.5
+NAXSI_NGINX_VER=	1.6
 NAXSI_GH_TUPLE=		wargio:naxsi:${NAXSI_NGINX_VER}:naxsi \
-			libinjection:libinjection:51f3a96:libinjection
+			libinjection:libinjection:4aa3894:libinjection
 NAXSI_VARS=		DSO_EXTMODS+=naxsi NAXSI_SUBDIR=/naxsi_src
 NAXSI_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-naxsi-libinjection__sqli_c \
 			${PATCHDIR}/extra-patch-naxsi_config
 
-NJS_GH_TUPLE=		nginx:njs:0.8.1:njs
+NJS_GH_TUPLE=		nginx:njs:0.8.2:njs
 NJS_VARS=		DSO_EXTMODS+=njs NJS_SUBDIR=/nginx
 
 NJS_XML_IMPLIES=	NJS
@@ -251,7 +248,7 @@ OPENTRACING_LIB_DEPENDS=	libopentracing.so:devel/libopentracing
 OPENTRACING_VARS=		DSO_EXTMODS+=opentracing OPENTRACING_SUBDIR=/opentracing
 OPENTRACING_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-nginx-opentracing-opentracing-config
 
-OTEL_GH_TUPLE=		osokin:nginx-otel:dc52126:otel
+OTEL_GH_TUPLE=		osokin:nginx-otel:8f0857d:otel
 OTEL_VARS=		DSO_EXTMODS+=otel OTEL_SUBDIR=/
 OTEL_LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 			libcares.so:dns/c-ares \
@@ -262,7 +259,7 @@ OTEL_LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 OTEL_BUILD_DEPENDS=	${LOCALBASE}/include/opentelemetry/proto/common/v1/common.proto:devel/opentelemetry-proto
 OTEL_CONFIGURE_ENV+=	NGX_OTEL_PROTO_DIR=${PREFIX}/include
 
-PASSENGER_NGINX_VER=	6.0.18
+PASSENGER_NGINX_VER=	6.0.19
 PASSENGER_CATEGORIES=	ruby
 PASSENGER_USES=		ruby
 PASSENGER_BUILD_DEPENDS=${LOCALBASE}/bin/rake:devel/rubygem-rake

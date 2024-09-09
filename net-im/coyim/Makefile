@@ -1,11 +1,11 @@
 PORTNAME=	coyim
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.11
-PORTREVISION=	20
+PORTREVISION=	21
 CATEGORIES=	net-im
 
 MAINTAINER=	fox@FreeBSD.org
-COMMENT=	Safe and secure by default chat client
+COMMENT=	Safe and secure by default XMPP chat client which uses Tor
 WWW=		https://coy.im
 
 LICENSE=	GPLv3

@@ -1,5 +1,5 @@
 PORTNAME=	google-protobuf
-PORTVERSION=	3.24.3
+PORTVERSION=	3.25.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -10,6 +10,8 @@ WWW=		https://protobuf.dev/ \
 		https://github.com/protocolbuffers/protobuf/tree/main/ruby
 
 LICENSE=	BSD3CLAUSE
+
+BUILD_DEPENDS=	rubygem-rake>=0:devel/rubygem-rake
 
 USES=		gem shebangfix
 

@@ -1,8 +1,8 @@
 PORTNAME=	appjail
-DISTVERSIONPREFIX=	v
-DISTVERSION=	g20230914
+DISTVERSION=	3.2.0.20240208
+PORTEPOCH=	1
 CATEGORIES=	sysutils
-PKGNAMESUFFIX= -devel
+PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Simple and easy-to-use tool for creating portable jails (devel)
@@ -16,18 +16,22 @@ CONFLICTS=	appjail
 USE_GITHUB=	yes
 GH_ACCOUNT=	DtxdF
 GH_PROJECT=	AppJail
-GH_TAGNAME=	fdf9e53e86af34b8ae3c317055b7f3e2645e764d
+GH_TAGNAME=	db207d9d3b808b60c6fced1de0b5120e4794a076
 
+MAKE_ARGS=	APPJAIL_VERSION=${DISTVERSION}+${GH_TAGNAME}
 ALL_TARGET=	utils-strip
 
-PORTDOCS=	README.md
 
 SUB_FILES=	pkg-message
 
-OPTIONS_DEFINE=			DEBOOTSTRAP DOCS DOAS GIT
+PORTDOCS=	README.md
+
+OPTIONS_DEFINE=			DEBOOTSTRAP DOAS DOCS GIT
+
 DEBOOTSTRAP_DESC=		Support for Debian and Ubuntu jails
-DEBOOTSTRAP_RUN_DEPENDS=	debootstrap>0:sysutils/debootstrap
 DOAS_DESC=			Add support for unprivileged users
+
+DEBOOTSTRAP_RUN_DEPENDS=	debootstrap>0:sysutils/debootstrap
 DOAS_RUN_DEPENDS=		doas>0:security/doas
 GIT_RUN_DEPENDS=		git>0:devel/git
 

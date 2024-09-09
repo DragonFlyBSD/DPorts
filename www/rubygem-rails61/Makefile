@@ -1,13 +1,13 @@
 PORTNAME=	rails
-PORTVERSION=	6.1.7.6
+PORTVERSION=	6.1.7.7
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	61
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Full-stack web application framework
-WWW=		https://github.com/rails/rails \
-		https://rubyonrails.org/
+WWW=		https://rubyonrails.org/ \
+		https://github.com/rails/rails
 
 LICENSE=	MIT
 

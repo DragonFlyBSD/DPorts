@@ -1,7 +1,0 @@
-CFLAGS+=	-DNDEBUG
-
-LDFLAGS+=	-L${LOCALBASE}/lib
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's/FreeBSD/DragonFly/' ${WRKSRC}/scripts/CMakeLists.txt
-	${REINPLACE_CMD} -e 's/FreeBSD/DragonFly/' ${WRKSRC}/cmake/plugin.cmake

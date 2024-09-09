@@ -1,7 +1,8 @@
 PORTNAME=	scikit-umfpack
 DISTVERSION=	0.3.3
+PORTREVISION=	5
 CATEGORIES=	math python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -15,12 +16,13 @@ BUILD_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR} \
 		swig:devel/swig
 LIB_DEPENDS=	libamd.so:math/suitesparse-amd \
+		libcblas.so:math/cblas \
 		libopenblas.so:math/openblas \
 		libumfpack.so:math/suitesparse-umfpack
 RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR}
 
-USES=		python:3.6+
+USES=		fortran python
 USE_PYTHON=	distutils cython autoplist pytest # tests fail, see https://github.com/scikit-umfpack/scikit-umfpack/issues/77
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}

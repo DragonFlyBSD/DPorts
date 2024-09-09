@@ -1,17 +1,16 @@
 PORTNAME=	gitlab-workhorse
-PORTVERSION=	16.3.5
+PORTVERSION=	16.9.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Smart reverse proxy for GitLab
-WWW=		https://gitlab.com/gitlab-org/gitlab-workhorse
+WWW=		https://gitlab.com/gitlab-org/gitlab/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 
-BUILD_DEPENDS=	git>=2.39.2:devel/git
+BUILD_DEPENDS=	git>=2.42.0:devel/git
 RUN_DEPENDS=	p5-Image-ExifTool>=0:graphics/p5-Image-ExifTool
 
 USES=		gmake go:modules,no_targets
@@ -30,8 +29,7 @@ GL_PROJECT=	gitlab-foss
 # so we download the required go.mod file from gitlab
 # lines are taken from go.mk
 # ---------------------------
-FETCH_DEPENDS=	${GO_CMD}:${GO_PORT} \
-		ca_root_nss>0:security/ca_root_nss
+FETCH_DEPENDS=	${GO_CMD}:${GO_PORT}
 MASTER_SITES+=	https://gitlab.com/gitlab-org/gitlab-foss/-/raw/v${DISTVERSION}/workhorse/
 DISTFILES+=	go.mod
 DIST_SUBDIR=	go/${PKGORIGIN:S,/,_,g}/${DISTNAME}

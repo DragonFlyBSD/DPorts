@@ -1,5 +1,5 @@
 PORTNAME=	openssl
-DISTVERSION=	3.2.0-alpha2
+DISTVERSION=	3.2.0
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.openssl.org/source/ \
 		ftp://ftp.cert.dfn.de/pub/tools/net/openssl/source/
@@ -12,7 +12,7 @@ WWW=		https://www.openssl.org/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl3[01] openssl-quictls
+CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl111 openssl31 openssl-quictls
 
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	config
@@ -45,8 +45,7 @@ OPTIONS_DEFAULT=ASM ASYNC CT DES EC FIPS GOST MAN3 MD4 NEXTPROTONEG \
 		THREADPOOL THREADS TLS1 TLS1_1 TLS1_2
 #OPTIONS_DEFAULT+=	KTLS pending updated KTLS patch
 
-OPTIONS_EXCLUDE=${${OSVERSION} < 1300042:?KTLS:} \
-		${${OSVERSION} > 1300000:?CRYPTODEV:}
+OPTIONS_EXCLUDE=CRYPTODEV
 
 OPTIONS_GROUP_OPTIMIZE_x86_64=	EC
 
@@ -145,6 +144,8 @@ ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 SHLIBS=			lib/engines-${OPENSSL_SHLIBVER}/loader_attic.so
 
+PORTSCOUT=		limit=^3\.2\.
+
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc64
@@ -160,18 +161,10 @@ CONFIGURE_ARGS+=	BSD-riscv64
 IGNORE=	the OpenSSL port can not be installed over the base version
 .endif
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300000 && !${PORT_OPTIONS:MCRYPTODEV}
-CONFIGURE_ARGS+=	no-devcryptoeng
-.endif
-
 OPENSSLDIR?=	${PREFIX}/openssl
 PLIST_SUB+=	OPENSSLDIR=${OPENSSLDIR:S=^${PREFIX}/==}
 
 .include "version.mk"
-
-.if ${PORT_OPTIONS:MASM}
-BROKEN_sparc64=	option ASM generates illegal instructions
-.endif
 
 post-patch:
 	${REINPLACE_CMD} -Ee 's|^MANDIR=.*$$|MANDIR=$$(INSTALLTOP)/man|' \

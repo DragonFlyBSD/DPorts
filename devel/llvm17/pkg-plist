@@ -4653,6 +4653,7 @@ llvm%%LLVM_SUFFIX%%/include/llvm/XRay/YAMLXRayRecord.h
 %%MLIR%%llvm%%LLVM_SUFFIX%%/include/mlir/Dialect/LLVMIR/ROCDLOpsDialect.h.inc
 %%MLIR%%llvm%%LLVM_SUFFIX%%/include/mlir/Dialect/LLVMIR/ROCDLOpsTypes.cpp.inc
 %%MLIR%%llvm%%LLVM_SUFFIX%%/include/mlir/Dialect/LLVMIR/ROCDLOpsTypes.h.inc
+%%MLIR%%llvm%%LLVM_SUFFIX%%/include/mlir/Dialect/LLVMIR/Transforms/AddComdats.h
 %%MLIR%%llvm%%LLVM_SUFFIX%%/include/mlir/Dialect/LLVMIR/Transforms/LegalizeForExport.h
 %%MLIR%%llvm%%LLVM_SUFFIX%%/include/mlir/Dialect/LLVMIR/Transforms/OptimizeForNVVM.h
 %%MLIR%%llvm%%LLVM_SUFFIX%%/include/mlir/Dialect/LLVMIR/Transforms/Passes.h
@@ -5665,6 +5666,8 @@ llvm%%LLVM_SUFFIX%%/include/llvm/XRay/YAMLXRayRecord.h
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/clang/%%LLVM_MAJOR%%/include/cpuid.h
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/clang/%%LLVM_MAJOR%%/include/crc32intrin.h
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/clang/%%LLVM_MAJOR%%/include/cuda_wrappers/algorithm
+%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/clang/%%LLVM_MAJOR%%/include/cuda_wrappers/bits/basic_string.h
+%%CLANG%%llvm%%LLVM_SUFFIX%%/lib/clang/%%LLVM_MAJOR%%/include/cuda_wrappers/bits/basic_string.tcc
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/clang/%%LLVM_MAJOR%%/include/cuda_wrappers/bits/shared_ptr_base.h
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/clang/%%LLVM_MAJOR%%/include/cuda_wrappers/cmath
 %%CLANG%%llvm%%LLVM_SUFFIX%%/lib/clang/%%LLVM_MAJOR%%/include/cuda_wrappers/complex

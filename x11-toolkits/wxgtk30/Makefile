@@ -1,7 +1,7 @@
 PORTNAME=	wx
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.0.5.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	https://github.com/wxWidgets/wxWidgets/releases/download/v${DISTVERSION}/
 PKGNAMESUFFIX=	${_SHORT_WX_VER}-${FLAVOR}
@@ -101,6 +101,11 @@ CONFIGURE_ARGS+=--disable-tls
 .if ${CHOSEN_COMPILER_TYPE} == gcc
 CONFIGURE_ARGS+=--disable-precomp-headers
 .endif
+
+# wxWidgets uses the same linker version script for all its shared libraries, so
+# some symbols are expectedly undefined. Suppress errors with lld >= 17 due to
+# these undefined symbols.
+LDFLAGS+=	-Wl,--undefined-version
 
 post-build-NLS-on:
 	@${DO_MAKE_BUILD} allmo -C ${BUILD_WRKSRC}/locale

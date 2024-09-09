@@ -1,5 +1,5 @@
 PORTNAME=	buildbot
-PORTVERSION=	3.9.2
+PORTVERSION=	3.10.1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}alembic>=1.6.0:databases/py-alembic@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}autobahn>=0.16.0:www/py-autobahn@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}buildbot-www==${PORTVERSION}:devel/py-buildbot-www@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}buildbot-www>=${PORTVERSION}:devel/py-buildbot-www@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dateutil>=1.5:devel/py-dateutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>=2.1:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyjwt>=0:www/py-pyjwt@${PY_FLAVOR} \
@@ -48,6 +48,10 @@ SUB_LIST=	PYTHON_CMD=${PYTHON_CMD} \
 # https://github.com/buildbot/buildbot/commit/9251a994e7ba5f8ab9e678b49920bdc38cd52b3d
 BUILDBOT_REMOVE_ME=	${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;}/buildbot/reporters/templates
 POST_PLIST+=		fix-plist
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|twisted_ver = ">= 18.7.0, <=22.10.0"|twisted_ver = ">= 18.7.0"|g' \
+		${WRKSRC}/setup.py
 
 fix-plist:
 	${REINPLACE_CMD} -e 's|^${BUILDBOT_REMOVE_ME}$$||' ${TMPPLIST}

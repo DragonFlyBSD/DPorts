@@ -1,6 +1,6 @@
 PORTNAME=	icingaweb2-module-icingadb
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.2
+DISTVERSION=	1.1.0
 CATEGORIES=	net-mgmt www
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
@@ -14,10 +14,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	icinga-php-library${PHP_PKGNAMESUFFIX}>=0.9:net-mgmt/icinga-php-library@${PHP_FLAVOR} \
 		icinga-php-thirdparty${PHP_PKGNAMESUFFIX}>=0.11.0:net-mgmt/icinga-php-thirdparty@${PHP_FLAVOR} \
 		icingadb>0:net-mgmt/icingadb \
-		icingaweb2${PHP_PKGNAMESUFFIX}>=2.9:net-mgmt/icingaweb2
+		icingaweb2${PHP_PKGNAMESUFFIX}>=2.9:net-mgmt/icingaweb2@${PHP_FLAVOR}
 
 USES=		php:web,flavors shebangfix
-USE_PHP=	curl dom json xml
+# php json extension is required but it's statically linked in default php
+USE_PHP=	curl dom xml
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	icinga

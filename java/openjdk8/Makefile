@@ -1,5 +1,6 @@
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${JDK_UPDATE_VERSION}.${JDK_BUILD_NUMBER}.${BSD_JDK_VERSION}
+PORTREVISION=	1
 CATEGORIES=	java devel
 MASTER_SITES=	LOCAL/jkim:jtreg
 PKGNAMESUFFIX?=	${JDK_MAJOR_VERSION}
@@ -52,8 +53,8 @@ INSTALLDIR=	${PREFIX}/${PKGBASE}
 NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	8
-JDK_UPDATE_VERSION=	382
-JDK_BUILD_NUMBER=	05
+JDK_UPDATE_VERSION=	392
+JDK_BUILD_NUMBER=	08
 BSD_JDK_VERSION=	1
 JTREG_VERSION=		4.1
 JTREG_BUILD_NUMBER=	b08
@@ -83,7 +84,8 @@ CONFIGURE_ARGS+=	--disable-freetype-bundling \
 			--with-jvm-variants=${JDK_BUILD_JVM} \
 			--with-milestone=fcs \
 			--with-package-path=${LOCALBASE} \
-			--with-zlib=system
+			--with-zlib=system \
+			--with-extra-ldflags="-Wl,--undefined-version"
 CONFIGURE_SCRIPT=	../../configure
 CONFIGURE_WRKSRC=	${WRKSRC}/common/autoconf
 
@@ -232,12 +234,7 @@ MAKE_ARGS+=	USE_PRECOMPILED_HEADER=0
 .endif
 .endif
 
-.if defined(PPC_ABI) && ${PPC_ABI} == ELFv2
-EXTRA_PATCHES+= ${FILESDIR}/extra-patch-ppc64-elfv2
-MAKE_ARGS+=	USE_PRECOMPILED_HEADER=0
-.endif
-
-.if ${ARCH} == powerpc64le
+.if ${ARCH:Mpowerpc64*}
 MAKE_ARGS+=	USE_PRECOMPILED_HEADER=0
 .endif
 

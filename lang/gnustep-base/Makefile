@@ -1,5 +1,6 @@
 PORTNAME=	gnustep-base
 DISTVERSION=	1.29.0
+PORTREVISION=	1
 CATEGORIES=	lang devel gnustep
 MASTER_SITES=	https://github.com/gnustep/libs-base/releases/download/base-${DISTVERSION:S,.,_,g}/
 
@@ -12,8 +13,6 @@ WWW=		http://www.gnustep.org/
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi
-
-BROKEN_FreeBSD_12_powerpc64=	fails to link: ld.lld: error: /usr/src/lib/csu/common/crtend.c:55: relocation R_PPC64_ADDR16_DS out of range: -32776 is not in [-32768, 32767]
 
 LIB_DEPENDS=	libffi.so:devel/libffi \
 		libcurl.so:ftp/curl \
@@ -57,10 +56,6 @@ GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
 GNUTLS_CONFIGURE_OFF=	--disable-tls
 
 .include <bsd.port.options.mk>
-
-.if ${OPSYS}_${OSREL:R} == FreeBSD_12
-LIB_DEPENDS+=		libunwind.so:devel/libunwind
-.endif
 
 .if ${PORT_OPTIONS:MAVAHI}
 LIB_DEPENDS+=		libavahi-client.so:net/avahi-app

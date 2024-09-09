@@ -1,6 +1,5 @@
 PORTNAME=	openssl
-PORTVERSION=	3.0.12
-PORTREVISION=	1
+PORTVERSION=	3.0.13
 CATEGORIES=	security devel
 PKGNAMESUFFIX=	-quictls
 
@@ -11,7 +10,7 @@ WWW=		https://www.github.com/quictls/openssl
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl3[012]
+CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl111 openssl3[12]
 
 BROKEN_i386=	ld: error: undefined symbol: __atomic_is_lock_free
 
@@ -47,8 +46,7 @@ OPTIONS_DEFINE=	ASYNC CRYPTODEV CT KTLS MAN3 RFC3779 SHARED ZLIB
 OPTIONS_DEFAULT=ASM ASYNC CT DES EC FIPS GOST KTLS MAN3 MD4 NEXTPROTONEG \
 		RC2 RC4 RMD160 SCTP SHARED SSE2 THREADS TLS1 TLS1_1 TLS1_2
 
-OPTIONS_EXCLUDE=${${OSVERSION} < 1300042:?KTLS:} \
-		${${OSVERSION} > 1300000:?CRYPTODEV:}
+OPTIONS_EXCLUDE= CRYPTODEV
 OPTIONS_EXCLUDE_i386=	FIPS
 
 OPTIONS_GROUP_OPTIMIZE_x86_64=	EC
@@ -136,23 +134,17 @@ ZLIB_CONFIGURE_ON=	zlib-dynamic
 
 SHLIBS=			lib/engines-${OPENSSL_SHLIBVER}/loader_attic.so
 
+PORTSCOUT=		limit=^3\.0\.
+
 .include <bsd.port.pre.mk>
 .if ${PREFIX} == /usr
 IGNORE=	the OpenSSL port can not be installed over the base version
-.endif
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300000 && !${PORT_OPTIONS:MCRYPTODEV}
-CONFIGURE_ARGS+=        no-devcryptoeng
 .endif
 
 OPENSSLDIR?=	${PREFIX}/openssl
 PLIST_SUB+=	OPENSSLDIR=${OPENSSLDIR:S=^${PREFIX}/==}
 
 .include "version.mk"
-
-.if ${PORT_OPTIONS:MASM}
-BROKEN_sparc64=	option ASM generates illegal instructions
-.endif
 
 post-patch:
 	${REINPLACE_CMD} -Ee 's|^MANDIR=.*$$|MANDIR=$$(INSTALLTOP)/man|' \

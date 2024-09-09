@@ -1,9 +1,0 @@
-USES+=	alias
-
-# wow, gcc 6+ are not supported
-USE_CLANG_FALLBACK=	default
-#MAKE_ARGS+=	use_llvm=yes
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@gcc --version@false@'	\
-		${WRKSRC}/platform/x11/detect.py

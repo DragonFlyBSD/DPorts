@@ -1,0 +1,13 @@
+--- src/3rdparty/chromium/build/toolchain/gcc_toolchain.gni.intermediate	2024-06-09 13:15:10 UTC
++++ src/3rdparty/chromium/build/toolchain/gcc_toolchain.gni
+@@ -56,8 +56,8 @@ if (enable_resource_allowlist_generation
+ declare_args() {
+   extra_cflags = ""
+   extra_cppflags = ""
+-  extra_cxxflags = ""
+-  extra_ldflags = ""
++  extra_cxxflags = getenv("CXXFLAGS")
++  extra_ldflags = getenv("LDFLAGS")
+ }
+ 
+ # This template defines a toolchain for something that works like gcc

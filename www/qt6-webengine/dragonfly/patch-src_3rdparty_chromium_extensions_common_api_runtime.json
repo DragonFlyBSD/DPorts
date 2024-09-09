@@ -1,0 +1,14 @@
+diff --git extensions/common/api/runtime.json extensions/common/api/runtime.json
+index b638baff541..89caf789990 100644
+--- src/3rdparty/chromium/extensions/common/api/runtime.json
++++ src/3rdparty/chromium/extensions/common/api/runtime.json
+@@ -87,7 +87,8 @@
+           "linux",
+           "openbsd",
+           "fuchsia",
+-          "freebsd"
++          "freebsd",
++          "dragonfly"
+         ]
+       },
+       {

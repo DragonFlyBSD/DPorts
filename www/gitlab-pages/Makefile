@@ -1,7 +1,6 @@
 PORTNAME=	gitlab-pages
-PORTVERSION=	16.3.5
+PORTVERSION=	16.9.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES+=	https://gitlab.com/gitlab-org/gitlab-pages/-/raw/v${DISTVERSION}/
 DISTFILES+=	go.mod
@@ -13,7 +12,7 @@ WWW=		https://gitlab.com/gitlab-org/gitlab-pages
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules
+USES=		go:modules,1.21
 GO_MODULE=	gitlab.com/gitlab-org/gitlab-pages
 
 USE_GITLAB=	yes

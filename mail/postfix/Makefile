@@ -3,7 +3,7 @@ DISTVERSION=	3.8.4
 PORTREVISION?=	0
 PORTEPOCH=	1
 CATEGORIES=	mail
-MASTER_SITES=	http://cdn.postfix.johnriley.me/mirrors/postfix-release/ \
+MASTER_SITES=	https://postfix-mirror.horus-it.com/postfix-release/ \
 		http://ftp.porcupine.org/mirrors/postfix-release/ \
 		http://de.postfix.org/ftpmirror/ \
 		http://www.artfiles.org/postfix.org/postfix-release/ \

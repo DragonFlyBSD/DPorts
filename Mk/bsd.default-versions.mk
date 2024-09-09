@@ -40,7 +40,7 @@ APACHE_DEFAULT?=	2.4
 # Possible values: 5, 18
 BDB_DEFAULT?=		5
 # Possible values: 2, 3
-COROSYNC_DEFAULT?=	2
+COROSYNC_DEFAULT?=	3
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Namd64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)
 EBUR128_DEFAULT?=	rust
@@ -59,15 +59,11 @@ FPC_DEFAULT?=		3.2.2
 .  else
 FPC_DEFAULT?=		3.3.1
 .  endif
-# Possible values: 8 (last to support powerpcspe), 9, 10, 11, 12
+# Possible values: 9, 10, 11, 12
 # (Any other version is completely unsupported and not meant for general use.)
-.  if ${ARCH} == "powerpcspe"
-GCC_DEFAULT?=		8
-.  else
 GCC_DEFAULT?=		12
-.  endif
-# Possible values: 9, agpl, 10
-GHOSTSCRIPT_DEFAULT?=	agpl
+# Possible values: 10
+GHOSTSCRIPT_DEFAULT?=	10
 # Possible values: mesa-libs, mesa-devel
 GL_DEFAULT?=		mesa-libs
 # Possible values: 1.19, 1.20, 1.21, 1.22-devel
@@ -80,13 +76,13 @@ GUILE_DEFAULT?=		2.2
 # Format:	     version[-flavor]
 # Examples:	     6-nox11, 7
 IMAGEMAGICK_DEFAULT?=	7
-# Possible values: 8, 11, 17, 18
+# Possible values: 8, 11, 17, 18, 19, 20, 21
 JAVA_DEFAULT?=		8
-# Possible values: 2.2.6, 2.3.0
+# Possible values: 3.0.0, 3.1.0
 .  if !defined(WANT_LAZARUS_DEVEL)
-LAZARUS_DEFAULT?=	2.2.6
+LAZARUS_DEFAULT?=	3.0.0
 .  else
-LAZARUS_DEFAULT?=	2.3.0
+LAZARUS_DEFAULT?=	3.1.0
 .  endif
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Nx86_64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)
@@ -108,18 +104,18 @@ LUAJIT_DEFAULT?=	luajit-devel
 .  endif
 # Possible values: 5.10, 5.20, 6.8
 MONO_DEFAULT?=		5.20
-# Possible values: 5.7, 8.0, 10.5m, 10.6m, 10.11m, 5.7p, 5.7w
+# Possible values: 8.0, 8.1, 10.5m, 10.6m, 10.11m
 MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
-# Possible value: 16, 18, 20, current, lts (Note: current = 20 and lts = 18)
+# Possible value: 16, 18, 20, 21, current, lts (Note: current = 21 and lts = 20)
 NODEJS_DEFAULT?=	lts
 # Possible value: 25, 26
 OPENLDAP_DEFAULT?=	26
 # Possible values: 5.34, 5.36, 5.38, devel
 .  if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
-PERL5_DEFAULT?=		5.34
+PERL5_DEFAULT?=		5.36
 .  elif !defined(PERL5_DEFAULT)
 # There's no need to replace development versions, like "5.23" with "devel"
 # because 1) nobody is supposed to use it outside of poudriere, and 2) it must
@@ -131,10 +127,10 @@ _PERL5_FROM_BIN!=	${LOCALBASE}/bin/perl -e 'printf "%vd\n", $$^V;'
 _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
-# Possible values: 11, 12, 13, 14, 15, 16
+# Possible values: 12, 13, 14, 15, 16
 PGSQL_DEFAULT?=		15
-# Possible values: 8.0, 8.1, 8.2, 8.3
-PHP_DEFAULT?=		8.1
+# Possible values: 8.1, 8.2, 8.3
+PHP_DEFAULT?=		8.2
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Namd64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)
 PYCRYPTOGRAPHY_DEFAULT?=	rust
@@ -150,8 +146,8 @@ RUBY_DEFAULT?=		3.1
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
 # Possible values: 4.13, 4.16
-SAMBA_DEFAULT?=		4.13
-# Possible values: base, openssl, libressl, libressl-devel
+SAMBA_DEFAULT?=		4.16
+# Possible values: base, openssl, openssl111, openssl31, openssl32, libressl, libressl-devel
 .  if !defined(SSL_DEFAULT)
 #	If no preference was set, check for an installed base version
 #	but give an installed port preference over it.

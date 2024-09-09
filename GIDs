@@ -474,7 +474,7 @@ dkimproxy:*:525:
 # free: 533
 pgbouncer:*:534:
 redis:*:535:
-# free: 536
+keydb:*:536:
 # free: 537
 # free: 538
 # free: 539
@@ -767,7 +767,7 @@ selenium:*:824:
 polw:*:825:
 statsd:*:826:
 _tuptime:*:827:
-# free: 828
+cirrus:*:828:
 # free: 829
 # free: 830
 # free: 831
@@ -907,7 +907,7 @@ git_daemon:*:964:
 elasticsearch:*:965:
 ossec:*:966:
 loki:*:967:
-# free: 968
+promtail:*:968:
 kippo:*:969:
 colord:*:970:
 shibd:*:971:

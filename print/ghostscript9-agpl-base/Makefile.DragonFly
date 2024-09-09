@@ -1,2 +1,0 @@
-# very loaded bulk build race when generating arch.h header
-MAKE_JOBS_UNSAFE=yes

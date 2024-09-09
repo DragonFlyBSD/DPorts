@@ -1,6 +1,6 @@
 PORTNAME=	fpc
 PORTVERSION=	3.2.2
-PORTREVISION=	5
+PORTREVISION=	8
 CATEGORIES=	lang
 MASTER_SITES=	SF/freepascal/Source/${PORTVERSION}:source \
 		https://downloads.freepascal.org/${PORTNAME}/dist/${PORTVERSION}/source/:source \
@@ -112,6 +112,8 @@ post-patch:
 	@${REINPLACE_CMD} -i "" -e 's|linux|freebsd,dragonfly,linux|g' \
 		${WRKSRC}/packages/a52/fpmake.pp
 	@${REINPLACE_CMD} -i "" -e 's|linux|freebsd,dragonfly,linux|g' \
+		${WRKSRC}/packages/dbus/fpmake.pp
+	@${REINPLACE_CMD} -i "" -e 's|linux|freebsd,dragonfly,linux|g' \
 		${WRKSRC}/packages/dts/fpmake.pp
 	@${REINPLACE_CMD} -i "" -e 's|freebsd,||g' \
 		-e 's|,dragonfly||g' \
@@ -132,7 +134,7 @@ post-patch:
 		${WRKSRC}/packages/mad/fpmake.pp
 	@${REINPLACE_CMD} -i "" -e 's|linux|freebsd,dragonfly,linux|g' \
 		${WRKSRC}/packages/modplug/fpmake.pp
-	@${REINPLACE_CMD} -i "" -e 's|linux|freebsd,dragonfly,linux|g' \
+	@${REINPLACE_CMD} -i "" -e 's|Linux|freebsd,dragonfly,linux|g' \
 		${WRKSRC}/packages/newt/fpmake.pp
 	@${REINPLACE_CMD} -i "" -e 's|linux|freebsd,dragonfly,linux|g' \
 		${WRKSRC}/packages/oggvorbis/fpmake.pp
@@ -146,6 +148,8 @@ post-patch:
 		${WRKSRC}/packages/rexx/fpmake.pp
 	@${REINPLACE_CMD} -i "" -e 's|linux|freebsd,dragonfly,linux|g' \
 		${WRKSRC}/packages/zorba/fpmake.pp
+	@${REINPLACE_CMD} -i "" -e 's|linux,freebsd|linux,freebsd,dragonfly|g' \
+		${WRKSRC}/packages/rtl-extra/fpmake.pp
 
 # dragonfly specifics
 	@${REINPLACE_CMD} -i "" -e 's|,dragonfly||g' \

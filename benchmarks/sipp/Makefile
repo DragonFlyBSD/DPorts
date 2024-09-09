@@ -6,11 +6,9 @@ MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${PO
 
 MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	SIP benchmarking and testing tool
-WWW=		http://sipp.sourceforge.net/
+WWW=		https://sipp.sourceforge.net/
 
 LICENSE=	GPLv2
-
-BROKEN_FreeBSD_12_powerpc64=	fails to compile: /usr/local/lib/gcc9/include/c++/cstddef:52:8: expected unqualified-id before string constant
 
 BUILD_DEPENDS=	help2man:misc/help2man
 

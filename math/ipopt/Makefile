@@ -1,6 +1,7 @@
 PORTNAME=	Ipopt
 DISTVERSIONPREFIX=	releases/
-DISTVERSION=	3.14.12
+DISTVERSION=	3.14.13
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,7 +11,6 @@ WWW=		https://projects.coin-or.org/Ipopt
 LICENSE=	EPL
 
 LIB_DEPENDS=	libcoinasl.so:math/asl \
-		libcoinmetis.so:math/coin-or-metis \
 		libcoinmumps.so:math/coin-or-mumps
 TEST_DEPENDS=	bash:shells/bash
 

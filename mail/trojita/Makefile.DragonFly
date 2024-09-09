@@ -1,2 +1,0 @@
-# libgcc_pic.a + ld.gold + pthread issue
-MAKE_ENV+= LDVER=ld.bfd

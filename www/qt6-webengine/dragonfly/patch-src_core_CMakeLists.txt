@@ -1,0 +1,20 @@
+--- src/core/CMakeLists.txt.intermediate	2024-01-26 22:54:53 UTC
++++ src/core/CMakeLists.txt
+@@ -20,7 +20,7 @@ add_subdirectory(tools)
+ #   TOOLCHAIN SETUP
+ ##
+ 
+-if(LINUX OR FREEBSD)
++if(LINUX OR FREEBSD OR DRAGONFLY)
+     setup_toolchains()
+ endif()
+ 
+@@ -399,7 +399,7 @@ foreach(arch ${archs})
+             CONDITION QT_FEATURE_webengine_embedded_build
+         )
+ 
+-        if(LINUX OR FREEBSD)
++        if(LINUX OR FREEBSD OR DRAGONFLY)
+             list(APPEND gnArgArg
+                 use_gtk=false # GTK toolkit bindings
+                 use_qt=false # Qt5 toolkit bindings

@@ -1,6 +1,6 @@
 PORTNAME=	neovim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.2
+DISTVERSION=	0.9.5
 CATEGORIES=	editors
 
 MAINTAINER=	adamw@FreeBSD.org
@@ -13,7 +13,7 @@ BUILD_DEPENDS=	gperf:devel/gperf \
 		${LUA_MODLIBDIR}/bit.so:devel/lua-bitop@${LUA_FLAVOR} \
 		${LUA_MODLIBDIR}/lpeg.so:devel/lua-lpeg@${LUA_FLAVOR}
 LIB_DEPENDS=	libluv.so:devel/luv \
-		libmsgpackc.so:devel/msgpack-c \
+		libmsgpack-c.so:devel/msgpack-c \
 		libtermkey.so:devel/libtermkey \
 		libtree-sitter.so:devel/tree-sitter \
 		libunibilium.so:devel/unibilium \
@@ -29,6 +29,7 @@ PORTSCOUT=	limit:^[0-9\.v]+$$
 CMAKE_ARGS=	-DLUA_PRG:FILEPATH="${LUA_CMD}" \
 		-DCMAKE_INSTALL_MANDIR:PATH="${MANPREFIX}/man" \
 		-DDEPS_PREFIX:PATH="${LOCALBASE}"
+CFLAGS+=	-I${LOCALBASE}/include
 
 DATADIR=	${PREFIX}/share/nvim
 PORTDATA=	runtime

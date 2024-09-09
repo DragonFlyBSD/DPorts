@@ -1,5 +1,5 @@
 PORTNAME=	cryptography
-PORTVERSION=	41.0.4
+PORTVERSION=	42.0.5
 PORTEPOCH=	1
 CATEGORIES=	security python
 MASTER_SITES=	PYPI
@@ -8,7 +8,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Cryptographic recipes and primitives for Python developers
-WWW=		https://github.com/pyca/cryptography
+WWW=		https://cryptography.io/en/latest/ \
+		https://github.com/pyca/cryptography
 
 LICENSE=	APACHE20 BSD3CLAUSE
 LICENSE_COMB=	dual
@@ -17,7 +18,7 @@ LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/LICENSE.BSD
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cffi>=1.12:devel/py-cffi@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}setuptools>=61.0.0:devel/py-setuptools@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}setuptools-rust>=0.11.4:devel/py-setuptools-rust@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}setuptools-rust>=1.7.0:devel/py-setuptools-rust@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cffi>=1.12:devel/py-cffi@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bcrypt>=3.1.5:security/py-bcrypt@${PY_FLAVOR} \

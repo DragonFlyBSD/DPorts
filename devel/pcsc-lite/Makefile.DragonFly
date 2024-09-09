@@ -1,0 +1,1 @@
+PLIST_FILES+=	share/polkit-1/actions/org.debian.pcsc-lite.policy

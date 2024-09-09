@@ -1,26 +1,25 @@
 PORTNAME=	wl-mirror
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.13.2
+DISTVERSION=	0.15.0
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Simple Wayland output mirror client
 WWW=		https://github.com/Ferdi265/wl-mirror
 
-LICENSE=	GPLv3
+LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_FreeBSD_12=	ld: error: undefined symbol: memfd_create
-
 BUILD_DEPENDS=	wayland-protocols>0:graphics/wayland-protocols
-LIB_DEPENDS=	libwayland-egl.so:graphics/wayland
+LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \
+		libwayland-egl.so:graphics/wayland
 
 USES=		cmake gl pkgconfig
 USE_GITHUB=	yes
 USE_GITLAB=	nodefault
 USE_GL=		glesv2 egl
 GH_ACCOUNT=	Ferdi265
-GL_TUPLE=	https://gitlab.freedesktop.org:wlroots:wlr-protocols:8cdeaac:wlrproto/proto/wlr-protocols
+GL_TUPLE=	https://gitlab.freedesktop.org:wlroots:wlr-protocols:4264185:wlrproto/proto/wlr-protocols
 PLIST_FILES=	bin/${PORTNAME}
 
 OPTIONS_DEFINE=	MANPAGES

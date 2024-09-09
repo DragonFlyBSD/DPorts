@@ -6,10 +6,13 @@ MASTER_SITES=	SF
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Window manager that arranges windows in a tree
-WWW=		http://treewm.sourceforge.net/
+WWW=		https://treewm.sourceforge.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	Last upstream release was in 2003
+EXPIRATION_DATE=	2024-01-17
 
 USES=		gmake imake:env tar:bzip2 xorg
 USE_XORG=	x11 ice sm xext xmu xpm xt xxf86vm

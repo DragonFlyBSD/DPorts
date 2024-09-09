@@ -1,6 +1,6 @@
 PORTNAME=	ddskk
 DISTVERSION=	16.2
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	japanese elisp
 MASTER_SITES=	ftp://ftp.ring.gr.jp/pub/elisp/skk/maintrunk/ \
 		http://www.ring.gr.jp/archives/elisp/skk/maintrunk/ \
@@ -13,10 +13,6 @@ WWW=		http://openlab.ring.gr.jp/skk/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/READMEs/COPYING
-
-.if ${FLAVOR:U} == devel_full || ${FLAVOR:U} == devel_nox
-BROKEN=		fails to build
-.endif
 
 USES=		emacs
 

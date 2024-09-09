@@ -1,15 +1,16 @@
---- src/pipewire/pipewire.c.orig	2022-07-15 22:00:19 UTC
+--- src/pipewire/pipewire.c.orig	2024-03-29 19:43:44 UTC
 +++ src/pipewire/pipewire.c
-@@ -27,7 +27,7 @@
+@@ -7,7 +7,8 @@
  #include <unistd.h>
  #include <limits.h>
  #include <stdio.h>
--#if !defined(__FreeBSD__) && !defined(__MidnightBSD__)
-+#if !defined(__FreeBSD__) && !defined(__MidnightBSD__) && !defined(__DragonFly__)
+-#if !defined(__FreeBSD__) && !defined(__MidnightBSD__) && !defined(__GNU__)
++#if !defined(__FreeBSD__) && !defined(__MidnightBSD__) && !defined(__GNU__) && \
++    !defined(__DragonFly__)
  #include <sys/prctl.h>
  #endif
  #include <pwd.h>
-@@ -769,7 +769,7 @@ static void init_prgname(void)
+@@ -743,7 +744,7 @@ static void init_prgname(void)
  		}
  	}
  #endif
@@ -18,12 +19,13 @@
  	{
  		ssize_t len;
  
-@@ -779,7 +779,7 @@ static void init_prgname(void)
+@@ -753,7 +754,8 @@ static void init_prgname(void)
  		}
  	}
  #endif
--#if !defined(__FreeBSD__) && !defined(__MidnightBSD__)
-+#if !defined(__FreeBSD__) && !defined(__MidnightBSD__) && !defined(__DragonFly__)
+-#if !defined(__FreeBSD__) && !defined(__MidnightBSD__) && !defined(__GNU__)
++#if !defined(__FreeBSD__) && !defined(__MidnightBSD__) && !defined(__GNU__) && \
++    !defined(__DragonFly__)
  	{
  		if (prctl(PR_GET_NAME, (unsigned long) name, 0, 0, 0) == 0) {
  			prgname = name;

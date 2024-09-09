@@ -1,7 +1,7 @@
 PORTNAME=	gitlab-elasticsearch-indexer
-PORTVERSION=	4.3.10
-DISTVERSIONPREFIX=	v
+PORTVERSION=	4.7.0
 PORTREVISION=	1
+DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libicui18n.so:devel/icu \
 		libicuuc.so:devel/icu
 #RUN_DEPENDS=	p5-Image-ExifTool>=0:graphics/p5-Image-ExifTool
 
-USES=		gmake go:modules,no_targets pkgconfig
+USES=		gmake go:modules,no_targets,1.21 pkgconfig
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
@@ -30,8 +30,7 @@ MAKE_ENV+=	${GO_ENV}
 # so we download the required go.mod file from gitlab
 # lines are taken from go.mk
 # ---------------------------
-FETCH_DEPENDS=	${GO_CMD}:${GO_PORT} \
-		ca_root_nss>0:security/ca_root_nss
+FETCH_DEPENDS=	${GO_CMD}:${GO_PORT}
 MASTER_SITES+=	https://gitlab.com/gitlab-org/gitlab-elasticsearch-indexer/-/raw/v${DISTVERSION}/
 DISTFILES+=	go.mod
 DIST_SUBDIR=	go/${PKGORIGIN:S,/,_,g}/${DISTNAME}

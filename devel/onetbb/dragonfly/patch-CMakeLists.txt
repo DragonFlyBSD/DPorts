@@ -1,11 +1,11 @@
---- CMakeLists.txt.orig	2023-07-29 22:36:43.383070000 +0200
-+++ CMakeLists.txt	2023-07-29 22:36:40.003000000 +0200
-@@ -222,7 +222,7 @@ else()
+--- CMakeLists.txt.orig	2023-11-17 16:23:05 UTC
++++ CMakeLists.txt
+@@ -245,7 +245,7 @@ else()
              add_subdirectory(src/tbbmalloc_proxy)
          endif()
      endif()
--    if (APPLE OR NOT BUILD_SHARED_LIBS)
-+    if (APPLE OR NOT BUILD_SHARED_LIBS OR ${CMAKE_SYSTEM_NAME} STREQUAL "DragonFly")
+-    if (NOT BUILD_SHARED_LIBS)
++    if (NOT BUILD_SHARED_LIBS OR ${CMAKE_SYSTEM_NAME} STREQUAL "DragonFly")
          message(STATUS "TBBBind build targets are disabled due to unsupported environment")
      else()
          add_subdirectory(src/tbbbind)

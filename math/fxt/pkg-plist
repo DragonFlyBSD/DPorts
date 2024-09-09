@@ -167,6 +167,7 @@ include/fxt/comb/big-fact2perm.h
 include/fxt/comb/binary-debruijn.h
 include/fxt/comb/binary-huffman.h
 include/fxt/comb/binary-necklace.h
+include/fxt/comb/binary-rot.h
 include/fxt/comb/binary-sl-gray.h
 include/fxt/comb/catalan-flat-path-lex.h
 include/fxt/comb/catalan-path-lex.h
@@ -332,6 +333,7 @@ include/fxt/comb/mset-perm-gray.h
 include/fxt/comb/mset-perm-lex-rec.h
 include/fxt/comb/mset-perm-lex.h
 include/fxt/comb/mset-perm-pref.h
+include/fxt/comb/msetpart.h
 include/fxt/comb/necklace.h
 include/fxt/comb/num-compositions.h
 include/fxt/comb/num-necklaces.h
@@ -429,6 +431,8 @@ include/fxt/comb/schroeder-rgs-lex.h
 include/fxt/comb/score-sequence.h
 include/fxt/comb/setpart-ccf-rgs-lex.h
 include/fxt/comb/setpart-ck-rgs.h
+include/fxt/comb/setpart-noncrossing-ll.h
+include/fxt/comb/setpart-noncrossing-rgs.h
 include/fxt/comb/setpart-p-rgs-lex.h
 include/fxt/comb/setpart-rgs-fixed-content.h
 include/fxt/comb/setpart-rgs-gray.h
@@ -891,6 +895,8 @@ lib/libfxt.a
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/binary-huffman-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/binary-necklace-demo.cc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/binary-necklace-out.txt
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/binary-rot-demo.cc
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/binary-rot-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/binary-sl-gray-demo.cc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/binary-sl-gray-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/binomial-demo.cc
@@ -1177,6 +1183,8 @@ lib/libfxt.a
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/mset-perm-pref-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/mset-subset-lex-demo.cc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/mset-subset-lex-out.txt
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/msetpart-demo.cc
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/msetpart-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/naf-gray-rec-demo.cc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/naf-gray-rec-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/naf-pos-rec-demo.cc
@@ -1404,6 +1412,10 @@ lib/libfxt.a
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/setpart-ck-rgs-demo.cc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/setpart-ck-rgs-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/setpart-demo.cc
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/setpart-noncrossing-ll-demo.cc
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/setpart-noncrossing-ll-out.txt
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/setpart-noncrossing-rgs-demo.cc
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/setpart-noncrossing-rgs-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/setpart-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/setpart-p-rgs-lex-demo.cc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/setpart-p-rgs-lex-out.txt
@@ -1457,10 +1469,7 @@ lib/libfxt.a
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/young-tab-rgs-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/young-tab-rgs-subset-lex-demo.cc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/young-tab-rgs-subset-lex-out.txt
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/zzztest-demo.cc
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/comb/zzztest-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/ds/attic/dichotomy-demo.cc
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/ds/attic/dichotomy-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/ds/bitarray-demo.cc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/ds/bitarray-out.txt
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/ds/bitarray2d-demo.cc

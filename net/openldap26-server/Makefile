@@ -46,7 +46,7 @@ CONFLICTS_INSTALL=	${PORTNAME}2[0-57-9]-server ${PORTNAME}-server
 GNU_CONFIGURE=		yes
 
 PORTREVISION_CLIENT=	0
-PORTREVISION_SERVER=	0
+PORTREVISION_SERVER=	1
 OPENLDAP_SHLIB_MAJOR=	2
 OPENLDAP_SHLIB_MINOR=	0.200
 
@@ -389,6 +389,11 @@ post-patch:
 .if defined(CONFIGURE_SED)
 	@${REINPLACE_CMD} -E ${CONFIGURE_SED} \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
+.endif
+.if !${PORT_OPTIONS:MDEBUG}
+	@${REINPLACE_CMD} -E \
+		-e '/ldap_dump_(connection|requests_and_responses);/d' \
+		${WRKSRC}/libraries/libldap/ldap.map
 .endif
 
 pre-configure:

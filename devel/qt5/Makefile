@@ -10,7 +10,7 @@ WWW=		https://www.qt.io/
 # * we don't want to pull in wayland just yet.
 # * do not include qdoc to avoid hard dep on devel/llvmXY
 # XXX(rene) exclude webengine and sql-ibase
-USE_QT=		${_USE_QT_ALL:Nphonon4:Ndeclarative:Nwayland:Nwebengine:Nsql-ibase:S/$/:run/}
+USE_QT=		${_USE_QT_ALL:Ndeclarative:Nwayland:Nwebengine:Nsql-ibase:S/$/:run/}
 USES=		metaport qt:5
 
 .include <bsd.port.mk>

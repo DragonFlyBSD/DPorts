@@ -17,4 +17,6 @@ PATCHDIR=	${.CURDIR}/files
 WRKSRC=		${WRKDIR}/go
 DISTINFO_FILE=	${.CURDIR}/distinfo
 
+SHEBANG_FILES:=	misc/wasm/go_js_wasm_exec src/net/http/cgi/testdata/test.cgi
+
 .include "${MASTERDIR}/Makefile"

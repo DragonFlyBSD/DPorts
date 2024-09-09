@@ -4,9 +4,11 @@ CXXFLAGS +=	-DWITHOUT_PULSE
 # Required for jemalloc
 USES+=  gmake
 
+# used by our build
+USES+= ninja
 # gcc8 not enough and I don't think we should be adapting code to gcc8, we should
 # really upgrade our base's gcc
-USE_GCC_VERSION=       11
+USE_GCC_VERSION=       12
 
 # bad MF
 BUILD_DEPENDS:=	${BUILD_DEPENDS:Npulseaudio*} autoconf>0:devel/autoconf

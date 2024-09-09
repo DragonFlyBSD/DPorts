@@ -1,8 +1,6 @@
-# Created by: ijliao
-
 PORTNAME=	images
 PORTVERSION=	4.0.1
-PORTREVISION=	10
+PORTREVISION=	13
 PORTEPOCH=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://bitbucket.org/camlspotter/camlimages/get/
@@ -12,6 +10,7 @@ DIST_SUBDIR=	ocaml-images
 
 MAINTAINER=	michael.grunewald@laposte.net
 COMMENT=	Objective Caml image processing library
+WWW=		http://pauillac.inria.fr/camlimages/
 
 BUILD_DEPENDS=	${LOCALBASE}/share/aclocal/ocaml.m4:lang/ocaml-autoconf
 BUILD_DEPENDS+=	omake:devel/omake
@@ -33,8 +32,8 @@ WRKSRC=		${WRKDIR}/camlspotter-camlimages-c803efa9d5d3
 
 MAKE_JOBS_UNSAFE=	yes
 
-OPTIONS_DEFINE=	PNG JPEG TIFF XPM GIF GHOSTSCRIPT GTK2 DOCS
-OPTIONS_DEFAULT=PNG JPEG TIFF XPM GIF GHOSTSCRIPT
+OPTIONS_DEFINE=	PNG JPEG TIFF XPM GIF FREETYPE GHOSTSCRIPT GTK2 DOCS
+OPTIONS_DEFAULT=PNG JPEG TIFF XPM GIF FREETYPE GHOSTSCRIPT
 OPTIONS_SUB=	yes
 
 PNG_CONFIGURE_WITH=	png
@@ -70,6 +69,10 @@ BINARY_ALIAS=		freetype-config=true
 USES+=		xorg
 USE_XORG=	xpm
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's,shell-success-null,shell-success,' \
+		${WRKSRC}/OMyMakeroot
 
 do-configure:
 	@(cd ${WRKSRC} && ${REINPLACE_CMD} ${OMAKESUBS} OMakefile)

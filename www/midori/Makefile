@@ -1,12 +1,12 @@
 PORTNAME=	midori
 PORTVERSION=	9.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	9
-CATEGORIES=	www xfce
+PORTREVISION=	10
+CATEGORIES=	www
 
-MAINTAINER=	xfce@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Lightweight web browser using WebKit browser engine
-WWW=		https://www.midori-browser.org/
+WWW=		https://astian.org/midori-browser/
 
 LICENSE=	LGPL21 MIT
 LICENSE_COMB=	multi

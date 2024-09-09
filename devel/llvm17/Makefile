@@ -1,12 +1,16 @@
 PORTNAME=	llvm
-DISTVERSION=	17.0.1
-PORTREVISION=	0
+DISTVERSION=	17.0.6
+PORTREVISION=	3
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
 		https://${PRE_}releases.llvm.org/${LLVM_RELEASE}${RCDIR}/
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
 DISTNAME=	llvm-project-${DISTVERSION}.src
 DISTFILES=	llvm-project-${DISTVERSION}.src${EXTRACT_SUFX}
+
+PATCH_SITES=	https://github.com/llvm/llvm-project/commit/
+PATCHFILES+=	llvmorg-18-init-15199-gb9935bb02a50.patch:-p1 # https://github.com/llvm/llvm-project/pull/75748
+PATCHFILES+=	llvmorg-18-init-15680-g966d564e43e6.patch:-p1 # https://github.com/llvm/llvm-project/pull/76185
 
 MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	LLVM and Clang
@@ -119,7 +123,6 @@ OPTIONS_EXCLUDE_armv7+=	FLANG OPENMP
 OPTIONS_EXCLUDE_i386=	FLANG OPENMP
 OPTIONS_EXCLUDE_powerpc=	FLANG OPENMP
 OPTIONS_EXCLUDE_riscv64=	LLDB
-OPTIONS_EXCLUDE_FreeBSD_12=	OPENMP
 .endif
 
 # All non-backend options
@@ -287,13 +290,6 @@ USES+=		gnome
 .if ${PORT_OPTIONS:MCOMPILER_RT}
 LLVM_ENABLE_PROJECTS+=	compiler-rt
 COMPILER_RT_PATTERN=	(sanitizer|include.xray|include\/(fuzzer|orc)|profile\/InstrProfData.inc)
-.if ${OSVERSION} < 1300525
-# An unwind.h is require to build.  I think an in-tree one should be used
-# but this seems to work as a workaround...
-BUILD_DEPENDS+=	libunwind>0:devel/libunwind
-# Allow unwind.h to be found reliably
-USES+=	localbase
-.endif
 .endif
 
 .if ${PORT_OPTIONS:MEXTRAS}

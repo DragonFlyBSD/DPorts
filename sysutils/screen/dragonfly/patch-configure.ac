@@ -1,15 +1,33 @@
---- configure.ac.intermediate	2022-06-04 20:35:18 UTC
-+++ configure.ac
-@@ -815,7 +815,7 @@ AC_CHECKING(getutxent)
+--- configure.ac.orig	2024-08-14 11:06:23.092014000 +0200
++++ configure.ac	2024-08-14 11:07:42.973793000 +0200
+@@ -585,7 +585,7 @@ main()
+ {
+   fd_set f;
+ 
+-#ifdef __FreeBSD__
++#id defined(__FreeBSD__) || defined(__DragonFly__)
+ /* From Andrew A. Chernov (ache@astral.msk.su):
+  * opening RDWR fifo fails in BSD 4.4, but select return values are
+  * right.
+@@ -891,7 +891,7 @@ AC_CHECKING(getutxent)
  AC_TRY_LINK([
- #include <time.h> /* to get time_t on SCO */
- #include <sys/types.h>
--#if (defined(SVR4) && !defined(DGUX)) || defined(__FreeBSD__)
-+#if (defined(SVR4) && !defined(DGUX)) || defined(__FreeBSD__) || defined(__DragonFly__)
- #include <utmpx.h>
+     #include <time.h> /* to get time_t on SCO */
+     #include <sys/types.h>
+-#if defined(SVR4) && !defined(DGUX) || defined(__FreeBSD__)
++#if defined(SVR4) && !defined(DGUX) || defined(__FreeBSD__) || defined(__DragonFly__)
+     #include <utmpx.h>
  #define utmp utmpx
  #else
-@@ -848,7 +848,7 @@ AC_CHECKING(ut_host)
+@@ -908,7 +908,7 @@ AC_CHECKING(getutxent with -lgen)
+ AC_TRY_LINK([
+     #include <time.h>
+     #include <sys/types.h>
+-#if defined(SVR4) && !defined(DGUX) || defined(__FreeBSD__)
++#if defined(SVR4) && !defined(DGUX) || defined(__FreeBSD__) || defined(__DragonFly__)
+     #include <utmpx.h>
+ #define utmp utmpx
+ #else
+@@ -924,7 +924,7 @@ AC_CHECKING(ut_host)
  AC_TRY_COMPILE([
  #include <time.h>
  #include <sys/types.h>

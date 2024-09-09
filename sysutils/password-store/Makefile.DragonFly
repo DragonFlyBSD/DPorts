@@ -1,3 +1,5 @@
+RUN_DEPENDS+=	base64:converters/base64
+
 dfly-patch:
 	${REINPLACE_CMD} -E \
 		-e 's|GETOPT="getopt"|GETOPT="${LOCALBASE}/bin/getopt"|' \
