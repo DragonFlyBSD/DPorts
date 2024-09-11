@@ -1,4 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e '/mimemagic>/s@~>@>=@g' \
-		${WRKSRC}/paperclip.gemspec

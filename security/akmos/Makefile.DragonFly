@@ -1,4 +1,0 @@
-
-BUILD_DEPENDS:=	${BUILD_DEPENDS:N*binutils}
-
-CFLAGS+= -Wno-sign-conversion

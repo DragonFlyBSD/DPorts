@@ -1,6 +1,0 @@
-USES+= localbase
-CFLAGS+= -Wno-return-type
-
-# [-Werror=cast-function-type]
-dfly-patch:
-	${REINPLACE_CMD} -e 's/-Werror //' ${WRKSRC}/tgl/Makefile.in

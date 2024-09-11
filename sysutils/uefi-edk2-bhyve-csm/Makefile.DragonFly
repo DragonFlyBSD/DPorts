@@ -1,6 +1,0 @@
-# port requires gcc48
-BUILD_DEPENDS+=	gcc48:lang/gcc48
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g' \
-		${WRKSRC}/BaseTools/Source/C/GenFv/GenFvInternalLib.c
