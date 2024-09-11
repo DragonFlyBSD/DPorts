@@ -111,7 +111,7 @@ OSREL=	${_OSRELEASE:C/[-(].*//}
 _EXPORTED_VARS+=	OSREL
 
 .  if !defined(OPSYS)
-OPSYS= DragonFly
+OPSYS=	DragonFly
 .  endif
 _EXPORTED_VARS+=	OPSYS
 
@@ -121,24 +121,24 @@ CONFIGURE_MAX_CMD_LEN!= ${SYSCTL} -n kern.argmax
 _EXPORTED_VARS+=	CONFIGURE_MAX_CMD_LEN
 
 .  if defined(USE_JAVA)
-.   if !defined(_JAVA_VERSION_LIST_REGEXP)
+.    if !defined(_JAVA_VERSION_LIST_REGEXP)
 _JAVA_VERSION_LIST_REGEXP!=	${MAKE} -V _JAVA_VERSION_LIST_REGEXP USE_JAVA=1 -f ${PORTSDIR}/Mk/bsd.port.mk
-.   endif
+.    endif
 _EXPORTED_VARS+=	_JAVA_VERSION_LIST_REGEXP
 
-.   if !defined(_JAVA_VENDOR_LIST_REGEXP)
+.    if !defined(_JAVA_VENDOR_LIST_REGEXP)
 _JAVA_VENDOR_LIST_REGEXP!=	${MAKE} -V _JAVA_VENDOR_LIST_REGEXP USE_JAVA=1 -f ${PORTSDIR}/Mk/bsd.port.mk
-.   endif
+.    endif
 _EXPORTED_VARS+=	_JAVA_VENDOR_LIST_REGEXP
 
-.   if !defined(_JAVA_OS_LIST_REGEXP)
+.    if !defined(_JAVA_OS_LIST_REGEXP)
 _JAVA_OS_LIST_REGEXP!=		${MAKE} -V _JAVA_OS_LIST_REGEXP USE_JAVA=1 -f ${PORTSDIR}/Mk/bsd.port.mk
-.   endif
+.    endif
 _EXPORTED_VARS+=	_JAVA_OS_LIST_REGEXP
 
-.   if !defined(_JAVA_PORTS_INSTALLED)
+.    if !defined(_JAVA_PORTS_INSTALLED)
 _JAVA_PORTS_INSTALLED!=		${MAKE} -V _JAVA_PORTS_INSTALLED USE_JAVA=1 -f ${PORTSDIR}/Mk/bsd.port.mk
-.   endif
+.    endif
 _EXPORTED_VARS+=	_JAVA_PORTS_INSTALLED
 .  else
 # export empty variables
@@ -148,9 +148,7 @@ _EXPORTED_VARS+=	_JAVA_VERSION_LIST_REGEXP \
 			_JAVA_PORTS_INSTALLED
 .  endif
 
-.  if !defined(UID)
-UID!=	${ID} -u
-.  endif
+UID?=	${.MAKE.UID}
 _EXPORTED_VARS+=	UID
 
 INDEXDIR?=	${PORTSDIR}
