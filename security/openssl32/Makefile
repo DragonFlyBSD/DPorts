@@ -1,8 +1,6 @@
 PORTNAME=	openssl
-DISTVERSION=	3.2.0
+PORTVERSION=	3.2.3
 CATEGORIES=	security devel
-MASTER_SITES=	https://www.openssl.org/source/ \
-		ftp://ftp.cert.dfn.de/pub/tools/net/openssl/source/
 PKGNAMESUFFIX=	32
 
 MAINTAINER=	brnrd@FreeBSD.org
@@ -12,7 +10,7 @@ WWW=		https://www.openssl.org/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl111 openssl31 openssl-quictls
+CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl111 openssl3[13] openssl*-quictls
 
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	config
@@ -22,12 +20,16 @@ CONFIGURE_ARGS=	--openssldir=${OPENSSLDIR} \
 
 USES=		cpe perl5
 USE_PERL5=	build
+USE_GITHUB=	yes
+GH_TAGNAME=	${PORTNAME}-${PORTVERSION}
 TEST_TARGET=	test
 
 LDFLAGS_i386=	-Wl,-znotext
 
 MAKE_ARGS+=	WHOLE_ARCHIVE_FLAG=--whole-archive CNF_LDFLAGS="${LDFLAGS}"
 MAKE_ENV+=	LIBRPATH="${PREFIX}/lib" GREP_OPTIONS=
+
+EXTRA_PATCHES+=	${.CURDIR}/../openssl/files/patch-crypto_async_arch_async__posix.h
 
 OPTIONS_GROUP=		CIPHERS COMPRESSION HASHES MODULES OPTIMIZE PROTOCOLS
 OPTIONS_GROUP_CIPHERS=	ARIA DES GOST IDEA SM4 RC2 RC4 RC5 WEAK-SSL-CIPHERS
@@ -167,8 +169,7 @@ PLIST_SUB+=	OPENSSLDIR=${OPENSSLDIR:S=^${PREFIX}/==}
 .include "version.mk"
 
 post-patch:
-	${REINPLACE_CMD} -Ee 's|^MANDIR=.*$$|MANDIR=$$(INSTALLTOP)/man|' \
-		-e 's|^(build\|install)_docs: .*|\1_docs: \1_man_docs|' \
+	${REINPLACE_CMD} -Ee 's|^(build\|install)_docs: .*|\1_docs: \1_man_docs|' \
 		${WRKSRC}/Configurations/unix-Makefile.tmpl
 	${REINPLACE_CMD} 's|SHLIB_VERSION=3|SHLIB_VERSION=${OPENSSL_SHLIBVER}|' \
 		${WRKSRC}/VERSION.dat
@@ -194,7 +195,7 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/openssl
 
 post-install-MAN3-on:
-	( cd ${STAGEDIR}/${PREFIX} ; find man/man3 -not -type d ; \
-		find man/man7 -not -type d ) | sed 's/$$/.gz/' >> ${TMPPLIST}
+	( cd ${STAGEDIR}/${PREFIX} ; find share/man/man3 -not -type d ; \
+		find share/man/man7 -not -type d ) | sed 's/$$/.gz/' >> ${TMPPLIST}
 
 .include <bsd.port.post.mk>
