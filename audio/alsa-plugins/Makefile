@@ -1,5 +1,6 @@
 PORTNAME=	alsa-plugins
 PORTVERSION=	1.2.7.1
+PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	https://www.alsa-project.org/files/pub/plugins/
 
@@ -19,13 +20,11 @@ INSTALL_TARGET=	install-strip
 CPPFLAGS+=	-I${.CURDIR}/../alsa-lib/files
 
 OPTIONS_DEFINE=		FFMPEG JACK PULSEAUDIO SAMPLERATE SPEEX
-OPTIONS_DEFAULT=	PULSEAUDIO
 OPTIONS_SUB=		yes
 
 FFMPEG_LIB_DEPENDS=		libavcodec.so:multimedia/ffmpeg
 FFMPEG_CONFIGURE_ENABLE=	libav
 
-JACK_IMPLIES=		SAMPLERATE
 JACK_LIB_DEPENDS=	libjack.so:audio/jack
 JACK_CONFIGURE_ENABLE=	jack
 
