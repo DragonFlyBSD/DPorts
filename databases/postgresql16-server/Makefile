@@ -1,5 +1,5 @@
 PORTNAME?=	postgresql
-DISTVERSION?=	16.0
+DISTVERSION?=	16.3
 # PORTREVISION must be ?= otherwise, all slave ports get this PORTREVISION and
 # not their own.  Probably best to keep it at ?=0 when reset here too.
 PORTREVISION?=	0
@@ -25,6 +25,7 @@ USES+=		tar:bzip2 cpe
 .if !defined(NO_BUILD)
 USES+=		gmake
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 .endif
 
 PG_USER?=	postgres
@@ -80,7 +81,7 @@ CONFIGURE_ENV+=	PATH=${PREFIX}/bin:${PATH}
 .endif
 
 .if defined(SERVER_ONLY)
-OPTIONS_DEFINE=	DTRACE LDAP INTDATE TZDATA XML DOCS
+OPTIONS_DEFINE=	DTRACE LDAP TZDATA XML DOCS
 LDAP_DESC=	Build with LDAP authentication support
 TZDATA_DESC=	Use internal timezone database
 XML_DESC=	Build with XML data type
@@ -108,18 +109,10 @@ ZSTD_LIB_DEPENDS+=	libzstd.so:archivers/zstd
 OPTIONS_DEFINE+=	LLVM
 OPTIONS_DEFAULT+=	LLVM
 LLVM_DESC=		Build with support for JIT-compiling expressions
-OPTIONS_EXCLUDE+=	${OPTIONS_EXCLUDE_${ARCH}_${OSREL:R}}
-OPTIONS_EXCLUDE_powerpc64_12=	LLVM
 LLVM_CONFIGURE_WITH=	llvm
 LLVM_CONFIGURE_ENV=	LLVM_CONFIG=${LLVM_CONFIG} \
 			CLANG=${LOCALBASE}/bin/clang${LLVM_VERSION}
 LLVM_USES=		llvm:max=15,min=11,lib
-
-# See http://www.freebsd.org/cgi/query-pr.cgi?pr=ports/76999 for more info
-# (requires dump/restore if modified.)
-OPTIONS_DEFINE+=	INTDATE
-INTDATE_DESC=		Builds with 64-bit date/time type
-OPTIONS_DEFAULT+=	INTDATE
 
 CONFIGURE_ARGS+=	--with-icu
 LIB_DEPENDS+=		libicudata.so:devel/icu
@@ -162,8 +155,6 @@ XML_CONFIGURE_WITH=	libxml
 XML_LIB_DEPENDS=	libxml2.so:textproc/libxml2
 
 TZDATA_CONFIGURE_OFF=	--with-system-tzdata=/usr/share/zoneinfo
-
-INTDATE_CONFIGURE_OFF=	--disable-integer-datetimes
 
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext
@@ -242,9 +233,9 @@ pre-build:
 .if !defined(NO_BUILD) && !target(do-build)
 
 do-build:
-	@ cd ${WRKSRC}/src/backend && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} generated-headers
+	@ cd ${WRKSRC}/src/backend && ${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} generated-headers
 	@ for dir in ${BUILD_DIRS}; do \
-		cd ${WRKSRC}/$${dir} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ; \
+		cd ${WRKSRC}/$${dir} && ${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ; \
 	done
 
 .  if exists(${FILESDIR}/pkg-message${COMPONENT}.in)
@@ -265,7 +256,7 @@ post-patch:
 do-install:
 	@for dir in ${INSTALL_DIRS}; do \
 	    cd ${WRKSRC}/$${dir} && \
-		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${INSTALL_TARGET}; \
+		${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${INSTALL_TARGET}; \
 	done
 .  if defined(SERVER_ONLY)
 	@ ${MKDIR} ${STAGEDIR}${PREFIX}/share/postgresql ;\
@@ -274,7 +265,7 @@ do-install:
 			${STAGEDIR}${PREFIX}/etc/periodic/daily
 .  endif # SERVER_ONLY
 .  if defined(CLIENT_ONLY)
-	@ cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install-local
+	@ cd ${WRKSRC}/src && ${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install-local
 .  endif
 	@ if [ -r ${PKGMESSAGE} ]; then \
 		${MKDIR} ${STAGEDIR}${DOCSDIR} ;\
