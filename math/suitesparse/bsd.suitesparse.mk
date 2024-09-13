@@ -4,7 +4,7 @@
 
 PKGNAMEPREFIX=	suitesparse-
 SSPNAME=	suitesparse
-SSPVERSION=	7.4.0
+SSPVERSION=	7.7.0
 DISTVERSIONPREFIX=	v
 
 MAINTAINER=	fortran@FreeBSD.org
@@ -25,6 +25,8 @@ CONFIGURE_WRKSRC=${WRKSRC}/SuiteSparse_config
 .endif
 BUILD_WRKSRC=	${CONFIGURE_WRKSRC}
 CMAKE_SOURCE_PATH=	${CONFIGURE_WRKSRC}
+CMAKE_ARGS+=	-DBLAS_LIBRARIES:STRING="${BLASLIB}"	\
+		-DLAPACK_LIBRARIES:STRING="${LAPACKLIB}"
 
 .if ${MPORTNAME} != config &&	\
 	${MPORTNAME} != CSparse &&	\
@@ -60,6 +62,7 @@ OPTIONS_DEFAULT+=	OPTIMIZED_CFLAGS
 
 .if ${MPORTNAME} == config ||	\
 	${MPORTNAME} == CHOLMOD ||	\
+	${MPORTNAME} == ParU ||	\
 	${MPORTNAME} == SPQR ||	\
 	${MPORTNAME} == UMFPACK
 OPTIONS_RADIO+=		BLAS
@@ -108,8 +111,6 @@ post-install:
 # See PR 230888 : Missing 64 bit atomic functions for i386
 USE_GCC=	yes
 LDFLAGS+=	-latomic
-.elif defined(PPC_ABI) && ${PPC_ABI} == ELFv1
-USE_GCC=	yes
 .else
 USES+=	compiler:c++11-lib
 .endif
