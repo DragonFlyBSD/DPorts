@@ -1,6 +1,6 @@
 PORTNAME=	nmsg
-PORTVERSION=	1.1.1
-PORTREVISION=	0
+PORTVERSION=	1.1.2
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	FARSIGHT LOCAL/truckman/farsight
 
@@ -15,8 +15,10 @@ LIB_DEPENDS=	libprotobuf-c.so:devel/protobuf-c \
 		libwdns.so:dns/wdns
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 USES=		gmake libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
+USE_PERL5=	build
 CONFIGURE_ARGS=	--with-pkgconfigdir='$${exec_prefix}/libdata/pkgconfig'
 INSTALL_TARGET=	install-strip
 
@@ -31,7 +33,6 @@ OPTIONS_SUB=		yes
 JSON_C_DESC=		JSON support via libjson-c
 JSON_C_CONFIGURE_WITH=	json-c
 JSON_C_LIB_DEPENDS=	libjson-c.so:devel/json-c
-JSON_C_BROKEN_OFF=	Does not build without json-c
 ZEROMQ_DESC=		ZeroMQ support
 ZEROMQ_CONFIGURE_WITH=	libzmq
 ZEROMQ_LIB_DEPENDS=	libzmq.so:net/libzmq4
@@ -39,6 +40,7 @@ ZEROMQ_LIB_DEPENDS=	libzmq.so:net/libzmq4
 ALL_TARGET=	all
 DOXYGEN_IMPLIES=	DOCS
 DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen
+DOXYGEN_USES=		perl5
 DOXYGEN_ALL_TARGET=	html-local
 DOCBOOK_XML=	${LOCALBASE}/share/xml/docbook/4.2
 MANPAGES_BUILD_DEPENDS=	xsltproc:textproc/libxslt \
