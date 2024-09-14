@@ -1,8 +1,10 @@
 PORTNAME=	dcmtk
 DISTVERSIONPREFIX=	${PORTNAME:tu}-
-DISTVERSION=	3.6.7
-PORTREVISION=	4
+DISTVERSION=	3.6.8
 CATEGORIES=	graphics devel
+
+PATCH_SITES=	https://github.com/DCMTK/${PORTNAME}/commit/
+PATCHFILES+=	c29bebcd19bb963d72dcd00ca8745f60f6b9a39e.patch:-p1 # fix compilation with clang 19, gcc 15
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	DICOM ToolKit, libraries and applications for DICOM/MEDICOM standard
@@ -10,8 +12,6 @@ WWW=		https://dcmtk.org
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
-
-BROKEN_aarch64=	clang-14 crashes, see bug#264408
 
 LIB_DEPENDS=	libicuuc.so:devel/icu \
 		libpng.so:graphics/png \
@@ -31,7 +31,13 @@ OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	*
 
+ETCDIR=		${PREFIX}/etc/${PORTNAME}-${PORTVERSION}
+DATADIR=	${PREFIX}/share/${PORTNAME}-${PORTVERSION}
+DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${PORTVERSION}
+
 TEST_TARGET=	test test-exhaustive
+
+PORTSCOUT=	limit:^.*[0-9].*$$ # prevent tags like latest
 
 .include <bsd.port.pre.mk>
 
