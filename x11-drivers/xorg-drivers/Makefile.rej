@@ -1,0 +1,36 @@
+@@ -26,26 +25,27 @@
+ VIDEO_DRIVERS=		apm \
+ 			ark \
+ 			ast \
+-			chips \
+-			cirrus \
+ 			dummy \
+ 			i128 \
+ 			i740 \
+-			mach64 \
+ 			mga \
+-			neomagic \
+ 			nv \
++			scfb \
++			tdfx \
++			tseng \
++			vesa
++
++VIDEO_DRIVERS_REMOVED=	mach64 \
++			chips \
++			cirrus \
++			neomagic \
+ 			openchrome \
+ 			r128 \
+ 			rendition \
+ 			s3virge \
+ 			savage \
+-			scfb \
+ 			siliconmotion \
+ 			sis \
+-			tdfx \
+-			tseng \
+-			vesa \
+ 			voodoo
+ 
+ OPTIONS_DEFAULT=	KEYBOARD \

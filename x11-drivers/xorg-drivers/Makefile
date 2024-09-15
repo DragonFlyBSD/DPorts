@@ -22,31 +22,11 @@ INPUT_DRIVERS=		egalax \
 			void \
 			wacom
 
-VIDEO_DRIVERS=		apm \
-			ark \
-			ast \
+VIDEO_DRIVERS=		ast \
 			dummy \
-			i128 \
-			i740 \
-			mga \
 			nv \
 			scfb \
-			tdfx \
-			tseng \
 			vesa
-
-VIDEO_DRIVERS_REMOVED=	mach64 \
-			chips \
-			cirrus \
-			neomagic \
-			openchrome \
-			r128 \
-			rendition \
-			s3virge \
-			savage \
-			siliconmotion \
-			sis \
-			voodoo
 
 OPTIONS_DEFAULT=	KEYBOARD \
 			LIBINPUT \
