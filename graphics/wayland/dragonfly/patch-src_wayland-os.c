@@ -1,5 +1,5 @@
---- src/wayland-os.c.orig	2022-10-22 10:58:42.178509000 +0200
-+++ src/wayland-os.c	2022-10-31 16:39:33.763815000 +0100
+--- src/wayland-os.c.orig	2024-08-24 15:43:55 UTC
++++ src/wayland-os.c
 @@ -33,7 +33,7 @@
  #include <fcntl.h>
  #include <errno.h>
@@ -9,19 +9,15 @@
  #include <sys/mman.h>
  #include <sys/un.h>
  #ifdef HAVE_SYS_UCRED_H
-@@ -69,17 +69,19 @@
- {
- 	int fd;
+@@ -46,7 +46,6 @@
+ int (*wl_fcntl)(int fildes, int cmd, ...) = fcntl;
+ int (*wl_socket)(int domain, int type, int protocol) = socket;
+ ssize_t (*wl_recvmsg)(int socket, struct msghdr *message, int flags) = recvmsg;
+-int (*wl_epoll_create1)(int flags) = epoll_create1;
  
-+#ifdef SOCK_CLOEXEC
- 	fd = socket(domain, type | SOCK_CLOEXEC, protocol);
- 	if (fd >= 0)
- 		return fd;
- 	if (errno != EINVAL)
- 		return -1;
-+#endif
- 
- 	fd = socket(domain, type, protocol);
+ static int
+ set_cloexec_or_close(int fd)
+@@ -85,7 +84,7 @@ wl_os_socket_cloexec(int domain, int typ
  	return set_cloexec_or_close(fd);
  }
  
@@ -30,7 +26,7 @@
  int
  wl_os_socket_peercred(int sockfd, uid_t *uid, gid_t *gid, pid_t *pid)
  {
-@@ -87,7 +89,7 @@
+@@ -93,7 +92,7 @@ wl_os_socket_peercred(int sockfd, uid_t
  	struct xucred ucred;
  
  	len = sizeof(ucred);
@@ -39,7 +35,7 @@
  	    ucred.cr_version != XUCRED_VERSION)
  		return -1;
  	*uid = ucred.cr_uid;
-@@ -189,19 +191,11 @@
+@@ -199,19 +198,11 @@ wl_os_recvmsg_cloexec(int sockfd, struct
  }
  
  int
@@ -49,7 +45,7 @@
  	int fd;
  
 -#ifdef EPOLL_CLOEXEC
--	fd = epoll_create1(EPOLL_CLOEXEC);
+-	fd = wl_epoll_create1(EPOLL_CLOEXEC);
 -	if (fd >= 0)
 -		return fd;
 -	if (errno != EINVAL)

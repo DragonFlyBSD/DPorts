@@ -1,5 +1,5 @@
---- src/event-loop.c.orig	2022-11-01 19:04:03.507533000 +0100
-+++ src/event-loop.c	2022-11-01 19:04:05.187496000 +0100
+--- src/event-loop.c.orig	2024-08-24 15:43:55 UTC
++++ src/event-loop.c
 @@ -34,10 +34,9 @@
  #include <string.h>
  #include <fcntl.h>
@@ -13,7 +13,7 @@
  #include <unistd.h>
  #include "wayland-util.h"
  #include "wayland-private.h"
-@@ -68,7 +67,7 @@
+@@ -69,7 +68,7 @@ struct wl_timer_heap {
  };
  
  struct wl_event_loop {
@@ -22,7 +22,7 @@
  	struct wl_list check_list;
  	struct wl_list idle_list;
  	struct wl_list destroy_list;
-@@ -80,7 +79,7 @@
+@@ -81,7 +80,7 @@ struct wl_event_loop {
  
  struct wl_event_source_interface {
  	int (*dispatch)(struct wl_event_source *source,
@@ -31,7 +31,7 @@
  };
  
  
-@@ -94,22 +93,22 @@
+@@ -95,22 +94,22 @@ struct wl_event_source_fd {
  
  static int
  wl_event_source_fd_dispatch(struct wl_event_source *source,
@@ -60,7 +60,7 @@
  }
  
  struct wl_event_source_interface fd_source_interface = {
-@@ -120,30 +119,10 @@
+@@ -121,30 +120,10 @@ static struct wl_event_source *
  add_source(struct wl_event_loop *loop,
  	   struct wl_event_source *source, uint32_t mask, void *data)
  {
@@ -91,7 +91,7 @@
  	return source;
  }
  
-@@ -179,6 +158,9 @@
+@@ -180,6 +159,9 @@ wl_event_loop_add_fd(struct wl_event_loo
  {
  	struct wl_event_source_fd *source;
  
@@ -101,7 +101,7 @@
  	source = zalloc(sizeof *source);
  	if (source == NULL)
  		return NULL;
-@@ -187,8 +169,36 @@
+@@ -188,8 +170,36 @@ wl_event_loop_add_fd(struct wl_event_loo
  	source->base.fd = wl_os_dupfd_cloexec(fd, 0);
  	source->func = func;
  	source->fd = fd;
@@ -139,19 +139,13 @@
  }
  
  /** Update a file descriptor source's event mask
-@@ -215,16 +225,22 @@
+@@ -216,16 +226,22 @@ WL_EXPORT int
  wl_event_source_fd_update(struct wl_event_source *source, uint32_t mask)
  {
  	struct wl_event_loop *loop = source->loop;
 -	struct epoll_event ep;
 +	struct kevent events[2];
 +	unsigned int num_events = 0;
-+
-+	if (mask & WL_EVENT_READABLE) {
-+		EV_SET(&events[num_events], source->fd, EVFILT_READ,
-+		       EV_ADD | EV_ENABLE, 0, 0, source);
-+		num_events++;
-+	}
  
 -	memset(&ep, 0, sizeof ep);
 -	if (mask & WL_EVENT_READABLE)
@@ -159,6 +153,12 @@
 -	if (mask & WL_EVENT_WRITABLE)
 -		ep.events |= EPOLLOUT;
 -	ep.data.ptr = source;
++	if (mask & WL_EVENT_READABLE) {
++		EV_SET(&events[num_events], source->fd, EVFILT_READ,
++		       EV_ADD | EV_ENABLE, 0, 0, source);
++		num_events++;
++	}
++
 +	if (mask & WL_EVENT_WRITABLE) {
 +		EV_SET(&events[num_events], source->fd, EVFILT_WRITE,
 +		       EV_ADD | EV_ENABLE, 0, 0, source);
@@ -170,7 +170,7 @@
  }
  
  /** \cond INTERNAL */
-@@ -239,7 +255,7 @@
+@@ -240,7 +256,7 @@ struct wl_event_source_timer {
  
  static int
  noop_dispatch(struct wl_event_source *source,
@@ -179,7 +179,7 @@
  	return 0;
  }
  
-@@ -257,25 +273,47 @@
+@@ -258,25 +274,47 @@ time_lt(struct timespec ta, struct times
  }
  
  static int
@@ -207,15 +207,15 @@
 +		diff_sec--;
 +		diff_nsec += 1000000000L;
 +	}
++
++	rel_deadline = (long) ((diff_sec * 1000) + (diff_nsec / 1000000));
++	if ((diff_nsec % 1000000) > 499999)
++		rel_deadline++;
  
 -	its.it_interval.tv_sec = 0;
 -	its.it_interval.tv_nsec = 0;
 -	its.it_value = deadline;
 -	return timerfd_settime(timerfd, TFD_TIMER_ABSTIME, &its, NULL);
-+	rel_deadline = (long) ((diff_sec * 1000) + (diff_nsec / 1000000));
-+	if ((diff_nsec % 1000000) > 499999)
-+		rel_deadline++;
-+
 +	EV_SET(&ev, timerfd, EVFILT_TIMER, EV_ADD | EV_ENABLE | EV_ONESHOT,
 +	       0, rel_deadline, timers);
 +
@@ -240,7 +240,7 @@
  }
  
  static void
-@@ -296,37 +334,43 @@
+@@ -297,37 +335,43 @@ wl_timer_heap_init(struct wl_timer_heap
  static void
  wl_timer_heap_release(struct wl_timer_heap *timers)
  {
@@ -306,7 +306,7 @@
  	return 0;
  }
  
-@@ -484,7 +528,6 @@
+@@ -485,7 +529,6 @@ wl_timer_heap_arm(struct wl_timer_heap *
  	heap_sift_up(timers->data, source);
  }
  
@@ -314,7 +314,7 @@
  static int
  wl_timer_heap_dispatch(struct wl_timer_heap *timers)
  {
-@@ -511,10 +554,10 @@
+@@ -512,10 +555,10 @@ wl_timer_heap_dispatch(struct wl_timer_h
  		list_tail->next_due = NULL;
  
  	if (timers->active > 0) {
@@ -327,7 +327,7 @@
  			return -1;
  	}
  
-@@ -531,7 +574,7 @@
+@@ -532,7 +575,7 @@ wl_timer_heap_dispatch(struct wl_timer_h
  
  static int
  wl_event_source_timer_dispatch(struct wl_event_source *source,
@@ -336,7 +336,7 @@
  {
  	struct wl_event_source_timer *timer;
  
-@@ -639,7 +682,7 @@
+@@ -640,7 +683,7 @@ wl_event_source_timer_update(struct wl_e
  		if (tsource->heap_idx == 0) {
  			/* Only update the timerfd if the new deadline is
  			 * the earliest */
@@ -345,7 +345,7 @@
  				return -1;
  		}
  	} else {
-@@ -650,7 +693,7 @@
+@@ -651,7 +694,7 @@ wl_event_source_timer_update(struct wl_e
  		if (timers->active == 0) {
  			/* Only update the timerfd if this was the last
  			 * active timer */
@@ -354,7 +354,7 @@
  				return -1;
  		}
  	}
-@@ -670,17 +713,11 @@
+@@ -671,17 +714,11 @@ struct wl_event_source_signal {
  
  static int
  wl_event_source_signal_dispatch(struct wl_event_source *source,
@@ -376,7 +376,7 @@
  
  	return signal_source->func(signal_source->signal_number,
  				   signal_source->base.data);
-@@ -717,6 +754,7 @@
+@@ -718,6 +755,7 @@ wl_event_loop_add_signal(struct wl_event
  {
  	struct wl_event_source_signal *source;
  	sigset_t mask;
@@ -384,7 +384,7 @@
  
  	source = zalloc(sizeof *source);
  	if (source == NULL)
-@@ -724,15 +762,26 @@
+@@ -725,15 +763,26 @@ wl_event_loop_add_signal(struct wl_event
  
  	source->base.interface = &signal_source_interface;
  	source->signal_number = signal_number;
@@ -414,7 +414,7 @@
  }
  
  /** \cond INTERNAL */
-@@ -829,24 +878,100 @@
+@@ -830,24 +879,100 @@ WL_EXPORT int
  wl_event_source_remove(struct wl_event_source *source)
  {
  	struct wl_event_loop *loop = source->loop;
@@ -529,7 +529,7 @@
  	}
  
  	wl_list_remove(&source->link);
-@@ -889,8 +1014,8 @@
+@@ -890,8 +1015,8 @@ wl_event_loop_create(void)
  	if (loop == NULL)
  		return NULL;
  
@@ -540,7 +540,7 @@
  		free(loop);
  		return NULL;
  	}
-@@ -925,22 +1050,21 @@
+@@ -926,22 +1051,21 @@ wl_event_loop_destroy(struct wl_event_lo
  
  	wl_event_loop_process_destroy_list(loop);
  	wl_timer_heap_release(&loop->timers);
@@ -566,7 +566,7 @@
  		if (dispatch_result < 0) {
  			wl_log("Source dispatch function returned negative value!\n");
  			wl_log("This would previously accidentally suppress a follow-up dispatch\n");
-@@ -994,19 +1118,25 @@
+@@ -1046,9 +1170,10 @@ timespec_sub(struct timespec a, struct t
  WL_EXPORT int
  wl_event_loop_dispatch(struct wl_event_loop *loop, int timeout)
  {
@@ -574,28 +574,35 @@
 +	struct kevent ev[64];
  	struct wl_event_source *source;
  	int i, count;
-+	struct timespec timeout_spec;
++        struct timespec timeout_spec;
  	bool has_timers = false;
+ 	bool use_timeout = timeout > 0;
+ 	struct timespec now, end;
+@@ -1061,7 +1186,13 @@ wl_event_loop_dispatch(struct wl_event_l
+ 	}
  
- 	wl_event_loop_dispatch_idle(loop);
- 
--	count = epoll_wait(loop->epoll_fd, ep, ARRAY_LENGTH(ep), timeout);
-+	/* timeout is provided in milliseconds */
-+	timeout_spec.tv_sec = (time_t) (timeout / 1000);
-+	timeout_spec.tv_nsec = (long) (timeout % 1000) * 1000000L;
+ 	while (true) {
+-		count = epoll_wait(loop->epoll_fd, ep, ARRAY_LENGTH(ep), timeout);
++		/* timeout is provided in milliseconds */
++		timeout_spec.tv_sec = (time_t) (timeout / 1000);
++		timeout_spec.tv_nsec = (long) (timeout % 1000) * 1000000L;
 +
-+	count = kevent(loop->event_fd, NULL, 0, ev, ARRAY_LENGTH(ev),
-+	               (timeout != -1) ? &timeout_spec : NULL);
- 	if (count < 0)
++		count = kevent(loop->event_fd, NULL, 0, ev, ARRAY_LENGTH(ev),
++		    (timeout != -1) ? &timeout_spec : NULL);
++
+ 		if (count >= 0)
+ 			break; /* have events or timeout */
+ 		else if (count < 0 && errno != EINTR && errno != EAGAIN)
+@@ -1082,7 +1213,7 @@ wl_event_loop_dispatch(struct wl_event_l
  		return -1;
  
  	for (i = 0; i < count; i++) {
 -		source = ep[i].data.ptr;
 +		source = ev[i].udata;
- 		if (source == &loop->timers.base)
+ 		if (source == &loop->timers.base) {
  			has_timers = true;
- 	}
-@@ -1022,9 +1152,10 @@
+ 			break;
+@@ -1100,9 +1231,10 @@ wl_event_loop_dispatch(struct wl_event_l
  	}
  
  	for (i = 0; i < count; i++) {
@@ -609,7 +616,7 @@
  	}
  
  	wl_event_loop_process_destroy_list(loop);
-@@ -1055,7 +1186,7 @@
+@@ -1133,7 +1265,7 @@ wl_event_loop_dispatch(struct wl_event_l
  WL_EXPORT int
  wl_event_loop_get_fd(struct wl_event_loop *loop)
  {

@@ -1,15 +1,15 @@
---- meson.build.orig	2022-10-22 10:59:58.476779000 +0200
-+++ meson.build	2022-10-31 16:12:58.994390000 +0100
-@@ -16,7 +16,7 @@
+--- meson.build.orig	2024-08-24 15:43:55 UTC
++++ meson.build
+@@ -16,7 +16,7 @@ config_h.set_quoted('PACKAGE', meson.pro
  config_h.set_quoted('PACKAGE_VERSION', meson.project_version())
  
  cc_args = []
--if host_machine.system() != 'freebsd'
-+if host_machine.system() != 'dragonfly'
+-if host_machine.system() not in ['freebsd', 'openbsd']
++if host_machine.system() not in ['freebsd', 'openbsd', 'dragonfly']
  	cc_args += ['-D_POSIX_C_SOURCE=200809L']
  endif
  add_project_arguments(cc_args, language: 'c')
-@@ -43,7 +43,6 @@
+@@ -43,7 +43,6 @@ have_funcs = [
  	'mkostemp',
  	'posix_fallocate',
  	'prctl',
@@ -17,7 +17,7 @@
  	'mremap',
  	'strndup',
  ]
-@@ -52,11 +51,11 @@
+@@ -52,11 +51,11 @@ foreach f: have_funcs
  endforeach
  config_h.set10('HAVE_XUCRED_CR_PID', cc.has_member('struct xucred', 'cr_pid', prefix : '#include <sys/ucred.h>'))
  have_broken_msg_cmsg_cloexec = false
@@ -31,7 +31,7 @@
  /*
   * FreeBSD had a broken implementation of MSG_CMSG_CLOEXEC between 2015 and
   * 2021. Check if we are compiling against a version that includes the fix
-@@ -80,8 +79,6 @@
+@@ -80,8 +79,6 @@ if get_option('libraries')
  	ffi_dep = dependency('libffi')
  
  	decls = [
