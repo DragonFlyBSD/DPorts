@@ -1,5 +1,6 @@
 PORTNAME=	flightgear
 PORTVERSION=	2020.3.19
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF/flightgear/release-${PORTVERSION:R}
 
@@ -37,7 +38,6 @@ DOS2UNIX_REGEX=	.*\.(c|h|cxx|cpp|hxx|hpp)
 CMAKE_ARGS+=	-DSYSTEM_SQLITE:BOOL=ON \
 		-DENABLE_HID_INPUT:BOOL=OFF \
 		-DFG_DATA_DIR:PATH=${LOCALBASE}/share/${PORTNAME} \
-		-DCMAKE_INSTALL_MANDIR:PATH=${MANPREFIX}/man \
 		-DFGCOM_DATA_PATH:PATH=${DATADIR}
 LDFLAGS+=	-L${LOCALBASE}/lib
 LDFLAGS_i386=	-Wl,-znotext
@@ -59,7 +59,7 @@ post-patch:
 
 .include <bsd.port.pre.mk>
 
-.if ${COMPILER_TYPE} == "clang" && ${COMPILER_VERSION} >= 150
+.if ${COMPILER_TYPE} == "clang"
 LDFLAGS_i386+=	-Wl,--no-check-dynamic-relocations
 .endif
 
