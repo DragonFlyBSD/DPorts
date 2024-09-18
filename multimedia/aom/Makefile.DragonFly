@@ -1,2 +1,2 @@
-# unsafe vmaf rules
-MAKE_JOBS_UNSAFE= yes
+# Use clang for misc functions: _mm_loadu_si64
+USE_CLANG_FALLBACK=       default
