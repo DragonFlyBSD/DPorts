@@ -41,7 +41,8 @@ USE_GL=		egl opengl
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 pango
 USE_LOCALE=	C.UTF-8
 CMAKE_ARGS=	-DOPENSSL_ROOT_DIR="${OPENSSLBASE}"
-CMAKE_ON=	QT_AVOID_CMAKE_ARCHIVING_API \
+CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_LTTngUST \
+		QT_AVOID_CMAKE_ARCHIVING_API \
 		QT_FIND_ALL_PACKAGES_ALWAYS \
 		QT_FEATURE_openssl_linked
 CMAKE_OFF=	QT_FEATURE_eglfs \
@@ -55,7 +56,6 @@ CMAKE_OFF+=	FEATURE_sql_mysql \
 SHEBANG_FILES=	${WRKSRC}/mkspecs/features/uikit/device_destinations.sh \
 		${WRKSRC}/mkspecs/features/uikit/devices.py \
 		${WRKSRC}/mkspecs/features/data/mac/objc_namespace.sh \
-		${WRKSRC}/util/android/android_emulator_launcher.sh \
 		${WRKSRC}/util/testrunner/qt-testrunner.py \
 		${WRKSRC}/util/testrunner/sanitizer-testrunner.py
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
