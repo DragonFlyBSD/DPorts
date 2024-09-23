@@ -1,5 +1,0 @@
-@@ -28,2 +28,2 @@
--BUILD_DEPENDS=	as:devel/binutils
--RUN_DEPENDS=	as:devel/binutils
-+BUILD_DEPENDS=	as:devel/binutils@native
-+RUN_DEPENDS=	as:devel/binutils@native
