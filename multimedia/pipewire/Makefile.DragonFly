@@ -1,8 +1,10 @@
 
 LDFLAGS+=     -L${LOCALBASE}/lib -ltinfo -lncurses
 
+# includes <threads.h> w/o good reason
+BUILD_DEPENDS+= libstdthreads>0:misc/libstdthreads
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
-		${WRKSRC}/subprojects/media-session/meson.build \
 		${WRKSRC}/src/pipewire/meson.build \
 		${WRKSRC}/meson.build
