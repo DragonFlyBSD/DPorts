@@ -208,7 +208,6 @@ llvm%%LLVM_SUFFIX%%/bin/dsymutil
 %%CLANG%%llvm%%LLVM_SUFFIX%%/bin/git-clang-format
 %%CLANG%%llvm%%LLVM_SUFFIX%%/bin/hmaptool
 %%CLANG%%llvm%%LLVM_SUFFIX%%/bin/intercept-build
-%%LLD%%llvm%%LLVM_SUFFIX%%/bin/ld
 %%LLD%%llvm%%LLVM_SUFFIX%%/bin/ld.lld
 %%LLD%%llvm%%LLVM_SUFFIX%%/bin/ld64.lld
 llvm%%LLVM_SUFFIX%%/bin/llc
