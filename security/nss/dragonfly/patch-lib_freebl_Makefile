@@ -1,0 +1,36 @@
+--- lib/freebl/Makefile.orig	2024-09-28 12:16:10 UTC
++++ lib/freebl/Makefile
+@@ -264,7 +264,7 @@ else ifeq ($(CPU_ARCH),x86)
+ endif
+ endif # Darwin
+ 
+-ifeq (,$(filter-out Linux FreeBSD, $(OS_TARGET)))
++ifeq (,$(filter-out Linux FreeBSD DragonFly, $(OS_TARGET)))
+ ifeq ($(CPU_ARCH),x86_64)
+     # Lower case s on mpi_amd64_common due to make implicit rules.
+     ASFILES  = arcfour-amd64-gas.s mpi_amd64_common.s
+@@ -280,12 +280,15 @@ ifeq ($(CPU_ARCH),x86_64)
+     INTEL_GCM = 1
+     MPI_SRCS += mpi_amd64.c mp_comba.c
+ endif
++# ASM optimizations crash on DragonFly
++ifneq ($(OS_TARGET),DragonFly)
+ ifeq ($(CPU_ARCH),x86)
+     ASFILES  = mpi_x86.s
+     DEFINES += -DMP_ASSEMBLY_MULTIPLY -DMP_ASSEMBLY_SQUARE
+     DEFINES += -DMP_ASSEMBLY_DIV_2DX1D -DMP_USE_UINT_DIGIT
+     DEFINES += -DMP_IS_LITTLE_ENDIAN
+ endif
++endif
+ ifeq ($(CPU_ARCH),arm)
+     DEFINES += -DMP_ASSEMBLY_MULTIPLY -DMP_ASSEMBLY_SQUARE
+     DEFINES += -DMP_USE_UINT_DIGIT
+@@ -359,7 +362,7 @@ endif
+ # to bind the blapi function references in FREEBLVector vector
+ # (ldvector.c) to the blapi functions defined in the freebl
+ # shared libraries.
+-ifeq (,$(filter-out FreeBSD Linux NetBSD OpenBSD, $(OS_TARGET)))
++ifeq (,$(filter-out FreeBSD Linux NetBSD OpenBSD DragonFly, $(OS_TARGET)))
+     MKSHLIB += -Wl,-Bsymbolic
+ endif
+ 
