@@ -1,1 +1,3 @@
+IGNORE=   fills disk with endless log of errors
+
 LDFLAGS+= -L${LOCALBASE}/lib -lxml2
