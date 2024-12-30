@@ -1,10 +1,9 @@
---- util/coroutine-ucontext.c.orig	2020-10-19 09:52:57 UTC
+--- util/coroutine-ucontext.c.orig	2024-06-10 18:35:25 UTC
 +++ util/coroutine-ucontext.c
-@@ -221,7 +221,15 @@ Coroutine *qemu_coroutine_new(void)
-                 2, arg.i[0], arg.i[1]);
+@@ -159,8 +159,17 @@ static void coroutine_trampoline(int i0,
+     self = arg.p;
+     co = &self->base;
  
-     /* swapcontext() in, siglongjmp() back out */
--    if (!sigsetjmp(old_env, 0)) {
 +    /* Save signal mask in this sigsetjmp, because makecontext on DragonFly
 +     * leaves all signals blocked when entering the new context with
 +     * swapcontext.
@@ -13,7 +12,10 @@
 +     * XXX Remove this workaround when the makecontext behaviour is fixed
 +     *     on DragonFly.
 +     */
-+    if (!sigsetjmp(old_env, 1)) {
-         start_switch_fiber_asan(COROUTINE_YIELD, &fake_stack_save, co->stack,
-                                 co->stack_size);
-         start_switch_fiber_tsan(&fake_stack_save,
++
+     /* Initialize longjmp environment and switch back the caller */
+-    if (!sigsetjmp(self->env, 0)) {
++    if (!sigsetjmp(self->env, 1)) {
+         CoroutineUContext *leaderp = get_ptr_leader();
+ 
+         start_switch_fiber_asan(&fake_stack_save,
