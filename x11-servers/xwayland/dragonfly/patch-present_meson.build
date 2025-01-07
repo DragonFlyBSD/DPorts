@@ -1,0 +1,11 @@
+--- present/meson.build.orig	2024-07-10 11:40:59 UTC
++++ present/meson.build
+@@ -16,7 +16,7 @@ hdrs_present = [
+     'presentext.h',
+ ]
+ 
+-if host_machine.system() in ['freebsd', 'openbsd']
++if host_machine.system() in ['freebsd', 'openbsd', 'dragonfly']
+    epoll_dep = dependency('epoll-shim')
+ else
+    epoll_dep = []
