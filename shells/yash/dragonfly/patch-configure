@@ -1,11 +1,11 @@
---- configure.orig	2018-12-22 03:42:49 UTC
-+++ configure
+--- configure.orig	Wed Mar 20 13:20:38 2024
++++ configure	Mon Dec
 @@ -378,7 +378,7 @@ else
  fi
  
  case "${ostype}" in
 -    freebsd)
 +    freebsd|dragonfly)
- 	# FreeBSD doesn't have a feature test macro to enable non-POSIX
- 	# extensions. We don't define _POSIX_C_SOURCE or _XOPEN_SOURCE so that
- 	# non-POSIX extensions are available.
+         # FreeBSD doesn't have a feature test macro to enable non-POSIX
+         # extensions. We don't define _POSIX_C_SOURCE or _XOPEN_SOURCE so that
+         # non-POSIX extensions are available.
