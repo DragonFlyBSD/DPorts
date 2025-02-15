@@ -309,13 +309,3 @@ you update your ports collection, before attempting any port upgrades.
   and renamed to databases/xtrabackup80 in preparation for upcoming
   incompatible branch databases/xtrabackup81, to avoid confusion.
 
-20231229:
-  AFFECTS: users of databases/tarantool
-  AUTHOR: arrowd@FreeBSD.org
-
-  A new major version of the tarantool has been released.
-
-  databases/tarantool renamed to databases/tarantool2.
-
-  2.11 is an LTS version and will be supported for a while.
-
