@@ -1,6 +1,6 @@
 PORTNAME=	cups-filters
 PORTVERSION=	1.28.17
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	https://github.com/OpenPrinting/cups-filters/releases/download/${DISTVERSION}/
 
@@ -43,6 +43,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-shell=/bin/sh \
 		--with-pdftops-path=${LOCALBASE}/bin/pdftops \
 		--with-test-font-path=${LOCALBASE}/share/fonts/dejavu/DejaVuSans.ttf
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=			BRAILLE COLORD DOCS
@@ -136,7 +137,7 @@ PSPOPPLER_DESC=			Poppler pdftops(1)
 .include <bsd.port.pre.mk>
 
 #.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
+.if ${COMPILER_TYPE} == clang
 CFLAGS+=	-Wno-error=dynamic-exception-spec
 .endif
 
