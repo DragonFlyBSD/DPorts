@@ -1,0 +1,14 @@
+bin/devdump
+bin/isodebug
+bin/isodump
+bin/isoinfo
+bin/isovfy
+bin/mkhybrid
+bin/mkisofs
+share/man/man8/devdump.8.gz
+share/man/man8/isodebug.8.gz
+share/man/man8/isodump.8.gz
+share/man/man8/isoinfo.8.gz
+share/man/man8/isovfy.8.gz
+share/man/man8/mkhybrid.8.gz
+share/man/man8/mkisofs.8.gz

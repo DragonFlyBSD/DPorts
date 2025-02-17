@@ -1,0 +1,14 @@
+Stripped down distribution of cdrtools that only contains tools to create
+ISO-9660 filesystems and verify their integrity.
+
+This package contains the following programs:
+- devdump (dump a device or file in hex)
+- isodebug (show debug info contained in an ISO-9660 image)
+- isodump (dump a device or file based on ISO-9660)
+- isoinfo (analyze or list an ISO-9660 image)
+- isovfy (verify an ISO-9660 image)
+- mkisofs (an ISO-9660 filesystem image creator)
+- mkhybrid (an ISO-9660/HFS filesystem image creator)
+  Link to mkisofs.
+
+WWW: http://cdrecord.org/
