@@ -1,20 +1,20 @@
---- SConscript.intermediate	2022-05-27 11:00:06 UTC
-+++ SConscript
-@@ -962,7 +962,7 @@ if not cleaning and not helping:
+--- SConscript.ori	Sat Feb 22 21:51:47 2025
++++ SConscript	Sat Feb 22 21:52:31 2025
+@@ -1036,7 +1036,7 @@ if not cleaning and not helping:
                          "-Wl,-compatibility_version,%s" % libgps_version,
                          "-Wl,-install_name,%s/$TARGET.srcpath" %
                          installdir('libdir', add_destdir=False)]
--    elif sys.platform.startswith('freebsd'):
-+    elif sys.platform.startswith('freebsd') or sys.platform.startswith('dragonfly'):
+-    elif config.env['target_platform'].startswith('freebsd'):
++    elif config.env['target_platform'].startswith('freebsd') or config.env['target_platform'].startswith('dragonfly'):
          # for isascii(), putenv(), nice(), strptime()
          confdefs.append('#if !defined(_XOPEN_SOURCE)')
          confdefs.append('#define _XOPEN_SOURCE 700')
-@@ -1042,7 +1042,7 @@ if not cleaning and not helping:
+@@ -1122,7 +1122,7 @@ if not cleaning and not helping:
              ncurseslibs = ['!ncurses5-config --libs --cflags']
          elif WhereIs('ncursesw5-config'):
              ncurseslibs = ['!ncursesw5-config --libs --cflags']
--        elif sys.platform.startswith('freebsd'):
-+        elif sys.platform.startswith('freebsd') or sys.platform.startswith('dragonfly'):
+-        elif config.env['target_platform'].startswith('freebsd'):
++        elif config.env['target_platform'].startswith('freebsd') or config.env['target_platform'].startswith('dragonfly'):
              ncurseslibs = ['-lncurses']
-         elif (sys.platform.startswith('darwin') or
-               sys.platform.startswith('openbsd') or
+         elif (config.env['target_platform'].startswith('darwin') or
+               config.env['target_platform'].startswith('openbsd') or
