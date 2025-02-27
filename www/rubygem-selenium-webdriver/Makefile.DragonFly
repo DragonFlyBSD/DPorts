@@ -1,3 +1,4 @@
 # Remove binaries since we're NO_ARCH
 post-stage:
 	${RM} -rf ${STAGEDIR}/usr/local/lib/ruby/gems/3.1/gems/selenium-webdriver-${PORTVERSION}/bin
+	${RM} -rf ${STAGEDIR}/usr/local/lib/ruby/gems/3.2/gems/selenium-webdriver-${PORTVERSION}/bin/linux
