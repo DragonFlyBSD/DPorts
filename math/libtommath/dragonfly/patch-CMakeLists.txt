@@ -1,0 +1,22 @@
+--- CMakeLists.txt.ori	Thu Feb 27 12:17:51 2025
++++ CMakeLists.txt	Thu Feb 27 12:18:24 2025
+@@ -251,6 +251,8 @@ elseif(LINUX_DISTRO STREQUAL "fedora" OR LINUX_DISTRO 
+     list(APPEND CPACK_GENERATOR RPM)
+ elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+     list(APPEND CPACK_GENERATOR FREEBSD)
++elseif(CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
++    list(APPEND CPACK_GENERATOR DRAGONFLY)
+ endif()
+ 
+ # general CPack config
+@@ -283,5 +285,10 @@ set(CPACK_RPM_PACKAGE_LICENSE "The Unlicense")
+ set(CPACK_FREEBSD_PACKAGE_MAINTAINER "gahr@FreeBSD.org")
+ set(CPACK_FREEBSD_PACKAGE_ORIGIN "math/libtommath")
+ set(CPACK_FREEBSD_PACKAGE_CATEGORIES "math")
++
++# DragonFly specific CPack config
++set(CPACK_DRAGONFLY_PACKAGE_MAINTAINER "")
++set(CPACK_DRAGONFLY_PACKAGE_ORIGIN "math/libtommath")
++set(CPACK_DRAGONFLY_PACKAGE_CATEGORIES "math")
+ 
+ include(CPack)
