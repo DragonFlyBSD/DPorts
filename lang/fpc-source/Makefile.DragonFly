@@ -1,4 +1,4 @@
 
 # touch hidden files in empty dirs to pass stage-qa
 dfly-install:
-	${FIND} ${STAGEDIR}${DATADIR} -type d -empty -exec ${TOUCH} {}/... \;
+	${RM} -f ${STAGEDIR}${DATADIR}/.git*
