@@ -301,11 +301,3 @@ you update your ports collection, before attempting any port upgrades.
   Although redmine 5.1.X supports ruby 3.2 and later but so far there is
   no redmine51 ports in the tree.
 
-20240222:
-  AFFECTS: users of databases/xtrabackup8
-  AUTHOR: eugen@FreeBSD.org
-
-  The port databases/xtrabackup8 upgraded to version 8.0.35-30
-  and renamed to databases/xtrabackup80 in preparation for upcoming
-  incompatible branch databases/xtrabackup81, to avoid confusion.
-

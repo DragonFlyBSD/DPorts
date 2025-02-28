@@ -16,7 +16,7 @@ _INCLUDE_BSD_DF_GCC_MK=	yes
 # All GCC versions supported by this framework.
 #
 # When updating this, keep Mk/bsd.default-versions.mk in sync.
-GCCVERSIONS=    4.8 8.0 9 10 11 12
+GCCVERSIONS=    4.8 8.0 9 10 11 12 13 14
 
 .undef PORT_COMPILER
 .undef BASE_COMPILER
