@@ -1,13 +1,8 @@
-
-.if ${PORTVERSION} != "0.179"
-BROKEN= needs recheck on new version
-.endif
-
-USES+=	localbase:ldflags
+#USES+=	localbase:ldflags
 
 ## disable nls
 #OPTIONS_EXCLUDE+=	NLS
-CONFIGURE_ARGS+=	--disable-nls
+#CONFIGURE_ARGS+=	--disable-nls
 BUILD_DEPENDS+=		gnustat:sysutils/coreutils \
 			bash>0:shells/bash
 CFLAGS+=	-Wno-error=cast-function-type -O1
