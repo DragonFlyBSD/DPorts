@@ -44,7 +44,6 @@ dfly-patch:
 		${WRKSRC}/xbmc/cores/DllLoader/exports/emu_msvcrt.h \
 		${WRKSRC}/xbmc/cores/DllLoader/exports/util/EmuFileWrapper.h \
 		${WRKSRC}/xbmc/cores/DllLoader/exports/wrapper.c \
-		${WRKSRC}/xbmc/cores/DllLoader/ldt_keeper.c \
 		${WRKSRC}/xbmc/guilib/XBTFReader.cpp \
 		${WRKSRC}/xbmc/guilib/guiinfo/SystemGUIInfo.cpp \
 		${WRKSRC}/xbmc/interfaces/python/XBPython.cpp \
@@ -59,3 +58,5 @@ dfly-patch:
 		${WRKSRC}/xbmc/utils/CharsetConverter.cpp \
 		${WRKSRC}/xbmc/utils/test/TestCPUInfo.cpp \
 		${WRKSRC}/xbmc/windowing/X11/XRandR.cpp
+
+MAKE_JOBS_UNSAFE=yes
