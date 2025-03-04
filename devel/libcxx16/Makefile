@@ -4,13 +4,15 @@
 PORTNAME?=	libcxx
 PORTVERSION=	16.0.6
 DISTNAME=	llvm-project-${PORTVERSION}.src
-PKGNAMEPREFIX= llvm16-
+PKGNAMEPREFIX=	llvm16-
 CATEGORIES=	devel
 MASTER_SITES=	http://releases.llvm.org/${PORTVERSION}/ \
 		 https://github.com/llvm/llvm-project/releases/download/llvmorg-${PORTVERSION}/
 
 MAINTAINER=	tuxillo@quantumachine.net
 COMMENT?=	LLVM C++ standard library with c++11 support
+
+CONFLICTS=     libcxx-16*
 
 USES=		tar:xz
 
