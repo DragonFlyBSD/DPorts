@@ -1,0 +1,32 @@
+--- src/main/cpp/BUILD.orig	Tue Mar  4 14:40:19 2025
++++ src/main/cpp/BUILD	Tue Mar
+@@ -30,6 +30,10 @@ cc_library(
+             "blaze_util_bsd.cc",
+             "blaze_util_posix.cc",
+         ],
++        "//src/conditions:dragonfly": [
++            "blaze_util_bsd.cc",
++            "blaze_util_posix.cc",
++        ],
+         "//src/conditions:windows": [
+             "blaze_util_windows.cc",
+         ],
+@@ -51,6 +55,8 @@ cc_library(
+         ],
+         "//src/conditions:openbsd": [
+         ],
++        "//src/conditions:dragonfly": [
++        ],
+         "//src/conditions:windows": WIN_LINK_OPTS,
+         "//conditions:default": [
+             "-lrt",
+@@ -111,6 +117,9 @@ cc_binary(
+             "-lm",
+         ],
+         "//src/conditions:openbsd": [
++        ],
++        "//src/conditions:dragonfly": [
++            "-lm",
+         ],
+         "//src/conditions:windows": [
+         ],

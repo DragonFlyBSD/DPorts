@@ -1,0 +1,15 @@
+--- src/conditions/BUILD.orig	Tue Jan  1 00:00:00 1980
++++ src/conditions/BUILD	Mon Mar
+@@ -162,6 +162,12 @@ config_setting(
+ )
+ 
+ config_setting(
++    name = "dragonfly",
++    constraint_values = ["@platforms//os:dragonfly"],
++    visibility = ["//visibility:public"],
++)
++
++config_setting(
+     name = "windows",
+     constraint_values = ["@platforms//os:windows"],
+     visibility = ["//visibility:public"],

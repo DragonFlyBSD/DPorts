@@ -1,0 +1,26 @@
+--- src/main/tools/BUILD.orig	Tue Jan  1 00:00:00 1980
++++ src/main/tools/BUILD	Mon Mar
+@@ -72,6 +72,7 @@ cc_binary(
+         "//src/conditions:darwin": ["dummy-sandbox.c"],
+         "//src/conditions:freebsd": ["dummy-sandbox.c"],
+         "//src/conditions:openbsd": ["dummy-sandbox.c"],
++        "//src/conditions:dragonfly": ["dummy-sandbox.c"],
+         "//src/conditions:windows": ["dummy-sandbox.c"],
+         "//conditions:default": [
+             "linux-sandbox.cc",
+@@ -86,6 +87,7 @@ cc_binary(
+         "//src/conditions:darwin": [],
+         "//src/conditions:freebsd": [],
+         "//src/conditions:openbsd": [],
++        "//src/conditions:dragonfly": [],
+         "//src/conditions:windows": [],
+         "//conditions:default": [
+             "-lm",
+@@ -96,6 +98,7 @@ cc_binary(
+         "//src/conditions:darwin": [],
+         "//src/conditions:freebsd": [],
+         "//src/conditions:openbsd": [],
++        "//src/conditions:dragonfly": [],
+         "//src/conditions:windows": [],
+         "//conditions:default": [
+             ":logging",

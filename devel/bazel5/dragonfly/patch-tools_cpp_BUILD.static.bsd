@@ -1,0 +1,55 @@
+--- tools/cpp/BUILD.static.bsd.orig	Tue Jan  1 00:00:00 1980
++++ tools/cpp/BUILD.static.bsd	Tue Mar
+@@ -35,9 +35,11 @@ cc_toolchain_suite(
+         "armeabi-v7a|compiler": ":cc-compiler-armeabi-v7a",
+         "freebsd|compiler": ":cc-compiler-freebsd",
+         "openbsd|compiler": ":cc-compiler-openbsd",
++        "dragonfly|compiler": ":cc-compiler-dragonfly",
+         "armeabi-v7a": ":cc-compiler-armeabi-v7a",
+         "freebsd": ":cc-compiler-freebsd",
+         "openbsd": ":cc-compiler-openbsd",
++        "dragonfly": ":cc-compiler-dragonfly",
+     },
+ )
+ 
+@@ -106,6 +108,40 @@ toolchain(
+         "@platforms//os:openbsd",
+     ],
+     toolchain = ":cc-compiler-openbsd",
++    toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
++)
++
++cc_toolchain(
++    name = "cc-compiler-dragonfly",
++    all_files = ":empty",
++    ar_files = ":empty",
++    as_files = ":empty",
++    compiler_files = ":empty",
++    dwp_files = ":empty",
++    linker_files = ":empty",
++    objcopy_files = ":empty",
++    strip_files = ":empty",
++    supports_param_files = 0,
++    toolchain_config = ":local_dragonfly",
++    toolchain_identifier = "local_dragonfly",
++)
++
++cc_toolchain_config(
++    name = "local_dragonfly",
++    cpu = "dragonfly",
++)
++
++toolchain(
++    name = "cc-toolchain-dragonfly",
++    exec_compatible_with = [
++        "@platforms//cpu:x86_64",
++        "@platforms//os:dragonfly",
++    ],
++    target_compatible_with = [
++        "@platforms//cpu:x86_64",
++        "@platforms//os:dragonfly",
++    ],
++    toolchain = ":cc-compiler-dragonfly",
+     toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
+ )
+ 

@@ -1,0 +1,15 @@
+--- tools/jdk/BUILD.java_tools.orig	Tue Jan  1 00:00:00 1980
++++ tools/jdk/BUILD.java_tools	Mon Mar
+@@ -150,6 +150,12 @@ config_setting(
+ )
+ 
+ config_setting(
++    name = "dragonfly",
++    constraint_values = ["@platforms//os:dragonfly"],
++    visibility = ["//visibility:public"],
++)
++
++config_setting(
+     name = "openbsd",
+     constraint_values = ["@platforms//os:openbsd"],
+     visibility = ["//visibility:public"],

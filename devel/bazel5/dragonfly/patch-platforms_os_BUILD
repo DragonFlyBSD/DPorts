@@ -1,0 +1,14 @@
+--- platforms/os/BUILD.orig	Tue Jan  1 00:00:00 1980
++++ platforms/os/BUILD	Mon Mar
+@@ -29,6 +29,11 @@ constraint_value(
+ )
+ 
+ constraint_value(
++    name = "dragonfly",
++    constraint_setting = ":os",
++)
++
++constraint_value(
+     name = "android",
+     constraint_setting = ":os",
+ )
