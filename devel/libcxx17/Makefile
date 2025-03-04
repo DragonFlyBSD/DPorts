@@ -4,6 +4,7 @@
 PORTNAME?=	libcxx
 PORTVERSION=	17.0.6
 DISTNAME=	llvm-project-${PORTVERSION}.src
+PKGNAMEPREFIX= llvm17-
 CATEGORIES=	devel
 MASTER_SITES=	http://releases.llvm.org/${PORTVERSION}/ \
 		 https://github.com/llvm/llvm-project/releases/download/llvmorg-${PORTVERSION}/
