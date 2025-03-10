@@ -1,9 +1,5 @@
 USE_CLANG_FALLBACK=	default
 
-.if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=   huge (399M packaged)
-.endif
-
 # LLDB needs to be ported to dragonfly
 # FLANG needs to be a separate thing
 # OPENMP force disable offloading target support
