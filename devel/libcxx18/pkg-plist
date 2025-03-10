@@ -1015,8 +1015,14 @@ llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/include/c++/v1/version
 llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/include/c++/v1/wchar.h
 llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/include/c++/v1/wctype.h
 llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/lib/c++/libstdc++.so
+llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/include/c++/v1/__cxxabi_config.h
+llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/include/c++/v1/cxxabi.h
 llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/lib/libc++.a
 llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/lib/libc++.so
 llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/lib/libc++.so.1
 llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/lib/libc++.so.1.0
 llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/lib/libc++experimental.a
+llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/lib/libc++abi.a
+llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/lib/libc++abi.so
+llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/lib/libc++abi.so.1
+llvm%%LLVM_DEFAULT%%/%%PORTNAME%%/lib/libc++abi.so.1.0
