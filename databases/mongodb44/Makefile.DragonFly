@@ -1,5 +1,7 @@
 USE_CLANG_FALLBACK=	15
 
+DFLY_UNMAINTAINED=	yes
+
 # Don't use llvm-ar
 MAKE_ARGS:=	${MAKE_ARGS:N*AR*}
 
