@@ -1,5 +1,5 @@
 diff --git third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py
-index a07c7c5d618..f95df5bd273 100644
+index a07c7c5d618f..f95df5bd2735 100644
 --- third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py
 +++ third_party/angle/third_party/glmark2/src/waflib/Tools/javaw.py
 @@ -285,6 +285,8 @@ def check_jni_headers(conf):

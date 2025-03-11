@@ -1,8 +1,8 @@
 diff --git components/policy/tools/generate_policy_source.py components/policy/tools/generate_policy_source.py
-index 7f2e7b957d6..50b57094af7 100755
+index f84f40968ed6..5a7a303c8619 100755
 --- components/policy/tools/generate_policy_source.py
 +++ components/policy/tools/generate_policy_source.py
-@@ -37,9 +37,9 @@ PLATFORM_STRINGS = {
+@@ -38,9 +38,9 @@ PLATFORM_STRINGS = {
      'ios': ['ios'],
      'fuchsia': ['fuchsia'],
      'chrome.win': ['win'],
@@ -14,7 +14,7 @@ index 7f2e7b957d6..50b57094af7 100755
      'chrome.win7': ['win'],
  }
  
-@@ -139,7 +139,6 @@ class PolicyDetails:
+@@ -137,7 +137,6 @@ class PolicyDetails:
          ['chrome_os']):
        raise RuntimeError('device_only is only allowed for Chrome OS: "%s"' %
                           self.name)

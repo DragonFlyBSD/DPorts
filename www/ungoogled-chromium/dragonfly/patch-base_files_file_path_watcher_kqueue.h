@@ -1,5 +1,5 @@
 diff --git base/files/file_path_watcher_kqueue.h base/files/file_path_watcher_kqueue.h
-index 1bae61cb3b9..ef9407c234b 100644
+index 1bae61cb3b97..ef9407c234bc 100644
 --- base/files/file_path_watcher_kqueue.h
 +++ base/files/file_path_watcher_kqueue.h
 @@ -6,8 +6,14 @@

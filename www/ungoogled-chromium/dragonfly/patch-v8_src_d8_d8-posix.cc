@@ -1,8 +1,8 @@
 diff --git v8/src/d8/d8-posix.cc v8/src/d8/d8-posix.cc
-index 6b53da110bd..81e3d5546d2 100644
+index c36c27d12046..5d942ab6103d 100644
 --- v8/src/d8/d8-posix.cc
 +++ v8/src/d8/d8-posix.cc
-@@ -339,7 +339,7 @@ static Local<Value> GetStdout(Isolate* isolate, int child_fd,
+@@ -343,7 +343,7 @@ static Local<Value> GetStdout(Isolate* isolate, int child_fd,
  // See http://code.google.com/p/v8/issues/detail?id=401.
  #if defined(WNOWAIT) && !defined(ANDROID) && !defined(__APPLE__) && \
      !defined(__NetBSD__) && !defined(__Fuchsia__)

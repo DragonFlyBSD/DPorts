@@ -1,5 +1,5 @@
 diff --git third_party/grpc/src/setup.py third_party/grpc/src/setup.py
-index 6501b43d612..e07b13bd33d 100644
+index 6501b43d6128..e07b13bd33d5 100644
 --- third_party/grpc/src/setup.py
 +++ third_party/grpc/src/setup.py
 @@ -62,7 +62,7 @@ CARES_INCLUDE = (

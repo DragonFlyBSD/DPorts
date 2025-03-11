@@ -1,5 +1,5 @@
 diff --git services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc
-index 8420decc95d..967bfebb833 100644
+index 8420decc95d8..967bfebb8330 100644
 --- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc
 @@ -17,6 +17,9 @@

@@ -1,5 +1,5 @@
 diff --git base/tracing/trace_time.cc base/tracing/trace_time.cc
-index 04df5e08bf5..37df5f7b675 100644
+index 04df5e08bf5f..37df5f7b6753 100644
 --- base/tracing/trace_time.cc
 +++ base/tracing/trace_time.cc
 @@ -8,7 +8,7 @@

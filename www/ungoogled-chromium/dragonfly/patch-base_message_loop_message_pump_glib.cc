@@ -1,5 +1,5 @@
 diff --git base/message_loop/message_pump_glib.cc base/message_loop/message_pump_glib.cc
-index cf4871601cf..f6ec34e007d 100644
+index e07537d654fa..60f6d8a617c4 100644
 --- base/message_loop/message_pump_glib.cc
 +++ base/message_loop/message_pump_glib.cc
 @@ -7,6 +7,7 @@
@@ -10,7 +10,7 @@ index cf4871601cf..f6ec34e007d 100644
  
  #if BUILDFLAG(IS_BSD)
  #include <pthread.h>
-@@ -661,6 +662,14 @@ void MessagePumpGlib::HandleDispatch() {
+@@ -664,6 +665,14 @@ void MessagePumpGlib::HandleDispatch() {
    }
  }
  

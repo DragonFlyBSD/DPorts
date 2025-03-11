@@ -1,5 +1,5 @@
 diff --git third_party/wayland/include/config.h third_party/wayland/include/config.h
-index 79fcbb81ce2..83dd42cfb9c 100644
+index 79fcbb81ce2c..83dd42cfb9c4 100644
 --- third_party/wayland/include/config.h
 +++ third_party/wayland/include/config.h
 @@ -32,7 +32,7 @@

@@ -1,5 +1,5 @@
 diff --git build/config/ozone.gni build/config/ozone.gni
-index 83057adc0ff..db92fd33c1b 100644
+index 6a590b0ef24c..f02aad7366d9 100644
 --- build/config/ozone.gni
 +++ build/config/ozone.gni
 @@ -96,6 +96,10 @@ declare_args() {

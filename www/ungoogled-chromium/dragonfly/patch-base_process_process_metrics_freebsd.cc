@@ -1,9 +1,9 @@
 diff --git base/process/process_metrics_freebsd.cc base/process/process_metrics_freebsd.cc
-index 946063d3cc9..b1fe0e9b156 100644
+index 49879f5d4c9b..a80cdfcb8c9a 100644
 --- base/process/process_metrics_freebsd.cc
 +++ base/process/process_metrics_freebsd.cc
-@@ -19,6 +19,8 @@
- #include "base/process/process_metrics_iocounters.h"
+@@ -18,6 +18,8 @@
+ #include "base/memory/ptr_util.h"
  #include "base/values.h"
  
 +static int fscale_;
@@ -11,39 +11,16 @@ index 946063d3cc9..b1fe0e9b156 100644
  namespace base {
  namespace {
  int GetPageShift() {
-@@ -35,7 +37,19 @@ int GetPageShift() {
- }
- 
- ProcessMetrics::ProcessMetrics(ProcessHandle process)
--    : process_(process) {}
-+    : process_(process) {
-+#if defined(OS_DRAGONFLY)
-+  size_t len = sizeof(int);
-+  int val;
-+
-+  if (sysctlbyname("kern.fscale", &val, &len, NULL, 0) == 0) {
-+    fscale_ = val;
-+    return;
-+  }
-+#else
-+  fscale_ = FSCALE;
-+#endif
-+}
- 
- // static
- std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
-@@ -53,7 +67,9 @@ TimeDelta ProcessMetrics::GetCumulativeCPUUsage() {
+@@ -52,30 +54,39 @@ ProcessMetrics::GetCumulativeCPUUsage() {
    if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0)
-     return TimeDelta();
+     return base::ok(TimeDelta());
  
--  return Microseconds(info.ki_runtime);
++#ifdef __FreeBSD__
+   return base::ok(Microseconds(info.ki_runtime));
++#else
 +  return Microseconds(TimeValToMicroseconds(info.kp_ru.ru_utime) +
 +		      TimeValToMicroseconds(info.kp_ru.ru_stime));
-+
- }
- 
- bool ProcessMetrics::GetIOCounters(IoCounters* io_counters) const {
-@@ -61,26 +77,30 @@ bool ProcessMetrics::GetIOCounters(IoCounters* io_counters) const {
++#endif
  }
  
  size_t GetSystemCommitCharge() {
@@ -79,7 +56,7 @@ index 946063d3cc9..b1fe0e9b156 100644
  }
  
  int64_t GetNumberOfThreads(ProcessHandle process) {
-@@ -138,15 +158,20 @@ bool GetSystemMemoryInfo(SystemMemoryInfoKB *meminfo) {
+@@ -133,15 +144,20 @@ bool GetSystemMemoryInfo(SystemMemoryInfoKB *meminfo) {
  }
  
  int ProcessMetrics::GetOpenFdCount() const {
@@ -100,7 +77,7 @@ index 946063d3cc9..b1fe0e9b156 100644
  }
  
  int ProcessMetrics::GetOpenFdSoftLimit() const {
-@@ -180,7 +205,11 @@ size_t ProcessMetrics::GetResidentSetSize() const {
+@@ -175,7 +191,11 @@ size_t ProcessMetrics::GetResidentSetSize() const {
    size_t rss;
  
    if (nproc > 0) {
@@ -112,7 +89,7 @@ index 946063d3cc9..b1fe0e9b156 100644
    } else {
      rss = 0;
    }
-@@ -206,9 +235,15 @@ uint64_t ProcessMetrics::GetVmSwapBytes() const {
+@@ -201,9 +221,15 @@ uint64_t ProcessMetrics::GetVmSwapBytes() const {
    size_t swrss;
  
    if (nproc > 0) {

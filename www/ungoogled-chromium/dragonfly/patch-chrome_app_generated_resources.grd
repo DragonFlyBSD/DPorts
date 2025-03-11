@@ -1,0 +1,112 @@
+diff --git chrome/app/generated_resources.grd chrome/app/generated_resources.grd
+index c815137505f3..c3e90d80df75 100644
+--- chrome/app/generated_resources.grd
++++ chrome/app/generated_resources.grd
+@@ -2,7 +2,7 @@
+ 
+ <!--
+ This file contains definitions of resources that will be translated for each
+-locale.  The variables is_win, is_macosx, is_linux, and is_posix are available
++locale.  The variables is_win, is_macosx, is_posix, and is_posix are available
+ for making strings OS specific.  Other platform defines such as use_titlecase
+ are declared in tools/grit/grit_rule.gni.
+ -->
+@@ -1286,7 +1286,7 @@ are declared in tools/grit/grit_rule.gni.
+           <message name="IDS_PASSWORDS_AND_AUTOFILL_MENU" desc="The text label of the passwords and autofill menu item">
+             Passwords and &amp;autofill
+           </message>
+-        <if expr="is_win or is_macosx or is_linux">
++        <if expr="is_win or is_macosx or is_posix">
+           <message name="IDS_RELAUNCH_TO_UPDATE_ALT" desc="Alternate text label of the relaunch to update Chrome menu item">
+             Relaunch to update
+           </message>
+@@ -1434,7 +1434,7 @@ are declared in tools/grit/grit_rule.gni.
+           <message name="IDS_PASSWORDS_AND_AUTOFILL_MENU" desc="In Title Case: The text label of the passwords and autofill menu item">
+             Passwords and &amp;Autofill
+           </message>
+-          <if expr="is_win or is_macosx or is_linux">
++          <if expr="is_win or is_macosx or is_posix">
+               <message name="IDS_RELAUNCH_TO_UPDATE_ALT" desc="In Title Case: Alternate text label of the relaunch to update Chrome menu item">
+                 Relaunch to Update
+               </message>
+@@ -3858,7 +3858,7 @@ are declared in tools/grit/grit_rule.gni.
+       </if>
+ 
+       <!-- Bluetooth Device Credentials (i.e. PIN/Passkey) dialog -->
+-      <if expr="is_win or is_linux">
++      <if expr="is_win or is_posix">
+         <message name="IDS_BLUETOOTH_DEVICE_CREDENTIALS_TITLE" desc="Title of the Bluetooth device credentials prompt dialog.">
+           Device Credentials
+         </message>
+@@ -5676,7 +5676,7 @@ are declared in tools/grit/grit_rule.gni.
+             Read information about your browser, OS, device, installed software, registry values and files
+           </message>
+         </if>
+-        <if expr="is_macosx or is_linux">
++        <if expr="is_macosx or is_posix">
+           <message name="IDS_EXTENSION_PROMPT_WARNING_ENTERPRISE_REPORTING_PRIVATE_ENABLED_LINUX_AND_MACOS" desc="Permission string for enterprise private reporting permission on Linux and MacOS.">
+             Read information about your browser, OS, device, installed software and files
+           </message>
+@@ -6440,7 +6440,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+           Old versions of Chrome Apps won't open on Windows devices after December 2022. Contact your administrator to update to a new version or remove this app.
+         </message>
+       </if>
+-      <if expr="is_linux">
++      <if expr="is_posix">
+         <message name="IDS_FORCE_INSTALLED_DEPRECATED_APPS_CONTENT" desc="Content of the force installed deprecated app dialog">
+           Old versions of Chrome Apps won't open on Linux devices after December 2022. Contact your administrator to update to a new version or remove this app.
+         </message>
+@@ -6486,7 +6486,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+           Old versions of Chrome apps won't open on Windows devices after December 2022. You can check if there's a new version available.
+         </message>
+       </if>
+-      <if expr="is_linux">
++      <if expr="is_posix">
+         <message name="IDS_DEPRECATED_APPS_MONITOR_RENDERER" desc="Dialog content that educates users that Chrome Apps will soon no longer launch.">
+           Old versions of Chrome apps won't open on Linux devices after December 2022. You can check if there's a new version available.
+         </message>
+@@ -11774,7 +11774,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+       <message name="IDS_APP_MENU_BUTTON_UPDATE" desc="Short label next to app-menu button when an update is available.">
+         Update
+       </message>
+-      <if expr="is_win or is_macosx or is_linux">
++      <if expr="is_win or is_macosx or is_posix">
+         <message name="IDS_APP_MENU_BUTTON_UPDATE_ALT1" desc="Alternate short label next to app-menu button when an update is available.">
+           Finish update
+         </message>
+@@ -12121,7 +12121,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+         Google Pay
+       </message>
+ 
+-      <if expr="is_linux">
++      <if expr="is_posix">
+         <message name="IDS_SHOW_WINDOW_DECORATIONS" desc="The label of a radio button in the options dialog for using the system title bar and borders.">
+           Use system title bar and borders
+         </message>
+@@ -13076,7 +13076,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+       </message>
+ 
+       <!-- Device Trust Consent dialog -->
+-      <if expr="is_win or is_macosx or is_linux or is_chromeos">
++      <if expr="is_win or is_macosx or is_posix or is_chromeos">
+         <message name="IDS_DEVICE_SIGNALS_CONSENT_DIALOG_TITLE" desc="Title of the dialog shown when user consent is required to share device signals.">
+           Share information about your device?
+         </message>
+@@ -13552,7 +13552,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+         Set as default
+       </message>
+ 
+-      <if expr="is_linux">
++      <if expr="is_posix">
+         <message name="IDS_MINIMIZE_WINDOW_MENU" desc="The Linux browser window menu item text for minimizing the window.">
+           Minimize
+         </message>
+@@ -15837,7 +15837,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+       Open Anyway
+     </message>
+ 
+-    <if expr="is_win or is_macosx or is_linux">
++    <if expr="is_win or is_macosx or is_posix">
+       <message name="IDS_UTILITY_PROCESS_SYSTEM_SIGNALS_NAME" desc="The name of the utility process used to collect system signals. Only spawned on Windows, Mac or Linux.">
+         System Signals Utilities
+       </message>

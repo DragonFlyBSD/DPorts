@@ -1,5 +1,5 @@
 diff --git tools/gn/src/base/files/file_posix.cc tools/gn/src/base/files/file_posix.cc
-index 3d2436ec0da..97d0008d411 100644
+index e4fccce0b7dc..a43555b7efa9 100644
 --- tools/gn/src/base/files/file_posix.cc
 +++ tools/gn/src/base/files/file_posix.cc
 @@ -371,7 +371,7 @@ void File::DoInitialize(const FilePath& path, uint32_t flags) {

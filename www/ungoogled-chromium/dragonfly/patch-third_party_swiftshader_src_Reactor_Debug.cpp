@@ -1,5 +1,5 @@
 diff --git third_party/swiftshader/src/Reactor/Debug.cpp third_party/swiftshader/src/Reactor/Debug.cpp
-index d4c16fc2f0e..95ecfa2d589 100644
+index 96695d65c7f8..911330ef49ee 100644
 --- third_party/swiftshader/src/Reactor/Debug.cpp
 +++ third_party/swiftshader/src/Reactor/Debug.cpp
 @@ -46,7 +46,8 @@ namespace {

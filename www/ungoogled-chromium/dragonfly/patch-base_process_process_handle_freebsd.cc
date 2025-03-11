@@ -1,8 +1,8 @@
 diff --git base/process/process_handle_freebsd.cc base/process/process_handle_freebsd.cc
-index 9a03e146c54..fb4d2f17b13 100644
+index f5b1c5b006c4..2bc34444d907 100644
 --- base/process/process_handle_freebsd.cc
 +++ base/process/process_handle_freebsd.cc
-@@ -29,7 +29,11 @@ ProcessId GetParentProcessId(ProcessHandle process) {
+@@ -30,7 +30,11 @@ ProcessId GetParentProcessId(ProcessHandle process) {
    if (length < sizeof(struct kinfo_proc))
      return -1;
  

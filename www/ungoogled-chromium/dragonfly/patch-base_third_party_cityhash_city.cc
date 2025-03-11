@@ -1,5 +1,5 @@
 diff --git base/third_party/cityhash/city.cc base/third_party/cityhash/city.cc
-index db7afa1e511..2eb60ab24b8 100644
+index db7afa1e5116..2eb60ab24b82 100644
 --- base/third_party/cityhash/city.cc
 +++ base/third_party/cityhash/city.cc
 @@ -61,7 +61,7 @@ using std::pair;

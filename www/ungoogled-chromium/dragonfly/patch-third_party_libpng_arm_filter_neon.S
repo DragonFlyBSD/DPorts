@@ -1,5 +1,5 @@
 diff --git third_party/libpng/arm/filter_neon.S third_party/libpng/arm/filter_neon.S
-index 2308aad13e6..df123cd0bbe 100644
+index 2308aad13e63..df123cd0bbef 100644
 --- third_party/libpng/arm/filter_neon.S
 +++ third_party/libpng/arm/filter_neon.S
 @@ -16,7 +16,7 @@

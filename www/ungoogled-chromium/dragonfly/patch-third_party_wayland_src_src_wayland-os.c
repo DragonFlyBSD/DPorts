@@ -1,5 +1,5 @@
 diff --git third_party/wayland/src/src/wayland-os.c third_party/wayland/src/src/wayland-os.c
-index a9066cae9c9..4cf99b61dbd 100644
+index a9066cae9c93..4cf99b61dbdc 100644
 --- third_party/wayland/src/src/wayland-os.c
 +++ third_party/wayland/src/src/wayland-os.c
 @@ -79,7 +79,7 @@ wl_os_socket_cloexec(int domain, int type, int protocol)

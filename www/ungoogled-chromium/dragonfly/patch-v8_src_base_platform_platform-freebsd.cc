@@ -1,5 +1,5 @@
 diff --git v8/src/base/platform/platform-freebsd.cc v8/src/base/platform/platform-freebsd.cc
-index d3f7c1bea46..a2134ed744f 100644
+index d80926acab0a..5e8b5bb7055b 100644
 --- v8/src/base/platform/platform-freebsd.cc
 +++ v8/src/base/platform/platform-freebsd.cc
 @@ -45,6 +45,7 @@ TimezoneCache* OS::CreateTimezoneCache() {

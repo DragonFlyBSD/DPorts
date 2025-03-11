@@ -1,8 +1,8 @@
 diff --git base/debug/proc_maps_linux.cc base/debug/proc_maps_linux.cc
-index 147dc2a5b4e..d179349f879 100644
+index 607e2d36c889..1154890760de 100644
 --- base/debug/proc_maps_linux.cc
 +++ base/debug/proc_maps_linux.cc
-@@ -119,9 +119,16 @@ bool ParseProcMaps(const std::string& input,
+@@ -124,9 +124,16 @@ bool ParseProcMaps(const std::string& input,
      // The final %n term captures the offset in the input string, which is used
      // to determine the path name. It *does not* increment the return value.
      // Refer to man 3 sscanf for details.

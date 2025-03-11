@@ -1,5 +1,5 @@
 diff --git third_party/libFuzzer/src/afl/afl_driver.cpp third_party/libFuzzer/src/afl/afl_driver.cpp
-index 52aede7e078..d612a3ca74d 100644
+index 52aede7e078d..d612a3ca74d3 100644
 --- third_party/libFuzzer/src/afl/afl_driver.cpp
 +++ third_party/libFuzzer/src/afl/afl_driver.cpp
 @@ -70,7 +70,7 @@ If 1, close stdout at startup. If 2 close stderr; if 3 close both.

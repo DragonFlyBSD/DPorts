@@ -1,5 +1,5 @@
 diff --git third_party/libevent/event-internal.h third_party/libevent/event-internal.h
-index b7f00402be5..64e07ba2f0d 100644
+index b7f00402be53..64e07ba2f0d6 100644
 --- third_party/libevent/event-internal.h
 +++ third_party/libevent/event-internal.h
 @@ -68,6 +68,8 @@ struct event_base {

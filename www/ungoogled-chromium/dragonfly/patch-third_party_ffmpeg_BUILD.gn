@@ -1,0 +1,13 @@
+diff --git third_party/ffmpeg/BUILD.gn third_party/ffmpeg/BUILD.gn
+index 9cd3aafc96f9..de4e4b30d508 100644
+--- third_party/ffmpeg/BUILD.gn
++++ third_party/ffmpeg/BUILD.gn
+@@ -206,8 +206,6 @@ target(link_target_type, "ffmpeg_internal") {
+   ]
+   defines = [
+     "HAVE_AV_CONFIG_H",
+-    "_POSIX_C_SOURCE=200112",
+-    "_XOPEN_SOURCE=600",
+     "PIC",
+     "FFMPEG_CONFIGURATION=NULL",
+   ]

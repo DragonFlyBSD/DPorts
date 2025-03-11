@@ -1,8 +1,8 @@
---- chrome/browser/after_startup_task_utils.cc.orig	2022-10-01 07:40:07 UTC
+--- chrome/browser/after_startup_task_utils.cc.orig	2024-07-31 14:19:23 UTC
 +++ chrome/browser/after_startup_task_utils.cc
-@@ -107,7 +107,7 @@ void SetBrowserStartupIsComplete() {
-   TRACE_EVENT0("startup", "SetBrowserStartupIsComplete");
-   g_startup_complete_flag.Get().Set();
+@@ -117,7 +117,7 @@ void SetBrowserStartupIsComplete() {
+                        TRACE_EVENT_SCOPE_GLOBAL, "BrowserCount", browser_count);
+   GetStartupCompleteFlag().Set();
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

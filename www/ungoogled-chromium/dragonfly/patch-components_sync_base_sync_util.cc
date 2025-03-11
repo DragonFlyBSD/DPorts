@@ -1,8 +1,8 @@
 diff --git components/sync/base/sync_util.cc components/sync/base/sync_util.cc
-index e636023e3b1..7f0a5c78901 100644
+index 26839c5c3894..6ed703a01473 100644
 --- components/sync/base/sync_util.cc
 +++ components/sync/base/sync_util.cc
-@@ -42,6 +42,8 @@ std::string GetSystemString() {
+@@ -45,6 +45,8 @@ std::string GetSystemString() {
    system = "FREEBSD ";
  #elif BUILDFLAG(IS_OPENBSD)
    system = "OPENBSD ";

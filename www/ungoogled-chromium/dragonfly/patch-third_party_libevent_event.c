@@ -1,5 +1,5 @@
 diff --git third_party/libevent/event.c third_party/libevent/event.c
-index 4aa326e0e46..f3d0db6adf0 100644
+index 4aa326e0e46d..f3d0db6adf0f 100644
 --- third_party/libevent/event.c
 +++ third_party/libevent/event.c
 @@ -165,6 +165,8 @@ event_base_new(void)

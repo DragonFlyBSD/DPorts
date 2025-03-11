@@ -1,5 +1,5 @@
 diff --git third_party/perfetto/include/perfetto/base/build_config.h third_party/perfetto/include/perfetto/base/build_config.h
-index fcb609d27a3..3fa1838c258 100644
+index e090b303859f..1378f4ce2fde 100644
 --- third_party/perfetto/include/perfetto/base/build_config.h
 +++ third_party/perfetto/include/perfetto/base/build_config.h
 @@ -53,7 +53,7 @@

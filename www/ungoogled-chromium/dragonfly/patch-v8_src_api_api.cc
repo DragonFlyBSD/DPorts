@@ -1,8 +1,8 @@
 diff --git v8/src/api/api.cc v8/src/api/api.cc
-index 9f74cd03940..f31ad24743b 100644
+index 013d4b1da3a3..b0b8e5a7dca7 100644
 --- v8/src/api/api.cc
 +++ v8/src/api/api.cc
-@@ -141,7 +141,8 @@
+@@ -148,7 +148,8 @@
  #include "src/wasm/wasm-serialization.h"
  #endif  // V8_ENABLE_WEBASSEMBLY
  
@@ -12,7 +12,7 @@ index 9f74cd03940..f31ad24743b 100644
  #include <signal.h>
  #include <unistd.h>
  
-@@ -6356,7 +6357,8 @@ bool v8::V8::Initialize(const int build_config) {
+@@ -6511,7 +6512,8 @@ bool v8::V8::Initialize(const int build_config) {
    return true;
  }
  

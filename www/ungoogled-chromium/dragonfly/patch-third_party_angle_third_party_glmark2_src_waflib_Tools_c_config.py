@@ -1,5 +1,5 @@
 diff --git third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py
-index 9c627c1cf6c..761f0fc8cc2 100644
+index 9c627c1cf6cf..761f0fc8cc26 100644
 --- third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py
 +++ third_party/angle/third_party/glmark2/src/waflib/Tools/c_config.py
 @@ -40,7 +40,7 @@ int main(int argc, char **argv) {

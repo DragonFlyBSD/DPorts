@@ -1,5 +1,5 @@
 diff --git components/sync_device_info/local_device_info_util_linux.cc components/sync_device_info/local_device_info_util_linux.cc
-index 0be5361ac9a..e58e4ab1b62 100644
+index 0be5361ac9a6..e58e4ab1b620 100644
 --- components/sync_device_info/local_device_info_util_linux.cc
 +++ components/sync_device_info/local_device_info_util_linux.cc
 @@ -9,7 +9,7 @@

@@ -1,8 +1,8 @@
 diff --git base/files/dir_reader_linux.h base/files/dir_reader_linux.h
-index 8ebf97840b4..8edaf95e875 100644
+index 5a7ec366fd02..24a349da149d 100644
 --- base/files/dir_reader_linux.h
 +++ base/files/dir_reader_linux.h
-@@ -62,7 +62,7 @@ class DirReaderLinux {
+@@ -67,7 +67,7 @@ class DirReaderLinux {
    bool Next() {
      if (size_) {
        linux_dirent* dirent = reinterpret_cast<linux_dirent*>(&buf_[offset_]);

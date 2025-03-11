@@ -1,5 +1,5 @@
 diff --git third_party/perfetto/src/base/unix_socket.cc third_party/perfetto/src/base/unix_socket.cc
-index 76a91369de9..1e9f4d834a2 100644
+index 76a91369de95..1e9f4d834a24 100644
 --- third_party/perfetto/src/base/unix_socket.cc
 +++ third_party/perfetto/src/base/unix_socket.cc
 @@ -44,7 +44,7 @@

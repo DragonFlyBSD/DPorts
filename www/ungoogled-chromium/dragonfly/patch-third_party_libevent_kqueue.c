@@ -1,5 +1,5 @@
 diff --git third_party/libevent/kqueue.c third_party/libevent/kqueue.c
-index 3c2ffd5524c..a4c67c35009 100644
+index 3c2ffd5524cc..a4c67c35009a 100644
 --- third_party/libevent/kqueue.c
 +++ third_party/libevent/kqueue.c
 @@ -40,6 +40,7 @@

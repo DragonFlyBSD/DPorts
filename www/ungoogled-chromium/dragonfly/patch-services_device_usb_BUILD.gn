@@ -1,8 +1,8 @@
 diff --git services/device/usb/BUILD.gn services/device/usb/BUILD.gn
-index fed63c895b4..409724683ca 100644
+index b4fe1201a9cf..a6e927903f78 100644
 --- services/device/usb/BUILD.gn
 +++ services/device/usb/BUILD.gn
-@@ -124,7 +124,7 @@ static_library("usb") {
+@@ -114,7 +114,7 @@ static_library("usb") {
      deps += [ "//third_party/libusb" ]
    }
  

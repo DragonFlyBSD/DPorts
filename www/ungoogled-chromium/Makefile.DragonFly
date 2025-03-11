@@ -1,12 +1,16 @@
 .if !defined(GN_ONLY)
+
 # XXX - This is a hack to force llvm to use libc++ C++ includes instead of base's gcc
-CXXFLAGS+=	-nostdlib++ -stdlib=libc++ -I${LOCALBASE}/include -I${LOCALBASE}/include/cxxrt
+CXXFLAGS+=	-nostdlib++ -stdlib=libc++ -I${LOCALBASE}/include
 CXXFLAGS+=	-cxx-isystem ${LOCALBASE}/llvm${LLVM_DEFAULT}/libcxx/include/c++/v1
-LDFLAGS=	-L /usr/lib -L${LOCALBASE}/llvm${LLVM_DEFAULT}/libcxx/lib/c++ -L /lib
+LDFLAGS+=	-L /lib -L${LOCALBASE}/llvm${LLVM_DEFAULT}/libcxx/lib/c++ -L /usr/lib -lpthread
 
 # Since FreeBSD has libc++ in base we need to rely on DPorts' libcxx
 LIB_DIRS+=	${PREFIX}/llvm${LLVM_DEFAULT}/libcxx/lib
 LIB_DEPENDS+=  	libc++.so.1:devel/libcxx${LLVM_DEFAULT}
+
+# for C programs
+CFLAGS+=	-I /usr/include
 
 # we don't support libcuse so no audio/virtual_oss
 RUN_DEPENDS:=	${RUN_DEPENDS:Nvirtual_oss*}
@@ -28,19 +32,10 @@ dfly-patch:
 		${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.h \
 		${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.cc \
 
-	# Setup nodejs dependency
-	@${MKDIR} ${WRKSRC}/third_party/node/dragonfly/node-dragonfly/bin
-	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/dragonfly/node-dragonfly/bin/node
-
 	# Chromium uses an unreleased version of FFmpeg, so configure it
 	${CP} -R \
                 ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux/ \
                 ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/dragonfly
-
-	# Setup buildtools/freebsd
-	@${MKDIR} ${WRKSRC}/buildtools/dragonfly
-	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/dragonfly
-	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/dragonfly
 
 	# XXX The correct solution is to pass variables to gn
 	# Use the current LLVM version by replacing the hardcoded one

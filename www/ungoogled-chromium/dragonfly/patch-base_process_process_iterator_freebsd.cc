@@ -1,5 +1,5 @@
 diff --git base/process/process_iterator_freebsd.cc base/process/process_iterator_freebsd.cc
-index 50792e1ce39..913d9fd27d2 100644
+index 50792e1ce399..913d9fd27d2a 100644
 --- base/process/process_iterator_freebsd.cc
 +++ base/process/process_iterator_freebsd.cc
 @@ -23,6 +23,7 @@ ProcessIterator::ProcessIterator(const ProcessFilter* filter)
