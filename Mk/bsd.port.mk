@@ -1412,6 +1412,11 @@ PREFIX?=		${LOCALBASE}
 
 PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 
+# Ignore unmaintained packages
+.    if defined(DFLY_UNMAINTAINED)
+IGNORE=        unmaintained, please request fixing to users mailing list
+.    endif
+
 .    if defined(USE_LOCAL_MK)
 .include "${PORTSDIR}/Mk/bsd.local.mk"
 .    endif
