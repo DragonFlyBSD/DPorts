@@ -1,2 +1,0 @@
-PLIST_FILES+= share/gtk-doc/html/cinnamon-js/cinnamon-js-ui-systray-SystrayManager.html \
-	      share/gtk-doc/html/cinnamon-js/cinnamon-js-ui-systray-section.html
