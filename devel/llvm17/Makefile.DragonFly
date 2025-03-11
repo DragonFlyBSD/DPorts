@@ -7,6 +7,8 @@ OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLLDB:NFLANG:NCOMPILER_RT:NOPENMP}
 OPTIONS_DEFINE+=	LLD_LINK
 
 dfly-patch:
+	${REINPLACE_CMD} -e 's|gcc50|gcc80|g' -e 's|5.0"|8.0"|' \
+		${WRKSRC}/clang/lib/Lex/InitHeaderSearch.cpp
 	${REINPLACE_CMD} -e 's,set(ENABLE_LIBOMPTARGET ON),set(ENABLE_LIBOMPTARGET OFF),g' \
 		${WRKSRC}/openmp/CMakeLists.txt
 
