@@ -36,7 +36,7 @@ CONFIGURE_WRKSRC=	${WRKSRC}/build
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS?=--prefix=${PREFIX} \
 		--interp-prefix=${PREFIX}/share/qemu \
-		--mandir=${MANPREFIX}/man \
+		--mandir=${PREFIX}/share/man \
 		--localstatedir=/var \
 		--python=${PYTHON_CMD} \
 		--enable-curses \
