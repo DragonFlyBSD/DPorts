@@ -1,8 +1,10 @@
---- vendor/github.com/moby/term/termios_nonbsd.go.orig	2022-09-13 11:24:09 UTC
-+++ vendor/github.com/moby/term/termios_nonbsd.go
-@@ -1,4 +1,4 @@
--//+build !darwin,!freebsd,!netbsd,!openbsd,!windows
-+//+build !darwin,!dragonfly,!freebsd,!netbsd,!openbsd,!windows
+--- vendor/github.com/moby/term/termios_nonbsd.go.orig	Wed Mar 12 20:50:12 2025
++++ vendor/github.com/moby/term/termios_nonbsd.go	Wed Mar 12 20:51:16 2025
+@@ -1,5 +1,5 @@
+-//go:build !darwin && !freebsd && !netbsd && !openbsd && !windows
+-// +build !darwin,!freebsd,!netbsd,!openbsd,!windows
++//go:build !darwin && !dragonfly && !freebsd && !netbsd && !openbsd && !windows
++// +build !darwin,!dragonfly,!freebsd,!netbsd,!openbsd,!windows
  
  package term
  
