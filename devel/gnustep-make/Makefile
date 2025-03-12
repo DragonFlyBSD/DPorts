@@ -1,5 +1,6 @@
 PORTNAME=	gnustep-make
-DISTVERSION=	2.9.2
+PORTVERSION=	2.8.0
+PORTREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	GNUSTEP/core
 
@@ -15,12 +16,11 @@ SHEBANG_FILES=	bake_debian_files.sh
 
 MAKE_FLAGS=	OPTFLAG="${CFLAGS}"
 CONFIGURE_ENV+=	INSTALL_PROGRAM="${INSTALL} -c" INSTALL_DATA="${INSTALL} -c"
-CONFIGURE_ARGS+=	--with-thread-lib=-pthread \
-			--with-config-file=${GNUSTEP_PREFIX}/GNUstep.conf \
-			--with-layout=gnustep \
-			--enable-objc-nonfragile-abi \
-			--enable-native-objc-exceptions \
-			--with-library-combo=ng-gnu-gnu
+CONFIGURE_ARGS+=	--with-thread-lib=-pthread
+CONFIGURE_ARGS+=	--with-config-file=${GNUSTEP_PREFIX}/GNUstep.conf
+CONFIGURE_ARGS+=	--with-layout=gnustep
+CONFIGURE_ARGS+=	--enable-objc-nonfragile-abi --enable-native-objc-exceptions
+CONFIGURE_ARGS+=	--with-library-combo=ng-gnu-gnu
 GNU_CONFIGURE_PREFIX=	${GNUSTEP_PREFIX}
 NO_ARCH=	yes
 
