@@ -1,10 +1,10 @@
---- config/system-headers.mozbuild.intermediate	2023-10-12 23:30:14 UTC
-+++ config/system-headers.mozbuild
+--- config/system-headers.mozbuild.ori	Sun Mar  2 13:11:57 2025
++++ config/system-headers.mozbuild	Sun Mar  2 13:12:05 2025
 @@ -499,7 +499,6 @@ system_headers = [
-     'MacTCP.h',
-     'MacTypes.h',
-     'MacWindows.h',
--    'malloc.h',
-     'malloc_np.h',
-     'mapicode.h',
-     'mapidefs.h',
+     "MacTCP.h",
+     "MacTypes.h",
+     "MacWindows.h",
+-    "malloc.h",
+     "malloc_np.h",
+     "mapicode.h",
+     "mapidefs.h",
