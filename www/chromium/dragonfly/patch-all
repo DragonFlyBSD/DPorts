@@ -1885,6 +1885,19 @@ index 44f331a70fb8..db461c5b0a79 100644
  #endif
  
  namespace sandbox {
+diff --git services/device/hid/BUILD.gn services/device/hid/BUILD.gn
+index 1215615a54da..cf56efd99df3 100644
+--- services/device/hid/BUILD.gn
++++ services/device/hid/BUILD.gn
+@@ -46,7 +46,7 @@ source_set("hid") {
+     libs = ["fido2", "cbor", "usbhid", "crypto", "util"]
+   }
+ 
+-  if (is_freebsd) {
++  if (is_freebsd || is_dragonfly) {
+     sources += [
+       "hid_connection_freebsd.cc",
+       "hid_connection_freebsd.h",
 diff --git services/device/hid/hid_connection_freebsd.cc services/device/hid/hid_connection_freebsd.cc
 index 4ca329ac2944..86d51ccfc988 100644
 --- services/device/hid/hid_connection_freebsd.cc
@@ -1903,6 +1916,28 @@ index 4ca329ac2944..86d51ccfc988 100644
  
  #include "base/files/file_descriptor_watcher_posix.h"
  #include "base/location.h"
+diff --git services/device/hid/hid_service.cc services/device/hid/hid_service.cc
+index 0eda0483533d..6908a9100c34 100644
+--- services/device/hid/hid_service.cc
++++ services/device/hid/hid_service.cc
+@@ -22,7 +22,7 @@
+ #include "services/device/hid/hid_service_linux.h"
+ #elif BUILDFLAG(IS_OPENBSD)
+ #include "services/device/hid/hid_service_fido.h"
+-#elif BUILDFLAG(IS_FREEBSD)
++#elif BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_DRAGONFLY)
+ #include "services/device/hid/hid_service_freebsd.h"
+ #elif BUILDFLAG(IS_MAC)
+ #include "services/device/hid/hid_service_mac.h"
+@@ -74,7 +74,7 @@ std::unique_ptr<HidService> HidService::Create() {
+   return std::make_unique<HidServiceLinux>();
+ #elif BUILDFLAG(IS_OPENBSD)
+   return std::make_unique<HidServiceFido>();
+-#elif BUILDFLAG(IS_FREEBSD)
++#elif BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_DRAGONFLY)
+   return std::make_unique<HidServiceFreeBSD>();
+ #elif BUILDFLAG(IS_MAC)
+   return std::make_unique<HidServiceMac>();
 diff --git services/device/hid/hid_service_freebsd.cc services/device/hid/hid_service_freebsd.cc
 index 0b6bf3b4ce37..88cfbd95e2b7 100644
 --- services/device/hid/hid_service_freebsd.cc
