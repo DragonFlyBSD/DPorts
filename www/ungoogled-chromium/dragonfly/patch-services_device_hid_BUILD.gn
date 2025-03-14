@@ -1,0 +1,13 @@
+diff --git services/device/hid/BUILD.gn services/device/hid/BUILD.gn
+index 1215615a54da..cf56efd99df3 100644
+--- services/device/hid/BUILD.gn
++++ services/device/hid/BUILD.gn
+@@ -46,7 +46,7 @@ source_set("hid") {
+     libs = ["fido2", "cbor", "usbhid", "crypto", "util"]
+   }
+ 
+-  if (is_freebsd) {
++  if (is_freebsd || is_dragonfly) {
+     sources += [
+       "hid_connection_freebsd.cc",
+       "hid_connection_freebsd.h",
