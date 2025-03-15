@@ -8,7 +8,7 @@ WWW=		https://github.com/sizeofvoid/openbsdisks2
 
 LICENSE=	BSD3CLAUSE
 
-LIB_DEPENDS=	libpolkit-qt5-core-1.so:sysutils/polkit-qt
+LIB_DEPENDS=	libpolkit-qt5-core-1.so:sysutils/polkit-qt-1
 
 USES=		cmake compiler:c++11-lang qt:5
 
