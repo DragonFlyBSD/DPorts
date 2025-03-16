@@ -1,6 +1,6 @@
---- panel-plugin/os.cc.orig	2021-10-01 16:44:42 UTC
-+++ panel-plugin/os.cc
-@@ -60,6 +60,13 @@
+--- panel-plugin/os.cc.orig	Sun Dec  3 14:03:14 2023
++++ panel-plugin/os.cc	Sun Mar
+@@ -61,6 +61,13 @@ using namespace std;
  #include <nlist.h>
  #endif
  
@@ -14,16 +14,16 @@
  #if defined (__NetBSD__)
  #include <sys/param.h>
  #include <sys/sched.h>
-@@ -185,7 +192,7 @@ read_cpu_data (std::vector<CpuData> &dat
-     return true;
+@@ -165,7 +172,7 @@ read_cpu_data (unordered_map<guint, CpuData> &data, un
+     fclose (fStat);
  }
  
 -#elif defined (__FreeBSD__)
 +#elif defined (__FreeBSD__) || defined(__DragonFly__)
- guint
+ static guint
  detect_cpu_number ()
  {
-@@ -214,10 +221,16 @@ read_cpu_data (std::vector<CpuData> &dat
+@@ -194,10 +201,16 @@ read_cpu_data (unordered_map<guint, CpuData> &data)
      gsize len = sizeof (max_cpu);
  
      data[0].load = 0;

@@ -1,0 +1,18 @@
+--- src/main/native/BUILD.orig	Tue Jan  1 00:00:00 1980
++++ src/main/native/BUILD	Mon Mar
+@@ -4,6 +4,7 @@ genrule(
+         "//src/conditions:darwin": ["@bazel_tools//tools/jdk:jni_md_header-darwin"],
+         "//src/conditions:freebsd": ["@bazel_tools//tools/jdk:jni_md_header-freebsd"],
+         "//src/conditions:openbsd": ["@bazel_tools//tools/jdk:jni_md_header-openbsd"],
++        "//src/conditions:dragonfly": ["@bazel_tools//tools/jdk:jni_md_header-dragonfly"],
+         "//src/conditions:windows": ["@bazel_tools//tools/jdk:jni_md_header-windows"],
+         "//conditions:default": ["@bazel_tools//tools/jdk:jni_md_header-linux"],
+     }),
+@@ -29,6 +30,7 @@ filegroup(
+         ],
+         "//src/conditions:freebsd": ["unix_jni_bsd.cc"],
+         "//src/conditions:openbsd": ["unix_jni_bsd.cc"],
++        "//src/conditions:dragonfly": ["unix_jni_bsd.cc"],
+         "//conditions:default": ["unix_jni_linux.cc"],
+     }),
+ )

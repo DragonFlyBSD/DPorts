@@ -1,6 +1,6 @@
---- common/autoconf/generated-configure.sh.orig	2021-01-20 00:41:17 UTC
+--- common/autoconf/generated-configure.sh.intermediate	2024-09-18 22:47:50 UTC
 +++ common/autoconf/generated-configure.sh
-@@ -13616,7 +13616,7 @@ test -n "$target_alias" &&
+@@ -13846,7 +13846,7 @@ test -n "$target_alias" &&
        VAR_OS_API=posix
        VAR_OS_ENV=macosx
        ;;
@@ -9,7 +9,7 @@
        VAR_OS=bsd
        VAR_OS_API=posix
        VAR_OS_ENV=bsd
-@@ -13649,7 +13649,7 @@ test -n "$target_alias" &&
+@@ -13879,7 +13879,7 @@ test -n "$target_alias" &&
      *netbsd*)
        VAR_OS_VENDOR=netbsd
        ;;
@@ -18,7 +18,7 @@
        VAR_OS_VENDOR=freebsd
        ;;
      *)
-@@ -13770,7 +13770,7 @@ $as_echo "$OPENJDK_BUILD_OS-$OPENJDK_BUI
+@@ -14006,7 +14006,7 @@ $as_echo "$OPENJDK_BUILD_OS-$OPENJDK_BUI
        VAR_OS_API=posix
        VAR_OS_ENV=macosx
        ;;
@@ -27,7 +27,7 @@
        VAR_OS=bsd
        VAR_OS_API=posix
        VAR_OS_ENV=bsd
-@@ -13803,7 +13803,7 @@ $as_echo "$OPENJDK_BUILD_OS-$OPENJDK_BUI
+@@ -14039,7 +14039,7 @@ $as_echo "$OPENJDK_BUILD_OS-$OPENJDK_BUI
      *netbsd*)
        VAR_OS_VENDOR=netbsd
        ;;
@@ -36,7 +36,7 @@
        VAR_OS_VENDOR=freebsd
        ;;
      *)
-@@ -41437,7 +41437,7 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -42605,7 +42605,7 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
      else
        # Default works for linux, might work on other platforms as well.
        SHARED_LIBRARY_FLAGS='-shared'

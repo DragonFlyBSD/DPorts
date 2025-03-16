@@ -1,6 +1,6 @@
---- configure.cmake.orig	2024-06-09 13:10:10 UTC
-+++ configure.cmake
-@@ -67,7 +67,7 @@ if(Python3_EXECUTABLE)
+--- configure.cmake.orig	Fri Feb 28 15:40:08 2025
++++ configure.cmake	Fri Feb
+@@ -68,7 +68,7 @@ if(Python3_EXECUTABLE)
  endif()
  
  #### Tests
@@ -9,7 +9,7 @@
     check_for_ulimit()
  endif()
  
-@@ -427,7 +427,7 @@ qt_feature("webengine-system-libpci" PRI
+@@ -428,7 +428,7 @@ qt_feature("webengine-system-libpci" PRIVATE
  
  qt_feature("webengine-ozone-x11" PRIVATE
      LABEL "Support GLX on qpa-xcb"
@@ -18,7 +18,7 @@
          AND TARGET Qt::Gui
          AND QT_FEATURE_xcb
          AND X11_FOUND
-@@ -464,12 +464,12 @@ assertTargets(
+@@ -466,12 +466,12 @@ assertTargets(
  )
  add_check_for_support(
     MODULES QtWebEngine
@@ -28,12 +28,12 @@
  )
  add_check_for_support(
     MODULES QtPdf
--   CONDITION LINUX OR (WIN32 AND NOT WIN_ARM_64) OR MACOS OR IOS OR (ANDROID AND NOT CMAKE_HOST_WIN32) OR FREEBSD
-+   CONDITION LINUX OR (WIN32 AND NOT WIN_ARM_64) OR MACOS OR IOS OR (ANDROID AND NOT CMAKE_HOST_WIN32) OR FREEBSD OR DRAGONFLY
-    MESSAGE "Build can be done only on Linux, Windows, macO, iOS and Android(on non-Windows hosts only)."
+-   CONDITION LINUX OR (WIN32 AND NOT WIN_ARM_64) OR MACOS OR IOS OR ANDROID OR FREEBSD
++   CONDITION LINUX OR (WIN32 AND NOT WIN_ARM_64) OR MACOS OR IOS OR ANDROID OR FREEBSD OR DRAGONFLY
+    MESSAGE "Build can be done only on Linux, Windows, macO, iOS and Android."
  )
  if(LINUX AND CMAKE_CROSSCOMPILING)
-@@ -571,6 +571,8 @@ add_check_for_support(
+@@ -573,6 +573,8 @@ add_check_for_support(
     CONDITION MSVC OR
         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
@@ -42,7 +42,7 @@
         (MACOS AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
     MESSAGE
         "${CMAKE_CXX_COMPILER_ID} compiler is not supported."
-@@ -581,6 +583,8 @@ add_check_for_support(
+@@ -583,6 +585,8 @@ add_check_for_support(
     CONDITION MSVC OR
         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR

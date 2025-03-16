@@ -1,0 +1,13 @@
+diff --git chrome/app/certificate_manager.grdp chrome/app/certificate_manager.grdp
+index ab1a66c14cb5..0e6168a447dd 100644
+--- chrome/app/certificate_manager.grdp
++++ chrome/app/certificate_manager.grdp
+@@ -33,7 +33,7 @@
+       </message>
+     </if>
+ 
+-    <if expr="is_linux">
++    <if expr="is_posix">
+       <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_PLATFORM" desc="Label for the OS platform.">
+         Linux
+       </message>

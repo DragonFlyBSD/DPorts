@@ -1,5 +1,5 @@
 diff --git services/device/hid/hid_connection_freebsd.cc services/device/hid/hid_connection_freebsd.cc
-index 4da42b18c68..4782996dfe9 100644
+index 4ca329ac2944..86d51ccfc988 100644
 --- services/device/hid/hid_connection_freebsd.cc
 +++ services/device/hid/hid_connection_freebsd.cc
 @@ -4,8 +4,13 @@

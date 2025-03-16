@@ -1,5 +1,6 @@
 PORTNAME=	gpodder
-DISTVERSION=	3.11.1
+DISTVERSION=	3.11.4
+PORTREVISION=	1
 CATEGORIES=	multimedia python
 
 MAINTAINER=	rm@FreeBSD.org
@@ -9,7 +10,8 @@ WWW=		https://gpodder.github.io/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	intltool-extract:textproc/intltool \
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+		intltool-extract:textproc/intltool \
 		help2man:misc/help2man
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}html5lib>0:www/py-html5lib@${PY_FLAVOR} \
@@ -30,7 +32,7 @@ OPTIONS_SUB=		yes
 OPTIONS_EXCLUDE=	NLS
 
 ALL_TARGET=	messages
-MAKE_ENV=	PYTHON=${PYTHON_CMD} GPODDER_MANPATH_NO_SHARE="yes"
+MAKE_ENV=	PYTHON=${PYTHON_CMD}
 MAKEFILE=	makefile
 NO_ARCH=	yes
 

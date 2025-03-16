@@ -1,8 +1,21 @@
 CFLAGS+= -fuse-ld=bfd
+
+# Make SPICE option available
+OPTIONS_DEFINE:=        ${OPTIONS_DEFINE} TESTS
+OPTIONS_DEFAULT:=
+
+TESTS_DESC=             Enable tests (installed to libexec)
+TESTS_CONFIGURE_ON=     --enable-tests
+TESTS_CONFIGURE_OFF=    --disable-tests
+
+# We're missing PTRACE_SYSCALL and probably moar
+#CONFIGURE_ARGS+=	--disable-tests
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
 		${WRKSRC}/src/ptrace/_UPT_reg_offset.c \
-		${WRKSRC}/src/x86/siglongjmp.S \
+		${WRKSRC}/src/ptrace/_UPT_access_reg.c \
+		${WRKSRC}/src/x86_64/siglongjmp.S \
 		${WRKSRC}/src/setjmp/longjmp.c \
 		${WRKSRC}/src/setjmp/siglongjmp.c \
 		${WRKSRC}/src/x86_64/ucontext_i.h \

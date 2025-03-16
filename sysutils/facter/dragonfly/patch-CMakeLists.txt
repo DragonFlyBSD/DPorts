@@ -1,6 +1,6 @@
---- CMakeLists.txt.orig	2019-06-26 14:35:30 UTC
-+++ CMakeLists.txt
-@@ -55,7 +55,7 @@ SET(LEATHERMAN_COMPONENTS locale catch n
+--- CMakeLists.txt.orig	Wed Mar 12 21:16:09 2025
++++ CMakeLists.txt	Wed Mar 12 21:16:12 2025
+@@ -55,7 +55,7 @@ SET(LEATHERMAN_COMPONENTS locale catch nowide logging 
  
  # We look for curl early, because whether or not we link to the leatherman curl library
  # is dependant on whether or not we find curl on the system.
@@ -9,12 +9,3 @@
      find_package(CURL)
      if (CURL_FOUND)
          add_definitions(-DUSE_CURL)
-@@ -175,7 +175,7 @@ endif()
- add_test(NAME "facter\\ smoke" COMMAND facter)
- 
- # Install the man page
--if ("${CMAKE_SYSTEM_NAME}" MATCHES "OpenBSD|FreeBSD")
-+if ("${CMAKE_SYSTEM_NAME}" MATCHES "OpenBSD|FreeBSD|DragonFly")
-     set(MANDIR man/man8/)
- else()
-     set(MANDIR share/man/man8/)

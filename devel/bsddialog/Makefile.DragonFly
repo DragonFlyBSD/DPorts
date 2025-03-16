@@ -5,4 +5,6 @@ dfly-patch:
 		${WRKSRC}/lib/Makefile
 	${REINPLACE_CMD} -e 's@-Werror@@g' \
 			 -e 's@-ltinfow@-ltinfo@g' \
-		${WRKSRC}/Makefile
+		${WRKSRC}/Makefile \
+		${WRKSRC}/utility/Makefile
+		

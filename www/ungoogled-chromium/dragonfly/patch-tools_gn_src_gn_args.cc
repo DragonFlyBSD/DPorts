@@ -1,5 +1,5 @@
 diff --git tools/gn/src/gn/args.cc tools/gn/src/gn/args.cc
-index 6b5d25f36c9..dc6b93c8ecb 100644
+index 6b5d25f36c98..dc6b93c8ecb0 100644
 --- tools/gn/src/gn/args.cc
 +++ tools/gn/src/gn/args.cc
 @@ -316,6 +316,8 @@ void Args::SetSystemVarsLocked(Scope* dest) const {

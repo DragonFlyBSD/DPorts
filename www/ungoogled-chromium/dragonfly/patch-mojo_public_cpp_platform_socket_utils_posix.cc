@@ -1,8 +1,8 @@
 diff --git mojo/public/cpp/platform/socket_utils_posix.cc mojo/public/cpp/platform/socket_utils_posix.cc
-index c7e609a16b9..0ba86f9bc57 100644
+index 74ad8bf4ad83..c74c0e729d4a 100644
 --- mojo/public/cpp/platform/socket_utils_posix.cc
 +++ mojo/public/cpp/platform/socket_utils_posix.cc
-@@ -29,7 +29,7 @@ bool IsRecoverableError() {
+@@ -34,7 +34,7 @@ bool IsRecoverableError() {
  }
  
  bool GetPeerEuid(base::PlatformFile fd, uid_t* peer_euid) {

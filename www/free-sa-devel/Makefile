@@ -1,5 +1,6 @@
 PORTNAME=	free-sa
 PORTVERSION=	2.0.0b6.7
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	SF/free-sa/free-sa-dev/2.0.0b6p7
 PKGNAMESUFFIX=	-devel
@@ -34,7 +35,7 @@ MAKE_ARGS+=	PREFIX="${PREFIX}" \
 		LARGEFILE=yes \
 		SATSEP="'" \
 		HAVE_STRL="1" \
-		MANDIR="${MANPREFIX}/man" \
+		MANDIR="${PREFIX}/share/man" \
 		STAGEDIR="${STAGEDIR}"
 
 # Fix build with clang11. Upstream seems dead, so don't expect a proper fix.
@@ -58,7 +59,7 @@ pre-everything::
 	@${ECHO_MSG} " For example, 'make WITH_OPTIMIZED_CFLAGS=yes'"
 	@${ECHO_MSG} "============================================================================="
 .endif
-.if empty(PORT_OPTIONS:MSA_DEBUG) &! (SA_DEBUG_LEVEL)
+.if empty(PORT_OPTIONS:MSA_DEBUG) && (SA_DEBUG_LEVEL)
 	@${ECHO_MSG} "============================================================================="
 	@${ECHO_MSG} " You can enable Free-SA debugging (level 1) by defining WITH_SA_DEBUG"
 	@${ECHO_MSG} " For example, 'make WITH_SA_DEBUG=yes'"

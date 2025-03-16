@@ -165,7 +165,6 @@ lib/fricas/target/%%HOST_ARCH%%/algebra/CVMP.fasl
 lib/fricas/target/%%HOST_ARCH%%/algebra/CYCGRP.fasl
 lib/fricas/target/%%HOST_ARCH%%/algebra/CYCLES.fasl
 lib/fricas/target/%%HOST_ARCH%%/algebra/CYCLOT2.fasl
-lib/fricas/target/%%HOST_ARCH%%/algebra/CYCLOTOM.fasl
 lib/fricas/target/%%HOST_ARCH%%/algebra/DBASE.fasl
 lib/fricas/target/%%HOST_ARCH%%/algebra/DBLRESP.fasl
 lib/fricas/target/%%HOST_ARCH%%/algebra/DCPO.fasl
@@ -2706,7 +2705,6 @@ lib/fricas/target/%%HOST_ARCH%%/src/algebra/crfp.spad
 lib/fricas/target/%%HOST_ARCH%%/src/algebra/curve.spad
 lib/fricas/target/%%HOST_ARCH%%/src/algebra/cycles.spad
 lib/fricas/target/%%HOST_ARCH%%/src/algebra/cyclo.spad
-lib/fricas/target/%%HOST_ARCH%%/src/algebra/cyclotom.spad
 lib/fricas/target/%%HOST_ARCH%%/src/algebra/cyldec.spad
 lib/fricas/target/%%HOST_ARCH%%/src/algebra/ddfact.spad
 lib/fricas/target/%%HOST_ARCH%%/src/algebra/defaults.spad
@@ -3013,4 +3011,11 @@ lib/fricas/target/%%HOST_ARCH%%/src/algebra/xpfact.spad
 lib/fricas/target/%%HOST_ARCH%%/src/algebra/xpoly.spad
 lib/fricas/target/%%HOST_ARCH%%/src/algebra/ystream.spad
 lib/fricas/target/%%HOST_ARCH%%/src/algebra/zerodim.spad
+lib/fricas/target/%%HOST_ARCH%%/src/algebra/math_sym.spad
+lib/fricas/target/%%HOST_ARCH%%/src/algebra/rsimp.spad
+lib/fricas/target/%%HOST_ARCH%%/algebra/MATHSYM.fasl
+lib/fricas/target/%%HOST_ARCH%%/algebra/POLVECF.fasl
+lib/fricas/target/%%HOST_ARCH%%/algebra/ROOTUT.fasl
+lib/fricas/target/%%HOST_ARCH%%/algebra/RSIMP.fasl
+lib/fricas/target/%%HOST_ARCH%%/algebra/UFFACT.fasl
 @dir lib/fricas/target/%%HOST_ARCH%%/share/texmf/tex

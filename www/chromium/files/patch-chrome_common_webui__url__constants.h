@@ -1,58 +1,56 @@
---- chrome/common/webui_url_constants.h.orig	2023-12-10 06:10:27 UTC
+--- chrome/common/webui_url_constants.h.orig	2024-08-26 12:06:38 UTC
 +++ chrome/common/webui_url_constants.h
-@@ -426,24 +426,24 @@ extern const char kOsUIShortcutCustomizationAppURL[];
- extern const char kOsUIVersionURL[];
+@@ -564,24 +564,24 @@ inline constexpr char16_t kOsUISystemURL[] = u"os://sy
+ inline constexpr char kOsUIVersionURL[] = "os://version";
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- extern const char kChromeUIWebUIJsErrorHost[];
- extern const char kChromeUIWebUIJsErrorURL[];
+ inline constexpr char kChromeUIWebUIJsErrorHost[] = "webuijserror";
+ inline constexpr char kChromeUIWebUIJsErrorURL[] = "chrome://webuijserror/";
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS_ASH)
 +    BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
- extern const char kChromeUIConnectorsInternalsHost[];
+ inline constexpr char kChromeUIConnectorsInternalsHost[] =
+     "connectors-internals";
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
- extern const char kChromeUIDiscardsHost[];
- extern const char kChromeUIDiscardsURL[];
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ inline constexpr char kChromeUIDiscardsHost[] = "discards";
+ inline constexpr char kChromeUIDiscardsURL[] = "chrome://discards/";
  #endif
  
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_FUCHSIA)
-+    BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
- extern const char kChromeUIWebAppSettingsURL[];
- extern const char kChromeUIWebAppSettingsHost[];
- #endif
-@@ -458,7 +458,7 @@ extern const char kChromeUILinuxProxyConfigHost[];
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ inline constexpr char kChromeUIWebAppSettingsHost[] = "app-settings";
+ inline constexpr char kChromeUIWebAppSettingsURL[] = "chrome://app-settings/";
+ inline constexpr char kChromeUIWhatsNewHost[] = "whats-new";
+@@ -593,13 +593,13 @@ inline constexpr char kChromeUILinuxProxyConfigHost[] 
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_ANDROID)
 +    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
- extern const char kChromeUISandboxHost[];
+ inline constexpr char kChromeUISandboxHost[] = "sandbox";
  #endif
  
-@@ -470,7 +470,7 @@ extern const char kChromeUISearchEngineChoiceHost[];
- // TODO(crbug.com/1052397): Revisit the macro expression once build flag switch
+ // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
  // of lacros-chrome is complete.
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA) || \
--    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
-+    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) || BUILDFLAG(IS_BSD)
- extern const char kChromeUIBrowserSwitchHost[];
- extern const char kChromeUIBrowserSwitchURL[];
- extern const char kChromeUIEnterpriseProfileWelcomeHost[];
-@@ -486,7 +486,7 @@ extern const char kChromeUIProfilePickerUrl[];
- extern const char kChromeUIProfilePickerStartupQuery[];
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD) || \
+     (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
+ inline constexpr char kChromeUIBrowserSwitchHost[] = "browser-switch";
+ inline constexpr char kChromeUIBrowserSwitchURL[] = "chrome://browser-switch/";
+@@ -621,7 +621,7 @@ inline constexpr char kChromeUIProfilePickerStartupQue
+ inline constexpr char kChromeUIProfilePickerUrl[] = "chrome://profile-picker/";
  #endif
  
 -#if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && \
 +#if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) && \
       defined(TOOLKIT_VIEWS)) ||                         \
      defined(USE_AURA)
- extern const char kChromeUITabModalConfirmDialogHost[];
+ inline constexpr char kChromeUITabModalConfirmDialogHost[] =

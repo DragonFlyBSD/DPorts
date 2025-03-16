@@ -1,0 +1,5 @@
+USE_GCC_VERSION=	13
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|g' \
+		${WRKSRC}/src/utils/CMakeLists.txt

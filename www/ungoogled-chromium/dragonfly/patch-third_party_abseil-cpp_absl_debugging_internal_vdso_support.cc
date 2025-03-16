@@ -1,5 +1,5 @@
 diff --git third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc
-index 8a588eaffee..26eebc96a43 100644
+index 8a588eaffee6..26eebc96a43b 100644
 --- third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc
 +++ third_party/abseil-cpp/absl/debugging/internal/vdso_support.cc
 @@ -54,7 +54,7 @@

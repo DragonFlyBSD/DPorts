@@ -1,0 +1,40 @@
+diff --git chrome/app/google_chrome_strings.grd chrome/app/google_chrome_strings.grd
+index 942ae122180c..5e059bc7c42c 100644
+--- chrome/app/google_chrome_strings.grd
++++ chrome/app/google_chrome_strings.grd
+@@ -301,7 +301,7 @@ chromium_strings.grd. -->
+           Welcome to Chrome; new browser window opened
+         </message>
+       </if>
+-      <if expr="is_macosx or is_linux">
++      <if expr="is_macosx or is_posix">
+         <message name="IDS_FIRST_RUN_DIALOG_WINDOW_TITLE" desc="Window title of First Run dialog on Mac and Linux, displayed in title bar">
+           Welcome to Google Chrome
+         </message>
+@@ -450,7 +450,7 @@ chromium_strings.grd. -->
+                     To get future Google Chrome updates, you'll need Windows 10 or later. This computer is using Windows 8.1.
+         </message>
+       </if>
+-      <if expr="is_linux">
++      <if expr="is_posix">
+         <message name="IDS_LINUX_OBSOLETE" desc="A message displayed on an at-launch infobar and about:help warning the user that the OS version they are using is no longer supported.">
+           Google Chrome may not function correctly because it is no longer supported on this Linux distribution
+         </message>
+@@ -540,7 +540,7 @@ Permissions you've already given to websites and apps may apply to this account.
+         </message>
+       </if>
+ 
+-      <if expr="is_linux">
++      <if expr="is_posix">
+         <message name="IDS_DESKTOP_SHORTCUT_COMMENT" desc="Description of the desktop shortcut file which will open a Chrome tab at a given url.">
+           Open <ph name="URL">$1<ex>https://www.example-url.com/</ex></ph> in a new tab in Google Chrome.
+         </message>
+@@ -1594,7 +1594,7 @@ Permissions you've already given to websites and apps may apply to this account.
+         </message>
+       </if>
+ 
+-      <if expr="is_win or is_macosx or is_linux">
++      <if expr="is_win or is_macosx or is_posix">
+         <message name="IDS_UPDATE_RECOMMENDED_DIALOG_TITLE_ALT" desc="Alternate window title for the Update Recommended dialog.">
+           Relaunch to finish Chrome update
+         </message>

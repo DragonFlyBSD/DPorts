@@ -1,5 +1,5 @@
 diff --git third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h
-index fa7f9d8c375..ae02c2fca7d 100644
+index fa7f9d8c375e..ae02c2fca7dd 100644
 --- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h
 +++ third_party/libphonenumber/dist/cpp/src/phonenumbers/base/synchronization/lock.h
 @@ -22,7 +22,8 @@

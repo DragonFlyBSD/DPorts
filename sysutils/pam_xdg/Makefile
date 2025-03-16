@@ -1,5 +1,5 @@
 PORTNAME=	pam_xdg
-DISTVERSION=	0.8.1
+DISTVERSION=	0.8.4
 CATEGORIES=	sysutils wayland
 MASTER_SITES=	https://ftp.sdaoden.eu/
 
@@ -10,6 +10,7 @@ WWW=		https://www.sdaoden.eu/code.html#s-toolbox
 LICENSE=	ISCL
 
 USES=		uidfix
+SUB_FILES=	pkg-message
 PLIST_FILES=	lib/${PORTNAME}.so \
 		share/man/man8/${PORTNAME}.8.gz
 

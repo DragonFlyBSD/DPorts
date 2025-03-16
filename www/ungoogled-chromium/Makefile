@@ -1,11 +1,15 @@
 PORTNAME=	ungoogled-chromium
-PORTVERSION=	120.0.6099.129
+PORTVERSION=	128.0.6613.137
+PULSEMV=	16
+PULSEV=		${PULSEMV}.1
 UGVERSION=	${DISTVERSION}-1
 CATEGORIES=	www wayland
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
-		https://nerd.hu/distfiles/:external
+		https://nerd.hu/distfiles/:external \
+		https://freedesktop.org/software/pulseaudio/releases/:pulseaudio
 DISTFILES=	chromium-${DISTVERSION}${EXTRACT_SUFX} \
-		ungoogled-chromium-${UGVERSION}.tar.gz:external
+		ungoogled-chromium-${UGVERSION}.tar.gz:external \
+		pulseaudio-${PULSEV}.tar.gz:pulseaudio
 
 MAINTAINER=	chromium@FreeBSD.org
 COMMENT=	Google web browser based on WebKit sans integration with Google
@@ -22,9 +26,11 @@ PATCH_DEPENDS=	gpatch:devel/patch \
 BUILD_DEPENDS=	bash:shells/bash \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ply>0:devel/py-ply@${PY_FLAVOR} \
+		bindgen:devel/rust-bindgen-cli \
 		gperf:devel/gperf \
 		flock:sysutils/flock \
 		node:www/node \
+		rustc:lang/rust \
 		xcb-proto>0:x11/xcb-proto \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
 		${LOCALBASE}/share/usbids/usb.ids:misc/usbids \
@@ -108,6 +114,7 @@ GN_ARGS+=	enable_widevine=true \
 		use_allocator_shim=false \
 		use_aura=true \
 		use_custom_libcxx=false \
+		use_custom_libunwind=false \
 		use_lld=true \
 		use_partition_alloc=true \
 		use_partition_alloc_as_malloc=false \
@@ -117,7 +124,7 @@ GN_ARGS+=	enable_widevine=true \
 		use_system_libffi=true \
 		use_system_libjpeg=true \
 		use_udev=false \
-		extra_cxxflags="${CXXFLAGS}" \
+		extra_cxxflags="${CXXFLAGS} ${PINCLUDES}" \
 		extra_ldflags="${LDFLAGS}" \
 		ffmpeg_branding="${FFMPEG_BRAND}"
 
@@ -127,13 +134,13 @@ GN_ARGS+=	build_with_tflite_lib=false \
 		clang_use_chrome_plugins=false \
 		disable_fieldtrial_testing_config=true \
 		enable_backup_ref_ptr_support=false \
+		enable_log_error_not_reached=true \
 		enable_hangout_services_extension=false \
 		enable_mdns=false \
 		enable_nacl=false \
 		enable_reading_list=false \
 		enable_remoting=false \
 		enable_reporting=false \
-		enable_rust=false \
 		enable_service_discovery=false \
 		exclude_unwind_tables=true \
 		google_api_key="" \
@@ -152,7 +159,7 @@ SUB_FILES=	ungoogled-chromium.desktop ungoogled-chromium
 SUB_LIST+=	COMMENT="${COMMENT}"
 
 OPTIONS_DEFINE=		CODECS CUPS DEBUG DRIVER KERBEROS LTO PIPEWIRE TEST WIDEVINE
-OPTIONS_DEFAULT=	CODECS CUPS DRIVER KERBEROS PIPEWIRE SNDIO
+OPTIONS_DEFAULT=	CODECS CUPS DRIVER KERBEROS PIPEWIRE SNDIO ALSA PULSEAUDIO
 OPTIONS_EXCLUDE_aarch64=LTO
 OPTIONS_GROUP=		AUDIO
 OPTIONS_GROUP_AUDIO=	ALSA PULSEAUDIO SNDIO
@@ -214,14 +221,10 @@ PIPEWIRE_VARS=		GN_ARGS+=rtc_use_pipewire=true \
 PIPEWIRE_VARS_OFF=	GN_ARGS+=rtc_use_pipewire=false \
 			GN_ARGS+=rtc_link_pipewire=false
 
-PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
-PULSEAUDIO_VARS=	GN_ARGS+=use_pulseaudio=true
+PULSEAUDIO_VARS=	GN_ARGS+=use_pulseaudio=true \
+			PINCLUDES="-I${WRKDIR}/pulseaudio-${PULSEV}/src -DPA_MAJOR=${PULSEMV}"
 PULSEAUDIO_VARS_OFF=	GN_ARGS+=use_pulseaudio=false
 
-# With SNDIO=on we exclude audio_manager_linux from the build (see
-# media/audio/BUILD.gn) and use audio_manager_openbsd which does not
-# support falling back to ALSA or PulseAudio.
-SNDIO_PREVENTS=		ALSA PULSEAUDIO
 SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
 SNDIO_VARS=		GN_ARGS+=use_sndio=true
 SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
@@ -230,8 +233,7 @@ WIDEVINE_DESC=		Depend on foreign-cdm to enable playback of DRM content
 WIDEVINE_RUN_DEPENDS=	foreign-cdm>0:www/foreign-cdm
 
 .include "Makefile.tests"
-TEST_DISTFILES=		chromium-${DISTVERSION}-testdata${EXTRACT_SUFX} \
-			test_fonts-336e775eec536b2d785cc80eff6ac39051931286.tar.gz:external
+TEST_DISTFILES=		chromium-${DISTVERSION}-testdata${EXTRACT_SUFX}
 TEST_ALL_TARGET=	${TEST_TARGETS}
 
 .include <bsd.port.options.mk>
@@ -241,15 +243,14 @@ TEST_ALL_TARGET=	${TEST_TARGETS}
 IGNORE=		you have selected HEIMDAL_BASE but do not have Heimdal installed in base
 .endif
 
-.if ${COMPILER_VERSION} < 160
-LLVM_DEFAULT=		16
+LLVM_DEFAULT=		18
 BUILD_DEPENDS+=		clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 BINARY_ALIAS+=		cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} \
 			cc=${LOCALBASE}/bin/clang${LLVM_DEFAULT} \
 			c++=${LOCALBASE}/bin/clang++${LLVM_DEFAULT} \
 			ar=${LOCALBASE}/bin/llvm-ar${LLVM_DEFAULT} \
-			nm=${LOCALBASE}/bin/llvm-nm${LLVM_DEFAULT}
-.endif
+			nm=${LOCALBASE}/bin/llvm-nm${LLVM_DEFAULT} \
+			ld=${LOCALBASE}/bin/ld.lld${LLVM_DEFAULT}
 
 # - swiftshader/lib/{libEGL.so,libGLESv2.so} is x86 only
 # - map ffmpeg target to ${ARCH}
@@ -266,7 +267,7 @@ PLIST_SUB+=	NOT_AARCH64=""
 FFMPEG_TARGET=	ia32
 .endif
 
-FFMPEG_BDIR=	${WRKSRC}/build.${FFMPEG_TARGET}.${OPSYS:tl}/${FFMPEG_BRAND}
+FFMPEG_BDIR=	${WRKSRC}/third_party/ffmpeg/build.${FFMPEG_TARGET}.${OPSYS:tl}/${FFMPEG_BRAND}
 FFMPEG_CDIR=	${WRKSRC}/third_party/ffmpeg/chromium/config/${FFMPEG_BRAND}/${OPSYS:tl}/${FFMPEG_TARGET}
 
 # Allow relocations against read-only segments (override lld default)
@@ -279,15 +280,18 @@ MAKE_ENV+=	C_INCLUDE_PATH=${LOCALBASE}/include \
 
 WRKSRC=		${WRKDIR}/chromium-${DISTVERSION}
 
+# rust
+RUSTC_VERSION!= rustc -V 2>/dev/null || true
+MAKE_ENV+=	RUSTC_BOOTSTRAP=1
+GN_ARGS+=	enable_rust=true \
+		rust_sysroot_absolute="${LOCALBASE}" \
+		rustc_version="${RUSTC_VERSION}"
+
 pre-everything::
 	@${ECHO_MSG}
 	@${ECHO_MSG} "To build Ungoogled Chromium, you should have around 2GB of memory"
 	@${ECHO_MSG} "and around ${WANTSPACE} of free disk space."
 	@${ECHO_MSG}
-
-post-extract-TEST-on:
-	@${MKDIR} ${WRKSRC}/third_party/test_fonts/test_fonts
-	@${MV} ${WRKDIR}/test_fonts ${WRKSRC}/third_party/test_fonts/
 
 pre-patch:
 	cd ${WRKDIR}/ungoogled-chromium-${UGVERSION} && ${PYTHON_CMD} \
@@ -308,39 +312,43 @@ pre-configure:
 		dav1d flac fontconfig freetype harfbuzz-ng icu libdrm libevent libpng \
 		libusb libwebp libxml libxslt openh264 opus || ${FALSE}
 	# Chromium uses an unreleased version of FFmpeg, so configure it
-	cd ${WRKSRC}/third_party/ffmpeg && \
-		${PYTHON_CMD} chromium/scripts/build_ffmpeg.py dragonfly ${FFMPEG_TARGET} \
+	cd ${WRKSRC}/media/ffmpeg && \
+		${PYTHON_CMD} scripts/build_ffmpeg.py ${OPSYS:tl} ${FFMPEG_TARGET} \
 		--config-only --branding=${FFMPEG_BRAND}
 	cd ${FFMPEG_BDIR} && ${GMAKE} ffversion.h
 	${MKDIR} ${FFMPEG_CDIR}
 .for _e in config.h config.asm config_components.h libavcodec libavformat libavutil
 	-${CP} -pR ${FFMPEG_BDIR}/${_e} ${FFMPEG_CDIR}
 .endfor
+	touch ${WRKDIR}/pulseaudio-${PULSEV}/src/pulse/version.h
+	@${REINPLACE_CMD} -e 's|$${LOCALBASE}|${LOCALBASE}|;s|$${MODCLANG_VERSION}|${LLVM_DEFAULT}|' \
+		${WRKSRC}/build/rust/rust_bindgen.gni
 
 do-configure:
 	# GN generator bootstrapping and generating ninja files
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} CC=${CC} CXX=${CXX} LD=${CXX} \
-		READELF=${READELF} AR=${AR} NM=${NM} ${PYTHON_CMD} \
-		./tools/gn/bootstrap/bootstrap.py ${GN_BOOTSTRAP_FLAGS}
+		READELF=${READELF} AR=${AR} NM=${NM} \
+		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
+		${PYTHON_CMD} ./tools/gn/bootstrap/bootstrap.py ${GN_BOOTSTRAP_FLAGS}
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./out/${BUILDTYPE}/gn \
 		gen --args='${GN_ARGS}' out/${BUILDTYPE}
 
 	# Setup nodejs dependency
-	@${MKDIR} ${WRKSRC}/third_party/node/freebsd/node-freebsd/bin
-	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/freebsd/node-freebsd/bin/node
+	@${MKDIR} ${WRKSRC}/third_party/node/${OPSYS:tl}/node-${OPSYS:tl}/bin
+	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/${OPSYS:tl}/node-${OPSYS:tl}/bin/node
 
-	# Setup buildtools/freebsd
-	@${MKDIR} ${WRKSRC}/buildtools/freebsd
-	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/freebsd
-	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/freebsd
-	${LN} -sf /usr/bin/strip ${WRKSRC}/buildtools/freebsd/strip
+	# Setup buildtools/${OPSYS:tl}
+	@${MKDIR} ${WRKSRC}/buildtools/${OPSYS:tl}
+	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/${OPSYS:tl}
+	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/${OPSYS:tl}
+	${LN} -sf /usr/bin/strip ${WRKSRC}/buildtools/${OPSYS:tl}/strip
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_MAN} ${WRKSRC}/chrome/app/resources/manpage.1.in \
-		${STAGEDIR}${MANPREFIX}/man/man1/ungoogled-chromium.1
+		${STAGEDIR}${PREFIX}/share/man/man1/ungoogled-chromium.1
 	@${SED} -i "" -e 's,\@\@PACKAGE\@\@,chromium,g;s,\@\@MENUNAME\@\@,Chromium Web Browser,g' \
-		${STAGEDIR}${MANPREFIX}/man/man1/ungoogled-chromium.1
+		${STAGEDIR}${PREFIX}/share/man/man1/ungoogled-chromium.1
 	${CP} ${WRKSRC}/chrome/app/theme/chromium/product_logo_22_mono.png ${WRKSRC}/chrome/app/theme/chromium/product_logo_22.png
 .for s in 22 24 48 64 128 256
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps
@@ -379,6 +387,7 @@ do-install:
 	# SwiftShader
 .if ${ARCH} != aarch64
 	${INSTALL_LIB} ${WRKSRC}/out/${BUILDTYPE}/libvk_swiftshader.so ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/out/${BUILDTYPE}/vk_swiftshader_icd.json ${STAGEDIR}${DATADIR}
 .endif
 
 post-install-DEBUG-on:

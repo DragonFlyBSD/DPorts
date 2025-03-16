@@ -1,5 +1,5 @@
 diff --git third_party/afl/src/afl-fuzz.c third_party/afl/src/afl-fuzz.c
-index a787f9a685a..f240282989e 100644
+index a787f9a685a6..f240282989e4 100644
 --- third_party/afl/src/afl-fuzz.c
 +++ third_party/afl/src/afl-fuzz.c
 @@ -58,9 +58,10 @@

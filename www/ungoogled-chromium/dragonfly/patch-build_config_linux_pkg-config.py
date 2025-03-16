@@ -1,5 +1,5 @@
 diff --git build/config/linux/pkg-config.py build/config/linux/pkg-config.py
-index 3caf00630d4..466f6c0849a 100755
+index 3caf00630d47..466f6c0849ae 100755
 --- build/config/linux/pkg-config.py
 +++ build/config/linux/pkg-config.py
 @@ -108,7 +108,7 @@ def main():

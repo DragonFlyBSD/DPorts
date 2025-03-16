@@ -1,8 +1,8 @@
 diff --git v8/src/libsampler/sampler.cc v8/src/libsampler/sampler.cc
-index acb9db8e17c..bae62877466 100644
+index 8650cd33f42c..1e59722bc131 100644
 --- v8/src/libsampler/sampler.cc
 +++ v8/src/libsampler/sampler.cc
-@@ -500,7 +500,7 @@ void SignalHandler::FillRegisterState(void* context, RegisterState* state) {
+@@ -516,7 +516,7 @@ void SignalHandler::FillRegisterState(void* context, RegisterState* state) {
    state->fp =
        reinterpret_cast<void*>(arm_thread_state64_get_fp(mcontext->__ss));
  #endif  // V8_HOST_ARCH_*

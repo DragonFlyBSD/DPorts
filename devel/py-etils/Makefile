@@ -1,5 +1,5 @@
 PORTNAME=	etils
-PORTVERSION=	1.5.0
+PORTVERSION=	1.9.2
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flit-core>=3.8<4:devel/py-flit-core@${PY_FLAVOR}
 
-USES=		python:3.9+
+USES=		python:3.11+
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
@@ -26,14 +26,16 @@ ARRAY_TYPES_IMPLIES=	ENP
 EAPP_DESC=		Absl flags/app utilities
 EAPP_IMPLIES=		EPY
 ECOLAB_DESC=		Colab utilities
-ECOLAB_IMPLIES=		ENP EPY
+ECOLAB_IMPLIES=		ENP EPY ETREE
 EDC_DESC=		Dataclasses utilities
 EDC_IMPLIES=		EPY
 ENP_DESC=		Numpy utilities
 ENP_IMPLIES=		EPY
 EPATH_DESC=		Pathlib-like API
 EPATH_GCS_DESC=		Pathlib-like API for GCS
+EPATH_GCS_IMPLIES=	EPATH
 EPATH_S3_DESC=		Pathlib-like API for S3
+EPATH_S3_IMPLIES=	EPATH
 EPATH_IMPLIES=		EPY
 EPY_DESC=		Collection of generic python utilities
 ETREE_DESC=		Tree utilities for tf.nest, jax.tree_utils, DeepMind tree
@@ -45,7 +47,9 @@ EAPP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}absl-py>=0:devel/py-absl-py@${PY_FLAVOR
 			${PYTHON_PKGNAMEPREFIX}simple-parsing>=0:devel/py-simple-parsing@${PY_FLAVOR}
 ECOLAB_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jupyter>=0:devel/py-jupyter@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}mediapy>=0:devel/py-mediapy@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}numpy>=0,1:math/py-numpy@${PY_FLAVOR}
+			${PYTHON_PKGNAMEPREFIX}numpy>=0,1:math/py-numpy@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}packaging>=0:devel/py-packaging@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}protobuf>=0,1:devel/py-protobuf@${PY_FLAVOR}
 ENP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=0,1:math/py-numpy@${PY_FLAVOR}
 EPATH_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fsspec>=0:devel/py-fsspec@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}importlib-resources>=0:devel/py-importlib-resources@${PY_FLAVOR} \

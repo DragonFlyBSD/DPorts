@@ -2,3 +2,6 @@
 # always use bundled version, but prefer ch3:nemesis
 LIB_DEPENDS:=	${LIB_DEPENDS:Nlibfabric.so*}
 CONFIGURE_ARGS:=${CONFIGURE_ARGS:N--with-libfabric*} --with-device=ch3:nemesis
+
+# remove SLURM support as it's not building for now
+LIB_DEPENDS:=	${LIB_DEPENDS:Nlibslurm.so*}

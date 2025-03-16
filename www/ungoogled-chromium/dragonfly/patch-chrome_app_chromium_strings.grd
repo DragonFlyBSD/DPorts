@@ -1,0 +1,40 @@
+diff --git chrome/app/chromium_strings.grd chrome/app/chromium_strings.grd
+index c3d5ce640e4c..86bfd2c1b3f8 100644
+--- chrome/app/chromium_strings.grd
++++ chrome/app/chromium_strings.grd
+@@ -315,7 +315,7 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
+           Welcome to Chromium; new browser window opened
+         </message>
+       </if>
+-      <if expr="is_macosx or is_linux">
++      <if expr="is_macosx or is_posix">
+         <message name="IDS_FIRST_RUN_DIALOG_WINDOW_TITLE" desc="Window title of First Run dialog on Mac and Linux, displayed in title bar">
+           Welcome to Chromium
+         </message>
+@@ -480,7 +480,7 @@ If you update this file, be sure also to update google_chrome_strings.grd. -->
+                     To get future Chromium updates, you'll need Windows 10 or later. This computer is using Windows 8.1.
+         </message>
+       </if>
+-      <if expr="is_linux">
++      <if expr="is_posix">
+         <message name="IDS_LINUX_OBSOLETE" desc="A message displayed on an at-launch infobar and about:help warning the user that the OS version they are using is no longer supported.">
+           Chromium may not function correctly because it is no longer supported on this Linux distribution
+         </message>
+@@ -563,7 +563,7 @@ Permissions you've already given to websites and apps may apply to this account.
+         </message>
+       </if>
+ 
+-      <if expr="is_linux">
++      <if expr="is_posix">
+         <message name="IDS_DESKTOP_SHORTCUT_COMMENT" desc="Description of the desktop shortcut file which will open a Chrome tab at a given url.">
+           Open <ph name="URL">$1<ex>https://www.example-url.com/</ex></ph> in a new tab in Chromium.
+         </message>
+@@ -1436,7 +1436,7 @@ Permissions you've already given to websites and apps may apply to this account.
+         </message>
+       </if>
+ 
+-      <if expr="is_win or is_macosx or is_linux">
++      <if expr="is_win or is_macosx or is_posix">
+         <message name="IDS_UPDATE_RECOMMENDED_DIALOG_TITLE_ALT" desc="Alternate window title for the Update Recommended dialog." translateable="false">
+           Not used in Chromium. Placeholder to keep resource maps in sync.
+         </message>

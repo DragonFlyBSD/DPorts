@@ -1,5 +1,5 @@
 diff --git base/process/process_metrics_posix.cc base/process/process_metrics_posix.cc
-index bdef95e4cc5..bc6d574db81 100644
+index bdef95e4cc5e..bc6d574db81a 100644
 --- base/process/process_metrics_posix.cc
 +++ base/process/process_metrics_posix.cc
 @@ -21,7 +21,7 @@

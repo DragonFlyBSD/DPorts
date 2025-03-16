@@ -1,5 +1,5 @@
 diff --git third_party/libdrm/src/xf86drmMode.c third_party/libdrm/src/xf86drmMode.c
-index 22a8a7c2297..bdf530d0cd6 100644
+index 22a8a7c22978..bdf530d0cd6c 100644
 --- third_party/libdrm/src/xf86drmMode.c
 +++ third_party/libdrm/src/xf86drmMode.c
 @@ -939,7 +939,7 @@ drm_public int drmCheckModesettingSupported(const char *busid)

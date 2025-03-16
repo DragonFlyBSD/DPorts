@@ -1,8 +1,11 @@
 PORTNAME=	embree
 PORTVERSION=	3.13.5
-PORTREVISION=	6
+PORTREVISION=	7
 DISTVERSIONPREFIX=	v
 CATEGORIES=	graphics
+
+PATCH_SITES=	https://github.com/RenderKit/${PORTNAME}/commit/
+PATCHFILES+=	cda4cf1919bb2a748e78915fbd6e421a1056638d.patch:-p1 # https://github.com/RenderKit/embree/issues/486
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Collection of high-performance ray tracing kernels

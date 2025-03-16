@@ -8,11 +8,15 @@ OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NZFS} QEMU
 # deal with orphans
 PLIST_FILES+=	bin/virt-qemu-qmp-proxy \
 		bin/virt-qemu-sev-validate \
-		man/man1/virt-qemu-qmp-proxy.1.gz \
-		man/man1/virt-qemu-sev-validate.1.gz \
+		lib/sysusers.d/libvirt-qemu.conf \
+		share/man/man1/virt-qemu-qmp-proxy.1.gz \
+		share/man/man1/virt-qemu-sev-validate.1.gz \
 		"@dir /var/run/libvirt/qemu/passt"
-
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's|fdatasync|fsync|' \
 		${WRKSRC}/src/util/virfile.c
+	${REINPLACE_CMD} -e '/libvirt_no_warn_duplicate_libraries/d' \
+		${WRKSRC}/src/meson.build \
+		${WRKSRC}/tests/meson.build \
+		${WRKSRC}/tools/meson.build

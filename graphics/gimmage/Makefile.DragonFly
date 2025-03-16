@@ -1,3 +1,0 @@
-
-# cleanup clang'isms
-CXXFLAGS:=	${CXXFLAGS:N-W*}

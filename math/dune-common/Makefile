@@ -1,8 +1,11 @@
 PORTNAME=	dune-common
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.8.0
-PORTREVISION=	11
+PORTREVISION=	14
 CATEGORIES=	math
+
+PATCH_SITES=	https://gitlab.dune-project.org/core/${PORTNAME}/-/commit/
+PATCHFILES+=	d36ce92a18904a3fe69028811c619b4b5a09ef4e.patch:-p1
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	DUNE framework: Build system, infrastructure and foundation classes
@@ -12,7 +15,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 BUILD_DEPENDS=	metis>0:math/metis \
-		openmpi>0:net/openmpi \
+		openmpi4>0:net/openmpi4 \
 		vc>0:devel/vc # Metis isn't used, see https://gitlab.dune-project.org/core/dune-common/-/issues/306
 LIB_DEPENDS=	libopenblas.so:math/openblas \
 		libtbb.so:devel/onetbb

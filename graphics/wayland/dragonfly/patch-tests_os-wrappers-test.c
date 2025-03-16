@@ -1,6 +1,6 @@
---- tests/os-wrappers-test.c.orig	2022-11-01 14:26:03.250878000 +0100
-+++ tests/os-wrappers-test.c	2022-11-01 14:28:28.137680000 +0100
-@@ -39,7 +39,6 @@
+--- tests/os-wrappers-test.c.orig	2024-08-24 15:43:55 UTC
++++ tests/os-wrappers-test.c
+@@ -38,7 +38,6 @@
  #include <stdarg.h>
  #include <fcntl.h>
  #include <stdio.h>
@@ -8,9 +8,17 @@
  
  #include "wayland-private.h"
  #include "test-runner.h"
-@@ -152,15 +151,7 @@
- __attribute__ ((visibility("default"))) int
- epoll_create1(int flags)
+@@ -47,7 +46,6 @@
+ extern int (*wl_socket)(int domain, int type, int protocol);
+ extern int (*wl_fcntl)(int fildes, int cmd, ...);
+ extern ssize_t (*wl_recvmsg)(int socket, struct msghdr *message, int flags);
+-extern int (*wl_epoll_create1)(int flags);
+ 
+ static int fall_back;
+ 
+@@ -121,15 +119,7 @@ recvmsg_wrapper(int sockfd, struct msghd
+ static int
+ epoll_create1_wrapper(int flags)
  {
 -	wrapped_calls_epoll_create1++;
 -
@@ -20,12 +28,20 @@
 -		return -1;
 -	}
 -
--	return real_epoll_create1(flags);
+-	return epoll_create1(flags);
 +	return 0;
  }
  
  static void
-@@ -375,6 +366,7 @@
+@@ -139,7 +129,6 @@ init_fallbacks(int do_fallbacks)
+ 	wl_fcntl = fcntl_wrapper;
+ 	wl_socket = socket_wrapper;
+ 	wl_recvmsg = recvmsg_wrapper;
+-	wl_epoll_create1 = epoll_create1_wrapper;
+ }
+ 
+ static void
+@@ -356,6 +345,7 @@ TEST(os_wrappers_recvmsg_cloexec_fallbac
  	do_os_wrappers_recvmsg_cloexec(1);
  }
  
@@ -33,7 +49,7 @@
  static void
  do_os_wrappers_epoll_create_cloexec(int n)
  {
-@@ -406,5 +398,6 @@
+@@ -387,5 +377,6 @@ TEST(os_wrappers_epoll_create_cloexec_fa
  	init_fallbacks(1);
  	do_os_wrappers_epoll_create_cloexec(2);
  }

@@ -1,5 +1,5 @@
 diff --git v8/src/base/utils/random-number-generator.cc v8/src/base/utils/random-number-generator.cc
-index 91b7c6fc666..49d442235b7 100644
+index 91b7c6fc6666..49d442235b7b 100644
 --- v8/src/base/utils/random-number-generator.cc
 +++ v8/src/base/utils/random-number-generator.cc
 @@ -56,7 +56,7 @@ RandomNumberGenerator::RandomNumberGenerator() {

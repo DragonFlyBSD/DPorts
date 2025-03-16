@@ -1,8 +1,8 @@
 diff --git base/debug/debugger_posix.cc base/debug/debugger_posix.cc
-index 95630588208..62d99dc3b45 100644
+index b42b9e52b9a6..7ea774aab290 100644
 --- base/debug/debugger_posix.cc
 +++ base/debug/debugger_posix.cc
-@@ -39,7 +39,7 @@
+@@ -45,7 +45,7 @@
  #include <sys/proc.h>
  #endif
  
@@ -11,7 +11,7 @@ index 95630588208..62d99dc3b45 100644
  #include <sys/user.h>
  #endif
  
-@@ -137,6 +137,8 @@ bool BeingDebugged() {
+@@ -142,6 +142,8 @@ bool BeingDebugged() {
    being_debugged = (info.ki_flag & P_TRACED) != 0;
  #elif BUILDFLAG(IS_OPENBSD)
    being_debugged = (info->p_psflags & PS_TRACED) != 0;

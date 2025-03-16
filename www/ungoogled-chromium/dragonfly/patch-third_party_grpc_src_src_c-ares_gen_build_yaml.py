@@ -1,5 +1,5 @@
 diff --git third_party/grpc/src/src/c-ares/gen_build_yaml.py third_party/grpc/src/src/c-ares/gen_build_yaml.py
-index 607704ca278..e268a9f02ef 100755
+index 607704ca278f..e268a9f02efc 100755
 --- third_party/grpc/src/src/c-ares/gen_build_yaml.py
 +++ third_party/grpc/src/src/c-ares/gen_build_yaml.py
 @@ -32,7 +32,7 @@ try:

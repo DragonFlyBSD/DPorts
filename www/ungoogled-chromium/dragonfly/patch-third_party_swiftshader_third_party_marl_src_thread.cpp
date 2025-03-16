@@ -1,5 +1,5 @@
 diff --git third_party/swiftshader/third_party/marl/src/thread.cpp third_party/swiftshader/third_party/marl/src/thread.cpp
-index b87ab0b41bb..46525bc2367 100644
+index b87ab0b41bbb..46525bc23678 100644
 --- third_party/swiftshader/third_party/marl/src/thread.cpp
 +++ third_party/swiftshader/third_party/marl/src/thread.cpp
 @@ -36,7 +36,7 @@

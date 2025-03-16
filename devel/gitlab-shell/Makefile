@@ -1,5 +1,5 @@
 PORTNAME=	gitlab-shell
-PORTVERSION=	14.33.0
+PORTVERSION=	14.38.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
@@ -13,44 +13,27 @@ LICENSE=	MIT
 # https://gitlab.com/gitlab-org/gitlab-shell/-/merge_requests/720
 #BUILD_DEPENDS=	heimdal>=0:security/heimdal
 
-USES=		gmake go:modules,no_targets pkgconfig
+USES=		gmake go:modules,no_targets,1.22 pkgconfig
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
-
-USERS=		git
-GROUPS=		git
-
-#INSTALL_TARGET=	install-strip
-ALL_TARGET=	build
+GO_MOD_DIST=	gitlab
+GO_MODULE=	gitlab.com/gitlab-org/gitlab-shell/v14
 
 MAKE_ENV=	GOFLAGS="${GO_BUILDFLAGS}"
 # make sure to pass go build options into make process
 MAKE_ENV+=	${GO_ENV}
+ALL_TARGET=	build
 
-# for go dependencies
-# Gitlab hosts there dependencies on their own platform and not on go-proxy
-# so we download the required go.mod file from gitlab
-# lines are taken from go.mk
-# ---------------------------
-FETCH_DEPENDS=	${GO_CMD}:${GO_PORT}
-MASTER_SITES+=	https://gitlab.com/gitlab-org/gitlab-shell/-/raw/v${DISTVERSION}/
-DISTFILES+=	go.mod
-DIST_SUBDIR=	go/${PKGORIGIN:S,/,_,g}/${DISTNAME}
-EXTRACT_ONLY+=	${DISTFILES:N*.mod\:*:N*.mod:C/:.*//}
-_USES_fetch+=	800:go-post-fetch
-go-post-fetch:
-	@${ECHO_MSG} "===> Fetching ${GO_MODNAME} dependencies";
-	@(cd ${DISTDIR}/${DIST_SUBDIR}; \
-		[ -e go.mod ] || ${RLN} ${GO_MODFILE} go.mod; \
-		${SETENV} ${GO_ENV} GOPROXY=${GO_GOPROXY} ${GO_CMD} mod download -x all)
-# ---------------------------
+USERS=		git
+GROUPS=		git
 
 VARLOGDIR=	/var/log/gitlab-shell
 
 PLIST_FILES+=	"@dir(git,,755) ${VARLOGDIR}"
 
 post-patch:
+	${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|" ${WRKSRC}/config.yml.example
 	${MV} ${WRKSRC}/config.yml.example ${WRKSRC}/config.yml.sample
 	${CP} ${WRKSRC}/config.yml.sample ${WRKSRC}/config.yml
 	${REINPLACE_CMD} -e 's|VERSION_STRING :=.*|VERSION_STRING := v${PORTVERSION}|g' ${WRKSRC}/Makefile

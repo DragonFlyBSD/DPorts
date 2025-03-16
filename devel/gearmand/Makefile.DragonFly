@@ -1,7 +1,0 @@
-USES+= alias:11
-
-CONFIGURE_ARGS+= ac_cv_msg_nosignal=yes
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@Wc++11-compat@Wno-c++11-compat@g' \
-		${WRKSRC}/configure

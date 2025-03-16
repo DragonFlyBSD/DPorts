@@ -1,19 +1,8 @@
 diff --git v8/BUILD.gn v8/BUILD.gn
-index 54b64cc2664..d7824649a1b 100644
+index 608199c033cf..2a9bf14faab1 100644
 --- v8/BUILD.gn
 +++ v8/BUILD.gn
-@@ -1433,6 +1433,10 @@ config("toolchain") {
-     defines += [ "V8_HAVE_TARGET_OS" ]
-     defines += [ "V8_TARGET_OS_FREEBSD" ]
-     defines += [ "V8_TARGET_OS_BSD" ]
-+  } else if (target_os == "dragonfly") {
-+    defines += [ "V8_HAVE_TARGET_OS" ]
-+    defines += [ "V8_TARGET_OS_FREEBSD" ]
-+    defines += [ "V8_TARGET_OS_BSD" ]
-   }
- 
-   # TODO(infra): Support v8_enable_prof on Windows.
-@@ -4337,7 +4341,7 @@ v8_header_set("v8_internal_headers") {
+@@ -4542,7 +4542,7 @@ v8_header_set("v8_internal_headers") {
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -22,7 +11,7 @@ index 54b64cc2664..d7824649a1b 100644
          sources += [ "src/trap-handler/handler-inside-posix.h" ]
        } else if (is_win) {
          sources += [ "src/trap-handler/handler-inside-win.h" ]
-@@ -5667,7 +5671,7 @@ v8_source_set("v8_base_without_compiler") {
+@@ -5940,7 +5940,7 @@ v8_source_set("v8_base_without_compiler") {
        # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
        # based on Darwin and thus POSIX-compliant to a similar degree.
        if (is_linux || is_chromeos || is_mac || is_ios ||
@@ -31,7 +20,7 @@ index 54b64cc2664..d7824649a1b 100644
          sources += [
            "src/trap-handler/handler-inside-posix.cc",
            "src/trap-handler/handler-outside-posix.cc",
-@@ -6279,7 +6283,7 @@ v8_component("v8_libbase") {
+@@ -6590,7 +6590,7 @@ v8_component("v8_libbase") {
        "src/base/platform/platform-openbsd.cc",
      ]
      libs = [ "execinfo" ]

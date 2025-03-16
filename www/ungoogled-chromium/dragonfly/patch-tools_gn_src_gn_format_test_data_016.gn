@@ -1,5 +1,5 @@
 diff --git tools/gn/src/gn/format_test_data/016.gn tools/gn/src/gn/format_test_data/016.gn
-index 00a79922828..e0e08f864c5 100644
+index 00a79922828f..e0e08f864c54 100644
 --- tools/gn/src/gn/format_test_data/016.gn
 +++ tools/gn/src/gn/format_test_data/016.gn
 @@ -1 +1 @@

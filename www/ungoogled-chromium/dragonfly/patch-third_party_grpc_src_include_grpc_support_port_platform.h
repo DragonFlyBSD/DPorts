@@ -1,5 +1,5 @@
 diff --git third_party/grpc/src/include/grpc/support/port_platform.h third_party/grpc/src/include/grpc/support/port_platform.h
-index 189c8141b80..9034a66d7bb 100644
+index 189c8141b807..9034a66d7bb8 100644
 --- third_party/grpc/src/include/grpc/support/port_platform.h
 +++ third_party/grpc/src/include/grpc/support/port_platform.h
 @@ -252,7 +252,7 @@

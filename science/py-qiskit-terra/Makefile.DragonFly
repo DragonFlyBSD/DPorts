@@ -1,1 +1,0 @@
-WRKSRC=	${WRKDIR}/qiskit-${DISTVERSION}

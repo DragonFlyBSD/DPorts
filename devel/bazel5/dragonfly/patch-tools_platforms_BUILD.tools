@@ -1,0 +1,30 @@
+--- tools/platforms/BUILD.tools.orig	Tue Jan  1 00:00:00 1980
++++ tools/platforms/BUILD.tools	Mon Mar
+@@ -77,6 +77,11 @@ alias(
+ )
+ 
+ alias(
++    name = "dragonfly",
++    actual = "@platforms//os:dragonfly",
++)
++
++alias(
+     name = "android",
+     actual = "@platforms//os:android",
+ )
+@@ -115,6 +120,7 @@ platform(
+         "@platforms//os:osx",
+         "@platforms//os:freebsd",
+         "@platforms//os:openbsd",
++        "@platforms//os:dragonfly",
+         "@platforms//os:linux",
+         "@platforms//os:windows",
+     ],
+@@ -138,6 +144,7 @@ platform(
+         "@platforms//os:osx",
+         "@platforms//os:freebsd",
+         "@platforms//os:openbsd",
++        "@platforms//os:dragonfly",
+         "@platforms//os:linux",
+         "@platforms//os:windows",
+     ],

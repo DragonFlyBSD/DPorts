@@ -1,5 +1,5 @@
---- tests/test-runner.c.orig	2022-11-01 14:11:31.710109000 +0100
-+++ tests/test-runner.c	2022-11-01 14:24:36.312796000 +0100
+--- tests/test-runner.c.orig	2024-08-24 15:43:55 UTC
++++ tests/test-runner.c
 @@ -29,6 +29,7 @@
  #include <unistd.h>
  #include <stdio.h>
@@ -18,7 +18,7 @@
  #ifndef PR_SET_PTRACER
  # define PR_SET_PTRACER 0x59616d61
  #endif
-@@ -276,17 +279,22 @@
+@@ -276,17 +279,22 @@ is_debugger_attached(void)
  		close(pipefd[0]);
  		if (buf == '-')
  			_exit(1);
@@ -41,7 +41,7 @@
  		rc = prctl(PR_SET_PTRACER, pid);
  		if (rc != 0 && errno != EINVAL) {
  			/* An error prevents us from telling if a debugger is attached.
-@@ -300,6 +308,7 @@
+@@ -300,6 +308,7 @@ is_debugger_attached(void)
  			/* Signal to client that parent is ready by passing '+' */
  			write(pipefd[1], "+", 1);
  		}
@@ -49,19 +49,10 @@
  		close(pipefd[1]);
  
  		waitpid(pid, &status, 0);
-@@ -315,18 +324,16 @@
- 	const struct test *t;
- 	pid_t pid;
- 	int total, pass;
-+#ifdef __DragonFly__
-+	int status;
-+#else
- 	siginfo_t info;
-+#endif
- 
+@@ -327,13 +336,9 @@ int main(int argc, char *argv[])
  	if (isatty(fileno(stderr)))
  		is_atty = 1;
--
+ 
 -	if (is_debugger_attached()) {
 -		fd_leak_check_enabled = 0;
 -		timeouts_enabled = 0;
@@ -69,49 +60,36 @@
 -		fd_leak_check_enabled = !getenv("WAYLAND_TEST_NO_LEAK_CHECK");
 -		timeouts_enabled = !getenv("WAYLAND_TEST_NO_TIMEOUTS");
 -	}
++
 +	fd_leak_check_enabled = !getenv("WAYLAND_TEST_NO_LEAK_CHECK");
 +	timeouts_enabled = !getenv("WAYLAND_TEST_NO_TIMEOUTS");
  
  	if (argc == 2 && strcmp(argv[1], "--help") == 0)
  		usage(argv[0], EXIT_SUCCESS);
-@@ -358,6 +365,12 @@
- 		if (pid == 0)
- 			run_test(t); /* never returns */
- 
-+#ifdef __DragonFly__
-+		if (wait(&status)) {
-+			fprintf(stderr, "waitid failed: %m\n");
-+			abort();
-+		}
-+#else
- 		if (waitid(P_PID, pid, &info, WEXITED)) {
- 			stderr_set_color(RED);
- 			fprintf(stderr, "waitid failed: %s\n",
-@@ -366,6 +379,21 @@
- 
+@@ -374,6 +379,20 @@ int main(int argc, char *argv[])
  			abort();
  		}
-+#endif
-+
+ 
 +		fprintf(stderr, "test \"%s\":\t", t->name);
 +#ifdef __DragonFly__
-+		if (WIFEXITED(status)) {
-+			fprintf(stderr, "exit status %d", WEXITSTATUS(status));
-+			if (WEXITSTATUS(status) == EXIT_SUCCESS)
++		if (WIFEXITED(info)) {
++			fprintf(stderr, "exit status %d", WEXITSTATUS(info));
++			if (WEXITSTATUS(info) == EXIT_SUCCESS)
 +				success = 1;
 +			break;
-+		} else if (WIFSIGNALED(status) || WCOREDUMP(status)) {
-+			fprintf(stderr, "signal %d", WTERMSIG(status));
++		} else if (WIFSIGNALED(info) || WCOREDUMP(info)) {
++			fprintf(stderr, "signal %d", WTERMSIG(info));
 +			break;
 +		}
 +#else
 + 	
- 
- 		switch (info.si_code) {
- 		case CLD_EXITED:
-@@ -390,6 +418,7 @@
- 
- 			break;
++
+ 		if (WIFEXITED(info)) {
+ 			if (WEXITSTATUS(info) == EXIT_SUCCESS)
+ 				success = !t->must_fail;
+@@ -392,6 +411,7 @@ int main(int argc, char *argv[])
+ 			fprintf(stderr, "test \"%s\":\tsignal %d",
+ 				t->name, WTERMSIG(info));
  		}
 +#endif
  

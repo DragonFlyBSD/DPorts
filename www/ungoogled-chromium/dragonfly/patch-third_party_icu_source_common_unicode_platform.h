@@ -1,5 +1,5 @@
 diff --git third_party/icu/source/common/unicode/platform.h third_party/icu/source/common/unicode/platform.h
-index a997843660c..723ae2498ad 100644
+index a997843660c9..723ae2498ad7 100644
 --- third_party/icu/source/common/unicode/platform.h
 +++ third_party/icu/source/common/unicode/platform.h
 @@ -173,8 +173,8 @@

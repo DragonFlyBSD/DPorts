@@ -1,20 +1,65 @@
---- meson.build.orig	2023-09-17 14:43:06 UTC
+--- meson.build.orig	2024-06-10 18:35:25 UTC
 +++ meson.build
-@@ -85,7 +85,7 @@ have_tools = get_option('tools') \
+@@ -44,7 +44,7 @@ genh = []
+ qapi_trace_events = []
+ 
+ bsd_oses = ['gnu/kfreebsd', 'freebsd', 'netbsd', 'openbsd', 'dragonfly', 'darwin']
+-supported_oses = ['windows', 'freebsd', 'netbsd', 'openbsd', 'darwin', 'sunos', 'linux']
++supported_oses = ['windows', 'freebsd', 'netbsd', 'openbsd', 'darwin', 'sunos', 'linux', 'dragonfly']
+ supported_cpus = ['ppc', 'ppc64', 's390x', 'riscv32', 'riscv64', 'x86', 'x86_64',
+   'arm', 'aarch64', 'loongarch64', 'mips', 'mips64', 'sparc64']
+ 
+@@ -187,7 +187,7 @@ have_tools = get_option('tools') \
    .allowed()
  have_ga = get_option('guest_agent') \
    .disable_auto_if(not have_system and not have_tools) \
--  .require(targetos in ['sunos', 'linux', 'windows', 'freebsd', 'netbsd', 'openbsd'],
-+  .require(targetos in ['sunos', 'linux', 'windows', 'freebsd', 'netbsd', 'openbsd', 'dragonfly'],
+-  .require(host_os in ['sunos', 'linux', 'windows', 'freebsd', 'netbsd', 'openbsd'],
++  .require(host_os in ['sunos', 'linux', 'windows', 'freebsd', 'netbsd', 'openbsd', 'dragonfly'],
             error_message: 'unsupported OS for QEMU guest agent') \
    .allowed()
  have_block = have_system or have_tools
-@@ -441,7 +441,7 @@ if get_option('hax').allowed()
-     accelerators += 'CONFIG_HAX'
-   endif
+@@ -737,7 +737,7 @@ if get_option('hvf').allowed()
  endif
--if targetos == 'netbsd'
-+if targetos in [ 'netbsd', 'dragonfly' ]
+ 
+ nvmm = not_found
+-if host_os == 'netbsd'
++if host_os in [ 'netbsd', 'dragonfly' ]
    nvmm = cc.find_library('nvmm', required: get_option('nvmm'))
    if nvmm.found()
      accelerators += 'CONFIG_NVMM'
+@@ -1317,7 +1317,7 @@ if have_system and get_option('curses').
+   msg = get_option('curses').enabled() ? 'curses library not found' : ''
+   curses_compile_args = ['-DNCURSES_WIDECHAR=1']
+   if curses.found()
+-    if cc.links(curses_test, args: curses_compile_args, dependencies: [curses])
++    if cc.links(curses_test, args: '-DNCURSES_WIDECHAR', args: '-DNCURSES_WIDECHAR', args: curses_compile_args, dependencies: [curses])
+       curses = declare_dependency(compile_args: curses_compile_args, dependencies: [curses],
+                                   version: curses.version())
+     else
+@@ -1338,7 +1338,7 @@ if have_system and get_option('curses').
+         libcurses = cc.find_library(curses_libname,
+                                     required: false)
+         if libcurses.found()
+-          if cc.links(curses_test, args: curses_compile_args, dependencies: libcurses)
++          if cc.links(curses_test, args: '-DNCURSES_WIDECHAR', args: '-DNCURSES_WIDECHAR', args: curses_compile_args, dependencies: libcurses)
+             curses = declare_dependency(compile_args: curses_compile_args,
+                                         dependencies: [libcurses])
+             break
+@@ -2425,7 +2425,7 @@ config_host_data.set('CONFIG_ASAN_IFACE_
+ have_inotify_init = cc.has_header_symbol('sys/inotify.h', 'inotify_init')
+ have_inotify_init1 = cc.has_header_symbol('sys/inotify.h', 'inotify_init1')
+ inotify = not_found
+-if (have_inotify_init or have_inotify_init1) and host_os == 'freebsd'
++if (have_inotify_init or have_inotify_init1) and host_os in ['freebsd','dragonfly']
+   # libinotify-kqueue
+   inotify = cc.find_library('inotify')
+   if have_inotify_init
+@@ -4475,7 +4475,7 @@ summary_info += {'libudev':           li
+ summary_info += {'FUSE lseek':        fuse_lseek.found()}
+ summary_info += {'selinux':           selinux}
+ summary_info += {'libdw':             libdw}
+-if host_os == 'freebsd'
++if host_os in ['freebsd','dragonfly']
+   summary_info += {'libinotify-kqueue': inotify}
+ endif
+ summary(summary_info, bool_yn: true, section: 'Dependencies')

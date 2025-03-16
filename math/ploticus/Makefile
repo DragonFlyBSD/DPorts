@@ -1,6 +1,6 @@
 PORTNAME=	ploticus
 PORTVERSION=	2.40
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	math
 MASTER_SITES=	SF
 DISTNAME=	pl${PORTVERSION:S/.//}src
@@ -8,6 +8,9 @@ DISTNAME=	pl${PORTVERSION:S/.//}src
 MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	Generates plots and graphs from data
 WWW=		https://ploticus.sourceforge.net/
+
+DEPRECATED=	Depends on expired graphics/ming
+EXPIRATION_DATE=2024-07-31
 
 LIB_DEPENDS=	libgd.so:graphics/gd \
 		libming.so:graphics/ming \
@@ -49,8 +52,8 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
 	cd ${WRKSRC}/prefabs && ${FIND} . | \
 		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${STAGEDIR}${DATADIR}
-	${INSTALL_MAN} ${WRKSRC}/man/man1/pl.1 ${STAGEDIR}${MANPREFIX}/man/man1/ploticus.1
-	${INSTALL_MAN} ${WRKSRC}/man/man3/libploticus.3 ${STAGEDIR}${MANPREFIX}/man/man3
+	${INSTALL_MAN} ${WRKSRC}/man/man1/pl.1 ${STAGEDIR}${PREFIX}/share/man/man1/ploticus.1
+	${INSTALL_MAN} ${WRKSRC}/man/man3/libploticus.3 ${STAGEDIR}${PREFIX}/share/man/man3
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	cd ${WRKSRC}/pltestsuite && ${FIND} . \! -name "*.orig" | \
 		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${STAGEDIR}${EXAMPLESDIR}

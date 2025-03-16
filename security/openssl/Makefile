@@ -1,9 +1,7 @@
 PORTNAME=	openssl
-PORTVERSION=	3.0.13
+PORTVERSION=	3.0.15
 PORTEPOCH=	1
 CATEGORIES=	security devel
-MASTER_SITES=	https://www.openssl.org/source/ \
-		ftp://ftp.cert.dfn.de/pub/tools/net/openssl/source/
 
 MAINTAINER=	brnrd@FreeBSD.org
 COMMENT=	TLSv1.3 capable SSL and crypto library
@@ -14,10 +12,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 #EXPIRATION_DATE=	2026-09-07
 
-CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl111 openssl3[12] openssl-quictls
+CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl111 openssl3* openssl*-quictls
 
 USES=		cpe perl5
 USE_PERL5=	build
+USE_GITHUB=	yes
+GH_TAGNAME=	${PORTNAME}-${PORTVERSION}
 TEST_TARGET=	test
 
 HAS_CONFIGURE=	yes
@@ -153,8 +153,7 @@ PLIST_SUB+=	OPENSSLDIR=${OPENSSLDIR:S=^${PREFIX}/==}
 .include "version.mk"
 
 post-patch:
-	${REINPLACE_CMD} -Ee 's|^MANDIR=.*$$|MANDIR=$$(INSTALLTOP)/man|' \
-		-e 's|^(build\|install)_docs: .*|\1_docs: \1_man_docs|' \
+	${REINPLACE_CMD} -Ee 's|^(build\|install)_docs: .*|\1_docs: \1_man_docs|' \
 		${WRKSRC}/Configurations/unix-Makefile.tmpl
 	${REINPLACE_CMD} 's|SHLIB_VERSION=3|SHLIB_VERSION=${OPENSSL_SHLIBVER}|' \
 		${WRKSRC}/VERSION.dat
@@ -180,7 +179,7 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/openssl
 
 post-install-MAN3-on:
-	( cd ${STAGEDIR}/${PREFIX} ; ${FIND} man/man3 -not -type d ; \
-		${FIND} man/man7 -not -type d ) | ${SED} 's/$$/.gz/' >> ${TMPPLIST}
+	( cd ${STAGEDIR}/${PREFIX} ; ${FIND} share/man/man3 -not -type d ; \
+		${FIND} share/man/man7 -not -type d ) | ${SED} 's/$$/.gz/' >> ${TMPPLIST}
 
 .include <bsd.port.post.mk>

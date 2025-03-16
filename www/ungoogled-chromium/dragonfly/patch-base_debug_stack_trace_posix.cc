@@ -1,8 +1,8 @@
 diff --git base/debug/stack_trace_posix.cc base/debug/stack_trace_posix.cc
-index d7e0cb370ad..40342f30e28 100644
+index c05861aec8be..b6e116f98b83 100644
 --- base/debug/stack_trace_posix.cc
 +++ base/debug/stack_trace_posix.cc
-@@ -813,7 +813,11 @@ class SandboxSymbolizeHelper {
+@@ -818,7 +818,11 @@ class SandboxSymbolizeHelper {
      {
        ScopedPrSetDumpable s;
        mem_fd = base::ScopedFD(
@@ -14,7 +14,7 @@ index d7e0cb370ad..40342f30e28 100644
        if (!mem_fd.is_valid()) {
          return;
        }
-@@ -870,6 +874,7 @@ class SandboxSymbolizeHelper {
+@@ -875,6 +879,7 @@ class SandboxSymbolizeHelper {
    // Parses /proc/self/maps in order to compile a list of all object file names
    // for the modules that are loaded in the current process.
    // Returns true on success.

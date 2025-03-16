@@ -1,0 +1,20 @@
+--- util/meson.build.orig	2024-06-10 18:35:25 UTC
++++ util/meson.build
+@@ -13,7 +13,7 @@ if host_os != 'windows'
+   util_ss.add(files('event_notifier-posix.c'))
+   util_ss.add(files('mmap-alloc.c'))
+   freebsd_dep = []
+-  if host_os == 'freebsd'
++  if host_os in ['freebsd','dragonfly']
+     freebsd_dep = util
+   endif
+   util_ss.add(files('oslib-posix.c'), freebsd_dep)
+@@ -105,7 +105,7 @@ if have_block
+   util_ss.add(files('timed-average.c'))
+   if config_host_data.get('CONFIG_INOTIFY1')
+     freebsd_dep = []
+-    if host_os == 'freebsd'
++    if host_os in ['freebsd','dragonfly']
+       freebsd_dep = inotify
+     endif
+     util_ss.add(files('filemonitor-inotify.c'), freebsd_dep)

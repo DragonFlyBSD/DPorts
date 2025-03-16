@@ -1,6 +1,6 @@
 PORTNAME=	parrot
 PORTVERSION=	8.1.0
-PORTREVISION=	20
+PORTREVISION=	21
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.parrot.org/pub/parrot/releases/supported/${PORTVERSION}/ \
 		LOCAL/sunpoet
@@ -10,6 +10,9 @@ COMMENT=	Virtual machine for dynamic languages
 WWW=		https://www.parrotcode.org/
 
 LICENSE=	ART20
+
+DEPRECATED=	Development stopped in 2017
+EXPIRATION_DATE=	2024-12-31
 
 BROKEN_FreeBSD_14=	Fails to package
 BROKEN_FreeBSD_15=	Fails to package
@@ -30,7 +33,8 @@ CONFIGURE_ARGS=	--cc=${CC} --cxx=${CXX} --link=${CXX} \
 		--prefix=${PREFIX} \
 		--icu-config=${LOCALBASE}/bin/icu-config \
 		--lex=${LOCALBASE}/bin/flex \
-		--yacc=${LOCALBASE}/bin/bison
+		--yacc=${LOCALBASE}/bin/bison \
+		--mandir=${PREFIX}/share/man
 CONFIGURE_SCRIPT=	Configure.pl
 INSTALL_TARGET=	install-dev
 TEST_TARGET=	test

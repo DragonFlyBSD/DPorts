@@ -1,5 +1,5 @@
 diff --git third_party/dawn/src/dawn/common/Platform.h third_party/dawn/src/dawn/common/Platform.h
-index 7833c5322f9..2fca89f0383 100644
+index 916b25f93750..8563a12d13ff 100644
 --- third_party/dawn/src/dawn/common/Platform.h
 +++ third_party/dawn/src/dawn/common/Platform.h
 @@ -59,7 +59,7 @@

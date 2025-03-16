@@ -1,23 +1,22 @@
-OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO}
+OPTIONS_DEFAULT:=        ${OPTIONS_DEFAULT:NPULSEAUDIO:NPROFILE}
 
 # Not ready for LTO
 OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NLTO}
 
 LDFLAGS+=		-R${PREFIX}/lib/thunderbird
-MAKE_ENV+=		AR=/usr/bin/ar LD=/usr/bin/ld \
-			STRIP=${STRIP_CMD} STRIP_FLAGS=
+MAKE_ENV+=		AR=/usr/bin/ar LD=/usr/bin/ld
 
 MOZ_OPTIONS+=	--host=${ARCH}-dports-${OPSYS:tl}${OSREL}
 MOZ_OPTIONS+=	--disable-webrtc
 # clang to generate C/c++ bindings...  assume default llvm
-MOZ_OPTIONS+=   --with-clang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang \
-                --with-libclang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
+MOZ_OPTIONS+=   --with-clang-path=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang \
+                --with-libclang-path=${LOCALBASE}/llvm${LLVM_VERSION}/lib
 CXXFLAGS+=      -Wno-multistatement-macros -Wno-class-memaccess
 
 # wasm unable to find clang and c;ang++ and wasm-ld
-BINARY_ALIAS=	clang=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang \
-		clang++=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang++ \
-		wasm-ld=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/wasm-ld
+BINARY_ALIAS=	clang=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang \
+		clang++=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang++ \
+		wasm-ld=${LOCALBASE}/llvm${LLVM_VERSION}/bin/wasm-ld
 
 # alsa headers use 'u_int32_t' and other BerkeleyDB/nvi fixed types (_XOPEN_SOURCE)
 # fix error: 'snprintf' was not declared in this scope
@@ -35,3 +34,5 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's@gtk+-wayland@&z@g' \
 		${WRKSRC}/toolkit/moz.configure
 
+
+USES:= ${USES:Nelfctl}

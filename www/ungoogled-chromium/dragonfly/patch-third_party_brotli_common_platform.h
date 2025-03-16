@@ -1,5 +1,5 @@
 diff --git third_party/brotli/common/platform.h third_party/brotli/common/platform.h
-index 4e470b6e289..f5f07239682 100644
+index 4e470b6e289b..f5f072396829 100644
 --- third_party/brotli/common/platform.h
 +++ third_party/brotli/common/platform.h
 @@ -30,7 +30,7 @@

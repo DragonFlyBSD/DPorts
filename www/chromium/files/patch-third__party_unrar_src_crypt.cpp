@@ -1,7 +1,7 @@
---- third_party/unrar/src/crypt.cpp.orig	2022-02-07 13:39:41 UTC
+--- third_party/unrar/src/crypt.cpp.orig	2024-07-30 11:12:21 UTC
 +++ third_party/unrar/src/crypt.cpp
-@@ -120,6 +120,8 @@ void GetRnd(byte *RndBuf,size_t BufSize)
-     Success=CryptGenRandom(hProvider, (DWORD)BufSize, RndBuf) == TRUE;
+@@ -116,6 +116,8 @@ void GetRnd(byte *RndBuf,size_t BufSize)
+     Success=CryptGenRandom(hProvider, (DWORD)BufSize, RndBuf) != FALSE;
      CryptReleaseContext(hProvider, 0);
    }
 +#elif defined(__OpenBSD__)

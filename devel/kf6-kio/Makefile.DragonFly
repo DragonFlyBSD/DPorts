@@ -5,3 +5,5 @@ USES+=	gmake
 dfly-patch:
 	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
 		${WRKSRC}/metainfo.yaml
+	${REINPLACE_CMD} -e 's,Q_OS_FREEBSD,Q_OS_DRAGONFLY,g' \
+		${WRKSRC}/src/gui/openfilemanagerwindowjob_p.h

@@ -1,8 +1,8 @@
 diff --git base/logging_unittest.cc base/logging_unittest.cc
-index 529e3243da3..5636d2db771 100644
+index 667561d2cffc..9340f43c86f6 100644
 --- base/logging_unittest.cc
 +++ base/logging_unittest.cc
-@@ -32,7 +32,8 @@
+@@ -41,7 +41,8 @@
  #include "base/posix/eintr_wrapper.h"
  #endif  // BUILDFLAG(IS_POSIX)
  
@@ -12,7 +12,7 @@ index 529e3243da3..5636d2db771 100644
  #include <ucontext.h>
  #endif
  
-@@ -575,7 +576,7 @@ void CheckCrashTestSighandler(int, siginfo_t* info, void* context_ptr) {
+@@ -579,7 +580,7 @@ void CheckCrashTestSighandler(int, siginfo_t* info, void* context_ptr) {
    // need the arch-specific boilerplate below, which is inspired by breakpad.
    // At the same time, on OSX, ucontext.h is deprecated but si_addr works fine.
    uintptr_t crash_addr = 0;
@@ -23,4 +23,4 @@ index 529e3243da3..5636d2db771 100644
    ucontext_t* context = reinterpret_cast<ucontext_t*>(context_ptr);
 diff --git base/message_loop/message_loop_task_runner.cc base/message_loop/message_loop_task_runner.cc
 new file mode 100644
-index 00000000000..72989b078cb
+index 000000000000..72989b078cb6

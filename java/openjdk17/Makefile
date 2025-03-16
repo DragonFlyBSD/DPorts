@@ -62,7 +62,7 @@ NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	17
 JDK_MINOR_VERSION=	0
-JDK_PATCH_VERSION=	9
+JDK_PATCH_VERSION=	11
 JDK_BUILD_NUMBER=	9
 BSD_JDK_VERSION=	1
 
@@ -131,6 +131,7 @@ JDK_BUILD_JVM=	server
 
 MAKE_ENV+=		--with-toolchain-type=${COMPILER_TYPE}
 CONFIGURE_ARGS+=	--with-toolchain-type=${COMPILER_TYPE}
+CONFIGURE_ARGS+=	--disable-warnings-as-errors
 
 .if ${OPSYS} == "FreeBSD"
 .if ${COMPILER_TYPE} == gcc
@@ -140,30 +141,11 @@ CONFIGURE_ARGS+=	--with-extra-ldflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFA
 			--with-extra-cxxflags="-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFAULT}"
 .else
 MAKE_ENV+=	USE_CLANG=true
-.if ${COMPILER_VERSION} >= 130
-EXTRA_CFLAGS+=		-Wno-unused-but-set-parameter
-.if ${COMPILER_VERSION} >= 140
-EXTRA_CFLAGS+=		-Wno-bitwise-instead-of-logical
-.endif
-.if ${COMPILER_VERSION} >= 150
-EXTRA_CFLAGS+=		-Wno-deprecated-non-prototype
-.endif
-CONFIGURE_ARGS+=	--with-extra-cflags="${EXTRA_CFLAGS}"
-CONFIGURE_ARGS+=	--with-extra-cxxflags="${EXTRA_CFLAGS}"
-.endif
-.endif
 .endif
 
-.if ${ARCH} == aarch64 || ${ARCH:Mpowerpc64*}
-CONFIGURE_ARGS+=	--disable-warnings-as-errors
-.endif
-.if ${ARCH} == aarch64 || (defined(PPC_ABI) && ${PPC_ABI} == ELFv1)
-CONFIGURE_ARGS+=	--disable-dtrace
-.endif
 .if ${ARCH} == aarch64
-CONFIGURE_ARGS+=	--with-boot-jdk-jvmargs=-XX:-UseCompressedClassPointers
+CONFIGURE_ARGS+=	--with-boot-jdk-jvmargs=-XX:-UseCompressedClassPointers --disable-dtrace
 MAKE_ENV+=		JAVA_TOOL_OPTIONS="-XX:-UseCompressedClassPointers"
-EXTRA_PATCHES=		${PATCHDIR}/extra-patch-src_hotspot_share_runtime_arguments.cpp
 .endif
 
 .if empty(ICONV_LIB)
@@ -172,6 +154,7 @@ ICONV_CFLAGS=	-DLIBICONV_PLUG
 ICONV_CFLAGS=	-I${LOCALBASE}/include
 ICONV_LDFLAGS=	-L${LOCALBASE}/lib
 ICONV_LIBS=	${ICONV_LIB}
+.endif
 .endif
 
 post-patch:
@@ -184,6 +167,12 @@ post-patch:
 		-e 's|%%ICONV_LDFLAGS%%|${ICONV_LDFLAGS}|' \
 		-e 's|%%ICONV_LIBS%%|${ICONV_LIBS}|' \
 		${WRKSRC}/make/autoconf/libraries.m4
+
+post-build:
+.if defined(OPENJDK_SYMLINK_CACERTS)
+	@${RM} ${JDK_IMAGEDIR}/lib/security/cacerts
+	@${LN} -sf ${OPENJDK_SYMLINK_CACERTS} ${JDK_IMAGEDIR}/lib/security/cacerts
+.endif
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${INSTALLDIR}

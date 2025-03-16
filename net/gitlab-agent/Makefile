@@ -1,6 +1,5 @@
 PORTNAME=	gitlab-agent
-PORTVERSION=	16.9.2
-PORTREVISION=	1
+PORTVERSION=	${GITLAB_VERSION}
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 
@@ -14,20 +13,21 @@ LICENSE=	MIT
 BUILD_DEPENDS=	git>=0:devel/git \
 		golangci-lint>=0:devel/golangci-lint
 
-USES=		go:modules,1.21
-GO_MODULE=	gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v16
+USES=		go:modules,1.22
+GO_MODULE=	gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v17
 
 _BUILD_DATE=	$$(date -u "+%Y-%m-%d-%H%M UTC")
+GO_TARGET=     ./cmd/kas
 GO_BUILDFLAGS= -tags="tracer_static,tracer_static_jaeger" \
 		-ldflags=" \
 		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v16/cmd.Version=v${PORTVERSION}' \
 		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v16/cmd.Commit=${GL_TAGNAME:C/^(........).*/\1/}' \
 		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v16/cmd.BuildTime=${_BUILD_DATE}'"
-GO_TARGET=     ./cmd/kas
 
 PLIST_FILES=	bin/kas
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/kas ${STAGEDIR}${PREFIX}/bin/kas
 
+.include "${.CURDIR}/../../www/gitlab/Makefile.common"
 .include <bsd.port.mk>

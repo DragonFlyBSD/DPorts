@@ -1,2 +1,3 @@
-SHA256 (flock-2.19.tar.gz) = 9716618042a753cc4bd6e787d0886ea5fce8a167d5ce62421cee2c09ea86fbda
-SIZE (flock-2.19.tar.gz) = 5452
+TIMESTAMP = 1640072142
+SHA256 (util-linux-2.37.2.tar.gz) = 15db966474e459b33fa390a6b892190a92079a73ca45384cde4c86e6ed265a86
+SIZE (util-linux-2.37.2.tar.gz) = 12232498

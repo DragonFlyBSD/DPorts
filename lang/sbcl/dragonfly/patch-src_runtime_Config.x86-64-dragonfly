@@ -1,0 +1,27 @@
+--- src/runtime/Config.x86-64-dragonfly.orig	Thu May 30 07:25:20 2024
++++ src/runtime/Config.x86-64-dragonfly	Mon Mar
+@@ -9,15 +9,15 @@
+ # provided with absolutely no warranty. See the COPYING and CREDITS
+ # files for more information.
+ 
+-# DragonFly BSD config is a modification of one for FreeBSD
+-
+ include Config.x86-64-bsd
+ 
+-LINKFLAGS += -dynamic -export-dynamic
++# Until sbcl-0.6.7.3, we used "LINKFLAGS+=-static" here, which
++# worked fine for most things, but LOAD-FOREIGN & friends require
++# dlopen() etc., which in turn depend on dynamic linking of the
++# runtime.
++OS_LIBS += -lutil -L/usr/local/lib
++CPPFLAGS += -isystem/usr/local/include
+ 
+-# Link against pthread even if we do not want threaded SBCL
+-# This is because of bug in DragonFly RTLD which sometimes
+-# (in very rare situations) makes loading threaded libraries
+-# impossible without it.
+-# See: https://bugs.dragonflybsd.org/issues/2663
+-OS_LIBS   += -lutil -lpthread
++ifdef LISP_FEATURE_SB_THREAD
++  OS_LIBS += -lpthread
++endif

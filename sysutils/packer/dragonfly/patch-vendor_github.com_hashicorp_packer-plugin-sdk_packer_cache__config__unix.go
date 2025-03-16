@@ -1,10 +1,11 @@
---- vendor/github.com/hashicorp/packer-plugin-sdk/packer/cache_config_unix.go.orig	2022-10-03 22:28:17.416378000 +0200
-+++ vendor/github.com/hashicorp/packer-plugin-sdk/packer/cache_config_unix.go	2022-10-03 22:28:36.475944000 +0200
-@@ -1,5 +1,5 @@
+--- vendor/github.com/hashicorp/packer-plugin-sdk/packer/cache_config_unix.go.orig	Tue Mar 11 16:52:15 2025
++++ vendor/github.com/hashicorp/packer-plugin-sdk/packer/cache_config_unix.go	Tue Mar 11 16:52:46 2025
+@@ -1,7 +1,7 @@
+ // Copyright (c) HashiCorp, Inc.
+ // SPDX-License-Identifier: MPL-2.0
+ 
 -//go:build darwin || freebsd || linux || netbsd || openbsd || solaris
--// +build darwin freebsd linux netbsd openbsd solaris
 +//go:build darwin || dragonfly || freebsd || linux || netbsd || openbsd || solaris
-+// +build darwin dragonfly freebsd linux netbsd openbsd solaris
  
  package packer
  

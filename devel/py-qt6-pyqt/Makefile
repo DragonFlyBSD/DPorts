@@ -1,24 +1,24 @@
 PORTNAME=	pyqt
-PORTVERSION=	${PYQT_VERSION}
+DISTVERSION=	${PYQT_VERSION}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITES_PYQT}
 PKGNAMEPREFIX=	${PYQT_PY_RELNAME}-
 DISTNAME=	${PYQT_DISTNAME}
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Python bindings for the Qt6 toolkit, QtCore module
+COMMENT=	Python bindings for the Qt6 toolkit
 WWW=		https://riverbankcomputing.com/software/pyqt
 
 PYQT_DIST=	yes
 
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libqscintilla2_qt6.so:devel/qscintilla2-qt6
-BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dbus>1:devel/py-dbus@${PY_FLAVOR}
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dbus>1:devel/py-dbus@${PY_FLAVOR}
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+		${PYTHON_PKGNAMEPREFIX}dbus>1:devel/py-dbus@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>1:devel/py-dbus@${PY_FLAVOR}
 
 USES=		gl pkgconfig python pyqt:6 qt:6
-USE_GL+=	gl opengl
-USE_LOCALE=	C.UTF-8
+USE_GL=		opengl
 USE_PYTHON=	concurrent flavors
 USE_PYQT=	pysip qtbuilder sip
 USE_QT=		base connectivity declarative imageformats multimedia \

@@ -1,4 +1,4 @@
---- content/browser/scheduler/responsiveness/jank_monitor_impl.cc.orig	2023-08-18 10:26:52 UTC
+--- content/browser/scheduler/responsiveness/jank_monitor_impl.cc.orig	2024-07-31 14:19:23 UTC
 +++ content/browser/scheduler/responsiveness/jank_monitor_impl.cc
 @@ -340,7 +340,7 @@ void JankMonitorImpl::ThreadExecutionState::DidRunTask
      // in context menus, among others). Simply ignore the mismatches for now.

@@ -1,0 +1,12 @@
+diff --git chrome/browser/resources/sandbox_internals/BUILD.gn chrome/browser/resources/sandbox_internals/BUILD.gn
+index 1b2f719a1471..e6e245e5983e 100644
+--- chrome/browser/resources/sandbox_internals/BUILD.gn
++++ chrome/browser/resources/sandbox_internals/BUILD.gn
+@@ -7,6 +7,7 @@ import("//ui/webui/resources/tools/build_webui.gni")
+ assert(is_android || is_linux || is_chromeos || is_win)
+ 
+ build_webui("build") {
++  print(current_os)
+   grd_prefix = "sandbox_internals"
+   static_files = [ "sandbox_internals.html" ]
+ 

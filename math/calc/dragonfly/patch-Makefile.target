@@ -1,0 +1,52 @@
+--- Makefile.target.orig	Fri Oct  4 06:12:04 2024
++++ Makefile.target	Fri Oct
+@@ -255,6 +255,49 @@ MAKE= gmake
+ 
+ endif	# ($(target),FreeBSD)
+ 
++#######################
++# DragonFlyBSD target #
++#######################
++
++ifeq ($(target),DragonFly)
++
++# default build type for this target
++#
++BLD_TYPE= calc-dynamic-only
++
++# target specific library parameters
++#
++CC_SHARE= -fPIC
++DEFAULT_LIB_INSTALL_PATH= ${PWD}:/lib:/usr/lib:${LIBDIR}:${PREFIX}/lib
++LD_SHARE= "-Wl,-rpath,${DEFAULT_LIB_INSTALL_PATH}" \
++    "-Wl,-rpath-link,${DEFAULT_LIB_INSTALL_PATH}"
++LIBCALC_SHLIB= -shared "-Wl,-soname,libcalc${LIB_EXT_VERSION}"
++LIBCUSTCALC_SHLIB= -shared "-Wl,-soname,libcustcalc${LIB_EXT_VERSION}"
++
++CC_STATIC=
++LD_STATIC=
++LIBCALC_STATIC=
++LIBCUSTCALC_STATIC=
++
++# common values set for this target
++#
++#CCWARN= -Wall
++CCWARN= -Wall -Wextra -pedantic
++WNO_IMPLICT= -Wno-implicit
++WNO_ERROR_LONG_LONG= -Wno-error=long-long
++WNO_LONG_LONG= -Wno-long-long
++CCWERR=
++CCOPT= ${DEBUG}
++CCMISC=
++LCC= gcc
++CC= ${PURIFY} ${LCC} ${CCWERR}
++
++# We must use gmake as the FreeBSD target because under some older
++# releases of FreeBSD, make not support conditional syntax.
++#
++MAKE= gmake
++
++endif	# ($(target),DragonFly)
+ 
+ ##################
+ # OpenBSD target #

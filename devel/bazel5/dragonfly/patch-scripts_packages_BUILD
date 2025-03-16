@@ -1,0 +1,10 @@
+--- scripts/packages/BUILD.orig	Tue Jan  1 00:00:00 1980
++++ scripts/packages/BUILD	Mon Mar
+@@ -24,6 +24,7 @@ filegroup(
+         ],
+         "//src/conditions:freebsd": [],
+         "//src/conditions:openbsd": [],
++        "//src/conditions:dragonfly": [],
+         "//src/conditions:darwin": [
+             ":with-jdk/install.sh",
+             ":without-jdk/install.sh",

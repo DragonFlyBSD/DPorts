@@ -1,5 +1,5 @@
 diff --git third_party/swiftshader/src/System/Configurator.cpp third_party/swiftshader/src/System/Configurator.cpp
-index 62a9b7eef36..fb34f5da1bd 100644
+index 62a9b7eef361..fb34f5da1bd8 100644
 --- third_party/swiftshader/src/System/Configurator.cpp
 +++ third_party/swiftshader/src/System/Configurator.cpp
 @@ -38,7 +38,7 @@ namespace sw {

@@ -1,3 +1,0 @@
-# stage changed behavior.  Instead of excluding, set option to off by
-# default until stage can be fixed.
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NSCDAEMON}

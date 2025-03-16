@@ -1,0 +1,11 @@
+--- libcxx/include/locale.orig	2018-03-29 01:18:53 UTC
++++ libcxx/include/locale
+@@ -217,7 +217,7 @@ _LIBCPP_PUSH_MACROS
+ 
+ _LIBCPP_BEGIN_NAMESPACE_STD
+ 
+-#if defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ #  define _LIBCPP_GET_C_LOCALE 0
+ #elif defined(__CloudABI__) || defined(__NetBSD__)
+ #  define _LIBCPP_GET_C_LOCALE LC_C_LOCALE

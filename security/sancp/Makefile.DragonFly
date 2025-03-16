@@ -1,2 +1,0 @@
-CFLAGS+=	-Wno-narrowing -Wno-restrict
-CFLAGS+=	-Wno-format-overflow -Wno-stringop-truncation -Wno-stringop-overflow

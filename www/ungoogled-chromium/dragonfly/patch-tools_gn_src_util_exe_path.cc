@@ -1,5 +1,5 @@
 diff --git tools/gn/src/util/exe_path.cc tools/gn/src/util/exe_path.cc
-index e9b44443954..9aa6b614866 100644
+index b5c5f85277bb..3252d8eae6ed 100644
 --- tools/gn/src/util/exe_path.cc
 +++ tools/gn/src/util/exe_path.cc
 @@ -15,7 +15,7 @@

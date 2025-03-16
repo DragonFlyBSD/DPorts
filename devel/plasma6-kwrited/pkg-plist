@@ -1,0 +1,3 @@
+bin/kwrited
+etc/xdg/autostart/kwrited-autostart.desktop
+share/knotifications6/kwrited.notifyrc

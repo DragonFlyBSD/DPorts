@@ -1,8 +1,8 @@
---- src/task-manager-freebsd.c.orig	2018-06-03 15:44:46 UTC
-+++ src/task-manager-freebsd.c
-@@ -9,9 +9,9 @@
-  * (at your option) any later version.
-  */
+--- src/task-manager-freebsd.c.orig	Wed Jan 24 14:04:31 2024
++++ src/task-manager-freebsd.c	Sun Mar
+@@ -13,9 +13,9 @@
+ #include <config.h>
+ #endif
  
 +#include <sys/param.h>
  #include <kvm.h>
@@ -11,7 +11,7 @@
  #include <sys/sysctl.h>
  #include <sys/user.h>
  #include <sys/proc.h>
-@@ -19,7 +19,7 @@
+@@ -23,7 +23,7 @@
  #include <paths.h>
  #include <unistd.h>
  #include <string.h>
@@ -20,7 +20,7 @@
  #include <sys/vmmeter.h>
  #endif
  
-@@ -27,6 +27,7 @@
+@@ -31,6 +31,7 @@
  
  #include "task-manager.h"
  
@@ -28,7 +28,7 @@
  static const gchar ki_stat2state[] = {
  	' ', /* - */
  	'R', /* SIDL */
-@@ -37,6 +38,7 @@ static const gchar ki_stat2state[] = {
+@@ -41,6 +42,7 @@ static const gchar ki_stat2state[] = {
  	'W', /* SWAIT */
  	'L' /* SLOCK */
  };
@@ -36,7 +36,7 @@
  
  
  static guint64
-@@ -136,20 +138,38 @@ get_task_details (struct kinfo_proc *kp,
+@@ -141,20 +143,38 @@ get_task_details (struct kinfo_proc *kp, Task *task)
  	int i, oid[4];
  
  	memset(task, 0, sizeof(Task));
@@ -60,7 +60,7 @@
  	task->vsz = kp->ki_size;
  	task->rss = ((guint64)kp->ki_rssize * (guint64)getpagesize ());
  	task->uid = kp->ki_uid;
- 	task->prio = (gshort)kp->ki_nice;
+ 	task->prio = kp->ki_nice;
  	g_strlcpy (task->name, kp->ki_comm, sizeof(task->name));
 +#endif
  
@@ -75,7 +75,7 @@
  	bufsz = sizeof(buf);
  	memset(buf, 0, sizeof(buf));
  	if (sysctl(oid, 4, buf, &bufsz, 0, 0) == -1) {
-@@ -176,10 +196,41 @@ get_task_details (struct kinfo_proc *kp,
+@@ -181,10 +201,41 @@ get_task_details (struct kinfo_proc *kp, Task *task)
  	}
  	else
  	{
@@ -117,7 +117,7 @@
  	switch (kp->ki_stat)
  	{
  		case SIDL:
-@@ -201,13 +252,33 @@ get_task_details (struct kinfo_proc *kp,
+@@ -206,13 +257,33 @@ get_task_details (struct kinfo_proc *kp, Task *task)
  		default:
  			task->state[i] = '?';
  	}
@@ -151,7 +151,7 @@
  	if (kp->ki_flag & P_TRACED)
  		task->state[i++] = 'X';
  	if (kp->ki_flag & P_WEXIT && kp->ki_stat != SZOMB)
-@@ -216,12 +287,20 @@ get_task_details (struct kinfo_proc *kp,
+@@ -221,12 +292,20 @@ get_task_details (struct kinfo_proc *kp, Task *task)
  		task->state[i++] = 'V';
  	if ((kp->ki_flag & P_SYSTEM) || kp->ki_lock > 0)
  		task->state[i++] = 'L';
@@ -172,7 +172,7 @@
  
  	return TRUE;
  }
-@@ -237,7 +316,11 @@ get_task_list (GArray *task_list)
+@@ -242,7 +321,11 @@ get_task_list (GArray *task_list)
  	if ((kd = kvm_openfiles (_PATH_DEVNULL, _PATH_DEVNULL, NULL, O_RDONLY, NULL)) == NULL)
  		return FALSE;
  
@@ -184,7 +184,7 @@
  	{
  		kvm_close (kd);
  		return FALSE;
-@@ -273,7 +356,11 @@ pid_is_sleeping (GPid pid)
+@@ -278,7 +361,11 @@ pid_is_sleeping (GPid pid)
  		return FALSE;
  	}
  

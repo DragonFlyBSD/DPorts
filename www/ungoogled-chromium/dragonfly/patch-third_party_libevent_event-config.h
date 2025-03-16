@@ -1,5 +1,5 @@
 diff --git third_party/libevent/event-config.h third_party/libevent/event-config.h
-index 22c4b2e6fbf..fab4b729f3a 100644
+index 22c4b2e6fbf9..fab4b729f3a7 100644
 --- third_party/libevent/event-config.h
 +++ third_party/libevent/event-config.h
 @@ -11,7 +11,7 @@

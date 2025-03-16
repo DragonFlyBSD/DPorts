@@ -1,5 +1,5 @@
 diff --git third_party/sqlite/BUILD.gn third_party/sqlite/BUILD.gn
-index ecbabc935d3..1d788ff7610 100644
+index 3aac35efdabb..49228e83f789 100644
 --- third_party/sqlite/BUILD.gn
 +++ third_party/sqlite/BUILD.gn
 @@ -198,7 +198,7 @@ component("chromium_sqlite3") {

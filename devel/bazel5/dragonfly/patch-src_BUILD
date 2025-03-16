@@ -1,0 +1,10 @@
+--- src/BUILD.orig	Tue Jan  1 00:00:00 1980
++++ src/BUILD	Tue Mar
+@@ -35,6 +35,7 @@ md5_cmd = "set -e -o pipefail && %s $(SRCS) | %s | %s 
+         # We avoid using the `head` tool's `-c` option, since it does not exist
+         # on OpenBSD.
+         "//src/conditions:openbsd": md5_cmd % ("/bin/md5", "/bin/md5", "dd bs=32 count=1"),
++        "//src/conditions:dragonfly": md5_cmd % ("/sbin/md5", "/sbin/md5", "head -c 32"),
+         "//conditions:default": md5_cmd % ("md5sum", "md5sum", "head -c 32"),
+     }),
+ ) for suffix, embedded_tools_target in {

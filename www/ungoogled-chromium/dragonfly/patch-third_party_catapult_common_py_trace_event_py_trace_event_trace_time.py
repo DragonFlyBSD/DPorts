@@ -1,5 +1,5 @@
 diff --git third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py
-index 9455125d209..0dced7919ee 100644
+index 9455125d2090..0dced7919ee6 100644
 --- third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py
 +++ third_party/catapult/common/py_trace_event/py_trace_event/trace_time.py
 @@ -27,6 +27,7 @@ _PLATFORMS = {

@@ -1,4 +1,4 @@
---- third_party/libwebrtc/build/build_config.h.orig	2022-09-12 16:44:50 UTC
+--- third_party/libwebrtc/build/build_config.h.orig	2022-01-26 20:57:35 UTC
 +++ third_party/libwebrtc/build/build_config.h
 @@ -72,7 +72,7 @@
  #define OS_WIN 1

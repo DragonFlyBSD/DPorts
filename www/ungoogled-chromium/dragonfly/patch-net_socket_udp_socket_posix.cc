@@ -1,12 +1,11 @@
 diff --git net/socket/udp_socket_posix.cc net/socket/udp_socket_posix.cc
-index 725c97a1cde..b504a8edcaf 100644
+index 4a4b687466d3..dfe7c3903e2a 100644
 --- net/socket/udp_socket_posix.cc
 +++ net/socket/udp_socket_posix.cc
-@@ -75,6 +75,34 @@ const int kActivityMonitorBytesThreshold = 65535;
- const int kActivityMonitorMinimumSamplesForThroughputEstimate = 2;
- const base::TimeDelta kActivityMonitorMsThreshold = base::Milliseconds(100);
+@@ -78,6 +78,32 @@ constexpr int kBindRetries = 10;
+ constexpr int kPortStart = 1024;
+ constexpr int kPortEnd = 65535;
  
-+
 +#if BUILDFLAG(IS_DRAGONFLY)
 +int GetIPv4AddressFromIndex(int socket, uint32_t index, uint32_t* address) {
 +  if (!index) {
@@ -33,11 +32,10 @@ index 725c97a1cde..b504a8edcaf 100644
 +}
 +#endif
 +
-+
- #if BUILDFLAG(IS_APPLE) && !BUILDFLAG(CRONET_BUILD)
- 
- // On macOS, the file descriptor is guarded to detect the cause of
-@@ -919,9 +947,21 @@ int UDPSocketPosix::SetMulticastOptions() {
+ int GetSocketFDHash(int fd) {
+   return fd ^ 1595649551;
+ }
+@@ -853,9 +879,21 @@ int UDPSocketPosix::SetMulticastOptions() {
    if (multicast_interface_ != 0) {
      switch (addr_family_) {
        case AF_INET: {
@@ -59,7 +57,7 @@ index 725c97a1cde..b504a8edcaf 100644
          int rv = setsockopt(socket_, IPPROTO_IP, IP_MULTICAST_IF,
                              reinterpret_cast<const char*>(&mreq), sizeof(mreq));
          if (rv)
-@@ -984,9 +1024,17 @@ int UDPSocketPosix::JoinGroup(const IPAddress& group_address) const {
+@@ -918,9 +956,17 @@ int UDPSocketPosix::JoinGroup(const IPAddress& group_address) const {
      case IPAddress::kIPv4AddressSize: {
        if (addr_family_ != AF_INET)
          return ERR_ADDRESS_INVALID;

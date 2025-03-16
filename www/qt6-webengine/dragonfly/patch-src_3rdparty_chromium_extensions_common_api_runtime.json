@@ -1,14 +1,10 @@
-diff --git extensions/common/api/runtime.json extensions/common/api/runtime.json
-index b638baff541..89caf789990 100644
---- src/3rdparty/chromium/extensions/common/api/runtime.json
-+++ src/3rdparty/chromium/extensions/common/api/runtime.json
-@@ -87,7 +87,8 @@
-           "linux",
-           "openbsd",
-           "fuchsia",
--          "freebsd"
-+          "freebsd",
-+          "dragonfly"
+--- src/3rdparty/chromium/extensions/common/api/runtime.json.orig	Fri Feb 28 16:46:01 2025
++++ src/3rdparty/chromium/extensions/common/api/runtime.json	Fri Feb
+@@ -90,6 +90,7 @@
+             {"name": "linux", "description": "Specifies the Linux operating system."},
+             {"name": "openbsd", "description": "Specifies the OpenBSD operating system."},
+             {"name": "freebsd", "description": "Specifies the FreeBSD operating system."},
++            {"name": "dragonfly", "description": "Specifies the DragonFly BSD operating system."},
+             {"name": "fuchsia", "description": "Specifies the Fuchsia operating system."}
          ]
        },
-       {

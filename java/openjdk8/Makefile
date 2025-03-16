@@ -1,6 +1,5 @@
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${JDK_UPDATE_VERSION}.${JDK_BUILD_NUMBER}.${BSD_JDK_VERSION}
-PORTREVISION=	1
 CATEGORIES=	java devel
 MASTER_SITES=	LOCAL/jkim:jtreg
 PKGNAMESUFFIX?=	${JDK_MAJOR_VERSION}
@@ -53,7 +52,7 @@ INSTALLDIR=	${PREFIX}/${PKGBASE}
 NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	8
-JDK_UPDATE_VERSION=	392
+JDK_UPDATE_VERSION=	412
 JDK_BUILD_NUMBER=	08
 BSD_JDK_VERSION=	1
 JTREG_VERSION=		4.1
@@ -203,9 +202,9 @@ LIB_DEPENDS+=	libffi.so:devel/libffi
 .endif
 
 .if ${COMPILER_TYPE} == clang
-MAKE_ENV+=	COMPILER_WARNINGS_FATAL=false USE_CLANG=true
+MAKE_ENV+=	USE_CLANG=true
 CONFIGURE_ENV+=	LIBCXX="-lc++"
-.if ${COMPILER_VERSION} >= 130 && ${ARCH} == aarch64
+.if ${ARCH} == aarch64
 # PR258954: see <https://bugs.openjdk.org/browse/JDK-8247766>. Even though the
 # upstream fix has been applied to this version of the JDK, users still report
 # the assertion "guarantee(val < (1U << nbits)) failed: Field too big for insn"
@@ -215,13 +214,11 @@ BUILD_DEPENDS+=	clang${LLVM_VER}:devel/llvm${LLVM_VER}
 CC=		${LOCALBASE}/bin/clang${LLVM_VER}
 CXX=		${LOCALBASE}/bin/clang++${LLVM_VER}
 .endif
-.if ${COMPILER_VERSION} >= 160
 # clang 16 defaults to C++17, which no longer allows the 'register' keyword.
 # There is an upstream commit that removes all the individual 'register'
 # keywords, but it has not yet been backported to OpenJDK 8.
 # NOTE: passing this option via --with-extra-cflags does not work.
 CFLAGS+=		-Dregister=
-.endif
 .endif
 
 # GCC is broken with PCH: https://lists.freebsd.org/pipermail/svn-src-all/2015-March/101722.html
@@ -288,6 +285,10 @@ post-build:
 	    ${JRE_IMAGEDIR}/lib/javazic.jar \
 	    build.tools.tzdb.TzdbZoneRulesCompiler \
 	    -C ${JDK_BUILDDIR}/jdk/btclasses build/tools/tzdb
+.endif
+.if defined(OPENJDK_SYMLINK_CACERTS)
+	@${RM} ${JRE_IMAGEDIR}/lib/security/cacerts
+	@${LN} -sf ${OPENJDK_SYMLINK_CACERTS} ${JRE_IMAGEDIR}/lib/security/cacerts
 .endif
 
 post-build-TZUPDATE-on:

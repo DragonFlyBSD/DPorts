@@ -1,0 +1,28 @@
+diff --git chrome/app/settings_strings.grdp chrome/app/settings_strings.grdp
+index f318a33f5605..1fb981f91ac2 100644
+--- chrome/app/settings_strings.grdp
++++ chrome/app/settings_strings.grdp
+@@ -301,12 +301,12 @@
+       Manage accessibility features
+     </message>
+   </if>
+-  <if expr="is_win or is_linux or is_macosx">
++  <if expr="is_win or is_posix or is_macosx">
+     <message name="IDS_SETTINGS_OVERSCROLL_HISTORY_NAVIGATION_TITLE" desc="Title for the overscroll history navigation setting, which allows you to navigate back and forward by swiping left or right with a touch device.">
+       Swipe between pages
+     </message>
+   </if>
+-  <if expr="is_win or is_linux">
++  <if expr="is_win or is_posix">
+     <message name="IDS_SETTINGS_OVERSCROLL_HISTORY_NAVIGATION_SUBTITLE" desc="Subtitle for the overscroll history navigation setting, which allows you to navigate back and forward by swiping left or right with a touch device.">
+       Navigate back and forward with a swipe gesture
+     </message>
+@@ -340,7 +340,7 @@
+       Theme
+     </message>
+   </if>
+-  <if expr="is_linux">
++  <if expr="is_posix">
+     <message name="IDS_SETTINGS_GTK_THEME" desc="Text of the label describing the system (GTK) browser theme on Linux">
+       GTK
+     </message>

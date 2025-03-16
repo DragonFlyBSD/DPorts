@@ -1,5 +1,5 @@
 diff --git third_party/libsync/src/sync.c third_party/libsync/src/sync.c
-index cd943d0d66e..aa0887c9405 100644
+index cd943d0d66e4..aa0887c9405e 100644
 --- third_party/libsync/src/sync.c
 +++ third_party/libsync/src/sync.c
 @@ -29,7 +29,7 @@

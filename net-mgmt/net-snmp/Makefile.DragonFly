@@ -16,6 +16,8 @@ CONFIGURE_ARGS+=	ac_cv_IFNET_NEEDS_KERNEL=no
 LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpkg.so*}
 CONFIGURE_ARGS+= ac_cv_header_pkg_h=no netsnmp_cv_func_pkg_init_LIBS=no
 
+CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--without-kmem-usage}
+
 # heh
 dfly-patch:
 	cp ${DFLY_FILESDIR}/cpu_dragonfly.c \

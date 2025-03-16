@@ -1,5 +1,0 @@
-# fix plist issues
-PLIST_FILES+=	lib/cmake/muparser/muparser-targets-%%CMAKE_BUILD_TYPE%%.cmake \
-		lib/cmake/muparser/muparser-targets.cmake \
-		lib/cmake/muparser/muparserConfig.cmake \
-		lib/cmake/muparser/muparserConfigVersion.cmake

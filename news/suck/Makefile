@@ -1,12 +1,11 @@
-# Created by: Noritaka Ishizumi <graphite@taurus.bekkoame.or.jp>
-
 PORTNAME=	suck
-PORTVERSION=	4.3.4
+PORTVERSION=	4.3.5
 CATEGORIES=	news
 PKGNAMESUFFIX?=	${CNEWS_SUFFIX}${PKGNAMESUFFIX2}
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Receives/sends news to/from localhost via NNTP
+WWW=		https://github.com/lazarus-pkgs/suck
 
 LICENSE=	PD
 
@@ -15,6 +14,8 @@ CONFLICTS?=	suckblow-1.*
 USES=		autoreconf gmake shebangfix
 SHEBANG_FILES=	sample/post_filter.pl
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-inn-lib=${PREFIX}/lib
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 MAKE_ENV=	CHKHISTORY=chkhistory_db.o
 USE_GITHUB=	yes
 GH_ACCOUNT=	lazarus-pkgs
@@ -49,7 +50,7 @@ CONFLICTS+=	suck-4.*
 .if ${PORT_OPTIONS:MINN}
 CFLAGS+=	-DNO_CONFIGDATA -I${LOCALBASE}/include/inn
 MAKE_ENV+=	DB_TYPE="-DUSE_INN23 -DDO_TAGGED_HASH"
-MAKE_ENV+=	DB_LIB="-linn -lstorage -linnhist"
+MAKE_ENV+=	DB_LIB="-linn -linnhist"
 MAKE_ENV+=	DB_LIB_LOC=-L${LOCALBASE}/news/lib
 MAKE_ENV+=	DB_INC_LOC="-I${LOCALBASE}/news/include -I${LOCALBASE}/news/include/inn"
 MAKE_ENV+=	INCDIR2=-I${LOCALBASE}/include

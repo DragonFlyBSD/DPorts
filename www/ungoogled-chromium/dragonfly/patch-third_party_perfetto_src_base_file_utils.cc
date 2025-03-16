@@ -1,5 +1,5 @@
 diff --git third_party/perfetto/src/base/file_utils.cc third_party/perfetto/src/base/file_utils.cc
-index 0969515e67d..f518323c298 100644
+index a1fa238472a5..c2c06a16e2e0 100644
 --- third_party/perfetto/src/base/file_utils.cc
 +++ third_party/perfetto/src/base/file_utils.cc
 @@ -205,7 +205,8 @@ bool FlushFile(int fd) {

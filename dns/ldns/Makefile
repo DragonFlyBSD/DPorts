@@ -1,5 +1,5 @@
 PORTNAME=	ldns
-DISTVERSION=	1.8.3
+DISTVERSION=	1.8.4
 CATEGORIES=	dns
 MASTER_SITES=	https://www.nlnetlabs.nl/downloads/ldns/ \
 		LOCAL/ehaupt
@@ -116,9 +116,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/packaging/libldns.pc \
 		 ${STAGEDIR}${PREFIX}/libdata/pkgconfig
 	${INSTALL_MAN} ${WRKSRC}/packaging/ldns-config.1 \
-		${STAGEDIR}${PREFIX}/man/man1
+		${STAGEDIR}${PREFIX}/share/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/man/man3/ldns_*.3 \
-		${STAGEDIR}${PREFIX}/man/man3
+		${STAGEDIR}${PREFIX}/share/man/man3
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib${PORTNAME}.so.3
 .if ${PORT_OPTIONS:MDRILL}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/drill
@@ -140,8 +140,8 @@ post-install:
 
 .if (defined(BUILD_PYLDNS))
 post-install:
-# file /usr/local/lib/python3.9/site-packages/_ldns.so.3.5.0
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION}/site-packages/_ldns.so.3.5.0
+# file /usr/local/lib/python3.11/site-packages/_ldns.so.3.6.0
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION}/site-packages/_ldns.so.3.6.0
 .endif # BUILD_PYLDNS
 
 .include <bsd.port.post.mk>

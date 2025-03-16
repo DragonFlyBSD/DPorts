@@ -1,5 +1,5 @@
 diff --git third_party/angle/src/common/platform.h third_party/angle/src/common/platform.h
-index 720dbf26e7f..35de950a6d9 100644
+index 5df2a6cc2bb7..870474a1eceb 100644
 --- third_party/angle/src/common/platform.h
 +++ third_party/angle/src/common/platform.h
 @@ -34,8 +34,12 @@

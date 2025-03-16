@@ -1,5 +1,5 @@
 diff --git third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
-index f01375cc9db..3df7fc08881 100644
+index f01375cc9dbb..3df7fc088817 100644
 --- third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
 +++ third_party/libphonenumber/dist/cpp/src/phonenumbers/base/memory/singleton.h
 @@ -22,7 +22,8 @@

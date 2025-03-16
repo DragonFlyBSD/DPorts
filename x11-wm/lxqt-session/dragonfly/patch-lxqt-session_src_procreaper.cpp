@@ -1,15 +1,17 @@
---- lxqt-session/src/procreaper.cpp.intermediate	2021-08-31 11:03:06 UTC
-+++ lxqt-session/src/procreaper.cpp
-@@ -31,6 +31,7 @@
- #include <sys/prctl.h>
- #include <proc/readproc.h>
- #elif defined(Q_OS_FREEBSD)
+--- lxqt-session/src/procreaper.cpp.orig	Wed Apr 17 11:22:25 2024
++++ lxqt-session/src/procreaper.cpp	Sun Mar
+@@ -34,7 +34,8 @@
+ # else
+ #  include <proc/readproc.h>
+ # endif
+-#elif defined(Q_OS_FREEBSD)
++#elif defined(Q_OS_FREEBSD) || defined(Q_OS_DRAGONFLY)
 +#include <sys/sysctl.h>
  #include <sys/procctl.h>
  #include <libutil.h>
  #include <sys/user.h>
-@@ -41,6 +42,95 @@
- #include <cerrno>
+@@ -49,6 +50,95 @@
+ #include <signal.h>
  #include <sys/wait.h>
  
 +/*-
@@ -104,7 +106,23 @@
  ProcReaper::ProcReaper()
      : mShouldRun{true}
  {
-@@ -121,9 +211,9 @@ void ProcReaper::stop(const std::set<int
+@@ -56,7 +146,7 @@ ProcReaper::ProcReaper()
+     int result = prctl(PR_SET_CHILD_SUBREAPER, 1);
+     if (result != 0)
+         qCWarning(SESSION) << "Unable to set PR_SET_CHILD_SUBREAPER, " << result << " - " << strerror(errno);
+-#elif defined(Q_OS_FREEBSD)
++#elif defined(Q_OS_FREEBSD) || defined(Q_OS_DRAGONFLY)
+     int result = procctl(P_PID, ::getpid(), PROC_REAP_ACQUIRE, nullptr);
+     if (result != 0)
+         qCWarning(SESSION) << "Unable to set PROC_REAP_ACQUIRE, " << result << " - " << strerror(errno);
+@@ -141,15 +231,15 @@ void ProcReaper::stop(const std::set<int64_t> & exclud
+     }
+     ::closeproc(proc_dir);
+ # endif
+-#elif defined(Q_OS_FREEBSD)
++#elif defined(Q_OS_FREEBSD) || defined(Q_OS_DRAGONFLY)
+     int cnt = 0;
+     if (kinfo_proc *proc_info = kinfo_getallproc(&cnt))
      {
          for (int i = 0; i < cnt; ++i)
          {

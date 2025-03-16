@@ -1,8 +1,8 @@
 diff --git third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h
-index e178782ccdf..66ca425ee29 100644
+index 8d27c2c4f72f..95d970e55347 100644
 --- third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h
 +++ third_party/googletest/src/googletest/include/gtest/internal/gtest-port.h
-@@ -117,6 +117,7 @@
+@@ -119,6 +119,7 @@
  //   GTEST_OS_CYGWIN   - Cygwin
  //   GTEST_OS_DRAGONFLY - DragonFlyBSD
  //   GTEST_OS_FREEBSD  - FreeBSD

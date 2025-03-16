@@ -1,5 +1,5 @@
 diff --git ppapi/tests/test_utils.h ppapi/tests/test_utils.h
-index 52a0c81bef2..4dc9fa483be 100644
+index 52a0c81bef23..4dc9fa483bec 100644
 --- ppapi/tests/test_utils.h
 +++ ppapi/tests/test_utils.h
 @@ -312,6 +312,8 @@ do { \

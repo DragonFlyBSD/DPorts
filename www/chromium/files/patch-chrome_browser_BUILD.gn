@@ -1,6 +1,6 @@
---- chrome/browser/BUILD.gn.orig	2023-12-10 06:10:27 UTC
+--- chrome/browser/BUILD.gn.orig	2024-08-26 12:06:38 UTC
 +++ chrome/browser/BUILD.gn
-@@ -6528,6 +6528,13 @@ static_library("browser") {
+@@ -7013,6 +7013,13 @@ static_library("browser") {
      }
    }
  

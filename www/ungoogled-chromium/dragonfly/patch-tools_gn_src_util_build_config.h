@@ -1,5 +1,5 @@
 diff --git tools/gn/src/util/build_config.h tools/gn/src/util/build_config.h
-index 668518ba44f..c682566a0da 100644
+index 52c4f2105e6c..ca524c1cc30a 100644
 --- tools/gn/src/util/build_config.h
 +++ tools/gn/src/util/build_config.h
 @@ -46,6 +46,8 @@
@@ -24,7 +24,7 @@ index 668518ba44f..c682566a0da 100644
 @@ -77,7 +80,7 @@
      defined(OS_FREEBSD) || defined(OS_LINUX) || defined(OS_MACOSX) || \
      defined(OS_NACL) || defined(OS_NETBSD) || defined(OS_OPENBSD) ||  \
-     defined(OS_QNX) || defined(OS_SOLARIS) || defined(OS_HAIKU) || \
+     defined(OS_QNX) || defined(OS_SOLARIS) || defined(OS_HAIKU) ||    \
 -    defined(OS_MSYS) || defined(OS_ZOS) || defined(OS_SERENITY)
 +    defined(OS_MSYS) || defined(OS_ZOS) || defined(OS_SERENITY) || defined(OS_DRAGONFLY)
  #define OS_POSIX 1
