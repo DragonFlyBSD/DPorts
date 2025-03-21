@@ -20,3 +20,4 @@ dfly-patch:
 		${WRKSRC}/src/iop/toneequal.c
 
 USE_GCC_VERSION=	12
+DFLY_UNMAINTAINED= yes
