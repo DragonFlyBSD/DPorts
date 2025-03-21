@@ -1,0 +1,15 @@
+--- meson.build.orig	Sat Dec 23 15:56:36 2023
++++ meson.build	Thu Mar
+@@ -223,6 +223,12 @@ if sys_linux or sys_bsd or sys_sun
+   config_h.set('_STAT_VER_LINUX', '1')
+ endif
+ 
++if host_os == 'dragonfly'
++  config_h.set('st_atimensec', 'st_atim.tv_nsec')
++  config_h.set('st_ctimensec', 'st_ctim.tv_nsec')
++  config_h.set('st_mtimensec', 'st_mtim.tv_nsec')
++endif
++
+ if host_os == 'freebsd' or host_os == 'dragonfly'
+   # This is necessary. We MUST use OpenSSL in base as bringing in from ports
+   # can cause major issues (2 copies of the same library).
