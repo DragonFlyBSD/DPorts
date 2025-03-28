@@ -8,3 +8,4 @@ dfly-patch:
 		${WRKSRC}/core/app/DigikamCoreTarget.cmake			\
 		${WRKSRC}/core/showfoto/CMakeLists.txt				\
 		${WRKSRC}/core/tests/CMakeLists.txt
+DFLY_UNMAINTAINED= yes
