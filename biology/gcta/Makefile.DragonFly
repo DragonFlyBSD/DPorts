@@ -2,3 +2,4 @@
 dfly-patch:
 	${REINPLACE_CMD} -e 's@-lz -Wl,--start-group @-lz @g' \
 		${WRKSRC}/Makefile
+DFLY_UNMAINTAINED= yes
