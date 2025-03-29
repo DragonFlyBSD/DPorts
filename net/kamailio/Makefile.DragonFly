@@ -16,3 +16,4 @@ dfly-patch:
 		${WRKSRC}/src/Makefile.defs
 	${REINPLACE_CMD} -e "s@LIBS = @& -L${LOCALBASE}/lib @g" \
 		${WRKSRC}/src/modules/db_mysql/Makefile
+DFLY_UNMAINTAINED= yes
