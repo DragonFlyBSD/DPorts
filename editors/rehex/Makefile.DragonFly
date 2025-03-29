@@ -4,3 +4,4 @@
 dfly-patch:
 	${REINPLACE_CMD} -e 's@define wxLUA_USE_wxAcceleratorTable@& 0 //@g' \
 		${WRKSRC}/wxLua/modules/wxbind/setup/wxluasetup.h
+DFLY_UNMAINTAINED= yes
