@@ -17,3 +17,4 @@ dfly-patch:
 dfly-install:
 	ln -fv ${STAGEDIR}${PREFIX}/share/man/man1/bemenu.1 \
 	       ${STAGEDIR}${PREFIX}/share/man/man1/bemenu-run.1
+DFLY_UNMAINTAINED= yes
