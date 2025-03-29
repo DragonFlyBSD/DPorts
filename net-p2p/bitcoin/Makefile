@@ -1,8 +1,5 @@
-# Created by: Shaun Amott <shaun@FreeBSD.org>
-
 PORTNAME=	bitcoin
-PORTVERSION=	22.0
-PORTREVISION?=	1
+PORTVERSION=	27.1
 CATEGORIES=	net-p2p finance
 MASTER_SITES=	https://bitcoincore.org/bin/bitcoin-core-${PORTVERSION}/ \
 		LOCAL/swills:icon
@@ -12,22 +9,24 @@ EXTRACT_ONLY=	${_DISTFILES:N*.png}
 
 MAINTAINER=	kbowling@FreeBSD.org
 COMMENT?=	Virtual Peer-to-Peer Currency Client (QT)
+WWW=		https://www.bitcoin.org/
 
 LICENSE=	MIT
 
 LIB_DEPENDS=	libboost_date_time.so:devel/boost-libs \
 		libevent.so:devel/libevent
 
-USES=		autoreconf compiler:c++11-lib cpe gmake libtool pkgconfig qt:5 shebangfix
+USES=		autoreconf compiler:c++20-lang cpe gmake libtool pkgconfig qt:5 shebangfix
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 SLAVE_PORT?=	no
 
 .if defined(SLAVE_PORT) && ${SLAVE_PORT} == "no"
 USES+=		desktop-file-utils
 USE_QT=		core gui network widgets \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build
 
 BUILD_DEPENDS+=	protoc:devel/protobuf
 LIB_DEPENDS+=	libprotobuf.so:devel/protobuf
@@ -93,7 +92,7 @@ CONFIGURE_ARGS?=	--without-libs \
 CONFIGURE_ENV=	OBJCXX="${CXX}" OBJCXXFLAGS="${CXXFLAGS}"
 MAKE_ENV+=	V=1
 
-PLIST_FILES?=	bin/bitcoin-qt man/man1/bitcoin-qt.1.gz \
+PLIST_FILES?=	bin/bitcoin-qt share/man/man1/bitcoin-qt.1.gz \
 		share/applications/bitcoin-qt.desktop share/pixmaps/bitcoin128.png
 
 .include <bsd.port.pre.mk>
