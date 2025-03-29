@@ -10,3 +10,4 @@ dfly-patch:
 	@${ECHO} "########################################################" >> ${DPMSG}
 
 .endif
+DFLY_UNMAINTAINED= yes
