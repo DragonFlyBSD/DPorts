@@ -1,2 +1,3 @@
 
 CFLAGS+=	-Wno-format-overflow
+DFLY_UNMAINTAINED= yes
