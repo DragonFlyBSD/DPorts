@@ -1336,4 +1336,4 @@ lib/crystal/yaml/schema/core/parser.cr
 lib/crystal/yaml/schema/fail_safe.cr
 lib/crystal/yaml/serialization.cr
 lib/crystal/yaml/to_yaml.cr
-man/man1/crystal.1.gz
+share/man/man1/crystal.1.gz
