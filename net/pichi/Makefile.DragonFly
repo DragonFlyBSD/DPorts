@@ -1,3 +1,4 @@
 
 # maxminddb.h:92:27: error: ISO C++ does not support '__int128' for 'mmdb_uint128_t' [-Werror=pedantic]
 CXXFLAGS+=	-Wno-error=pedantic
+DFLY_UNMAINTAINED= yes
