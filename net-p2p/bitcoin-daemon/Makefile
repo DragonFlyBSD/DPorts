@@ -18,12 +18,10 @@ CONFIGURE_ARGS=	--with-daemon \
 		--without-utils
 
 PLIST_FILES=	bin/bitcoind \
-		man/man1/bitcoind.1.gz \
+		share/man/man1/bitcoind.1.gz \
 		"@sample %%ETCDIR%%.conf.sample"
 
 USE_RC_SUBR=	bitcoind
-
-PORTREVISION=	0
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/bitcoin.conf ${STAGEDIR}${PREFIX}/etc/bitcoin.conf.sample
