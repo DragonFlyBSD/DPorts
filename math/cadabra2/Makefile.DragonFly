@@ -1,1 +1,2 @@
 LDFLAGS+= -pthread
+DFLY_UNMAINTAINED= yes
