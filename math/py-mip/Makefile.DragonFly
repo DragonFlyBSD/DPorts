@@ -3,3 +3,4 @@
 dfly-patch:
 	${REINPLACE_CMD} -e 's@, "mip.libraries"@@g' \
 		${WRKSRC}/setup.py
+DFLY_UNMAINTAINED= yes
