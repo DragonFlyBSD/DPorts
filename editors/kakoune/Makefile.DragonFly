@@ -1,1 +1,2 @@
 USES+= pkgconfig
+DFLY_UNMAINTAINED= yes
