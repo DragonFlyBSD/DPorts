@@ -1,5 +1,3 @@
-# Created by: Konstantin Lepa <konstantin.lepa@gmail.com>
-
 PORTNAME=	vxlog
 PORTVERSION=	1.0.3
 PORTREVISION=	1
@@ -9,6 +7,7 @@ MASTER_SITES=	http://bitbucket.org/klepa/vxlog/downloads/ \
 
 MAINTAINER=	konstantin.lepa@gmail.com
 COMMENT=	C++ logging library
+WWW=		https://sourceforge.net/projects/vxlog/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/doc/COPYING.txt
