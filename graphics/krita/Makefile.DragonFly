@@ -1,6 +1,2 @@
 # don't know how to make libs/libqml/qml/panels/filterconfigpages/motion\. Stop
 USES+= gmake
-
-# to avoid orphans
-PLIST_FILES+=	lib/kritaplugins/kritajp2import.so \
-		share/applications/krita_jp2.desktop
