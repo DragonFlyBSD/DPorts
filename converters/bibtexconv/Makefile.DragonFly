@@ -1,1 +1,2 @@
 USES+= localbase
+DFLY_UNMAINTAINED= yes
