@@ -1,1 +1,2 @@
 CONFIGURE_ARGS+= --with-libltdl-includes=-I${PREFIX}/include --with-libltdl-libs=-L${PREFIX}/lib
+DFLY_UNMAINTAINED= yes
