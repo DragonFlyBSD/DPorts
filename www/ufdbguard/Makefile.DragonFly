@@ -13,3 +13,4 @@ dfly-patch:
 # to avoid orphans
 dfly-install:
 	${RMDIR} ${STAGEDIR}/etc/urlfilterdb
+DFLY_UNMAINTAINED= yes

@@ -1,5 +1,5 @@
 PORTNAME=	libpqxx
-PORTVERSION=	7.2.0
+PORTVERSION=	7.9.1
 CATEGORIES=	databases
 PKGNAMEPREFIX=	postgresql-
 DIST_SUBDIR=	postgresql
@@ -13,17 +13,18 @@ LICENSE=	BSD3CLAUSE
 CONFLICTS=	postgresql-libpqxx-[1-5].* postgresql-libpqxx3-3.* \
 		postgresql-libpqxx4-4.*
 
-USES=		compiler:c++11-lang gmake libtool pathfix pgsql python:build shebangfix
+USES=		compiler:c++17-lang gmake libtool pathfix pgsql python:build shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	jtv
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-SHEBANG_FILES=	${WRKSRC}/tools/splitconfig
+SHEBANG_FILES=	${WRKSRC}/tools/splitconfig.py
 INSTALL_TARGET=	install-strip
 PLIST_SUB=	PORTVERSION=${PORTVERSION:R}
 
 CONFIGURE_ARGS=	--enable-shared \
 		--disable-documentation \
 		--disable-dependency-tracking
+CXXFLAGS+=	-std=c++17
 
 .include <bsd.port.mk>

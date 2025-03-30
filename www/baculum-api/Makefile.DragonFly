@@ -1,2 +1,3 @@
 IGNORE=   unmaintained, please request fixing to users mailing list
 IGNORE=   unmaintained, please request fixing to users mailing list
+DFLY_UNMAINTAINED= yes

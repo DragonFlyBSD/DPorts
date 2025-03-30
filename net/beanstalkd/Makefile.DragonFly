@@ -2,3 +2,4 @@
 
 post-extract:
 	${MV} ${WRKSRC}/freebsd.c ${WRKSRC}/dragonfly.c
+DFLY_UNMAINTAINED= yes

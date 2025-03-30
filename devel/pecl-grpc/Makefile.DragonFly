@@ -5,3 +5,4 @@ dfly-patch:
 		${WRKSRC}/third_party/abseil-cpp/absl/base/internal/endian.h \
 		${WRKSRC}/third_party/abseil-cpp/absl/base/internal/sysinfo.cc \
 		${WRKSRC}/third_party/abseil-cpp/absl/base/internal/raw_logging.cc
+DFLY_UNMAINTAINED= yes

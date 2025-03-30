@@ -1,1 +1,2 @@
 MAKE_ENV+=	LDVER=ld.bfd
+DFLY_UNMAINTAINED= yes

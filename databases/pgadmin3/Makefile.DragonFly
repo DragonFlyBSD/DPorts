@@ -5,3 +5,4 @@ BUILD_DEPENDS+=	gsed:textproc/gsed
 dfly-patch:
 	${REINPLACE_CMD} -e '/iso8859_1/s@[[:<:]]sed[[:>:]]@gsed@g' \
                 ${WRKSRC}/Makefile.in
+DFLY_UNMAINTAINED= yes

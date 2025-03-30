@@ -6,3 +6,4 @@ dfly-patch:
 		${WRKSRC}/cmake/platforms.cmake
 	${REINPLACE_CMD} -e 's@HAVE_EXECINFO_H@do_not_use@g' \
 		${WRKSRC}/code/windows_stub/stubs.cpp
+DFLY_UNMAINTAINED= yes

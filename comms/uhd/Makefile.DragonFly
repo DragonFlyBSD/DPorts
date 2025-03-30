@@ -16,3 +16,4 @@ PLIST_FILES+=	%%DATADIR%%/examples/python/benchmark_rate.py \
 		%%DATADIR%%/tests/pychdr_parse_test.py \
 		%%DATADIR%%/tests/pyranges_test.py \
 		%%DATADIR%%/tests/verify_fbs_test.py
+DFLY_UNMAINTAINED= yes

@@ -15,3 +15,4 @@ dfly-patch:
 		${WRKSRC}/src/CMakeLists.txt \
 		${WRKSRC}/lib/ffindex/src/CMakeLists.txt \
 		${WRKSRC}/lib/ffindex/src/mpq/CMakeLists.txt
+DFLY_UNMAINTAINED= yes

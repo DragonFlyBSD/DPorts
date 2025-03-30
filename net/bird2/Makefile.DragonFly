@@ -3,3 +3,4 @@
 dfly-patch:
 	${REINPLACE_CMD} -e 's@_Thread_local static@static _Thread_local@g' \
 		${WRKSRC}/filter/filter.c
+DFLY_UNMAINTAINED= yes

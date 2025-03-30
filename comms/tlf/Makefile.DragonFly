@@ -6,3 +6,4 @@ PLIST_FILES+=	%%PORTDOCS%%%%DOCSDIR%%/Xresources \
 		%%DATADIR%%/okommults \
 		%%DATADIR%%/rules/cwops_mini_cwt \
 		%%DATADIR%%/rules/okom
+DFLY_UNMAINTAINED= yes

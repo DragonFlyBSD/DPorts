@@ -41,3 +41,4 @@ PLIST_FILES+=	lib/libXmt.so.4.0 \
 		man/man3/XmtRegisterPopupConstructor.3.gz \
 		man/man3/XmtSetTypedValue.3.gz \
 		man/man3/XmtSymbolGetValue.3.gz
+DFLY_UNMAINTAINED= yes

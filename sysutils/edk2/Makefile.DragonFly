@@ -1,3 +1,4 @@
 
 # special case
 BUILD_DEPENDS+=	gcc${GCC_DEFAULT}>0:lang/gcc${GCC_DEFAULT}
+DFLY_UNMAINTAINED= yes

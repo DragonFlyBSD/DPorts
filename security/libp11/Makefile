@@ -1,12 +1,12 @@
-# Created by: Alex Dupre <ale@FreeBSD.org>
-
 PORTNAME=	libp11
-PORTVERSION=	0.4.11
+PORTVERSION=	0.4.12
+PORTREVISION=	1
 DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	security devel
 
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	Small layer on top of PKCS\#11 API
+WWW=		https://github.com/OpenSC/libp11/wiki
 
 LICENSE=	LGPL21
 
@@ -16,7 +16,12 @@ USES=		autoreconf cpe libtool pkgconfig ssl
 CPE_VENDOR=	opensc_project
 CPE_PRODUCT=	opensc
 
-OPTIONS_DEFINE=	DOCS EXAMPLES
+OPTIONS_DEFINE=	DOCS DOXYGEN EXAMPLES
+
+DOXYGEN_CONFIGURE_ENABLE=	api-doc
+DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen
+DOXYGEN_USES=		gmake
+DOXYGEN_IMPLIES=	DOCS
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenSC

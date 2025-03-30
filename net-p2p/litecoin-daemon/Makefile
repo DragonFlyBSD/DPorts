@@ -6,8 +6,6 @@ COMMENT=	Virtual Peer-to-Peer Currency (Daemon)
 SLAVE_PORT=	yes
 
 OPTIONS_DEFINE=		DEBUG HARDENING TESTS UPNP ZMQ
-# WALLET_BDBMODERN is a choice for WALLET, introduced via OPTIONS_RADIO=WALLET
-# from ${MASTERDIR}/Makefile
 OPTIONS_DEFAULT=	HARDENING UPNP WALLET_BDBMODERN ZMQ
 
 USES+=		cpe
@@ -23,7 +21,7 @@ CONFIGURE_ARGS=	--with-daemon \
 		--without-utils
 
 PLIST_FILES=	bin/litecoind
-PLIST_FILES+=	man/man1/litecoind.1.gz
+PLIST_FILES+=	share/man/man1/litecoind.1.gz
 PLIST_FILES+=	"@sample etc/litecoin.conf.sample"
 
 USE_RC_SUBR=	litecoind

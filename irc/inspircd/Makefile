@@ -1,6 +1,6 @@
 PORTNAME=	inspircd
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.17.0
+DISTVERSION=	4.0.1
 CATEGORIES=	irc
 
 MAINTAINER=	driesm@FreeBSD.org
@@ -23,7 +23,7 @@ CONFIGURE_ARGS=	--binary-dir=${PREFIX}/bin \
 		--distribution-label=${OPSYS}-${PORTVERSION} \
 		--gid=nobody \
 		--log-dir=${_INSPIRCD_LOGDIR} \
-		--manual-dir=${MANPREFIX}/man/man1 \
+		--manual-dir=${PREFIX}/share/man/man1 \
 		--module-dir=${PREFIX}/libexec/${PORTNAME}/modules \
 		--prefix=${PREFIX}/libexec/${PORTNAME} \
 		--runtime-dir=${_INSPIRCD_RUNDIR} \
@@ -102,8 +102,8 @@ _INSPIRCD_LOGDIR?=	/var/log/${PORTNAME}
 _INSPIRCD_RUNDIR?=	/var/run/${PORTNAME}
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|examples/||g' -e 's|\.example||g' ${WRKSRC}/docs/conf/inspircd.conf.example
-	@${REINPLACE_CMD} -e 's|examples/||g' -e 's|\.example||g' ${WRKSRC}/docs/conf/modules.conf.example
+	@${REINPLACE_CMD} -e 's|examples/||g' -e 's|\.example||g' ${WRKSRC}/docs/conf/inspircd.example.conf
+	@${REINPLACE_CMD} -e 's|examples/||g' -e 's|\.example||g' ${WRKSRC}/docs/conf/modules.example.conf
 
 pre-configure:
 	@(cd ${WRKSRC}/src/modules && for m in ${EXTRAS}; do ${RLN} extra/$$m $$m; done)

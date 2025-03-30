@@ -5,3 +5,4 @@ CLIENT_LIB_DEPENDS:=	${CLIENT_LIB_DEPENDS:Nlibpulse*}
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
 		${WRKSRC}/CMakeLists.txt
+DFLY_UNMAINTAINED= yes

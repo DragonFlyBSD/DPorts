@@ -19,3 +19,4 @@ dfly-patch:
 		${WRKSRC}/modules/server/cpuload.cpp	\
 		${WRKSRC}/engine/Mutex.cpp		\
 		${WRKSRC}/yateclass.h
+DFLY_UNMAINTAINED= yes

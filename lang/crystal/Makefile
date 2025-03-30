@@ -85,7 +85,7 @@ do-build-DOCS-on:
 
 do-install:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/.build/crystal ${STAGEDIR}${PREFIX}/bin/
-	${INSTALL_MAN} ${INSTALL_WRKSRC}/man/crystal.1 ${STAGEDIR}${MANPREFIX}/man/man1/
+	${INSTALL_MAN} ${INSTALL_WRKSRC}/man/crystal.1 ${STAGEDIR}${PREFIX}/share/man/man1/
 	(cd ${INSTALL_WRKSRC}/src && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/lib/${PORTNAME})
 
 do-install-DOCS-on:
