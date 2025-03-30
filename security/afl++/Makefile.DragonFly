@@ -72,3 +72,4 @@ PLIST_FILES+=	bin/afl-analyze bin/afl-c++ bin/afl-cc bin/afl-clang bin/afl-clang
 		share/man/man8/afl-g++-fast.8.gz share/man/man8/afl-gcc-fast.8.gz share/man/man8/afl-gotcpu.8.gz \
 		share/man/man8/afl-plot.8.gz share/man/man8/afl-showmap.8.gz share/man/man8/afl-system-config.8.gz \
 		share/man/man8/afl-tmin.8.gz share/man/man8/afl-whatsup.8.gz
+DFLY_UNMAINTAINED= yes
