@@ -1,3 +1,4 @@
 
 # hmmm maybe
 USE_RUBY?= yes
+DFLY_UNMAINTAINED= yes
