@@ -12,3 +12,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'	\
 		${WRKSRC}/crypt/des.h						\
 		${WRKSRC}/misc/os_spec.h
+DFLY_UNMAINTAINED= yes
