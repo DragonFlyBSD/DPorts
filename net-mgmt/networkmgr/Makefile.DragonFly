@@ -2,3 +2,4 @@
 # to avoid orphans (python egg info)
 dfly-install:
 	${RM} -rfv ${STAGEDIR}${PYTHON_LIBDIR}
+DFLY_UNMAINTAINED= yes
