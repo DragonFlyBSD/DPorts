@@ -3,3 +3,4 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's@ STREQUAL "\(FreeBSD\)"@ MATCHES "\1|DragonFly"@g'	\
 		${WRKSRC}/apps/CMakeLists.txt				\
 		${WRKSRC}/cmakemodules/FindBDB.cmake
+DFLY_UNMAINTAINED= yes
