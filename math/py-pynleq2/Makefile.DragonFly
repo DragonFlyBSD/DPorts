@@ -10,3 +10,4 @@ LDFLAGS+=	-Wl,-rpath=/usr/local/lib/gcc8 -L/usr/local/lib/gcc8
 dfly-patch:
 	${REINPLACE_CMD} -e "s@flang@gfortran@g" \
 		${WRKSRC}/setup.py
+DFLY_UNMAINTAINED= yes

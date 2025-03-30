@@ -1,20 +1,21 @@
 PORTNAME=	pynleq2
 DISTVERSION=	0.0.2
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	math python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python binding for NLEQ2 algorithm's fortran implementation
+WWW=		https://github.com/bjodah/pynleq2
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYNUMPY}
 
-USES=		fortran python:3.6+
+USES=		fortran python
 USE_PYTHON=	distutils autoplist
 USE_GITHUB=	nodefault
 GH_TUPLE=	PySCeS:pysces:0.9.8:fortran
