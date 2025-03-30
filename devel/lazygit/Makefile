@@ -1,6 +1,6 @@
 PORTNAME=	lazygit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.40.2
+DISTVERSION=	0.42.0
 PORTREVISION=	2
 CATEGORIES=	devel
 
@@ -11,7 +11,7 @@ WWW=		https://github.com/jesseduffield/lazygit
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules
+USES=		go:1.22,modules
 
 GO_MODULE=	github.com/jesseduffield/lazygit
 
