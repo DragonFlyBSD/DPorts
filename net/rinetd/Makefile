@@ -1,39 +1,37 @@
 PORTNAME=	rinetd
 PORTVERSION=	0.62
-PORTREVISION=	4
+DISTVERSIONPREFIX=	v
+PORTEPOCH=	1
 CATEGORIES=	net
-MASTER_SITES=	http://www.boutell.com/rinetd/http/ \
-		GENTOO
-DISTNAME=	rinetd
 
-MAINTAINER=	garga@FreeBSD.org
+MAINTAINER=	grembo@FreeBSD.org
 COMMENT=	Simple TCP port redirector
+WWW=		https://github.com/samhocevar/rinetd
 
 LICENSE=	GPLv2
 
-OPTIONS_DEFINE=	DOCS
-
-WRKSRC=		${WRKDIR}/rinetd-${PORTVERSION}
-
 USES=		cpe dos2unix
-
-PORTDOCS=	index.html
-PLIST_FILES=	sbin/rinetd \
-		man/man8/rinetd.8.gz
-
+USE_GITHUB=	yes
+GH_ACCOUNT=	samhocevar
+GH_TAGNAME=	1c95abb27dbf3
 USE_RC_SUBR=	rinetd
 
-post-extract:
-	@${MV} ${WRKDIR}/rinetd ${WRKSRC}
+PLIST_FILES=	sbin/rinetd \
+		share/man/man8/rinetd.8.gz
+PORTDOCS=	index.html
+
+OPTIONS_DEFINE=	DOCS
 
 post-patch:
-	@${REINPLACE_CMD} -E "s,(/etc/rinetd.conf),${PREFIX}\1," \
-		${WRKSRC}/rinetd.[8c]
-	@${REINPLACE_CMD} -E "s,/usr(/sbin/rinetd),${PREFIX}\1," \
+	@${REINPLACE_CMD} -E \
+			-e "s,(/etc/rinetd.conf),${PREFIX}\1," \
+			-e "s,/usr(/sbin/rinetd),${PREFIX}\1," \
 		${WRKSRC}/rinetd.8
+	@${REINPLACE_CMD} -E "s,(/etc/rinetd.conf),${PREFIX}\1," \
+		${WRKSRC}/rinetd.c
 	@${REINPLACE_CMD} -e "s,cc ,${CC} ,g" ${WRKSRC}/Makefile
 
-post-install:
+post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
