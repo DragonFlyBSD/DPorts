@@ -1,4 +1,0 @@
-
-# zrj: ninja does not use sh src/create-miner-symlinks.sh
-dfly-patch:
-	${CHMOD} +x ${WRKSRC}/src/create-miner-symlinks.sh

@@ -1,7 +1,0 @@
-[
-{ type: install
-  message: <<EOM
-Please verify %%PREFIX%%/etc/mtools.conf for your machine.
-EOM
-}
-]

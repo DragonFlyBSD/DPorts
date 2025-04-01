@@ -1,6 +1,0 @@
-# zrj: add missing link against -lm in libsvg-cairo.so
-# NOTYPE  GLOBAL DEFAULT  UND {atan2, ceil, cos, sin, sqrt}
-# fixes graphics/mapserver build (binutils 2.27 ld.gold is unhappy)
-dfly-patch:
-	${REINPLACE_CMD} -e "/LINK) -rpath/s/$$/ -lm/g"	\
-		${WRKSRC}/src/Makefile.in

@@ -1,2 +1,0 @@
-Acfgfs is a tool that lets you mount certain arcan applications as a FUSE
-file-system. The application has to explicitly support it (e.g., Durden).

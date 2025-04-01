@@ -1,9 +1,0 @@
-USE_GCC_VERSION=	12
-
-# zrj: too noisy on gcc80
-CXXFLAGS+=	-Wno-expansion-to-defined -Wno-class-memaccess \
-		-Wno-unused-but-set-parameter
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@return isnan(@return std::isnan(@g' \
-		${WRKSRC}/Source/WebCore/rendering/shapes/ShapeOutsideInfo.cpp

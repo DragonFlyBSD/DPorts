@@ -1,3 +1,0 @@
-
-CFLAGS+=	-Wno-maybe-uninitialized
-DFLY_UNMAINTAINED= yes

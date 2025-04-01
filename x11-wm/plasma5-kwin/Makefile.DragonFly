@@ -1,8 +1,0 @@
-USE_GCC_VERSION=	12
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|g' \
-		${WRKSRC}/src/wayland/CMakeLists.txt \
-		${WRKSRC}/src/CMakeLists.txt
-	${REINPLACE_CMD} -e 's@(Libinput 1.14)@(Libinput)@g' \
-		${WRKSRC}/CMakeLists.txt

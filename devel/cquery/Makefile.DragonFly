@@ -1,4 +1,0 @@
-USES+=	alias
-
-# some clang++ thing
-CXXFLAGS+=	-fpermissive -pthread

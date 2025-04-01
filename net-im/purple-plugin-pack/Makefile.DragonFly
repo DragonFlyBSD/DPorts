@@ -1,4 +1,0 @@
-
-# orphan with textproc/enchant2
-PLIST_FILES+=	lib/pidgin/switchspell.so
-IGNORE=   unmaintained, please request fixing to users mailing list

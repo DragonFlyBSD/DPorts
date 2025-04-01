@@ -1,9 +1,0 @@
-
-MAKE_ARGS+=	KORE_CURL_LIB="-L${LOCALBASE}/lib -lcurl" KORE_CURL_INC="-I${LOCALBASE}/include"
-
-# zrj: remove clang'ism from MF
-# [-Werror=pointer-compare]
-dfly-patch:
-	${REINPLACE_CMD} -e 's@ -Wno-error=c11-extensions@@g'	\
-			 -e 's/-Werror //g'	\
-		${WRKSRC}/Makefile

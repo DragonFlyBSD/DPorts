@@ -1,4 +1,0 @@
-%%LUA_MODLIBDIR%%/lxp.so
-%%LUA_MODSHAREDIR%%/lxp/lom.lua
-%%LUA_MODSHAREDIR%%/lxp/threat.lua
-%%LUA_MODSHAREDIR%%/lxp/totable.lua
