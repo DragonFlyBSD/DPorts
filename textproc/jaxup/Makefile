@@ -1,6 +1,6 @@
 PORTNAME=	jaxup
 PORTVERSION=	1.01
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	textproc java
 MASTER_SITES=	http://klomp.org/jaxup/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
@@ -9,6 +9,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java XUpdate engine
 WWW=		https://klomp.org/jaxup/
 
+DEPRECATED=	Abandonware and obsolete, last release in 2003
+EXPIRATION_DATE=2025-04-30 
+
 BUILD_DEPENDS=	${JAR_DEPENDS}
 RUN_DEPENDS=	${JAR_DEPENDS}
 
@@ -16,16 +19,14 @@ JAR_DEPENDS=	${JAVALIBDIR}/jdom.jar:java/jdom \
 		${JAVALIBDIR}/jaxen-full.jar:java/jaxen \
 		${JAVALIBDIR}/xercesImpl.jar:textproc/xerces-j
 
-USES=		zip
-WRKSRC=		${WRKDIR}/${PORTNAME}
+USES=		java:ant,run zip
 
-USE_JAVA=	yes
+WRKSRC=		${WRKDIR}/${PORTNAME}
 
 DATADIR=	${JAVASHAREDIR}/${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS
 
-USE_ANT=	yes
 ALL_TARGET=	jar
 DOCS_ALL_TARGET=docs
 
