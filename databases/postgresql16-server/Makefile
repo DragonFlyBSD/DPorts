@@ -1,8 +1,8 @@
 PORTNAME?=	postgresql
-DISTVERSION?=	16.4
+DISTVERSION?=	16.8
 # PORTREVISION must be ?= otherwise, all slave ports get this PORTREVISION and
 # not their own.  Probably best to keep it at ?=0 when reset here too.
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	databases
 MASTER_SITES=	PGSQL/source/v${DISTVERSION}
 PKGNAMESUFFIX?= ${PORTVERSION:R}${COMPONENT}
@@ -70,13 +70,12 @@ GROUPS=	${PG_GROUP}
 SUB_FILES+=	502.pgsql
 .endif
 
-OPTIONS_SUB=	yes
-
 MAKE_ENV+=	PATH=${PREFIX}/bin:${PATH}
 CONFIGURE_ENV+=	PATH=${PREFIX}/bin:${PATH}
 
 .if defined(SERVER_ONLY)
 OPTIONS_DEFINE=	DTRACE LDAP TZDATA XML DOCS
+OPTIONS_DEFAULT+=XML
 LDAP_DESC=	Build with LDAP authentication support
 TZDATA_DESC=	Use internal timezone database
 XML_DESC=	Build with XML data type
@@ -118,20 +117,16 @@ CONFIGURE_ARGS+=	--without-icu
 
 
 .if !defined(SLAVE_ONLY)
-OPTIONS_DEFINE+=	NLS PAM GSSAPI OPTIMIZED_CFLAGS DEBUG DOCS
-KRB5_DESC=		Build with kerberos provider support
+OPTIONS_DEFINE+=	NLS PAM GSSAPI OPTIMIZED_CFLAGS DEBUG DOCS SSL
 NLS_DESC=		Use internationalized messages
 PAM_DESC=		Build with PAM Support
-MIT_KRB5_DESC=		Build with MIT kerberos support
-HEIMDAL_KRB5_DESC=	Builds with Heimdal kerberos
-GSSAPI_DESC=		Build with GSSAPI support
+GSSAPI_DESC=		Build with GSSAPI from base (security/krb5)
 OPTIMIZED_CFLAGS_DESC=	Builds with compiler optimizations (-O3)
-
-OPTIONS_DEFINE+=	SSL
 SSL_DESC=		Build with OpenSSL support
 
 OPTIONS_DEFAULT+=	SSL
 
+GSSAPI_USES=		gssapi:mit
 GSSAPI_CONFIGURE_WITH=	gssapi
 .endif # !SLAVE_ONLY
 
@@ -175,36 +170,7 @@ CFLAGS+=	-msse2
 .endif
 
 .if !defined(SLAVE_ONLY)
-
 PATCH_DIST_STRIP=-p1
-
-.if ${PORT_OPTIONS:MGSSAPI}
-.if empty(PORT_OPTIONS:MMIT_KRB5) && empty(PORT_OPTIONS:MHEIMDAL_KRB5)
-# Kerberos libraries will pull the proper GSSAPI library
-# via linker dependencies, but otherwise we must specify
-# it explicitely: ld --as-needed is used for compilation,
-# so configure's -lgssapi_krb5 won't go.
-LDFLAGS+=	-lgssapi
-LDFLAGS_SL+=	-lgssapi
-.endif
-.endif
-
-.  if ${PORT_OPTIONS:MMIT_KRB5}
-.   if defined(IGNORE_WITH_SRC_KRB5) && (exists(/usr/lib/libkrb5.so) || exists(/usr/bin/krb5-config))
-IGNORE=	requires that you remove heimdal\'s /usr/bin/krb5-config and /usr/lib/libkrb5.so*, and set NO_KERBEROS=true in /etc/src.conf to build successfully with MIT-KRB
-.   else
-CONFIGURE_ARGS+=--with-krb5
-# Allow defining a home built MIT Kerberos by setting KRB5_HOME
-.    if defined(KRB5_HOME) && exists(${KRB5_HOME}/lib/libgssapi_krb5.a) && exists(${KRB5_HOME}/bin/krb5-config)
-LIB_DEPENDS+=	libkrb5.so.3:security/krb5
-.    endif
-.   endif
-.  endif
-
-.  if ${PORT_OPTIONS:MHEIMDAL_KRB5}
-CONFIGURE_ARGS+=--with-krb5
-.  endif
-
 .endif # !SLAVE_ONLY
 
 # For testing files in FILESDIR
