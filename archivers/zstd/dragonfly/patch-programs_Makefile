@@ -1,0 +1,11 @@
+--- programs/Makefile.orig	Wed Feb 19 00:04:24 2025
++++ programs/Makefile	Wed Apr
+@@ -388,7 +388,7 @@ datarootdir ?= $(PREFIX)/share
+ mandir      ?= $(datarootdir)/man
+ man1dir     ?= $(mandir)/man1
+ 
+-ifneq (,$(filter OpenBSD NetBSD DragonFly SunOS,$(UNAME)))
++ifneq (,$(filter OpenBSD NetBSD SunOS,$(UNAME)))
+   MANDIR  ?= $(PREFIX)/man
+   MAN1DIR ?= $(MANDIR)/man1
+ else
