@@ -13,6 +13,9 @@ WWW=		https://synhxd.sourceforge.net/
 
 LICENSE=	GPLv1
 
+DEPRECATED=	Obsolete protocol that has been superseded by many others
+EXPIRATION_DATE=2025-04-30
+
 USES=		readline ssl tar:tgz
 
 GNU_CONFIGURE=	yes
@@ -55,11 +58,9 @@ XMMS_CONFIGURE_ENABLE=		xmms
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=int-conversion
-.if ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 )
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
-.endif
 .endif
 
 do-install:
