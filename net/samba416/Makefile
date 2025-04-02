@@ -1,11 +1,11 @@
 PORTNAME=			${SAMBA4_BASENAME}416
 PORTVERSION=			${SAMBA4_VERSION}
-PORTREVISION=			5
+PORTREVISION=			6
 CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
 
-MAINTAINER=			timur@FreeBSD.org
+MAINTAINER=			samba@FreeBSD.org
 COMMENT=			Free SMB/CIFS and AD/DC server and client for Unix
 WWW=				https://gitlab.com/samba-freebsd/
 
@@ -107,6 +107,9 @@ CONFIGURE_LOG=			bin/config.log
 FLAVORS=			default externalldb
 FLAVOR?=			${FLAVORS:[1]}
 externalldb_PKGNAMESUFFIX=		-externalldb
+.if ${FLAVOR:U} == externalldb
+BROKEN=				fails to build; databases/ldb25 is not built with Python support by default
+.endif
 
 # Make sure that the right version of Python is used by the tools
 # https://bugzilla.samba.org/show_bug.cgi?id=7305
@@ -121,7 +124,7 @@ OPTIONS_SUB=			yes
 
 OPTIONS_DEFINE=			AD_DC ADS CLUSTER CUPS DOCS FAM GPGME \
 				LDAP MANDOC PROFILE PYTHON3 QUOTAS \
-				SPOTLIGHT SYSLOG UTMP
+				SYSLOG UTMP
 #OPTIONS_DEFINE+=		DEVELOPER MEMORY_DEBUG
 
 OPTIONS_GROUP=			VFS
@@ -146,7 +149,6 @@ FAM_DESC=			File Alteration Monitor
 GPGME_DESC=			GpgME support
 LDAP_DESC=			LDAP client
 LIBZFS_DESC=			LibZFS
-SPOTLIGHT_DESC=			Spotlight server-side search support
 MANDOC_DESC=			Build manpages from DOCBOOK templates
 MEMORY_DEBUG_DESC=		Debug memory allocator
 PICKY_DEVELOPER_DESC=		Treat compiler warnings as errors(implies DEVELOPER)
@@ -309,7 +311,8 @@ CONFIGURE_ARGS+=		\
 				--with-libarchive \
 				--without-acl-support \
 				--with-sendfile-support \
-				--disable-ctdb-tests
+				--disable-ctdb-tests \
+				--disable-spotlight
 #				${ICONV_CONFIGURE_BASE}
 ##############################################################################
 FRUIT_PREVENTS=			ZEROCONF_NONE
@@ -404,14 +407,6 @@ MANDOC_CONFIGURE_ENV_OFF=	XSLTPROC="true"
 PROFILE_CONFIGURE_WITH=		profiling-data
 
 QUOTAS_CONFIGURE_WITH=		quotas
-
-SPOTLIGHT_CONFIGURE_ENABLE=	spotlight
-SPOTLIGHT_BUILD_DEPENDS=	tracker>=1.4.1:sysutils/tracker
-SPOTLIGHT_RUN_DEPENDS=		tracker>=1.4.1:sysutils/tracker
-# ICU
-SPOTLIGHT_LIB_DEPENDS=		libicuuc.so:devel/icu
-SPOTLIGHT_USES=			bison gnome
-SPOTLIGHT_USE=			gnome=glib20
 
 SYSLOG_CONFIGURE_WITH=		syslog
 
