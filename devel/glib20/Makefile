@@ -1,5 +1,6 @@
 PORTNAME=	glib
 DISTVERSION=	2.80.5
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
@@ -32,7 +33,6 @@ MESON_ARGS=	-Db_lundef=false \
 		-Dinstalled_tests=false \
 		-Dintrospection=disabled \
 		-Dlibmount=disabled \
-		-Dlocalstatedir=/var \
 		-Druntime_dir=/var/run \
 		-Dselinux=disabled \
 		-Dxattr=false
