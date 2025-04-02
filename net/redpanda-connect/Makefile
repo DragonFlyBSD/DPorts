@@ -1,6 +1,6 @@
 PORTNAME=	connect
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.30.1
+DISTVERSION=	4.38.0
 PORTREVISION=	1
 CATEGORIES=	net
 PKGNAMEPREFIX=	redpanda-
@@ -9,7 +9,7 @@ MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Stream processor for a wide array of data sources and sinks
 WWW=		https://redpanda.com/blog/redpanda-connect
 
-# RCL license applies to the "snowflake" and "splunk" connectors
+# RCL license applies to some connectors
 LICENSE=	APACHE20 RCL
 LICENSE_COMB=	multi
 LICENSE_NAME_RCL=	Redpanda Community License Agreement
