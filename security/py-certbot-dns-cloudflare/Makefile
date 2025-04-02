@@ -19,7 +19,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLA
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}acme>=${ACME_VERSION},1:security/py-acme@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}certbot>=${ACME_VERSION},1:security/py-certbot@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}cloudflare>=1.5.1<2.20:dns/py-cloudflare@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}cloudflare>=1.5.1<2.20_99:dns/py-cloudflare@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}setuptools>=41.6.0:devel/py-setuptools@${PY_FLAVOR}
 
 USES=		python
