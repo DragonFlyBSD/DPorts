@@ -1,6 +1,5 @@
 PORTNAME=	verbiste
-PORTVERSION=	0.1.48
-PORTREVISION=	1
+PORTVERSION=	0.1.49
 CATEGORIES=	french education textproc
 MASTER_SITES=	http://sarrazip.com/dev/
 
@@ -16,7 +15,6 @@ USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 INSTALL_TARGET=	install-strip
 SHEBANG_FILES=	${WRKSRC}/examples/*.pl
 
@@ -28,7 +26,7 @@ OPTIONS_DEFINE=	GTK2 DOCS EXAMPLES
 
 .if ${PORT_OPTIONS:MGTK2}
 USES+=		gettext
-USE_GNOME+=	cairo gdkpixbuf2 gtk20
+USE_GNOME+=	cairo gdkpixbuf gtk20
 LIB_DEPENDS+=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz
