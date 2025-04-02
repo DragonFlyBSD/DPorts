@@ -1,15 +1,15 @@
---- Makefile.PL.orig	2021-02-12 11:08:52 UTC
+--- Makefile.PL.orig	2024-01-15 03:30:56 UTC
 +++ Makefile.PL
-@@ -206,7 +206,7 @@ else { # we still need to determine whether__float128 
+@@ -196,7 +196,7 @@ unless($skip_msvc) {
  
      print $SAVE "\n\n" if $save;
  
 -    my $mylibs = $mklib . " " . $mylibpth . " -lquadmath";
 +    my $mylibs = $mklib . " " . $mylibpth;
  
-     my $out = `$mycc -o have_f128.exe -x c have_f128.in 2>&1`;
- 
-@@ -347,7 +347,7 @@ my %options = (
+     # First up, build have_f128.exe from have_f128.c.
+     # This simply establishes whether the __float128 type is available.
+@@ -418,7 +418,7 @@ my %options = (
    AUTHOR       => 'Sisyphus (sisyphus at (@) cpan dot (.) org)',
    ABSTRACT     => 'Perl interface to the MPFR (floating point) library',
    DEFINE       => $defines,
