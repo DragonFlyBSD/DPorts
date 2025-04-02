@@ -1,14 +1,18 @@
 PORTNAME=	datasette
-DISTVERSION=	0.63.3
+DISTVERSION=	0.65.1
 CATEGORIES=	databases www
 MASTER_SITES=	PYPI
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Multi-tool for exploring and publishing data
-WWW=		https://datasette.io/
+WWW=		https://datasette.io \
+		https://github.com/simonw/datasette
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Depends on expired devel/py-pytest-runner
+EXPIRATION_DATE=2025-06-01
 
 PY_DEPENDS=	\
 		${PYTHON_PKGNAMEPREFIX}aiofiles>=0.4:devel/py-aiofiles@${PY_FLAVOR} \
@@ -25,7 +29,7 @@ PY_DEPENDS=	\
 		${PYTHON_PKGNAMEPREFIX}pint>=0.9:devel/py-pint@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pluggy>=1.0:devel/py-pluggy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}uvicorn>=0.11:www/py-uvicorn@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}yaml>=5.3:devel/py-yaml@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}pyyaml>=5.3:devel/py-pyyaml@${PY_FLAVOR}
 BUILD_DEPENDS=	${PY_DEPENDS} \
 		${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest-runner>0:devel/py-pytest-runner@${PY_FLAVOR} \
