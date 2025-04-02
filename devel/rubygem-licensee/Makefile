@@ -1,9 +1,9 @@
 PORTNAME=	licensee
-PORTVERSION=	9.17.1
+PORTVERSION=	9.18.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	mfechner@FreeBSD.org
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Detects under what license a project is distributed
 WWW=		https://github.com/benbalter/licensee
 
@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 RUN_DEPENDS=	rubygem-dotenv>=2.0<4:misc/rubygem-dotenv \
 		rubygem-octokit>=4.20<10:net/rubygem-octokit \
-		rubygem-reverse_markdown>=1.0<3:textproc/rubygem-reverse_markdown \
+		rubygem-reverse_markdown>=1.0<4:textproc/rubygem-reverse_markdown \
 		rubygem-rugged>=0.24<2.0:devel/rubygem-rugged \
 		rubygem-thor>=0.19<2.0:devel/rubygem-thor
 
