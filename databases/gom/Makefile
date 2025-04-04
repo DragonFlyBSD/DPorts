@@ -1,5 +1,6 @@
 PORTNAME=	gom
 PORTVERSION=	0.4
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 
@@ -11,7 +12,7 @@ LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		gnome meson pkgconfig python sqlite tar:xz
-USE_GNOME=	gdkpixbuf2 glib20 introspection pygobject3
+USE_GNOME=	gdkpixbuf glib20 introspection pygobject3
 
 USE_LDCONFIG=	yes
 
