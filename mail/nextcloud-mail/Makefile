@@ -1,5 +1,5 @@
 PORTNAME=	mail
-PORTVERSION=	3.7.2
+PORTVERSION=	4.3.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	mail
 
@@ -9,7 +9,7 @@ WWW=		https://apps.nextcloud.com/apps/mail
 
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-NEXTCLOUD_RUN_DEPENDS=	26
+NEXTCLOUD_RUN_DEPENDS=	30
 
 USES=		cpe gettext nextcloud php:flavors
 USE_PHP=	imap
