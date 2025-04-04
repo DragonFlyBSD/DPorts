@@ -18,7 +18,7 @@ LIB_DEPENDS=	libhamlib.so:comms/hamlib \
 
 
 USES=		compiler:c11 gnome pkgconfig shared-mime-info
-USE_GNOME=	cairo gdkpixbuf2 gtk20
+USE_GNOME=	cairo gdkpixbuf gtk20
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
@@ -36,7 +36,7 @@ NLS_CONFIGURE_OFF=	--disable-nls
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=deprecated-non-prototype
 .endif
 
