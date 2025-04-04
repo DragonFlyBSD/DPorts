@@ -16,12 +16,14 @@ LIB_DEPENDS=	libanthy.so:japanese/anthy \
 		libfreetype.so:print/freetype2
 
 USES=		compiler:c++11-lang gmake gnome iconv:wchar_t localbase:ldflags pkgconfig
-USE_GNOME=	gtk20 cairo gdkpixbuf2
+USE_GNOME=	gtk20 cairo gdkpixbuf
 USE_CXXSTD=	c++11
 
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 OPTIONS_DEFINE=	NLS
+
+CONFLICTS_INSTALL=	kasumi-unicode
 
 .include <bsd.port.options.mk>
 
