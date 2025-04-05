@@ -4,4 +4,8 @@ MASTER_SITES+=	https://leaf.dragonflybsd.org/~mneumann/rust/:bootstrap \
 # Temporarily specify bootstrap version
 RUST_BOOTSTRAP_VERSION:=	1.84.1
 
+# ld.gold will not be able to link std into the rustc driver
+# https://rust-lang.zulipchat.com/#narrow/channel/131828-t-compiler/topic/__rust_alloc_error_handler_should_panic.20not.20defined/with/510296308
+MAKE_ENV+= LDVER=ld.bfd
+
 MAKE_ENV+="LD_LIBRARY_PATH=${WRKDIR}/bootstrap/lib:/usr/lib/gcc80"
