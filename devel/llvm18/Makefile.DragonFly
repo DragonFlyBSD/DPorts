@@ -1,3 +1,5 @@
+USE_CLANG_FALLBACK=	default
+
 # LLDB needs to be ported to dragonfly
 # FLANG needs to be a separate thing
 # OPENMP force disable offloading target support
