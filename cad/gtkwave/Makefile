@@ -1,5 +1,5 @@
 PORTNAME=	gtkwave
-DISTVERSION=	3.3.120
+DISTVERSION=	3.3.121
 CATEGORIES=	cad
 MASTER_SITES=	http://gtkwave.sourceforge.net/
 DISTNAME=	${PORTNAME}-gtk3-${DISTVERSION}
@@ -15,7 +15,7 @@ LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
 
 USES=		desktop-file-utils gettext-runtime gmake gnome gperf pkgconfig \
 		shared-mime-info
-USE_GNOME=	cairo gdkpixbuf2 gtk30
+USE_GNOME=	cairo gdkpixbuf gtk30
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-mime-update \
