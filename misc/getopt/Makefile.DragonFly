@@ -1,0 +1,2 @@
+# avoid doing the cpu_set_t code porting for dfly for now
+CONFIGURE_ARGS+=	--disable-lscpu ac_cv_type_cpu_set_t=no
