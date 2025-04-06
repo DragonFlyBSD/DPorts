@@ -1,26 +1,25 @@
---- tools/touchpad-edge-detector.c.orig	2019-05-02 15:11:50.000000000 +0300
-+++ tools/touchpad-edge-detector.c	2019-05-14 13:34:34.207305000 +0300
-@@ -26,7 +26,13 @@
- #endif
+--- tools/touchpad-edge-detector.c.orig	Fri May 31 05:24:44 2024
++++ tools/touchpad-edge-detector.c	Sun Apr
+@@ -20,6 +20,12 @@
  
- #include <libevdev/libevdev.h>
+ #include "libevdev/libevdev.h"
+ 
 +#if defined(__DragonFly__)
 +#include <sys/types.h>
 +#include <sys/event.h>
 +#include <sys/time.h>
-+#else
- #include <sys/signalfd.h>
 +#endif
- #include <errno.h>
- #include <fcntl.h>
- #include <limits.h>
-@@ -103,6 +109,88 @@ handle_event(struct dimensions *d, const
- 	return 0;
++
+ #define min(a, b) (((a) < (b)) ? (a) : (b))
+ #define max(a, b) (((a) > (b)) ? (a) : (b))
+ 
+@@ -93,8 +99,90 @@ signal_handler(__attribute__((__unused__)) int signal)
+ 	signalled++;
  }
  
 +#if defined(__DragonFly__)
-+static int
-+mainloop(struct libevdev *dev, struct dimensions *dim) {
+ static int
+ mainloop(struct libevdev *dev, struct dimensions *dim) {
 +	int kq, nev;
 +	struct kevent change[2];
 +	struct kevent events[2];
@@ -100,10 +99,12 @@
 +	return 0;
 +}
 +#else  /* Linux */
- static int
- mainloop(struct libevdev *dev, struct dimensions *dim) {
- 	struct pollfd fds[2];
-@@ -141,6 +229,7 @@ mainloop(struct libevdev *dev, struct di
++static int
++mainloop(struct libevdev *dev, struct dimensions *dim) {
+ 	struct pollfd fds;
+ 
+ 	fds.fd = libevdev_get_fd(dev);
+@@ -129,6 +217,7 @@ mainloop(struct libevdev *dev, struct dimensions *dim)
  
  	return 0;
  }
