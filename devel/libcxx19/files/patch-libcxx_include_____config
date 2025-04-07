@@ -1,0 +1,34 @@
+--- libcxx/include/__config.orig	Tue Jan 14 09:41:02 2025
++++ libcxx/include/__config	Sun Apr
+@@ -631,11 +631,12 @@ typedef __char32_t char32_t;
+ #    define _LIBCPP_DECLARE_STRONG_ENUM_EPILOG(x)
+ #  endif // _LIBCPP_CXX03_LANG
+ 
+-#  if defined(__APPLE__) || defined(__FreeBSD__) || defined(_LIBCPP_MSVCRT_LIKE) || defined(__NetBSD__)
++#  if defined(__APPLE__) || defined(__FreeBSD__) || defined(_LIBCPP_MSVCRT_LIKE) || defined(__NetBSD__) || \
++      defined(__DragonFly__)
+ #    define _LIBCPP_LOCALE__L_EXTENSIONS 1
+ #  endif
+ 
+-#  ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #    define _DECLARE_C99_LDBL_MATH 1
+ #  endif
+ 
+@@ -667,7 +668,7 @@ typedef __char32_t char32_t;
+ #    define _LIBCPP_HAS_NO_C11_ALIGNED_ALLOC
+ #  endif
+ 
+-#  if defined(__APPLE__) || defined(__FreeBSD__)
++#  if defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ #    define _LIBCPP_HAS_DEFAULTRUNELOCALE
+ #  endif
+ 
+@@ -811,6 +812,7 @@ typedef __char32_t char32_t;
+         defined(__wasi__) ||                                                                                           \
+         defined(__NetBSD__) ||                                                                                         \
+         defined(__OpenBSD__) ||                                                                                        \
++        defined(__DragonFly__) ||                                                                                      \
+         defined(__NuttX__) ||                                                                                          \
+         defined(__linux__) ||                                                                                          \
+         defined(__GNU__) ||                                                                                            \
