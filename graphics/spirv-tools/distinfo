@@ -1,5 +1,5 @@
-TIMESTAMP = 1718893782
-SHA256 (KhronosGroup-SPIRV-Tools-v2024.3_GH0.tar.gz) = 3961edff3410599112a50bfcda2d4a828f7cb12e8294ee0f6169976ef0532b83
-SIZE (KhronosGroup-SPIRV-Tools-v2024.3_GH0.tar.gz) = 3169316
-SHA256 (KhronosGroup-SPIRV-Headers-1.5.4.raytracing.fixed-362-g2acb319_GH0.tar.gz) = 4d2cfa61a074971180c940b0b1102da37c433897366e28455b7816392b2896ac
-SIZE (KhronosGroup-SPIRV-Headers-1.5.4.raytracing.fixed-362-g2acb319_GH0.tar.gz) = 521900
+TIMESTAMP = 1740516879
+SHA256 (KhronosGroup-SPIRV-Tools-v2025.1.rc1_GH0.tar.gz) = b04b1f00960664319321a58f513fd33eecca19a1460047bbdf3da8fd0c46d2f2
+SIZE (KhronosGroup-SPIRV-Tools-v2025.1.rc1_GH0.tar.gz) = 3243577
+SHA256 (KhronosGroup-SPIRV-Headers-1.5.4.raytracing.fixed-395-g09913f0_GH0.tar.gz) = 57bca0d2d899d42c47ded9fa2ce3058d1949c4169b8effa45a2213808f110e37
+SIZE (KhronosGroup-SPIRV-Headers-1.5.4.raytracing.fixed-395-g09913f0_GH0.tar.gz) = 543425
