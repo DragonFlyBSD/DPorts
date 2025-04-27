@@ -1,0 +1,2 @@
+# no 32-bit support in dfly
+FLAVORS:= ${FLAVORS:Ni386}
