@@ -4161,6 +4161,7 @@ sysutils/shim||2025-02-22|Has expired: upstream has been inactive for 10 years a
 devel/py-python-gilt|devel/gilt|2025-02-23|Project switched language from python to go
 textproc/uim-gtk|textproc/uim-gtk2|2025-02-23|Rename with versioned suffix
 x11-toolkits/scenefx|x11-toolkits/scenefx02|2025-02-25|Renamed to match versioned API
+textproc/rubygem-rexml-gitlab|textproc/rubygem-rexml|2025-02-25|Use textproc/rubygem-rexml
 www/kdsoap@qt5||2025-02-26|Qt5 flavor is no longer needed
 www/kdsoap@qt6|www/kdsoap|2025-02-26|Unflavorize; only Qt6 support is needed
 net/drive||2025-02-28|Remove expired port
@@ -4296,3 +4297,8 @@ print/py-pypdf2|print/py-pypdf|2025-03-31|Has expired: Upstream moved the develo
 math/py-pystan||2025-03-31|Has expired: Marked as BROKEN for years
 net-im/telepathy-qt||2025-03-31|Has expired: Leaf library depending on Qt5
 devel/py-pkgutil-resolve-name||2025-03-31|Removed, only for Python 3.8
+devel/appstream-qt@qt5||2025-04-03|Unflavorize; only Qt6 support is needed
+devel/appstream-qt@qt6|devel/appstream-qt|2025-04-03|Unflavorize; only Qt6 support is needed
+ports-mgmt/packagekit-qt@qt5||2025-04-03|Unflavorize; only Qt6 support is needed
+ports-mgmt/packagekit-qt@qt6|ports-mgmt/packagekit-qt|2025-04-03|Unflavorize; only Qt6 support is needed
+devel/rubygem-sidekiq72|devel/rubygem-sidekiq-gitlab|2025-04-18|Please use devel/sidekiq-gitlab instead
