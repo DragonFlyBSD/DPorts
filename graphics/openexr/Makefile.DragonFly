@@ -1,4 +1,4 @@
-USE_GCC_VERSION=	13
+USE_GCC_VERSION=	${GCC_DEFAULT}
 
 # avoid doxygen dep for now
 DOCS_BUILD_DEPENDS:=
