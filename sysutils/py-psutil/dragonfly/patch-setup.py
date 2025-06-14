@@ -1,14 +1,14 @@
---- setup.py.orig	2024-06-02 23:32:26 UTC
-+++ setup.py
-@@ -49,6 +49,7 @@ sys.path.insert(0, os.path.join(HERE, "p
- from _common import AIX  # NOQA
- from _common import BSD  # NOQA
- from _common import FREEBSD  # NOQA
-+from _common import DRAGONFLY  # NOQA
- from _common import LINUX  # NOQA
- from _common import MACOS  # NOQA
- from _common import NETBSD  # NOQA
-@@ -291,6 +292,20 @@ elif FREEBSD:
+--- setup.py.orig	2025-06-13 18:12:17.346305000 +0200
++++ setup.py	2025-06-13 18:14:40.708941000 +0200
+@@ -60,6 +60,7 @@ sys.path.insert(0, os.path.join(HERE, "p
+ 
+ from _common import AIX  # noqa: E402
+ from _common import BSD  # noqa: E402
++from _common import DRAGONFLY  # noqa: E402
+ from _common import FREEBSD  # noqa: E402
+ from _common import LINUX  # noqa: E402
+ from _common import MACOS  # noqa: E402
+@@ -315,6 +316,20 @@ elif MACOS:
          # fmt: on
      )
  
@@ -26,23 +26,23 @@
 +        libraries=["kvm", "kinfo", "devstat"],
 +        **py_limited_api)
 +
- elif OPENBSD:
-     macros.append(("PSUTIL_OPENBSD", 1))
+ elif FREEBSD:
+     macros.append(("PSUTIL_FREEBSD", 1))
      ext = Extension(
-@@ -483,6 +498,7 @@ def main():
+@@ -512,6 +527,7 @@ def main():
+             'Operating System :: Microsoft',
+             'Operating System :: OS Independent',
+             'Operating System :: POSIX :: AIX',
++            'Operating System :: POSIX :: BSD :: DragonFly BSD',
              'Operating System :: POSIX :: BSD :: FreeBSD',
              'Operating System :: POSIX :: BSD :: NetBSD',
              'Operating System :: POSIX :: BSD :: OpenBSD',
-+            'Operating System :: POSIX :: BSD :: DragonFly BSD',
-             'Operating System :: POSIX :: BSD',
-             'Operating System :: POSIX :: Linux',
-             'Operating System :: POSIX :: SunOS/Solaris',
-@@ -549,7 +565,7 @@ def main():
+@@ -578,7 +594,7 @@ def main():
                      " is not installed"
                  )
                  print(hilite(msg, color="red"), file=sys.stderr)
 -            elif FREEBSD:
-+            elif FREEBSD or DRAGONFLY:
-                 if which('pkg'):
-                     missdeps("pkg install gcc python%s" % py3)
-                 elif which('mport'):  # MidnightBSD
++            elif DRAGONFLY or FREEBSD:
+                 if shutil.which("pkg"):
+                     missdeps("pkg install gcc python3")
+                 elif shutil.which("mport"):  # MidnightBSD
