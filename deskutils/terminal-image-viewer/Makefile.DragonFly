@@ -1,6 +1,6 @@
 
 # needs <experimental/filesystem> but redirect to <filesystem>
-USE_GCC_VERSION= 9
+USE_GCC_VERSION=	${GCC_DEFAULT}
 LDFLAGS+=	-lstdc++fs
 
 dfly-patch:
