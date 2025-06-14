@@ -1,21 +1,9 @@
---- spa/plugins/alsa/alsa-pcm.c.orig	2022-12-09 10:28:24 UTC
-+++ spa/plugins/alsa/alsa-pcm.c
-@@ -460,9 +460,11 @@ static ssize_t log_write(void *cookie, c
- 	return size;
- }
+--- spa/plugins/alsa/alsa-pcm.c.orig	2025-06-13 16:36:49.370959000 +0200
++++ spa/plugins/alsa/alsa-pcm.c	2025-06-13 16:37:31.372050000 +0200
+@@ -1028,7 +1028,11 @@ int spa_alsa_init(struct state *state, c
  
-+#ifndef __DragonFly__
- static cookie_io_functions_t io_funcs = {
- 	.write = log_write,
- };
-+#endif
+ 	state->card = ensure_card(state->card_index, state->open_ucm, state->is_split_parent);
  
- int spa_alsa_init(struct state *state, const struct spa_dict *info)
- {
-@@ -504,7 +506,11 @@ int spa_alsa_init(struct state *state, c
- 		spa_log_error(state->log, "can't create card %u", state->card_index);
- 		return -errno;
- 	}
 +#ifdef __DragonFly__
 +	state->log_file = funopen(state, NULL, log_write, NULL, NULL);
 +#else
