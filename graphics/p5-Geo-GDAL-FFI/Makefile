@@ -1,6 +1,6 @@
 PORTNAME=	Geo-GDAL-FFI
-PORTVERSION=	0.09
-PORTREVISION=	3
+PORTVERSION=	0.12
+PORTREVISION=	2
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -15,18 +15,19 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	${RUN_DEPENDS}
 LIB_DEPENDS=	libgdal.so:graphics/gdal
 RUN_DEPENDS=	p5-FFI-Platypus>=0:devel/p5-FFI-Platypus \
-		p5-FFI-Platypus-Declare>=0:devel/p5-FFI-Platypus-Declare \
+		p5-PDL>=0:math/p5-PDL \
 		p5-PkgConfig>=0.23026:devel/p5-PkgConfig \
-		PDL>=0:math/PDL
+		p5-Sort-Versions>=0:devel/p5-Sort-Versions
 TEST_DEPENDS=	p5-JSON>=0:converters/p5-JSON \
-		p5-Test-Exception>=0:devel/p5-Test-Exception
+		p5-Path-Tiny>=0:devel/p5-Path-Tiny \
+		p5-Test-Exception>=0:devel/p5-Test-Exception \
+		p5-Test-TempDir-Tiny>=0:devel/p5-Test-TempDir-Tiny
 
-USES=		perl5
+USES=		dos2unix perl5
 USE_PERL5=	configure
 
 NO_ARCH=	yes
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/lib/Geo/GDAL/FFI.pm
+PORTSCOUT=	skipv:0.0501,0.0502,0.0503,0.0601
 
 .include <bsd.port.mk>
