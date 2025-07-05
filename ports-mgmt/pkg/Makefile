@@ -1,5 +1,5 @@
 PORTNAME=	pkg
-DISTVERSION=	2.1.2
+DISTVERSION=	2.2.0
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 
@@ -26,7 +26,7 @@ CFLAGS+=	-Wno-error
 
 OPTIONS_DEFINE=	DOCS
 
-.if !exists(/usr/include/jail.h)
+.if !exists(/usr/include/sys/jail.h)
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-docs_pkg.8
 .endif
 
