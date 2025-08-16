@@ -4,7 +4,7 @@
                        NVGetPCIXpressChip(dev) : dev->vendor_id << 16 | dev->device_id;
      const char *name = xf86TokenToString(NVKnownChipsets, id);
  
-+#ifndef __FreeBSD__
+#if !!defined(__FreeBSD__) && !defined(__DragonFly__)
 +    /* FreeBSD always has vgapci driver attached.  */
      if (pci_device_has_kernel_driver(dev)) {
          xf86DrvMsg(0, X_ERROR,
