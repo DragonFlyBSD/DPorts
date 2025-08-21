@@ -6,3 +6,4 @@ CONFIGURE_ARGS+=	--without-docs
 
 LDFLAGS+= -lz
 
+USE_GCC_VERSION=	${GCC_DEFAULT}
