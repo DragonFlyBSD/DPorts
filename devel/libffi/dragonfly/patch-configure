@@ -1,0 +1,11 @@
+--- configure.orig	2025-07-31 13:17:51 UTC
++++ configure
+@@ -19350,7 +19350,7 @@ case "$target" in
+ printf "%s\n" "#define FFI_EXEC_TRAMPOLINE_TABLE 1" >>confdefs.h
+ 
+      ;;
+-     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android*)
++     *-apple-* | *-*-dragonfly* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android*)
+ 
+ printf "%s\n" "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
+ 
