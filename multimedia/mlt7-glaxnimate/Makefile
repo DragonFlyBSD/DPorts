@@ -30,7 +30,7 @@ _CMAKE_OFF_qt6=	MOD_GLAXNIMATE
 _PLIST_SUB_qt5=	QT_VERSION_SUFFIX=
 _PLIST_SUB_qt6=	QT_VERSION_SUFFIX="-qt6"
 
-USE_GCC_VERSION=    11
+USE_GCC_VERSION=	${GCC_DEFAULT}
 
 # Only enable Qt binding, and disable everything else
 CMAKE_ON=	${_CMAKE_ON_${FLAVOR}}
