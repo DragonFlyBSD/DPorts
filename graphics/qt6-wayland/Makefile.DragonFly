@@ -1,3 +1,5 @@
+USE_GCC_VERSION=	${GCC_DEFAULT}
+
 dfly-patch:
 	${REINPLACE_CMD} -e 's|FREEBSD|DRAGONFLY|g' \
 		${WRKSRC}/CMakeLists.txt
