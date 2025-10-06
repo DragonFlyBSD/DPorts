@@ -1,6 +1,6 @@
 PORTNAME=	cinnamon-settings-daemon
 PORTVERSION=	5.4.4
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	sysutils gnome
 DIST_SUBDIR=	gnome
 
@@ -34,7 +34,7 @@ RUN_DEPENDS=	cinnamon-session:x11/cinnamon-session
 
 USES=		compiler:c11 gettext-tools gnome localbase meson pkgconfig \
 		python:build shebangfix xorg
-USE_GNOME=	cairo dconf gdkpixbuf2 gtk30 intltool libgnomekbd pango
+USE_GNOME=	cairo dconf gdkpixbuf gtk30 intltool libgnomekbd pango
 USE_XORG=	x11 xext xfixes xi
 
 USE_GITHUB=	yes
