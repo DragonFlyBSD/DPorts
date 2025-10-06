@@ -6,3 +6,6 @@ dfly-patch:
 	${REINPLACE_CMD} -e "s@LIBRARY_LINK_OPTS)@& -L${LOCALBASE}/lib -lcrypto@g" \
 		${WRKSRC}/liveMedia/Makefile.tail
 
+USE_GCC_VERSION=	${GCC_DEFAULT}
+
+CXXFLAGS+=	-DNO_STD_LIB=1
