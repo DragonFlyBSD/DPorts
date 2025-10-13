@@ -1,0 +1,7 @@
+# base gcc not enough
+USE_GCC_VERSION=	${GCC_DEFAULT}
+
+# eventfd.h
+LIB_DEPENDS+=	libepoll-shim.so:devel/libepoll-shim
+CFLAGS+=	-I${LOCALBASE}/include/libepoll-shim
+LDFLAGS+=	-lepoll-shim
