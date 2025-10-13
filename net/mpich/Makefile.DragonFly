@@ -1,3 +1,4 @@
+USE_GCC_VERSION=	${GCC_DEFAULT}
 
 # always use bundled version, but prefer ch3:nemesis
 LIB_DEPENDS:=	${LIB_DEPENDS:Nlibfabric.so*}
