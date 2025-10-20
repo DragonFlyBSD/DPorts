@@ -1,5 +1,6 @@
 PORTNAME=	gitlab-workhorse
 PORTVERSION=	${GITLAB_VERSION}
+PORTREVISION=	${GITLAB_PORTREVISION} # modify it in www/gitlab/Makefile.common
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/../LICENSE
 BUILD_DEPENDS=	git>=2.42.0:devel/git
 RUN_DEPENDS=	p5-Image-ExifTool>=0:graphics/p5-Image-ExifTool
 
-USES=		gmake go:modules,no_targets,1.22
+USES=		gmake go:modules,no_targets,1.23
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
