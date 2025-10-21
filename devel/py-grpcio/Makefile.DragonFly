@@ -1,3 +1,4 @@
+USE_GCC_VERSION=	${GCC_DEFAULT}
 
 # running 120 python executables on some systems is abit excessive...
 MAKE_ENV+=	GRPC_PYTHON_BUILD_EXT_COMPILER_JOBS=${MAKE_JOBS_NUMBER}
