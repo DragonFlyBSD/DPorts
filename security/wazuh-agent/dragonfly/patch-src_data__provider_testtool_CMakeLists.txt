@@ -1,0 +1,10 @@
+--- src/data_provider/testtool/CMakeLists.txt.orig	Mon Mar 10 09:32:47 2025
++++ src/data_provider/testtool/CMakeLists.txt	Sat Oct
+@@ -50,7 +50,6 @@ else()
+         sysinfo
+         dl
+         pthread
+-        proc
+     )
+ 
+     if(SOLARIS)
