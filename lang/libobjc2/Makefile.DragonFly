@@ -1,2 +1,9 @@
-CFLAGS+=	-I${LOCALBASE}/cxx_atomics
-BUILD_DEPENDS+=	${LOCALBASE}/cxx_atomics/stdatomic.h:misc/cxx_atomics
+# Prefer building with clang
+CXXFLAGS+=      -nostdlib++ -stdlib=libc++ -I${LOCALBASE}/include
+CXXFLAGS+=      -cxx-isystem ${LOCALBASE}/llvm${LLVM_DEFAULT}/libcxx/include/c++/v1
+LDFLAGS+=       -L /lib -L${LOCALBASE}/llvm${LLVM_DEFAULT}/libcxx/lib/c++ -L /usr/lib -lpthread
+LIB_DIRS+=      ${PREFIX}/llvm${LLVM_DEFAULT}/libcxx/lib
+LIB_DEPENDS+=   libc++.so.1:devel/libcxx${LLVM_DEFAULT}
+
+# Avoid duplicate init array crap from ld.gold
+MAKE_ENV+= LDVER=ld.bfd
