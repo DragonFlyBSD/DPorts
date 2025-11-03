@@ -24,7 +24,6 @@
 #include "regcache.h"
 #include "regset.h"
 #include "gdbarch.h"
-#include "gdbcmd.h"
 #include "gdbthread.h"
 #include "gdbsupport/gdb_wait.h"
 #include "inf-ptrace.h"
@@ -138,7 +137,7 @@ dfly_nat_target::find_memory_regions (find_memory_region_ftype func,
 	{
 	  gdb_printf (gdb_stdout, 
 			    "Save segment, %ld bytes at %s (%c%c%c)\n",
-			    size, paddress (target_gdbarch (), start),
+			    size, paddress (current_inferior ()->arch (), start),
 			    read ? 'r' : '-',
 			    write ? 'w' : '-',
 			    exec ? 'x' : '-');
