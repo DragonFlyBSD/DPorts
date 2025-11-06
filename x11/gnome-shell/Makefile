@@ -1,6 +1,6 @@
 PORTNAME=	gnome-shell
 PORTVERSION=	42.4
-PORTREVISION=	9
+PORTREVISION=	14
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
 DIST_SUBDIR=	gnome
@@ -22,7 +22,7 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libcanberra.so:audio/libcanberra \
 		libcroco-0.6.so:textproc/libcroco \
 		libdrm.so:graphics/libdrm \
-		libgcr-base-3.so:security/gcr \
+		libgcr-base-3.so:security/gcr3 \
 		libgjs.so:lang/gjs \
 		libgnome-autoar-0.so:archivers/gnome-autoar \
 		libgraphene-1.0.so:graphics/graphene \
@@ -45,7 +45,7 @@ PORTSCOUT=	limitw:1,even
 USES=		compiler:c11 cpe gettext gl gnome gstreamer libtool localbase \
 		meson pathfix perl5 pkgconfig python shebangfix tar:xz \
 		webplugin:native xorg
-USE_GNOME=	cairo evolutiondataserver3 gdkpixbuf2 gnomedesktop3 gtk40 \
+USE_GNOME=	cairo evolutiondataserver3 gdkpixbuf gnomedesktop3 gtk40 \
 		introspection libxml2 libxslt:build
 USE_XORG=	x11 xcomposite xdamage xext xfixes xi xrandr xtst
 USE_GL=		egl gbm
@@ -53,6 +53,8 @@ USE_PERL5=	build
 USE_LDCONFIG=	yes
 SHEBANG_FILES=	src/gnome-shell-extension-tool.in src/gnome-shell-perf-tool.in
 BINARY_ALIAS=	python3=${PYTHON_CMD}
+# These libs are found via rpath mechanism
+NO_SHLIB_REQUIRES_GLOB=	libmutter-clutter-* libmutter-cogl-*
 
 WEBPLUGIN_NAME=	libgnome-shell-browser-plugin.so
 WEBPLUGIN_DIR=	${PREFIX}/lib/mozilla/plugins/
