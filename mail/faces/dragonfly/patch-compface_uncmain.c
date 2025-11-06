@@ -1,24 +1,11 @@
---- compface/uncmain.c.intermediate	2013-01-03 23:38:01.194490000 +0100
-+++ compface/uncmain.c	2013-01-03 23:40:31.294700000 +0100
-@@ -14,6 +14,8 @@
-  */
+--- compface/uncmain.c.orig	Wed Nov  5 22:02:58 2025
++++ compface/uncmain.c	Wed Nov
+@@ -15,6 +15,8 @@
  
+ #include <errno.h>
  #include <fcntl.h>
 +#include <string.h>
 +#include <unistd.h>
+ #include <stdio.h>
  #include "compface.h"
  
- extern int xbitmap;
-@@ -33,7 +35,12 @@
- 
- /* error handling definitions follow */
- 
-+#ifdef __DragonFly__
-+#include <errno.h>
-+extern int sys_nerr;
-+#else
- extern int errno, sys_nerr;
-+#endif
- extern char *sys_errlist[];
- 
- extern void exit P((int)) ;
