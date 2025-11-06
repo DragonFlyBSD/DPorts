@@ -1,8 +1,8 @@
---- present/meson.build.orig	2024-07-10 11:40:59 UTC
-+++ present/meson.build
-@@ -16,7 +16,7 @@ hdrs_present = [
-     'presentext.h',
- ]
+--- meson.build.orig	Tue Feb 25 18:38:11 2025
++++ meson.build	Wed Nov
+@@ -332,7 +332,7 @@ endif
+ 
+ libdrm_dep = dependency('libdrm', version: libdrm_req, required: false)
  
 -if host_machine.system() in ['freebsd', 'openbsd']
 +if host_machine.system() in ['freebsd', 'openbsd', 'dragonfly']
