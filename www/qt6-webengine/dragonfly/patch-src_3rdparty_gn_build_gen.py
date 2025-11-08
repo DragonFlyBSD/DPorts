@@ -1,7 +1,5 @@
-diff --git src/3rdparty/gn/build/gen.py src/3rdparty/gn/build/gen.py
-index 54a9a205c02..6add9216a91 100755
---- src/3rdparty/gn/build/gen.py
-+++ src/3rdparty/gn/build/gen.py
+--- src/3rdparty/gn/build/gen.py.orig	Thu Nov  6 19:22:56 2025
++++ src/3rdparty/gn/build/gen.py	Thu Nov
 @@ -51,6 +51,8 @@ class Platform(object):
        self._platform = 'netbsd'
      elif self._platform.startswith('openbsd'):
@@ -11,16 +9,16 @@ index 54a9a205c02..6add9216a91 100755
      elif self._platform.startswith('haiku'):
        self._platform = 'haiku'
      elif self._platform.startswith('sunos'):
-@@ -60,7 +62,7 @@ class Platform(object):
+@@ -62,7 +64,7 @@ class Platform(object):
  
    @staticmethod
    def known_platforms():
--    return ['linux', 'darwin', 'mingw', 'msys', 'msvc', 'aix', 'fuchsia', 'freebsd', 'netbsd', 'openbsd', 'haiku', 'solaris', 'zos']
-+    return ['linux', 'darwin', 'mingw', 'msys', 'msvc', 'aix', 'fuchsia', 'freebsd', 'netbsd', 'openbsd', 'haiku', 'solaris', 'zos', 'dragonfly']
+-    return ['linux', 'darwin', 'mingw', 'msys', 'msvc', 'aix', 'fuchsia', 'freebsd', 'netbsd', 'openbsd', 'haiku', 'solaris', 'zos', 'serenity']
++    return ['linux', 'darwin', 'mingw', 'msys', 'msvc', 'aix', 'fuchsia', 'freebsd', 'netbsd', 'openbsd', 'haiku', 'solaris', 'zos', 'serenity', 'dragonfly']
  
    def platform(self):
      return self._platform
-@@ -98,8 +100,11 @@ class Platform(object):
+@@ -100,8 +102,11 @@ class Platform(object):
    def is_freebsd(self):
      return self._platform == 'freebsd'
  
@@ -28,12 +26,12 @@ index 54a9a205c02..6add9216a91 100755
 +    return self._platform == 'dragonfly'
 +
    def is_posix(self):
--    return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'solaris', 'msys', 'netbsd']
-+    return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'solaris', 'msys', 'netbsd', 'dragonfly']
+-    return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'solaris', 'msys', 'netbsd', 'serenity']
++    return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'solaris', 'msys', 'netbsd', 'serenity', 'dragonfly']
  
    def is_zos(self):
      return self._platform == 'zos'
-@@ -284,6 +289,7 @@ def WriteGenericNinja(path, static_libraries, executables,
+@@ -332,6 +337,7 @@ def WriteGenericNinja(path, static_libraries, executab
        'darwin': 'build_mac.ninja.template',
        'linux': 'build_linux.ninja.template',
        'freebsd': 'build_linux.ninja.template',
