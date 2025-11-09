@@ -1,6 +1,6 @@
 PORTNAME=	remmina
-DISTVERSION=	1.4.35
-PORTREVISION=	3
+DISTVERSION=	1.4.39
+PORTREVISION=	1
 CATEGORIES=	net gnome
 
 MAINTAINER=	fernape@FreeBSD.org
@@ -28,7 +28,7 @@ GL_ACCOUNT=	Remmina
 GL_PROJECT=	Remmina
 GL_TAGNAME=	2a455eadd6462457d08c2d066c5c245e0dee3bf9
 
-USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 pango
+USE_GNOME=	cairo gdkpixbuf glib20 gtk30 pango
 
 USE_XORG=	ice sm x11 xext
 
@@ -118,7 +118,7 @@ VNC_LIB_DEPENDS=	libvncserver.so:net/libvncserver
 VNC_CMAKE_BOOL=		WITH_LIBVNCSERVER
 
 WWW_LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
-			libwebkit2gtk-4.0.so:www/webkit2-gtk3
+			libwebkit2gtk-4.0.so:www/webkit2-gtk@40
 WWW_CMAKE_BOOL=		WITH_WEBKIT2GTK
 WWW_CMAKE_ON=		-DLIBSOUP_LIBRARY=${LOCALBASE}/lib/libsoup-2.4.so
 
