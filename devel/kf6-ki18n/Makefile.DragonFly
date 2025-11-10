@@ -1,4 +1,3 @@
-USE_GCC_VERSION=	${GCC_DEFAULT}
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
