@@ -1,4 +1,3 @@
-USE_GCC_VERSION=	${GCC_DEFAULT}
 
 # Need to specify our own make settings for qt6 ports to pick our spec
 PLIST_FILES+=	  %%QT_MKSPECDIR%%/dragonfly-g++/qmake.conf \
