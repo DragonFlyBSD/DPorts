@@ -1,7 +1,7 @@
---- net/disk_cache/simple/simple_file_tracker.cc.orig	2024-08-26 12:06:38 UTC
+--- net/disk_cache/simple/simple_file_tracker.cc.orig	2025-03-05 08:14:56 UTC
 +++ net/disk_cache/simple/simple_file_tracker.cc
-@@ -35,7 +35,17 @@ void RecordFileDescripterLimiterOp(FileDescriptorLimit
- }  // namespace
+@@ -37,7 +37,17 @@ bool SimpleFileTracker::TrackedFiles::InLRUList() cons
+ }
  
  SimpleFileTracker::SimpleFileTracker(int file_limit)
 +#if defined(OS_OPENBSD)
