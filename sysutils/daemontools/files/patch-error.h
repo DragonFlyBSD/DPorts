@@ -1,4 +1,4 @@
---- error.h.orig	2001-07-12 16:49:49.000000000 +0000
+--- error.h.orig
 +++ error.h
 @@ -3,7 +3,7 @@
  #ifndef ERROR_H
