@@ -1,6 +1,6 @@
---- configure.orig	2016-09-21 21:40:21 UTC
-+++ configure
-@@ -18310,7 +18310,7 @@ RCSTOP="$rcstop"
+--- configure.ac.orig	2025-11-16 10:41:07.188525000 +0100
++++ configure.ac	2025-11-16 10:44:53.920235000 +0100
+@@ -449,7 +449,7 @@ RCSTOP="$rcstop"
  
  if test x$rcdir = x; then
  	case "`uname`" in
