@@ -1,4 +1,4 @@
---- cmake/external/qt/CMakeLists.txt.orig	2024-03-08 11:07:18 UTC
+--- cmake/external/qt/CMakeLists.txt.orig	2024-10-11 07:45:28 UTC
 +++ cmake/external/qt/CMakeLists.txt
 @@ -16,6 +16,8 @@ if (DESKTOP_APP_USE_PACKAGED)
          Qt::CorePrivate
@@ -19,14 +19,14 @@
      $<$<TARGET_EXISTS:Qt::OpenGLWidgets>:${qt_loc}/include/QtOpenGLWidgets>
 @@ -46,9 +49,11 @@ INTERFACE
      $<$<TARGET_EXISTS:Qt::WaylandCompositor>:${qt_loc}/include/QtWaylandCompositor>
-     ${qt_loc}/include/QtCore/${qt_version}
-     ${qt_loc}/include/QtGui/${qt_version}
+     ${qt_loc}/include/QtCore/${QT_VERSION}
+     ${qt_loc}/include/QtGui/${QT_VERSION}
 +    ${qt_loc}/include/QtServiceSupport/${qt_version}
-     ${qt_loc}/include/QtWidgets/${qt_version}
-     ${qt_loc}/include/QtCore/${qt_version}/QtCore
-     ${qt_loc}/include/QtGui/${qt_version}/QtGui
+     ${qt_loc}/include/QtWidgets/${QT_VERSION}
+     ${qt_loc}/include/QtCore/${QT_VERSION}/QtCore
+     ${qt_loc}/include/QtGui/${QT_VERSION}/QtGui
 +    ${qt_loc}/include/QtServiceSupport/${qt_version}/QtServiceSupport
-     ${qt_loc}/include/QtWidgets/${qt_version}/QtWidgets
+     ${qt_loc}/include/QtWidgets/${QT_VERSION}/QtWidgets
  )
  
 @@ -97,6 +102,12 @@ set(common_qt_libs
