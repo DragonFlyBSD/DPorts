@@ -1,0 +1,11 @@
+--- meson.build.orig	2025-11-18 21:39:09.329945000 +0100
++++ meson.build	2025-11-18 21:49:00.504346000 +0100
+@@ -105,7 +105,7 @@ if libutempter.found()
+   feature_cflags += '-DHAVE_LIBUTEMPTER=1'
+ endif
+ 
+-if host_machine.system() in ['freebsd', 'dragonfly']
++if host_machine.system() in ['freebsd']
+   libprocstat = cc.find_library('procstat', required: true)
+   libutil = cc.find_library('util', required: true)
+ else
