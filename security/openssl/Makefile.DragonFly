@@ -1,2 +1,5 @@
 OPTIONS_EXCLUDE+= SCTP
 CFLAGS:=	${CFLAGS:N-Werror:N-Qunused-arguments}
+
+# no longer we do have cryptodeveng
+CONFIGURE_ARGS+=	no-devcryptoeng

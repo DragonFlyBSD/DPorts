@@ -119,7 +119,6 @@ SHARED_USE=		ldconfig=yes
 SHARED_VARS=		shlibs+="lib/libcrypto.so.${OPENSSL_SHLIBVER} \
 				lib/libssl.so.${OPENSSL_SHLIBVER} \
 				lib/engines-${OPENSSL_SHLIBVER}/capi.so \
-				lib/engines-${OPENSSL_SHLIBVER}/devcrypto.so \
 				lib/engines-${OPENSSL_SHLIBVER}/padlock.so"
 SSL3_CONFIGURE_ON+=	enable-ssl3-method
 ZLIB_CONFIGURE_ON=	zlib-dynamic
