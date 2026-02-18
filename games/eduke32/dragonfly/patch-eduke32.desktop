@@ -1,0 +1,14 @@
+--- eduke32.desktop.orig	2026-02-14 12:49:06.171549000 +0100
++++ eduke32.desktop	2026-02-14 12:47:20.740770000 +0100
+@@ -0,0 +1,11 @@
++[Desktop Entry]
++Type=Application
++Version=1.0
++Name=EDuke32
++GenericName=EDuke32
++Comment=Duke Nukem 3D Port based on JFDuke and EDuke
++Icon=game_icon
++Exec=eduke32
++Categories=Game;Shooter;
++StartupNotify=false
++
