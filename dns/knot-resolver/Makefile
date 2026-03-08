@@ -1,40 +1,33 @@
-# Created by: Leo Vandewoestijne <freebsd@dns.company>
-
 PORTNAME=	knot-resolver
-DISTVERSION=	5.4.4
-PORTREVISION=	1
+DISTVERSION=	5.7.5
 CATEGORIES=	dns
 MASTER_SITES=	https://secure.nic.cz/files/knot-resolver/ \
 		https://dns.company/downloads/knot-resolver/
 
 MAINTAINER=	freebsd@dns.company
 COMMENT=	Caching full resolver implementation
+WWW=		https://www.knot-resolver.cz/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	bash:shells/bash \
-		cmake:devel/cmake \
+		cmake:devel/cmake-core \
 		flake8:devel/py-flake8@${PY_FLAVOR} \
 		lua51-cqueues>=20200726_1:devel/lua-cqueues@lua51 \
 		luacheck:devel/lua-luacheck
-
-LIB_DEPENDS=	libdnssec.so:dns/knot3-lib \
+LIB_DEPENDS=	libdnssec.so:dns/knot3 \
 		libgnutls.so:security/gnutls \
-		libknot.so:dns/knot3-lib \
+		libknot.so:dns/knot3 \
 		liblmdb.so:databases/lmdb \
-		libluajit-5.1.so:lang/luajit-openresty \
 		libnghttp2.so:www/libnghttp2 \
 		libuv.so:devel/libuv \
-		libzscanner.so:dns/knot3-lib
-
+		libzscanner.so:dns/knot3
 RUN_DEPENDS=	lua51-cqueues>=20200726_1:devel/lua-cqueues@lua51
 
-USES=		compiler:c11 libedit libtool meson ncurses ninja pkgconfig \
-		python:3.5+,build shebangfix tar:xz
-
+USES=		compiler:c11 libedit luajit meson ncurses ninja \
+		pkgconfig python:build shebangfix tar:xz
 USE_CXXSTD=	c++11
-
 USE_RC_SUBR=	krescachegc kresd
 
 SHEBANG_FILES=	scripts/bench.sh \
@@ -48,7 +41,6 @@ SHEBANG_FILES=	scripts/bench.sh \
 		scripts/make-archive.sh \
 		scripts/make-doc.sh \
 		scripts/make-obs.sh \
-		scripts/run-pylint.sh \
 		scripts/run-scanbuild-with-args.sh \
 		scripts/test-config.sh \
 		scripts/test-integration-prepare.sh \
@@ -94,15 +86,12 @@ PORTDOCS=	AUTHORS COPYING CodingStyle NEWS README.md
 PORTEXAMPLES=	config.cluster config.docker config.internal config.isp \
 		config.personal config.privacy config.splitview
 
-OPTIONS_DEFINE=		DOCS EXAMPLES DNSTAP ROOTKEYS TRUSTANCHOR TEST TESTUNIT TESTCONF TESTEXTRA
-OPTIONS_DEFAULT=	DOCS EXAMPLES        ROOTKEYS TRUSTANCHOR TEST TESTUNIT
+OPTIONS_DEFINE=		DOCS EXAMPLES DNSTAP ROOTKEYS TRUSTANCHOR TESTUNIT
+OPTIONS_DEFAULT=	ROOTKEYS TRUSTANCHOR
 
 DNSTAP_DESC=		dnstap support
-ROOTKEYS_DESC=		install root.keys
-TESTCONF_DESC=		Do config tests
-TESTEXTRA_DESC=		Do extra tests
-TESTUNIT_DESC=		Do unit tests
-TEST_DESC=		Do tests
+ROOTKEYS_DESC=		Install root.keys
+TESTUNIT_DESC=		Build unit tests
 TRUSTANCHOR_DESC=	Trust anchor bootstrapping, management and stats
 
 DNSTAP_LIB_DEPENDS=	libfstrm.so:devel/fstrm \
@@ -115,17 +104,6 @@ DNSTAP_PLIST_FILES=	lib/knot-resolver/kres_modules/dnstap.so
 ROOTKEYS_MESON_ON=	-Dinstall_root_keys=enabled
 ROOTKEYS_MESON_OFF=	-Dinstall_root_keys=disabled
 ROOTKEYS_PLIST_FILES=	${ETCDIR}/root.keys
-
-TESTCONF_BROKEN=	missing luajit basexx package
-TESTCONF_MESON_ON=	-Dconfig_tests=enabled
-TESTCONF_MESON_OFF=	-Dconfig_tests=disabled
-
-TESTEXTRA_BROKEN=		CMake Error: The source directory misses CMakeLists.txt
-TESTEXTRA_BUILD_DEPENDS=	git:devel/git
-TESTEXTRA_USES=			cmake python:3
-TESTEXTRA_MESON_ON=		-Dextra_tests=enabled \
-				-Dsendmmsg=disabled
-TESTEXTRA_MESON_OFF=		-Dextra_tests=disabled
 
 TESTUNIT_BUILD_DEPENDS=	cmocka>=1.1.1:sysutils/cmocka
 TESTUNIT_MESON_ON=	-Dunit_tests=enabled
@@ -149,8 +127,6 @@ STRIP_TARGETS=	sbin/kres-cache-gc \
 pre-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${MKDIR} ${STAGEDIR}${RUNDIR}
-
-pre-install-TEST-on: do-test
 
 post-install:
 	${MV} ${STAGEDIR}${ETCDIR}/kresd.conf ${STAGEDIR}${ETCDIR}/kresd.conf.sample

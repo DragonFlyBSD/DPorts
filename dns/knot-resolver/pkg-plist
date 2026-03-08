@@ -12,7 +12,6 @@ include/libkres/iterate.h
 include/libkres/layer.h
 include/libkres/log.h
 include/libkres/lru.h
-include/libkres/map.h
 include/libkres/module.h
 include/libkres/nsec.h
 include/libkres/nsec3.h
@@ -29,6 +28,7 @@ include/libkres/trie.h
 include/libkres/utils.h
 include/libkres/zonecut.h
 lib/knot-resolver/ahocorasick.so
+lib/knot-resolver/debug_opensslkeylog.so
 lib/knot-resolver/distro-preconfig.lua
 lib/knot-resolver/kluautil.lua
 lib/knot-resolver/kres-gen.lua
@@ -42,6 +42,7 @@ lib/knot-resolver/kres_modules/dns64.lua
 lib/knot-resolver/kres_modules/edns_keepalive.so
 lib/knot-resolver/kres_modules/etcd.lua
 lib/knot-resolver/kres_modules/experimental_dot_auth.lua
+lib/knot-resolver/kres_modules/extended_error.so
 lib/knot-resolver/kres_modules/graphite.lua
 lib/knot-resolver/kres_modules/hints.so
 lib/knot-resolver/kres_modules/http.lua
@@ -90,9 +91,9 @@ lib/knot-resolver/upgrade-4-to-5.lua
 lib/knot-resolver/zonefile.lua
 lib/libkres.a
 libdata/pkgconfig/libkres.pc
-man/man8/kresd.8.gz
+share/man/man8/kresd.8.gz
 sbin/kres-cache-gc
 sbin/kresc
 sbin/kresd
 @dir(%%USERS%%,%%GROUPS%%,0755) %%ETCDIR%%
-@dir(%%USERS%%,%%GROUPS%%,0755) %%RUNDIR%%
+@dir(%%USERS%%,%%GROUPS%%,0700) %%RUNDIR%%
