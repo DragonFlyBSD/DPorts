@@ -1,5 +1,5 @@
---- src/ssl.c.orig	2021-07-29 21:21:04.704570000 +0200
-+++ src/ssl.c	2021-07-29 21:21:38.593792000 +0200
+--- src/ssl.c.orig	Wed Jan  8 20:55:23 2025
++++ src/ssl.c	Sat Nov
 @@ -1,5 +1,5 @@
  //getaddrinfo is an extension (not C99)
 -#if !defined(_WIN32) && !defined(__sun) && !defined(_POSIX_C_SOURCE)
@@ -11,8 +11,8 @@
  #endif
  
  //see https://github.com/jeroen/openssl/issues/41
--#if defined(__FreeBSD__) && !defined(__BSD_VISIBLE)
-+#if defined(__FreeBSD__) && !defined(__BSD_VISIBLE) && !defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) && !defined(__DragonFly__)
+ #if !defined(__BSD_VISIBLE)
  #define __BSD_VISIBLE 1
  #endif
- 

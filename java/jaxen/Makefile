@@ -9,7 +9,11 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Java XPath Engine
 WWW=		https://jaxen.org
 
-USE_JAVA=	YES
+DEPRECATED=	Outdated, unsupported upstream and unmaintained in tree for years
+EXPIRATION_DATE=2025-04-30
+
+USES=		java
+
 NO_BUILD=	YES
 
 JARFILES=	jaxen-core.jar jaxen-dom.jar jaxen-dom4j.jar jaxen-exml.jar jaxen-full.jar jaxen-jdom.jar lib/saxpath.jar

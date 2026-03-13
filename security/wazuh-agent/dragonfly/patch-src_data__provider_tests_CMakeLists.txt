@@ -1,0 +1,11 @@
+--- src/data_provider/tests/CMakeLists.txt.orig	Mon Mar 10 09:32:47 2025
++++ src/data_provider/tests/CMakeLists.txt	Sat Oct
+@@ -23,7 +23,7 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+   add_subdirectory(sysInfoHardwareMac)
+   add_subdirectory(sysInfoNetworkBSD)
+   add_subdirectory(sysInfoPackagesMAC)
+-elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++elseif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+   add_subdirectory(sysInfoNetworkBSD)
+ elseif(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
+   add_subdirectory(sysInfoNetworkBSD)

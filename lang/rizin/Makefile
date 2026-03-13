@@ -1,6 +1,6 @@
 PORTNAME=	rizin
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.3
+DISTVERSION=	0.7.4
 CATEGORIES=	lang security shells
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -14,7 +14,7 @@ LICENSE_FILE_LGPL3 =	${WRKSRC}/COPYING.LESSER
 
 NOT_FOR_ARCHS=	armv6 armv7
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyyaml>=0:devel/py-pyyaml@${PY_FLAVOR}
 LIB_DEPENDS=	libcapstone.so:devel/capstone \
 		libmspack.so:archivers/libmspack \
 		libxxhash.so:devel/xxhash \
@@ -43,7 +43,9 @@ MESON_ARGS=	-D use_sys_capstone=enabled \
 		-D use_sys_libmspack=enabled \
 		-D use_sys_tree_sitter=enabled \
 		-D enable_rz_test=false \
-		-D use_sys_libzstd=enabled \
+		-D use_sys_libzstd=enabled
+
+PLIST_SUB=	SOVERSION=${PORTVERSION}
 
 TESTING_UNSAFE=	requires additional test input files
 

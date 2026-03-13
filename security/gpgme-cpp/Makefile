@@ -1,11 +1,11 @@
 PORTREVISION=	0
-PKGNAMESUFFIX=	-${SLAVEPORT}
+PKGNAMESUFFIX=	-${_GPGME_BINDING}
 
 COMMENT=	Gpgme C++ bindings
 
-MASTERDIR=	${.CURDIR}/../../security/gpgme
-SLAVEPORT=	cpp
-BINDING_NAME=	cpp
+MASTERDIR=	${.CURDIR:H:H}/security/gpgme
 PLIST=		${.CURDIR}/pkg-plist
+
+_GPGME_BINDING=	cpp
 
 .include "${MASTERDIR}/Makefile"

@@ -1,5 +1,5 @@
---- setup.py.orig	2024-06-22 11:27:45 UTC
-+++ setup.py
+--- setup.py.orig	2025-11-05 20:44:00.702453000 +0100
++++ setup.py	2025-11-05 20:50:58.075906000 +0100
 @@ -885,13 +885,14 @@ class PyBuildExt(build_ext):
          # find out which version of OpenSSL we have
          openssl_ver = 0
@@ -49,7 +49,17 @@
  
          if any(sys.platform.startswith(prefix)
 -               for prefix in ("linux", "freebsd", "gnukfreebsd")):
-+               for prefix in ("linux", "dragon", "freebsd", "gnukfreebsd")):
++               for prefix in ("linux", "dragonfly", "freebsd", "gnukfreebsd")):
              exts.append( Extension('ossaudiodev', ['ossaudiodev.c']) )
          else:
              missing.append('ossaudiodev')
+@@ -1957,6 +1963,9 @@ class PyBuildExt(build_ext):
+                 # OpenBSD and FreeBSD use Tcl/Tk library names like libtcl83.a,
+                 # but the include subdirs are named like .../include/tcl8.3.
+                 dotversion = dotversion[:-1] + '.' + dotversion[-1]
++            if '.' not in dotversion and "dragonfly" in host_platform.lower():
++                dotversion = dotversion[:-1] + '.' + dotversion[-1]
++
+             tcl_include_sub = []
+             tk_include_sub = []
+             for dir in inc_dirs:

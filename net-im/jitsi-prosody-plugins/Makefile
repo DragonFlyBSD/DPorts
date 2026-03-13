@@ -1,5 +1,5 @@
 PORTNAME=	jitsi
-PORTVERSION=	2.0.8319
+PORTVERSION=	2.0.9955
 CATEGORIES=	net-im
 PKGNAMESUFFIX=	-prosody-plugins
 
@@ -22,7 +22,7 @@ NO_BUILD=	yes
 
 USE_GITHUB=	yes
 GH_PROJECT=	${PORTNAME}-meet
-GH_TAGNAME=	stable/jitsi-meet_8319
+GH_TAGNAME=	stable/jitsi-meet_9955
 
 INSTALLPATH=	${PREFIX}/lib/jitsi-prosody-plugins
 

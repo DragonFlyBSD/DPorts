@@ -1,4 +1,4 @@
-USE_GCC_VERSION=	11
+USE_GCC_VERSION=	${GCC_DEFAULT}
 
 dflypri_args1=	enable_basic_printing=true enable_print_preview=true use_dbus=true use_udev=false
 dflypri_args1+=	extra_ldflags=\\\"-L${LOCALBASE}/lib\\\"

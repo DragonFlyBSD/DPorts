@@ -1,11 +1,21 @@
---- CMakeLists.txt.orig	2022-07-06 07:23:55 UTC
+Fix detection of several libraries
+
+1) Use system zlib instead of embedded zlib-ng
+
+2) Fix minizip detection
+
+--- CMakeLists.txt.orig	2024-12-01 23:00:52 UTC
 +++ CMakeLists.txt
-@@ -133,7 +133,7 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
- # Set up paths
- set(bindir  ${CMAKE_INSTALL_PREFIX}/bin               CACHE PATH "bindir")
- set(datadir ${CMAKE_INSTALL_PREFIX}/share/dolphin-emu CACHE PATH "datadir")
--set(mandir  ${CMAKE_INSTALL_PREFIX}/share/man         CACHE PATH "mandir")
-+set(mandir  ${CMAKE_INSTALL_PREFIX}/man               CACHE PATH "mandir")
- add_definitions(-DDATA_DIR="${datadir}/")
+@@ -672,10 +672,10 @@ dolphin_find_optional_system_library_pkgconfig(ZSTD li
  
- if(CMAKE_SYSROOT)
+ dolphin_find_optional_system_library_pkgconfig(ZSTD libzstd>=1.4.0 zstd::zstd Externals/zstd)
+ 
+-add_subdirectory(Externals/zlib-ng)
++dolphin_find_optional_system_library_pkgconfig(ZLIB zlib ZLIB::ZLIB Externals/zlib-ng)
+ 
+ dolphin_find_optional_system_library_pkgconfig(MINIZIP
+-  "minizip>=4.0.4" minizip::minizip Externals/minizip-ng
++  "minizip-ng>=4.0.4" minizip::minizip Externals/minizip-ng
+ )
+ 
+ dolphin_find_optional_system_library(LZO Externals/LZO)

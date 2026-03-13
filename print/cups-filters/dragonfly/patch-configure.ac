@@ -1,0 +1,11 @@
+--- configure.ac.orig	2025-11-16 10:41:07.188525000 +0100
++++ configure.ac	2025-11-16 10:44:53.920235000 +0100
+@@ -449,7 +449,7 @@ RCSTOP="$rcstop"
+ 
+ if test x$rcdir = x; then
+ 	case "`uname`" in
+-		FreeBSD* | OpenBSD* | MirBSD* | ekkoBSD*)
++		FreeBSD* | OpenBSD* | MirBSD* | ekkoBSD* | DragonFly*)
+ 			# FreeBSD and OpenBSD
+ 			;;
+ 

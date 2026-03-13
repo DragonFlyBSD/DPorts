@@ -1,2 +1,2 @@
 USES+= pkgconfig
-DFLY_UNMAINTAINED= yes
+USE_GCC_VERSION=        ${GCC_DEFAULT}

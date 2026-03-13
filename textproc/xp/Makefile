@@ -9,10 +9,12 @@ MAINTAINER=	mike@vee.net
 COMMENT=	XML parser written in Java
 WWW=		http://www.jclark.com/xml/xp/index.html
 
-USE_JAVA=	yes
+DEPRECATED=     Obsolete, never versions of Java already include XML parser(s)
+EXPIRATION_DATE=2025-04-30
+
+USES=		java zip
 
 NO_BUILD=	yes
-USES=		zip
 
 PORTDOCS=	api copying.txt index.html
 

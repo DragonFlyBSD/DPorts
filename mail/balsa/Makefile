@@ -1,5 +1,6 @@
 PORTNAME=	balsa
 PORTVERSION=	2.6.4
+PORTREVISION=	2
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://pawsa.fedorapeople.org/balsa/
 
@@ -17,7 +18,7 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libgmime-3.0.so:mail/gmime30 \
 		libcanberra-gtk3.so:audio/libcanberra-gtk3 \
 		libical.so:devel/libical \
-		libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
+		libwebkit2gtk-4.0.so:www/webkit2-gtk@40 \
 		libgnutls.so:security/gnutls \
 		libfribidi.so:converters/fribidi \
 		libsoup-2.4.so:devel/libsoup  \
@@ -31,9 +32,10 @@ RUN_DEPENDS=	gnome-keyring:security/gnome-keyring
 USES=		cpe desktop-file-utils gettext gmake gnome iconv libtool pathfix perl5 \
 		pkgconfig tar:xz
 CPE_VENDOR=	gnome
-USE_GNOME=	cairo gdkpixbuf2 gnomeprefix intlhack libxslt gtksourceview4
+USE_GNOME=	cairo gdkpixbuf gnomeprefix intlhack libxslt gtksourceview4
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--with-canberra \
 				--with-gtksourceview
 CPPFLAGS+=	-I${LOCALBASE}/include

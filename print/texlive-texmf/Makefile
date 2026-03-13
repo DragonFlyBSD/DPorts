@@ -32,6 +32,9 @@ do-install:
 		${STAGEDIR}${PREFIX}/share/texmf-dist/tex/latex/prettytok/prettytok-decode-8bit.py
 	${REINPLACE_CMD} -i '' -e '1s|/usr/bin/perl|${perl_CMD}|' \
 		${STAGEDIR}${PREFIX}/share/texmf-dist/scripts/eolang/eolang.pl
+	# https://ctan.org/ctan-ann/id/mailman.9290.1717583628.3764.ctan-ann@ctan.org
+	${REINPLACE_CMD} -e 's|IfInstanceExistTF|IfInstanceExistsTF|g' \
+		${STAGEDIR}${PREFIX}/share/texmf-dist/tex/latex/xfrac/xfrac.sty
 	${FIND} -s ${STAGEDIR}${PREFIX}/share/texmf-dist -not -type d | ${SORT} | \
 		${SED} -e 's#^${STAGEDIR}${PREFIX}/##' >> ${TMPPLIST}
 	${FIND} -s ${STAGEDIR}${PREFIX}/share/texmf-dist -type d -empty | ${SORT} -r | \
@@ -111,13 +114,16 @@ _maintainer-patch: _maintainer-extract
 	${REINPLACE_CMD} -i '' \
 		's/\\def\\magyar@sugg@ie@low#1#2#3/\\def\\magyar@sugg@ie@low\\protect #1#2#3/' \
 		${WRKSRC}/texmf-dist/tex/generic/babel-hungarian/magyar.ldf
+	${REINPLACE_CMD} -i '' \
+		'/liturgic/d' \
+		${WRKSRC}/texmf-dist/tex/generic/config/language.dat \
+		${WRKSRC}/texmf-dist/tex/generic/config/language.def
 	${FIND} ${WRKSRC} -type f | \
 		${XARGS} ${REINPLACE_CMD} -i '' -E -e '1s|/bin/bash|${bash_CMD}|; \
 		1s|/usr/bin/perl|${perl_CMD}|; \
 		1s|/usr/bin/env python[23]?|${python_CMD}|; \
 		1s|/usr/bin/python|${python_CMD}|; \
 		1s|/bin/python3|${python_CMD}|; \
-		/ec\.tex/d; \
 		1s|/usr/bin/luatex|${LOCALBASE}/bin/luatex|'
 
 _maintainer-dist: _maintainer-patch

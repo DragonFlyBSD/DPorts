@@ -1,6 +1,6 @@
 PORTNAME=	cinnamon-desktop
 PORTVERSION=	5.4.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome
 
@@ -20,7 +20,7 @@ RUN_DEPENDS=	xkeyboard-config>=0:x11/xkeyboard-config \
 		libxkbfile>=0:x11/libxkbfile
 
 USES=		gettext gnome localbase meson pkgconfig python:build shebangfix xorg
-USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool introspection
+USE_GNOME=	cairo gdkpixbuf gtk30 intltool introspection
 USE_XORG=	x11 xext xrandr
 USE_LDCONFIG=	yes
 

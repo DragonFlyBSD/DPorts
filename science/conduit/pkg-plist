@@ -1,5 +1,8 @@
 bin/conduit_adjset_validate
 bin/conduit_blueprint_verify
+bin/conduit_generate_data
+%%MPICH%%bin/conduit_generate_data_mpi
+%%OPENMPI%%bin/conduit_generate_data_mpi
 bin/conduit_relay_entangle.py
 bin/conduit_relay_io_convert
 bin/conduit_relay_io_ls
@@ -13,6 +16,7 @@ include/conduit/conduit_blueprint.h
 include/conduit/conduit_blueprint.hpp
 include/conduit/conduit_blueprint.mod
 include/conduit/conduit_blueprint_config.h
+include/conduit/conduit_blueprint_curves.hpp
 include/conduit/conduit_blueprint_exports.h
 include/conduit/conduit_blueprint_mcarray.h
 include/conduit/conduit_blueprint_mcarray.hpp
@@ -22,11 +26,15 @@ include/conduit/conduit_blueprint_mesh.h
 include/conduit/conduit_blueprint_mesh.hpp
 include/conduit/conduit_blueprint_mesh.mod
 include/conduit/conduit_blueprint_mesh_examples.hpp
+include/conduit/conduit_blueprint_mesh_examples_generate.hpp
+include/conduit/conduit_blueprint_mesh_examples_gyre.hpp
 include/conduit/conduit_blueprint_mesh_examples_julia.hpp
 include/conduit/conduit_blueprint_mesh_examples_polystar.hpp
 include/conduit/conduit_blueprint_mesh_examples_related_boundary.hpp
 include/conduit/conduit_blueprint_mesh_examples_rz_cylinder.hpp
+include/conduit/conduit_blueprint_mesh_examples_tiled.hpp
 include/conduit/conduit_blueprint_mesh_examples_venn.hpp
+include/conduit/conduit_blueprint_mesh_flatten.hpp
 include/conduit/conduit_blueprint_mesh_kdtree.hpp
 include/conduit/conduit_blueprint_mesh_topology_metadata.hpp
 include/conduit/conduit_blueprint_mesh_utils.hpp
@@ -34,6 +42,7 @@ include/conduit/conduit_blueprint_mesh_utils.hpp
 %%NO_NOMPI%%include/conduit/conduit_blueprint_mpi_mesh.h
 %%NO_NOMPI%%include/conduit/conduit_blueprint_mpi_mesh.hpp
 %%NO_NOMPI%%include/conduit/conduit_blueprint_mpi_mesh_examples.hpp
+%%NO_NOMPI%%include/conduit/conduit_blueprint_mpi_mesh_flatten.hpp
 %%NO_NOMPI%%include/conduit/conduit_blueprint_mpi_mesh_partition.hpp
 %%NO_NOMPI%%include/conduit/conduit_blueprint_mpi_mesh_utils.hpp
 include/conduit/conduit_blueprint_ndarray_index.hpp
@@ -56,6 +65,7 @@ include/conduit/conduit_data_array.hpp
 include/conduit/conduit_data_type.hpp
 include/conduit/conduit_datatype.h
 include/conduit/conduit_endianness.hpp
+include/conduit/conduit_endianness_enum.mod
 include/conduit/conduit_endianness_types.h
 include/conduit/conduit_error.hpp
 include/conduit/conduit_execution.hpp
@@ -81,6 +91,7 @@ include/conduit/conduit_node.h
 include/conduit/conduit_node.hpp
 include/conduit/conduit_node_iterator.hpp
 include/conduit/conduit_obj.mod
+include/conduit/conduit_range_vector.hpp
 include/conduit/conduit_relay.h
 include/conduit/conduit_relay.hpp
 include/conduit/conduit_relay.mod
@@ -113,6 +124,7 @@ include/conduit/conduit_relay_web_node_viewer_server.hpp
 include/conduit/conduit_schema.hpp
 include/conduit/conduit_utils.h
 include/conduit/conduit_utils.hpp
+include/conduit/conduit_vector_view.hpp
 lib/cmake/conduit/ConduitConfig.cmake
 lib/cmake/conduit/ConduitConfigVersion.cmake
 lib/cmake/conduit/conduit-%%CMAKE_BUILD_TYPE%%.cmake

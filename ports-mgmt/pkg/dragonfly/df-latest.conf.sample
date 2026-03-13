@@ -119,6 +119,13 @@ Beltelecom: {
 	enabled		: no
 }
 
+# Belgium
+# TeamBelgium
+TeamBelgium: {
+	url		: https://dragonflybsd.mirror-services.net/pub/dports/${ABI}/LATEST,
+	enabled		: no
+}
+
 # Denmark
 # Aalborg University, Aalborg
 Aalborg: {
@@ -143,13 +150,6 @@ Wolfpond: {
 # Checkdomain GmbH
 GmbH: {
 	url		: https://mirror.checkdomain.de/dragonflybsd/dports/${ABI}/LATEST,
-	enabled		: no
-}
-
-# Germany
-# RWTH Aachen
-Aachen: {
-	url		: https://ftp.halifax.rwth-aachen.de/dragonflybsd/dports/${ABI}/LATEST,
 	enabled		: no
 }
 

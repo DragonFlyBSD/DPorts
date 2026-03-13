@@ -11,22 +11,17 @@ LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USES=		cmake compiler:c++14-lang pathfix python:build
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	catchorg
 GH_PROJECT=	Catch2
 
 CMAKE_ARGS=	-DCMAKE_INSTALL_DOCDIR=${DOCSDIR}
-PORTDOCS=	*
-
 NO_ARCH=	yes
 
 PORTSCOUT=	limit:^2\.
 
 OPTIONS_DEFINE=	DOCS
-
-post-patch:
-	@${REINPLACE_CMD} -e 's/\(-Wno-error=pragmas\)/\1 -Wno-error=c++20-extensions/' \
-		${WRKSRC}/projects/CMakeLists.txt
 
 do-test:
 	${BUILD_WRKSRC}/projects/SelfTest

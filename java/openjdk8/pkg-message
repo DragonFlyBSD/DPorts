@@ -1,6 +1,7 @@
 [
 { type: install
   message: <<EOM
+
 This OpenJDK implementation requires procfs(5) mounted on /proc.
 
 If you have not done it yet, please do the following:

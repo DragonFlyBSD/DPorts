@@ -1,4 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e '/MATCHES/s@FreeBSD|@&DragonFly|@g' \
-		${WRKSRC}/CMakeLists.txt

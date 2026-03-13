@@ -5,79 +5,20 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
-20240620:
-  AFFECTS: net-mgmt/net-snmp
-  AUTHOR: markj@FreeBSD.org
+20250327:
+  AFFECTS: users of thunderbird
+  AUTHOR: cmt@FreeBSD.org
 
-  The snmpd and snmptrapd daemons now drop privileges by default when started
-  using the rc scripts provided in the package.  Make sure that snmpd
-  configuration in /usr/local/share/snmp is readable by the "snmpd" user.  If
-  you have defined extension scripts in snmpd.conf, make sure that they can be
-  executed by an unprivileged user.  To revert to the old behavior of always
-  running as root, set snmpd_sugid="NO" or snmptrapd_sugid="NO" in /etc/rc.conf.
+  The mail/thunderbird port switched to Thunderbird's new release train,
+  with frequent major releases (ca. 4-weeks-cycle). Users wanting to
+  stay with the 128-releases for now and the ESR releases in general
+  should switch to the mail/thunderbird-esr port.
 
-  See the snmpd rc script for a hint on how to debug any permission problems
-  that might arise as a result of this change.
-
-20240615:
-  AFFECTS: mail/cyrus-imapd25
-  AUTHOR: ume@FreeBSD.org
-
-  The BDB option is disabled by default.
-
-  If you are using the berkeley cyrusdb backend, we strongly recommend
-  that you switch to something other than the berkeley cyrusdb
-  backend.  If you want to continue using the berkeley cyrusdb
-  backend, build the cyrus-imapd25 port yourself with the BDB option
-  enabled.
-
-20240613:
-  AFFECTS: multimedia/audacios and multimedia/audacious-plugins
-  AUTHOR: madpilot@FreeBSD.org
-
-  Upstream project made qt6 the new default, so the port flavors have
-  been updated to follow this change.
-
-  If you are using the qt6 flavor, you should uninstall it and install
-  the unflavored package. If you want to keep using the qt5 version it
-  will be updated automatically to the qt6 version. If you should
-  uninstall the unflavored package and instal the qt5 version.
-
-20240606:
-  AFFECTS: users of net-mgmt/unifi8
-  AUTHOR: ronald@FreeBSD.org
-
-  The default MongoDB version dependency has been switched from 5.0 to 6.0.
-  Although MongoDB 5.0 -> MongoDB 6.0 datafiles in-place upgrade seem to
-  work, users are strongly recommended to take full backup of unifi
-  database prior to upgrade and start with clean installation afterwards.
-
-  For an in-place upgrade it is important that the MongoDB
-  'featureCompatibilityVersion' is set to 5.0.
-  See: https://www.mongodb.com/docs/v6.0/release-notes/6.0-upgrade-standalone/#feature-compatibility-version
-  Run these commands in mongodb50 before upgrading (e.g. while unifi is running):
-  $ mongo --port 27117
-  > db.adminCommand( { setFeatureCompatibilityVersion: "5.0" } )
-  > exit
-
-  See updating entry 20230310 for a backup/restore upgrade.
-
-20240604:
-  AFFECTS: net-mgmt/net-snmp
-  AUTHOR: markj@FreeBSD.org
-
-  The net-snmp port's newsyslog(8) configuration has been updated such
-  that the snmpd log file will be owned by the snmpd user following log
-  rotation.  This is done to make it easier to run snmpd as the snmpd
-  user rather than as root, using the snmpd_sugid rc.conf option.
-  For now snmpd still runs as root by default.  This is expected to change
-  in the future.
-
-20240529:
+20250325:
   AFFECTS: users of TeX*
   AUTHOR: bofh@FreeBSD.org
 
-  TeX system has been updated to 2024 from 2023. Normal pkg upgrade or
+  TeX system has been updated to 2025 from 2024. Normal pkg upgrade or
   portmaster -a should handle all the upgrade properly. In case not please
   create a ticket or send a mail to tex@FreeBSD.org
 
@@ -87,203 +28,103 @@ you update your ports collection, before attempting any port upgrades.
 
   # pkg remove texlive-texmf
 
-20240529:
-  AFFECTS: users of python
-  AUTHOR: rm@FreeBSD.org
-
-  The default version of python3 and python was switched to 3.11.
-
-  For ports users wanting to keep version 3.9 as default,
-  add DEFAULT_VERSIONS+= python=3.9 python3=3.9 to make.conf
-
-  Following procedures may ease the upgrade:
-
-  For users of pre-build packages:
-  # sh
-  # for i in $(pkg query -g %n 'py39-*'); do pkg set -yn ${i}:py311-${i#py39-}; done
-  # pkg upgrade
-
-  For portmaster users:
-  # sh
-  # portmaster -o lang/python311 python39
-  # REINSTALL="$(pkg info -oq '*py39*')"
-  # pkg delete -f "*py39*"
-  # portmaster $REINSTALL
-  # REBUILD=$(pkg query -g "%n:%dn" '*' | grep py3 | grep -v py311 | cut -d : -f 1 | sort -u)
-  # portmaster $REBUILD
-  # REBUILD2=$(pkg list | grep python-39 | xargs pkg which | awk '{print $6}' | sort -u)
-  # portmaster $REBUILD2
-
-  Final steps (for pre-built packages & portmaster):
-
-  If no longer required, Python 3.9 can be removed via
-  "pkg remove python39" and the directory /usr/local/lib/python3.9 can
-  then be deleted afterwards, if not empty.
-
-20240522:
-  AFFECTS: net-p2p/transmission-daemon
-
-  The web interface has been separated from the daemon port into its own port.
-  This allows users of transmission-gtk and transmission-qt to install the web
-  interface.
-
-20240521:
-  AFFECTS: www/gitlab
-  AUTHOR: mfechner@FreeBSD.org
-
-  Make sure you upgrade first to 16.11.x before you upgrade to the today
-  released version 17.0.0.
-
-  For more details see:
-  https://gitlab.fechner.net/mfechner/Gitlab-docu/-/blob/master/update/16.11-17.0-freebsd.md
-
-20240517:
-  AFFECTS: comms/tio
-  AUTHOR: diizzy@FreeBSD.org
-
-  As of 3.1 upstream have reworked configuration file layout and syntax
-  so older configurations will not work.
-
-  For more details, see
-
-  https://github.com/tio/tio/releases/tag/v3.1
-
-20240513:
-  AFFECTS: users of security/libressl
-  AUTHOR: brnrd@FreeBSD.org
-
-  The port has been updated to the latest stable version 3.9 of LibreSSL.
-  The shared library versions of the libraries have been bumped.
-
-  After upgrading, manually update all packages that depend on any of the
-  libraries provided by LibreSSL (libssl, libcrypto and libtls) since the
-  versions of these libraries have changed. Normally, you can obtain the
-  list of dependent software by running the following command:
-
-  # pkg info -r libressl
-
-  Then you should rebuild all ports depending on libressl to avoid dangling
-  shared library dependencies.
-
-20240509:
-  AFFECTS: databases/timescaledb
-  AUTHOR: kbowling@FreeBSD.org
-
-  The Foreign Key storage in hypertables has changed in an incompatible way,
-  after runing ALTER EXTENSION, you must run the SQL script here:
-  https://github.com/timescale/timescaledb-extras/blob/master/utils/2.15.X-fix_hypertable_foreign_keys.sql
-
-  For more details, see
-
-  https://github.com/timescale/timescaledb/pull/6797
-
-20240508:
-  AFFECTS: www/oauth2-proxy
-  AUTHOR: netchild@FreeBSD.org
-
-  The start script is converted to be instance aware.  To use it:
-   - cp /usr/local/etc/oauth2-proxy.cfg.sample /usr/local/etc/oauth2-proxy-myapp.cfg
-   - vi /usr/local/etc/oauth2-proxy-myapp.cfg
-   - ln -s oauth2_proxy /usr/local/etc/rc.d/oauth2_proxy_myapp
-   - sysctl oauth2_proxy_myapp_enable=YES
-   - service oauth2_proxy_myapp start
-  This allows to easily start multiple instances on the same system.
-
-  As part of this, the start script was renamed to oauth2_proxy. This only
-  affects manual restarts, no change in rc.conf is needed.
-
-20240430:
-  AFFECTS: audio/py-pyradio
+20250321:
+  AFFECTS: users of mail/oama
   AUTHOR: nivit@FreeBSD.org
 
-  The new version of Pyradio moves some data files to new locations.
-  To see what it really does, run pyradio from a terminal the first time.
-  Besides that, the recordings are moved/saved into ~/pyradio-recordings.
-  You can change that directory in the config file.
+  Starting from version 0.15, when the GPG backend is used the encrypted
+  credentials are stored in the $XDG_STATE_HOME/oama directory.
+  If the XDG_STATE_HOME environment variable is not set then it defaults to
+  $HOME/.local/state.
 
-  For more details, see
+  That is a breaking change! If you use the GPG backend you need to manually
+  move your credential ~/.local/var/oama/*.oama files into the new directory.
 
-  https://github.com/coderholic/pyradio/releases/tag/0.9.3
+20250316:
+  AFFECTS: users of graphics/gdk-pixbuf2
+  AUTHOR: vishwin@FreeBSD.org
 
-20240423:
-  AFFECTS: textproc/vale
-  AUTHOR: bofh@FreeBSD.org
+  Loaders for ANI, BMP, ICNS, ICO, PNM, QTIF, TGA, XBM and XPM have
+  been moved to a separate graphics/gdk-pixbuf-extra port. Install
+  the aforementioned port if artefacts in those formats no longer
+  load or otherwise cause errors, and report them so that
+  USE_GNOME=gdkpixbufextra can be declared. Most should only need
+  USE_GNOME=gdkpixbufextra:run, but for those also needing these
+  loaders for build, leave out the :run.
 
-  When upgrading to v3.0.0, the vocabularies need to be moved from
-  $StylesPath/Vocab to $StylesPath/config/vocabularies.
+20250315:
+  AFFECTS: users of sysutils/snmp_exporter
+  AUTHOR: lexi@hemlock.eden.le-fay.org
 
-20240421:
-  AFFECTS: www/gitlab-ce
-  AUTHOR: mfechner@FreeBSD.org
+  BREAKING CHANGE: The new version of sysutils/snmp_exporter (0.28.0)
+  introduces several breaking changes.  If you don't want to migrate yet,
+  switch to the new port sysutils/snmp_exporter20 which contains the previous
+  version (0.20.0).
 
-  With the upgrade to version 16.11 the default path for gitlab-ce changed:
-  /usr/local/www/gitlab-ce -> /usr/local/www/gitlab
-  Make sure you follow the upgrade manual very carefully:
-  https://gitlab.fechner.net/mfechner/Gitlab-docu/-/blob/master/update/16.10-16.11-freebsd.md
+  1. The exporter uses a new configuration file format for SNMP authentication,
+  and configurations from the previous version will no longer work.  This
+  applies regardless of whether you use the configuration generator or write
+  the configuration by hand.
 
-  The gitlab port also got a new flavor gitlab@ee to make the Gitlab
-  Enterprise Edition available (you will need a license for it).
-  Please note, that the ee flavor is a draft, but any feedback is welcome.
-  See also the installation and upgrade manual for more details.
-  https://gitlab.fechner.net/mfechner/Gitlab-docu/-/blob/master/install/16.11-freebsd.md
+  For migration instructions, see:
+    https://github.com/prometheus/snmp_exporter/blob/main/auth-split-migration.md
 
-20240408:
-  AFFECTS: users of databases/p5-DBD-mysql
-  AUTHOR: flo@FreeBSD.org
+  2. Breaking changes were made affecting the 'synology', 'ddwrt' and
+  'kemp_loadmaster' modules.  For migration instructions, see:
+    https://github.com/prometheus/snmp_exporter/releases/tag/v0.27.0
 
-  Upstream removed support for MariaDB from the 5.0 branch. So if you use
-  MariaDB you need to use databases/p5-DBD-mysql4 from now on.
+  3. The sysUpTime metric has been removed from the if_mib module.  For
+  migration instructions, see:
+    https://github.com/prometheus/snmp_exporter/releases/tag/v0.28.0
 
-  Portmaster users:
-        portmaster -o databases/p5-DBD-mysql4 databases/p5-DBD-mysql
-        portmaster -a
+  4. (FreeBSD-specific) The port no longer patches the generator to hardcode
+  ${PREFIX}/etc in the paths used by snmp_exporter_generator.  If you were
+  relying on this behaviour, you should update your scripts to specify the full
+  pathname.
 
-  Portupgrade users:
-        portupgrade -o databases/p5-DBD-mysql4 -f databases/p5-DBD-mysql
-        portupgrade -a
+20250312:
+  AFFECTS: users of net/samba4{19,20}
+  AUTHOR: michaelo@FreeBSD.org
 
-20240330:
-  AFFECTS: users of mail/spamassassin
-  AUTHOR: cy@FreeBSD.org
+  The MANDOC option has been renamed to MANPAGES to match the option
+  name with other ports and the description from Mk/bsd.options.desc.mk.
 
-  sa-update must be run following update and prior to restarting sa-spamd
-  else it will fail to start due to a syntax error.
+20250311:
+  AFFECTS: users of databases/mongodb80
+  AUTHOR: ronald@FreeBSD.org
 
-20240326:
-  AFFECTS: users of net/bird2
-  AUTHOR: olivier@FreeBSD.org
+  Added flavor mongodb80-armv80a.
+  See item 20250217 for the rationale.
 
-  The net/bird2 default flavor has ben switched to netlink on FreeBSD >= 14.0
-  There is not change for FreeBSD < 14.0 (default flavor is still rtsock)
+20250310:
+  AFFECTS: users of www/wget2
+  AUTHOR: michaelo@FreeBSD.org
 
-20240319:
-  AFFECTS: users of net/rdist6
-  AUTHOR: cy@FreeBSD.org
+  The default NGHTTP2 option has been renamed to HTTP2 to match the option
+  name in ftp/curl and the description from Mk/bsd.options.desc.mk.
 
-  As of 52032b3d50c0 net/rdist6 will install its binary named rdist instead
-  of rdist6. Base FreeBSD no longer has its own rdist binary. Therefore
-  there is no need to rename the rdist6 binary to rdist6 to avoid confusion.
-  The historical and default name of the rdist binary is "rdist".
+20250219:
+  AFFECTS: users of comms/ser2net
+  AUTHOR: rodrigo@FreeBSD.org
 
-20240318:
-  AFFECTS: users of net-mgmt/unifi8
-  AUTHOR: otis@FreeBSD.org
+  ser2net 4.6.4 doesn't support 3.5.1 configuration who has to be
+  converted over to use new YAML syntax.
 
-  The default MongoDB version dependency has been switched from 4.4 to 5.0.
+  Please see the examples on ser2net.yaml sample configuration and
+  read the ser2net.yaml manpage on how to configure the new version.
+  Additional links and resources have been provided on the pkg-message.
 
-  Although MongoDB 4.4 -> MongoDB 5.0 datafiles in-place upgrade seem to
-  work, users are strongly recommended to take full backup of unifi
-  database prior to upgrade and start with clean installation afterwards.
+20250217:
+  AFFECTS: users of databases/mongodb70
+  AUTHOR: ronald@FreeBSD.org
 
-  See updating entry 20230310 for details.
+  MongoDB on non-LSE ARM CPUs like Raspberry Pi 4 works but is
+  unsupported upstream and can give corruption on high concurrency.
+  Please read https://jira.mongodb.org/browse/SERVER-71772 for details.
 
-20240316:
-  AFFECTS: users of net/rabbitmq
-  AUTHOR: dch@FreeBSD.org
+  Port mongodb70 is flavored to create two packages:
+    mongodb70 and mongodb70-armv80a
 
-  In preparation for upgrading to future RabbitMQ releases, users *must*
-  enable all feature flags before upgrading stepwise to v3.12.13, to be
-  able to migrate later to v3.13.0 when it is released in 2024Q2.
-
-  See https://www.rabbitmq.com/docs/upgrade for details.
+  Please install mongodb70-armv80a on RPI4 or similar ARM systems as pkg
+  mongodb70 will fail on runtime with unsupported instruction error.
 

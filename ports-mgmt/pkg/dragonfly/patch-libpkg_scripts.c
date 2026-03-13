@@ -1,5 +1,5 @@
---- libpkg/scripts.c.orig	Mon Nov 13 13:48:44 2023
-+++ libpkg/scripts.c	Wed Mar
+--- libpkg/scripts.c.orig	Fri Mar 28 05:46:30 2025
++++ libpkg/scripts.c	Tue Apr
 @@ -71,9 +71,14 @@ pkg_script_run(struct pkg * const pkg, pkg_script type
  #ifdef PROC_REAP_KILL
  	bool do_reap;
@@ -15,7 +15,7 @@
  	struct {
  		const char * const arg;
  		const pkg_script b;
-@@ -250,16 +255,21 @@ cleanup:
+@@ -257,11 +262,21 @@ cleanup:
  		return (ret);
  
  	procctl(P_PID, mypid, PROC_REAP_STATUS, &info);
@@ -29,12 +29,11 @@
 +		killemall.flags = 0;
 +#endif
  		if (procctl(P_PID, mypid, PROC_REAP_KILL, &killemall) != 0) {
- 			pkg_errno("%s", "Fail to kill all processes");
++#if defined(__FreeBSD__)
+ 			if (errno != ESRCH || killemall.rk_killed != 0 ) {
++#else
++			if (errno != ESRCH || killemall.killed != 0 ) {
++#endif
+ 				pkg_errno("%s", "Fail to kill all processes");
+ 			}
  		}
- 	}
- 	procctl(P_PID, mypid, PROC_REAP_RELEASE, NULL);
- #endif
--
- 	return (ret);
- }
- 

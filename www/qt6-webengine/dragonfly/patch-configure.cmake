@@ -1,6 +1,6 @@
---- configure.cmake.orig	Fri Feb 28 15:40:08 2025
-+++ configure.cmake	Fri Feb
-@@ -68,7 +68,7 @@ if(Python3_EXECUTABLE)
+--- configure.cmake.orig	Thu Nov  6 18:09:00 2025
++++ configure.cmake	Thu Nov
+@@ -73,7 +73,7 @@ if(Python3_EXECUTABLE)
  endif()
  
  #### Tests
@@ -9,16 +9,16 @@
     check_for_ulimit()
  endif()
  
-@@ -428,7 +428,7 @@ qt_feature("webengine-system-libpci" PRIVATE
+@@ -434,7 +434,7 @@ qt_feature("webengine-system-libpci" PRIVATE
  
  qt_feature("webengine-ozone-x11" PRIVATE
-     LABEL "Support GLX on qpa-xcb"
+     LABEL "Support X11 on qpa-xcb"
 -    CONDITION LINUX OR FREEBSD
 +    CONDITION LINUX OR FREEBSD OR DRAGONFLY
          AND TARGET Qt::Gui
          AND QT_FEATURE_xcb
          AND X11_FOUND
-@@ -466,12 +466,12 @@ assertTargets(
+@@ -474,12 +474,12 @@ assertTargets(
  )
  add_check_for_support(
     MODULES QtWebEngine
@@ -33,7 +33,7 @@
     MESSAGE "Build can be done only on Linux, Windows, macO, iOS and Android."
  )
  if(LINUX AND CMAKE_CROSSCOMPILING)
-@@ -573,6 +573,8 @@ add_check_for_support(
+@@ -567,6 +567,8 @@ add_check_for_support(
     CONDITION MSVC OR
         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
@@ -42,7 +42,7 @@
         (MACOS AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
     MESSAGE
         "${CMAKE_CXX_COMPILER_ID} compiler is not supported."
-@@ -583,6 +585,8 @@ add_check_for_support(
+@@ -577,6 +579,8 @@ add_check_for_support(
     CONDITION MSVC OR
         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR

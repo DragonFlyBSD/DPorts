@@ -1,6 +1,6 @@
 PORTNAME=	gcc
-PORTVERSION=	13.2.0
-PORTREVISION=	4
+PORTVERSION=	13.3.0
+PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	GCC
 PKGNAMESUFFIX=	${SUFFIX}
@@ -17,8 +17,8 @@ ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le ris
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
 		libmpc.so:math/mpc
-BUILD_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
-RUN_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils
+BUILD_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils@native
+RUN_DEPENDS+=	${LOCALBASE}/bin/as:devel/binutils@native
 .if defined(MAINTAINER_MODE)
 BUILD_DEPENDS+=	runtest:misc/dejagnu
 .endif
@@ -65,6 +65,9 @@ CFLAGS:=	${CFLAGS:S/mcpu=g/mcpu=G/}
 CXXFLAGS:=	${CFLAGS:S/mcpu=g/mcpu=G/}
 .endif
 
+GRAPHITE_LIB_DEPENDS=          libisl.so:devel/isl
+GRAPHITE_CONFIGURE_WITH+=      isl
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == x86_64
@@ -97,6 +100,7 @@ INSTALL_TARGET=	install-strip
 BINMODE=	755
 .endif
 CONFIGURE_ARGS+=--disable-nls \
+		--disable-libssp \
 		--enable-gnu-indirect-function \
 		--enable-host-shared \
 		--enable-plugin \
@@ -131,12 +135,11 @@ INFO+=		gcc${SUFFIX}/libquadmath \
 SUB_FILES=	pkg-message
 SUB_LIST+=	TARGLIB=${TARGLIB}
 
-.if ${PORT_OPTIONS:MGRAPHITE}
-LIB_DEPENDS+=	libisl.so:devel/isl
-CONFIGURE_ARGS+=--with-isl=${LOCALBASE}
-.endif
-
 CONFIGURE_ARGS+=--enable-languages=${LANGUAGES}
+
+.if (${ARCH} == x86_64 || ${ARCH} == powerpc64) && ${PORT_OPTIONS:MMULTILIB}
+USE_LDCONFIG32=	${TARGLIB32}/gcc${SUFFIX}
+.endif
 
 pre-everything::
 	@${ECHO_MSG} "Making GCC ${PORTVERSION} for ${CONFIGURE_TARGET} [${LANGUAGES}]"

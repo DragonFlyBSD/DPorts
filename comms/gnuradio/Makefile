@@ -1,7 +1,7 @@
 PORTNAME=	gnuradio
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.8.4.0
-PORTREVISION=	13
+PORTREVISION=	25
 CATEGORIES=	comms astro hamradio
 
 MAINTAINER=	hamradio@FreeBSD.org
@@ -10,14 +10,15 @@ WWW=		https://www.gnuradio.org/
 
 LICENSE=	GPLv3
 
+BROKEN=		Fails to build with Boost 1.87 
+
 BUILD_DEPENDS=	volk>0:devel/volk \
 		doxygen>0:devel/doxygen \
 		${PYTHON_PKGNAMEPREFIX}sphinx>=1.2.2,1:textproc/py-sphinx@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 		${PYNUMPY} \
 		${PYTHON_SITELIBDIR}/mako/__init__.py:textproc/py-mako@${PY_FLAVOR} \
-		${PYTHON_SITELIBDIR}/yaml/__init__.py:devel/py-yaml@${PY_FLAVOR} \
-		${PYTHON_SITELIBDIR}/gi/__init__.py:devel/py-gobject3@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyyaml>=3.11:devel/py-pyyaml@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/cairo/__init__.py:graphics/py-cairo@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/six.py:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/click/__init__.py:devel/py-click@${PY_FLAVOR} \
@@ -34,7 +35,7 @@ LIB_DEPENDS=	libcodec2.so:audio/codec2 \
 		libfftw3.so:math/fftw3 \
 		libfftw3f.so:math/fftw3-float \
 		libgmpxx.so:math/gmp \
-		libqwt6.so:x11-toolkits/qwt6 \
+		libqwt.so:x11-toolkits/qwt6@qt5 \
 		${PY_BOOST} \
 		liblog4cpp.so:devel/log4cpp \
 		libportaudio.so:audio/portaudio \
@@ -48,8 +49,8 @@ LIB_DEPENDS=	libcodec2.so:audio/codec2 \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		cmake compiler:c++11-lang desktop-file-utils fortran gnome \
-		iconv perl5 pkgconfig pyqt:5 python qt:5 shared-mime-info \
-		shebangfix
+		iconv localbase:ldflags perl5 pkgconfig pyqt:5 python \
+		qt:5 shared-mime-info shebangfix
 
 SHEBANG_FILES=	grc/scripts/freedesktop/grc_setup_freedesktop.in \
 		gnuradio-runtime/python/gnuradio/ctrlport/gr-ctrlport-monitor \
@@ -69,6 +70,7 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH:STRING="${LOCALBASE}/lib/gcc${_GCC_VER}" \
 #CMAKE_ARGS+=	--debug-output --trace
 USE_CXXSTD=	c++11
 USE_GITHUB=	yes
+USE_GNOME=	pygobject3
 USE_PYQT=	pyqt5
 USE_WX=		3.2
 USE_QT=		buildtools core gui xml qmake widgets

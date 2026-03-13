@@ -1,4 +1,0 @@
-PLIST_FILES+=	"@dir ${PYTHON_SITELIBDIR}/PyQtChart-5.15.6.dist-info" \
-		${PYTHON_SITELIBDIR}/PyQtChart-5.15.6.dist-info/INSTALLER \
-		${PYTHON_SITELIBDIR}/PyQtChart-5.15.6.dist-info/METADATA \
-		${PYTHON_SITELIBDIR}/PyQtChart-5.15.6.dist-info/RECORD

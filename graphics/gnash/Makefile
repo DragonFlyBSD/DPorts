@@ -1,6 +1,6 @@
 PORTNAME=	gnash
 PORTVERSION=	0.8.10
-PORTREVISION=	64
+PORTREVISION=	68
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	http://git.savannah.gnu.org/cgit/gnash.git/snapshot/
 DISTNAME=	gnash-2b3bdede0305c4fc3ad21a0a4197330606c9b880
@@ -37,7 +37,7 @@ CPE_VENDOR=	gnu
 USE_CSTD=	gnu11
 USE_CXXSTD=	c++11
 USE_XORG=	x11 xau xdmcp xext xi xinerama ice sm xv
-USE_GNOME=	atk gdkpixbuf2 gtk20 libxml2 pango
+USE_GNOME=	atk gdkpixbuf gtk20 libxml2 pango
 USE_GL=		egl
 USE_SDL=	sdl
 GNU_CONFIGURE=	yes

@@ -1,7 +1,0 @@
-
-# zrj: add missing link against -lm in libsvg.so
-# NOTYPE  GLOBAL DEFAULT  UND {cos, sin, tan}
-# fixes graphics/mapserver build (binutils 2.27 ld.gold is unhappy)
-dfly-patch:
-	${REINPLACE_CMD} -e "/LINK) -rpath/s/$$/ -lm/g"	\
-		${WRKSRC}/src/Makefile.in

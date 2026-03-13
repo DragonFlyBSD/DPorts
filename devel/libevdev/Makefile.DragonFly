@@ -1,0 +1,3 @@
+dfly-patch:
+	${CP} -r ${WRKSRC}/include/linux/freebsd \
+	      ${WRKSRC}/include/linux/dragonfly

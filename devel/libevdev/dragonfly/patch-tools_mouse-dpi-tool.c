@@ -1,25 +1,24 @@
---- tools/mouse-dpi-tool.c.orig	2019-05-02 15:11:57.000000000 +0300
-+++ tools/mouse-dpi-tool.c	2019-05-14 13:33:52.197067000 +0300
-@@ -26,7 +26,13 @@
- #endif
+--- tools/mouse-dpi-tool.c.orig	Fri May 31 05:24:44 2024
++++ tools/mouse-dpi-tool.c	Sun Apr
+@@ -19,6 +19,12 @@
  
- #include <libevdev/libevdev.h>
+ #include "libevdev/libevdev.h"
+ 
 +#if defined(__DragonFly__)
 +#include <sys/types.h>
 +#include <sys/event.h>
 +#include <sys/time.h>
-+#else
- #include <sys/signalfd.h>
 +#endif
- #include <errno.h>
- #include <fcntl.h>
- #include <limits.h>
-@@ -145,6 +151,88 @@ handle_event(struct measurements *m, con
- 	return 0;
++
+ #define min(a, b) (((a) < (b)) ? (a) : (b))
+ #define max(a, b) (((a) > (b)) ? (a) : (b))
+ 
+@@ -130,7 +136,89 @@ signal_handler(__attribute__((__unused__)) int signal)
+ 	signalled++;
  }
  
 +#if defined(__DragonFly__)
-+static int
+ static int
 +mainloop(struct libevdev *dev, struct dimensions *dim) {
 +	int kq, nev;
 +	struct kevent change[2];
@@ -100,10 +99,11 @@
 +	return 0;
 +}
 +#else  /* Linux */
- static int
++static int
  mainloop(struct libevdev *dev, struct measurements *m) {
- 	struct pollfd fds[2];
-@@ -183,6 +271,7 @@ mainloop(struct libevdev *dev, struct me
+ 	struct pollfd fds;
+ 
+@@ -165,6 +253,7 @@ mainloop(struct libevdev *dev, struct measurements *m)
  
  	return 0;
  }

@@ -1,2 +1,3 @@
-SHA256 (libevdev-1.5.9.tar.xz) = e1663751443bed9d3e76a4fe2caf6fa866a79705d91cacad815c04e706198a75
-SIZE (libevdev-1.5.9.tar.xz) = 408200
+TIMESTAMP = 1718002642
+SHA256 (libevdev-1.13.2.tar.xz) = 3eca86a6ce55b81d5bce910637fc451c8bbe373b1f9698f375c7f1ad0de3ac48
+SIZE (libevdev-1.13.2.tar.xz) = 460456

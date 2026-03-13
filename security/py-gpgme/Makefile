@@ -5,10 +5,10 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Gpgme Python bindings
 
-MASTERDIR=	${.CURDIR}/../../security/gpgme
-SLAVEPORT=	python
-BINDING_NAME=	python
+MASTERDIR=	${.CURDIR:H:H}/security/gpgme
 PLIST=		${.CURDIR}/pkg-plist
+
+_GPGME_BINDING=	python
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/gpg/_gpgme*.so

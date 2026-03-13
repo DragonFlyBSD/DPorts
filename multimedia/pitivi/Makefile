@@ -1,6 +1,6 @@
 PORTNAME=	pitivi
 PORTVERSION=	2022.06
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:R}
 
@@ -18,14 +18,14 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gstreamer1>=1.14.0:multimedia/py-gstreamer1@
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYNUMPY}
 
-USES=		cpe desktop-file-utils gettext gnome gstreamer meson pkgconfig python:3.7+ \
+USES=		cpe desktop-file-utils gettext gnome gstreamer meson pkgconfig python \
 		shared-mime-info shebangfix tar:xz
 SHEBANG_FILES=	bin/pitivi.in \
 		getenvvar.py \
 		tests/__init__.py \
 		tests/validate-tests/manager.py \
 		tests/validate-tests/runtests
-USE_GNOME=	cairo intltool gdkpixbuf2 gsound gtk30 pygobject3
+USE_GNOME=	cairo intltool gdkpixbuf gsound gtk30 pygobject3
 USE_GSTREAMER=	bad editing-services gdkpixbuf good gtk
 USE_LDCONFIG=	yes
 MESON_ARGS=	-Db_lundef=false

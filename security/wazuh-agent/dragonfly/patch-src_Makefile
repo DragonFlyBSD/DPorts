@@ -1,0 +1,69 @@
+--- src/Makefile.orig	Sun Oct 26 10:37:22 2025
++++ src/Makefile	Sun Oct
+@@ -269,15 +269,15 @@ ifeq (${uname_S},Darwin)
+ 	OSSEC_LIBS+=-framework Security -framework CoreFoundation -framework SystemConfiguration
+ 	PRECOMPILED_OS:=darwin
+ else
+-ifeq (${uname_S},FreeBSD)
++ifneq (,$(filter $(uname_S),DragonFly FreeBSD))
+ 		DEFINES+=-DFreeBSD
+-		OSSEC_CFLAGS+=-pthread -I/usr/local/include
+-		OSSEC_LDFLAGS+=-pthread -lnghttp2
++		OSSEC_CFLAGS+=-lpthread -I/usr/local/include
++		OSSEC_LDFLAGS+=-lpthread -lnghttp2
+ 		OSSEC_LDFLAGS+=-L/usr/local/lib
+-		OSSEC_LDFLAGS+='-Wl,-rpath,$$ORIGIN/../lib'
+-		AR_LDFLAGS+=-pthread -lnghttp2
++		OSSEC_LDFLAGS+=-Wl,-zorigin '-Wl,-rpath,$$ORIGIN/../lib'
++		AR_LDFLAGS+=-lpthread -lnghttp2
+ 		AR_LDFLAGS+=-L/usr/local/lib
+-		AR_LDFLAGS+='-Wl,-rpath,$$ORIGIN/../../lib'
++		AR_LDFLAGS+=-Wl,-zorigin '-Wl,-rpath,$$ORIGIN/../../lib'
+ 		PRECOMPILED_OS:=freebsd
+ else
+ ifeq (${uname_S},NetBSD)
+@@ -532,7 +532,7 @@ OSSEC_WINDRES 		=${QUIET_CCBIN}${MING_BASE}windres
+ 
+ ifneq (,$(filter ${USE_INOTIFY},YES auto yes y Y 1))
+ 	DEFINES+=-DINOTIFY_ENABLED
+-	ifeq (${uname_S},FreeBSD)
++	ifneq (,$(filter $(uname_S),DragonFly FreeBSD))
+ 		OSSEC_LDFLAGS+=-I/usr/local/include -L/usr/local/lib
+ 		OSSEC_LIBS+=-L/usr/local/lib -linotify
+ 		OSSEC_CFLAGS+=-I/usr/local/include
+@@ -959,7 +959,7 @@ ifeq (${TARGET},winagent)
+ 	EXTERNAL_LIBS += $(LIBCURL_LIB)
+ else ifeq (${uname_S},Linux)
+ 	EXTERNAL_LIBS += $(LIBCURL_LIB)
+-else ifeq (${uname_S},FreeBSD)
++else ifneq (,$(filter $(uname_S),DragonFly FreeBSD))
+ 	EXTERNAL_LIBS += $(LIBCURL_LIB)
+ else ifeq (${uname_S},Darwin)
+ 	EXTERNAL_LIBS += $(LIBCURL_LIB)
+@@ -1177,7 +1177,7 @@ else
+ 	cd $(EXTERNAL_CURL) && CPPFLAGS="-fPIC -I${ROUTE_PATH}/${EXTERNAL_OPENSSL}include" LDFLAGS="-L${ROUTE_PATH}/${EXTERNAL_OPENSSL}" LIBS="-ldl -lpthread" ./configure --with-openssl="${ROUTE_PATH}/${EXTERNAL_OPENSSL}" --disable-ldap --without-libidn2 --without-libpsl --without-brotli --without-nghttp2 --without-zstd
+ endif
+ else
+-ifeq (${uname_S},FreeBSD)
++ifneq (,$(filter $(uname_S),DragonFly FreeBSD))
+ 	cd $(EXTERNAL_CURL) && CPPFLAGS="-fPIC -I${ROUTE_PATH}/${EXTERNAL_OPENSSL}include" LDFLAGS="-L${ROUTE_PATH}/${EXTERNAL_OPENSSL}" LIBS="-pthread" ./configure --with-ssl="${ROUTE_PATH}/${EXTERNAL_OPENSSL}" --disable-ldap --without-libidn2 --without-brotli --without-nghttp2 --without-librtmp --without-zstd --without-libpsl
+ else
+ 	cd $(EXTERNAL_CURL) && CPPFLAGS="-fPIC -I${ROUTE_PATH}/${EXTERNAL_OPENSSL}include" LDFLAGS="-L${ROUTE_PATH}/${EXTERNAL_OPENSSL}" LIBS="-lpthread" ./configure --with-openssl="${ROUTE_PATH}/${EXTERNAL_OPENSSL}" --disable-ldap --without-libidn2 --without-brotli --without-nghttp2 --without-librtmp --without-zstd --without-libpsl
+@@ -2476,7 +2476,7 @@ else
+ 	mkdir -p ${WPYTHON_DIR}
+ 	cp external/${WPYTHON_TAR} ${WPYTHON_DIR}/${WPYTHON_TAR} && ${TAR} ${WPYTHON_DIR}/${WPYTHON_TAR} -C ${WPYTHON_DIR} && rm -rf ${WPYTHON_DIR}/${WPYTHON_TAR}
+ endif
+-ifeq (${uname_S},FreeBSD)
++ifneq (,$(filter $(uname_S),DragonFly FreeBSD))
+ 	mkdir -p $(STAGEDIR)${INSTALLDIR}/lib
+ 	find $(STAGEDIR)${WPYTHON_DIR} -name "*${WLIBPYTHON}" -exec ln -f {} $(STAGEDIR)${INSTALLDIR}/lib/${WLIBPYTHON} \;
+ else
+@@ -2485,7 +2485,7 @@ endif
+ 
+ python_dependencies := requirements.txt
+ 
+-ifeq (${uname_S},FreeBSD)
++ifneq (,$(filter $(uname_S),DragonFly FreeBSD))
+ install_dependencies:
+ ifneq (,$(wildcard ${EXTERNAL_CPYTHON}))
+ 	$(STAGEDIR)${WPYTHON_DIR}/bin/python3 -B -m pip install --upgrade pip --prefix=${WPYTHON_DIR} --root=$(STAGEDIR) --no-index --find-links=wazuh-cache/ --cache-dir=wazuh-cache/ --no-compile

@@ -30,6 +30,7 @@ share/gcc-%%GCC_VERSION%%/python/libstdcxx/__init__.py
 share/gcc-%%GCC_VERSION%%/python/libstdcxx/v6/__init__.py
 share/gcc-%%GCC_VERSION%%/python/libstdcxx/v6/printers.py
 share/gcc-%%GCC_VERSION%%/python/libstdcxx/v6/xmethods.py
+include/gcc%%SUFFIX%%/ISO_Fortran_binding.h
 @postexec if type ccache-update-links >/dev/null 2>&1; then ccache-update-links -v; fi
 @postunexec if type ccache-update-links >/dev/null 2>&1; then ccache-update-links -v; fi
 @comment Insert PLIST.lib here

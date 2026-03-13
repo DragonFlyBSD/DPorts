@@ -1,0 +1,57 @@
+--- configure.orig	Mon Oct 21 11:31:57 2024
++++ configure	Mon Apr
+@@ -7298,6 +7298,27 @@ tools are selected during the Xcode/Developer Tools in
+     fi
+     ;;
+ 
++*-dragonfly*)
++    if test -z "$USE_NSPR_THREADS"; then
++        USE_PTHREADS=1
++    fi
++    $as_echo "#define XP_UNIX 1" >>confdefs.h
++
++    $as_echo "#define HAVE_BSD_FLOCK 1" >>confdefs.h
++
++    $as_echo "#define HAVE_SOCKLEN_T 1" >>confdefs.h
++
++    CFLAGS="$CFLAGS $(DSO_CFLAGS) -ansi -Wall"
++    
++    
++    
++    MKSHLIB='$(CC) $(DSO_LDOPTS) -o $@'
++    DSO_CFLAGS=-fPIC
++    DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
++    MDCPUCFG_H=_dragonfly.cfg
++    PR_MD_CSRCS=freebsd.c
++    ;;
++
+ *-freebsd*)
+     if test -z "$USE_NSPR_THREADS"; then
+         USE_PTHREADS=1
+@@ -8760,7 +8781,7 @@ printf %s "checking whether ${CC-cc} accepts -pthread.
+ 	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
+ 	    ac_cv_have_dash_pthread=yes
+ 		case "$target_os" in
+-	    freebsd*)
++	    freebsd*|dragonfly*)
+ # Freebsd doesn't use -pthread for compiles, it uses them for linking
+             ;;
+ 	    *)
+@@ -8798,7 +8819,7 @@ printf "%s\n" "$ac_cv_have_dash_pthreads" >&6; }
+             _PTHREAD_LDFLAGS=
+         fi
+ 	    ;;
+-    *-freebsd*)
++    *-freebsd*|*-dragonfly*)
+ 	    printf "%s\n" "#define _REENTRANT 1" >>confdefs.h
+ 
+ 	    printf "%s\n" "#define _THREAD_SAFE 1" >>confdefs.h
+@@ -8875,7 +8896,7 @@ case "$target" in
+         ;;
+     esac
+     ;;
+-*-freebsd*)
++*-freebsd*|*dragonfly*)
+     if test -n "$USE_NSPR_THREADS"; then
+         printf "%s\n" "#define _PR_LOCAL_THREADS_ONLY 1" >>confdefs.h
+ 

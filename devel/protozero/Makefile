@@ -1,5 +1,5 @@
 PORTNAME=	protozero
-PORTVERSION=	1.7.1
+PORTVERSION=	1.8.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
@@ -13,7 +13,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 USE_GITHUB=	yes
 GH_ACCOUNT=	mapbox
 
-USES=		cmake compiler:c++11-lang
+USES=		cmake compiler:c++17-lang
+CMAKE_ARGS=	-DCMAKE_CXX_STANDARD=17
 TEST_TARGET=	test
 NO_ARCH=	yes  # header only library
 

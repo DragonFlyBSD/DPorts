@@ -1,10 +1,11 @@
 --- src/jdk.hotspot.agent/bsd/native/libsaproc/libproc.h.orig	2019-10-16 18:31:09 UTC
 +++ src/jdk.hotspot.agent/bsd/native/libsaproc/libproc.h
-@@ -58,7 +58,14 @@ typedef int bool;
+@@ -58,7 +58,15 @@ typedef int bool;
  #include <elf.h>
  #include <link.h>
  #include <machine/reg.h>
 +#ifdef __DragonFly__
++#include <stdbool.h>
 +typedef enum ps_err_e {
 +  PS_OK, PS_ERR, PS_BADPID, PS_BADLID,
 +  PS_BADADDR, PS_NOSYM, PS_NOFREGS

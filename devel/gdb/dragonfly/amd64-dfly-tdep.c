@@ -21,6 +21,7 @@
 #include "arch-utils.h"
 #include "frame.h"
 #include "gdbcore.h"
+#include "extract-store-integer.h"
 #include "regcache.h"
 #include "osabi.h"
 #include "regset.h"

@@ -117,8 +117,8 @@ lib/cmake/gdal/GDALConfig.cmake
 lib/cmake/gdal/GDALConfigVersion.cmake
 lib/gdalplugins/drivers.ini
 lib/libgdal.so
-lib/libgdal.so.35
-lib/libgdal.so.35.%%PORTVERSION%%
+lib/libgdal.so.36
+lib/libgdal.so.36.%%PORTVERSION%%
 libdata/pkgconfig/gdal.pc
 share/bash-completion/completions/gdal-config
 share/bash-completion/completions/gdal2tiles.py
@@ -162,7 +162,7 @@ share/bash-completion/completions/ogrtindex
 %%DATADIR%%/GDALLogoColor.svg
 %%DATADIR%%/GDALLogoGS.svg
 %%DATADIR%%/LICENSE.TXT
-%%DATADIR%%/MM_m_idofic.csv
+%%BIGENDIAN%%%%DATADIR%%/MM_m_idofic.csv
 %%HDF5%%%%DATADIR%%/bag_template.xml
 %%DATADIR%%/cubewerx_extra.wkt
 %%DATADIR%%/default.rsc
@@ -303,6 +303,7 @@ share/bash-completion/completions/ogrtindex
 %%DATADIR%%/seed_2d.dgn
 %%DATADIR%%/seed_3d.dgn
 %%DATADIR%%/stateplane.csv
+%%DATADIR%%/template_tiles.mapml
 %%DATADIR%%/tms_LINZAntarticaMapTileGrid.json
 %%DATADIR%%/tms_MapML_APSTILE.json
 %%DATADIR%%/tms_MapML_CBMTILE.json

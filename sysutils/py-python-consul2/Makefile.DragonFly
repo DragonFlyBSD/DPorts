@@ -1,4 +1,0 @@
-
-.if defined(FLAVOR) && ${FLAVOR:Mpy27}
-PLIST_FILES+=	%%PYTHON_SITELIBDIR%%/consul/aio.py
-.endif

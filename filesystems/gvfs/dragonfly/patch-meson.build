@@ -1,0 +1,11 @@
+--- meson.build.orig	2025-11-17 19:50:53.183138000 +0100
++++ meson.build	2025-11-17 19:50:39.323030000 +0100
+@@ -438,7 +438,7 @@ endif
+ enable_gphoto2 = get_option('gphoto2')
+ if enable_gphoto2
+   assert(enable_gudev, 'gphoto2 requested but gudev is required')
+-  assert(host_machine.system().contains('linux') or host_machine.system().contains('bsd'),
++  assert(host_machine.system().contains('linux') or host_machine.system().contains('bsd') or host_machine.system().contains('dragonfly'),
+          'Cannot build with gphoto2 support. Need OS tweaks in volume monitor.')
+ 
+   libgphoto2_dep = dependency('libgphoto2', version: '>= 2.4.0')

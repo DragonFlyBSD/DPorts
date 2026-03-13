@@ -10,8 +10,11 @@ WWW=		https://xmlresume.sourceforge.net/
 
 LICENSE=	MIT
 
-USES=		tar:tgz
-USE_JAVA=	yes
+DEPRECATED=	Obsolete XML and XSL based system that targets résumés and curricu vitae
+EXPIRATION_DATE=2025-04-30
+
+USES=		java tar:tgz
+
 NO_BUILD=	yes
 NO_ARCH=	yes
 SUB_FILES=	pkg-message

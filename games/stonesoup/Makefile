@@ -1,5 +1,5 @@
 PORTNAME=	stonesoup
-DISTVERSION=	0.31.0
+DISTVERSION=	0.32.1
 CATEGORIES=	games
 
 MAINTAINER=	fuz@FreeBSD.org
@@ -9,7 +9,7 @@ WWW=		https://crawl.develz.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/../../LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyyaml>=0:devel/py-pyyaml@${PY_FLAVOR}
 
 FLAVORS=	console sdl
 FLAVOR?=	${FLAVORS[1]}

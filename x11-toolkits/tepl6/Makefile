@@ -1,6 +1,6 @@
 PORTNAME=	tepl
 DISTVERSION=	6.4.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	6
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libamtk-5.so:x11-toolkits/amtk \
 		libuchardet.so:textproc/uchardet
 
 USES=		compiler:c11 gettext gnome meson pkgconfig tar:xz
-USE_GNOME=	cairo gdkpixbuf2 gtksourceview4 libxml2
+USE_GNOME=	cairo gdkpixbuf gtksourceview4 libxml2
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

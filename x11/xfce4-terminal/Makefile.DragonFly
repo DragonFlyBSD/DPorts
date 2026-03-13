@@ -1,1 +1,1 @@
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:N--with-utempter}
+MESON_ARGS=     -Dlibutempter=disabled

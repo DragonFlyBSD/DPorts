@@ -1,20 +1,19 @@
 PORTNAME=	hiawatha
-PORTVERSION=	11.2
-PORTREVISION=	1
+DISTVERSION=	11.6
 CATEGORIES=	www
-MASTER_SITES=	https://www.hiawatha-webserver.org/files/
+MASTER_SITES=	https://hiawatha.leisink.net/files/
 
 MAINTAINER=	johntdarrah@gmail.com
 COMMENT=	Advanced and secure web server for Unix
-WWW=		https://www.hiawatha-webserver.org/
+WWW=		https://hiawatha.leisink.net/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libmbedtls.so:security/mbedtls
+LIB_DEPENDS=	libmbedtls.so:security/mbedtls3
 
 USES=		cmake:insource compiler:c11 cpe localbase:ldflags shebangfix
-CPE_VENDOR=	${PORTNAME}-webserver
+CPE_VENDOR=	hiawatha-webserver
 USE_RC_SUBR=	hiawatha
 SHEBANG_FILES=	extra/letsencrypt/lefh.in
 
@@ -30,7 +29,7 @@ OPTIONS_SUB=		yes
 
 CACHE_DESC=		Caching support
 CGIWRAPPER_DESC=	Install cgi-wrapper(1) (needs setuid bit)
-LEFH_DESC=		Install Let's Encrypt For Hiawatha script
+LEFH_DESC=		Install Let\'s Encrypt For Hiawatha script
 LOADCHECK_DESC=		Load check support (experimental)
 MONITOR_DESC=		Hiawatha Monitor support
 RPROXY_DESC=		Reverse proxy support

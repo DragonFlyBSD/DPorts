@@ -1389,6 +1389,7 @@ share/applications/librecad.desktop
 %%DATADIR%%/plugins/liblist.so
 %%DATADIR%%/plugins/libpicfile.so
 %%DATADIR%%/plugins/libplotequation.so
+%%DATADIR%%/plugins/libpointstocsv.so
 %%DATADIR%%/plugins/libsameprop.so
 %%DATADIR%%/plugins/libsample.so
 share/metainfo/org.librecad.librecad.appdata.xml

@@ -1,8 +1,9 @@
 PORTNAME=	python-dbusmock
-PORTVERSION=	0.31.1
+DISTVERSION=	0.34.3
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	${PORTNAME:S/-/_/}-${DISTVERSION}
 
 MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Mock D-Bus objects for tests
@@ -18,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>0:devel/py-dbus@${PY_FLAVOR}
 
 USES=		gnome python
 USE_GNOME=	pygobject3
-USE_PYTHON=	autoplist pep517
+USE_PYTHON=	autoplist pep517 pytest
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 NO_ARCH=	yes

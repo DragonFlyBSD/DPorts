@@ -1,6 +1,5 @@
 PORTNAME=	gcc
-PORTVERSION=	11.4.0
-PORTREVISION=	1
+PORTVERSION=	11.5.0
 CATEGORIES=	lang
 MASTER_SITES=	GCC
 PKGNAMESUFFIX=	${SUFFIX}
@@ -106,6 +105,7 @@ INSTALL_TARGET=	install-strip
 BINMODE=	755
 .endif
 CONFIGURE_ARGS+=--disable-nls \
+		--disable-libssp \
 		--enable-gnu-indirect-function \
 		--enable-host-shared \
 		--enable-plugin \
@@ -148,6 +148,10 @@ CONFIGURE_ARGS+=--with-isl=${LOCALBASE}
 
 CONFIGURE_ARGS+=--enable-languages=${LANGUAGES}
 
+.if (${ARCH} == x86_64 || ${ARCH} == powerpc64) && ${PORT_OPTIONS:MMULTILIB}
+USE_LDCONFIG32=	${TARGLIB32}/gcc${SUFFIX}
+.endif
+
 pre-everything::
 	@${ECHO_MSG} "Making GCC ${PORTVERSION} for ${CONFIGURE_TARGET} [${LANGUAGES}]"
 
@@ -166,6 +170,10 @@ post-stage:
 	${RM} -r ${STAGEDIR}${TARGLIB}/gcc/*/${GCC_VERSION}/include-fixed/
 	# Add target libraries and include files to packaging list.
 	${RM} ${WRKDIR}/PLIST.lib
+	# Install ISO_Fortran_binding.h in an easily findable directory
+	${MKDIR} ${STAGEDIR}${PREFIX}/include/gcc${SUFFIX}
+	${INSTALL_DATA} ${STAGEDIR}${PREFIX}/lib/gcc${SUFFIX}/gcc/${CONFIGURE_TARGET}/${GCC_VERSION}/include/ISO_Fortran_binding.h      \
+		${STAGEDIR}${PREFIX}/include/gcc${SUFFIX}
 
 .if (${ARCH} == x86_64 || ${ARCH} == powerpc64) && ${PORT_OPTIONS:MMULTILIB}
 	${MKDIR} ${STAGEDIR}${TARGLIB32}

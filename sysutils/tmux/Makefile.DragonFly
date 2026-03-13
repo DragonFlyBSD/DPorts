@@ -1,1 +1,2 @@
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:N--enable-utempter}
+USES+=	ncurses:port

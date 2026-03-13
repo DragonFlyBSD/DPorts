@@ -1,6 +1,6 @@
---- Makefile.orig	2024-08-20 19:30:28 UTC
+--- Makefile.orig	2025-05-14 17:37:06 UTC
 +++ Makefile
-@@ -618,12 +618,12 @@ ${DEPENDENCY_DIR}/git-%/Makefile: ${DEPENDENCY_DIR}/gi
+@@ -717,12 +717,12 @@ ${DEPENDENCY_DIR}/git-%/Makefile: ${DEPENDENCY_DIR}/gi
  # otherwise try to rebuild all targets depending on it whenever we build
  # something else. We thus depend on the Makefile instead.
  ${DEPENDENCY_DIR}/git-%/Makefile: ${DEPENDENCY_DIR}/git-%.version

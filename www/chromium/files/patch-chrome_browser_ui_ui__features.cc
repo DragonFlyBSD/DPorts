@@ -1,7 +1,7 @@
---- chrome/browser/ui/ui_features.cc.orig	2024-08-26 12:06:38 UTC
+--- chrome/browser/ui/ui_features.cc.orig	2025-05-28 14:55:43 UTC
 +++ chrome/browser/ui/ui_features.cc
-@@ -108,7 +108,7 @@ BASE_FEATURE(kEvDetailsInPageInfo,
-              "EvDetailsInPageInfo",
+@@ -35,7 +35,7 @@ BASE_FEATURE(kCloseOmniboxPopupOnInactiveAreaClick,
+              "CloseOmniboxPopupOnInactiveAreaClick",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -9,18 +9,9 @@
  // Enables the feature to remove the last confirmation dialog when relaunching
  // to update Chrome.
  BASE_FEATURE(kFewerUpdateConfirmations,
-@@ -381,7 +381,7 @@ BASE_FEATURE(kTopChromeWebUIUsesSpareRenderer,
-              "TopChromeWebUIUsesSpareRenderer",
-              base::FEATURE_ENABLED_BY_DEFAULT);
- 
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // Enables alternate update-related text to be displayed in browser app menu
- // button, menu item and confirmation dialog.
- BASE_FEATURE(kUpdateTextOptions,
-@@ -457,7 +457,7 @@ BASE_FEATURE(kStopLoadingAnimationForHiddenWindow,
-              "StopLoadingAnimationForHiddenWindow",
-              base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -339,7 +339,7 @@ BASE_FEATURE(kViewsJSAppModalDialog,
+              base::FEATURE_DISABLED_BY_DEFAULT);
+ #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

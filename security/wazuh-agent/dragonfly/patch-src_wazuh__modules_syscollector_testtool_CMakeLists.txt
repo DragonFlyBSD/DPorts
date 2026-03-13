@@ -1,0 +1,16 @@
+--- src/wazuh_modules/syscollector/testtool/CMakeLists.txt.orig	Mon Mar 10 09:32:47 2025
++++ src/wazuh_modules/syscollector/testtool/CMakeLists.txt	Sat Oct
+@@ -65,12 +65,12 @@ elseif (CMAKE_SYSTEM_NAME STREQUAL "AIX")
+         dl)
+ else()
+     target_link_libraries(syscollector_test_tool
++        pthread
+         rsync
+         dbsync
+         sysinfo
+         syscollector
+         dl
+-        proc
+     )
+ 
+     if(SOLARIS)

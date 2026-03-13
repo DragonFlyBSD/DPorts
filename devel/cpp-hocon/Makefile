@@ -1,6 +1,6 @@
 PORTNAME=	cpp-hocon
 PORTVERSION=	0.3.0
-PORTREVISION=	6
+PORTREVISION=	9
 CATEGORIES=	devel
 
 MAINTAINER=	puppet@FreeBSD.org
@@ -9,6 +9,9 @@ WWW=		https://github.com/puppetlabs/cpp-hocon
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Project got archived
+EXPIRATION_DATE=2025-05-09
 
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libleatherman_util.so:devel/leatherman

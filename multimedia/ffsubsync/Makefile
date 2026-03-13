@@ -1,5 +1,5 @@
 PORTNAME=	ffsubsync
-DISTVERSION=	0.4.25
+DISTVERSION=	0.4.27
 CATEGORIES=	multimedia python
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -8,6 +8,9 @@ WWW=		https://github.com/smacke/ffsubsync
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Depends on expried multimedia/py-ffmpeg-python
+EXPIRATION_DATE=2025-06-01
 
 BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
@@ -33,4 +36,8 @@ USE_PYTHON=	pep517 noflavors autoplist pytest
 
 NO_ARCH=	yes
 
+# tests as of 0.4.27:
+# Results (2.66s):
+#       37 passed
+#        1 skipped
 .include <bsd.port.mk>

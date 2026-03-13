@@ -1,0 +1,18 @@
+--- meson.build.orig	Tue Mar 11 20:14:44 2025
++++ meson.build	Thu Apr
+@@ -333,15 +333,6 @@ if cdata.has('HAVE_UNISTD_H')
+   time_prefix += '#include <unistd.h>'
+ endif
+ 
+-posix_timers_src = time_prefix + '''
+-#if !defined(_POSIX_TIMERS) || _POSIX_TIMERS < 0 || !defined(CLOCK_REALTIME)
+-#error Either _POSIX_TIMERS or CLOCK_REALTIME not defined
+-#endif
+-'''
+-if cc.compiles(posix_timers_src, name : 'posix timers from time.h')
+-  cdata.set('HAVE_POSIX_TIMERS', 1)
+-endif
+-
+ monotonic_clock_src = time_prefix + '''
+ #if !defined(_POSIX_MONOTONIC_CLOCK) || _POSIX_MONOTONIC_CLOCK < 0 || !defined(CLOCK_MONOTONIC)
+ #error Either _POSIX_MONOTONIC_CLOCK or CLOCK_MONOTONIC not defined

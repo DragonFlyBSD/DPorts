@@ -1,5 +1,0 @@
-
-# RJ: alias to __NetBSD__ in libuv contrib for source_membership etc
-dfly-patch:
-	${REINPLACE_CMD} -e 's@__NetBSD__@__DragonFly__@g' \
-		${WRKSRC}/src/libuv-*/src/unix/udp.c

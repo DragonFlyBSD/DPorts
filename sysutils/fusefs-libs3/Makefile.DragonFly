@@ -1,3 +1,0 @@
-dfly-patch:
-	${REINPLACE_CMD} -e '/sys\/user.h/d' \
-		${WRKSRC}/lib/mount_bsd.c

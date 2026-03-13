@@ -1,4 +1,4 @@
-USE_GCC_VERSION=	12
+USE_GCC_VERSION=	13
 
 USES:= ${USES:Nelfctl}
 
@@ -45,7 +45,6 @@ PERCENT_BSD_LIST= \
 	libreofficekit/Library_libreofficekitgtk.mk \
 	svl/Library_svl.mk \
 	vcl/Module_vcl.mk \
-	vcl/Library_desktop_detector.mk \
 	vcl/Library_vcl.mk
 
 # Avoid stripping in /tmp, it takes too much space for poudriere
@@ -53,9 +52,6 @@ PERCENT_BSD_LIST= \
 # So let's just hardcode it for now
 
 dfly-patch:
-	${CP} -v ${DFLY_FILESDIR}/skia-01.patch ${WRKSRC}/external/skia
-	${REINPLACE_CMD} -e 's,skia_patches := ,& skia-01.patch ,g' \
-		${WRKSRC}/external/skia/UnpackedTarball_skia.mk
 	${CP} -v ${DFLY_FILESDIR}/pdfium-build__config.patch ${WRKSRC}/external/pdfium
 	${REINPLACE_CMD} -e 's,pdfium_patches += pdfium-bsd.patch,& pdfium-build__config.patch ,g' \
 		${WRKSRC}/external/pdfium/UnpackedTarball_pdfium.mk

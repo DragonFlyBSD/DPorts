@@ -12,7 +12,11 @@ WWW=		https://dst.lbl.gov/ACSSoftware/nux/
 RUN_DEPENDS=	${JAVALIBDIR}/xom.jar:textproc/xom \
 		${JAVALIBDIR}/saxon9.jar:textproc/saxon-devel
 
-USE_JAVA=	yes
+USES=		java
+
+DEPRECATED=	Depends on deprecated port textproc/saxon-devel
+EXPIRATION_DATE=2025-04-30
+
 NO_BUILD=	yes
 NO_ARCH=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}

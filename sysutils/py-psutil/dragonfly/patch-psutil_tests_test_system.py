@@ -1,8 +1,6 @@
-diff --git psutil/tests/test_system.py psutil/tests/test_system.py
-index d6b7a21a..75532f87 100755
---- psutil/tests/test_system.py
-+++ psutil/tests/test_system.py
-@@ -22,6 +22,7 @@ import psutil
+--- psutil/tests/test_system.py.orig	2025-06-13 17:26:16.985522000 +0200
++++ psutil/tests/test_system.py	2025-06-13 17:28:35.248063000 +0200
+@@ -23,6 +23,7 @@ import psutil
  from psutil import AIX
  from psutil import BSD
  from psutil import FREEBSD
@@ -10,12 +8,12 @@ index d6b7a21a..75532f87 100755
  from psutil import LINUX
  from psutil import MACOS
  from psutil import NETBSD
-@@ -650,7 +651,7 @@ class TestDiskAPIs(PsutilTestCase):
-             self.assertEqual(nt[1], nt.write_count)
-             self.assertEqual(nt[2], nt.read_bytes)
-             self.assertEqual(nt[3], nt.write_bytes)
+@@ -728,7 +729,7 @@ class TestDiskAPIs(PsutilTestCase):
+             assert nt[1] == nt.write_count
+             assert nt[2] == nt.read_bytes
+             assert nt[3] == nt.write_bytes
 -            if not (OPENBSD or NETBSD):
 +            if not (OPENBSD or NETBSD or DRAGONFLY):
-                 self.assertEqual(nt[4], nt.read_time)
-                 self.assertEqual(nt[5], nt.write_time)
+                 assert nt[4] == nt.read_time
+                 assert nt[5] == nt.write_time
                  if LINUX:

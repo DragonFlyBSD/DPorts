@@ -1,6 +1,6 @@
 PORTNAME=	leatherman
 PORTVERSION=	1.12.9
-PORTREVISION=	3
+PORTREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	puppet@FreeBSD.org
@@ -8,6 +8,9 @@ COMMENT=	Leatherman C++ Tool library
 WWW=		https://github.com/puppetlabs/leatherman
 
 LICENSE=	APACHE20
+
+DEPRECATED=	Project got archived
+EXPIRATION_DATE=2025-05-09
 
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libcurl.so:ftp/curl
@@ -29,7 +32,7 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION}
 post-configure:
 	# This file is vendored in vendor/Catch-1.10.0.zip and extracted at configure step
 	${SED} -i '' -e '1s|\(.*\)|#include <sys/signal.h>\n\1|' ${CONFIGURE_WRKSRC}/src/Catch-1.10.0/single_include/catch.hpp
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+.if ${OPSYS} == FreeBSD
 	${REINPLACE_CMD} -e 's|ptrdiff_t|size_t|' ${CONFIGURE_WRKSRC}/src/Catch-1.10.0/single_include/catch.hpp
 .endif
 

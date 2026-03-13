@@ -1,0 +1,11 @@
+--- meson.build.orig	Tue Feb 25 18:38:11 2025
++++ meson.build	Wed Nov
+@@ -332,7 +332,7 @@ endif
+ 
+ libdrm_dep = dependency('libdrm', version: libdrm_req, required: false)
+ 
+-if host_machine.system() in ['freebsd', 'openbsd']
++if host_machine.system() in ['freebsd', 'openbsd', 'dragonfly']
+    epoll_dep = dependency('epoll-shim')
+ else
+    epoll_dep = []

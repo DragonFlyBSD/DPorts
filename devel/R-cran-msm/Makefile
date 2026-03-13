@@ -1,6 +1,5 @@
 PORTNAME=	msm
-PORTVERSION=	1.7
-PORTREVISION=	1
+PORTVERSION=	1.8.2
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -11,7 +10,10 @@ WWW=		https://cran.r-project.org/package=msm
 LICENSE=	GPLv2+
 
 RUN_DEPENDS=	R-cran-expm>0:math/R-cran-expm	\
-		R-cran-mvtnorm>0:math/R-cran-mvtnorm
+		R-cran-tibble>0:devel/R-cran-tibble	\
+		R-cran-mvtnorm>0:math/R-cran-mvtnorm	\
+		R-cran-generics>0:devel/R-cran-generics
+TEST_DEPENDS=	R-cran-testthat>0:devel/R-cran-testthat
 
 USES=		cran:compiles
 

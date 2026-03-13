@@ -1,7 +1,7 @@
 PORTNAME=	courier-imap
-PORTVERSION=	5.2.6
+PORTVERSION=	5.2.10
+PORTREVISION=	1
 PORTEPOCH=	2
-PORTREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	SF/courier/imap/${PORTVERSION}
 
@@ -114,7 +114,7 @@ post-patch:
 		${WRKSRC}/Makefile.in
 
 post-patch-INOTIFY-on:
-	@${REINPLACE_CMD} -e 's|LIBS = @LIBS@|& ${LOCALBASE}/lib/libinotify.a /usr/lib/libpthread.a|' \
+	@${REINPLACE_CMD} -e 's|LIBS = @LIBS@|& -L${LOCALBASE}/lib -linotify -lpthread|' \
 		${WRKSRC}/libs/maildir/Makefile.in \
 		${WRKSRC}/libs/imap/Makefile.in
 

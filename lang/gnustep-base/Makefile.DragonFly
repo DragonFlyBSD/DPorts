@@ -1,1 +1,7 @@
 LLD_UNSAFE=yes	# Needs linker to provide library search paths.
+
+# XXX: not sure why not all .so symlinks are generated. remove this
+# hack once fixed
+dfly-install:
+	cd ${STAGEDIR}/${PREFIX}/GNUstep/System/Library/Libraries/ && \
+		${LN} -s libgnustep-base.so libgnustep-base.so.${DISTVERSION:R}

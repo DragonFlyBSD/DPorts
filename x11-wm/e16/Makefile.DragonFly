@@ -1,3 +1,5 @@
 
 # no pulse
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO} SNDIO
+
+LIB_DEPENDS+=  libdbus-1.so:devel/dbus

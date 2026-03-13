@@ -1,8 +1,0 @@
-
-# to avoid orphans
-PLIST_FILES+=	lib/ogmrip/container-plugins/libogmrip-mp4.a \
-		lib/ogmrip/container-plugins/libogmrip-mp4.so
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
-		${WRKSRC}/libogmdvd/ogmdvd-transport.c
