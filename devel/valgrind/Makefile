@@ -24,7 +24,7 @@ LIB32_PATH?=	/usr/lib32/libc.so
 CONFLICTS=	valgrind-[0-9]*
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	1338-1
+GH_ACCOUNT=	dan1338
 GH_PROJECT=	valgrind-dragonfly
 GH_TAGNAME=	dragonfly
 
