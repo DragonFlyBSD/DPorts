@@ -1,5 +1,6 @@
 PORTNAME=	udpxy
 DISTVERSION=	1.0-25.1
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	alex.deiter@gmail.com
@@ -20,8 +21,8 @@ WRKSRC_SUBDIR=	chipmunk
 
 PLIST_FILES=	sbin/udpxy \
 		sbin/udpxrec \
-		man/man1/udpxy.1.gz \
-		man/man1/udpxrec.1.gz
+		share/man/man1/udpxy.1.gz \
+		share/man/man1/udpxrec.1.gz
 
 OPTIONS_DEFAULT=	RELEASE
 OPTIONS_SINGLE=	CONF
@@ -29,13 +30,14 @@ OPTIONS_SINGLE_CONF=	RELEASE LEAN
 RELEASE_DESC=	No asserts, no debug symbols, verbose on
 LEAN_DESC=	No asserts, no debug symbols, verbose off
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/udpxy ${STAGEDIR}${PREFIX}/sbin
 	${LN} -s udpxy ${STAGEDIR}${PREFIX}/sbin/udpxrec
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/en/udpxy.1 ${STAGEDIR}${MANPREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/doc/en/udpxrec.1 ${STAGEDIR}${MANPREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/doc/en/udpxy.1 ${STAGEDIR}${PREFIX}/share/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/doc/en/udpxrec.1 ${STAGEDIR}${PREFIX}/share/man/man1/
 
 .include <bsd.port.options.mk>
 
@@ -46,5 +48,9 @@ ALL_TARGET=release
 .elif ${PORT_OPTIONS:MLEAN}
 ALL_TARGET=lean
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g'	\
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

@@ -25,6 +25,7 @@ PLIST_SUB=	SHLIB_VER=${SHLIB_VER} SHLIB_VER_MAJ=${SHLIB_VER_MAJ}
 
 OPTIONS_DEFINE=	DOCS
 
+LDFLAGS= -L${LOCALBASE}/lib
 post-extract:
 	@${RM} ${WRKSRC}/doc/index.html~
 

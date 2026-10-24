@@ -1,10 +1,10 @@
 PORTNAME=	libzip
-DISTVERSION=	1.11.2
+DISTVERSION=	1.12.1
 CATEGORIES=	archivers devel
 MASTER_SITES=	https://github.com/nih-at/${PORTNAME}/releases/download/v${DISTVERSION}/ \
 		https://libzip.org/download/
 
-MAINTAINER=	rakuco@FreeBSD.org
+MAINTAINER=	fuz@FreeBSD.org
 COMMENT=	C library for reading, creating, and modifying ZIP archives
 WWW=		https://libzip.org/
 
@@ -13,8 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libzstd.so:archivers/zstd
 
-USES=		cmake cpe pathfix ssl tar:xz
-CPE_VENDOR=	nih
+USES=		cmake cpe ssl tar:xz
 USE_LDCONFIG=	yes
 
 CMAKE_OFF=	BUILD_OSSFUZZ \

@@ -1,14 +1,14 @@
 PORTNAME=	oidn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.3.0
-PORTREVISION=	1
+DISTVERSION=	2.5.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://freebsd.org/:weights # bogus URL to make the framework happy, the fetch uses Git URL below
 DISTFILES=	${PORTNAME}-weights-${WEIGHTS_GIT_HASH}${EXTRACT_SUFX}:weights
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Intel(R) Open Image Denoise library
-WWW=		https://www.openimagedenoise.org/
+WWW=		https://www.openimagedenoise.org/ \
+		https://github.com/RenderKit/oidn
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -26,10 +26,9 @@ USES=		cmake:noninja compiler:c++14-lang python:build
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	OpenImageDenoise
-GH_TUPLE=	OpenImageDenoise:mkl-dnn:9bea36e:m/external/mkl-dnn \
-		ROCmSoftwarePlatform:composable_kernel:e85178b:composable_kernel/external/composable_kernel \
-		NVIDIA:cutlass:66d9cdd:cutlass/external/cutlass
+GH_ACCOUNT=	RenderKit
+GH_TUPLE=	ROCmSoftwarePlatform:composable_kernel:3e6d21a:composable_kernel/external/composable_kernel \
+		NVIDIA:cutlass:d55f6be:cutlass/external/cutlass
 
 CMAKE_ARGS=	-DTBB_ROOT:STRING=${LOCALBASE} -DTBB_INCLUDE_DIR:STRING=${LOCALBASE}/include -DPYTHON_EXECUTABLE:STRING=${PYTHON_CMD}
 
@@ -42,16 +41,17 @@ OPTIONS_SUB=			yes
 APPS_DESC=			Build example and test apps
 APPS_CMAKE_BOOL=		OIDN_APPS
 
-DOCSDIR=			share/doc/${GH_ACCOUNT}
+DOCSDIR=			share/doc/OpenImageDenoise
 
 OPENIMAGEIO_DESC=		Build with OpenImageIO for image formats support
 OPENIMAGEIO_CMAKE_BOOL=		OIDN_APPS_OPENIMAGEIO
 OPENIMAGEIO_LIB_DEPENDS=	libOpenImageIO.so:graphics/openimageio
 OPENIMAGEIO_IMPLIES=		APPS # OpenImageIO is only used by apps and examples
 
-WEIGHTS_GIT_URL=	https://github.com/OpenImageDenoise/oidn-weights.git
+WEIGHTS_GIT_URL=	https://github.com/RenderKit/oidn-weights.git
 WEIGHTS_GIT_HASH=	28883d1769d5930e13cf7f1676dd852bd81ed9e7
 
+DFLY_UNMAINTAINED= yes
 pre-fetch:
 	@if [ "${FORCE_FETCH_ALL}" = "true" ] || ! [ -f "${DISTDIR}/${DIST_SUBDIR}/${PORTNAME}-weights-${WEIGHTS_GIT_HASH}${EXTRACT_SUFX}" ]; then \
 		${MKDIR} ${DISTDIR}/${DIST_SUBDIR} && \
@@ -61,12 +61,12 @@ pre-fetch:
 			${MKDIR} ${WRKDIR}; \
 			HOME=${WRKDIR}; \
 			git config --global filter.lfs.smudge "git-lfs smudge -- %f" && \
-			git clone -q ${WEIGHTS_GIT_URL} ${PORTNAME}-weights-${WEIGHTS_GIT_HASH} && \
+			GIT_CLONE_PROTECTION_ACTIVE=false git clone -nq ${WEIGHTS_GIT_URL} ${PORTNAME}-weights-${WEIGHTS_GIT_HASH} && \
 			(cd ${PORTNAME}-weights-${WEIGHTS_GIT_HASH} && git reset -q --hard ${WEIGHTS_GIT_HASH} && ${RM} -r .git) && \
 			${RM} -r ${WRKDIR} \
 		) && \
 		${FIND} ${PORTNAME}-weights-${WEIGHTS_GIT_HASH} -and -exec ${TOUCH} -h -d 1970-01-01T00:00:00Z {} \; && \
-		${FIND} ${PORTNAME}-weights-${WEIGHTS_GIT_HASH} -print0 | LC_ALL=C ${SORT} -z | \
+		${FIND} ${PORTNAME}-weights-${WEIGHTS_GIT_HASH} -print0 | ${SORT} -z | \
 		${TAR} czf ${PORTNAME}-weights-${WEIGHTS_GIT_HASH}${EXTRACT_SUFX} --format=ustar --gid 0 --uid 0 --options gzip:!timestamp --no-recursion --null -T - && \
 		${RM} -r ${PORTNAME}-weights-${WEIGHTS_GIT_HASH}; \
 	fi

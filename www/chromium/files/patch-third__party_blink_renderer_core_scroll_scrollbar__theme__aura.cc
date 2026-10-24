@@ -1,6 +1,6 @@
---- third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2025-04-04 08:52:13 UTC
+--- third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2026-10-18 13:29:39 UTC
 +++ third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc
-@@ -146,7 +146,7 @@ bool ScrollbarThemeAura::SupportsDragSnapBack() const 
+@@ -123,7 +123,7 @@ bool ScrollbarThemeAura::SupportsDragSnapBack() const 
  // Disable snapback on desktop Linux to better integrate with the desktop
  // behavior. Typically, Linux apps do not implement scrollbar snapback (this
  // is true for at least GTK and QT apps).
@@ -9,7 +9,7 @@
    return false;
  #else
    return true;
-@@ -423,7 +423,7 @@ ScrollbarPart ScrollbarThemeAura::PartsToInvalidateOnT
+@@ -385,7 +385,7 @@ int ScrollbarThemeAura::PartsToInvalidateOnThumbPositi
  
  bool ScrollbarThemeAura::ShouldCenterOnThumb(const Scrollbar& scrollbar,
                                               const WebMouseEvent& event) const {

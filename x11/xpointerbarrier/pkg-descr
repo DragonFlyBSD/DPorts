@@ -1,0 +1,8 @@
+This program creates four pointer barriers around each XRandR screen,
+thus effectively jailing your mouse pointer to one physical screen.
+
+Pointer barriers are mostly useful when there is more than one physical
+screen connected to your computer. Properly placed barriers can then
+make you feel like you're sitting in front of only one screen: When you
+throw your mouse in the upper right corner, it does not suddenly switch
+to another monitor.

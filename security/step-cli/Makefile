@@ -1,0 +1,34 @@
+PORTNAME=	step-cli
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.30.2
+PORTREVISION=	7
+CATEGORIES=	security
+
+MAINTAINER=	mw@wipp.bayern
+COMMENT=	Smallstep step-ca command line client
+WWW=		https://smallstep.com/cli/
+
+LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+USES=		go:modules shebangfix
+
+SHEBANG_FILES=	autocomplete/bash_autocomplete
+
+GO_MODULE=	github.com/smallstep/cli
+GO_TARGET=	./cmd/step
+GO_BUILDFLAGS=	-ldflags "-w -X main.Version=${DISTVERSION}"
+
+PLIST_FILES=	bin/step \
+		etc/bash_completion.d/step-completion.bash \
+		share/zsh/site-functions/_step
+
+post-install:
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d \
+		 ${STAGEDIR}${PREFIX}/share/zsh/site-functions
+	${INSTALL_DATA} ${WRKSRC}/autocomplete/bash_autocomplete \
+		${STAGEDIR}${PREFIX}/etc/bash_completion.d/step-completion.bash
+	${INSTALL_DATA} ${WRKSRC}/autocomplete/zsh_autocomplete \
+		${STAGEDIR}${PREFIX}/share/zsh/site-functions/_step
+
+.include <bsd.port.mk>

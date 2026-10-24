@@ -1,6 +1,6 @@
 PORTNAME=	veles
 DISTVERSION=	2018.05.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	misc
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
@@ -16,8 +16,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE-2.0
 BROKEN_riscv64=		fails to build: /usr/include/c++/v1/__config:1141:6: No thread API
 
 PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}msgpack>0:devel/py-msgpack@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}openssl>0:security/py-openssl@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pbr>0:devel/py-pbr@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyopenssl>0:security/py-pyopenssl@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}
 BUILD_DEPENDS=	msgpack-c>0:devel/msgpack-c \
 		msgpack-cxx>0:devel/msgpack-cxx \
@@ -39,6 +39,7 @@ CMAKE_ARGS=	-DFREEBSD_PYTHON_CMD:STRING=${PYTHON_CMD} \
 CMAKE_OFF=	MSGPACK_USE_BOOST # this should work, but Veles doesn't use cmake scripts for msgpack
 CXXFLAGS+=	-DMSGPACK_NO_BOOST # workaround for the above
 
+LDFLAGS= -pthread
 .include <bsd.port.pre.mk>
 
 # veles needs clang-format and clang-tidy that are only provided by the port

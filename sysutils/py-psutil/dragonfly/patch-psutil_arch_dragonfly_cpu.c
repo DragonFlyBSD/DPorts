@@ -1,6 +1,6 @@
 --- /dev/null
 +++ psutil/arch/dragonfly/cpu.c
-@@ -0,0 +1,183 @@
+@@ -0,0 +1,222 @@
 +/*
 + * Copyright (c) 2009, Jay Loden, Giampaolo Rodola'. All rights reserved.
 + * Use of this source code is governed by a BSD-style license that can be
@@ -20,6 +20,7 @@
 +
 +
 +#include <Python.h>
++#include <errno.h>
 +#include <sys/sysctl.h>
 +#include <devstat.h>
 +#include <sys/resource.h>
@@ -184,6 +185,41 @@
 +        v_trap  // traps
 +    );
 +}
-diff --git psutil/arch/dragonfly/cpu.h psutil/arch/dragonfly/cpu.h
-new file mode 100644
-index 00000000..a0de54f0
++
++
++/*
++ * Return frequency information of a given CPU.
++ * Mirrors the FreeBSD implementation; DragonFly exposes the same
++ * dev.cpu.N.freq / dev.cpu.N.freq_levels sysctls.
++ */
++PyObject *
++psutil_cpu_freq(PyObject *self, PyObject *args) {
++    int current;
++    int core;
++    char sensor[26];
++    char available_freq_levels[1000] = {0};
++    size_t size;
++
++    if (!PyArg_ParseTuple(args, "i", &core))
++        return NULL;
++
++    size = sizeof(current);
++    str_format(sensor, sizeof(sensor), "dev.cpu.%d.freq", core);
++    if (sysctlbyname(sensor, &current, &size, NULL, 0) != 0)
++        goto error;
++
++    // In case of failure, an empty string is returned.
++    size = sizeof(available_freq_levels);
++    str_format(sensor, sizeof(sensor), "dev.cpu.%d.freq_levels", core);
++    if (sysctlbyname(sensor, available_freq_levels, &size, NULL, 0) != 0)
++        available_freq_levels[0] = '\0';
++
++    return Py_BuildValue("is", current, available_freq_levels);
++
++error:
++    if (errno == ENOENT)
++        PyErr_SetString(PyExc_NotImplementedError, "unable to read frequency");
++    else
++        PyErr_SetFromErrno(PyExc_OSError);
++    return NULL;
++}

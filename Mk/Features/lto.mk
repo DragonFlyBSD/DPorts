@@ -10,12 +10,14 @@ LTO_Include_MAINTAINER=	pkubaj@FreeBSD.org
 .  if !defined(LTO_UNSAFE) || defined(LTO_DISABLE_CHECK)
 .    if "${ARCH}" == "riscv64" && !defined(LTO_DISABLE_CHECK)
        DEV_WARNING+=	"LTO is currently broken on riscv64, to override set LTO_DISABLE_CHECK=yes"
-.    elif defined(_INCLUDE_USES_CARGO_MK) && "${OPSYS}" != "DragonFly"
+.    elif defined(_INCLUDE_USES_CARGO_MK) && "${OPSYS}" == "DragonFly"
 #
 # XXX: We cannot enable LTO optimizations here for rust because it ignores
 #      libraries at link time (possibly due to --as-needed being specified).
 #      This is likely a bug and we have to sort it out before this can be
-#      enabled.
+#      enabled. Nor can it fall through to -flto=thin below: crates' C code
+#      then builds as LTO-only objects that the link cannot resolve.
+.    elif defined(_INCLUDE_USES_CARGO_MK)
    CARGO_ENV+=	CARGO_PROFILE_RELEASE_LTO="true" \
 		CARGO_PROFILE_RELEASE_PANIC="abort" \
 		CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1

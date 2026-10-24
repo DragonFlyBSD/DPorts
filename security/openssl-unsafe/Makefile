@@ -31,7 +31,7 @@ CFLAGS+=	-fPIC -DPIC
 SUB_FILES=	pkg-message
 PLIST_SUB+=	SHLIBVER=${OPENSSL_SHLIBVER}
 
-.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "mips64el"
+.if ${MACHINE_ARCH} == "x86_64"
 CONFIGURE_ARGS+=	enable-ec_nistp_64_gcc_128
 .endif
 
@@ -40,6 +40,7 @@ PLIST_SUB+=	OPENSSLDIR=${OPENSSLDIR:S=^${PREFIX}/==}
 
 PORTSCOUT=	ignore
 
+OPTIONS_EXCLUDE= SCTP
 .include "version.mk"
 
 post-patch:
@@ -75,4 +76,6 @@ post-install:
 test: build
 	cd ${WRKSRC} && ${MAKE} test
 
+CONFIGURE_ARGS:= ${CONFIGURE_ARGS:Nsctp}
+CFLAGS:= ${CFLAGS:N-Werror:N-Qunused-arguments}
 .include <bsd.port.mk>

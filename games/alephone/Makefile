@@ -1,7 +1,9 @@
 PORTNAME=	alephone
-DISTVERSION=	20190331
-PORTREVISION=	6
+DISTVERSION=	20250829
+PORTREVISION=	3
 CATEGORIES=	games
+MASTER_SITES=	https://github.com/Aleph-One-Marathon/${PORTNAME}/releases/download/release-${DISTVERSION}/
+DISTNAME=	AlephOne-${DISTVERSION}
 
 MAINTAINER=	fiziologus@gmail.com
 COMMENT=	Open source version of Bungies Marathon game
@@ -9,53 +11,52 @@ WWW=		http://source.bungie.org/
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	libexpat.so:textproc/expat2 \
-		libboost_filesystem.so:devel/boost-libs
+BUILD_DEPENDS=	asio>0:net/asio
+LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs \
+		libsndfile.so:audio/libsndfile \
+		libvorbisenc.so:audio/libvorbis \
+		libyuv.so:graphics/libyuv
 
-USES=		autoreconf compiler:c++11-lang gmake localbase \
-		pkgconfig shared-mime-info sdl gl tar:bzip2
-
-USE_SDL=	sdl2 image2 net2 ttf2
+USES=		compiler:c++17-lang gl gmake localbase openal pkgconfig sdl \
+		shared-mime-info tar:bzip2
 USE_GL=		gl glu
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	Aleph-One-Marathon
-GH_TAGNAME=	release-20190331
-
+USE_SDL=	image2 net2 sdl2 ttf2
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-alsa
+CONFIGURE_ARGS=	--without-miniupnpc \
+		--without-vorbis
 
-PORTDOCS=	*
+LDFLAGS+=	-lpthread
 
 DATADIR=	${PREFIX}/share/AlephOne
+PORTDOCS=	*
 
-OPTIONS_DEFINE=	MAD FFMPEG OGG SPEEX ZZIP PNG CURL SNDFILE DOCS
-OPTIONS_DEFAULT=MAD FFMPEG OGG SPEEX ZZIP PNG CURL SNDFILE
+OPTIONS_DEFINE=		CURL DOCS PNG ZZIP
+OPTIONS_DEFAULT=	CURL DOCS PNG ZZIP
 
-FFMPEG_DESC=	Use ffmpeg for film export and playback
 ZZIP_DESC=	Enable zziplib support
 
-MAD_LIB_DEPENDS=	libmad.so:audio/libmad
-MAD_CONFIGURE_WITH=	mad
-FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
-FFMPEG_CONFIGURE_WITH=	ffmpeg
-OGG_LIB_DEPENDS=	libvorbisfile.so:audio/libvorbis
-OGG_CONFIGURE_WITH=	vorbis
-SPEEX_LIB_DEPENDS=	libspeex.so:audio/speex \
-			libspeexdsp.so:audio/speexdsp
-SPEEX_CONFIGURE_WITH=	speex
-ZZIP_LIB_DEPENDS=	libzzip.so:devel/zziplib
-ZZIP_CONFIGURE_WITH=	zzip
-PNG_LIB_DEPENDS=	libpng.so:graphics/png
-PNG_CONFIGURE_WITH=	png
 CURL_LIB_DEPENDS=	libcurl.so:ftp/curl
 CURL_CONFIGURE_WITH=	curl
-SNDFILE_LIB_DEPENDS=	libsndfile.so:audio/libsndfile
-SNDFILE_CONFIGURE_WITH=	sndfile
+
+PNG_LIB_DEPENDS=	libpng.so:graphics/png
+PNG_CONFIGURE_WITH=	png
+
+ZZIP_LIB_DEPENDS=	libzzip.so:devel/zziplib
+ZZIP_CONFIGURE_WITH=	zzip
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD
+CFLAGS+=	-Wno-error=int-conversion
+.endif
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} README ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/docs && ${INSTALL_DATA} README.txt ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/docs && ${INSTALL_DATA} *.html ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,^  \*linux\*|\*bsd\*) :$$,  *linux*|*bsd*|*dragonfly*) :,' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

@@ -24,4 +24,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|##x|x|' \
 		${WRKSRC}/include/platform.h
 
+PLIST_FILES:= ${PLIST_FILES:Nbin/ah-tty.static}
+dfly-patch:
+	${REINPLACE_CMD} -e '/bin_PROGRAMS/s@ah-tty.static@@g'	\
+		${WRKSRC}/Makefile.in
+
 .include <bsd.port.mk>

@@ -1,0 +1,9 @@
+TIMESTAMP = 1783852939
+SHA256 (rocky/e/elfutils-libelf-0.194-1.el9.rocky.0.1.aarch64.rpm) = e41517aab2193f72c9d3b7a845e11561731cd135c74b26207defcdb56a3b86a8
+SIZE (rocky/e/elfutils-libelf-0.194-1.el9.rocky.0.1.aarch64.rpm) = 203237
+SHA256 (rocky/e/elfutils-libelf-0.194-1.el9.rocky.0.1.i686.rpm) = 14d9078b1f23a057d87eb3d7f0067aae6373e2ecde916192f8ebe7bb9db4de44
+SIZE (rocky/e/elfutils-libelf-0.194-1.el9.rocky.0.1.i686.rpm) = 210914
+SHA256 (rocky/e/elfutils-libelf-0.194-1.el9.rocky.0.1.x86_64.rpm) = 0409e21273c5ad14f92b4f4b81feddce2e87835607c2793df39588e78cd872b6
+SIZE (rocky/e/elfutils-libelf-0.194-1.el9.rocky.0.1.x86_64.rpm) = 206079
+SHA256 (rocky/e/elfutils-0.194-1.el9.rocky.0.1.src.rpm) = f65af5ed7a1af0185298545f69b073935eb36077e92a63da84824f7fa68c9d57
+SIZE (rocky/e/elfutils-0.194-1.el9.rocky.0.1.src.rpm) = 12030802

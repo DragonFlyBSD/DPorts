@@ -1,0 +1,1257 @@
+Base-Commit: 5170777d28bee1ce92cc693a0dbf2ad01492e5cf
+Branch: 140-based
+
+diff --git a/chromium/base/substring_set_matcher/substring_set_matcher.h b/chromium/base/substring_set_matcher/substring_set_matcher.h
+index 57cca616305..4314a031477 100644
+--- src/3rdparty/chromium/base/substring_set_matcher/substring_set_matcher.h
++++ src/3rdparty/chromium/base/substring_set_matcher/substring_set_matcher.h
+@@ -31,8 +31,11 @@ class BASE_EXPORT SubstringSetMatcher {
+   ~SubstringSetMatcher();
+ 
+   // Registers all |patterns|. Each pattern needs to have a unique ID and all
+-  // pattern strings must be unique. Build() should be called exactly once
+-  // (before it is called, the tree is empty).
++  // pattern strings must be unique. If duplicate pattern strings are passed,
++  // it will trigger a CHECK failure in DCHECK-enabled builds. In release
++  // builds, duplicate patterns are silently ignored (only the first one is
++  // registered) to prevent memory corruption. Build() should be called
++  // exactly once (before it is called, the tree is empty).
+   //
+   // Complexity:
+   //    Let n = number of patterns.
+@@ -203,7 +206,11 @@ class BASE_EXPORT SubstringSetMatcher {
+     void SetFailure(NodeID failure);
+ 
+     void SetMatchID(MatcherStringPattern::ID id) {
+-      DCHECK(!IsEndOfPattern());
++      // A node ends at most one pattern; a duplicate would add a second
++      // kMatchIDLabel edge that can overflow the node's storage in SetEdge().
++      if (IsEndOfPattern()) {
++        return;
++      }
+       DCHECK(id < kInvalidNodeID);  // This is enforced by Build().
+       SetEdge(kMatchIDLabel, static_cast<NodeID>(id));
+       has_outputs_ = true;
+diff --git a/chromium/base/substring_set_matcher/substring_set_matcher_unittest.cc b/chromium/base/substring_set_matcher/substring_set_matcher_unittest.cc
+index a253fc80f69..bb51fa247d0 100644
+--- src/3rdparty/chromium/base/substring_set_matcher/substring_set_matcher_unittest.cc
++++ src/3rdparty/chromium/base/substring_set_matcher/substring_set_matcher_unittest.cc
+@@ -228,4 +228,47 @@ TEST(SubstringSetMatcherTest, LotsOfEdges) {
+   matcher.Build(patterns);
+ }
+ 
++// In DCHECK-enabled builds, duplicate patterns trigger a CHECK failure as they
++// violate the API contract. In release builds, duplicate patterns are silently
++// ignored (only the first one is registered) to prevent memory corruption.
++#if !DCHECK_IS_ON()
++TEST(SubstringSetMatcherTest, DuplicatePatterns) {
++  std::vector<MatcherStringPattern> patterns;
++  MatcherStringPattern::ID id = 0;
++
++  // "a" is a pattern so node "ba" gets a non-root failure edge.
++  patterns.emplace_back("a", id++); // ID 0
++
++  // Four identical "ba" patterns.
++  patterns.emplace_back("ba", id++); // ID 1
++  patterns.emplace_back("ba", id++); // ID 2
++  patterns.emplace_back("ba", id++); // ID 3
++  patterns.emplace_back("ba", id++); // ID 4
++
++  // 256 character children on node "ba" to fill capacity.
++  for (int i = 0; i < 256; ++i) {
++    std::string str;
++    str.push_back('b');
++    str.push_back('a');
++    str.push_back(static_cast<char>(i));
++    patterns.emplace_back(str, id++);
++  }
++
++  SubstringSetMatcher matcher;
++  ASSERT_TRUE(matcher.Build(patterns));
++
++  std::set<MatcherStringPattern::ID> matches;
++  matcher.Match("ba", &matches);
++
++  // We expect to match "a" (ID 0) and the first "ba" pattern (ID 1).
++  // Duplicate "ba" patterns (IDs 2-4) should be ignored.
++  EXPECT_EQ(2u, matches.size());
++  EXPECT_TRUE(matches.find(0) != matches.end());
++  EXPECT_TRUE(matches.find(1) != matches.end());
++  EXPECT_TRUE(matches.find(2) == matches.end());
++  EXPECT_TRUE(matches.find(3) == matches.end());
++  EXPECT_TRUE(matches.find(4) == matches.end());
++}
++#endif  // !DCHECK_IS_ON()
++
+ }  // namespace base
+diff --git a/chromium/content/browser/renderer_host/navigation_request.cc b/chromium/content/browser/renderer_host/navigation_request.cc
+index 8f99cffc30c..f040cad77d2 100644
+--- src/3rdparty/chromium/content/browser/renderer_host/navigation_request.cc
++++ src/3rdparty/chromium/content/browser/renderer_host/navigation_request.cc
+@@ -3405,6 +3405,14 @@ void NavigationRequest::ResetStateForSiteInstanceChange() {
+   // ISNs and DSNs are process-specific.
+   frame_entry_item_sequence_number_ = -1;
+   frame_entry_document_sequence_number_ = -1;
++
++  // If this was not a redirect that preserves POST submissions (e.g., 307), or
++  // if this will be an error page that may end up in another process, then
++  // clear the post_data as well to prevent leaking file references to a
++  // different SiteInstance.
++  if (!IsPost() || DidEncounterError()) {
++    common_params_->post_data.reset();
++  }
+ }
+ 
+ void NavigationRequest::RegisterSubresourceOverride(
+@@ -3698,10 +3706,10 @@ void NavigationRequest::OnRequestRedirected(
+     return;
+   }
+ 
+-  // For now, DevTools needs the POST data sent to the renderer process even if
+-  // it is no longer a POST after the redirect.
+-  if (redirect_info.new_method != "POST")
++  // If the navigation is no longer a POST, the POST data should be reset.
++  if (redirect_info.new_method != "POST") {
+     common_params_->post_data.reset();
++  }
+ 
+   const bool is_first_response = commit_params_->redirects.empty();
+   UpdateNavigationHandleTimingsOnResponseReceived(/*is_redirect=*/true,
+diff --git a/chromium/content/browser/worker_host/worker_script_loader.cc b/chromium/content/browser/worker_host/worker_script_loader.cc
+index 893dd951844..699616db440 100644
+--- src/3rdparty/chromium/content/browser/worker_host/worker_script_loader.cc
++++ src/3rdparty/chromium/content/browser/worker_host/worker_script_loader.cc
+@@ -12,7 +12,9 @@
+ #include "content/browser/service_worker/service_worker_main_resource_loader_interceptor.h"
+ #include "content/public/browser/browser_task_traits.h"
+ #include "content/public/browser/browser_thread.h"
++#include "content/public/common/url_utils.h"
+ #include "net/base/load_timing_info.h"
++#include "net/base/net_errors.h"
+ #include "net/url_request/redirect_util.h"
+ #include "services/network/public/cpp/record_ontransfersizeupdate_utils.h"
+ #include "services/network/public/cpp/shared_url_loader_factory.h"
+@@ -228,6 +230,22 @@ void WorkerScriptLoader::OnReceiveRedirect(
+     const net::RedirectInfo& redirect_info,
+     network::mojom::URLResponseHeadPtr response_head) {
+   DCHECK_CURRENTLY_ON(BrowserThread::UI);
++
++  if (resource_request_.url.SchemeIsBlob()) {
++    // Loading a blob URL never produces a redirect.
++    complete_status_ =
++        network::URLLoaderCompletionStatus(net::ERR_UNSAFE_REDIRECT);
++    CommitCompleted();
++    return;
++  }
++
++  if (!IsSafeRedirectTarget(resource_request_.url, redirect_info.new_url)) {
++    complete_status_ =
++        network::URLLoaderCompletionStatus(net::ERR_UNSAFE_REDIRECT);
++    CommitCompleted();
++    return;
++  }
++
+   if (--redirect_limit_ == 0) {
+     complete_status_ =
+         network::URLLoaderCompletionStatus(net::ERR_TOO_MANY_REDIRECTS);
+diff --git a/chromium/extensions/renderer/bindings/api_event_handler.cc b/chromium/extensions/renderer/bindings/api_event_handler.cc
+index 53091252909..4558d38cf8f 100644
+--- src/3rdparty/chromium/extensions/renderer/bindings/api_event_handler.cc
++++ src/3rdparty/chromium/extensions/renderer/bindings/api_event_handler.cc
+@@ -20,6 +20,7 @@
+ #include "base/values.h"
+ #include "content/public/renderer/v8_value_converter.h"
+ #include "extensions/common/mojom/event_dispatcher.mojom.h"
++#include "extensions/renderer/bindings/api_binding_util.h"
+ #include "extensions/renderer/bindings/api_response_validator.h"
+ #include "extensions/renderer/bindings/event_emitter.h"
+ #include "extensions/renderer/bindings/get_per_context_data.h"
+@@ -104,15 +105,24 @@ void DispatchEvent(const v8::FunctionCallbackInfo<v8::Value>& info) {
+   if (iter == data->emitters.end()) {
+     return;
+   }
+-  v8::Global<v8::Object>& v8_emitter = iter->second;
++  v8::Local<v8::Object> v8_emitter = iter->second.Get(isolate);
+ 
++  // Converting `info[0]` to a vector of arguments can fail if script execution
++  // (such as running getters during property conversion) throws an exception.
+   v8::LocalVector<v8::Value> args(isolate);
+-  CHECK(gin::Converter<v8::LocalVector<v8::Value>>::FromV8(isolate, info[0],
+-                                                           &args));
++  if (!gin::Converter<v8::LocalVector<v8::Value>>::FromV8(isolate, info[0],
++                                                          &args)) {
++    return;
++  }
++
++  // The conversion above re-enters JS (e.g., via getters on array properties)
++  // which can synchronously invalidate the context (e.g., detaching an iframe).
++  if (!binding::IsContextValid(context)) {
++    return;
++  }
+ 
+   EventEmitter* emitter = nullptr;
+-  gin::Converter<EventEmitter*>::FromV8(isolate, v8_emitter.Get(isolate),
+-                                        &emitter);
++  gin::Converter<EventEmitter*>::FromV8(isolate, v8_emitter, &emitter);
+   CHECK(emitter);
+   // Note: It's safe to use EventEmitter::FireSync() here because this should
+   // only be triggered from a JS call, so we know JS is running.
+diff --git a/chromium/extensions/renderer/bindings/api_event_handler_unittest.cc b/chromium/extensions/renderer/bindings/api_event_handler_unittest.cc
+index e97e217f394..d312a24d179 100644
+--- src/3rdparty/chromium/extensions/renderer/bindings/api_event_handler_unittest.cc
++++ src/3rdparty/chromium/extensions/renderer/bindings/api_event_handler_unittest.cc
+@@ -15,11 +15,13 @@
+ #include "extensions/common/mojom/event_dispatcher.mojom.h"
+ #include "extensions/renderer/bindings/api_binding_test.h"
+ #include "extensions/renderer/bindings/api_binding_test_util.h"
++#include "extensions/renderer/bindings/api_binding_util.h"
+ #include "extensions/renderer/bindings/exception_handler.h"
+ #include "extensions/renderer/bindings/test_js_runner.h"
+ #include "gin/arguments.h"
+ #include "gin/converter.h"
+ #include "gin/public/context_holder.h"
++#include "gin/public/gin_embedders.h"
+ #include "testing/gmock/include/gmock/gmock.h"
+ #include "v8/include/v8-object.h"
+ #include "v8/include/v8-primitive.h"
+@@ -1347,4 +1349,85 @@ TEST_F(APIEventHandlerTest,
+   ::testing::Mock::VerifyAndClearExpectations(&change_handler);
+ }
+ 
++// Tests the behavior of a context getting invalidated during event dispatch.
++// Regression test for https://crbug.com/536512612.
++TEST_F(APIEventHandlerTest, ContextInvalidationDuringEventDispatch) {
++  TestJSRunner::AllowErrors allow_errors;
++  v8::HandleScope handle_scope(isolate());
++  v8::Local<v8::Context> context = MainContext();
++  v8::Context::Scope context_scope(context);
++
++  const char kEventName[] = "alpha";
++  v8::Local<v8::Object> event = handler()->CreateEventInstance(
++      kEventName, /*supports_filters=*/false, /*supports_lazy_listeners=*/true,
++      binding::kNoListenerMax, /*notify_on_change=*/true, context);
++  ASSERT_FALSE(event.IsEmpty());
++
++  // Craft a JS function to invalidate the context directly and expose it on
++  // the global.
++  auto invalidate_context =
++      [](const v8::FunctionCallbackInfo<v8::Value>& info) {
++        v8::Local<v8::Context> context = info.GetIsolate()->GetCurrentContext();
++        APIEventHandler* handler =
++            static_cast<APIEventHandler*>(info.Data().As<v8::External>()->Value(
++                gin::kExternalPointerTypeTagDefaultTag));
++        handler->InvalidateContext(context);
++        binding::InvalidateContext(context);
++      };
++  v8::Local<v8::Function> invalidate_func =
++      v8::Function::New(
++          context, invalidate_context,
++          v8::External::New(isolate(), handler(),
++                            gin::kExternalPointerTypeTagDefaultTag))
++          .ToLocalChecked();
++  context->Global()
++      ->Set(context, gin::StringToSymbol(isolate(), "invalidateContext"),
++            invalidate_func)
++      .Check();
++
++  // An attacker script that defines a sneaky getter on index '0' for all
++  // objects in an effort to inject itself into our bindings. It then
++  // invalidates the context.
++  const char kAttackerScript[] = R"(
++    (function() {
++      Object.defineProperty(Object.prototype, '0', {
++        get: function() {
++          globalThis.invalidateContext();
++          return 'foo';
++        },
++        configurable: true
++      });
++    })
++  )";
++  v8::Local<v8::Function> attacker_script =
++      FunctionFromString(context, kAttackerScript);
++  RunFunction(attacker_script, context, 0, nullptr);
++
++  // An unsuspecting argument massager that accidentally triggers the attacker
++  // getter.
++  const char kArgumentMassager[] = R"(
++    (function(originalArgs, dispatch) {
++        let args = [];
++        args.length = 1;
++        dispatch(args);
++    });
++    )";
++  v8::Local<v8::Function> massager =
++      FunctionFromString(context, kArgumentMassager);
++  handler()->RegisterArgumentMassager(context, kEventName, massager);
++
++  v8::Local<v8::Function> listener_function =
++      FunctionFromString(context, "(function() {})");
++  AddListener(context, listener_function, event);
++
++  const char kArguments[] = "[{}]";
++  base::ListValue event_args = ListValueFromString(kArguments);
++  // Dispatching the event will invoke the massager, which calls `dispatch()`.
++  // `dispatch` attempts to convert `args` via `FromV8()`, which triggers the
++  // getter on index '0'. The getter calls `invalidateContext()`, invalidating
++  // the context and clearing emitters.
++  handler()->FireEventInContext(kEventName, context, event_args, nullptr);
++  EXPECT_FALSE(binding::IsContextValid(context));
++}
++
+ }  // namespace extensions
+diff --git a/chromium/gpu/command_buffer/service/shared_image/compound_image_backing.h b/chromium/gpu/command_buffer/service/shared_image/compound_image_backing.h
+index 1fb46909941..97f9179e61d 100644
+--- src/3rdparty/chromium/gpu/command_buffer/service/shared_image/compound_image_backing.h
++++ src/3rdparty/chromium/gpu/command_buffer/service/shared_image/compound_image_backing.h
+@@ -166,7 +166,7 @@ class GPU_GLES2_EXPORT CompoundImageBacking : public SharedImageBacking {
+     SharedImageBacking* GetBacking();
+ 
+     AccessStreamSet access_streams;
+-    uint32_t content_id_ = 0;
++    uint64_t content_id_ = 0;
+ 
+     CreateBackingCallback create_callback;
+     std::unique_ptr<SharedImageBacking> backing;
+@@ -285,7 +285,8 @@ class GPU_GLES2_EXPORT CompoundImageBacking : public SharedImageBacking {
+   // factory from any thread.
+   scoped_refptr<SharedImageFactoryRef> shared_image_factory_;
+ 
+-  uint32_t latest_content_id_ = 1;
++  // 64-bit so it never wraps back to a stale element's content id in practice.
++  uint64_t latest_content_id_ = 1;
+ 
+   // Holds all of the "element" backings that make up this compound backing. For
+   // each there is a backing, set of streams and tracking for latest content.
+diff --git a/chromium/media/gpu/h265_decoder.cc b/chromium/media/gpu/h265_decoder.cc
+index ed7fe9593ce..91d50b09fea 100644
+--- src/3rdparty/chromium/media/gpu/h265_decoder.cc
++++ src/3rdparty/chromium/media/gpu/h265_decoder.cc
+@@ -713,6 +713,10 @@ H265Decoder::H265Accelerator::Status H265Decoder::PreprocessCurrentSlice() {
+       return result;
+ 
+     DCHECK(!curr_pic_);
++  } else if (!curr_pic_) {
++    DVLOG(1) << "Received slice segment with first_slice_segment_in_pic_flag "
++             << "equal to 0 without an active picture";
++    return H265Accelerator::Status::kFail;
+   }
+ 
+   return H265Accelerator::Status::kOk;
+diff --git a/chromium/media/gpu/windows/media_foundation_video_encode_accelerator_win.cc b/chromium/media/gpu/windows/media_foundation_video_encode_accelerator_win.cc
+index ad07d2d6cf6..b3295b71872 100644
+--- src/3rdparty/chromium/media/gpu/windows/media_foundation_video_encode_accelerator_win.cc
++++ src/3rdparty/chromium/media/gpu/windows/media_foundation_video_encode_accelerator_win.cc
+@@ -325,6 +325,7 @@ MediaFoundationVideoEncodeAccelerator::
+     ~MediaFoundationVideoEncodeAccelerator() {
+   DVLOG(3) << __func__;
+   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
++  pending_input_queue_.clear();
+ }
+ 
+ VideoEncodeAccelerator::SupportedProfiles
+diff --git a/chromium/media/gpu/windows/media_foundation_video_encode_accelerator_win.h b/chromium/media/gpu/windows/media_foundation_video_encode_accelerator_win.h
+index 9b685adb125..9ff3d6431bf 100644
+--- src/3rdparty/chromium/media/gpu/windows/media_foundation_video_encode_accelerator_win.h
++++ src/3rdparty/chromium/media/gpu/windows/media_foundation_video_encode_accelerator_win.h
+@@ -247,6 +247,9 @@ class MEDIA_GPU_EXPORT MediaFoundationVideoEncodeAccelerator
+ 
+   std::unique_ptr<MediaLog> media_log_;
+ 
++  // Helper for accessing shared textures
++  scoped_refptr<CommandBufferHelper> command_buffer_helper_;
++
+   // Bitstream buffers ready to be used to return encoded output as a FIFO.
+   base::circular_deque<std::unique_ptr<BitstreamBufferRef>>
+       bitstream_buffer_queue_;
+@@ -349,9 +352,6 @@ class MEDIA_GPU_EXPORT MediaFoundationVideoEncodeAccelerator
+   // Preferred adapter for DXGIDeviceManager.
+   const CHROME_LUID luid_;
+ 
+-  // Helper for accessing shared textures
+-  scoped_refptr<CommandBufferHelper> command_buffer_helper_;
+-
+   // Used for frame format conversion.
+   VideoFrameConverter frame_converter_;
+ 
+diff --git a/chromium/media/parsers/h265_parser.cc b/chromium/media/parsers/h265_parser.cc
+index e73b32568ed..dc41db1dde6 100644
+--- src/3rdparty/chromium/media/parsers/h265_parser.cc
++++ src/3rdparty/chromium/media/parsers/h265_parser.cc
+@@ -1143,6 +1143,11 @@ H265Parser::Result H265Parser::ParseSliceHeader(const H265NALU& nalu,
+       std::min(shdr->temporal_id, sps->sps_max_sub_layers_minus1);
+ 
+   if (!shdr->first_slice_segment_in_pic_flag) {
++    if (validate_extended_bitstream_ && !prior_shdr) {
++      DVLOG(1) << "First slice segment in picture must have "
++               << "first_slice_segment_in_pic_flag equal to 1";
++      return kInvalidStream;
++    }
+     if (pps->dependent_slice_segments_enabled_flag)
+       READ_BOOL_OR_RETURN(&shdr->dependent_slice_segment_flag);
+     READ_BITS_OR_RETURN(base::bits::Log2Ceiling(sps->pic_size_in_ctbs_y),
+diff --git a/chromium/media/parsers/h265_parser_unittest.cc b/chromium/media/parsers/h265_parser_unittest.cc
+index a4f544240bc..8eb19cc8d9d 100644
+--- src/3rdparty/chromium/media/parsers/h265_parser_unittest.cc
++++ src/3rdparty/chromium/media/parsers/h265_parser_unittest.cc
+@@ -639,4 +639,28 @@ TEST_F(H265ParserTest, ValidSubLayerCount) {
+   EXPECT_NE(H265Parser::kOk, parser.ParseVPS(&unused_vps_id));
+ }
+ 
++TEST_F(H265CrossSliceTest, RejectsNonFirstSliceSegmentWithoutPriorSliceHeader) {
++  H26xAnnexBBitstreamBuilder builder;
++  BuildSpsAndPps(builder);
++  AppendSecondSlice(builder, H265NALU::IDR_W_RADL);
++  builder.Flush();
++  parser_.SetStream(builder.data());
++
++  H265NALU nalu;
++  int sps_id;
++  int pps_id;
++  ASSERT_EQ(parser_.AdvanceToNextNALU(&nalu), H265Parser::kOk);
++  ASSERT_EQ(nalu.nal_unit_type, H265NALU::SPS_NUT);
++  ASSERT_EQ(parser_.ParseSPS(&sps_id), H265Parser::kOk);
++  ASSERT_EQ(parser_.AdvanceToNextNALU(&nalu), H265Parser::kOk);
++  ASSERT_EQ(nalu.nal_unit_type, H265NALU::PPS_NUT);
++  ASSERT_EQ(parser_.ParsePPS(nalu, &pps_id), H265Parser::kOk);
++
++  ASSERT_EQ(parser_.AdvanceToNextNALU(&nalu), H265Parser::kOk);
++  ASSERT_EQ(nalu.nal_unit_type, H265NALU::IDR_W_RADL);
++  H265SliceHeader shdr;
++  EXPECT_EQ(parser_.ParseSliceHeader(nalu, &shdr, nullptr),
++            H265Parser::kInvalidStream);
++}
++
+ }  // namespace media
+diff --git a/chromium/third_party/angle/src/libANGLE/renderer/vulkan/VertexArrayVk.cpp b/chromium/third_party/angle/src/libANGLE/renderer/vulkan/VertexArrayVk.cpp
+index c078c03215e..6b3cc7c9e83 100644
+--- src/3rdparty/chromium/third_party/angle/src/libANGLE/renderer/vulkan/VertexArrayVk.cpp
++++ src/3rdparty/chromium/third_party/angle/src/libANGLE/renderer/vulkan/VertexArrayVk.cpp
+@@ -176,7 +176,7 @@ angle::Result StreamVertexDataWithDivisor(ContextVk *contextVk,
+     return angle::Result::Continue;
+ }
+ 
+-size_t GetVertexCountForRange(GLint64 srcBufferBytes,
++size_t GetVertexCountForRange(uint64_t srcBufferBytes,
+                               uint32_t srcFormatSize,
+                               uint32_t srcVertexStride)
+ {
+@@ -196,8 +196,20 @@ size_t GetVertexCountForRange(GLint64 srcBufferBytes,
+ 
+ size_t GetVertexCount(BufferVk *srcBuffer, const gl::VertexBinding &binding, uint32_t srcFormatSize)
+ {
++    GLint64 size = srcBuffer->getSize();
++    if (size < 0)
++    {
++        return 0;
++    }
++
++    uintptr_t unsignedSize = static_cast<uintptr_t>(size);
++    uintptr_t offset       = binding.getOffset();
++    if (unsignedSize < offset)
++    {
++        return 0;
++    }
+     // Bytes usable for vertex data.
+-    GLint64 bytes = srcBuffer->getSize() - binding.getOffset();
++    uint64_t bytes = unsignedSize - offset;
+     GLuint stride = binding.getStride();
+     if (stride == 0)
+     {
+@@ -229,7 +241,11 @@ angle::Result CalculateMaxVertexCountForConversion(ContextVk *contextVk,
+     // with the dirtyRange.
+     VkDeviceSize srcBufferSize = srcBuffer->getSize();
+     size_t srcOffset  = conversion->getCacheKey().offset;
+-    GLint64 srcLength          = static_cast<GLint64>(srcBufferSize) - srcOffset;
++    if (srcBufferSize < srcOffset)
++    {
++        return angle::Result::Continue;
++    }
++    uint64_t srcLength = srcBufferSize - srcOffset;
+ 
+     // The max number of vertices from binding to the end of the buffer
+     size_t maxNumVertices = GetVertexCountForRange(srcLength, srcFormatSize, srcStride);
+@@ -242,8 +258,12 @@ angle::Result CalculateMaxVertexCountForConversion(ContextVk *contextVk,
+     vk::MemoryHostVisibility hostVisible = conversion->getCacheKey().hostVisible
+                                                ? vk::MemoryHostVisibility::Visible
+                                                : vk::MemoryHostVisibility::NonVisible;
+-    ANGLE_TRY(contextVk->initBufferForVertexConversion(conversion, maxNumVertices * dstStride,
+-                                                       hostVisible));
++
++    uint64_t dstBufferSize = static_cast<uint64_t>(maxNumVertices) * dstStride;
++    ANGLE_VK_CHECK_MATH(contextVk, dstBufferSize <= std::numeric_limits<size_t>::max());
++
++    ANGLE_TRY(contextVk->initBufferForVertexConversion(
++        conversion, static_cast<size_t>(dstBufferSize), hostVisible));
+ 
+     // Calculate numVertices to convert
+     *maxNumVerticesOut = maxNumVertices;
+@@ -251,14 +271,15 @@ angle::Result CalculateMaxVertexCountForConversion(ContextVk *contextVk,
+     return angle::Result::Continue;
+ }
+ 
+-void CalculateOffsetAndVertexCountForDirtyRange(BufferVk *bufferVk,
+-                                                VertexConversionBuffer *conversion,
+-                                                const angle::Format &srcFormat,
+-                                                const angle::Format &dstFormat,
+-                                                const RangeDeviceSize &dirtyRange,
+-                                                uint32_t *srcOffsetOut,
+-                                                uint32_t *dstOffsetOut,
+-                                                uint32_t *numVerticesOut)
++angle::Result CalculateOffsetAndVertexCountForDirtyRange(ContextVk *contextVk,
++                                                         BufferVk *bufferVk,
++                                                         VertexConversionBuffer *conversion,
++                                                         const angle::Format &srcFormat,
++                                                         const angle::Format &dstFormat,
++                                                         const RangeDeviceSize &dirtyRange,
++                                                         uint32_t *srcOffsetOut,
++                                                         uint32_t *dstOffsetOut,
++                                                         uint32_t *numVerticesOut)
+ {
+     ASSERT(!dirtyRange.empty());
+     unsigned srcFormatSize = srcFormat.pixelBytes;
+@@ -275,41 +296,56 @@ void CalculateOffsetAndVertexCountForDirtyRange(BufferVk *bufferVk,
+     size_t srcOffset = conversion->getCacheKey().offset;
+     size_t dstOffset = 0;
+ 
+-    GLint64 srcLength = bufferVk->getSize() - srcOffset;
++    VkDeviceSize srcBufferSize = bufferVk->getSize();
++    uint64_t srcLength         = srcBufferSize - srcOffset;
++
++    uint64_t currentSrcOffset = srcOffset;
++    uint64_t currentDstOffset = dstOffset;
++    uint64_t currentSrcLength = srcLength;
+ 
+     // Adjust offset to the begining of the dirty range
+     if (dirtyRange.low() > srcOffset)
+     {
+-        size_t vertexCountToSkip = (static_cast<size_t>(dirtyRange.low()) - srcOffset) / srcStride;
+-        size_t srcBytesToSkip    = vertexCountToSkip * srcStride;
+-        size_t dstBytesToSkip    = vertexCountToSkip * dstStride;
+-        srcOffset += srcBytesToSkip;
+-        srcLength -= srcBytesToSkip;
+-        dstOffset += dstBytesToSkip;
++        uint64_t vertexCountToSkip =
++            (static_cast<uint64_t>(dirtyRange.low()) - srcOffset) / srcStride;
++        uint64_t srcBytesToSkip = vertexCountToSkip * srcStride;
++        uint64_t dstBytesToSkip = vertexCountToSkip * dstStride;
++
++        currentSrcOffset += srcBytesToSkip;
++        currentSrcLength -= srcBytesToSkip;
++        currentDstOffset += dstBytesToSkip;
+     }
+ 
+     // Adjust dstOffset to align to 4 bytes. The GPU convert code path always write a uint32_t and
+     // must aligned at 4 bytes. We could possibly make it able to store at unaligned uint32_t but
+     // performance will be worse than just convert a few extra data.
+-    while ((dstOffset % 4) != 0)
++    while ((currentDstOffset % 4) != 0)
+     {
+-        dstOffset -= dstStride;
+-        srcOffset -= srcStride;
+-        srcLength += srcStride;
++        ASSERT(currentDstOffset >= dstStride && currentSrcOffset >= srcStride);
++        currentDstOffset -= dstStride;
++        currentSrcOffset -= srcStride;
++        currentSrcLength += srcStride;
+     }
+ 
+     // Adjust length
+-    if (dirtyRange.high() < static_cast<VkDeviceSize>(bufferVk->getSize()))
++    if (dirtyRange.high() < srcBufferSize)
+     {
+-        srcLength = dirtyRange.high() - srcOffset;
++        ASSERT(dirtyRange.high() >= currentSrcOffset);
++        currentSrcLength = dirtyRange.high() - currentSrcOffset;
+     }
+ 
+     // Calculate numVertices to convert
+-    size_t numVertices = GetVertexCountForRange(srcLength, srcFormatSize, srcStride);
++    size_t numVertices = GetVertexCountForRange(currentSrcLength, srcFormatSize, srcStride);
++
++    ANGLE_VK_CHECK_MATH(contextVk, numVertices <= std::numeric_limits<uint32_t>::max());
++    ANGLE_VK_CHECK_MATH(contextVk, currentSrcOffset <= std::numeric_limits<uint32_t>::max());
++    ANGLE_VK_CHECK_MATH(contextVk, currentDstOffset <= std::numeric_limits<uint32_t>::max());
+ 
+     *numVerticesOut = static_cast<uint32_t>(numVertices);
+-    *srcOffsetOut   = static_cast<uint32_t>(srcOffset);
+-    *dstOffsetOut   = static_cast<uint32_t>(dstOffset);
++    *srcOffsetOut   = static_cast<uint32_t>(currentSrcOffset);
++    *dstOffsetOut   = static_cast<uint32_t>(currentDstOffset);
++
++    return angle::Result::Continue;
+ }
+ }  // anonymous namespace
+ 
+@@ -644,9 +680,9 @@ angle::Result VertexArrayVk::convertVertexBufferGPU(ContextVk *contextVk,
+             }
+ 
+             uint32_t srcOffset, dstOffset, numVertices;
+-            CalculateOffsetAndVertexCountForDirtyRange(srcBuffer, conversion, srcFormat, dstFormat,
+-                                                       dirtyRange, &srcOffset, &dstOffset,
+-                                                       &numVertices);
++            ANGLE_TRY(CalculateOffsetAndVertexCountForDirtyRange(
++                contextVk, srcBuffer, conversion, srcFormat, dstFormat, dirtyRange, &srcOffset,
++                &dstOffset, &numVertices));
+             if (params.vertexCount == 0)
+             {
+                 params.vertexCount = numVertices;
+@@ -717,9 +753,9 @@ angle::Result VertexArrayVk::convertVertexBufferCPU(ContextVk *contextVk,
+             // Use numVertices instead of maxNumVertices to calculate bytesToCopy to avoid buffer
+             // overrun.
+             uint32_t srcOffset, dstOffset, numVertices;
+-            CalculateOffsetAndVertexCountForDirtyRange(srcBuffer, conversion, srcFormat, dstFormat,
+-                                                       dirtyRange, &srcOffset, &dstOffset,
+-                                                       &numVertices);
++            ANGLE_TRY(CalculateOffsetAndVertexCountForDirtyRange(
++                contextVk, srcBuffer, conversion, srcFormat, dstFormat, dirtyRange, &srcOffset,
++                &dstOffset, &numVertices));
+             ASSERT(numVertices <= maxNumVertices);
+ 
+             if (numVertices > 0)
+diff --git a/chromium/third_party/skia/src/gpu/ganesh/GrDrawingManager.cpp b/chromium/third_party/skia/src/gpu/ganesh/GrDrawingManager.cpp
+index 77fac2746d7..a7c668b69da 100644
+--- src/3rdparty/chromium/third_party/skia/src/gpu/ganesh/GrDrawingManager.cpp
++++ src/3rdparty/chromium/third_party/skia/src/gpu/ganesh/GrDrawingManager.cpp
+@@ -126,7 +126,9 @@ bool GrDrawingManager::flush(SkSpan<GrSurfaceProxy*> proxies,
+             if (info.fSubmittedProc) {
+                 info.fSubmittedProc(info.fSubmittedContext, true);
+             }
+-            return false;
++            // Nothing to flush is a success (fSubmittedProc is already called with `true`
++            // above).
++            return true;
+         }
+     }
+ 
+@@ -542,8 +544,11 @@ GrSemaphoresSubmitted GrDrawingManager::flushSurfaces(SkSpan<GrSurfaceProxy*> pr
+     // portion of the DAG required by 'proxies' in order to restore some of the
+     // semantics of this method.
+     bool didFlush = this->flush(proxies, access, info, newState);
+-    for (GrSurfaceProxy* proxy : proxies) {
+-        resolve_and_mipmap(gpu, proxy);
++    if (didFlush) {
++        // Only resolve/regen mips if the flush actually executed the render tasks.
++        for (GrSurfaceProxy* proxy : proxies) {
++            resolve_and_mipmap(gpu, proxy);
++        }
+     }
+ 
+     SkDEBUGCODE(this->validate());
+@@ -986,16 +991,6 @@ bool GrDrawingManager::newWritePixelsTask(sk_sp<GrSurfaceProxy> dst,
+     SkASSERT(fContext);
+ 
+     this->closeActiveOpsTask();
+-    const GrCaps& caps = *fContext->priv().caps();
+-
+-    // On platforms that prefer flushes over VRAM use (i.e., ANGLE) we're better off forcing a
+-    // complete flush here.
+-    if (!caps.preferVRAMUseOverFlushes()) {
+-        this->flushSurfaces(SkSpan<GrSurfaceProxy*>{},
+-                            SkSurfaces::BackendSurfaceAccess::kNoAccess,
+-                            GrFlushInfo{},
+-                            nullptr);
+-    }
+ 
+     GrRenderTask* task = this->appendTask(GrWritePixelsTask::Make(this,
+                                                                   std::move(dst),
+diff --git a/chromium/third_party/skia/src/gpu/ganesh/SurfaceContext.cpp b/chromium/third_party/skia/src/gpu/ganesh/SurfaceContext.cpp
+index 4311912f225..048c15b1b99 100644
+--- src/3rdparty/chromium/third_party/skia/src/gpu/ganesh/SurfaceContext.cpp
++++ src/3rdparty/chromium/third_party/skia/src/gpu/ganesh/SurfaceContext.cpp
+@@ -584,6 +584,22 @@ bool SurfaceContext::internalWritePixels(GrDirectContext* dContext,
+     }
+     pt.fY = flip ? dstSurface->height() - pt.fY - src[0].height() : pt.fY;
+ 
++    auto flushSurfaceAndCheckSuccess = [dContext](GrSurfaceProxy* dstProxy, bool expectsTasks) {
++        const bool hasPendingTasks =
++                dContext->priv().drawingManager()->getLastRenderTask(dstProxy) != nullptr;
++        SkASSERT(!expectsTasks || hasPendingTasks);
++        GrSemaphoresSubmitted flushResult = dContext->priv().flushSurface(dstProxy);
++        return flushResult == GrSemaphoresSubmitted::kYes || !hasPendingTasks;
++    };
++
++    // On platforms that prefer flushes over VRAM use (i.e., ANGLE) we're better off forcing a
++    // complete flush here.
++    if (!caps->preferVRAMUseOverFlushes()) {
++        if (!flushSurfaceAndCheckSuccess(dstProxy, /*expectsTasks=*/false)) {
++            return false;
++        }
++    }
++
+     if (!dContext->priv().drawingManager()->newWritePixelsTask(
+                 sk_ref_sp(dstProxy),
+                 SkIRect::MakePtSize(pt, src[0].dimensions()),
+@@ -599,7 +615,9 @@ bool SurfaceContext::internalWritePixels(GrDirectContext* dContext,
+     if (!ownAllStorage) {
+         // If any pixmap doesn't own its pixels then we must flush so that the pixels are pushed to
+         // the GPU before we return.
+-        dContext->priv().flushSurface(dstProxy);
++        if (!flushSurfaceAndCheckSuccess(dstProxy, /*expectsTasks=*/true)) {
++            return false;
++        }
+     }
+     return true;
+ }
+diff --git a/chromium/third_party/skia/src/sksl/codegen/SkSLRasterPipelineCodeGenerator.cpp b/chromium/third_party/skia/src/sksl/codegen/SkSLRasterPipelineCodeGenerator.cpp
+index 067bdf2e72c..e91738bdfd2 100644
+--- src/3rdparty/chromium/third_party/skia/src/sksl/codegen/SkSLRasterPipelineCodeGenerator.cpp
++++ src/3rdparty/chromium/third_party/skia/src/sksl/codegen/SkSLRasterPipelineCodeGenerator.cpp
+@@ -1422,10 +1422,13 @@ std::optional<SlotRange> Generator::writeFunction(
+             // If we are passing a child effect to a function, we need to add its mapping to our
+             // child map.
+             if (arg.type().isEffectChild()) {
+-                if (int* childIndex = fChildEffectMap.find(arg.as<VariableReference>()
+-                                                              .variable())) {
++                if (int* childIndexPtr =
++                            fChildEffectMap.find(arg.as<VariableReference>().variable())) {
++                    // In earlier C++ versions, the map assignment could cause the map to be
++                    // resized, invalidating the pointer.
++                    int childIndex = *childIndexPtr;
+                     SkASSERT(!fChildEffectMap.find(&param));
+-                    fChildEffectMap[&param] = *childIndex;
++                    fChildEffectMap[&param] = childIndex;
+                 }
+                 continue;
+             }
+@@ -2809,8 +2812,9 @@ bool Generator::pushConstructorCompound(const AnyConstructor& c) {
+ }
+ 
+ bool Generator::pushChildCall(const ChildCall& c) {
+-    int* childIdx = fChildEffectMap.find(&c.child());
+-    SkASSERT(childIdx != nullptr);
++    int* childIdxPtr = fChildEffectMap.find(&c.child());
++    SkASSERT(childIdxPtr != nullptr);
++    int childIdx = *childIdxPtr;  // Save this in case pushExpression changes fChildEffectMap
+     SkASSERT(!c.arguments().empty());
+ 
+     // All child calls have at least one argument.
+@@ -2832,7 +2836,7 @@ bool Generator::pushChildCall(const ChildCall& c) {
+ 
+             // Move the argument into src.rgba while also preserving the execution mask.
+             fBuilder.exchange_src();
+-            fBuilder.invoke_shader(*childIdx);
++            fBuilder.invoke_shader(childIdx);
+             break;
+         }
+         case Type::TypeKind::kColorFilter: {
+@@ -2843,7 +2847,7 @@ bool Generator::pushChildCall(const ChildCall& c) {
+ 
+             // Move the argument into src.rgba while also preserving the execution mask.
+             fBuilder.exchange_src();
+-            fBuilder.invoke_color_filter(*childIdx);
++            fBuilder.invoke_color_filter(childIdx);
+             break;
+         }
+         case Type::TypeKind::kBlender: {
+@@ -2861,7 +2865,7 @@ bool Generator::pushChildCall(const ChildCall& c) {
+             }
+             fBuilder.pop_dst_rgba();
+             fBuilder.exchange_src();
+-            fBuilder.invoke_blender(*childIdx);
++            fBuilder.invoke_blender(childIdx);
+             break;
+         }
+         default: {
+diff --git a/chromium/tools/licenses/sbom.py b/chromium/tools/licenses/sbom.py
+index d4c26b0ff63..5a1d9e31f80 100644
+--- src/3rdparty/chromium/tools/licenses/sbom.py
++++ src/3rdparty/chromium/tools/licenses/sbom.py
+@@ -120,17 +120,22 @@ class ExtendedSpdxJsonWriter(spdx_writer._SPDXJSONWriter):
+       if metadata_name in pkg.extra_metadata:
+         pkg_content[json_name] = pkg.extra_metadata[metadata_name]
+ 
+-    # Add any existing CPE info as a comment, since it is not all in the correct format
++    # Add non CPE 2.2/2.3 info as a comment, since it is not all in the correct format
+     if 'CPEPrefix' in pkg.extra_metadata:
+       cpe = pkg.extra_metadata['CPEPrefix']
+-      if cpe == 'unknown':
+-        comment = "Chromium authors declared this package to have an unknown CPE"
++      if cpe.startswith('cpe:2.3:'):
++        pkg_content['externalRefs'] = [ { 'referenceCategory': 'SECURITY', 'referenceType' : 'cpe23Type', 'referenceLocator':  cpe } ]
++      elif cpe.startswith('cpe:/'):
++        pkg_content['externalRefs'] = [ { 'referenceCategory': 'SECURITY', 'referenceType' : 'cpe22Type', 'referenceLocator':  cpe } ]
+       else:
+-        comment = ("Chromium authors declared this package to have the CPE prefix '%s'" % cpe)
+-
+-      if 'comment' in pkg_content:
+-        comment = pkg_content['comment'] + '\n' + comment
+-      pkg_content['comment'] = comment
++        if cpe == 'unknown':
++          comment = "Chromium authors declared this package to have an unknown CPE"
++        else:
++          comment = ("Chromium authors declared this package to have the CPE prefix '%s'" % cpe)
++
++        if 'comment' in pkg_content:
++          comment = pkg_content['comment'] + '\n' + comment
++        pkg_content['comment'] = comment
+ 
+     self.content['packages'].append(pkg_content)
+     if need_to_add_license:
+diff --git a/chromium/ui/base/resource/resource_bundle.cc b/chromium/ui/base/resource/resource_bundle.cc
+index 844cbc10de0..18654b5c6a2 100644
+--- src/3rdparty/chromium/ui/base/resource/resource_bundle.cc
++++ src/3rdparty/chromium/ui/base/resource/resource_bundle.cc
+@@ -735,6 +735,7 @@ bool ResourceBundle::HasDataResource(int resource_id) const {
+   if (delegate_ && delegate_->HasDataResource(resource_id)) {
+     return true;
+   }
++  base::AutoLock lock_scope(*resource_handles_lock_);
+   for (const auto& resource_handle : resource_handles_) {
+     if (resource_handle->HasResource(static_cast<uint16_t>(resource_id))) {
+       return true;
+@@ -798,6 +799,8 @@ std::string_view ResourceBundle::GetRawDataResourceForScale(
+     }
+   }
+ 
++  base::AutoLock lock_scope(*resource_handles_lock_);
++
+   if (scale_factor != ui::k100Percent) {
+     for (const auto& resource_handle : resource_handles_) {
+       if (resource_handle->GetResourceScaleFactor() == scale_factor) {
+@@ -1019,6 +1022,7 @@ void ResourceBundle::CheckCanOverrideStringResources() {
+ ResourceBundle::ResourceBundle(Delegate* delegate)
+     : delegate_(delegate),
+       locale_resources_data_lock_(new base::Lock),
++      resource_handles_lock_(new base::Lock),
+       max_scale_factor_(k100Percent) {
+   mangle_localized_strings_ = base::CommandLine::ForCurrentProcess()->HasSwitch(
+       switches::kMangleLocalizedStrings);
+@@ -1110,6 +1114,7 @@ void ResourceBundle::AddDataPackFromPathInternal(
+ 
+ void ResourceBundle::AddResourceHandle(
+     std::unique_ptr<ResourceHandle> resource_handle) {
++  base::AutoLock lock_scope(*resource_handles_lock_);
+ #if DCHECK_IS_ON()
+   resource_handle->CheckForDuplicateResources(resource_handles_);
+ #endif
+@@ -1143,7 +1148,13 @@ void ResourceBundle::InitDefaultFontList() {
+ }
+ 
+ gfx::ImageSkia ResourceBundle::CreateImageSkia(int resource_id) {
+-  DCHECK(!resource_handles_.empty()) << "Missing call to SetResourcesDataDLL?";
++#if DCHECK_IS_ON()
++  {
++    base::AutoLock lock_scope(*resource_handles_lock_);
++    DCHECK(!resource_handles_.empty())
++        << "Missing call to SetResourcesDataDLL?";
++  }
++#endif
+ 
+   std::optional<LottieData> data = GetLottieData(resource_id);
+   if (data) {
+@@ -1202,6 +1213,7 @@ bool ResourceBundle::LoadBitmap(int resource_id,
+                                 SkBitmap* bitmap,
+                                 bool* fell_back_to_1x) const {
+   DCHECK(fell_back_to_1x);
++  base::AutoLock lock_scope(*resource_handles_lock_);
+   for (const auto& pack : resource_handles_) {
+     if (pack->GetResourceScaleFactor() == ui::kScaleFactorNone &&
+         LoadBitmap(*pack, resource_id, bitmap, fell_back_to_1x)) {
+diff --git a/chromium/ui/base/resource/resource_bundle.h b/chromium/ui/base/resource/resource_bundle.h
+index cb3cb9ae8c0..c742164e29a 100644
+--- src/3rdparty/chromium/ui/base/resource/resource_bundle.h
++++ src/3rdparty/chromium/ui/base/resource/resource_bundle.h
+@@ -569,6 +569,9 @@ class COMPONENT_EXPORT(UI_BASE) ResourceBundle {
+   // Protects |locale_resources_data_|.
+   std::unique_ptr<base::Lock> locale_resources_data_lock_;
+ 
++  // Protects |resource_handles_|.
++  std::unique_ptr<base::Lock> resource_handles_lock_;
++
+   // Handles for data sources.
+   std::vector<std::unique_ptr<ResourceHandle>> locale_resources_data_;
+   std::vector<std::unique_ptr<ResourceHandle>> resource_handles_;
+diff --git a/chromium/ui/base/resource/resource_bundle_unittest.cc b/chromium/ui/base/resource/resource_bundle_unittest.cc
+index 3ea3aff394a..48d1a561f2c 100644
+--- src/3rdparty/chromium/ui/base/resource/resource_bundle_unittest.cc
++++ src/3rdparty/chromium/ui/base/resource/resource_bundle_unittest.cc
+@@ -13,6 +13,8 @@
+ #include <stdint.h>
+ 
+ #include <algorithm>
++#include <array>
++#include <atomic>
+ #include <map>
+ #include <memory>
+ #include <string>
+@@ -29,6 +31,8 @@
+ #include "base/numerics/byte_conversions.h"
+ #include "base/strings/string_view_util.h"
+ #include "base/strings/utf_string_conversions.h"
++#include "base/test/bind.h"
++#include "base/threading/thread.h"
+ #include "build/build_config.h"
+ #include "skia/buildflags.h"
+ #include "testing/gmock/include/gmock/gmock.h"
+@@ -606,6 +610,45 @@ TEST_F(ResourceBundleImageTest, GetRawDataResource) {
+             resource_bundle->GetRawDataResourceForScale(6, k200Percent));
+ }
+ 
++// Data resources may be looked up on a worker thread while a data pack is
++// being added on the main thread. Verify that this is supported.
++TEST_F(ResourceBundleImageTest, GetRawDataResourceWhileAddingDataPack) {
++  base::FilePath empty_path = dir_path().Append(FILE_PATH_LITERAL("empty.pak"));
++  constexpr std::array<uint8_t, 15> kEmptyPakData = {
++      0x04, 0x00, 0x00, 0x00,             // header(version
++      0x00, 0x00, 0x00, 0x00,             //        no. entries
++      0x01,                               //        encoding)
++      0x00, 0x00, 0x0f, 0x00, 0x00, 0x00  // extra entry for the size of last
++  };
++  ASSERT_TRUE(base::WriteFile(empty_path, kEmptyPakData));
++
++  ResourceBundle* resource_bundle = CreateResourceBundleWithEmptyLocalePak();
++  resource_bundle->AddDataPackFromPath(empty_path, kScaleFactorNone);
++
++  constexpr int kIterations = 256;
++  constexpr int kMissingResourceId = 42;
++
++  std::atomic<bool> done = false;
++  base::Thread reader_thread("ResourceReader");
++  ASSERT_TRUE(reader_thread.Start());
++  reader_thread.task_runner()->PostTask(
++      FROM_HERE, base::BindLambdaForTesting([&]() {
++        while (!done.load()) {
++          EXPECT_FALSE(resource_bundle->HasDataResource(kMissingResourceId));
++          EXPECT_TRUE(
++              resource_bundle->GetRawDataResource(kMissingResourceId).empty());
++        }
++      }));
++
++  for (int i = 0; i < kIterations; ++i) {
++    resource_bundle->AddDataPackFromPath(empty_path, kScaleFactorNone);
++  }
++  done.store(true);
++  reader_thread.Stop();
++
++  EXPECT_FALSE(resource_bundle->HasDataResource(kMissingResourceId));
++}
++
+ // Test requesting image reps at various scale factors from the image returned
+ // via ResourceBundle::GetImageNamed().
+ TEST_F(ResourceBundleImageTest, GetImageNamed) {
+diff --git a/chromium/ui/base/x/x11_shm_image_pool.cc b/chromium/ui/base/x/x11_shm_image_pool.cc
+index 8e418acfdb6..dfab3aa134f 100644
+--- src/3rdparty/chromium/ui/base/x/x11_shm_image_pool.cc
++++ src/3rdparty/chromium/ui/base/x/x11_shm_image_pool.cc
+@@ -154,9 +154,18 @@ bool XShmImagePool::Resize(const gfx::Size& pixel_size) {
+   if (color_type == kUnknown_SkColorType)
+     return false;
+ 
++  const auto* visual_info = connection_->GetVisualInfoFromId(visual_);
++  if (!visual_info) {
++    return false;
++  }
++  size_t row_bytes = RowBytesForVisualWidth(*visual_info, pixel_size.width());
++
+   SkImageInfo image_info = SkImageInfo::Make(
+       pixel_size.width(), pixel_size.height(), color_type, kPremul_SkAlphaType);
+-  std::size_t needed_frame_bytes = image_info.computeMinByteSize();
++  std::size_t needed_frame_bytes = image_info.computeByteSize(row_bytes);
++  if (SkImageInfo::ByteSizeOverflowed(needed_frame_bytes)) {
++    return false;
++  }
+ 
+   if (needed_frame_bytes > frame_bytes_ ||
+       needed_frame_bytes < frame_bytes_ * kShmResizeShrinkThreshold) {
+@@ -209,11 +218,6 @@ bool XShmImagePool::Resize(const gfx::Size& pixel_size) {
+     }
+   }
+ 
+-  const auto* visual_info = connection_->GetVisualInfoFromId(visual_);
+-  if (!visual_info)
+-    return false;
+-  size_t row_bytes = RowBytesForVisualWidth(*visual_info, pixel_size.width());
+-
+   for (FrameState& state : frame_states_) {
+     state.bitmap = SkBitmap();
+     if (!state.bitmap.installPixels(image_info, state.shmaddr, row_bytes))
+diff --git a/chromium/ui/gfx/x/future.cc b/chromium/ui/gfx/x/future.cc
+index a0d2ec39f28..0524b2260e5 100644
+--- src/3rdparty/chromium/ui/gfx/x/future.cc
++++ src/3rdparty/chromium/ui/gfx/x/future.cc
+@@ -36,6 +36,17 @@ void FutureImpl::Sync(RawReply* raw_reply, std::unique_ptr<Error>* error) {
+   TakeResponse(raw_reply, error);
+ }
+ 
++void FutureImpl::Peek(RawReply* raw_reply, std::unique_ptr<Error>* error) {
++  DCHECK_CALLED_ON_VALID_SEQUENCE(connection_->sequence_checker_);
++  Wait();
++
++  auto* request = connection_->GetRequestForFuture(this);
++  CHECK(request->have_response);
++
++  *raw_reply = request->reply;
++  *error = nullptr;
++}
++
+ void FutureImpl::OnResponse(ResponseCallback callback) {
+   UpdateRequestHandler(std::move(callback));
+ }
+diff --git a/chromium/ui/gfx/x/future.h b/chromium/ui/gfx/x/future.h
+index 2141a2905ed..6be59a21e09 100644
+--- src/3rdparty/chromium/ui/gfx/x/future.h
++++ src/3rdparty/chromium/ui/gfx/x/future.h
+@@ -28,6 +28,10 @@ class COMPONENT_EXPORT(X11) FutureImpl {
+ 
+   void Sync(RawReply* raw_reply, std::unique_ptr<Error>* error);
+ 
++  // Similar to Sync(), but does not remove the response from the connection's
++  // queue or clear the response callback.
++  void Peek(RawReply* raw_reply, std::unique_ptr<Error>* error);
++
+   void OnResponse(ResponseCallback callback);
+ 
+   // Update an existing Request with a new handler.  |sequence| must
+@@ -102,7 +106,8 @@ class Future : public FutureBase {
+                   "to FutureBase");
+   }
+ 
+-  // Blocks until we receive the response from the server. Returns the response.
++  // Blocks until the response is received from the server. Returns the
++  // response, removing it from the request queue.
+   Response<Reply> Sync() {
+     if (!impl()) {
+       return {nullptr, nullptr};
+@@ -114,7 +119,29 @@ class Future : public FutureBase {
+ 
+     std::unique_ptr<Reply> reply;
+     if (raw_reply) {
+-      auto buf = ReadBuffer(raw_reply);
++      ReadBuffer buf(raw_reply);
++      reply = detail::ReadReply<Reply>(&buf);
++    }
++
++    return {std::move(reply), std::move(error)};
++  }
++
++  // Blocks until the response is received from the server. Returns the response
++  // without taking it from the request queue or clearing the response callback.
++  // Unlike Sync(), this method does not remove the response from the request
++  // queue.
++  Response<Reply> Peek() {
++    if (!impl()) {
++      return {nullptr, nullptr};
++    }
++
++    RawReply raw_reply;
++    std::unique_ptr<Error> error;
++    impl()->Peek(&raw_reply, &error);
++
++    std::unique_ptr<Reply> reply;
++    if (raw_reply) {
++      ReadBuffer buf(raw_reply);
+       reply = detail::ReadReply<Reply>(&buf);
+     }
+ 
+@@ -185,4 +212,4 @@ inline void Future<void>::OnResponse(Callback callback) {
+ 
+ }  // namespace x11
+ 
+-#endif  //  UI_GFX_X_FUTURE_H_
++#endif  // UI_GFX_X_FUTURE_H_
+diff --git a/chromium/ui/gfx/x/geometry_cache.cc b/chromium/ui/gfx/x/geometry_cache.cc
+index 60c40b3dfaf..a36c897ed2e 100644
+--- src/3rdparty/chromium/ui/gfx/x/geometry_cache.cc
++++ src/3rdparty/chromium/ui/gfx/x/geometry_cache.cc
+@@ -34,31 +34,43 @@ GeometryCache::GeometryCache(Connection* connection,
+ GeometryCache::~GeometryCache() = default;
+ 
+ gfx::Rect GeometryCache::GetBoundsPx() {
+-  auto weak_this = weak_ptr_factory_.GetWeakPtr();
++  auto get_local_geometry = [this]() {
++    if (have_geometry_) {
++      return geometry_;
++    }
++    if (auto response = geometry_future_.Peek()) {
++      return response ? gfx::Rect(response->x, response->y, response->width,
++                                  response->height)
++                      : gfx::Rect();
++    }
++    return geometry_;
++  };
++
+   if (!have_parent_) {
+-    parent_future_.DispatchNow();
+-    if (!weak_this) {
+-      return {};
++    auto response = parent_future_.Peek();
++    if (!response) {
++      return get_local_geometry();
+     }
+-  }
+-  CHECK(have_parent_);
+-  if (!have_geometry_) {
+-    geometry_future_.DispatchNow();
+-    if (!weak_this) {
+-      return {};
++    Window parent_window = response ? response->parent : Window::None;
++    if (parent_window == Window::None) {
++      parent_.reset();
++      return get_local_geometry();
++    }
++    if (!parent_ || parent_->window_ != parent_window) {
++      parent_ = std::make_unique<GeometryCache>(
++          connection_, parent_window,
++          base::BindRepeating(&GeometryCache::OnParentGeometryChanged,
++                              weak_ptr_factory_.GetWeakPtr()));
+     }
+   }
+-  CHECK(have_geometry_);
+ 
++  gfx::Rect geometry = get_local_geometry();
+   if (!parent_) {
+-    return geometry_;
++    return geometry;
+   }
+   auto parent_bounds = parent_->GetBoundsPx();
+-  if (!weak_this) {
+-    return {};
+-  }
+   gfx::Vector2d offset(parent_bounds.x(), parent_bounds.y());
+-  return geometry_ + offset;
++  return geometry + offset;
+ }
+ 
+ void GeometryCache::OnQueryTreeResponse(QueryTreeResponse response) {
+diff --git a/chromium/v8/src/ast/scopes.cc b/chromium/v8/src/ast/scopes.cc
+index 776649629db..d19d4cacb49 100644
+--- src/3rdparty/chromium/v8/src/ast/scopes.cc
++++ src/3rdparty/chromium/v8/src/ast/scopes.cc
+@@ -2677,6 +2677,12 @@ void Scope::AllocateScopeInfosRecursively(
+     CHECK_EQ(scope_info_->scope_type(), scope_type_);
+     CHECK_EQ(scope_info_->HasContext(), NeedsContext());
+     CHECK_EQ(scope_info_->ContextLength(), num_heap_slots_);
++    if (is_function_scope()) {
++      DeclarationScope* function_scope = AsDeclarationScope();
++      CHECK_EQ(scope_info_->HasSimpleParameters(),
++               function_scope->has_simple_parameters());
++      CHECK_EQ(scope_info_->ParameterCount(), function_scope->num_parameters());
++    }
+ #ifdef DEBUG
+     // Consume the scope info.
+     it->second = {};
+diff --git a/chromium/v8/src/common/code-memory-access.cc b/chromium/v8/src/common/code-memory-access.cc
+index 084fc669ec6..7c535b36026 100644
+--- src/3rdparty/chromium/v8/src/common/code-memory-access.cc
++++ src/3rdparty/chromium/v8/src/common/code-memory-access.cc
+@@ -415,6 +415,14 @@ ThreadIsolation::JitPageReference::AllocationContaining(
+   return {it->first, it->second};
+ }
+ 
++base::Address ThreadIsolation::JitPageReference::EndOfLastAllocation() {
++  if (jit_page_->allocations_.empty()) {
++    return address_;
++  }
++  auto last = jit_page_->allocations_.rbegin();
++  return last->first + last->second.Size();
++}
++
+ // static
+ void ThreadIsolation::RegisterJitPage(Address address, size_t size) {
+   CFIMetadataWriteScope write_scope("Adding new executable memory.");
+@@ -570,6 +578,8 @@ ThreadIsolation::JitPageReference ThreadIsolation::SplitJitPageLocked(
+     JitPage* mid;
+     ConstructNew(&mid, size);
+     jit_page.Shrink(mid);
++    // Defense in depth: the cut should not be in the middle of a code object.
++    CHECK(jit_page.EndOfLastAllocation() <= jit_page.End());
+     trusted_data_.jit_pages_->emplace(addr, mid);
+     return JitPageReference(mid, addr);
+   }
+diff --git a/chromium/v8/src/common/code-memory-access.h b/chromium/v8/src/common/code-memory-access.h
+index cc06986f244..31c05d18ef6 100644
+--- src/3rdparty/chromium/v8/src/common/code-memory-access.h
++++ src/3rdparty/chromium/v8/src/common/code-memory-access.h
+@@ -284,6 +284,7 @@ class V8_EXPORT ThreadIsolation {
+     base::Address StartOfAllocationAt(base::Address inner_pointer);
+     std::pair<base::Address, JitAllocation&> AllocationContaining(
+         base::Address addr);
++    base::Address EndOfLastAllocation();
+ 
+     bool Empty() const { return jit_page_->allocations_.empty(); }
+     void Shrink(class JitPage* tail);
+diff --git a/chromium/v8/src/objects/scope-info.h b/chromium/v8/src/objects/scope-info.h
+index fbddba5bbb2..49322143b9c 100644
+--- src/3rdparty/chromium/v8/src/objects/scope-info.h
++++ src/3rdparty/chromium/v8/src/objects/scope-info.h
+@@ -115,8 +115,8 @@ class ScopeInfo : public TorqueGeneratedScopeInfo<ScopeInfo, HeapObject> {
+ 
+   V8_EXPORT_PRIVATE bool HasInferredFunctionName() const;
+ 
+-  void SetFunctionName(Tagged<UnionOf<Smi, String>> name);
+-  void SetInferredFunctionName(Tagged<String> name);
++  V8_EXPORT_PRIVATE void SetFunctionName(Tagged<UnionOf<Smi, String>> name);
++  V8_EXPORT_PRIVATE void SetInferredFunctionName(Tagged<String> name);
+ 
+   // Does this scope belong to a function?
+   bool HasPositionInfo() const;
+diff --git a/chromium/v8/src/parsing/expression-scope.h b/chromium/v8/src/parsing/expression-scope.h
+index 3a06b2ed693..c835bd7c5ea 100644
+--- src/3rdparty/chromium/v8/src/parsing/expression-scope.h
++++ src/3rdparty/chromium/v8/src/parsing/expression-scope.h
+@@ -363,7 +363,8 @@ class VariableDeclarationParsingScope : public ExpressionScope<Types> {
+                                      ? ExpressionScopeT::kLexicalDeclaration
+                                      : ExpressionScopeT::kVarDeclaration),
+         mode_(mode),
+-        names_(names) {}
++        names_(names),
++        scope_(parser->scope()) {}
+ 
+   VariableDeclarationParsingScope(const VariableDeclarationParsingScope&) =
+       delete;
+@@ -374,10 +375,9 @@ class VariableDeclarationParsingScope : public ExpressionScope<Types> {
+     VariableKind kind = NORMAL_VARIABLE;
+     bool was_added;
+     Variable* var = this->parser()->DeclareVariable(
+-        name, kind, mode_, Variable::DefaultInitializationFlag(mode_),
+-        this->parser()->scope(), &was_added, pos);
+-    if (was_added &&
+-        this->parser()->scope()->num_var() > kMaxNumFunctionLocals) {
++        name, kind, mode_, Variable::DefaultInitializationFlag(mode_), scope_,
++        &was_added, pos);
++    if (was_added && scope_->num_var() > kMaxNumFunctionLocals) {
+       this->parser()->ReportMessage(MessageTemplate::kTooManyVariables);
+     }
+     if (names_) names_->Add(name, this->parser()->zone());
+@@ -421,6 +421,7 @@ class VariableDeclarationParsingScope : public ExpressionScope<Types> {
+ 
+   VariableMode mode_;
+   ZonePtrList<const AstRawString>* names_;
++  Scope* scope_;
+ };
+ 
+ template <typename Types>
+diff --git a/chromium/v8/src/runtime/runtime-scopes.cc b/chromium/v8/src/runtime/runtime-scopes.cc
+index 5c72ab73caf..f36906c6782 100644
+--- src/3rdparty/chromium/v8/src/runtime/runtime-scopes.cc
++++ src/3rdparty/chromium/v8/src/runtime/runtime-scopes.cc
+@@ -546,7 +546,7 @@ DirectHandle<JSObject> NewSloppyArguments(Isolate* isolate,
+                                           DirectHandle<JSFunction> callee,
+                                           T parameters, int argument_count) {
+   CHECK(!IsDerivedConstructor(callee->shared()->kind()));
+-  DCHECK(callee->shared()->has_simple_parameters());
++  CHECK(callee->shared()->has_simple_parameters());
+   DirectHandle<JSObject> result =
+       isolate->factory()->NewArgumentsObject(callee, argument_count);
+ 
+diff --git a/chromium/v8/src/wasm/wasm-serialization.cc b/chromium/v8/src/wasm/wasm-serialization.cc
+index b7885e95da0..6b9f1786767 100644
+--- src/3rdparty/chromium/v8/src/wasm/wasm-serialization.cc
++++ src/3rdparty/chromium/v8/src/wasm/wasm-serialization.cc
+@@ -931,12 +931,14 @@ DeserializationUnit NativeModuleDeserializer::ReadCode(int fn_index,
+   if (current_code_space_.size() < static_cast<size_t>(code_size)) {
+     // Allocate the next code space. Don't allocate more than 90% of
+     // {kMaxCodeSpaceSize}, to leave some space for jump tables.
++    // Perform the division first to avoid overflow.
+     size_t max_reservation = RoundUp<kCodeAlignment>(
+-        v8_flags.wasm_max_code_space_size_mb * MB * 9 / 10);
++        v8_flags.wasm_max_code_space_size_mb * MB / 10 * 9);
+     size_t code_space_size = std::min(max_reservation, remaining_code_size_);
+     std::tie(current_code_space_, current_jump_tables_) =
+         native_module_->AllocateForDeserializedCode(code_space_size);
+     DCHECK_EQ(current_code_space_.size(), code_space_size);
++    CHECK_LE(code_size, current_code_space_.size());
+     CHECK(current_jump_tables_.is_valid());
+   }
+ 

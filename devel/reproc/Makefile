@@ -1,11 +1,10 @@
 PORTNAME=	reproc
-DISTVERSIONPREFIX=	v
-DISTVERSION=	14.2.5
+DISTVERSION=	14.2.8
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C/C++ library to simplify running external programs
-WWW=		https://github.com/DaanDeMeyer/reproc
+WWW=		https://github.com/daandemeyer/reproc
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -14,7 +13,7 @@ USES=		cmake compiler:c++11-lang
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	DaanDeMeyer
+GH_ACCOUNT=	daandemeyer
 
 CMAKE_ON=	REPROC++ BUILD_SHARED_LIBS
 
@@ -23,5 +22,7 @@ do-test:
 		${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} -DREPROC_TEST:BOOL=ON ${CMAKE_SOURCE_PATH} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${ALL_TARGET} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} test
+
+# tests as of 14.2.7: 100% tests passed, 0 tests failed out of 10
 
 .include <bsd.port.mk>

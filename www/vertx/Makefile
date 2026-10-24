@@ -1,6 +1,6 @@
 PORTNAME=	vertx
 PORTVERSION=	2.1.1
-PORTREVISION=	0
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://dl.bintray.com/vertx/downloads/
 DISTNAME=	vert.x-${PORTVERSION}
@@ -117,5 +117,9 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${PORTNAME} ${STAGEDIR}${DATADIR}/bin/${PORTNAME}
 	${LN} -s ${DATADIR}/bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	cd ${WRKSRC}/api-docs && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
+
+.if defined(DEVELOPER)
+REINPLACE_CMD:= ${SED} ${REINPLACE_ARGS}
+.endif
 
 .include <bsd.port.mk>

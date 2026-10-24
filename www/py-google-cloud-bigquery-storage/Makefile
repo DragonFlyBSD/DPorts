@@ -1,5 +1,5 @@
 PORTNAME=	google-cloud-bigquery-storage
-PORTVERSION=	2.29.1
+PORTVERSION=	2.41.0
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,22 +7,35 @@ DISTNAME=	google_cloud_bigquery_storage-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Google Cloud Bigquery Storage API client library
-WWW=		https://cloud.google.com/python/docs/reference/bigquerystorage/latest \
-		https://github.com/googleapis/python-bigquery-storage
+WWW=		https://docs.cloud.google.com/python/docs/reference/bigquerystorage/latest \
+		https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-storage \
+		https://github.com/googleapis/google-cloud-python
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}google-api-core>=2.11.0<3.0.0:www/py-google-api-core@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}google-api-core>=2.25.0<3.0.0:www/py-google-api-core@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}google-auth>=2.14.1<3.0.0:security/py-google-auth@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}proto-plus>=1.25.0<2.0.0:devel/py-proto-plus@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}protobuf>=4.21.6,1<7.0.0,1:devel/py-protobuf@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}grpcio>=1.75.1<2.0.0:devel/py-grpcio@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}proto-plus>=1.26.1<2.0.0:devel/py-proto-plus@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}protobuf>=6.33.5,1<8.0.0,1:devel/py-protobuf@${PY_FLAVOR}
 
 USES=		python
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
+
+OPTIONS_DEFINE=	FASTAVRO PANDAS PYARROW
+FASTAVRO_DESC=	Avro support via fastavro
+PANDAS_DESC=	DataFrame support via pandas
+PANDAS_IMPLIES=	PYARROW
+PYARROW_DESC=	Apache Arrow support via pyarrow
+
+FASTAVRO_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fastavro>=1.1.0<2.0.0:textproc/py-fastavro@${PY_FLAVOR}
+PANDAS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pandas>=1.1.3,1<3.0.0,1:math/py-pandas@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}pandas-gbq>=0.35.1<2.0.0:math/py-pandas-gbq@${PY_FLAVOR}
+PYARROW_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyarrow>=3.0.0:databases/py-pyarrow@${PY_FLAVOR}
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	primesieve
 DISTVERSIONPREFIX=	v
-DISTVERSION=	8.0
+DISTVERSION=	12.14
 PORTEPOCH=	1
 CATEGORIES=	math
 
@@ -17,7 +17,9 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	kimwalisch
 
-CMAKE_OFF=	BUILD_STATIC_LIBS
+CMAKE_OFF= BUILD_STATIC_LIBS multiarch_avx512_bw multiarch_avx512_vbmi2
 CMAKE_TESTING_ON=	BUILD_TESTS
+
+# tests as of 12.14: 100% tests passed, 0 tests failed out of 34
 
 .include <bsd.port.mk>

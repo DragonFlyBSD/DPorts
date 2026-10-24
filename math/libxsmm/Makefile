@@ -38,4 +38,9 @@ MAKE_ARGS+=	PLATFORM=1
 post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/include/libxsmm/libxsmm_timer.c.orig
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/Makefile \
+		${WRKSRC}/Makefile.inc
+
 .include <bsd.port.mk>

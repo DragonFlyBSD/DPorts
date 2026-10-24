@@ -1,6 +1,5 @@
 PORTNAME=	wolfssl
-PORTVERSION=	5.7.6
-PORTREVISION=   1
+PORTVERSION=	5.9.4
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.wolfssl.com/ \
 		LOCAL/fox
@@ -9,7 +8,7 @@ MAINTAINER=	fox@FreeBSD.org
 COMMENT=	Embedded SSL C-Library
 WWW=		https://www.wolfssl.com/
 
-LICENSE=	GPLv2+
+LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		cpe libtool zip
@@ -18,15 +17,18 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--enable-certgen \
+		--enable-context-extra-user-data \
 		--enable-des3 \
 		--enable-dh \
 		--enable-dsa \
 		--enable-dtls \
 		--enable-ecc \
+		--enable-haproxy \
 		--enable-ipv6 \
 		--enable-keygen \
 		--enable-opensslall \
 		--enable-opensslextra \
+		--enable-quic \
 		--enable-ripemd \
 		--enable-sessioncerts \
 		--enable-sha512 \
@@ -36,13 +38,32 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--enable-static \
 		--enable-tls13 \
 		--enable-tls13-draft18 \
-		--enable-context-extra-user-data
+		--enable-keying-material \
+		--enable-all-asm
+
+.if "${ARCH}" == "x86_64"
+CONFIGURE_ARGS+=	--enable-aesni-with-avx
+.endif
+
 TEST_TARGET=	check
-CFLAGS+=	-DWOLFSSL_ALT_NAMES
+CFLAGS+=	-DWOLFSSL_ALT_NAMES -DWOLFSSL_GETRANDOM=1 -DWOLFSSL_TLS13_MIDDLEBOX_COMPAT
+CFLAGS_i386=	-DWOLFSSL_SHA224
+CFLAGS_powerpc=	-DWOLFSSL_SHA224
+CFLAGS_powerpc64=	-DWOLFSSL_SHA224
+CFLAGS_powerpc64le=	-DWOLFSSL_SHA224
 
 OPTIONS_DEFINE=	DEBUG DOCS
 
 DEBUG_CONFIGURE_ON=	--enable-debug
+
+PLIST_SUB+= PORTDOCS="@comment "
+.include <bsd.port.options.mk>
+
+.if "${ARCH}" == "i386" || ${ARCH:Marmv?} || ${ARCH:Mpowerpc*}
+PLIST_SUB+=	SP_H="@comment "
+.else
+PLIST_SUB+=	SP_H=""
+.endif
 
 post-configure:
 	@${REINPLACE_CMD} \

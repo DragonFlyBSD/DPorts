@@ -14,6 +14,7 @@ USES=		compiler:c++11-lang tar:tgz
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
+USE_CXXSTD= c++11
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|-O2 -g|| ; \

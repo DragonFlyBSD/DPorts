@@ -16,4 +16,8 @@ USES=		gem
 
 NO_ARCH=	yes
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/addressable>/s,"< 2.8","<= 2.8.0",g' \
+		${WRKSRC}/diva.gemspec
+
 .include <bsd.port.mk>

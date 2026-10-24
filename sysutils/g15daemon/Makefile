@@ -33,4 +33,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|' \
 		${WRKSRC}/g15daemon/main.c
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/libg15daemon_client/g15daemon_net.c \
+		${WRKSRC}/plugins/g15_plugin_net.c
+
 .include <bsd.port.mk>

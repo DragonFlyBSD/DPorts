@@ -1,11 +1,11 @@
 PORTNAME=	robustbase
-DISTVERSION=	0.99-4-1
+DISTVERSION=	0.99-7
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Basic Robust Statistics
-WWW=		https://cran.r-project.org/web/packages/robustbase/
+WWW=		https://cran.r-project.org/package=robustbase
 
 LICENSE=	GPLv2+
 

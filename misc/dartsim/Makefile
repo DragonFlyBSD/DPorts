@@ -1,12 +1,13 @@
 PORTNAME=	dartsim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	6.13.0
-PORTREVISION=	3
+DISTVERSION=	6.19.4
+PORTREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Dynamic Animation and Robotics Toolkit
-WWW=		https://dartsim.github.io/
+WWW=		https://dartsim.github.io/ \
+		https://github.com/dartsim/dart
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,7 +18,7 @@ BUILD_DEPENDS=	pagmo2>0:science/pagmo2 \
 		pybind11>0:devel/pybind11
 LIB_DEPENDS=	libassimp.so:multimedia/assimp \
 		libBulletDynamics.so:devel/bullet \
-		libboost_system.so:devel/boost-libs \
+		libboost_thread.so:devel/boost-libs \
 		libccd.so:math/libccd \
 		libconsole_bridge.so:devel/ros-console_bridge \
 		libfcl.so:math/fcl \
@@ -27,13 +28,16 @@ LIB_DEPENDS=	libassimp.so:multimedia/assimp \
 		liblz4.so:archivers/liblz4 \
 		liboctomap.so:math/octomap \
 		libode.so:devel/ode \
-		libosg.so:graphics/osg34 \
+		libosg.so:graphics/osg \
 		libnlopt.so:math/nlopt \
 		libpagmo.so:science/pagmo2 \
+		libspdlog.so:devel/spdlog \
 		libtinyxml2.so:textproc/tinyxml2 \
 		liburdfdom_world.so:devel/ros-urdfdom
+TEST_DEPENDS=	benchmark>0:devel/benchmark \
+		googletest>0:devel/googletest
 
-USES=		cmake compiler:c++17-lang eigen:3,build,run gl localbase:ldflags \
+USES=		cmake:testing compiler:c++17-lang eigen:3,build,run gl localbase:ldflags \
 		pkgconfig python xorg
 USE_GL=		gl glu glut
 USE_XORG=	xi xmu
@@ -45,20 +49,34 @@ GH_PROJECT=	dart
 
 CXXFLAGS+=	-I${LOCALBASE}/include/coin # because of pagmo2 headers include <IpReturnCodes.hpp>
 
-CMAKE_ON=	BUILD_SHARED_LIBS # DART_VERBOSE
-CMAKE_ARGS=	-DODE_DIR=${LOCALBASE}
+CMAKE_ON=	BUILD_SHARED_LIBS DART_USE_SYSTEM_GOOGLETEST DART_USE_SYSTEM_GOOGLEBENCHMARK # DART_VERBOSE
+CMAKE_OFF=	BUILD_TESTING
+CMAKE_OFF+=	DART_TREAT_WARNINGS_AS_ERRORS # workaround for https://github.com/dartsim/dart/issues/1799
+CMAKE_ARGS=	-DODE_DIR=${LOCALBASE} \
+		-DFREEBSD_PYTHON_VER=${PYTHON_VER}
+CMAKE_TESTING_TARGET=	tests # only builds test
 
 DATADIR=	share/dart
 DOCSDIR=	${PREFIX}/share/doc/dart
+
+BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	*
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=unused-but-set-variable
 .endif
 
+post-test:
+	@cd ${BUILD_WRKSRC} && \
+		${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} test
+
+# tests as of 6.19.4: 100% tests passed, 0 tests failed out of 102
+
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibtbb*}
 .include <bsd.port.mk>

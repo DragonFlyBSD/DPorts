@@ -1,5 +1,5 @@
 PORTNAME=	libnatpmp
-DISTVERSION=	20230423
+DISTVERSION=	20250404
 CATEGORIES=	net
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/pull/
@@ -15,7 +15,7 @@ USES=		gmake
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	miniupnp
-GH_TAGNAME=	724dc69
+GH_TAGNAME=	134fc89
 USE_LDCONFIG=	yes
 
 MAKE_ARGS+=	CC="${CC}"
@@ -32,5 +32,9 @@ PLIST_FILES=	bin/natpmpc \
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/natpmpc \
 		${STAGEDIR}${PREFIX}/lib/libnatpmp.so.1
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/lib64/lib/' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

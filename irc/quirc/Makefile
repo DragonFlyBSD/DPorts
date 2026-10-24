@@ -27,6 +27,7 @@ PORTDOCS=	AUTHORS ChangeLog FAQ NEWS README doc/*.txt
 
 OPTIONS_DEFINE=	DOCS
 
+CXXFLAGS= -Wno-write-strings
 post-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}/common
 	${LN} -sf ../install.tcl ${STAGEDIR}${DATADIR}/common

@@ -1,6 +1,6 @@
 PORTNAME=	czmq
 PORTVERSION=	4.1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/zeromq/${PORTNAME}/releases/download/v${PORTVERSION}/
 
@@ -26,4 +26,5 @@ TEST_TARGET=	check
 
 CFLAGS+=	-Wno-error
 
+LIBS= -pthread
 .include <bsd.port.mk>

@@ -18,4 +18,6 @@ GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/dymo-cups-drivers-1.4.0.5
 
+CONFIGURE_ENV= LDVER=ld.bfd
+LDFLAGS= -pthread
 .include <bsd.port.mk>

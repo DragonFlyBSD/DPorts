@@ -1,8 +1,8 @@
---- src/liboslquery/py_osl.h.orig	2022-01-08 02:36:45 UTC
+--- src/liboslquery/py_osl.h.orig	2025-12-01 12:53:35 UTC
 +++ src/liboslquery/py_osl.h
-@@ -31,6 +31,13 @@
- #    include <OpenEXR/half.h>
- #endif
+@@ -29,6 +29,13 @@
+ 
+ #include <Imath/half.h>
  
 +#if PY_VERSION_HEX >= 0x030b00a6
 +   #ifndef Py_BUILD_CORE

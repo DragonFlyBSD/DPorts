@@ -1,6 +1,6 @@
 PORTNAME=	internetarchive
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.3.1
+DISTVERSION=	5.11.1
 CATEGORIES=	www python
 #MASTER_SITES=	PYPI # no tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,28 +12,31 @@ WWW=		https://github.com/jjjake/internetarchive
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}charset-normalizer>=2.1.1:textproc/py-charset-normalizer@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}docopt>=0.6.0,<0.7.0:devel/py-docopt@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonpatch>=0.4:devel/py-jsonpatch@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}requests>=2.25.0,<3.0.0:www/py-requests@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}schema>=0.4.0:devel/py-schema@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}six>=1.13.0,<2.0.0:devel/py-six@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}requests>=2.25.0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tqdm>=4.0.0:misc/py-tqdm@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}urllib3>=1.26.0:net/py-urllib3@${PY_FLAVOR}
 py39_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>=3.6.0:devel/py-importlib-metadata@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}responses>=0.20.0:devel/py-responses@${PY_FLAVOR} \
-		ruff>=0.0.269:devel/ruff
+		${PYTHON_PKGNAMEPREFIX}ruff>=0.0.269:devel/py-ruff@${PY_FLAVOR}
 
 USES=		python
-USE_PYTHON=	distutils concurrent autoplist pytest # 15 tests fail, https://github.com/jjjake/internetarchive/issues/596
+USE_PYTHON=	pep517 concurrent autoplist pytest
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	jjjake
 
-TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} PATH=${STAGEDIR}${PREFIX}/bin:${PATH}
+TEST_ENV=	${MAKE_ENV} \
+		PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} \
+		PATH=${STAGEDIR}${PREFIX}/bin:${PATH}
+TEST_ARGS=	--disable-plugin-autoload \
+		-p responses -p ruff
 
 NO_ARCH=	yes
 
-# tests as of 5.3.1: 15 failed, 131 passed in 65.72s (0:01:05)
+# tests as of 5.11.1: 349 passed, 37 skipped, 3 warnings in 34.38s
 
 .include <bsd.port.mk>

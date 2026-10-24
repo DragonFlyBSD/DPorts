@@ -1,2 +1,0 @@
-
-LDFLAGS:=	${LDFLAGS:N*libgcc_s.so:N-Wl,-rpath*}

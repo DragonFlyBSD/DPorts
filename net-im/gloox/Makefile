@@ -34,4 +34,8 @@ post-patch:
 		's| -pedantic|| ; \
 		 s| -pipe||'
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\<string\>@<cstring>@g'		\
+		${WRKSRC}/src/dns.h
+
 .include <bsd.port.mk>

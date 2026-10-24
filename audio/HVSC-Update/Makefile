@@ -18,6 +18,7 @@ PLIST_FILES=	bin/hvsc_update_tool
 
 OPTIONS_DEFINE=	DOCS
 
+DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/hvsc_update_tool ${STAGEDIR}${PREFIX}/bin
 
@@ -26,5 +27,9 @@ do-install-DOCS-on:
 .for file in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*freebsd\*\))@\1|*dragonfly*)@g'	\
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

@@ -1,5 +1,6 @@
 PORTNAME=	Drawpile
-DISTVERSION=	2.2.2
+DISTVERSION=	2.3.0
+PORTREVISION=	10
 CATEGORIES=	graphics python
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -43,6 +44,7 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 PORTSCOUT=	limit:^\d+\. # prevent tags like 'continuous'
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 #.if ${ARCH} == armv7

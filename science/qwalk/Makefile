@@ -25,4 +25,7 @@ GH_PROJECT=	mainline
 WRKSRC_SUBDIR=	src
 MAKE_ARGS=	INSTALLPATH=${STAGEDIR}${PREFIX}/bin
 
+dfly-patch:
+	${CP} ${WRKSRC}/make/FreeBSD.mk ${WRKSRC}/make/DragonFly.mk
+
 .include <bsd.port.mk>

@@ -1,20 +1,20 @@
---- components/password_manager/core/browser/password_store/login_database.cc.orig	2024-08-26 14:40:28 UTC
+--- components/password_manager/core/browser/password_store/login_database.cc.orig	2026-08-13 07:41:05 UTC
 +++ components/password_manager/core/browser/password_store/login_database.cc
-@@ -1028,7 +1028,7 @@ bool ShouldDeleteUndecryptablePasswords(
-         clearing_undecryptable_passwords,
-     bool is_user_data_dir_policy_set,
-     bool is_disabled_by_policy) {
+@@ -1015,7 +1015,7 @@ bool ShouldDeleteUndecryptablePasswords(
+     bool is_enabled_by_policy,
+     IsAccountStore is_account_store,
+     const os_crypt_async::Encryptor* encryptor) {
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   std::string user_data_dir_string;
    std::unique_ptr<base::Environment> environment(base::Environment::Create());
    // On Linux user data directory ca be specified using an env variable. If it
-@@ -1047,7 +1047,7 @@ bool ShouldDeleteUndecryptablePasswords(
+   // exists, passwords shouldn't be deleted.
+@@ -1029,7 +1029,7 @@ bool ShouldDeleteUndecryptablePasswords(
      return false;
    }
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    if (command_line->HasSwitch(password_manager::kPasswordStore)) {
-     RecordShouldDeleteUndecryptablePasswordsMetric(
-         ShouldDeleteUndecryptablePasswordsResult::
+     return false;
+   }

@@ -1,6 +1,6 @@
 PORTNAME=	jna
 PORTVERSION=	5.15.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	devel java
 
 MAINTAINER=	ports@markdixon.name
@@ -52,5 +52,8 @@ do-install-DOCS-on:
 	@cd ${WRKSRC}/doc && ${COPYTREE_SHARE} javadoc ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/dist/platform-${PORTVERSION}-javadoc.jar \
 		${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/native/Makefile
 
 .include <bsd.port.mk>

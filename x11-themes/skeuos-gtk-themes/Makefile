@@ -3,7 +3,7 @@ DISTVERSION=	20220629
 CATEGORIES=	x11-themes
 PKGNAMESUFFIX=	-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Light and dark colorful Gtk3.20+ theme
 WWW=		https://github.com/daniruiz/skeuos-gtk
 

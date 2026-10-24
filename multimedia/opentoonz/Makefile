@@ -1,7 +1,7 @@
 PORTNAME=	opentoonz
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.0
-PORTREVISION=	10
+PORTREVISION=	13
 CATEGORIES=	multimedia
 
 MAINTAINER=	rozhuk.im@gmail.com
@@ -62,5 +62,11 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e "s|find_library(OPENBLAS_LIB NAMES.*|find_library(OPENBLAS_LIB NAMES ${BLASLIBS})|g" \
 		${WRKSRC}/toonz/sources/CMakeLists.txt
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<sys/dir\.h>@<dirent.h>@g' \
+		${WRKSRC}/toonz/sources/common/tsystem/tpluginmanager.cpp \
+		${WRKSRC}/toonz/sources/common/tsystem/tsystempd.cpp \
+		${WRKSRC}/toonz/sources/toonzfarm/tnzcore_stuff/tsystem.cpp
 
 .include <bsd.port.mk>

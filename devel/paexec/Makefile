@@ -26,6 +26,7 @@ MAKE_ENV+=	EGDIR="${STAGEDIR}${EXAMPLESDIR}" \
 			BINDIR="${STAGEDIR}${PREFIX}/bin" \
 			MANDIR="${STAGEDIR}${PREFIX}/share/man" WARNERR="no"
 
+MAKE_ENV+= WARNS=0
 do-build:
 	@${SETENV} ${MAKE_ENV} ${LOCALBASE}/bin/mkcmake -C ${WRKSRC}
 

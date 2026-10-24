@@ -1,12 +1,13 @@
 PORTNAME=	libpci
-PORTVERSION=	3.13.0
+PORTVERSION=	3.15.0
 CATEGORIES=	devel
 MASTER_SITES=	KERNEL_ORG/software/utils/pciutils
 DISTNAME=	pciutils-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	PCI configuration space I/O made easy
-WWW=		https://mj.ucw.cz/sw/pciutils/
+WWW=		https://mj.ucw.cz/sw/pciutils/ \
+		https://github.com/pciutils/pciutils
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -47,5 +48,9 @@ do-install:
 .endfor
 	${LN} -fs libpci.so.3 ${STAGEDIR}${PREFIX}/lib/libpci.so
 	${INSTALL_DATA} ${WRKSRC}/lib/config.mk ${STAGEDIR}${DATADIR}/
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-I/usr/src/sys@@g' \
+		${WRKSRC}/lib/Makefile
 
 .include <bsd.port.mk>

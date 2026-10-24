@@ -1,6 +1,6 @@
 PORTNAME=	rmilter
 PORTVERSION=	1.10.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	mail
 
 MAINTAINER=	vsevolod@FreeBSD.org
@@ -9,10 +9,10 @@ WWW=		https://github.com/vstakhov/rmilter
 
 LICENSE=	BSD2CLAUSE
 
-LIB_DEPENDS=	libpcre.so:devel/pcre
+DEPRECATED=	Deprecated upstream, does not build with CMake 4
+EXPIRATION_DATE=2026-11-30
 
-NOT_FOR_ARCHS=		mips
-NOT_FOR_ARCHS_REASON=	fails to compile: error: Unsupported word size
+LIB_DEPENDS=	libpcre.so:devel/pcre
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	vstakhov
@@ -23,7 +23,6 @@ USE_GNOME=	glib20
 USERS=		_rmilter
 GROUPS=		_rmilter
 
-WITH_SENDMAIL_BASE=	yes
 
 OPTIONS_DEFINE=		DKIM
 OPTIONS_DEFAULT=	DKIM
@@ -36,7 +35,7 @@ DKIM_CMAKE_OFF=	-DENABLE_DKIM=OFF
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD
-CFLAGS+=       -Wno-error=int-conversion
+CFLAGS+= -Wno-error=int-conversion -Wno-implicit-fallthrough
 .endif
 
 # Workaround to prevent bsd.milter.mk from breaking the build with the recent clang

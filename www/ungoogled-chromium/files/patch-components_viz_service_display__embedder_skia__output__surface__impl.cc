@@ -1,9 +1,9 @@
---- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2024-08-26 14:40:28 UTC
+--- components/viz/service/display_embedder/skia_output_surface_impl.cc.orig	2026-08-13 07:41:05 UTC
 +++ components/viz/service/display_embedder/skia_output_surface_impl.cc
-@@ -1663,7 +1663,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::GetGrBackendFor
-                                             ->GetVulkanPhysicalDevice(),
+@@ -1530,7 +1530,7 @@ GrBackendFormat SkiaOutputSurfaceImpl::GetGrBackendFor
                                          VK_IMAGE_TILING_OPTIMAL, vk_format,
-                                         si_format, yuv_color_space, ycbcr_info);
+                                         si_format, image_context->color_space(),
+                                         image_context->ycbcr_info());
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      // Textures that were allocated _on linux_ with ycbcr info came from

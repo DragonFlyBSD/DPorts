@@ -1,0 +1,22 @@
+-- Use $(MAKE) instead of a hardcoded "make" when recursing into aotus.  The
+-- bundled aotus/smeka makefiles use GNU make syntax and fail with FreeBSD make.
+--- External/Lua-Engine/flook/Makefile.orig	2026-07-08 15:35:43 UTC
++++ External/Lua-Engine/flook/Makefile
+@@ -64,15 +64,15 @@
+ endif
+ lib-aotus: prep-aotus
+ ifdef SETUP
+-	(cd aotus/obj ; make SETUP=../../$(SETUP) )
++	(cd aotus/obj ; $(MAKE) SETUP=../../$(SETUP) )
+ else
+-	(cd aotus/obj ; make )
++	(cd aotus/obj ; $(MAKE) )
+ endif
+ clean-aotus: prep-aotus
+ ifdef SETUP
+-	(cd aotus/obj ; make SETUP=../../$(SETUP) clean )
++	(cd aotus/obj ; $(MAKE) SETUP=../../$(SETUP) clean )
+ else
+-	(cd aotus/obj ; make clean )
++	(cd aotus/obj ; $(MAKE) clean )
+ endif

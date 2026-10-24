@@ -1,8 +1,0 @@
-USES+= autoreconf pathfix pkgconfig
-PATHFIX_MAKEFILEIN= Makefile.am
-
-pre-configure:
-.if ${DFLYVERSION} >= 300703
-	${REINPLACE_CMD} -e 's|bus/usb/usbhid|bus/u4b/usbhid|g' \
-		${WRKSRC}/configure.ac
-.endif

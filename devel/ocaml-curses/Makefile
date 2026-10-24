@@ -10,16 +10,21 @@ WWW=		https://github.com/mbacarella/curses
 LICENSE=	LGPL21+ # with a special exception to clause 6
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		ncurses ocaml:dune pkgconfig
+USES=		ncurses ocaml:dune,ldconfig pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	mbacarella
-USE_OCAML=		yes
-USE_OCAML_LDCONFIG=	yes
 
 DOCSDIR=	${OCAML_DOCSDIR}/${PORTNAME}
 PORTDOCS=	CHANGES.md README.md
 
 OPTIONS_DEFINE=	DOCS
+
+DFLY_UNMAINTAINED= yes
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc
+USE_BINUTILS=	yes
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} \

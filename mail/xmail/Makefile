@@ -1,6 +1,6 @@
 PORTNAME=	xmail
 PORTVERSION=	1.6
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	XCONTRIB/applications
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -16,6 +16,7 @@ USE_XORG=	ice sm x11 xaw xbitmaps xext xmu xpm xt
 
 CFLAGS+=	-Wno-incompatible-function-pointer-types -lutil
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 # Fix the build with -fno-common (for Clang 11 and GCC 10)
 	@${REINPLACE_CMD} -e '/In_Bogus_Mail_File;/d' ${WRKSRC}/xmail.c

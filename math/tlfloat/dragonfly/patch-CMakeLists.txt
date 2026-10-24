@@ -1,0 +1,16 @@
+--- CMakeLists.txt.orig	2025-03-24 23:34:31 UTC
++++ CMakeLists.txt
+@@ -275,7 +275,12 @@ endif()
+ # Compiler options
+ 
+ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fcompare-debug-second -fconstexpr-ops-limit=1000000000 -fno-math-errno")
++  include(CheckCXXCompilerFlag)
++  check_cxx_compiler_flag("-fconstexpr-ops-limit=1000000000" TLFLOAT_CXX_SUPPORTS_CONSTEXPR_OPS_LIMIT)
++  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fcompare-debug-second -fno-math-errno")
++  if (TLFLOAT_CXX_SUPPORTS_CONSTEXPR_OPS_LIMIT)
++    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fconstexpr-ops-limit=1000000000")
++  endif()
+   set(INLINE_CXX_FLAGS "--inline-limit=1000000")
+   set(NOEXCEPT_CXX_FLAGS "-fno-exceptions;-fno-rtti")
+   if(CMAKE_SYSTEM_PROCESSOR MATCHES "i[3-6]86")

@@ -1,7 +1,7 @@
 upstream:
   default:
+    - 8.8.8.8
     - 1.1.1.1
-    - tcp-tls:fdns1.dismail.de:853
     - https://dns.digitale-gesellschaft.ch/dns-query
 blocking:
   blackLists:
@@ -10,5 +10,8 @@ blocking:
   clientGroupsBlock:
     default:
       - ads
-port: 53
-httpPort: 4000
+statistics:
+  enable: true
+ports:
+  dns: 53
+  http: 4000

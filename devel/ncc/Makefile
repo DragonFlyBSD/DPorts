@@ -24,6 +24,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+CFLAGS+= -Wno-narrowing
 post-patch:
 	@${REINPLACE_CMD} -e '/NOGNU/d' ${WRKSRC}/config.h
 	@${REINPLACE_CMD} -e '/#include <alloca.h>/d' ${WRKSRC}/dbstree.h

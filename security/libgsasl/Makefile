@@ -1,13 +1,13 @@
 PORTNAME=	gsasl
-PORTVERSION=	2.2.1
-PORTREVISION=	1
+PORTVERSION=	2.2.4
 CATEGORIES=	security
 MASTER_SITES=	GNU
 PKGNAMEPREFIX=	lib
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GNU SASL library
-WWW=		https://www.gnu.org/software/gsasl/
+WWW=		https://www.gnu.org/software/gsasl/ \
+		https://gitlab.com/gsasl/gsasl
 
 LICENSE=	LGPL21
 
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
 		libidn.so:dns/libidn \
 		libntlm.so:security/libntlm
 
-USES=		charsetfix libtool pathfix pkgconfig ssl
+USES=		charsetfix libtool pkgconfig ssl
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
@@ -45,4 +45,5 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR} ${STAGEDIR}${DOCSDIR}/reference
 	${INSTALL_DATA} ${WRKSRC}/doc/reference/html/* ${STAGEDIR}${DOCSDIR}/reference
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSSAPI_BASE} GSSAPI_MIT
 .include <bsd.port.mk>

@@ -1,3 +1,3 @@
-TIMESTAMP = 1705544232
-SHA256 (trezor-cython-hidapi-0.14.0_GH0.tar.gz) = 211b0cb99b1f9724f3d1b09d198d764b7eca77514ae86584e3f3ce872aefff51
-SIZE (trezor-cython-hidapi-0.14.0_GH0.tar.gz) = 22504
+TIMESTAMP = 1784005068
+SHA256 (hidapi-0.15.0.tar.gz) = ecbc265cbe8b7b88755f421e0ba25f084091ec550c2b90ff9e8ddd4fcd540311
+SIZE (hidapi-0.15.0.tar.gz) = 184995

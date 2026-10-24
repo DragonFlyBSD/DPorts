@@ -1,0 +1,11 @@
+--- Makefile.orig
++++ Makefile
+@@ -148,7 +148,7 @@
+ ifneq (,$(findstring main, $(shell $(CC) $(CFLAGS) $(LDFLAGS) -lrt 2>&1)))
+ override LDFLAGS += -lrt
+ endif
+-ifneq (,$(findstring main, $(shell $(CC) $(CFLAGS) $(LDFLAGS) -latomic 2>&1)))
++ifeq (,$(findstring -latomic, $(shell $(CC) $(CFLAGS) $(LDFLAGS) -latomic 2>&1)))
+ override LDFLAGS += -latomic
+ else
+ override CFLAGS += -DNO_LIBATOMIC

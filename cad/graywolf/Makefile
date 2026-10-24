@@ -1,7 +1,7 @@
 PORTNAME=	graywolf
 DISTVERSION=	0.1.6-4
 DISTVERSIONSUFFIX=	-gf47937b
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	cad
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
@@ -23,7 +23,7 @@ LIB_DEPENDS=	libgsl.so:math/gsl
 TEST_DEPENDS=	bash:shells/bash \
 		rsync:net/rsync
 
-USES=		cmake compiler:c11 pkgconfig sbrk shebangfix xorg
+USES= cmake compiler:c11 pkgconfig sbrk shebangfix xorg localbase:ldflags
 USE_XORG=	ice sm x11 xext
 USE_LDCONFIG=	yes
 

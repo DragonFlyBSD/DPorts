@@ -1,0 +1,3 @@
+Docling GLM-OCR is an OCR plugin for Docling that integrates the GLM-OCR
+model for optical character recognition. It extends Docling's OCR
+capabilities with GLM-based text recognition from document images.

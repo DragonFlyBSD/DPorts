@@ -1,5 +1,6 @@
 PORTNAME=	rspamd
-PORTVERSION=	3.11.1
+PORTVERSION=	4.1.0
+PORTREVISION=	1
 CATEGORIES=	mail
 
 MAINTAINER=	vsevolod@FreeBSD.org
@@ -77,11 +78,22 @@ LUAJIT_USES=		luajit
 LUAJIT_USES_OFF=	lua:51+
 LUAJIT_CMAKE_OFF=	-DENABLE_LUAJIT=OFF
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NLUAJIT}
+OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NLUAJIT}
+.include <bsd.port.options.mk>
+
+.if ${OPTIONS_DEFINE:NHYPERSCAN}
+PLIST_SUB+=	HYPERSCAN="@comment "
+.endif
+
 post-install:
 	@${MKDIR} \
 		${STAGEDIR}/var/log/rspamd \
 		${STAGEDIR}/var/db/rspamd \
 		${STAGEDIR}/var/run/rspamd
+	${RM} ${STAGEDIR}${DATADIR}/www/ARCHITECTURE.md
+	${RM} ${STAGEDIR}${DATADIR}/www/README.md
 	${RM} ${STAGEDIR}/${ETCDIR}/rspamd.conf.sample
 	# Linux specific
 	${RM} ${STAGEDIR}/${ETCDIR}/rspamd.systemd.conf

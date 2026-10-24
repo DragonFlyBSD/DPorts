@@ -29,6 +29,7 @@ PORTEXAMPLES=	dot.mmrc.sample
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+CXXFLAGS+= -Imd5
 post-patch:
 	@${REINPLACE_CMD} -e 's|md5/libmd5.a||g' ${WRKSRC}/Makefile
 
@@ -45,5 +46,11 @@ do-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/DOT-mmrc \
 		${STAGEDIR}${EXAMPLESDIR}/dot.mmrc.sample
+
+LIBS:= ${LIBS:N-lmd}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@tempfile.o@& md5/libmd5.a@g' \
+			 -e 's@^:@md5/libmd5.a:@g' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

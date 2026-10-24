@@ -1,5 +1,6 @@
 PORTNAME=	tty-markdown
 PORTVERSION=	0.7.2
+PORTREVISION=	1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	rubygem-kramdown>=1.16.2<3.0:textproc/rubygem-kramdown \
 		rubygem-pastel>=0.8<1:devel/rubygem-pastel \
-		rubygem-rouge>=3.14<5.0:textproc/rubygem-rouge \
+		rubygem-rouge4>=3.14<5.0:textproc/rubygem-rouge4 \
 		rubygem-strings>=0.2.0<1:devel/rubygem-strings \
 		rubygem-tty-color>=0.5<1:devel/rubygem-tty-color \
 		rubygem-tty-screen>=0.8<1:devel/rubygem-tty-screen

@@ -1,5 +1,6 @@
 PORTNAME=	conkyforecast
 PORTVERSION=	2.24
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	https://launchpad.net/~conky-companions/+archive/ppa/+files/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -13,7 +14,7 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	conky:sysutils/conky \
 		pidof:sysutils/pidof
 
-USES=		gettext python:3.6+ fonts
+USES=		gettext python fonts
 USE_PYTHON=	distutils concurrent optsuffix
 
 NO_ARCH=	yes

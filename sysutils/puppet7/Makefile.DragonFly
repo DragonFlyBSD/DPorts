@@ -1,3 +1,0 @@
-
-# avoid conflict installing in same place
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NRFACTER} CFACTER

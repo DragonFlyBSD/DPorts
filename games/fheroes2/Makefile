@@ -1,5 +1,5 @@
 PORTNAME=	fheroes2
-PORTVERSION=	1.0.8
+PORTVERSION=	1.1.17
 CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
@@ -9,16 +9,14 @@ WWW=		https://ihhub.github.io/fheroes2/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libpng.so:graphics/png
 RUN_DEPENDS=	timidity:audio/timidity
 
-USES=		cmake gettext-tools iconv localbase:ldflags pkgconfig sdl \
-		shebangfix
+USES=		cmake sdl
 USE_GITHUB=	yes
 GH_ACCOUNT=	ihhub
-USE_SDL=	image2 mixer2 sdl2 ttf2
-SHEBANG_FILES=	script/demo/download_demo_version.sh
+USE_SDL=	mixer2 sdl2
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

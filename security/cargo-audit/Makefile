@@ -1,18 +1,18 @@
 PORTNAME=	cargo-audit
 DISTVERSIONPREFIX=	${PORTNAME}/v
-DISTVERSION=	0.20.0
-PORTREVISION=	1
+DISTVERSION=	0.22.2
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	security
 
-MAINTAINER=	mikael@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Audit Cargo.lock for crates with security vulnerabilities
 WWW=		https://rustsec.org/
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
-LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
-LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
+LICENSE_FILE_APACHE20=	${WRKSRC}/${PORTNAME}/LICENSE-APACHE
+LICENSE_FILE_MIT=	${WRKSRC}/${PORTNAME}/LICENSE-MIT
 
 # ca_root_nss must be installed until
 # https://github.com/rustsec/rustsec/issues/1137 is fixed
@@ -23,14 +23,13 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	RustSec
 GH_PROJECT=	rustsec
 
+CARGO_CARGOTOML=	${WRKSRC}/${PORTNAME}/Cargo.toml
+CARGO_INSTALL_PATH=	${PORTNAME}
+
 NO_TEST=	yes
+PORTSCOUT=	limit:^0\.
 
 PLIST_FILES=	bin/cargo-audit
 
-CARGO_CARGOLOCK=	${WRKSRC}/../Cargo.lock
-WRKSRC_SUBDIR=	cargo-audit
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/cargo-audit
-
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

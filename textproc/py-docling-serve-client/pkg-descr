@@ -1,0 +1,3 @@
+Docling Serve Client is a Python SDK for interacting with the Docling
+Serve API using Pydantic models. It provides a type-safe client library
+for remote document conversion through a Docling Serve instance.

@@ -1,6 +1,6 @@
 PORTNAME=	nscde
 DISTVERSION=	2.3
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	x11-wm
 MASTER_SITES=	https://github.com/NsCDE/NsCDE/releases/download/${DISTVERSION}/
 
@@ -12,7 +12,7 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psutil>=5.7.0:sysutils/py-psutil@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}xdg>0:devel/py-xdg@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyxdg>0:devel/py-pyxdg@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyyaml>=3.11:devel/py-pyyaml@${PY_FLAVOR} \
 		dunst:sysutils/dunst \
 		font-bh-lucidatypewriter-100dpi>0:x11-fonts/font-bh-lucidatypewriter-100dpi \
@@ -32,7 +32,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psutil>=5.7.0:sysutils/py-psutil@${PY_FLAV
 		xsettingsd:x11/xsettingsd \
 		xterm:x11/xterm
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psutil>=5.7.0:sysutils/py-psutil@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}xdg>0:devel/py-xdg@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyxdg>0:devel/py-pyxdg@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyyaml>=3.11:devel/py-pyyaml@${PY_FLAVOR} \
 		dunst:sysutils/dunst \
 		font-bh-lucidatypewriter-100dpi>0:x11-fonts/font-bh-lucidatypewriter-100dpi \
@@ -83,10 +83,13 @@ SUDO_DESC=			Use sudo to elevate privileges
 ASTKSH_RUN_DEPENDS=	ksh93:shells/ast-ksh93
 DOAS_RUN_DEPENDS=	doas:security/doas
 KSH2020_RUN_DEPENDS=	ksh93:shells/ksh
-SUDO_RUN_DEPENDS=	sudo:security/sudo
+
+SUDO_USES=	sudo
 
 _SUDOFILES=	data/fvwm/Functions.fvwmconf.in lib/scripts/SysActionDialog
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NKSH2020} ASTKSH
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 UNAME_M_CMD=	${UNAME} -m
@@ -101,5 +104,12 @@ post-install-EXAMPLES-on:
 
 post-install-EXAMPLES-off:
 	${RM} -fr ${STAGEDIR}/${PREFIX}/share/doc/nscde/examples/*
+
+ASTKSH_RUN_DEPENDS:= ${ASTKSH_RUN_DEPENDS:N*ast-ksh93} ksh93:shells/ast-ksh
+dfly-patch:
+	${REINPLACE_CMD} -e 's@clang@cc@g' \
+		${WRKSRC}/src/colorpicker/Makefile \
+		${WRKSRC}/src/pclock-*/src/Makefile \
+		${WRKSRC}/src/XOverrideFontCursor/Makefile
 
 .include <bsd.port.post.mk>

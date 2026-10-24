@@ -1,8 +1,8 @@
 PORTNAME=	CyLP
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.92.2
-PORTREVISION=	1
+DISTVERSION=	0.94.0
 CATEGORIES=	math python
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -14,9 +14,9 @@ LICENSE_NAME=	Common Public License Version 1.0
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	auto-accept dist-mirror dist-sell pkg-mirror pkg-sell
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cython3>0:lang/cython3 \
-		${PY_SETUPTOOLS} \
-		${PYNUMPY} \
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+		${PYTHON_PKGNAMEPREFIX}hypothesis>0:devel/py-hypothesis@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 LIB_DEPENDS=	libblas.so:math/blas \
 		libCbc.so:math/cbc \
@@ -25,21 +25,28 @@ LIB_DEPENDS=	libblas.so:math/blas \
 		libCoinUtils.so:math/coinutils \
 		liblapack.so:math/lapack \
 		libOsi.so:math/osi
-RUN_DEPENDS=	${PYNUMPY} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scipy>=0.10.0:science/py-scipy@${PY_FLAVOR}
 
 USES=		compiler:c++11-lang python
-USE_PYTHON=	pep517 cython autoplist pytest
+USE_PYTHON=	autoplist cython pep517 pytest
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	coin-or
 
 MAKE_ENV=	COIN_INSTALL_DIR=${LOCALBASE}
 
-TEST_WRKSRC=	${WRKSRC}/cylp
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/cylp/cy/Cy*.so
+DFLY_UNMAINTAINED= yes
+do-test:
+	# deselect tests:
+	# * test_PySolve.py: it SEGVs, see https://github.com/coin-or/CyLP/issues/232
+	# * test_removeVar2: it fails with Python error, see https://github.com/coin-or/CyLP/issues/231
+	@cd ${WRKDIR} && ${SETENV} ${TEST_ENV} pytest -rs --pyargs cylp \
+		--ignore=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/cylp/py/test_PySolve.py \
+		-k 'not test_removeVar2'
+
+# tests as of 0.94.0: 12 passed, 1 deselected, 36 warnings in 0.20s
 
 .include <bsd.port.mk>

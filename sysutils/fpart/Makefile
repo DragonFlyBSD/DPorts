@@ -1,5 +1,5 @@
 PORTNAME=	fpart
-PORTVERSION=	1.7.0
+PORTVERSION=	1.7.1
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION} \
 		http://contribs.martymac.org/fpart/
@@ -20,9 +20,9 @@ PORTDOCS=	Changelog.md README.md TODO
 OPTIONS_DEFINE=	FPSYNC DOCS
 OPTIONS_DEFAULT=	FPSYNC
 FPSYNC_DESC=	Install fpsync tool
-FPSYNC_RUN_DEPENDS=	rsync:net/rsync \
-			sudo:security/sudo
+FPSYNC_RUN_DEPENDS=	rsync:net/rsync
 FPSYNC_PLIST_FILES=	bin/fpsync share/man/man1/fpsync.1.gz
+FPSYNC_USES=	sudo
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}

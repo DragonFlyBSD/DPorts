@@ -1,3 +1,0 @@
-
-# some issue with imagemagick headers for assert
-CXXFLAGS+=	-DNDEBUG

@@ -1,7 +1,8 @@
 PORTNAME=	ExtUtils-CppGuess
-PORTVERSION=	0.27
+PORTVERSION=	0.271
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:ETJ
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -13,7 +14,6 @@ LICENSE_COMB=	dual
 
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Capture-Tiny>=0:devel/p5-Capture-Tiny
-TEST_DEPENDS=	p5-ExtUtils-CBuilder>=0.280231:devel/p5-ExtUtils-CBuilder
 
 USES=		perl5
 USE_PERL5=	configure

@@ -1,5 +1,5 @@
 PORTNAME=	libiscsi
-DISTVERSION=	1.20.0.240205
+DISTVERSION=	1.20.3
 CATEGORIES=	net
 
 MAINTAINER=	d8zNeCFG@aon.at
@@ -14,13 +14,14 @@ LICENSE_FILE_LGPL21+ =	${WRKSRC}/LICENCE-LGPL-2.1.txt
 USES=		autoreconf compiler:c11 gmake libtool pathfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	sahlberg
-GH_TAGNAME=	fef688aa9980
 
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
 
+CFLAGS+=	-Wno-cast-align
+
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}.so.10.0.0
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}.so
 
 .include <bsd.port.mk>

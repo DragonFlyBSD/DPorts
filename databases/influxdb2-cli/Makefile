@@ -1,7 +1,7 @@
 PORTNAME=	influxdb2-cli
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.7.3
-PORTREVISION=	3
+DISTVERSION=	2.7.5
+PORTREVISION=	28
 CATEGORIES=	databases net-mgmt
 
 MAINTAINER=	driesm@FreeBSD.org
@@ -22,6 +22,7 @@ CONFLICTS_INSTALL=	influxdb
 
 PLIST_FILES=	bin/influx
 
+IGNORE= unmaintained, please request fixing to users mailing list
 pre-patch:
 	${RM} -r ${WRKSRC}/vendor/golang.org/x/sys
 	${LN} -s ${WRKDIR}/sys-* ${WRKSRC}/vendor/golang.org/x/sys

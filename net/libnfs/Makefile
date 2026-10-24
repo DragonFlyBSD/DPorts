@@ -24,8 +24,13 @@ CONFIGURE_ARGS=	--disable-werror
 
 PLIST_SUB=	SHLIB=${SHLIB}
 
+MAKE_JOBS_UNSAFE= yes
 post-patch:
 	${REINPLACE_CMD} 's|$$(libdir)/\(pkgconfig\)|$$(prefix)/libdata/\1|' \
 		${WRKSRC}/Makefile.am
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/__FreeBSD__/__DragonFly__/' \
+		${WRKSRC}/lib/socket.c
 
 .include <bsd.port.mk>

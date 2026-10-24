@@ -1,11 +1,11 @@
 PORTNAME=	clock
-PORTVERSION=	0.7.3
+PORTVERSION=	0.7.4
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Date-Time Types and Tools
-WWW=		https://cran.r-project.org/web/packages/clock/
+WWW=		https://cran.r-project.org/package=clock
 
 LICENSE=	MIT
 

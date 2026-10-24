@@ -16,4 +16,5 @@ USES=		gmake ncurses
 PLIST_FILES=	bin/tweak \
 		share/man/man1/tweak.1.gz
 
+MAKE_ARGS= LIBS="-L${NCURSESLIB} -lncurses"
 .include <bsd.port.mk>

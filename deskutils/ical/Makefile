@@ -29,6 +29,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-tcl
 USER_TCL=	${HOME}/.tk/${PORTNAME}/user.tcl
 DIST_VER=	${DISTNAME:S/${PORTVERSION}/${VERSION}/}
 
+CXXFLAGS= -Wno-narrowing
 post-install:
 	@${RM} ${STAGEDIR}/${PREFIX}/lib/ical/v${PORTVERSION}/contrib/*.patch
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}

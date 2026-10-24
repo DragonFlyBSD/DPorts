@@ -1,7 +1,8 @@
 PORTNAME=	examples
 PORTVERSION=	${QT5_VERSION}${QT5_KDE_PATCH}
+PORTREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	QT/official_releases/qt/${QT5_VERSION:R}/${QT5_VERSION}/single
+MASTER_SITES=	QT/archive/qt/${QT5_VERSION:R}/${QT5_VERSION}/single
 PKGNAMEPREFIX=	qt5-
 DISTNAME=	qt-everywhere-opensource-src-${QT5_VERSION}
 WRKSRC=		${WRKDIR}/qt-everywhere-src-${QT5_VERSION}
@@ -31,7 +32,7 @@ _QT_DISTS=		3d activeqt androidextras base charts connectivity datavis3d \
 			macextras multimedia networkauth purchasing quickcontrols \
 			quickcontrols2 remoteobjects script scxml sensors serialbus \
 			serialport speech svg tools virtualkeyboard wayland \
-			webchannel webengine websockets webview winextras \
+			webchannel websockets webview winextras \
 			xmlpatterns
 EXAMPLES=		${_QT_DISTS:C/^/qt/}
 

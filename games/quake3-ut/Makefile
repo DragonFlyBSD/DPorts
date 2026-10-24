@@ -28,4 +28,8 @@ do-install:
 	(cd ${WRKSRC} && ${INSTALL_DATA} beta3.html radio_commands.txt \
 		readme*.txt ${STAGEDIR}${DOCSDIR})
 
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	huge (438M packaged)
+.endif
+
 .include <bsd.port.mk>

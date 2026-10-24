@@ -1,17 +1,15 @@
 PORTNAME=	ellipsis
-PORTVERSION=	0.3.2
-PORTREVISION=	1
+PORTVERSION=	0.3.3
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Powerful tool for extending functions
-WWW=		https://cran.r-project.org/web/packages/ellipsis/
+WWW=		https://cran.r-project.org/package=ellipsis
 
-LICENSE=	GPLv3
+LICENSE=	MIT
 
-CRAN_DEPENDS=	R-cran-rlang>=0.3.0:devel/R-cran-rlang
-RUN_DEPENDS=	${CRAN_DEPENDS}
+RUN_DEPENDS=	R-cran-rlang>=0.3.0:devel/R-cran-rlang
 
 USES=		cran:auto-plist,compiles
 

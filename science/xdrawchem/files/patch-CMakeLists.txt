@@ -1,0 +1,12 @@
+--- CMakeLists.txt.orig	2026-07-08 00:52:13 UTC
++++ CMakeLists.txt
+@@ -405,5 +405,7 @@ install(FILES xdrawchem.metainfo.xml
+ )
+ 
+ # ── Tests ───────────────────────────────────────────────────────────────
+-include(CTest)
+-add_subdirectory(tests)
++if (BUILD_TESTING)
++    enable_testing()
++    add_subdirectory(tests)
++endif()

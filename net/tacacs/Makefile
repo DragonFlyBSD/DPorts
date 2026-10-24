@@ -39,7 +39,7 @@ USERS=		tacacs
 GROUPS=		tacacs
 
 OPTIONS_DEFINE=		CURL FREERADIUS PCRE SCTP
-OPTIONS_DEFAULT=	SCTP
+OPTIONS_DEFAULT= ${OPTIONS_DEFEAULT:NSCTP}
 
 CURL_DESC=		Curl support
 CURL_LIB_DEPENDS=	libcurl.so:ftp/curl
@@ -59,6 +59,8 @@ PCRE_CONFIGURE_OFF=
 SCTP_DESC=		SCTP support
 SCTP_CONFIGURE_WITH=	sctp
 
+MAKE_ARGS= INCDIR_SSL=${OPENSSLINC} LIBDIR_SSL=${OPENSSLLIB}
+IGNORE= unmaintained, please request fixing to users mailing list
 post-build:
 	@${REINPLACE_CMD} -e '1d' ${WRKSRC}/tac_plus/sample/tac_plus.cfg
 

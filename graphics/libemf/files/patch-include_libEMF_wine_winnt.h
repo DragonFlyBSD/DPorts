@@ -1,8 +1,8 @@
---- include/libEMF/wine/winnt.h.orig	2022-10-27 16:15:39 UTC
+--- include/libEMF/wine/winnt.h.orig	2026-05-17 12:28:08 UTC
 +++ include/libEMF/wine/winnt.h
-@@ -69,6 +69,10 @@
- # define  WORDS_BIGENDIAN
- # define  BITFIELDS_BIGENDIAN
+@@ -77,6 +77,10 @@
+ # undef  WORDS_BIGENDIAN
+ # undef  BITFIELDS_BIGENDIAN
  # undef  ALLOW_UNALIGNED_ACCESS
 +#elif defined(__riscv)
 +# undef  WORDS_BIGENDIAN
@@ -11,7 +11,7 @@
  #elif !defined(RC_INVOKED)
  # error Unknown CPU architecture!
  #endif
-@@ -1581,6 +1585,71 @@ typedef struct _CONTEXT {
+@@ -1659,6 +1663,71 @@ typedef struct _CONTEXT {
  } CONTEXT;
  
  #endif /* __e2k__ */
@@ -81,5 +81,5 @@
 +
 +#endif /* __riscv */
  
- #if !defined(CONTEXT_FULL) && !defined(RC_INVOKED)
- #error You need to define a CONTEXT for your CPU
+ #ifdef __riscv
+ #if __riscv_xlen==64

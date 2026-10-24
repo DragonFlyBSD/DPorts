@@ -1,0 +1,5 @@
+Molecule Plugins is a collection of provider plugins for the
+AnsibleetMolecule testing framework. It provides drivers for Docker,
+Podman, Vagrant, Azure, EC2, GCE, and OpenStack, enabling Molecule to
+provision test instances across a variety of platforms.
+

@@ -1,7 +1,7 @@
 PORTNAME=	reddsaver
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.4.0
-PORTREVISION=	7
+PORTREVISION=	33
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -186,7 +186,5 @@ OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

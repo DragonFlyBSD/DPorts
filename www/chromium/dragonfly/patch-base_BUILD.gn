@@ -1,0 +1,22 @@
+diff --git base/BUILD.gn base/BUILD.gn
+index 6afa72db0f69..de0930348b26 100644
+--- base/BUILD.gn
++++ base/BUILD.gn
+@@ -948,7 +948,7 @@ component("base") {
+     #"system/sys_info_openbsd.cc",
+   ]
+ 
+-  if (is_apple || current_os == "freebsd" || current_os == "openbsd") {
++  if (is_apple || current_os == "freebsd" || current_os == "openbsd" || current_os == "dragonfly") {
+     sources += [
+       "posix/sysctl.cc",
+       "posix/sysctl.h",
+@@ -2188,7 +2188,7 @@ component("base") {
+       "process/process_metrics_openbsd.cc",
+       "system/sys_info_openbsd.cc",
+     ]
+-  } else if (is_freebsd) {
++  } else if (is_freebsd || is_dragonfly) {
+     sources += [
+       "process/process_handle_freebsd.cc",
+       "process/process_iterator_freebsd.cc",

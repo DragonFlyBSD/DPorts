@@ -1,7 +1,7 @@
 PORTNAME=	stratagus
 PORTVERSION=	3.3.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -54,5 +54,10 @@ EAGER_LOAD_DESC=	Load all game data at startup (more memory, less stutter)
 EAGER_LOAD_CMAKE_BOOL=	EAGER_LOAD
 
 OPENMP_CMAKE_BOOL=	WITH_OPENMP
+
+DFLY_UNMAINTAINED= yes
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Werror"@"@g' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

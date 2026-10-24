@@ -1,3 +1,3 @@
-TIMESTAMP = 1703610971
-SHA256 (azure-mgmt-cosmosdb-9.3.0.tar.gz) = d360e2b14376fdab810e13e013d694bc4bd8c28414402e0d6060ff3d064e97f6
-SIZE (azure-mgmt-cosmosdb-9.3.0.tar.gz) = 272663
+TIMESTAMP = 1783564034
+SHA256 (azure_mgmt_cosmosdb-10.0.0.tar.gz) = f9f5e9cbc984ad3cf3f9bdfb853ec3e868b0e89e9c2597de4d429fa6602ca8d9
+SIZE (azure_mgmt_cosmosdb-10.0.0.tar.gz) = 375076

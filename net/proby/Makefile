@@ -1,7 +1,7 @@
 PORTNAME=	proby
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.2
-PORTREVISION=	42
+PORTREVISION=	55
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -235,4 +235,5 @@ CARGO_CRATES=	actix-codec-0.2.0 \
 
 PLIST_FILES=	bin/${PORTNAME}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -1,11 +1,11 @@
 PORTNAME=	pillar
-PORTVERSION=	1.10.1
+PORTVERSION=	1.11.1
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Coloured Formatting for Columns
-WWW=		https://cran.r-project.org/web/packages/pillar/
+WWW=		https://cran.r-project.org/package=pillar
 
 LICENSE=	MIT
 

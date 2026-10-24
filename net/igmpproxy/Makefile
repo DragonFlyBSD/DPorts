@@ -1,10 +1,10 @@
 PORTNAME=	igmpproxy
 DISTVERSION=	0.4
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	net
 
-MAINTAINER=	franco@opnsense.org
+MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Multicast forwarding IGMP proxy
 WWW=		https://github.com/pali/igmpproxy
 
@@ -15,11 +15,14 @@ USES=		autoreconf
 USE_GITHUB=	yes
 GH_ACCOUNT=	pali
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USE_RC_SUBR=	igmpproxy
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/igmpproxy.conf \
 	    ${STAGEDIR}${PREFIX}/etc/igmpproxy.conf.sample
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_POSIX_C_SOURCE@&__@g' \
+		${WRKSRC}/src/igmpproxy.c
 
 .include <bsd.port.mk>

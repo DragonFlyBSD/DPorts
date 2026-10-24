@@ -22,6 +22,7 @@ CONFIGURE_ARGS=	--with-ldap-lib=${LOCALBASE}/lib \
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
+LIB_DEPENDS+= libkrb5.so:security/krb5
 post-patch:
 	@${REINPLACE_CMD} -e '/typedef int sig_atomic_t/d' \
 		${WRKSRC}/portable/system.h

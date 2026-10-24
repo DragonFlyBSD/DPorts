@@ -1,0 +1,12 @@
+--- swift/unittests/IDE/CMakeLists.txt.orig	2026-09-13 22:35:30 UTC
++++ swift/unittests/IDE/CMakeLists.txt
+@@ -5,6 +5,9 @@ target_link_libraries(SwiftIDETests
+   )
+ target_link_libraries(SwiftIDETests
+   PRIVATE
++  swiftFrontend
+   swiftIDE
++  swiftSILGen
++  swiftSILOptimizer
+   swiftClangImporter
+ )

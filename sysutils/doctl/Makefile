@@ -1,6 +1,7 @@
 PORTNAME=	doctl
-DISTVERSION=	1.99.0
-PORTREVISION=	1
+DISTVERSIONPREFIX=	v
+DISTVERSION=	1.147.0
+PORTREVISION=	13
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/digitalocean/${PORTNAME}/releases/download/v${DISTVERSION}/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-source
@@ -20,4 +21,5 @@ NO_WRKSUBDIR=	yes
 
 PLIST_FILES=	bin/doctl
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

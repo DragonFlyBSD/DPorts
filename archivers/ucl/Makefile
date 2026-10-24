@@ -24,6 +24,7 @@ CONFLICTS_INSTALL=	libucl
 
 OPTIONS_DEFINE=	DOCS
 
+CPPFLAGS= -std=c90
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/examples/.libs/uclpack ${STAGEDIR}${PREFIX}/bin
 

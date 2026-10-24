@@ -1,0 +1,2 @@
+PyPika is a SQL query builder API for Python.
+It constructs SQL queries using a fluent, Python-native interface.

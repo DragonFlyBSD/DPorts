@@ -1,6 +1,6 @@
---- psutil/arch/dragonfly/proc.c.orig	2024-05-17 10:32:28 UTC
+--- /dev/null
 +++ psutil/arch/dragonfly/proc.c
-@@ -0,0 +1,519 @@
+@@ -0,0 +1,442 @@
 +/*
 + * Copyright (c) 2009, Jay Loden, Giampaolo Rodola'. All rights reserved.
 + * Use of this source code is governed by a BSD-style license that can be
@@ -17,7 +17,6 @@
 +#include <sys/sysctl.h>
 +#include <sys/param.h>
 +#include <sys/user.h>
-+#include <sys/proc.h>
 +#include <signal.h>
 +#include <fcntl.h>
 +#include <devstat.h>
@@ -33,88 +32,12 @@
 +// ============================================================================
 +
 +
-+int
-+psutil_kinfo_proc(pid_t pid, struct kinfo_proc *proc) {
-+    // Fills a kinfo_proc struct based on process pid.
-+    int mib[4];
-+    size_t size;
-+    mib[0] = CTL_KERN;
-+    mib[1] = KERN_PROC;
-+    mib[2] = KERN_PROC_PID;
-+    mib[3] = pid;
-+
-+    size = sizeof(struct kinfo_proc);
-+    if (sysctl((int *)mib, 4, proc, &size, NULL, 0) == -1) {
-+        PyErr_SetFromOSErrnoWithSyscall("sysctl(KERN_PROC_PID)");
-+        return -1;
-+    }
-+
-+    // sysctl stores 0 in the size if we can't find the process information.
-+    if (size == 0) {
-+        NoSuchProcess("sysctl (size = 0)");
-+        return -1;
-+    }
-+    return 0;
-+}
-+
-+
-+// remove spaces from string
-+static void psutil_remove_spaces(char *str) {
-+    char *p1 = str;
-+    char *p2 = str;
-+    do
-+        while (*p2 == ' ')
-+            p2++;
-+    while ((*p1++ = *p2++));
-+}
-+
-+
 +// ============================================================================
 +// APIS
 +// ============================================================================
-+
-+int
-+psutil_get_proc_list(struct kinfo_proc **procList, size_t *procCount) {
-+    // Returns a list of all BSD processes on the system.  This routine
-+    // allocates the list and puts it in *procList and a count of the
-+    // number of entries in *procCount.  You are responsible for freeing
-+    // this list. On success returns 0, else 1 with exception set.
-+    int err;
-+    struct kinfo_proc *buf = NULL;
-+    int name[] = { CTL_KERN, KERN_PROC, KERN_PROC_ALL, 0 };
-+    size_t length = 0;
-+
-+    assert(procList != NULL);
-+    assert(*procList == NULL);
-+    assert(procCount != NULL);
-+
-+    // Call sysctl with a NULL buffer in order to get buffer length.
-+    err = sysctl(name, 3, NULL, &length, NULL, 0);
-+    if (err == -1) {
-+        PyErr_SetFromOSErrnoWithSyscall("sysctl (null buffer)");
-+        return 1;
-+    }
-+
-+    // Allocate an appropriately sized buffer based on the results
-+    // from the previous call.
-+    buf = malloc(length);
-+    if (buf == NULL) {
-+        PyErr_NoMemory();
-+        return 1;
-+    }
-+
-+    // Call sysctl again with the new buffer.
-+    err = sysctl(name, 3, buf, &length, NULL, 0);
-+    if (err == -1) {
-+        PyErr_SetFromOSErrnoWithSyscall("sysctl");
-+        free(buf);
-+        return 1;
-+    }
-+
-+    *procList = buf;
-+    *procCount = length / sizeof(struct kinfo_proc);
-+    return 0;
-+}
++// Note: psutil_kinfo_proc() and psutil_get_proc_list() are provided by
++// psutil/arch/bsd/proc_utils.c (shared BSD helper) since psutil 7.x; do
++// not redefine them here (duplicate definitions break the link).
 +
 +/*
 + * Borrowed from psi Python System Information project

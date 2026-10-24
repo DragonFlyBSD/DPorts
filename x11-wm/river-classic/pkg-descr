@@ -1,0 +1,8 @@
+River is a non-monolithic Wayland compositor. Unlike other Wayland compositors,
+river does not combine the compositor and window manager into one program.
+Instead, users can choose any window manager implementing the
+river-window-management-v1 protocol.
+
+Note: river is currently early in development. Expect breaking changes
+and missing features. Bugs should however be rare at this point, if
+you run into one don't hesitate to open an issue upstream.

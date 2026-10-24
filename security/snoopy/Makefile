@@ -1,5 +1,5 @@
 PORTNAME=	snoopy
-PORTVERSION=	2.5.1
+PORTVERSION=	2.5.2
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/a2o/snoopy/releases/download/snoopy-${PORTVERSION}/
 
@@ -25,6 +25,7 @@ SHEBANG_GLOB=	*.sh
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' ${WRKSRC}/README.md
 

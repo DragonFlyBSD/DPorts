@@ -1,7 +1,6 @@
 PORTNAME=	simpleini
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.22
-PORTREVISION=	1
+DISTVERSION=	4.27
 CATEGORIES=	devel
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -11,7 +10,6 @@ WWW=		https://github.com/brofield/simpleini
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENCE.txt
 
-USES=		cmake:testing
 USE_GITHUB=	yes
 GH_ACCOUNT=	brofield
 NO_ARCH=	yes
@@ -22,9 +20,9 @@ PORTDOCS=	*
 OPTIONS_DEFINE=	TEST DOCS
 
 TEST_BUILD_DEPENDS=	googletest>=0:devel/googletest
-
-post-patch-TEST-off:
-	@${REINPLACE_CMD} -e '/add_subdirectory(tests/ d' ${WRKSRC}/CMakeLists.txt
+TEST_USES=		cmake:testing
+TEST_USES_OFF=		cmake
+TEST_CMAKE_BOOL=	BUILD_TESTING
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

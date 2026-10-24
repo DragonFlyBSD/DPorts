@@ -1,0 +1,7 @@
+regexplain is a terminal user interface for building and understanding
+regular expressions. As you type a pattern it breaks the regex down into its
+components and explains what each part matches, and it highlights matches
+against sample text in real time.
+
+It is aimed at learning, debugging, and experimenting with regular
+expressions without leaving the terminal.

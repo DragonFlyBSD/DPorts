@@ -1,5 +1,0 @@
-
-CHEZ_MACHTYPE=	ta6fb
-
-# save on same patches
-DFLY_PATCHDIR=  ${.CURDIR:H}/racket/dragonfly

@@ -45,6 +45,7 @@ PORTDOCS=	ChangeLog README
 
 OPTIONS_DEFINE=	DOCS
 
+DFLY_UNMAINTAINED= yes
 pre-build:
 	@${REINPLACE_CMD} -e 's,CC,CXX,;s,gcc,$${CXX},' \
 		-e "s|\(-lcrypto\)|-L${OPENSSLLIB} \1|g" ${WRKSRC}/src/Makefile

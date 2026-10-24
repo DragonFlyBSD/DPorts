@@ -1,5 +1,5 @@
 PORTNAME=	minisatip
-PORTVERSION=	1.3.0
+PORTVERSION=	2.0.116
 DISTVERSIONPREFIX=	v
 PORTEPOCH=	1
 CATEGORIES=	multimedia
@@ -13,25 +13,20 @@ LICENSE=	GPLv2+
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 LIB_DEPENDS=	libdvbcsa.so:multimedia/libdvbcsa
 
-USES=		gmake
+USES=		cmake ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	catalinii
+
+USE_RC_SUBR=	${PORTNAME}
+ALL_TARGET=	minisatip
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-USE_RC_SUBR=	${PORTNAME}
-GNU_CONFIGURE=	yes
-ALL_TARGET=	minisatip
-
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
-post-patch:
-	@${REINPLACE_CMD} 's|/usr/share/minisatip|${DATADIR}|' \
-		${WRKSRC}/src/minisatip.c
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/minisatip ${STAGEDIR}${PREFIX}/sbin
+post-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} html ${STAGEDIR}${DATADIR})
 

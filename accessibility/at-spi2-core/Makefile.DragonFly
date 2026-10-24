@@ -1,3 +1,0 @@
-
-# for gettimeofday() visibility
-CFLAGS+=	-D_XOPEN_SOURCE=700

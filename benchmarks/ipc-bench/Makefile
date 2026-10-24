@@ -15,6 +15,8 @@ GH_ACCOUNT=	goldsborough
 GH_PROJECT=	ipc-bench
 GH_TAGNAME=	589146a
 
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
 BINARIES=	domain fifo mmap mq shm signal tcp
 
 OPTIONS_DEFINE=	ZMQ
@@ -23,6 +25,7 @@ ZMQ_DESC=	Enable ZeroMQ benches via libzmq${ZMQ_VERSION}
 ZMQ_LIB_DEPENDS=	libzmq.so:net/libzmq${ZMQ_VERSION}
 ZMQ_VERSION?=	4
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 .if ${PORT_OPTIONS:MZMQ}
 BINARIES+=	zeromq

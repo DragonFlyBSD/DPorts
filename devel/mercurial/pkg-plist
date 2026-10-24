@@ -6,8 +6,8 @@
 %%DATA%%%%DATADIR%%/contrib/dumprevlog
 %%DATA%%%%DATADIR%%/contrib/hg-ssh
 %%DATA%%%%DATADIR%%/contrib/hgk
-%%DATA%%%%DATADIR%%/contrib/hgsh/hgsh.c
 %%DATA%%%%DATADIR%%/contrib/hgsh/Makefile
+%%DATA%%%%DATADIR%%/contrib/hgsh/hgsh.c
 %%DATA%%%%DATADIR%%/contrib/mercurial.el
 %%DATA%%%%DATADIR%%/contrib/mq.el
 %%DATA%%%%DATADIR%%/contrib/pylintrc
@@ -16,8 +16,8 @@
 %%DATA%%%%DATADIR%%/contrib/tcsh_completion
 %%DATA%%%%DATADIR%%/contrib/tcsh_completion_build.sh
 %%DATA%%%%DATADIR%%/contrib/undumprevlog
-%%DATA%%%%DATADIR%%/contrib/vim/hg-menu.vim
 %%DATA%%%%DATADIR%%/contrib/vim/HGAnnotate.vim
+%%DATA%%%%DATADIR%%/contrib/vim/hg-menu.vim
 %%DATA%%%%DATADIR%%/contrib/vim/hgcommand.vim
 %%DATA%%%%DATADIR%%/contrib/vim/hgtest.vim
 %%DATA%%%%DATADIR%%/contrib/vim/patchreview.txt

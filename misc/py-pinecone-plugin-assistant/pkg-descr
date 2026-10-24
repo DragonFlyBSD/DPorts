@@ -1,0 +1,2 @@
+Assistant plugin for the Pinecone Python client. It provides chat and
+assistant management functionality backed by Pinecone vector search.

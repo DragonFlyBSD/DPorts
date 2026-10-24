@@ -1,4 +1,0 @@
-BUILD_DEPENDS+=  git>0:devel/git
-
-dfly-install:
-	${RM} -rfv ${STAGEDIR}/${WRKDIRPREFIX}

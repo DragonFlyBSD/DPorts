@@ -10,7 +10,7 @@ WWW=		https://github.com/NigelCunningham/pam-MySQL
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		autoreconf compiler:c11 libtool:keepla mysql pkgconfig
+USES= autoreconf compiler:c11 libtool:keepla mysql pkgconfig localbase:ldflags
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	NigelCunningham
@@ -40,4 +40,5 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${WRKSRC}/NEWS \
 		${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
+CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--with-pam=*} --with-pam=/usr
 .include <bsd.port.mk>

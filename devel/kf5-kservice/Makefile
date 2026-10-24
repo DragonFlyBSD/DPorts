@@ -14,4 +14,8 @@ USE_QT=		core dbus xml \
 # Make the applications.menu file not conflict with KDE4.
 CMAKE_ARGS=	-DAPPLICATIONS_MENU_NAME:STRING="kf5-applications.menu"
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

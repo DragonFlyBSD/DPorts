@@ -24,6 +24,7 @@ BINARY_ALIAS=	make=${GMAKE}
 
 TEST_TARGET=	test # -avx and -fma will fail where no such hardware optimization is available
 
+CXXFLAGS= -Wno-error=restrict
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so
 

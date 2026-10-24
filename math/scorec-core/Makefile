@@ -1,8 +1,7 @@
 PORTNAME=	scorec-core
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.2.7-55
+DISTVERSION=	3.0.2
 PORTREVISION=	1
-DISTVERSIONSUFFIX=	-g83113372
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -49,4 +48,7 @@ OPENMPI_USES=		mpi:openmpi
 
 PORTSCOUT=	limit:^.*[0-9]\.[0-9].* # prevent tags like remove_viz
 
+# 3 tests fail, see https://github.com/SCOREC/core/issues/410
+
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

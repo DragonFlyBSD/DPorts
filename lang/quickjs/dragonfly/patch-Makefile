@@ -10,13 +10,15 @@
  ifeq ($(shell uname -s),FreeBSD)
  CONFIG_FREEBSD=y
  endif
-@@ -42,6 +45,10 @@ ifdef CONFIG_DARWIN
+@@ -77,6 +80,12 @@
  CONFIG_CLANG=y
  CONFIG_DEFAULT_AR=y
  endif
 +ifdef CONFIG_DRAGONFLY
 +CONFIG_DEFAULT_AR=y
 +CONFIG_LTO=
++# the gcc branch below lacks the -fPIC the port adds for clang (libquickjs.so)
++CFLAGS += -fPIC
 +endif
  ifdef CONFIG_FREEBSD
  # use clang instead of gcc

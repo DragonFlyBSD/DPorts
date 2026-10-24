@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/third_party/blink/public/common/renderer_preferences/renderer_preferences.h.orig	2024-01-30 07:53:34 UTC
+--- src/3rdparty/chromium/third_party/blink/public/common/renderer_preferences/renderer_preferences.h.orig	2025-09-06 10:01:20 UTC
 +++ src/3rdparty/chromium/third_party/blink/public/common/renderer_preferences/renderer_preferences.h
-@@ -63,7 +63,7 @@ struct BLINK_COMMON_EXPORT RendererPreferences {
+@@ -66,7 +66,7 @@ struct BLINK_COMMON_EXPORT RendererPreferences {
    UserAgentOverride user_agent_override;
    std::string accept_languages;
    bool send_subresource_notification{false};

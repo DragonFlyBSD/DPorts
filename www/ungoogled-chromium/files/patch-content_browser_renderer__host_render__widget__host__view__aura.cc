@@ -1,24 +1,24 @@
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-09-14 09:26:11 UTC
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2026-08-13 07:41:05 UTC
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
-@@ -120,7 +120,7 @@
- #include "ui/gfx/gdi_util.h"
- #endif
+@@ -133,7 +133,7 @@
+ #include "ui/gfx/win/gdi_util.h"
+ #endif  // BUILDFLAG(IS_WIN)
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- #include "content/browser/accessibility/browser_accessibility_auralinux.h"
+ #include "ui/accessibility/platform/browser_accessibility_auralinux.h"
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/text_input_flags.h"
-@@ -479,7 +479,7 @@ gfx::NativeViewAccessible RenderWidgetHostViewAura::Ge
+@@ -579,7 +579,7 @@ gfx::NativeViewAccessible RenderWidgetHostViewAura::Ge
      return ToBrowserAccessibilityWin(manager->GetBrowserAccessibilityRoot())
          ->GetCOM();
  
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   BrowserAccessibilityManager* manager =
+   ui::BrowserAccessibilityManager* manager =
        host()->GetOrCreateRootBrowserAccessibilityManager();
    if (manager && manager->GetBrowserAccessibilityRoot())
-@@ -1736,7 +1736,7 @@ bool RenderWidgetHostViewAura::ShouldDoLearning() {
+@@ -2044,7 +2044,7 @@ bool RenderWidgetHostViewAura::ShouldDoLearning() {
    return host() && host()->delegate() && host()->delegate()->ShouldDoLearning();
  }
  
@@ -27,21 +27,21 @@
  bool RenderWidgetHostViewAura::SetCompositionFromExistingText(
      const gfx::Range& range,
      const std::vector<ui::ImeTextSpan>& ui_ime_text_spans) {
-@@ -2564,7 +2564,7 @@ bool RenderWidgetHostViewAura::NeedsInputGrab() {
+@@ -3123,7 +3123,7 @@ bool RenderWidgetHostViewAura::NeedsInputGrab() {
  }
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    return NeedsInputGrab();
  #else
    return false;
-@@ -2748,7 +2748,7 @@ void RenderWidgetHostViewAura::ForwardKeyboardEventWit
+@@ -3351,7 +3351,7 @@ void RenderWidgetHostViewAura::ForwardKeyboardEventWit
    if (!target_host)
      return;
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    auto* linux_ui = ui::LinuxUi::instance();
-   std::vector<ui::TextEditCommandAuraLinux> commands;
-   if (!event.skip_if_unhandled && linux_ui && event.os_event &&
+   if (!event.skip_if_unhandled && linux_ui && event.os_event) {
+     const auto command = linux_ui->GetTextEditCommandForEvent(

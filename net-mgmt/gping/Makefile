@@ -1,6 +1,6 @@
 PORTNAME=	gping
-PORTVERSION=	1.14.0
 DISTVERSIONPREFIX=	gping-v
+DISTVERSION=	1.21.0
 PORTREVISION=	1
 CATEGORIES=	net-mgmt
 
@@ -18,8 +18,9 @@ GH_ACCOUNT=	orf
 PLIST_FILES=	bin/gping \
 		share/man/man1/gping.1.gz
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/target/*/release/${PORTNAME} \
+	${INSTALL_PROGRAM} ${WRKDIR}/target/release/${PORTNAME} \
 		${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/gping.1 ${STAGEDIR}${PREFIX}/share/man/man1
 

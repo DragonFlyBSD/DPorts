@@ -11,7 +11,9 @@ WWW=		https://openocd.sf.net
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gmake libtool makeinfo pkgconfig tar:bzip2
+USES=		cpe gmake libtool makeinfo pkgconfig tar:bzip2
+CPE_VENDOR=	openocd
+CPE_PRODUCT=	open_on-chip_debugger
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
@@ -96,5 +98,11 @@ SERIAL_CONFIGURE_ENABLE=	buspirate
 VERBOSE_JTAGIO_CONFIGURE_ENABLE=	verbose
 VERBOSE_USBCOMM_CONFIGURE_ENABLE=	verbose-usb-comms
 VERBOSE_USBIO_CONFIGURE_ENABLE=		verbose-usb-io
+
+CFLAGS:= ${CFLAGS:N-Wno-error=unused-command-line-argument}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<dev/ppbus/ppi\.h>@<dev/misc/ppi/ppi.h>@g'	\
+			 -e 's@<dev/ppbus/ppbconf\.h>@<bus/ppbus/ppbconf.h>@g'	\
+		${WRKSRC}/src/jtag/drivers/parport.c
 
 .include <bsd.port.mk>

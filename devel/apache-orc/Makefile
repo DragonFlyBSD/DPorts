@@ -1,12 +1,12 @@
 PORTNAME=	orc
-DISTVERSION=	2.0.3
-PORTREVISION=	2
+DISTVERSION=	2.2.0
+PORTREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	https://dlcdn.apache.org/orc/orc-2.0.3/:orc \
-		https://archive.apache.org/dist/orc/orc-format-1.0.0/:orc_format
+MASTER_SITES=	https://dlcdn.apache.org/orc/orc-2.2.0/:orc \
+		https://archive.apache.org/dist/orc/orc-format-1.1.0/:orc_format
 PKGNAMEPREFIX=	apache-
 DISTFILES=	${PORTNAME}-${DISTVERSION}.tar.gz:orc \
-		orc-format-1.0.0.tar.gz:orc_format
+		orc-format-1.1.0.tar.gz:orc_format
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Smallest, fastest columnar storage for Hadoop workloads
@@ -22,7 +22,9 @@ LIB_DEPENDS=	libsnappy.so:archivers/snappy \
 		libprotobuf.so:devel/protobuf \
 		libabsl_demangle_internal.so:devel/abseil
 
-USES=		cmake
+USES=		cmake cpe
+
+CPE_VENDOR=	apache
 
 CMAKE_ARGS+=	-DBUILD_JAVA=OFF \
 		-DZLIB_HOME="/usr" \

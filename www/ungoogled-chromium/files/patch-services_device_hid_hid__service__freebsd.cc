@@ -1,6 +1,6 @@
---- services/device/hid/hid_service_freebsd.cc.orig	2023-04-08 11:38:38 UTC
+--- services/device/hid/hid_service_freebsd.cc.orig	2026-08-13 07:41:05 UTC
 +++ services/device/hid/hid_service_freebsd.cc
-@@ -0,0 +1,395 @@
+@@ -0,0 +1,394 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -106,7 +106,7 @@
 +
 +  bool HaveReadWritePermissions(std::string device_id) {
 +    std::string device_node = "/dev/" + device_id;
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +
 +    base::FilePath device_path(device_node);
 +    base::File device_file;
@@ -130,7 +130,7 @@
 +
 +    std::vector<uint8_t> report_descriptor;
 +
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +
 +    base::FilePath device_path(device_node);
 +    base::File device_file;
@@ -196,7 +196,7 @@
 + private:
 +
 +  void CheckPendingPermissionChange() {
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +    std::map<std::string, int>::iterator it;
 +    for (it = permissions_checks_attempts_.begin(); it != permissions_checks_attempts_.end();) {
 +      std::string device_name = it->first;
@@ -222,7 +222,7 @@
 +  }
 +
 +  void SetupDevdMonitor() {
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +
 +    int devd_fd = socket(AF_UNIX, SOCK_SEQPACKET, 0);
 +    if (devd_fd < 0)
@@ -383,7 +383,6 @@
 +
 +  if (!base::SetNonBlocking(params->fd.get())) {
 +    HID_PLOG(ERROR) << "Failed to set the non-blocking flag on the device fd";
-+    std::move(params->callback).Run(nullptr);
 +  }
 +
 +  std::move(params->callback).Run(base::MakeRefCounted<HidConnectionFreeBSD>(

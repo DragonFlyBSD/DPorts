@@ -1,0 +1,7 @@
+#ifndef FREEBSD_WCHAR_MODULE_PATCH_H
+#define FREEBSD_WCHAR_MODULE_PATCH_H
+
+#define _WCHAR_H_CPLUSPLUS_98_CONFORMANCE_ 1
+#include_next <wchar.h>
+
+#endif

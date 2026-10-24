@@ -1,11 +1,9 @@
-AVIDEMUX_VERSION=	2.7.8
+AVIDEMUX_VERSION=	2.8.1
 MASTER_SITES=	\
 		SF/avidemux/avidemux/${PORTVERSION}
 DISTNAME=	avidemux_${PORTVERSION}
 
-PATCH_SITES=	https://github.com/mean00/avidemux2/commit/
-PATCHFILES=		76f72e226684d68953de60c6d097f22c1c2f8ef1.patch
-PATCH_DIST_STRIP=	-p1
+MAINTAINER?=	vvd@FreeBSD.org
 
 BUILD_DEPENDS+=	${BUILD_DEPENDS_${ARCH}}
 BUILD_DEPENDS_x86_64=	yasm:devel/yasm
@@ -39,7 +37,7 @@ MAKE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin
 OPTIONS_DEFINE=	CLI FREETYPE FONTCONFIG OSS JACK PULSEAUDIO \
 		XVIDEO FAAC FRIBIDI OPUS TWOLAME \
 		FAAD X264 X265 VPX AOM XVID AMR VORBIS NLS LAME VAAPI VDPAU \
-		DCA FDK QT5 TINYPY VAPOURSYNTH
+		DCA FDK QT5 TINYPY VAPOURSYNTH NVENC
 OPTIONS_DEFAULT=	FREETYPE FONTCONFIG OSS XVIDEO VPX XVID \
 			FAAD VDPAU VORBIS DCA FDK QT5 TINYPY VAPOURSYNTH \
 			PULSEAUDIO
@@ -48,6 +46,7 @@ OPTIONS_SUB=	yes
 AOM_DESC=	AOM AV1 decoder support
 CLI_DESC=	Build CLI tool
 FDK_DESC=	FDK AAC codec support
+NVENC_DESC=	NVIDIA decoder/encoder with CUDA support
 TINYPY_DESC=	Python scripting support via TinyPy
 VAPOURSYNTH_DESC=	VapourSynth video manipulation support
 
@@ -70,9 +69,12 @@ OPTIONS_DEFAULT+=	LAME FAAC AMR X264
 # of the stack)
 .if ${ARCH} == x86_64
 CFLAGS+=	-fno-omit-frame-pointer
-#MAKE_ENV+=	ARCH=x86_64
-#CONFIGURE_ENV+=	ARCH=x86_64
 .endif
+
+.if ${ARCH} == i386
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-i386-nosse
+.endif
+
 CMAKE_ARGS+=	-DLIBEXECINFO_INCLUDE_DIR=/usr/include
 CMAKE_ARGS+=	-DLIBEXECINFO_LIBRARY_DIR=-lexecinfo
 
@@ -278,6 +280,15 @@ CMAKE_ARGS+=	-DOPENCORE_AMRWB:BOOL=OFF
 PLIST_SUB+=	AMRWB="@comment "
 .endif
 
+.if ${PORT_OPTIONS:MNVENC}
+BROKEN=		Fails to configure or build with ffnvcodec-headers >= 13.0
+BUILD_DEPENDS+=	${LOCALBASE}/include/ffnvcodec/nvEncodeAPI.h:multimedia/ffnvcodec-headers
+PLIST_SUB+=	NVENC=""
+.else
+CMAKE_ARGS+=	-DNVENC:BOOL=OFF
+PLIST_SUB+=	NVENC="@comment "
+.endif
+
 .include <bsd.port.pre.mk>
 
 # is this kosher?  the result seems to run tho...  (see ports/185997)
@@ -287,8 +298,15 @@ LDFLAGS+=	-lc++
 
 USE_GCC=	yes
 
-NOT_FOR_ARCHS=		powerpc powerpc64 powerpcspe sparc64
+NOT_FOR_ARCHS=		powerpc powerpc64 powerpcspe
 NOT_FOR_ARCHS_REASON=	cmake/admDetermineSystem.cmake:78: CPU not supported
+
+post-extract:
+.for p in ffmpeg_fix_build_with_binutils_2.41.patch ffmpeg_fix_build_on_armv7.patch
+	@${CP} ${FILESDIR}/$p \
+	       ${WRKSRC}/avidemux_core/ffmpeg_package/patches/
+.endfor
+
 
 post-patch:
 	@${MKDIR} ${CONFIGURE_WRKSRC}/config

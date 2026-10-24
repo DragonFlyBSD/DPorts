@@ -2,8 +2,8 @@ PORTNAME=	kguiaddons
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	x11-toolkits kde kde-frameworks
 
-COMMENT=	Utilities for graphical user interfaces
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Utilities for graphical user interfaces
 
 BUILD_DEPENDS=	wayland-protocols>0:graphics/wayland-protocols
 LIB_DEPENDS=	libwayland-client.so:graphics/wayland \
@@ -12,7 +12,13 @@ LIB_DEPENDS=	libwayland-client.so:graphics/wayland \
 USES=		cmake desktop-file-utils gl kde:6 pkgconfig qt:6 tar:xz xorg
 USE_GL=		gl opengl
 USE_KDE=	ecm:build plasma-wayland-protocols:build
-USE_QT=		base wayland
+USE_QT=		base wayland tools:build
 USE_XORG=	x11 xcb
+
+CMAKE_OFF=	BUILD_PYTHON_BINDINGS
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

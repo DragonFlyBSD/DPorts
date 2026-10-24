@@ -1,0 +1,34 @@
+-- Two small pyproject.toml adjustments for FreeBSD:
+-- 1. Relax the exact hatchling version pin so the port builds with the
+--    hatchling version currently available in the FreeBSD ports tree.
+-- 2. Allow pytest-benchmark's PytestBenchmarkWarning when pytest-xdist is
+--    active; upstream turns all warnings into errors, which makes the test
+--    runner abort before any tests run.
+
+--- pyproject.toml.orig	2020-02-02 00:00:00 UTC
++++ pyproject.toml
+@@ -90,7 +90,7 @@ typecheck = { chain = [
+ "typecheck:mypy" = "mypy ."
+ 
+ [build-system]
+-requires = ["hatchling==1.26.3", "hatch-fancy-pypi-readme"]
++requires = ["hatchling>=1.26.3", "hatch-fancy-pypi-readme"]
+ build-backend = "hatchling.build"
+ 
+ [tool.hatch.build]
+@@ -129,12 +129,13 @@ testpaths = ["tests"]
+ 
+ [tool.pytest.ini_options]
+ testpaths = ["tests"]
+-addopts = "--tb=short -n auto"
++addopts = "--tb=short"
+ xfail_strict = true
+ asyncio_mode = "auto"
+ asyncio_default_fixture_loop_scope = "session"
+ filterwarnings = [
+-  "error"
++  "error",
++  "ignore::pytest_benchmark.logger.PytestBenchmarkWarning"
+ ]
+ 
+ [tool.pyright]

@@ -1,7 +1,7 @@
---- services/device/hid/BUILD.gn.orig	2025-02-19 07:43:18 UTC
+--- services/device/hid/BUILD.gn.orig	2026-09-25 15:26:43 UTC
 +++ services/device/hid/BUILD.gn
-@@ -34,7 +34,26 @@ source_set("hid") {
-     "//services/device/public/mojom",
+@@ -47,7 +47,26 @@ source_set("hid") {
+     "//third_party/protobuf:protobuf_lite",
    ]
  
 -  if ((is_linux || is_chromeos) && use_udev) {

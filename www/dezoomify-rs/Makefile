@@ -1,7 +1,7 @@
 PORTNAME=	dezoomify-rs
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.13.0
-PORTREVISION=	4
+DISTVERSION=	2.20.0
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -10,6 +10,8 @@ WWW=		https://dezoomify-rs.ophir.dev/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 USES=		cargo ssl
 USE_GITHUB=	yes

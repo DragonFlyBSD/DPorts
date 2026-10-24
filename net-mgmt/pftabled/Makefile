@@ -37,4 +37,9 @@ post-install-PERLC-on:
 post-install-PYTHONC-on:
 	${INSTALL_SCRIPT} ${WRKSRC}/pftabled-client.py ${STAGEDIR}${PREFIX}/bin/
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@net/pfvar.h@net/pf/pfvar.h@g'	\
+		${WRKSRC}/configure				\
+		${WRKSRC}/pftabled.c
+
 .include <bsd.port.mk>

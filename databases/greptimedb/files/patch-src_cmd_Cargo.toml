@@ -1,0 +1,11 @@
+--- src/cmd/Cargo.toml.orig	2026-09-16 03:17:27 UTC
++++ src/cmd/Cargo.toml
+@@ -122,7 +122,7 @@ pprof = { version = "0.15", features = [
+     "flamegraph",
+ ] }
+ 
+-[target.'cfg(not(windows))'.dependencies]
++[target.'cfg(not(any(windows, target_os = "freebsd")))'.dependencies]
+ tikv-jemallocator = "0.7"
+ 
+ [dev-dependencies]

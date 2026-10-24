@@ -11,4 +11,8 @@ USE_KDE=	config coreaddons crash dbusaddons service \
 USE_QT=		core dbus gui widgets \
 		buildtools:build qmake:build
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

@@ -382,6 +382,7 @@ TLS_USES=		ssl
 NO_MTREE=	yes
 NO_PREFIX_RMDIR=yes
 
+USES+= localbase:ldflags
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "x86_64" && !defined(SLAVE_LDAP) \

@@ -249,4 +249,23 @@ post-install-DOCS-on:
 		${WRKSRC}/src/docs/readme.txt ${STAGEDIR}${DOCSDIR}
 
 .include "${.CURDIR}/../quake2-data/Makefile.include"
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+		${WRKSRC}/src/client/cl_main.c \
+		${WRKSRC}/src/client/snd_mix.c \
+		${WRKSRC}/src/ctf/q_shared.c \
+		${WRKSRC}/src/ctf/q_shared.h \
+		${WRKSRC}/src/game/q_shared.c \
+		${WRKSRC}/src/linux/cd_linux.c \
+		${WRKSRC}/src/linux/gl_glx.c \
+		${WRKSRC}/src/linux/glw_linux.h \
+		${WRKSRC}/src/linux/q_shlinux.c \
+		${WRKSRC}/src/linux/rw_x11.c \
+		${WRKSRC}/src/qcommon/qcommon.h \
+		${WRKSRC}/src/ref_soft/r_alias.c \
+		${WRKSRC}/src/ref_soft/r_part.c \
+		${WRKSRC}/src/ref_soft/r_polyse.c
+
 .include <bsd.port.mk>

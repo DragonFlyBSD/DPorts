@@ -1,3 +1,0 @@
-
-# disable for now
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NDOXYGEN}

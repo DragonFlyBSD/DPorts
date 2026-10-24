@@ -11,6 +11,7 @@ include/aws/crt/RefCounted.h
 include/aws/crt/StlAllocator.h
 include/aws/crt/StringUtils.h
 include/aws/crt/StringView.h
+include/aws/crt/TypeTraits.h
 include/aws/crt/Types.h
 include/aws/crt/UUID.h
 include/aws/crt/Utility.h
@@ -20,10 +21,13 @@ include/aws/crt/auth/Signing.h
 include/aws/crt/auth/Sigv4Signing.h
 include/aws/crt/cbor/Cbor.h
 include/aws/crt/checksum/CRC.h
+include/aws/crt/checksum/XXHash.h
+include/aws/crt/crypto/HKDF.h
 include/aws/crt/crypto/HMAC.h
 include/aws/crt/crypto/Hash.h
 include/aws/crt/crypto/SecureRandom.h
 include/aws/crt/crypto/SymmetricCipher.h
+include/aws/crt/endpoints/BddEngine.h
 include/aws/crt/endpoints/RuleEngine.h
 include/aws/crt/http/HttpConnection.h
 include/aws/crt/http/HttpConnectionManager.h
@@ -38,12 +42,15 @@ include/aws/crt/io/SocketOptions.h
 include/aws/crt/io/Stream.h
 include/aws/crt/io/TlsOptions.h
 include/aws/crt/io/Uri.h
+include/aws/crt/mqtt/IoTSDKMetrics.h
 include/aws/crt/mqtt/Mqtt5Client.h
 include/aws/crt/mqtt/Mqtt5Packets.h
 include/aws/crt/mqtt/Mqtt5Types.h
 include/aws/crt/mqtt/MqttClient.h
 include/aws/crt/mqtt/MqttConnection.h
 include/aws/crt/mqtt/MqttTypes.h
+include/aws/crt/s3/S3.h
+include/aws/crt/s3/S3BufferTicket.h
 include/aws/iot/Mqtt5Client.h
 include/aws/iot/MqttClient.h
 include/aws/iot/MqttCommon.h

@@ -1,5 +1,6 @@
 PORTNAME=	postal
 PORTVERSION=	0.76
+PORTREVISION=	1
 CATEGORIES=	benchmarks mail
 MASTER_SITES=	https://www.coker.com.au/postal/
 
@@ -11,12 +12,13 @@ LICENSE=	GPLv3
 
 USES=		gmake tar:tgz
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 PLIST_FILES=	bin/postal-list \
-		man/man1/postal-list.1.gz \
-		man/man8/bhm.8.gz \
-		man/man8/postal.8.gz \
-		man/man8/rabid.8.gz \
+		share/man/man1/postal-list.1.gz \
+		share/man/man8/bhm.8.gz \
+		share/man/man8/postal.8.gz \
+		share/man/man8/rabid.8.gz \
 		sbin/bhm \
 		sbin/postal \
 		sbin/rabid
@@ -35,6 +37,8 @@ OPENSSL_CONFIGURE_OFF=	--disable-openssl
 OPENSSL_CPPFLAGS=	-I${OPENSSLINC}
 OPENSSL_LDFLAGS=	-L${OPENSSLLIB}
 
+CFLAGS= -std=c++98
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|-lpthread|-pthread| ; \

@@ -1,7 +1,7 @@
---- ui/gfx/native_pixmap_handle.cc.orig	2022-11-30 08:12:58 UTC
+--- ui/gfx/native_pixmap_handle.cc.orig	2026-06-04 10:12:25 UTC
 +++ ui/gfx/native_pixmap_handle.cc
 @@ -11,7 +11,7 @@
- #include "ui/gfx/buffer_format_util.h"
+ #include "components/viz/common/resources/shared_image_format_utils.h"
  #include "ui/gfx/geometry/size.h"
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
@@ -25,15 +25,15 @@
                "gfx::NativePixmapHandle::kNoModifier should be an alias for"
                "DRM_FORMAT_MOD_INVALID");
 @@ -36,7 +40,7 @@ NativePixmapPlane::NativePixmapPlane() : stride(0), of
- NativePixmapPlane::NativePixmapPlane(int stride,
-                                      int offset,
+ NativePixmapPlane::NativePixmapPlane(uint32_t stride,
+                                      uint64_t offset,
                                       uint64_t size
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
                                       ,
                                       base::ScopedFD fd
  #elif BUILDFLAG(IS_FUCHSIA)
-@@ -47,7 +51,7 @@ NativePixmapPlane::NativePixmapPlane(int stride,
+@@ -47,7 +51,7 @@ NativePixmapPlane::NativePixmapPlane(uint32_t stride,
      : stride(stride),
        offset(offset),
        size(size)

@@ -1,13 +1,13 @@
---- chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc.orig	2024-07-31 14:19:23 UTC
+--- chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc.orig	2026-06-05 13:45:06 UTC
 +++ chrome/browser/extensions/api/runtime/chrome_runtime_api_delegate.cc
-@@ -284,7 +284,9 @@ bool ChromeRuntimeAPIDelegate::GetPlatformInfo(Platfor
-   } else if (strcmp(os, "linux") == 0) {
+@@ -368,7 +368,9 @@ bool ChromeRuntimeAPIDelegate::GetPlatformInfo(Platfor
+   } else if (os == "linux") {
      info->os = extensions::api::runtime::PlatformOs::kLinux;
-   } else if (strcmp(os, "openbsd") == 0) {
+   } else if (os == "openbsd") {
 -    info->os = extensions::api::runtime::PlatformOs::kOpenbsd;
 +    info->os = extensions::api::runtime::PlatformOs::kLinux;
-+  } else if (strcmp(os, "freebsd") == 0) {
++  } else if (os == "freebsd") {
 +    info->os = extensions::api::runtime::PlatformOs::kLinux;
+   } else if (os == "android") {
+     info->os = extensions::api::runtime::PlatformOs::kAndroid;
    } else {
-     NOTREACHED_IN_MIGRATION() << "Platform not supported: " << os;
-     return false;

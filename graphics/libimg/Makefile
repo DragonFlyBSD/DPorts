@@ -62,4 +62,8 @@ post-install-EXAMPLES-on:
 	${INSTALL_DATA} ${WRKSRC}/msgs/*.msg ${STAGEDIR}${EXAMPLESDIR}/msgs/
 	${INSTALL_SCRIPT} ${WRKSRC}/demo.tcl ${WRKSRC}/tkv.tcl ${STAGEDIR}${EXAMPLESDIR}/
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD-|DragonFly-|g' \
+		${WRKSRC}/configure.* ${WRKSRC}/*/configure
+
 .include <bsd.port.mk>

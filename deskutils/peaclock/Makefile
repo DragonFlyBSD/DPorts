@@ -16,8 +16,15 @@ USES=		cmake compiler:c++17-lang localbase:ldflags
 USE_GITHUB=	yes
 GH_ACCOUNT=	octobanana
 
-CXXFLAGS+=	-Wno-narrowing # https://github.com/octobanana/peaclock/issues/18
+CXXFLAGS+= -Wno-narrowing # https://github.com/octobanana/peaclock/issues/18 -isystem ${LOCALBASE}/cxxfs_gcc8
 
 PLIST_FILES=	bin/${PORTNAME}
+
+BUILD_DEPENDS= cxxfs_gcc8>0:misc/cxxfs_gcc8
+LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
+dfly-patch:
+	${REINPLACE_CMD} -e 's@pthread@& stdc++fs@g' \
+		${WRKSRC}/CMakeLists.txt
+
 
 .include <bsd.port.mk>

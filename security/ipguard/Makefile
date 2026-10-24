@@ -13,7 +13,7 @@ LICENSE=	BSD2CLAUSE
 LIB_DEPENDS=	libnet.so:net/libnet
 
 USE_RC_SUBR=	${PORTNAME}
-CFLAGS+=	-fcommon
+CFLAGS+= -fcommon -Wno-stringop-truncation -Wno-format-truncation
 PORTDOCS=	COPYRIGHT NEWS README README.tcpdump README.log ethers.sample rfc826.txt
 PLIST_FILES=	sbin/ipguard \
 		share/man/man8/${PORTNAME}.8.gz

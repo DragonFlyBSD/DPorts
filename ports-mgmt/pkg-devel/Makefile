@@ -1,5 +1,5 @@
 PORTNAME=	pkg
-DISTVERSION=	1.20.99.8
+DISTVERSION=	2.8.99.1
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 PKGNAMESUFFIX=	-devel
@@ -12,14 +12,14 @@ LICENSE=	BSD2CLAUSE
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
-GH_TAGNAME=	884ebbf0e
+GH_TAGNAME=	efa833c0d
 
-CFLAGS+=	-O0 -g -Wno-error
 USE_LDCONFIG=	${PREFIX}/lib/compat/pkg
 HAS_CONFIGURE=	yes
 PORTDOCS=	NEWS
 PORTSCOUT=	ignore:1
-CONFIGURE_ARGS=	--mandir=${PREFIX}/man --prefix="${PREFIX}"
+CONFIGURE_ARGS=	--prefix="${PREFIX}" \
+		--mandir="${PREFIX}/share/man"
 CONFIGURE_ENV=	CC_FOR_BUILD="${CC}"
 
 # Use a submake as 'deinstall install' needs to reevaluate PKG_REGISTER
@@ -33,6 +33,8 @@ SAN_DESC=	Enable sanitizers (ASAN and UBSAN)
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-docs_pkg.8
 .endif
 
+CFLAGS= -I/usr/include/priv
+LDFLAGS= -L/usr/lib/priv -R/lib/priv
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MSAN}
@@ -40,7 +42,7 @@ CONFIGURE_ARGS+=	--with-asan --with-ubsan
 .endif
 
 # TODO: activate in april 2021
-#.if ${OPSYS} == FreeBSD && ${OSVERSION} > 1400000
+#.if ${OPSYS} == FreeBSD
 #CONFIGURE_ARGS+=	--default-format=tzst
 #.endif
 
@@ -68,11 +70,44 @@ post-build:
 .endif
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/src/pkg.conf.sample ${STAGEDIR}${PREFIX}/etc/
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/compat/pkg
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/NEWS ${STAGEDIR}${DOCSDIR}/NEWS
 .if ${PORT_OPTIONS:MSAN}
 	@${CP} ${STAGEDIR}${PREFIX}/sbin/pkg ${STAGEDIR}${PREFIX}/sbin/pkg-static
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@openssl@wolfssl@g' \
+		${WRKSRC}/external/libcurl/Makefile.autosetup
+	${REINPLACE_CMD} -e '/USE_OPENSSL/d' \
+		${WRKSRC}/external/libcurl/curl_config.h
+.if defined(PACKAGE_BUILDING)
+	@${REINPLACE_CMD} -e "s|/usr/ports|/usr/dports|g" ${PROBLEM_FILES}
+.else
+	@${REINPLACE_CMD} -e "s|/usr/ports|${PORTSDIR}|g" ${PROBLEM_FILES}
+.endif
+.if exists(/usr/lib/priv/libprivate_ssl.so)
+	${REINPLACE_CMD} \
+		-e 's|lssl|lprivate_ssl|' \
+		-e 's|lcrypto|lprivate_crypto|' \
+		${WRKSRC}/libpkg/Makefile.autosetup \
+		${WRKSRC}/src/Makefile.autosetup \
+		${WRKSRC}/tests/Makefile.autosetup
+.endif
+
+post-stage:
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/periodic/411.pkg-backup \
+		${WRKSRC}/scripts/periodic/490.status-pkg-changes \
+		${STAGEDIR}${PREFIX}/etc/periodic/daily/
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/periodic/460.pkg-checksum \
+		${WRKSRC}/scripts/periodic/410.pkg-audit \
+		${STAGEDIR}${PREFIX}/etc/periodic/security/
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/periodic/400.status-pkg \
+		${STAGEDIR}${PREFIX}/etc/periodic/weekly/
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/pkg/repos
+	${INSTALL_DATA} ${DFLY_FILESDIR}/df-latest.conf.sample \
+		${STAGEDIR}${PREFIX}/etc/pkg/repos
 
 .include <bsd.port.post.mk>

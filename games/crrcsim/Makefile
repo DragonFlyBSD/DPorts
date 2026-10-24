@@ -35,6 +35,7 @@ DESKTOP_ENTRIES="CRRCsim" \
 
 OPTIONS_DEFINE=	DOCS
 
+USE_CXXSTD= gnu++98
 post-patch:
 	@${REINPLACE_CMD} -e '/portaudio/ s|==|=|' ${WRKSRC}/configure
 

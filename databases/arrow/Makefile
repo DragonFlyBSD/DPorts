@@ -1,6 +1,6 @@
 PORTNAME=	arrow
-DISTVERSION=	15.0.2
-PORTREVISION=	1
+PORTVERSION=	24.0.0
+PORTREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	APACHE/${PORTNAME}/${PORTNAME}-${DISTVERSION} \
 		https://github.com/apache/orc/archive/rel/:orc
@@ -10,28 +10,34 @@ EXTRACT_ONLY=	apache-${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Columnar in-memory analytics layer for big data
-WWW=		https://arrow.apache.org/
+WWW=		https://arrow.apache.org \
+		https://github.com/apache/arrow
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/../LICENSE.txt
 
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
-USES=		cmake compiler:c++17-lang localbase pkgconfig python:build
+USES=		cmake compiler:c++20-lang cpe localbase pkgconfig python:build,test
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	apache
+#GH_TUPLE=	apache:arrow-testing:d2a1371:arrow_testing/testing \
+		apache:parquet-testing:c7cf137:parquet_testing/cpp/submodules/parquet-testing
 
 WRKSRC_SUBDIR=	cpp
 
-CMAKE_ARGS=	-DCMAKE_CXX_STANDARD=17 -DARROW_SIMD_LEVEL=NONE -DARROW_RUNTIME_SIMD_LEVEL=NONE \
-		-DPython3_EXECUTABLE=${PYTHON_CMD}
-CMAKE_OFF=	ARROW_BUILD_STATIC ARROW_WITH_BACKTRACE ARROW_BUILD_TESTS ARROW_BUILD_BENCHMARKS
+PLIST_SUB=	LIBVERSION=${DISTVERSION:R:R}00
 
-OPTIONS_GROUP=			COMPRESSION COMPONENTS # components are listed in cpp/cmake_modules/DefineOptions.cmake
+CMAKE_ARGS=	-DARROW_RUNTIME_SIMD_LEVEL=NONE -DARROW_SIMD_LEVEL=NONE -DCMAKE_CXX_STANDARD=20
+CMAKE_OFF= ARROW_BUILD_BENCHMARKS ARROW_BUILD_STATIC ARROW_BUILD_TESTS ARROW_WITH_BACKTRACE ARROW_JEMALLOC
+
+BINARY_ALIAS=	python=${PYTHON_CMD} # only for tests
+
+OPTIONS_GROUP=			COMPONENTS COMPRESSION # components are listed in cpp/cmake_modules/DefineOptions.cmake
+OPTIONS_GROUP_COMPONENTS=	ACERO COMPUTE CSV DATASET FILESYSTEM FLIGHT FLIGHT_SQL GANDIVA HDFS IPC JSON MIMALLOC PARQUET ORC S3 SKYHOOK SUBSTRAIT BUILD_UTILITIES TENSORFLOW TESTING
 OPTIONS_GROUP_COMPRESSION=	BROTLI BZ2 LZ4 SNAPPY ZLIB ZSTD
-OPTIONS_GROUP_COMPONENTS=	ACERO COMPUTE CSV DATASET FILESYSTEM FLIGHT GANDIVA HDFS IPC JSON MIMALLOC PARQUET ORC S3 SKYHOOK SUBSTRAIT BUILD_UTILITIES TENSORFLOW TESTING
 OPTIONS_SUB=			yes
 
 ## DESCs
@@ -91,10 +97,13 @@ FLIGHT_LIB_DEPENDS=		libgflags.so:devel/gflags \
 				libgrpc.so:devel/grpc \
 				libre2.so:devel/re2
 FLIGHT_IMPLIES=			IPC COMPUTE # see https://github.com/apache/arrow/issues/40766
-FLIGHT_BROKEN=			configure breaks: Could not find a package configuration file provided by "re2"
+
+FLIGHT_SQL_DESC=		Arrow Flight SQL
+FLIGHT_SQL_CMAKE_BOOL=		ARROW_FLIGHT_SQL
+FLIGHT_SQL_IMPLIES=		FLIGHT
 
 GANDIVA_DESC=			Gandiva libraries
-GANDIVA_USES=			llvm:17,lib ssl
+GANDIVA_USES=			llvm:lib ssl
 GANDIVA_CMAKE_BOOL=		ARROW_GANDIVA
 GANDIVA_CMAKE_ON=		-DARROW_WITH_UTF8PROC=ON
 GANDIVA_LIB_DEPENDS=		libgrpc.so:devel/grpc \
@@ -136,9 +145,8 @@ BUILD_UTILITIES_CMAKE_BOOL=	ARROW_BUILD_UTILITIES
 #PYTHON_DESC=			Build python extension support
 #PYTHON_CMAKE_BOOL=		ARROW_PYTHON
 #PYTHON_USES=			python
-#PYTHON_BUILD_DEPENDS=		${PYNUMPY} # see https://issues.apache.org/jira/browse/ARROW-16820
-#PYTHON_CMAKE_ON=		-DPython3_EXECUTABLE=${PYTHON_CMD}
-#PYTHON_RUN_DEPENDS=		${PYNUMPY}
+#PYTHON_BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}numpy>=1.16,1:math/py-numpy@${PY_FLAVOR} # see https://issues.apache.org/jira/browse/ARROW-16820
+#PYTHON_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}numpy>=1.16,1:math/py-numpy@${PY_FLAVOR}
 #PYTHON_IMPLIES=			COMPUTE CSV DATASET FILESYSTEM HDFS JSON
 #PYTHON_VARS=			PLIST_SUB+=PYTHON_SUFFIX=${PYTHON_SUFFIX}
 
@@ -180,12 +188,15 @@ TESTING_CMAKE_BOOL=		ARROW_TESTING
 TESTING_LIB_DEPENDS=		libgtest.so:devel/googletest
 
 # form OPTIONS_DEFAULT
-.for opt in ${OPTIONS_GROUP_COMPONENTS}
+.for opt in ${OPTIONS_GROUP_COMPONENTS} ${OPTIONS_GROUP_COMPRESSION}
 .  if "${${opt}_BROKEN}" == ""
 OPTIONS_DEFAULT+=	${opt}
 .  endif
 .endfor
 
+CPE_VENDOR=	apache
+
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCOMPUTE} || ${PORT_OPTIONS:MFLIGHT} || ${PORT_OPTIONS:MGANDIVA}
@@ -198,6 +209,9 @@ PLIST_FILES+=	bin/arrow-file-to-stream \
 .endif
 .if ${PORT_OPTIONS:MGANDIVA} || ${PORT_OPTIONS:MCOMPUTE}
 PLIST_FILES+=	lib/cmake/Arrow/Findutf8proc.cmake
+.endif
+.if ${PORT_OPTIONS:MGANDIVA} || ${PORT_OPTIONS:MZSTD}
+PLIST_FILES+=	lib/cmake/Gandiva/FindzstdAlt.cmake
 .endif
 
 .if ${PORT_OPTIONS:MPYTHON} == "PYTHON" && ${PORT_OPTIONS:MFLIGHT} == "FLIGHT"
@@ -219,10 +233,12 @@ post-install:
 		-e 's|"true"|"ON"|; s|"false"|"OFF"|' \
 		${STAGEDIR}${PREFIX}/lib/cmake/Arrow/ArrowOptions.cmake
 
-do-test: # tests fail to compile: https://issues.apache.org/jira/browse/ARROW-12625
+do-test:
 	@cd ${BUILD_WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} -DARROW_BUILD_TESTS:BOOL=ON ${CMAKE_SOURCE_PATH} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${ALL_TARGET} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} test
+
+# tests as of : 89% tests passed, 10 tests failed out of 90, see https://github.com/apache/arrow/issues/45604
 
 .include <bsd.port.mk>

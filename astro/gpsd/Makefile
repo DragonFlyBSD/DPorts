@@ -1,6 +1,6 @@
 PORTNAME=	gpsd
 PORTVERSION=	3.25
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	astro geography
 MASTER_SITES=	SAVANNAH
 
@@ -15,6 +15,8 @@ FLAVORS=	default nox11
 FLAVOR?=	${FLAVORS:[1]}
 nox11_PKGNAMESUFFIX=	-nox11
 
+BUILD_DEPENDS=	${PY_SETUPTOOLS}
+
 USES=		cpe pathfix pkgconfig python scons
 CPE_VENDOR=	gpsd_project
 USE_LDCONFIG=	yes
@@ -28,7 +30,7 @@ MAKE_ARGS=	manbuild=no \
 		prefix="${PREFIX}" \
 		qt=no \
 		target_python="${PYTHON_CMD}"
-MAKE_ENV=	DESTDIR="${STAGEDIR}"
+MAKE_ENV= DESTDIR="${STAGEDIR}" LINKFLAGS="${LDFLAGS}"
 PLIST_SUB=	PYTHON_EGGINFO=gps-${PORTVERSION}.egg-info
 
 OPTIONS_DEFINE=		AIVDM ASHTECH CPPBIND DBUS EARTHMATE EVERMORE FURY FV18 \
@@ -149,8 +151,8 @@ RECONFIGURE_MAKE_ARGS_OFF=	reconfigure=no
 CPPBIND_MAKE_ARGS_OFF=		libgpsmm=no
 PYSERIAL_BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}pyserial>=0:comms/py-pyserial@${PY_FLAVOR}
 PYSERIAL_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}pyserial>=0:comms/py-pyserial@${PY_FLAVOR}
-X11_BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}cairo>=0:graphics/py-cairo@${PY_FLAVOR}
-X11_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}cairo>=0:graphics/py-cairo@${PY_FLAVOR}
+X11_BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}pycairo>=0:graphics/py-pycairo@${PY_FLAVOR}
+X11_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}pycairo>=0:graphics/py-pycairo@${PY_FLAVOR}
 X11_USES=			gnome
 X11_USE=			gnome=gtk30 pygobject3
 X11_MAKE_ARGS_OFF=		xgps=no
@@ -161,6 +163,7 @@ PROFILING_MAKE_ARGS=	profiling=yes
 # generates .py[co] files for installed modules
 # if that's not done, ${PYTHON_SITELIBDIR}/gps will be polluted
 # with these files when module is imported from root user
+LDFLAGS= -lm
 post-install:
 	(cd ${STAGEDIR}${PREFIX} && \
 	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \

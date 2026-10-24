@@ -1,20 +1,17 @@
 PORTNAME=	dimRed
-PORTVERSION=	0.2.6
-PORTREVISION=	1
+PORTVERSION=	0.2.7
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Framework for Dimensionality Reduction
-WWW=		https://cran.r-project.org/web/packages/dimRed/
+WWW=		https://cran.r-project.org/package=dimRed
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-CRAN_DEPENDS=	R-cran-DRR>0:math/R-cran-DRR \
+RUN_DEPENDS=	R-cran-DRR>0:math/R-cran-DRR \
 		R-cran-magrittr>0:devel/R-cran-magrittr
-BUILD_DEPENDS=	${CRAN_DEPENDS}
-RUN_DEPENDS=	${CRAN_DEPENDS}
 
 USES=		cran:auto-plist,compiles
 

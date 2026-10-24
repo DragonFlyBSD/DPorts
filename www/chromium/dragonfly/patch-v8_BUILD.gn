@@ -1,0 +1,31 @@
+diff --git v8/BUILD.gn v8/BUILD.gn
+index ca78c2c1716f..b6f4da438b87 100644
+--- v8/BUILD.gn
++++ v8/BUILD.gn
+@@ -4664,7 +4664,7 @@ v8_header_set("v8_internal_headers") {
+       # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
+       # based on Darwin and thus POSIX-compliant to a similar degree.
+       if (is_linux || is_chromeos || is_mac || is_ios ||
+-          target_os == "freebsd") {
++          target_os == "freebsd" || target_os == "dragonfly") {
+         sources += [ "src/trap-handler/handler-inside-posix.h" ]
+       } else if (is_win) {
+         sources += [ "src/trap-handler/handler-inside-win.h" ]
+@@ -6028,7 +6028,7 @@ v8_source_set("v8_base_without_compiler") {
+       # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
+       # based on Darwin and thus POSIX-compliant to a similar degree.
+       if (is_linux || is_chromeos || is_mac || is_ios ||
+-          target_os == "freebsd") {
++          target_os == "freebsd" || target_os == "dragonfly") {
+         sources += [
+           "src/trap-handler/handler-inside-posix.cc",
+           "src/trap-handler/handler-outside-posix.cc",
+@@ -6689,7 +6689,7 @@ v8_component("v8_libbase") {
+       "src/base/platform/platform-openbsd.cc",
+     ]
+     libs = [ "execinfo" ]
+-  } else if (is_freebsd) {
++  } else if (is_freebsd || is_dragonfly) {
+     sources += [
+       "src/base/debug/stack_trace_posix.cc",
+       "src/base/platform/platform-freebsd.cc",

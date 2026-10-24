@@ -1,2 +1,0 @@
-LDFLAGS+= -lm
-DFLY_UNMAINTAINED= yes

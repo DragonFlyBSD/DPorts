@@ -1,0 +1,4 @@
+Docling Jobkit provides a framework for running distributed batch jobs
+that process documents with Docling. It enables large-scale document
+conversion workloads to be executed across multiple workers, with job
+scheduling, monitoring, and result collection.

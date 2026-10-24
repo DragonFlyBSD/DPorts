@@ -1,18 +1,28 @@
---- src/CMakeLists.txt	2020-08-11 10:05:36.000000000 -0500
-+++ src/CMakeLists.txt	2021-01-04 19:53:06.893137000 -0500
-@@ -227,7 +227,7 @@
-                        ${GNUTLS_LDFLAGS} ${GPGME_LDFLAGS} ${CMAKE_THREAD_LIBS_INIT} ${LINKER_HARDENING_FLAGS} ${LINKER_DEBUG_FLAGS}
-                        ${PostgreSQL_LIBRARIES} ${GLIB_LDFLAGS} ${GTHREAD_LDFLAGS}
-                        ${LIBGVM_BASE_LDFLAGS} ${LIBGVM_UTIL_LDFLAGS} ${LIBGVM_OSP_LDFLAGS} ${LIBGVM_GMP_LDFLAGS}
--                       ${LIBICAL_LDFLAGS} ${LINKER_HARDENING_FLAGS})
-+                       ${LIBICAL_LDFLAGS} ${LINKER_HARDENING_FLAGS} -lexecinfo)
- target_link_libraries (manage-test cgreen m
-                        ${GNUTLS_LDFLAGS} ${GPGME_LDFLAGS} ${CMAKE_THREAD_LIBS_INIT} ${LINKER_HARDENING_FLAGS} ${LINKER_DEBUG_FLAGS}
-                        ${PostgreSQL_LIBRARIES} ${GLIB_LDFLAGS} ${GTHREAD_LDFLAGS}
-@@ -441,5 +441,7 @@
-                    COMMAND ctags ${C_FILES})
- add_custom_target (tags COMMENT "Building tags files...")
- add_dependencies (tags etags ctags)
+--- src/CMakeLists.txt.orig	2026-06-22 01:59:08.000000000 -0700
++++ src/CMakeLists.txt	2026-06-22 23:09:06.824461000 -0700
+@@ -70,7 +70,9 @@
+ 
+ pkg_check_modules(GNUTLS REQUIRED gnutls>=3.2.15)
+ pkg_check_modules(GLIB REQUIRED glib-2.0>=2.42)
+-pkg_check_modules(LIBBSD REQUIRED libbsd)
++if (NOT ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++  pkg_check_modules(LIBBSD REQUIRED libbsd)
++endif()
+ pkg_check_modules(LIBICAL REQUIRED libical>=1.00)
+ pkg_check_modules(GPGME REQUIRED gpgme)
+ 
+@@ -466,6 +468,7 @@
+   ${LIBICAL_LDFLAGS}
+   ${LINKER_HARDENING_FLAGS}
+   ${OPT_THEIA_TGT}
++  -lexecinfo
+ )
+ target_link_libraries(
+   gvm-pg-server
+@@ -782,5 +785,7 @@
+ 
+ add_custom_target(check COMMENT "Checking code...")
+ add_dependencies(check cppcheck)
 +
 +file(RENAME "pwpolicy.conf" "pwpolicy.conf.sample")
  

@@ -1,5 +1,5 @@
 PORTNAME=	prestashop
-PORTVERSION=	8.2.0
+PORTVERSION=	8.2.5
 CATEGORIES=	finance www
 MASTER_SITES=	https://github.com/PrestaShop/PrestaShop/releases/download/${PORTVERSION}/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -16,6 +16,7 @@ USE_PHP=	ctype curl dom fileinfo filter gd intl \
 		mbstring mcrypt mysqli \
 		pdo_mysql posix session simplexml \
 		soap tokenizer zip
+IGNORE_WITH_PHP=	86
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 SUB_FILES=	pkg-message

@@ -1,109 +1,81 @@
 PORTNAME=	sra-tools
-DISTVERSION=	2.11.0
-PORTREVISION=	4
-CATEGORIES=	biology
+DISTVERSION=	3.4.1
+PORTREVISION=	3
+CATEGORIES=	biology java
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	NCBI's toolkit for handling data in INSDC Sequence Read Archives
-WWW=		https://github.com/ncbi/sra-tools/wiki
+WWW=		https://github.com/ncbi/sra-tools
 
 LICENSE=		PD LGPL21+
 LICENSE_COMB=		multi
 LICENSE_FILE_PD=	${WRKSRC}/LICENSE
 LICENSE_DISTFILES_LGPL21+ =
 
-ONLY_FOR_ARCHS=		amd64
-ONLY_FOR_ARCHS_REASON=	NCBI-VDB requires SSE2 instructions, no 32-bit support
+ONLY_FOR_ARCHS=		aarch64 amd64
+ONLY_FOR_ARCHS_REASON=	Upstream explicitly supports specific platforms
 
-BUILD_DEPENDS=	bash:shells/bash \
-		${LOCALBASE}/lib/libngs-c++.a:biology/ngs-sdk
-LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
-		libhdf5.so:science/hdf5 \
-		libepoll-shim.so:devel/libepoll-shim
+# hdf5 is dynamically loaded by some tools, but nothing links to it
+BUILD_DEPENDS=	bash:shells/bash
+RUN_DEPENDS=	hdf5>0:science/hdf5
 
-USES=		compiler:c11 gmake localbase:ldflags perl5 shebangfix
-USE_PERL5=	build
+USES=		bison cmake java shebangfix
 USE_GITHUB=	yes
+USE_LDCONFIG=	yes
 
-SHEBANG_GLOB=	*.sh *.pl
+# Builds with earlier versions, but ngs-doc plist differs if jdk17 is present
+JAVA_VERSION=	17
+
+OPTIONS_DEFINE=	EXAMPLES
+
+SHEBANG_GLOB=	*.sh
 GH_ACCOUNT=	ncbi
-GH_TUPLE+=	ncbi:ngs:${DISTVERSION}:ngs/ngs # ported as biology/ngs-sdk
+# FIXME: At the time this was added, sra-tools build required access to the
+# ncbi-vdb source tree.  Use a separate dependent port if that is no
+# longer the case.  CMakeLists.txt still looks for ../ncbi-vdb in 3.1.1.
 GH_TUPLE+=	ncbi:ncbi-vdb:${DISTVERSION}:vdb/ncbi-vdb
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-ngs-sdk-prefix=${LOCALBASE} \
-		--with-ncbi-vdb-sources=${NCBI_VDB_WRKSRC} \
-		--with-xml2-prefix=${LOCALBASE} \
-		--with-hdf5-prefix=${LOCALBASE} \
-		CC="${CC}" CXX="${CXX}" TOOLS="${CHOSEN_COMPILER_TYPE}" \
-		--with-ncbi-vdb-build=${NCBI_VDB_WRKSRC}/amd64-portbld-freebsd$$(${FREEBSD_RELEASE})
-MAKE_ARGS=	CCNAME=${CC} CXXNAME=${CXX} PKGCFLAGS="${CFLAGS}" \
-		INST_ETCDIR=${STAGEDIR}${PREFIX}/etc
+CMAKE_ARGS+=	-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
+# Prevent cmake from using a later Java version, if present
+CMAKE_ARGS+=	-DJAVA_HOME:PATH=${JAVA_HOME}
 
-NCBI_VDB_WRKSRC=	${WRKSRC}/ncbi-vdb
-NCBI_VDB_FILESDIR=	${FILESDIR}
-FREEBSD_RELEASE=	uname -r | cut -d - -f 1
-
-CFLAGS+=	-I${WRKSRC}/interfaces/os/sun
-CXXFLAGS+=	-I${WRKSRC}/interfaces/os/sun
-
-CONFLICTS_INSTALL=	kget
-
-BINARY_ALIAS=	gcc=${CC} g++=${CXX}
-
-# for port developers, building with these options may fail
-OPTIONS_DEFINE=		DEBUG OPTIMIZED_CFLAGS TEST
-DEBUG_PREVENTS=		OPTIMIZED_CFLAGS
-DEBUG_CONFIGURE_WITH=	debug
-OPTIMIZED_CFLAGS_MAKE_ARGS_OFF=	OPT=""
-TEST_TEST_TARGET=	test
-TEST_USES=		python
-
-# ncbi-vdb build extras
-VDB_CONFIGURE_ARGS=	\
-		--with-xml2-prefix=${LOCALBASE} \
-		--with-hdf5-prefix=${LOCALBASE} \
-		--prefix=${PREFIX} \
-		--build=amd64-portbld-freebsd$$(${FREEBSD_RELEASE}) \
-		CC="${CC}" CXX="${CXX}" TOOLS="${CHOSEN_COMPILER_TYPE}"
-VDB_MAKE_ARGS+=	-j 1 CCNAME=${CC} CXXNAME=${CXX} PKGCFLAGS="${CFLAGS}"
-MAKE_ENV+=	CPATH="${LOCALBASE}/include/libepoll-shim"
-CFLAGS+=	-I${WRKSRC}/lib
-
-pre-patch:
-	@${CP} ${FILESDIR}/Makefile.bsd ${NCBI_VDB_WRKSRC}/build/
-	@${CP} ${FILESDIR}/ld.bsd.*.sh ${NCBI_VDB_WRKSRC}/build/
-	@${MKDIR} ${NCBI_VDB_WRKSRC}/interfaces/os/bsd
-	@${CP} -p ${NCBI_VDB_WRKSRC}/interfaces/os/mac/endian.h \
-		${NCBI_VDB_WRKSRC}/interfaces/os/bsd/
-
-post-patch:
-	@${GREP} -q '@@PREFIX@@' ${WRKSRC}/ncbi-vdb/libs/kfg/config.c || (echo "@@PREFIX@@ in file/patch-libs_kfg_config.c is overwritten probably due to using 'make makepatch'"; exit 1)
-	@${REINPLACE_CMD} -e 's#@@PREFIX@@#"${PREFIX}"#' ${WRKSRC}/ncbi-vdb/libs/kfg/config.c
-	@${LN} -s ${WRKSRC}/ncbi-vdb/interfaces/cc/gcc/x86_64 ${WRKSRC}/ncbi-vdb/interfaces/cc/gcc/amd64
-
-post-patch-TEST-on:
-	@${REINPLACE_CMD} -e 's|python|${PYTHON_CMD}|' ${WRKSRC}/test/kget/Makefile
+PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 pre-configure:
-	@${CP} ${NCBI_VDB_WRKSRC}/setup/os-arch.prl ${WRKSRC}/setup/os-arch.prl
-	# same as in biology/ncbi-vdb
-	@${CP} ${NCBI_VDB_FILESDIR}/Makefile.bsd ${WRKSRC}/build/
-	@${CP} ${NCBI_VDB_WRKSRC}/build/ld.bsd.*.sh ${WRKSRC}/build/
-	@${MKDIR} ${WRKSRC}/interfaces/override
-	@${CP} ${NCBI_VDB_WRKSRC}/interfaces/os/sun/atomic32.h ${WRKSRC}/interfaces/override
-	@${CP} ${FILESDIR}/byteswap.h ${WRKSRC}/interfaces/override
-	@cd ${WRKSRC}/ncbi-vdb && ./configure ${VDB_CONFIGURE_ARGS}
-	@${ECHO} ${CHOSEN_COMPILER_TYPE} > ${WRKSRC}/ncbi-vdb/build/COMP
-	@cd ${WRKSRC}/ncbi-vdb && ${DO_MAKE_BUILD} ${VDB_MAKE_ARGS}
+	# Reinplaces may follow static patches.  Run "make clean patch"
+	# before updating those patches so reinplaces do not get added to them.
+	@${REINPLACE_CMD} -e 's|"/etc/ncbi"|"${PREFIX}/etc/ncbi"|g' \
+		${WRKSRC}/ncbi-vdb/libs/kfg/config.c
+	@${REINPLACE_CMD} -e 's|/usr/local/bin|${PREFIX}/bin|g' \
+		${WRKSRC}/tools/external/driver-tool/file-path.posix.cpp
+	@${REINPLACE_CMD} -e 's|/../ncbi-vdb|/ncbi-vdb|g' \
+		${WRKSRC}/CMakeLists.txt
+	cd ${WRKSRC}/ncbi-vdb/build && cmake .. && make
 
-post-build-TEST-on:	do-test
+# FIXME: Unsure where the jquery version comes from and it differs on
+# amd64 (jquery-3.7.1.min.js) and aarch64 (jquery-3.6.1.min.js).
+# Just hack the version out for now.  Not sure we even need javadoc installed.
+post-stage:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*.${DISTVERSION}
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.${DISTVERSION}
 
-do-install:
-	cd ${WRKSRC}/${ARCH}-*/sra-tools/${OPSYS}/gcc/${ARCH}/rel/bin && \
-	    for f in `ls *.${PORTVERSION}`; do \
-		${INSTALL_PROGRAM} $${f} \
-		${STAGEDIR}${PREFIX}/bin/`basename $${f%%.${PORTVERSION}}`; \
-	done
+post-stage-EXAMPLES-off:
+	${RM} -r ${STAGEDIR}${EXAMPLESDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@STREQUAL  "FreeBSD" )@MATCHES "^(FreeBSD|DragonFly)$$" )@' \
+		${WRKSRC}/build/env.cmake \
+		${WRKSRC}/ncbi-vdb/build/env.cmake
+	${REINPLACE_CMD} -e 's@NOT CMAKE_SYSTEM_NAME STREQUAL "FreeBSD"@NOT CMAKE_SYSTEM_NAME MATCHES "^(FreeBSD|DragonFly)$$"@' \
+		${WRKSRC}/tools/loaders/CMakeLists.txt
+	${REINPLACE_CMD} \
+		-e 's/defined(__FreeBSD__)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/defined __FreeBSD__/(defined __FreeBSD__ || defined __DragonFly__)/g' \
+		-e 's/^#ifdef __FreeBSD__/#if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		${WRKSRC}/ncbi-vdb/interfaces/os/bsd/endian.h \
+		${WRKSRC}/ncbi-vdb/interfaces/os/bsd/byteswap.h \
+		${WRKSRC}/ncbi-vdb/libs/kapp/mac/ram.c \
+		${WRKSRC}/ncbi-vdb/libs/klib/unix/systime.c \
+		${WRKSRC}/libs/inc/spdlog/fmt/bundled/os.h
 
 .include <bsd.port.mk>

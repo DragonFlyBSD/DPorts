@@ -1,5 +1,5 @@
 PORTNAME=	ot-recorder
-PORTVERSION=	0.9.7
+PORTVERSION=	1.0.3
 CATEGORIES=	www
 
 MAINTAINER=	dvl@FreeBSD.org
@@ -10,16 +10,16 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	curl>0:ftp/curl \
-		e2fsprogs-libuuid>0:misc/e2fsprogs-libuuid \
 		libconfig>0:devel/libconfig \
-		lmdb>0:databases/lmdb \
+		lmdb0>0:databases/lmdb0 \
 		mosquitto>0:net/mosquitto \
 		pkgconf>0:devel/pkgconf
 
 LIB_DEPENDS=	libconfig.so:devel/libconfig \
 		libcurl.so:ftp/curl \
-		liblmdb.so:databases/lmdb \
-		libmosquitto.so:net/mosquitto
+		liblmdb.so:databases/lmdb0 \
+		libmosquitto.so:net/mosquitto \
+		libuuid.so:misc/libuuid
 
 USES=		gmake
 
@@ -53,5 +53,10 @@ do-install:
 	${MKDIR} ${STAGEDIR}/var/run/ot-recorder
 
 	${INSTALL_SCRIPT} ${WRKDIR}/ot-recorder ${STAGEDIR}$/${PREFIX}/etc/rc.d/
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@clang@cc@g' \
+			 -e "s@CFLAGS += @& -Wno-stringop-overflow -Wno-format-truncation -Wno-maybe-uninitialized @g" \
+		${WRKSRC}/config.mk
 
 .include <bsd.port.post.mk>

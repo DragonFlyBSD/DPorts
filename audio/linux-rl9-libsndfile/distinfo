@@ -1,0 +1,9 @@
+TIMESTAMP = 1783862066
+SHA256 (rocky/l/libsndfile-1.0.31-9.el9_8.1.aarch64.rpm) = 7b4f429ed280f0c80fa093b69fdd2f588635d4ba68739add55544b1c543da28a
+SIZE (rocky/l/libsndfile-1.0.31-9.el9_8.1.aarch64.rpm) = 211320
+SHA256 (rocky/l/libsndfile-1.0.31-9.el9_8.1.i686.rpm) = a463b4b95b1218ffe65c94141161883e23f9a40c49e764557fe20ea79022cd02
+SIZE (rocky/l/libsndfile-1.0.31-9.el9_8.1.i686.rpm) = 238157
+SHA256 (rocky/l/libsndfile-1.0.31-9.el9_8.1.x86_64.rpm) = d6ab5fd7ed1951182fe04d095cf70e812f911db6feb92325ff97a242d4923c9d
+SIZE (rocky/l/libsndfile-1.0.31-9.el9_8.1.x86_64.rpm) = 210216
+SHA256 (rocky/l/libsndfile-1.0.31-9.el9_8.1.src.rpm) = 5f12181ee27d5bbb7ad66fdf224c17b479d950d79d2dd67738b2b20766356d47
+SIZE (rocky/l/libsndfile-1.0.31-9.el9_8.1.src.rpm) = 901804

@@ -1,6 +1,6 @@
 PORTNAME=	cpp2py
 DISTVERSION=	2.0.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	devel
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -13,11 +13,13 @@ WWW=		https://github.com/TRIQS/cpp2py
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-PY_DEPENDS=	${PYNUMPY} \
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
+PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>0:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}h5py>0:science/py-h5py@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR}
-BUILD_DEPENDS=	${PY_DEPENDS}
+BUILD_DEPENDS+=	${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
 USES=		cmake compiler:c++14-lang gettext-runtime python shebangfix
@@ -29,6 +31,7 @@ GH_ACCOUNT=	TRIQS
 SHEBANG_FILES=	bin/c*
 
 CMAKE_ARGS=	-DPYTHON_INTERPRETER:STRING=${PYTHON_CMD}
+CMAKE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4.5 compatibility, see https://github.com/TRIQS/cpp2py/issues/59
 
 PORTSCOUT=	limit:^[0-9\.]*$$
 

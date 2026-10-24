@@ -1,6 +1,6 @@
 PORTNAME=	pidgin-sipe
 PORTVERSION=	1.24.0
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	net-im
 MASTER_SITES=	SF/sipe/sipe/${DISTNAME}
 
@@ -48,6 +48,7 @@ PORTDOCS=	AUTHORS ChangeLog HACKING NEWS README TODO
 
 CFLAGS+=	-Wno-error
 
+LIB_DEPENDS+= libgssapi_krb5.so:security/krb5
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
@@ -62,5 +63,8 @@ post-install-DOCS-on:
 .for docs in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${docs} ${STAGEDIR}${DOCSDIR}
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/configure
 
 .include <bsd.port.mk>

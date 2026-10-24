@@ -1,0 +1,12 @@
+--- src/ucm/Makefile.am.orig	2026-06-10 21:24:01 UTC
++++ src/ucm/Makefile.am
+@@ -48,7 +48,8 @@ libucm_la_SOURCES = \
+ 	bistro/bistro_x86_64.c \
+ 	bistro/bistro_aarch64.c \
+ 	bistro/bistro_ppc64.c \
+-	bistro/bistro_rv64.c
++	bistro/bistro_rv64.c \
++	malloc/brk_sbrk_override_stub.c
+ 
+ if HAVE_UCM_PTMALLOC286
+ libucm_la_CPPFLAGS += \

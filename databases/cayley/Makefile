@@ -1,7 +1,7 @@
 PORTNAME=	cayley
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.7
-PORTREVISION=	6
+PORTREVISION=	36
 CATEGORIES=	databases
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -23,6 +23,7 @@ GO_BUILDFLAGS=	-ldflags="-X github.com/${GH_ACCOUNT}graph/${GH_PROJECT}/version.
 
 PLIST_FILES=	bin/${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 pre-patch:
 	${RM} -r ${WRKSRC}/vendor/golang.org/x/sys
 	${LN} -s ${WRKDIR}/sys-* ${WRKSRC}/vendor/golang.org/x/sys

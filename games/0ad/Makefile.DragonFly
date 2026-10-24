@@ -2,5 +2,4 @@
 MANUAL_PACKAGE_BUILD=	570M package (too big for mirrors)
 .endif
 
-USES+=		alias
 MAKE_ENV+=	MAKE=${MAKE_CMD}

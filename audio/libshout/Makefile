@@ -1,6 +1,6 @@
 PORTNAME=	libshout
 PORTVERSION=	2.4.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio net
 MASTER_SITES=	https://downloads.xiph.org/releases/libshout/ \
 		https://ftp.osuosl.org/pub/xiph/releases/libshout/ \
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libogg.so:audio/libogg
 
-USES=		cpe gmake libtool pathfix pkgconfig ssl
+USES=		cpe gmake libtool pkgconfig ssl
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
@@ -33,4 +33,5 @@ THEORA_LIB_DEPENDS=	libtheora.so:multimedia/libtheora
 vorbis_CONFIGURE_ENABLE=vorbis
 VORBIS_LIB_DEPENDS=	libvorbis.so:audio/libvorbis
 
+LDFLAGS:= ${LDFLAGS:N-lcrypto} -L${OPENSSLLIB} -lcrypto
 .include <bsd.port.mk>

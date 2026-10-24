@@ -1,5 +1,3 @@
-# Created by: Martin Matuska <mm@FreeBSD.org>
-
 PORTNAME=	jailrc
 PORTVERSION=	1.0
 CATEGORIES=	sysutils
@@ -16,6 +14,7 @@ USE_RC_SUBR=	jailrc
 PORTDOCS=	*
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= FreeBSD specific (jail v2)
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	@${INSTALL_DATA} ${FILESDIR}/README ${STAGEDIR}${DOCSDIR}/README

@@ -52,4 +52,8 @@ DOCSDIR=		${PREFIX}/share/gtk-doc/html/
 CFLAGS+=	-Wno-unused-value
 .endif
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Werror @ @g' \
+		${WRKSRC}/libdbusmenu-*/Makefile.in
+
 .include <bsd.port.post.mk>

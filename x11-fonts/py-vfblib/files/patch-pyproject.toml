@@ -1,18 +1,22 @@
---- pyproject.toml.orig	2025-01-24 10:33:32 UTC
+--- pyproject.toml.orig	1970-01-01 00:00:00 UTC
 +++ pyproject.toml
-@@ -1,5 +1,5 @@
- [project]
--name = "vfbLib"
-+name = "vfblib"
- dynamic = ["version"]
- description = "Tools for converting FontLab Studio 5 (VFB) files."
- keywords = ["vfb", "vfbLib", "fonttools"]
 @@ -23,7 +23,7 @@ dependencies = [
- requires-python = ">=3.10"
+ requires-python = ">=3.11"
  dependencies = [
-     "fonttools[ufo] >= 4.45.1",
--    "orjson >= 3.10.13, < 4",
-+    "orjson >= 3.10.11, < 4",
-     "typing_extensions >= 4.8.0",
-     "ufonormalizer >= 0.6.1",
-     "ufoLib2 >= 0.16.0",
+     "fonttools[ufo] >= 4.65.0",
+-    "orjson >= 3.12.0, < 4",
++    "orjson >= 3.11.9, < 4",
+     "typing_extensions >= 4.16.0",
+     "ufoLib2[json] >= 0.18.1",
+     "ufonormalizer >= 0.6.3",
+@@ -75,8 +75,8 @@ test = [
+ ]
+ 
+ [build-system]
+-requires = ["uv_build>=0.12.17,<0.13"]
+-build-backend = "uv_build"
++requires = ["flit-core >= 3.12"]
++build-backend = "flit_core.buildapi"
+ 
+ [tool.coverage.paths]
+ source = [

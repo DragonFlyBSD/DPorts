@@ -1,0 +1,4 @@
+PyPDF2 is a pure-Python PDF library capable of splitting, merging,
+cropping, and transforming PDF files. It provides utilities for
+extracting text and metadata, rotating pages, adding watermarks,
+and performing other common PDF manipulation tasks.

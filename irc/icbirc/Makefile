@@ -16,4 +16,7 @@ MAKE_ENV=	BINDIR="${PREFIX}/bin" MANDIR="${PREFIX}/share/man/man"
 PLIST_FILES=	bin/icbirc \
 		share/man/man8/icbirc.8.gz
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

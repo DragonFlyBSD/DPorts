@@ -1,6 +1,5 @@
 PORTNAME=	commonmarker
-PORTVERSION=	1.1.4
-PORTREVISION=	1
+PORTVERSION=	2.10.0
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 DISTFILES=	${DISTNAME}.gem
@@ -15,12 +14,14 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 RUN_DEPENDS=	rubygem-rb_sys>=0.9<1:lang/rubygem-rb_sys
 
-USES=		cargo gem gmake llvm:build
+USES=		cargo gem gmake llvm
 
 CARGO_BUILD=	no
 CARGO_INSTALL=	no
+CARGO_TEST=	no
 GEM_ENV=	MAKE=gmake
 GEMFILES=	${DISTNAME}.gem
 GEMS_SKIP_SUBDIR=	yes
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

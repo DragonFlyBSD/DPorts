@@ -1,7 +1,7 @@
 PORTNAME=	openorienteering-mapper
 PORTVERSION=	0.9.5
-PORTREVISION=	7
 DISTVERSIONPREFIX=	v
+PORTREVISION=	17
 CATEGORIES=	graphics geography
 
 MAINTAINER=	sikmir@gmail.com
@@ -12,7 +12,8 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 PATCH_SITES=	https://github.com/OpenOrienteering/mapper/commit/
-PATCHFILES=	69977dfd4cbb8608aafa8ca8b5388d4983f5430a.patch:-p1
+PATCHFILES=	69977dfd4cbb8608aafa8ca8b5388d4983f5430a.patch:-p1 \
+		a3cb8e4518f8d15a6938c9b1620c35703788c6ff.patch:-p1
 
 LIB_DEPENDS=	libpolyclipping.so:graphics/polyclipping \
 		libproj.so:graphics/proj
@@ -51,5 +52,14 @@ TEST_USE=	QT=testlib:build
 TEST_TEST_TARGET=	test
 TIFF_DESC=	Support for TIFF
 TIFF_USE=	QT=imageformats
+
+.if defined(DISABLE_LICENSES)
+CMAKE_ARGS+=	-DLICENSING_PROVIDER=OFF
+.endif
+
+IGNORE= unmaintained, please request fixing to users mailing list
+dfly-patch:
+	${LN} -sv ${WRKSRC}/doc/licensing/freebsd-licensing.cmake ${WRKSRC}/doc/licensing/dragonfly-licensing.cmake
+	${REINPLACE_CMD} -e '/third_party_components gdal/d' ${WRKSRC}/doc/licensing/CMakeLists.txt
 
 .include <bsd.port.mk>

@@ -1,0 +1,27 @@
+bin/corepack
+lib/node_modules/corepack/CHANGELOG.md
+lib/node_modules/corepack/LICENSE.md
+lib/node_modules/corepack/README.md
+@(,,755) lib/node_modules/corepack/dist/corepack.js
+lib/node_modules/corepack/dist/lib/corepack.cjs
+@(,,755) lib/node_modules/corepack/dist/npm.js
+@(,,755) lib/node_modules/corepack/dist/npx.js
+@(,,755) lib/node_modules/corepack/dist/pnpm.js
+@(,,755) lib/node_modules/corepack/dist/pnpx.js
+@(,,755) lib/node_modules/corepack/dist/yarn.js
+@(,,755) lib/node_modules/corepack/dist/yarnpkg.js
+lib/node_modules/corepack/package.json
+@(,,755) lib/node_modules/corepack/shims/corepack
+lib/node_modules/corepack/shims/nodewin/corepack
+lib/node_modules/corepack/shims/nodewin/npm
+lib/node_modules/corepack/shims/nodewin/npx
+lib/node_modules/corepack/shims/nodewin/pnpm
+lib/node_modules/corepack/shims/nodewin/pnpx
+lib/node_modules/corepack/shims/nodewin/yarn
+lib/node_modules/corepack/shims/nodewin/yarnpkg
+@(,,755) lib/node_modules/corepack/shims/npm
+@(,,755) lib/node_modules/corepack/shims/npx
+@(,,755) lib/node_modules/corepack/shims/pnpm
+@(,,755) lib/node_modules/corepack/shims/pnpx
+@(,,755) lib/node_modules/corepack/shims/yarn
+@(,,755) lib/node_modules/corepack/shims/yarnpkg

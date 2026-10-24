@@ -1,8 +1,8 @@
 PORTNAME=	qpOASES
-DISTVERSION=	3.2.1
-PORTREVISION=	10
+DISTVERSIONPREFIX=	releases/
+DISTVERSION=	3.2.2
+PORTREVISION=	1
 CATEGORIES=	math
-MASTER_SITES=	https://www.coin-or.org/download/source/${PORTNAME}/
 PKGNAMEPREFIX=	coin-or-
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,8 +17,12 @@ LIB_DEPENDS=	libopenblas.so:math/openblas
 USES=		cmake fortran tar:tgz
 USE_LDCONFIG=	yes
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	coin-or
+
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	QPOASES_BUILD_EXAMPLES
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM:STRING=3.5 # CMake 4 compatibility, see https://github.com/coin-or/qpOASES/issues/157
 
 LDFLAGS+=	${LOCALBASE}/lib/libopenblas.so
 

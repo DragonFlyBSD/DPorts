@@ -1,12 +1,11 @@
 PORTNAME=	sqldf
-DISTVERSION=	0.4-11
-PORTREVISION=	1
+DISTVERSION=	0.4-12
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	SQL select on R data frames
-WWW=		https://cran.r-project.org/web/packages/sqldf/
+WWW=		https://cran.r-project.org/package=sqldf
 
 LICENSE=	GPLv2
 

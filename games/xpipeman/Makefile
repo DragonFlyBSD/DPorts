@@ -1,6 +1,6 @@
 PORTNAME=	xpipeman
 PORTVERSION=	1.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SUNSITE/games/strategy
 DISTNAME=	${PORTNAME}
@@ -15,6 +15,7 @@ USE_XORG=	x11 xaw xext xmu xt sm ice
 
 CFLAGS+=	-Wno-error=return-type
 
+CFLAGS+= -DSYSV
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD

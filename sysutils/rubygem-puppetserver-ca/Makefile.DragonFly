@@ -1,3 +1,0 @@
-
-# missing dep for stage-qa
-RUN_DEPENDS= facter:sysutils/facter

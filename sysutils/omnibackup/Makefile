@@ -1,6 +1,6 @@
 PORTNAME=	omnibackup
 PORTVERSION=	0.2.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	info@babaei.net
@@ -23,7 +23,7 @@ OPTIONS_DEFAULT=	\
 	MYSQL
 
 OPENLDAP_DESC=	OpenLDAP support
-OPENLDAP_USES=	ldap
+OPENLDAP_USES=	ldap:server
 
 NO_ARCH=	yes
 NO_BUILD=	yes
@@ -48,10 +48,7 @@ PLIST_FILES+=	${DOCSDIR}/README.md
 .if ${PORT_OPTIONS:MOPENLDAP} \
 	|| ${PORT_OPTIONS:MPGSQL} \
 	|| ${PORT_OPTIONS:MMYSQL}
-RUN_DEPENDS+=	sudo:security/sudo
-.if ${PORT_OPTIONS:MOPENLDAP}
-RUN_DEPENDS+=	slapcat:net/openldap${OPENLDAP_VER}-server
-.endif
+USES+=	sudo
 .if ${PORT_OPTIONS:MPGSQL}
 USES+=	pgsql
 RUN_DEPENDS+=	pg_dump:databases/postgresql${PGSQL_VER_NODOT}-client

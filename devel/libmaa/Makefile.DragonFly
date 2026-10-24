@@ -1,2 +1,0 @@
-# Needed in order to build
-CFLAGS+=	-Wno-format-truncation

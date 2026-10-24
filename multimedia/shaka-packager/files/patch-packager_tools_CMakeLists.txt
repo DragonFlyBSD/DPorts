@@ -1,0 +1,8 @@
+--- packager/tools/CMakeLists.txt.orig
++++ packager/tools/CMakeLists.txt
+@@ -17,5 +17,3 @@
+ 
+ # Anyone who depends on this library will need this include directory.
+ target_include_directories(license_notice PUBLIC "${CMAKE_BINARY_DIR}")
+-
+-add_subdirectory(pssh)

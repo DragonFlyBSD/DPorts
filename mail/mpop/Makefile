@@ -1,9 +1,9 @@
 PORTNAME=	mpop
-DISTVERSION=	1.4.21
+DISTVERSION=	1.4.23
 CATEGORIES=	mail
 MASTER_SITES=	https://marlam.de/mpop/releases/
 
-MAINTAINER=	mew14930xvi@inbox.lv
+MAINTAINER=	mce@FreeBSD.org
 COMMENT=	Small and fast POP3 client
 WWW=		https://marlam.de/mpop/
 
@@ -13,13 +13,12 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		cpe gmake makeinfo pkgconfig tar:xz
 CPE_VENDOR=	martin_lambers
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-tls=no
 INFO=		mpop
 
 OPTIONS_DEFINE=		GSASL IDN LIBSECRET MPOPD NLS
 OPTIONS_DEFAULT=	GNUTLS IDN MPOPD
-OPTIONS_RADIO=		TLS
-OPTIONS_RADIO_TLS=	GNUTLS LIBTLS OPENSSL
+OPTIONS_SINGLE=		TLS
+OPTIONS_SINGLE_TLS=	GNUTLS LIBTLS OPENSSL
 OPTIONS_SUB=		yes
 
 GSASL_DESC=		${SASL_DESC} via GNU SASL
@@ -34,6 +33,8 @@ GSASL_CONFIGURE_WITH=		libgsasl
 IDN_LIB_DEPENDS=		libidn2.so:dns/libidn2
 IDN_CONFIGURE_WITH=		libidn
 LIBSECRET_LIB_DEPENDS=		libsecret-1.so:security/libsecret
+LIBSECRET_USES=			gnome
+LIBSECRET_USE=			GNOME=glib20
 LIBSECRET_CONFIGURE_WITH=	libsecret
 LIBTLS_LIB_DEPENDS=		libtls.so:security/${"${SSL_DEFAULT:Mlibressl*}":?libressl:libretls}
 LIBTLS_CONFIGURE_ON=		--with-tls=libtls

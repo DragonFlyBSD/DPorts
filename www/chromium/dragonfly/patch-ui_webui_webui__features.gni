@@ -1,0 +1,18 @@
+--- ui/webui/webui_features.gni.intermediate
++++ ui/webui/webui_features.gni
+@@ -46,13 +46,13 @@
+     enable_webui_history =
+         target_os == "win" || target_os == "mac" || target_os == "linux" ||
+         target_os == "chromeos" || is_desktop_android || target_os == "openbsd" ||
+-        target_os == "freebsd"
++        target_os == "freebsd" || target_os == "dragonfly"
+ 
+     # Enable the WebUI version of the New Tab Page.
+     enable_webui_ntp =
+         target_os == "win" || target_os == "mac" || target_os == "linux" ||
+         target_os == "chromeos" || is_desktop_android || target_os == "openbsd" ||
+-        target_os == "freebsd"
++        target_os == "freebsd" || target_os == "dragonfly"
+   }
+ 
+   declare_args() {

@@ -21,6 +21,7 @@ USE_QT=		qmake:build buildtools:build core declarative gui \
 		network sql widgets graphicaleffects:run \
 		quickcontrols:run sql-sqlite3:run
 
+CXXFLAGS= -DHAVE_OS_DRAGONFLYBSD
 post-patch:
 	@${REINPLACE_CMD} -e '/DEFINES +=/s,^macx:,,' \
 		${WRKSRC}/qmltermwidget/qmltermwidget.pro

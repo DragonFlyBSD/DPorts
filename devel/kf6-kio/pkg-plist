@@ -192,6 +192,7 @@ include/KF6/KIOWidgets/KIO/Paste
 include/KF6/KIOWidgets/KIO/PasteJob
 include/KF6/KIOWidgets/KIO/RenameDialog
 include/KF6/KIOWidgets/KIO/RenameFileDialog
+include/KF6/KIOWidgets/KIO/RenameFileWarningDialog
 include/KF6/KIOWidgets/KIO/SkipDialog
 include/KF6/KIOWidgets/KIO/SslUi
 include/KF6/KIOWidgets/KIO/WidgetsAskUserActionHandler
@@ -221,6 +222,7 @@ include/KF6/KIOWidgets/kio/paste.h
 include/KF6/KIOWidgets/kio/pastejob.h
 include/KF6/KIOWidgets/kio/renamedialog.h
 include/KF6/KIOWidgets/kio/renamefiledialog.h
+include/KF6/KIOWidgets/kio/renamefilewarningdialog.h
 include/KF6/KIOWidgets/kio/skipdialog.h
 include/KF6/KIOWidgets/kio/sslui.h
 include/KF6/KIOWidgets/kio/widgetsaskuseractionhandler.h
@@ -257,6 +259,7 @@ lib/libexec/kf6/kioworker
 lib/libkuriikwsfiltereng_private.so
 %%QT_PLUGINDIR%%/designer/kio6widgets.so
 %%QT_PLUGINDIR%%/kf6/kded/remotenotifier.so
+%%QT_PLUGINDIR%%/kf6/kded/trashdirnotify.so
 %%QT_PLUGINDIR%%/kf6/kio/kio_file.so
 %%QT_PLUGINDIR%%/kf6/kio/kio_ftp.so
 %%QT_PLUGINDIR%%/kf6/kio/kio_ghelp.so
@@ -547,6 +550,7 @@ share/kf6/searchproviders/amazon_mp3.desktop
 share/kf6/searchproviders/amg.desktop
 share/kf6/searchproviders/archpkg.desktop
 share/kf6/searchproviders/archwiki.desktop
+share/kf6/searchproviders/ard.desktop
 share/kf6/searchproviders/backports.desktop
 share/kf6/searchproviders/baidu.desktop
 share/kf6/searchproviders/beolingus.desktop
@@ -584,6 +588,7 @@ share/kf6/searchproviders/es2en.desktop
 share/kf6/searchproviders/facebook.desktop
 share/kf6/searchproviders/fedora.desktop
 share/kf6/searchproviders/feedster.desktop
+share/kf6/searchproviders/flathub.desktop
 share/kf6/searchproviders/flatpak.desktop
 share/kf6/searchproviders/flickr.desktop
 share/kf6/searchproviders/flickrcc.desktop
@@ -647,6 +652,7 @@ share/kf6/searchproviders/nl-telephone.desktop
 share/kf6/searchproviders/nl-teletekst.desktop
 share/kf6/searchproviders/npm.desktop
 share/kf6/searchproviders/opendesktop.desktop
+share/kf6/searchproviders/openstreetmap.desktop
 share/kf6/searchproviders/opensuse.desktop
 share/kf6/searchproviders/pgpkeys.desktop
 share/kf6/searchproviders/php.desktop
@@ -670,6 +676,7 @@ share/kf6/searchproviders/ruby_application_archive.desktop
 share/kf6/searchproviders/rust.desktop
 share/kf6/searchproviders/soundcloud.desktop
 share/kf6/searchproviders/sourceforge.desktop
+share/kf6/searchproviders/startpage.desktop
 share/kf6/searchproviders/technorati.desktop
 share/kf6/searchproviders/technoratitags.desktop
 share/kf6/searchproviders/thesaurus.desktop
@@ -693,7 +700,9 @@ share/kf6/searchproviders/yahoo_shopping.desktop
 share/kf6/searchproviders/yahoo_video.desktop
 share/kf6/searchproviders/yandex.desktop
 share/kf6/searchproviders/youtube.desktop
+share/kf6/searchproviders/zdf.desktop
 share/locale/af/LC_MESSAGES/kio6.mo
+share/locale/am/LC_MESSAGES/kio6.mo
 share/locale/ar/LC_MESSAGES/kio6.mo
 share/locale/ast/LC_MESSAGES/kio6.mo
 share/locale/az/LC_MESSAGES/kio6.mo
@@ -749,6 +758,8 @@ share/locale/ml/LC_MESSAGES/kio6.mo
 share/locale/mr/LC_MESSAGES/kio6.mo
 share/locale/ms/LC_MESSAGES/kio6.mo
 share/locale/my/LC_MESSAGES/kio6.mo
+share/locale/nan_TW/LC_MESSAGES/kio6.mo
+share/locale/nan_TW@latin/LC_MESSAGES/kio6.mo
 share/locale/nb/LC_MESSAGES/kio6.mo
 share/locale/nds/LC_MESSAGES/kio6.mo
 share/locale/ne/LC_MESSAGES/kio6.mo

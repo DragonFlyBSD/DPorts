@@ -1,6 +1,5 @@
 PORTNAME=	xlsxio
-PORTVERSION=	0.2.35
-PORTREVISION=	1
+PORTVERSION=	0.2.36
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/brechtsanders/xlsxio/releases/download/${PORTVERSION}/
 
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libminizip.so:archivers/minizip
 
-USES=		cmake pathfix tar:xz
+USES=		cmake tar:xz
 
 CMAKE_OFF=	BUILD_DOCUMENTATION \
 		BUILD_EXAMPLES \

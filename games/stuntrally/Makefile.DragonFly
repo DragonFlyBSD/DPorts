@@ -1,5 +1,0 @@
-.if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=   ~892MM package (too big for mirrors)
-.endif
-
-USES+=	alias

@@ -1,16 +1,18 @@
 PORTNAME=	spirv-llvm-translator
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${DISTVERSION_${FLAVOR}}
-DISTVERSION_llvm20=	20.1.1
-DISTVERSION_llvm19=	19.1.6
-DISTVERSION_llvm18=	18.1.11
-DISTVERSION_llvm17=	17.0.11
-DISTVERSION_llvm16=	16.0.11
-DISTVERSION_llvm15=	15.0.11
-DISTVERSION_llvm14=	14.0.11
-DISTVERSION_llvm13=	13.0.2
+DISTVERSION_llvm23=	23.1.1
+DISTVERSION_llvm22=	22.1.6
+DISTVERSION_llvm21=	21.1.11
+DISTVERSION_llvm20=	20.1.17
+DISTVERSION_llvm19=	19.1.22
+DISTVERSION_llvm18=	18.1.27
+DISTVERSION_llvm17=	17.0.27
+DISTVERSION_llvm16=	16.0.28
+DISTVERSION_llvm15=	15.0.27
+DISTVERSION_llvm14=	14.0.27
+DISTVERSION_llvm13=	13.0.5
 DISTVERSION_llvm12=	12.0.1
-DISTVERSION_llvm11=	11.0.2
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-${FLAVOR}
 
@@ -23,7 +25,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 
 LIB_DEPENDS=	libLLVM-${FLAVOR:S/llvm//}.so:devel/${FLAVOR}
 
-FLAVORS=	${20 19 18 17 16 15 14 13 12 11:L:S/^/llvm/}
+FLAVORS=	${23 22 21 20 19 18 17 16 15 14 13 12:L:S/^/llvm/}
 CONFLICTS_BUILD=${FLAVOR}-lite
 
 USES=		cmake compiler:c++11-lib
@@ -33,18 +35,16 @@ GH_ACCOUNT=	KhronosGroup
 GH_PROJECT=	SPIRV-LLVM-Translator
 .if ${FLAVOR:U:Mllvm1[12]}
 # empty
-.elif ${FLAVOR:U:Mllvm1[378]}
-GH_TUPLE=	KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-332-g1c6bb27:headers/projects/SPIRV-Headers
-.elif ${FLAVOR:U} == llvm19
-GH_TUPLE=	KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-350-gb73e168:headers/projects/SPIRV-Headers
+.elif ${FLAVOR:U} == llvm13
+GH_TUPLE=	KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-411-gaa6cef1:headers/projects/SPIRV-Headers
 .else
-GH_TUPLE=	KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-390-g2b2e05e:headers/projects/SPIRV-Headers
+GH_TUPLE=	KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-493-g575b651:headers/projects/SPIRV-Headers
 .endif
 DISTINFO_FILE=	${.CURDIR}/distinfo.${FLAVOR}
+PATCHDIR=	${.CURDIR}/files.${FLAVOR}
 CXXFLAGS+=	${${FLAVOR:S/llvm//} < 16 && ${COMPILER_TYPE} == clang:?-Wno-enum-constexpr-conversion:}
 CMAKE_ON=	BUILD_SHARED_LIBS LLVM_BUILD_TOOLS LLVM_TOOL_SPIRV_HEADERS_BUILD
 CMAKE_ARGS=	-DLLVM_DIR:PATH="${LOCALBASE}/${FLAVOR}"
-CMAKE_ARGS+=	${${FLAVOR:S/llvm//}==11:?-DBASE_LLVM_VERSION=11.0:}
 CMAKE_INSTALL_PREFIX=		${PREFIX}/${FLAVOR}
 _PLIST_FILES=	bin/llvm-spirv \
 		include/LLVMSPIRVLib/LLVMSPIRVExtensions.inc \
@@ -56,6 +56,12 @@ _PLIST_FILES=	bin/llvm-spirv \
 PLIST_FILES=	${_PLIST_FILES:S,^,${FLAVOR}/,}
 SOVERSION=	${${FLAVOR:S/llvm//}<18:?${DISTVERSION:R:R}:${DISTVERSION:R}}
 
+pre-everything::
+	@for f in ${.CURDIR}/files/patch-*; do if [ -e $$f ]; then \
+		${ECHO_MSG} "Error: patch-* under \"files\" aren't supported. Move under \"files.<flavor>\" instead."; \
+		exit 1; \
+	fi; done
+
 post-patch:
 	@${REINPLACE_CMD} -e '/pkgconfig/s/lib/&data/' \
 		${WRKSRC}/CMakeLists.txt
@@ -65,6 +71,14 @@ makesum:
 . for f in ${FLAVORS}
 	${MAKE} -C${.CURDIR} FLAVOR=$f DEFAULT_MAKESUM=1 ${.TARGET}
 . endfor
+.endif
+
+.if ${FLAVOR:U:Mllvm19} || ${FLAVOR:U:Mllvm2[0-2]}
+USES+=	dfly-libcxx:${FLAVOR:S/llvm//}
+.endif
+
+.if ${FLAVOR:U:Mllvm1[78]}
+USES+=	dfly-libcxx
 .endif
 
 .include <bsd.port.mk>

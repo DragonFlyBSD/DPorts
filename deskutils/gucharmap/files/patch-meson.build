@@ -1,0 +1,11 @@
+--- meson.build.orig	2026-03-08 07:43:23 UTC
++++ meson.build
+@@ -46,7 +46,7 @@ pcre2_req_version     = '10.21'
+ # changes to gucharmap. Therefore, you should NOT upgrade the unicode version
+ # of a released gucharmap, but upgrade to the gucharmap version corresponding
+ # to the desired unicode version.
+-unicode_req_version   = '17.0.0'
++unicode_req_version   = '18.0.0'
+ 
+ # API
+ 

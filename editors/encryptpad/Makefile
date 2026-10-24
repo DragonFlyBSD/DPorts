@@ -1,29 +1,22 @@
 PORTNAME=	encryptpad
-DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.0.2
-PORTREVISION=	1
+DISTVERSION=	0.6.0.0
 CATEGORIES=	editors security
+MASTER_SITES=	https://github.com/evpo/EncryptPad/releases/download/v${DISTVERSION}/
+DISTNAME=	${PORTNAME}${DISTVERSION:S/./_/g}_src
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Minimalist secure text editor and binary encryptor
 WWW=		https://evpo.net/encryptpad/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/license.txt
 
-LIB_DEPENDS=	libbotan-2.so:security/botan2
+LIB_DEPENDS=	libbotan-3.so:security/botan3
 
 USES=		compiler:c++11-lang desktop-file-utils gl gmake pkgconfig \
-		python:build qt:5 shared-mime-info shebangfix
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	evpo
-GH_PROJECT=	EncryptPad
-
-USE_GL=		gl
-USE_QT=		core gui widgets buildtools:build qmake:build
-BINARY_ALIAS=	python=${PYTHON_CMD} \
-		qmake=${QMAKE}
+		python:build qt:6 shared-mime-info
+USE_GL=		opengl
+USE_QT=		base svg
 
 PORTDOCS=	*
 
@@ -40,7 +33,7 @@ CONFIGURE_ARGS=	--cpu="ppc64le"
 .include <bsd.port.pre.mk>
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./configure.py ${CONFIGURE_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} ./configure.py ${CONFIGURE_ARGS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/release/* ${STAGEDIR}${PREFIX}/bin

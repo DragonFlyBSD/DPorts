@@ -1,7 +1,0 @@
-
-# zrj: be naughty (include dir search ordering)
-dfly-patch:
-	${REINPLACE_CMD} -e 's@BITS=32@BITS=64@g'	\
-			 -e "s@-fno-rtti@-isystem ${LOCALBASE}/include@g"	\
-		${BUILD_WRKSRC}/build-oculusvr.xml	\
-		${PATCH_WRKSRC}/gluegen/Makefile

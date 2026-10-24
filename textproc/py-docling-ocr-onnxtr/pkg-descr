@@ -1,0 +1,4 @@
+Docling OCR OnnxTR is a plugin that integrates Onnx Text Recognition
+(OnnxTR) into the Docling document processing pipeline. It provides
+ONNX Runtime-based OCR capabilities for efficient, cross-platform
+text extraction from document images.

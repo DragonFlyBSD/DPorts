@@ -1,6 +1,5 @@
 PORTNAME=	bzip3
-DISTVERSION=	1.5.1
-PORTREVISION=	1
+DISTVERSION=	1.5.4
 CATEGORIES=	archivers
 MASTER_SITES=	https://github.com/kspalaiologos/${PORTNAME}/releases/download/${DISTVERSION}/
 
@@ -13,8 +12,11 @@ LICENSE_COMB=	multi
 LICENSE_FILE_APACHE20=	${WRKSRC}/3rdparty/libsais-LICENSE
 LICENSE_FILE_LGPL3+ =	${WRKSRC}/LICENSE
 
-USES=		cmake cpe pathfix tar:xz
+USES=		cpe libtool tar:xz
 CPE_VENDOR=	bzip3_project
 USE_LDCONFIG=	yes
+GNU_CONFIGURE=	yes
+
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

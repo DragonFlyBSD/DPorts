@@ -17,4 +17,8 @@ USES=		gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	joyent
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@' \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

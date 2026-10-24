@@ -18,7 +18,7 @@ OPTIONS_DEFAULT=8
 8_DESC=		8-bit characters (required by speech_tools, festival)
 16_DESC=	16-bit characters (upstream's default)
 
-CFLAGS+=	-Wno-empty-body
+CFLAGS+= -Wno-empty-body -Wno-error=empty-body -Wno-error=nonnull -Wno-error=unused-but-set-variable
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 EXTRACT_AFTER_ARGS=	--exclude win32.h

@@ -8,9 +8,11 @@ COMMENT=	ARM TF-A for platform ${PLAT}
 
 LICENSE=	BSD3CLAUSE
 
-BUILD_DEPENDS+=	aarch64-none-elf-gcc:devel/aarch64-none-elf-gcc
+BUILD_DEPENDS+=	aarch64-none-elf-gcc:devel/aarch64-none-elf-gcc \
+		gsed:textproc/gsed
 
 USES=	gmake
+BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	ARM-software
@@ -20,10 +22,10 @@ GH_TAGNAME=	lts-${ATF_VERSION}
 SSP_UNSAFE=	yes
 MAKE_ENV+=	CROSS_COMPILE="aarch64-none-elf-"
 ATF_TARGET?=	bl31
-ALL_TARGET=	ARCH="aarch64" PLAT=${PLAT} V=1 CFLAGS= HOSTCC=${CC} ${ATF_TARGET}
+ALL_TARGET=	ARCH="aarch64" PLAT=${PLAT} V=1 CFLAGS=-Wno-unused-command-line-argument HOSTCC=${CC} ${ATF_TARGET}
 
 # Default to the latest release
-ATF_VERSION?=	v2.10.6
+ATF_VERSION?=	v2.14.6
 
 PLIST_FILES?=	${PREFIX}/share/${PORTNAME}-${PLAT}/${BL31:T}
 .if defined(FIP)
@@ -33,8 +35,6 @@ PLIST_FILES+=	${PREFIX}/share/${PORTNAME}-${PLAT}/${FIP:T}
 DESCR?=		${.CURDIR}/pkg-descr
 
 NO_ARCH=	yes
-
-LDFLAGS+=	--no-warn-rwx-segments
 
 .if !defined(PLAT)
 . if defined(DPORTS_BUILDER)
@@ -53,5 +53,19 @@ do-install:
 .if defined(FIP)
 	${INSTALL_DATA} ${WRKSRC}/build/${PLAT}/release/${FIP} ${STAGEDIR}/${PREFIX}/share/${PORTNAME}-${PLAT}/
 .endif
+
+.if ${PLAT:Mfvp}
+USES+=	ssl
+BUILD_DEPENDS+=	dtc:sysutils/dtc
+MAKE_ARGS+=	LDFLAGS=""
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-Wall@& -I${OPENSSLINC}@g" \
+			 -e 's@-lcrypto@-L${OPENSSLLIB} &@g' \
+		${WRKSRC}/tools/fiptool/Makefile
+.endif
+
+dfly-install:
+	${RM} -fv ${STAGEDIR}/README
 
 .include <bsd.port.mk>

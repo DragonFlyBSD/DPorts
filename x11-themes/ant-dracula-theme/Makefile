@@ -3,7 +3,7 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	4.0.0
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Dark theme for GTK & KDE
 WWW=		https://github.com/dracula/gtk
 

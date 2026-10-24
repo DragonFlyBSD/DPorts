@@ -30,4 +30,10 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cpdup ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/cpdup.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
+.include <bsd.port.options.mk>
+.if ${DFLYVERSION} > 500700
+USES+=	localbase:ldflags
+LIB_DEPENDS+=	libmd.so:security/libmd
+.endif
+
 .include <bsd.port.mk>

@@ -29,4 +29,9 @@ GH_PROJECT=	ZPlugins
 
 BINARY_ALIAS=	make=${GMAKE}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/meson.build \
+		${WRKSRC}/plugins/meson.build
+
 .include <bsd.port.mk>

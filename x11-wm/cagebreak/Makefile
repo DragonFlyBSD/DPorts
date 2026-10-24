@@ -1,6 +1,5 @@
 PORTNAME=	cagebreak
-DISTVERSION=	2.4.0
-PORTREVISION=	1
+DISTVERSION=	3.2.1
 CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -16,13 +15,14 @@ LIB_DEPENDS=	libevdev.so:devel/libevdev \
 		libudev.so:devel/libudev-devd \
 		libwayland-server.so:graphics/wayland \
 		libfontconfig.so:x11-fonts/fontconfig \
-		libwlroots-0.18.so:x11-toolkits/wlroots018 \
+		libwlroots-0.20.so:x11-toolkits/wlroots020 \
 		libinput.so:x11/libinput \
 		libxkbcommon.so:x11/libxkbcommon
 
-USES=		compiler:c11 gnome meson pkgconfig
+USES=		compiler:c11 gnome meson pkgconfig xorg
 USE_GITHUB=	yes
 USE_GNOME=	cairo pango
+USE_XORG=	pixman
 GH_ACCOUNT=	project-repo
 MESON_ARGS=	-Dversion_override="${DISTVERSIONFULL}" # if snapshot
 PLIST_FILES=	bin/${PORTNAME} \

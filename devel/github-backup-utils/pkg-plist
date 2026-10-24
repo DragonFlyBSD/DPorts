@@ -7,6 +7,7 @@ bin/ghe-restore
 %%DATADIR%%/ghe-backup-actions
 %%DATADIR%%/ghe-backup-config
 %%DATADIR%%/ghe-backup-config.bak
+%%DATADIR%%/ghe-backup-elm-exporter
 %%DATADIR%%/ghe-backup-es-audit-log
 %%DATADIR%%/ghe-backup-es-rsync
 %%DATADIR%%/ghe-backup-fsck
@@ -35,6 +36,7 @@ bin/ghe-restore
 %%DATADIR%%/ghe-maintenance-mode-status
 %%DATADIR%%/ghe-prune-snapshots
 %%DATADIR%%/ghe-restore-actions
+%%DATADIR%%/ghe-restore-elm-exporter
 %%DATADIR%%/ghe-restore-es-audit-log
 %%DATADIR%%/ghe-restore-es-rsync
 %%DATADIR%%/ghe-restore-external-database-compatibility-check

@@ -1,2 +1,0 @@
-# TODO(tuxillo): dunno how this is set really
-MAKE_ENV+=	OPENSSL_PREFIX=${LOCALBASE}

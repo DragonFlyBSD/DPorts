@@ -1,0 +1,40 @@
+PORTNAME=	bitsandbytes
+DISTVERSION=	0.50.2
+CATEGORIES=	misc # machine-learning
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	yuri@FreeBSD.org
+COMMENT=	k-bit optimizers and matrix multiplication routines
+WWW=		https://huggingface.co/docs/bitsandbytes/main/en/index \
+		https://github.com/bitsandbytes-foundation/bitsandbytes
+
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+		${PYTHON_PKGNAMEPREFIX}scikit-build-core>0:devel/py-scikit-build-core@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}trove-classifiers>=2025.8.6.13:devel/py-trove-classifiers@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.17:math/py-numpy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}packaging>=20.9:devel/py-packaging@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pytorch>=2.4:misc/py-pytorch@${PY_FLAVOR}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}einops>=0.8.0:misc/py-einops@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}lion-pytorch>=0.2.3:misc/py-lion-pytorch@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}scipy>=1.11.4:science/py-scipy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}transformers>=4.30.1:misc/py-transformers@${PY_FLAVOR}
+
+USES=		cmake:indirect python
+USE_PYTHON=	pep517 autoplist pytest
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	bitsandbytes-foundation
+
+TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/bitsandbytes/libbitsandbytes_cpu.so
+
+# tests as of 0.50.2: 2341 passed, 1136 skipped, 30 xfailed, 99 warnings, 27 errors in 905.70s (0:15:05)
+# failures are all "fixture 'device' not found", see https://github.com/bitsandbytes-foundation/bitsandbytes/issues/2084
+
+.include <bsd.port.mk>

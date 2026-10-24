@@ -1,11 +1,11 @@
---- lib/socks_mosq.c.orig	2021-06-11 10:07:38.501387000 +0200
-+++ lib/socks_mosq.c	2021-06-11 10:08:01.790864000 +0200
-@@ -30,7 +30,7 @@
+--- lib/socks_mosq.c.orig	2026-10-01 00:00:00 UTC
++++ lib/socks_mosq.c
+@@ -30,7 +30,7 @@ Contributors:
  #else
  #  include <arpa/inet.h>
  #endif
--#if defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(_AIX)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(_AIX) || defined(__DragonFly__)
  #  include <sys/socket.h>
  #  include <netinet/in.h>
  #endif

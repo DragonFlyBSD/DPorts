@@ -1,19 +1,23 @@
 PORTNAME=	urlchecker
-DISTVERSION=	1.0.1
+DISTVERSION=	2.0.0
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	uzsolt@FreeBSD.org
 COMMENT=	URL checking tools
-WWW=		https://cran.r-project.org/web/packages/urlchecker/
+WWW=		https://cran.r-project.org/package=urlchecker
 
 LICENSE=	GPLv3
 
-CRAN_DEPENDS=	R-cran-cli>=2.4.0:devel/R-cran-cli \
+RUN_DEPENDS=	R-cran-cli>=2.4.0:devel/R-cran-cli \
 		R-cran-curl>0:ftp/R-cran-curl \
+		R-cran-gitcreds>0:security/R-cran-gitcreds \
+		R-cran-rlang>=1.1.0:devel/R-cran-rlang \
 		R-cran-xml2>0:textproc/R-cran-xml2
-BUILD_DEPENDS=	${CRAN_DEPENDS}
-RUN_DEPENDS=	${CRAN_DEPENDS}
+TEST_DEPENDS=	R-cran-covr>0:devel/R-cran-covr \
+		R-cran-testthat>0:devel/R-cran-testthat \
+		R-cran-webfakes>0:devel/R-cran-webfakes \
+		R-cran-withr>0:devel/R-cran-withr
 
 USES=		cran:auto-plist
 

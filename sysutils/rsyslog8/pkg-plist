@@ -19,12 +19,13 @@ lib/rsyslog/lmtcpclt.so
 lib/rsyslog/lmtcpsrv.so
 lib/rsyslog/lmzlibw.so
 lib/rsyslog/mmexternal.so
+lib/rsyslog/mmleefparse.so
 lib/rsyslog/ommail.so
 lib/rsyslog/omprog.so
 lib/rsyslog/omstdout.so
 lib/rsyslog/omtesting.so
 lib/rsyslog/omuxsock.so
 lib/rsyslog/pmciscoios.so
+sbin/rsyslogd
 share/man/man5/rsyslog.conf.5.gz
 share/man/man8/rsyslogd.8.gz
-sbin/rsyslogd

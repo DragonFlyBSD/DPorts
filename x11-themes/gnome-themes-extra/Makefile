@@ -22,4 +22,7 @@ USE_GNOME=	cairo gtk20 intltool gtk30 librsvg2
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${PREFIX}/share/locale
+
 .include <bsd.port.mk>

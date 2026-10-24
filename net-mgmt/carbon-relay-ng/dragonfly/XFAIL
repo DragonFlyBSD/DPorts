@@ -1,0 +1,1 @@
+XFAIL_DragonFly= go text_formatter.go IsTerminal

@@ -1,2 +1,0 @@
-# MF forces -lcrypto
-LDFLAGS:= ${LDFLAGS:N-lcrypto} -L${OPENSSLLIB} -lcrypto

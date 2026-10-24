@@ -1,6 +1,6 @@
 PORTNAME=	FrontISTR
 PORTVERSION=	5.2
-PORTREVISION=	6
+PORTREVISION=	8
 DISTVERSIONPREFIX=	v
 CATEGORIES=	science cad
 
@@ -38,6 +38,7 @@ DOCS_ALL_TARGET=	doc
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+OPTIONS_EXCLUDE= DOCS
 pre-configure:
 	${REINPLACE_CMD} -e 's/awk/gawk/' ${WRKSRC}/tests/test.sh
 
@@ -52,5 +53,11 @@ do-install-EXAMPLES-on:
 
 do-test:
 	(cd ${TEST_WRKSRC} && ctest)
+
+USES:= ${USES:Nmpi}
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibscalapack*}
+dfly-patch:
+	${REINPLACE_CMD} -e '/target_link_libraries(hecm/s@)@ compat)@g' \
+		${WRKSRC}/hecmw1/CMakeLists.txt
 
 .include <bsd.port.mk>

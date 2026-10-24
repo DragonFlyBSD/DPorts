@@ -2,8 +2,8 @@ PORTNAME=	kdoctools
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	devel kde kde-frameworks
 
-COMMENT=	Create documentation from DocBook
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Create documentation from DocBook
 
 BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
 		docbook-xml>0:textproc/docbook-xml \
@@ -16,5 +16,9 @@ USE_GNOME=	libxml2 libxslt
 USE_KDE=	archive i18n \
 		ecm:build
 USE_QT=		base
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

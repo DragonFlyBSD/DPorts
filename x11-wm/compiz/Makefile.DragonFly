@@ -1,3 +1,0 @@
-# There is no nvidia support on DragonFly
-
-RUN_DEPENDS:=	${RUN_DEPENDS:Nnvidia-settings*}

@@ -10,7 +10,7 @@ WWW=		https://www.ulduzsoft.com/libircclient/
 LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		compiler:c11
+USES= compiler:c11 ssl localbase
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes

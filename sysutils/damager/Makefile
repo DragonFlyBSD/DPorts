@@ -23,4 +23,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@clang@cc@g' -e 's@-std=c90@@g' \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

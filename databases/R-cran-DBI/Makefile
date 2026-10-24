@@ -1,11 +1,11 @@
 PORTNAME=	DBI
-DISTVERSION=	1.2.3
+DISTVERSION=	1.3.0
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	R Database Interface
-WWW=		https://cran.r-project.org/web/packages/DBI/
+WWW=		https://cran.r-project.org/package=DBI
 
 LICENSE=	LGPL21+
 

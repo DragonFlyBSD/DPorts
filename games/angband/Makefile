@@ -10,13 +10,13 @@ WWW=		https://rephial.org/
 
 LICENSE=	GPLv2
 
-USES=		autoreconf gmake ncurses
+USES=		autoreconf gmake iconv:build ncurses
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_NCURSES_CONFIG=${TRUE}
 CONFIGURE_ARGS=	--localstatedir=/var
 
 CPPFLAGS+=	-I${NCURSESINC}
-LDFLAGS+=	-Wl,--Bstatic -L${NCURSESLIB} -lncursesw -Wl,--Bdynamic
+LDFLAGS= 
 
 OPTIONS_DEFINE=	SDL X11 DOCS
 OPTIONS_DEFAULT=X11
@@ -35,6 +35,7 @@ X11_USE=		XORG=ice,sm,x11
 X11_RUN_DEPENDS=	xorg-fonts-miscbitmaps>=0:x11-fonts/xorg-fonts-miscbitmaps
 X11_CONFIGURE_ENABLE=	x11
 
+LIBS= ${LOCALBASE}/lib/libncurses.a ${LOCALBASE}/lib/libtinfo.a
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/-Wno-missing-field-initializers/,/fi$$/d ; \
@@ -43,6 +44,9 @@ post-patch:
 		's|.SILENT:||' ${WRKSRC}/mk/buildsys.mk.in
 	@${REINPLACE_CMD} -e \
 		's|-O0||' ${WRKSRC}/src/Makefile
+	cd ${WRKSRC}/docs && \
+		${ICONV_CMD} -f MACCENTRALEUROPE -t UTF-8 version.rst > version-utf-8.rst && \
+		${MV} version-utf-8.rst version.rst
 
 post-build-DOCS-on:
 	# Needs gmake, although we could run sphinx directly

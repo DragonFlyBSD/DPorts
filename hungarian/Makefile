@@ -1,0 +1,7 @@
+SUBDIR += aspell
+SUBDIR += hunspell
+SUBDIR += hyphen
+SUBDIR += jdictionary-eng-hun
+SUBDIR += jdictionary-eng-hun-expr
+SUBDIR += libreoffice
+SUBDIR += mythes

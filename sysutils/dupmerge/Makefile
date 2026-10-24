@@ -25,4 +25,9 @@ do-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${STAGEDIR}${DOCSDIR}/
 
+LDFLAGS:= ${LDFLAGS:N-lroken}
+dfly-patch:
+	${REINPLACE_CMD} -e '/roken.h/d'	\
+		${WRKSRC}/dupmerge.c
+
 .include <bsd.port.mk>

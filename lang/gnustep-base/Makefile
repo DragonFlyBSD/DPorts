@@ -1,13 +1,10 @@
 PORTNAME=	gnustep-base
-DISTVERSION=	1.29.0
-PORTREVISION=	2
+DISTVERSION=	1.31.1
+PORTREVISION=	1
 CATEGORIES=	lang devel gnustep
 MASTER_SITES=	https://github.com/gnustep/libs-base/releases/download/base-${DISTVERSION:S,.,_,g}/
 
-PATCH_SITES=	https://github.com/gnustep/libs-base/commit/
-PATCHFILES=	37913d006d96a6bdcb963f4ca4889888dcce6094.patch:-p1
-
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	joe.maloney@icloud.com
 COMMENT=	GNUstep Foundation library
 WWW=		http://www.gnustep.org/
 
@@ -55,6 +52,7 @@ ICU_CONFIGURE_OFF=	--disable-icu
 GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
 GNUTLS_CONFIGURE_OFF=	--disable-tls
 
+LLD_UNSAFE= yes	# Needs linker to provide library search paths.
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MAVAHI}

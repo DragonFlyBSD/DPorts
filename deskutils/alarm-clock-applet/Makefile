@@ -1,6 +1,6 @@
 PORTNAME=	alarm-clock-applet
 PORTVERSION=	0.3.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils
 MASTER_SITES=	http://launchpad.net/alarm-clock/trunk/0.3.4/+download/
 
@@ -28,5 +28,8 @@ GCONF_SCHEMAS=	alarm-clock.schemas
 OPTIONS_DEFINE=	NLS
 NLS_USES=	gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror=format=2//g' ${WRKSRC}/configure
 
 .include <bsd.port.mk>

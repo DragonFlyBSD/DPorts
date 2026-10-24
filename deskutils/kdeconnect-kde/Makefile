@@ -9,6 +9,7 @@ WWW=		https://community.kde.org/KDEConnect
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
+		libei.so:x11/libei \
 		libfakekey.so:x11/libfakekey \
 		libwayland-client.so:graphics/wayland \
 		libxkbcommon.so:x11/libxkbcommon \
@@ -18,10 +19,12 @@ BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 RUN_DEPENDS=	sshpass:security/sshpass \
 		sshfs:filesystems/sshfs
 
-USES=		cmake compiler:c++17-lang desktop-file-utils gettext-tools \
+USES=		cmake compiler:c++17-lang cpe desktop-file-utils gettext-tools \
 		gl kde:6 localbase:ldflags pkgconfig qt:6 ssl tar:xz xorg
+CPE_PRODUCT=	kdeconnect
+CPE_VENDOR=	kde
 USE_GL=		gl opengl # GLX
-USE_KDE=	bookmarks colorscheme completion config configwidgets \
+USE_KDE=	bookmarks colorscheme completion config \
 		coreaddons crash dbusaddons doctools guiaddons i18n iconthemes \
 		itemmodels itemviews jobwidgets kcmutils kio kirigami-addons \
 		kirigami2 notifications package people qqc2-desktop-style \
@@ -33,6 +36,11 @@ USE_LDCONFIG=	${QT_QMLDIR}/org/kde/kdeconnect
 
 OPTIONS_DEFINE=	DOCS
 
-KDE_APPLICATIONS_SHLIB_VER=${KDE_APPLICATIONS_VERSION}
+LIB_DEPENDS:= ${LIB_DEPENDS:NlibKF5PulseAudioQt*}
+DFLY_PLIST= ${WRKSRC}/pkg-plist
+PLIST= ${DFLY_PLIST}
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/kdeconnect-kde/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/findthisdevice/d' -e '/pausemusic/d' -e '/_systemvolume/d' ${DFLY_PLIST}
 
 .include <bsd.port.mk>

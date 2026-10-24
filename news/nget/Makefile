@@ -25,6 +25,7 @@ OPTIONS_DEFINE=	DOCS
 
 WRKSRC=	${WRKDIR}/nget-${PORTVERSION}
 
+USE_CXXSTD= c++11
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == gcc

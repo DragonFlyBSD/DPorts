@@ -1,5 +1,6 @@
 PORTNAME=	webkit
 DISTVERSION=	2.46.6
+PORTREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	https://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk_${FLAVOR}
@@ -17,6 +18,7 @@ LICENSE_COMB=	dual
 
 BROKEN_riscv64=	error: Unknown Architecture
 
+BUILD_DEPENDS=	rubygem-getoptlong>0:devel/rubygem-getoptlong
 LIB_DEPENDS=	libavif.so:graphics/libavif \
 		libdrm.so:graphics/libdrm \
 		libenchant-2.so:textproc/enchant2 \
@@ -84,6 +86,8 @@ USE_GNOME+=	gtk30
 CMAKE_OFF+=	USE_GTK4
 .endif
 .if ${FLAVOR:M40}
+DEPRECATED=	libsoup 2 support scheduled for removal in 2.52: https://webkitgtk.org/2025/10/07/webkitgtk-soup2-deprecation.html
+
 LIB_DEPENDS+=	libsoup-2.4.so:devel/libsoup
 
 CMAKE_ON+=	USE_SOUP2
@@ -124,6 +128,10 @@ WAYLAND_CMAKE_BOOL=	ENABLE_WAYLAND_TARGET
 WAYLAND_BUILD_DEPENDS=	wayland-protocols>=1.12:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=	libwayland-egl.so:graphics/wayland
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
+LIB_DEPENDS+= libepoll-shim.so:devel/libepoll-shim
+CFLAGS= -I${LOCALBASE}/include/libepoll-shim
+LDFLAGS= -lepoll-shim
 .include <bsd.port.options.mk>
 
 .ifdef WITH_DEBUG

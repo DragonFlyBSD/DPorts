@@ -1,0 +1,4 @@
+Docling Serve Haystack provides a Haystack converter component for
+Docling Serve, enabling document conversion via HTTP. It allows
+Haystack pipelines to use a remote Docling Serve instance for
+document processing.

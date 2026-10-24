@@ -1,5 +1,6 @@
 PORTNAME=	uperf
-DISTVERSION=	1.0.7
+DISTVERSIONPREFIX=	v
+DISTVERSION=	1.0.8
 PORTEPOCH=	1
 CATEGORIES=	benchmarks
 
@@ -10,11 +11,11 @@ WWW=		https://uperf.org/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		ssl
+USES=		autoreconf ssl
 USE_GITHUB=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--datadir=${DATADIR}/workloads
+CONFIGURE_ARGS= --datadir=${DATADIR}/workloads --with-ssl-includes=${OPENSSLINC} --with-ssl-libs=${OPENSSLLIB}
 
 OPTIONS_DEFINE=	DOCS
 

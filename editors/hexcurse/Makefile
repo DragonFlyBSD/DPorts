@@ -20,6 +20,7 @@ INSTALL_TARGET=	install-strip
 
 PLIST_FILES=	bin/hexcurse share/man/man1/hexcurse.1.gz
 
+CFLAGS= -Wno-format -Wno-implicit-fallthrough -Wno-stringop-truncation -Wno-stringop-overflow
 post-patch:
 	@${REINPLACE_CMD} -e 's, getopt\.c,,' ${WRKSRC}/src/Makefile.am
 	@${REINPLACE_CMD} -e 's,hgetopt,getopt,' ${WRKSRC}/src/hexcurse.c

@@ -34,6 +34,7 @@ INFINITE_DESC=	Infinite retry in client commands
 
 OPTIONS_SUB=	yes
 
+CFLAGS= -Wno-misleading-indentation
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MINFINITE}

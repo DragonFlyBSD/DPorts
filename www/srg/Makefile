@@ -20,6 +20,7 @@ GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
 OPTIONS_DEFINE=	EXAMPLES
 
+CXXFLAGS= -fpermissive
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/CPPFLAGS/s|-I/usr/local/include|| ; \

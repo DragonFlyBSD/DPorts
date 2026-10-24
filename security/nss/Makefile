@@ -1,5 +1,5 @@
 PORTNAME=	nss
-PORTVERSION=	3.112
+DISTVERSION=	3.131.1
 CATEGORIES=	security
 MASTER_SITES=	MOZILLA/security/${PORTNAME}/releases/${DISTNAME:tu:C/[-.]/_/g}_RTM/src
 
@@ -10,8 +10,6 @@ WWW=		https://firefox-source-docs.mozilla.org/security/nss/index.html
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	${BUILD_DEPENDS_${ARCH}}
-BUILD_DEPENDS_powerpc64le=	as:devel/binutils
 LIB_DEPENDS=	libnspr4.so:devel/nspr \
 		libsqlite3.so:databases/sqlite3
 TEST_DEPENDS=	bash:shells/bash
@@ -111,13 +109,15 @@ do-install:
 		-exec ${INSTALL_DATA} {} ${STAGEDIR}${PREFIX}/include/nss \;
 	${INSTALL_LIB} ${BINS}/lib/*.so \
 		${STAGEDIR}${PREFIX}/lib/
-	${INSTALL_DATA} ${BINS}/lib/libcrmf.a \
-		${STAGEDIR}${PREFIX}/lib/
 .for bin in ${INSTALL_BINS}
 	${INSTALL_PROGRAM} ${BINS}/bin/${bin} \
 		${STAGEDIR}${PREFIX}/bin
 .endfor
 	${INSTALL_SCRIPT} ${WRKDIR}/nss-config ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/nss.pc ${STAGEDIR}${PREFIX}/libdata/pkgconfig
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/WARNING_CFLAGS += -Werror/d' \
+		${WRKSRC}/coreconf/Werror.mk
 
 .include <bsd.port.mk>

@@ -1,20 +1,11 @@
---- cmake/CompileBoost.cmake.orig	2023-06-01 02:57:35 UTC
+--- cmake/CompileBoost.cmake.orig	2025-07-02 21:14:39 UTC
 +++ cmake/CompileBoost.cmake
-@@ -123,7 +123,7 @@ if(USE_SANITIZER)
- endif()
+@@ -60,6 +60,8 @@ function(compile_boost)
  
- # since boost 1.72 boost installs cmake configs. We will enforce config mode
--set(Boost_USE_STATIC_LIBS ON)
-+set(Boost_USE_STATIC_LIBS OFF)
- 
- # Clang and Gcc will have different name mangling to std::call_once, etc.
- if (UNIX AND CMAKE_CXX_COMPILER_ID MATCHES "Clang$")
-@@ -151,7 +151,7 @@ if(WIN32)
-   return()
- endif()
- 
--find_package(Boost 1.78.0 EXACT QUIET COMPONENTS context filesystem iostreams serialization system CONFIG PATHS ${BOOST_HINT_PATHS})
-+find_package(Boost 1.78.0 COMPONENTS context filesystem iostreams serialization system CONFIG PATHS ${BOOST_HINT_PATHS})
- set(FORCE_BOOST_BUILD OFF CACHE BOOL "Forces cmake to build boost and ignores any installed boost")
- 
- # The precompiled boost silently broke in CI.  While investigating, I considered extending
+   set(BOOST_INSTALL_DIR "${CMAKE_BINARY_DIR}/boost_install")
+   ExternalProject_add("${COMPILE_BOOST_TARGET}Project"
++    SOURCE_DIR         ${BOOST_SOURCE_DIR}
++    DOWNLOAD_COMMAND   ""
+     URL                "https://archives.boost.io/release/1.78.0/source/boost_1_78_0.tar.bz2"
+     URL_HASH           SHA256=8681f175d4bdb26c52222665793eef08490d7758529330f98d3b29dd0735bccc
+     CONFIGURE_COMMAND  ${BOOTSTRAP_COMMAND}

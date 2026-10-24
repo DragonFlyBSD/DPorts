@@ -1,5 +1,5 @@
 PORTNAME=	v
-PORTVERSION=	0.4.1
+PORTVERSION=	0.5.1
 CATEGORIES=	lang
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -10,6 +10,8 @@ WWW=		https://vlang.io/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN_i386=	error: mismatched types
+
 USES=		compiler:c11 gmake
 
 ALL_TARGET=	v
@@ -18,12 +20,13 @@ TEST_TARGET=	check
 
 USE_GITHUB=	yes
 GH_TUPLE=	vlang:v:${PORTVERSION} \
-		vlang:vc:b59fe13:vc/vc
+		vlang:vc:f461dfe:vc/vc
 
-PORTSCOUT=	skipv:weekly.*
+PORTSCOUT=	limit:^[0-9\.]*$$
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	# cd ${WRKSRC} && ./v symlink # Does not respect DESTDIR
 	${MKDIR} ${STAGEDIR}${DATADIR}

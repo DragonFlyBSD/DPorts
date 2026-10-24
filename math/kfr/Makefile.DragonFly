@@ -1,3 +1,0 @@
-
-# needs clang in order to build libkfr_dft.so too
-USE_CLANG_FALLBACK=	default

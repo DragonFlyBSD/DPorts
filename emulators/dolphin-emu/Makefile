@@ -1,6 +1,5 @@
 PORTNAME=	dolphin-emu
-PORTVERSION=	2412
-PORTREVISION=	1
+PORTVERSION=	2609
 CATEGORIES=	emulators
 
 MAINTAINER=	martymac@FreeBSD.org
@@ -10,16 +9,20 @@ WWW=		https://www.dolphin-emu.org
 LICENSE=	BSD3CLAUSE CC0-1.0 GPLv2+ MIT
 LICENSE_COMB=	multi
 
-BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers
+BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers \
+		glslang>0:graphics/glslang \
+		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 # Notes on dependencies:
 # - alsa support has been disabled (not optimal)
-# - enet and soundtouch come from Externals/ as Dolphin's versions diverge
+# - enet comes from Externals/ as Dolphin's version diverges
 #   (see comments in CMakeLists.txt)
 # Various problems that may be addressed in the future:
 # - freesurround comes from Externals/ as it is not available from ports yet
 # - cubeb comes from Externals/ as it is not available from ports yet
-# - gtest detection is missing (Externals/ version enforced by CMakeLists.txt)
+# - SFML comes from Externals/ as v3.0 is needed
 # - mbedtls2 comes from Externals/ as it has been deprecated in the ports tree
+# - mGBA comes from Externals/ as building with our ports' version fails
+# - gtest detection is missing (Externals/ version enforced by CMakeLists.txt)
 LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libavdevice.so:multimedia/ffmpeg \
 		libavfilter.so:multimedia/ffmpeg \
@@ -39,13 +42,14 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libpulse.so:audio/pulseaudio \
 		libjack.so:audio/jack \
 		libsndio.so:audio/sndio \
-		libsfml-system.so:devel/sfml \
 		libminiupnpc.so:net/miniupnpc \
 		libcurl.so:ftp/curl \
 		libhidapi.so:comms/hidapi \
-		libxkbcommon.so:x11/libxkbcommon
+		libxkbcommon.so:x11/libxkbcommon \
+		libudev.so:devel/libudev-devd \
+		libevdev.so:devel/libevdev
 
-USES=		cmake compiler:c++17-lang desktop-file-utils elfctl gl iconv \
+USES=		cmake compiler:c++23-lang desktop-file-utils elfctl gl iconv \
 		pkgconfig python qmake qt:6 sdl xorg
 
 ELF_FEATURES=	+noaslr:Binaries/dolphin-emu*
@@ -54,21 +58,28 @@ ELF_FEATURES=	+noaslr:Binaries/dolphin-emu*
 USE_GITHUB=	yes
 GH_PROJECT=	dolphin
 GH_TAGNAME=	${PORTVERSION}
+USES+= localbase:ldflags
+LIB_DEPENDS+= libasound.so:audio/alsa-lib
+RUN_DEPENDS= ${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins alsa-lib>=1.1.1_1:audio/alsa-lib
+CMAKE_ARGS+= -DENABLE_ALSA:BOOL=ON
+CMAKE_ARGS+= -DENABLE_PULSEAUDIO:BOOL=OFF
+IGNORE= unmaintained, please request fixing to users mailing list
 .include "${.CURDIR}/Makefile.tuples"
 
 USE_GL=		egl gl
-USE_SDL=	sdl2
+USE_SDL=	sdl3
 USE_XORG=	ice sm x11 xext xi xrandr
 USE_QT=		base svg
 
-# XXX Does not build with USE_MGBA or ENABLE_EVDEV
 CMAKE_ARGS+=	-DUSE_UPNP:BOOL=ON \
+		-DENABLE_NOGUI:BOOL=ON \
 		-DENABLE_QT:BOOL=ON \
 		-DENABLE_ALSA:BOOL=OFF \
 		-DENABLE_PULSEAUDIO:BOOL=ON \
 		-DUSE_DISCORD_PRESENCE:BOOL=OFF \
-		-DUSE_MGBA:BOOL=OFF \
-		-DENABLE_AUTOUPDATE:BOOL=OFF
+		-DUSE_MGBA:BOOL=ON \
+		-DENABLE_AUTOUPDATE:BOOL=OFF \
+		-DENABLE_EVDEV:BOOL=ON
 MAKE_ENV+=	DESTDIR="${STAGEDIR}"
 
 # XXX Fix build on archs where 'unsigned long' is 32bit
@@ -76,7 +87,7 @@ CXXFLAGS+=	-DLZO_CFG_PREFER_TYPEOF_ACC_INT32E_T=LZO_TYPEOF_INT
 
 # Bypass git check (and set a dummy -unused- revision)
 CMAKE_ARGS+=	-DDOLPHIN_WC_BRANCH:STRING="stable" \
-		-DDOLPHIN_WC_REVISION:STRING="1"
+		-DDOLPHIN_WC_REVISION:STRING="${PORTVERSION}"
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
@@ -111,5 +122,12 @@ Makefile.tuples::
 		git submodule init && \
 		git submodule update --recursive && \
 		${SH} ${FILESDIR}/gen_gh_tuple.sh > ${.CURDIR}/Makefile.tuples
+
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
+		${WRKSRC}/Externals/cubeb/src/cubeb_alsa.c
+	${REINPLACE_CMD} -e 's@_POSIX_SOURCE@&___@g' \
+		${WRKSRC}/Externals/cubeb/src/cubeb_jack.cpp
 
 .include <bsd.port.post.mk>

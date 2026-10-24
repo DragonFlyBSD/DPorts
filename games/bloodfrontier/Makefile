@@ -24,7 +24,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 ALL_TARGET=	libenet
 
-CXXFLAGS+=	-Wno-c++11-narrowing
+CXXFLAGS+= -Wno-c++11-narrowing -Wno-narrowing
 
 SUB_FILES=	${PLIST_FILES:Mbin/*:T}
 
@@ -67,5 +67,9 @@ do-install-CLIENT-on:
 do-install-DEDICATED-on:
 	${INSTALL_SCRIPT} ${WRKDIR}/bfserver ${STAGEDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/bfserver ${STAGEDIR}${PREFIX}/libexec/
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	380M package (too big for mirrors)
+.endif
 
 .include <bsd.port.mk>

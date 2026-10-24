@@ -1,10 +1,9 @@
 PORTNAME=	sword
-PORTVERSION=	1.8.1
-PORTREVISION=	17
+PORTVERSION=	1.9.0
 CATEGORIES=	misc
 MASTER_SITES=	http://crosswire.org/ftpmirror/pub/sword/source/v${PORTVERSION:R}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Framework for manipulating Bible texts
 WWW=		https://crosswire.org/sword/index.jsp
 
@@ -36,6 +35,7 @@ CLUCENE_CONFIGURE_WITH=	clucene=${LOCALBASE} icu
 CURL_LIB_DEPENDS=	libcurl.so:ftp/curl
 CURL_CONFIGURE_WITH=	curl
 
+USE_CXXSTD= gnu++17
 post-install:
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install_config)
 	${MV} ${STAGEDIR}${PREFIX}/etc/sword.conf \

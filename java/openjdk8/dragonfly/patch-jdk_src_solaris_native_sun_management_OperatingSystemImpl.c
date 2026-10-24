@@ -1,15 +1,16 @@
---- jdk/src/solaris/native/sun/management/OperatingSystemImpl.c.orig	2021-01-20 00:41:17 UTC
+--- jdk/src/solaris/native/sun/management/OperatingSystemImpl.c.orig	2026-10-23 00:00:00 UTC
 +++ jdk/src/solaris/native/sun/management/OperatingSystemImpl.c
-@@ -56,7 +56,7 @@
- #include <limits.h>
- #include <stdlib.h>
- #include <unistd.h>
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
+@@ -60,6 +60,9 @@
+ #include <sys/user.h>
  #include <vm/vm_param.h>
  #endif
++#ifdef __DragonFly__
++#include <vm/vm_param.h>
++#endif
  
-@@ -365,10 +365,10 @@ Java_sun_management_OperatingSystemImpl_
+ #if defined(_AIX)
+ #include <libperfstat.h>
+@@ -388,10 +391,10 @@
          return -1;
      }
      return (jlong)vm_stats.free_count * page_size;
@@ -22,7 +23,7 @@
         "vm.stats.vm.v_cache_count",
  #endif
         /* "vm.stats.vm.v_inactive_count", */
-@@ -376,7 +376,11 @@ Java_sun_management_OperatingSystemImpl_
+@@ -399,7 +402,11 @@
      };
      size_t size;
      jlong free_pages;

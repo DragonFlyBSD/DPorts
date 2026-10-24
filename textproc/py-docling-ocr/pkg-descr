@@ -1,0 +1,4 @@
+Docling OCR is an optical character recognition package that uses LLM
+models for text extraction from images. It provides a unified interface
+for OCR operations within the Docling pipeline, supporting multiple OCR
+backends and LLM-based text recognition approaches.

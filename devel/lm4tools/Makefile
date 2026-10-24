@@ -1,5 +1,5 @@
 PORTNAME=	lm4tools
-PORTVERSION=	0.1.3.20160905
+PORTVERSION=	0.1.3.20180903
 CATEGORIES=	devel
 
 MAINTAINER=	lev@FreeBSD.org
@@ -11,7 +11,7 @@ LICENSE_COMB=	multi
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	utzig
-GH_TAGNAME=	65fbc45
+GH_TAGNAME=	61a7d17
 
 USES=		gmake
 
@@ -30,5 +30,10 @@ do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}/lmicdiusb
 	${INSTALL_DATA} ${WRKSRC}/lmicdiusb/commands.txt ${STAGEDIR}${DOCSDIR}/lmicdiusb/commands.txt
 	${INSTALL_DATA} ${WRKSRC}/lmicdiusb/README ${STAGEDIR}${DOCSDIR}/lmicdiusb/README
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/lm4flash/Makefile \
+		${WRKSRC}/lmicdiusb/Makefile
 
 .include <bsd.port.mk>

@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/license.terms
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 # c_src/Makefile line 103
-NOT_FOR_ARCHS=		armv6 armv7 i386 mips powerpc
+NOT_FOR_ARCHS=		armv6 armv7 i386 powerpc
 NOT_FOR_ARCHS_REASON=	subcomponent libigl does not support 32bit platforms
 
 BUILD_DEPENDS=	erl:lang/erlang \
@@ -68,5 +68,11 @@ do-install:
 		${STAGEDIR}${PREFIX}/lib/erlang/lib/${PORTNAME} "-name *\.so"
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/src/${PORTNAME}.icon ${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME}.ico
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Werror @@g' \
+		${WRKSRC}/e3d/Makefile \
+		${WRKSRC}/plugins_src/import_export/Makefile \
+		${WRKSRC}/plugins_src/autouv/Makefile
 
 .include <bsd.port.mk>

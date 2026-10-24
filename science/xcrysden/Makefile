@@ -1,6 +1,6 @@
 PORTNAME=	xcrysden
 PORTVERSION=	1.6.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	science
 MASTER_SITES=	http://www.xcrysden.org/download/
 
@@ -51,4 +51,5 @@ post-install:
 	# move examples from the docs dir
 	@${MV} ${STAGEDIR}${DOCSDIR}/examples ${STAGEDIR}${EXAMPLESDIR}
 
+BINARY_ALIAS:= ${BINARY_ALIAS:Ngfortran=*} gfortran=gfortran${_GCC_VER}
 .include <bsd.port.mk>

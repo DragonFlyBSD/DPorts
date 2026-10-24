@@ -11,6 +11,7 @@ LICENSE=	BSD2CLAUSE
 
 PLIST_FILES=	bin/${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-build:
 	cd ${BUILD_WRKSRC} && ${CC} ${CFLAGS} -DSWITCHCHAR=\'-\' \
 		-DSWITCHSTR=\"-\" file.c io-curse.c uhex.c \

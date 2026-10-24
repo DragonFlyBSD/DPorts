@@ -26,6 +26,7 @@ rcvar=proxysql_enable
 load_rc_config $name
 
 : ${proxysql_enable:="NO"}
+: ${proxysql_command:="%%PREFIX%%/sbin/proxysql"}
 : ${proxysql_user:="proxysql"}
 : ${proxysql_group:="proxysql"}
 : ${proxysql_config:="%%ETCDIR%%/proxysql.cfg"}
@@ -33,15 +34,12 @@ load_rc_config $name
 : ${proxysql_args:=""}
 : ${proxysql_restart_delay:="10"}
 
-
+##### REMOVE daemon, allow proxysql to fork
 pidfile="/var/run/proxysql/proxysql.pid"
-command="/usr/sbin/daemon"
-proxysql_command="%%PREFIX%%/sbin/proxysql"
-command_args="-rP ${pidfile} -S -R ${proxysql_restart_delay} \
-    -T ${name} ${proxysql_command} \
-    -f -c ${proxysql_config} \
-    -D ${proxysql_datadir} \
-    --no-version-check ${proxysql_args}"
+command="%%PREFIX%%/sbin/proxysql"
+command_args="-c ${proxysql_config} \
+              -D ${proxysql_datadir} \
+              --no-version-check ${proxysql_args}"
 required_files="${proxysql_config}"
 extra_commands="reload initial"
 reload_cmd=proxysql_reload
@@ -49,12 +47,12 @@ initial_cmd=proxysql_initial
 
 proxysql_initial()
 {
-    su -m ${proxysql_user} -c "${proxysql_command} --initial"
+    su -m ${proxysql_user} -c "${proxysql_command} ${command_args} --initial"
 }
 
 proxysql_reload()
 {
-    su -m ${proxysql_user} -c "${proxysql_command} --reload"
+    su -m ${proxysql_user} -c "${proxysql_command} ${command_args} --reload"
 }
 
 load_rc_config $name

@@ -45,4 +45,8 @@ post-patch:
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/dwmblocks
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's,__OpenBSD__,__DragonFly__,g' \
+		${WRKSRC}/dwmblocks.c
+
 .include <bsd.port.mk>

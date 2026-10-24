@@ -1,0 +1,4 @@
+pdfminer.six is a community-maintained Python PDF parser and analyzer.
+It extracts text, images, and metadata from PDF files and provides
+utilities for PDF content analysis and layout-aware text extraction.
+It is a fork of the original pdfminer with Python 3 support.

@@ -27,4 +27,8 @@ do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-Wall @& -I${LOCALBASE}/include/ncurses -I${LOCALBASE}/include -L${LOCALBASE}/lib @g" \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

@@ -1,5 +1,6 @@
 PORTNAME=	aria2
 PORTVERSION=	1.37.0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/aria2/aria2/releases/download/release-${PORTVERSION}/
 
@@ -11,7 +12,7 @@ WWW=		https://aria2.github.io/ \
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		compiler:c++11-lang cpe libtool pathfix pkgconfig ssl tar:xz
+USES=		compiler:c++11-lang cpe libtool pkgconfig ssl tar:xz
 
 CONFIGURE_ARGS=	--disable-epoll \
 		--enable-bittorrent \
@@ -71,6 +72,7 @@ SSH2_CONFIGURE_WITH=	libssh2
 SSH2_LIB_DEPENDS=	libssh2.so:security/libssh2
 STATIC_CONFIGURE_ENABLE=static
 
+LDFLAGS= -lcrypto
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d/
 	${INSTALL_DATA} ${WRKSRC}/doc/bash_completion/aria2c ${STAGEDIR}${PREFIX}/etc/bash_completion.d/

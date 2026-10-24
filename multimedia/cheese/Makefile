@@ -1,8 +1,7 @@
 PORTNAME=	cheese
-PORTVERSION=	41.1
-PORTREVISION=	3
+PORTVERSION=	44.1
 CATEGORIES=	multimedia gnome
-MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
+MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -26,7 +25,7 @@ RUN_DEPENDS=	gnome-video-effects>=0:graphics/gnome-video-effects
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gl gnome gstreamer localbase:ldflags pkgconfig meson tar:xz xorg vala:build
+USES= gettext gl gnome gstreamer localbase:ldflags pkgconfig meson tar:xz xorg vala:build python:3.4+,build shebangfix
 USE_GNOME=	cairo librsvg2 gnomedesktop3 libxml2:build introspection:build
 USE_GL=		egl
 USE_XORG=	xi xext xdamage xfixes xcomposite xrandr xxf86vm x11
@@ -39,6 +38,7 @@ MESON_ARGS=	-Dgtk_doc=false \
 
 GLIB_SCHEMAS=	org.gnome.Cheese.gschema.xml
 
+SHEBANG_FILES= meson_post_install.py
 post-patch:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} -e 's|canberra-gtk\.h|canberra-gtk3/canberra-gtk.h|'
 

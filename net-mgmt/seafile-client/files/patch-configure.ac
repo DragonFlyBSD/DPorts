@@ -1,6 +1,6 @@
---- configure.ac.orig	2017-01-05 08:05:21 UTC
+--- configure.ac.orig	2026-06-18 08:15:42 UTC
 +++ configure.ac
-@@ -51,8 +51,16 @@ else
+@@ -53,8 +53,16 @@ fi
    AC_MSG_RESULT(no)
  fi
  
@@ -18,7 +18,7 @@
    blinux=true
    AC_MSG_RESULT(compile in linux)
  else
-@@ -61,6 +69,7 @@ fi
+@@ -63,6 +71,7 @@ AM_CONDITIONAL([MACOS], [test "$bmac" = "true"])
  
  AM_CONDITIONAL([WIN32], [test "$bwin32" = "true"])
  AM_CONDITIONAL([MACOS], [test "$bmac" = "true"])
@@ -26,7 +26,7 @@
  AM_CONDITIONAL([LINUX], [test "$blinux" = "true"])
  
  
-@@ -105,6 +114,8 @@ if test "$bwin32" = true; then
+@@ -107,6 +116,8 @@ if test "$bwin32" = true; then
    LIB_MAC=
    MSVC_CFLAGS="-D__MSVCRT__ -D__MSVCRT_VERSION__=0x0601"
    LIB_CRYPT32=-lcrypt32
@@ -35,7 +35,7 @@
  elif test "$bmac" = true ; then
    LIB_WS32=
    LIB_GDI32=
-@@ -119,6 +130,24 @@ elif test "$bmac" = true ; then
+@@ -121,6 +132,24 @@ elif test "$bmac" = true ; then
    LIB_MAC="-framework CoreServices"
    LIB_CRYPT32=
    LIB_ICONV=-liconv
@@ -60,7 +60,7 @@
  else
    LIB_WS32=
    LIB_GDI32=
-@@ -132,6 +161,8 @@ else
+@@ -134,6 +163,8 @@ else
    LIB_MAC=
    MSVC_CFLAGS=
    LIB_CRYPT32=
@@ -69,7 +69,7 @@
  fi
  
  AC_SUBST(LIB_WS32)
-@@ -144,6 +175,8 @@ AC_SUBST(LIB_IPHLPAPI)
+@@ -146,6 +177,8 @@ AC_SUBST(LIB_MAC)
  AC_SUBST(LIB_SHELL32)
  AC_SUBST(LIB_PSAPI)
  AC_SUBST(LIB_MAC)

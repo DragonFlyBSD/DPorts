@@ -1,24 +1,29 @@
 PORTNAME=	cpprestsdk
 PORTVERSION=	2.10.19
+PORTREVISION=	9
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	sigsegv@radiotube.org
 COMMENT=	Microsoft C++ REST SDK
 WWW=		https://github.com/Microsoft/cpprestsdk
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../license.txt
 
-BUILD_DEPENDS=	${LOCALBASE}/include/websocketpp/client.hpp:devel/websocketpp
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs
+DEPRECATED=	Deprecated upstream, does not build with CMake 4
+EXPIRATION_DATE=2026-11-30
 
-USES=		cmake compiler:c++11-lang pkgconfig ssl
+BUILD_DEPENDS=	${LOCALBASE}/include/websocketpp/client.hpp:devel/websocketpp
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
+
+USES=		cmake:testing compiler:c++11-lang pkgconfig ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	Microsoft
 USE_LDCONFIG=	yes
 
 CMAKE_OFF=	BUILD_SAMPLES BUILD_TESTS WERROR
+CMAKE_TESTING_ON=	BUILD_TESTS
 
 WRKSRC_SUBDIR=	Release
 
@@ -27,4 +32,5 @@ OPTIONS_DEFINE=	BROTLI
 BROTLI_LIB_DEPENDS=	libbrotlidec.so:archivers/brotli
 BROTLI_CMAKE_ON=	-DCPPREST_EXCLUDE_BROTLI:BOOL=OFF
 
+CXXFLAGS:= ${CXXFLAGS:N-Wno-c11-extensions} -Wno-error=conversion -Wno-format-truncation -Wno-format-overflow
 .include <bsd.port.mk>

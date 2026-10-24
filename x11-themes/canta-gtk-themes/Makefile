@@ -3,7 +3,7 @@ DISTVERSION=	2021-09-08
 PORTREVISION=	1
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell
 WWW=		https://github.com/vinceliuice/Canta-theme
 

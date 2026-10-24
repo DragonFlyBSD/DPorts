@@ -1,8 +1,7 @@
 PORTNAME=	qats
-DISTVERSION=	4.11.1
-PORTREVISION=	1
+DISTVERSIONPREFIX=	v
+DISTVERSION=	5.3.0
 CATEGORIES=	math
-MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,26 +11,33 @@ WWW=		https://github.com/dnvgl/qats
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools-scm>=3.4.3:devel/py-setuptools-scm@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}QtPy>=1.9.0:devel/py-QtPy@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}furo>=2022.12.7:textproc/py-furo@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}h5py>0:science/py-h5py@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}myst-parser>=0.18.1:textproc/py-myst-parser@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}poetry-core>0:devel/py-poetry-core@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}poetry-dynamic-versioning>0:devel/py-poetry-dynamic-versioning@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}h5py>=3.5.0:science/py-h5py@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}importlib-resources>0:devel/py-importlib-resources@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}matplotlib>=3.3.3:math/py-matplotlib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}npTDMS>=1.1.0:misc/py-npTDMS@${PY_FLAVOR} \
-		${PYNUMPY} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.26.0:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}openpyxl>=3.0.5:textproc/py-openpyxl@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pandas>0:math/py-pandas@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pandas>=2.2.0:math/py-pandas@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pymatreader>=0.0.24:misc/py-pymatreader@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pyside2>=5.15.2:devel/pyside2@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}scipy>=1.7.2:science/py-scipy@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}pyside6>=6.6:devel/pyside6@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}QtPy>=1.9.0:devel/py-QtPy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}scipy>=1.11.1:science/py-scipy@${PY_FLAVOR}
 
-USES=		pyqt:5 python
-USE_PYTHON=	distutils concurrent autoplist pytest
-USE_PYQT=	pyqt5
+USES=		python
+USE_PYTHON=	pep517 concurrent autoplist pytest
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	dnvgl
 
 NO_ARCH=	yes
+
+TEST_ENV=	${MAKE_ENV} PYTEST_ADDOPTS="-p no:black -p no:ruff -p no:mypy"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's/version = "0.0.0"/version = "${DISTVERSION}"/' ${WRKSRC}/pyproject.toml
+
+# tests as of 5.3.0: 121 passed in 10.81s
 
 .include <bsd.port.mk>

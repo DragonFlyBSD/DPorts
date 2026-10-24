@@ -22,6 +22,7 @@ TEST_DEPENDS=	p5-File-Slurp>=0:devel/p5-File-Slurp \
 USES=		perl5
 USE_PERL5=	modbuild
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Archive/Extract/Libarchive/Libarchive.so
 

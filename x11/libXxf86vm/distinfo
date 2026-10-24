@@ -1,3 +1,3 @@
-TIMESTAMP = 1716964345
-SHA256 (xorg/lib/libXxf86vm-1.1.5.tar.xz) = 247fef48b3e0e7e67129e41f1e789e8d006ba47dba1c0cdce684b9b703f888e7
-SIZE (xorg/lib/libXxf86vm-1.1.5.tar.xz) = 265384
+TIMESTAMP = 1776043825
+SHA256 (xorg/lib/libXxf86vm-1.1.7.tar.xz) = ae50c0f669e0af5a67cc4cd0f54f21d64a64d2660af883e80e95d3fe51b945d8
+SIZE (xorg/lib/libXxf86vm-1.1.7.tar.xz) = 272632

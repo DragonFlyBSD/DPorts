@@ -19,4 +19,8 @@ USE_KDE=	ecm:build plasma-wayland-protocols:build
 USE_QT=		concurrent core gui wayland \
 		buildtools:build qmake:build testlib:build
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

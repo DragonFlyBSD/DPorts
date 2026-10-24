@@ -1,0 +1,4 @@
+APTED implements the APTED (All Path Tree Edit Distance) algorithm for
+computing the tree edit distance between ordered trees. It provides an
+efficient algorithm for measuring structural similarity between
+hierarchical data representations such as document structures.

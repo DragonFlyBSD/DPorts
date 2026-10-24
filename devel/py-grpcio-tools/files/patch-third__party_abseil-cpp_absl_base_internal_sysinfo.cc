@@ -1,7 +1,7 @@
---- third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2023-09-08 14:23:50 UTC
+--- third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2026-02-03 19:17:18 UTC
 +++ third_party/abseil-cpp/absl/base/internal/sysinfo.cc
-@@ -34,6 +34,10 @@
- #include <sys/sysctl.h>
+@@ -42,6 +42,10 @@
+ #include <lwp.h>
  #endif
  
 +#ifdef __FreeBSD__
@@ -11,7 +11,7 @@
  #if defined(__myriad2__)
  #include <rtems.h>
  #endif
-@@ -421,14 +425,18 @@ pid_t GetTID() {
+@@ -433,14 +437,18 @@ pid_t GetTID() {
    return tid;
  }
  

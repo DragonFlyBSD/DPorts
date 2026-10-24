@@ -35,6 +35,7 @@ NLS_QMAKE_ON=	CONFIG+="install_translations"
 NOTO_DESC=	Original look with Noto Sans font
 NOTO_RUN_DEPENDS=	noto>0:x11-fonts/noto
 
+PLIST_SUB= NLS="@comment "
 post-patch:
 	${REINPLACE_CMD} '/^Comment/s,=.*,=${COMMENT},' \
 		${WRKSRC}/etc/${PORTNAME}.desktop
@@ -48,4 +49,5 @@ post-install:
 			${STAGEDIR}${PREFIX}/share/icons/hicolor/$${f%.*}/apps/${PORTNAME}.$${f#*.}; \
 	done)
 
+OPTIONS_DEFINE:= ${OPTIONS_DEFINE:NNLS}
 .include <bsd.port.mk>

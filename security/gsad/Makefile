@@ -1,7 +1,6 @@
 PORTNAME=	gsad
 DISTVERSIONPREFIX=	v
-DISTVERSION=	22.6.0
-PORTREVISION=	1
+DISTVERSION=	27.1.0
 CATEGORIES=	security
 
 MAINTAINER=	acm@FreeBSD.org
@@ -18,7 +17,7 @@ LIB_DEPENDS=	libgvm_base.so:security/gvm-libs \
 RUN_DEPENDS=	doxygen>0:devel/doxygen \
 		${PYTHON_PKGNAMEPREFIX}polib>=0:devel/py-polib@${PY_FLAVOR}
 
-USES=		cmake gettext-runtime gnome pkgconfig python alias
+USES=		cmake gettext-runtime gnome pkgconfig python
 USE_GNOME=	glib20 libxml2
 
 USE_GITHUB=	yes
@@ -50,7 +49,6 @@ post-install:
 	@${ECHO_CMD} "sbin/gsad" >> ${TMPPLIST} >> ${TMPPLIST}
 	@${ECHO_CMD} "share/man/man8/gsad.8.gz" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dir(gvm,gvm,750) /var/run/gsad" >> ${TMPPLIST}
-	@${ECHO_CMD} "@dir(gvm,gvm,750) /var/run/gvm" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dir(gvm,gvm,750) /var/run/gvm" >> ${TMPPLIST}
 
 .include <bsd.port.mk>

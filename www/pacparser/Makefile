@@ -1,6 +1,6 @@
 PORTNAME=	pacparser
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.2.20230816
+DISTVERSION=	1.5.2
 CATEGORIES=	www
 
 MAINTAINER=	ehaupt@FreeBSD.org
@@ -15,11 +15,12 @@ BUILD_DEPENDS=	bash:shells/bash
 USES=		gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	manugarg
-GH_TAGNAME=	e29c1a3
 USE_LDCONFIG=	yes
 
 MAKE_ENV+=	NO_INTERNET=1
 MAKE_JOBS_UNSAFE=	yes
+
+LDFLAGS+=	-lpthread
 
 WRKSRC_SUBDIR=	src
 
@@ -39,6 +40,7 @@ PYTHON_INSTALL_TARGET=	install install-pymod
 PYTHON_PLIST_SUB=	PYBIND=""
 PYTHON_PLIST_SUB_OFF=	PYBIND="@comment "
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch-PYTHON-on:
 	@${REINPLACE_CMD} \
 		-e "s|version=pacparser_version()|version=\"${DISTVERSION}\"|" \

@@ -3,7 +3,7 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	1.4.1
 CATEGORIES=	devel java
 
-MAINTAINER=	0mp@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gradle tab completion for Bash and Zsh
 WWW=		https://github.com/gradle/gradle-completion
 
@@ -16,8 +16,12 @@ GH_ACCOUNT=	gradle
 NO_ARCH=	yes
 NO_BUILD=	yes
 
+USES=		cpe
+
 PLIST_FILES=	share/bash-completion/completions/gradle \
 		share/zsh/site-functions/_gradle
+
+CPE_VENDOR=	gradle
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/bash-completion/completions

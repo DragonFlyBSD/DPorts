@@ -32,6 +32,7 @@ GH_TUPLE=	dfranx:assimp:2012451:assimp/libs/assimp \
 
 LDFLAGS+=	-linotify
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install: # workaround for https://github.com/dfranx/SHADERed/issues/304
 	${RM} -r \
 		${STAGEDIR}${PREFIX}/include \

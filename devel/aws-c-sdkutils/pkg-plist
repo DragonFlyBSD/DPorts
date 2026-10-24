@@ -1,4 +1,5 @@
 include/aws/sdkutils/aws_profile.h
+include/aws/sdkutils/endpoints_bdd_engine.h
 include/aws/sdkutils/endpoints_rule_engine.h
 include/aws/sdkutils/exports.h
 include/aws/sdkutils/partitions.h
@@ -8,4 +9,5 @@ lib/cmake/aws-c-sdkutils/aws-c-sdkutils-config.cmake
 lib/cmake/aws-c-sdkutils/shared/aws-c-sdkutils-targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/aws-c-sdkutils/shared/aws-c-sdkutils-targets.cmake
 lib/libaws-c-sdkutils.so
+lib/libaws-c-sdkutils.so.1.0
 lib/libaws-c-sdkutils.so.1.0.0

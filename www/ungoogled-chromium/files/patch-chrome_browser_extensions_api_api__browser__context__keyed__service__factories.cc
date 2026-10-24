@@ -1,20 +1,20 @@
---- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2024-07-31 14:19:23 UTC
+--- chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc.orig	2026-08-13 07:41:05 UTC
 +++ chrome/browser/extensions/api/api_browser_context_keyed_service_factories.cc
-@@ -44,7 +44,7 @@
- #include "pdf/buildflags.h"
- #include "printing/buildflags/buildflags.h"
+@@ -56,7 +56,7 @@
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- #include "chrome/browser/extensions/api/system_indicator/system_indicator_manager_factory.h"
- #endif
+ #endif  // BUILDFLAG(ENABLE_EXTENSIONS)
  
-@@ -119,7 +119,7 @@ void EnsureApiBrowserContextKeyedServiceFactoriesBuilt
-   extensions::SettingsPrivateEventRouterFactory::GetInstance();
-   extensions::SettingsOverridesAPI::GetFactoryInstance();
-   extensions::SidePanelService::GetFactoryInstance();
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-   extensions::SystemIndicatorManagerFactory::GetInstance();
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/extensions/api/web_authentication_proxy/web_authentication_proxy_api.h"
+ #include "chrome/browser/extensions/api/web_authentication_proxy/web_authentication_proxy_service.h"
  #endif
-   extensions::TabGroupsEventRouterFactory::GetInstance();
+@@ -152,7 +152,7 @@ void EnsureApiBrowserContextKeyedServiceFactoriesBuilt
+ #endif  // BUILDFLAG(ENABLE_EXTENSIONS)
+ 
+   // These APIs are intentionally not supported on desktop Android.
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   extensions::WebAuthenticationProxyAPI::GetFactoryInstance();
+   extensions::WebAuthenticationProxyRegistrarFactory::GetInstance();
+   extensions::WebAuthenticationProxyServiceFactory::GetInstance();

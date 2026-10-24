@@ -1,6 +1,6 @@
 PORTNAME=	octave-forge-gsl
 PORTVERSION=	2.1.1
-PORTREVISION=	16
+PORTREVISION=	20
 CATEGORIES=	math
 MASTER_SITES=	SF/octave/Octave%20Forge%20Packages/Individual%20Package%20Releases
 DISTNAME=	${OCTAVE_PKGNAME}-${DISTVERSIONFULL}
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libgsl.so:math/gsl
 
 USES=		octave
 
-LDFLAGS+=	-L${PREFIX}/lib
+LDFLAGS+= -L${PREFIX}/lib -L${LOCALBASE}/lib
 
 GNU_CONFIGURE=	yes
 

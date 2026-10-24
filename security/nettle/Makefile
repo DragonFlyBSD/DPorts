@@ -1,5 +1,5 @@
 PORTNAME=	nettle
-PORTVERSION=	3.10.1
+PORTVERSION=	3.10.2
 CATEGORIES=	security
 MASTER_SITES=	GNU \
 		https://www.lysator.liu.se/~nisse/archive/
@@ -16,7 +16,7 @@ LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING.LESSERv3
 BUILD_DEPENDS=	gmp>=6.1.0:math/gmp
 LIB_DEPENDS=	libgmp.so:math/gmp
 
-USES=		compiler:c11 cpe gmake localbase pathfix
+USES=		compiler:c11 cpe gmake localbase
 
 CONFIGURE_ARGS=	--enable-ld-version-script --enable-shared
 CONFIGURE_ENV=	M4="/usr/bin/m4 -g"
@@ -34,13 +34,7 @@ EXAMPLES_CFLAGS=	-I${OPENSSLINC}
 EXAMPLES_USES=		ssl
 EXAMPLES_EXTRA_PATCHES_OFF=	${PATCHDIR}/extra-patch-Makefile.in
 
-.include <bsd.port.options.mk>
-
-.if ${ARCH} == "mips64"
-post-patch:
-	@${REINPLACE_CMD} -e 's|__sgi|__unix__|' ${WRKSRC}/configure
-.endif
-
+MAKE_JOBS_UNSAFE= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib*.so
 	${INSTALL_DATA} ${WRKSRC}/nettle.info ${STAGEDIR}${PREFIX}/${INFO_PATH}/nettle.info

@@ -1,1 +1,4 @@
-This package contains the X Resource usage library.
+XRes is X Resource extension client library.
+X Resource is an extension that allows a client to query the X server
+about its usage of various resources. It should not be confused with
+the X resource database access functions.

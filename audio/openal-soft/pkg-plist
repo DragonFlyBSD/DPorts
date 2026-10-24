@@ -14,7 +14,6 @@
 include/AL/al.h
 include/AL/alc.h
 include/AL/alext.h
-include/AL/efx-creative.h
 include/AL/efx-presets.h
 include/AL/efx.h
 lib/cmake/OpenAL/OpenALConfig.cmake
@@ -41,3 +40,4 @@ libdata/pkgconfig/openal.pc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/altonegen.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/common/alhelpers.c
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/common/alhelpers.h
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/common/alhelpers.hpp

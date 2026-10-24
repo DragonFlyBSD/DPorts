@@ -1,7 +1,7 @@
 PORTNAME=	kopia
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.14.1
-PORTREVISION=	1
+DISTVERSION=	0.23.1
+PORTREVISION=	6
 CATEGORIES=	sysutils
 
 MAINTAINER=	eduardo@FreeBSD.org
@@ -11,15 +11,15 @@ WWW=		https://kopia.io/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.21,modules
+USES=		go:modules
 GO_MODULE=	github.com/kopia/kopia
-GO_BUILDFLAGS=	-ldflags "\
-		-X github.com/kopia/kopia/repo.BuildVersion=${DISTVERSION} \
-		-X github.com/kopia/kopia/repo.BuildInfo="`date +%Y%m%d`""
+GO_LDFLAGS=	-X github.com/kopia/kopia/repo.BuildVersion=${DISTVERSION} \
+		-X github.com/kopia/kopia/repo.BuildInfo=${HOSTARCH}-portbld-${OPSYS:tl}-${OSREL:R}
 
 PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man1/${PORTNAME}.1.gz
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-build:
 	${GO_WRKDIR_BIN}/${PORTNAME} --log-dir="" --help-man > ${WRKSRC}/${PORTNAME}.1
 

@@ -17,7 +17,7 @@ BUILD_DEPENDS=	makedepend:devel/makedepend
 
 USES=		gmake sdl tar:bzip2
 USE_SDL=	sdl net mixer ttf image
-USE_CXXSTD=	c++98
+USE_CXXSTD= gnu++98
 
 MAKE_JOBS_UNSAFE=	yes
 

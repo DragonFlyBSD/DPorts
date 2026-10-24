@@ -1,4 +1,4 @@
---- chrome/browser/media/router/discovery/BUILD.gn.orig	2024-06-22 08:49:42 UTC
+--- chrome/browser/media/router/discovery/BUILD.gn.orig	2026-08-13 07:41:05 UTC
 +++ chrome/browser/media/router/discovery/BUILD.gn
 @@ -82,7 +82,7 @@ static_library("discovery") {
    ]

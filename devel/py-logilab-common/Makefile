@@ -1,13 +1,13 @@
 PORTNAME=	logilab-common
-PORTVERSION=	1.11.0
-PORTREVISION=	2
+PORTVERSION=	2.1.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	logilab_common-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Common low-level libraries shared among logilab projects
-WWW=		https://logilab-common.readthedocs.io/en/latest/
+WWW=		https://forge.extranet.logilab.fr/open-source/logilab-common
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
@@ -24,10 +24,4 @@ USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 31000
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>=6:devel/py-importlib-metadata@${PY_FLAVOR}
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

@@ -1,4 +1,0 @@
-.if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=	lots of small files
-.endif
-IGNORE=   unmaintained, please request fixing to users mailing list

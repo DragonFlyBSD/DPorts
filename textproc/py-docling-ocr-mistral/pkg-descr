@@ -1,0 +1,4 @@
+Docling OCR Mistral is a plugin that integrates Mistral OCR into the
+Docling document processing pipeline. It enables optical character
+recognition using Mistral's vision-language models for high-quality
+text extraction from document images.

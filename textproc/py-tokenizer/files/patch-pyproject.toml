@@ -1,0 +1,20 @@
+--- pyproject.toml.orig	2026-07-12 10:32:04 UTC
++++ pyproject.toml
+@@ -10,7 +10,6 @@ readme = "README.md"
+ authors = [{ name = "Miðeind ehf.", email = "mideind@mideind.is" }]
+ maintainers = [{ name = "Vilhjálmur Þorsteinsson", email = "vt@mideind.is" }]
+ readme = "README.md"
+-license = "MIT"
+ keywords = [
+     "tokenizer",
+     "tokenization",
+@@ -43,6 +42,9 @@ requires-python = ">=3.10"
+     "Topic :: Text Processing :: Linguistic",
+ ]
+ requires-python = ">=3.10"
++
++[license]
++file = "LICENSE.txt"
+ 
+ [project.urls]
+ Homepage = "https://mideind.is"

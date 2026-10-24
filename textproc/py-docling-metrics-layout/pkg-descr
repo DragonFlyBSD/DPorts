@@ -1,0 +1,4 @@
+Docling Metrics Layout provides layout evaluation metrics for Docling
+document processing. It measures the accuracy of document layout analysis,
+including region detection, reading order, and spatial arrangement of
+document elements.

@@ -1,0 +1,36 @@
+--- configure.orig
++++ configure
+@@ -393,7 +393,7 @@
+ int main(void){setupterm(NULL, 0, NULL);return 0;}
+ EOF
+   $cc $cflags -o conftest.o -c conftest.c -lncurses > /dev/null 2>&1
+-  $cc $ldflags -o conftest conftest.o -lncurses > /dev/null 2>&1
++  $cc $ldflags -o conftest conftest.o -lncurses -ltinfo > /dev/null 2>&1
+   if [ $? -eq 0 ] ; then
+     rm -f conftest conftest.o conftest.c
+     return 0
+@@ -410,7 +410,7 @@
+ int main(void){setupterm(NULL, 0, NULL);return 0;}
+ EOF
+   $cc $cflags -o conftest.o -c conftest.c -lncurses > /dev/null 2>&1
+-  $cc $ldflags -o conftest conftest.o -lncurses > /dev/null 2>&1
++  $cc $ldflags -o conftest conftest.o -lncurses -ltinfo > /dev/null 2>&1
+   if [ $? -eq 0 ] ; then
+     rm -f conftest conftest.o conftest.c
+     return 0
+@@ -1220,13 +1220,13 @@
+   else
+     ncursescheck
+     if [ $? -eq 0 ] ; then
+-      libs="$libs -lncurses"
++      libs="$libs -lncurses -ltinfo"
+       echo "#define HAVE_NCURSES" >> pconfig.h
+       echo "ncurses.h"
+     else
+       ncursesncursescheck
+       if [ $? -eq 0 ] ; then
+-	libs="$libs -lncurses"
++	libs="$libs -lncurses -ltinfo"
+ 	echo "#define HAVE_NCURSESNCURSES" >> pconfig.h
+ 	echo "ncurses/ncurses.h"
+       else

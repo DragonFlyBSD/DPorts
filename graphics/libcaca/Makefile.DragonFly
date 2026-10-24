@@ -1,3 +1,0 @@
-
-# no configure check but needed
-CFLAGS+=	-DHAVE_ARPA_INET_H

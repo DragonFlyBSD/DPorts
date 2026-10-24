@@ -18,4 +18,14 @@ USES=		cmake gettext tar:xz
 NO_ARCH=	yes
 STRIP=		# ninja breaks without this: unknown target 'install/strip'
 
+MAKE_JOBS_UNSAFE= yes
+dfly-configure:
+	-${MKDIR} ${WRKDIR}/.build/tables/am
+	-${MKDIR} ${WRKDIR}/.build/tables/ar
+	-${MKDIR} ${WRKDIR}/.build/tables/ml
+	-${MKDIR} ${WRKDIR}/.build/tables/ta
+	-${MKDIR} ${WRKDIR}/.build/tables/uk
+	-${MKDIR} ${WRKDIR}/.build/tables/th
+	-${MKDIR} ${WRKDIR}/.build/tables/vi
+
 .include <bsd.port.mk>

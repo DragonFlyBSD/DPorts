@@ -1,14 +1,22 @@
 PORTNAME=	gbtolib
 DISTVERSION=	3.0.3
+PORTREVISION=	6
 CATEGORIES=	science # chemistry, physics
 MASTER_SITES=	https://zenodo.org/record/5798035/files/
 DISTNAME=	GBTOLib-${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	High-performance library for evaluation of molecular integrals
+WWW=		https://zenodo.org/record/5798035
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN_powerpc64=	compilation fails in the Fortran code: Error: Kind -1 not supported for type REAL at (1)
+BROKEN_powerpc64le=	compilation fails in the Fortran code: Error: Kind -1 not supported for type REAL at (1)
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
 LIB_DEPENDS=	libopenblas.so:math/openblas
 
@@ -16,6 +24,9 @@ USES=		cmake fortran zip
 
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	BUILD_DOC BUILD_TESTING
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4.5 compatibility
+
+FFLAGS=		-fdefault-integer-8
 
 OPTIONS_DEFINE=	MPI
 

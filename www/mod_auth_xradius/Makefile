@@ -11,11 +11,12 @@ WWW=		http://www.outoforder.cc/projects/apache/mod_auth_xradius/
 
 LICENSE=	APACHE20
 
-USES=		apache tar:bzip2
+USES= apache tar:bzip2 ssl
 GNU_CONFIGURE=	yes
 # Seems dead upstream. Don't expect a proper fix.
-CFLAGS+=	-fcommon
+CFLAGS+= -fcommon -I${OPENSSLINC} -DWITH_SSL
 
 PLIST_FILES=	${APACHEMODDIR}/mod_auth_xradius.so
 
+LDFLAGS= -L${OPENSSLLIB} -lcrypto
 .include <bsd.port.mk>

@@ -1,0 +1,11 @@
+--- tests/modules/Makefile.intermediate	2026-09-05 00:46:12 UTC
++++ tests/modules/Makefile
+@@ -34,7 +34,7 @@ ifneq ($(SANITIZER),memory)
+ endif
+ endif
+ 
+-ifeq ($(uname_S),FreeBSD)
++ifeq ($(uname_S), $(filter $(uname_S),FreeBSD DragonFly))
+ 	LD = cc
+ 	CC = cc
+ endif

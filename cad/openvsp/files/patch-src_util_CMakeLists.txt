@@ -1,0 +1,22 @@
+--- src/util/CMakeLists.txt.orig	2026-05-04 20:09:34 UTC
++++ src/util/CMakeLists.txt
+@@ -22,6 +22,10 @@ INCLUDE_DIRECTORIES(
+     ${GTE_INCLUDE_DIR}
+     )
+ 
++set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
++set(THREADS_PREFER_PTHREAD_FLAG TRUE)
++find_package(Threads REQUIRED)
++
+ ADD_LIBRARY(util
+ BndBox.cpp
+ CADutil.cpp
+@@ -76,6 +80,8 @@ XferSurf.h
+ WriteMatlab.h
+ XferSurf.h
+ )
++
++target_link_libraries(util Threads::Threads)
+ 
+ target_link_libraries( util Eigen3::Eigen )
+ 

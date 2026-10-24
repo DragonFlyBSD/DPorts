@@ -1,7 +1,6 @@
 PORTNAME=	highs
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.5.3
-PORTREVISION=	1
+DISTVERSION=	1.15.1
 CATEGORIES=	math
 PKGNAMEPREFIX=	coin-or-
 
@@ -10,11 +9,10 @@ COMMENT=	Solver for large scale sparse linear programming (LP) problems
 WWW=		https://github.com/ERGO-Code/HiGHS
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-LIB_DEPENDS=	libOsi.so:math/osi
-
-USES=		blaslapack cmake:testing compiler:c++11-lang pkgconfig
+USES=		cmake:testing compiler:c++11-lang pkgconfig
+USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	ERGO-Code
@@ -22,10 +20,17 @@ GH_PROJECT=	HiGHS
 
 CMAKE_OFF=	BUILD_TESTING
 
-post-install: # see https://github.com/ERGO-Code/HiGHS/issues/502
+IGNORE= unmaintained, please request fixing to users mailing list
+post-install:
+	# see https://github.com/ERGO-Code/HiGHS/issues/502
 	${RM} -r ${STAGEDIR}${PREFIX}/external
+	# remove stray files
+	@${RM} -r ${STAGEDIR}${PREFIX}/share/doc
+	# workaround for https://github.com/ERGO-Code/HiGHS/issues/2250
+	@${REINPLACE_CMD} \
+		-e 's|INTERFACE_INCLUDE_DIRECTORIES "/include;|INTERFACE_INCLUDE_DIRECTORIES "|' \
+		${STAGEDIR}${PREFIX}/lib/cmake/highs/highs-targets.cmake
 
-# one test fails, see https://github.com/ERGO-Code/HiGHS/issues/1132
-# tests fail to build on i386: undefined reference to fmax, see https://github.com/ERGO-Code/HiGHS/issues/505
+# tests as of 1.15.1: 100% tests passed, 0 tests failed out of 2
 
 .include <bsd.port.mk>

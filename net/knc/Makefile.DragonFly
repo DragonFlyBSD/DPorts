@@ -1,3 +1,0 @@
-USES+= localbase
-
-LIB_DEPENDS+=	libgssapi_krb5.so:security/krb5

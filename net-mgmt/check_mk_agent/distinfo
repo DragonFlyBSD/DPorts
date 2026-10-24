@@ -1,7 +1,7 @@
-TIMESTAMP = 1677107456
-SHA256 (check_mk_agent-2.1.0.p22/check_mk_agent.freebsd) = c99b59beb8d0eee0916e8dc4b7f9dcce08afb62e157856e785837aadb0f071ec
-SIZE (check_mk_agent-2.1.0.p22/check_mk_agent.freebsd) = 28094
-SHA256 (check_mk_agent-2.1.0.p22/README.FreeBSD) = 01094a2197ca0a3a43ac16098c0f800d2ee808db2fd9a2f133f4bad04062ec5f
-SIZE (check_mk_agent-2.1.0.p22/README.FreeBSD) = 1349
-SHA256 (check_mk_agent-2.1.0.p22/COPYING) = fbaab079995bef694ef8451f0f763b91b44e5b57b8e2a487d2a240b395187a7f
-SIZE (check_mk_agent-2.1.0.p22/COPYING) = 15174
+TIMESTAMP = 1791207491
+SHA256 (check_mk_agent-2.5.0p15/check_mk_agent.freebsd) = 128bda81ce969073c7837aab31ac2a39cad2b66ac4b779d5fbbeed782c12465b
+SIZE (check_mk_agent-2.5.0p15/check_mk_agent.freebsd) = 37673
+SHA256 (check_mk_agent-2.5.0p15/README.FreeBSD) = 81f67b7d9407f977b4ddbccdd861788f4070fb0773591a89e2c320876aef69df
+SIZE (check_mk_agent-2.5.0p15/README.FreeBSD) = 1348
+SHA256 (check_mk_agent-2.5.0p15/COPYING) = fbaab079995bef694ef8451f0f763b91b44e5b57b8e2a487d2a240b395187a7f
+SIZE (check_mk_agent-2.5.0p15/COPYING) = 15174

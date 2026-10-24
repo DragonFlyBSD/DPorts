@@ -1,19 +1,22 @@
 PORTNAME=	bogofilter
-PORTREVISION=	5
-CATEGORIES=	mail
+PORTREVISION=	2
 PKGNAMESUFFIX=	-kc
 
-MAINTAINER=	mandree@FreeBSD.org
+COMMENT=	Fast, teachable, learning spam detector (KyotoCabinet database)
+
+DEPRECATED=	# override master port
 
 LIB_DEPENDS=	libkyotocabinet.so:databases/kyotocabinet
 
-CONFLICTS_INSTALL=	bogofilter bogofilter-lmdb bogofilter-sqlite
-
 CONFIGURE_ARGS=	--with-database=kyotocabinet
-BF_CPPFLAGS=	-I${LOCALBASE}/include
-BF_LIBS=
+
+CONFLICTS_INSTALL=	bogofilter bogofilter-lmdb1 bogofilter-sqlite
+
+MASTERDIR=	${.CURDIR}/../bogofilter
 DESCR=		${PKGDIR}/pkg-descr
 
-MASTERDIR=	${.CURDIR}/../bogofilter-bdb
+BF_CPPFLAGS=	-I${LOCALBASE}/include
+BF_LIBS=
 
+DFLY_UNMAINTAINED= yes
 .include "${MASTERDIR}/Makefile"

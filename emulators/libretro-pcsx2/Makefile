@@ -1,6 +1,6 @@
 PORTNAME=	libretro-pcsx2
 PORTVERSION=	0.20201030
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	emulators games
 
 MAINTAINER=	beyert@cs.ucr.edu
@@ -20,6 +20,8 @@ LIB_DEPENDS=	libcdio.so:sysutils/libcdio \
 
 USES=	cmake compiler:c++11-lib
 
+IGNORE= unmaintained, please request fixing to users mailing list
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.pre.mk>
 
 CPPFLAGS+=	-I${LOCALBASE}/include/wx-3.0

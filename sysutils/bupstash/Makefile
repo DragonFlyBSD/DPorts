@@ -1,7 +1,7 @@
 PORTNAME=	bupstash
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.12.0
-PORTREVISION=	8
+PORTREVISION=	37
 CATEGORIES=	sysutils
 
 MAINTAINER=	felix@userspace.com.au
@@ -21,4 +21,5 @@ CARGO_FEATURES=	--no-default-features
 
 PLIST_FILES=	bin/bupstash
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

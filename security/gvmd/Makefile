@@ -1,11 +1,11 @@
 PORTNAME=	gvmd
-DISTVERSION=	21.4.5
-PORTREVISION=	1
+DISTVERSION=	26.36.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Greenbone Vulnerability Manager central management service
+WWW=		https://github.com/greenbone/gvmd
 
 LICENSE=	AGPLv3+
 
@@ -15,6 +15,7 @@ LIB_DEPENDS=	libgvm_base.so:security/gvm-libs \
 		libgpgme.so:security/gpgme \
 		libical.so:devel/libical
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
+		${LOCALBASE}/lib/postgresql/libpg-gvm.so:databases/pg-gvm \
 		doxygen>0:devel/doxygen \
 		p5-XML-Twig>=0:textproc/p5-XML-Twig \
 		snmpget:net-mgmt/net-snmp \
@@ -44,13 +45,17 @@ SHEBANG_FILES=	tools/gvm-lsc-rpm-creator \
 		src/alert_methods/SCP/alert \
 		src/alert_methods/SMB/alert
 
+PLIST_FILES= "@dir /var/lib"
 post-patch:
 	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/src/manage_sql.c
-	${REINPLACE_CMD} -e 's|+660|660|g' ${WRKSRC}/tools/greenbone-feed-sync.in
+	${REINPLACE_CMD} -e 's|#include <bsd/unistd.h>||g' ${WRKSRC}/src/gvmd.c \
+		${WRKSRC}/src/manage_sql_secinfo.c ${WRKSRC}/src/manage.c
 
 post-install:
 	@${MKDIR} ${STAGEDIR}/var/lib/gvm/gvmd/gnupg
 	@${MKDIR} ${STAGEDIR}/var/log/gvm
 	@${MKDIR} ${STAGEDIR}/var/run/gvmd
 
+BUILD_DEPENDS:= ${BUILD_DEPENDS:Ndoxygen*}
+RUN_DEPENDS:= ${RUN_DEPENDS:Ndoxygen*}
 .include <bsd.port.mk>

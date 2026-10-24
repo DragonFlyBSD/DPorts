@@ -17,7 +17,7 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2
 RUN_DEPENDS=	${LOCALBASE}/${DATADIR_REL}/config/scourge.cfg:games/scourge-data
 
 USES=		autoreconf compiler gettext gl gmake localbase pkgconfig sdl
-USE_CXXSTD=	c++14
+USE_CXXSTD= gnu++98
 USE_GL=		gl
 USE_SDL=	sdl image mixer net ttf
 

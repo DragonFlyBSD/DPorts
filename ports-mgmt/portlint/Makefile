@@ -1,5 +1,5 @@
 PORTNAME=	portlint
-PORTVERSION=	2.22.5
+PORTVERSION=	2.25.0
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -41,5 +41,8 @@ do-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/portlintgrep.pl \
 	    ${STAGEDIR}${EXAMPLESDIR}/portlintgrep
+
+dfly-patch:
+	@${REINPLACE_CMD} -e 's|/usr/ports|/usr/dports|g' ${WRKSRC}/portlint*
 
 .include <bsd.port.mk>

@@ -37,6 +37,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_FILES=	lib/libretro/kronos_libretro.so
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 pre-build:
 	cd ${CMAKE_SOURCE_PATH} && ${CMAKE_BIN} .
 	cd ${WRKSRC}/yabause/src && ${MAKE} m68kmake

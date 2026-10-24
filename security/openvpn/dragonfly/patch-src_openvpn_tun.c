@@ -8,7 +8,7 @@
 +#elif defined(TARGET_FREEBSD)
  
      /* example: ifconfig tun2 10.2.0.2 10.2.0.1 mtu 1450 netmask 255.255.255.255 up */
-     if (tun)       /* point-to-point tun */
+     if (tun_p2p) /* point-to-point tun */
 @@ -1584,6 +1584,49 @@ do_ifconfig_ipv4(struct tuntap *tt, cons
      argv_msg(M_INFO, &argv);
      openvpn_execve_check(&argv, es, S_FATAL, "FreeBSD ifconfig failed");
@@ -17,7 +17,7 @@
 +    in_addr_t remote_end = INADDR_ANY;  /* for "virtual" subnet topology */
 +
 +    /* example: ifconfig tun2 10.2.0.2 10.2.0.1 mtu 1450 netmask 255.255.255.255 up */
-+    if (tun)       /* point-to-point tun */
++    if (tun_p2p)       /* point-to-point tun */
 +    {
 +        argv_printf(&argv, "%s %s %s %s mtu %d netmask 255.255.255.255 up",
 +                    IFCONFIG_PATH, ifname, ifconfig_local,
@@ -45,7 +45,7 @@
 +    openvpn_execve_check(&argv, es, S_FATAL, "DragonFly ifconfig failed");
 +
 +    /* Add a network route for the local tun interface */
-+    if (!tun && tt->type == DEV_TYPE_TUN && tt->topology == TOP_SUBNET)
++    if (!tun_p2p && tt->type == DEV_TYPE_TUN && tt->topology == TOP_SUBNET)
 +    {
 +        struct route_ipv4 r;
 +        CLEAR(r);

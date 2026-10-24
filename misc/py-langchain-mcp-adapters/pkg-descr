@@ -1,0 +1,5 @@
+langchain-mcp-adapters makes Anthropic Model Context Protocol (MCP) tools
+compatible with LangChain and LangGraph agents.
+
+It provides adapters that expose MCP tools, prompts, and resources as
+LangChain-compatible callables.

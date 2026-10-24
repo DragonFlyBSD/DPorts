@@ -1,14 +1,15 @@
 PORTNAME=	skopeo
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.14.4
-PORTREVISION=	2
+DISTVERSION=	1.22.2
+PORTREVISION=	8
 CATEGORIES=	sysutils
 
 MAINTAINER=	dfr@FreeBSD.org
 COMMENT=	Inspect container images and repositories on registries
 WWW=		https://github.com/containers/skopeo
 
-LICENSE=	GPLv2
+LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	bash:shells/bash \
 		curl:ftp/curl \
@@ -20,6 +21,7 @@ USES=		gmake go:modules,no_targets pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	containers
 
+DFLY_UNMAINTAINED= yes
 do-install:
 	${SETENV} ${MAKE_ENV} ${GO_ENV} ${GMAKE} -C ${WRKSRC} \
 		DESTDIR=${STAGEDIR} GOCACHE=${TMPDIR} \

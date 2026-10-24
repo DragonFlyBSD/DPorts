@@ -1,4 +1,4 @@
---- net/http/http_network_session.cc.orig	2024-09-30 07:45:04 UTC
+--- net/http/http_network_session.cc.orig	2026-02-11 09:05:39 UTC
 +++ net/http/http_network_session.cc
 @@ -20,7 +20,9 @@
  #include "build/build_config.h"

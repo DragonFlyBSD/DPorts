@@ -1,8 +1,9 @@
 PORTNAME=	python-ly
-PORTVERSION=	0.9.8
-DISTVERSIONPREFIX=	v
+DISTVERSION=	0.9.10
 CATEGORIES=	print python
+MASTER_SITES=	https://github.com/frescobaldi/${PORTNAME}/releases/download/v${DISTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	${PORTNAME:S|-|_|}-${DISTVERSION}
 
 MAINTAINER=	martin.dieringer@gmx.de
 COMMENT=	Python package to manipulate LilyPond files
@@ -11,13 +12,10 @@ WWW=		https://github.com/frescobaldi/python-ly
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+		${PYTHON_PKGNAMEPREFIX}hatchling>0:devel/py-hatchling@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 
 USES=		python
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	frescobaldi
-
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes

@@ -1,8 +1,8 @@
---- ipc/ipc_channel.h.orig	2024-06-17 12:56:06 UTC
+--- ipc/ipc_channel.h.orig	2026-09-25 15:26:43 UTC
 +++ ipc/ipc_channel.h
-@@ -218,7 +218,7 @@ class COMPONENT_EXPORT(IPC) Channel : public Sender {
-   static std::string GenerateUniqueRandomChannelID();
- #endif
+@@ -165,7 +165,7 @@ class COMPONENT_EXPORT(IPC) Channel final
+   void OnAssociatedInterfaceRequest(
+       mojo::GenericPendingAssociatedReceiver receiver) override;
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

@@ -1,75 +1,64 @@
-PORTNAME=	fastnetmon
-PORTVERSION=	1.1.4
+PORTNAME=		fastnetmon
 DISTVERSIONPREFIX=	v
-PORTREVISION=	8
-CATEGORIES=	net-mgmt security
+DISTVERSION=		1.2.9
+PORTREVISION=	7
+CATEGORIES=		net-mgmt security
 
-MAINTAINER=	farrokhi@FreeBSD.org
-COMMENT=	Very fast DDoS analyzer with sflow/netflow/mirror support
-WWW=		https://fastnetmon.com
+MAINTAINER=		farrokhi@FreeBSD.org
+COMMENT=		Very fast DDoS analyzer with sflow/netflow/mirror support
+WWW=			https://fastnetmon.com
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE_FILE=	${WRKSRC}/../LICENSE
 
-BROKEN_armv6=		Does not build: invokes x86 assembler
-BROKEN_armv7=		Does not build: invokes x86 assembler
+BROKEN_armv6=	does not build: invokes x86 assembler
+BROKEN_armv7=	does not build: invokes x86 assembler
 
 LIB_DEPENDS=	libboost_regex.so:devel/boost-libs \
 		liblog4cpp.so:devel/log4cpp \
-		libmongoc-1.0.so:devel/mongo-c-driver \
-		libjson-c.so:devel/json-c \
-		libbson-1.0.so:devel/libbson
+		libmongoc2.so:devel/mongo-c-driver \
+		libbson2.so:devel/libbson \
+		libcapnp.so:devel/capnproto \
+		libgrpc.so:devel/grpc \
+		libprotobuf.so:devel/protobuf \
+		libabsl_base.so:devel/abseil \
+		libhiredis.so:databases/hiredis
 
-USES=	cmake compiler:c++11-lang luajit
+USES= cmake compiler:c++20-lang localbase:ldflags pkgconfig ssl ncurses
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	pavel-odintsov
 
-USERS=	${PORTNAME}
-GROUPS=	${PORTNAME}
+WRKSRC_SUBDIR=	src
 
 USE_RC_SUBR=	${PORTNAME}
-
-OPTIONS_DEFINE=	DOCS REDIS
-
-REDIS_LIB_DEPENDS=	libhiredis.so:databases/hiredis
-
+USERS=		${PORTNAME}
+GROUPS=		${PORTNAME}
 PORTDOCS=	*
 
 CFLAGS_i386=	-march=i586
-CMAKE_SOURCE_PATH=	${WRKSRC}/src
-CMAKE_ARGS+=	-DDISABLE_PF_RING_SUPPORT=ON \
-		-DENABLE_NETMAP_SUPPORT=OFF
-CMAKE_INSTALL_PREFIX=	${PREFIX}
+CXXFLAGS+=	-D_GNU_SOURCE
 
-.include <bsd.port.pre.mk>
+CMAKE_OFF=	SET_ABSOLUTE_INSTALL_PATH
+CMAKE_ON=	ENABLE_NETMAP_SUPPORT \
+		LINK_WITH_ABSL
 
-.if ${ARCH} != x86_64 && ${ARCH} != armv6 && ${ARCH} != armv7 && ${ARCH} != i386 && ${ARCH} != powerpc && empty(ARCH:Mpowerpc64*)
-CMAKE_ARGS+=	-DENABLE_LUA_SUPPORT:BOOL=OFF
-.else
-.  if ${LUAJIT_VER} == luajit-devel || ${LUAJIT_VER} == luajit-openresty
-EXTRA_PATCHES=	${FILESDIR}/extra-patch-src_fast__library.h \
-		${FILESDIR}/extra-patch-src_netflow__plugin_netflow__collector.cpp
-.  endif
-.endif
+OPTIONS_DEFINE=	DOCS
 
+CMAKE_ARGS= -DENABLE_NETMAP_SUPPORT:BOOL=OFF
 post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' ${WRKSRC}/src/CMakeLists.txt
-	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|; \
-		s|/var/run|&/fastnetmon|g; s|/var/log|&/fastnetmon|g; \
-		s|"/etc/|"${PREFIX}/etc/|g; s|/root/fastnetmon|${DATADIR}|g' \
-		${WRKSRC}/src/fastnetmon.conf ${WRKSRC}/src/fastnetmon.cpp
-	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
-		${WRKSRC}/src/man/fastnetmon.1 ${WRKSRC}/src/fast_platform.h.template
+	@${REINPLACE_CMD} -e 's|/etc/networks|${PREFIX}/etc/networks|g' \
+		-e 's|/var/run|/var/run/${PORTNAME}|g' ${WRKSRC}/fastnetmon.conf
+	@${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|g' ${WRKSRC}/man/fastnetmon.8
 
 post-install:
-	${MV} ${STAGEDIR}${PREFIX}/etc/${PORTNAME}.conf \
-		${STAGEDIR}${PREFIX}/etc/${PORTNAME}.conf.sample
-	${MKDIR} ${STAGEDIR}/var/run/fastnetmon ${STAGEDIR}/var/log/fastnetmon
-	${INSTALL_MAN} ${WRKSRC}/src/man/fastnetmon.1 ${STAGEDIR}${MANPREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/src/man/fastnetmon_client.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/fastnetmon.conf ${STAGEDIR}${PREFIX}/etc/fastnetmon.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/networks_list ${STAGEDIR}${PREFIX}/etc/networks_list.sample
+	${INSTALL_DATA} ${WRKSRC}/networks_whitelist ${STAGEDIR}${PREFIX}/etc/networks_whitelist.sample
+	${MKDIR} ${STAGEDIR}/var/run/fastnetmon ${STAGEDIR}/var/log/fastnetmon ${STAGEDIR}/var/log/fastnetmon_attacks
+	${INSTALL_SCRIPT} ${WRKSRC}/notify_about_attack.sh ${STAGEDIR}${PREFIX}/bin/notify_about_attack.sh.sample
 
 post-install-DOCS-on:
-	cd ${WRKSRC} && ${COPYTREE_SHARE} "README.md docs" ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/../ && ${COPYTREE_SHARE} "README.md docs" ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

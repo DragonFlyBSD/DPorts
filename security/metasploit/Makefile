@@ -1,6 +1,6 @@
 PORTNAME=	metasploit
-DISTVERSION=	6.2.23
-PORTREVISION=	10
+DISTVERSION=	6.4.58
+PORTREVISION=	22
 CATEGORIES=	security
 
 MAINTAINER=	tanawts@gmail.com
@@ -12,26 +12,41 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		nmap:security/nmap \
-		rubygem-actionpack60>=6.0:www/rubygem-actionpack60 \
-		rubygem-activerecord60>=6.0:databases/rubygem-activerecord60 \
-		rubygem-activesupport60>=6.0:devel/rubygem-activesupport60 \
+		rubygem-aarch64>=0:devel/rubygem-aarch64 \
+		rubygem-abbrev>=0:textproc/rubygem-abbrev \
+		rubygem-actionpack71>=7.1:www/rubygem-actionpack71 \
+		rubygem-activerecord71>=7.1:databases/rubygem-activerecord71 \
+		rubygem-activesupport71>=7.1:devel/rubygem-activesupport71 \
 		rubygem-aws-sdk-ec2>=0:devel/rubygem-aws-sdk-ec2 \
+		rubygem-aws-sdk-ec2instanceconnect>=0:devel/rubygem-aws-sdk-ec2instanceconnect \
 		rubygem-aws-sdk-iam>=0:devel/rubygem-aws-sdk-iam \
 		rubygem-aws-sdk-s3>=0:devel/rubygem-aws-sdk-s3 \
+		rubygem-aws-sdk-ssm>=0:devel/rubygem-aws-sdk-ssm \
+		rubygem-base64>=0:converters/rubygem-base64 \
 		rubygem-bcrypt>=0:security/rubygem-bcrypt \
 		rubygem-bcrypt_pbkdf>=0:security/rubygem-bcrypt_pbkdf \
+		rubygem-benchmark>=0:benchmarks/rubygem-benchmark \
+		rubygem-bigdecimal>=0:math/rubygem-bigdecimal \
+		rubygem-bootsnap>=0:devel/rubygem-bootsnap \
 		rubygem-bson>=0:devel/rubygem-bson \
 		rubygem-bundler>=0:sysutils/rubygem-bundler \
+		rubygem-chunky_png>=0:graphics/rubygem-chunky_png \
 		rubygem-concurrent-ruby>=0:devel/rubygem-concurrent-ruby \
+		rubygem-csv>=0:devel/rubygem-csv \
 		rubygem-dnsruby>=0:dns/rubygem-dnsruby \
+		rubygem-drb>=0:devel/rubygem-drb \
 		rubygem-ed25519>=0:security/rubygem-ed25519 \
+		rubygem-elftools>=0:devel/rubygem-elftools \
 		rubygem-em-http-request>=0:www/rubygem-em-http-request \
 		rubygem-eventmachine>=0:devel/rubygem-eventmachine \
 		rubygem-faker>=0:devel/rubygem-faker \
 		rubygem-faraday>=0:www/rubygem-faraday \
 		rubygem-faraday-retry>=0:www/rubygem-faraday-retry \
 		rubygem-faye-websocket>=0:www/rubygem-faye-websocket \
+		rubygem-ffi>=0:devel/rubygem-ffi \
+		rubygem-fiddle>=0:devel/rubygem-fiddle \
 		rubygem-filesize>=0:devel/rubygem-filesize \
+		rubygem-getoptlong>=0:devel/rubygem-getoptlong \
 		rubygem-hrr_rb_ssh-ed25519>=0:security/rubygem-hrr_rb_ssh-ed25519 \
 		rubygem-http-cookie>=0:www/rubygem-http-cookie \
 		rubygem-irb>=0:devel/rubygem-irb \
@@ -41,30 +56,38 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		rubygem-metasploit-concern>=0:security/rubygem-metasploit-concern \
 		rubygem-metasploit-credential>=0:security/rubygem-metasploit-credential \
 		rubygem-metasploit-model>=0:security/rubygem-metasploit-model \
-		rubygem-metasploit-payloads>=2.0.97:security/rubygem-metasploit-payloads \
+		rubygem-metasploit-payloads>=2.0.189:security/rubygem-metasploit-payloads \
 		rubygem-metasploit_data_models>=0:security/rubygem-metasploit_data_models \
-		rubygem-metasploit_payloads-mettle>=1.0.20:security/rubygem-metasploit_payloads-mettle \
+		rubygem-metasploit_payloads-mettle>=1.0.35:security/rubygem-metasploit_payloads-mettle \
 		rubygem-mqtt>=0:net/rubygem-mqtt \
 		rubygem-msgpack>=0:devel/rubygem-msgpack \
+		rubygem-mutex_m>=0:devel/rubygem-mutex_m \
 		rubygem-nessus_rest>=0:security/rubygem-nessus_rest \
+		rubygem-net-imap>=0:mail/rubygem-net-imap \
 		rubygem-net-ldap>=0:net/rubygem-net-ldap \
+		rubygem-net-sftp>=0:security/rubygem-net-sftp \
 		rubygem-net-smtp>=0:mail/rubygem-net-smtp \
 		rubygem-net-ssh>=0:security/rubygem-net-ssh \
 		rubygem-network_interface>=0:net/rubygem-network_interface \
 		rubygem-nexpose>=0:security/rubygem-nexpose \
 		rubygem-nokogiri>=0:textproc/rubygem-nokogiri \
-		rubygem-octokit>=0:net/rubygem-octokit \
+		rubygem-octokit4>=4:net/rubygem-octokit4 \
 		rubygem-openssl-ccm>=0:security/rubygem-openssl-ccm \
 		rubygem-openvas-omp>=0:security/rubygem-openvas-omp \
+		rubygem-ostruct>=0:devel/rubygem-ostruct \
 		rubygem-packetfu>=0:net/rubygem-packetfu \
 		rubygem-patch_finder>=0:devel/rubygem-patch_finder \
 		rubygem-pcaprub>=0:net/rubygem-pcaprub \
 		rubygem-pdf-reader>=0:print/rubygem-pdf-reader \
 		rubygem-pg>=0:databases/rubygem-pg \
 		rubygem-puma>=0:www/rubygem-puma \
-		rubygem-railties60>=6.0:www/rubygem-railties60 \
+		rubygem-rack-session10>=0:www/rubygem-rack-session10 \
+		rubygem-rackup10>=0:www/rubygem-rackup10 \
+		rubygem-railties71>=7.1:www/rubygem-railties71 \
+		rubygem-rasn1>=0:security/rubygem-rasn1 \
 		rubygem-recog>=0:security/rubygem-recog \
 		rubygem-redcarpet>=0:textproc/rubygem-redcarpet \
+		rubygem-reline>=0:devel/rubygem-reline \
 		rubygem-rex-arch>=0:security/rubygem-rex-arch \
 		rubygem-rex-bin_tools>=0:security/rubygem-rex-bin_tools \
 		rubygem-rex-core>=0:security/rubygem-rex-core \
@@ -83,11 +106,13 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		rubygem-rex-struct2>=0:security/rubygem-rex-struct2 \
 		rubygem-rex-text>=0:security/rubygem-rex-text \
 		rubygem-rex-zip>=0:security/rubygem-rex-zip \
+		rubygem-rinda>=0:devel/rubygem-rinda \
 		rubygem-ruby-macho>=0:devel/rubygem-ruby-macho \
+		rubygem-ruby-mysql>=0:databases/rubygem-ruby-mysql \
 		rubygem-ruby_smb>=0:net/rubygem-ruby_smb \
 		rubygem-rubyntlm>=0:net/rubygem-rubyntlm \
 		rubygem-rubyzip>=0:archivers/rubygem-rubyzip \
-		rubygem-sinatra>=0:www/rubygem-sinatra \
+		rubygem-sinatra3>=0:www/rubygem-sinatra3 \
 		rubygem-sqlite3>=0:databases/rubygem-sqlite3 \
 		rubygem-sshkey>=0:security/rubygem-sshkey \
 		rubygem-swagger-blocks>=0:devel/rubygem-swagger-blocks \
@@ -143,6 +168,7 @@ SHEBANG_FILES=	data/exploits/CVE-2017-17562/build.sh \
 		modules/auxiliary/gather/office365userenum.py \
 		modules/auxiliary/scanner/http/onion_omega2_login.py \
 		modules/auxiliary/scanner/http/rdp_web_login.py \
+		modules/auxiliary/scanner/http/rpyc_rce.py \
 		modules/auxiliary/scanner/msmail/exchange_enum.go \
 		modules/auxiliary/scanner/msmail/host_id.go \
 		modules/auxiliary/scanner/msmail/onprem_enum.go \
@@ -155,20 +181,20 @@ SHEBANG_FILES=	data/exploits/CVE-2017-17562/build.sh \
 		modules/exploits/example.py \
 		modules/exploits/linux/smtp/haraka.py \
 		tools/dev/import-dev-keys.sh tools/dev/sign-dev-keys.sh \
-		tools/dev/update_joomla_components.py \
 		tools/hardware/killerbee_msfrelay.py \
-		tools/modules/aws-aggregator-userdata.sh
+		tools/modules/aws-aggregator-userdata.sh \
+		test/ldap/samba-ad-run.sh \
+		test/ldap/samba-ad-setup.sh
 SHEBANG_LANG=	go
 
 STRIP=
 NO_ARCH=	yes
 NO_ARCH_IGNORE=	template_x64_bsd.bin template_x86_bsd.bin CVE-2013-2171.bin
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
-	${REINPLACE_CMD} 's,git ls-files,find . ! -type d | sed "s|^./||", ; \
-		/rb-readline/d ; /win32api/d' \
-		${WRKSRC}/metasploit-framework.gemspec
-	${REINPLACE_CMD} "/concurrent-ruby/s|,'1.0.5'||" \
+	${REINPLACE_CMD} "/rb-readline/d ; /win32api/d ; \
+		/msgpack/s|, '~> 1.6.0'|| ; /octokit/s|, '~> 4.0'|| ; /rasn1/s|, '0.14.0'|| ; /ffi/s|, '< 1.17.0'|| ; /sqlite3/s|, '1.7.3'|| ; /irb/s|, '~> 1.7.4'|| ; /faraday/s|, '2.7.11'|| ; /concurrent-ruby/s|, '1.3.4'||" \
 		${WRKSRC}/metasploit-framework.gemspec
 
 do-build:
@@ -180,7 +206,7 @@ do-build:
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
 	cd ${WRKSRC} && ${PAX} -rw . ${STAGEDIR}${DATADIR}
-.for f in msfconsole msfd msfdb msfrpc msfrpcd msfvenom
+.for f in msfconsole msfd msfrpc msfrpcd msfvenom
 	${RLN} ${STAGEDIR}${DATADIR}/${f} ${STAGEDIR}${PREFIX}/bin/${f}
 .endfor
 
@@ -189,5 +215,19 @@ post-install:
 		${SED} 's,${STAGEDIR}${PREFIX}/,, ; /Gemfile.lock/s|^|@(,,0666) |' >> ${TMPPLIST}
 	@${FIND} -ds ${STAGEDIR}${DATADIR} -type d -empty | \
 		${SED} 's,${STAGEDIR}${PREFIX}/,, ; s,^,@dir ,' >> ${TMPPLIST}
+
+.if defined(DEVELOPER)
+.MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+NO_ARCH_IGNORE+=	libndkstager.so CVE-2013-6282.so CVE-2014-3153.so ofs-lib.so \
+			CVE-2019-5736.x64.bin CVE-2019-5736.x86.bin \
+			fedora-5-7.bin fedora-5-8.bin fedora-5-9.bin \
+			fedora-5-10.bin fedora-5-11.bin groovy.bin hirsute.bin \
+			lib_mysqludf_sys_32.so lib_mysqludf_sys_64.so exp.so libXm.so.3 \
+			template_armle_linux.bin template_mipsbe_linux.bin \
+			template_x64_linux.bin template_x86_linux.bin \
+			template_x86_solaris.bin CVE-2013-2171.bin \
+			template_x86_bsd.bin template_x64_bsd.bin exploit
+.endif
 
 .include <bsd.port.mk>

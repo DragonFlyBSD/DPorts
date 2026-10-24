@@ -1,11 +1,11 @@
 PORTNAME=	plm
-DISTVERSION=	2.6-5
+DISTVERSION=	2.6-7
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Linear Models for Panel Data
-WWW=		https://cran.r-project.org/web/packages/plm/
+WWW=		https://cran.r-project.org/package=plm
 
 LICENSE=	GPLv2+
 

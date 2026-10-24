@@ -1,11 +1,11 @@
 PORTNAME=	mpdcon
 PORTVERSION=	1.5.1
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	audio gnustep
 MASTER_SITES=	SAVANNAH/gap
 DISTNAME=	MPDCon-${PORTVERSION}
 
-MAINTAINER=	bofh@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MPD client for GNUstep
 WWW=		https://gap.nongnu.org/mpdcon/
 
@@ -20,7 +20,7 @@ USE_GNUSTEP=	base gui back build
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 

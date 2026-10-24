@@ -1,2 +1,0 @@
-pre-configure:
-	cd ${WRKSRC} && ${RM} -r tools/makedep

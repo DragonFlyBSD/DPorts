@@ -1,5 +1,5 @@
 PORTNAME=	sniffit
-PORTVERSION=	0.6
+DISTVERSION=	0.7
 DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	net security
 
@@ -9,7 +9,7 @@ COMMENT=	Packet sniffer program. For educational use
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		autoreconf cpe
+USES= autoreconf cpe ncurses
 CPE_VENDOR=	sniffit_project
 USE_GITHUB=	yes
 GH_ACCOUNT=	resurrecting-open-source-projects
@@ -18,13 +18,7 @@ GNU_CONFIGURE=	yes
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD
-CFLAGS+=	-Wno-error=int-conversion
-CFLAGS+=	-Wno-error=incompatible-function-pointer-types
-.endif
-
+CFLAGS= -Wno-discarded-qualifiers
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/sniffit ${STAGEDIR}${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/man/sniffit.5 ${STAGEDIR}${PREFIX}/share/man/man5

@@ -26,4 +26,8 @@ MMX_CFLAGS=		-DUSE_MMX
 post-patch:
 	${TOUCH} -mr ${WRKSRC}/configure.in ${WRKSRC}/aclocal.m4
 
+dfly-patch:
+	${REINPLACE_CMD} -e "/libSDL2_gfx_la_LINK) -rpath/s/$$/ -lm/g"	\
+		${WRKSRC}/Makefile.in
+
 .include <bsd.port.mk>

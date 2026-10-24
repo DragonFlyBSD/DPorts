@@ -1,7 +1,7 @@
---- os/utils.c.orig	2014-04-15 01:01:57 UTC
+--- os/utils.c.orig	2026-07-08 01:35:09 UTC
 +++ os/utils.c
-@@ -443,11 +443,11 @@ GetTimeInMillis(void)
-     static clockid_t clockid;
+@@ -471,11 +471,11 @@ GetTimeInMillis(void)
+     struct timespec tp;
  
      if (!clockid) {
 -#ifdef CLOCK_MONOTONIC_COARSE

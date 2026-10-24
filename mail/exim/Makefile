@@ -53,7 +53,7 @@ EXIMON_USE=	xorg=x11,xaw,xext,xmu,xt
 GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
 ICONV_USES=	iconv:lib,build
 INTERNATIONAL_LIB_DEPENDS=	libidn.so:dns/libidn libidn2.so:dns/libidn2
-LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
+LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb0
 MYSQL_USES=	mysql
 OPENLDAP_USES=	ldap
 PGSQL_LIB_DEPENDS=	libicudata.so:devel/icu
@@ -102,6 +102,7 @@ IGNORE=	you cannot enable DANE without DNSSEC support or without TLS support
 .endif
 
 .if ${PORT_OPTIONS:MSA_EXIM} || defined(FETCH_ALL)
+BROKEN=		Unmaintained extension
 MASTER_SITES+=	http://marc.merlins.org/linux/exim/files/:sa_exim \
 		SF/sa-exim/sa-exim/${SA_EXIM_VERSION}:sa_exim
 DISTFILES+=	sa-exim-${SA_EXIM_VERSION}.tar.gz:sa_exim
@@ -109,7 +110,7 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-Local-sa-exim.c
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-Local-sa-exim.conf
 .endif
 
-EXIM_VERSION=	4.98.2
+EXIM_VERSION=	4.100.1
 SA_EXIM_VERSION=4.2.1
 EXIM_INSTALL_ARG+=	"-no_chown" "-no_symlink"
 EXTRA_PATCHES+=	`${FIND} ${PATCHDIR} -name '74_*.patch'|${SORT} -h`
@@ -136,11 +137,11 @@ EXIM_INSTALL_ARG+=	"eximon" "eximon.bin"
 .endif # !EXIMON_ONLY
 
 PORTDOC_BASE=	ACKNOWLEDGMENTS NOTICE README.UPDATING
-PORTDOC_FILES=	ChangeLog Exim3.upgrade Exim4.upgrade NewStuff \
+PORTDOC_FILES=	ChangeLog NewStuff DANE-draft-notes \
 		OptionLists.txt README README.SIEVE dbm.discuss.txt \
 		experimental-spec.txt filter.txt spec.txt
 
-PORT_EXAMPLES=	convert4r3 convert4r4 transport-filter.pl
+PORT_EXAMPLES=	transport-filter.pl
 
 DAILY_SCRIPTS=	150.exim-tidydb 460.exim-mail-rejects
 
@@ -297,13 +298,6 @@ SEDLIST+=	-e 's,^\# (DISABLE_TLS=),\1,'
 
 .if ${PORT_OPTIONS:MEMBEDDED_PERL}
 SEDLIST+=	-e 's,^\# (EXIM_PERL=),\1,'
-.endif
-
-.if ${PORT_OPTIONS:MTCP_WRAPPERS}
-SEDLIST+=	-e 's,XX_TCP_WRAPPERS_LIBS_XX,-lwrap,' \
-		-e 's,^\# (USE_TCP_WRAPPERS=),\1,'
-.else
-SEDLIST+=	-e 's,XX_TCP_WRAPPERS_LIBS_XX,,'
 .endif
 
 .if ${PORT_OPTIONS:MICONV}
@@ -572,12 +566,6 @@ post-extract:
 	@@${CP} ${WRKDIR}/sa-exim-${SA_EXIM_VERSION}/sa-exim.conf ${WRKSRC}/Local
 .endif
 
-dfly-patch:
-	(cd ${WRKSRC}/OS && \
-		${CP} os.h-FreeBSD os.h-DragonFly && \
-		${CP} os.c-FreeBSD os.c-DragonFly && \
-		${CP} Makefile-FreeBSD Makefile-DragonFly)
-
 do-configure:
 	@${MKDIR} ${WRKSRC}/Local
 	@${SED} -E ${SEDLIST} ${WRKSRC}/src/EDITME > ${WRKSRC}/Local/Makefile
@@ -656,5 +644,11 @@ post-install:
 EXIM_WARN_FLAGS?=	-Wno-logical-op-parentheses -Wno-macro-redefined -Wno-parentheses -Wno-dangling-else
 .endif
 CFLAGS+=	${EXIM_WARN_FLAGS}
+
+dfly-patch:
+	(cd ${WRKSRC}/OS && \
+		${CP} os.h-FreeBSD os.h-DragonFly && \
+		${CP} os.c-FreeBSD os.c-DragonFly && \
+		${CP} Makefile-FreeBSD Makefile-DragonFly)
 
 .include <bsd.port.post.mk>

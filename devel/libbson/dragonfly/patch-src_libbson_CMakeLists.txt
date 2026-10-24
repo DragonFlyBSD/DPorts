@@ -1,23 +1,15 @@
---- src/libbson/CMakeLists.txt.orig	2024-02-01 23:51:26 UTC
+--- src/libbson/CMakeLists.txt.orig	2026-04-07 13:38:53 UTC
 +++ src/libbson/CMakeLists.txt
-@@ -85,17 +85,9 @@ endif ()
- 
- include (CheckIncludeFiles)
- 
--CHECK_INCLUDE_FILE (strings.h BSON_HAVE_STRINGS_H)
--if (NOT BSON_HAVE_STRINGS_H)
--   set (BSON_HAVE_STRINGS_H 0)
--endif ()
--
--CHECK_SYMBOL_EXISTS (strlcpy string.h BSON_HAVE_STRLCPY)
--if (NOT BSON_HAVE_STRLCPY)
--   set (BSON_HAVE_STRLCPY 0)
--else ()
--   set (BSON_HAVE_STRLCPY 1)
--endif ()
+@@ -94,9 +94,10 @@ check_symbol_exists (gmtime_r time.h BSON_HAVE_GMTIME_
+ mongo_bool01 (BSON_HAVE_GMTIME_R BSON_HAVE_GMTIME_R)
+ check_function_exists (rand_r BSON_HAVE_RAND_R)
+ mongo_bool01 (BSON_HAVE_RAND_R BSON_HAVE_RAND_R)
+-check_include_file (strings.h BSON_HAVE_STRINGS_H)
 +# XXX Include detection failure, wait for a higher version
 +set (BSON_HAVE_STRINGS_H 1)
+ mongo_bool01 (BSON_HAVE_STRINGS_H BSON_HAVE_STRINGS_H)
+-check_symbol_exists (strlcpy string.h BSON_HAVE_STRLCPY)
 +set (BSON_HAVE_STRLCPY 0)
- 
- CHECK_INCLUDE_FILE (stdbool.h BSON_HAVE_STDBOOL_H)
- 
+ mongo_bool01 (BSON_HAVE_STRLCPY BSON_HAVE_STRLCPY)
+ check_include_file (stdbool.h BSON_HAVE_STDBOOL_H)
+ mongo_bool01 (BSON_HAVE_STDBOOL_H BSON_HAVE_STDBOOL_H)

@@ -22,6 +22,7 @@ CONFLICTS=	heirloom-mailx
 
 WRKSRC=		${WRKDIR}/mail-2.2.8
 
+MAKE_ENV= CWARNFLAGS=-fcommon
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD

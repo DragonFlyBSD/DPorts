@@ -18,7 +18,7 @@ ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		bash:shells/bash \
 		cmake-core>0:devel/cmake-core
-LIB_DEPENDS=	libinotify.so:devel/libinotify
+LIB_DEPENDS= libinotify.so:devel/libinotify libcharset.so:converters/libiconv
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss
 
 CONFLICTS_INSTALL=	certmgr coin-or-disco disco mono mono[0-9]*
@@ -40,8 +40,7 @@ NLS_USES=	gettext
 
 X11_USES=	display:test
 
-USES=	autoreconf bison compiler:c11 cpe elfctl gmake iconv libtool \
-	pathfix perl5 python shebangfix tar:bzip2
+USES= autoreconf bison compiler:c11 cpe gmake iconv libtool pathfix perl5 python shebangfix tar:bzip2 localbase
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
@@ -49,9 +48,8 @@ USE_LDCONFIG=	yes
 SHEBANG_FILES=	scripts/mono-heapviz scripts/mono-package-runtime \
 		mono/mini/genmdesc.py mono/tests/test_lldb.py
 BINARY_ALIAS=	python=${PYTHON_CMD}
-ELF_FEATURES=	+wxneeded:mono/mini/mono-sgen
 
-CONFIGURE_ARGS=	--disable-dtrace --enable-btls
+CONFIGURE_ARGS= --disable-dtrace --enable-btls ac_cv_header_localcharset_h=yes ac_cv_lib_charset_locale_charset=yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 MAKE_ENV=	MONO_SHARED_DIR="${WRKDIR}" \
@@ -68,6 +66,7 @@ PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
 OPTIONS_SLAVE=	MONOLITE
 .endif
 
+DFLY_ALLOW_REMAKE= increases chances of building exponentially
 .include <bsd.port.options.mk>
 
 .if ${ARCH:Mpowerpc*}
@@ -114,5 +113,9 @@ post-install:
 	${RLN} ${STAGEDIR}${PREFIX}/lib/mono/msbuild/Current \
 		${STAGEDIR}${PREFIX}/lib/mono/msbuild/15.0
 	${ECHO_CMD} lib/mono/msbuild/15.0 >>${TMPPLIST}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@LIBS+="-liconv -lcharset"@LIBS="-liconv -lcharset $$LIBS"@g' \
+		${WRKSRC}/configure ${WRKSRC}/configure.ac
 
 .include <bsd.port.post.mk>

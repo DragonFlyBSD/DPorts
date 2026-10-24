@@ -1,6 +1,5 @@
 PORTNAME=	uwsgi
-PORTVERSION=	2.0.28
-PORTREVISION=	1
+PORTVERSION=	2.0.31
 CATEGORIES=	www python
 PKGNAMESUFFIX=	${PYTHON_PKGNAMESUFFIX}
 
@@ -17,6 +16,8 @@ GH_ACCOUNT=	unbit
 USE_PYTHON=	distutils concurrent
 USE_RC_SUBR=	uwsgi
 CPE_VENDOR=	unbit
+
+PORTSCOUT=	skipv:no_server_mode
 
 MAKE_ENV+=	CPUCOUNT=${MAKE_JOBS_NUMBER} UWSGI_EMBED_PLUGINS=cgi
 
@@ -64,6 +65,7 @@ SSL_USES=		ssl
 SSL_CFLAGS=		-I${OPENSSLINC}
 SSL_LDFLAGS=		${OPENSSL_LDFLAGS}
 
+LDFLAGS= -L${LOCALBASE}/lib
 post-patch:
 .for var in JSON PCRE XML SSL
 	@${REINPLACE_CMD} -e '/^${var:tl} =/ s|= .*|= ${BUILDCONF_${var}:Ufalse}|' ${WRKSRC}/buildconf/base.ini

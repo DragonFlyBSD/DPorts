@@ -21,6 +21,7 @@ PLIST_FILES=	lib/libretro/pcsx_rearmed_libretro.so
 
 MAKEFILE=	Makefile.libretro
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.pre.mk>
 
 .if ${ARCH:Marmv?}

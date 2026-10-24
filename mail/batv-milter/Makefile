@@ -58,4 +58,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
 
+.if !exists(/usr/include/libmilter/mfapi.h)
+BUILD_DEPENDS+=	${LOCALBASE}/include/libmilter/mfapi.h:mail/sendmail
+CFLAGS+=	-I${LOCALBASE}/include
+.endif
+
 .include <bsd.port.post.mk>

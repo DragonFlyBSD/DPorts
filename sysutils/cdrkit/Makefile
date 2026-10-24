@@ -32,4 +32,8 @@ post-patch:
 	    ${WRKSRC}/include/schily.h
 	@${REINPLACE_CMD} -e 's|getdelim|wodim_getdelim|g' ${WRKSRC}/wodim/cue.c
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/libusal/scsi-bsd.c
+
 .include <bsd.port.mk>

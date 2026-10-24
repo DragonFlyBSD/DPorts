@@ -1,7 +1,7 @@
 PORTNAME=	or-tools
 DISTVERSIONPREFIX=	v
-DISTVERSION=	9.5
-PORTREVISION=	9
+DISTVERSION=	9.6
+PORTREVISION=	16
 CATEGORIES=	math
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BROKEN_armv7=	SWIG wrapped code invalid in 32 bit architecture, regenerate code using -DSWIGWORDSIZE32
 BROKEN_i386=	SWIG wrapped code invalid in 32 bit architecture, regenerate code using -DSWIGWORDSIZE32 # see https://github.com/google/or-tools/issues/2130
 
-PY_DEPENDS=	${PYNUMPY} \
+PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}absl-py>0:devel/py-absl-py@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}protobuf>0:devel/py-protobuf@${PY_FLAVOR}
 BUILD_DEPENDS=	${PY_DEPENDS} \
@@ -42,7 +42,7 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libre2.so:devel/re2
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		blaslapack cmake:insource compiler:c++17-lang eigen:3 pkgconfig python
+USES= blaslapack cmake:insource compiler:c++17-lang eigen:3 pkgconfig python localbase:ldflags
 USE_PYTHON=	flavors pytest # tests fail, see https://github.com/google/or-tools/issues/3464
 
 USE_GITHUB=	yes
@@ -52,7 +52,6 @@ CMAKE_OFF=	BUILD_DEPS BUILD_pybind11 INSTALL_BUILD_DEPS BUILD_TESTING BUILD_EXAM
 CMAKE_ON=	BUILD_PYTHON
 CMAKE_ARGS=	-DSWIG_EXECUTABLE=${LOCALBASE}/bin/swig -DFREEBSD_PYTHON_VER=${PYTHON_VER}
 CONFIGURE_ENV=	UNIX_CBC_DIR=${LOCALBASE} UNIX_CLP_DIR=${LOCALBASE}
-CXXFLAGS+=	-DABSL_LEGACY_THREAD_ANNOTATIONS
 BUILD_ENV=	UNIX_CBC_DIR=${LOCALBASE} UNIX_CLP_DIR=${LOCALBASE}
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
@@ -69,6 +68,8 @@ post-patch:
 		${WRKSRC}/ortools/glop/CMakeLists.txt \
 		${WRKSRC}/ortools/linear_solver/CMakeLists.txt \
 		${WRKSRC}/ortools/sat/CMakeLists.txt
+	@${REINPLACE_CMD} -e '17,19d ; /AbslStringify/,+10d' \
+		${WRKSRC}/ortools/base/logging.h
 
 do-install: # by default cmake installs the whole or-tools project without the python part, so extract the wheel and install python files manually here
 	${MKDIR} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
@@ -84,5 +85,18 @@ run-examples: # one of the examples fail: https://github.com/google/or-tools/iss
 		${SETENV} ${TEST_ENV} ${PYTHON_CMD} ${e} && \
 		${ECHO} "... test ${e} succeeded"
 .endfor
+
+pre-configure:
+	@${MKDIR} ${BUILD_WRKSRC}
+	@${TOUCH} ${BUILD_WRKSRC}/build.ninja
+
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/COMMAND/s|protobuf::protoc|protoc -I${LOCALBASE}/include|' \
+		${WRKSRC}/cmake/python.cmake \
+		${WRKSRC}/cmake/java.cmake   \
+		${WRKSRC}/cmake/dotnet.cmake \
+		${WRKSRC}/cmake/cpp.cmake
+
 
 .include <bsd.port.mk>

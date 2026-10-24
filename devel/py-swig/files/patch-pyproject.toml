@@ -1,0 +1,63 @@
+-- Switch from scikit-build-core to setuptools so the port does not try to build
+-- the bundled SWIG binary.  Use PEP 621 object form for the license field,
+-- add setuptools package discovery for the source layout, and drop the
+-- console scripts that conflict with devel/swig.
+
+--- pyproject.toml.orig	2026-09-14 21:45:57 UTC
++++ pyproject.toml
+@@ -1,5 +1,5 @@
+ [build-system]
+-requires = ["scikit-build-core"]
+-build-backend = "scikit_build_core.build"
++requires = ["setuptools>=63.1.0", "setuptools-scm>=0"]
++build-backend = "setuptools.build_meta"
+
+ [project]
+@@ -9,7 +9,7 @@
+ name = "swig"
+ description = "SWIG is a software development tool that connects programs written in C and C++ with a variety of high-level programming languages."
+ keywords = ["swig", "build", "c", "c++"]
+-license = "GPL-3.0-or-later"
++license = {text = "GPL-3.0-or-later"}
+ readme = "README.md"
+ classifiers = [
+   "Programming Language :: C",
+@@ -20,36 +20,10 @@
+ dynamic = ["version"]
+
+
+-[tool.scikit-build]
+-wheel.py-api = "py3"
+-wheel.expand-macos-universal-tags = true
+-metadata.version.provider = "scikit_build_core.metadata.setuptools_scm"
+-sdist.include = ["src/swig/_version.py"]
+-wheel.install-dir = "swig/data"
++[tool.setuptools.packages.find]
++where = ["src"]
+
+-[tool.cibuildwheel]
+-archs = ["auto64", "auto32"]
+-build = "cp39-*"
+-test-command = [
+-  "swig -version",
+-  "swig -pcreversion",
+-  "swig -help",
+-]
+-environment.PIP_ONLY_BINARY = ":all:"
+
+-[tool.cibuildwheel.linux]
+-manylinux-x86_64-image = "quay.io/pypa/manylinux2010_x86_64:2022-08-05-4535177"
+-manylinux-i686-image = "quay.io/pypa/manylinux2010_i686:2022-08-05-4535177"
+-manylinux-aarch64-image = "manylinux2014"
+-manylinux-ppc64le-image = "manylinux2014"
+-manylinux-s390x-image = "manylinux2014"
+-manylinux-riscv64-image = "ghcr.io/mayeut/manylinux_2_31:2025.07.25-1"
+-
+-
+-[project.scripts]
+-swig = "swig:swig"
+-"swig4.0" = "swig:swig"
+-
+ [project.urls]
+ Homepage = "https://swig.org/"
+ Download = "https://swig.org/download.html"

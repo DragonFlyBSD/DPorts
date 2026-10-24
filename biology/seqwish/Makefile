@@ -1,29 +1,28 @@
 PORTNAME=	seqwish
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.9
+DISTVERSION=	0.7.12
 CATEGORIES=	biology
-MASTER_SITES=	https://github.com/ekg/seqwish/releases/download/v${DISTVERSION}/
+MASTER_SITES=	https://github.com/pangenome/seqwish/releases/download/v${DISTVERSION}/
+DISTFILES=	seqwish-v0.7.12.tar.gz
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Alignment to variation graph inducer
-WWW=		https://github.com/ekg/seqwish
+WWW=		https://github.com/pangenome/seqwish
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_i386=	compilation fails: error: use of undeclared identifier '_pdep_u64'
+BROKEN_i386=	compilaiton fails: error: `target_pointer_width` must be 64
 
-USES=		cmake:noninja
+LIB_DEPENDS=	libzstd.so:archivers/zstd
 
-#CMAKE_ARGS=	-DEXTRA_FLAGS="" # disable -march=native ; this causes the link failure: undefined symbol: __sync_val_compare_and_swap_16
+USES=		cargo pkgconfig
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
 PLIST_FILES=	bin/${PORTNAME}
 
-OPTIONS_DEFINE=		OPENMP
-OPTIONS_DEFAULT=	OPENMP
+# tests as of 0.7.12: test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
 
-OPENMP_CMAKE_BOOL=	USE_OPENMP
-OPENMP_CXXFLAGS=	-fopenmp
-OPENMP_BROKEN_OFF=	https://github.com/ekg/seqwish/issues/114
-
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

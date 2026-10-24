@@ -1,6 +1,5 @@
 PORTNAME=	yara-python-dex
-PORTVERSION=	1.0.7.1
-PORTREVISION=	1
+PORTVERSION=	1.1.0
 CATEGORIES=	security python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -9,6 +8,9 @@ COMMENT=	Prebuilt dex-enabled yara-python wheels
 WWW=		https://github.com/MobSF/yara-python-dex
 
 LICENSE=	APACHE20
+
+BUILD_DEPENDS=	${PY_SETUPTOOLS}	\
+		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	MobSF VirusTotal:yp VirusTotal:yp2
@@ -20,12 +22,10 @@ GH_SUBDIR=	yara-python:yp yara-python/yara:yp2
 CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}yara
 
 USES=		pytest python ssl
-USE_PYTHON=	distutils
+USE_PYTHON=	pep517
 
 .if !defined(WITH_DEBUG)
 LDFLAGS+=	-s
 .endif
-
-PLIST_SUB=	VER=${PORTVERSION:R}
 
 .include <bsd.port.mk>

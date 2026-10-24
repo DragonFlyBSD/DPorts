@@ -1,6 +1,6 @@
 PORTNAME=	tartube
-DISTVERSION=	2.5.100
-PORTREVISION=	1
+DISTVERSION=	2.5.242
+PORTREVISION=	0
 CATEGORIES=	multimedia python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -35,6 +35,7 @@ OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
 NLS_MAKE_ENV=	WITH_LOCALE=yes
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	${SED} -i.bak -e "s|\( = '\)/usr/share/tartube|\1${DATADIR}|1" \
 		-e "s|\(version = \).*|\1'${PORTVERSION}',|1" \

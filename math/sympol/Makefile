@@ -1,7 +1,7 @@
 PORTNAME=	sympol
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.9
-PORTREVISION=	13
+PORTREVISION=	18
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,9 +11,9 @@ WWW=		https://www.math.uni-rostock.de/~rehn/software/sympol.html
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	${LOCALBASE}/lib/libbliss.a:math/bliss \
-		permlib>0:math/permlib
-LIB_DEPENDS=	libboost_program_options.so:devel/boost-libs \
+BUILD_DEPENDS=	permlib>0:math/permlib
+LIB_DEPENDS=	libbliss.so:math/bliss \
+		libboost_program_options.so:devel/boost-libs \
 		libcddgmp.so:math/cddlib \
 		libgmp.so:math/gmp
 
@@ -30,6 +30,7 @@ SHEBANG_GLOB=	*.pl
 
 CMAKE_ARGS=		-DBLISS_INCLUDE_DIR=${LOCALBASE}/include/bliss
 CMAKE_TESTING_ON=	BUILD_TESTS # test 'perltest' fails with 'output format mismatch', see https://github.com/tremlin/SymPol/issues/1
+CMAKE_ARGS+=		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4.5 compatibility
 
 post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/lib/libcddgmp.so

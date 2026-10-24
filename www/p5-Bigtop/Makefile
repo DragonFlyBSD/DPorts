@@ -29,4 +29,8 @@ USES=		perl5
 USE_PERL5=	modbuild
 CONFIGURE_ENV=	TENTMAKER_TEMPLATE_PATH=${STAGEDIR}${PREFIX}/share/TentMaker
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s@return '\$$tentmaker_template_path@return '${LOCALBASE}/share/TentMaker@"	\
+		${WRKDIR}/Bigtop-${PORTVERSION}/Build.PL
+
 .include <bsd.port.mk>

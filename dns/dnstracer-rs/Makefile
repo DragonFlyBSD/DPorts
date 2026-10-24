@@ -1,9 +1,10 @@
 PORTNAME=	dnstracer
-DISTVERSION=	1.1.4
+DISTVERSION=	1.2.5
+PORTREVISION=	4
 CATEGORIES=	dns
-MASTER_SITES=	CRATESIO
-PKGNAMESUFFIX=	-rs
+MASTER_SITES=	CRATESIO/${PORTNAME}/${DISTNAME}${CARGO_CRATE_EXT}
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
+PKGNAMESUFFIX=	-rs
 
 MAINTAINER=	mat@FreeBSD.org
 COMMENT=	Trace a chain of DNS servers to the source
@@ -14,7 +15,5 @@ LICENSE=	MIT
 USES=		cargo
 
 PLIST_FILES=	bin/dnstracer
-
-# make cargo-crates > Makefile.crates
 
 .include <bsd.port.mk>

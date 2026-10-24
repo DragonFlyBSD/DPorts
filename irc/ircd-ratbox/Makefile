@@ -78,6 +78,7 @@ CONFIGURE_ARGS+=	--with-nicklen=${NICKLEN}
 .endif
 
 #-----------------------------------------------------------------------
+LDFLAGS= -L${OPENSSLLIB}
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "i386"
@@ -175,6 +176,10 @@ post-install:
 	@${ECHO_MSG} "Executing install-mod.sh for ircd-shortcuts module installation."
 	${SH} ${WRKSRC}/install-mod.sh ${WRKSRC}/contrib/m_rsshortcut.la \
 		${STAGEDIR}${PREFIX}/lib/${PORTNAME}/modules/contrib
+.endif
+
+.if ${PORT_OPTIONS:MOPENSSL}
+CFLAGS+= -I${OPENSSLINC}
 .endif
 
 .include <bsd.port.mk>

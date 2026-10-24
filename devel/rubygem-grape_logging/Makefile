@@ -1,5 +1,5 @@
 PORTNAME=	grape_logging
-PORTVERSION=	1.8.4
+PORTVERSION=	3.0.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -10,8 +10,9 @@ WWW=		https://github.com/aserafin/grape_logging
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-RUN_DEPENDS=	rubygem-grape>=0:devel/rubygem-grape \
-		rubygem-rack>=0,3:www/rubygem-rack
+RUN_DEPENDS=	rubygem-grape>=2.4.0:devel/rubygem-grape \
+		rubygem-rack>=0,3:www/rubygem-rack \
+		rubygem-zeitwerk>=0:devel/rubygem-zeitwerk
 
 USES=		gem
 

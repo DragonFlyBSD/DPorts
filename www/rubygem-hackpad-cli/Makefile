@@ -21,4 +21,8 @@ NO_ARCH=	yes
 USES=		gem
 PLIST_FILES=	bin/hpcli
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/reverse_markdown>/s@~>@>=@g' \
+		${WRKSRC}/hackpad-cli.gemspec
+
 .include <bsd.port.mk>

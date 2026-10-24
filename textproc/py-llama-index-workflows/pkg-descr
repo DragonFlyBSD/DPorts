@@ -1,0 +1,4 @@
+LlamaIndex Workflows provides an event-driven, async-first, step-based
+framework for controlling the execution flow of AI applications. It
+enables building complex, multi-step AI agents and pipelines with
+reliable execution semantics and observability.

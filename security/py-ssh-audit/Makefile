@@ -1,6 +1,6 @@
 PORTNAME=	ssh-audit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.3.0
+DISTVERSION=	3.9.0
 CATEGORIES=	security
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -20,6 +20,5 @@ USE_PYTHON=	pep517
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/ssh-audit.1 ${STAGEDIR}${PREFIX}/share/man/man1
-	${ECHO_CMD} share/man/man1/ssh-audit.1.gz >> ${TMPPLIST}
 
 .include <bsd.port.mk>

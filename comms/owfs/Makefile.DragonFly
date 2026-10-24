@@ -1,4 +1,0 @@
-
-USES+=	autoreconf
-
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NOWFS}

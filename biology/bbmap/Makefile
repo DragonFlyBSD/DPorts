@@ -1,8 +1,7 @@
 PORTNAME=	bbmap
-DISTVERSION=	39.15
+DISTVERSIONPREFIX=	v
+DISTVERSION=	40.02
 CATEGORIES=	biology java
-MASTER_SITES=	SF/bbmap/
-DISTNAME=	BBMap_${PORTVERSION}
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	BBMap short read aligner, and other bioinformatic tools
@@ -14,17 +13,18 @@ LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
 
 RUN_DEPENDS=	bash:shells/bash \
-		pigz:archivers/pigz \
-		pbzip2:archivers/pbzip2
+		pbzip2:archivers/pbzip2 \
+		pigz:archivers/pigz
 
 USES=		java shebangfix
+USE_GITHUB=	yes
+GH_ACCOUNT=	bbushnell
+GH_PROJECT=	BBTools
 
 SHEBANG_FILES=	${WRKSRC}/*.sh
 
 NO_ARCH=	yes
 NO_BUILD=	yes
-
-WRKSRC=		${WRKDIR}/${PORTNAME}
 
 LIBEXEC_DIR=	${PREFIX}/libexec/bbmap
 
@@ -42,8 +42,10 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/*.sh ${STAGEDIR}${LIBEXEC_DIR}
 	cd ${WRKSRC}/current && ${COPYTREE_SHARE} . \
 		${STAGEDIR}${JAVAJARDIR}/bbmap
-.for f in bbduk.sh bbnorm.sh dedupe.sh bbmap.sh bloomfilter.sh reformat.sh \
-	bbmerge.sh tadpole.sh
+.for f in bbmap.sh bbduk.sh bbmerge.sh bbnorm.sh tadpole.sh clumpify.sh \
+	callvariants.sh bbsplit.sh sendsketch.sh comparesketch.sh \
+	dedupe.sh bbmap.sh bloomfilter.sh reformat.sh \
+	bbmerge.sh tadpole.sh bbversion.sh
 	${RLN} ${STAGEDIR}${LIBEXEC_DIR}/${f} ${STAGEDIR}${PREFIX}/bin
 .endfor
 

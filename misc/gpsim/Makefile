@@ -60,4 +60,8 @@ post-install-EXAMPLES-on:
 		${STAGEDIR}${EXAMPLESDIR}/projects/${i})
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/libgpsim_eXdbm_la_LIBADD =/s@$$@ -lm@g' \
+		${WRKSRC}/eXdbm/Makefile.in
+
 .include <bsd.port.mk>

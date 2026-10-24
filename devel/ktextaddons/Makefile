@@ -1,5 +1,5 @@
 PORTNAME=	ktextaddons
-DISTVERSION=	1.6.0
+DISTVERSION=	2.2.0
 CATEGORIES=	devel kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/
 
@@ -11,13 +11,21 @@ LICENSE=	LGPL20+
 
 LIB_DEPENDS=	libqt6keychain.so:security/qtkeychain@qt6
 
-USES=		gettext cmake kde:6 qt:6 tar:xz xorg
-USE_KDE=	archive coreaddons colorscheme i18n kio sonnet \
+USES=		gettext cmake kde:6 python:run qt:6 shebangfix tar:xz xorg
+USE_KDE=	archive colorscheme coreaddons i18n iconthemes \
+		itemviews kio service sonnet \
 		syntaxhighlighting textwidgets widgetsaddons \
 		ecm:build
-USE_QT=		base speech
+USE_QT=		base multimedia speech
 USE_XORG=	x11
 
+SHEBANG_FILES=	textedittexttospeech/kokoroinstall/scripts/kokoro_helper.py \
+		textspeechtotext/speechtotext/whisperinstall/scripts/whisper_helper.py
+
 PLIST_SUB+=	LIBVERSION=${PORTVERSION}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

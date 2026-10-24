@@ -1,6 +1,6 @@
 PORTNAME=		putty
 # https://tartarus.org/~simon/putty-prerel-snapshots/putty-0.83~pre20250105.1e45199.tar.gz
-DISTVERSION=		0.83
+DISTVERSION=		0.85
 PORTREVISION=		0
 #DISTVERSIONSUFFIX=	.ec158a2
 CATEGORIES=		security
@@ -22,8 +22,6 @@ USE_PERL5=	build
 
 CONFLICTS_INSTALL?=	pssh* putty-nogtk*
 
-PATCH_STRIP=	-p1
-
 PLIST_FILES=	bin/pageant \
 		bin/plink \
 		bin/pscp \
@@ -38,11 +36,12 @@ PLIST_FILES=	bin/pageant \
 		share/man/man1/puttygen.1.gz
 
 OPTIONS_DEFINE=			GTK3
-OPTIONS_DEFAULT=		GSSAPI_BASE GTK3
+OPTIONS_DEFAULT= GTK3 GSSAPI_MIT
 OPTIONS_SINGLE=			GSSAPI_SELECT
 OPTIONS_SINGLE_GSSAPI_SELECT=	GSSAPI_BASE GSSAPI_HEIMDAL GSSAPI_MIT \
 				GSSAPI_NONE
 
+OPTIONS_EXCLUDE= GSSAPI_BASE
 .include <bsd.port.options.mk>
 
 LDFLAGS+=	-Wl,--as-needed
@@ -53,7 +52,7 @@ LDFLAGS+=	-Wl,--as-needed
 # - Putty 0.77 cannot have X11 without the gdk/gdkx.h header i. e. GTK.
 .if ${PORT_OPTIONS:MGTK3} && !defined(WITHOUT_X11)
 USES+=		xorg
-USE_XORG=	x11
+USE_XORG=	x11 xrender
 USES+=		gnome
 USE_GNOME=	cairo gdkpixbuf gtk30
 CMAKE_ARGS+=	-DPUTTY_GTK_VERSION:STRING=3

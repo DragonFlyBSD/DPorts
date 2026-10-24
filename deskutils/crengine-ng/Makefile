@@ -1,0 +1,40 @@
+PORTNAME=	crengine-ng
+DISTVERSION=	0.9.13
+CATEGORIES=	deskutils
+
+MAINTAINER=	kenrap@FreeBSD.org
+COMMENT=	Cross-platform library for text viewers and e-book readers
+WWW=		https://gitlab.com/coolreader-ng/crengine-ng
+
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2 \
+		libfribidi.so:converters/fribidi \
+		libgif.so:graphics/giflib \
+		libharfbuzz.so:print/harfbuzz \
+		libpng.so:graphics/png \
+		libunibreak.so:textproc/libunibreak \
+		libutf8proc.so:textproc/utf8proc \
+		libzstd.so:archivers/zstd
+
+USES=		cmake desktop-file-utils gettext-runtime jpeg pkgconfig
+
+USE_GITLAB=	yes
+GL_ACCOUNT=	coolreader-ng
+
+CMAKE_ARGS=	-DCRE_BUILD_STATIC=OFF \
+		-DDOC_DATA_COMPRESSION_LEVEL=3
+
+.if defined(WITH_LTO)
+CMAKE_ARGS+=	-DENABLE_LTO=ON
+.endif
+
+OPTIONS_DEFINE=		WEBP
+OPTIONS_DEFAULT=	WEBP
+
+WEBP_LIB_DEPENDS=	libwebp.so:graphics/webp
+WEBP_CMAKE_BOOL=	WITH_WEBP
+
+.include <bsd.port.mk>

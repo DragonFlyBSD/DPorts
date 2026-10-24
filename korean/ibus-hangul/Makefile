@@ -1,8 +1,7 @@
 PORTNAME=	ibus-hangul
-PORTVERSION=	1.5.1
-PORTREVISION=	3
+PORTVERSION=	1.5.5
+PORTREVISION=	1
 CATEGORIES=	korean
-MASTER_SITES=	https://github.com/choehwanjin/ibus-hangul/releases/download/${PORTVERSION}/
 
 MAINTAINER=	jkim@FreeBSD.org
 COMMENT=	Hangul input engine for IBus
@@ -13,9 +12,14 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libhangul.so:korean/libhangul \
 		libibus-1.0.so:textproc/ibus
 
-USES=		gmake gnome libtool pkgconfig python
+USES=		autoreconf desktop-file-utils gmake gnome libtool \
+		pkgconfig python
 USE_GNOME=	gtk30 intlhack pygobject3
 USE_PYTHON=	py3kplist
+
+GH_ACCOUNT=	choehwanjin
+GH_TAGNAME=	aa4b71c
+USE_GITHUB=	yes
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	NLS

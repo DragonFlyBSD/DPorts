@@ -1,6 +1,5 @@
 PORTNAME=	dante
-PORTVERSION=	1.4.3
-PORTREVISION=	3
+PORTVERSION=	1.4.4
 CATEGORIES=	net security
 MASTER_SITES=	http://www.inet.no/dante/files/ \
 		ftp://ftp.inet.no/pub/socks/
@@ -27,6 +26,8 @@ OPTIONS_DEFAULT=	UPNP
 UPNP_LIB_DEPENDS=	libminiupnpc.so:net/miniupnpc
 UPNP_CONFIGURE_OFF=	--without-upnp
 
+CFLAGS= -Wno-unused-but-set-variable
+CPP= cpp -P
 post-patch:
 	@${REINPLACE_CMD} -e '/FORTIFY_SOURCE gives error/,+28d' \
 		${WRKSRC}/configure

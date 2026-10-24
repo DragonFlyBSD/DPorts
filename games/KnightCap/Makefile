@@ -28,4 +28,8 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifdef \(__FreeBSD__\)@if defined(\1)||defined(__DragonFly__)@g'	\
+		${WRKSRC}/knightcap.c
+
 .include <bsd.port.mk>

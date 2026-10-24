@@ -1,8 +1,7 @@
-# Created by: alepulver
-
 PORTNAME=	xrdp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.19
+DISTVERSION=	0.10.80.b20260702
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	net
 PKGNAMESUFFIX=	-devel
@@ -12,58 +11,78 @@ PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
 
 MAINTAINER=	meta@FreeBSD.org
 COMMENT=	Open source Remote Desktop Protocol (RDP) server (development version)
+WWW=		https://www.xrdp.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/nasm:devel/nasm
-RUN_DEPENDS=	xterm:x11/xterm \
-		${LOCALBASE}/lib/xorg/modules/libxorgxrdp.so:x11-drivers/xorgxrdp \
-		${LOCALBASE}/lib/pulse-14.2/modules/module-xrdp-sink.so:audio/pulseaudio-module-xrdp
 LIB_DEPENDS=	libImlib2.so:graphics/imlib2
+RUN_DEPENDS=	${LOCALBASE}/lib/xorg/modules/libxorgxrdp.so:x11-drivers/xorgxrdp-devel \
+		xterm:x11/xterm
 
-USES=		autoreconf:build compiler:c11 cpe jpeg localbase libtool pkgconfig \
-		ssl xorg
+USES=		autoreconf:build compiler:c11 cpe jpeg libtool localbase \
+		pkgconfig ssl xorg
 CPE_VENDOR=	neutrinolabs
-USE_XORG=	ice pixman sm x11 xfixes xrandr
-USE_LDCONFIG=	${PREFIX}/lib/xrdp
 USE_GITHUB=	yes
+GH_ACCOUNT=	neutrinolabs
+GH_TAGNAME=	3af31df3
+GH_TUPLE=	neutrinolabs:librfxcodec:0badc06:librfxcodec/librfxcodec \
+		neutrinolabs:libpainter:379b8fb:libpainter/libpainter
+USE_LDCONFIG=	${PREFIX}/lib/xrdp
+USE_XORG=	ice pixman sm x11 xfixes xkbfile xrandr
 
 GNU_CONFIGURE=	yes
-GH_ACCOUNT=	neutrinolabs
-GH_TUPLE=	neutrinolabs:librfxcodec:v0.1.6:librfxcodec/librfxcodec \
-		neutrinolabs:libpainter:v0.1.1:libpainter/libpainter
-
-CONFIGURE_ARGS=	--localstatedir=/var --enable-strict-locations \
-		--with-pkgconfigdir=${LOCALBASE}/libdata/pkgconfig \
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
+CONFIGURE_ARGS=	--enable-imlib2 \
+		--enable-jpeg \
+		--enable-painter \
 		--enable-pam-config=freebsd \
-		--enable-jpeg --enable-pixman --enable-rfxcodec --enable-painter \
-		--enable-imlib2
+		--enable-pixman \
+		--enable-rfxcodec \
+		--enable-strict-locations \
+		--enable-vsock \
+		--localstatedir=/var \
+		--with-sysconfsubdir=${PORTNAME}${PKGNAMESUFFIX} \
+		--with-pkgconfigdir=${LOCALBASE}/libdata/pkgconfig
+
+INSTALL_TARGET=	install-strip
 LDFLAGS+=	-lssl
 CONFLICTS=	xrdp
-INSTALL_TARGET=	install-strip
+ETCDIR=		${PREFIX}/etc/${PORTNAME}${PKGNAMESUFFIX}
 SUB_FILES=	pkg-deinstall pkg-install pkg-message
 SUB_LIST=	OPENSSLBASE=${OPENSSLBASE}
 
-OPTIONS_DEFINE=	DEBUG FUSE IPV6
-OPTIONS_DEFAULT=	FDKAAC OPUS
-OPTIONS_GROUP=	AUDIO_CODEC
+OPTIONS_DEFINE=			DEBUG FUSE IPV6
+OPTIONS_DEFAULT=		FDKAAC OPENH264 OPUS X264
+OPTIONS_GROUP=			AUDIO_CODEC VIDEO_CODEC
 OPTIONS_GROUP_AUDIO_CODEC=	FDKAAC MP3LAME OPUS
-FDKAAC_DESC=	Enable Fraunhofer FDK AAC for audio redirection
-FUSE_DESC=	Enable drive redirection via FUSE (experimental)
-MP3LAME_DESC=	Enable MP3 Lame for audio redirection
-OPUS_DESC=	Enable Opus for audio redirection
+OPTIONS_GROUP_VIDEO_CODEC=	OPENH264 X264
+FDKAAC_DESC=			Enable Fraunhofer FDK AAC for audio redirection
+FUSE_DESC=			Enable drive redirection via FUSE (experimental)
+MP3LAME_DESC=			Enable MP3 Lame for audio redirection
+OPENH264_DESC=			H.264 video codec support via OpenH264
+OPUS_DESC=			Enable Opus for audio redirection
 
-DEBUG_CONFIGURE_ENABLE=	devel-debug devel-logging
+DEBUG_CONFIGURE_ENABLE=		devel-debug devel-logging
+FDKAAC_LIB_DEPENDS=		libfdk-aac.so:audio/fdk-aac
 FDKAAC_CONFIGURE_ENABLE=	fdkaac
-FDKAAC_LIB_DEPENDS=	libfdk-aac.so:audio/fdk-aac
-FUSE_CONFIGURE_ENABLE=	fuse
-FUSE_USES=		fuse
-IPV6_CONFIGURE_ENABLE=	ipv6
+FUSE_USES=			fuse:3
+FUSE_CONFIGURE_ENABLE=		fuse
+IPV6_CONFIGURE_ENABLE=		ipv6
+MP3LAME_LIB_DEPENDS=		libmp3lame.so:audio/lame
 MP3LAME_CONFIGURE_ENABLE=	mp3lame
-MP3LAME_LIB_DEPENDS=	libmp3lame.so:audio/lame
-OPUS_CONFIGURE_ENABLE=	opus
-OPUS_LIB_DEPENDS=	libopus.so:audio/opus
+OPENH264_LIB_DEPENDS=		libopenh264.so:multimedia/openh264
+OPENH264_CONFIGURE_ENABLE=	openh264
+OPUS_LIB_DEPENDS=		libopus.so:audio/opus
+OPUS_CONFIGURE_ENABLE=		opus
+X264_LIB_DEPENDS=		libx264.so:multimedia/libx264
+X264_CONFIGURE_ENABLE=		x264
+
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
+
+GROUPS=		_xrdp
+USERS=		_xrdp
 
 .include <bsd.port.pre.mk>
 
@@ -76,18 +95,33 @@ CONFIGURE_ENV+=	OPENSSL_CFLAGS="-I${OPENSSLINC}" \
 .endif
 
 pre-configure:
-	@${REINPLACE_CMD} -e "s|0.9.14|${DISTVERSION}-${GH_TAGNAME}|" ${WRKSRC}/configure.ac
+	# This version doesn't require GH_TAGNAME override now
+	@${REINPLACE_CMD} -e "s|0.10.80|${DISTVERSION}-${GH_TAGNAME}|" ${WRKSRC}/configure.ac
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./bootstrap
+
+post-patch:
+	${REINPLACE_CMD} -e "s|^param=Xorg|param=${LOCALBASE}/libexec/Xorg|" \
+		-e "s|^LogFile=xrdp-sesman\.log|LogFile=xrdp-sesman${PKGNAMESUFFIX}.log|" \
+		${WRKSRC}/sesman/sesman.ini.in
+	${REINPLACE_CMD} -e "s|^LogFile=xrdp\.log|LogFile=xrdp${PKGNAMESUFFIX}.log|" \
+		${WRKSRC}/xrdp/xrdp.ini.in
 
 post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/startwm.sh ${STAGEDIR}${ETCDIR}
 
 post-stage:
-	@${RM} ${STAGEDIR}${PREFIX}/etc/xrdp/rsakeys.ini
-	@${RM} ${STAGEDIR}${PREFIX}/etc/xrdp/cert.pem
-	@${RM} ${STAGEDIR}${PREFIX}/etc/xrdp/key.pem
-.for f in sesman.ini startwm.sh reconnectwm.sh xrdp.ini xrdp_keyboard.ini
-	@${MV} ${STAGEDIR}${PREFIX}/etc/xrdp/$f ${STAGEDIR}${PREFIX}/etc/xrdp/$f.sample
+	@${RM} ${STAGEDIR}${ETCDIR}/rsakeys.ini
+	@${RM} ${STAGEDIR}${ETCDIR}/cert.pem
+	@${RM} ${STAGEDIR}${ETCDIR}/key.pem
+.for f in sesman.ini startwm.sh reconnectwm.sh xrdp.ini xrdp_keyboard.toml \
+	gfx.toml
+	@${MV} ${STAGEDIR}${ETCDIR}/$f \
+		${STAGEDIR}${ETCDIR}/$f.sample
 .endfor
+
+RUN_DEPENDS:= ${RUN_DEPENDS:N*pulseaudio-module-xrdp}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*freebsd\*\))@\1|*dragonfly*)@g' \
+		${WRKSRC}/configure.ac
 
 .include <bsd.port.post.mk>

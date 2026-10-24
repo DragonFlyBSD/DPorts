@@ -1,6 +1,7 @@
 PORTNAME=	seqkit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.10.0
+DISTVERSION=	2.13.0
+PORTREVISION=	8
 CATEGORIES=	biology
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,6 +11,8 @@ WWW=		https://bioinf.shenwei.me/seqkit \
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	compilation fails: vendor/github.com/ulikunitz/xz/lzma/reader.go:33:15: cannot use 1 << 31 (untyped int constant 2147483648) as int value in assignment (overflows)
 
 USES=		go:modules
 USE_GITHUB=	nodefault

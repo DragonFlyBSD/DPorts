@@ -1,5 +1,5 @@
 PORTNAME=	ewah-bool-utils
-DISTVERSION=	1.1.0
+DISTVERSION=	1.3.2
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,25 +9,27 @@ MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	EWAH Bool Array utils for yt
 WWW=		https://github.com/yt-project/ewah_bool_utils
 
-LICENSE=	BSD3CLAUSE
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE=	BSD2CLAUSE APACHE20
+LICENSE_COMB=	dual
+LICENSE_FILE_BSD2CLAUSE=	${WRKSRC}/LICENSE
+LICENSE_FILE_APACHE20=	${WRKSRC}/src/ewah_bool_utils/cpp/LICENSE
 
-BUILD_DEPENDS=	${PY_SETUPTOOLS} \
-		${PYTHON_PKGNAMEPREFIX}cython3>=3.0:lang/cython3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}wheel>=0.37.1:devel/py-wheel@${PY_FLAVOR} \
-		${PYNUMPY}
-RUN_DEPENDS=	${PYNUMPY}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}meson-python>=0.18.0:devel/meson-python@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=2.0.0:math/py-numpy@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.23.2:math/py-numpy@${PY_FLAVOR}
 
-USES=		python
-USE_PYTHON=	pep517 autoplist pytest
+USES=		compiler:c++11-lang python
+USE_PYTHON=	autoplist cython pep517 pytest
 
-TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} # tests fail to run, see https://github.com/yt-project/ewah_bool_utils/issues/41
+TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 TEST_WRKSRC=	${WRKSRC}/tests
 
 post-install:
 	@${STRIP_CMD} \
-		${STAGEDIR}${PYTHON_SITELIBDIR}/ewah_bool_utils/_testing${PYTHON_EXT_SUFFIX}.so \
-		${STAGEDIR}${PYTHON_SITELIBDIR}/ewah_bool_utils/ewah_bool_wrap${PYTHON_EXT_SUFFIX}.so \
-		${STAGEDIR}${PYTHON_SITELIBDIR}/ewah_bool_utils/morton_utils${PYTHON_EXT_SUFFIX}.so
+		${STAGEDIR}${PYTHON_SITELIBDIR}/ewah_bool_utils/_testing${PYTHON_SOABI}.so \
+		${STAGEDIR}${PYTHON_SITELIBDIR}/ewah_bool_utils/ewah_bool_wrap${PYTHON_SOABI}.so \
+		${STAGEDIR}${PYTHON_SITELIBDIR}/ewah_bool_utils/morton_utils${PYTHON_SOABI}.so
+
+# tests as of 1.3.2: 3 passed
 
 .include <bsd.port.mk>

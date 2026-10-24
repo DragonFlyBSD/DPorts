@@ -30,4 +30,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${STAGEDIR}${DOCSDIR}
 
 .include "${.CURDIR}/../quake-source/Makefile.include"
+dfly-patch:
+	${ECHO} "#include <unistd.h>" >> ${WRKSRC}/cmdlib.h
+	${ECHO} "#include <unistd.h>" >> ${WRKSRC}/qcc.h
+
 .include <bsd.port.mk>

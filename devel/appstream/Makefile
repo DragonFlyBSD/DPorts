@@ -2,7 +2,7 @@
 # being overriden by devel/appstream-qt slave port
 
 PORTNAME?=	AppStream
-DISTVERSION=	1.0.4
+DISTVERSION=	1.2.1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.freedesktop.org/software/${PORTNAME:tl}/releases/
 
@@ -13,15 +13,18 @@ WWW=		https://www.freedesktop.org/wiki/Distributions/AppStream/
 LICENSE=	GPLv2+ LGPL21+
 LICENSE_COMB=	multi
 
-BUILD_DEPENDS=	docbook-xsl>=0:textproc/docbook-xsl \
+BUILD_DEPENDS=	bash-completion>0:shells/bash-completion \
+		docbook-xsl>=0:textproc/docbook-xsl \
+		docbook-xsl-ns>=0:textproc/docbook-xsl-ns \
 		gperf>0:devel/gperf \
 		itstool:textproc/itstool \
-		lmdb>0:databases/lmdb
+		lmdb0>0:databases/lmdb0
 LIB_DEPENDS?=	libcurl.so:ftp/curl \
 		libstemmer.so:textproc/snowballstemmer \
 		libxmlb.so:textproc/libxmlb \
-		libyaml.so:textproc/libyaml \
-		libzstd.so:archivers/zstd
+		libfyaml.so:textproc/libfyaml \
+		libwayland-client.so:graphics/wayland \
+		libzstd.so:archivers/zstd \
 
 USES+=		gettext gnome localbase:ldflags meson pkgconfig \
 		python:build tar:xz vala:build
@@ -35,6 +38,7 @@ MESON_ARGS+=	-Dstemming=true \
 		-Dinstall-docs=false \
 		-Dsystemd=false
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-patch:
 	${REINPLACE_CMD} \
 		-e 's|APPLICATIONS_DIR = "/usr/share/applications"|APPLICATIONS_DIR = "${LOCALBASE}/share/applications"|' \

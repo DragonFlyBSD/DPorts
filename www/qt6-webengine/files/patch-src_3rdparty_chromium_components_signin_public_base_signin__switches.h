@@ -1,11 +1,20 @@
---- src/3rdparty/chromium/components/signin/public/base/signin_switches.h.orig	2024-02-23 21:04:38 UTC
+--- src/3rdparty/chromium/components/signin/public/base/signin_switches.h.orig	2025-09-06 10:01:20 UTC
 +++ src/3rdparty/chromium/components/signin/public/base/signin_switches.h
-@@ -92,7 +92,7 @@ BASE_DECLARE_FEATURE(kUnoDesktop);
- 
- // Controls the view mode for (history) sync screen.
- #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \
--    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS)
-+    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_IOS) || BUILDFLAG(IS_BSD)
- BASE_DECLARE_FEATURE(kMinorModeRestrictionsForHistorySyncOptIn);
+@@ -61,7 +61,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+ BASE_DECLARE_FEATURE(kSmartEmailLineBreaking);
  #endif
  
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+ BASE_DECLARE_FEATURE(kEnableHistorySyncOptin);
+ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+@@ -222,7 +222,7 @@ BASE_DECLARE_FEATURE(kSyncEnableBookmarksInTransportMo
+ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+ bool IsExtensionsExplicitBrowserSigninEnabled();
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Uses the Material Next theme for the signin promo.
+ COMPONENT_EXPORT(SIGNIN_SWITCHES)
+ BASE_DECLARE_FEATURE(kSignInPromoMaterialNextUI);

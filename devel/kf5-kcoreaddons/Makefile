@@ -8,7 +8,8 @@ COMMENT=	KF5 addons to QtCore
 LICENSE=	LGPL21+ BSD3CLAUSE
 LICENSE_COMB=	multi
 
-USES=		cmake compiler:c++11-lib kde:5 qt:5 shared-mime-info tar:xz
+USES=		cmake compiler:c++11-lib cpe kde:5 qt:5 shared-mime-info tar:xz
+CPE_VENDOR=	kde
 USE_KDE=	ecm:build
 USE_QT=		core dbus linguisttools \
 		buildtools:build qmake:build
@@ -23,9 +24,13 @@ INOTIFY_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_INOTIFY
 
 # TODO: FAM is broken, and hangs on NFS
 FAM_DESC=		Filesystem alteration notifications using fam (broken: hangs on NFS)
-FAM_USES=		fam
+FAM_LIB_DEPENDS=	libfam.so.0:devel/gamin
 FAM_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_FAM
 
 CMAKE_ARGS=	-DACCOUNTS_SERVICE_ICON_DIR:PATH=/var/db/AccountsService/icons
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

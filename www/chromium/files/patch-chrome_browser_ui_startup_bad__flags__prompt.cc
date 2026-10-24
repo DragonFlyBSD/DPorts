@@ -1,11 +1,11 @@
---- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2025-05-05 10:57:53 UTC
+--- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2026-10-18 13:29:39 UTC
 +++ chrome/browser/ui/startup/bad_flags_prompt.cc
-@@ -95,7 +95,7 @@ const char* const kBadFlags[] = {
-     extensions::switches::kExtensionsOnChromeURLs,
+@@ -126,7 +126,7 @@ const char* const kBadFlags[] = {
+     extensions::switches::kAllowlistedExtensionID,
  #endif
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
      // Speech dispatcher is buggy, it can crash and it can make Chrome freeze.
-     // http://crbug.com/327295
+     // http://crbug.com/40078530
      switches::kEnableSpeechDispatcher,

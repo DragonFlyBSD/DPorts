@@ -1,20 +1,29 @@
---- chrome/browser/browser_features.cc.orig	2024-08-26 14:40:28 UTC
+--- chrome/browser/browser_features.cc.orig	2026-08-13 07:41:05 UTC
 +++ chrome/browser/browser_features.cc
-@@ -69,7 +69,7 @@ BASE_FEATURE(kClosedTabCache,
+@@ -62,7 +62,7 @@ BASE_FEATURE(kCertVerificationNetworkTime, base::FEATU
+ BASE_FEATURE(kClearUserDataUponProfileDestruction,
+              base::FEATURE_ENABLED_BY_DEFAULT);
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Enables usage of os_crypt_async::SecretPortalKeyProvider.  Once
+ // `kSecretPortalKeyProviderUseForEncryption` is enabled, this flag cannot be
+ // disabled without losing data.
+@@ -72,7 +72,7 @@ BASE_FEATURE(kDbusSecretPortal, base::FEATURE_ENABLED_
+ // Destroy profiles when their last browser window is closed, instead of when
+ // the browser exits.
  BASE_FEATURE(kDestroyProfileOnBrowserClose,
-              "DestroyProfileOnBrowserClose",
- #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
--    BUILDFLAG(IS_CHROMEOS_LACROS)
-+    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -316,7 +316,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlockedWarning,
- BASE_FEATURE(kSupportSearchSuggestionForPrerender2,
-              "SupportSearchSuggestionForPrerender2",
- #if BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_CHROMEOS_LACROS) || \
--    BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
-+    BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+@@ -157,7 +157,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlocked, base::FE
+ BASE_FEATURE(kSandboxExternalProtocolBlockedWarning,
               base::FEATURE_ENABLED_BY_DEFAULT);
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT);
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // If true, encrypt new data with the key provided by SecretPortalKeyProvider.
+ // Otherwise, it will only decrypt existing data.
+ BASE_FEATURE(kSecretPortalKeyProviderUseForEncryption,

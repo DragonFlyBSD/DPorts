@@ -33,4 +33,11 @@ post-extract:
 		-e 's@conf-dist$$@conf.sample@'	\
 		${WRKSRC}/Makefile
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@' \
+		${WRKSRC}/src/nhttpd/Makefile \
+		${WRKSRC}/src/tools/Makefile
+	${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@' \
+		${WRKSRC}/src/tools/crypt.c
+
 .include <bsd.port.mk>

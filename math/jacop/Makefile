@@ -1,6 +1,6 @@
 PORTNAME=	jacop
-DISTVERSIONPREFIX=	v
-DISTVERSION=	4.8.0
+#DISTVERSIONPREFIX=	v
+DISTVERSION=	4.10.0
 CATEGORIES=	math java
 MASTER_SITES=	LOCAL/yuri/:maven \
 		http://people.freebsd.org/~yuri/:maven
@@ -12,11 +12,14 @@ WWW=		https://github.com/radsz/jacop
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
-BUILD_DEPENDS=	maven>0:devel/maven
+BUILD_DEPENDS=	maven38>0:devel/maven38
 
 USES=		java
 USE_GITHUB=	yes
 GH_ACCOUNT=	radsz
+JAVA_VERSION=	8 11 17
+
+MAKE_ENV+=	JAVA_HOME=${JAVA_HOME}
 
 NO_ARCH=	yes
 
@@ -43,6 +46,12 @@ MASTER_SITES+=	LOCAL/yuri/:maven
 DISTFILES+=	${PORTNAME}-${DISTVERSION}-deps${EXTRACT_SUFX}:maven
 MVN_ARGS=	--offline
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e ' \
+		s|"mznlib": "/Users/kris/jacop-mzn/jacop"|"mznlib": "${PREFIX}/share/minizinc/jacop"|; \
+		s|"executable": "/Users/kris/jacop-mzn/fzn-jacop"|"executable": "${PREFIX}/bin/fzn-jacop"|; \
+		' ${WRKSRC}/src/main/minizinc/org.jacop.msc
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \

@@ -1,6 +1,6 @@
---- fdbclient/SpecialKeySpace.actor.cpp.orig	2023-11-07 15:13:56 UTC
+--- fdbclient/SpecialKeySpace.actor.cpp.orig	2026-04-16 19:21:39 UTC
 +++ fdbclient/SpecialKeySpace.actor.cpp
-@@ -2996,7 +2996,7 @@ ACTOR Future<Void> validateSpecialSubrangeRead(ReadYou
+@@ -3049,7 +3049,7 @@ ACTOR Future<Void> validateSpecialSubrangeRead(ReadYou
  	// Test
  	RangeResult testResult = wait(ryw->getRange(testBegin, testEnd, limits, Snapshot::True, reverse));
  	if (testResult != expectedResult) {

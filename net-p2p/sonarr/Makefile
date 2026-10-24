@@ -1,7 +1,7 @@
 PORTNAME=	sonarr
-DISTVERSION=	4.0.5.1710
+DISTVERSION=	4.0.20.3014
 CATEGORIES=	net-p2p
-MASTER_SITES=	https://github.com/Sonarr/Sonarr/releases/download/v${PORTVERSION}/
+MASTER_SITES=	https://github.com/Sonarr/Sonarr/releases/download/v${DISTVERSION}/
 DISTNAME=	Sonarr.main.${DISTVERSION}.freebsd-x64
 
 MAINTAINER=	michiel@vanbaak.eu
@@ -19,13 +19,13 @@ RUN_DEPENDS=	ca_root_nss>0:security/ca_root_nss \
 		libinotify>0:devel/libinotify \
 		libunwind>0:devel/libunwind
 
-USES=	sqlite:3 ssl:run
+USES=		sqlite:3 ssl:run
 USE_RC_SUBR=	sonarr
 
 CONFLICTS_INSTALL=	sonarr
 
 NO_BUILD=	YES
-SUB_FILES=	sonarr package_info pkg-message
+SUB_FILES=	package_info pkg-message sonarr
 SUB_LIST=	DATADIR=${DATADIR} \
 		GROUPS=${GROUPS} \
 		MAINTAINER=${MAINTAINER} \
@@ -38,16 +38,18 @@ WRKSRC=		${WRKDIR}/Sonarr
 USERS=		sonarr
 GROUPS=		sonarr
 
+DFLY_UNMAINTAINED= yes
 post-extract:
 	${RM} -rf ${WRKSRC}/Sonarr.Update
 
 do-install:
-	${INSTALL} -d -m 755 ${STAGEDIR}/${DATADIR}/bin/
-	cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${STAGEDIR}/${DATADIR}/bin/ "! -name Sonarr -and ! -name ffprobe"
-	${INSTALL_PROGRAM} ${WRKSRC}/Sonarr ${STAGEDIR}/${DATADIR}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/ffprobe ${STAGEDIR}/${DATADIR}/bin/
+	${INSTALL} -d -m 755 ${STAGEDIR}/${DATADIR}/bin
+	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}/${DATADIR}/bin "! -name Sonarr -and ! -name ffprobe"
+	${INSTALL_PROGRAM} ${WRKSRC}/Sonarr ${WRKSRC}/ffprobe ${STAGEDIR}/${DATADIR}/bin
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/package_info ${STAGEDIR}/${DATADIR}/
+	@${ECHO_CMD} "e_sqlite3.so libsqlite3.so" \
+		>${STAGEDIR}${PREFIX}/etc/libmap.d/Sonarr.conf
 
 .include <bsd.port.mk>

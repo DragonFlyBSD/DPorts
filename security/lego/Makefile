@@ -1,6 +1,6 @@
 PORTNAME=	lego
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.22.2
+DISTVERSION=	5.5.2
 PORTREVISION=	2
 CATEGORIES=	security
 
@@ -13,31 +13,32 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 
-USES=		go:1.23,modules
-GO_MODULE=	github.com/go-acme/lego/v4
-GO_TARGET=	./cmd/lego
-GO_BUILDFLAGS=	-ldflags '-X "main.version=${DISTVERSION}"'
+USES=		go:modules
+GO_MODULE=	github.com/go-acme/lego/v5
+GO_LDFLAGS=	-X main.version=${DISTVERSION}
 
-SAMPLE_FILES=	deploy.sh.sample lego.sh.sample
+SAMPLE_FILES=	deploy.sh.sample lego.sh.sample lego.yml.sample
 SUB_FILES=	${SAMPLE_FILES} 604.lego pkg-message
 SUB_LIST=	LEGO_USER=${LEGO_USER} \
 		PORTNAME=${PORTNAME}
 
 LEGO_USER?=	_lego
-
+.if ${LEGO_USER} == _lego
 USERS=		${LEGO_USER}
 GROUPS=		${LEGO_USER}
+.endif
+GROUPS+=	www
+PLIST_SUB=	LEGO_USER=${LEGO_USER}
 
 PERIODIC_DIRS=	etc/periodic/weekly
 PERIODIC_FILES=	604.lego
 
 post-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/${PERIODIC_DIRS}
-	${INSTALL_SCRIPT} ${WRKDIR}/${PERIODIC_FILES} ${STAGEDIR}${PREFIX}/${PERIODIC_DIRS}/${PERIODIC_FILES}
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/ssl/lego \
-		${STAGEDIR}${ETCDIR} ${STAGEDIR}${WWWDIR}
-.	for d in ${SAMPLE_FILES}
-		${INSTALL_SCRIPT} ${WRKDIR}/${d} ${STAGEDIR}${ETCDIR}/${d}
-.	endfor
+	${MKDIR} ${STAGEDIR}${PREFIX}/${PERIODIC_DIRS} \
+		 ${STAGEDIR}${PREFIX}/etc/ssl/lego \
+		 ${STAGEDIR}${ETCDIR} \
+		 ${STAGEDIR}${WWWDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/${PERIODIC_FILES} ${STAGEDIR}${PREFIX}/${PERIODIC_DIRS}
+	${INSTALL_SCRIPT} ${SAMPLE_FILES:C|^|${WRKDIR}/|} ${STAGEDIR}${ETCDIR}
 
 .include <bsd.port.mk>

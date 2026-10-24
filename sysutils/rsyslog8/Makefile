@@ -1,5 +1,6 @@
 PORTNAME=	rsyslog
-PORTVERSION=	8.2502.0
+PORTVERSION=	8.2608.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.rsyslog.com/files/download/rsyslog/
 
@@ -10,23 +11,40 @@ WWW=		https://www.rsyslog.com/
 LICENSE=	GPLv3 LGPL3 APACHE20
 LICENSE_COMB=	multi
 
-LIB_DEPENDS=	libestr.so:devel/libestr \
+FLAVORS=		default mysql pgsql
+mysql_PKGNAMESUFFIX=	-mysql
+pgsql_PKGNAMESUFFIX=	-pgsql
+
+LIB_DEPENDS=	libcurl.so:ftp/curl \
+		libestr.so:devel/libestr \
 		libfastjson.so:devel/libfastjson \
 		liblogging-rfc3195.so:devel/liblogging \
-		libuuid.so:misc/e2fsprogs-libuuid \
-		libcurl.so:ftp/curl
+		libprotobuf-c.so:devel/protobuf-c \
+		libsnappy.so:archivers/snappy \
+		libuuid.so:misc/libuuid \
+		libyaml.so:textproc/libyaml
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}docutils>0:textproc/py-docutils@${PY_FLAVOR}
 
 USES=		cpe libtool pkgconfig autoreconf python:env
 
 PORTSCOUT=	limit:^8\.
 
-OPTIONS_DEFINE=	DBI DOCS DTLS ELASTIC GCRYPT GSSAPI HTTP JSONPARSE KAFKA \
-		MYSQL NORMALIZE PGSQL RABBITMQ RELP SNMP
+OPTIONS_DEFINE=	BEATS DBI DOCS DTLS ELASTIC GCRYPT GSSAPI HTTP JSONPARSE \
+		KAFKA MYSQL NORMALIZE PGSQL RABBITMQ RELP SNMP
 OPTIONS_RADIO=	SSLLIB
 OPTIONS_RADIO_SSLLIB=	GNUTLS OPENSSL
 OPTIONS_DEFAULT=GCRYPT
 OPTIONS_SUB=	yes
+
+.if ${FLAVOR:U} == mysql
+OPTIONS_SLAVE=	MYSQL
+.elif ${FLAVOR:U} == pgsql
+OPTIONS_SLAVE=	PGSQL
+.endif
+
+BEATS_DESC=		Enable input from Elastic *Beats
+BEATS_CONFIGURE_ENABLE=	imbeats
+BEATS_PLIST_FILES=	lib/rsyslog/imbeats.so
 
 DBI_DESC=		LibDBI output module for rsyslog
 DBI_LIB_DEPENDS=	libdbi.so:databases/libdbi
@@ -116,10 +134,6 @@ SNMP_PLIST_FILES=	lib/rsyslog/omsnmp.so
 
 .ifdef WITH_MYSQL_MICROSECONDS
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-mysql-microseconds
-.endif
-
-.ifdef WITH_SANE_HOSTNAME
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-sane-hostname
 .endif
 
 CFLAGS+=	-I${LOCALBASE}/include

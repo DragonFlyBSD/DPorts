@@ -1,5 +1,3 @@
-# Created by: Tom Judge <tj@FreeBSD.org>
-
 PORTNAME=	check_zpools
 PORTVERSION=	1.0
 CATEGORIES=	net-mgmt
@@ -7,6 +5,7 @@ PKGNAMEPREFIX=	nagios-
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Nagios plugin that checks zpool state
+WWW=		https://github.com/Napsty/check_zpools
 
 RUN_DEPENDS=	bash:shells/bash
 
@@ -19,6 +18,7 @@ SHEBANG_FILES=	check_zpools.sh
 
 PLIST_FILES=	libexec/nagios/check_zpools
 
+IGNORE= DragonFly has no ZFS support
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/nagios
 	${INSTALL_SCRIPT} ${WRKSRC}/check_zpools.sh \

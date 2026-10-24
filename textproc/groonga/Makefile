@@ -1,5 +1,5 @@
 PORTNAME=	groonga
-DISTVERSION=	13.0.5
+DISTVERSION=	16.1.2
 CATEGORIES=	textproc
 MASTER_SITES=	https://packages.groonga.org/source/groonga/
 
@@ -10,21 +10,19 @@ WWW=		https://groonga.org/
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gmake libedit libtool localbase:ldflags pathfix pkgconfig ssl
+BUILD_DEPENDS=	${LOCALBASE}/include/rapidjson/document.h:devel/rapidjson
+LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
+		libzstd.so:archivers/zstd
+RUN_DEPENDS=	bash:shells/bash
+
+USES=		cmake libedit libtool localbase:ldflags pathfix pkgconfig shebangfix ssl
 USE_LDCONFIG=	yes
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-benchmark \
-		--disable-document \
-		--localstatedir=/var \
-		--with-log-path=/var/log/groonga.log \
-		--with-munin-plugins \
-		--without-cutter \
-		--without-inkscape \
-		--without-kytea \
-		--without-lemon
+SHEBANG_FILES= tools/object-inspect-all.sh \
+		tools/index-column-diff-all.sh
 
-INSTALL_TARGET=	install-strip
+CMAKE_ARGS=	-DGRN_LOG_PATH=/var/log/groonga.log
+CMAKE_ON=	GRN_WITH_EXAMPLES GRN_WITH_MUNIN_PLUGINS GRN_WITH_TOOLS
 
 OPTIONS_DEFINE=		MECAB RUBY SUGGEST
 OPTIONS_DEFAULT=	MECAB RUBY
@@ -34,25 +32,17 @@ MECAB_DESC=	Morphological analysis support via MeCab
 SUGGEST_DESC=	Suggestions support
 
 MECAB_LIB_DEPENDS=	libmecab.so:japanese/mecab
-MECAB_CONFIGURE_OFF=	--without-mecab
+MECAB_CMAKE_BOOL=	GRN_WITH_MECAB
 RUBY_RUN_DEPENDS=	rubygem-bundler>=0:sysutils/rubygem-bundler
 RUBY_USES=		ruby
-RUBY_CONFIGURE_ON=	--enable-mruby
-SUGGEST_BROKEN=		"Does not build with libzmq4"
+RUBY_CMAKE_BOOL=	GRN_WITH_MRUBY
 SUGGEST_LIB_DEPENDS=	libevent.so:devel/libevent \
 			libmsgpackc.so:devel/msgpack-c \
 			libzmq.so:net/libzmq4
-SUGGEST_CONFIGURE_ON=	--enable-zeromq \
-			--with-libevent=${LOCALBASE} \
-			--with-message-pack=${LOCALBASE}
-SUGGEST_CONFIGURE_OFF=	--disable-zeromq \
-			--without-libevent \
-			--without-message-pack
+SUGGEST_CMAKE_BOOL=	GRN_WITH_LIBEVENT GRN_WITH_MESSAGE_PACK GRN_WITH_ZEROMQ
 
-post-patch:
-# Avoid conflict with C++20 <version> by adding .txt suffix
-	@${MV} ${WRKSRC}/version ${WRKSRC}/version.txt
-	@${REINPLACE_CMD} -Ei .c++20 '/test|cat/s/[[:<:]]version/&.txt/' \
-		${WRKSRC}/version-gen.sh
+dfly-patch:
+	${REINPLACE_CMD} -e 's@Wbad-function-cast@&__z@g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

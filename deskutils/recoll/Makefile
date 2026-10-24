@@ -1,6 +1,6 @@
 PORTNAME=	recoll
 PORTVERSION=	1.33.1
-PORTREVISION=	8
+PORTREVISION=	15
 CATEGORIES=	deskutils
 MASTER_SITES=	${WWW}
 
@@ -12,15 +12,16 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${PY_SETUPTOOLS}
-LIB_DEPENDS=	libxapian.so:databases/xapian-core
+LIB_DEPENDS=	libfam.so.0:devel/gamin \
+		libxapian.so:databases/xapian-core
 RUN_DEPENDS=	antiword:textproc/antiword \
 		catdoc:textproc/catdoc \
 		unrar:archivers/unrar \
 		unrtf:textproc/unrtf \
 		wpd2html:textproc/libwpd010
 
-USES=		bison compiler:c++11-lang gmake gnome iconv libtool localbase \
-		pkgconfig python shebangfix
+USES=		bison compiler:c++11-lang gmake gnome iconv libtool \
+		localbase pkgconfig python shebangfix
 USE_GNOME=	libxslt
 USE_LDCONFIG=	yes
 USE_PYTHON=	py3kplist
@@ -61,7 +62,7 @@ QT5_CONFIGURE_ON=	--disable-webkit
 QT5_CONFIGURE_OFF=	--disable-qtgui
 SOUND_RUN_DEPENDS=	mutagen-pony-${PYTHON_VER}:audio/py-mutagen@${PY_FLAVOR}
 X11MON_DESC=		X11 session monitoring support
-X11MON_USES=		fam xorg
+X11MON_USES=		xorg
 X11MON_USE=		XORG=ice,sm,x11
 X11MON_CONFIGURE_OFF=	--disable-x11mon
 X11MON_CONFIGURE_ON=	--with-fam
@@ -86,5 +87,9 @@ post-install:
 
 post-install-CHM-on:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/recollchm/*.so
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifdef REAL_GCC@&__z@g' \
+		${WRKSRC}/common/conf_post.h
 
 .include <bsd.port.mk>

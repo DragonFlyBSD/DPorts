@@ -27,10 +27,18 @@ PORTDOCS=	README
 OPTIONS_DEFINE=	DOCS
 OPTIONS_DEFAULT=DOCS
 
+CFLAGS= -Wno-format-truncation
 pre-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 
 post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g' \
+		${WRKSRC}/anongitssh.c
+	${REINPLACE_CMD} -e 's@-Wmissing-variable-declarations@@g' \
+			 -e 's@-Wthread-safety@@g' -e 's@-Qunused-arguments@@g' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

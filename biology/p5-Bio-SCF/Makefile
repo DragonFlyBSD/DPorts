@@ -1,6 +1,6 @@
 PORTNAME=	Bio-SCF
 PORTVERSION=	1.03
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	biology perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -17,5 +17,10 @@ RUN_DEPENDS=	${LOCALBASE}/include/io_lib/scf.h:biology/iolib
 
 USES=		perl5 localbase:ldflags
 USE_PERL5=	configure
+
+CFLAGS= -Wundef
+dfly-patch:
+	${REINPLACE_CMD} -e '/-DLITTLE_ENDIAN/d' \
+		${WRKSRC}/Makefile.PL
 
 .include <bsd.port.mk>

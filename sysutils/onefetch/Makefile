@@ -1,9 +1,9 @@
 PORTNAME=	onefetch
-DISTVERSION=	2.20.0
-PORTREVISION=	2
+DISTVERSION=	2.28.1
+PORTREVISION=	1
 CATEGORIES=	sysutils devel
 
-MAINTAINER=	lcook@FreeBSD.org
+MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Git repository summary on your terminal
 WWW=		https://github.com/o2sh/onefetch
 
@@ -26,9 +26,6 @@ OPTIONS_DEFAULT=	MANPAGES
 
 MANPAGES_PLIST_FILES=	share/man/man1/${PORTNAME}.1.gz
 
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
@@ -36,4 +33,5 @@ post-install-DOCS-on:
 post-install-MANPAGES-on:
 	${INSTALL_MAN} ${WRKSRC}/docs/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -1,7 +1,6 @@
 PORTNAME=	powder-toy
 DISTVERSIONPREFIX=	v
-DISTVERSION=	97.0.352
-PORTREVISION=	1
+DISTVERSION=	100.1.400
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -18,13 +17,14 @@ LIB_DEPENDS=	libfftw3f.so:math/fftw3-float \
 		libpng.so:graphics/png \
 		libjsoncpp.so:devel/jsoncpp
 
-USES=		compiler:c++17-lang desktop-file-utils luajit:luajit-openresty \
+USES=		compiler:c++17-lang desktop-file-utils luajit \
 		meson pkgconfig python:build sdl
 USE_GITHUB=	yes
 GH_ACCOUNT=	The-Powder-Toy
 GH_PROJECT=	The-Powder-Toy
 USE_SDL=	sdl2
 MESON_ARGS=	-Dapp_exe="${PORTNAME}"
+CXXFLAGS_i386=	-msse
 
 CONFLICTS_INSTALL=powder-toy-devel
 
@@ -37,8 +37,9 @@ SSE_DESC=		Enable SSE optimizations
 SSE_MESON_ON=		-Dx86_sse=auto
 SSE_MESON_OFF=		-Dx86_sse=none
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
-	@${REINPLACE_CMD} -e 's|python3|${PYTHON_CMD}|' ${WRKSRC}/meson.build
+	@${REINPLACE_CMD} -e "s|'python3'|'${PYTHON_CMD}'|" ${WRKSRC}/meson.build
 
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/powder-toy ${STAGEDIR}${PREFIX}/bin/

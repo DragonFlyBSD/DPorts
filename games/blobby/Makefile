@@ -31,6 +31,7 @@ PORTDOCS=	AUTHORS ChangeLog README.md
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}

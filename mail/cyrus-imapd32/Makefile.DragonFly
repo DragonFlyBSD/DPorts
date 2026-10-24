@@ -1,3 +1,0 @@
-
-MAKE_ENV+=	LDVER=ld.bfd
-LDFLAGS+=	-lm

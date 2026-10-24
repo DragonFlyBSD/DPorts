@@ -1,0 +1,20 @@
+--- pyproject.toml.orig	2026-07-02 15:34:40 UTC
++++ pyproject.toml
+@@ -1,6 +1,6 @@ requires = [
+ [build-system]
+ requires = [
+-    "setuptools>=78",
++    "setuptools>=61",
+     "setuptools_scm>=8",
+     "numpy>=1.7"
+ ]
+@@ -13,8 +13,7 @@ dynamic = ["version"]
+ ]
+ description = "A full featured python library to read from and write to FITS files."
+ dynamic = ["version"]
+-license = "GPL-2.0-or-later"
+-license-files = ["LICENSE.txt"]
++license = {text = "GPL-2.0-or-later"}
+ readme = "README.md"
+ classifiers = [
+     "Development Status :: 5 - Production/Stable",

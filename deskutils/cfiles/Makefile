@@ -2,7 +2,7 @@ PORTNAME=	cfiles
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.8-6
 DISTVERSIONSUFFIX=	-g327d47f
-PORTREVISION=	31
+PORTREVISION=	34
 CATEGORIES=	deskutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,7 +17,7 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/w3m/w3mimgdisplay:www/w3m-img \
 		bash:shells/bash \
 		pdftoppm:graphics/poppler-utils
 
-USES=		shebangfix
+USES= shebangfix ncurses pkgconfig
 SHEBANG_FILES=	scripts/*
 USE_GITHUB=	yes
 GH_ACCOUNT=	mananapr
@@ -29,6 +29,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 		${DATADIR}/scripts/clearimg \
 		${DATADIR}/scripts/displayimg
 
+CFLAGS= -L${LOCALBASE}/lib
 post-patch:
 	@${REINPLACE_CMD} -E '\
 		s,"(atool|fzf|pdftoppm)","${LOCALBASE}/bin/\1",g; \
@@ -60,4 +61,5 @@ GOLANG_ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386
 RUN_DEPENDS+=	fzf:textproc/fzf
 .endif
 
+MAKE_ARGS:= ${MAKE_ARGS:NNCURSES*}
 .include <bsd.port.post.mk>

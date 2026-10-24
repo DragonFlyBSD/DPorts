@@ -1,0 +1,3 @@
+FastDepends is a library that provides FastAPI's dependency injection system,
+extracted and cleared from HTTP domain logic. It supports both synchronous and
+asynchronous dependencies and can be used independently of FastAPI.

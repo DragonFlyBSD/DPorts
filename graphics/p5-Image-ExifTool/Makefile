@@ -1,5 +1,5 @@
 PORTNAME=	Image-ExifTool
-PORTVERSION=	13.10
+DISTVERSION=	13.55
 CATEGORIES=	graphics perl5
 MASTER_SITES=	https://exiftool.org/ \
 		CPAN

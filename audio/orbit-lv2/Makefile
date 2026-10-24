@@ -24,9 +24,10 @@ GL_ACCOUNT=	OpenMusicKontrollers
 GL_PROJECT=	${PORTNAME}.lv2
 GL_TAGNAME=	f4aa620fc8d77418856581a6a955192af15b3860
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=int-conversion
 .endif
 

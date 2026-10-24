@@ -1,0 +1,4 @@
+The official Python library for the Groq API.
+
+Groq builds fast AI inference technology and provides an OpenAI-compatible
+API for running large language models.

@@ -1,6 +1,6 @@
 PORTNAME=	enblend
 PORTVERSION=	4.2
-PORTREVISION=	25
+PORTREVISION=	29
 CATEGORIES=	graphics
 MASTER_SITES=	SF/enblend/enblend-enfuse/enblend-enfuse-${PORTVERSION}
 DISTNAME=	enblend-enfuse-${PORTVERSION}
@@ -31,6 +31,7 @@ PORTDOCS=	AUTHORS NEWS README
 
 OPTIONS_DEFINE=	DOCS
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${COMPILER_TYPE} == gcc

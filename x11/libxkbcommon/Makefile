@@ -1,6 +1,6 @@
 PORTNAME=	libxkbcommon
-PORTVERSION=	1.8.1
-PORTREVISION=	1
+DISTVERSIONPREFIX=	xkbcommon-
+DISTVERSION=	1.13.2
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -10,23 +10,29 @@ WWW=		https://xkbcommon.org/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	xkeyboard-config>0:x11/xkeyboard-config
 RUN_DEPENDS=	xkeyboard-config>0:x11/xkeyboard-config
+TEST_DEPENDS=	setxkbmap>0:x11/setxkbmap \
+		xorg-vfbserver>0:x11-servers/xorg-server@xvfb
 
 USES=		bison compiler:c11 cpe gnome meson pkgconfig python:test \
 		shebangfix
-USE_GNOME=	libxml2
-USE_GITHUB=	yes
-GH_ACCOUNT=	xkbcommon
-GH_TAGNAME=	${GH_ACCOUNT}-${PORTVERSION}
-USE_LDCONFIG=	yes
-MESON_ARGS=	-Denable-docs=false \
-		-Dx-locale-root="${PREFIX}/lib/X11/locale" \
-		${MESON_ARGS_${OPSYS}_${OSREL:R}}
 CPE_VENDOR=	xkbcommon
 SHEBANG_FILES=	test/xkeyboard-config-test.py.in \
 		test/*.py
+USE_GNOME=	libxml2
+USE_LDCONFIG=	yes
 
-HAS_SYMBOL_VERSION=	${PREFIX}/lib/libxkbregistry.so.0.8.1
+USE_GITHUB=	yes
+GH_ACCOUNT=	xkbcommon
+
+SHLIB_VERSION=	${DISTVERSION:S/^1./0./}
+HAS_SYMBOL_VERSION=	${PREFIX}/lib/libxkbregistry.so.${SHLIB_VERSION}
+
+PLIST_SUB=	SHLIB_VERSION=${SHLIB_VERSION}
+
+MESON_ARGS=	-Denable-docs=false \
+		-Dx-locale-root="${PREFIX}/lib/X11/locale"
 
 OPTIONS_DEFINE=	EVDEV WAYLAND X11
 OPTIONS_DEFAULT=EVDEV WAYLAND X11
@@ -36,12 +42,26 @@ EVDEV_DESC=		Interactive debugger for XKB keymaps for evdev
 EVDEV_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto
 EVDEV_USES=		localbase
 
-WAYLAND_BUILD_DEPENDS=	wayland-protocols>=1.12:graphics/wayland-protocols
+WAYLAND_BUILD_DEPENDS=	wayland-protocols>0:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 WAYLAND_MESON_TRUE=	enable-wayland
 
 X11_USES=	xorg
 X11_USE=	XORG=xcb
 X11_MESON_TRUE=	enable-x11
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MEVDEV} || ${PORT_OPTIONS:MWAYLAND} || ${PORT_OPTIONS:MX11}
+PLIST_SUB+=	EVDEV_OR_WAYLAND_OR_X11=""
+.else
+PLIST_SUB+=	EVDEV_OR_WAYLAND_OR_X11="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MWAYLAND} || ${PORT_OPTIONS:MX11}
+PLIST_SUB+=	WAYLAND_OR_X11=""
+.else
+PLIST_SUB+=	WAYLAND_OR_X11="@comment "
+.endif
 
 .include <bsd.port.mk>

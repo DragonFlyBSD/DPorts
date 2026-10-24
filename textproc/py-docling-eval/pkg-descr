@@ -1,0 +1,4 @@
+Docling Eval provides evaluation tooling for the Docling document
+understanding platform. It includes benchmarks, metrics, and test
+suites for assessing the quality and accuracy of document conversion
+and structure recognition outputs.

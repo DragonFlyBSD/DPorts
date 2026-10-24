@@ -52,6 +52,7 @@ X11_USES=		gl xorg
 X11_USE=		GL=gl,glu,glut XORG=x11
 X11_CONFIGURE_ENABLE=	gl x11
 
+CFLAGS= -DHAVE_ARPA_INET_H
 post-patch:
 	@${REINPLACE_CMD} -e 's|-g -O2 ||g ; s| -fomit-frame-pointer||g ; \
 		s| -fno-strength-reduce||g ; s|arpa\/inet.h ||g' \

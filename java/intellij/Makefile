@@ -3,7 +3,7 @@
 
 PORTNAME=	intellij
 PORTVERSION=	2020.2.3
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	java devel
 MASTER_SITES=	https://download-cf.jetbrains.com/idea/
 DISTNAME=	ideaIC-${PORTVERSION}-no-jbr
@@ -31,6 +31,7 @@ WRKSRC=		${WRKDIR}/idea-IC-202.7660.26
 SUB_FILES=	idea idea.desktop pkg-message
 CONFLICTS=	idea intellij-ultimate
 
+PLIST_FILES= %%DATADIR%%/lib/jnaerator-runtime-0.12.jar %%DATADIR%%/lib/jstun-0.7.5.20200723.jar %%DATADIR%%/lib/quiche-jna-stubs-15.jar %%DATADIR%%/lib/tls-channel-0.3.2.jar
 do-install:
 # Linux/Windows/OS X only so remove them
 	@${RM} -r ${WRKSRC}/bin/fsnotifier \
@@ -62,5 +63,15 @@ do-install:
 # Fix slow render
 	${ECHO} "-Dsun.java2d.xrender=false" >> ${STAGEDIR}${DATADIR}/bin/idea.vmoptions
 	${ECHO} "-Dsun.java2d.xrender=false" >> ${STAGEDIR}${DATADIR}/bin/idea64.vmoptions
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	huge (417M packaged)
+.endif
+
+.if defined(DEVELOPER)
+.MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+NO_ARCH_IGNORE+=	libdbm64.so libwebp_jni.so libwebp_jni64.so
+.endif
 
 .include <bsd.port.mk>

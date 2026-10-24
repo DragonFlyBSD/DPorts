@@ -1,17 +1,18 @@
 PORTNAME=	gsasl
-PORTVERSION=	2.2.1
+PORTVERSION=	2.2.4
 CATEGORIES=	security
 MASTER_SITES=	GNU
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	GNU SASL command-line utility
-WWW=		https://www.gnu.org/software/gsasl/
+WWW=		https://www.gnu.org/software/gsasl/ \
+		https://gitlab.com/gsasl/gsasl
 
 LICENSE=	LGPL21
 
 LIB_DEPENDS=	libgsasl.so:security/libgsasl
 
-USES=		charsetfix libtool localbase pathfix pkgconfig readline
+USES=		charsetfix libtool localbase pkgconfig readline
 
 CONFIGURE_ARGS=	--disable-rpath \
 		--without-gssapi-impl

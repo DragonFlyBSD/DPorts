@@ -2,6 +2,7 @@ PORTNAME=	wslay
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	1.1.1-22
 DISTVERSIONSUFFIX=	-g45d2258
+PORTREVISION=	1
 CATEGORIES=	www devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -20,7 +21,10 @@ GH_ACCOUNT=	tatsuhiro-t
 
 CMAKE_ON=	WSLAY_SHARED
 CMAKE_OFF=	WSLAY_STATIC
-
 CMAKE_TESTING_ON=	WSLAY_TESTS
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4.5 compatibility, see https://github.com/tatsuhiro-t/wslay/issues/76
+
+post-extract:
+	${CP} ${FILESDIR}/wslay.pc.cmake.in ${WRKSRC}
 
 .include <bsd.port.mk>

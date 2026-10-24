@@ -1,2 +1,0 @@
-ALL_TARGET= dragonfly
-IGNORE=   unmaintained, please request fixing to users mailing list

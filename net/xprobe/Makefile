@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 CONFIGURE_ENV=	INSTALL=${INSTALL}
 GNU_CONFIGURE=	yes
 
+CFLAGS= -Wno-array-bounds -Wno-write-strings
 post-patch:
 	@${REINPLACE_CMD} -e 's|-DBROKEN_BSD||' ${WRKSRC}/libs-external/USI++/src/configure
 

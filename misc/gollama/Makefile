@@ -1,8 +1,8 @@
 PORTNAME=	gollama
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.27.15
-PORTREVISION=	3
-CATEGORIES=	misc # machine learning
+DISTVERSION=	2.0.6
+PORTREVISION=	2
+CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Go manage your Ollama models
@@ -11,9 +11,9 @@ WWW=		https://github.com/sammcj/gollama
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.22,modules
+USES=		go:modules
 
-GO_MODULE=	github.com/sammcj/gollama
+GO_MODULE=	github.com/sammcj/gollama/v2
 
 PLIST_FILES=	bin/${PORTNAME}
 

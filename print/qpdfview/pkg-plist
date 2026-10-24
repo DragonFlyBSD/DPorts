@@ -3,9 +3,9 @@ bin/qpdfview
 lib/qpdfview/libqpdfview_image.so
 lib/qpdfview/libqpdfview_pdf.so
 %%PS%%lib/qpdfview/libqpdfview_ps.so
-share/man/man1/qpdfview.1.gz
 share/applications/qpdfview.desktop
 share/icons/hicolor/scalable/apps/qpdfview.svg
+share/man/man1/qpdfview.1.gz
 share/metainfo/qpdfview.appdata.xml
 %%DATADIR%%/help.html
 %%DATADIR%%/help_af.html

@@ -1,6 +1,6 @@
 PORTNAME=	eisl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.50
+DISTVERSION=	5.66
 CATEGORIES=	lang devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,11 +10,13 @@ WWW=		https://github.com/sasagawa888/eisl
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
 
+BROKEN_armv7=	stage breaks: Abort trap (likely due to the memory allocation problem)
 BROKEN_i386=	stage breaks: data segment of more than 500GB is required, see https://github.com/sasagawa888/eisl/issues/218
 
 TEST_DEPENDS=	cppcheck:devel/cppcheck
 
-USES=		gmake ncurses:port # port because tests need ncurses6-config
+USES=		gmake gl localbase:ldflags ncurses:port tcl # port because tests need ncurses6-config
+USE_GL=		gl glu glut
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	sasagawa888
@@ -25,8 +27,10 @@ TEST_TARGET=	check # tests print some errors and warnings, see https://github.co
 MAKEFILE=	makefile
 
 CFLAGS+=	-D__BSD_VISIBLE # w/out this there's error: use of undeclared identifier '_SC_NPROCESSORS_CONF'
+CFLAGS+=	-I${TCL_INCLUDEDIR}
 LDFLAGS+=	-lncursesw
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == riscv64
@@ -35,12 +39,27 @@ EXTRA_PATCHES=	${FILESDIR}/extra-patch-makefile
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=int-conversion
 .endif
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400092 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
+
+post-install:
+	${STRIP_CMD} \
+		${STAGEDIR}${PREFIX}/bin/eisl \
+		${STAGEDIR}${PREFIX}/bin/edlis
+
+USES:= ${USES:Nncurses*} ncurses
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<curses.h>@<ncurses.h>@g' \
+		${WRKSRC}/edlis.c \
+		${WRKSRC}/main.c \
+		${WRKSRC}/term.h \
+		${WRKSRC}/library/virtty.lsp
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/function.c
 
 .include <bsd.port.post.mk>

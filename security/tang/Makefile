@@ -1,5 +1,6 @@
 PORTNAME=	tang
 DISTVERSION=	15
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://github.com/latchset/${PORTNAME}/releases/download/v${DISTVERSION}/
 
@@ -24,5 +25,11 @@ CPE_VENDOR=	tang_project
 
 post-install:
 	${MKDIR} -m 0700 ${STAGEDIR}/var/db/tang
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/meson.build \
+		${WRKSRC}/*/meson.build
+
 
 .include <bsd.port.mk>

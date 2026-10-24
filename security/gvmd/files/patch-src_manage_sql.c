@@ -1,26 +1,31 @@
---- src/manage_sql.c	2021-04-16 02:27:18.000000000 -0500
-+++ src/manage_sql.c	2021-06-14 19:33:56.599632000 -0500
-@@ -52,7 +52,6 @@
+--- src/manage_sql.c.orig	2026-06-22 01:59:08.000000000 -0700
++++ src/manage_sql.c	2026-06-22 23:13:07.804612000 -0700
+@@ -85,7 +85,6 @@
  #include <errno.h>
  #include <glib/gstdio.h>
  #include <gnutls/x509.h>
 -#include <malloc.h>
- #include <pwd.h>
  #include <stdlib.h>
  #include <sys/socket.h>
-@@ -9075,7 +9074,7 @@
-   g_debug ("   HTTP_GET %s", url);
+ #include <sys/stat.h>
+@@ -97,12 +96,12 @@
+ #include <gpgme.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <unistd.h>
  
-   cmd = (gchar **) g_malloc (5 * sizeof (gchar *));
--  cmd[0] = g_strdup ("/usr/bin/wget");
-+  cmd[0] = g_strdup ("%%LOCALBASE%%/bin/wget");
-   cmd[1] = g_strdup ("-O");
-   cmd[2] = g_strdup ("-");
-   cmd[3] = g_strdup (url);
-@@ -15262,8 +15261,6 @@
-     }
+ #include <gvm/base/gvm_sentry.h>
+ #include <gvm/base/hosts.h>
+ #include <gvm/base/pwpolicy.h>
+ #include <gvm/base/logging.h>
+-#include <bsd/unistd.h>
+ 
+ #if ENABLE_JWT_AUTH
+ #include <gvm/auth/gvm_auth.h>
+@@ -3361,8 +3360,6 @@
  
    cleanup_iterator (&nvts);
+   cleanup_iterator (&prefs);
 -
 -  malloc_trim (0);
  }

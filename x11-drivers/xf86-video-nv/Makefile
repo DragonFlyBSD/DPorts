@@ -1,14 +1,15 @@
 PORTNAME=	xf86-video-nv
-PORTVERSION=	2.1.22
-PORTREVISION=	1
+DISTVERSION=	2.1.24
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org nv display driver
-WWW=		https://www.x.org/
+COMMENT=	Minimal NVIDIA video driver for the Xorg X server
+WWW=		https://gitlab.freedesktop.org/xorg/driver/xf86-video-nv
 
-USES=		tar:xz xorg-cat:driver
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/COPYING
 
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
+USES=		xorg-cat:driver
 
+CFLAGS= -Wno-maybe-uninitialized
 .include <bsd.port.mk>

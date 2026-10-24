@@ -11,7 +11,7 @@ WWW=		http://www.roland-riegel.de/nload/
 
 LICENSE=	GPLv2
 
-USES=				ncurses
+USES= ncurses autoreconf
 GNU_CONFIGURE=			yes
 
 PLIST_FILES=	bin/nload \

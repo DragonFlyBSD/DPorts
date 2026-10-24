@@ -1,19 +1,23 @@
 PORTNAME=	qmcpack
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.15.0
-PORTREVISION=	1
+DISTVERSION=	4.1.0
+PORTREVISION=	4
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Many-body ab initio Quantum Monte Carlo code for quantum chemistry
-WWW=		https://www.qmcpack.org/
+WWW=		https://www.qmcpack.org/ \
+		https://github.com/QMCPACK/qmcpack
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_i386=	undefined reference to `__atomic_load'
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libfftw3.so:math/fftw3 \
 		libhdf5.so:science/hdf5 \
 		libmpich.so:net/mpich \
@@ -31,7 +35,7 @@ SHEBANG_FILES=	src/QMCTools/gpaw4qmcpack.py \
 		${NEXUS_PLIST_FILES:C/^/nexus\//}
 SHEBANG_GLOB=	check.sh
 
-CMAKE_OFF=	BUILD_UNIT_TESTS
+CMAKE_OFF= BUILD_UNIT_TESTS QMC_MPI ENABLE_OFFLOAD
 CMAKE_ARGS=	-DFREEBSD_PYTHON_VER=${PYTHON_VER}
 CMAKE_TESTING_ON=	BUILD_UNIT_TESTS # many tests fail, see https://github.com/QMCPACK/qmcpack/issues/4274
 
@@ -46,7 +50,7 @@ OPTIONS_SUB=		yes
 
 NEXUS_DESC=		Install Nexus (workflow utility) alongside QMCPACK
 NEXUS_CMAKE_BOOL=	INSTALL_NEXUS
-NEXUS_PY_DEPENDS=	${PYNUMPY} \
+NEXUS_PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}h5py>0:science/py-h5py@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}pandas>0:math/py-pandas@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}pyscf>0:science/py-pyscf@${PY_FLAVOR}
@@ -61,4 +65,6 @@ NEXUS_PLIST_FILES=	bin/eshdf \
 			bin/qmc-fit \
 			bin/qmca
 
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibmpich*}
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

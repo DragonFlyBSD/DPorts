@@ -8,6 +8,6 @@ PLIST=		${PKGDIR}/pkg-plist.java
 
 OPTIONS_DEFINE=		IPV6
 
-USE_JAVA=	yes
+CPE_PRODUCT=	zabbix
 
 .include "${MASTERDIR}/Makefile"

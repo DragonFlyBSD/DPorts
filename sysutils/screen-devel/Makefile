@@ -1,6 +1,6 @@
 PORTNAME=	screen
-DISTVERSION=	5.0.0.${SCREEN_COMMIT_DATE}
-PORTREVISION=	2
+DISTVERSION=	5.0.2.${SCREEN_COMMIT_DATE}
+PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 MASTER_SITES=	#
@@ -9,19 +9,22 @@ MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Multi-screen window manager
 WWW=		https://www.gnu.org/software/screen/
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	cschuber
+GH_PROJECT=	screen
+GH_TAGNAME=	e9206ef
+SCREEN_COMMIT_DATE=	20260711
+
 CONFLICTS=	screen-[0-9]*
 
-GIT_TAGNAME=	0f2370a
-SCREEN_COMMIT_DATE=	20240727
-
-WRKSRC=		${WRKDIR}/${PORTNAME}-${GIT_TAGNAME}/src
+WRKSRC_SUBDIR=	src
 
 LICENSE=	GPLv3
 
 OPTIONS_DEFINE=		INFO NETHACK XTERM_256 SYSTEM_SCREENRC MULTIUSER \
 			NOSOCKETDIR
 OPTIONS_DEFAULT=	INFO NETHACK XTERM_256 SOCKETS SYSTEM_SCREENRC \
-			NCURSES_DEFAULT MULTIUSER
+			NCURSES_DEFAULT
 OPTIONS_SINGLE=		IPC NCURSES
 OPTIONS_SINGLE_IPC=	SOCKETS NAMED_PIPES
 OPTIONS_SINGLE_NCURSES=	NCURSES_DEFAULT NCURSES_BASE NCURSES_PORT
@@ -45,10 +48,12 @@ NCURSES_PORT_USES=	ncurses:port
 OPTIONS_SUB=
 
 USES=		autoreconf:build gmake cpe
+CONFIGURE_ARGS=	--with-system_screenrc=${ETCDIR}/screenrc
 MAKE_ARGS+=	WITH_MAN=1
 
 CPE_VENDOR=	gnu
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 GNU_CONFIGURE=	yes
@@ -81,13 +86,6 @@ CONFIGURE_ARGS+=	--disable-socket-dir
 .if defined(SCREEN_SOCKET_DIR)
 CONFIGURE_ARGS+=	--with-socket-dir=${SCREEN_SOCKET_DIR}
 .endif
-
-do-fetch:
-	@cd ${DISTDIR} && \
-	if [ ! -f ${DISTNAME}${EXTRACT_SUFX} ]; then \
-		fetch -o ${DISTNAME}${EXTRACT_SUFX} \
-		    "https://git.savannah.gnu.org/gitweb/?p=screen.git;a=snapshot;h=${GIT_TAGNAME};sf=tgz"; \
-	fi    
 
 post-patch:
 	@${RM} ${WRKSRC}/doc/screen.info*

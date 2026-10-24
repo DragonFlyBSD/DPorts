@@ -1,9 +1,9 @@
 PORTNAME=	calendar
-DISTVERSION=	7.0.0
+DISTVERSION=	8.0.1
 CATEGORIES=	deskutils
 PKGNAMEPREFIX=	elementary-
 
-MAINTAINER=	nc@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Desktop calendar app designed for elementary OS
 WWW=		https://github.com/elementary/calendar
 
@@ -28,7 +28,8 @@ RUN_DEPENDS=	consolekit2>0:sysutils/consolekit2
 USES=		desktop-file-utils gettext gnome meson pkgconfig vala:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	elementary
-USE_GNOME=	evolutiondataserver3 gdkpixbuf2 glib20 gtk30
+USE_GNOME=	evolutiondataserver3 gdkpixbuf glib20 gtk30
 GLIB_SCHEMAS=	io.elementary.calendar.gschema.xml
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

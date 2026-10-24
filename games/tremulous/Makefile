@@ -143,4 +143,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/tremulous.xpm \
 		${STAGEDIR}${PREFIX}/share/pixmaps
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|freebsd|dragonfly|' ${BUILD_WRKSRC}/Makefile
+
 .include <bsd.port.mk>

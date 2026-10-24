@@ -17,4 +17,5 @@ MAKE_ARGS=	INSTALL="${INSTALL_PROGRAM}" MANDIR="${PREFIX}/share/man"
 PLIST_FILES=	bin/pick \
 		share/man/man1/pick.1.gz
 
+CPPFLAGS= ${CFLAGS}
 .include <bsd.port.mk>

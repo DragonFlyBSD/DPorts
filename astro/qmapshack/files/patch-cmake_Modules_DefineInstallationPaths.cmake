@@ -1,20 +1,13 @@
---- cmake/Modules/DefineInstallationPaths.cmake.orig	2020-03-27 08:07:31 UTC
+diff --git cmake/Modules/DefineInstallationPaths.cmake cmake/Modules/DefineInstallationPaths.cmake
+index 66e60854..72cb3642 100644
+--- cmake/Modules/DefineInstallationPaths.cmake
 +++ cmake/Modules/DefineInstallationPaths.cmake
-@@ -59,7 +59,7 @@ if (UNIX)
-     FORCE
-   )
-   SET(HTML_INSTALL_DIR
--    "${DATA_INSTALL_PREFIX}/doc/HTML"
-+	  "${DATA_INSTALL_PREFIX}/doc/${_PROJECT_NAME}/HTML"
-     CACHE PATH "The HTML install dir for documentation (default data/doc/html)"
-     FORCE
-   )
-@@ -97,7 +97,7 @@ if (UNIX)
-     FORCE
-   )
-   SET(MAN_INSTALL_DIR
--    "${SHARE_INSTALL_PREFIX}/man"
-+    "${CMAKE_INSTALL_PREFIX}/share/man"
-     CACHE PATH "The ${_PROJECT_NAME} man install dir (default prefix/man)"
-     FORCE
-   )
+@@ -20,7 +20,7 @@ if(WIN32)
+ else()
+     set(BIN_INSTALL_DIR     "${CMAKE_INSTALL_FULL_BINDIR}"                  CACHE PATH "Where the binaries go")
+     set(DATA_INSTALL_PREFIX "${CMAKE_INSTALL_FULL_DATAROOTDIR}"             CACHE PATH "Parent directory for application data")
+-    set(HTML_INSTALL_DIR    "${CMAKE_INSTALL_FULL_DATAROOTDIR}/doc/HTML"    CACHE PATH "Where the offline help goes")
++    set(HTML_INSTALL_DIR    "${CMAKE_INSTALL_FULL_DATAROOTDIR}/doc/qmapshack/HTML"    CACHE PATH "Where the offline help goes")
+     set(ICON_INSTALL_DIR    "${CMAKE_INSTALL_FULL_DATAROOTDIR}/icons"       CACHE PATH "Where the icon theme goes")
+     set(XDG_APPS_DIR        "${CMAKE_INSTALL_FULL_DATAROOTDIR}/applications" CACHE PATH "Where the .desktop files go")
+     set(MAN_INSTALL_DIR     "${CMAKE_INSTALL_FULL_MANDIR}"                  CACHE PATH "Where the man pages go")

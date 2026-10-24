@@ -1,12 +1,11 @@
 PORTNAME=	molden
-DISTVERSION=	7.1
-PORTREVISION=	1
+DISTVERSION=	7.3
 PORTEPOCH=	1
 CATEGORIES=	biology
 MASTER_SITES=	https://ftp.science.ru.nl/Molden/
 DISTNAME=	${PORTNAME}${DISTVERSION}
 
-MAINTAINER=	jmd@FreeBSD.org
+MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Display molecular orbitals and electron densities in 2D and 3D
 WWW=		https://www.theochem.ru.nl/molden/
 
@@ -35,11 +34,15 @@ PLIST_FILES=	bin/ambfor \
 		bin/molden \
 		bin/surf
 
+BINARY_ALIAS=	gcc=${CC}
+
 PORTSCOUT=	limit:^5\.0\.
 
 OPTIONS_DEFINE=		DATA DOCS
 OPTIONS_DEFAULT=	DATA
 
+LDFLAGS= -L${LOCALBASE}/lib
+IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	# remove object modules
 	@${FIND} ${WRKSRC} -name "*.o" | ${XARGS} ${RM}
@@ -75,5 +78,9 @@ do-install-DOCS-on:
 # in theory, this should set FCFLAGS, but the port does not conform
 FFLAGS+=	-fallow-argument-mismatch
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@/usr/include/[^[:space:]]*\.h@@g'	\
+		${WRKSRC}/surf/Makefile
 
 .include <bsd.port.post.mk>

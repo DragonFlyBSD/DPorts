@@ -1,6 +1,6 @@
 PORTNAME=	bdb
 PORTVERSION=	0.6.6
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	databases ruby
 MASTER_SITES=	ftp://ftp.idaemons.org/pub/distfiles/ruby/ \
 		http://idaemons.org/distfiles/ruby/ \
@@ -14,9 +14,6 @@ WWW=		https://github.com/knu/ruby-bdb
 
 LICENSE=	RUBY
 
-BROKEN_RUBY32=	yes
-BROKEN_RUBY33=	yes
-
 BUILD_DEPENDS=	rubygem-rdoc>=0.a:devel/rubygem-rdoc
 
 USES=		bdb ruby:extconf shebangfix tar:bzip2
@@ -29,10 +26,12 @@ SHEBANG_FILES=	examples/basic.rb examples/cats.rb examples/cursor.rb \
 		examples/replication/base/mc.rb examples/replication/base/op.rb \
 		examples/replication/mgr/b.rb examples/txn.rb examples/zeroc.rb
 
-CONFIGURE_ARGS=	--with-db-include=${BDB_INCLUDE_DIR} \
-		--with-db-lib=${BDB_LIB_DIR}
 ALL_TARGET=	all rdoc
+CONFIGURE_ARGS=	--with-cflags=-Wno-incompatible-function-pointer-types \
+		--with-db-include=${BDB_INCLUDE_DIR} \
+		--with-db-lib=${BDB_LIB_DIR}
 INSTALL_TARGET=	site-install
+WITH_BDB6_PERMITTED=	yes
 
 DOCS=		Changes README.en bdb.rd docs/*.rd
 DOCSDIR=	${RUBY_MODDOCDIR}
@@ -44,12 +43,7 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
-CONFIGURE_ARGS+=	--with-cflags="-Wno-error=incompatible-function-pointer-types"
-.endif
-
+MAKE_ENV= RUBYOPT=-EUTF-8
 post-patch:
 	@${RM} ${WRKSRC}/docs/*.orig
 

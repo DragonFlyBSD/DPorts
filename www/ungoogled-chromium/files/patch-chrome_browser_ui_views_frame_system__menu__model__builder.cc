@@ -1,24 +1,24 @@
---- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2024-08-26 14:40:28 UTC
+--- chrome/browser/ui/views/frame/system_menu_model_builder.cc.orig	2026-08-13 07:41:05 UTC
 +++ chrome/browser/ui/views/frame/system_menu_model_builder.cc
-@@ -75,7 +75,7 @@ void SystemMenuModelBuilder::BuildSystemMenuForBrowser
-     ui::SimpleMenuModel* model) {
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && !BUILDFLAG(IS_CHROMEOS_LACROS)
-   model->AddItemWithStringId(IDC_MINIMIZE_WINDOW, IDS_MINIMIZE_WINDOW_MENU);
-   model->AddItemWithStringId(IDC_MAXIMIZE_WINDOW, IDS_MAXIMIZE_WINDOW_MENU);
-   model->AddItemWithStringId(IDC_RESTORE_WINDOW, IDS_RESTORE_WINDOW_MENU);
-@@ -91,7 +91,7 @@ void SystemMenuModelBuilder::BuildSystemMenuForBrowser
+@@ -133,7 +133,7 @@ void SystemMenuModelBuilder::BuildSystemMenuForBrowser
    }
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && !BUILDFLAG(IS_CHROMEOS_LACROS)
+ #endif  // BUILDFLAG(IS_WIN)
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   AddItemWithIconMaybe(model, IDC_MINIMIZE_WINDOW, IDS_MINIMIZE_WINDOW_MENU,
+                        views::kChromeMinimizeIcon);
+   AddItemWithIconMaybe(model, IDC_MAXIMIZE_WINDOW, IDS_MAXIMIZE_WINDOW_MENU,
+@@ -237,7 +237,7 @@ void SystemMenuModelBuilder::BuildSystemMenuForBrowser
+     model->AddSeparator(ui::NORMAL_SEPARATOR);
+     model->AddItemWithStringId(IDC_TASK_MANAGER_CONTEXT_MENU, IDS_TASK_MANAGER);
+   }
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    model->AddSeparator(ui::NORMAL_SEPARATOR);
    bool supports_server_side_decorations = true;
  #if BUILDFLAG(IS_OZONE) && !BUILDFLAG(IS_CHROMEOS)
-@@ -155,7 +155,7 @@ void SystemMenuModelBuilder::BuildSystemMenuForAppOrPo
+@@ -321,7 +321,7 @@ void SystemMenuModelBuilder::BuildSystemMenuForAppOrPo
      model->AddSeparator(ui::NORMAL_SEPARATOR);
      model->AddItemWithStringId(IDC_TASK_MANAGER, IDS_TASK_MANAGER);
    }

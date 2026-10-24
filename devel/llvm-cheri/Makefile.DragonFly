@@ -1,4 +1,0 @@
-MANUAL_PACKAGE_BUILD=	Useful only for Cherri devel.
-.if defined(DPORTS_BUILDER)
-.undef MANUAL_PACKAGE_BUILD
-.endif

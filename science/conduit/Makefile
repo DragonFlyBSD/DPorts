@@ -1,6 +1,6 @@
 PORTNAME=	conduit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.3
+DISTVERSION=	0.9.6
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -34,7 +34,7 @@ CMAKE_TESTING_ON=	ENABLE_TESTS
 
 OPTIONS_SINGLE=		MPI
 OPTIONS_SINGLE_MPI=	NOMPI MPICH OPENMPI
-OPTIONS_DEFAULT=	MPICH
+OPTIONS_DEFAULT= NOMPI
 OPTIONS_SUB=		yes
 
 NOMPI_DESC=		Build without parallel processing support
@@ -44,7 +44,11 @@ MPICH_CMAKE_ON=		-DENABLE_MPI=ON
 
 OPENMPI_USES=		mpi:openmpi
 OPENMPI_CMAKE_ON=	-DENABLE_MPI=ON
+# workaround for https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=297240:
+OPENMPI_CMAKE_ON+=	-DMPI_C_COMPILER:PATH=${MPICC} \
+			-DMPI_CXX_COMPILER:PATH=${MPICXX} \
+			-DMPI_CXX_HEADER_DIR:PATH=${MPI_HOME}/include
 
-# 100% tests passed, 0 tests failed out of 3
+# tests as of 0.9.5: 100% tests passed, 0 tests failed out of 3
 
 .include <bsd.port.mk>

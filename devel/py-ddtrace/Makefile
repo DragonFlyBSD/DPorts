@@ -1,11 +1,9 @@
 PORTNAME=	ddtrace
-PORTVERSION=	2.9.1
+PORTVERSION=	4.13.2
 CATEGORIES=	devel python
-MASTER_SITES=	PYPI \
-		https://github.com/abseil/abseil-cpp/releases/download/20240116.2/:abseil
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTFILES=	ddtrace-${PORTVERSION}${EXTRACT_SUFX} \
-		abseil-cpp-20240116.2${EXTRACT_SUFX}:abseil
+DISTFILES=	ddtrace-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Datadog APM client library
@@ -17,47 +15,48 @@ LICENSE_COMB=	dual
 LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE.Apache
 LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/LICENSE.BSD3
 
-BUILD_DEPENDS=	cmake:devel/cmake-core \
-		${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools-rust>=0<2:devel/py-setuptools-rust@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}setuptools-scm>=4:devel/py-setuptools-scm@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
-LIB_DEPENDS=	libddwaf.so:devel/libddwaf
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}attrs>=20:devel/py-attrs@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}bytecode>=0.15.0:devel/py-bytecode@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}cattrs>=0:devel/py-cattrs@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}ddsketch>=3.0.0:devel/py-ddsketch@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}envier>=0.5<1:devel/py-envier@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}opentelemetry-api>=1:devel/py-opentelemetry-api@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}protobuf>=3,1:devel/py-protobuf@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}six>=1.12.0:devel/py-six@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}typing-extensions>=0:devel/py-typing-extensions@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}xmltodict>=0.12:devel/py-xmltodict@${PY_FLAVOR}
+LIB_DEPENDS=	libdatadog_profiling_ffi.so:devel/libdatadog \
+		libddwaf.so:devel/libddwaf
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bytecode>=0.17.0<1:devel/py-bytecode@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}envier>=0.6.1<0.7:devel/py-envier@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}opentelemetry-api>=1<2:devel/py-opentelemetry-api@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wrapt>=1<3:devel/py-wrapt@${PY_FLAVOR}
 
-USES=		compiler:c++17-lang python shebangfix
+USES=		cargo cmake:indirect compiler:c++17-lang python shebangfix
 USE_PYTHON=	autoplist concurrent cython pep517
+
+CARGO_BUILD=	no
+CARGO_CARGOLOCK=${WRKSRC}/src/native/Cargo.lock
+CARGO_CARGOTOML=${WRKSRC}/src/native/Cargo.toml
+CARGO_INSTALL=	no
+CARGO_TEST=	no
+MAKE_ENV=	CIBUILDWHEEL=1 \
+		DD_COMPILE_ABSEIL=0 \
+		DD_COMPILE_MODE=Release \
+		DD_PROFILING_NATIVE_TESTS=0 \
+		DD_SETUP_FORCE_CYTHONIZE=1
 
 PORTSCOUT=	limit:^[0-9]*\.[0-9]*\.[0-9]*
 
-SHEBANG_FILES=	ddtrace/internal/datadog/profiling/cmake/tools/fetch_infer.sh \
-		ddtrace/internal/datadog/profiling/cmake/tools/fetch_libdatadog.sh \
-		ddtrace/internal/datadog/profiling/setup_custom.sh
+SHEBANG_GLOB=	*.sh
 
-OPTIONS_DEFINE=	OPENTRACING
-OPTIONS_DEFAULT=OPENTRACING
+OPTIONS_DEFINE=	OPENFEATURE OPENTELEMETRY OPENTRACING
+OPTIONS_DEFAULT=OPENFEATURE OPENTELEMETRY OPENTRACING
+OPENFEATURE_DESC=	Evaluate feature flags support
+OPENTELEMETRY_DESC=	OpenTelemetry support
 OPENTRACING_DESC=	OpenTracing support
 
-OPENTRACING_RUN_DEPENDS=${PYTHON_PKGNAMEPREFIX}opentracing>=2.0.0:devel/py-opentracing@${PY_FLAVOR}
-
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} >= 31200
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR}
-.endif
+OPENFEATURE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}openfeature-sdk>=0.8<1:devel/py-openfeature-sdk@${PY_FLAVOR}
+OPENTELEMETRY_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}opentelemetry-exporter-otlp>=1<2:devel/py-opentelemetry-exporter-otlp@${PY_FLAVOR}
+OPENTRACING_RUN_DEPENDS=${PYTHON_PKGNAMEPREFIX}opentracing>=2<3:devel/py-opentracing@${PY_FLAVOR}
 
 post-patch:
-	${MV} ${WRKDIR}/abseil-cpp-20240116.2/ ${WRKSRC}/ddtrace/appsec/_iast/_taint_tracking/_deps/
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/setup.py ${WRKSRC}/../libdatadog-86b7f5700d3db4e58076794b5e8073a40d780083/libdd-library-config/src/lib.rs
 
 post-install:
 	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -name '*.so' -exec ${STRIP_CMD} {} +
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

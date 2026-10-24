@@ -19,7 +19,7 @@ USES=		dos2unix perl5
 USE_PERL5=	configure
 
 CONFIGURE_ARGS=	X11LIB=${LOCALBASE}/lib X11INC=${LOCALBASE}/include
-MAKE_JOBS_UNSAFE=	yes
+MAKE_JOBS_UNSAFE= yes
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Tk/TableMatrix/TableMatrix.so

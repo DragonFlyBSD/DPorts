@@ -1,6 +1,6 @@
 PORTNAME=	dlib
 DISTVERSIONPREFIX=v
-DISTVERSION=	19.24.8
+DISTVERSION=	20.0.1
 CATEGORIES=	science devel math
 PKGNAMESUFFIX=	-cpp
 
@@ -14,16 +14,19 @@ LICENSE_FILE=	${WRKSRC}/dlib/LICENSE.txt
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libgif.so:graphics/giflib
 
-USES=			cmake compiler:c++11-lang pkgconfig sqlite tar:bzip2 xorg
+USES=			cmake compiler:c++11-lang jpeg pkgconfig sqlite tar:bzip2
 USE_LDCONFIG=		yes
-USE_XORG=		ice sm x11 xext
 
 USE_GITHUB=		yes
 GH_ACCOUNT=		davisking
 
+EXTRACT_AFTER_ARGS=	--exclude=${PORTNAME}-${DISTVERSION}/dlib/external \
+			--no-same-owner --no-same-permissions
+
 CMAKE_ON=		BUILD_SHARED_LIBS
 
-OPTIONS_DEFINE=		BLASLAPACK FFMPEG
+OPTIONS_DEFINE=		BLASLAPACK FFMPEG X11
+OPTIONS_DEFAULT=	X11
 
 BLASLAPACK_DESC=	Use OpenBLAS for matrix operations
 FFMPEG_DESC=		Build with the FFMPEG wrappers
@@ -31,5 +34,9 @@ FFMPEG_DESC=		Build with the FFMPEG wrappers
 BLASLAPACK_USES=	blaslapack:openblas
 BLASLAPACK_CMAKE_OFF=	-DDLIB_USE_BLAS=0 -DDLIB_USE_LAPACK=0
 FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
+
+X11_USES=		xorg
+X11_USE=		XORG=ice,sm,x11,xext
+X11_CMAKE_BOOL_OFF=	DLIB_NO_GUI_SUPPORT
 
 .include <bsd.port.mk>

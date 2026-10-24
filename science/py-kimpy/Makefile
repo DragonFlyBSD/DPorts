@@ -1,6 +1,5 @@
 PORTNAME=	kimpy
-DISTVERSION=	2.1.1
-PORTREVISION=	1
+DISTVERSION=	2.1.4
 CATEGORIES=	science python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,12 +13,17 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pybind11>0:devel/py-pybind11@${PY_FLAVOR}
 LIB_DEPENDS=	libkim-api.so:science/kim-api
-RUN_DEPENDS=	${PYNUMPY}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}
 
 USES=		compiler:c++20-lang pkgconfig python
 USE_PYTHON=	distutils autoplist pytest # tests fail to run, see https://github.com/openkim/kimpy/issues/16
 
+TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+TEST_WRKSRC=	${WRKSRC}/tests
+
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/kimpy/*${PYTHON_EXT_SUFFIX}.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/kimpy/*${PYTHON_TAG}.so
+
+# tests as of 2.1.4: 21 passed in 3.01s
 
 .include <bsd.port.mk>

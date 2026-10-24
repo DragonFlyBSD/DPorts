@@ -1,0 +1,11 @@
+--- Makefile.orig	2025-07-14 17:23:25 UTC
++++ Makefile
+@@ -195,7 +195,7 @@
+   ifeq ($(USE_THREADS),1)
+     PTHREAD_FLAGS += -pthread
+   endif
+-else ifeq ($(uname_S),FreeBSD)
++else ifneq (,$(filter FreeBSD DragonFly,$(uname_S)))
+   REAL_LDFLAGS += -lm
+   ifeq ($(USE_THREADS),1)
+     PTHREAD_FLAGS += -pthread

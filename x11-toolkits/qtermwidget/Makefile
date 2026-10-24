@@ -1,5 +1,5 @@
 PORTNAME=	qtermwidget
-PORTVERSION=	2.1.0
+PORTVERSION=	2.4.0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	LXQT
 
@@ -10,7 +10,7 @@ WWW=		https://github.com/lxde/qtermwidget
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake compiler:c++17-lang gettext-runtime lxqt:2 \
+USES=		cmake compiler:c++20-lang gettext-runtime lxqt:2 \
 		pkgconfig qt:6 tar:xz
 USE_LDCONFIG=	yes
 USE_QT=		base:run tools:build
@@ -18,4 +18,5 @@ USE_LXQT=	buildtools2
 
 CMAKE_ARGS+=	-DQTERMWIDGET_USE_UTEMPTER=ON
 
+CFLAGS= -DHAVE_UTMPX -DHAVE_UPDWTMPX -DHAVE_LOGINX
 .include <bsd.port.mk>

@@ -1,12 +1,11 @@
 PORTNAME=	SQUAREM
-DISTVERSION=	2021.1
-PORTREVISION=	1
+DISTVERSION=	2026.1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Squared Extrapolation Methods for Accelerating EM-Like Algorithms
-WWW=		https://cran.r-project.org/web/packages/SQUAREM/
+WWW=		https://cran.r-project.org/package=SQUAREM
 
 LICENSE=	GPLv2+
 

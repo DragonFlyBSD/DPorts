@@ -1,6 +1,6 @@
 PORTNAME=	protobuf
-PORTVERSION=	29.3
-PORTREVISION=	1
+# Be sure to bump consumers when updating
+PORTVERSION=	29.6
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/protocolbuffers/protobuf/releases/download/v${PORTVERSION}/
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libjsoncpp.so:devel/jsoncpp
 TEST_DEPENDS=	googletest>=0:devel/googletest
 
-USES=		cmake:testing compiler:c++17-lang cpe localbase pathfix pkgconfig
+USES=		cmake:testing compiler:c++17-lang cpe localbase pkgconfig
 
 CMAKE_ARGS=	-Dprotobuf_ABSL_PROVIDER=package \
 		-Dprotobuf_JSONCPP_PROVIDER=package
@@ -28,20 +28,24 @@ CMAKE_OFF=	protobuf_BUILD_CONFORMANCE \
 		protobuf_BUILD_TESTS \
 		protobuf_DISABLE_RTTI \
 		protobuf_INSTALL_EXAMPLES \
+		protobuf_INSTALL_TESTS \
 		protobuf_MODULE_COMPATIBLE \
-		protobuf_REMOVE_INSTALLED_HEADERS
+		protobuf_MSVC_STATIC_RUNTIME \
+		protobuf_REMOVE_INSTALLED_HEADERS \
+		protobuf_USE_UNITY_BUILD
 CMAKE_ON=	protobuf_ABSOLUTE_TEST_PLUGIN_PATH \
 		protobuf_ALLOW_CCACHE \
 		protobuf_BUILD_LIBPROTOC \
+		protobuf_BUILD_LIBUPB \
 		protobuf_BUILD_PROTOBUF_BINARIES \
 		protobuf_BUILD_PROTOC_BINARIES \
 		protobuf_BUILD_SHARED_LIBS \
 		protobuf_INSTALL \
 		protobuf_USE_EXTERNAL_GTEST \
 		protobuf_VERBOSE \
-		protobuf_WITH_ZLIB
+		protobuf_WITH_ZLIB \
+		utf8_range_ENABLE_INSTALL
 CMAKE_TESTING_ON=	protobuf_BUILD_TESTS
-PATHFIX_CMAKELISTSTXT=	CMakeLists.txt install.cmake
 USE_CXXSTD=	c++17
 USE_LDCONFIG=	yes
 
@@ -49,4 +53,5 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 CPE_VENDOR=	google
 
+MAKE_ENV= LDVER=ld.bfd
 .include <bsd.port.mk>

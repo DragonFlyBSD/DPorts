@@ -1,6 +1,6 @@
 PORTNAME=	hwloc
 PORTVERSION=	1.11.13
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v${PORTVERSION:R}/downloads/ \
 		http://icl.cs.utk.edu/open-mpi/software/hwloc/v${PORTVERSION:R}/downloads/
@@ -43,8 +43,14 @@ CAIRO_LIB_DEPENDS=	libcairo.so:graphics/cairo
 CAIRO_USES=		xorg
 CAIRO_USE=		XORG=x11
 
+DFLY_UNMAINTAINED= yes
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}/html
 	${INSTALL_DATA} ${WRKSRC}/doc/doxygen-doc/html/* ${STAGEDIR}${DOCSDIR}/html/
+
+.include <bsd.port.options.mk>
+.if ${DFLYVERSION} >= 400706
+PLIST_FILES+=	include/hwloc/glibc-sched.h
+.endif
 
 .include <bsd.port.mk>

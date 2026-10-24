@@ -29,10 +29,15 @@ OPTIONS_SUB=	yes
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext
 
+BUILD_DEPENDS= gsed:textproc/gsed
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=int-conversion
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]sed[[:>:]]@gsed@g' \
+		${WRKSRC}/ylwrap
 
 .include <bsd.port.mk>

@@ -1,33 +1,33 @@
 PORTNAME=	wsjtx
-DISTVERSION=	2.1.2
-PORTREVISION=	3
+DISTVERSION=	2.5.4
+PORTREVISION=	17
 CATEGORIES=	comms hamradio
 MASTER_SITES=	SF/wsjt/${PORTNAME}-${PORTVERSION}${DISTVERSIONSUFFIX}
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Weak signal ham radio communication package
+WWW=		https://physics.princeton.edu/pulsar/k1jt/wsjtx.html
 
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	asciidoctor:textproc/rubygem-asciidoctor \
-		autoconf>=2.69:devel/autoconf \
-		automake>=1.16.1:devel/automake \
 		a2x:textproc/asciidoc \
-		libtool:devel/libtool \
+		git:devel/git \
 		${LOCALBASE}/share/xsl/docbook:textproc/docbook-xsl
 LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libfftw3f.so:math/fftw3-float \
+		libboost_log_setup.so:devel/boost-libs \
 		libxslt.so:textproc/libxslt
 
-USES=		cmake compiler:c++11-lib fortran gl \
-		makeinfo pkgconfig qt:5 tar:tgz
+USES=	cmake:noninja compiler:c++11-lang fortran gl libedit \
+		makeinfo pkgconfig qt:5 readline tar:tgz
 USE_GL=		glu
 USE_QT=		core gui network widgets \
 		multimedia concurrent printsupport serialport sql sql-sqlite3 \
-		buildtools_build linguisttools_build qmake_build
+		buildtools:build linguisttools:build qmake:build testlib
 
-CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH+=${LOCALBASE}/wsjtx/lib \
-		-DLOCALBASE::STRING="${LOCALBASE}"
+CONFLICTS_INSTALL=	wsjtz
+
 # for detailed debugging uncomment the next line
 #CMAKE_ARGS+=   --debug-output --trace
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
@@ -40,6 +40,24 @@ _PATCHES=	wsjtx.patch hamlib.patch
 # workaround for More actual than formal arguments in procedure call at (1)
 FFLAGS+=	-fallow-argument-mismatch
 .endif
+
+_HAMLIB_PATCHES=	configure hamlib.pc.in tests/rigtestlibusb.c src/misc.c
+make-hamlib-patch:
+	${MV} ${FILESDIR}/hamlib.patch ${FILESDIR}/hamlib.patch.old
+. for f in ${_HAMLIB_PATCHES}
+	(cd ${WRKDIR}/.build/hamlib-prefix/src;diff -u hamlib/$f.orig hamlib/$f >> ${FILESDIR}/hamlib.patch || true)
+. endfor
+
+_WSJTX_PATCHES=	wsjtx_config.h.in CMakeLists.txt Radio.cpp \
+		widgets/FrequencyLineEdit.cpp \
+		widgets/FrequencyDeltaLineEdit.cpp \
+		CMake/Modules/FindUsb.cmake \
+		CMake/Modules/FindHamlib.cmake
+make-wsjtx-patch:
+	${MV} ${FILESDIR}/wsjtx.patch ${FILESDIR}/wsjtx.patch.old
+. for f in ${_WSJTX_PATCHES}
+	(cd ${WRKDIR}/.build/wsjtx-prefix/src;diff -u wsjtx/$f.orig wsjtx/$f >> ${FILESDIR}/wsjtx.patch || true)
+. endfor
 
 post-patch:
 .  for _patch in ${_PATCHES}
@@ -60,9 +78,20 @@ do-install:
 	(cd ${CONFIGURE_WRKSRC};${MAKE} -f Makefile DESTDIR=${STAGEDIR} install)
 
 post-install:
-.for f in fcal fmeasure fmtave ft8code jt4code jt65code jt9 jt9code \
-	message_aggregator msk144code qra64code qra64sim udp_daemon wsjtx wsprd
+.for f in fcal fmeasure fmtave fst4sim ft8code jt4code jt65code jt9 jt9code \
+	message_aggregator msk144code rigctld-wsjtx rigctlcom-wsjtx \
+	rigctl-wsjtx udp_daemon q65code q65sim \
+	wsjtx wsjtx_app_version wsprd
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${f}
 .endfor
+
+.if !target(dfly-patch)
+dfly-patch:
+	${ECHO} '--- hamlib/src/usb_port.c.orig' >> ${WRKSRC}/hamlib.patch
+	${ECHO} '+++ hamlib/src/usb_port.c' >> ${WRKSRC}/hamlib.patch
+	${ECHO} '@@ -297 +297 @@' >> ${WRKSRC}/hamlib.patch
+	${ECHO} '-    (void)libusb_set_auto_detach_kernel_driver(udh, port->parm.usb.iface);' >> ${WRKSRC}/hamlib.patch
+	${ECHO} '+//    (void)libusb_set_auto_detach_kernel_driver(udh, port->parm.usb.iface);' >> ${WRKSRC}/hamlib.patch
+.endif
 
 .include <bsd.port.post.mk>

@@ -1,0 +1,15 @@
+TIMESTAMP = 1783021360
+SHA256 (mesa-26.1.4.tar.xz) = 072705caa9adf4740f1489194b13e278ad959166863b5271fe423a86353c9ab6
+SIZE (mesa-26.1.4.tar.xz) = 77677128
+SHA256 (paste-1.0.14.tar.gz) = de3145af08024dea9fa9914f381a17b8fc6034dfb00f3a84013f7ff43f29ed4c
+SIZE (paste-1.0.14.tar.gz) = 18157
+SHA256 (rustc-hash-2.1.1.tar.gz) = 357703d41365b4b27c590e3ed91eabb1b663f07c4c084095e60cbed4362dff0d
+SIZE (rustc-hash-2.1.1.tar.gz) = 14154
+SHA256 (syn-2.0.87.tar.gz) = 25aa4ce346d03a6dcd68dd8b4010bcb74e54e62c90c573f394c46eae99aba32d
+SIZE (syn-2.0.87.tar.gz) = 278076
+SHA256 (quote-1.0.35.tar.gz) = 291ec9ab5efd934aaf503a6466c5d5251535d108ee747472c3977cc5acc868ef
+SIZE (quote-1.0.35.tar.gz) = 28136
+SHA256 (proc-macro2-1.0.86.tar.gz) = 5e719e8df665df0d1c8fbfd238015744736151d4445ec0836b8e628aae103b77
+SIZE (proc-macro2-1.0.86.tar.gz) = 48958
+SHA256 (unicode-ident-1.0.12.tar.gz) = 3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b
+SIZE (unicode-ident-1.0.12.tar.gz) = 42168

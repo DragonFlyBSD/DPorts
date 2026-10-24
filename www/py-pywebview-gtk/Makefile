@@ -1,12 +1,11 @@
 PORTNAME=	pywebview
-DISTVERSION=	5.3.2
-PORTREVISION=	2
+DISTVERSION=	6.2.1
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	-gtk
 
-MAINTAINER=	DtxdF@disroot.org
+MAINTAINER=	dtxdf@FreeBSD.org
 COMMENT=	Build GUI for your Python program with JavaScript, HTML, and CSS (gtk)
 WWW=		https://github.com/r0x0r/pywebview
 
@@ -19,6 +18,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools-scm>=0:devel/py-setuptools-scm@
 LIB_DEPENDS=	libwebkit2gtk-4.0.so:www/webkit2-gtk@40
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bottle>=0:www/py-bottle@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}proxy_tools>=0:www/py-proxy_tools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}PyGObject-stubs>=0:devel/py-PyGObject-stubs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>=0:devel/py-typing-extensions@${PY_FLAVOR}
 
 USES=		gnome python

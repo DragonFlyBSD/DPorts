@@ -54,6 +54,7 @@ CLAMAV_BUILD_DEPENDS=		clamscan:security/clamav
 CLAMAV_RUN_DEPENDS=		clamscan:security/clamav
 CLAMAV_CONFIGURE_ENABLE=	antivirus clamav clamd
 
+CFLAGS= -I${LOCALBASE}/include
 .include <bsd.port.options.mk>
 
 .include "${PORTSDIR}/mail/sendmail/bsd.milter.mk"

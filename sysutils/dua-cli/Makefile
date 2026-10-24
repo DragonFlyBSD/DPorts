@@ -1,7 +1,7 @@
 PORTNAME=	dua-cli
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.29.4
-PORTREVISION=	2
+DISTVERSION=	2.34.0
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -25,4 +25,5 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} \
 		${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

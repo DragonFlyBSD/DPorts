@@ -1,5 +1,5 @@
 PORTNAME=	pixman
-DISTVERSION=	0.44.2
+DISTVERSION=	0.46.4
 CATEGORIES=	x11
 MASTER_SITES=	https://cairographics.org/releases/
 
@@ -10,10 +10,14 @@ WWW=		https://pixman.org
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cpe meson pkgconfig tar:xz
+USES=		cpe ${USES_LLVM_${ARCH}} meson pkgconfig tar:xz
+# Newer Clang does not permit MMX without SSE, see PR 295268
+USES_LLVM_i386=	llvm:max=19
+
 MESON_ARGS=	-Dloongson-mmi=disabled \
 		-Dgtk=disabled \
-		-Ddemos=disabled
+		-Ddemos=disabled \
+		-Dmips-dspr2=disabled
 
 OPTIONS_DEFINE=		OPENMP TEST
 OPTIONS_DEFAULT=	OPENMP
@@ -52,17 +56,12 @@ MESON_ARGS+=	-Dmmx=disabled \
 		-Dsse2=disabled \
 		-Dssse3=disabled
 .endif
-.if ${ARCH:Mmips*}
-MESON_ARGS+=	-Dmips-dspr2=enabled
-.else
-MESON_ARGS+=	-Dmips-dspr2=disabled
-.endif
 .if ${ARCH:Mpowerpc*}
 MESON_ARGS+=	-Dvmx=enabled
 .else
 MESON_ARGS+=	-Dvmx=disabled
 .endif
-.if ${ARCH} == riscv64
+.if ${ARCH} == riscv64 && 0 # XXX Convert to elf_aux_info + HWCAP_ISA_V
 MESON_ARGS+=	-Drvv=enabled
 .else
 MESON_ARGS+=	-Drvv=disabled

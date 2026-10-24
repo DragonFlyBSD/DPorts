@@ -1,11 +1,11 @@
 PORTNAME=	sourcetools
-DISTVERSION=	0.1.7-1
+DISTVERSION=	0.1.7-2
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	uzsolt@FreeBSD.org
 COMMENT=	Tools for the Reading and Tokenization of R Code
-WWW=		https://cran.r-project.org/web/packages/sourcetools/
+WWW=		https://cran.r-project.org/package=sourcetools
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

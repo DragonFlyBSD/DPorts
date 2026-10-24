@@ -1,3 +1,3 @@
-TIMESTAMP = 1656817845
-SHA256 (botocore-stubs-1.27.22.tar.gz) = ec94790abb50ae7da42f1650f09a35a86ef257c50f03b0a618ede1ed807b5609
-SIZE (botocore-stubs-1.27.22.tar.gz) = 33250
+TIMESTAMP = 1789395241
+SHA256 (botocore_stubs-1.43.67.tar.gz) = 853e74014a1f557055c4ffae5fb38d7c65c7c0520e1aab366cac41d5428f419d
+SIZE (botocore_stubs-1.43.67.tar.gz) = 42846

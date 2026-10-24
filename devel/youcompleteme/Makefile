@@ -50,6 +50,9 @@ VIMFILESDIR=		${PREFIX}/share/vim/vimfiles
 
 CMAKE_ARGS=		${CMAKE_ARGS_PY${PYTHON_MAJOR_VER}} -DUSE_SYSTEM_ABSEIL:BOOL=ON
 
+BUILD_DEPENDS= cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
 post-patch:
 		${REINPLACE_CMD} "s/'python3'/'${PYTHON_VERSION}'/" \
 			${WRKSRC}/python/ycm/paths.py

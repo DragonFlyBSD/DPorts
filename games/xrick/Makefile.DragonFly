@@ -1,5 +1,0 @@
-
-# game.c:104:1: error: C++ style comments are not allowed in ISO C90
-dfly-patch:
-	${REINPLACE_CMD} -e 's@ -ansi @@g' \
-		${WRKSRC}/Makefile

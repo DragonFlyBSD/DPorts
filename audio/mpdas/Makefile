@@ -23,6 +23,7 @@ SUB_FILES=	pkg-message
 PLIST_FILES=	bin/mpdas \
 		share/man/man1/mpdas.1.gz
 
+USE_CXXSTD= c++11
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mpdas ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/mpdas.1 ${STAGEDIR}${PREFIX}/share/man/man1

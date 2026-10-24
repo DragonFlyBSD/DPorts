@@ -4,7 +4,7 @@ PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.brain-dump.org/projects/dvtm/
 
-MAINTAINER=	beat@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tiling window management for the console
 WWW=		https://www.brain-dump.org/projects/dvtm/
 
@@ -26,5 +26,9 @@ post-extract:
 	@${ECHO_MSG} "creating config.h from ${DVTM_CONF}"
 	@${CP} ${DVTM_CONF} ${WRKSRC}/config.h
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lncurses@-lncursesw@g' \
+		${WRKSRC}/config.mk
 
 .include <bsd.port.mk>

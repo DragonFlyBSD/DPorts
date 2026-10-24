@@ -1,7 +1,7 @@
 PORTNAME=	gcta
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.94.1
-PORTREVISION=	2
+PORTREVISION=	6
 CATEGORIES=	biology
 
 MAINTAINER=	jwb@FreeBSD.org
@@ -33,6 +33,7 @@ LDFLAGS+=	-fopenmp
 
 PLIST_FILES=	bin/gcta64 bin/gcta
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 # Temporary hack for clang build errors:
@@ -48,5 +49,9 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/gcta64 ${STAGEDIR}${PREFIX}/bin
 	${RLN} ${STAGEDIR}${PREFIX}/bin/gcta64 ${STAGEDIR}${PREFIX}/bin/gcta
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lz -Wl,--start-group @-lz @g' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.post.mk>

@@ -35,7 +35,7 @@ USE_XORG=	x11
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
-CXXFLAGS+=	-Wno-c++11-narrowing
+CXXFLAGS+= -Wno-c++11-narrowing -Wno-narrowing
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes

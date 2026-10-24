@@ -42,4 +42,8 @@ PLIST_SUB+=		CLIENT=""
 USES+=			desktop-file-utils
 .endif
 
+.if defined(SERVER_ONLY)
+USES:=	${USES:Ngl:Nsdl:Nxorg}
+.endif
+
 .include <bsd.port.mk>

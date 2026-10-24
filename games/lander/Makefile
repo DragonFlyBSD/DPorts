@@ -1,7 +1,7 @@
 PORTNAME=	lander
 DISTVERSIONPREFIX=	r
 DISTVERSION=	0.7.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -27,8 +27,13 @@ PORTDATA=	*
 OPTIONS_DEFINE=	NLS DOCS
 OPTIONS_SUB=	yes
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}/
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/using namespace std::tr1;/d' \
+		${WRKSRC}/src/Platform.hpp
 
 .include <bsd.port.mk>

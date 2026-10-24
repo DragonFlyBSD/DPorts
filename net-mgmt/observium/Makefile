@@ -1,5 +1,5 @@
 PORTNAME=	observium
-DISTVERSION=	24.12
+DISTVERSION=	26.1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://www.observium.org/
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
@@ -20,10 +20,9 @@ RUN_DEPENDS=	rrdtool:databases/rrdtool \
 		mtr:net/mtr@nox11 \
 		${LOCALBASE}/share/pear/Net/IPv4.php:net/pear-Net_IPv4@${PHP_FLAVOR} \
 		${LOCALBASE}/share/pear/Net/IPv6.php:net/pear-Net_IPv6@${PHP_FLAVOR} \
-		snmpget:net-mgmt/net-snmp \
-		sudo:security/sudo
+		snmpget:net-mgmt/net-snmp
 
-USES=		cpe php:cli,flavors,mod python shebangfix
+USES=		cpe php:cli,flavors python shebangfix sudo
 USE_PHP=	ctype filter gd iconv mysqli posix session snmp tokenizer xml zlib
 SHEBANG_FILES=	\
 		poller-wrapper.py \
@@ -51,6 +50,7 @@ PYPOLLER_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mysqlclient>=1.3.13:databases/py-my
 SUBVERSION_RUN_DEPENDS=	svn:devel/subversion
 WMIC_RUN_DEPENDS=	wmic:net-mgmt/wmi-client
 
+OPTIONS_EXCLUDE_DragonFly= LIBVIRT
 .include <bsd.port.options.mk>
 
 SUB_FILES+=	pkg-message observium.conf.sample
@@ -59,9 +59,10 @@ SUB_LIST+=	PHP="${PREFIX}/bin/php" PYTHON="${PYTHON_CMD}"
 ROOT_FILES=	add_device.php adduser.php alerter.php \
 		config.php.default config_to_json.php \
 		delete_device.php discovery.php housekeeping.php \
-		irc.php notifications.php observium-wrapper poller-wrapper.py poller.php \
-		rename_device.php snmp.conf.example snmpd.conf.example \
-		snmptrap.php syslog.php test_alert.php test_code.php test_db.php test_geo.php VERSION
+		irc.php notifications.php observium-wrapper phpunit.xml phpunit9.xml \
+		poller-wrapper.py poller.php rename_device.php snmp.conf.example snmpd.conf.example \
+		syslog.php test_alert.php test_code.php test_db.php test_geo.php VERSION \
+		README LICENSE.COMMUNITY INSTALL
 ROOT_DIRS=	html includes libs logs mibs rrd scripts templates tests update
 
 PORTDOCS=	INSTALL README VERSION
@@ -69,12 +70,12 @@ PORTEXAMPLES=	snmp.conf.example snmpd.conf.example
 
 .if ${PORT_OPTIONS:MAPACHEMOD}
 USES+=	apache:run
-.endif
 .if !defined(PACKAGE_BUILDING)
 USES+=	php:mod
 .else
 # Package builder doesn't create php8 with module
 USES+=	php:web
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MMYSQLD}
@@ -89,8 +90,11 @@ pre-install:
 	${MKDIR} ${WRKSRC}/logs ${WRKSRC}/rrd
 
 do-install:
-	${MKDIR} ${STAGEDIR}/${WWWDIR} ${STAGEDIR}/${PREFIX}/${APACHEETCDIR}/Includes
+.if ${PORT_OPTIONS:MAPACHEMOD}
+	${MKDIR} ${STAGEDIR}/${PREFIX}/${APACHEETCDIR}/Includes
 	${INSTALL_DATA} ${WRKDIR}/observium.conf.sample ${STAGEDIR}/${PREFIX}/${APACHEETCDIR}/Includes
+.endif
+	${MKDIR} ${STAGEDIR}/${WWWDIR}
 .for dir in ${ROOT_DIRS}
 	${MKDIR} ${STAGEDIR}/${WWWDIR}/${dir}
 	(cd ${WRKSRC}/${dir} && ${COPYTREE_SHARE} . ${STAGEDIR}/${WWWDIR}/${dir})
@@ -117,7 +121,9 @@ do-install-EXAMPLES-on:
 .endfor
 
 post-install:
+.if ${PORT_OPTIONS:MAPACHEMOD}
 	@${ECHO_CMD}  "@sample ${APACHEETCDIR}/Includes/observium.conf.sample" >> ${TMPPLIST}
+.endif
 	@${FIND} -s ${STAGEDIR}${WWWDIR} -type f '(' -name '*.orig' -or -name '*.bak' ')' -delete
 	@${FIND} -s ${STAGEDIR}${WWWDIR} -not -type d | ${SORT} | \
 		${SED} -e 's#^${STAGEDIR}${PREFIX}/##' >> ${TMPPLIST}

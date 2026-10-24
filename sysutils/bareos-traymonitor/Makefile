@@ -1,15 +1,18 @@
-PORTNAME=	bareos
+PORTREVISION=	0
 PKGNAMESUFFIX=	-traymonitor
+
 
 COMMENT=	Backup archiving recovery open sourced (traymonitor)
 
-LIB_DEPENDS+=	libqwt5-qt5.so:x11-toolkits/qwt5-qt5 \
-		libbareos.so:sysutils/bareos-client
+LIB_DEPENDS+=	libbareos.so:sysutils/bareos-client
 
-CONFLICTS=	bareos17-traymonitor bareos18-traymonitor bareos19-traymonitor
+CONFLICTS=	bareos23-traymonitor-qt5 bareos23-traymonitor-qt6 \
+		bareos24-traymonitor
 
-USES=		desktop-file-utils gettext-runtime pkgconfig qt:5
-USE_QT=		buildtools_build qmake_build uitools_build gui core
+USES=		desktop-file-utils gettext-runtime pkgconfig qt:6
+USE_QT=		base:run declarative:build tools:build
+CMAKE_ARGS+=	-Dbat-qt6=yes
+
 WITH_BAT=	yes
 
 PLIST=		${.CURDIR}/pkg-plist
@@ -21,6 +24,7 @@ CMAKE_ARGS+=		-Dtraymonitor=yes \
 			-Dbuild-dird=no \
 			-Dbuild-stored=no \
 			-Dclient-only=yes \
-			-Dnls=ON
+			-Dnls=ON \
+			-DENABLE_WEBUI=OFF
 
 .include "${MASTERDIR}/Makefile"

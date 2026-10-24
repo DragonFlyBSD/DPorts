@@ -22,6 +22,7 @@ EXTRA_PATCHES=	${FILESDIR}/extra-patch-ne_mesg.c \
 
 MAKE_ARGS=	CC="${CC}"
 
+CFLAGS= -Wno-format-truncation -Wno-pointer-sign
 post-patch:
 	${REINPLACE_CMD} -e 's/-o bin -g bin//g; s/-o root -g wheel//g' ${WRKSRC}/Makefile.in
 

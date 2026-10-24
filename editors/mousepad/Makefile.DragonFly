@@ -1,1 +1,0 @@
-LIB_DEPENDS+=	libpolkit-gobject-1.so:sysutils/polkit

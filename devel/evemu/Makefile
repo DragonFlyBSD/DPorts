@@ -39,6 +39,7 @@ REINPLACE_ARGS=	-i ''
 TEST_TARGET=	check
 TEST_WRKSRC=	${WRKSRC}/test
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	${REINPLACE_CMD} -e 's|program_invocation_short_name|getprogname()|' \
 		${WRKSRC}/tools/evemu-event.c ${WRKSRC}/tools/evemu-play.c \
@@ -53,5 +54,8 @@ post-install-MANPAGES-on:
 	@${REINPLACE_CMD} -e 's|^\.so evemu|.so man1/evemu|' \
 		${STAGEDIR}${PREFIX}/share/man/man1/${manpage}
 .endfor
+
+dfly-install:
+	${RM} -fv ${STAGEDIR}${LOCALBASE}/man/man1/*.bak
 
 .include <bsd.port.mk>

@@ -18,7 +18,7 @@ ALL_TARGET=	all shared
 INSTALL_TARGET=	install_shared
 
 CFLAGS+=	-I${OPENSSLINC}
-LDFLAGS+=	-L${OPENSSLLIB}
+LDFLAGS+= -L${OPENSSLLIB} -L${OPENSSLLIB} -lcrypto
 
 post-patch:
 # PREFIX safeness

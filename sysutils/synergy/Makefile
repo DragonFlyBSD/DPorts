@@ -81,4 +81,8 @@ do-test:
 		${BUILD_WRKSRC}/bin/unittests \
 		${BUILD_WRKSRC}/bin/integtests
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|\.\*BSD|DragonFly|' ${WRKSRC}/CMakeLists.txt
+
+
 .include <bsd.port.mk>

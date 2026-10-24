@@ -8,24 +8,27 @@ WWW=		https://www.kde.org/applications/utilities/kleopatra/
 
 LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libboost_thread.so:devel/boost-libs \
+		libkdsingleapplication-qt6.so:devel/kdsingleapplication \
 		libgpgme.so:security/gpgme \
 		libgpg-error.so:security/libgpg-error \
-		libgpgmepp.so:security/gpgme-cpp \
-		libqgpgme.so:security/gpgme-qt@qt5
+		libgpgmepp.so:security/gpgmepp \
+		libqgpgmeqt6.so:security/qgpgme@qt6
 
-USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:5 \
-		shared-mime-info qt:5 tar:xz xorg
-USE_KDE=	auth codecs config configwidgets coreaddons crash dbusaddons \
-		doctools i18n iconthemes itemmodels kcmutils notifications \
-		service sonnet textwidgets widgetsaddons windowsystem xmlgui \
-		libkleo mime \
+USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:6 \
+		qt:6 shared-mime-info tar:xz xorg
+USE_KDE=	colorscheme config coreaddons crash dbusaddons \
+		doctools i18n iconthemes itemmodels kio \
+		notifications widgetsaddons windowsystem xmlgui \
 		ecm:build
-USE_QT=		core dbus gui network printsupport testlib widgets xml \
-		buildtools:build qmake:build
+# KDE Pim
+USE_KDE+=	akonadimime identitymanagement libkleo mailtransport \
+		mime mimetreeparser
+USE_QT=		base
 USE_XORG=	x11
 
 OPTIONS_DEFINE=	DOCS
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.pre.mk>
 
 .if ${COMPILER_TYPE} == clang

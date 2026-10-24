@@ -20,10 +20,11 @@ CONFIGURE_ENV=	GOTSSL=yes
 
 MAKE_JOBS_UNSAFE=	yes
 
+LDLAGS= -L${OPENSSLLIB}
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD
-CFLAGS+=	-Wno-error=int-conversion
+CFLAGS+= -Wno-error=int-conversion -I${OPENSSLINC}
 .endif
 
 post-patch:

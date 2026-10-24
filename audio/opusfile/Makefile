@@ -5,7 +5,7 @@ CATEGORIES=	audio
 MASTER_SITES=	https://downloads.xiph.org/releases/opus/ \
 		https://ftp.osuosl.org/pub/xiph/releases/opus/
 
-MAINTAINER=	liangtai.s16@gmail.com
+MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Opus playback library
 WWW=		https://opus-codec.org/
 
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libogg.so:audio/libogg \
 		libopus.so:audio/opus
 
-USES=		autoreconf libtool pathfix pkgconfig ssl
+USES=		autoreconf cpe libtool pkgconfig ssl
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
@@ -32,6 +32,8 @@ DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen
 CONFIGURE_ARGS+=	--disable-examples
 INSTALL_TARGET=	install-strip
 
+CPE_VENDOR=	xiph
+
 .include <bsd.port.pre.mk>
 
 .if ${SSL_DEFAULT} == base
@@ -47,5 +49,8 @@ post-install-DOXYGEN-on:
 		${SED} 's|${STAGEDIR}${PREFIX}/||' \
 		>> ${WRKDIR}/PLIST.doc ; \
 	(cd ${WRKDIR} ; ${SED} -i -e '/PLIST.doc/ r PLIST.doc' ${TMPPLIST})
+
+post-stage:
+	${RM} ${STAGEDIR}${DOCSDIR}/COPYING
 
 .include <bsd.port.post.mk>

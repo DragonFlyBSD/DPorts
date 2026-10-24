@@ -1,7 +1,8 @@
 PORTNAME=	buku
-PORTVERSION=	4.9
+PORTVERSION=	5.1.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www python
+#MASTER_SITES=	PYPI
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Powerful command-line bookmark manager
@@ -10,20 +11,18 @@ WWW=		https://github.com/jarun/buku
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61:devel/py-setuptools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.4.1:www/py-beautifulsoup@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup4>=4.4.1:www/py-beautifulsoup4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}certifi>=0:security/py-certifi@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}html5lib>=1.0.1:www/py-html5lib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}urllib3>=1.23,1<2,1:net/py-urllib3@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}urllib3>=1.23,1<3,1:net/py-urllib3@${PY_FLAVOR}
 
 USES=		python
 USE_PYTHON=	autoplist cryptography noflavors pep517
 
 NO_ARCH=	yes
-
-PLIST_FILES=	share/man/man1/buku.1.gz
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	jarun
@@ -41,9 +40,6 @@ ZSH_PLIST_FILES=	share/zsh/site-functions/_buku
 
 post-extract:
 	@${RM} -r ${WRKSRC}/bukuserver
-
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/buku.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 post-install-BASH-on:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d

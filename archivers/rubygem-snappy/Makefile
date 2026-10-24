@@ -19,4 +19,5 @@ SHEBANG_FILES=	smoke.sh \
 		vendor/snappy/config.status \
 		vendor/snappy/libtool
 
+LIB_DEPENDS:= ${LIB_DEPENDS:N*/libunwind}
 .include <bsd.port.mk>

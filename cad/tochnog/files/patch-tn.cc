@@ -1,5 +1,5 @@
---- tn.cc.orig	2013-08-16 01:47:35.000000000 +0200
-+++ tn.cc	2014-03-09 17:57:23.000000000 +0100
+--- tn.cc.orig	2013-08-15 23:47:35 UTC
++++ tn.cc
 @@ -33,6 +33,40 @@
    int PetscFinalize(void);
  #endif
@@ -41,19 +41,19 @@
  int main( int argc, char* argv[] )
  
  {
-@@ -40,37 +74,107 @@
+@@ -40,37 +74,107 @@ int main( int argc, char* argv[] )
    Time CPU;
    CPU.firsttime=CPU.taketime();
  
 -  long int i=0, l=0, any_point=0;
 +  extern char *optarg;
 +  extern int optind, opterr, optopt;
-+
+ 
 +  int opt_index, option, error_count = 0;
 +  bool print_usage = false, print_version = false;
 +
 +  size_t i=0, l=0, s_len=0, any_point=0;
- 
++
      // initialise static variables
    initialize();
  
@@ -155,7 +155,7 @@
 -    pri( "or:    tochnog file.dat > file.out" );
 -    exit(TN_EXIT_STATUS);
 -  }
--#endif
+ #endif
 -
 -    // append .dat to input file name
 -  l = strlen( data_file );
@@ -169,7 +169,6 @@
 -    // empty the tn.dvd file at the start of calculation
 -  ofstream outdvd( "tn.dvd" );
 -  outdvd.close();
-+#endif
  
      // read input file
    input();

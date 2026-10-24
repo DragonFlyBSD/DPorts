@@ -1,20 +1,25 @@
-# Created by: Andrew Pantyukhin <infofarmer@FreeBSD.org>
-# $FreeBSD$
-
 PORTNAME=	anki
-DISTVERSION=	2.1.16
-PORTREVISION=	2
-CATEGORIES=	games python
-MASTER_SITES=	https://apps.ankiweb.net/downloads/archive/
-DISTNAME=	anki-${PORTVERSION}-source
-DIST_SUBDIR=	python
+DISTVERSION=	26.09.3
+# Don't forget to update ${_MY_BUILDHASH} if DISTVERSION changes
+CATEGORIES=	games education python
 
 MAINTAINER=	kai@FreeBSD.org
 COMMENT=	Flashcard trainer with spaced repetition
+WWW=		https://apps.ankiweb.net/
 
 LICENSE=	AGPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+NOT_FOR_ARCHS=	armv6 armv7 i386 powerpc
+NOT_FOR_ARCHS_REASON=	the provided build system written in Rust (= runner) accepts only 64-bit systems.
+
+BUILD_DEPENDS=	protoc:devel/protobuf \
+		rsync:net/rsync \
+		uv:devel/uv \
+		${PYTHON_PKGNAMEPREFIX}black>0:devel/py-black@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}hatchling>0:devel/py-hatchling@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
+LIB_DEPENDS=	libzstd.so:archivers/zstd
 RUN_DEPENDS=	lame:audio/lame \
 		${PYTHON_PKGNAMEPREFIX}pyaudio>0:audio/py-pyaudio@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
@@ -22,18 +27,54 @@ RUN_DEPENDS=	lame:audio/lame \
 		${PYTHON_PKGNAMEPREFIX}jsonschema>0:devel/py-jsonschema@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}send2trash>0:deskutils/py-send2trash@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}distro>0:sysutils/py-distro@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}orjson>0:devel/py-orjson@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}markdown>0:textproc/py-markdown@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}beautifulsoup>0:www/py-beautifulsoup@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}beautifulsoup4>0:www/py-beautifulsoup4@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}flask>0:www/py-flask@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}protobuf>=6.0,1<8.0,1:devel/py-protobuf@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}truststore>=0.10.4:security/py-truststore@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}typing-extensions>0:devel/py-typing-extensions@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}waitress>=2.0.0:www/py-waitress@${PY_FLAVOR}
 
-USES=		desktop-file-utils pyqt:5 python:3.6+ shebangfix tar:tgz
-USE_PYQT=	core_run gui_run printsupport_run sip_run webengine_run widgets_run
+# USES=ssl is required for the compilation of the Rust code
+USES=		cargo desktop-file-utils ninja nodejs:build npm:yarn4 pyqt:6 \
+	        python shebangfix ssl
+USE_GITHUB=	yes
+GH_ACCOUNT=	ankitects
+# Translation files
+GH_TUPLE=	ankitects:anki-core-i18n:4992570:ftlrslib \
+		ankitects:anki-desktop-ftl:8a58eb9:ftlextra
 
-NO_ARCH=	yes
-SHEBANG_FILES=	tools/runanki.system.in
-WRKSRC=		${WRKDIR}/anki-${PORTVERSION}
+USE_PYQT=	pyqt6 sip:build webengine
 
-OPTIONS_DEFINE=		NLS
+SHEBANG_FILES=	yarn qt/tools/runanki.system.in
+
+CARGO_CARGOTOML=	${WRKSRC}/Cargo.toml
+
+CARGO_BUILD=	no
+CARGO_INSTALL=	no
+
+CARGO_TARGET_DIR=	${WRKSRC}/out/rust
+
+# Variables used by the "runner" build system
+MAKE_ENV+=	NODE_BINARY=${LOCALBASE}/bin/node \
+		NODE_OPTIONS=--max-old-space-size=1024 \
+		OFFLINE_BUILD=1 \
+		PREINSTALLED_YARN=1 \
+		PROTOC_BINARY=${LOCALBASE}/bin/protoc \
+		PYTHON_BINARY=${PYTHON_CMD} \
+		UV_BINARY=${LOCALBASE}/bin/uv \
+		UV_NO_BUILD_ISOLATION=1 \
+		UV_OFFLINE=1 \
+		out=${WRKSRC}/out
+# If RELEASE is unset the "runner" build system omits the
+# "--release" flag for cargo(1).
+.if !defined(WITH_DEBUG)
+MAKE_ENV+=	RELEASE=1
+.endif
+
 OPTIONS_DEFAULT=	MPV
 OPTIONS_GROUP=		PLAYER
 OPTIONS_GROUP_PLAYER=	MPLAYER MPV
@@ -44,23 +85,89 @@ MPV_DESC=	mpv media player support
 MPLAYER_RUN_DEPENDS=	mplayer:multimedia/mplayer
 MPV_RUN_DEPENDS=	mpv:multimedia/mpv
 
-NLS_USES=	gettext-runtime gettext-tools
+# Should contain the most recent commit that reflects ${DISTVERSION} and must
+# be exactly 8 digits otherwise the check for newer versions won't work as
+# expected.
+_MY_BUILDHASH=	29bb700b
+# Remove ${CARGO_BUILD_TARGET} from ${CARGO_ENV} to avoid problems with
+# hardcoded paths as the "runner" build system expects its components
+# in ${WRKSRC}/out/rust/debug
+_MY_CARGO_ENV=	${CARGO_ENV:C/CARGO_BUILD_TARGET=.+//}
+# Path of the cache that is used by www/yarn
+_MY_YARNCACHE=	${WRKDIR}/.cache/yarn
+
+post-extract:
+# Some parts of the runner build system expects to be in a git repository
+	@${TOUCH} ${WRKSRC}/.git
+# Prepare the virtual repositories for the translation files
+	@${RM} -r ${WRKSRC}/ftl/core-repo ${WRKSRC}/ftl/qt-repo
+	@${RLN} ${WRKSRC_ftlrslib} ${WRKSRC}/ftl/core-repo
+	@${RLN} ${WRKSRC_ftlextra} ${WRKSRC}/ftl/qt-repo
 
 post-patch:
-	@${REINPLACE_CMD} -i '' \
-		's|%%PREFIX%%|${PREFIX}|' \
-		${WRKSRC}/anki/lang.py
-	@${FIND} ${WRKSRC} -name '*.orig' -delete
+	@${REINPLACE_CMD} -e 's|\@PREFIX\@|${PREFIX}|' \
+		${WRKSRC}/qt/tools/runanki.system.in
 
-post-patch-NLS-off:
-	@${REINPLACE_CMD} -i '' '/locale/s/^/#/' \
-		${WRKSRC}/Makefile
+pre-configure:
+	# Create paths for the Python pseudo venv and link some binaries to it.
+	${MKDIR} ${WRKSRC}/out/pyenv/bin ${WRKSRC}/out/extracted/node/bin
+	${LN} -s ${PYTHON_CMD} ${WRKSRC}/out/pyenv/bin/python
+	${LN} -s ${WRKDIR}/.bin/yarn ${WRKSRC}/out/extracted/node/bin/yarn
+	# Also move NodeJS modules to the pseudo venv to save some build time
+	${MV} -i ${WRKSRC}/node_modules ${WRKSRC}/out/node_modules
 
+# Overview of the build process
+#
+# 1. The "runner" build system is built explicitly with the "--release" flag
+#     to avoid issues with hardcoded paths.  Once completed the binaries are
+#     placed into ${WRKSRC}/out/rust/release.
+# 2. As soon as step 1 is finished, the "runner" build system is executed,
+#    which then processes the following steps:
+#    * build remaining components of "runner" (= ninja_gen, configure, etc.)
+#    * generate the ninja file and run ninja afterwards
+#    * create the Python wheel files (via "uv") in ${WRKSRC}/out/wheels
+pre-build:
+	${ECHO_CMD} -e "${_MY_BUILDHASH}" >> ${WRKSRC}/out/buildhash
+	${ECHO_MSG} "===> Building runner build framework"
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${_MY_CARGO_ENV} \
+		${CARGO} build --package runner --release --verbose --verbose
 do-build:
-	@${PYTHON_CMD} -m compileall ${WRKSRC}
-	@${PYTHON_CMD} -O -m compileall ${WRKSRC}
+	${ECHO_MSG} "===> Executing runner build framework"
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${_MY_CARGO_ENV} \
+		${WRKSRC}/out/rust/release/runner build wheels
 
+post-build:
+	${MKDIR} ${WRKSRC}/out/dist
+	cd ${WRKSRC}/out/wheels \
+		&& ${UNZIP_NATIVE_CMD} -d ${WRKSRC}/out/dist -x *.orig anki*.whl \
+		&& ${UNZIP_NATIVE_CMD} -d ${WRKSRC}/out/dist -x *.orig aqt*.whl
+# Update the timestamps otherwise the set dates of the wheels
+# (= 1980-01-01 00:00:00) are used
+	${FIND} ${WRKSRC}/out/dist -type f -exec ${TOUCH} {} +
+
+do-install:
+	${MKDIR} ${STAGEDIR}${DATADIR}/_aqt \
+			${STAGEDIR}${DATADIR}/anki \
+			${STAGEDIR}${DATADIR}/aqt \
+			${STAGEDIR}${PREFIX}/share/pixmaps \
+			${STAGEDIR}${PREFIX}/share/applications
+	cd ${WRKSRC}/out/dist/ \
+		&& ${COPYTREE_SHARE} _aqt ${STAGEDIR}${DATADIR} "! -name .gitignore" \
+		&& ${COPYTREE_SHARE} anki ${STAGEDIR}${DATADIR} "! -name .gitignore" \
+		&& ${COPYTREE_SHARE} aqt ${STAGEDIR}${DATADIR} "! -name .gitignore"
+	cd ${WRKSRC}/qt/installer/linux-template/\{\{\ cookiecutter.format\ \}\}/\{\{\ cookiecutter.app_name\ \}\} \
+		&& ${INSTALL_DATA} anki.xpm anki.png ${STAGEDIR}${PREFIX}/share/pixmaps \
+		&& ${INSTALL_DATA} anki.desktop ${STAGEDIR}${PREFIX}/share/applications \
+		&& ${INSTALL_MAN} anki.1 ${STAGEDIR}${PREFIX}/share/man/man1
+	cd ${WRKSRC}/qt/tools \
+		&& ${INSTALL_SCRIPT} runanki.system.in ${STAGEDIR}${PREFIX}/bin/anki
+
+# Autogenerate some parts of the plist file as several *.css and *.mjs files
+# have a computed filename.  As it is user-specific it is impossible to know
+# their filename in advance.
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/runanki.system ${STAGEDIR}${PREFIX}/bin/anki
+	@${FIND} ${STAGEDIR}${DATADIR}/_aqt/data/web/sveltekit/_app/immutable/ -type f -name "*.css" -o -name "*.mjs" | \
+		${SORT} | ${SED} -e 's|${STAGEDIR}||' \
+		>> ${TMPPLIST}
 
 .include <bsd.port.mk>

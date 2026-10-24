@@ -1,6 +1,6 @@
 PORTNAME=	warmux
 DISTVERSION=	11.04.1
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	games
 MASTER_SITES=	http://ftp.nluug.nl/ibiblio/distributions/slitaz/sources/packages-cooking/w/ \
 		http://mirror.clarkson.edu/slitaz/sources/packages/w/ \
@@ -44,6 +44,7 @@ NLS_CONFIGURE_ENABLE=	nls
 SERVER_DESC=		Enable dedicated server
 SERVER_CONFIGURE_ENABLE=	servers
 
+CPPFLAGS= -std=gnu++98
 post-patch:
 	${REINPLACE_CMD} -e "s,-Werror,," ${WRKSRC}/Makefile.in \
 	${WRKSRC}/src/Makefile.in ${WRKSRC}/configure

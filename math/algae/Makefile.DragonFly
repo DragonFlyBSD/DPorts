@@ -1,3 +1,0 @@
-dfly-patch:
-	${REINPLACE_CMD} -e 's|/usr/include/malloc.h||g' \
-		${WRKSRC}/src/DEPENDS

@@ -1,5 +1,6 @@
 PORTNAME=		Ice
-PORTVERSION=		3.7.10
+PORTVERSION=		3.7.11
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=		devel
 PKGNAMESUFFIX?=		37
@@ -15,7 +16,7 @@ CONFLICTS=		Ice py*-Ice php*-Ice
 
 .if ${SLAVE_PORT} == "no"
 LIB_DEPENDS=		libexpat.so:textproc/expat2 \
-			liblmdb.so:databases/lmdb \
+			liblmdb.so:databases/lmdb0 \
 			libmcpp.so:devel/mcpp
 .else
 LIB_VRS=		${PORTVERSION:R:S|.||g}
@@ -127,7 +128,7 @@ do-test-TEST-on:
 .for CONFIG in ${CONFIGS}
 	@${ECHO} Testing configuration ${CONFIG}
 	cd ${BUILD_WRKSRC} && \
-		${SETENV} LC_ALL=en_US.UTF-8 ${PYTHON_CMD} ./allTests.py \
+		${PYTHON_CMD} ./allTests.py \
 		--config=${CONFIG} \
 		$$(${TEST} $$(${IS_JAILED_CMD}) -eq 1 \
 			&& ${ECHO} ${JAILED_FILTER})
@@ -142,5 +143,28 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.*
 	@cd ${WRKSRC} && ${GMAKE} install-doc install-slice
 .endif
+
+dfly-patch:
+	@${SED} 's|%%CONFIGS%%|${CONFIGS}|g; \
+		s|%%DATADIR%%|${STAGEDIR}${DATADIR}|g; \
+		s|%%DOCSDIR%%|${STAGEDIR}${DOCSDIR}|g; \
+		s|%%ICONV_LIB%%|${ICONV_LIB}|g; \
+		s|%%INSTALL_PROGRAM%%|${INSTALL_PROGRAM}|g; \
+		s|%%INSTALL_DATA%%|${INSTALL_DATA}|g; \
+		s|%%LOCALBASE%%|${LOCALBASE}|g; \
+		s|%%MANPREFIX%%|${STAGEDIR}${MANPREFIX}|g; \
+		s|%%OPENSSLLIB%%|${OPENSSLLIB}|g; \
+		s|%%OPENSSLINC%%|${OPENSSLINC}|g; \
+		s|%%PREFIX%%|${STAGEDIR}${PREFIX}|g; \
+		s/Ice_system_libs.*/& -lexecinfo/;' \
+		${FILESDIR}/Make.rules.FreeBSD > ${WRKSRC}/config/Make.rules.DragonFly
+	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/cpp/include/IceUtil/Config.h \
+		${WRKSRC}/cpp/src/Ice/Network.cpp \
+		${WRKSRC}/cpp/src/Ice/Thread.cpp \
+		${WRKSRC}/cpp/src/Glacier2CryptPermissionsVerifier/CryptPermissionsVerifierI.cpp \
+		${WRKSRC}/cpp/src/IceSSL/OpenSSLEngine.cpp \
+		${WRKSRC}/cpp/src/IceGrid/PlatformInfo.cpp \
+		${WRKSRC}/cpp/src/IceUtil/UtilException.cpp
 
 .include <bsd.port.post.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	aom
-DISTVERSION=	3.12.1
+DISTVERSION=	3.15.1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://storage.googleapis.com/${PORTNAME}-releases/
 DISTNAME=	lib${PORTNAME}-${DISTVERSION}
@@ -36,9 +36,11 @@ VMAF_LIB_DEPENDS=	libvmaf.so:multimedia/vmaf
 VMAF_USES=		pkgconfig
 VMAF_CMAKE_ON=		-DCONFIG_TUNE_VMAF:STRING=1
 
+USE_CLANG_FALLBACK= default
+LIB_DEPENDS= libc++.so.1:devel/libcxx${LLVM_DEFAULT}
 post-patch:
 # Extract (snapshot) version from the port instead of CHANGELOG
 	@${REINPLACE_CMD} 's,$${AOM_ROOT}/CHANGELOG,${DISTVERSIONFULL:S/^v//},' \
-		${WRKSRC}/build/cmake/version.cmake
+		${WRKSRC}/cmake/version.cmake
 
 .include <bsd.port.mk>

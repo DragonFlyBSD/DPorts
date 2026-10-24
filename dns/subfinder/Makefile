@@ -1,7 +1,7 @@
 PORTNAME=	subfinder
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.6.3
-PORTREVISION=	1
+DISTVERSION=	2.16.0
+PORTREVISION=	2
 CATEGORIES=	dns
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,4 +17,5 @@ GO_TARGET=	./cmd/${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

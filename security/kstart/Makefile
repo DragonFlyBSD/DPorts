@@ -14,6 +14,7 @@ HAS_CONFIGURE=	yes
 PLIST_FILES=	bin/k5start bin/krenew \
 		share/man/man1/k5start.1.gz share/man/man1/krenew.1.gz
 
+LIB_DEPENDS= libgssapi_krb5.so:security/krb5
 do-install:
 	@${GZIP_CMD} ${WRKSRC}/docs/k5start.1
 	@${GZIP_CMD} ${WRKSRC}/docs/krenew.1

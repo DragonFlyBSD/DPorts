@@ -7,4 +7,6 @@ COMMENT=	GNU Compiler Collection for bare metal riscv32 cross-development
 
 MASTERDIR=	${.CURDIR}/../aarch64-none-elf-gcc
 
+IGNORE= unmaintained, please request fixing to users mailing list
+DFLY_UNMAINTAINED= yes
 .include "${MASTERDIR}/Makefile"

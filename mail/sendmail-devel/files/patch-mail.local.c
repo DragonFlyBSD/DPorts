@@ -1,4 +1,4 @@
---- mail.local/mail.local.c.orig	2023-04-27 10:39:42 UTC
+--- mail.local/mail.local.c.orig	2026-03-17 06:40:58 UTC
 +++ mail.local/mail.local.c
 @@ -154,6 +154,8 @@ bool	BounceQuota = false;		/* permanent error when ove
  bool	HoldErrs = false;		/* Hold errors in ErrBuf */
@@ -9,7 +9,7 @@
  bool	CloseMBDB = false;
  char	*HomeMailFile = NULL;		/* store mail in homedir */
  
-@@ -237,12 +239,12 @@ main(argc, argv)
+@@ -232,12 +234,12 @@ main(int argc, char *argv[])
  
  	/* HACK: add U to all options - this should be only for USE_EAI */
  #if HASHSPOOL
@@ -25,7 +25,7 @@
  # endif
  #endif /* HASHSPOOL */
  	{
-@@ -252,6 +254,10 @@ main(argc, argv)
+@@ -247,6 +249,10 @@ main(int argc, char *argv[])
  			EightBitMime = false;
  			break;
  
@@ -36,7 +36,7 @@
  		  case 'b':		/* bounce mail when over quota. */
  			BounceQuota = true;
  			break;
-@@ -361,6 +367,10 @@ main(argc, argv)
+@@ -356,6 +362,10 @@ main(int argc, char *argv[])
  #endif
  			break;
  
@@ -47,7 +47,7 @@
  		  case '?':
  		  default:
  			usage();
-@@ -370,7 +380,8 @@ main(argc, argv)
+@@ -365,7 +375,8 @@ main(int argc, char *argv[])
  	argv += optind;
  
  	/* initialize biff structures */
@@ -57,7 +57,7 @@
  
  	err = sm_mbdb_initialize(mbdbname);
  	if (err != EX_OK)
-@@ -1300,6 +1311,7 @@ tryagain:
+@@ -1288,6 +1299,7 @@ tryagain:
  
  	/* Get the starting offset of the new message */
  	curoff = lseek(mbfd, (off_t) 0, SEEK_END);
@@ -65,7 +65,7 @@
  	(void) sm_snprintf(biffmsg, sizeof(biffmsg), "%s@%lld\n",
  			   name, (LONGLONG_T) curoff);
  
-@@ -1362,7 +1374,7 @@ tryagain:
+@@ -1350,7 +1362,7 @@ tryagain:
  	}
  
  	/* Flush to disk, don't wait for update. */
@@ -74,7 +74,7 @@
  	{
  		mailerr("450 4.2.0", "Sync %s: %s", path, sm_errstring(errno));
  err3:
-@@ -1433,7 +1445,7 @@ err0:
+@@ -1421,7 +1433,7 @@ err0:
  		/* Attempt to truncate back to pre-write size */
  		goto err3;
  	}
@@ -83,8 +83,8 @@
  		notifybiff(biffmsg);
  
  	if (
-@@ -1618,9 +1630,9 @@ usage()
- 	ExitVal = EX_USAGE;
+@@ -1602,9 +1614,9 @@ usage(void)
+ {
  	/* XXX add U to options for USE_EAI */
  #if _FFR_SPOOL_PATH
 -	mailerr(NULL, "usage: mail.local [-7] [-b] [-d] [-l] [-f from|-r from] [-h filename] [-p path] user ...");
@@ -93,5 +93,5 @@
 -	mailerr(NULL, "usage: mail.local [-7] [-b] [-d] [-l] [-f from|-r from] [-h filename] user ...");
 +	mailerr(NULL, "usage: mail.local [-7] [-b] [-B] [-d] [-l] [-f from|-r from] [-h filename] user ...");
  #endif
- 	sm_exit(ExitVal);
+ 	sm_exit(EX_USAGE);
  }

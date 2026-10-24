@@ -1,0 +1,15 @@
+TIMESTAMP = 1778747531
+SHA256 (grpc-grpc-go-v1.78.0-3d0dd1e_GH0.tar.gz) = a956d7895f13e9c4ea66385bdd1f21241827fb2688333e15547e0cf7c0377a45
+SIZE (grpc-grpc-go-v1.78.0-3d0dd1e_GH0.tar.gz) = 3069887
+SHA256 (golang-net-v0.51.0_GH0.tar.gz) = 2558140dfbedb31d8d2243cf2862b1ad09e99406f96a68d226823b4c28e20058
+SIZE (golang-net-v0.51.0_GH0.tar.gz) = 1547526
+SHA256 (golang-sys-v0.42.0_GH0.tar.gz) = e53d8b0700995779285ac8376b513dcbb906755a1cb10d6028f539476db905a2
+SIZE (golang-sys-v0.42.0_GH0.tar.gz) = 1539867
+SHA256 (golang-text-v0.34.0_GH0.tar.gz) = e80f73101db5eead129a96e99b90163c883ca1317a827c1f15c5da7e099b1df4
+SIZE (golang-text-v0.34.0_GH0.tar.gz) = 6772603
+SHA256 (google-go-genproto-a57be14db171_GH0.tar.gz) = 4b55323cf626fb26892b11ea46b01fc0c341f6f3ec586b1b5d3052571e668664
+SIZE (google-go-genproto-a57be14db171_GH0.tar.gz) = 5932581
+SHA256 (grpc-grpc-go-v1.81.0_GH0.tar.gz) = 525e3a08b51313b28c0b532f2af6a630babf52d08680511e554fbeedeec4b6fc
+SIZE (grpc-grpc-go-v1.81.0_GH0.tar.gz) = 3042143
+SHA256 (protocolbuffers-protobuf-go-v1.36.11_GH0.tar.gz) = 517b935001f3d43640489cd1aab531a3ed5927fb34379fa6cb1c1a514e9cb8e8
+SIZE (protocolbuffers-protobuf-go-v1.36.11_GH0.tar.gz) = 1821632

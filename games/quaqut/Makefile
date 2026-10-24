@@ -18,6 +18,7 @@ PLIST_FILES=	bin/${PORTNAME} share/man/man1/${PORTNAME}.1.gz
 
 OPTIONS_DEFINE=	DOCS
 
+USES= guessfix
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/quaqut.1 ${STAGEDIR}${PREFIX}/share/man/man1

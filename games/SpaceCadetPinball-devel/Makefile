@@ -1,7 +1,6 @@
 PORTNAME=	SpaceCadetPinball
-PORTVERSION=	2.0.1.20230103
+PORTVERSION=	2.1.0.20240821
 DISTVERSIONPREFIX=	Release_
-PORTREVISION=	1
 CATEGORIES=	games
 PKGNAMESUFFIX=	-devel
 
@@ -16,9 +15,10 @@ USES=		cmake sdl xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	k4zmu2a
 GH_PROJECT=	SpaceCadetPinball
-GH_TAGNAME=	10ff114
+GH_TAGNAME=	cb9b7b886244a27773f66b0b19fdc2998392565e
 
 USE_SDL=	mixer2 sdl2
 USE_XORG=	ice sm x11 xext
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

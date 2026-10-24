@@ -1,8 +1,8 @@
 PORTNAME=	gtksourceview2
 DISTVERSION=	2.10.5
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	x11-toolkits gnome
-MASTER_SITES=	GNOME/sources/${PORTNAME:S/2$//}/${DISTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITES=	GNOME
 DISTNAME=	${PORTNAME:S/2$//}-${DISTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -22,4 +22,5 @@ CONFIGURE_ARGS=	--enable-compile-warnings=no \
 		--enable-glade-catalog=no \
 		--disable-gtk-doc-html
 
+USE_GNOME:= ${USE_GNOME:Ngconf2}
 .include <bsd.port.mk>

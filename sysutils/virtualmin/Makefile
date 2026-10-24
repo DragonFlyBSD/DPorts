@@ -1,0 +1,37 @@
+PORTNAME=	virtualmin
+PORTVERSION=	8.1.0
+PORTEPOCH=	1
+CATEGORIES=	sysutils
+MASTER_SITES=	http://download.webmin.com/download/virtualmin/
+DISTNAME=	virtual-server-${PORTVERSION}.gpl
+EXTRACT_SUFX=	.wbm.gz
+
+MAINTAINER=	olgeni@FreeBSD.org
+COMMENT=	Virtual hosting management system based on webmin
+WWW=		https://www.webmin.com/virtualmin.html
+
+LICENSE=	GPLv2
+
+RUN_DEPENDS=	${LOCALBASE}/lib/webmin/webmin-init:sysutils/webmin
+
+USES=		cpe shebangfix
+SHEBANG_FILES=	*.cgi
+NO_BUILD=	yes
+WRKSRC=		${WRKDIR}/virtual-server
+
+IGNORE= contains FreeBSD binaries
+post-extract:
+	@${RM} -r ${WRKSRC}/images/.xvpics ${WRKSRC}/.gitignore \
+		${WRKSRC}/.github ${WRKSRC}/.editorconfig ${WRKSRC}/FUNDING.yml
+	@${FIND} ${WRKSRC} -name "*.swp" -delete
+	@${FIND} ${WRKSRC} -name "*.cgi" | ${XARGS} ${REINPLACE_CMD} -e "s@/usr/local/bin/perl@${PERL}@"
+	@${FIND} ${WRKSRC} -name "*.bak" -delete
+	@${FIND} ${WRKSRC} -name "*.cgi" | ${XARGS} ${CHMOD} 755
+	@${FIND} ${WRKSRC} -type d -empty -delete
+
+do-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/webmin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/webmin/virtual-server
+	${CP} -r ${WRKSRC} ${STAGEDIR}${PREFIX}/lib/webmin
+
+.include <bsd.port.mk>

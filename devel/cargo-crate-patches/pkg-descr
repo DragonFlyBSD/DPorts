@@ -1,0 +1,5 @@
+Container for the DragonFly patches applied to vendored cargo crates.
+
+Ports built with USES=cargo:extra pull the files named here into
+EXTRA_PATCHES when their CARGO_CRATES list a matching crate version.
+The port itself builds and installs nothing.

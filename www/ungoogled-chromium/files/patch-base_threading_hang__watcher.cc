@@ -1,11 +1,11 @@
---- base/threading/hang_watcher.cc.orig	2024-07-31 14:19:23 UTC
+--- base/threading/hang_watcher.cc.orig	2026-05-09 18:09:27 UTC
 +++ base/threading/hang_watcher.cc
-@@ -354,7 +354,7 @@ void HangWatcher::InitializeOnMainThread(ProcessType p
+@@ -236,7 +236,7 @@ bool ThreadTypeLoggingLevelGreaterOrEqual(HangWatcher:
  
-   bool enable_hang_watcher = base::FeatureList::IsEnabled(kEnableHangWatcher);
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && !BUILDFLAG(IS_BSD)
-   if (is_zygote_child) {
-     enable_hang_watcher =
-         enable_hang_watcher &&
+ constexpr base::FeatureState HangWatcherFeatureDefault() {
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_LINUX)
++    BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   return FEATURE_ENABLED_BY_DEFAULT;
+ #else
+   return FEATURE_DISABLED_BY_DEFAULT;

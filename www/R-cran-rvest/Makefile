@@ -1,11 +1,11 @@
 PORTNAME=	rvest
-PORTVERSION=	1.0.4
+PORTVERSION=	1.0.5
 CATEGORIES=	www
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Easily Harvest (Scrape) Web Pages
-WWW=		https://cran.r-project.org/web/packages/rvest/
+WWW=		https://cran.r-project.org/package=rvest
 
 LICENSE=	MIT
 
@@ -17,7 +17,7 @@ RUN_DEPENDS=	R-cran-cli>0:devel/R-cran-cli \
 		R-cran-rlang>=1.1.0:devel/R-cran-rlang \
 		R-cran-selectr>0:www/R-cran-selectr \
 		R-cran-tibble>0:devel/R-cran-tibble \
-		R-cran-xml2>=1.3:textproc/R-cran-xml2
+		R-cran-xml2>=1.4.0:textproc/R-cran-xml2
 
 USES=		cran:auto-plist
 

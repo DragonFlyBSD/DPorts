@@ -1,5 +1,5 @@
 PORTNAME=	3d-ascii-viewer
-PORTVERSION=	1.3.0
+PORTVERSION=	1.4.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	graphics
 
@@ -21,6 +21,7 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	EXAMPLES
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/3d-ascii-viewer ${STAGEDIR}${PREFIX}/bin
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/models

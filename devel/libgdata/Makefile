@@ -1,10 +1,10 @@
 PORTNAME=	libgdata
 PORTVERSION=	0.18.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
-MAINTAINER=	kwm@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GLib-based implementation of the GData protocol
 WWW=		https://live.gnome.org/libgdata
 
@@ -19,8 +19,10 @@ LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
 		libgcr-base-3.so:security/gcr3 \
 		liboauth.so:net/liboauth
 
-USES=		gettext gnome localbase meson pkgconfig tar:xz vala:build
+USES=		cpe gettext gnome localbase meson pkgconfig tar:xz vala:build
+CPE_VENDOR=	gnome
 USE_GNOME=	glib20 introspection:build libxml2
 USE_LDCONFIG=	yes
 
+LIB_DEPENDS+= libgnome-keyring.so:security/libgnome-keyring
 .include <bsd.port.mk>

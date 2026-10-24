@@ -10,7 +10,8 @@
 # version:		1 -- default (this may be omitted since there is
 #			currently only one supported version)
 # _internal:		Only intended for use by multimedia/gstreamer1 to
-#			define specific variables so as not depend on itself
+#			define specific variables like _GST1_VERSION so that
+#			it does not depend on itself
 #
 # MAINTAINER: multimedia@FreeBSD.org
 
@@ -39,36 +40,29 @@ _GST_VER=	${_GST_VER_DEFAULT}
 
 #== Component setup
 
-# When modifying _GST1_VERSION, be sure to also update distinfo for the
-# following ports:
-# - multimedia/gstreamer1
-# - multimedia/gstreamer1-editing-services
-# - multimedia/gstreamer1-libav
-# - multimedia/gstreamer1-plugins (via `make makesum-gst1`)
-# - multimedia/gstreamer1-rtsp-server
-# - multimedia/gstreamer1-vaapi
-# - multimedia/py-gstreamer1
-_GST1_VERSION=		1.26.0
+# When modifying _GST1_VERSION, run `make -C ${PORTSDIR}/multimedia/gstreamer1 makesum-all`
+# to update the distinfo files for the entire suite.
+_GST1_VERSION=		1.28.8
 _GST1_LIB_VER=		1.0
 _GST1_SOVERSION=	0.${_GST1_VERSION:R:E}${${_GST1_VERSION:E} > 9:?:0}${_GST1_VERSION:E}.0
 
 _GST1_CATEGORIES=	audio comms devel ftp graphics multimedia net security \
 			sysutils textproc www x11 x11-toolkits
 _GST1_PLUGINS_audio= 	a52dec alsa amrnb amrwbdec bs2b cdparanoia chromaprint faac \
-			faad flac flite gme gsm jack ladspa lame lv2 modplug \
+			faad fdkaac flac flite gme gsm jack ladspa lame lv2 modplug \
 			mpg123 ogg openmpt opus shout2 sidplay \
 			sndfile sndio soundtouch speex taglib twolame vorbis \
 			wavpack webrtcdsp
 _GST1_PLUGINS_comms=	spandsp
-_GST1_PLUGINS_devel=	soup
+_GST1_PLUGINS_devel=	devtools soup
 _GST1_PLUGINS_ftp=	curl
 _GST1_PLUGINS_graphics=	aalib cairo gdkpixbuf gl jpeg kms libcaca libvisual \
 			opencv openexr openjpeg png rsvg vulkan webp zbar
 _GST1_PLUGINS_multimedia=	aom assrender bad dash dts dv dvdread \
 			editing-services good hls libav libde265 \
 			mpeg2dec mpeg2enc mplex mm msdk openh264 resindvd \
-			rtsp-server rust smoothstreaming theora ttml ugly \
-			v4l2 vaapi vpx webrtc x264 x265
+			rtsp-server rust smoothstreaming svtav1 theora ttml \
+			ugly v4l2 vpx webrtc x264 x265
 _GST1_PLUGINS_net=	sctp srtp
 _GST1_PLUGINS_security=	dtls
 _GST1_PLUGINS_sysutils=	cdio
@@ -77,7 +71,7 @@ _GST1_PLUGINS_www=	neon srt
 _GST1_PLUGINS_x11=	x ximagesrc
 _GST1_PLUGINS_x11-toolkits=	gtk pango qt5 qt6
 
-# == Unversioned information
+#== Unversioned information
 
 # Gather all available plugins for the chosen version
 _GST_PLUGINS_BASE=	bad core good ugly libgstreamer plugins
@@ -144,6 +138,9 @@ gst-faac_IMPL=		bad
 
 gst-faad_PORT=		audio/gstreamer${_GST_VER}-plugins-faad
 gst-faad_IMPL=		bad
+
+gst-fdkaac_PORT=	audio/gstreamer${_GST_VER}-plugins-fdkaac
+gst-fdkaac_IMPL=	bad
 
 gst-flac_PORT=		audio/gstreamer${_GST_VER}-plugins-flac
 gst-flac_IMPL=		good
@@ -225,6 +222,10 @@ gst-spandsp_PORT=	comms/gstreamer${_GST_VER}-plugins-spandsp
 gst-spandsp_IMPL=	bad
 
 #==== devel plugin section
+
+gst-devtools_PORT=	devel/gstreamer${_GST_VER}-devtools
+gst-devtools_SUFFIX=	#
+gst-devtools_IMPL=	#
 
 gst-soup_PORT=		devel/gstreamer${_GST_VER}-plugins-soup
 gst-soup_IMPL=		good
@@ -349,11 +350,12 @@ gst-rtsp-server_IMPL=	#
 
 gst-rust_PORT=		multimedia/gstreamer${_GST_VER}-plugins-rust
 gst-rust_IMPL=		#
-gst-rust_GST1_VERSION=	0.13.5
-gst-rust_VERSION=	${gst-rust_GST${_GST_VER}_VERSION}
 
 gst-smoothstreaming_PORT=	multimedia/gstreamer${_GST_VER}-plugins-smoothstreaming
 gst-smoothstreaming_IMPL=	bad
+
+gst-svtav1_PORT=	multimedia/gstreamer${_GST_VER}-plugins-svt-av1
+gst-svtav1_IMPL=	bad
 
 gst-theora_PORT=	multimedia/gstreamer${_GST_VER}-plugins-theora
 gst-theora_IMPL=	#
@@ -363,10 +365,6 @@ gst-ttml_IMPL=		bad
 
 gst-v4l2_PORT=		multimedia/gstreamer${_GST_VER}-plugins-v4l2
 gst-v4l2_IMPL=		good
-
-gst-vaapi_PORT=		multimedia/gstreamer${_GST_VER}-vaapi
-gst-vaapi_SUFFIX=	#
-gst-vaapi_IMPL=		#
 
 gst-vpx_PORT=		multimedia/gstreamer${_GST_VER}-plugins-vpx
 gst-vpx_IMPL=		good

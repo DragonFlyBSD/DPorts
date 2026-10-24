@@ -1,6 +1,6 @@
 PORTNAME=	ktexteditor
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
@@ -20,5 +20,10 @@ USE_QT=		concurrent core dbus declarative gui network printsupport \
 		widgets xml \
 		buildtools:build qmake:build
 USE_XORG=	x11
+
+USES+= gmake
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

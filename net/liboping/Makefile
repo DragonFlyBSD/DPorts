@@ -23,4 +23,8 @@ post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Net/Oping/Oping.so
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/liboping.so.0.3.0
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's| -Werror||' \
+		${WRKSRC}/src/Makefile.in
+
 .include <bsd.port.mk>

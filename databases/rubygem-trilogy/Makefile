@@ -1,5 +1,5 @@
 PORTNAME=	trilogy
-PORTVERSION=	2.9.0
+PORTVERSION=	2.13.0
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
@@ -10,6 +10,10 @@ WWW=		https://github.com/trilogy-libraries/trilogy/tree/main/contrib/ruby
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		gem ssl
+RUN_DEPENDS=	rubygem-bigdecimal>=0:math/rubygem-bigdecimal
+
+USES=		cpe gem ssl
+
+CPE_VENDOR=	trilogy_project
 
 .include <bsd.port.mk>

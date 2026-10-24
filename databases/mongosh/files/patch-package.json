@@ -1,0 +1,27 @@
+--- package.json.orig	2026-04-30 23:25:01 UTC
++++ package.json
+@@ -30,7 +30,7 @@
+     "pretest-smoke": "npm run compile-cli",
+     "test-smoke": "npm run test-smoke -w @mongosh/cli-repl",
+     "compile": "npm run compile --workspaces --if-present",
+-    "compile-cli": "lerna run compile --scope @mongosh/cli-repl --include-dependencies",
++    "compile-cli": "lerna --loglevel silly run compile --scope @mongosh/cli-repl --include-dependencies",
+     "prestart-cli": "npm run compile-cli",
+     "start-cli": "npm run start -w @mongosh/cli-repl",
+     "start-browser": "npm run start --workspace @mongosh/browser-repl",
+@@ -68,7 +68,6 @@
+     "postcreate-static-analysis-report": "mongodb-sbom-tools sarif-to-markdown --sarif=.sbom/codeql.sarif.json --md=.sbom/codeql.md",
+     "where": "monorepo-where",
+     "reformat": "npm run reformat --workspaces --if-present",
+-    "prepare": "husky",
+     "precommit": "precommit",
+     "preinstall": "node scripts/sort-workspaces.js",
+     "bump-auxiliary": "npm run bump-auxiliary --workspace @mongosh/build",
+@@ -108,7 +107,6 @@
+     "cross-env": "^6.0.3",
+     "find-up": "^5.0.0",
+     "glob": "^10.3.12",
+-    "husky": "^9.0.11",
+     "knip": "^5.71.0",
+     "mocha": "^11.7.5",
+     "mongodb-runner": "^6.5.3",

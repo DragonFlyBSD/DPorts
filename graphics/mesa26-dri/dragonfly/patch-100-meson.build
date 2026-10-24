@@ -1,0 +1,23 @@
+--- meson.build.orig	2026-07-02 19:34:59 UTC
++++ meson.build
+@@ -599,8 +599,8 @@ if not have_mtls_dialect
+   # cross-compiling, but because this is just an optimization we can skip it
+   if meson.is_cross_build() and not meson.can_run_host_binaries()
+     warning('cannot auto-detect -mtls-dialect when cross-compiling, using compiler default')
+-  elif host_machine.system() == 'freebsd'
+-    warning('cannot use -mtls-dialect for FreeBSD, using compiler default')
++  elif host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly'
++    warning('cannot use -mtls-dialect for FreeBSD/DragonFly (rtld lacks TLSDESC relocations), using compiler default')
+   else
+     # The way to specify the TLSDESC dialect is architecture-specific.
+     # We probe both because there is not a fallback guaranteed to work for all
+@@ -1559,7 +1559,9 @@ foreach f, prefix: functions_to_detect
+   endif
+ endforeach
+
+-if cpp.links('''
++if host_machine.system() == 'dragonfly'
++  pre_args += '-DHAVE_BSD_QSORT_R'
++elif cpp.links('''
+     #define _GNU_SOURCE
+     #include <stdlib.h>

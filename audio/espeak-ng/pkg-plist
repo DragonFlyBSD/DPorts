@@ -750,9 +750,6 @@ libdata/pkgconfig/espeak-ng.pc
 %%DATADIR%%/espeak-ng-data/voices/mb/mb-vz1
 %%DATADIR%%/espeak-ng-data/xex_dict
 %%DATADIR%%/espeak-ng-data/yue_dict
-share/man/man1/espeak-ng.1.gz
-share/man/man1/espeak.1.gz
-share/man/man1/speak-ng.1.gz
 share/vim/addons/ftdetect/espeakfiletype.vim
 share/vim/addons/syntax/espeaklist.vim
 share/vim/addons/syntax/espeakrules.vim

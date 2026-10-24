@@ -1,32 +1,31 @@
 PORTNAME=	kaffeine
-DISTVERSION=	2.0.18
-PORTREVISION=	6
+PORTVERSION=	2.1.0
 CATEGORIES=	multimedia kde
 MASTER_SITES=	KDE/stable/${PORTNAME}
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Multimedia player based on KDE and VLC
-WWW=		https://www.kde.org/applications/multimedia/kaffeine/
+COMMENT=	Multimedia player based on VLC
+WWW=		https://apps.kde.org/kaffeine/
 
-LICENSE=	GPLv2+
-LICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE=	CC0-1.0
+LICENSE_FILE=	${WRKSRC}/LICENSES/CC0-1.0.txt
 
 BUILD_DEPENDS=	v4l_compat>=1.18.0:multimedia/v4l_compat
 LIB_DEPENDS=	libvlc.so:multimedia/vlc \
 		libdvbv5.so:multimedia/libv4l
 
-USES=		cmake compiler:c++11-lang cpe desktop-file-utils gettext \
-		pkgconfig kde:5 qt:5 tar:xz xorg
-USE_KDE=	auth bookmarks codecs completion config configwidgets \
-		coreaddons i18n itemviews kio solid dbusaddons jobwidgets \
-		phonon service widgetsaddons windowsystem xmlgui \
+USES=		cmake cpe desktop-file-utils gettext inotify \
+		pkgconfig kde:6 qt:6 tar:xz xorg
+USE_KDE=	coreaddons dbusaddons i18n kio solid \
+		widgetsaddons windowsystem xmlgui \
 		doctools:build ecm:build
-USE_QT=		concurrent core dbus gui network sql svg x11extras xml \
-		widgets qmake:build buildtools:build
+USE_QT=		base svg
 USE_XORG=	x11 xscrnsaver
 
 CPE_VENDOR=	kaffeine
 CPE_PRODUCT=	kaffeine_player
+
+KDE_INVENT=	f5e0f38c625ab42ade837a8fc2ce6125c8104c1f
 
 post-patch:
 	@${RM} -r ${WRKSRC}/include

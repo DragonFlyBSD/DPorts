@@ -1,0 +1,4 @@
+Docling Agent is a Python library that simplifies agentic operations on
+documents, such as writing, editing, summarizing, extracting, and enriching
+content. It builds on top of the Docling document understanding platform to
+enable AI agents to work with structured document representations.

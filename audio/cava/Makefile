@@ -1,6 +1,8 @@
 PORTNAME=	cava
-DISTVERSION=	0.10.2
+DISTVERSION=	0.10.6
+PORTREVISION=	1
 CATEGORIES=	audio
+MASTER_SITES=	https://github.com/karlstav/${PORTNAME}/releases/download/${DISTVERSION}/
 
 MAINTAINER=	vendion@gmail.com
 COMMENT=	Cross-platform Audio Visualizer
@@ -12,9 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libiniparser.so:devel/iniparser
 
-USES=		autoreconf compiler:c11 libtool localbase pkgconfig
-USE_GITHUB=	yes
-GH_ACCOUNT=	karlstav
+USES=		compiler:c11 localbase pkgconfig
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-input-alsa \
@@ -75,6 +75,7 @@ VT_PLIST_FILES=		${DATADIR}/cava.fnt
 
 CPPFLAGS+=	-I${PREFIX}/include/iniparser
 
+DFLY_UNMAINTAINED= yes
 pre-configure:
 	${ECHO_CMD} ${DISTVERSION} > ${WRKSRC}/version
 
@@ -86,4 +87,5 @@ post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/example_files/config ${STAGEDIR}${EXAMPLESDIR}
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
 .include <bsd.port.mk>

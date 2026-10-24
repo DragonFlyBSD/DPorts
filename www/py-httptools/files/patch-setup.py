@@ -1,6 +1,6 @@
---- setup.py.orig	2021-04-23 20:30:51 UTC
+--- setup.py.orig	2026-05-25 22:07:13 UTC
 +++ setup.py
-@@ -48,7 +48,7 @@ class httptools_build_ext(build_ext):
+@@ -44,7 +44,7 @@ class httptools_build_ext(build_ext):
  
          super().initialize_options()
          self.use_system_llhttp = False

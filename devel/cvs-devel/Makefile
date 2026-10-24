@@ -31,6 +31,7 @@ CVS_VER?=	v${DISTVERSION:S//_/g}
 OPTIONS_DEFINE=	PAM
 PAM_DESC=	PAM support
 
+CONFIGURE_ARGS+= ac_cv_have_decl___fpending=yes
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPAM}

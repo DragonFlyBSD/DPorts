@@ -1,5 +1,5 @@
 PORTNAME=	memcached
-DISTVERSION=	1.6.38
+DISTVERSION=	1.6.45
 CATEGORIES=	databases
 MASTER_SITES=	http://www.memcached.org/files/
 
@@ -47,6 +47,7 @@ SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 SASL_USES=	localbase:ldflags
 SASL_CONFIGURE_ENABLE=	sasl
 
+OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NDTRACE}
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD

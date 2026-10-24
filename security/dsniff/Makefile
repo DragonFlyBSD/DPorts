@@ -1,6 +1,6 @@
 PORTNAME=	dsniff
 DISTVERSION=	2.4b1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	security
 MASTER_SITES=	http://www.monkey.org/~dugsong/${PORTNAME}/beta/ \
 		LOCAL/sbz
@@ -13,6 +13,7 @@ LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_FreeBSD_14=	fails to compile : conflicting types for 'pcap_init'
+BROKEN_FreeBSD_15=	fails to compile : conflicting types for 'pcap_init'
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libnids.a:net/libnids
 LIB_DEPENDS=	libnet.so:net/libnet
@@ -21,6 +22,7 @@ USES=		gettext gnome pkgconfig
 USE_GNOME=	glib20
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--with-libnet=${LOCALBASE}
 DESTDIRNAME=	install_prefix
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION:C/..$//}
@@ -33,9 +35,10 @@ X11_USES=	xorg
 X11_USE=	xorg=x11,xmu
 X11_CONFIGURE_WITH=x
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
-.if 0 # ${OPSYS} == FreeBSD || ${SSL_DEFAULT} == openssl
+.if 0
 # Requires OpenSSL 1.0.x for old SSL interface
 BUILD_DEPENDS+=		${NONEXISTENT}:security/openssl-unsafe:stage
 CPPFLAGS+=		-nostdinc -I/usr/include -I${WRKDIR}/openssl-unsafe/include
@@ -56,5 +59,19 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,csin,_csin,g' \
 		${WRKSRC}/webmitm.c \
 		${WRKSRC}/sshmitm.c
+
+.if ${DISTVERSION} == "2.4b1"
+USES:=	${USES:Nssl}
+BUILD_DEPENDS+=	libressl-static>0:security/libressl-static
+CFLAGS+=	-I${LOCALBASE}/libressl-static/include
+LDFLAGS+=	-L${LOCALBASE}/libressl-static/lib
+CONFIGURE_ARGS+= --with-openssl=${LOCALBASE}/libressl-static
+.else
+USES+=	ssl
+.endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-lmd@-L${LOCALBASE}/lib -lcrypto@g" \
+		${WRKSRC}/Makefile.in
 
 .include <bsd.port.post.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	libcec
-PORTVERSION=	7.0.0
+PORTVERSION=	8.1.7
 DISTVERSIONPREFIX=	libcec-
 CATEGORIES=	multimedia
 
@@ -13,9 +13,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 LIB_DEPENDS=	libp8-platform.so:devel/p8-platform
 
-USES=		alias cmake compiler:c++11-lib pathfix pkgconfig shebangfix
+USES=		cmake compiler:c++11-lib pkgconfig shebangfix
 
-CMAKE_ARGS=	-DCMAKE_REQUIRED_INCLUDES=${LOCALBASE}/include \
+CMAKE_ARGS=	-DCMAKE_INSTALL_INCLUDEDIR=${PREFIX}/include \
+		-DCMAKE_REQUIRED_INCLUDES=${LOCALBASE}/include \
 		-DCMAKE_REQUIRED_FLAGS=-L${LOCALBASE}/lib \
 		-DGIT_REVISION=libcec-${PORTVERSION}
 USE_LDCONFIG=	yes
@@ -36,7 +37,7 @@ PYTHON_DESC=	Build python wrapper
 
 PYTHON_BUILD_DEPENDS=	swig:devel/swig
 PYTHON_CMAKE_BOOL_OFF=	SKIP_PYTHON_WRAPPER
-PYTHON_USES=		python:build
+PYTHON_USES=		python
 X11_USE_OFF=		XORG=x11,xorgproto,xrandr
 X11_USES_OFF=		xorg
 

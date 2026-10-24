@@ -1,32 +1,36 @@
 PORTNAME=		canu
-DISTVERSION=		2.2
-PORTREVISION=		6
+DISTVERSION=		2.3
 CATEGORIES=		biology java perl5
 # Github auto-generated tarballs lack submodules
 MASTER_SITES=		https://github.com/marbl/canu/releases/download/v${DISTVERSION}/
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Single molecule sequence assembler
-WWW=		https://canu.readthedocs.io/
+WWW=		https://github.com/marbl/canu
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKDIR}/${PORTNAME}-${PORTVERSION}/README.license.GPL
 
-NOT_FOR_ARCHS=		armv6 armv7 i386 mips powerpc powerpcspe
+NOT_FOR_ARCHS=		armv6 armv7 i386 powerpc powerpcspe
 NOT_FOR_ARCHS_REASON=	Requires 64-bit processor
 
-LIB_DEPENDS=	libboost_regex.so:devel/boost-libs
+BUILD_DEPENDS=	${LOCALBASE}/include/boost/config/platform/bsd.hpp:devel/boost-libs
+LIB_DEPENDS=	libcurl.so:ftp/curl
 RUN_DEPENDS=	gnuplot:math/gnuplot
 
-USES=		compiler:c++11-lang gmake java localbase perl5 tar:xz
-USE_CXXSTD=	c++14
+USES=		compiler:c++11-lang gmake java:run localbase perl5 pkgconfig ssl tar:xz
 
+JAVA_VERSION=	8+
+
+WRKSRC_SUBDIR=	src
 # Upstream Makefile compiles directly into ${DESTDIR}${PREFIX} rather than
 # using a separate install target.
 MAKE_ENV=	DESTDIR=${WRKSRC} CANU_BUILD_ENV=ports
+# Silence warnings about C++20 extensions
+CXXFLAGS+=	-std=c++20
+LDFLAGS+= -lexecinfo -fopenmp
 
-WRKSRC_SUBDIR=	src
-
+CFLAGS= -fopenmp
 .include <bsd.port.pre.mk>
 
 # Parasail should be unbundled, but that would be a project because it's
@@ -47,13 +51,8 @@ pre-configure:
 		-e 's|-fexpensive-optimizations||g' \
 		${WRKSRC}/Makefile
 	@${REINPLACE_CMD} \
-		-e 's|RealBin/../lib/site_perl|RealBin/../${SITE_PERL_REL}/canu|g' \
+		-e 's|RealBin/../lib/perl5/site_perl|RealBin/../${SITE_PERL_REL}/canu|g' \
 		${WRKSRC}/pipelines/canu.pl
-
-# Upstream does not want to use lib/perl5/site_perl
-post-build:
-	@${MKDIR} ${WRKSRC}/build/lib/perl5
-	${MV} ${WRKSRC}/build/lib/site_perl ${WRKSRC}/build/lib/perl5
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}

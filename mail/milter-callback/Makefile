@@ -49,4 +49,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.conf \
 		${STAGEDIR}${PREFIX}/etc/mail/${PORTNAME}.conf.sample
 
+.if !exists( /usr/include/libmilter/mfapi.h )
+BUILD_DEPENDS+=	${LOCALBASE}/include/libmilter/mfapi.h:mail/libmilter
+.endif
+
+LDFLAGS:= ${LDFLAGS:N-lthr}
 .include <bsd.port.mk>

@@ -24,6 +24,7 @@ ML_CORTEXRM_DESC=	Multilib configuration optimized for Cortex-M/R
 CONFIGURE_ARGS=	--disable-libstdcxx \
 	--without-headers
 
+PLIST_FILES= lib/gcc/%%GCC_TARGET%%/%%GCC_VERSION%%/include-fixed/README
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MML_NONE}
@@ -48,5 +49,8 @@ SUB_LIST+=		ML_DEFAULT="@comment " ML_CORTEX="" ML_CORTEXA="@comment " ML_CORTEX
 .endif
 
 MASTERDIR=	${.CURDIR}/../aarch64-none-elf-gcc
+
+dfly-install:
+	${RM} -v ${STAGEDIR}${LOCALBASE}/lib/gcc/${GCC_TARGET}/${PORTVERSION}/include-fixed/*.h
 
 .include "${MASTERDIR}/Makefile"

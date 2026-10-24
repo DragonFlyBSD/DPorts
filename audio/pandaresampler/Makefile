@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	include/pandaresampler.hh \
 		lib/libpandaresampler.a
 
+DFLY_UNMAINTAINED= yes
 do-install: # workaround for https://github.com/swesterfeld/pandaresampler/issues/1
 	${INSTALL_DATA} ${WRKSRC}/lib/pandaresampler.hh ${STAGEDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/lib/.libs/libpandaresampler.a ${STAGEDIR}${PREFIX}/lib

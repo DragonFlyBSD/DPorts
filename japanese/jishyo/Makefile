@@ -1,6 +1,6 @@
 PORTNAME=	jishyo
 PORTVERSION=	0.1
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	japanese gnustep
 MASTER_SITES=	http://www.eskimo.com/~pburns/Dictionaries/files/
 DISTNAME=	Jishyo-${PORTVERSION}
@@ -21,4 +21,5 @@ CPPFLAGS+=	-fcommon
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/GNUstep/System/Applications/Jishyo.app/Jishyo
 
+CFLAGS:= ${CFLAGS} -Wno-error=implicit-function-declaration
 .include <bsd.port.mk>

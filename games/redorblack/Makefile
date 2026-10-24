@@ -13,6 +13,7 @@ USES=		compiler:c11
 
 PLIST_FILES=	bin/redorblack
 
+USE_CXXSTD= c++11
 do-build:
 	${CXX} ${CXXFLAGS} -o ${WRKSRC}/redorblack ${WRKSRC}/redorblack.c
 

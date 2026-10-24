@@ -4577,4 +4577,4 @@ lib/python-legacy/zipfile.py
 lib/python-legacy/zipfile.pyc
 lib/python-legacy/zipfile.pyo
 libdata/pkgconfig/python--legacy.pc
-man/man1/python-legacy.1.gz
+share/man/man1/python-legacy.1.gz

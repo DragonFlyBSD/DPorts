@@ -1,25 +1,29 @@
 PORTNAME=	age
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.1
-PORTREVISION=	1
+DISTVERSION=	1.3.2
+PORTREVISION=	3
 CATEGORIES=	security
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Simple, modern and secure file encryption tool
 WWW=		https://github.com/FiloSottile/age
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules
+USES=		go:1.27+,modules
 
 GO_MODULE=	filippo.io/age
 GO_TARGET=	./cmd/age \
-		./cmd/age-keygen
+		./cmd/age-keygen \
+		./cmd/age-plugin-batchpass
 
 PLIST_FILES=	bin/age \
 		bin/age-keygen \
+		bin/age-plugin-batchpass \
+		share/man/man1/age-inspect.1.gz \
 		share/man/man1/age-keygen.1.gz \
+		share/man/man1/age-plugin-batchpass.1.gz \
 		share/man/man1/age.1.gz
 
 post-install:

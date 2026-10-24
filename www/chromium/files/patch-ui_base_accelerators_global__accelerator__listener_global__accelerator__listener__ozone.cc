@@ -1,29 +1,29 @@
---- ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc.orig	2025-03-05 08:14:56 UTC
+--- ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc.orig	2026-09-25 15:26:43 UTC
 +++ ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_ozone.cc
-@@ -12,7 +12,7 @@
- #include "ui/base/accelerators/accelerator.h"
- #include "ui/ozone/public/ozone_platform.h"
+@@ -13,7 +13,7 @@
  
--#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(USE_DBUS)
+ #if BUILDFLAG(IS_CHROMEOS)
+ #include "ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_chromeos.h"
+-#elif BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
++#elif (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(USE_DBUS)
+ #include "base/environment.h"
  #include "base/feature_list.h"
- #include "ui/base/accelerators/global_accelerator_listener/global_accelerator_listener_linux.h"
+ #include "base/nix/xdg_util.h"
+@@ -23,7 +23,7 @@
  #endif
-@@ -20,7 +20,7 @@
- using content::BrowserThread;
  
  namespace {
 -#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
 +#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(USE_DBUS)
- BASE_FEATURE(kGlobalShortcutsPortal,
-              "GlobalShortcutsPortal",
-              base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -38,7 +38,7 @@ GlobalAcceleratorListener* GlobalAcceleratorListener::
-     return instance->get();
-   }
+ BASE_FEATURE(kGlobalShortcutsPortal, base::FEATURE_ENABLED_BY_DEFAULT);
  
--#if BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(USE_DBUS)
-   if (base::FeatureList::IsEnabled(kGlobalShortcutsPortal)) {
-     static GlobalAcceleratorListenerLinux* const linux_instance =
-         new GlobalAcceleratorListenerLinux(nullptr);
+ constexpr char kSessionSuffix[] = "_global_shortcuts";
+@@ -51,7 +51,7 @@ GlobalAcceleratorListener* GlobalAcceleratorListener::
+   static const base::NoDestructor<std::unique_ptr<GlobalAcceleratorListener>>
+       chromeos_instance(GlobalAcceleratorListenerChromeOS::Create());
+   return chromeos_instance->get();
+-#elif BUILDFLAG(IS_LINUX) && BUILDFLAG(USE_DBUS)
++#elif (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && BUILDFLAG(USE_DBUS)
+   // ListShortcuts on GNOME will return an empty list when the session is
+   // created, making this class incorrectly believe it must rebind all
+   // shortcuts, leading to a dialog shown on every browser start.

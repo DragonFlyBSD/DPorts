@@ -42,4 +42,8 @@ post-install:
 	${INSTALL_DATA} ${_DISTDIR}/${PORTNAME}.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps/
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*-\*-freebsd\*\))@\1|*-*-dragonfly*)@g'	\
+		${WRKSRC}/configure
+
 .include <bsd.port.mk>

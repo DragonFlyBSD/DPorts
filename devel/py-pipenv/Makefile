@@ -1,5 +1,5 @@
 PORTNAME=	pipenv
-PORTVERSION=	2024.4.1
+PORTVERSION=	2026.8.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,11 +17,18 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61:devel/py-setuptools@${PY_FL
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}certifi>=0:security/py-certifi@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}packaging>=22:devel/py-packaging@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}setuptools>=61:devel/py-setuptools@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}virtualenv>=20.24.2:devel/py-virtualenv@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}virtualenv>=20.26.6:devel/py-virtualenv@${PY_FLAVOR}
 
-USES=		python
+USES=		cpe python
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
+
+CPE_VENDOR=	pypa
+
+OPTIONS_DEFINE=	COMPLETION
+COMPLETION_DESC=Completion support
+
+COMPLETION_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}argcomplete>=3.1:devel/py-argcomplete@${PY_FLAVOR}
 
 .include <bsd.port.mk>

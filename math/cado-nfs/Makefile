@@ -1,6 +1,7 @@
 PORTNAME=	cado-nfs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.3.0-20240408
+PORTREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -33,6 +34,7 @@ TEST_TARGET=	check # 'test' does the same but is less verbose
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
+PLIST_FILES= lib/cado-nfs-3.0.0/utils/antebuffer
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == x86_64
@@ -41,4 +43,5 @@ PLIST_SUB=	LINGEN_PZ=""
 PLIST_SUB=	LINGEN_PZ="@comment "
 .endif
 
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibhwloc*}
 .include <bsd.port.mk>

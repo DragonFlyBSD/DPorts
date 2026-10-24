@@ -1,7 +1,9 @@
 PORTNAME=	Gimp
-PORTVERSION=	2.38
+DISTVERSION=	2.38
+PORTREVISION=	2
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:ETJ
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
@@ -35,4 +37,10 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Gimp/Net/Net.so
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Gimp/UI/UI.so
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} >= 504200
+BROKEN=	fails to build
+.endif
+
+.include <bsd.port.post.mk>

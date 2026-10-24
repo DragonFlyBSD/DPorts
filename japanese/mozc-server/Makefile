@@ -1,7 +1,7 @@
 PORTNAME=	mozc
 PORTVERSION=	2.23.2815.102.01
 DISTVERSIONPREFIX=	v
-PORTREVISION?=	26
+PORTREVISION?=	33
 CATEGORIES=	japanese
 
 MAINTAINER=	hrs@FreeBSD.org
@@ -14,7 +14,6 @@ LIB_DEPENDS=	libprotobuf.so:devel/protobuf \
 		libzinnia.so:japanese/zinnia
 RUN_DEPENDS=	xdg-open:devel/xdg-utils
 
-BROKEN_FreeBSD_13_powerpc64=	fails to build: ERROR: ninja -v -C out_linux/Release mozc_server: Error code 1
 BROKEN_powerpc=		fails to compile: segfault
 
 USE_GITHUB=	yes
@@ -377,10 +376,9 @@ CATEGORIES+=	elisp
 RUN_DEPENDS+=	mozc_server:japanese/mozc-server
 
 NO_ARCH=	yes
-PLIST_FILES+=	${EMACS_VERSION_SITE_LISPDIR}/mozc/mozc.elc \
-		${EMACS_VERSION_SITE_LISPDIR}/mozc/mozc.el.gz \
-		${EMACS_VERSION_SITE_LISPDIR}/mozc/leim-list.el
-PLIST_DIRS+=	${EMACS_VERSION_SITE_LISPDIR}/mozc
+PLIST_FILES+=	${EMACS_SITE_LISPDIR}/mozc/mozc.el.gz \
+		${EMACS_SITE_LISPDIR}/mozc/leim-list.el
+PLIST_DIRS+=	${EMACS_SITE_LISPDIR}/mozc
 
 post-patch-mozc_el:
 	${REINPLACE_CMD} "s,%%PREFIX%%,${PREFIX}," \
@@ -389,21 +387,32 @@ post-patch-mozc_el:
 post-patch: post-patch-mozc_el
 
 do-build-mozc_el:
-	cd ${BUILD_WRKSRC}/unix/emacs && \
-	    ${EMACS_CMD} -batch -q -no-site-file -no-init-file \
-	    -f batch-byte-compile mozc.el && \
-	    ${GZIP_CMD} mozc.el
+	cd ${BUILD_WRKSRC}/unix/emacs && ${GZIP_CMD} mozc.el
 
 do-install-mozc_el:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/mozc
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/mozc
 	${INSTALL_DATA} \
 	    ${BUILD_WRKSRC}/unix/emacs/mozc.el.gz \
-	    ${BUILD_WRKSRC}/unix/emacs/mozc.elc \
 	    ${FILESDIR}/leim-list.el \
-	    ${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/mozc/
+	    ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/mozc/
 .endif
 
 do-build: ${BUILD_MOZC_LIST:S/^/do-build-/}
 do-install: ${BUILD_MOZC_LIST:S/^/do-install-/}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|freebsd|dragonfly|' \
+		${WRKSRC}/src/gyp/common.gypi
+	${REINPLACE_CMD} -e 's|OS_FREEBSD|OS_DRAGONFLY|' \
+		${WRKSRC}/src/gyp/common.gypi \
+		${WRKSRC}/src/base/thread.cc \
+		${WRKSRC}/src/base/logging.cc \
+		${WRKSRC}/src/base/mutex.cc \
+		${WRKSRC}/src/ipc/ipc_path_manager.cc \
+		${WRKSRC}/src/ipc/unix_ipc.cc \
+		${WRKSRC}/src/gui/about_dialog/about_dialog.cc \
+		${WRKSRC}/src/server/mozc_server.cc
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/src/build_tools/util.py
 
 .include <bsd.port.post.mk>

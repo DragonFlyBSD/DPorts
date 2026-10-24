@@ -6,12 +6,13 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Color contrast checker
 WWW=		https://apps.kde.org/en/kontrast
 
-USES=		compiler:c++11-lang cmake pkgconfig \
-		kde:5 qt:5 tar:xz
-USE_KDE=	coreaddons i18n kdeclarative kirigami2 \
+LIB_DEPENDS=	libQCoro6Core.so:devel/qcoro \
+		libfuturesql6.so:databases/futuresql
+
+USES=		cmake compiler:c++11-lang gettext kde:6 pkgconfig qt:6 tar:xz
+USE_KDE=	coreaddons crash i18n kirigami-addons kirigami2 \
 		ecm:build
-USE_QT=		core dbus declarative gui network quickcontrols2 sql svg widgets \
-		buildtools:build qmake:build
+USE_QT=		base
 
 OPTIONS_DEFINE=	DOCS
 

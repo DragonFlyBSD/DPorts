@@ -35,4 +35,12 @@ PLIST_FILES=	bin/rabs
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/rabs
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/radb/Makefile \
+		${WRKSRC}/minilang/Makefile \
+		${WRKSRC}/minilang/build.rabs \
+		${WRKSRC}/test/src/externals/build.rabs \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

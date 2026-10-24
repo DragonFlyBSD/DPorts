@@ -1,0 +1,20 @@
+--- pyproject.toml.orig	2026-06-25 09:41:48 UTC
++++ pyproject.toml
+@@ -4,7 +4,7 @@ authors = [{ name = "Christoph Reiter", email = "reite
+ description = "read and write audio tags for many formats"
+ readme = { file = "README.rst", content-type = "text/x-rst" }
+ authors = [{ name = "Christoph Reiter", email = "reiter.christoph@gmail.com" }]
+-license = "GPL-2.0-or-later"
++license = { text = "GPL-2.0-or-later" }
+ requires-python = ">=3.10, <4"
+ classifiers = [
+   "Operating System :: OS Independent",
+@@ -65,7 +65,7 @@ mutagen = ["py.typed"]
+ "share/man/man1" = ["man/*.1"]
+ 
+ [build-system]
+-requires = ["setuptools>=77"]
++requires = ["setuptools>=61"]
+ build-backend = "setuptools.build_meta"
+ 
+ [tool.coverage.run]

@@ -15,4 +15,7 @@ ALL_TARGET=	dwz
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+USES= localbase:ldflags
+LIB_DEPENDS= libelf.so:devel/libelf
+CFLAGS= -I${LOCALBASE}/include/libelf
 .include <bsd.port.mk>

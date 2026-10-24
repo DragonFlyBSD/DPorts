@@ -44,6 +44,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+LIB_DEPENDS= libboost_system.so:devel/boost-libs
 post-extract:
 	@${MV} ${WRKDIR}/bakefile-0.2.9/autoconf/*.m4 ${WRKSRC}/m4
 

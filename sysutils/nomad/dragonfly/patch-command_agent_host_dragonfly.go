@@ -1,7 +1,7 @@
---- command/agent/host/dragonfly.go.orig	2021-06-22 14:22:13 UTC
+--- command/agent/host/dragonfly.go.orig
 +++ command/agent/host/dragonfly.go
 @@ -0,0 +1,50 @@
-+// +build dragonfly
++//go:build dragonfly
 +
 +package host
 +

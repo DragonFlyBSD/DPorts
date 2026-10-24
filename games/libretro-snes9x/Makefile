@@ -1,5 +1,6 @@
 PORTNAME=	libretro-snes9x
-DISTVERSION=	0.20231013
+DISTVERSION=	0.20250908
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	games
 
@@ -14,19 +15,22 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror pkg-mirror auto-accept
 
 USES=		compiler:c++11-lib gmake
-USE_LDCONFIG=	yes
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	libretro
 GH_PROJECT=	snes9x
-GH_TAGNAME=	ec4ebfc8f3819a9522fcb8e53eed985090017b1b
-
-PLIST_FILES=	lib/libretro/snes9x_libretro.so
+GH_TAGNAME=	5a40cd5514e63e691e39141d64267798357a1424
+USE_LDCONFIG=	yes
 
 BUILD_WRKSRC=	${WRKSRC}/libretro
+
+PLIST_FILES=	lib/libretro/snes9x_libretro.so
 
 do-install:
 	${MKDIR} ${STAGEDIR}/${PREFIX}/lib/libretro
 	${INSTALL_LIB} ${WRKSRC}/libretro/snes9x_libretro.so ${STAGEDIR}/${PREFIX}/lib/libretro
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^#if defined(__FreeBSD__) || defined(__OpenBSD__)/#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)/' \
+		${WRKSRC}/unzip/ioapi.h
 
 .include <bsd.port.mk>

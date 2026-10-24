@@ -21,4 +21,5 @@ GH_TUPLE=	ggerganov:imgui:d413be8:imgui/third-party/imgui/imgui
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	IMTUI_BUILD_EXAMPLES
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

@@ -18,4 +18,7 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
+dfly-patch:
+	${RM} -fv ${WRKSRC}/xlreader
+
 .include <bsd.port.mk>

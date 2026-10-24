@@ -1,4 +1,0 @@
-
-USES+=		gl
-USE_GL+=	gl
-

@@ -27,6 +27,7 @@ PLIST_FILES=	bin/gbsdconv \
 		%%DATADIR%%/gbsdconv.xml \
 		%%DATADIR%%/gbsdconv2.png
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/gbsdconv_taglib.so
 

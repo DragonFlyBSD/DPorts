@@ -12,6 +12,7 @@ USES=		tar:bzip2 uidfix
 
 PLIST_FILES=	bin/pam_helper
 
+CFLAGS= -Wno-unused-but-set-variable
 post-patch:
 	@${REINPLACE_CMD} '/BINOWN=/d ; s,$${MINUSLPAM},-lpam,' ${WRKSRC}/Makefile
 

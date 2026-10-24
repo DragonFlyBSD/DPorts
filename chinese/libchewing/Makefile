@@ -1,28 +1,43 @@
 PORTNAME=	libchewing
-PORTVERSION=	0.8.5
+PORTVERSION=	0.13.1
 CATEGORIES=	chinese textproc
-MASTER_SITES=	https://github.com/chewing/libchewing/releases/download/v${PORTVERSION}/
+MASTER_SITES=	https://codeberg.org/chewing/libchewing/releases/download/v${PORTVERSION}/
+DISTFILES=	libchewing-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Chewing intelligent phonetic input method library
 WWW=		https://chewing.im/ \
-		https://github.com/chewing/libchewing
+		https://codeberg.org/chewing/libchewing
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cmake:testing localbase:ldflags pathfix pkgconfig sqlite tar:zst
+BUILD_DEPENDS=	corrosion>=0:devel/corrosion
 
+USES=		cargo cmake:testing localbase:ldflags pkgconfig sqlite tar:zst
+
+CARGO_BUILD=	no
+CARGO_INSTALL=	no
+CARGO_TEST=	no
 CMAKE_OFF=	BUILD_INFO \
 		BUILD_TESTING \
 		ENABLE_GCOV \
-		USE_VALGRIND \
-		WITH_INTERNAL_SQLITE3 \
-		WITH_RUST
-CMAKE_ON=	BUILD_SHARED_LIBS \
+		USE_SYSTEM_CHEWING_CLI \
+		USE_VALGRIND
+CMAKE_ON=	BUILD_DATA \
+		BUILD_SHARED_LIBS \
+		COMPRESS_MANS \
 		NO_UNDEFINED \
 		WITH_SQLITE3
-CMAKE_TESTING_PARALLEL_LEVEL=	1	# https://github.com/chewing/libchewing/issues/293
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	MANPAGES
+OPTIONS_DEFAULT=MANPAGES
+OPTIONS_SUB=	yes
+
+MANPAGES_CMAKE_BOOL=	BUILD_DOC
+
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/chewing-cli
 
 .include <bsd.port.mk>

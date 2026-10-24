@@ -24,4 +24,10 @@ USE_XORG=	ice sm x11 xcb xext xrandr
 # KF6 coinstallability
 CMAKE_OFF=	BUILD_DESKTOPTHEMES
 
+USE_KDE:= ${USE_KDE:Nwayland}
+USES+= gmake
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	jose
-DISTVERSION=	14
+DISTVERSION=	15
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/latchset/${PORTNAME}/releases/download/v${DISTVERSION}/
 
@@ -22,5 +22,10 @@ OPTIONS_SUB=	yes
 
 MANPAGES_BUILD_DEPENDS=	a2x:textproc/asciidoc
 MANPAGES_MESON_ENABLED=	docs
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+			 -e "s,/usr/lib/,${LOCALBASE}/lib/,g" \
+		${WRKSRC}/meson.build
 
 .include <bsd.port.mk>

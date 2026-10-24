@@ -1,3 +1,3 @@
-TIMESTAMP = 1731679272
-SHA256 (oslo.cache-3.9.0.tar.gz) = c2fb2e7d64cc16622ba165288b0f7b27f78af0294cf33e883c7cdcec515d408b
-SIZE (oslo.cache-3.9.0.tar.gz) = 76381
+TIMESTAMP = 1783784406
+SHA256 (oslo_cache-4.3.0.tar.gz) = c747ada25e20925746da36a208eec50f0d4c310fcaac10b436b69393ee8140fe
+SIZE (oslo_cache-4.3.0.tar.gz) = 71016

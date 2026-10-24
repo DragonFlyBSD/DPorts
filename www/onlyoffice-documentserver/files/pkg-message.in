@@ -1,0 +1,128 @@
+[
+{ type: install
+  message: <<EOM
+CONFIGURATION:
+-------------
+The configuration file can be found (or created) at the following path:
+  %%ETCDIR%%/documentserver/local.json
+The default values are available in the default.json configuration file,
+which is available in the folders above. Please do not edit the contents of the
+default.json file directly. The default values will be restored each time you
+upgrade Document Server to a new version and all your changes will be lost. 
+
+1. Enable services at startup in the /etc/rc.conf file:
+  nginx_enable="YES"
+  supervisord_enable="YES"
+
+  Optionally in case of a jail with local IP and no internet access:
+    update /etc/hosts in order to resolve your nextcloud server to its local IP
+
+2. Set up supervisord in order to execute documentserver services:
+  - let supervisord.conf load files contained in this directory by adding to
+    %%PREFIX%%/etc/supervisord.conf:
+[include]
+files = %%ETCDIR%%/documentserver/supervisor/*.conf
+
+  - start supervisord:
+    # service supervisord start
+
+3. Set up nginx:
+  - Include the configuration appropriate for your deployment within
+    your %%PREFIX%%/etc/nginx/nginx.conf file:
+
+     HTTP:
+       include %%ETCDIR%%/documentserver/nginx/ds.conf;
+
+     HTTPS:
+       include %%ETCDIR%%/documentserver/nginx/ds-ssl.conf;
+
+   Review and customize the supplied ds.conf or ds-ssl.conf nginx configuration
+   before use, including the listen directives, TLS configuration, and any site-
+   specific settings.
+
+  - run documentserver-update-securelink.sh once for creating a verysecretstring
+Note: documentserver-update-securelink.sh updates only the packaged ds.conf, ds-ssl.conf,
+and local.json files in their default locations. If your nginx configuration uses custom
+copies or alternate paths, synchronize the secure_link_secret values manually.
+
+  - start nginx:
+    # service nginx start
+
+4. Install OnlyOffice plugins (you'll need internet):
+   # %%PREFIX%%/bin/documentserver-pluginsmanager.sh --update=%%PREFIX%%/www/onlyoffice/documentserver/sdkjs-plugins/plugin-list-default.json
+
+5. Set up Onlyoffice with Nextcloud, if desired:
+  - JWT is mandated within Onlyoffice Nextcloud app, requiring edits to %%ETCDIR%%/documentserver/local.json:
+      In the token:enable section, set the browser, request:inbox and request:outbox objects to "true"
+
+  - create a secure JWT secret (Base64 avoids issues with JSON/PHP character escaping)
+    # openssl rand -base64 48
+
+  - store the JWT secret in %%ETCDIR%%/documentserver/local.json:
+      In the services:Coauthoring:secret section, enter the JWT secret in the browser, inbox, outbox and session objects
+
+  - restart Onlyoffice:
+    # service supervisord restart
+
+  - specify the JWT secret in the Nextcloud administrative configuration for Onlyoffice app
+
+  - see the following for more info:
+      https://api.onlyoffice.com/editors/nextcloud
+
+8. Enjoy.
+EOM
+}
+{ type: upgrade
+  maximum_version: 7.1.0.215
+  message: <<EOM
+If you are upgrading onlyoffice-documentserver from a version prior to 7.1.0.215,
+you need to update the database schema:
+  For PostgreSQL:
+    psql -U postgres -d onlyoffice -f %%WWWDIR%%/documentserver/server/schema/postgresql/upgrade/upgradev710.sql
+  For MySQL:
+    mysql -u onlyoffice -D onlyoffice -p < %%WWWDIR%%/documentserver/server/schema/mysql/upgrade/upgradev710.sql
+EOM
+}
+{ type: upgrade
+  minimum_version: 7.1.0.215
+  maximum_version: 7.2.1.34
+  message: <<EOM
+If you are upgrading onlyoffice-documentserver from a version prior to 7.2.1.34,
+you need to update the database schema:
+  For PostgreSQL:
+    psql -U postgres -d onlyoffice -f %%WWWDIR%%/documentserver/server/schema/postgresql/upgrade/upgradev720.sql
+  For MySQL:
+    mysql -u onlyoffice -D onlyoffice -p < %%WWWDIR%%/documentserver/server/schema/mysql/upgrade/upgradev720.sql
+EOM
+}
+{ type: upgrade
+  minimum_version: 9.1.0
+  maximum_version: 9.1.0_1
+  message: <<EOM
+NOTICE: The Admin Panel has been made closed source as of version 9.3.0.
+It is no longer included in the community edition and is now only available
+in the Developer and Enterprise editions of ONLYOFFICE Docs.
+
+Attempts to access the Admin Panel URL (http://host/admin) will fail.
+All configuration remains fully available through %%ETCDIR%%/documentserver/local.json
+as before, with no loss of functionality for the community edition.
+
+You may safely remove any Admin Panel logs and configuration files:
+  # rm -rf /var/log/onlyoffice/documentserver/adminpanel
+  # rm -f %%ETCDIR%%/documentserver/supervisor/adminpanel.conf
+EOM
+}
+{ type: upgrade
+  maximum_version: 9.4.0
+  message: <<EOM
+NOTICE: As of ONLYOFFICE Docs 9.4.0, the upstream Community Edition no
+longer supports PostgreSQL, MySQL, or RabbitMQ. These capabilities
+remain available only in the Developer and Enterprise editions.
+
+If upgrading from a version prior to 9.4.0, net/rabbitmq and any
+database client packages used solely by ONLYOFFICE Docs may be removed.
+After verifying proper operation, any database previously dedicated to
+ONLYOFFICE Docs may be archived and deleted.
+EOM
+}
+]

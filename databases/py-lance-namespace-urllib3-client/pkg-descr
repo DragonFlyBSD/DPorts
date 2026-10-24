@@ -1,0 +1,2 @@
+Lance Namespace Specification urllib3 client.
+It connects to Lance Namespace endpoints using the urllib3 HTTP library.

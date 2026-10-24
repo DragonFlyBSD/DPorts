@@ -1,7 +1,7 @@
 PORTNAME=	acmed
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.21.0
-PORTREVISION=	18
+PORTREVISION=	31
 CATEGORIES=	security
 
 MAINTAINER=	ports@FreeBSD.org
@@ -31,4 +31,5 @@ post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/acmed/accounts
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/acmed/certs
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

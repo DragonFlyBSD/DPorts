@@ -1,5 +1,5 @@
 PORTNAME=	stevedore
-PORTVERSION=	5.4.1
+PORTVERSION=	5.9.1
 CATEGORIES=	devel
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,12 +14,27 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 # pbr is a RUN_DEPENDS too, just declared elsewhere (requirements.txt)
 # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=234529
 # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=197373
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pbr>=2.0.0:devel/py-pbr@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pbr>=2.0.0:devel/py-pbr@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pbr>=6.1.1:devel/py-pbr@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pbr>=6.1.1:devel/py-pbr@${PY_FLAVOR}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}stestr>=4.2.1:devel/py-stestr@${PY_FLAVOR} \
+	${PYTHON_PKGNAMEPREFIX}coverage>=4.0:devel/py-coverage@${PY_FLAVOR} \
+	${PYTHON_PKGNAMEPREFIX}sphinx>=9.4.0:textproc/py-sphinx@${PY_FLAVOR}
 
 USES=		python
-USE_PYTHON=	autoplist distutils
+USE_PYTHON=	autoplist distutils pytest
+
+.if make(test)
+# tests: 94 passed
+TEST_ENV=	PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
+		PYTHONPATH="${STAGEDIR}${PYTHON_SITELIBDIR}"
+.endif
 
 NO_ARCH=	yes
+
+post-patch:
+	${REINPLACE_CMD} -E \
+		-e 's/^(license = )"([^"]+)"/\1{ text = "\2" }/1' \
+		-e '/^license-files/d' \
+		${WRKSRC}/pyproject.toml
 
 .include <bsd.port.mk>

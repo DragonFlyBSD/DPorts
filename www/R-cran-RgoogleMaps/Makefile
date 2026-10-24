@@ -1,11 +1,11 @@
 PORTNAME=	RgoogleMaps
-PORTVERSION=	1.5.1
+PORTVERSION=	1.5.3
 CATEGORIES=	www
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Overlays on Google map tiles in R
-WWW=		https://cran.r-project.org/web/packages/RgoogleMaps/
+WWW=		https://cran.r-project.org/package=RgoogleMaps
 
 LICENSE=	GPLv2+
 

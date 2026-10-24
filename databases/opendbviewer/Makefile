@@ -1,9 +1,10 @@
 PORTNAME=	opendbviewer
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.2.0
+PORTREVISION=	2
 CATEGORIES=	databases
 
-MAINTAINER=	eduardo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple database explorer
 WWW=		https://github.com/Jet1oeil/opendbviewer
 
@@ -17,6 +18,8 @@ USE_GL=		egl
 USE_QT=		core dbus gui network sql sql-sqlite3 testlib widgets \
 		buildtools:build linguisttools:build qmake:build
 USE_XORG=	x11 xcb
+
+CMAKE_ARGS+=	-DQT_USE_VERSION=5
 
 OPTIONS_DEFINE=		DOCS MYSQL PGSQL
 OPTIONS_DEFAULT=	PGSQL

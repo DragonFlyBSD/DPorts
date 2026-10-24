@@ -1,39 +1,65 @@
-# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-
 PORTNAME=	pysal
-PORTVERSION=	2.6.0
+PORTVERSION=	26.7
+PORTREVISION=	1
 CATEGORIES=	science python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Cross-platform library of spatial analysis functions
+COMMENT=	Meta Package for PySAL - A library of spatial analysis functions
+WWW=		https://pysal.org/pysal/ \
+		https://github.com/pysal/pysal
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}access>=1.1.3:science/py-access@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}esda>=2.4.1:science/py-esda@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}giddy>=2.3.3:graphics/py-giddy@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}inequality>=1.0.0:science/py-inequality@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}libpysal>=4.6.0:science/py-libpysal@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}mapclassify>=2.4.3:graphics/py-mapclassify@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}mgwr>=2.1.2:graphics/py-mgwr@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}momepy>=0.5.2:graphics/py-momepy@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pointpats>=2.2.0:graphics/py-pointpats@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}segregation>=2.1.0:science/py-segregation@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}spaghetti>=1.6.5:science/py-spaghetti@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}spglm>=1.0.8:math/py-spglm@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}spint>=1.0.7:math/py-spint@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}splot>=1.1.4:math/py-splot@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}spopt>=0.2.1:math/py-spopt@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}spreg>=1.2.4:math/py-spreg@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}spvcm>=0.3.0:math/py-spvcm@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}tobler>=0.8.2:science/py-tobler@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61.0:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}setuptools-scm>=6.2:devel/py-setuptools-scm@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}access>=1.1.10:science/py-access@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}beautifulsoup4>=4.10:www/py-beautifulsoup4@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}esda>=2.10.0:science/py-esda@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}geopandas>=0.10.0:graphics/py-geopandas@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}giddy>=2.3.8:graphics/py-giddy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}inequality>=1.1.2:science/py-inequality@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}lazy_loader>=0.3:devel/py-lazy_loader@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}libpysal>=4.15.0:science/py-libpysal@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}mapclassify>=2.10.0:graphics/py-mapclassify@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}mgwr>=2.2.1:graphics/py-mgwr@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}momepy>=1.0.0:graphics/py-momepy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.22,1:math/py-numpy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}packaging>=22:devel/py-packaging@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pandas>=1.4:math/py-pandas@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}platformdirs>=2.0.2:devel/py-platformdirs@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pointpats>=2.6.0:graphics/py-pointpats@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}requests>=2.27:www/py-requests@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}scikit-learn>=1.1:science/py-scikit-learn@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}scipy>=1.8,1:science/py-scipy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}segregation>=2.5.5:science/py-segregation@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}shapely>=2.0.1:devel/py-shapely@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}spaghetti>=1.7.6:science/py-spaghetti@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}spglm>=1.1.0:math/py-spglm@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}spint>=1.1.0:math/py-spint@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}splot>=1.1.7:math/py-splot@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}spml>=0.2.2:science/py-spml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}spopt>=0.7.0:math/py-spopt@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}spreg>=1.9.0:math/py-spreg@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}tobler>=0.14.0:science/py-tobler@${PY_FLAVOR}
 
-USES=		python:3.7+
-USE_PYTHON=	autoplist concurrent distutils
+USES=		python:3.12+
+USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
+
+OPTIONS_DEFINE=	PLUS
+PLUS_DESC=	Extra features
+
+PLUS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}joblib>=1.2:devel/py-joblib@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}networkx>=2.7,2:math/py-networkx@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}numba>=0.55:devel/py-numba@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}pyarrow>=7.0:databases/py-pyarrow@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}sqlalchemy20>=2.0:databases/py-sqlalchemy20@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}xarray>=2022.3:devel/py-xarray@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}zstd>=0:archivers/py-zstd@${PY_FLAVOR}
 
 .include <bsd.port.mk>

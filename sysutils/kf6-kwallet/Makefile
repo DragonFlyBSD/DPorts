@@ -5,12 +5,7 @@ CATEGORIES=	sysutils kde kde-frameworks
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Safe desktop-wide storage for passwords
 
-LIB_DEPENDS=	libassuan.so:security/libassuan \
-		libgcrypt.so:security/libgcrypt \
-		libsecret-1.so:security/libsecret \
-		libgpgme.so:security/gpgme \
-		libgpgmepp.so:security/gpgme-cpp \
-		libqca-qt6.so:devel/qca@qt6
+LIB_DEPENDS= libassuan.so:security/libassuan libgcrypt.so:security/libgcrypt libsecret-1.so:security/libsecret libgpgme.so:security/gpgme libqca-qt6.so:devel/qca@qt6
 
 USES=		cmake gettext-tools gl kde:6 pkgconfig qt:6 tar:xz xorg
 USE_GL=		gl opengl
@@ -20,5 +15,9 @@ USE_KDE=	colorscheme config coreaddons crash dbusaddons i18n \
 USE_QT=		base
 USE_XORG=	x11
 
-KDE_FRAMEWORKS_VERSION=	6.14.1
+CMAKE_ON= CMAKE_DISABLE_FIND_PACKAGE_Gpgmepp
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

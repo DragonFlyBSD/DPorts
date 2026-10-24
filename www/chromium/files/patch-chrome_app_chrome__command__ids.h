@@ -1,6 +1,6 @@
---- chrome/app/chrome_command_ids.h.orig	2025-03-05 08:14:56 UTC
+--- chrome/app/chrome_command_ids.h.orig	2026-09-25 15:26:43 UTC
 +++ chrome/app/chrome_command_ids.h
-@@ -72,11 +72,11 @@
+@@ -83,11 +83,11 @@
  #define IDC_TOGGLE_MULTITASK_MENU       34050
  #endif
  
@@ -9,8 +9,8 @@
  #define IDC_USE_SYSTEM_TITLE_BAR        34051
  #endif
  
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  #define IDC_RESTORE_WINDOW              34052
- #endif
+ #endif // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  

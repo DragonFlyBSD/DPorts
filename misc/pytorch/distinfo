@@ -1,3 +1,3 @@
-TIMESTAMP = 1727986762
-SHA256 (pytorch/pytorch-v2.4.1.tar.gz) = 39666a43c0c10f5fd46c1a7ca95dc74d3bc39de2678b70066481cbf02e58384f
-SIZE (pytorch/pytorch-v2.4.1.tar.gz) = 296932555
+TIMESTAMP = 1784078377
+SHA256 (pytorch/pytorch-v2.13.0.tar.gz) = 66614a19060f69cfd63cd0295f65a1241bd15df2fa65c60ae51066c11c2ce812
+SIZE (pytorch/pytorch-v2.13.0.tar.gz) = 485291648

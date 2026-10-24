@@ -20,7 +20,7 @@ SHEBANG_GLOB=	*.py
 
 PORTDOCS=	*
 
-.include "${.CURDIR}/../boost-all/common.mk"
+.include "${.CURDIR:H}/boost-all/common.mk"
 
 do-install:
 # Documentation & examples
@@ -36,5 +36,10 @@ do-install:
 		${GREP} -v "assign/test" | ${GREP} -v "iterator/test" | \
 		${GREP} -v "range/test" |\
 		${PAX} -rw ${STAGEDIR}${DOCSDIR}/libs
+
+.if defined(DEVELOPER)
+.MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+.endif
 
 .include <bsd.port.mk>

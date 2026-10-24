@@ -10,7 +10,7 @@ WWW=		https://www.angelcode.com/angelscript/
 
 LICENSE=	ZLIB
 
-USES=		alias compiler:c11 dos2unix gmake zip
+USES=		compiler:c11 dos2unix gmake zip
 USE_LDCONFIG=	yes
 
 DOS2UNIX_FILES=	../../source/as_config.h
@@ -30,5 +30,9 @@ pre-build:
 	(cd ${WRKDIR}/sdk/angelscript/source && ${REINPLACE_CMD} -e 's|ifdef __OPTIMIZE__|if defined(__OPTIMIZE__) \&\&\ !defined(__clang__)|g' \
 		-e 's,ifdef __OPTIMIZE__ifdef __OPTIMIZE__,,g' *.cpp)
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|!defined(__FreeBSD__) && !defined(__OpenBSD__)|& \&\& !defined(__DragonFly__)|' \
+		${WRKDIR}/sdk/angelscript/source/as_memory.cpp
 
 .include <bsd.port.mk>

@@ -1,13 +1,12 @@
 PORTNAME=		openvpn
-DISTVERSION=		2.6.14
-PORTREVISION?=		0
+DISTVERSION=		2.7.8
+PORTREVISION=		0
 CATEGORIES=		security net net-vpn
 MASTER_SITES=		https://swupdate.openvpn.org/community/releases/ \
-			https://build.openvpn.net/downloads/releases/ \
-			LOCAL/mandree
+			https://build.openvpn.net/downloads/releases/
 
 MAINTAINER=		mandree@FreeBSD.org
-COMMENT?=		Secure IP/Ethernet tunnel daemon
+COMMENT=		Secure IP/Ethernet tunnel daemon
 WWW=			https://openvpn.net/community/
 
 LICENSE=		GPLv2
@@ -15,22 +14,24 @@ LICENSE_FILE=		${WRKSRC}/COPYRIGHT.GPL
 
 BUILD_DEPENDS+=		cmocka>=0:sysutils/cmocka \
 			rst2man:textproc/py-docutils@${PY_FLAVOR}
+TEST_DEPENDS=		fping:net/fping
 
 USES=			cpe libtool localbase:ldflags pkgconfig python:build shebangfix ssl
 USE_RC_SUBR=		openvpn
 
-SHEBANG_FILES=		sample/sample-scripts/auth-pam.pl \
+SHEBANG_FILES=		sample/sample-plugins/keying-material-exporter-demo/http-client.py \
+			sample/sample-plugins/keying-material-exporter-demo/http-server.py \
+			sample/sample-scripts/auth-pam.pl \
 			sample/sample-scripts/totpauth.py \
 			sample/sample-scripts/ucn.pl \
 			sample/sample-scripts/verify-cn
 
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
-CONFIGURE_ARGS+=	--enable-strict --with-crypto-library=openssl
+CONFIGURE_ARGS+=	--with-crypto-library=openssl
 # set PLUGIN_LIBDIR so that unqualified plugin paths are found:
 CONFIGURE_ENV+=		PLUGINDIR="${PREFIX}/lib/openvpn/plugins"
 
-CONFLICTS_INSTALL?=	openvpn-devel
+CONFLICTS_INSTALL=	openvpn-devel
 
 SUB_FILES=		pkg-message openvpn-client
 
@@ -43,7 +44,6 @@ PORTEXAMPLES=		*
 OPTIONS_DEFINE=		ASYNC_PUSH DCO DOCS EASYRSA EXAMPLES LZ4 LZO PKCS11 SMALL \
 			TEST UNITTESTS X509ALTUSERNAME
 OPTIONS_DEFAULT=	DCO EASYRSA LZ4 LZO PKCS11 TEST
-OPTIONS_EXCLUDE_FreeBSD_13=	DCO # FreeBSD 14 only
 
 ASYNC_PUSH_DESC=	Enable async-push support
 DCO_DESC=		Data Channel Offload/ovpn(4) support->README.dco.md
@@ -54,7 +54,6 @@ SMALL_DESC=		Build a smaller executable with fewer features
 UNITTESTS_DESC=		Enable unit tests
 X509ALTUSERNAME_DESC=	Enable --x509-username-field
 
-ASYNC_PUSH_LIB_DEPENDS=	libinotify.so:devel/libinotify
 ASYNC_PUSH_CONFIGURE_ENABLE=	async-push
 
 DCO_CONFIGURE_ENABLE=	dco
@@ -87,12 +86,19 @@ CFLAGS+=		-DLOG_OPENVPN=${LOG_OPENVPN}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MLZO}
-IGNORE_SSL=libressl libressl-devel
+IGNORE_SSL= nothing
 IGNORE_SSL_REASON=OpenVPN does not have permission to include LZO with LibreSSL. Compile against OpenSSL, or if your setups support it, disable LZO support
 .endif
 
 .if ! ${PORT_OPTIONS:MLZ4} && ! ${PORT_OPTIONS:MLZO}
 CONFIGURE_ARGS+=	--enable-comp-stub
+.endif
+
+# FreeBSD 15 added Linux-compatible inotify support
+.if ${PORT_OPTIONS:MASYNC_PUSH}
+. if "${OPSYS}" != "FreeBSD" || ${OSVERSION} < 1500068
+LIB_DEPENDS+=	libinotify.so:devel/libinotify
+. endif
 .endif
 
 .include <bsd.port.pre.mk>
@@ -111,9 +117,6 @@ post-patch:
 		${WRKSRC}/doc/man-sections/generic-options.rst
 
 pre-configure:
-	# just too many of sign-compare; bitwise-instead-of-logical was audited and is intentional,
-	# and unused-function affects test---these are developer-side warnings, not relevant on end systems
-	${REINPLACE_CMD} 's/-Wsign-compare/-Wno-unknown-warning-option -Wno-sign-compare -Wno-bitwise-instead-of-logical -Wno-unused-function/' ${WRKSRC}/configure
 .ifdef (LOG_OPENVPN)
 	@${ECHO} "Building with LOG_OPENVPN=${LOG_OPENVPN}"
 .else
@@ -142,15 +145,13 @@ post-configure:
 # for instance, pkcs11-helper:
 _tlslibs=libssl libcrypto
 post-build:
-	@a=$$(LC_ALL=C ldd -f '%o\n' ${WRKSRC}/src/openvpn/openvpn \
+	@a=$$(ldd -f '%o\n' ${WRKSRC}/src/openvpn/openvpn \
 	|	${SORT} -u) ; set -- $$(for i in ${_tlslibs} ; do ${PRINTF} '%s\n' "$$a" | ${GREP} $${i}.so | wc -l ; done | ${SORT} -u) ;\
 	if test "$$*" != "1" ; then ( set -x ; ldd -a ${WRKSRC}/src/openvpn/openvpn ) ; ${PRINTF} '%s\n' "$$a" ; ${ECHO_CMD} >&2 "${.CURDIR} FAILED: either of ${_tlslibs} libraries linked multiple times" ; ${RM} ${BUILD_COOKIE} ; exit 1 ; fi
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/openvpn/plugins/openvpn-plugin-auth-pam.so
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/openvpn/plugins/openvpn-plugin-down-root.so
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/pull-resolv-conf/client.up ${STAGEDIR}${PREFIX}/libexec/openvpn-client.up
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/pull-resolv-conf/client.down ${STAGEDIR}${PREFIX}/libexec/openvpn-client.down
 	${INSTALL_SCRIPT} ${WRKDIR}/openvpn-client ${STAGEDIR}${PREFIX}/sbin/openvpn-client
 	${MKDIR} ${STAGEDIR}${PREFIX}/include
 
@@ -164,8 +165,9 @@ post-install-DOCS-on:
 .endif
 
 post-install-EXAMPLES-on:
-	(cd ${WRKSRC}/sample && ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR}/)
-	${CHMOD} ${BINMODE} ${STAGEDIR}${EXAMPLESDIR}/sample-scripts/*
-	${RM} ${STAGEDIR}${EXAMPLESDIR}/sample-config-files/*.orig
+	(cd ${WRKSRC}/sample && \
+		${COPYTREE_SHARE} "sample-config-files sample-keys sample-plugins" \
+			${STAGEDIR}${EXAMPLESDIR} '! -name "*.orig"' && \
+		${COPYTREE_BIN} sample-scripts ${STAGEDIR}${EXAMPLESDIR} '! -name "*.orig"')
 
 .include <bsd.port.post.mk>

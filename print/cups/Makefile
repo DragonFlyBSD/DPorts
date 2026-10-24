@@ -1,9 +1,11 @@
 PORTNAME=	cups
-DISTVERSION=	2.4.11
-PORTREVISION=	1
+DISTVERSION=	2.4.20
 CATEGORIES=	print
 MASTER_SITES=	https://github.com/OpenPrinting/${PORTNAME}/releases/download/v${DISTVERSION}/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-source
+
+PATCH_SITES=	https://github.com/OpenPrinting/cups/commit/
+PATCHFILES=	23a183b63a4c94ae7cd0f36c63ee7eb905be60fd.patch:-p1
 
 MAINTAINER=	tijl@FreeBSD.org
 COMMENT=	Common UNIX Printing System
@@ -11,9 +13,9 @@ WWW=		https://github.com/OpenPrinting/cups
 
 LICENSE=		APACHE20 CUPS
 LICENSE_COMB=		multi
+LICENSE_NAME_CUPS=	Apache License v2.0 with CUPS Exceptions
 LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE
 LICENSE_FILE_CUPS=	${WRKSRC}/NOTICE
-LICENSE_NAME_CUPS=	Apache License v2.0 with CUPS Exceptions
 LICENSE_PERMS_CUPS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USES=		cpe gmake iconv localbase pkgconfig
@@ -42,8 +44,11 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 USERS=		cups
 GROUPS=		cups
 
-OPTIONS_DEFINE=		AVAHI DBUS DOCS GNUTLS IPPTOOL LIBPAPER NLS X11
-OPTIONS_DEFAULT=	AVAHI DBUS GNUTLS LIBPAPER
+OPTIONS_DEFINE=		AVAHI DBUS DOCS IPPTOOL LIBPAPER NLS TLS X11
+OPTIONS_DEFAULT=	AVAHI DBUS IPPTOOL LIBPAPER OPENSSL
+OPTIONS_RADIO=		TLS
+OPTIONS_RADIO_TLS=	GNUTLS OPENSSL
+OPTIONS_EXCLUDE=	TLS
 OPTIONS_SUB=		yes
 
 IPPTOOL_DESC=	Internet Printing Protocol testing tool
@@ -59,11 +64,16 @@ DBUS_CONFIGURE_ENABLE=	dbus
 DBUS_SUB_LIST=		DBUS_DAEMON=dbus
 DBUS_SUB_LIST_OFF=	DBUS_DAEMON=
 
+GNUTLS_IMPLIES=		TLS
 GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
-GNUTLS_CONFIGURE_WITH=	tls=gnutls
 
 LIBPAPER_LIB_DEPENDS=		libpaper.so:print/libpaper
 LIBPAPER_CONFIGURE_ENABLE=	libpaper
+
+OPENSSL_IMPLIES=	TLS
+OPENSSL_USES=		ssl
+
+TLS_CONFIGURE_WITH=	tls=${PORT_OPTIONS:MGNUTLS:tl}${PORT_OPTIONS:MOPENSSL:tl}
 
 X11_BUILD_DEPENDS=	xdg-open:devel/xdg-utils
 X11_RUN_DEPENDS=	xdg-open:devel/xdg-utils
@@ -104,8 +114,8 @@ post-patch:
 post-patch-DOCS-off:
 # Link to online documentation.
 	@${FIND} ${WRKSRC}/doc ${WRKSRC}/templates -type f -exec ${SED} -i '' \
-		-e 's|[Hh][Rr][Ee][Ff]="/*help/{[^"]*"|href="https://openprinting.github.io/cups/#DOCUMENTATION|g' \
-		-e 's|[Hh][Rr][Ee][Ff]="/*help/"|href="https://openprinting.github.io/cups/#DOCUMENTATION|g' \
+		-e 's|[Hh][Rr][Ee][Ff]="/help/{[^"]*"|href="https://openprinting.github.io/cups/#DOCUMENTATION"|g' \
+		-e 's|[Hh][Rr][Ee][Ff]="/help/"|href="https://openprinting.github.io/cups/#DOCUMENTATION"|g' \
 		-e '/have_gssapi/s|[Hh][Rr][Ee][Ff]="/*help/|href="https\\://openprinting.github.io/cups/doc/|g' \
 		-e 's|[Hh][Rr][Ee][Ff]="/*help/|href="https://openprinting.github.io/cups/doc/|g' {} +
 

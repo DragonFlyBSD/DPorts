@@ -1,6 +1,6 @@
 PORTNAME=	mbdyn
 DISTVERSION=	1.7.3
-PORTREVISION=	18
+PORTREVISION=	20
 CATEGORIES=	science
 MASTER_SITES=	https://www.mbdyn.org/userfiles/downloads/
 
@@ -15,7 +15,7 @@ BROKEN_powerpc=		does not compile on powerpc
 
 BUILD_DEPENDS=	libatomic_ops>0:devel/libatomic_ops
 LIB_DEPENDS=	libltdl.so:devel/libltdl \
-		libarpack.so:math/arpack-ng \
+		libarpack.so:math/arpack-ng@mpich \
 		libumfpack.so:math/suitesparse-umfpack
 
 USES=		compiler:c++11-lib fortran gmake libtool:build localbase
@@ -68,5 +68,12 @@ pre-configure:
 	${REINPLACE_CMD} -e '/try_lapack_LIBS=/s/-llapack/${LAPACKLIB}/' \
 		-e 's/ -lxerbla//; s/-lcholmod/-lcholmod ${BLASLIB} ${LAPACKLIB} -lsuitesparseconfig/'	\
 		${WRKSRC}/configure
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@#include "ac/sys_sysinfo.h"@extern "C" { int get_nprocs_conf(void); int get_nprocs(void); }@g' \
+		${WRKSRC}/mbdyn/base/invsolver.cc \
+		${WRKSRC}/mbdyn/base/readlinsol.cc \
+		${WRKSRC}/mbdyn/base/rtsolver.cc \
+		${WRKSRC}/mbdyn/base/solver.cc
 
 .include <bsd.port.post.mk>

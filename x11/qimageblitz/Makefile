@@ -24,4 +24,8 @@ USE_CXXSTD=	gnu++98
 SVN_URL=	svn://anonsvn.kde.org/home/kde/trunk/kdesupport/qimageblitz
 SVN_REVISION=	1548172
 
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4,5 compatibility
+
+MASTER_SITES= https://avalon.dragonflybsd.org/misc/distfiles/
+
 .include <bsd.port.mk>

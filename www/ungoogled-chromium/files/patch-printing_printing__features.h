@@ -1,11 +1,11 @@
---- printing/printing_features.h.orig	2024-07-31 14:19:23 UTC
+--- printing/printing_features.h.orig	2026-06-05 13:45:06 UTC
 +++ printing/printing_features.h
-@@ -22,7 +22,7 @@ COMPONENT_EXPORT(PRINTING_BASE)
- BASE_DECLARE_FEATURE(kAddPrinterViaPrintscanmgr);
- #endif  // BUILDFLAG(IS_CHROMEOS)
+@@ -19,7 +19,7 @@ namespace printing::features {
+ COMPONENT_EXPORT(PRINTING_BASE)
+ BASE_DECLARE_FEATURE(kAlignPdfDefaultPrintSettingsWithHTML);
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  COMPONENT_EXPORT(PRINTING_BASE) BASE_DECLARE_FEATURE(kCupsIppPrintingBackend);
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC)
- 
+ COMPONENT_EXPORT(PRINTING_BASE) BASE_DECLARE_FEATURE(kLinuxXdgPrintPortal);
+ #endif  // BUILDFLAG(IS_LINUX)

@@ -1,3 +1,0 @@
-USES:= ${USES:S/cargo/cargo:extra/}
-
-WITHOUT_LTO=	yes

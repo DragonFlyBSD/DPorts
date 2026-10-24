@@ -1,5 +1,5 @@
-TIMESTAMP = 1735843421
-SHA256 (go/sysutils_tempo/grafana-tempo-v2.6.1_GH0/go.mod) = 16764341886c2531d9cbba50cbbc30c80676a2010c494cfed439b1f80c89b61e
-SIZE (go/sysutils_tempo/grafana-tempo-v2.6.1_GH0/go.mod) = 17886
-SHA256 (go/sysutils_tempo/grafana-tempo-v2.6.1_GH0/grafana-tempo-v2.6.1_GH0.tar.gz) = ff53e3eb7ed70e378b06a70295677d4f05d40554b33b8bd91d5c351c18d3b55f
-SIZE (go/sysutils_tempo/grafana-tempo-v2.6.1_GH0/grafana-tempo-v2.6.1_GH0.tar.gz) = 36372210
+TIMESTAMP = 1779561193
+SHA256 (go/sysutils_tempo/grafana-tempo-v2.10.5_GH0/go.mod) = 052e16bd8cd1be8fec66456c51da087e70c057210f80fa2883fde16e825e0f84
+SIZE (go/sysutils_tempo/grafana-tempo-v2.10.5_GH0/go.mod) = 24032
+SHA256 (go/sysutils_tempo/grafana-tempo-v2.10.5_GH0/grafana-tempo-v2.10.5_GH0.tar.gz) = a861edd57b72aeae753d5110aa38de54078a42e71dd77c3112f2487b2a85b317
+SIZE (go/sysutils_tempo/grafana-tempo-v2.10.5_GH0/grafana-tempo-v2.10.5_GH0.tar.gz) = 28486326

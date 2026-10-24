@@ -24,4 +24,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,int[[:blank:]]*itemno,extern &,' \
 		${WRKSRC}/import/salesorder.c
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@getdate.c@@g' -e 's@getdate.o@@g' \
+		${WRKSRC}/lib/Makefile
+
 .include <bsd.port.mk>

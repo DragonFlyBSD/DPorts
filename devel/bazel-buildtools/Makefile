@@ -1,6 +1,7 @@
 PORTNAME=	bazel-buildtools
-DISTVERSION=	3.2.1
-PORTREVISION=	23
+DISTVERSIONPREFIX=	v
+DISTVERSION=	10.1.0
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,18 +10,16 @@ WWW=		https://github.com/bazelbuild/buildtools
 
 LICENSE=	APACHE20
 
-USES=		go
+USES=		go:1.27+,modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	bazelbuild
 GH_PROJECT=	buildtools
-GH_TUPLE=	\
-		golang:protobuf:v1.3.1:protobuf/vendor/github.com/golang/protobuf \
-		google:skylark:a5f7082:skylark/vendor/github.com/google/skylark \
-		google:starlark-go:aaf7be0:starlark_go/vendor/go.starlark.net
+
+GO_MODULE=	github.com/bazel-contrib/buildtools/v10
+GO_TARGET=	./cmd/${PORTNAME}
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/${GH_PROJECT}
 GO_TARGET=	./buildifier \
-		./buildifier2 \
 		./buildozer \
 		./unused_deps
 

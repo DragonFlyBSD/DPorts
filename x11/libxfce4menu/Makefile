@@ -1,5 +1,5 @@
 PORTNAME=	libxfce4menu
-PORTVERSION=	4.20.1
+PORTVERSION=	4.20.2
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE
 DISTNAME=	libxfce4ui-${DISTVERSIONFULL}
@@ -59,6 +59,7 @@ VAPI_CONFIGURE_ENABLE=	vala
 
 WAYLAND_CONFIGURE_ENABLE=	wayland
 
+LIB_DEPENDS+= libdbus-glib-1.so:devel/dbus-glib
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${LOCALBASE}|' ${WRKSRC}/xfce4-about/main.c
 

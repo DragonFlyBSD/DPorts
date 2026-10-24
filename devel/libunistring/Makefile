@@ -1,5 +1,5 @@
 PORTNAME=	libunistring
-DISTVERSION=	1.3
+DISTVERSION=	1.4.2
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
@@ -13,7 +13,7 @@ LICENSE_FILE_GFDL=	${WRKSRC}/doc/libunistring.texi
 LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
 LICENSE_FILE_LGPL3+ =	${WRKSRC}/COPYING.LIB
 
-USES=		alias charsetfix cpe iconv libtool tar:xz
+USES=		charsetfix cpe iconv libtool tar:xz
 CPE_VENDOR=	gnu
 USE_LDCONFIG=	yes
 
@@ -25,5 +25,9 @@ TEST_TARGET=	check
 INFO=		${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/= EOWNERDEAD/d' -e '/= ENOTRECOVERABLE/d' \
+		${WRKSRC}/tests/test-errno-h.c
 
 .include <bsd.port.mk>

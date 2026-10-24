@@ -1,0 +1,32 @@
+PORTNAME=	pgbot
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.8.1
+PORTREVISION=	2
+CATEGORIES=	databases
+
+MAINTAINER=	olgeni@FreeBSD.org
+COMMENT=	Read-only observability and health reports for PostgreSQL
+WWW=		https://pgbot.dev/ \
+		https://github.com/pgrundev/pgbot
+
+LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+USES=		go:modules
+
+GO_MODULE=	github.com/pgrundev/pgbot
+GO_TARGET=	./cmd/pgbot
+GO_LDFLAGS=	-X main.version=${DISTVERSION}
+
+PLIST_FILES=	bin/${PORTNAME} \
+		${DOCSDIR}/CHANGELOG.md \
+		${DOCSDIR}/README.md \
+		${DOCSDIR}/SECURITY.md
+
+IGNORE= modernc.org/libc, used by its pure-Go SQLite, does not support DragonFly
+post-install:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${GO_WRKSRC}/CHANGELOG.md ${GO_WRKSRC}/README.md \
+		${GO_WRKSRC}/SECURITY.md ${STAGEDIR}${DOCSDIR}
+
+.include <bsd.port.mk>

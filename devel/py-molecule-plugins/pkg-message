@@ -1,0 +1,9 @@
+[
+{ type: install
+  message: <<EOM
+For podman driver support, install sysutils/podman and sysutils/ansible.
+The sysutils/ansible port includes the containers.podman and ansible.posix
+collections required by the molecule podman driver.
+EOM
+}
+]

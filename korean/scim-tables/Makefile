@@ -8,7 +8,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SCIM table based Korean input methods
 WWW=		https://github.com/scim-im/scim
 
-BUILD_DEPENDS=	scim-make-table:textproc/scim-table-imengine
+BUILD_DEPENDS= scim-make-table:textproc/scim-table-imengine scim:textproc/scim
 RUN_DEPENDS=	scim-make-table:textproc/scim-table-imengine
 
 GNU_CONFIGURE=	yes

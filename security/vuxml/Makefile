@@ -31,7 +31,8 @@ dir_DTD=	share/xml/dtd/vuxml
 .include <bsd.port.pre.mk>
 
 VUXML_FILE?=	${PKGDIR}/vuln.xml
-VUXML_FLAT_FILE?=	${PKGDIR}/vuln-flat.xml
+VUXML_FLAT_NAME=	vuln-flat.xml
+VUXML_FLAT_FILE?=	${PKGDIR}/${VUXML_FLAT_NAME}
 _YEAR!=	date +%Y
 VUXML_CURRENT_FILE?=	${PKGDIR}/vuln/${_YEAR}.xml
 
@@ -57,10 +58,10 @@ do-test:
 	@${CP} -R ${.CURDIR}/vuln.xml ${.CURDIR}/vuln ${WRKDIR}/test
 	@cd ${.CURDIR} && make validate PKGDIR=${WRKDIR}/test
 
-${VUXML_FLAT_FILE}: ${VUXML_FILE} vuln/*.xml
+${VUXML_FLAT_NAME}: ${VUXML_FILE} vuln/*.xml
 	xmllint -noent ${.ALLSRC:[1]} > ${.TARGET}
 
-validate: tidy
+validate: tidy check-portepoch
 	@${SH} ${FILESDIR}/validate.sh "${VUXML_FLAT_FILE}"
 	@${ECHO_MSG} Checking if tidy differs...
 	@if ${DIFF} -u "${VUXML_FLAT_FILE}" "${VUXML_FILE}.tidy"; \
@@ -81,9 +82,24 @@ validate: tidy
 		${ECHO_CMD} Consider using ${VUXML_FILE}.unexpanded for final commit; \
 		return 1; \
 	fi
-	${PYTHON_CMD} ${FILESDIR}/extra-validation.py ${VUXML_FLAT_FILE}
+	@${ECHO_MSG} Checking CVE IDs...
+	@(NON_CANONICAL_CVE="`cd ${.CURDIR} && ${GREP} -Fn '<cvename>' vuln/*.xml | ${EGREP} -v '(CAN|CVE)-' | ${SED} -E 's/([0-9]+:)[[:space:]]*</\1 </' || ${TRUE}`"; \
+	if [ -z "$${NON_CANONICAL_CVE}" ]; \
+	then \
+		${ECHO_MSG} ... seems okay; \
+	else \
+		${ECHO_MSG} Only CVE IDs are allowed within cvename tags. These lines are wrong:; \
+		printf "%s\n" "$${NON_CANONICAL_CVE}"; \
+		return 1; \
+	fi)
 
-tidy: ${VUXML_FLAT_FILE}
+	${PYTHON_CMD} ${FILESDIR}/extra-validation.py ${VUXML_FLAT_FILE}
+	@${ECHO_CMD}
+	@${ECHO_CMD} 'Be sure to get versioning right for PORTEPOCH and remember possible linux-* ports!'
+	@${ECHO_CMD} 'Also, <gt> tags are usually wrong in ranges. Use <ge> where adequate.'
+	@${ECHO_CMD}
+
+tidy: ${VUXML_FLAT_NAME}
 	@if [ ! -e ${LOCALBASE}/share/xml/dtd/vuxml/catalog.xml ]; \
 	then \
 		echo "Please install the VuXML port prior to running make validate/tidy."; \
@@ -91,7 +107,14 @@ tidy: ${VUXML_FLAT_FILE}
 	fi
 	${SH} ${FILESDIR}/tidy.sh "${FILESDIR}/tidy.xsl" "${VUXML_FLAT_FILE}" > "${VUXML_FILE}.tidy"
 
+check-portepoch:
+	${PYTHON_CMD} ${FILESDIR}/check_vuln_portepoch.py ${VUXML_CURRENT_FILE}
+
 newentry:
+	@${ECHO_CMD}
+	@${ECHO_CMD} 'Be sure to get versioning right for PORTEPOCH and remember possible linux-* ports!'
+	@${ECHO_CMD} 'Also, <gt> tags are usually wrong in ranges. Use <ge> where adequate.'
+	@${ECHO_CMD}
 	@${SH} ${FILESDIR}/newentry.sh "${VUXML_CURRENT_FILE}" "CVE_ID=${CVE_ID}" "SA_ID=${SA_ID}"
 
 .if defined(VID) && !empty(VID)

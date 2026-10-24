@@ -26,6 +26,7 @@ OPTIONS_DEFAULT=OPENSSL
 OPENSSL_DESC=	use faster hash libs from OpenSSL
 OPENSSL_USES=	ssl
 
+LDFLAGS= -L${OPENSSLLIB}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}
@@ -33,7 +34,7 @@ OPENSSLSUFFIX=	-openssl
 LDLIBS+=	-lmd
 .else
 OPENSSLSUFFIX=	-rsa
-CFLAGS+=	-DWITH_RSA
+CFLAGS+= -DWITH_RSA -I${OPENSSLINC}
 .endif
 
 MAKE_ARGS+=	CFLAGS="${CFLAGS}"
@@ -44,5 +45,9 @@ post-extract:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ed2k ${STAGEDIR}${PREFIX}/bin/
+
+.if ${DFLYVERSION} > 500700
+LIB_DEPENDS+=	libmd.so:security/libmd
+.endif
 
 .include <bsd.port.mk>

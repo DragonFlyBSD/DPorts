@@ -1,0 +1,1 @@
+XFAIL_DragonFly= needs libusb_usb_2_0 ext drescriptor

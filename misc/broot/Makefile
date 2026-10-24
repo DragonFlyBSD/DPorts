@@ -1,7 +1,7 @@
 PORTNAME=	broot
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.44.2
-PORTREVISION=	2
+DISTVERSION=	1.56.2
+PORTREVISION=	4
 CATEGORIES=	misc
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -53,4 +53,5 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} \
 		${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -1,7 +1,7 @@
 PORTNAME=	git-lfs
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.6.1
-PORTREVISION=	1
+PORTREVISION=	24
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/
 
@@ -14,7 +14,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 RUN_DEPENDS=	git:devel/git
 
-USES=		go:modules
+USES=		cpe go:modules
+CPE_PRODUCT=	git_large_file_storage
+CPE_VENDOR=	git_large_file_storage_project
 GO_MODULE=	github.com/git-lfs/git-lfs/v3
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
@@ -23,7 +25,7 @@ OPTIONS_DEFINE=		MANPAGES
 OPTIONS_DEFAULT=	MANPAGES
 OPTIONS_SUB=		yes
 
-MANPAGES_BUILD_DEPENDS=	asciidoctor:textproc/rubygem-asciidoctor
+MANPAGES_BUILD_DEPENDS= asciidoctor:textproc/rubygem-asciidoctor groff:textproc/groff
 
 post-build-MANPAGES-on:
 	cd ${GO_WRKSRC}/docs/man && ${LOCALBASE}/bin/asciidoctor -b manpage *.adoc

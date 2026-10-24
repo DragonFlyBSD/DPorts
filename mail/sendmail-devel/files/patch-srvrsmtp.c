@@ -1,16 +1,16 @@
---- sendmail/srvrsmtp.c.orig	2025-02-05 06:35:18 UTC
+--- sendmail/srvrsmtp.c.orig	2026-06-19 08:47:02 UTC
 +++ sendmail/srvrsmtp.c
-@@ -972,6 +972,9 @@ do								\
+@@ -930,6 +930,9 @@ do								\
  # define SHOWCMDINREPLY(inp) inp
  # define SHOWSHRTCMDINREPLY(inp) shortenstring(inp, MAXSHORTSTR)
  #endif
-+#ifdef USE_BLACKLIST
++#ifdef USE_BLOCKLIST
 +	int saved_bl_fd;
 +#endif
  
  void
- smtp(nullserver, d_flags, e)
-@@ -1563,6 +1566,8 @@ smtp(nullserver, d_flags, e)
+ smtp(char *volatile nullserver, BITMAP256 d_flags,
+@@ -1521,6 +1524,8 @@ smtp(char *volatile nullserver, BITMAP256 d_flags,
  			/* check if data is on the socket during the pause */
  			if ((tp = channel_readable(InChannel, msecs)) != NULL)
  			{
@@ -19,27 +19,27 @@
  				greetcode = "554";
  				nullserver = "Command rejected";
  				sm_syslog(LOG_INFO, e->e_id,
-@@ -1572,6 +1577,8 @@ smtp(nullserver, d_flags, e)
+@@ -1530,6 +1535,8 @@ smtp(char *volatile nullserver, BITMAP256 d_flags,
  					  (int) tp->tv_sec +
  						(tp->tv_usec >= 500000 ? 1 : 0)
  					 );
 +				fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);
-+				BLACKLIST_NOTIFY(BLACKLIST_AUTH_FAIL, fd, "pre-greeting traffic");
++				BLOCKLIST_NOTIFY(BLOCKLIST_AUTH_FAIL, fd, "pre-greeting traffic");
  			}
  		}
  	}
-@@ -1691,6 +1698,10 @@ smtp(nullserver, d_flags, e)
+@@ -1649,6 +1656,10 @@ smtp(char *volatile nullserver, BITMAP256 d_flags,
  		SmtpPhase = "server cmd read";
  		sm_setproctitle(true, e, "server %s cmd read", CurSmtpClient);
  
-+#ifdef USE_BLACKLIST
++#ifdef USE_BLOCKLIST
 +		saved_bl_fd = dup(sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL));
 +#endif
 +
  		/* handle errors */
  		if (sm_io_error(OutChannel) ||
  		    (p = sfgets(inp, sizeof(inp), InChannel,
-@@ -2006,8 +2017,11 @@ smtp(nullserver, d_flags, e)
+@@ -1964,8 +1975,11 @@ smtp(char *volatile nullserver, BITMAP256 d_flags,
  #define LOGAUTHFAIL	\
  	do	\
  	{	\
@@ -47,55 +47,81 @@
  		SET_AUTH_USER_CONDITIONALLY	\
  		message("535 5.7.0 authentication failed");	\
 +		fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);	\
-+		BLACKLIST_NOTIFY(BLACKLIST_AUTH_FAIL, fd, "AUTH FAIL");	\
++		BLOCKLIST_NOTIFY(BLOCKLIST_AUTH_FAIL, fd, "AUTH FAIL");	\
  		if (LogLevel >= 9)	\
  			sm_syslog(LOG_WARNING, e->e_id,	\
  				  "AUTH failure (%s): %s (%d) %s%s%.*s, relay=%.100s",	\
-@@ -2157,6 +2171,9 @@ smtp(nullserver, d_flags, e)
+@@ -2064,6 +2078,13 @@ smtp(char *volatile nullserver, BITMAP256 d_flags,
+ 			  case CMDEHLO:
+ 			  case CMDNOOP:
+ 			  case CMDRSET:
++				if (lognullconnection)
++				{
++					 int fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);
++					 BLOCKLIST_NOTIFY(BLOCKLIST_AUTH_FAIL, fd, nullserver);
++				}
++				/* FALLTHROUGH */
++
+ 			  case CMDERROR:
+ 				/* process normally */
+ 				break;
+@@ -2091,6 +2112,11 @@ smtp(char *volatile nullserver, BITMAP256 d_flags,
+ #endif /* MAXBADCOMMANDS > 0 */
+ 				if (nullserver != NULL)
+ 				{
++					if (lognullconnection)
++					{
++						 int fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);
++						 BLOCKLIST_NOTIFY(BLOCKLIST_AUTH_FAIL, fd, nullserver);
++					}
+ 					if (ISSMTPREPLY(nullserver))
+ 					{
+ 						/* Can't use ("%s", ...) due to usrerr() requirements */
+@@ -2115,6 +2141,9 @@ smtp(char *volatile nullserver, BITMAP256 d_flags,
  			DELAY_CONN("AUTH");
  			if (!sasl_ok || n_mechs <= 0)
  			{
 +				int fd;
 +				fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);
-+				BLACKLIST_NOTIFY(BLACKLIST_AUTH_FAIL, fd, "AUTH LOGIN FAIL");
++				BLOCKLIST_NOTIFY(BLOCKLIST_AUTH_FAIL, fd, "AUTH LOGIN FAIL");
  				message("503 5.3.3 AUTH not available");
  				break;
  			}
-@@ -3894,10 +3911,17 @@ smtp(nullserver, d_flags, e)
+@@ -3905,10 +3934,17 @@ smtp(char *volatile nullserver, BITMAP256 d_flags,
  				**  timeouts for the same connection.
  				*/
  
-+#ifdef USE_BLACKLIST
-+				/* no immediate BLACKLIST_ABUSIVE_BEHAVIOR */
-+				BLACKLIST_NOTIFY(BLACKLIST_AUTH_FAIL, saved_bl_fd, "no command issued");
++#ifdef USE_BLOCKLIST
++				/* no immediate BLOCKLIST_ABUSIVE_BEHAVIOR */
++				BLOCKLIST_NOTIFY(BLOCKLIST_AUTH_FAIL, saved_bl_fd, "no command issued");
 +#endif
  				sm_syslog(LOG_INFO, e->e_id,
  					  "%s did not issue MAIL/EXPN/VRFY/ETRN during connection to %s",
  					  CurSmtpClient, d);
  			}
-+#ifdef USE_BLACKLIST
++#ifdef USE_BLOCKLIST
 +			close(saved_bl_fd);
 +#endif
  			if (tTd(93, 100))
  			{
  				/* return to handle next connection */
-@@ -3979,7 +4003,10 @@ smtp(nullserver, d_flags, e)
+@@ -3990,7 +4026,10 @@ smtp(char *volatile nullserver, BITMAP256 d_flags,
  #if MAXBADCOMMANDS > 0
  			if (++n_badcmds > MAXBADCOMMANDS)
  			{
 +				int fd;
    stopattack:
 +				fd = sm_io_getinfo(InChannel, SM_IO_WHAT_FD, NULL);
-+				BLACKLIST_NOTIFY(BLACKLIST_ABUSIVE_BEHAVIOR, fd, "too many bad commands");
++				BLOCKLIST_NOTIFY(BLOCKLIST_ABUSIVE_BEHAVIOR, fd, "too many bad commands");
  				message("421 4.7.0 %s Too many bad commands; closing connection",
  					MyHostName);
  
-@@ -4033,6 +4060,9 @@ smtp(nullserver, d_flags, e)
+@@ -4044,6 +4083,9 @@ smtp(char *volatile nullserver, BITMAP256 d_flags,
  		}
  #if SASL
  		}
 +#endif
-+#ifdef USE_BLACKLIST
++#ifdef USE_BLOCKLIST
 +		close(saved_bl_fd);
  #endif
  	    }

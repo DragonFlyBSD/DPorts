@@ -25,6 +25,7 @@ DESKTOP_ENTRIES="SpiralLoops" "" "" "SpiralLoops" "" false
 
 OPTIONS_DEFINE=	DOCS
 
+CXXFLAGS= -fpermissive
 post-patch:
 	${MV} ${WRKSRC}/Makefile.in ${WRKSRC}/Makefile.in.orig
 	${SED} -E "s:-ldl::g; \

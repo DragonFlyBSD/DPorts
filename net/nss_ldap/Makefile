@@ -35,6 +35,7 @@ CONFIGURE_ARGS=	--with-ldap-conf-file=${PREFIX}/etc/nss_ldap.conf \
 
 SUB_FILES=	pkg-message
 
+LIB_DEPENDS= libkrb5.so:security/krb5
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MKERBEROS}

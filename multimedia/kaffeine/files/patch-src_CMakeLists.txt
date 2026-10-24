@@ -1,0 +1,11 @@
+--- src/CMakeLists.txt.orig	2026-07-09 01:46:18 UTC
++++ src/CMakeLists.txt
+@@ -58,7 +58,7 @@ if (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+ endif(HAVE_DVB)
+ 
+ if (CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+-    target_link_libraries(kaffeine inotify)
++    target_link_libraries(kaffeine ${Inotify_LIBRARIES})
+ endif()
+ 
+ install(TARGETS kaffeine ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

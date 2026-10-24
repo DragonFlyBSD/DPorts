@@ -1,3 +1,0 @@
-
-USES+=	localbase:ldflags
-NLS_LDFLAGS+=	-lintl

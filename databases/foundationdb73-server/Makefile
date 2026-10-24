@@ -1,28 +1,27 @@
 PORTNAME?=	foundationdb
-DISTVERSION=	7.3.41
-PORTREVISION?=	0
+DISTVERSION=	7.3.77
 CATEGORIES?=	databases
+MASTER_SITES=	SF/boost/boost/${BOOST_VERSION}:boost
 PKGNAMESUFFIX?=	${DISTVERSION:C/([0-9]+)\.([0-9]+).*/\1\2/}-${_COMPONENT}
+DISTFILES=	boost_${BOOST_VERSION_UNDER}${EXTRACT_SUFX}:boost
 
-MAINTAINER?=	dmitry.wagin@ya.ru
+MAINTAINER?=	drtr0jan@yandex.ru
 COMMENT?=	FoundationDB is a large-scale distributed database
 WWW=		https://www.foundationdb.org/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_aarch64=	invalid asm rdtsc
 ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	not yet ported to anything else
 
 BUILD_DEPENDS=	bash:shells/bash \
 		msgpack-cxx>0:devel/msgpack-cxx \
-		toml11>0:devel/toml11
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
-		libeio.so:devel/libeio \
+		toml11>4.0.0:devel/toml11
+LIB_DEPENDS=	libeio.so:devel/libeio \
 		libfmt.so:devel/libfmt
 
-USES=		cmake compiler:c++20-lang llvm:max=16 mono:build python:build \
+USES=		cmake compiler:c++20-lang llvm mono:build python:build \
 		shebangfix ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	apple
@@ -39,7 +38,12 @@ SUB_FILES+=	foundationdb.conf
 
 SHEBANG_FILES=	bindings/c/generate_asm.py
 
-CMAKE_ARGS=	-DOPENSSL_ROOT_DIR=${OPENSSLLIB}
+# Bundle last supported Boost release
+BOOST_VERSION=		1.78.0
+BOOST_VERSION_UNDER=	${BOOST_VERSION:C/\./_/g}
+
+CMAKE_ARGS=	-DBOOST_SOURCE_DIR=${WRKDIR}/boost_${BOOST_VERSION_UNDER} \
+		-DOPENSSL_ROOT_DIR=${OPENSSLLIB}
 CMAKE_OFF=	BUILD_DOCUMENTATION BUILD_GO_BINDING BUILD_JAVA_BINDING \
 		BUILD_PYTHON_BINDING BUILD_RUBY_BINDING DISABLE_TLS \
 		SSD_ROCKSDB_EXPERIMENTAL USE_DTRACE USE_JEMALLOC
@@ -50,21 +54,33 @@ CONFLICTS+=	${PORTNAME}*-${_COMPONENT}*
 
 SUB_LIST=	${SUB_FDB}
 
+FOUNDATIONDB_USER?=	${PORTNAME}
+FOUNDATIONDB_GROUP?=	${PORTNAME}
+FOUNDATIONDB_DBDIR?=	/var/db/${PORTNAME}
+FOUNDATIONDB_LOGDIR?=	/var/log/${PORTNAME}
+
+.if ${FOUNDATIONDB_USER} == ${PORTNAME}
 USERS=		${FOUNDATIONDB_USER}
+.endif
+.if ${FOUNDATIONDB_GROUP} == ${PORTNAME}
 GROUPS=		${FOUNDATIONDB_GROUP}
+.endif
 
 PLIST=		${PKGDIR}/pkg-plist-${_COMPONENT}
 PLIST_SUB=	${SUB_FDB}
-
-FOUNDATIONDB_USER?=	foundationdb
-FOUNDATIONDB_GROUP?=	foundationdb
-FOUNDATIONDB_DBDIR?=	/var/db/foundationdb
-FOUNDATIONDB_LOGDIR?=	/var/log/foundationdb
 
 SUB_FDB=	FOUNDATIONDB_USER=${FOUNDATIONDB_USER} \
 		FOUNDATIONDB_GROUP=${FOUNDATIONDB_GROUP} \
 		FOUNDATIONDB_DBDIR=${FOUNDATIONDB_DBDIR} \
 		FOUNDATIONDB_LOGDIR=${FOUNDATIONDB_LOGDIR}
+
+.include <bsd.port.pre.mk>
+
+post-patch:
+.if ${COMPILER_TYPE} == clang
+	@${REINPLACE_CMD} -e 's|std::unary_function|std::__unary_function|' \
+		${WRKSRC}/../boost_${BOOST_VERSION_UNDER}/boost/container_hash/hash.hpp
+.endif
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${ETCDIR}
@@ -105,4 +121,4 @@ do-install:
 .  endfor
 .endif # _CLIENT_ONLY
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

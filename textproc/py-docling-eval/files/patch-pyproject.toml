@@ -1,0 +1,12 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 20:28:24 UTC
++++ pyproject.toml
+@@ -2,7 +2,7 @@ description = "Evaluation of Docling"
+ name = "docling-eval"
+ version = "1.4.1" # DO NOT EDIT, updated automatically
+ description = "Evaluation of Docling"
+-license = "MIT"
++license = {text = "MIT"}
+ keywords= ["docling", "evaluation", "convert", "document", "pdf", "docx", "html", "markdown", "layout model", "segmentation", "table structure", "table former"]
+ readme = "README.md"
+ authors = [

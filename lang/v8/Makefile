@@ -16,7 +16,7 @@ DISTFILES=	build-${BUILD_REV}.tar.gz:local \
 DIST_SUBDIR=	v8/${PORTVERSION:R:R}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
-MAINTAINER=	sunpoet@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open source JavaScript engine by Google
 WWW=		https://v8.dev/
 
@@ -71,6 +71,8 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 
 OPTIONS_DEFINE=	EXAMPLES
 
+GN_ARGS+= v8_enable_i18n_support=false
+GN_ARGS+= use_lld=false is_clang=false
 post-extract:
 	@${MKDIR} ${WRKSRC}/base/trace_event/common ${WRKSRC}/build ${WRKSRC}/buildtools ${WRKSRC}/third_party/googletest/src ${WRKSRC}/third_party/icu ${WRKSRC}/third_party/zlib ${WRKSRC}/tools/clang
 	@${TAR} -xf ${DISTDIR}/${DIST_SUBDIR}/build-${BUILD_REV}.tar.gz -C ${WRKSRC}/build
@@ -116,4 +118,5 @@ do-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/out/Release/v8_simple_* ${STAGEDIR}${EXAMPLESDIR}
 
+BUILD_DEPENDS:= ${BUILD_DEPENDS:N*binutils}
 .include <bsd.port.mk>

@@ -159,4 +159,5 @@ x-tool-plist: .NOTMAIN .PHONY ${PLIST}
 		${PLIST}
 .endif
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NDOXYGEN}
 .include <bsd.port.mk>

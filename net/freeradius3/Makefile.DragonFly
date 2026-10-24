@@ -1,6 +1,0 @@
-
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NHEIMDAL} MITKRB_PORT
-
-# because '_talloc_realloc_array' in .so
-MAKE_ENV+=	LDVER=ld.bfd
-DFLY_UNMAINTAINED= yes

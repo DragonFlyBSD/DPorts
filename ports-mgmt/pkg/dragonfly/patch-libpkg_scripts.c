@@ -1,6 +1,6 @@
---- libpkg/scripts.c.orig	Fri Mar 28 05:46:30 2025
-+++ libpkg/scripts.c	Tue Apr
-@@ -71,9 +71,14 @@ pkg_script_run(struct pkg * const pkg, pkg_script type
+--- libpkg/scripts.c.orig	2026-04-29 11:18:06 UTC
++++ libpkg/scripts.c
+@@ -69,9 +69,14 @@ pkg_script_run(struct pkg * const pkg, pkg_script type
  #ifdef PROC_REAP_KILL
  	bool do_reap;
  	pid_t mypid;
@@ -9,13 +9,13 @@
  	struct procctl_reaper_kill killemall;
 +#elif defined(__DragonFly__)
 +	struct reaper_status info;
-+	struct reaper_kill killemall;	
++	struct reaper_kill killemall;
  #endif
 +#endif
  	struct {
  		const char * const arg;
  		const pkg_script b;
-@@ -257,11 +262,21 @@ cleanup:
+@@ -257,11 +262,22 @@ cleanup:
  		return (ret);
  
  	procctl(P_PID, mypid, PROC_REAP_STATUS, &info);
@@ -28,12 +28,13 @@
 +		killemall.signal = SIGKILL;
 +		killemall.flags = 0;
 +#endif
++
  		if (procctl(P_PID, mypid, PROC_REAP_KILL, &killemall) != 0) {
 +#if defined(__FreeBSD__)
  			if (errno != ESRCH || killemall.rk_killed != 0 ) {
 +#else
 +			if (errno != ESRCH || killemall.killed != 0 ) {
 +#endif
- 				pkg_errno("%s", "Fail to kill all processes");
+ 				pkg_errno("%s", "Failed to kill all processes");
  			}
  		}

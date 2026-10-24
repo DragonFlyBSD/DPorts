@@ -1,0 +1,4 @@
+langchain-ollama is an integration package connecting Ollama and LangChain.
+
+It provides chat model and embedding components that use a locally running
+Ollama server within the LangChain framework.

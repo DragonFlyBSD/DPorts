@@ -32,4 +32,8 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} \
 		${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-Wall @&${CFLAGS}@g" \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

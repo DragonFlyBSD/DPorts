@@ -1,0 +1,4 @@
+AutoGen is an open-source programming framework for building AI agents and
+facilitating cooperation among multiple agents to solve tasks. It is a
+generic multi-agent conversation framework that supports agents that can
+converse with each other to accomplish tasks.

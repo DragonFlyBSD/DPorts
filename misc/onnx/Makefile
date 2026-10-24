@@ -1,12 +1,11 @@
 PORTNAME=	onnx
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.17.0
-PORTREVISION=	2
+DISTVERSION=	1.22.0
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Open Neural Network eXchange
-WWW=		https://onnx.ai/ \
+WWW=		https://onnx.ai \
 		https://github.com/onnx/onnx
 
 LICENSE=	MIT
@@ -21,7 +20,7 @@ USES=		cmake:testing compiler:c++17-lang python:build
 USE_GITHUB=	yes
 
 CMAKE_ON=	BUILD_SHARED_LIBS
-CMAKE_OFF=	BUILD_ONNX_PYTHON
+CMAKE_OFF=	ONNX_BUILD_PYTHON
 CMAKE_TESTING_ON=	ONNX_BUILD_TESTS
 CMAKE_TESTING_TARGET=
 
@@ -33,6 +32,8 @@ post-install:
 post-test:
 	cd ${BUILD_WRKSRC} && ./onnx_gtests
 
-# tests as of 1.17.0: 84 tests from 11 test suites ran. (160 ms total)
+# tests as of 1.22.0:
+# [==========] 100 tests from 15 test suites ran. (42 ms total)
+# [  PASSED  ] 100 tests.
 
 .include <bsd.port.mk>

@@ -1,7 +1,7 @@
 PORTNAME=	redeclipse
 PORTVERSION=	2.0.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -51,6 +51,7 @@ DEDICATED_PLIST_FILES=	bin/${PORTNAME}_server libexec/${PORTNAME}_server
 OPTIMIZED_CFLAGS_CFLAGS=	-O3 -fomit-frame-pointer -ffast-math
 OPTIMIZED_CFLAGS_CXXFLAGS=	-O3 -fomit-frame-pointer -ffast-math
 
+DPMSG= ${WRKDIR}/dports-message
 post-extract:
 	@${RM} -rf ${WRKSRC}/src/include ${WRKSRC}/src/lib
 
@@ -70,5 +71,15 @@ do-install-CLIENT-on:
 do-install-DEDICATED-on:
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}_server ${STAGEDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME}_server_bsd ${STAGEDIR}${PREFIX}/libexec/${PORTNAME}_server
+
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
+RUN_DEPENDS:=	${RUN_DEPENDS:N*redeclipse-data}
+PKGMESSAGE=	${DPMSG}
+
+dfly-patch:
+	@${ECHO} "########################################################" >> ${DPMSG}
+	@${ECHO} "# Build games/redeclipse-data from source to play this #" >> ${DPMSG}
+	@${ECHO} "########################################################" >> ${DPMSG}
+.endif
 
 .include <bsd.port.mk>

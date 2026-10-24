@@ -1,6 +1,6 @@
 PORTNAME=	tochnog
 PORTVERSION=	20140100
-PORTREVISION=	13
+PORTREVISION=	15
 CATEGORIES=	cad
 MASTER_SITES=	SF/${PORTNAME}/Tochnog%20Latest%20January%202014
 DISTFILES=	Sources${EXTRACT_SUFX} gid${EXTRACT_SUFX} \
@@ -13,15 +13,15 @@ WWW=		https://tochnog.sourceforge.net/
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	${LOCALBASE}/lib/libf2c.a:lang/f2c
+LIB_DEPENDS=	libf2c.so:lang/f2c
 
-OPTIONS_DEFINE=	ATLAS EXAMPLES
-ATLAS_DESC=	Use ATLAS instead of BLAS/LAPACK
+USES=		blaslapack:openblas fortran zip dos2unix
+DOS2UNIX_FILES=	time.cc time.h tnlapack.h tnsuplu.h
+
+OPTIONS_DEFINE=	EXAMPLES
 
 WRKSRC=		${WRKDIR}/Sources/Tochnog-Latest-jan-2014
 MAKEFILE=	makefile
-USES=		fortran zip dos2unix
-DOS2UNIX_FILES=	time.cc time.h tnlapack.h tnsuplu.h
 
 # You can set GIDDIR to share/gid to install the scripts to be used
 # with the cad/linux-gid port, otherwise they can be linked to the data
@@ -31,23 +31,14 @@ GIDDIR?=	share/${PORTNAME}
 PLIST_SUB+=	GIDDIR=${GIDDIR}
 GID_PTYPES=	${PREFIX}/${GIDDIR}/problemtypes
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MATLAS}
-LIB_DEPENDS+=	libatlas.so:math/atlas
-BLAS_LIBS=	-lf77blas
-.else
-LIB_DEPENDS+=	libblas.so:math/blas	\
-		liblapack.so:math/lapack
-BLAS_LIBS=	-llapack -lblas
-.endif
-
 ALL_TARGET=	freebsd_old
 LIB_DEPENDS+=	libsuperlu.so:math/superlu
 SUPERLU=	superlu
 
+.include <bsd.port.options.mk>
+
 .if ${OPSYS} == FreeBSD
-CPPFLAGS+=  -Dregister=
+CPPFLAGS+=	-Dregister=
 .endif
 
 post-extract:
@@ -61,7 +52,7 @@ pre-configure:
 .endfor
 	${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},g ; \
 	s,%%SUPERLU%%,${SUPERLU},g ; \
-	s,%%BLAS_LIBS%%,-L${LOCALBASE}/lib ${BLAS_LIBS},g' \
+	s,%%BLAS_LIBS%%,-L${LOCALBASE}/lib ${BLASLIB},g' \
 	${WRKSRC}/makefile
 	${REINPLACE_CMD} -e 's,SUPERLU_USE 0,SUPERLU_USE 1,' \
 	${WRKSRC}/tnsuplu.h
@@ -80,6 +71,7 @@ do-install:
 	  ${STAGEDIR}${GID_PTYPES}/tochnog.gid
 	${INSTALL_SCRIPT} ${WRKDIR}/Sources/gid/tochnog.gid/tochnog.ba*	\
 	  ${STAGEDIR}${GID_PTYPES}/tochnog.gid
+
 do-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${RM} ${WRKDIR}/Sources/test/*.orig

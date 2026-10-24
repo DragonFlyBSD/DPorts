@@ -37,4 +37,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/${PERIODICSCRIPT} \
 	    ${STAGEDIR}${PREFIX}/etc/periodic/daily
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

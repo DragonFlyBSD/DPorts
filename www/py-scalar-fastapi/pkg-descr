@@ -1,0 +1,4 @@
+Scalar FastAPI provides an easy way to render beautiful API reference
+documentation based on OpenAPI/Swagger specifications in FastAPI
+applications. It integrates the Scalar API reference UI as an
+alternative to the default Swagger UI and ReDoc.

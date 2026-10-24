@@ -1,16 +1,20 @@
 PORTNAME=	onednn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.5.3
+DISTVERSION=	3.13.2
 CATEGORIES=	math # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Intel(R) Math Kernel Library for Deep Neural Networks
+WWW=		https://github.com/oneapi-src/oneDNN
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-NOT_FOR_ARCHS=	armv6 armv7 i386 mips powerpc powerpcspe
+NOT_FOR_ARCHS=	armv6 armv7 i386 powerpc powerpcspe
 BROKEN_aarch64=	error: sys/prctl.h file not found
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
 TEST_DEPENDS=	bash:shells/bash \
 		libsysinfo>0:devel/libsysinfo
@@ -22,7 +26,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	oneapi-src
 GH_PROJECT=	oneDNN
 
-CMAKE_OFF=	DNNL_BUILD_TESTS DNNL_BUILD_EXAMPLES
+CMAKE_OFF=	BUILD_TESTS BUILD_EXAMPLES
 
 OPTIONS_DEFAULT=		SIMD_DEFAULT OPENMP
 OPTIONS_SINGLE=			SIMD CPU_RUNTIME
@@ -64,14 +68,28 @@ OPTIONS_SINGLE_SIMD+=	SIMD_SSE41
 
 CXXFLAGS:=	${CXXFLAGS:S/-O2/-O3/} # clang writes wrong binary code when -O2 optimization is used and one testcase is failing, see https://bugs.llvm.org/show_bug.cgi?id=48104
 
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64 && !defined(CPUTYPE)
+CXXFLAGS+=	-mcpu=power7
+.endif
+
 post-install:
 	@${RM} -r ${STAGEDIR}${PREFIX}/share/doc
 
-do-test: # some tests are known to fail: https://github.com/intel/mkl-dnn/issues/350 (the upstream failed to reproduce it and closed the report)
+do-test: # 1 test fails, see https://github.com/oneapi-src/oneDNN/issues/2011
 	@${REINPLACE_CMD} 's| /bin/bash | ${LOCALBASE}/bin/bash |' ${WRKSRC}/tests/CMakeLists.txt
 	@cd ${BUILD_WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} -DDNNL_BUILD_TESTS=ON ${CMAKE_SOURCE_PATH} && \
+		${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} -DBUILD_TESTS=ON ${CMAKE_SOURCE_PATH} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${ALL_TARGET} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} test
+
+# tests as of 3.13.2: 100% tests passed, 0 tests failed out of 236
+
+dfly-patch:
+
+	${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+		${WRKSRC}/src/common/utils.cpp \
+		${WRKSRC}/src/common/memory_debug.cpp
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	game.libretro.pcsx-rearmed
-PORTVERSION=	24.0.0.56
-DISTVERSIONSUFFIX=	-Nexus
+PORTVERSION=	25.0.0.72.20260330
+DISTVERSIONSUFFIX=	-Piers
 CATEGORIES=	games
 
 MAINTAINER=	rozhuk.im@gmail.com
@@ -19,6 +19,7 @@ NO_ARCH=	yes
 USES=		kodi
 USE_GITHUB=	yes
 GH_ACCOUNT=	kodi-game
+GH_TAGNAME=	af400a7e20b15d340429a6b1ef942e1cdcfb291f
 
 do-build:
 	@${MKDIR} ${WRKSRC}/lib
@@ -36,5 +37,9 @@ do-install:
 		${STAGEDIR}${PREFIX}/share/kodi/addons
 	@(cd ${WRKSRC}/lib/ && ${COPYTREE_SHARE} * ${STAGEDIR}${PREFIX}/lib/kodi/addons/${PORTNAME})
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} ${PORTNAME} ${STAGEDIR}${PREFIX}/share/kodi/addons)
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/depends/common/pcsx-rearmed/CMakeLists.txt
 
 .include <bsd.port.mk>

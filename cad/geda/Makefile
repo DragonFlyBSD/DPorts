@@ -16,7 +16,7 @@ LIB_DEPENDS=	libstroke.so:devel/libstroke
 RUN_DEPENDS=	gawk:lang/gawk
 
 USES=		desktop-file-utils gettext gmake gnome guile:1.8 libtool \
-		pathfix perl5 pkgconfig python:run shared-mime-info \
+		perl5 pkgconfig python:run shared-mime-info \
 		shebangfix
 SHEBANG_FILES=	examples/lightning_detector/bom libgeda/docs/*.dox \
 		utils/gxyrs/*.pl utils/scripts/* \
@@ -43,4 +43,5 @@ PORTSCOUT=	limitw:1,even
 
 OPTIONS_DEFINE=	DOCS
 
+MAKE_ENV= LDVER=ld.bfd
 .include <bsd.port.mk>

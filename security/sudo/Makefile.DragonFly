@@ -1,2 +1,0 @@
-# Remove AUDIT from options list
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NAUDIT}

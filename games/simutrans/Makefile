@@ -1,11 +1,11 @@
 PORTNAME=	simutrans
-DISTVERSION=	124.3
-PORTREVISION=	1
+DISTVERSION=	124.5
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Transportation simulator
-WWW=		https://www.simutrans.com/
+WWW=		https://www.simutrans.com/ \
+		https://github.com/aburch/simutrans/
 
 LICENSE=	ART10 MIT
 LICENSE_COMB=	multi
@@ -14,6 +14,7 @@ LICENSE_FILE_MIT=	${WRKSRC}/simutrans/license_squirrel.txt
 
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libfreetype.so:print/freetype2 \
+		libfontconfig.so:x11-fonts/fontconfig \
 		libzstd.so:archivers/zstd
 
 USES=		cmake compiler:c++14-lang pkgconfig sdl
@@ -56,6 +57,8 @@ FLUIDSYNTH_DESC=		Enable FluidSynth for MIDI playback
 FLUIDSYNTH_LIB_DEPENDS=		libfluidsynth.so:audio/fluidsynth
 FLUIDSYNTH_CMAKE_BOOL=		SIMUTRANS_USE_FLUIDSYNTH_MIDI
 
+CXXFLAGS= -Wno-c++11-narrowing
+USE_CLANG_FALLBACK= default
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/simutrans && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}

@@ -21,4 +21,5 @@ USES=		tar:xz uidfix
 HAS_CONFIGURE=	yes
 MAKE_ENV+=	MAKEFLAGS=-r
 
+CONFIGURE_ARGS= ac_cv_prog_has_bmake=yes
 .include <bsd.port.mk>

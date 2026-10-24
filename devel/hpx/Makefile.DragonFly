@@ -1,3 +1,0 @@
-# actually only for libatomix
-USES+=	alias fortran
-DFLY_UNMAINTAINED= yes

@@ -23,4 +23,7 @@ CONFIGURE_ARGS=	--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 
+CFLAGS= -I${OPENSSLINC}
+CPPFLAGS= -I${OPENSSLINC}
+LDFLAGS= -L${OPENSSLLIB}
 .include <bsd.port.mk>

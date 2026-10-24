@@ -1,34 +1,34 @@
 PORTNAME=	mattermost
-PORTVERSION=	7.10.4
-DISTVERSIONPREFIX=	v
-PORTREVISION=	3
+PORTVERSION=	11.7.10
+PORTREVISION=	2
 CATEGORIES=	www
-MASTER_SITES=	https://raw.githubusercontent.com/${PORTNAME}/${PORTNAME}/${DISTVERSIONFULL}/:gomod
+MASTER_SITES=	LOCAL/decke
 PKGNAMESUFFIX=	-server
-DISTFILES=	go.mod:gomod
 
-MAINTAINER=	bofh@FreeBSD.org
-COMMENT=	Open source Slack-alternative in Golang and React
-WWW=		https://mattermost.org/
+MAINTAINER=	decke@FreeBSD.org
+COMMENT=	Open core, self-hosted collaboration platform in Golang and React
+WWW=		https://mattermost.com/
 
-LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+LICENSE=	AGPLv3
+LICENSE_FILE=	${WRKSRC}/../LICENSE.txt
 
-ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386
+ONLY_FOR_ARCHS=	aarch64 amd64
+ONLY_FOR_ARCHS_REASON=	module modernc.org/sqlite only supported on aarch64 and amd64
 
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss \
 		mattermost-webapp>=${PORTVERSION}:www/mattermost-webapp
 
-USES=		go:modules
-USE_GITHUB=	yes
-GH_ACCOUNT=	mattermost
+USES=		go:modules tar:xz
 USE_RC_SUBR=	mattermostd
 
-GO_MODULE=	github.com/mattermost/mattermost-server/v6
-GO_TARGET=	./cmd/mattermost ./scripts/config_generator
-GO_BUILDFLAGS=	-ldflags="-X github.com/mattermost/mattermost-server/v6/model.BuildNumber=${PORTVERSION}"
+GO_TARGET=	./cmd/mattermost ./cmd/mmctl ./scripts/config_generator
+GO_BUILDFLAGS=	-ldflags=" \
+		-X github.com/mattermost/mattermost/server/public/model.BuildNumber=${PORTVERSION} \
+		-X github.com/mattermost/mattermost/server/public/model.BuildHashEnterprise=none \
+		-X github.com/mattermost/mattermost/server/public/model.BuildEnterpriseReady=false"
 
 WWWDIR=		${PREFIX}/www/mattermost
+WRKSRC_SUBDIR=	server
 
 MATTERMOSTD_USER=	mattermost
 MATTERMOSTD_GROUP=	mattermost
@@ -36,9 +36,8 @@ MATTERMOSTD_GROUP=	mattermost
 USERS=		${MATTERMOSTD_USER}
 GROUPS=		${MATTERMOSTD_GROUP}
 
-post-extract:
-	@${RM} ${WRKSRC}/vendor/modules.txt
-
+PLIST_FILES= %%WWWDIR%%/templates/cloud_trial_ended_email.html
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${MV} ${STAGEDIR}${PREFIX}/bin/mattermost ${STAGEDIR}${PREFIX}/bin/mattermostd
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/mattermost

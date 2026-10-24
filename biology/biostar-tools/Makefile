@@ -1,9 +1,11 @@
 PORTNAME=	biostar-tools
-PORTVERSION=	1.7.0
+PORTVERSION=	2.1
 CATEGORIES=	biology python
+MASTER_SITES=	# empty
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Meta-port for Biostar Handbook tools
+WWW=		https://www.biostarhandbook.com
 
 LICENSE=	BSD2CLAUSE
 
@@ -20,7 +22,6 @@ RUN_DEPENDS=	wget>0:ftp/wget \
 		miller>0:textproc/miller \
 		ncbi-entrez-direct>0:biology/ncbi-entrez-direct \
 		readseq>0:biology/readseq \
-		snpeff>0:biology/snpeff \
 		picard-tools>0:biology/picard-tools \
 		bbmap>0:biology/bbmap \
 		minimap2>0:biology/minimap2 \
@@ -34,7 +35,6 @@ RUN_DEPENDS=	wget>0:ftp/wget \
 		seqtk>0:biology/seqtk \
 		datamash>0:textproc/datamash \
 		bcftools>0:biology/bcftools \
-		sra-tools>0:biology/sra-tools \
 		subread>0:biology/subread \
 		hisat2>0:biology/hisat2 \
 		trimmomatic>0:biology/trimmomatic \
@@ -58,17 +58,28 @@ RUN_DEPENDS=	wget>0:ftp/wget \
 		Jellyfish>0:biology/jellyfish \
 		mafft>0:biology/mafft \
 		clustal-omega>0:biology/clustal-omega \
-		${PYTHON_PKGNAMEPREFIX}pywgsim>0:biology/py-pywgsim@${PY_FLAVOR} \
 		sam2pairwise>0:biology/sam2pairwise \
-		kallisto>0:biology/kallisto
+		kallisto>0:biology/kallisto \
+		bamutil>0:biology/bamutil \
+		${PYTHON_PKGNAMEPREFIX}deepTools>0:biology/py-deeptools@${PY_FLAVOR} \
+		igv>0:biology/igv \
+		gffread>0:biology/gffread \
+		ucsc-userapps>0:biology/ucsc-userapps
 
 USES=		metaport python
 
-SUB_FILES=	biostar-shell
+.include <bsd.port.pre.mk>
+
+# sra-tools is only supported on specific architectures
+.if ${ARCH} == x86_64 || ${ARCH} == aarch64
+RUN_DEPENDS+=	sra-tools>0:biology/sra-tools
+.endif
+
+SUB_FILES=	biostar-shell pkg-message
 PLIST_FILES=	bin/biostar-shell
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/biostar-shell ${STAGEDIR}${PREFIX}/bin
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

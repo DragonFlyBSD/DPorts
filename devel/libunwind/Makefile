@@ -1,12 +1,12 @@
 PORTNAME=	libunwind
-PORTVERSION=	20240221	# This is the release date on https://github.com/libunwind/libunwind/releases
-PORTREVISION=	2
+PORTVERSION=	20250904	# This is the release date on https://github.com/libunwind/libunwind/releases
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/libunwind/libunwind/releases/download/v${LIBUNWIND_VERSION}/
 DISTNAME=	libunwind-${LIBUNWIND_VERSION}
 
 PATCH_SITES=	https://github.com/libunwind/libunwind/commit/
-PATCHFILES=	b841b2a2665da25dd28fd16977a77bf8b3494dc7.patch:-p1
+PATCHFILES=	b841b2a2665da25dd28fd16977a77bf8b3494dc7.patch:-p1 \
+		2ad7f439d6d04a808947e04b07e1efb34371c8b2.patch:-p1
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Generic stack unwinding library
@@ -18,7 +18,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
-USES=		compiler:c11 cpe libtool pathfix pkgconfig
+USES=		compiler:c11 cpe libtool pkgconfig
 
 CONFIGURE_ARGS=	--disable-cxx-exceptions \
 		--disable-unwind-header \
@@ -28,14 +28,22 @@ CONFIGURE_ARGS_armv7=	ac_cv_search__Unwind_Resume="-lgcc_s -lgcc"
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
+TEST_TARGET=	check
+TESTING_UNSAFE=	1 test (Gtest-concurrent and/or Ltest-concurrent) fails rarely due to race condition https://github.com/libunwind/libunwind/issues/715
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	ARCH=${ARCH:S|amd64|x86_64|:C|armv.|arm|:S|i386|x86|:C|powerpc64.*|ppc64|:S|powerpc|ppc32|}
 
 CPE_VENDOR=	libunwind_project
 
-LIBUNWIND_VERSION=	1.8.1
+LIBUNWIND_VERSION=	1.8.3
 
+CFLAGS= -fuse-ld=bfd
+OPTIONS_DEFINE:= ${OPTIONS_DEFINE} TESTS
+OPTIONS_DEFAULT:= 
+TESTS_DESC= Enable tests (installed to libexec)
+TESTS_CONFIGURE_ON= --enable-tests
+TESTS_CONFIGURE_OFF= --disable-tests
 .include <bsd.port.options.mk>
 
 .if ${ARCH:Mpowerpc*}
@@ -48,4 +56,26 @@ post-install:
 .  if ${OPTIONS_DEFAULT:MTESTS}
 	cd ${STAGEDIR}${PREFIX}/ && ${FIND} libexec/libunwind -type f >> ${TMPPLIST}
 .  endif
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/src/ptrace/_UPT_reg_offset.c \
+		${WRKSRC}/src/ptrace/_UPT_access_reg.c \
+		${WRKSRC}/src/x86_64/siglongjmp.S \
+		${WRKSRC}/src/setjmp/longjmp.c \
+		${WRKSRC}/src/setjmp/siglongjmp.c \
+		${WRKSRC}/src/x86_64/ucontext_i.h \
+		${WRKSRC}/src/x86_64/getcontext.S \
+		${WRKSRC}/src/x86_64/init.h \
+		${WRKSRC}/src/x86_64/setcontext.S \
+		${WRKSRC}/include/tdep-x86_64/jmpbuf.h \
+		${WRKSRC}/include/libunwind_i.h \
+		${WRKSRC}/include/tdep-x86/jmpbuf.h \
+		${WRKSRC}/tests/Gtest-trace.c \
+		${WRKSRC}/tests/crasher.c \
+		${WRKSRC}/tests/Gtest-bt.c \
+		${WRKSRC}/tests/test-coredump-unwind.c
+	${REINPLACE_CMD} -e 's|lgcc_s|lgcc|' \
+		-e 's|xfreebsd|xdragonfly|' \
+		${WRKSRC}/configure
+
 .include <bsd.port.mk>

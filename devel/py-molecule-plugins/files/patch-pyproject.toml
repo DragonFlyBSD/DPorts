@@ -1,0 +1,10 @@
+--- pyproject.toml.orig	2025-08-12 19:57:36 UTC
++++ pyproject.toml
+@@ -1,7 +1,7 @@
+ [build-system]
+ requires = [
+-  "setuptools >= 64.0.0", # required by pyproject+setuptools_scm integration
++  "setuptools >= 63.0.0", # relaxed for FreeBSD ports
+   "setuptools_scm[toml] >= 7.0.5", # required for "no-local-version" scheme
+
+ ]

@@ -1,5 +1,6 @@
 PORTNAME=	libfm-qt
 PORTVERSION=	1.4.0
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	LXQT
 
@@ -9,6 +10,9 @@ WWW=		https://github.com/lxqt/libfm-qt
 
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Uses qt5 switch to qt6 variant x11/libfm-qt6
+EXPIRATION_DATE=2026-11-20
 
 LIB_DEPENDS=	libmenu-cache.so:x11/menu-cache \
 		libexif.so:graphics/libexif
@@ -25,6 +29,7 @@ USE_XORG=	xcb
 USE_LXQT=	buildtools
 USE_LDCONFIG=	yes
 
+LDFLAGS= -lpthread
 post-install:
 	${RM} -Rf ${STAGEDIR}${PREFIX}/include/${PORTNAME}/tests/
 

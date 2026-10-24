@@ -1,5 +1,5 @@
-TIMESTAMP = 1679115395
-SHA256 (go/textproc_ov/ov-v0.15.0/v0.15.0.mod) = ce0040112c942b0ac4b25a921927c75a034fcfb2ab7ccc95cee09608851f6721
-SIZE (go/textproc_ov/ov-v0.15.0/v0.15.0.mod) = 1496
-SHA256 (go/textproc_ov/ov-v0.15.0/v0.15.0.zip) = e7f273a1d95b6f0fbb10457f5f8a66966da806f6941580d52f574ec12e7d85af
-SIZE (go/textproc_ov/ov-v0.15.0/v0.15.0.zip) = 635822
+TIMESTAMP = 1783993036
+SHA256 (go/textproc_ov/ov-v0.54.0/v0.54.0.mod) = 6064eebf33ddf9fda9e6b2502a7d6f24ced5f9c7d59b3c778515b22f3116875a
+SIZE (go/textproc_ov/ov-v0.54.0/v0.54.0.mod) = 1842
+SHA256 (go/textproc_ov/ov-v0.54.0/v0.54.0.zip) = 2f3907e43c92cb6310d7615392fa7941606abbf8602340b20624544151c00ed8
+SIZE (go/textproc_ov/ov-v0.54.0/v0.54.0.zip) = 4159530

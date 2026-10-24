@@ -1,6 +1,6 @@
 PORTNAME=	fontforge
 DISTVERSION=	20230101
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/${DISTVERSION}/
 
@@ -97,6 +97,8 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 X11_RUN_DEPENDS=	${LOCALBASE}/share/fonts/gnu-unifont/unifont.pcf.gz:x11-fonts/gnu-unifont
 X11_CMAKE_BOOL=	ENABLE_X11
 
+LDFLAGS= -lz
+PYTHON_CMAKE_ON= -DPYHOOK_INSTALL_DIR:STRING=${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK3} || ${PORT_OPTIONS:MX11}
@@ -121,5 +123,6 @@ post-patch-FREETYPE-on:
 post-stage-DOCS-on:
 	@${RM} ${STAGEDIR}${DOCSDIR}/.buildinfo \
 		${STAGEDIR}${DOCSDIR}/.nojekyll
+	${RMDIR} ${STAGEDIR}${DOCSDIR}/_sources
 
 .include <bsd.port.mk>

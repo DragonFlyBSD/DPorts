@@ -1,5 +1,5 @@
 PORTNAME=	virtualgl
-DISTVERSION=	3.1.2
+DISTVERSION=	3.1.5
 CATEGORIES=	x11 graphics
 MASTER_SITES=	https://github.com/VirtualGL/${PORTNAME}/releases/download/${DISTVERSION}/
 DISTNAME=	VirtualGL-${DISTVERSION}
@@ -65,5 +65,12 @@ PLIST_SUB+=	AMD64="@comment " \
 PLIST_SUB+=	AMD64="" \
 		I386="@comment "
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@FreeBSD@DragonFly@g" \
+		${WRKSRC}/server/vglserver_config \
+		${WRKSRC}/server/fakerconfig.cpp \
+		${WRKSRC}/server/CMakeLists.txt \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.post.mk>

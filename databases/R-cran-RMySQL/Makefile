@@ -1,11 +1,11 @@
 PORTNAME=	RMySQL
-DISTVERSION=	0.11.0
+DISTVERSION=	0.11.3
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	R interface to the MySQL database
-WWW=		https://cran.r-project.org/web/packages/RMySQL/
+WWW=		https://cran.r-project.org/package=RMySQL
 
 LICENSE=	GPLv2
 
@@ -15,4 +15,6 @@ USES=		cpe cran:auto-plist,compiles mysql
 
 CPE_VENDOR=	r-consortium
 
+RARGS= --with-mysql-inc=${LOCALBASE}/include/mysql --with-mysql-lib=${LOCALBASE}/lib/mysql
+R_POSTCMD_INSTALL_OPTIONS= --configure-args='${RARGS}'
 .include <bsd.port.mk>

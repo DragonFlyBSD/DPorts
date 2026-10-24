@@ -1,29 +1,14 @@
---- CMakeLists.txt.orig	2019-12-02 22:50:20 UTC
-+++ CMakeLists.txt
-@@ -434,20 +434,24 @@ configure_file(
- # Regression tests
- 
- # Get and configure google test
-+if (BUILD_TESTING)
- include(cmake/googletest.cmake)
- fetch_googletest(
-     ${PROJECT_SOURCE_DIR}/cmake
-     ${PROJECT_BINARY_DIR}/googletest
-     )
- 
--enable_testing()
-+  enable_testing()
-+endif(BUILD_TESTING)
+-- Fix CMake 4.x compatibility by raising the minimum required CMake version.
+-- CMake 4.0 dropped support for cmake_minimum_required(VERSION < 3.5).
+
+--- CMakeLists.txt.orig	2024-08-23 14:28:52.000000000 -0700
++++ CMakeLists.txt	2026-08-27 15:49:03.057152000 -0700
+@@ -5,7 +5,7 @@
+ # This file is part of Boolector.
+ # See COPYING for more information on using this software.
+ #
+-cmake_minimum_required(VERSION 3.3)
++cmake_minimum_required(VERSION 3.5)
  
  #-----------------------------------------------------------------------------#
- # Source directories
  
- include_directories(src ${CMAKE_CURRENT_BINARY_DIR}/src)
- add_subdirectory(src)
--add_subdirectory(test)
-+if (BUILD_TESTING)
-+  add_subdirectory(test)
-+endif(BUILD_TESTING)
- if(PYTHON)
-   add_subdirectory(src/api/python)
- endif()

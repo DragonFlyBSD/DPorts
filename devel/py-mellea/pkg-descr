@@ -1,0 +1,4 @@
+Mellea is a library for writing generative programs in Python. It
+provides abstractions and utilities for building programs that
+generate structured outputs using large language models, supporting
+constrained generation and programmatic control of LLM outputs.

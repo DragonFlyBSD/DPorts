@@ -2,6 +2,7 @@ PORTNAME=	grafx2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.9
 DISTVERSIONSUFFIX=	.3219
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://pulkomandy.tk/projects/GrafX2/downloads/ \
 		LOCAL/ehaupt
@@ -45,5 +46,9 @@ post-install:
 	@${MV} ${STAGEDIR}${PREFIX}/bin/grafx2-${GRAFX2_API} \
 		${STAGEDIR}${PREFIX}/bin/grafx2
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/grafx2
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

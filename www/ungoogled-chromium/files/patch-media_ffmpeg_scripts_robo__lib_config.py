@@ -1,6 +1,6 @@
---- media/ffmpeg/scripts/robo_lib/config.py.orig	2024-06-22 08:49:42 UTC
+--- media/ffmpeg/scripts/robo_lib/config.py.orig	2026-02-15 10:01:45 UTC
 +++ media/ffmpeg/scripts/robo_lib/config.py
-@@ -55,19 +55,13 @@ class RoboConfiguration:
+@@ -75,19 +75,13 @@ class RoboConfiguration:
          self._llvm_path = os.path.join(self.chrome_src(), "third_party",
                                         "llvm-build", "Release+Asserts", "bin")
  
@@ -19,8 +19,8 @@
 -                shell.log(f"On sushi branch: {self.sushi_branch_name()}")
  
          # Filename that we'll ask generate_gn.py to write git commands to.
-         # TODO: Should this use script_directory, or stay with ffmpeg?  As long as
-@@ -186,9 +180,9 @@ class RoboConfiguration:
+         # TODO(crbug.com/450394703): Should this use script_directory, or stay
+@@ -204,9 +198,9 @@ class RoboConfiguration:
  
          if re.match(r"i.86", platform.machine()):
              self._host_architecture = "ia32"
@@ -32,7 +32,7 @@
              self._host_architecture = "arm64"
          elif platform.machine() == "mips32":
              self._host_architecture = "mipsel"
-@@ -223,6 +217,10 @@ class RoboConfiguration:
+@@ -229,6 +223,10 @@ class RoboConfiguration:
          elif platform.system() == "Windows" or "CYGWIN_NT" in platform.system(
          ):
              self._host_operating_system = "win"
@@ -43,7 +43,7 @@
          else:
              raise ValueError(f"Unsupported platform: {platform.system()}")
  
-@@ -231,8 +229,8 @@ class RoboConfiguration:
+@@ -237,8 +235,8 @@ class RoboConfiguration:
          wd = os.getcwd()
          # Walk up the tree until we find src/AUTHORS
          while wd != "/":

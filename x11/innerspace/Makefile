@@ -1,6 +1,6 @@
 PORTNAME=	innerspace
 PORTVERSION=	0.2.0
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	SAVANNAH/gap
 DISTNAME=	InnerSpace-${PORTVERSION}
@@ -11,7 +11,7 @@ WWW=		https://www.nongnu.org/gap/innerspace/index.html
 
 LICENSE=	GPLv2
 
-USES=		gnustep
+USES= gnustep localbase:ldflags
 USE_GNUSTEP=	back build
 
 post-patch:

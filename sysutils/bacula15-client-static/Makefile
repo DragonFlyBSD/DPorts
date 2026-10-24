@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--disable-build-dird \
 			--enable-static-cons \
 			--enable-static-fd
 
+DFLY_UNMAINTAINED= yes
 .include "${MASTERDIR}/Makefile"
 
 do-install:

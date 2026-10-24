@@ -1,0 +1,11 @@
+--- third_party/angle/angle_common_gn/moz.build.intermediate	2026-09-07 11:55:17 UTC
++++ third_party/angle/angle_common_gn/moz.build
+@@ -134,7 +134,7 @@ if CONFIG["OS_TARGET"] == "Linux":
+         "/third_party/angle/src/common/system_utils_posix.cpp"
+     ]
+ 
+-if CONFIG["OS_TARGET"] == "FreeBSD":
++if CONFIG["OS_TARGET"] in ("DragonFly", "FreeBSD"):
+ 
+     DEFINES["ANGLE_USE_VULKAN_DISPLAY"] = True
+     DEFINES["ANGLE_VULKAN_DISPLAY_MODE_HEADLESS"] = True

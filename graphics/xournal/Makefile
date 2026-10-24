@@ -1,6 +1,6 @@
 PORTNAME=	xournal
 PORTVERSION=	0.4.8.2016
-PORTREVISION=	52
+PORTREVISION=	55
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
@@ -71,5 +71,9 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${PORTDOCS_MAIN:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}/html-doc
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} html-doc/ ${STAGEDIR}${DOCSDIR})
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*-\*-freebsd\*\)@\1 | *-*-dragonfly*@g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
---- chrome/browser/feedback/system_logs/chrome_system_logs_fetcher.cc.orig	2025-05-05 10:57:53 UTC
+--- chrome/browser/feedback/system_logs/chrome_system_logs_fetcher.cc.orig	2026-10-18 13:29:39 UTC
 +++ chrome/browser/feedback/system_logs/chrome_system_logs_fetcher.cc
-@@ -44,7 +44,7 @@
+@@ -45,7 +45,7 @@
  #include "services/network/public/cpp/shared_url_loader_factory.h"
  #endif
  

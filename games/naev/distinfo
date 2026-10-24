@@ -1,3 +1,5 @@
-TIMESTAMP = 1728703065
-SHA256 (naev-0.11.5-source.tar.xz) = b17aebb2a070fc2dbd541ce6604ed924e19a1b7ff2759e3511d72253fa10b17a
-SIZE (naev-0.11.5-source.tar.xz) = 453774708
+TIMESTAMP = 1787889218
+SHA256 (naev-0.13.5-source.tar.xz) = 5949876562d3855c49ace33762689629fcb59aee33c63c0ad8700920f7841a20
+SIZE (naev-0.13.5-source.tar.xz) = 199944560
+SHA256 (naev-cache-0.13.5.tar.gz) = f8569e03980858e7089ba4f9017488f100d8ca82c3a9eb1c4132cd505e3b32cd
+SIZE (naev-cache-0.13.5.tar.gz) = 178669774

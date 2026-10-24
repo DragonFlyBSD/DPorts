@@ -13,7 +13,10 @@ WWW=		https://github.com/libfuse/libfuse
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
-USES=		autoreconf gettext-tools iconv libtool
+
+USES=		autoreconf cpe gettext-tools iconv libtool
+CPE_VENDOR=	libfuse_project
+CPE_PRODUCT=	libfuse
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes

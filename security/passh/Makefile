@@ -1,6 +1,6 @@
 PORTNAME=	passh
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.1
+DISTVERSION=	1.0.2
 CATEGORIES=	security
 
 MAINTAINER=	0mp@FreeBSD.org
@@ -18,6 +18,7 @@ PORTDOCS=	README.md sshpass-broken.md
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 

@@ -1,6 +1,6 @@
---- components/soda/soda_util.cc.orig	2024-06-22 08:49:42 UTC
+--- components/soda/soda_util.cc.orig	2026-05-09 18:09:27 UTC
 +++ components/soda/soda_util.cc
-@@ -20,7 +20,7 @@
+@@ -23,7 +23,7 @@
  #include "base/win/windows_version.h"
  #endif
  
@@ -9,7 +9,7 @@
  #include "base/cpu.h"
  #endif
  
-@@ -45,7 +45,7 @@ bool IsSupportedChromeOS() {
+@@ -39,7 +39,7 @@ bool IsSupportedChromeOS() {
  }
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -18,8 +18,8 @@
  bool IsSupportedLinux() {
  #if defined(ARCH_CPU_X86_FAMILY)
    // Check if the CPU has the required instruction set to run the Speech
-@@ -76,7 +76,7 @@ bool IsSupportedWin() {
- bool IsOnDeviceSpeechRecognitionSupported() {
+@@ -67,7 +67,7 @@ bool IsOnDeviceSpeechRecognitionSupported() {
+   // support Gemini Nano.
  #if BUILDFLAG(IS_CHROMEOS)
    return IsSupportedChromeOS();
 -#elif BUILDFLAG(IS_LINUX)

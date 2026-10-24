@@ -88,6 +88,12 @@ do-install-DOCS-on:
 	@${RM} ${WRKSRC}/../doc/COPYING ${WRKSRC}/../doc/README
 	${INSTALL_DATA} ${WRKSRC}/../doc/* ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@CPP -P@CC -E -P@'	\
+		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's@MAYBE_INLINE_BODY void@void@'	\
+		${WRKSRC}/MD5_std.c
+
 .include <bsd.port.mk>
 
 .if defined(PACKAGE_BUILDING) || defined(BATCH)

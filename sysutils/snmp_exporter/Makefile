@@ -1,9 +1,10 @@
 PORTNAME=	snmp_exporter
 DISTVERSIONPREFIX=v
-DISTVERSION=	0.28.0
+DISTVERSION=	0.29.0
+PORTREVISION=	24
 CATEGORIES=	sysutils
 
-MAINTAINER=	lexi@hemlock.eden.le-fay.org
+MAINTAINER=	ivy@FreeBSD.org
 COMMENT=	SNMP Exporter for Prometheus
 WWW=		https://github.com/prometheus/snmp_exporter
 
@@ -20,6 +21,7 @@ GO_TARGET=	. \
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/snmp_exporter/
-	${INSTALL_DATA} ${FILESDIR}/generator.yml ${STAGEDIR}${PREFIX}/etc/snmp_exporter/generator.yml.sample
+	${INSTALL_DATA} ${WRKSRC}/snmp.yml ${STAGEDIR}${PREFIX}/etc/snmp_exporter/snmp.yml.sample
+	${INSTALL_DATA} ${WRKSRC}/generator/generator.yml ${STAGEDIR}${PREFIX}/etc/snmp_exporter/generator.yml.sample
 
 .include <bsd.port.mk>

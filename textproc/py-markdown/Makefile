@@ -1,9 +1,9 @@
 PORTNAME=	markdown
-PORTVERSION=	3.6
+PORTVERSION=	3.10.3
 CATEGORIES=	textproc python
-MASTER_SITES=	PYPI
+MASTER_SITES=	PYPI \
+		https://github.com/Python-Markdown/markdown/releases/download/${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	Markdown-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python implementation of Markdown
@@ -23,10 +23,4 @@ USE_PYTHON=	autoplist concurrent pep517 unittest
 
 NO_ARCH=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 31000
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>=4.4:devel/py-importlib-metadata@${PY_FLAVOR}
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

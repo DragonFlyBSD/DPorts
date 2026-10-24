@@ -1,7 +1,7 @@
 PORTNAME=	spine
-DISTVERSION=	1.2.29
+DISTVERSION=	1.2.31
 CATEGORIES=	net-mgmt
-MASTER_SITES=	http://www.cacti.net/downloads/${PORTNAME}/
+MASTER_SITES=	https://www.cacti.net/downloads/${PORTNAME}/
 DISTNAME=	cacti-${PORTNAME}-${DISTVERSION}
 
 MAINTAINER=	skreuzer@FreeBSD.org
@@ -19,7 +19,7 @@ USES=		autoreconf libtool mysql ssl
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-mysql=${LOCALBASE} --with-snmp=${LOCALBASE}
-CPPFLAGS+=	`net-snmp-config --cflags`
+CPPFLAGS+=	`net-snmp-config --cflags` -Wno-error=declaration-after-statement
 LDFLAGS+=	`net-snmp-config --libs` -lexecinfo
 
 CONFLICTS_INSTALL=	cacti88

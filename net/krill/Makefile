@@ -1,17 +1,17 @@
 PORTNAME=	krill
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.13.1
-PORTREVISION=	3
+DISTVERSION=	0.16.0
+PORTREVISION=	5
 CATEGORIES=	net
 
 MAINTAINER=	jaap@NLnetLabs.nl
 COMMENT=	RPKI daemon, Certificate Authority and Publication Server
 WWW=		https://github.com/NLnetLabs/krill
 
-LICENSE=	BSD3CLAUSE
+LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS=	amd64 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	ring crate not ported to other architectures
 
 USES=		cargo ssl
@@ -24,22 +24,15 @@ USE_RC_SUBR=	${PORTNAME}
 USERS=		${PORTNAME}
 GROUPS=		${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/krill
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/krillc
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/krillup
-	@${MKDIR} ${STAGEDIR}/${PREFIX}/etc/krill
+	@${MKDIR} ${STAGEDIR}${ETCDIR} \
+		${STAGEDIR}/var/krill
 	${INSTALL_DATA} ${WRKSRC}/defaults/krill.conf \
-		${STAGEDIR}${PREFIX}/etc/krill/krill.conf.sample
-	${INSTALL_MAN} ${WRKSRC}/doc/krill.1 \
-		${STAGEDIR}${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/doc/krillc.1 \
-		${STAGEDIR}${PREFIX}/man/man1/
-	${INSTALL_MAN} ${WRKSRC}/doc/krillup.1 \
-		${STAGEDIR}${PREFIX}/man/man1/
-	${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/defaults/krill.conf \
-		${STAGEDIR}${DOCSDIR}
-	${MKDIR} ${STAGEDIR}/var/krill
+		${STAGEDIR}${ETCDIR}/krill.conf.sample
+.for f in krill.1 krillc.1 krillup.1 krillta.1 krill.conf.5
+	${INSTALL_MAN} ${WRKSRC}/doc/${f}.gz \
+		${STAGEDIR}${MANDIRS}/man${f:E}
+.endfor
 
 .include <bsd.port.mk>

@@ -8,7 +8,7 @@ COMMENT=	Wayland Reference Compositor
 
 LICENSE=	MIT
 
-USES=		alias gmake jpeg libtool pkgconfig tar:xz gl xorg
+USES=		gmake jpeg libtool pkgconfig tar:xz gl xorg
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

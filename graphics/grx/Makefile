@@ -48,6 +48,7 @@ TIFF_LIB_DEPENDS=	libtiff.so:graphics/tiff
 TIFF_CONFIGURE_ENABLE=	tiff
 ZLIB_CONFIGURE_ENABLE=	zlib
 
+MAKE_JOBS_UNSAFE= yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPNG} && empty(PORT_OPTIONS:MZLIB)

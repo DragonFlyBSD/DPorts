@@ -12,9 +12,6 @@ WWW=		https://gcc.gnu.org/
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
 
-BROKEN_mips=		configure: error: cannot compute suffix of object files: cannot compile
-BROKEN_mips64=		configure: error: cannot compute suffix of object files: cannot compile
-
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
 		libmpc.so:math/mpc
@@ -52,16 +49,8 @@ CONFIGURE_ARGS+=--target=${GCC_TARGET} --disable-nls --enable-languages=c,c++ \
 ALL_TARGET=	all-gcc all-target-libgcc
 INSTALL_TARGET=	install-gcc install-target-libgcc
 
+PLIST_FILES= lib/gcc/%%GCC_TARGET%%/%%GCC_VERSION%%/include-fixed/README
 .include <bsd.port.pre.mk>
-
-# Extraction fails with poudriere on aarch64 for GCC 11.
-# It seems that the bug is specific to lang/gcc11 and lang/gcc12 only.
-# No other GCC port is affected.
-# See https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=271052
-# and https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=246670
-.if ${ARCH} == aarch64
-EXTRACT_CMD=    ${SETENV} LC_ALL=en_US.UTF-8 /usr/bin/bsdtar
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/LIBSTDCXX/ s/stdc\+\+/c\+\+/g ' \
@@ -101,5 +90,8 @@ post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/share/info/*
 	@${RM} ${STAGEDIR}${PREFIX}/share/man/man7/*
 	${RM} -r ${STAGEDIR}/usr/lib/gcc/${GCC_TARGET}/${PORTVERSION}/include-fixed
+
+dfly-install:
+	${RM} -v ${STAGEDIR}${LOCALBASE}/lib/gcc/${GCC_TARGET}/${PORTVERSION}/include-fixed/*.h
 
 .include <bsd.port.post.mk>

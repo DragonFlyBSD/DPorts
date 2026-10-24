@@ -2,8 +2,8 @@ PORTNAME=	kidletime
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	devel kde kde-frameworks
 
-COMMENT=	Reporting of idle time of user and system
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Reporting of idle time of user and system
 
 BUILD_DEPENDS=	wayland-protocols>=1.27:graphics/wayland-protocols
 
@@ -14,7 +14,11 @@ USES=		cmake gl kde:6 pkgconfig qt:6 tar:xz xorg
 USE_GL=		gl opengl
 USE_KDE=	ecm:build \
 		plasma-wayland-protocols:build
-USE_QT=		base wayland
+USE_QT=		base wayland tools:build
 USE_XORG=	ice sm x11 xcb xext
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

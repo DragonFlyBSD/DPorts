@@ -1,0 +1,9 @@
+--- packager/mpd/CMakeLists.txt.orig
++++ packager/mpd/CMakeLists.txt
+@@ -110,6 +110,5 @@
+   file
+   absl::flags
+   mpd_builder
+-  mpd_mocks
+   )
+ 

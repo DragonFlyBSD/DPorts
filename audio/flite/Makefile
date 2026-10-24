@@ -27,4 +27,8 @@ post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e "/-shared -Wl/s/)$$/ -lm)/g"	\
+		${WRKSRC}/config/common_make_rules
+
 .include <bsd.port.mk>

@@ -1,6 +1,5 @@
 PORTNAME=	squidclamav
-PORTVERSION=	7.3
-PORTREVISION=	2
+PORTVERSION=	7.5
 CATEGORIES=	www security
 MASTER_SITES=	SF
 
@@ -12,7 +11,7 @@ LICENSE=	GPLv3+
 
 LIB_DEPENDS=	libicapapi.so:www/c-icap
 
-USES=		cpe libtool shebangfix
+USES= cpe libtool shebangfix libarchive
 
 CPE_VENDOR=	darold
 

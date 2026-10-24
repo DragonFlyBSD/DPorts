@@ -1,5 +1,5 @@
 PORTNAME=	mc
-PORTVERSION=	4.8.32
+PORTVERSION=	4.8.33
 CATEGORIES=	misc shells
 MASTER_SITES=	http://ftp.midnight-commander.org/ \
 		https://ftp.osuosl.org/pub/midnightcommander/
@@ -18,18 +18,17 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-src_diffviewer_ydiff.c
 RUN_DEPENDS+=	gdiff:textproc/diffutils
 .endif
 
-USES=		gmake gnome libtool perl5 pkgconfig python shebangfix tar:xz
-SHEBANG_FILES=	${WRKSRC}/src/vfs/extfs/helpers/s3+.in \
-		${WRKSRC}/src/vfs/extfs/helpers/uc1541
-python_OLD_CMD=	@PYTHON@
+USES=		gmake gnome libtool perl5 pkgconfig python:run tar:xz
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ZIP=${LOCALBASE}/bin/zip UNZIP=${UNZIP_NATIVE_CMD}
 
+CONFLICTS_INSTALL=	${PORTNAME}6
+
 PORTDOCS=	AUTHORS FAQ HACKING NEWS README TODO
 
 OPTIONS_DEFINE=	ASPELL DOCS EDITOR EXTATTR ICONV NLS PCRE2 SFTP SUBSHELL X11
-OPTIONS_DEFAULT=	EDITOR ICONV SFTP SLANG SUBSHELL X11
+OPTIONS_DEFAULT=	EDITOR ICONV SFTP NCURSES SUBSHELL X11
 OPTIONS_SINGLE=	SCREEN
 OPTIONS_SINGLE_SCREEN=	SLANG NCURSES
 OPTIONS_SUB=	yes
@@ -76,6 +75,8 @@ SUBSHELL_SUB_FILES=	pkg-message
 X11_BUILD_DEPENDS=	${LOCALBASE}/include/X11/Xlib.h:x11/libX11
 X11_CONFIGURE_WITH=	x
 
+NCURSES_USES= ncurses
+BUILD_DEPENDS= gsed:textproc/gsed
 post-patch-EXTATTR-off:
 	@${REINPLACE_CMD} -e '/found_e2p=/s|yes|disabled|; /e2p library/ \
 		{ s| or|,|; s|)|&, or disabled|; }' ${WRKSRC}/configure
@@ -89,5 +90,11 @@ post-install-X11-on:
 	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps/
 	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.desktop ${STAGEDIR}${DESKTOPDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]sed[[:>:]]@gsed@g' \
+		${WRKSRC}/doc/man/hu/Makefile.in
+	${REINPLACE_CMD} -e 's@-ltermcap@-lncurses@g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

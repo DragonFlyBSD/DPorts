@@ -1,6 +1,6 @@
 PORTNAME=	guile-gnome-platform
 DISTVERSION=	2.16.5
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNU/guile-gnome/${PORTNAME}
 
@@ -155,5 +155,9 @@ post-install:
 	for f in ${INFO_UNUSED}; do \
 		${RM} ${STAGEDIR}${PREFIX}/${INFO_PATH}/$${f}.info*; \
 	done;
+
+dfly-install:
+	-${RM} -fv ${STAGEDIR}${PREFIX}/share/info/guile-gnome-libgnome.info
+	-${RM} -fv ${STAGEDIR}${PREFIX}/share/info/guile-gnome-libgnomeui.info
 
 .include <bsd.port.mk>

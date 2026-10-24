@@ -18,14 +18,10 @@ LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING.LGPL
 
 LIB_DEPENDS=	libogg.so:audio/libogg
 
-USES=		compiler:c11 cpe iconv libtool pathfix pkgconfig tar:xz
+USES=		compiler:c11 cpe iconv libtool pkgconfig tar:xz
 USE_LDCONFIG=	yes
 
 CPE_VENDOR=	flac_project
-
-# Preserve UTF-8 filenames in test/flac-to-flac-metadata-test-files/.
-# They are referenced by the test suite.
-EXTRACT_CMD=	${SETENV} LC_ALL=C.UTF-8 ${TAR}
 
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

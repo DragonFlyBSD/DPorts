@@ -37,6 +37,7 @@ OPENSSL_USES=		ssl
 OPENSSL_CONFIGURE_ON=	--set-tls=2
 OPENSSL_LDFLAGS=	-lssl -lcrypto
 
+DFLY_UNMAINTAINED= yes
 post-configure:
 	${REINPLACE_CMD} -e 's|_IN_H 0|_IN_H 1|g ; \
 		 s|_SOCKET_H 0|_SOCKET_H 1|g' ${WRKSRC}/.config

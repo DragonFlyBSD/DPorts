@@ -12,6 +12,7 @@ CFLAGS+=	-DNO_UTIL -D__dead= -D'SA_LEN(x)=(x)->sa_len'
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST_FILES=	sbin/rdate share/man/man8/${PORTNAME}.8.gz
 
+CFLAGS+= -D__dead=__dead2
 .include <bsd.port.pre.mk>
 
 post-patch:
@@ -27,4 +28,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rdate ${STAGEDIR}${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/rdate.8 ${STAGEDIR}${PREFIX}/share/man/man8
 
+CFLAGS:= ${CFLAGS:N-DNO_UTIL:N-D__dead=}
 .include <bsd.port.post.mk>

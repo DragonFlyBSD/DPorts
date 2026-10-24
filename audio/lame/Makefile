@@ -1,6 +1,6 @@
 PORTNAME=	lame
-DISTVERSION=	3.100
-PORTREVISION=	5
+DISTVERSION=	4.0
+PORTREVISION=	0
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME:tl}/${DISTVERSION}
 
@@ -13,8 +13,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${BUILD_DEPENDS_${ARCH}}
 BUILD_DEPENDS_i386=	nasm:devel/nasm
+LIB_DEPENDS=	libmpg123.so:audio/mpg123
 
-USES=		cpe gmake iconv libtool
+USES=		cpe gmake iconv libtool pkgconfig
 USE_LDCONFIG=	yes
 CPE_VENDOR=	lame_project
 GNU_CONFIGURE=	yes
@@ -31,8 +32,6 @@ post-patch:
 # Fix parallel builds
 	@${REINPLACE_CMD} -e 's,test -d \.libs || mkdir,mkdir -p,' \
 		${WRKSRC}/libmp3lame/i386/Makefile.in
-# Remove undefined symbol from linker version script - XXX to be removed with lame 3.101
-	@${REINPLACE_CMD} -e '/lame_init_old/d' ${WRKSRC}/include/libmp3lame.sym
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmp3lame.so.0

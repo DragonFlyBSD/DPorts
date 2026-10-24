@@ -1,7 +1,7 @@
 PORTNAME=	gum
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.11.0
-PORTREVISION=	4
+DISTVERSION=	2.0.0
+PORTREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	dave@bitboss.ca
@@ -12,7 +12,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		go:modules
-GO_MODULE=	github.com/charmbracelet/gum
+GO_MODULE=	charm.land/gum/v2
 
 PLIST_FILES=	bin/gum \
 		etc/bash_completion.d/gum.bash \
@@ -20,6 +20,7 @@ PLIST_FILES=	bin/gum \
 		share/man/man1/gum.1.gz \
 		share/zsh/site-functions/_gum
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-build:
 	${GO_WRKDIR_BIN}/${PORTNAME} man > ${WRKSRC}/${PORTNAME}.1
 .for SHELL in bash fish zsh
@@ -27,13 +28,13 @@ post-build:
 .endfor
 
 post-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d \
+		 ${STAGEDIR}${PREFIX}/share/fish/completions \
+		 ${STAGEDIR}${PREFIX}/share/zsh/site-functions
 	${INSTALL_DATA} ${WRKSRC}/bash \
 		${STAGEDIR}${PREFIX}/etc/bash_completion.d/${PORTNAME}.bash
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/completions
 	${INSTALL_DATA} ${WRKSRC}/fish \
 		${STAGEDIR}${PREFIX}/share/fish/completions/${PORTNAME}.fish
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions
 	${INSTALL_DATA} ${WRKSRC}/zsh \
 		${STAGEDIR}${PREFIX}/share/zsh/site-functions/_${PORTNAME}
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/share/man/man1

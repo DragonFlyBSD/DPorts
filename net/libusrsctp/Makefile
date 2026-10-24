@@ -24,13 +24,10 @@ PLIST_FILES=	include/usrsctp.h \
 		lib/libusrsctp.so.2.0.0 \
 		libdata/pkgconfig/usrsctp.pc
 
-CFLAGS+=	-Wno-error
-
-.include <bsd.port.pre.mk>
+CFLAGS+= -Wno-error -Wno-format-truncation
 
 post-patch:
-.if ${OSVERSION} >= 1400000
 	@${REINPLACE_CMD} -e 's|ip6protosw.h|ip6_var.h|g' \
 		${WRKSRC}/usrsctplib/netinet/sctp_os_userspace.h
-.endif
-.include <bsd.port.post.mk>
+
+.include <bsd.port.mk>

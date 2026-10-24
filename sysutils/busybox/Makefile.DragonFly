@@ -1,4 +1,0 @@
-USES+= alias
-
-# zrj: for strchrnul()
-CFLAGS+= -D__FreeBSD_version=1300029

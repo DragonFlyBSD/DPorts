@@ -21,6 +21,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-2.2.2
 
 OPTIONS_DEFINE=	DOCS
 
+MAKE_ENV= NOMAN=yes NO_WERROR=yes
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD

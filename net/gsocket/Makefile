@@ -26,4 +26,6 @@ GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 INSTALL_TARGET=	install-strip
 
+BROKEN_SSL= libressl
+BROKEN_SSL_REASON_libressl= port requires openssl/srp.h
 .include <bsd.port.mk>

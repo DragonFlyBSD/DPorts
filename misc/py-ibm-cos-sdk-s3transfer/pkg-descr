@@ -1,0 +1,4 @@
+IBM COS SDK S3 Transfer provides the IBM Cloud Object Storage transfer
+manager for Python. It handles multipart uploads, parallel downloads,
+and other transfer optimizations for efficient data movement to and
+from IBM Cloud Object Storage.

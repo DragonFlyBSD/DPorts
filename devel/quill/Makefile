@@ -1,7 +1,7 @@
 PORTNAME=	quill
-DISTVERSIONPREFIX=	v
-DISTVERSION=	8.1.0
+DISTVERSION=	13.0.0
 CATEGORIES=	devel
+MASTER_SITES=	https://github.com/odygrd/quill/releases/download/v${DISTVERSION}/
 PKGNAMESUFFIX=	-logging-library
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,15 +11,14 @@ WWW=		https://github.com/odygrd/quill
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake:testing compiler:c++17-lang
+TEST_DEPENDS=	doctest>0:devel/doctest
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	odygrd
+USES=		cmake:testing compiler:c++17-lang zip
 
-CMAKE_TESTING_ON=	QUILL_BUILD_TESTS # 1 tests fails, see https://github.com/odygrd/quill/issues/550
+CMAKE_TESTING_ON=	QUILL_BUILD_TESTS
 
 NO_ARCH=	yes
 
-# tests fail to compile: https://github.com/odygrd/quill/issues/646
+# tests as of 13.0.0: 100% tests passed, 0 tests failed out of 419
 
 .include <bsd.port.mk>

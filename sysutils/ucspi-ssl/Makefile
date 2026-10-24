@@ -55,4 +55,8 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s|\(-lssl -lcrypto\)|-L${OPENSSLLIB} \1|" \
+		${WRKSRC}/conf-ssllib
+
 .include <bsd.port.post.mk>

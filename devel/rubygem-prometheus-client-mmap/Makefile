@@ -1,5 +1,6 @@
 PORTNAME=	prometheus-client-mmap
-PORTVERSION=	1.2.10
+PORTVERSION=	1.6.1
+PORTREVISION=	1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -9,10 +10,10 @@ WWW=		https://gitlab.com/gitlab-org/prometheus-client-mmap
 
 LICENSE=	APACHE20
 
-RUN_DEPENDS=	rubygem-base64>=0:converters/rubygem-base64 \
-		rubygem-bigdecimal>=0:math/rubygem-bigdecimal \
+RUN_DEPENDS=	rubygem-base6402>=0:converters/rubygem-base6402 \
+		rubygem-bigdecimal-gitlab>=0:math/rubygem-bigdecimal-gitlab \
 		rubygem-logger-gitlab>=0:devel/rubygem-logger-gitlab \
-		rubygem-rb_sys>=0.9.109<0.10:lang/rubygem-rb_sys
+		rubygem-rb_sys>=0.9.128<0.10:lang/rubygem-rb_sys
 
 USES=		cargo gem gmake llvm:build
 
@@ -25,7 +26,7 @@ CARGO_CARGOTOML=	${WRKSRC}/Cargo.toml
 CARGO_CARGOLOCK=	${WRKSRC}/Cargo.lock
 CARGO_BUILD=	no
 CARGO_INSTALL=	no
-GEM_ENV+=	MAKE=gmake
+GEM_ENV+= MAKE=gmake LIBCLANG_PATH=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
 
 # update the crates file with: make cargo-crates > Makefile.crates
 

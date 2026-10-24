@@ -35,4 +35,8 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/xrick
 	${INSTALL_DATA} ${WRKSRC}/data.zip ${STAGEDIR}${PREFIX}/share/xrick
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ -ansi @@g' \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

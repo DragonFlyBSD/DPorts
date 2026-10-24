@@ -1,37 +1,39 @@
 PORTNAME=	vulkan-loader
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.311
+DISTVERSION=	1.4.360
 CATEGORIES=	graphics devel
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	Driver loader for the Vulkan graphics API
 WWW=		https://github.com/KhronosGroup/Vulkan-Loader
 
 LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers
 
-USES=		alias cmake compiler:c++11-lib pkgconfig python:build
+USES=		cmake compiler:c++11-lib pkgconfig python:build
 USE_GITHUB=	yes
-USE_LDCONFIG=	yes
 GH_ACCOUNT=	KhronosGroup
 GH_PROJECT=	Vulkan-Loader
+USE_LDCONFIG=	yes
 CMAKE_ON=	CMAKE_SKIP_RPATH
 CMAKE_OFF=	BUILD_TESTS
-PLIST_SUB=	VERSION=${DISTVERSION:C/-.*//}
+PLIST_SUB=	VERSION=${DISTVERSION}
 
-OPTIONS_DEFINE=	WAYLAND XCB XLIB
-OPTIONS_DEFAULT=WAYLAND XCB XLIB
+OPTIONS_DEFINE=		WAYLAND XCB XLIB
+OPTIONS_DEFAULT=	WAYLAND XCB XLIB
+
+XCB_DESC=		${X11_DESC} via libxcb
+XLIB_DESC=		${X11_DESC} via libX11
 
 WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 WAYLAND_CMAKE_BOOL=	BUILD_WSI_WAYLAND_SUPPORT
 
-XCB_DESC=		${X11_DESC} via libxcb
 XCB_USES=		xorg
 XCB_USE=		XORG=xcb
 XCB_CMAKE_BOOL=		BUILD_WSI_XCB_SUPPORT
 
-XLIB_DESC=		${X11_DESC} via libX11
 XLIB_USES=		xorg
 XLIB_USE=		XORG=x11,xrandr
 XLIB_CMAKE_BOOL=	BUILD_WSI_XLIB_SUPPORT
@@ -45,5 +47,8 @@ post-patch:
 		-e '/FALLBACK/s,/etc,${PREFIX}&,' \
 		-e 's,/usr/local,${PREFIX},' \
 		${WRKSRC}/CMakeLists.txt
+
+dfly-patch:
+	${REINPLACE_CMD} 's@_XOPEN_SOURCE@&__z@g' ${WRKSRC}/loader/CMakeLists.txt
 
 .include <bsd.port.mk>

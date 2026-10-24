@@ -1,4 +1,5 @@
 Revert TCPWRAPPER removal -bdrewery
+Syncs in sshd.c changes from src as well.
 
 commit f2719b7c2b8a3b14d778d8a6d8dc729b5174b054
 Author: Damien Miller <djm@mindrot.org>
@@ -33,19 +34,11 @@ index 289e13d..e6a900b 100644
  .Xr login.conf 5 ,
  .Xr moduli 5 ,
  .Xr sshd_config 5 ,
-diff --git sshd.c sshd.c
-index 0ade557..045f149 100644
---- sshd.c.orig	2018-04-04 15:34:54.865684000 -0700
-+++ sshd.c	2018-04-04 15:40:20.964130000 -0700
-@@ -1,4 +1,4 @@
--/* $OpenBSD: sshd.c,v 1.506 2018/03/03 03:15:51 djm Exp $ */
-+/* $OpenBSD: sshd.c,v 1.422 2014/03/27 23:01:27 markus Exp $ */
- /*
-  * Author: Tatu Ylonen <ylo@cs.hut.fi>
-  * Copyright (c) 1995 Tatu Ylonen <ylo@cs.hut.fi>, Espoo, Finland
-@@ -131,6 +131,13 @@
- #include "version.h"
- #include "ssherr.h"
+--- sshd-session.c.orig	2024-07-01 13:26:10.677919000 -0700
++++ sshd-session.c	2024-07-01 13:26:58.873906000 -0700
+@@ -110,6 +110,13 @@
+ #include "srclimit.h"
+ #include "dh.h"
  
 +#ifdef LIBWRAP
 +#include <tcpd.h>
@@ -57,7 +50,7 @@ index 0ade557..045f149 100644
  /* Re-exec fds */
  #define REEXEC_DEVCRYPTO_RESERVED_FD	(STDERR_FILENO + 1)
  #define REEXEC_STARTUP_PIPE_FD		(STDERR_FILENO + 2)
-@@ -2072,6 +2079,25 @@ main(int ac, char **av)
+@@ -1256,7 +1263,26 @@ main(int ac, char **av)
  #endif
  
  	rdomain = ssh_packet_rdomain_in(ssh);
@@ -68,7 +61,7 @@ index 0ade557..045f149 100644
 +	/* Check whether logins are denied from this host. */
 +	if (ssh_packet_connection_is_on_socket(ssh)) {
 +		struct request_info req;
-+
+ 
 +		request_init(&req, RQ_DAEMON, __progname, RQ_FILE, sock_in, 0);
 +		fromhost(&req);
 +
@@ -80,9 +73,10 @@ index 0ade557..045f149 100644
 +		}
 +	}
 +#endif /* LIBWRAP */
- 
++
  	/* Log the connection. */
  	laddr = get_local_ipaddr(sock_in);
+ 	verbose("Connection from %s port %d on %s port %d%s%s%s",
 --- configure.ac.orig	2022-02-23 03:31:11.000000000 -0800
 +++ configure.ac	2022-03-02 12:47:49.958341000 -0800
 @@ -1599,6 +1599,62 @@ else
@@ -156,3 +150,72 @@ index 0ade557..045f149 100644
  echo "                   libedit support: $LIBEDIT_MSG"
  echo "                   libldns support: $LDNS_MSG"
  echo "  Solaris process contract support: $SPC_MSG"
+--- sshd.c.orig	2024-06-30 21:36:28.000000000 -0700
++++ sshd.c	2024-07-01 13:44:05.739756000 -0700
+@@ -90,6 +100,10 @@
+ #include "ssh-gss.h"
+ #endif
+ #include "monitor_wrap.h"
++#ifdef LIBWRAP
++#include <tcpd.h>
++#include <syslog.h>
++#endif /* LIBWRAP */
+ 
+ /* Re-exec fds */
+ #define REEXEC_DEVCRYPTO_RESERVED_FD	(STDERR_FILENO + 1)
+@@ -925,7 +939,12 @@ server_accept_loop(int *sock_in, int *sock_out, int *n
+ 	socklen_t fromlen;
+ 	u_char rnd[256];
+ 	sigset_t nsigset, osigset;
++#ifdef LIBWRAP
++	struct request_info req;
+ 
++	request_init(&req, RQ_DAEMON, __progname, 0);
++#endif
++
+ 	/* pipes connected to unauthenticated child sshd processes */
+ 	child_alloc();
+ 	startup_pollfd = xcalloc(options.max_startups, sizeof(int));
+@@ -1133,6 +1152,42 @@ server_accept_loop(int *sock_in, int *sock_out, int *n
+ 					usleep(100 * 1000);
+ 				continue;
+ 			}
++#ifdef LIBWRAP
++			/* Check whether logins are denied from this host. */
++			request_set(&req, RQ_FILE, *newsock,
++			    RQ_CLIENT_NAME, "", RQ_CLIENT_ADDR, "", 0);
++			sock_host(&req);
++			if (!hosts_access(&req)) {
++				const struct linger l = { .l_onoff = 1,
++				    .l_linger  = 0 };
++
++				(void )setsockopt(*newsock, SOL_SOCKET,
++				    SO_LINGER, &l, sizeof(l));
++				(void )close(*newsock);
++				/*
++				 * Mimic message from libwrap's refuse() as
++				 * precisely as we can afford.  The authentic
++				 * message prints the IP address and the
++				 * hostname it resolves to in parentheses.  If
++				 * the IP address cannot be resolved to a
++				 * hostname, the IP address will be repeated
++				 * in parentheses.  As name resolution in the
++				 * main server loop could stall, and logging
++				 * resolved names adds little or no value to
++				 * incident investigation, this implementation
++				 * only repeats the IP address in parentheses.
++				 * This should resemble librwap's refuse()
++				 * closely enough not to break auditing
++				 * software like sshguard or custom scripts.
++				 */
++				syslog(LOG_WARNING,
++				    "refused connect from %s (%s)",
++				    eval_hostaddr(req.client),
++				    eval_hostaddr(req.client));
++				debug("Connection refused by tcp wrapper");
++				continue;
++			}
++#endif /* LIBWRAP */
+ 			if (unset_nonblock(*newsock) == -1) {
+ 				close(*newsock);
+ 				continue;

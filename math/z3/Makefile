@@ -36,6 +36,9 @@ LDFLAGS_i386=		-Wl,-znotext
 BUILD_WRKSRC=		${WRKSRC}/build
 INSTALL_WRKSRC=		${WRKSRC}/build
 
+CONFIGURE_ENV= USE_OPENMP=0
+MAKE_ENV= USE_OPENMP=0
+BUILD_DEPENDS= ${PYTHON_PKGNAMEPREFIX}setuptools>=63:devel/py-setuptools@${PY_FLAVOR}
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/z3
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libz3.so

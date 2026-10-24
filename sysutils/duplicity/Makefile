@@ -1,8 +1,6 @@
 PORTNAME=	duplicity
-DISTVERSION=	3.0.4
-PORTREVISION=	1
+DISTVERSION=	3.2.2
 CATEGORIES=	sysutils
-MASTER_SITES=	PYPI
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Backup tool that uses librsync and GnuPG
@@ -12,38 +10,35 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pip>0:devel/py-pip@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pipx>0:devel/py-pipx@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}setuptools-gettext>0:devel/py-setuptools-gettext@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 LIB_DEPENDS=	librsync.so:net/librsync
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fasteners>=0:devel/py-fasteners@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}future>0:devel/py-future@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}mock>0:devel/py-mock@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}paramiko>=0:security/py-paramiko@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fasteners>=0.19:devel/py-fasteners@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}httplib2>0:www/py-httplib2@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}paramiko>0:security/py-paramiko@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pexpect>0:misc/py-pexpect@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}urllib3>=0:net/py-urllib3@${PY_FLAVOR}
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}black>0:devel/py-black@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pytest-pycodestyle>0:devel/py-pytest-pycodestyle@${PY_FLAVOR} \
-		gtar>0:archivers/gtar \
-		par2cmdline>0:archivers/par2cmdline \
-		pylint${PYTHON_PKGNAMESUFFIX}>0:devel/pylint@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}pysocks>0:net/py-pysocks@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycodestyle>0:devel/py-pycodestyle@${PY_FLAVOR} \
+		gtar:archivers/gtar
 
-USES=		cpe localbase python shebangfix
+USES=		cpe gettext-tools localbase python shebangfix
 CPE_VENDOR=	${PORTNAME}_project
+USE_GITLAB=	yes
+GL_TAGNAME=	rel.${DISTVERSION}
 USE_LDCONFIG=	yes
 USE_PYTHON=	autoplist noflavors pep517 pytest
 
-PYTEST_IGNORED_TESTS=	test_code.py #https://lists.nongnu.org/archive/html/duplicity-talk/2025-02/msg00007.html
+# TestCode only runs upstream linters (black, pylint, pycodestyle)
+PYTEST_IGNORED_TESTS=	TestCode
 
 SHEBANG_FILES=	duplicity/__main__.py testing/overrides/bin/*
 
-PORTDOCS=	AUTHORS.md README-LOG.md README-REPO.md README-TESTING.md \
-		README.md
+PORTDOCS=	AUTHORS.md CHANGELOG.md README-LOG.md README.md
 
-OPTIONS_DEFINE=		B2 DOCS DROPBOX FTP FTPS GDOCS NLS S3
+OPTIONS_DEFINE=		B2 DOCS DROPBOX FTP FTPS S3
 OPTIONS_DEFAULT=	B2 DROPBOX GNUPG2 S3
-OPTIONS_GROUP=		GPG
 OPTIONS_SINGLE=		GPG
 OPTIONS_SINGLE_GPG=	GNUPG GNUPG2
 
@@ -51,21 +46,17 @@ B2_DESC=	Backblaze B2 backend
 DROPBOX_DESC=	Dropbox backend
 FTP_DESC=	FTP backend
 FTPS_DESC=	FTPS backend
-GDOCS_DESC=	Google Docs backend
 GPG_DESC=	GnuPG support
 GNUPG_DESC=	Use GnuPG 1
 GNUPG2_DESC=	Use GnuPG 2
 S3_DESC=	Amazon S3 backend
 
-B2_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}b2sdk>=0.1.8:devel/py-b2sdk@${PY_FLAVOR}
+B2_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}b2sdk>0:devel/py-b2sdk@${PY_FLAVOR}
 DROPBOX_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dropbox>0:www/py-dropbox@${PY_FLAVOR}
 FTP_RUN_DEPENDS=	ncftp>=3.2.2:ftp/ncftp3
 FTPS_RUN_DEPENDS=	lftp>=3.7.15:ftp/lftp
-GDOCS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}PyDrive2>0:www/py-pydrive2@${PY_FLAVOR}
 GNUPG_RUN_DEPENDS=	gnupg1>=1.4.7:security/gnupg1
 GNUPG2_RUN_DEPENDS=	gpg2:security/gnupg
-NLS_USES=		gettext-tools
-NLS_EXTRA_PATCHES_OFF=	${FILESDIR}/extra-patch-setup.py
 S3_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}boto3>0:www/py-boto3@${PY_FLAVOR}
 
 post-install:
@@ -74,9 +65,5 @@ post-install:
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
-
-pre-test:
-	@${REINPLACE_CMD} -e 's,python3,${PYTHON_CMD:T},' \
-		${WRKSRC}/testing/functional/__init__.py
 
 .include <bsd.port.mk>

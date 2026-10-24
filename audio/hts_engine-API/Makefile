@@ -13,6 +13,7 @@ LICENSE=	BSD3CLAUSE
 
 HAS_CONFIGURE=	yes
 
+PLIST= ${WRKDIR}/fixed-plist
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/AUTHORS   ${STAGEDIR}${DOCSDIR}
@@ -21,5 +22,8 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/INSTALL   ${STAGEDIR}${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/NEWS      ${STAGEDIR}${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/README    ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/@dir share\/licenses\/hts_engine-API/d' > ${PLIST}
 
 .include <bsd.port.mk>

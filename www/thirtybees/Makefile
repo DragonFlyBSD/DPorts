@@ -1,8 +1,8 @@
 PORTNAME=	thirtybees
-PORTVERSION=	1.3.0
+PORTVERSION=	1.7.0
 CATEGORIES=	www finance
-MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/${PORTVERSION}/
-DISTNAME=	${PORTNAME}-v${PORTVERSION}
+MASTER_SITES=	https://thirtybees.com/versions/
+DISTNAME=	${PORTNAME}-v${PORTVERSION}-php8.3
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Mature e-commerce solution
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSES
 USES=		php:web zip
 USE_PHP=	bcmath curl gd imap mbstring opcache pdo_mysql \
 		soap xml zip
-IGNORE_WITH_PHP=80
+IGNORE_WITH_PHP=85 86
 
 NO_BUILD=	yes
 NO_ARCH=	yes
@@ -26,7 +26,25 @@ PLIST_SUB=	THIRTYBEES_USER=${THIRTYBEES_USER} \
 THIRTYBEES_USER?=	${WWWOWN}
 THIRTYBEES_GROUP?=	${WWWGRP}
 
+IGNORE= unmaintained, please request fixing to users mailing list
+post-extract:
+	@${RM} -r ${WRKSRC}/.github
+
 do-install:
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR}
+
+dfly-install:
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/blockcustomerprivacy
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/blocklink
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/blockpermanentlinks
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/blockreinsurance
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/blocksharefb
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/crossselling
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/ecbexchange
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/productscategory
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/producttooltip
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/sendtoafriend
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/trackingfront
+	${RMDIR} ${STAGEDIR}${WWWDIR}/modules/vatnumber
 
 .include <bsd.port.mk>

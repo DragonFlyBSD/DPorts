@@ -1,2 +1,0 @@
-#IGNORE=   unmaintained, please request fixing to users mailing list
-USE_GCC_VERSION=	${GCC_DEFAULT}

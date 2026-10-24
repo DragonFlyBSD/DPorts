@@ -35,6 +35,7 @@ STRIP_FILES=	bin/elf2hex \
 		lib/libriscv.so \
 		lib/libsoftfloat.so
 
+BUILD_DEPENDS= dtc>0:sysutils/dtc
 post-patch:
 	${REINPLACE_CMD} -e \
 	's|[(]install_libs_dir[)]/pkgconfig|(INSTALLDIR)/libdata/pkgconfig|g' \

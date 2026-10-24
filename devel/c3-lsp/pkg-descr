@@ -1,0 +1,9 @@
+c3-lsp is a language server for the C3 programming language.
+
+It provides editor features such as code completion, go to definition,
+go to declaration, hover information and signature help. The server can
+also resolve standard library symbols for supported c3c versions, so that
+completion and hover work across the stdlib.
+
+The server binary is installed as c3lsp and is meant to be launched by an
+editor plugin (Neovim, VS Code, Emacs, ...) configured to point at it.

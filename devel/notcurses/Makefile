@@ -1,7 +1,7 @@
 PORTNAME=	notcurses
 DISTVERSIONPREFIX=	v
-DISTVERSION=	${ABIVERSION}.0.8
-PORTREVISION=	4
+DISTVERSION=	${ABIVERSION}.0.16
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/:docs
 DISTFILES=	${PORTNAME}-doc-${DISTVERSION}.tar.gz:docs
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libavformat.so:multimedia/ffmpeg \
 		libqrcodegen.so:graphics/qr-code-generator \
 		libunistring.so:devel/libunistring
 
-USES=		cmake:noninja compiler:c++17-lang localbase pkgconfig
+USES=		cmake:noninja compiler:c++17-lang localbase ncurses pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	dankamongmen
 USE_LDCONFIG=	yes
@@ -39,15 +39,9 @@ OPTIONS_SUB=		yes
 
 ABIVERSION=	3
 
-.include <bsd.port.options.mk>
-
-# ncursesw and tinfo >= 6.1 seem to be needed (see CMakeLists.txt:l104)
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1400035
-USES+=ncurses:port
-.else
-USES+=ncurses
-.endif
-
+BUILD_DEPENDS= cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
 post-patch-DOCS-off:
 	@${REINPLACE_CMD} -e 's|install(FILES $${MARKDOWN} DESTINATION $${CMAKE_INSTALL_DOCDIR})|#install(FILES $${MARKDOWN} DESTINATION $${CMAKE_INSTALL_DOCDIR})|' \
 		${WRKSRC}/CMakeLists.txt
@@ -57,5 +51,9 @@ post-install-MANPAGES-on:
 	# we don't want to install e.g. "notcurses-x.x.1"
 	${FIND} ${WRKDIR} -maxdepth 1 -type f -iname \*.1 -execdir ${INSTALL_MAN} {} ${STAGEDIR}${PREFIX}/share/man/man1 \;
 	${FIND} ${WRKDIR} -maxdepth 1 -type f -iname \*.3 -execdir ${INSTALL_MAN} {} ${STAGEDIR}${PREFIX}/share/man/man3 \;
+
+dfly-patch:
+	${REINPLACE_CMD} 's@tarGET_Link_libraries(ncls@& PUBLIC -lstdc++fs@g' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

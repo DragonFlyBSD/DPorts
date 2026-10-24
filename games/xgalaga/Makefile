@@ -28,6 +28,7 @@ OPTIONS_SUB=	yes
 
 SOUND_CONFIGURE_OFF=	--without-sound
 
+CONFIGURE_ARGS+= ac_cv_build=x86_64-unknown-dragonfly4
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/xgalaga
 

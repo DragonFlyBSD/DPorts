@@ -1,0 +1,6 @@
+Perfetto is an open-source suite of SDKs, daemons and tools which use tracing
+to help developers understand the behaviour of complex systems and root-cause
+functional and performance issues on client and embedded systems.
+
+It is a production-grade tool that is the default tracing system for the
+Android operating system and the Chromium browser.

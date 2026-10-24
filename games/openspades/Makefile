@@ -1,6 +1,6 @@
 PORTNAME=	openspades
 PORTVERSION=	0.1.3
-PORTREVISION=	4
+PORTREVISION=	6
 DISTVERSIONPREFIX=	v
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/yvt/openspades-paks/releases/download/r33/:data
@@ -45,5 +45,13 @@ post-patch:
 
 post-install:
 	cd ${WRKSRC}/Resources/ && ${COPYTREE_SHARE} "Gfx Locales Maps Models PackageInfo.json Scripts Shaders Sounds Textures *.pak" ${STAGEDIR}${DATADIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/[[:<:]]isinf[[:>:]]/std::isinf/g'	\
+			 -e 's/[[:<:]]isnan[[:>:]]/std::isnan/g'	\
+			 -e 's/std::std::/std::/g'			\
+		${WRKSRC}/Sources/Client/Client_Input.cpp		\
+		${WRKSRC}/Sources/Client/Corpse.cpp			\
+		${WRKSRC}/Sources/Draw/SWMapRenderer.cpp
 
 .include <bsd.port.mk>

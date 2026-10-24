@@ -1,6 +1,6 @@
 PORTNAME=	apricots
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.8
+DISTVERSION=	0.2.9
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -25,6 +25,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/apricots.desktop \
 		${STAGEDIR}${PREFIX}/share/applications/

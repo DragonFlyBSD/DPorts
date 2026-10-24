@@ -47,4 +47,7 @@ post-install:
 .endfor
 	@${MV} ${STAGEDIR}${ETCDIR}/pandora_agent.conf ${STAGEDIR}${ETCDIR}/pandora_agent.conf.sample
 
+dfly-patch:
+	${LN} -sv ${WRKSRC}/FreeBSD ${WRKSRC}/DragonFly
+
 .include <bsd.port.post.mk>

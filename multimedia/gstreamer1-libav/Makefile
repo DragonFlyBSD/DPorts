@@ -21,7 +21,7 @@ USE_GNOME=	glib20
 SHEBANG_FILES=	scripts/extract-release-date-from-doap-file.py \
 		scripts/gen-changelog.py \
 
-MESON_ARGS=	-Ddoc=disabled
+MESON_ARGS= -Ddoc=disabled -Dtests=disabled
 
 PORTSCOUT=	limitw:1,even
 

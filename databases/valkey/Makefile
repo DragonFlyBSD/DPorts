@@ -1,15 +1,15 @@
 PORTNAME=	valkey
-DISTVERSION=	7.2.7
+DISTVERSION=	9.1.2
 CATEGORIES=	databases
 
-MAINTAINER=	yasu@FreeBSD.org
+MAINTAINER=	bofh@freebsd.org
 COMMENT=	High-performance data structure server that primarily serves key/value workloads
 WWW=		https://valkey.io/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gmake pkgconfig tcl:test
+USES=		cpe gmake pkgconfig tcl:test
 USE_GITHUB=	yes
 GH_ACCOUNT=	valkey-io
 USE_RC_SUBR=	valkey valkeysentinel
@@ -50,6 +50,9 @@ VALKEY_DBDIR?=	/var/db/valkey
 VALKEY_RUNDIR?=	/var/run/valkey
 VALKEY_LOGDIR?=	/var/log/valkey
 
+CPE_VENDOR=	lfprojects
+
+DFLY_UNMAINTAINED= yes
 post-build:
 	${SED} ${SUB_LIST:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} \
 		${WRKSRC}/valkey.conf > ${WRKDIR}/valkey.conf
@@ -62,6 +65,9 @@ post-install:
 	${MKDIR} ${STAGEDIR}${VALKEY_LOGDIR} \
 		${STAGEDIR}${VALKEY_DBDIR} \
 		${STAGEDIR}${VALKEY_RUNDIR}
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/valkey-benchmark
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/valkey-cli
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/valkey-server
 
 do-test:
 	@cd ${WRKSRC} && ${TCLSH} tests/test_helper.tcl

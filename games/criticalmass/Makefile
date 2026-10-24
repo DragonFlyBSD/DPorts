@@ -35,4 +35,8 @@ PLIST_DIRS=	share/Critical_Mass
 
 DESKTOP_ENTRIES="CriticallMass" "" "" "critter" "" ""
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-DGAME_HAS_HERO_PARTICLE@-DGL_GLEXT_PROTOTYPES &@g' \
+		${WRKSRC}/configure
+
 .include <bsd.port.mk>

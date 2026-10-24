@@ -1,10 +1,10 @@
 PORTNAME=	starfighter
 PORTVERSION=	2.4
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 
-MAINTAINER=	alfix86@gmail.com
+MAINTAINER=	asiciliano@FreeBSD.org
 COMMENT=	Liberate the universe from the evil company WEAPCO
 WWW=		https://pr-starfighter.github.io/
 

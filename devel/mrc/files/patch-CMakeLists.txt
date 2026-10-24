@@ -1,0 +1,15 @@
+-- Install examples to share/examples/mrc instead of share/doc/mrc
+-- so that the EXAMPLES option works correctly in the FreeBSD port.
+-- The trailing slash on "examples/" installs directory contents
+-- rather than the directory itself.
+--
+--- CMakeLists.txt.orig	2026-04-08 13:44:36 UTC
++++ CMakeLists.txt
+@@ -110,6 +110,6 @@ endif()
+ 	install(FILES doc/mrc.1 DESTINATION share/man/man1)
+ endif()
+ 
+-install(DIRECTORY examples DESTINATION share/doc/mrc PATTERN build EXCLUDE)
++install(DIRECTORY examples/ DESTINATION share/examples/mrc PATTERN build EXCLUDE)
+ 
+ # add_subdirectory(examples/simple)

@@ -1,0 +1,23 @@
+PORTNAME=	gwm
+DISTVERSIONPREFIX=	v
+DISTVERSION=	1.10.0
+PORTREVISION=	1
+CATEGORIES=	devel
+
+MAINTAINER=	olgeni@FreeBSD.org
+COMMENT=	Git worktree manager with CLI and TUI
+WWW=		https://github.com/kbrdn1/gwm-cli
+
+LICENSE=	APACHE20 MIT
+LICENSE_COMB=	dual
+LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
+LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
+
+USES=		cargo
+USE_GITHUB=	yes
+GH_ACCOUNT=	kbrdn1
+GH_PROJECT=	gwm-cli
+
+PLIST_FILES=	bin/gwm
+
+.include <bsd.port.mk>

@@ -1,5 +1,0 @@
-SUB_FILES=	pkg-message
-
-.if !exists(/etc/rc.d/hostapd)
-USE_RC_SUBR=	hostapd
-.endif

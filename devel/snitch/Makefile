@@ -1,6 +1,6 @@
 PORTNAME=	snitch
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.5
+DISTVERSION=	1.3.2
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-testing
 
@@ -11,7 +11,9 @@ WWW=		https://github.com/cschreib/snitch
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake compiler:c++20-lang
+TEST_DEPENDS=	doctest>0:devel/doctest
+
+USES=		cmake:testing compiler:c++20-lang
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -31,5 +33,23 @@ CMAKE_ON=	SNITCH_HEADER_ONLY
 NO_ARCH=	yes
 CONFLICTS_INSTALL=	snitch-testing # see https://github.com/cschreib/snitch/issues/125
 .endif
+
+CMAKE_ON+=		SNITCH_USE_SYSTEM_DOCTEST
+CMAKE_TESTING_ON=	SNITCH_DO_TEST SNITCH_ENABLE
+CMAKE_TESTING_TARGET=	snitch_runtime_tests_run \
+			snitch_runtime_tests_self_run \
+			snitch_approval_tests_run # unclear how to run all tests
+
+DFLY_UNMAINTAINED= yes
+post-install:
+	@${RM} ${STAGEDIR}${PREFIX}/doc/snitch/LICENSE
+	@${RMDIR} \
+		${STAGEDIR}${PREFIX}/doc/snitch \
+		${STAGEDIR}${PREFIX}/doc
+
+# tests as of 1.3.2:
+# [doctest] test cases:    3 |    3 passed | 0 failed | 0 skipped
+# [doctest] assertions: 3407 | 3407 passed | 0 failed |
+# [doctest] Status: SUCCESS!
 
 .include <bsd.port.mk>

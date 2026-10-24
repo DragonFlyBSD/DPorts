@@ -31,4 +31,4 @@ post-patch:
 # the environment... There is no obvious way to prevent bsd.port.mk
 # from adding CFLAGS and CXXFLAGS to the build environment, so we
 # remove them here.
-MAKE_ENV:=	${MAKE_ENV:NCFLAGS=*:NCXXFLAGS=*}
+MAKE_ENV:= ${MAKE_ENV:NCFLAGS=*:NCXXFLAGS=*} CWARNFLAGS=-fcommon

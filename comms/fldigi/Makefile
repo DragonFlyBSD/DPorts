@@ -1,68 +1,65 @@
 PORTNAME=	fldigi
-DISTVERSION=	4.1.20
-PORTREVISION=	1
+DISTVERSION=	4.2.13
 CATEGORIES=	comms hamradio
-MASTER_SITES=	http://www.w1hkj.com/files/fldigi/
+MASTER_SITES=	SF/fldigi/${PORTNAME}
 
 MAINTAINER=	hamradio@FreeBSD.org
 COMMENT=	Digital decoder for psk, cw, psk31, olivia
+WWW=		https://www.w1hkj.org/FldigiHelp/
 
 LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	asciidoc:textproc/asciidoc\
-		docbook-xsl>=1.0:textproc/docbook-xsl\
+BUILD_DEPENDS=	asciidoc:textproc/asciidoc \
+		docbook-xsl>=1.0:textproc/docbook-xsl \
 		xsltproc:textproc/libxslt
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs\
-		libpng.so:graphics/png \
-		libfltk.so:x11-toolkits/fltk \
+LIB_DEPENDS=	libfltk.so:x11-toolkits/fltk \
 		libfontconfig.so:x11-fonts/fontconfig \
+		libpng16.so:graphics/png \
 		libportaudio.so:audio/portaudio \
+		libsamplerate.so:audio/libsamplerate \
 		libsndfile.so:audio/libsndfile \
-		libsamplerate.so:audio/libsamplerate
+		libudev.so:devel/libudev-devd
 
-USES=		autoreconf compiler:c++11-lib jpeg gmake perl5 pkgconfig \
-		shebangfix xorg
-
+USES=		autoreconf:build compiler:c++11-lib desktop-file-utils gmake \
+		jpeg perl5 pkgconfig shebangfix xorg
 USE_CXXSTD=	gnu++0x
+USE_XORG=	x11 xcursor xext xfixes xft xinerama xrender
+
 GNU_CONFIGURE=	yes
-USE_XORG=	x11 xft xext xfixes xcursor xinerama xrender
-CONFIGURE_ENV=	FLTK_CONFIG="${LOCALBASE}/bin/fltk-config" \
-		    EXTRA_LIBS="-lexecinfo"
+CONFIGURE_ARGS=	--enable-optimizations=none \
+		--with-asciidoc \
+		--with-sndfile
+CONFIGURE_ENV=	EXTRA_LIBS="-lexecinfo" \
+		FLTK_CONFIG="${LOCALBASE}/bin/fltk-config"
 
-OPTIONS_DEFINE=	FLARQ OSS PULSEAUDIO HAMLIB NLS DOCS
-
-NATIVE_OPT_DESC=	Enable Native Optimizations
-FLARQ_DESC=		Compile flarq
-OSS_DESC=		Support OSS
-PULSEAUDIO_DESC=	PulseAudio support
-HAMLIB_DESC=		Support rig control via hamlib
-
-OPTIONS_DEFAULT=	FLARQ OSS HAMLIB
+OPTIONS_DEFINE=		DOCS FLARQ HAMLIB NLS OSS PULSEAUDIO
+OPTIONS_DEFAULT=	FLARQ HAMLIB OSS
 OPTIONS_SUB=		yes
 
-NATIVE_OPT_CONFIGURE_ON=	--enable-optimizations=native
-NATIVE_OPT_CONFIGURE_OFF=	--enable-optimizations=none
+FLARQ_DESC=	Compile flarq
+HAMLIB_DESC=	Support rig control via hamlib
+
 FLARQ_CONFIGURE_ENABLE=		flarq
-OSS_CONFIGURE_ENABLE=		oss
-PULSEAUDIO_CONFIGURE_WITH=	pulseaudio
-PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
-HAMLIB_CONFIGURE_WITH=		hamlib
 HAMLIB_LIB_DEPENDS=		libhamlib.so:comms/hamlib
-NLS_CONFIGURE_ENABLE=		nls
+HAMLIB_CONFIGURE_WITH=		hamlib
 NLS_USES=			gettext
+NLS_CONFIGURE_ENABLE=		nls
+OSS_CONFIGURE_ENABLE=		oss
+PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
+PULSEAUDIO_CONFIGURE_WITH=	pulseaudio
 
-# Always need asciidoc for man pages
-CONFIGURE_ARGS+=--with-asciidoc
-# Always need soundfile
-CONFIGURE_ARGS+=--with-sndfile
-
+CFLAGS= -fpermissive
 post-configure:
-# force rebuild of man pages
 	${RM} ${WRKSRC}/doc/*.1
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/guide.html ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g'	\
+		${WRKSRC}/src/misc/newinstall.cxx
 
 .include <bsd.port.mk>

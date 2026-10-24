@@ -1,5 +1,5 @@
 PORTNAME=	cbsd
-DISTVERSION=	14.2.6
+DISTVERSION=	15.1.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	fbsd-ports@convectix.com
@@ -10,15 +10,14 @@ LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
-		libsqlite3.so:databases/sqlite3 \
+		libjq.so:textproc/jq \
+		libonig.so:devel/oniguruma \
 		libssh2.so:security/libssh2
 RUN_DEPENDS=	curl:ftp/curl \
 		jq:textproc/jq \
-		rsync:net/rsync \
-		sqlite3:databases/sqlite3 \
-		sudo:security/sudo
+		rsync:net/rsync
 
-USES=		compiler:c++11-lang libedit pkgconfig:both
+USES=		autoreconf:build compiler:c++11-lang gmake pkgconfig:both sqlite sudo
 USE_GITHUB=	yes
 USE_RC_SUBR=	cbsdd cbsdrsyncd cbsd-statsd-bhyve cbsd-statsd-hoster \
 		cbsd-statsd-jail
@@ -31,6 +30,7 @@ GROUPS=		${PORTNAME}
 
 CBSD_HOME?=	${PREFIX}/cbsd
 
+MAKE_ENV= OSTYPE=DragonFly
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == x86_64 || ${ARCH} == i386 || ${ARCH} == x86_64

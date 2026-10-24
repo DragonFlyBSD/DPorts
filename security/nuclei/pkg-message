@@ -1,0 +1,16 @@
+Breaking Change: Signed templates required for JavaScript protocol
+
+Starting with v3.11.0, custom templates that use the javascript:
+protocol must be digitally signed before Nuclei will load or execute
+them. Unsigned JavaScript templates are now skipped during template
+loading and when referenced from workflows.
+
+Why this change
+
+This release continues the security hardening started in v3.10.0
+(sandbox enforcement, network policy checks, stricter code-template
+handling, YAML include protections, and related fixes in #7469). The
+JavaScript protocol exposes Go-backed modules through Nuclei's JS
+runtime, which significantly increases attack surface compared with
+request-only templates. Requiring signatures brings JavaScript templates
+in line with the existing protections for code-protocol templates.

@@ -1,0 +1,184 @@
+--- src/ucp/core/ucp_worker.c.orig	2026-09-09 02:32:02 UTC
++++ src/ucp/core/ucp_worker.c
+@@ -9,6 +9,8 @@
+ #  include "config.h"
+ #endif
+ 
++#include <errno.h>
++
+ #include "ucp_am.h"
+ #include "ucp_ep_vfs.h"
+ #include "ucp_worker.h"
+@@ -36,9 +38,18 @@
+ #include <ucs/vfs/base/vfs_cb.h>
+ #include <ucs/vfs/base/vfs_obj.h>
+ #include <sys/poll.h>
++#if defined(HAVE_SYS_EVENTFD_H)
+ #include <sys/eventfd.h>
+-#include <sys/epoll.h>
++#endif
++#if defined(HAVE_SYS_TIMERFD_H)
+ #include <sys/timerfd.h>
++#endif
++#if defined(__linux__)
++#include <sys/epoll.h>
++#endif
++#if defined(__FreeBSD__)
++#include <fcntl.h>
++#endif
+ #include <time.h>
+ 
+ 
+@@ -291,7 +302,10 @@ static ucs_status_t ucp_worker_wakeup_init(ucp_worker_
+         worker->event_fd   = -1;
+         worker->event_set  = NULL;
+         worker->eventfd    = -1;
+-        worker->uct_events = 0;
++#if defined(__FreeBSD__)
++        worker->eventfd_write = -1;
++#endif
++	worker->uct_events = 0;
+         status = UCS_OK;
+         goto out;
+     }
+@@ -321,6 +335,19 @@ static ucs_status_t ucp_worker_wakeup_init(ucp_worker_
+         worker->flags |= UCP_WORKER_FLAG_EDGE_TRIGGERED;
+     }
+ 
++#if defined(__FreeBSD__)
++    {
++        int pipefd[2];
++        if (pipe2(pipefd, O_CLOEXEC | O_NONBLOCK) < 0) {
++            ucs_error("Failed to create wakeup pipe: %m");
++            status = UCS_ERR_IO_ERROR;
++            goto err_cleanup_event_set;
++        }
++        worker->eventfd       = pipefd[0]; /* read end: monitored by kqueue */
++        worker->eventfd_write = pipefd[1]; /* write end: used to signal */
++    }
++    ucp_worker_wakeup_ctl_fd(worker, UCP_WORKER_EPFD_OP_ADD, worker->eventfd);
++#elif defined(HAVE_SYS_EVENTFD_H)
+     worker->eventfd = eventfd(0, EFD_CLOEXEC | EFD_NONBLOCK);
+     if (worker->eventfd == -1) {
+         ucs_error("Failed to create event fd: %m");
+@@ -329,6 +356,13 @@ static ucs_status_t ucp_worker_wakeup_init(ucp_worker_
+     }
+ 
+     ucp_worker_wakeup_ctl_fd(worker, UCP_WORKER_EPFD_OP_ADD, worker->eventfd);
++#else
++    /* No eventfd(). */
++    worker->eventfd = -1;
++#if defined(__FreeBSD__)
++    worker->eventfd_write = -1;
++#endif
++#endif
+ 
+     worker->uct_events = 0;
+ 
+@@ -372,6 +406,12 @@ static void ucp_worker_wakeup_cleanup(ucp_worker_h wor
+     }
+     if (worker->eventfd != -1) {
+         close(worker->eventfd);
++#if defined(__FreeBSD__)
++        if (worker->eventfd_write != -1) {
++            close(worker->eventfd_write);
++            worker->eventfd_write = -1;
++        }
++#endif
+     }
+ }
+ 
+@@ -424,12 +464,24 @@ static ucs_status_t ucp_worker_wakeup_signal_fd(ucp_wo
+ static ucs_status_t ucp_worker_wakeup_signal_fd(ucp_worker_h worker)
+ {
+     uint64_t dummy = 1;
++    int write_fd;
+     int ret;
+ 
+-    ucs_trace_func("worker=%p fd=%d", worker, worker->eventfd);
++#if defined(__FreeBSD__)
++    write_fd = worker->eventfd_write;
++#else
++    write_fd = worker->eventfd;
++#endif
+ 
++    ucs_trace_func("worker=%p fd=%d", worker, write_fd);
++
++    if (write_fd == -1) {
++
++        return UCS_OK;
++    }
++
+     do {
+-        ret = write(worker->eventfd, &dummy, sizeof(dummy));
++        ret = write(write_fd, &dummy, sizeof(dummy));
+         if (ret == sizeof(dummy)) {
+             return UCS_OK;
+         } else if (ret == -1) {
+@@ -3501,7 +3553,7 @@ void ucp_worker_print_info(ucp_worker_h worker, FILE *
+     UCP_WORKER_THREAD_CS_EXIT_CONDITIONAL(worker);
+ }
+ 
+-static UCS_F_ALWAYS_INLINE void
++static UCS_F_ALWAYS_INLINE ucs_status_t
+ ucp_worker_keepalive_timerfd_init(ucp_worker_h worker)
+ {
+     ucs_time_t ka_interval = worker->context->config.ext.keepalive_interval;
+@@ -3511,14 +3563,18 @@ ucp_worker_keepalive_timerfd_init(ucp_worker_h worker)
+ 
+     if (!(worker->context->config.features & UCP_FEATURE_WAKEUP) ||
+         (worker->keepalive.timerfd >= 0)) {
+-        return;
++        return UCS_OK;
+     }
+ 
++/* timerfd_* are Linux-only */
++#if !defined(HAVE_SYS_TIMERFD_H)
++    worker->keepalive.timerfd = -1;
++    return UCS_OK;
++#else
+     worker->keepalive.timerfd = timerfd_create(CLOCK_MONOTONIC, TFD_NONBLOCK);
+     if (worker->keepalive.timerfd < 0) {
+-        ucs_warn("worker %p: failed to create keepalive timer fd: %m",
+-                 worker);
+-        return;
++        ucs_error("timerfd_create() failed: %m");
++        return UCS_ERR_IO_ERROR;
+     }
+ 
+     ucs_assert(ka_interval > 0);
+@@ -3538,10 +3594,11 @@ ucp_worker_keepalive_timerfd_init(ucp_worker_h worker)
+     ucp_worker_wakeup_ctl_fd(worker, UCP_WORKER_EPFD_OP_ADD,
+                              worker->keepalive.timerfd);
+ 
+-    return;
++    return UCS_OK;
+ 
+ err_close_timerfd:
+     close(worker->keepalive.timerfd);
++#endif
+ }
+ 
+ static UCS_F_ALWAYS_INLINE void
+@@ -3704,6 +3761,7 @@ void ucp_worker_keepalive_add_ep(ucp_ep_h ep)
+ void ucp_worker_keepalive_add_ep(ucp_ep_h ep)
+ {
+     ucp_worker_h worker = ep->worker;
++    ucs_status_t status;
+ 
+     if (ucp_ep_config(ep)->key.keepalive_lane == UCP_NULL_LANE) {
+         ucs_trace("ep %p flags 0x%x cfg_index %d err_mode %d: keepalive lane"
+@@ -3712,7 +3770,12 @@ void ucp_worker_keepalive_add_ep(ucp_ep_h ep)
+         return;
+     }
+ 
+-    ucp_worker_keepalive_timerfd_init(worker);
++    status = ucp_worker_keepalive_timerfd_init(worker);
++    if ((status != UCS_OK) && (status != UCS_ERR_UNSUPPORTED)) {
++        ucs_warn("worker %p: failed to initialize keepalive timerfd: %s",
++                 worker, ucs_status_string(status));
++    }
++
+     ucs_trace("ep %p flags 0x%x: set keepalive lane to %u", ep,
+               ep->flags, ucp_ep_config(ep)->key.keepalive_lane);
+     uct_worker_progress_register_safe(worker->uct,

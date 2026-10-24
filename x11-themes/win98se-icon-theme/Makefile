@@ -1,9 +1,9 @@
 PORTNAME=	win98se-icon-theme
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.15
+DISTVERSION=	0.2.16.1
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Enhanced Classic Win98SE icon theme
 WWW=		https://github.com/nestoris/Win98SE
 

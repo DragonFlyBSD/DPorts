@@ -1,15 +1,15 @@
 PORTNAME=	bcmatroska2
-DISTVERSION=	5.4.2
+DISTVERSION=	5.4.118
 CATEGORIES=	multimedia
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Belledonne Communications Matroska media container support
-WWW=		https://www.linphone.org/
+WWW=		https://gitlab.linphone.org/BC/public/bcmatroska2
 
 LICENSE=	BSD3CLAUSE
 
-BUILD_DEPENDS=	${LOCALBASE}/lib/libbctoolbox.a:net/bctoolbox \
-		${LOCALBASE}/lib/libbcunit.a:devel/bcunit
+LIB_DEPENDS=	libbctoolbox.so:net/bctoolbox \
+		libbcunit.so:devel/bcunit
 
 USES=		cmake compiler:c++17-lang
 USE_GITLAB=	yes
@@ -17,12 +17,16 @@ GL_SITE=	https://gitlab.linphone.org/BC
 GL_ACCOUNT=	public
 USE_LDCONFIG=	yes
 
-CMAKE_ARGS=	-DCMAKE_PREFIX_PATH=${LOCALBASE}
+CMAKE_ON=	BUILD_SHARED_LIBS
 
-#.include <bsd.port.pre.mk>
+PORTSCOUT=	ignore:1
 
-#.if ${COMPILER_TYPE} == clang
-#CFLAGS+=	-Wno-error=incompatible-function-pointer-types
-#.endif
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/corec/corec/portab.h \
+		${WRKSRC}/libmatroska2/minilzo/minilzo.c \
+		${WRKSRC}/libmatroska2/minilzo/lzodefs.h \
+		${WRKSRC}/corec/corec/helpers/file/file_libc.c \
+		${WRKSRC}/corec/corec/helpers/file/file_bctbx.c
 
 .include <bsd.port.mk>

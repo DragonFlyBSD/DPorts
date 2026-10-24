@@ -16,12 +16,11 @@ LIB_DEPENDS=	libkyotocabinet.so:databases/kyotocabinet
 
 USES=		gmake pkgconfig
 
-CONFIGURE_ARGS=	--enable-uyield
+CONFIGURE_ARGS= --enable-uyield ac_cv_lib_kyotocabinet_main=yes
 CPPFLAGS+=	-fPIC
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 MAKE_ARGS=	PCDIR=${PREFIX}/libdata/pkgconfig
-REINPLACE_ARGS=	-i ''
 TEST_TARGET=	check
 USE_CXXSTD=	gnu++98
 USE_LDCONFIG=	yes
@@ -54,9 +53,6 @@ OPTIONS_DEFINE=	DOCS LZO
 LZO_CONFIGURE_OFF=	ac_cv_lib_lzo2_main=no
 LZO_CONFIGURE_ON=	ac_cv_lib_lzo2_main=yes
 LZO_LIB_DEPENDS=	liblzo2.so:archivers/lzo2
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|-lstdc++ ||g' ${WRKSRC}/configure ${WRKSRC}/doc/spex.html ${WRKSRC}/example/Makefile
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libkyototycoon.so ${STAGEDIR}${PREFIX}/libexec/*.so

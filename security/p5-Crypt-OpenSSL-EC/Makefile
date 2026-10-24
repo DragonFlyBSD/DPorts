@@ -15,7 +15,7 @@ LICENSE_COMB=	dual
 BUILD_DEPENDS=	${RUN_DEPENDS}
 RUN_DEPENDS=	p5-Crypt-OpenSSL-Bignum>=0.04:security/p5-Crypt-OpenSSL-Bignum
 
-USES=		perl5 ssl
+USES= perl5 ssl localbase
 USE_PERL5=	configure
 
 MAKE_ENV=	OPENSSL_PREFIX=${OPENSSLBASE}

@@ -1,0 +1,10 @@
+--- meson.build.orig	2026-07-23 19:58:12 UTC
++++ meson.build
+@@ -88,6 +88,7 @@
+                     required: true,
+                 ),
+                 include_directories: blasinfo[0],
++                compile_args: ['-DDWAVE_OPTIMIZATION_SCIPY_OPENBLAS'],
+             )
+         ]
+     elif get_option('blas').enabled()

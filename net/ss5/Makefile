@@ -29,6 +29,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION:C/-[0-9]+//}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+MAKE_JOBS_UNSAFE= yes
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
@@ -47,5 +48,25 @@ post-install:
 		${STAGEDIR}${PREFIX}/etc/ss5/ss5.ha.sample
 	${INSTALL_DATA} ${WRKSRC}/conf/ss5.passwd \
 		${STAGEDIR}${PREFIX}/etc/ss5/ss5.passwd.sample
+
+dfly-patch:
+	${REINPLACE_CMD} 's@(UINT)pthread_self@(UINT)(uintmax_t)pthread_self@g' \
+		${WRKSRC}/common/SS5MySql.c \
+		${WRKSRC}/common/SS5OpenLdap.c \
+		${WRKSRC}/modules/mod_authen/SS5Mod_authentication.c \
+		${WRKSRC}/modules/mod_authen/SS5Pam.c \
+		${WRKSRC}/modules/mod_authen/SS5Supa.c \
+		${WRKSRC}/modules/mod_author/SS5Mod_authorization.c \
+		${WRKSRC}/modules/mod_balance/SS5Mod_balance.c \
+		${WRKSRC}/modules/mod_dump/SS5Mod_dump.c \
+		${WRKSRC}/modules/mod_filter/SS5Mod_filter.c \
+		${WRKSRC}/modules/mod_proxy/SS5Mod_proxy.c \
+		${WRKSRC}/modules/mod_socks4/SS5Mod_socks4.c \
+		${WRKSRC}/modules/mod_socks5/SS5Mod_socks5.c \
+		${WRKSRC}/src/SS5Core.c \
+		${WRKSRC}/src/SS5Core_GSS.c \
+		${WRKSRC}/src/SS5GSSApi.c
+	${REINPLACE_CMD} -e 's@(void \*)clientSocket@(void *)(uintptr_t)clientSocket@g' \
+		${WRKSRC}/src/SS5Thread.c
 
 .include <bsd.port.mk>

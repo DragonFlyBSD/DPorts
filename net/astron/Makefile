@@ -22,4 +22,8 @@ GH_TAGNAME=	c8ba982
 
 PLIST_FILES=	bin/astrond
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

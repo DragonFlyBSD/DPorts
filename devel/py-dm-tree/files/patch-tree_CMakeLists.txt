@@ -1,0 +1,13 @@
+--- tree/CMakeLists.txt.orig	2026-06-16 01:25:03 UTC
++++ tree/CMakeLists.txt
+@@ -7,8 +7,8 @@ project (tree LANGUAGES CXX)
+ 
+ project (tree LANGUAGES CXX)
+ 
+-option(USE_SYSTEM_ABSEIL "Force use of system abseil-cpp" OFF)
+-option(USE_SYSTEM_PYBIND11 "Force use of system pybind11" OFF)
++option(USE_SYSTEM_ABSEIL "Force use of system abseil-cpp" ON)
++option(USE_SYSTEM_PYBIND11 "Force use of system pybind11" ON)
+ 
+ # Required for Python.h and python binding.
+ find_package(Python3 COMPONENTS Interpreter Development)

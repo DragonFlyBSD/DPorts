@@ -1,0 +1,12 @@
+--- configure.ac.orig
++++ configure.ac
+@@ -6531,7 +6531,8 @@
+     ])
+   fi
+ 
+-  AS_VAR_IF([have_curses], [ncurses], [
++  dnl DragonFly exposes ncursesw but only ships the non-wide panel library.
++  AS_IF([test "$have_curses" = "ncurses" -o "$ac_sys_system" = "DragonFly"], [
+     PKG_CHECK_MODULES([PANEL], [panel], [
+       have_panel=panel
+     ], [

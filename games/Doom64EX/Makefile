@@ -23,4 +23,5 @@ CMAKE_ON=	ENABLE_SYSTEM_FLUIDSYNTH
 PLIST_FILES=	bin/doom64ex \
 		share/games/doom64ex/doom64ex.pk3
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

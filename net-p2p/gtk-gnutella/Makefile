@@ -53,6 +53,7 @@ TLS_CONFIGURE_OFF=	-Ud_gnutls
 CONFIGURE_ARGS+=	-ders
 .endif
 
+MAKE_JOBS_UNSAFE= yes
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.SH" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|@exit 0|@echo done|'

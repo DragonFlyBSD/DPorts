@@ -2,10 +2,10 @@ PORTNAME=	gkrellflynn
 PORTVERSION=	0.8
 PORTREVISION=	9
 CATEGORIES=	sysutils
-MASTER_SITES=	http://mirror.amdmi3.ru/distfiles/ \
+MASTER_SITES=	https://mirror.amdmi3.ru/distfiles/ \
 		http://horus.comlab.uni-rostock.de/flynn/
 
-MAINTAINER=	amdmi3@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tiny system load meter for gkrellm
 WWW=		http://horus.comlab.uni-rostock.de/flynn/
 

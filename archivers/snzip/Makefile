@@ -27,4 +27,5 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

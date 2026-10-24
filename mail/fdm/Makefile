@@ -30,6 +30,7 @@ PCRE_LIBS=	-lpcre2-8
 PCRE_LIB_DEPENDS=libpcre2-8.so:devel/pcre2
 PCRE_CONFIGURE_ENABLE=	pcre2
 
+CFLAGS= -DMAXNAMLEN=255
 post-patch:
 	${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|g' ${WRKSRC}/*.[15] ${WRKSRC}/MANUAL
 	${ECHO_CMD} 'lex.c: parse.h' >> ${WRKSRC}/Makefile.am

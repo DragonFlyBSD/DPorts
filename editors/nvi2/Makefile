@@ -1,6 +1,5 @@
 PORTNAME=	nvi2
-PORTVERSION=	2.2.1
-PORTREVISION=	3
+PORTVERSION=	2.2.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors
 
@@ -35,6 +34,7 @@ PLIST_FILES=	bin/nex \
 		share/man/man1/nvi.1.gz \
 		share/man/man1/nview.1.gz
 
+CFLAGS= -DTAILQ_FOREACH_SAFE=TAILQ_FOREACH_MUTABLE -DSLIST_FOREACH_SAFE=SLIST_FOREACH_MUTABLE
 post-patch:
 	${REINPLACE_CMD} -e \
 	    '/-Wall/s/^/add_compile_options(-fcolor-diagnostics)\n/' \
@@ -48,5 +48,9 @@ do-install:
 	    ${STAGEDIR}${PREFIX}/share/man/man1/nvi.1
 	${LN} -sf nvi.1 ${STAGEDIR}${PREFIX}/share/man/man1/nex.1
 	${LN} -sf nvi.1 ${STAGEDIR}${PREFIX}/share/man/man1/nview.1
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/-fcolor-diagnostics/d' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

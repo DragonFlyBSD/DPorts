@@ -1,6 +1,6 @@
 PORTNAME=	openmc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.15.0
+DISTVERSION=	0.16.0
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,13 +12,12 @@ WWW=		https://openmc.org/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_FreeBSD_15=	compilation fails with clang-19, see https://github.com/openmc-dev/openmc/issues/3183
-
 BUILD_DEPENDS=	xtensor>0:math/xtensor
 LIB_DEPENDS=	libfmt.so:devel/libfmt \
 		libhdf5.so:science/hdf5 \
 		libpng16.so:graphics/png \
 		libpugixml.so:textproc/pugixml
+TEST_DEPENDS=	catch2>0:devel/catch2
 
 USES=		cmake:noninja,testing eigen:3 pkgconfig
 
@@ -49,7 +48,11 @@ OPENMP_CMAKE_BOOL=	OPENMC_USE_OPENMP
 OPTIONS_DEFAULT+=	OPENMP
 .endif
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-install:
 	${RM} -r ${STAGEDIR}${DOCSDIR}
 
+# tests as of 0.16.0: 92% tests passed, 1 tests failed out of 12, see https://github.com/openmc-dev/openmc/issues/4054
+
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NMPI}
 .include <bsd.port.mk>

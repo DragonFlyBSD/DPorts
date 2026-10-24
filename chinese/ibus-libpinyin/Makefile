@@ -1,5 +1,6 @@
 PORTNAME=	ibus-libpinyin
 DISTVERSION=	1.15.4
+PORTREVISION=	1
 CATEGORIES=	chinese
 MASTER_SITES=	SF/libpinyin/${PORTNAME}
 

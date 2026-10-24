@@ -1,0 +1,13 @@
+--- swift/unittests/Sema/CMakeLists.txt.orig	2026-09-13 22:35:30 UTC
++++ swift/unittests/Sema/CMakeLists.txt
+@@ -14,7 +14,10 @@ target_link_libraries(swiftSemaTests
+   PRIVATE
+     swiftAST
+     swiftClangImporter
++    swiftFrontend
+     swiftSIL
++    swiftSILGen
++    swiftSILOptimizer
+     swiftSema
+     swiftSerialization)
+ 

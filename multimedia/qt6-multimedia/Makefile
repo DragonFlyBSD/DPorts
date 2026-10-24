@@ -1,24 +1,27 @@
 PORTNAME=	multimedia
 DISTVERSION=	${QT6_VERSION}
+PORTREVISION=	1
 CATEGORIES=	multimedia
 PKGNAMEPREFIX=	qt6-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt audio, video, radio and camera support module
 
-BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers
+BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers \
+		${PYTHON_PKGNAMEPREFIX}cyclonedx-python-lib>0:textproc/py-cyclonedx-python-lib@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}spdx-tools>=0.8.3:misc/py-spdx-tools@${PY_FLAVOR}
 LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon
 
-USES=		cmake compiler:c++17-lang gl localbase:ldflags pkgconfig qt-dist:6
+USES=		cmake compiler:c++17-lang gl localbase:ldflags pkgconfig \
+		python:build qt-dist:6
 USE_GL=		opengl
-USE_QT=		base declarative shadertools:build
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
+USE_QT=		base declarative shadertools:build
 
 CFLAGS_powerpc=		-DPFFFT_SIMD_DISABLE
-CXXFLAGS_powerpc64=	-mvsx
 
 OPTIONS_DEFINE=		FFMPEG GSTREAMER PIPEWIRE Q3D V4L VAAPI X11
-OPTIONS_DEFAULT=	FFMPEG GSTREAMER PIPEWIRE PULSEAUDIO Q3D V4L VAAPI X11
+OPTIONS_DEFAULT= FFMPEG GSTREAMER PIPEWIRE PULSEAUDIO Q3D V4L VAAPI X11 ALSA
 AUDIO_DESC=		Low-level audio backend
 OPTIONS_SINGLE=		AUDIO
 OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO
@@ -75,6 +78,7 @@ X11_USES=		xorg
 X11_USE=		XORG=x11,xext,xrandr
 X11_IMPLIES=		FFMPEG
 
+OPTIONS_EXCLUDE= PULSEAUDIO
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "i386" && ${MACHINE_CPU:Nsse}

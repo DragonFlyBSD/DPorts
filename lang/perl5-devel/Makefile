@@ -1,8 +1,8 @@
 PORTNAME=	perl
 DISTVERSION=	${PERL_VERSION}
-PORTREVISION=	0
 CATEGORIES=	lang devel perl5
-MASTER_SITES=	CPAN/../../src/5.0
+MASTER_SITES=	CPAN/../../src/5.0 \
+		CPAN/../by-authors/id/B/BO/BOOK
 DIST_SUBDIR=	perl
 
 MAINTAINER=	mat@FreeBSD.org
@@ -133,7 +133,7 @@ PERLMANPREFIX_REL=	${_PRIV_LIB}/perl
 PERLMANPREFIX=		${PREFIX}/${PERLMANPREFIX_REL}
 MANDIRS=		${PERLMANPREFIX}/man
 
-# XXX replace all LIBPERL_VER occurences with PERL_VERSION
+# XXX replace all LIBPERL_VER occurrences with PERL_VERSION
 LIBPERL_VER=	${PORTVERSION:C/[^0-9.]//}
 
 OPTIONS_DEFINE=		DEBUG DOT_INC DTRACE GDBM MULTIPLICITY PERL_64BITINT \
@@ -143,9 +143,7 @@ OPTIONS_DEFAULT=	DTRACE MULTIPLICITY PERL_64BITINT
 .if !exists(/usr/sbin/dtrace)
 OPTIONS_EXCLUDE=	DTRACE
 .endif
-.for a in aarch64 armv6 armv7 \
-	mips mips64 mips64el mips64elhf mips64hf mipsel mipselhf mipshf mipsn32 \
-	riscv64 riscv64sf
+.for a in aarch64 armv6 armv7 riscv64
 OPTIONS_EXCLUDE_${a}=	DTRACE
 .endfor
 OPTIONS_SUB=		yes
@@ -243,7 +241,8 @@ pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "########################################"
 # No need to make me, or the package builders, wait
-.if !(defined(PACKAGE_BUILDING) || defined(PERL_DEV_SHUT_UP) || defined(BATCH))
+.if !(defined(PACKAGE_BUILDING) || defined(PERL_DEV_SHUT_UP) || \
+	defined(BATCH))
 	@sleep 30
 .endif
 
@@ -272,6 +271,10 @@ post-patch:
 		/^if.*nopods.*versiononly || /s/.*/if (1) {/' \
 		${WRKSRC}/installperl
 .endif
+	cd ${PATCHDIR}; for patch in patch-*; do \
+		${AWK} -v patch="$$patch" 'seen == 1 && /,NULL/ {print ",\"FreeBSD:" patch "\""} {print} /local_patches\[\]/ { seen=1 }' ${WRKSRC}/patchlevel.h > ${WRKDIR}/patchlevel.h; \
+		mv -f ${WRKDIR}/patchlevel.h ${WRKSRC}/patchlevel.h ; \
+	done
 
 post-install:
 	@${REINPLACE_CMD} -e '/^lddlflags/s|-L${WRKSRC} ||' \
@@ -312,5 +315,9 @@ post-install:
 			${CHMOD} 444 $$f; \
 		done
 	${INSTALL_DATA} ${WRKDIR}/perl-man.conf ${STAGEDIR}${PREFIX}/etc/man.d/perl${PKGNAMESUFFIX}.conf
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@__FreeBSD_version > 410001@1@'	\
+		${WRKSRC}/mg.c
 
 .include <bsd.port.mk>

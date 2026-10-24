@@ -23,6 +23,7 @@ GH_ACCOUNT=	tkircher
 CMAKE_OFF=	BUILD_PYTHON_BINDINGS BUILD_MATLAB_BINDINGS BUILD_EXAMPLES BUILD_TESTS BUILD_DOC \
 		USE_OPENMP # OpenMP search is broken in cmake: https://gitlab.kitware.com/cmake/cmake/issues/17474
 
+MAKE_ENV= LDVER=ld.bfd
 post-install: # workaround for https://github.com/mariusmuja/flann/issues/466
 	${REINPLACE_CMD} -i '' -e 's/lib;-llz4/lib -llz4/' ${STAGEDIR}${PREFIX}/libdata/pkgconfig/flann.pc
 

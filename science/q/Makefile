@@ -1,7 +1,7 @@
 PORTNAME=	q
 DISTVERSIONPREFIX=	v
 DISTVERSION=	6.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,7 +11,7 @@ WWW=		https://github.com/qusers/Q6
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 
-USES=		fortran gmake
+USES=		fortran:gfortran gmake
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	qusers

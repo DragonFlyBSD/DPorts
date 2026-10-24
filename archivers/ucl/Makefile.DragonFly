@@ -1,2 +1,0 @@
-# failed the ACC conformance test
-CPPFLAGS+=	-std=c90

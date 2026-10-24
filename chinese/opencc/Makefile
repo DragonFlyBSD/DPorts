@@ -1,6 +1,7 @@
 PORTNAME=	opencc
-DISTVERSION=	1.1.6
 DISTVERSIONPREFIX=	ver.
+DISTVERSION=	1.4.2
+PORTREVISION=	1
 CATEGORIES=	chinese converters
 
 MAINTAINER=	lichray@gmail.com
@@ -9,23 +10,28 @@ WWW=		https://github.com/BYVoid/OpenCC
 
 LICENSE=	APACHE20
 
+BUILD_DEPENDS=	rapidjson>=0:devel/rapidjson \
+		${LOCALBASE}/include/tclap/CmdLine.h:devel/tclap12
+LIB_DEPENDS=	libmarisa.so:devel/marisa-trie
+TEST_DEPENDS=	googletest>=0:devel/googletest
+
+USES=		cmake:testing compiler:c++17-lang localbase:ldflags python:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	BYVoid
 GH_PROJECT=	OpenCC
-
-USES=		cmake compiler:c++11-lib python:build
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=	TESTS
+CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_Git \
+		USE_SYSTEM_MARISA \
+		USE_SYSTEM_RAPIDJSON \
+		USE_SYSTEM_TCLAP
+CMAKE_TESTING_ON=	ENABLE_GTEST USE_SYSTEM_GTEST
 
-TESTS_DESC=	Build the unit testing
-TESTS_CMAKE_ON=	-DENABLE_GTEST=ON
+OPTIONS_DEFINE=	JIEBA
+OPTIONS_DEFAULT=	JIEBA
+OPTIONS_SUB=	yes
 
-MAKE_JOBS_UNSAFE=	yes
-TEST_TARGET=	test
-
-post-patch:
-	@${REINPLACE_CMD} -e "s|python|${PYTHON_CMD}|g" \
-		${WRKSRC}/data/CMakeLists.txt
+JIEBA_DESC=	Jieba segmentation plugin
+JIEBA_CMAKE_BOOL=	BUILD_OPENCC_JIEBA_PLUGIN
 
 .include <bsd.port.mk>

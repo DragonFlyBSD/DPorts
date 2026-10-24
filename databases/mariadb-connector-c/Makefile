@@ -1,10 +1,10 @@
 PORTNAME=	mariadb-connector-c
-PORTVERSION=	3.3.8
-PORTREVISION=	1
+PORTVERSION=	3.4.9
 CATEGORIES=	databases
-MASTER_SITES=	https://mirror.nodesdirect.com/${SITESDIR}/ \
-		https://mirror.one.com/${SITESDIR}/ \
+MASTER_SITES=	\
 		https://ftp.nluug.nl/db/${SITESDIR}/ \
+		https://mirror.nodesdirect.com/${SITESDIR}/ \
+		https://mirror.one.com/${SITESDIR}/ \
 		https://ftp.icm.edu.pl/pub/unix/database/${SITESDIR}/ \
 		https://mirror.truenetwork.ru/${SITESDIR}/ \
 		https://mirrors.aliyun.com/${SITESDIR}/ \
@@ -29,7 +29,19 @@ CONFLICTS_INSTALL=	mariadb[0-9]*-client \
 			mysql[0-9]*-client \
 			percona[0-9]*-client
 
-USES=		cmake:insource compiler:c++11-lib iconv:translit ssl
+OPTIONS_SINGLE=		GSSAPI
+OPTIONS_SINGLE_GSSAPI=	GSSAPI_BASE GSSAPI_HEIMDAL GSSAPI_MIT GSSAPI_NONE
+OPTIONS_DEFAULT=	GSSAPI_BASE
+OPTIONS_SUB=		yes
+
+GSSAPI_BASE_USES=	gssapi
+GSSAPI_HEIMDAL_USES=	gssapi:heimdal
+GSSAPI_MIT_USES=	gssapi:mit
+GSSAPI_NONE_CMAKE_ON=	-DPLUGIN_AUTH_GSSAPI_CLIENT=OFF
+
+USES=		cmake:insource compiler:c++11-lib cpe iconv:translit ssl
+CPE_PRODUCT=	connector/c
+CPE_VENDOR=	mariadb
 USE_LDCONFIG=	${PREFIX}/lib/mariadb
 SITESDIR=	mariadb/connector-c-${PORTVERSION}
 DOCSDIR=	${PREFIX}/share/doc/mysql

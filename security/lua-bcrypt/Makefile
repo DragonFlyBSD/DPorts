@@ -13,13 +13,15 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	luarocks${LUA_VER_STR}:devel/lua-luarocks@${FLAVOR}
 
-USES=		lua:module
+USES= lua:53-54,module ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	mikejsavage
 GH_PROJECT=	lua-bcrypt
 
 PLIST_FILES=	${LUA_MODLIBDIR}/bcrypt.so
 
+CFLAGS= -I${OPENSSLINC}
+LDFLAGS= -L${OPENSSLLIB}
 post-patch:
 	@${REINPLACE_CMD} -e 's|luarocks|luarocks${LUA_VER_STR}|g' ${WRKSRC}/Makefile
 

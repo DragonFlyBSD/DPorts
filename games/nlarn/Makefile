@@ -24,4 +24,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/lib/* ${STAGEDIR}${DATADIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

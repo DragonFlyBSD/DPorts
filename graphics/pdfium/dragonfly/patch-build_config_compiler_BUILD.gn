@@ -1,0 +1,22 @@
+--- build/config/compiler/BUILD.gn.orig
++++ build/config/compiler/BUILD.gn
+@@ -1687,8 +1687,18 @@
+   # can be replaced by the C++ symbols. This config ensures the C++ symbols
+   # exist and are strong in order to cause that replacement to occur by
+   # explicitly linking in clang's compiler-rt library.
+-  if (is_clang && !(is_a_target_toolchain && is_cronet_build)) {
++  # DragonFly: devel/llvm* is built without compiler-rt, so there is no
++  # clang_rt.builtins to link; libgcc provides the intrinsics.
++  if (is_clang && !(is_a_target_toolchain && is_cronet_build) &&
++      current_os != "freebsd") {
+     configs += [ "//build/config/clang:compiler_builtins" ]
++  }
++
++  # DragonFly: the build compiles for x86_64-unknown-freebsd, whose clang
++  # driver looks for libc++ only in /usr/include/c++/v1. devel/libcxx*
++  # installs it in the llvm prefix.
++  if (is_clang && !use_custom_libcxx && current_os == "freebsd") {
++    cflags_cc = [ "-stdlib++-isystem$clang_base_path/include/c++/v1" ]
+   }
+ 
+   # TODO(crbug.com/40570904): Come up with a better name for is POSIX + Fuchsia

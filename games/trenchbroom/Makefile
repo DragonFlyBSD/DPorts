@@ -1,6 +1,6 @@
 PORTNAME=	${GH_PROJECT:tl}
 PORTVERSION=	2.0.0.b
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	games cad
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -56,5 +56,9 @@ do-install:
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(Linux|FreeBSD\)@\1|DragonFly@g'	\
+		${WRKSRC}/cmake/TrenchBroomApp.cmake
 
 .include <bsd.port.mk>

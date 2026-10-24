@@ -1,10 +1,10 @@
 PORTNAME=	BZ-Client
-PORTVERSION=	1.04
-PORTREVISION=	3
+DISTVERSION=	4.9100
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:JWIED
+MASTER_SITE_SUBDIR=	CPAN:DJZORT
 PKGNAMEPREFIX=	p5-
+DISTNAME=	${PORTNAME}-${DISTVERSION:C/00$//}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Client for the Bugzilla web services API
@@ -23,5 +23,7 @@ TEST_DEPENDS=	p5-libwww>=0:www/p5-libwww \
 
 USES=		perl5
 USE_PERL5=	configure
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

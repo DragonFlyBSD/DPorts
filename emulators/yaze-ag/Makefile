@@ -30,6 +30,7 @@ CONFLICTS_INSTALL=	cpmtools
 
 OPTIONS_DEFINE=	DOCS
 
+MAKE_ARGS= CC=cc
 post-build:
 		${REINPLACE_CMD} -e 's:%%DATADIR%%:${DATADIR}:' \
 				 -e 's:%%DOCSDIR%%:${DOCSDIR}:' \

@@ -1,7 +1,7 @@
 PORTNAME=	octave-forge-rtree
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.8.2
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -27,6 +27,7 @@ WRKSRC=		${WRKDIR}/${OCTAVE_SRC}
 
 BINARY_ALIAS=	tar=gtar
 
+DFLY_UNMAINTAINED= yes
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} CFLAGS="${CFLAGS}" ./configure
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} package

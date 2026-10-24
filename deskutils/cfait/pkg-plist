@@ -1,0 +1,5 @@
+bin/cfait
+%%GUI%%bin/cfait-gui
+%%GUI%%share/applications/cfait.desktop
+%%DOCS%%share/doc/cfait/README.md
+%%GUI%%share/icons/hicolor/scalable/apps/cfait.svg

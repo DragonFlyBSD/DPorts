@@ -1,6 +1,6 @@
 PORTNAME=	sdl_sound
 PORTVERSION=	1.0.3
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	audio
 MASTER_SITES=	http://www.icculus.org/SDL_sound/downloads/
 DISTNAME=	SDL_sound-${PORTVERSION}
@@ -55,6 +55,7 @@ VORBIS_LIB_DEPENDS=	libvorbis.so:audio/libvorbis \
 			libogg.so:audio/libogg
 VORBIS_CONFIGURE_ENABLE=ogg
 
+LDFLAGS= -lm
 pre-configure-MIDI-on:
 	@if ! [ -e "${LOCALBASE}/lib/timidity/goemon.cfg" ]; then \
 		${ECHO_CMD} 'MIDI support requires audio/timidity port to be built with GOEMON option enabled, which is not the case'; \

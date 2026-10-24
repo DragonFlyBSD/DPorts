@@ -13,6 +13,7 @@ WRKSRC=		${WRKDIR}/temp-watch
 
 ALL_TARGET=	OpenBSD
 
+CFLAGS= -DMAXNAMLEN=255
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/temp-watch ${STAGEDIR}${PREFIX}/bin
 

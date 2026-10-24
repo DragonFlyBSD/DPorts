@@ -1,0 +1,30 @@
+--- pyproject.toml.orig	2026-07-10 18:11:46 UTC
++++ pyproject.toml
+@@ -1,5 +1,5 @@
+ [build-system]
+-requires = ["setuptools>=77"]
++requires = ["setuptools>=61"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+@@ -8,8 +8,7 @@ requires-python = ">=3.9"
+ description = "Fast MUTF-8 encoder & decoder"
+ readme = "README.md"
+ requires-python = ">=3.9"
+-license = "MIT"
+-license-files = ["LICENCE"]
++license = { text = "MIT" }
+ authors = [{ name = "Tyler Kennedy", email = "tk@tkte.ch" }]
+ keywords = ["mutf-8", "cesu-8", "jvm"]
+ classifiers = [
+@@ -38,10 +37,6 @@ packages = ["mutf8"]
+ 
+ [tool.setuptools]
+ packages = ["mutf8"]
+-# optional=true so a failed compile falls back to the pure-Python mutf8/mutf8.py.
+-ext-modules = [
+-    { name = "mutf8.cmutf8", sources = ["mutf8/cmutf8.c"], language = "c", optional = true },
+-]
+ 
+ [tool.setuptools.dynamic]
+ version = { attr = "mutf8.__version__" }

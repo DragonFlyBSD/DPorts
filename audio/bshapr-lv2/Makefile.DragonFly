@@ -1,3 +1,0 @@
-
-# can sometimes race empty .o objects
-MAKE_JOBS_UNSAFE=	yes

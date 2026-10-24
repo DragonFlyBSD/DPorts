@@ -6,7 +6,7 @@ MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/U-hexen%20version%20${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Yet another port of Hexen, popular game from Raven Software
-WWW=		http://uhexen.sourceforge.net/
+WWW=		https://uhexen.sourceforge.net/
 
 LICENSE=	ACTIVISION
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -24,6 +24,7 @@ OPTIONS_DEFAULT=	MUSIC
 MUSIC_DESC=	In-game MIDI music support
 MUSIC_RUN_DEPENDS=	${LOCALBASE}/lib/timidity/goemon.cfg:audio/timidity
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 do-install:

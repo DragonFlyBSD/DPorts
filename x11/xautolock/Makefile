@@ -18,4 +18,8 @@ XLOCK_RUN_DEPENDS=	xlock:x11/xlockmore
 
 PLIST_FILES=	bin/xautolock share/man/man1/xautolock.1.gz
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined (__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'	\
+		${WRKSRC}/src/engine.c
+
 .include <bsd.port.mk>

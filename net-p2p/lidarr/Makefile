@@ -1,6 +1,5 @@
 PORTNAME=	lidarr
-DISTVERSION=	1.3.5.3530
-PORTREVISION=	2
+DISTVERSION=	3.1.0.4875
 CATEGORIES=	net-p2p
 MASTER_SITES=	https://github.com/lidarr/Lidarr/releases/download/v${PORTVERSION}/
 DISTNAME=	Lidarr.master.${DISTVERSION}.freebsd-core-x64
@@ -15,13 +14,14 @@ LICENSE=	GPLv3
 ONLY_FOR_ARCHS=	amd64
 
 RUN_DEPENDS=	ca_root_nss>0:security/ca_root_nss \
+		chromaprint>0:audio/chromaprint \
 		icu>0:devel/icu \
 		krb5>0:security/krb5 \
+		libiconv>0:converters/libiconv \
 		libinotify>0:devel/libinotify \
-		libunwind>0:devel/libunwind \
-		chromaprint>0:audio/chromaprint
+		libunwind>0:devel/libunwind
 
-USES=		ssl:run sqlite:3 iconv
+USES=		sqlite:3 ssl:run
 
 USE_RC_SUBR=	${PORTNAME}
 
@@ -40,6 +40,7 @@ WRKSRC=		${WRKDIR}/Lidarr
 USERS=		${PORTNAME}
 GROUPS=		${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 post-extract:
@@ -52,5 +53,7 @@ do-install:
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/package_info ${STAGEDIR}/${DATADIR}/
+	@${ECHO_CMD} "e_sqlite3.so libsqlite3.so" \
+		>${STAGEDIR}${PREFIX}/etc/libmap.d/Lidarr.conf
 
 .include <bsd.port.mk>

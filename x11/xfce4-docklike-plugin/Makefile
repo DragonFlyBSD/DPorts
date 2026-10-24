@@ -1,31 +1,33 @@
 PORTNAME=	xfce4-docklike-plugin
-PORTVERSION=	0.4.3
+DISTVERSION=	0.5.1
+PORTREVISION=	1
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4
 
-MAINTAINER=	bsd@quentb.com
+MAINTAINER=	laurent@FreeBSD.org
 COMMENT=	Modern, minimalist taskbar for Xfce
-WWW=		https://gitlab.xfce.org/panel-plugins/xfce4-docklike-plugin
+WWW=		https://docs.xfce.org/panel-plugins/xfce4-docklike-plugin/start
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz \
-		libgtk-layer-shell.so:x11-toolkits/gtk-layer-shell
-
-USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce xorg
-USE_GNOME=	cairo gdkpixbuf gtk30
+USES=		compiler:c++11-lang gettext-tools gnome meson pkgconfig tar:xz \
+		xfce xorg
+USE_GNOME=	gdkpixbuf gtk30
 USE_XFCE=	libmenu panel windowing
-USE_XORG=	x11
+USE_XORG=	x11 xi
 
-GNU_CONFIGURE=		yes
+MESON_ARGS=	-Dx11=enabled
 
-INSTALL_TARGET=	install-strip
+OPTIONS_DEFINE=		NLS WAYLAND
+OPTIONS_DEFAULT=	WAYLAND
+OPTIONS_SUB=		yes
 
-OPTIONS_DEFINE=	NLS
-OPTIONS_SUB=	yes
+WAYLAND_CATEGORIES=	wayland
+WAYLAND_LIB_DEPENDS=	libgtk-layer-shell.so:x11-toolkits/gtk-layer-shell
+WAYLAND_MESON_ENABLED=	wayland
 
-NLS_USES=		gettext-runtime
-NLS_CONFIGURE_ENABLE=	nls
+post-patch-NLS-off:
+	@${REINPLACE_CMD} -e "/^subdir('po')/d" ${WRKSRC}/meson.build
 
 .include <bsd.port.mk>

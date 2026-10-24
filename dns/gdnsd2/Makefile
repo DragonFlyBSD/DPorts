@@ -54,4 +54,8 @@ post-install:
 		${STAGEDIR}${PREFIX}/etc/gdnsd/zones \
 		${STAGEDIR}/var/run/gdnsd
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@return pthread_set_name_np@pthread_set_name_np@g' \
+		${WRKSRC}/configure
+
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	wpa_supplicant
-PORTVERSION=	2.10
-PORTREVISION=	10
+PORTVERSION=	2.12
+PORTREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	https://w1.fi/releases/
 
@@ -12,13 +12,18 @@ LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/README
 
 USES=		cpe gmake pkgconfig:build readline ssl
+CPE_VENDOR=	w1.fi
+USE_LDCONFIG=	yes
 BUILD_WRKSRC=	${WRKSRC}/wpa_supplicant
 INSTALL_WRKSRC=	${WRKSRC}/src
+CPPFLAGS+=	-Wno-incompatible-function-pointer-types
 CFLAGS+=	${CPPFLAGS} # USES=readline only augments CPPFLAGS and LDFLAGS
+CFLAGS+=	-Wno-undefined-internal
 CFLAGS+=	-I${OPENSSLINC}
 CFLAGS+=	-Wno-deprecated-declarations
 LDFLAGS+=	-L${OPENSSLLIB} -lutil
 MAKE_ENV=	V=1
+ALL_TARGET+=	all
 
 SUB_FILES=	pkg-message
 PORTDOCS=	README ChangeLog
@@ -37,15 +42,16 @@ OPTIONS_DEFINE=		WPS WPS_ER WPS_NOREG WPS_NFC WPS_UPNP PKCS12 SMARTCARD \
 			HT_OVERRIDES VHT_OVERRIDES TLSV12 IEEE80211W \
 			IEEE80211R DEBUG_FILE DEBUG_SYSLOG PRIVSEP \
 			DELAYED_MIC IEEE80211N IEEE80211AC INTERWORKING \
-			IEEE8021X_EAPOL EAPOL_TEST \
-			HS20 NO_ROAMING P2P TDLS DBUS MATCH DOCS \
-                        SIM_SIMULATOR USIM_SIMULATOR WEP
+			IEEE8021X_EAPOL EAPOL_TEST IPV6 LIBWPA\
+			HS20 NO_ROAMING P2P PASN TDLS DBUS MATCH DOCS \
+                        SIM_SIMULATOR USIM_SIMULATOR WNM MBO RSN_PREAUTH WEP
 OPTIONS_DEFAULT=	BSD WIRED \
 			TLS PEAP TTLS MD5 MSCHAPV2 GTC LEAP OTP PSK \
 			WPS PKCS12 SMARTCARD IEEE80211R DEBUG_SYSLOG \
 			INTERWORKING HS20 DBUS MATCH IEEE80211R IEEE80211W \
 			IEEE8021X_EAPOL WPS_ER WPS_NFC WPS_UPNP \
-			FAST PWD PAX SAKE GPSK TNC IKEV2 EKE WEP
+			FAST PWD PAX SAKE GPSK TNC IKEV2 EKE \
+			WNM MBO RSN_PREAUTH WEP PASN IPV6 LIBWPA
 OPTIONS_SUB=
 
 WPS_DESC=		Wi-Fi Protected Setup
@@ -64,6 +70,7 @@ IEEE80211R_DESC=	Fast BSS Transition (IEEE 802.11r-2008)
 IEEE80211W_DESC=	Management Frame Protection (IEEE 802.11w)
 IEEE8021X_EAPOL_DESC=	EAP over LAN support
 EAPOL_TEST_DESC=	Development testing
+IPV6_DESC=		Development testing IPv6 support
 DEBUG_FILE_DESC=	Support for writing debug log to a file
 DEBUG_SYSLOG_DESC=	Send debug messages to syslog instead of stdout
 PRIVSEP_DESC=		Privilege separation
@@ -72,6 +79,7 @@ INTERWORKING_DESC=	Improve ext. network interworking (IEEE 802.11u)
 HS20_DESC=		Hotspot 2.0
 NO_ROAMING_DESC=	Disable roaming
 P2P_DESC=		Peer-to-Peer support
+PASN_DESC=		Pre-Association Security Negotiation
 TDLS_DESC=		Tunneled Direct Link Setup
 MATCH_DESC=		Interface match mode
 
@@ -107,6 +115,10 @@ PAX_DESC=		Password Authenticated Exchange
 SAKE_DESC=		Shared-Secret Authentication & Key Establishment
 GPSK_DESC=		Generalized Pre-Shared Key
 TNC_DESC=		Trusted Network Connect
+WNM_DESC=		Wireless Network Monitoring
+MBO_DESC=		Multi Band Operation (Enables WNM)
+RSN_PREAUTH=		RSN Preauthentication
+LIBWPA_DESC=		libwpa_client Shared Library
 
 PRIVSEP_PLIST_FILES=	sbin/wpa_priv
 DBUS_PLIST_FILES=	share/dbus-1/system-services/fi.w1.wpa_supplicant1.service \
@@ -114,12 +126,12 @@ DBUS_PLIST_FILES=	share/dbus-1/system-services/fi.w1.wpa_supplicant1.service \
 
 .include <bsd.port.pre.mk>
 
-.if ${PORT_OPTIONS:MNDIS} && ${PORT_OPTIONS:MPRIVSEP}
-BROKEN=	Fails to compile with both NDIS and PRIVSEP
+.if ! ${PORT_OPTIONS:MPASN}
+BROKEN=	PASN is now a hard requirement
 .endif
 
-.if ${PORT_OPTIONS:MIEEE80211AC} && ${PORT_OPTIONS:MIEEE80211N}
-BROKEN=	Fails to compile with both IEEE80211AC and IEEE80211N
+.if ${PORT_OPTIONS:MNDIS} && ${PORT_OPTIONS:MPRIVSEP}
+BROKEN=	Fails to compile with both NDIS and PRIVSEP
 .endif
 
 .if ${PORT_OPTIONS:MSIM} || ${PORT_OPTIONS:MAKA} || ${PORT_OPTIONS:MAKA_PRIME}
@@ -132,10 +144,17 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 LIB_DEPENDS+=	libdbus-1.so:devel/dbus
 .endif
 
+.if ${PORT_OPTIONS:MEAPOL_TEST}
+ALL_TARGET+=	eapol_test
+.endif
+
 post-patch:
 	@${CP} ${FILESDIR}/Packet32.[ch] ${FILESDIR}/ntddndis.h \
 		${WRKSRC}/src/utils
 	# Set driver(s)
+	# SAE and ENC_ASSOC are always required.
+	@${ECHO_CMD} CONFIG_SAE=y >> ${CFG}
+	@${ECHO_CMD} CONFIG_ENC_ASSOC=y >> ${CFG}
 .for item in BSD NDIS WIRED ROBOSWITCH TEST NONE
 .  if ${PORT_OPTIONS:M${item}}
 	@${ECHO_CMD} CONFIG_DRIVER_${item}=y >> ${CFG}
@@ -151,12 +170,23 @@ post-patch:
 .if ${PORT_OPTIONS:MSIM} || ${PORT_OPTIONS:MAKA} || ${PORT_OPTIONS:MAKA_PRIME}
 	@${ECHO_CMD} CONFIG_PCSC=y >> ${CFG}
 .endif
+.if ${PORT_OPTIONS:MMBO}
+	@${ECHO_CMD} CONFIG_WNM=y >> ${CFG}
+.endif
 .for simple in WPS WPS_ER WPS_NFC WPS_UPNP PKCS12 SMARTCARD HT_OVERRIDES \
 	VHT_OVERRIDES TLSV12 IEEE80211AC IEEE80211N IEEE80211R IEEE80211W \
-	IEEE8021X_EAPOL EAPOL_TEST \
-	INTERWORKING DEBUG_FILE DEBUG_SYSLOG HS20 NO_ROAMING PRIVSEP P2P TDLS
+	IEEE8021X_EAPOL EAPOL_TEST IPV6 \
+	INTERWORKING DEBUG_FILE DEBUG_SYSLOG HS20 NO_ROAMING PRIVSEP P2P \
+	PASN TDLS WNM MBO RSN_PREAUTH
 .  if ${PORT_OPTIONS:M${simple}}
 	@${ECHO_CMD} CONFIG_${simple}=y >> ${CFG}
+.	if ${simple} == "IEEE80211N"
+		@${ECHO_CMD} CONFIG_IEEE80211BE=y >> ${CFG}
+		@${ECHO_CMD} CONFIG_IEEE80211AX=y >> ${CFG}
+		@${ECHO_CMD} CONFIG_IEEE80211AC=y >> ${CFG}
+		@${ECHO_CMD} CONFIG_AP=y >> ${CFG}
+		@${ECHO_CMD} NEED_AP_MLME=y >> ${CFG}
+.	endif
 .  endif
 .endfor
 .for item in READLINE PEERKEY
@@ -193,9 +223,6 @@ post-patch:
 	@${ECHO_CMD} CONFIG_BACKEND=file >> ${CFG}
 	@${ECHO_CMD} CONFIG_L2_PACKET=freebsd >> ${CFG}
 	@${ECHO_CMD} CONFIG_TLS=openssl >> ${CFG}
-
-post-build-EAPOL_TEST-on:
-	cd ${BUILD_WRKSRC} && ${GMAKE} eapol_test
 
 do-install:
 	(cd ${BUILD_WRKSRC} && ${INSTALL_PROGRAM} wpa_supplicant wpa_cli \

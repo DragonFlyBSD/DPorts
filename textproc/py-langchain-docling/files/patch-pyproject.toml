@@ -1,0 +1,13 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 20:31:38 UTC
++++ pyproject.toml
+@@ -2,8 +2,7 @@ description = "Docling LangChain integration"
+ name = "langchain-docling"
+ version = "2.0.0"  # DO NOT EDIT, updated automatically
+ description = "Docling LangChain integration"
+-license = "MIT"
+-license-files = ["LICENSE"]
++license = {text = "MIT"}
+ readme = "README.md"
+ authors = [
+     { name = "Panos Vagenas", email = "pva@zurich.ibm.com" },

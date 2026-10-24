@@ -31,4 +31,8 @@ post-install:
 	${LN} -sf libzookeeper_mt.so.2 ${STAGEDIR}${PREFIX}/lib/libzookeeper_mt.so
 	${LN} -sf libzookeeper_st.so.2 ${STAGEDIR}${PREFIX}/lib/libzookeeper_st.so
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g'	\
+		${WRKSRC}/Makefile.am
+
 .include <bsd.port.mk>

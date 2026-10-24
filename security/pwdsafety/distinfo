@@ -1,0 +1,5 @@
+TIMESTAMP = 1787496567
+SHA256 (go/security_pwdsafety/pwdsafety-v0.4.2/v0.4.2.mod) = 836b5dd5a964221f78168b9bbdca437ebdfab487c143611e2ee83d6aea2194e7
+SIZE (go/security_pwdsafety/pwdsafety-v0.4.2/v0.4.2.mod) = 274
+SHA256 (go/security_pwdsafety/pwdsafety-v0.4.2/v0.4.2.zip) = 0c9739e328e4edcee0c7fcdc170a2052d961d723c53e1cfc4e97166bbf8450c7
+SIZE (go/security_pwdsafety/pwdsafety-v0.4.2/v0.4.2.zip) = 41372

@@ -1,4 +1,0 @@
-
-.if ${DISTVERSION} == 3.11.4
-WRKSRC:=	${WRKDIR}/pymc-3.11.4
-.endif

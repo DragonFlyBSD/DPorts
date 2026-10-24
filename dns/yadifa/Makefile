@@ -1,6 +1,6 @@
 PORTNAME=	yadifa
-DISTVERSION=	2.6.4
-DISTVERSIONSUFFIX=	-10892
+DISTVERSION=	3.0.2
+DISTVERSIONSUFFIX=	-11672
 CATEGORIES=	dns
 MASTER_SITES=	https://www.yadifa.eu/sites/default/files/releases/ \
 		https://dns.company/downloads/yadifa/
@@ -12,14 +12,11 @@ WWW=		https://www.yadifa.eu/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		compiler:c11 cpe libtool ssl
+USES=		autoreconf compiler:c11 cpe libtool ssl
 USE_RC_SUBR=	${PORTNAME}d
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--localstatedir=/var
-
-# obsolete in next version, so > 2.6.2
-LDFLAGS+=	-lexecinfo
+CONFIGURE_ARGS= --localstatedir=/var --with-openssl=${OPENSSLBASE}
 
 SUB_LIST+=	GROUPS="${GROUPS}" \
 		USERS="${USERS}"
@@ -50,19 +47,22 @@ RRL_DESC=		Response Rate Limiting
 RRSIG_DESC=		RRSIG management
 ZONESIGN_DESC=		Zonesign tool
 
-CTRL_CONFIGURE_OFF=		--disable-ctrl
-DDNS_CONFIGURE_OFF=		--disable-dynupdate
-DNSSECTOOLS_CONFIGURE_OFF=	--disable-dnssec-tools
-ECDSA_CONFIGURE_OFF=		--disable-ecdsa
+CTRL_IMPLIES=			MASTER
+CTRL_CONFIGURE_ENABLE=		ctrl
+DDNS_CONFIGURE_ENABLE=		dynupdate
+DNSSECTOOLS_CONFIGURE_ENABLE=	dnssec-tools
+ECDSA_CONFIGURE_ENABLE=		ecdsa
 KEYGEN_CONFIGURE_ENABLE=	keygen
-LARGEFILE_CONFIGURE_OFF=	--disable-largefile
-MASTER_CONFIGURE_OFF=		--disable-master
-NSID_CONFIGURE_OFF=		--disable-nsid
-RRL_CONFIGURE_OFF=		--disable-rrl
-RRSIG_CONFIGURE_OFF=		--disable-rrsig-management
+LARGEFILE_CONFIGURE_ENABLE=	largefile
+MASTER_IMPLIES=			DDNS RRSIG
+MASTER_CONFIGURE_ENABLE=	master
+NSID_CONFIGURE_ENABLE=		nsid
+RRL_CONFIGURE_ENABLE=		rrl
+RRSIG_CONFIGURE_ENABLE=		rrsig-management
 TCL_USES=			tcl
 ZONESIGN_CONFIGURE_ENABLE=	zonesign
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-configure:
 	${REINPLACE_CMD} -e 's|^docdir = .*|docdir = ${EXAMPLESDIR}|' ${WRKSRC}/etc/Makefile
 	${REINPLACE_CMD} -e 's|/usr/local/var|/var|' -e 's|/var/zones|/var/${PORTNAME}|' ${WRKSRC}/etc/yadifad.conf.example
@@ -85,5 +85,12 @@ post-install-EXAMPLES-on:
 	${LN} -s ../../${EXAMPLESDIR_REL}/$f.bash_completion \
 		${STAGEDIR}${PREFIX}/etc/bash_completion.d/$f.sh
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@CCVER@&___@g' \
+			 -e 's@-DHAVE_CONFIG_H@& -D__FreeBSD__=9@g' \
+			 -e 's@FreeBSD)@FreeBSD|DragonFly)@g' \
+			 -e 's@defined __FreeBSD__@& || defined __DragonFly__@g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

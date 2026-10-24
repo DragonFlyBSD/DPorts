@@ -1,0 +1,281 @@
+PORTNAME=	coverm
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.8.0
+PORTREVISION=	2
+CATEGORIES=	biology
+
+MAINTAINER=	yuri@FreeBSD.org
+COMMENT=	Read coverage calculator for metagenomics
+WWW=		https://github.com/wwood/CoverM
+
+LICENSE=	AGPLv3
+LICENSE_FILE=	${WRKSRC}/LICENCE.txt
+
+BROKEN_aarch64=	compilation fails, see https://github.com/wwood/CoverM/issues/234
+BROKEN_i386=	compilation fails, see https://github.com/wwood/CoverM/issues/227
+
+USES=		cargo
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	wwood
+GH_PROJECT=	CoverM
+
+CARGO_CRATES=	addr2line-0.25.1 \
+		adler2-2.0.1 \
+		aho-corasick-1.1.4 \
+		ansi_term-0.12.1 \
+		anstream-1.0.0 \
+		anstyle-1.0.14 \
+		anstyle-parse-1.0.0 \
+		anstyle-query-1.1.5 \
+		anstyle-wincon-3.0.11 \
+		anyhow-1.0.103 \
+		approx-0.5.1 \
+		assert_cli-0.6.3 \
+		autocfg-1.5.1 \
+		backtrace-0.3.76 \
+		bincode-1.3.3 \
+		bio-2.0.3 \
+		bio-types-1.0.4 \
+		bird_tool_utils-0.5.2 \
+		bird_tool_utils-man-0.4.0 \
+		bit-set-0.8.0 \
+		bit-vec-0.8.0 \
+		bitflags-1.3.2 \
+		bitflags-2.13.0 \
+		buffer-redux-1.1.0 \
+		bv-0.11.1 \
+		bytecount-0.6.9 \
+		bytemuck-1.25.0 \
+		byteorder-1.5.0 \
+		bzip2-0.4.4 \
+		bzip2-sys-0.1.13+1.0.8 \
+		capnp-0.14.11 \
+		cargo-husky-1.5.0 \
+		cc-1.2.65 \
+		cfg-if-1.0.4 \
+		cfg_aliases-0.2.1 \
+		checkm-0.3.0 \
+		clap-4.6.1 \
+		clap_builder-4.6.0 \
+		clap_complete-4.6.6 \
+		clap_lex-1.1.0 \
+		cmake-0.1.58 \
+		colorchoice-1.0.5 \
+		colored-1.9.4 \
+		concurrent-queue-2.5.0 \
+		crc32fast-1.5.0 \
+		crossbeam-deque-0.8.6 \
+		crossbeam-epoch-0.9.18 \
+		crossbeam-utils-0.8.21 \
+		csv-1.4.0 \
+		csv-core-0.1.13 \
+		custom_derive-0.1.7 \
+		defmt-1.1.0 \
+		defmt-macros-1.1.0 \
+		defmt-parser-1.0.0 \
+		derive-new-0.5.9 \
+		derive-new-0.6.0 \
+		difference-2.0.0 \
+		disjoint-0.8.0 \
+		displaydoc-0.2.6 \
+		editdistancek-1.0.2 \
+		either-1.16.0 \
+		enum-map-2.7.3 \
+		enum-map-derive-0.17.0 \
+		env_filter-2.0.0 \
+		env_logger-0.10.2 \
+		env_logger-0.11.11 \
+		environment-0.1.1 \
+		equivalent-1.0.2 \
+		errno-0.3.14 \
+		failure-0.1.8 \
+		failure_derive-0.1.8 \
+		fastrand-2.4.1 \
+		feature-probe-0.1.1 \
+		finch-0.6.2 \
+		find-msvc-tools-0.1.9 \
+		fixedbitset-0.4.2 \
+		flate2-1.1.9 \
+		form_urlencoded-1.2.2 \
+		fs-utils-1.1.4 \
+		fuchsia-cprng-0.1.1 \
+		fxhash-0.2.1 \
+		galah-0.5.2 \
+		getrandom-0.2.17 \
+		getrandom-0.3.4 \
+		getrandom-0.4.3 \
+		gimli-0.32.3 \
+		glob-0.3.3 \
+		hashbrown-0.17.1 \
+		heck-0.5.0 \
+		hermit-abi-0.5.2 \
+		home-0.5.12 \
+		hts-sys-2.2.0 \
+		humantime-2.3.0 \
+		icu_collections-2.2.0 \
+		icu_locale_core-2.2.0 \
+		icu_normalizer-2.2.0 \
+		icu_normalizer_data-2.2.0 \
+		icu_properties-2.2.0 \
+		icu_properties_data-2.2.0 \
+		icu_provider-2.2.0 \
+		idna-1.1.0 \
+		idna_adapter-1.2.2 \
+		ieee754-0.2.6 \
+		indexmap-2.14.0 \
+		is-terminal-0.4.17 \
+		is_terminal_polyfill-1.70.2 \
+		itertools-0.13.0 \
+		itertools-num-0.1.3 \
+		itoa-1.0.18 \
+		jiff-0.2.31 \
+		jiff-static-0.2.31 \
+		jobserver-0.1.34 \
+		lazy_static-1.5.0 \
+		libc-0.2.186 \
+		libm-0.2.16 \
+		libz-sys-1.1.29 \
+		linear-map-1.2.0 \
+		linux-raw-sys-0.4.15 \
+		linux-raw-sys-0.12.1 \
+		litemap-0.8.2 \
+		log-0.4.33 \
+		lzma-sys-0.1.20 \
+		matrixmultiply-0.3.10 \
+		memchr-2.8.2 \
+		memmap-0.7.0 \
+		miniz_oxide-0.8.9 \
+		multimap-0.10.1 \
+		murmurhash3-0.0.5 \
+		nalgebra-0.32.6 \
+		nalgebra-macros-0.2.2 \
+		ndarray-0.16.1 \
+		needletail-0.5.1 \
+		newtype_derive-0.1.6 \
+		nix-0.29.0 \
+		num-complex-0.4.6 \
+		num-integer-0.1.46 \
+		num-rational-0.4.2 \
+		num-traits-0.2.19 \
+		object-0.37.3 \
+		once_cell-1.21.4 \
+		once_cell_polyfill-1.70.2 \
+		ordered-float-4.6.0 \
+		paste-1.0.15 \
+		percent-encoding-2.3.2 \
+		petgraph-0.6.5 \
+		pkg-config-0.3.33 \
+		portable-atomic-1.13.1 \
+		portable-atomic-util-0.2.7 \
+		potential_utf-0.1.5 \
+		ppv-lite86-0.2.21 \
+		proc-macro-error-attr2-2.0.0 \
+		proc-macro-error2-2.0.1 \
+		proc-macro2-1.0.106 \
+		quick-error-1.2.3 \
+		quote-1.0.46 \
+		r-efi-5.3.0 \
+		r-efi-6.0.0 \
+		rand-0.4.6 \
+		rand-0.8.6 \
+		rand_chacha-0.3.1 \
+		rand_core-0.3.1 \
+		rand_core-0.4.2 \
+		rand_core-0.6.4 \
+		rand_distr-0.4.3 \
+		rawpointer-0.2.1 \
+		rayon-1.12.0 \
+		rayon-core-1.13.0 \
+		rdrand-0.4.0 \
+		regex-1.12.4 \
+		regex-automata-0.4.14 \
+		regex-syntax-0.8.11 \
+		remove_dir_all-0.5.3 \
+		roff-0.1.0 \
+		roff-0.2.2 \
+		rust-htslib-0.46.0 \
+		rustc-demangle-0.1.27 \
+		rustc_version-0.1.7 \
+		rustix-0.38.44 \
+		rustix-1.1.4 \
+		rustversion-1.0.22 \
+		ryu-1.0.23 \
+		safe_arch-0.7.4 \
+		semver-0.1.20 \
+		serde-1.0.228 \
+		serde_core-1.0.228 \
+		serde_derive-1.0.228 \
+		serde_json-1.0.150 \
+		shlex-2.0.1 \
+		simba-0.8.1 \
+		simd-adler32-0.3.9 \
+		smallvec-1.15.2 \
+		stable_deref_trait-1.2.1 \
+		statrs-0.17.1 \
+		strsim-0.11.1 \
+		strum-0.26.3 \
+		strum_macros-0.26.4 \
+		syn-1.0.109 \
+		syn-2.0.118 \
+		synstructure-0.12.6 \
+		synstructure-0.13.2 \
+		tempdir-0.3.7 \
+		tempfile-3.27.0 \
+		termcolor-1.4.1 \
+		thiserror-1.0.69 \
+		thiserror-2.0.18 \
+		thiserror-impl-1.0.69 \
+		thiserror-impl-2.0.18 \
+		tinystr-0.8.3 \
+		triple_accel-0.4.0 \
+		typenum-1.20.1 \
+		unicode-ident-1.0.24 \
+		unicode-xid-0.2.6 \
+		url-2.5.8 \
+		utf8_iter-1.0.4 \
+		utf8parse-0.2.2 \
+		vcpkg-0.2.15 \
+		vec_map-0.8.2 \
+		version-compare-0.2.1 \
+		wasi-0.11.1+wasi-snapshot-preview1 \
+		wasip2-1.0.4+wasi-0.2.12 \
+		which-6.0.3 \
+		wide-0.7.33 \
+		winapi-0.3.9 \
+		winapi-i686-pc-windows-gnu-0.4.0 \
+		winapi-util-0.1.11 \
+		winapi-x86_64-pc-windows-gnu-0.4.0 \
+		windows-link-0.2.1 \
+		windows-sys-0.59.0 \
+		windows-sys-0.61.2 \
+		windows-targets-0.52.6 \
+		windows_aarch64_gnullvm-0.52.6 \
+		windows_aarch64_msvc-0.52.6 \
+		windows_i686_gnu-0.52.6 \
+		windows_i686_gnullvm-0.52.6 \
+		windows_i686_msvc-0.52.6 \
+		windows_x86_64_gnu-0.52.6 \
+		windows_x86_64_gnullvm-0.52.6 \
+		windows_x86_64_msvc-0.52.6 \
+		winsafe-0.0.19 \
+		wit-bindgen-0.57.1 \
+		writeable-0.6.3 \
+		xz2-0.1.7 \
+		yoke-0.8.3 \
+		yoke-derive-0.8.2 \
+		zerocopy-0.8.52 \
+		zerocopy-derive-0.8.52 \
+		zerofrom-0.1.8 \
+		zerofrom-derive-0.1.7 \
+		zerotrie-0.2.4 \
+		zerovec-0.11.6 \
+		zerovec-derive-0.11.3 \
+		zmij-1.0.21
+
+PLIST_FILES=	bin/${PORTNAME}
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+
+.include <bsd.port.mk>

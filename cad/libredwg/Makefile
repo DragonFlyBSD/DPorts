@@ -11,6 +11,7 @@ LICENSE=	GPLv3+
 
 USES=		cpe libtool tar:xz
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--enable-trace --with-perl-install=no
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
@@ -41,8 +42,9 @@ PYTHON_CONFIGURE_OFF=	--disable-python
 PYTHON_PORTEXAMPLES=	load_dwg.py
 PYTHON_VARS=		SHEBANG_FILES+=examples/load_dwg.py
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
-# XXX: switch the order of #include's to unbreak on powerpc/sparc64
+# XXX: switch the order of #include's to unbreak on powerpc
 # which are still based on gcc-4.2.1 (should be no-op elsewhere)
 	@${REINPLACE_CMD} -e '/#include "com/ { x; s/^/#include <stdlib.h>/; \
 		G; }; 24d' ${WRKSRC}/src/common.c

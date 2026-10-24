@@ -20,4 +20,8 @@ USES=		cmake compiler:c++11-lang ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenBMP
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@STREQUAL FreeBSD@MATCHES "FreeBSD|DragonFly"@g' \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

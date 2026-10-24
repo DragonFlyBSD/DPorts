@@ -1,6 +1,6 @@
 PORTNAME=	cardioid
 PORTVERSION=	g20211026
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -14,7 +14,7 @@ LIB_DEPENDS=	libblas.so:math/blas \
 		liblapack.so:math/lapack
 RUN_DEPENDS=	bash:shells/bash
 
-USES=		cmake:testing compiler:c++11-lang shebangfix
+USES=		cmake:testing shebangfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	LLNL
@@ -50,5 +50,14 @@ OPENMPI_CMAKE_ON=	-DENABLE_MPI=ON
 
 OPENMP_CMAKE_BOOL=	ENABLE_OPENMP
 OPENMP_BROKEN_OFF=	https://github.com/LLNL/cardioid/issues/14
+
+IGNORE= unmaintained, please request fixing to users mailing list
+.include <bsd.port.options.mk>
+
+.if (!exists(/usr/include/omp.h) && ${PORT_OPTIONS:MOPENMP})
+USES+=	compiler:gcc-c++11-lib
+.else
+USES+=	compiler:c++11-lang
+.endif
 
 .include <bsd.port.mk>

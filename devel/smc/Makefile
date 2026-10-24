@@ -1,16 +1,15 @@
 PORTNAME=	smc
 PORTVERSION=	4.3.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/OldFiles
 DISTNAME=	${PORTNAME}_${PORTVERSION:S/./_/g}
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	The State Machine Compiler
 WWW=		https://smc.sourceforge.net/
 
-USES=		java
+USES=		java tar:tgz
 
 NO_BUILD=	yes
 

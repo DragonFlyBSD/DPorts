@@ -1,2 +1,0 @@
-
-CMAKE_ARGS+=	-DMPI_C_COMPILER="${LOCALBASE}/mpi/openmpi/bin/mpicc" -DMPI_CXX_COMPILER="${LOCALBASE}/mpi/openmpi/bin/mpicxx" -DMPI_Fortran_COMPILER="${LOCALBASE}/mpi/openmpi/bin/mpifort"

@@ -1,42 +1,47 @@
 PORTNAME=	thunderbird
-DISTVERSION=	128.3.0
-PORTREVISION=	2
+DISTVERSION=	158.0.1
 CATEGORIES=	mail news net-im wayland
-MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}esr-candidates/build3/source
-DISTFILES=	${DISTNAME}esr.source${EXTRACT_SUFX}
+MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build1/source
+DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Mozilla Thunderbird is standalone mail and news that stands above
-WWW=		https://www.mozilla.com/thunderbird/
+WWW=		https://www.thunderbird.net/
+
+NOT_FOR_ARCHS=		i386
+NOT_FOR_ARCHS_REASON=	fails to build: rust needs more address space than platform can provide
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.101:security/nss \
+		nss>=3.130:security/nss \
 		libevent>=2.1.8:devel/libevent \
-		harfbuzz>=8.5.0:print/harfbuzz \
-		graphite2>=1.3.14:graphics/graphite2 \
-		png>=1.6.43:graphics/png \
+		png>=1.6.45:graphics/png \
 		dav1d>=1.0.0:multimedia/dav1d \
-		libvpx>=1.14.0:multimedia/libvpx \
+		libvpx>=1.15.0:multimedia/libvpx \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
-		autoconf2.13:devel/autoconf2.13 \
 		nasm:devel/nasm \
 		yasm:devel/yasm \
-		zip:archivers/zip
-LIB_DEPENDS=	libjson-c.so:devel/json-c \
-		libbotan-2.so:security/botan2
+		zip:archivers/zip \
+		${LOCALBASE}/share/wasi-sysroot/lib/wasm32-wasip1/libc++abi.a:devel/wasi-libcxx${LLVM_VERSION} \
+		${LOCALBASE}/share/wasi-sysroot/lib/wasm32-wasip1/libc.a:devel/wasi-libc@${LLVM_VERSION} \
+		wasi-compiler-rt${LLVM_VERSION}>0:devel/wasi-compiler-rt${LLVM_VERSION}
+LIB_DEPENDS=	libjson-c.so:devel/json-c
 
 USE_GECKO=	gecko
+CONFLICTS_INSTALL=	thunderbird-esr
 # cannot use system icu: calendar is completely broken by
-# https://unicode-org.atlassian.net/browse/ICU-22132 (fix not in 74.1)
+# https://unicode-org.atlassian.net/browse/ICU-22132 (fix not in 76.1)
 USE_MOZILLA=	-icu -sqlite
 CFLAGS_powerpc64le=	-DSQLITE_BYTEORDER=1234
 
 USES=		tar:xz
+# helpful when testing beta
+WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
 MOZ_OPTIONS=	--enable-application=comm/mail --enable-official-branding
-MOZ_OPTIONS+=	--with-system-bz2 --with-system-jsonc --with-system-botan
+MOZ_OPTIONS+=	--with-system-bz2 --with-system-jsonc
+MOZ_OPTIONS+=	--with-wasi-sysroot=${LOCALBASE}/share/wasi-sysroot
 MOZ_MK_OPTIONS=	MOZ_THUNDERBIRD=1 MAIL_PKG_SHARED=1
 MOZ_EXPORT=		MOZ_THUNDERBIRD=1 MAIL_PKG_SHARED=1
 
@@ -47,18 +52,15 @@ SYSTEM_PREFS=	${FAKEDIR}/lib/${PORTNAME}/defaults/pref/${PORTNAME}.js
 
 OPTIONS_DEFAULT=CANBERRA
 
+LDFLAGS= -R${PREFIX}/lib/thunderbird
+MAKE_ENV= AR=/usr/bin/ar LD=/usr/bin/ld
+MOZ_OPTIONS+= --host=${ARCH}-dports-${OPSYS:tl}${OSREL}
+MOZ_OPTIONS+= --disable-webrtc
+MOZ_OPTIONS+= --with-clang-path=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang
+MOZ_OPTIONS+= --with-libclang-path=${LOCALBASE}/llvm${LLVM_VERSION}/lib
+CXXFLAGS= -Wno-multistatement-macros -Wno-class-memaccess
+BINARY_ALIAS= clang=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang clang++=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang++ wasm-ld=${LOCALBASE}/llvm${LLVM_VERSION}/bin/wasm-ld
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
-
-.include <bsd.port.options.mk>
-
-.if ${ARCH} == powerpc64
-MOZ_OPTIONS+=	--without-wasm-sandboxed-libraries
-.else
-BUILD_DEPENDS+=	${LOCALBASE}/share/wasi-sysroot/lib/wasm32-wasi/libc++abi.a:devel/wasi-libcxx${LLVM_VERSION} \
-		${LOCALBASE}/share/wasi-sysroot/lib/wasm32-wasi/libc.a:devel/wasi-libc \
-		wasi-compiler-rt${LLVM_VERSION}>0:devel/wasi-compiler-rt${LLVM_VERSION}
-MOZ_OPTIONS+=	--with-wasi-sysroot=${LOCALBASE}/share/wasi-sysroot
-.endif
 
 post-extract:
 	@${SED} -e 's|@PORTNAME_ICON@|${PORTNAME_ICON:R}|;s|@MOZILLA@|${MOZILLA}|' \
@@ -75,4 +77,21 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/${MOZILLA_EXEC_NAME}.desktop ${STAGEDIR}${PREFIX}/share/applications
 	${LN} -sf ${PORTNAME_ICON_SRC} ${STAGEDIR}${PREFIX}/share/pixmaps/${PORTNAME_ICON}
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO:NPROFILE}
+OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NLTO}
+dfly-patch:
+	# disable SCTP
+	${REINPLACE_CMD} -e 's|MOZ_SCTP|MOZ_DISABLE_SCTP|' \
+		${WRKSRC}/netwerk/moz.build
+	(cd ${WRKSRC}/gfx/angle/checkout/src/compiler/translator && \
+		${REINPLACE_CMD} -e 's|<math.h>|<cmath>|' \
+		InfoSink.h IntermNode.cpp)
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
+		${WRKSRC}/media/libcubeb/src/cubeb_alsa.c
+	${REINPLACE_CMD} -e 's@_POSIX_SOURCE@&___@g' \
+		${WRKSRC}/media/libcubeb/src/cubeb_jack.cpp
+	${REINPLACE_CMD} -e 's@gtk+-wayland@&z@g' \
+		${WRKSRC}/toolkit/moz.configure
+
+USES:= ${USES:Nelfctl}
 .include <bsd.port.mk>

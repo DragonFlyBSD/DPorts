@@ -5,11 +5,11 @@ CATEGORIES=	ftp
 MASTER_SITES=	http://www.sourcefiles.org/System/Daemons/FTP/ \
 		LOCAL/sunpoet
 
-MAINTAINER=	skynick@mail.sc.ru
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Secure FTP client/server with TLS/SSL support
-WWW=		http://bsdftpd-ssl.sc.ru
+WWW=		# not found as of 20250701
 
-USES=		ssl
+USES= ssl ncurses
 MAKE_ENV+=	OBJFORMAT=elf
 MAKE_JOBS_UNSAFE=	yes
 
@@ -26,6 +26,7 @@ OPTIONS_DEFAULT=SERVER
 # explicitly link against libpam to support external toolchains.
 LDFLAGS+=	-lpam
 
+CFLAGS= -DSMALL
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSERVER} && ${PORT_OPTIONS:MEXAMPLES}

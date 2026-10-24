@@ -1,20 +1,29 @@
---- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2024-08-26 14:40:28 UTC
+--- third_party/blink/renderer/core/exported/web_view_impl.cc.orig	2026-08-13 07:41:05 UTC
 +++ third_party/blink/renderer/core/exported/web_view_impl.cc
-@@ -427,7 +427,7 @@ SkFontHinting RendererPreferencesToSkiaHinting(
+@@ -402,7 +402,7 @@ void RecordPrerenderActivationSignalDelay(const String
+ #if !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_WIN)
+ SkFontHinting RendererPreferencesToSkiaHinting(
      const blink::RendererPreferences& prefs) {
- // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
- // complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    if (!prefs.should_antialias_text) {
      // When anti-aliasing is off, GTK maps all non-zero hinting settings to
      // 'Normal' hinting so we do the same. Otherwise, folks who have 'Slight'
-@@ -3418,7 +3418,7 @@ void WebViewImpl::UpdateFontRenderingFromRendererPrefs
+@@ -3631,7 +3631,7 @@ void WebViewImpl::UpdateFontRenderingFromRendererPrefs
+       gfx::FontRenderParams::SUBPIXEL_RENDERING_NONE);
+   WebFontRenderStyle::SetSubpixelPositioning(
        renderer_preferences_.use_subpixel_positioning);
- // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
- // complete.
--#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)) && \
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)) && \
-     !BUILDFLAG(IS_ANDROID)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    if (!renderer_preferences_.system_font_family_name.empty()) {
-     WebFontRenderStyle::SetSystemFontFamily(blink::WebString::FromUTF8(
+     WebFontRenderStyle::SetSystemFontFamily(blink::WebString::FromUtf8(
+         renderer_preferences_.system_font_family_name));
+@@ -3781,7 +3781,7 @@ void WebViewImpl::UpdateRendererPreferences(
+       renderer_preferences_.selection_clipboard_buffer_available);
+ #endif  // BUILDFLAG(IS_OZONE)
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   GetSettings()->SetMiddleClickPasteAllowed(
+       renderer_preferences_.middle_click_paste_allowed);
+ #endif  // BUILDFLAG(IS_LINUX)

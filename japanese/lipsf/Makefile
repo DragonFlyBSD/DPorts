@@ -17,8 +17,18 @@ PORTDOCS=	HISTORY Install README TECHKNOW
 
 OPTIONS_DEFINE=	DOCS
 
+CFLAGS= -DMAXNAMLEN=255 -DUSETERMINFO
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+
+.include <bsd.port.options.mk>
+dfly-patch:
+.if ${DFLYVERSION} > 400501
+	${REINPLACE_CMD} -e 's@LDFLAGS[[:space:]]=@LDFLAGS +=@g'	\
+		${WRKSRC}/Makefile.in
+	${REINPLACE_CMD} -e 's@-lcurses@-lncurses@g'	\
+		${WRKSRC}/machine.h
+.endif
 
 .include <bsd.port.mk>

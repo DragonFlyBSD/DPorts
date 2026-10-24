@@ -32,4 +32,8 @@ post-install:
 .endfor
 .endif
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<net/if_tun.h>@<net/tun/if_tun.h>@g' \
+		${WRKSRC}/configure ${WRKSRC}/tun_bsd.c
+
 .include <bsd.port.mk>

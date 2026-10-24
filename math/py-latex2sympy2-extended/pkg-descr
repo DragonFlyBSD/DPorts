@@ -1,0 +1,4 @@
+latex2sympy2-extended converts LaTeX mathematical expressions into
+SymPy symbolic expressions. It parses LaTeX math notation and produces
+equivalent SymPy objects, enabling symbolic computation and manipulation
+of mathematical formulas expressed in LaTeX.

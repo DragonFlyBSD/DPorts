@@ -379,4 +379,7 @@ post-install:
 	${INSTALL_DATA} ${DOCS:S,^,${WRKSRC}/doc/,} ${STAGEDIR}${VPOPMAIL_DIR}/doc/
 .endif
 
+dfly-patch:
+	${ECHO} "#include <unistd.h>" >> ${WRKSRC}/cdb/cdb.h
+
 .include <bsd.port.mk>

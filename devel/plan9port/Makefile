@@ -4,14 +4,14 @@ CATEGORIES=	devel plan9
 DIST_SUBDIR=	plan9port
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	tiago.gasiba@gmail.com
+MAINTAINER=	tiga@FreeBSD.org
 COMMENT=	Plan 9 from User Space
 WWW=		https://9fans.github.io/plan9port/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	as:devel/binutils@native
+BUILD_DEPENDS= as:devel/binutils@native
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
@@ -87,5 +87,15 @@ do-install:
 		src/cmd/devdraw/o.devdraw; do \
 			${STRIP_CMD} $$f > /dev/null 2>&1 || ${TRUE}; \
 		done
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/sys\/termios.h/d' \
+		${WRKSRC}/src/cmd/9term/bsdpty.c \
+		${WRKSRC}/src/cmd/draw/mc.c \
+		${WRKSRC}/src/lib9/readcons.c
+
+
+dfly-configure:
+	${REINPLACE_CMD} '/CC9=/d' ${WRKSRC}/LOCAL.config
 
 .include <bsd.port.post.mk>

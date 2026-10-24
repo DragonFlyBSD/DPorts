@@ -1,6 +1,6 @@
 PORTNAME=	shared-mime-info
 DISTVERSION=	2.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc gnome
 
 MAINTAINER=	desktop@FreeBSD.org
@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		gettext gnome localbase meson pathfix pkgconfig python:build shebangfix \
 		tar:xz trigger
-CONFIGURE_ARGS=	-Dupdate-mimedb=false \
+MESON_ARGS=	-Dupdate-mimedb=false \
 		-Dxdgmime-path=${WRKSRC}/src/xdgmime
 USE_GNOME=	glib20 libxml2
 USE_GITLAB=	YES
@@ -29,6 +29,7 @@ SHEBANG_FILES=	${WRKSRC}/tests/*.py \
 MIMESUBDIRS=	all application audio chemical font image inode message model \
 		multipart print text uri video x-content x-epoc x-scheme-handler
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-patch:
 	${REINPLACE_CMD} 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/src/xdgmime/src/xdgmime.c \

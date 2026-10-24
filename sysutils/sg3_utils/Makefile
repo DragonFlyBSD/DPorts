@@ -18,4 +18,8 @@ post-install:
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/lib/sg_pt_freebsd.c
+
 .include <bsd.port.mk>

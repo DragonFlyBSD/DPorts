@@ -1,5 +1,5 @@
 PORTNAME=	dav1d
-DISTVERSION=	1.5.1
+DISTVERSION=	1.5.4
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -13,7 +13,8 @@ BUILD_DEPENDS=	${BUILD_DEPENDS_${ARCH}}
 BUILD_DEPENDS_x86_64=	nasm:devel/nasm
 BUILD_DEPENDS_i386=	nasm:devel/nasm
 
-USES=		compiler:c11 meson
+USES=		compiler:c11 cpe meson
+CPE_VENDOR=	videolan
 USE_GITLAB=	yes
 USE_LDCONFIG=	yes
 GL_SITE=	https://code.videolan.org
@@ -42,13 +43,14 @@ XXHASH_MESON_ENABLED=	xxhash_muxer
 .MAKEFLAGS:	WITH="${OPTIONS_DEFINE}"
 .endif
 
-# https://github.com/llvm/llvm-project/issues/39981
-.if !empty(CFLAGS:M-flto*)
-MESON_ARGS+=	${MESON_ARGS_${CHOSEN_COMPILER_TYPE}_${ARCH}}
-MESON_ARGS_clang_x86_64=	-Dstack_alignment=16
-MESON_ARGS_clang_i386=	-Dstack_alignment=4
-.endif
+post-build-TEST-on:
+# Ensure checkasm is built before tests are run
+	@${DO_MAKE_BUILD} -C ${BUILD_WRKSRC} meson-test-prereq
 
 pre-install-TEST-on: do-test
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's| defined(__DragonFly__) \|\|||' \
+		${WRKSRC}/src/thread.h
 
 .include <bsd.port.mk>

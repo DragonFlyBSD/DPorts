@@ -1,5 +1,5 @@
 PORTNAME=	dwlb
-PORTVERSION=	s20240516
+PORTVERSION=	s20250520
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -19,11 +19,12 @@ USES=		gmake pkgconfig xorg
 USE_GITHUB=	yes
 USE_XORG=	pixman
 GH_ACCOUNT=	kolunmi
-GH_TAGNAME=	0daa1c1
+GH_TAGNAME=	48dbe00
 EXTRA_PATCHES=	${${PORTNAME:tu}_PATCHES}
 PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man1/${PORTNAME}.1.gz
 
+DFLY_UNMAINTAINED= yes
 pre-everything::
 	@${ECHO_MSG} "To build ${PORTNAME} with your own config.h set ${PORTNAME:tu}_CONF variable"
 	@${ECHO_MSG} "either in ${.CURDIR:T}/Makefile.local, make.conf(5), environ(7) or command line e.g.,"

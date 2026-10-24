@@ -1,2 +1,0 @@
-USES+=	alias
-LIBS+=	-lutil

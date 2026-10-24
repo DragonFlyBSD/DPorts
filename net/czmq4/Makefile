@@ -1,7 +1,7 @@
 PORTNAME=	czmq
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.2.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net
 PKGNAMESUFFIX=	4
 
@@ -36,5 +36,9 @@ TEST_TARGET=	check
 CPPFLAGS+=	-Wno-error
 
 CONFLICTS_INSTALL=	czmq-3.*
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*freebsd\*\))@\1|*dragonfly*)@g' \
+		${WRKSRC}/configure.ac
 
 .include <bsd.port.mk>

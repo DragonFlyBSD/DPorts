@@ -21,6 +21,7 @@ GH_ACCOUNT=	iotamudelta
 GH_PROJECT=	ROCT-Thunk-Interface
 GH_TAGNAME=	9d1fb76
 
+CFLAGS= -DMAP_NORESERVE=0
 post-install:
 	${MKDIR} ${STAGEDIR}/${PREFIX}/include/roct
 	${MKDIR} ${STAGEDIR}/${PREFIX}/include/roct/linux

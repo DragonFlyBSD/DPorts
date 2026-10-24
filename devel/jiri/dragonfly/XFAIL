@@ -1,0 +1,1 @@
+XFAIL_DragonFly= go update.go Executable

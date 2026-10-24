@@ -10,9 +10,9 @@
 .if !defined(_INCLUDE_USES_CARGO_MK)
 _INCLUDE_USES_CARGO_MK=	yes
 
-. if ${cargo_ARGS:Mextra}
-.  include "${USESDIR}/cargo-extra.mk"
-. endif
+.  if !empty(cargo_ARGS:Nextra)
+IGNORE+=	USES=cargo only takes the optional argument "extra"
+.  endif
 
 .sinclude "${MASTERDIR}/Makefile.crates"
 
@@ -20,17 +20,38 @@ _INCLUDE_USES_CARGO_MK=	yes
 # CARGO_CRATES will be downloaded from MASTER_SITE_CRATESIO.
 CARGO_CRATES?=
 
+# DragonFly: per-crate patches. This must come after Makefile.crates and
+# the CARGO_CRATES default. cargo-extra.mk expands CARGO_CRATES in a .for
+# loop, which bmake evaluates at parse time, so including it any earlier
+# sees an empty list and silently adds nothing for every port that keeps
+# its crates in Makefile.crates.
+.  if ${cargo_ARGS:Mextra}
+.    include "${USESDIR}/cargo-extra.mk"
+.  endif
+
 # List of features to build (space separated list).
 # Use special token --no-default-features to disable default
 # features by passing it to cargo build/install/test.
 CARGO_FEATURES?=
 
+# The subdirectory in the source tree where the cargo project
+# is located. By default the whole project is in Rust, but
+# the Rust part can be at any location.
+# Multiple Rust subprojects are not yet supported.
+CARGO_SRC_SUBDIR?=
+
+# Is the Rust project top-level?
+CARGO_RUST_TOPLEVEL=	${CARGO_SRC_SUBDIR:C/^.+$/no/:C/^$/yes/}
+
+# WRKSRC of the Rust project.
+CARGO_WRKSRC=	${WRKSRC}/${CARGO_SRC_SUBDIR}
+
 # Name of the local directory for vendoring crates.
-CARGO_VENDOR_DIR?=	${WRKSRC}/cargo-crates
+CARGO_VENDOR_DIR?=	${CARGO_WRKSRC}/cargo-crates
 
 # Default path for cargo manifest.
-CARGO_CARGOTOML?=	${WRKSRC}/Cargo.toml
-CARGO_CARGOLOCK?=	${WRKSRC}/Cargo.lock
+CARGO_CARGOTOML?=	${CARGO_WRKSRC}/Cargo.toml
+CARGO_CARGOLOCK?=	${CARGO_WRKSRC}/Cargo.lock
 
 # Save crates inside ${DISTDIR}/rust/crates by default.
 CARGO_DIST_SUBDIR?=	rust/crates
@@ -56,7 +77,7 @@ _CARGO_CRATES:=		${_CARGO_CRATES:C/^([-_a-zA-Z0-9]+)-([0-9].*)/\0 \1 \2/}
 
 .  for _index _crate _name _version in ${_CARGO_CRATES}
 # Resolving CRATESIO alias is very inefficient with many MASTER_SITES, consume MASTER_SITE_CRATESIO directly
-MASTER_SITES+=	${MASTER_SITE_CRATESIO:S,%SUBDIR%,${_name}/${_version},:S,$,:_cargo_${_index},}
+MASTER_SITES+=	${MASTER_SITE_CRATESIO:S,%SUBDIR%,${_name}/${_crate}${CARGO_CRATE_EXT},:S,$,:_cargo_${_index},}
 DISTFILES+=	${CARGO_DIST_SUBDIR}/${_crate}${CARGO_CRATE_EXT}:_cargo_${_index}
 
 # Provide pointer to the crate's extraction dir
@@ -69,7 +90,7 @@ WRKSRC_crate_${_crate}=	${CARGO_VENDOR_DIR}/${_crate}
 _CARGO_AWK=	${AWK} -vCP="${CP}" -vFIND="${FIND}" -vGREP="${GREP}" \
 		-vCARGO_VENDOR_DIR="${CARGO_VENDOR_DIR}" \
 		-vGIT_SOURCES="${_CARGO_GIT_SOURCES}" \
-		-vWRKDIR="${WRKDIR}" -vWRKSRC="${WRKSRC}" \
+		-vWRKDIR="${WRKDIR}" -vWRKSRC="${CARGO_WRKSRC}" \
 		-f${SCRIPTSDIR}/split-url.awk \
 		-f${SCRIPTSDIR}/cargo-crates-git-common.awk -f
 
@@ -97,7 +118,7 @@ WRKSRC_crate_${_crate}=	${WRKDIR}/${_wrksrc}
 
 CARGO_BUILDDEP?=	yes
 .  if ${CARGO_BUILDDEP:tl} == "yes"
-BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.85.0:lang/${RUST_DEFAULT}
+BUILD_DEPENDS+=	${RUST_DEFAULT}>=1.98.0:lang/${RUST_DEFAULT}
 .  elif ${CARGO_BUILDDEP:tl} == "any-version"
 BUILD_DEPENDS+=	${RUST_DEFAULT}>=0:lang/${RUST_DEFAULT}
 .  endif
@@ -128,9 +149,9 @@ CARGO_ENV+= \
 	CARGO_TARGET_DIR=${CARGO_TARGET_DIR} \
 	RUSTC=${RUSTC} \
 	RUSTDOC=${RUSTDOC} \
-	RUSTFLAGS="${RUSTFLAGS} ${LDFLAGS:C/.+/-C link-arg=&/}"
+	RUSTFLAGS="${RUSTFLAGS} -C linker=${CC} ${LDFLAGS:C/.+/-C link-args=&/}"
 
-.  if ${ARCH} != powerpc64le
+.  if ${ARCH} != powerpc64le || (${ARCH} == powerpc64le && ${OSVERSION} >= 1600019)
 CARGO_ENV+=	RUST_BACKTRACE=1
 .  endif
 
@@ -152,7 +173,7 @@ RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/}
 
 # Helper to shorten cargo calls.
 _CARGO_RUN=		${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${CARGO_ENV} ${CARGO}
-CARGO_CARGO_RUN=	cd ${WRKSRC}; ${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${CARGO_ENV} \
+CARGO_CARGO_RUN=	cd ${CARGO_WRKSRC} && ${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${CARGO_ENV} \
 			CARGO_FREEBSD_PORTS_SKIP_GIT_UPDATE=1 ${CARGO}
 
 # User arguments for cargo targets.
@@ -160,13 +181,14 @@ CARGO_BUILD_ARGS?=
 CARGO_INSTALL_ARGS?=
 CARGO_INSTALL_PATH?=	.
 CARGO_TEST_ARGS?=
+CARGO_TEST_AFTER_ARGS?=
 CARGO_UPDATE_ARGS?=
 
 # Use module targets ?
-CARGO_BUILD?=	yes
+CARGO_BUILD?=	${CARGO_RUST_TOPLEVEL}
 CARGO_CONFIGURE?=	yes
-CARGO_INSTALL?=	yes
-CARGO_TEST?=	yes
+CARGO_INSTALL?=	${CARGO_RUST_TOPLEVEL}
+CARGO_TEST?=	${CARGO_RUST_TOPLEVEL}
 
 # rustc stashes intermediary files in TMPDIR (default /tmp) which
 # might cause issues for users that for some reason space limit
@@ -256,15 +278,19 @@ CARGO_ENV+=	ZSTD_SYS_USE_PKG_CONFIG=1
 # https://github.com/rust-lang/libc/commit/78f93220d70e
 # https://github.com/rust-lang/libc/commit/969ad2b73cdc
 .        if ${_name} == libc && ${_major} == 0 && (${_minor} < 2 || (${_minor} == 2 && ${_patch} < 38))
-DEV_ERROR+=	"CARGO_CRATES=${_crate} may be unstable on FreeBSD 12.0. Consider updating to the latest version \(higher than 0.2.37\)."
+DEV_ERROR+=	"CARGO_CRATES=${_crate} may be unstable on FreeBSD 12.0. Consider updating to the latest version (higher than 0.2.37)."
 .        endif
 .        if ${_name} == libc && ${_major} == 0 && (${_minor} < 2 || (${_minor} == 2 && ${_patch} < 49))
-DEV_ERROR+=	"CARGO_CRATES=${_crate} may be unstable on aarch64 or not build on armv6, armv7, powerpc64. Consider updating to the latest version \(higher than 0.2.49\)."
+DEV_ERROR+=	"CARGO_CRATES=${_crate} may be unstable on aarch64 or not build on armv6, armv7, powerpc64. Consider updating to the latest version (higher than 0.2.49)."
+.        endif
+.        if ${_name} == libc && ${_major} == 0 && (${_minor} < 2 || (${_minor} == 2 && ${_patch} < 176))
+DEV_WARNING+=	"CARGO_CRATES=${_crate} requires COMPAT_FREEBSD11 support, not present by default on riscv64. Consider updating to the latest version (higher than 0.2.175)."
+_CARGO_COMPAT11=
 .        endif
 # FreeBSD 12.0 updated base OpenSSL in r339270:
 # https://github.com/sfackler/rust-openssl/commit/276577553501
 .        if ${_name} == openssl && !exists(${PATCHDIR}/patch-openssl-1.1.1) && ${_major} == 0 && (${_minor} < 10 || (${_minor} == 10 && ${_patch} < 4))
-DEV_WARNING+=	"CARGO_CRATES=${_crate} does not support OpenSSL 1.1.1. Consider updating to the latest version \(higher than 0.10.3\)."
+DEV_WARNING+=	"CARGO_CRATES=${_crate} does not support OpenSSL 1.1.1. Consider updating to the latest version (higher than 0.10.3)."
 .        endif
 .      endfor
 .    endif
@@ -292,27 +318,31 @@ cargo-extract:
 .  if ${CARGO_CONFIGURE:tl} == "yes"
 _USES_configure+=	250:cargo-configure
 
+CARGO_DOT_DIR=	${WRKSRC}/${CARGO_SRC_SUBDIR}/../.cargo
+
 # configure hook.  Place a config file for overriding crates-io index
 # by local source directory.
 cargo-configure:
+.    if defined(_CARGO_COMPAT11)
 # Check that the running kernel has COMPAT_FREEBSD11 required by lang/rust post-ino64
 	@${SETENV} CC="${CC}" OPSYS="${OPSYS}" OSVERSION="${OSVERSION}" WRKDIR="${WRKDIR}" \
 		${SH} ${SCRIPTSDIR}/rust-compat11-canary.sh
+.    endif
 .    if defined(_CARGO_MSG)
 	@${ECHO_MSG} ${_CARGO_MSG}
 .    endif
 	@${ECHO_MSG} "===>   Cargo config:"
-	@${MKDIR} ${WRKDIR}/.cargo
-	@: > ${WRKDIR}/.cargo/config.toml
-	@${ECHO_CMD} "[source.cargo]" >> ${WRKDIR}/.cargo/config.toml
-	@${ECHO_CMD} "directory = '${CARGO_VENDOR_DIR}'" >> ${WRKDIR}/.cargo/config.toml
-	@${ECHO_CMD} "[source.crates-io]" >> ${WRKDIR}/.cargo/config.toml
-	@${ECHO_CMD} "replace-with = 'cargo'" >> ${WRKDIR}/.cargo/config.toml
+	@${MKDIR} ${CARGO_DOT_DIR}
+	@: > ${CARGO_DOT_DIR}/config.toml
+	@${ECHO_CMD} "[source.cargo]" >> ${CARGO_DOT_DIR}/config.toml
+	@${ECHO_CMD} "directory = '${CARGO_VENDOR_DIR}'" >> ${CARGO_DOT_DIR}/config.toml
+	@${ECHO_CMD} "[source.crates-io]" >> ${CARGO_DOT_DIR}/config.toml
+	@${ECHO_CMD} "replace-with = 'cargo'" >> ${CARGO_DOT_DIR}/config.toml
 .    if !empty(_CARGO_GIT_SOURCES)
 	@${_CARGO_AWK} ${SCRIPTSDIR}/cargo-crates-git-configure.awk \
-		/dev/null >> ${WRKDIR}/.cargo/config.toml
+		/dev/null >> ${CARGO_DOT_DIR}/config.toml
 .    endif
-	@${CAT} ${WRKDIR}/.cargo/config.toml
+	@${CAT} ${CARGO_DOT_DIR}/config.toml
 	@if ! ${GREP} -qF '[profile.release]' ${CARGO_CARGOTOML}; then \
 		${ECHO_CMD} "" >> ${CARGO_CARGOTOML}; \
 		${ECHO_CMD} "[profile.release]" >> ${CARGO_CARGOTOML}; \
@@ -350,13 +380,18 @@ do-install:
 .    endfor
 .  endif
 
+.  if !empty(CARGO_TEST_AFTER_ARGS)
+_CARGO_TEST_AFTER_ARGS=	-- ${CARGO_TEST_AFTER_ARGS}
+.  endif
+
 .  if !target(do-test) && ${CARGO_TEST:tl} == "yes"
 do-test:
 	@${CARGO_CARGO_RUN} test \
 		--manifest-path ${CARGO_CARGOTOML} \
 		--verbose \
 		--verbose \
-		${CARGO_TEST_ARGS}
+		${CARGO_TEST_ARGS} \
+		${_CARGO_TEST_AFTER_ARGS}
 .  endif
 
 #

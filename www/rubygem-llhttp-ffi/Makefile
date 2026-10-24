@@ -5,7 +5,8 @@ MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby FFI bindings for llhttp
-WWW=		https://github.com/bryanp/llhttp/tree/main/ffi
+WWW=		https://github.com/bryanp/llhttp/tree/main/ffi \
+		https://github.com/bryanp/llhttp
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE

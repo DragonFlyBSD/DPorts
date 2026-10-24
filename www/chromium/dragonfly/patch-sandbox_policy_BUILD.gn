@@ -1,0 +1,22 @@
+diff --git sandbox/policy/BUILD.gn sandbox/policy/BUILD.gn
+index dfe5c47ae4b9..3a9d966310ea 100644
+--- sandbox/policy/BUILD.gn
++++ sandbox/policy/BUILD.gn
+@@ -135,6 +135,17 @@ component("policy") {
+       "//ui/gfx/x",
+     ]
+   }
++  if (is_dragonfly) {
++    sources += [
++      "dragonfly/sandbox_dragonfly.cc",
++      "dragonfly/sandbox_dragonfly.h",
++    ]
++    deps += [
++      "//sandbox:sandbox_buildflags",
++      "//ui/gfx/x",
++    ]
++  }
++
+   if (is_chromeos) {
+     sources += [
+       "linux/bpf_ime_policy_linux.cc",

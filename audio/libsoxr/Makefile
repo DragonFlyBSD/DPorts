@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING.LGPL
 LICENSE_FILE_FFTPAK=	${FILESDIR}/FFTPAK_license.txt
 LICENSE_PERMS_FFTPAK=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USES=		cmake pathfix pkgconfig tar:xz
+USES=		cmake pkgconfig tar:xz
 
 USE_LDCONFIG=	yes
 
@@ -50,11 +50,5 @@ AVFFT_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 PFFFT_CMAKE_ON=		-DWITH_PFFFT:BOOL=ON
 PFFFT_CMAKE_OFF=	-DWITH_PFFFT:BOOL=OFF
 PFFFT_IMPLIES=		SIMD
-
-post-patch:
-	@${GREP} -El 'SOURCE_DIR}/LICENCE|AVCODEC_INCLUDE_DIRS' \
-		${WRKSRC}/CMakeLists.txt | ${XARGS} ${REINPLACE_CMD} \
-		-e '/$${CMAKE_CURRENT_SOURCE_DIR}\/LICENCE/d' \
-		-e 's/AVCODEC_INCLUDE_DIRS/AVCODEC_INCLUDES/'
 
 .include <bsd.port.mk>

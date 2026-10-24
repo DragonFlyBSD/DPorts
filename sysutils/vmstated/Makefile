@@ -15,6 +15,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	christian-moerz
 GH_PROJECT=	vmstated
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	${REINPLACE_CMD} "s@PREFIX@${PREFIX}@g" "${WRKSRC}/rc/vmstated"
 

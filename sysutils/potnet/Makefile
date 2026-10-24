@@ -1,6 +1,6 @@
 PORTNAME=	potnet
 DISTVERSION=	0.5.0
-PORTREVISION=	11
+PORTREVISION=	24
 CATEGORIES=	sysutils
 
 MAINTAINER=	pizzamig@FreeBSD.org
@@ -125,4 +125,5 @@ CARGO_CRATES=	android-tzdata-0.1.1 \
 
 PLIST_FILES=	bin/potcpu bin/potnet
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

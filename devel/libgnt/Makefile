@@ -1,10 +1,10 @@
 PORTNAME=	libgnt
-PORTVERSION=	2.14.3
-PORTREVISION=	3
+DISTVERSION=	2.14.4
 CATEGORIES=	devel
 MASTER_SITES=	SF/pidgin/${PORTNAME}/${PORTVERSION}/
+DISTNAME=	${PORTNAME}-${PORTVERSION}-dev
 
-MAINTAINER=	bofh@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Toolkit based on glib and ncurses for text-mode user interfaces
 WWW=		https://keep.imfreedom.org/libgnt/libgnt/
 
@@ -14,10 +14,15 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	gtkdoc-scan:textproc/gtk-doc
 LIB_DEPENDS=	libffi.so:devel/libffi
 
-USES=		gettext-runtime gnome iconv:wchar_t meson pkgconfig tar:xz
+USES= gettext-runtime gnome iconv:wchar_t meson pkgconfig tar:xz ncurses
 USE_GNOME=	glib20 libxml2
 USE_LDCONFIG=	yes
 
 MESON_ARGS=	-Dpython2=false
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@include/ncursesw@include/ncurses@g' \
+			 -e "/ncurses_sys_prefix/s@'/usr'@'${LOCALBASE}'@g" \
+		${WRKSRC}/meson.build
 
 .include <bsd.port.mk>

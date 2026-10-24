@@ -7,6 +7,8 @@ MASTER_SITES=	LOCAL/cy
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	The traditional 4.4BSD /bin/csh C-shell
 
+BROKEN_aarch64=	ld: error: undefined symbol: sbrk
+
 EXTRACT_DEPENDS=	rcs:devel/rcs57
 
 USES=		tar:bzip2
@@ -15,6 +17,8 @@ NO_WRKSUBDIR=	yes
 
 OPTIONS_DEFINE=	DOCS
 
+CFLAGS= -DMAXNAMLEN=255
+MAKE_ENV= CWARNFLAGS=-fcommon
 post-extract:
 	cd ${WRKSRC} ; co RCS/*,v; chmod u+w *
 	cd ${WRKSRC}/USD.doc ; co RCS/*,v

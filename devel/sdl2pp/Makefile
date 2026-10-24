@@ -1,6 +1,6 @@
 PORTNAME=	sdl2pp
 PORTVERSION=	0.18.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -33,5 +33,10 @@ post-install-DOCS-on:
 
 post-install-DOXYGEN-on:
 	@cd ${CONFIGURE_WRKSRC} && ${COPYTREE_SHARE} doxygen ${STAGEDIR}${DOCSDIR}/
+
+CXXFLAGS:= ${CXXFLAGS:N-D_GLIBCXX_USE_C99}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\[deprecated\]@[gnu::deprecated]@g'	\
+		${WRKSRC}/SDL2pp/Config.hh.in
 
 .include <bsd.port.mk>

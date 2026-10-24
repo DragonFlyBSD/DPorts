@@ -1,12 +1,13 @@
 PORTNAME=	openturns
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.23
+DISTVERSION=	1.27.2
 PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Uncertainty treatment library
-WWW=		https://openturns.github.io/www/
+WWW=		https://openturns.github.io/www/ \
+		https://github.com/openturns/openturns
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
@@ -36,10 +37,12 @@ LIB_DEPENDS=	libamd.so:math/suitesparse-amd \
 		libglog.so:devel/glog \
 		libgmp.so:math/gmp \
 		libhdf5_cpp.so:science/hdf5 \
+		libhighs.so:math/highs \
 		libipopt.so:math/ipopt \
 		liblapack.so:math/lapack \
 		libmpc.so:math/mpc \
 		libmpfr.so:math/mpfr \
+		libmuparser.so:math/muparser \
 		libnlopt.so:math/nlopt \
 		libOsi.so:math/osi \
 		libpagmo.so:science/pagmo2 \
@@ -50,7 +53,7 @@ LIB_DEPENDS=	libamd.so:math/suitesparse-amd \
 		libsz.so:science/libaec \
 		libtbb.so:devel/onetbb
 
-USES=		bison blaslapack:openblas cmake eigen:3 gnome jpeg llvm:18 localbase:ldflags pkgconfig sqlite xorg # compiler:c++17-lang
+USES=		bison blaslapack:openblas cmake eigen:3 gnome jpeg llvm:${LLVM_DEFAULT} localbase:ldflags pkgconfig sqlite xorg # compiler:c++17-lang
 USE_GITHUB=	yes
 USE_GNOME=	libxml2
 USE_XORG=	ice sm x11 xau xcb xdmcp xext
@@ -72,7 +75,7 @@ OPTIONS_SUB=		yes
 PYTHON_USES=		python
 PYTHON_CMAKE_BOOL=	BUILD_PYTHON
 PYTHON_CMAKE_ON=	-DSWIG_EXECUTABLE=${LOCALBASE}/bin/swig
-PYTHON_PY_DEPENDS=	${PYNUMPY} \
+PYTHON_PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}chaospy>0:math/py-chaospy@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}dill>0:devel/py-dill@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}matplotlib>=1.3.1:math/py-matplotlib@${PY_FLAVOR} \
@@ -95,5 +98,7 @@ PORTEXAMPLES=		*
 
 post-install:
 	@${RM} -r ${STAGEDIR}${DOCSDIR}
+
+# tests as of 1.25.1: 99% tests passed, 1 tests failed out of 539, the test cppcheck_Normal_large was killed because it used too much memory
 
 .include <bsd.port.mk>

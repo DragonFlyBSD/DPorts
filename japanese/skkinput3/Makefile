@@ -1,6 +1,6 @@
 PORTNAME=	skkinput
 PORTVERSION=	3.0.6
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	japanese x11
 MASTER_SITES=	OSDN/${PORTNAME}
 PKGNAMESUFFIX=	3
@@ -12,11 +12,14 @@ WWW=		https://sourceforge.jp/projects/skkinput3/
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/GPL
 
+DEPRECATED=	Abandoned, cannot be executed on amd64 due to an error
+EXPIRATION_DATE=2026-10-31
+
 USES=		imake xorg
 USE_CSTD=	gnu89
 USE_GCC=	yes
 USE_XORG=	ice sm x11 xext xmu xt
-MAKE_JOBS_UNSAFE=	yes
+MAKE_JOBS_UNSAFE= yes
 
 PORTDOCS=	*.jis dot.skkinput ChangeLog
 

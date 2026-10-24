@@ -80,3 +80,30 @@ More set, but unused variables:
 -    yBloc += tile->height;      // Increment top coordinate in the resolution level
      topInBuffer += heightOfBuffer;  // Increment top coordinate in the buffer
    }
+--- basics/mac_comp.h	2013-09-02 11:45:00.000000000 -0400
++++ basics/mac_comp.h	2026-06-21 23:30:53.268226000 -0400
+@@ -109,5 +109,5 @@
+ #ifndef macintosh
+ 
+-  #define BlockMove(srcptr, dstptr, byteCount) memmove((dstptr), (srcptr), (byteCount))
++  #define BlockMove(srcptr, dstptr, byteCount) memmove(((void *)(dstptr)), (srcptr), (byteCount))
+     
+ #endif
+--- ole/olecore.cpp	2013-09-02 11:47:00.000000000 -0400
++++ ole/olecore.cpp	2026-06-21 23:35:33.709477000 -0400
+@@ -1508,5 +1508,5 @@
+     // If the subtype is VARIANT, use VARIANT *pvar
+     case VT_VARIANT: {
+-      memcpy(pvec->pvar, pvector->pvar, pvec->cElements * sizeof(VARIANT));
++      memcpy((void *)pvec->pvar, pvector->pvar, pvec->cElements * sizeof(VARIANT));
+ 
+       // Copy the variable length elements in the vector
+--- ole/olestrm.cpp	2013-09-02 11:45:00.000000000 -0400
++++ ole/olestrm.cpp	2026-06-21 23:40:28.589464000 -0400
+@@ -1091,5 +1091,5 @@
+     {
+       // Reset the memory
+-      memset(pvector->pvar, 0, pvector->cElements * sizeof(VARIANT));
++      memset((void *)pvector->pvar, 0, pvector->cElements * sizeof(VARIANT));
+ 
+       // Read each element in the vector

@@ -23,4 +23,10 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s|freebsd|dragonfly|g" \
+		${WRKSRC}/rebar.config
+	${REINPLACE_CMD} -e "s|FreeBSD|DragonFly|g" \
+		${WRKSRC}/c_src/Makefile
+
 .include <bsd.port.mk>

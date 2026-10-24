@@ -1,5 +1,5 @@
 PORTNAME=	gigedit
-DISTVERSION=	1.2.1
+DISTVERSION=	1.3.0
 CATEGORIES=	audio
 MASTER_SITES=	http://download.linuxsampler.org/packages/
 
@@ -16,8 +16,8 @@ LIB_DEPENDS=	libgig.so:audio/libgig \
 		libsndfile.so:audio/libsndfile
 
 USES=		autoreconf gettext gmake gnome libtool pkgconfig tar:bz2
-USE_GNOME=	cairo cairomm gdkpixbuf2 glib20 glibmm gtk30 gtkmm30 intltool pango pangomm
-USE_LDCONFIG=	yes
+USE_GNOME=	cairo cairomm gdkpixbuf glib20 glibmm gtk30 gtkmm30 intltool pango pangomm
+USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
 
 GNU_CONFIGURE=	yes
 
@@ -29,4 +29,5 @@ OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	*
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

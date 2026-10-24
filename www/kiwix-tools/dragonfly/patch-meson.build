@@ -1,11 +1,11 @@
---- meson.build.orig	2023-04-28 09:36:55 UTC
+--- meson.build.orig	2026-01-22 02:17:14 UTC
 +++ meson.build
 @@ -1,13 +1,13 @@
  project('kiwix-tools', 'cpp',
-   version : '3.5.0',
+   version : '3.7.0',
    license : 'GPL',
--  default_options: ['c_std=c11', 'cpp_std=c++11', 'werror=true'])
-+  default_options: ['c_std=c11', 'cpp_std=c++11', 'werror=false'])
+-  default_options: ['c_std=c11', 'cpp_std=c++17', 'werror=true'])
++  default_options: ['c_std=c11', 'cpp_std=c++17', 'werror=false'])
  
  compiler = meson.get_compiler('cpp')
  

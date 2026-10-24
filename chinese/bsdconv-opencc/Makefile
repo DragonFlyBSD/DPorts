@@ -1,5 +1,6 @@
 PORTNAME=	opencc
 PORTVERSION=	11.5
+PORTREVISION=	1
 CATEGORIES=	chinese converters
 PKGNAMEPREFIX=	bsdconv-
 

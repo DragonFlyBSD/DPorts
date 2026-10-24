@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 INFO=		gnetcat
 PLIST_FILES=	bin/gnetcat share/man/man1/gnetcat.1.gz
 
+CFLAGS= -Wno-pointer-sign -Wno-stringop-truncation
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/netcat ${STAGEDIR}${PREFIX}/bin/gnetcat
 	${INSTALL_MAN} ${WRKSRC}/doc/netcat.1 \

@@ -14,13 +14,4 @@ USE_QT=		core declarative gui location network webchannel \
 		buildtools:build
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == x86_64 || ${ARCH} == i386
-PLIST_SUB+=	WEBENGINE=""
-USE_QT+=	webengine
-.else
-PLIST_SUB+=	WEBENGINE="@comment "
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

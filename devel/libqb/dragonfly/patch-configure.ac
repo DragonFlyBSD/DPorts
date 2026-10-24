@@ -1,0 +1,11 @@
+--- configure.ac.orig
++++ configure.ac
+@@ -412,7 +412,7 @@
+ 				   [Disable _POSIX_THREAD_PROCESS_SHARED])
+ 		AC_MSG_RESULT([Darwin])
+ 	;;
+-	*bsd*)
++	dragonfly*|*bsd*)
+ 		AC_DEFINE_UNQUOTED([QB_BSD], [1],
+ 				   [Compiling for BSD platform])
+ 		case "$host_os" in

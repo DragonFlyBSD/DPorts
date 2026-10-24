@@ -1,35 +1,35 @@
 PORTNAME=	vfblib
-PORTVERSION=	0.9.1
+PORTVERSION=	0.12.1
 CATEGORIES=	x11-fonts python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Tools for converting FontLab Studio 5 (VFB) files
-WWW=		https://github.com/LucasFonts/vfbLib
+WWW=		https://vfblib.readthedocs.io/en/latest/ \
+		https://github.com/LucasFonts/vfbLib
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=45:devel/py-setuptools@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}setuptools-scm>=6.2:devel/py-setuptools-scm@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fonttools>=4.45.1:print/py-fonttools@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}orjson>=3.10.11<4:devel/py-orjson@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}typing-extensions>=4.8.0:devel/py-typing-extensions@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}ufolib2>=0.16.0:print/py-ufolib2@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}ufonormalizer>=0.6.1:x11-fonts/py-ufonormalizer@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flit-core>=3.12:devel/py-flit-core@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fonttools>=4.65.0:print/py-fonttools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}orjson>=3.11.9<4:devel/py-orjson@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}typing-extensions>=4.16.0:devel/py-typing-extensions@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}ufolib2>=0.18.1:print/py-ufolib2@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}ufonormalizer>=0.6.3:x11-fonts/py-ufonormalizer@${PY_FLAVOR}
 
-USES=		python:3.10+
+USES=		python:3.11+
 USE_PYTHON=	autoplist concurrent pep517
 
+MAKE_ENV=	SOURCE_DATE_EPOCH=315532800 # 1980-01-01 00:00:00 UTC
 NO_ARCH=	yes
 
 OPTIONS_DEFINE=	ALL TOML YAML
 ALL_DESC=	All optional dependencies
 ALL_IMPLIES=	TOML YAML
 
-TOML_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tomli-w>=1.0.0:textproc/py-tomli-w@${PY_FLAVOR}
-YAML_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyyaml>=6.0.2:devel/py-pyyaml@${PY_FLAVOR}
+TOML_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tomli-w>=1.2.0:textproc/py-tomli-w@${PY_FLAVOR}
+YAML_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyyaml>=6.0.3:devel/py-pyyaml@${PY_FLAVOR}
 
 .include <bsd.port.mk>

@@ -1,29 +1,35 @@
 PORTNAME=	haruna
-DISTVERSION=	0.12.1
+DISTVERSION=	1.8.1
 CATEGORIES=	multimedia kde
-MASTER_SITES=	KDE/stable/${PORTNAME}/
+MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE video player
-WWW=		https://invent.kde.org/multimedia/haruna
+WWW=		https://apps.kde.org/haruna/
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSES/GPL-3.0-or-later.txt
 
-LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
-		libmpv.so:multimedia/mpv
-RUN_DEPENDS=	kio-extras>0:devel/kio-extras \
-		yt-dlp:www/yt-dlp
+LIB_DEPENDS=	libkdsingleapplication-qt6.so:devel/kdsingleapplication \
+		libavcodec.so:multimedia/ffmpeg \
+		libmpv.so:multimedia/mpv \
+		libMpvQt.so:multimedia/mpvqt
+RUN_DEPENDS=	kio-extras>0:devel/kio-extras
 
-USES=		cmake compiler:c++11-lang desktop-file-utils kde:5 qt:5 tar:xz xorg
-USE_KDE=	auth bookmarks codecs completion config configwidgets coreaddons \
-		doctools filemetadata i18n iconthemes kirigami2 itemviews jobwidgets \
-		kio service solid widgetsaddons windowsystem xmlgui \
-		ecm:build doctools:build \
-		breeze:run breeze-icons:run qqc2-desktop-style:run
-USE_QT=		concurrent core dbus declarative gui network quickcontrols2 \
-		widgets x11extras xml \
-		buildtools:build qmake:build
+USES=		cmake desktop-file-utils gettext-tools gl kde:6 pkgconfig \
+		qt:6 tar:xz xorg
+USE_GL=		opengl
+USE_KDE=	breeze colorscheme config coreaddons crash \
+		filemetadata i18n iconthemes kio kirigami2 \
+		windowsystem \
+		ecm:build
+USE_QT=		5compat base declarative shadertools
 USE_XORG=	x11
 
+OPTIONS_DEFINE=		YTDLP
+
+YTDLP_DESC=		Install yt-dlp to play videos from youtube
+YTDLP_RUN_DEPENDS=	yt-dlp:www/yt-dlp
+
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

@@ -16,4 +16,10 @@ PLIST_FILES+=	sbin/mptd
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mptd ${STAGEDIR}${PREFIX}/sbin/mptd
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@dev/mpt/@dev/disk/mpt/@g'	\
+		${WRKSRC}/mptd.h
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/mpt_cam.c
+
 .include <bsd.port.mk>

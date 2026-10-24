@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
-USES=		gettext-runtime pkgconfig
+USES= gettext-runtime pkgconfig ncurses
 
 ALL_TARGET=	aylet
 

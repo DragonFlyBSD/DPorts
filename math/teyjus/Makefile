@@ -44,4 +44,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/source/${e}.opt ${STAGEDIR}${PREFIX}/bin/${e}
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/source/OMakefile
+
 .include <bsd.port.mk>

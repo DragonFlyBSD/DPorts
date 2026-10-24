@@ -1,0 +1,4 @@
+ghgrab is a terminal tool for browsing and downloading individual files and
+directories from Git forges such as GitHub, without cloning the whole
+repository. It presents an interactive TUI to navigate a repository tree and
+grab just the files you need.

@@ -1,5 +1,14 @@
 --- CMakeLists.txt.orig	2016-05-31 12:34:02 UTC
 +++ CMakeLists.txt
+@@ -6,7 +6,7 @@ PROJECT( AQEMU CXX )
+ # Tobias Gläßer (Qt5 port)
+ 
+ PROJECT( AQEMU CXX )
+-CMAKE_MINIMUM_REQUIRED( VERSION 3.1.0 FATAL_ERROR )
++CMAKE_MINIMUM_REQUIRED( VERSION 3.10 FATAL_ERROR )
+ 
+ # Available options
+ OPTION( DEBUG "Build with debug information" )
 @@ -285,7 +285,7 @@ MACRO( pack_icons _sources )
  		
  		SET( _out ${CMAKE_CURRENT_SOURCE_DIR}/${_basename}.rcc )

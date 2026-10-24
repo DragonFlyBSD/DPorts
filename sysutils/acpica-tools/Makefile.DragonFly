@@ -1,3 +1,0 @@
-
-# until actypes.h:652:48: error: cast from function call of type 'char *' to non-matching type 'long unsigned int' [-Werror=bad-function-cast]
-CFLAGS+=	-Wno-error=bad-function-cast

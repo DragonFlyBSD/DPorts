@@ -1,0 +1,3 @@
+Docling Metrics Core defines metric types and evaluation utilities for
+the Docling document processing pipeline. It provides the foundational
+interfaces and common functionality used by all Docling metrics modules.

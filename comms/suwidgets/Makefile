@@ -25,4 +25,5 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	BatchDrake
 GH_PROJECT=	SuWidgets
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

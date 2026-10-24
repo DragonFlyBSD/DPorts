@@ -1,3 +1,0 @@
-
-# fix #!/usr/bin/env python3
-USES+=	python:3.4+,build shebangfix

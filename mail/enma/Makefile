@@ -1,6 +1,6 @@
 PORTNAME=	enma
 PORTVERSION=	1.2.0
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	SF/${PORTNAME}/ENMA/${PORTVERSION}
 
@@ -12,16 +12,17 @@ LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--with-ssl-incdir=${OPENSSLINC} \
 		--with-ssl-libdir=${OPENSSLLIB}
 
 USES=		gmake libtool perl5 ssl
-BROKEN_SSL=	openssl30 openssl31
+BROKEN_SSL=	openssl openssl31
 BROKEN_SSL_REASON=	Fails to build with error undefined reference due to --no-allow-shlib-undefined: EVP
 USE_RC_SUBR=	milter-enma
 USE_LDCONFIG=	yes
 USE_PERL5=	build
-LDFLAGS+=	-lssl
+LDFLAGS+= -lssl -lcrypto
 MANLANG=	"" ja_JP.UTF-8
 PORTDOCS=	ChangeLog INSTALL LICENSE README
 SUB_FILES=	milter-enma
@@ -46,13 +47,14 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/postfix/smtpd:mail/postfix
 . endif
 .endif
 
+MAKE_ENV= LDVER=ld.bfd
 .include <bsd.port.options.mk>
 .include "${PORTSDIR}/mail/sendmail/bsd.milter.mk"
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
-CFLAGS+=	-Wno-error=int-conversion
+.if ${OPSYS} == FreeBSD
+CFLAGS+= -Wno-error=int-conversion -Wno-unused-parameter
 .endif
 
 pre-configure:

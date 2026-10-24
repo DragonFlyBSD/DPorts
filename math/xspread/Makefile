@@ -1,6 +1,6 @@
 PORTNAME=	xspread
 PORTVERSION=	3.1.1c
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	math
 MASTER_SITES=	http://archive.debian.org/%SUBDIR%/ \
 		http://mirror.safehostnet.com/debian-archive/%SUBDIR%/ \
@@ -30,6 +30,8 @@ X11_USE=		XORG=x11,xau,xcb,xdmcp,xt
 X11_USES=		localbase xorg
 X11_CONFIGURE_ENV_OFF=	ac_cv_header_X11_X_h=no
 
+USES= ncurses
+MAKE_ENV= EXTRA_LDOPTIONS="-L${LOCALBASE}/lib"
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/local/lib/libXt|${LOCALBASE}/lib/libXt|' \
 		${WRKSRC}/configure
@@ -47,5 +49,9 @@ do-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/x/notes ${STAGEDIR}${DOCSDIR}
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} "doc documents sample_files tests" ${STAGEDIR}${DOCSDIR} "! -name *.tmp")
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(terminfo curses\)@\1 ncurses@g'	\
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

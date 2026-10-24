@@ -57,4 +57,7 @@ post-install:
 	${LN} -sf ${PREFIX}/include/tix/generic/tix.h ${STAGEDIR}${PREFIX}/include/tix.h
 	${RMDIR} ${STAGEDIR}${PREFIX}/lib/Tix${PORTVERSION}/html
 
+pre-patch:
+	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' ${WRKSRC}/configure
+
 .include <bsd.port.post.mk>

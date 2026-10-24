@@ -55,6 +55,7 @@ GTK2_CONFIGURE_WITH=	liblgtk2
 GTK2_BUILD_DEPENDS=	lablgtk2:x11-toolkits/ocaml-lablgtk2
 GTK2_RUN_DEPENDS=	lablgtk2:x11-toolkits/ocaml-lablgtk2
 
+USES+= pkgconfig
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXPM}

@@ -14,7 +14,7 @@ BUILD_DEPENDS=	a2x:textproc/asciidoc \
 		gsed:textproc/gsed
 LIB_DEPENDS=	libgnutls.so:security/gnutls
 
-USES=		autoreconf gmake libtool pkgconfig
+USES=		autoreconf cpe gmake libtool pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	obgm
 
@@ -35,5 +35,9 @@ DOXYGEN_IMPLIES=	DOCS
 DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen \
 			dot:graphics/graphviz
 DOXYGEN_CONFIGURE_ENABLE=	doxygen
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*freebsd\*\))@\1|*dragonfly*)@g' \
+		${WRKSRC}/configure.ac
 
 .include <bsd.port.mk>

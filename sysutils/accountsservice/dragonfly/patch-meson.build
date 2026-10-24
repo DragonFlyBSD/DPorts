@@ -1,11 +1,11 @@
---- meson.build.orig	2024-01-06 17:51:36 UTC
+--- meson.build.orig	2026-05-05 19:45:36 UTC
 +++ meson.build
-@@ -91,7 +91,7 @@ if cc.has_header_symbol('utmpx.h', 'WTMP
-   path_wtmp = result.stdout().strip()
+@@ -97,7 +97,7 @@ if path_wtmp == ''
+     path_wtmp = result.stdout().strip()
  
-   config_h.set('PATH_WTMP', 'WTMPX_FILENAME')
--elif cc.has_header_symbol('paths.h', '_PATH_WTMPX')
-+elif cc.has_header_symbol('utmpx.h', '_PATH_WTMPX')
-   code = '''#include <paths.h>
-   #include <stdio.h>
-   int main (int argc, char **argv) {
+     config_h.set('PATH_WTMP', 'WTMPX_FILENAME')
+-  elif cc.has_header_symbol('paths.h', '_PATH_WTMPX') and meson.can_run_host_binaries()
++  elif cc.has_header_symbol('utmpx.h', '_PATH_WTMPX') and meson.can_run_host_binaries()
+     code = '''#include <paths.h>
+     #include <stdio.h>
+     int main (int argc, char **argv) {

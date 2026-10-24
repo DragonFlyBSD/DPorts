@@ -1,8 +1,8 @@
 PORTNAME=	mate-notification-daemon
-PORTVERSION=	1.28.3
-PORTREVISION=	1
+DISTVERSION=	1.28.3
+PORTREVISION=	4
 CATEGORIES=	deskutils mate
-MASTER_SITES=	MATE
+MASTER_SITES=	https://github.com/mate-desktop/${PORTNAME}/releases/download/v${DISTVERSION}/
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -21,10 +21,7 @@ LIB_DEPENDS=	libcanberra-gtk3.so:audio/libcanberra-gtk3 \
 		libmate-panel-applet-4.so:x11/mate-panel \
 		libnotify.so:devel/libnotify
 
-PORTSCOUT=	limitw:1,even
-
-USES=		gettext gmake gnome libtool localbase pathfix pkgconfig tar:xz \
-		xorg
+USES=		gettext gmake gnome libtool localbase pkgconfig tar:xz xorg
 USE_XORG=	x11
 USE_GNOME=	cairo glib20 gtk30 intlhack librsvg2 libwnck3
 GNU_CONFIGURE=	yes
@@ -32,6 +29,8 @@ GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-static \
 		--with-dbus-services=${PREFIX}/share/dbus-1/services
 INSTALL_TARGET=	install-strip
+
+PORTSCOUT=	site:https://github.com/mate-desktop/mate-notification-daemon/releases/ limitw:1,even
 
 GLIB_SCHEMAS=	org.mate.NotificationDaemon.gschema.xml
 

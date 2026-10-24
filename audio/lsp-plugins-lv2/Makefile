@@ -13,16 +13,14 @@ WWW=		https://lsp-plug.in/
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-ONLY_FOR_ARCHS=	amd64 armv7 i386 powerpc64 powerpc64le
+ONLY_FOR_ARCHS=	aarch64 amd64 armv7 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	assembly only for these architectures
-BROKEN_armv7=	arch/arm/neon-d32/copy.h:371:17: error: operand must be an immediate in the range [0,15], see https://github.com/sadko4u/lsp-plugins/issues/266
-BROKEN_i386=	error: inline assembly requires more registers than available, see https://github.com/sadko4u/lsp-plugins/issues/266
 
 BUILD_DEPENDS=	lv2>0:audio/lv2
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libsndfile.so:audio/libsndfile
 
-USES=		gmake gl gnome iconv:wchar_t pkgconfig xorg # compiler:c11
+USES= gmake gl gnome iconv:wchar_t pkgconfig xorg # compiler:c11 localbase:ldflags
 USE_GNOME=	cairo
 USE_XORG=	x11 xrandr
 USE_GL=		gl
@@ -45,6 +43,10 @@ JACK_LIB_DEPENDS=	libjack.so:audio/jack
 VST2_DESC=		Build VST2 plugins
 VST2_MAKE_ARGS=		FEATURES+='vst2'
 
+LIB_DEPENDS+= libexpat.so:textproc/expat2
+CFLAGS= -DWCHAR=wchar_t -Dfdatasync=fsync
+MAKE_ENV= ICONV_LIBS=-liconv BUILD_PLATFORM=DragonFly
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 # FreeBSD does not have exp10(3), use pow(3) instead
 	@${GREP} -lR "exp10(" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
@@ -67,5 +69,10 @@ post-install-JACK-on:
 
 post-install-VST2-on:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/vst/lsp-plugins/*.so
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]BSD[[:>:]]@DragonFly@g' \
+		${WRKSRC}/src/container/Makefile \
+		${WRKSRC}/src/utils/Makefile
 
 .include <bsd.port.mk>

@@ -1,0 +1,4 @@
+Semchunk splits text into smaller chunks while preserving as much
+local semantic context as possible. It is designed for use in RAG
+and LLM applications where text must be divided into segments that
+maintain coherent meaning for embedding and retrieval.

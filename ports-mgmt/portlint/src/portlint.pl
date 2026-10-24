@@ -28,6 +28,8 @@ use IPC::Open2;
 use File::Basename;
 use Term::ANSIColor qw(:constants);
 use POSIX qw(strftime);
+use open qw(:std :utf8);
+use utf8;
 
 sub perror($$$$);
 our ($opt_a, $opt_A, $opt_b, $opt_C, $opt_c, $opt_g, $opt_h, $opt_m, $opt_t, $opt_v, $opt_M, $opt_N, $opt_B, $opt_V, @ALLOWED_FULL_PATHS);
@@ -51,8 +53,8 @@ $portdir = '.';
 
 # version variables
 my $major = 2;
-my $minor = 22;
-my $micro = 5;
+my $minor = 25;
+my $micro = 0;
 
 # default setting - for FreeBSD
 my $portsdir = '/usr/ports';
@@ -175,12 +177,23 @@ my @varlist =  qw(
 );
 
 my %makevar;
+our @wrkdirs = ('work');
+our $metaport = 0;
 my $i = 0;
 for (split(/\n/, get_makevar(@varlist))) {
 	$_ =~ s/\0//;
 	print "OK: makevar: $varlist[$i] = $_\n" if ($verbose);
 	$makevar{$varlist[$i]} = $_;
 	$i++;
+}
+
+if ($makevar{FLAVORS}) {
+	my $makeenv_save = $makeenv;
+	for (split(/\s+/, $makevar{FLAVORS})) {
+		$makeenv .= " FLAVOR=$_";
+		push @wrkdirs, basename(get_makevar('WRKDIR'));
+		$makeenv = $makeenv_save;
+	}
 }
 
 #
@@ -263,6 +276,10 @@ foreach my $muse (@muses) {
 	$makevar{USES} .= " " . $muse;
 }
 
+if ($makevar{USES} =~ /\bmetaport\b/) {
+	$metaport = 1;
+}
+
 #
 # check for files.
 #
@@ -328,12 +345,7 @@ if ($committer) {
 
 		print "OK: checking the file name of $fullname.\n" if ($verbose);
 
-		if ($fullname eq 'work') {
-			&perror("FATAL", $fullname, -1, "be sure to cleanup the working directory ".
-					"before committing the port.");
-
-			$File::Find::prune = 1;
-		} elsif (-l) {
+		if (-l) {
 			&perror("WARN", $fullname, -1, "this is a symlink. ".
 					"Please remove it.");
 		} elsif (-z) {
@@ -376,6 +388,14 @@ if ($committer) {
 				&perror("FATAL", "", -1, "$fullname not under git.")
 					unless (eval { /$ENV{'PL_GIT_IGNORE'}/, 1 } &&
 						/$ENV{'PL_GIT_IGNORE'}/);
+			}
+		} elsif (-d) {
+			for my $wd (@wrkdirs) {
+				if ($fullname eq $wd) {
+					&perror("FATAL", $fullname, -1, "be sure to cleanup the working directory ".
+						"before committing the port.");
+					$File::Find::prune = 1;
+				}
 			}
 		}
 	}
@@ -1357,6 +1377,8 @@ sub checkmakefile {
 	my $optused = 0;
 	my $desktop_entries = '';
 	my $conflicts = "";
+	my %targ_hashes = ();
+	my $found_earlier = 0;
 
 	my $masterdir = $makevar{MASTERDIR};
 	if ($masterdir ne '' && $masterdir ne $makevar{'.CURDIR'}) {
@@ -1366,7 +1388,15 @@ sub checkmakefile {
 	open(IN, "< $file") || return 0;
 	$rawwhole = '';
 	$tmp = 0;
+	my $trailing_bs = 0;
 	while (<IN>) {
+		if ($trailing_bs && ($_ eq "" || /^\s+$/)) {
+			&perror("FATAL", $file, $.-1, "line ends with '\\' but next line is ".
+				"empty");
+			$trailing_bs = 0;
+		} elsif ($trailing_bs) {
+			$trailing_bs = 0;
+		}
 		if ($_ =~ /[ \t]+\n?$/) {
 			&perror("WARN", $file, $., "whitespace before ".
 				"end of line.");
@@ -1389,6 +1419,7 @@ sub checkmakefile {
 		$rawwhole .= $_;
 		if (/\\$/) {
 			# Concat continued lines.
+			$trailing_bs = 1;
 			chomp $rawwhole;
 			chop $rawwhole;
 		}
@@ -1557,10 +1588,10 @@ sub checkmakefile {
 					"%%FOO%% variables.  Use make variables and logic instead");
 			}
 			if ($plist_file =~ m|\.desktop$| && $makevar{USES} !~ /\bdesktop-file-utils\b/) {
-				&perror("FATAL", "", -1, "PLIST_FILES: this port installs .desktop files. ".
-					"please add `desktop-file-utils` to USES.");
-			}
-
+            	&perror("WARN", "", -1, "this port installs .desktop files. ".
+                	"If the .desktop file(s) installed contain ``MimeType='', ".
+                	"you must add `desktop-file-utils` to USES.");
+            }
 		}
 	}
 
@@ -2156,8 +2187,8 @@ xargs xmkmf
 				&& $curline !~ /^PORTNAME=[^\n]+$i/m
 				&& $curline !~ /^[A-Z]+_TARGET[?+]?=[^\n]+$i/m
 				&& $curline !~ /^[A-Z]+_INSTALL_TARGET[?+]?=[^\n]+$i/m
-				&& $curline !~ /^IGNORE(_[\w\d]+)?(.)?=[^\n]+$i/m
-				&& $curline !~ /^BROKEN(_[\w\d]+)?(.)?=[^\n]+$i/m
+				&& $curline !~ /^([\w\d]+_)?IGNORE(_[\w\d]+)?(.)?=[^\n]+$i/m
+				&& $curline !~ /^([\w\d]+_)?BROKEN(_[\w\d]+)?(.)?=[^\n]+$i/m
 				&& $curline !~ /^RESTRICTED(.)?=[^\n]+$i/m
 				&& $curline !~ /^NO_PACKAGE(.)?=[^\n]+$i/m
 				&& $curline !~ /^NO_CDROM(.)?=[^\n]+$i/m
@@ -2192,8 +2223,8 @@ xargs xmkmf
 			my $lineno = &linenumber($`);
 			if ($lm =~ /(^|\s+)[\@\-]{0,2}($i\d*)\b/
 				&& $lm !~ /^[A-Z]+_TARGET[?+]?=[^\n]+($i\d*)/m
-				&& $lm !~ /^IGNORE(.)?=[^\n]+($i\d*)/m
-				&& $lm !~ /^BROKEN(.)?=[^\n]+($i\d*)/m
+				&& $lm !~ /^([\w\d]+_)?IGNORE(_[\w\d]+)?(.)?=[^\n]+($i\d*)/m
+				&& $lm !~ /^([\w\d]+_)?BROKEN(_[\w\d]+)?(.)?=[^\n]+($i\d*)/m
 				&& $lm !~ /^RESTRICTED(.)?=[^\n]+($i\d*)/m
 				&& $lm !~ /^NO_PACKAGE(.)?=[^\n]+($i\d*)/m
 				&& $lm !~ /^NO_CDROM(.)?=[^\n]+($i\d*)/m
@@ -2394,22 +2425,22 @@ xargs xmkmf
 		} elsif ($gcc_val !~ /\+/) {
 			&perror("WARN", $file, $lineno, "Setting a specific version for ".
 				"USE_GCC should only be done as a last resort.  Unless you ".
-				"have confirmed this port does not build with later ".
-				"versions of GCC, please use USE_GCC=$gcc_val+.");
+				"are unable to get this port to build with current ".
+				"versions of GCC, please use USE_GCC=yes.");
 		}
 	}
 
 	#
 	# whole file: USE_JAVA check
 	#
-	if ($whole =~ /^USE_JAVA[?:]?=\s*(.*)$/m) {
+	if ($makevar{USES} =~ /\bjava(:(build|run))?\b/) {
 		$use_java = 1;
 	}
 
 	#
 	# whole file: USE_ANT check
 	#
-	if ($whole =~ /^USE_ANT[?:]?=\s*(.*)$/m) {
+	if ($makevar{USES} =~ /\bjava:ant/) {
 		$use_ant = 1;
 	}
 
@@ -2429,7 +2460,7 @@ xargs xmkmf
 	# whole file: check for USE_ANT and USES=gmake both defined
 	#
 	if ($use_ant && $makevar{USES} =~ /\bgmake\b/) {
-		&perror("WARN", $file, -1, "a port shall not define both USE_ANT ".
+		&perror("WARN", $file, -1, "a port shall not define both USES=java:ant ".
 			"and USES[+]=gmake");
 	}
 
@@ -2881,7 +2912,9 @@ DIST_SUBDIR EXTRACT_ONLY
 			}
 		}
 	} else {
-		&perror("WARN", $file, -1, "no MASTER_SITES found. is it ok?");
+		if (!$metaport) {
+			&perror("WARN", $file, -1, "no MASTER_SITES found. is it ok?");
+		}
 	}
 
 	# check DISTFILES and related items.
@@ -3171,7 +3204,7 @@ PATCH_SITES PATCHFILES PATCH_DIST_STRIP
 		if ($verbose);
 	$tmp = $sections[$idx] // '';
 
-	&checkearlier($file, $tmp, @varnames);
+	$found_earlier = &checkearlier($file, $tmp, @varnames);
 	&checkorder('MAINTAINER', $tmp, $file, qw(
 MAINTAINER COMMENT WWW
 	));
@@ -3220,6 +3253,9 @@ MAINTAINER COMMENT WWW
 		}
 		if (length($makevar{COMMENT}) > 70) {
 			&perror("WARN", $file, -1, "COMMENT exceeds 70 characters limit.");
+		}
+		if ($makevar{COMMENT} =~ /([^[:ascii:]])/) {
+			&perror("WARN", $file, -1, "COMMENT contains non-ASCII characters (e.g., $1).");
 		}
 	}
 
@@ -3294,6 +3330,15 @@ MAINTAINER COMMENT WWW
 			}
 		}
 
+		# Check for dups in LICENSE_PERMS
+		my @lic_perms = split(/\s+/, $makevar{LICENSE_PERMS});
+		my %lperm_seen;
+		foreach my $lic (@lic_perms) {
+    		if ($lperm_seen{$lic}++) {
+				&perror("WARN", $file, -1, "license permission $lic is duplicated in LICENSE_PERMS.");
+    		}
+		}
+
 		# Last-ditch check to make sure the license is sanely defined.
 		my $lic_check = system("make check-license 2>&1 >/dev/null");
 		if ($lic_check) {
@@ -3327,16 +3372,15 @@ NOT_FOR_ARCHS NOT_FOR_ARCHS_REASON(_\w+)? LEGAL_TEXT
 
 	if ($tmp =~ /$brokenpattern/) {
 		$idx++;
+		$tmp = "\n" . $tmp;
+
+		foreach my $i (@linestocheck) {
+			$tmp =~ s/$i[?+:]?=[^\n]+\n//g;
+		}
+
+		push(@varnames, @linestocheck);
+		&checkearlier($file, $tmp, @varnames);
 	}
-
-	$tmp = "\n" . $tmp;
-
-	foreach my $i (@linestocheck) {
-		$tmp =~ s/$i[?+:]?=[^\n]+\n//g;
-	}
-
-	push(@varnames, @linestocheck);
-	&checkearlier($file, $tmp, @varnames);
 
 	#
 	# section 7: *_DEPENDS (may not be there)
@@ -3380,7 +3424,7 @@ TEST_DEPENDS FETCH_DEPENDS DEPENDS_TARGET
 	}
 
 	push(@varnames, @linestocheck);
-	&checkearlier($file, $tmp, @varnames);
+	$found_earlier = &checkearlier($file, $tmp, @varnames);
 
 	# section 8: FLAVORS/FLAVOR(optional)
 	#
@@ -3453,7 +3497,10 @@ TEST_DEPENDS FETCH_DEPENDS DEPENDS_TARGET
 	# Makefile 10: check the rest of file
 	#
 	print "OK: checking the rest of the $file.\n" if ($verbose);
-	$tmp = join("\n\n", @sections[$idx+1 .. scalar(@sections)-1]);
+	if ($found_earlier) {
+		$idx++;
+	}
+	$tmp = join("\n\n", @sections[$idx .. scalar(@sections)-1]);
 
 	$tmp = "\n" . $tmp;	# to make the begin-of-line check easier
 
@@ -3586,6 +3633,40 @@ TEST_DEPENDS FETCH_DEPENDS DEPENDS_TARGET
 		&perror("WARN", $file, -1, "USE_ANT is intended only for ports that ".
 			"build with Ant.  It is recommended not to override the default ".
 			"'do-build:' target when defining USE_ANT");
+	}
+
+	# Check the right sequence of pre-, do-, post-.
+	foreach my $targ_prefix ("pre", "do", "post") {
+		if ($tmp =~ /^${targ_prefix}-([^:]+):/m) {
+			my $targ_lineno = &linenumber($`);
+			my $targ = $1;
+			my $targ_hash;
+			if (!$targ_hashes{$targ}) {
+				$targ_hash = {};
+			} else {
+				$targ_hash = $targ_hashes{$targ};
+			}
+
+			if ($targ_hash->{$targ_prefix}) {
+				# Duplicate target!
+				&perror("FATAL", $file, -1, "Target ${targ_prefix}-${targ} is duplicated!");
+			} else {
+				$targ_hash->{$targ_prefix} = $targ_lineno;
+			}
+
+			$targ_hashes{$targ} = $targ_hash;
+		}
+	}
+
+	foreach my $targ (keys %targ_hashes) {
+		my $tpre = $targ_hashes{$targ}->{'pre'} // "-inf";
+		my $tdo = $targ_hashes{$targ}->{'do'} // $tpre + 1;
+		my $tpost = $targ_hashes{$targ}->{'post'} // $tdo + 1;
+
+		if ($tpre > $tdo || $tpre > $tpost || $tdo > $tpost) {
+			&perror("FATAL", $file, -1, "Target ``$targ'' violates the pre-${targ}, do-${targ}, ".
+				"post-${targ} order.")
+		}
 	}
 
 	#
@@ -3761,8 +3842,10 @@ sub checkorder {
 		# This if condition tests for .if, .else (in all forms),
 		# .for and .endfor and .include
 		} elsif ($i !~ m/^\.(if|el|endif|for|endfor|include)/) {
-			&perror("FATAL", $file, -1, "extra item \"$i\" placed in the ".
-				"$section section.");
+			if ($i eq "USES" && !$metaport) {
+				&perror("FATAL", $file, -1, "extra item \"$i\" placed in the ".
+					"$section section.");
+			}
 		}
 	}
 	if ($invalidorder) {
@@ -3777,13 +3860,17 @@ sub checkearlier {
 	my($file, $str, @varnames) = @_;
 
 	$str //= '';
+	my $found_issue = 0;
 
 	print "OK: checking items that have to appear earlier.\n" if ($verbose);
 	foreach my $i (@varnames) {
 		if ($str =~ /\n($i)\??=/) {
 			&perror("WARN", $file, -1, "\"$1\" has to appear earlier.");
+			$found_issue = 1;
 		}
 	}
+
+	return $found_issue;
 }
 
 sub linenumber {

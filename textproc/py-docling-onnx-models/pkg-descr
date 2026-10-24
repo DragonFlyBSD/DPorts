@@ -1,0 +1,4 @@
+Docling ONNX Models provides ONNX Runtime implementations for Docling
+AI models. It enables running Docling's document understanding models
+using the ONNX Runtime inference engine, offering portable and optimized
+model execution across different hardware platforms.

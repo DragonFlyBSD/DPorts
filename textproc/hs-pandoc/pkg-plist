@@ -2,7 +2,6 @@ share/man/man1/pandoc-lua.1.gz
 share/man/man1/pandoc-server.1.gz
 share/man/man1/pandoc.1.gz
 %%NO_EMBED_DATA%%%%DATADIR%%/data/abbreviations
-%%NO_EMBED_DATA%%%%DATADIR%%/data/bash_completion.tpl
 %%NO_EMBED_DATA%%%%DATADIR%%/data/creole.lua
 %%NO_EMBED_DATA%%%%DATADIR%%/data/default.csl
 %%NO_EMBED_DATA%%%%DATADIR%%/data/docbook-entities.txt
@@ -86,6 +85,7 @@ share/man/man1/pandoc.1.gz
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/common.latex
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.ansi
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.asciidoc
+%%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.bbcode
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.beamer
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.biblatex
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.bibtex
@@ -125,12 +125,15 @@ share/man/man1/pandoc.1.gz
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.s5
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.slideous
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.slidy
+%%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.t2t
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.tei
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.texinfo
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.textile
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.typst
+%%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.vimdoc
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.xwiki
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/default.zimwiki
+%%NO_EMBED_DATA%%%%DATADIR%%/data/templates/document-metadata.latex
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/font-settings.latex
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/fonts.latex
 %%NO_EMBED_DATA%%%%DATADIR%%/data/templates/hypersetup.latex

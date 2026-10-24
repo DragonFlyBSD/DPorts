@@ -1,0 +1,4 @@
+Docling Metrics Text provides text extraction evaluation metrics for
+Docling document processing. It measures the accuracy of text content
+extraction, including character-level and word-level comparison against
+ground-truth data.

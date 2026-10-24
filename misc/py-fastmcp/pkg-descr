@@ -1,0 +1,6 @@
+FastMCP is a fast, Pythonic way to build MCP (Model Context Protocol)
+servers and clients.
+
+It provides a high-level, ergonomic interface over the Model Context
+Protocol, making it easy to expose tools, resources, and prompts to
+LLMs and agents.

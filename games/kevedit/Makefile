@@ -25,4 +25,8 @@ GNU_CONFIGURE=	yes
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/uintmax_t/d'				\
+		${WRKSRC}/glob/config.h
+
 .include <bsd.port.mk>

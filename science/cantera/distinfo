@@ -1,5 +1,7 @@
-TIMESTAMP = 1692765950
-SHA256 (Cantera-cantera-v3.0.0_GH0.tar.gz) = 6d17cdef21dae9deaf91351260b68ccf7e264c37c6030c9d4bf26a2cefb2b905
-SIZE (Cantera-cantera-v3.0.0_GH0.tar.gz) = 2451103
+TIMESTAMP = 1779779043
+SHA256 (Cantera-cantera-v3.2.0_GH0.tar.gz) = f01e25e33f9d5e37db7ababe5af36b60caabff52dba04bb221d53e44735f60ec
+SIZE (Cantera-cantera-v3.2.0_GH0.tar.gz) = 2817937
 SHA256 (LLNL-sundials-887af43_GH0.tar.gz) = 147919c4887c93157c9975f195e8d45903285b61303d42f9dfdee251468abdb7
 SIZE (LLNL-sundials-887af43_GH0.tar.gz) = 18888776
+SHA256 (cantera-cantera-example-data-b9e0731_GH0.tar.gz) = eb7c843e413d78591127f61c3dfe1a9df05d338db2f0522d9e17195812013df6
+SIZE (cantera-cantera-example-data-b9e0731_GH0.tar.gz) = 260528

@@ -1,0 +1,25 @@
+-- Downgrade the setuptools build requirement and rewrite the PEP-621 license
+-- declaration so the port builds with the version of py-setuptools shipped
+-- in the FreeBSD ports tree.
+--- pyproject.toml.orig	2026-07-14 16:14:45 UTC
++++ pyproject.toml
+@@ -1,6 +1,6 @@ requires = [
+ [build-system]
+ requires = [
+-  "setuptools >= 77.0.1",
++  "setuptools",
+   "setuptools_scm[toml]>=8"
+ ]
+ build-backend = "setuptools.build_meta"
+@@ -35,10 +35,7 @@ requires-python = ">=3.11"
+     "Operating System :: MacOS",
+ ]
+ requires-python = ">=3.11"
+-license = "BSD-3-Clause"
+-license-files = [
+-    "LICENSE",
+-]
++license = {text = "BSD-3-Clause"}
+ dependencies = [
+     "app-model>=0.5.0,<0.6.0",
+     "cachey>=0.2.1",

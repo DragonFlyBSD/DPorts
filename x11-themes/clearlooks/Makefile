@@ -10,7 +10,7 @@ WWW=		https://clearlooks.sourceforge.net/
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
-USES=		gnome libtool pkgconfig tar:bzip2
+USES= gnome libtool pkgconfig tar:bzip2 ltmainfix
 USE_GNOME=	gtk20
 
 CPPFLAGS+=	-I${LOCALBASE}/include

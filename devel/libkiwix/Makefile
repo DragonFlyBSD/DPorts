@@ -1,40 +1,50 @@
 PORTNAME=	libkiwix
-DISTVERSION=	12.1.0
-PORTREVISION=	1
+DISTVERSION=	14.0.0
+PORTREVISION=	3
 CATEGORIES=	devel
+MASTER_SITES=	https://download.kiwix.org/release/libkiwix/
 
 MAINTAINER=	olce.freebsd.ports@certner.fr
-COMMENT=	Common code base for all Kiwix ports
-WWW=		https://www.kiwix.org/
+COMMENT=	Software library to read and write ZIM files
+WWW=		https://github.com/kiwix/libkiwix
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	bash:shells/bash
+# 'googletest' dependency is only necessary for Meson's 'test' target, but it
+# must be present as soon as configure time.
+BUILD_DEPENDS=	bash:shells/bash \
+		${LOCALBASE}/include/kainjow/mustache.hpp:devel/mustache \
+		googletest>0:devel/googletest
+
 LIB_DEPENDS=	libzim.so:devel/libzim \
 		libpugixml.so:textproc/pugixml \
 		libaria2.so:www/aria2 \
 		libicui18n.so:devel/icu \
 		libicuuc.so:devel/icu \
-		libxapian.so:databases/xapian-core \
+		libxapian.so:databases/xapian-core14 \
 		libctpp2.so:textproc/ctpp2 \
 		libcurl.so:ftp/curl \
 		libmicrohttpd.so:www/libmicrohttpd
 
-USES=		compiler:c++11-lang meson pkgconfig python shebangfix
-USE_GITHUB=	yes
-GH_ACCOUNT=	kiwix
-GH_TUPLE=	kiwix:${PORTNAME}:${PORTVERSION}:DEFAULT \
-		kainjow:Mustache:v4.1:mustache
+USES=		compiler:c++17-lang cpe meson pkgconfig python shebangfix tar:xz
+CPE_VENDOR=	kiwix
 USE_LDCONFIG=	yes
+
+CONFLICTS_INSTALL=	libkiwix13
 
 SHEBANG_FILES=	scripts/format_code.sh
 SHEBANG_REGEX=	./scripts/kiwix.*[^.].
 
-CPPFLAGS+=	-I${WRKSRC_mustache}
-CXXFLAGS+=	-I${WRKSRC_mustache}
-LDFLAGS+=	-lz
+CPPFLAGS+=	-I${LOCALBASE}/include/kainjow
+CXXFLAGS+=	-I${LOCALBASE}/include/kainjow
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION} PORTMAJ=${PORTVERSION:C/\..*//}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,FreeBSD,DragonFly,g' \
+		${WRKSRC}/src/server/internalServer.cpp
+	${REINPLACE_CMD} -e 's,freebsd,dragonfly,g' \
+		${WRKSRC}/meson.build
 
 .include <bsd.port.mk>

@@ -1,6 +1,5 @@
 PORTNAME=	logwatch
-DISTVERSION=	7.12
-PORTREVISION=	1
+DISTVERSION=	7.15
 CATEGORIES=	sysutils
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-${DISTVERSION}
 
@@ -10,8 +9,6 @@ WWW=		https://www.logwatch.org
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-RUN_DEPENDS=	p5-HTML-HTML5-Entities>=0:textproc/p5-HTML-HTML5-Entities
 
 USES=		perl5 shebangfix
 USE_PERL5=	run
@@ -41,7 +38,6 @@ pre-configure:
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/HOWTO-Customize-LogWatch ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

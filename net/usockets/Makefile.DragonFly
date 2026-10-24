@@ -1,2 +1,0 @@
-USES+=	alias localbase:ldflags
-DFLY_UNMAINTAINED= yes

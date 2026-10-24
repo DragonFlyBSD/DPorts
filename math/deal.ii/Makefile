@@ -1,35 +1,64 @@
-
 PORTNAME=	deal.II
-DISTVERSIONPREFIX=	v
-DISTVERSION=	9.2.0.20201001 # 9.2.0 breaks with invalid linker flag -l-pthread
+DISTVERSION=	9.8.0
+PORTREVISION=	3
 CATEGORIES=	math
+MASTER_SITES=	https://github.com/dealii/dealii/releases/download/v${DISTVERSION}/
+DISTNAME=	dealii-${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Finite element Differential Equations Analysis Library (DEAL)
+WWW=		https://www.dealii.org/ \
+		https://github.com/dealii/dealii
 
-LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/LICENSE.md
+LICENSE=	APACHE20 LGPL21
+LICENSE_COMB=	dual
+LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE.md
+LICENSE_FILE_LGPL21=	${WRKSRC}/LICENSE.md
 
-BUILD_DEPENDS=	${LOCALBASE}/include/boost/config.hpp:devel/boost-libs
-LIB_DEPENDS=	libboost_serialization.so:devel/boost-libs \
+BROKEN_aarch64=		error: use of undeclared identifier '__TBB_machine_fetchadd4'
+BROKEN_armv7=		clang runs out of memory
+BROKEN_i386=		compilation fails: Kokkos assumes 64-bit build; i.e., 8-byte pointers
+
+BUILD_DEPENDS=	cgal>0:math/cgal \
+		taskflow>0:devel/taskflow
+LIB_DEPENDS=	libarb.so:math/arb \
+		libblis.so:math/blis \
+		libboost_serialization.so:devel/boost-libs \
+		libecm.so:math/gmp-ecm \
+		libflint.so:math/flint2 \
+		libgmp.so:math/gmp \
+		libmpc.so:math/mpc \
+		libmpfr.so:math/mpfr \
 		libhdf5.so:science/hdf5 \
+		liblapack.so:math/lapack \
 		libmetis.so:math/metis \
-		libtbb.so:devel/tbb
+		libsymengine.so:math/symengine \
+		libtbb.so:devel/onetbb \
+		libvtkCommonCore-${VTK_VER}.so:math/vtk${VTK_VER:R} \
+		libkokkoscore.so:devel/kokkos # TMP commented out for bundled kokkos, tests fail for non-bundled kokkos, see https://github.com/dealii/dealii/issues/15692
+RUN_DEPENDS=	cgal>0:math/cgal \
+		taskflow>0:devel/taskflow
 
-USES=		blaslapack:gotoblas cmake compiler:c++17-lang localbase:ldflags
-USE_GITHUB=	yes
-GH_ACCOUNT=	${PORTNAME:tl:S/.//}
-GH_PROJECT=	${PORTNAME:tl:S/.//}
-GH_TAGNAME=	803d21ff957e349b3799cd3ef2c840bc78734305
+USES=		blaslapack:openblas cmake:testing compiler:c++23-lang localbase:ldflags xorg
+
 USE_LDCONFIG=	yes
 
 CMAKE_OFF=	DEAL_II_ALLOW_BUNDLED DEAL_II_COMPONENT_EXAMPLES \
 		DEAL_II_WITH_P4EST DEAL_II_WITH_TRILINOS DEAL_II_WITH_UMFPACK \
-		DEAL_II_WITH_NANOFLANN DEAL_II_WITH_MUPARSER DEAL_II_WITH_ASSIMP \
-		DEAL_II_WITH_HDF5
+		DEAL_II_WITH_MUPARSER DEAL_II_WITH_ASSIMP
+CMAKE_OFF+=	DEAL_II_WITH_MUMPS # when math/mumps is installed deal fails because it expects a newer mumps (FIXME)
+#CMAKE_ON=	FORCE_BUNDLED_KOKKOS # TMP turn on bundled kokkos
+CMAKE_TESTING_ON=	FREEBSD_ENABLE_TESTS
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4.5 compatibility, see https://github.com/dealii/dealii/issues/20250
 
-OPTIONS_DEFINE=		ADOLC ARPACK GSL LAPACK MPI NETCDF OPENCASCADE PETSC SCALAPACK SUNDIALS
-OPTIONS_DEFAULT=	GSL LAPACK # SUNDIALS
+USE_CXXSTD=	c++23
+LDFLAGS+=	-lomp
+LDFLAGS+=	-lexecinfo # TMP for bundled kokkos
+
+XARCH=		${ARCH}
+
+OPTIONS_DEFINE=		ADOLC ARPACK GSL LAPACK MPI OPENCASCADE PETSC SCALAPACK SLEPC SUNDIALS # for all options see contrib/docker/Dockerfile, TODO some of them need to be enabled here
+OPTIONS_DEFAULT=	GSL LAPACK MPI OPENCASCADE PETSC SCALAPACK SLEPC SUNDIALS
 
 ADOLC_DESC=		Compile with ADOL-C
 ADOLC_CMAKE_BOOL=	DEAL_II_WITH_ADOLC
@@ -39,8 +68,8 @@ ADOLC_BROKEN=		requires the development version: see https://github.com/dealii/d
 ARPACK_DESC=		Compile with Arpack and PArpack (only with MPI, LAPACK)
 ARPACK_CMAKE_BOOL=	DEAL_II_WITH_ARPACK
 ARPACK_CMAKE_ON=	-DARPACK_LINKER_FLAGS:STRING="${LDFLAGS}"
-ARPACK_BUILD_DEPENDS=	arpack-ng>0:math/arpack-ng
-ARPACK_RUN_DEPENDS=	arpack-ng>0:math/arpack-ng # itself doesn't link to arpack, but makes depending project link to it
+ARPACK_BUILD_DEPENDS=	arpack-ng@mpich>0:math/arpack-ng@mpich
+ARPACK_RUN_DEPENDS=	arpack-ng@mpich>0:math/arpack-ng@mpich # itself doesn't link to arpack, but makes depending project link to it
 ARPACK_IMPLIES=		LAPACK
 
 GSL_DESC=		Compile with gsl
@@ -60,35 +89,43 @@ MPI_CMAKE_ON=		-DMPI_LINKER_FLAGS:STRING="${LDFLAGS}"
 MPI_LIB_DEPENDS=	libboost_iostreams.so:devel/boost-libs \
 			libmpich.so:net/mpich
 
-NETCDF_DESC=		Compile with Netcdf (only with MPI)
-NETCDF_CMAKE_BOOL=	DEAL_II_WITH_NETCDF
-NETCDF_CMAKE_ON=	-DNETCDF_INCLUDE_DIR:STRING=${LOCALBASE}/include -DNETCDF_CPLUSPLUS_LIBRARY:STRING=${LOCALBASE}/lib/libnetcdf_c++4.so
-NETCDF_BROKEN=		see https://github.com/dealii/dealii/issues/7263
-
 OPENCASCADE_DESC=	Compile with OpenCascade
 OPENCASCADE_CMAKE_BOOL=	DEAL_II_WITH_OPENCASCADE
 OPENCASCADE_CMAKE_ON=	-DOPENCASCADE_INCLUDE_DIR:STRING=${LOCALBASE}/include/OpenCASCADE
 OPENCASCADE_LIB_DEPENDS=	libTKernel.so:cad/opencascade
 
 PETSC_DESC=		Compile with Petsc (only with MPI)
+PETSC_USE=		XORG=x11 # PETSc adds x11 through interface libraries
 PETSC_CMAKE_BOOL=	DEAL_II_WITH_PETSC
 PETSC_LIB_DEPENDS=	libpetsc.so:science/PETSc
-PETSC_BROKEN=		see https://github.com/dealii/dealii/issues/7260
+PETSC_IMPLIES=		MPI # has to use the same MPI as PETSc uses
+.if ${XARCH:M*64*} # match index size width being set to 64 in science/PETSc and math/metis
+PETSC_CMAKE_BOOL+=	DEAL_II_WITH_64BIT_INDICES # as opposed to 32-bit indices that are default in deal.II
+.endif
 
 SCALAPACK_DESC=		Compile with ScaLAPACK (only with MPI)
 SCALAPACK_CMAKE_BOOL=	DEAL_II_WITH_SCALAPACK
 SCALAPACK_IMPLIES=	MPI LAPACK
 SCALAPACK_LIB_DEPENDS=	libscalapack.so:math/scalapack
 
+SLEPC_DESC=		Compile with Slepc (only with MPI)
+SLEPC_USE=		XORG=x11 # SLEPc adds x11 through interface libraries
+SLEPC_CMAKE_BOOL=	DEAL_II_WITH_SLEPC
+SLEPC_LIB_DEPENDS=	libslepc.so:math/slepc
+SLEPC_IMPLIES=		MPI # has to use the same MPI as PETSc uses
+
 SUNDIALS_DESC=		Compile with SUNDIALS
 SUNDIALS_CMAKE_BOOL=	DEAL_II_WITH_SUNDIALS
 SUNDIALS_LIB_DEPENDS=	libsundials_arkode.so:math/sundials
-SUNDIALS_BROKEN=	Build fails with: Required variable "SUNDIALS_LIB_PAR" set to NOTFOUND
 
-post-patch: # unbundle boost
-	@${RM} -r ${WRKSRC}/dealii/bundled/boost-*
+pre-configure: # unbundle boost
+	${RM} -r ${WRKSRC}/bundled/boost-*
 
 post-stage:
 	@${RM} ${STAGEDIR}${PREFIX}/*.log
 
+# tests as of 9.8.0: 100% tests passed, 0 tests failed out of 17
+
+.include <../../math/vtk9/Makefile.version>
+USES:= ${USES:Nblaslapack*}
 .include <bsd.port.mk>

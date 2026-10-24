@@ -1,7 +1,6 @@
---- mesonbuild/environment.py.orig	2021-01-06 10:39:48 UTC
-+++ mesonbuild/environment.py
-@@ -357,7 +357,7 @@ def detect_cpu_family(compilers: Compile
-     """
+--- mesonbuild/envconfig.py.orig
++++ mesonbuild/envconfig.py
+@@ -584,6 +584,6 @@
      if mesonlib.is_windows():
          trial = detect_windows_arch(compilers)
 -    elif mesonlib.is_freebsd() or mesonlib.is_netbsd() or mesonlib.is_openbsd() or mesonlib.is_qnx() or mesonlib.is_aix():
@@ -9,8 +8,8 @@
          trial = platform.processor().lower()
      else:
          trial = platform.machine().lower()
-@@ -412,7 +412,7 @@ def detect_cpu_family(compilers: Compile
- def detect_cpu(compilers: CompilersDict):
+@@ -650,6 +650,6 @@
+ def detect_cpu(compilers: T.Dict[str, Compiler]) -> str:
      if mesonlib.is_windows():
          trial = detect_windows_arch(compilers)
 -    elif mesonlib.is_freebsd() or mesonlib.is_netbsd() or mesonlib.is_openbsd() or mesonlib.is_aix():

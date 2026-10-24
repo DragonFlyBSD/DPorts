@@ -25,6 +25,8 @@ PLIST_FILES=	bin/mtm \
 		share/man/man1/mtm.1.gz
 PORTDATA=	mtm.ti
 
+MAKE_ARGS= LIBPATH="-L${LOCALBASE}/lib"
+DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/mtm.1 \
 		${STAGEDIR}${PREFIX}/share/man/man1/mtm.1

@@ -1,5 +1,0 @@
-
-USES+=	alias localbase:ldflags
-
-MAKE_ARGS+=	ROUND_ROBIN=1
-IGNORE=   unmaintained, please request fixing to users mailing list

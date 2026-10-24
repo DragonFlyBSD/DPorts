@@ -25,4 +25,7 @@ PLIST_SUB=	VERSION=${PORTVERSION}
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libwapcaplet.so
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

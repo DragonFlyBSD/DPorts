@@ -1,4 +1,4 @@
-DISTVERSION?=	14.18
+DISTVERSION?=	14.24
 # PORTREVISION must be ?= otherwise, all slave ports get this PORTREVISION and
 # not their own.  Probably best to keep it at ?=0 when reset here too.
 PORTREVISION?=	0
@@ -21,4 +21,7 @@ PG_USER?=	postgres
 PG_GROUP?=	postgres
 PG_UID?=	770
 
-.include "${.CURDIR}/../postgresql16-server/Makefile"
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NLLVM}
+PG_UID!= grep -E '^pgsql:' ${PORTSDIR}/GIDs | awk -F ':' '{print $$3}'; echo
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NICU}
+.include "${.CURDIR}/../postgresql19-server/Makefile"

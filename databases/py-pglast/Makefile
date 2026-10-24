@@ -1,5 +1,6 @@
 PORTNAME=	pglast
 PORTVERSION=	5.8
+PORTREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,6 +16,7 @@ BROKEN_riscv64=		fails to build: PostgreSQL does not have native spinlock suppor
 USES=		gmake python
 USE_PYTHON=	autoplist distutils
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|make|gmake|' ${WRKSRC}/setup.py
 

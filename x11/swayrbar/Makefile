@@ -1,14 +1,14 @@
 PORTNAME=	swayrbar
-DISTVERSION=	0.4.2
+DISTVERSION=	0.5.0
 PORTREVISION=	6
 CATEGORIES=	x11
-MASTER_SITES=	CRATESIO
+MASTER_SITES=	CRATESIO/${PORTNAME}/${DISTNAME}${CARGO_CRATE_EXT}
 # XXX Teach USES=cargo to have proper default
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	status_command for swaybar
-WWW=		https://sr.ht/~tsdh/swayr/#swayrbar
+WWW=		https://sr.ht/~tsdh/swayr/\#swayrbar
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${_LICENSE_STORE}/GPLv3

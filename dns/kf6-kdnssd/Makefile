@@ -2,8 +2,8 @@ PORTNAME=	kdnssd
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	dns kde kde-frameworks
 
-COMMENT=	Network service discovery using Zeroconf
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Network service discovery using Zeroconf
 
 USES=		cmake kde:6 qt:6 tar:xz
 USE_KDE=	ecm:build
@@ -22,5 +22,9 @@ AVAHI_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Avahi
 MDNSRESPONDER_BUILD_DEPENDS=	${LOCALBASE}/include/dns_sd.h:net/mDNSResponder
 MDNSRESPONDER_LIB_DEPENDS=	libdns_sd.so:net/mDNSResponder
 MDNSRESPONDER_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_DNSSD
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

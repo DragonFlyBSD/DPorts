@@ -64,4 +64,8 @@ post-install:
 		${STAGEDIR}${PREFIX}/lib/Mailer/account/*.so \
 		${STAGEDIR}${PREFIX}/lib/libMailer.so.0.0
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_test "date"@#disabled &@g' \
+		${WRKSRC}/tests/tests.sh
+
 .include <bsd.port.post.mk>

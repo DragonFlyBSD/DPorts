@@ -1,0 +1,4 @@
+Azure Search Documents is the Microsoft Azure Search Documents client
+library for Python. It provides APIs for indexing, querying, and
+managing documents within Azure AI Search indexes, supporting full-text
+search, filtering, and faceted navigation.

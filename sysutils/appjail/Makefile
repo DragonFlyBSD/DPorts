@@ -1,9 +1,9 @@
 PORTNAME=	appjail
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.3.0
+DISTVERSION=	5.9.1
 CATEGORIES=	sysutils
 
-MAINTAINER=	DtxdF@disroot.org
+MAINTAINER=	dtxdf@FreeBSD.org
 COMMENT=	Simple and easy-to-use tool for creating portable jails
 WWW=		https://github.com/DtxdF/AppJail/
 
@@ -19,19 +19,43 @@ ALL_TARGET=	utils-strip
 CONFLICTS=	appjail-devel
 
 PORTDOCS=	README.md
+PORTEXAMPLES=	*
 
-OPTIONS_DEFINE=	DEBOOTSTRAP DOAS DOCS GIT
+OPTIONS_DEFINE=		DEBOOTSTRAP DOAS DOCS EXAMPLES GIT OCI PKGBASE X11
+OPTIONS_DEFAULT=	OCI PKGBASE
+OPTIONS_RADIO=		SECRETS
+OPTIONS_RADIO_SECRETS=	AGE RAGE
 
+AGE_DESC=		Use security/age as secrets backend
 DEBOOTSTRAP_DESC=	Support for Debian and Ubuntu jails
 DOAS_DESC=		Add support for unprivileged users
+OCI_DESC=		Add support for OCI
+PKGBASE_DESC=		Add support for pkgbase
+RAGE_DESC=		Use security/rage as secrets backend
+X11_DESC=		Add support for x11
 
+AGE_RUN_DEPENDS=		age:security/age
 DEBOOTSTRAP_RUN_DEPENDS=	debootstrap>0:sysutils/debootstrap
 DOAS_RUN_DEPENDS=		doas>0:security/doas
 GIT_RUN_DEPENDS=		git>0:devel/git
+OCI_RUN_DEPENDS=		buildah>0:sysutils/buildah \
+				jq>0:textproc/jq
+PKGBASE_RUN_DEPENDS=		${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
+RAGE_RUN_DEPENDS=		rage:security/rage-encryption
+X11_RUN_DEPENDS=		xauth:x11/xauth \
+				xdotool:x11/xdotool \
+				Xephyr:x11-servers/xorg-server@xephyr \
+				xev:x11/xev \
+				xseticon:x11/xseticon
 
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}/${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}/${DOCSDIR}
+
+do-install-EXAMPLES-on:
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	@cd ${WRKSRC}/share/examples/appjail && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
+	@cd ${WRKSRC}/share/examples/appjail && ${CHMOD} +x hooks/pre.d/*.sh
 
 post-install:
 	${MKDIR} ${STAGEDIR}/${ETCDIR}

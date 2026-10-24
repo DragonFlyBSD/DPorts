@@ -70,4 +70,10 @@ do-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-I/usr/include/sys@@g'			\
+		${WRKSRC}/sndserv/Makefile
+	${REINPLACE_CMD} -e 's@\<soundcard.h\>@<sys/soundcard.h>@g'	\
+		${WRKSRC}/sndserv/linux.c
+
 .include <bsd.port.mk>

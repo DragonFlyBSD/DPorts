@@ -1,0 +1,11 @@
+-- Add cmake arguments for system dependencies and position-independent code to scikit-build-core configuration.
+--- pyproject.toml.orig	2022-11-09 12:37:21 UTC
++++ pyproject.toml
+@@ -42,6 +42,7 @@ build-backend = "scikit_build_core.build"
+ build-backend = "scikit_build_core.build"
+ 
+ [tool.scikit-build]
++cmake.args = ["-DUSE_SYSTEM_DEPS=ON", "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"]
+ wheel.packages = ["docling_metrics_text"]
+ 
+ # [build-system]

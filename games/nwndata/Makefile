@@ -1,5 +1,3 @@
-# Created by: Erik Olson <erikolson@olsonexpress.com>
-
 PORTNAME=	nwndata
 PORTVERSION=	${NWNVER}
 PORTREVISION=	${NWNREV}
@@ -13,6 +11,7 @@ DISTFILES=
 
 MAINTAINER=	scf@FreeBSD.org
 COMMENT=	Neverwinter Nights Data Files
+WWW=		http://www.neverwinternights.info/
 
 LICENSE=	Proprietary
 LICENSE_NAME=	Proprietary
@@ -20,7 +19,7 @@ LICENSE_TEXT=	Distribution not allowed
 LICENSE_PERMS=	auto-accept
 
 ONLY_FOR_ARCHS=	amd64 i386
-ONLY_FOR_ARCHS_REASON=	Binary Distribution on x86 only
+ONLY_FOR_ARCHS_REASON=	binary distribution for x86 only
 
 # Setup port based upon whether this is the Diamond edition or straight NWN.
 .if defined(CDROM_MOUNT) && exists(${CDROM_MOUNT}/KingmakerSetup.exe)
@@ -28,7 +27,7 @@ NWNVER=		1.61
 NWNREV=		0
 NWN_DIAMOND=	yes
 
-USES=		7z:p7zip zip
+USES=		7z:7-zip zip
 
 PLIST_SUB+=	DIAMOND="" ORIGINAL="@comment "
 .else
@@ -42,10 +41,11 @@ PLIST_SUB+=	DIAMOND="@comment " ORIGINAL=""
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/nwn
 
+IGNORE= data for game that only runs on linux emulator
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}
 .if defined(NWN_DIAMOND)
-	${LOCALBASE}/bin/${P7ZIP_CMD} e -y -x'r!*.dll' -x'r!*.exe'\
+	${LOCALBASE}/bin/${7-ZIP_CMD} e -y -x'r!*.dll' -x'r!*.exe'\
 		-o${WRKSRC}/Kingmaker ${CDROM_MOUNT}/KingmakerSetup.exe
 .for zipfile in Data_Shared.zip Data_linux.zip data/XP1.zip data/XP2.zip
 	(cd ${STAGEDIR}${DATADIR} && ${UNZIP_NATIVE_CMD}\
@@ -54,6 +54,10 @@ do-install:
 .else
 	(cd ${WRKSRC} && ${FIND} . -print | \
 	    ${CPIO} -pdmuv -R${SHAREOWN}:${SHAREGRP} ${STAGEDIR}${DATADIR})
+.endif
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	"huge" package (too big for mirrors)
 .endif
 
 .include <bsd.port.mk>

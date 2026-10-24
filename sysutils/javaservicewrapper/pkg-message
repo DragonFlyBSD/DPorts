@@ -1,0 +1,11 @@
+[
+{
+  type: upgrade
+  maximum_version: "3.7.0"
+  message: <<EOM
+With the upgrade to version 3.7.0+ the port has been drastically simplified
+and all package files have been moved to default locations. Check your wrapper
+script and wrapper.conf for necessary changes.
+EOM
+}
+]

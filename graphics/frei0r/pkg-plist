@@ -1,4 +1,10 @@
 include/frei0r.h
+include/frei0r.hpp
+include/frei0r/blur.h
+include/frei0r/cairo.h
+include/frei0r/cfc.h
+include/frei0r/colorspace.h
+include/frei0r/math.h
 lib/frei0r-1/3dflippo.so
 lib/frei0r-1/B.so
 lib/frei0r-1/G.so
@@ -26,12 +32,14 @@ lib/frei0r-1/brightness.so
 lib/frei0r-1/burn.so
 lib/frei0r-1/bw0r.so
 lib/frei0r-1/c0rners.so
+lib/frei0r-1/camerashake.so
 lib/frei0r-1/cartoon.so
 lib/frei0r-1/cluster.so
 lib/frei0r-1/colgate.so
 lib/frei0r-1/color_only.so
 lib/frei0r-1/coloradj_RGB.so
 lib/frei0r-1/colordistance.so
+lib/frei0r-1/colorenhance.so
 lib/frei0r-1/colorhalftone.so
 lib/frei0r-1/colorize.so
 lib/frei0r-1/colortap.so
@@ -53,6 +61,7 @@ lib/frei0r-1/edgeglow.so
 lib/frei0r-1/elastic_scale.so
 lib/frei0r-1/emboss.so
 lib/frei0r-1/equaliz0r.so
+lib/frei0r-1/euclid_eraser.so
 lib/frei0r-1/filmgrain.so
 lib/frei0r-1/flippo.so
 lib/frei0r-1/gamma.so
@@ -62,6 +71,7 @@ lib/frei0r-1/glow.so
 lib/frei0r-1/grain_extract.so
 lib/frei0r-1/grain_merge.so
 lib/frei0r-1/hardlight.so
+lib/frei0r-1/heatmap0r.so
 lib/frei0r-1/hue.so
 lib/frei0r-1/hueshift0r.so
 lib/frei0r-1/invert0r.so
@@ -85,11 +95,13 @@ lib/frei0r-1/nervous.so
 lib/frei0r-1/nois0r.so
 lib/frei0r-1/normaliz0r.so
 lib/frei0r-1/nosync0r.so
+lib/frei0r-1/ntsc.so
 lib/frei0r-1/onecol0r.so
 lib/frei0r-1/overlay.so
 lib/frei0r-1/partik0l.so
 lib/frei0r-1/perspective.so
 lib/frei0r-1/pixeliz0r.so
+lib/frei0r-1/pixels0rt.so
 lib/frei0r-1/pixs0r.so
 lib/frei0r-1/plasma.so
 lib/frei0r-1/posterize.so
@@ -145,5 +157,6 @@ lib/frei0r-1/uvmap.so
 lib/frei0r-1/value.so
 lib/frei0r-1/vertigo.so
 lib/frei0r-1/vignette.so
+lib/frei0r-1/water.so
 lib/frei0r-1/xfade0r.so
 libdata/pkgconfig/frei0r.pc

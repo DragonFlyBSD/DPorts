@@ -1,0 +1,4 @@
+DirtyJSON is a JSON decoder for Python that can extract data from
+malformed or non-standard JSON input. It is designed to be tolerant
+of common JSON formatting errors and can recover usable data from
+inputs that would cause standard JSON parsers to fail.

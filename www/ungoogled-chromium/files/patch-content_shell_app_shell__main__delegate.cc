@@ -1,6 +1,6 @@
---- content/shell/app/shell_main_delegate.cc.orig	2024-08-26 14:40:28 UTC
+--- content/shell/app/shell_main_delegate.cc.orig	2026-08-13 07:41:05 UTC
 +++ content/shell/app/shell_main_delegate.cc
-@@ -276,7 +276,7 @@ void ShellMainDelegate::PreSandboxStartup() {
+@@ -305,7 +305,7 @@ void ShellMainDelegate::PreSandboxStartup() {
      // Reporting for sub-processes will be initialized in ZygoteForked.
      if (process_type != switches::kZygoteProcess) {
        crash_reporter::InitializeCrashpad(process_type.empty(), process_type);

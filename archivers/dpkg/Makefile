@@ -33,7 +33,7 @@ CONFIGURE_ARGS=	--with-admindir=${DPKGDIR} \
 		--with-libintl-prefix=${LOCALBASE} \
 		--with-logdir=/var/log \
 		--with-libmd
-CONFIGURE_ENV=	PERL_LIBDIR="${PREFIX}/${SITE_PERL_REL}"
+CONFIGURE_ENV= PERL_LIBDIR="${PREFIX}/${SITE_PERL_REL}" ac_cv_header_md5_h=no
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
@@ -44,5 +44,10 @@ NLS_USES=		gettext-runtime
 post-install:
 	(cd ${STAGEDIR}${DPKGDIR} && ${TOUCH} available.sample \
 		diversions.sample statoverride.sample status.sample)
+
+CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--with-libmd} --with-libmd=no
+dfly-patch:
+	${REINPLACE_CMD} -e 's|<md5.h>|"compat/md5.h"|' \
+		${WRKSRC}/lib/dpkg/buffer.c
 
 .include <bsd.port.mk>

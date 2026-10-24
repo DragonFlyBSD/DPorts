@@ -38,6 +38,7 @@ ROOT_DESC=	Install bootstrap files into /etc/runit and /sbin
 ROOT_VARS_OFF=	RUNITDIR=${ETCDIR} SBINDIR=${PREFIX}/sbin
 ROOT_VARS=	RUNITDIR=/etc/runit SBINDIR=/sbin
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|man/man|share/man/man|' ${WRKSRC}/Makefile
 

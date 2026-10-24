@@ -1,6 +1,6 @@
 PORTNAME=	ccache
 PORTVERSION=	3.7.12
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/ccache/ccache/releases/download/v${DISTVERSION}/ \
 		LOCAL/bdrewery
@@ -39,6 +39,7 @@ STATIC_LDFLAGS+=		-static
 # Support WITH_CCACHE_BUILD but don't depend on it.
 NO_CCACHE_DEPEND=	yes
 
+MEMCACHED_EXTRA_PATCHES= ${FILESDIR}/../dragonfly/extra-memcached-configure.ac
 .include <bsd.port.pre.mk>
 
 .  if ${COMPILER_TYPE} == clang

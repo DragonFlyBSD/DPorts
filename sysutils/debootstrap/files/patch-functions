@@ -1,20 +1,54 @@
---- functions.orig	2023-02-24 08:27:34 UTC
+--- functions.orig	2026-03-26 22:58:30 UTC
 +++ functions
-@@ -658,7 +658,7 @@ download_release_sig () {
- 		info RELEASESIG "Checking Release signature"
- 		# Don't worry about the exit status from gpgv; parsing the output will
- 		# take care of that.
--		(gpgv --status-fd 1 --keyring "$KEYRING" --ignore-time-conflict \
-+		(gpgv2 --status-fd 1 --keyring "$KEYRING" --ignore-time-conflict \
- 		 "$relsigdest" "$reldest" || true) | read_gpg_status
- 		progress 100 100 DOWNRELSIG "Downloading Release file signature"
- 	fi
-@@ -1706,7 +1706,7 @@ read_gpg_status () {
- 	elif [ "$unkkey" ]; then
- 		error 1 UNKNOWNRELSIG "Release signed by unknown key (key id %s)\n   The specified keyring $KEYRING may be incorrect or out of date.\n   You can find the latest Debian release key at https://ftp-master.debian.org/keys.html" "$unkkey"
- 	else
--		error 1 SIGCHECK "Error executing gpgv to check Release signature"
-+		error 1 SIGCHECK "Error executing gpgv2 to check Release signature"
- 	fi
+@@ -1045,7 +1045,7 @@ extract_dpkg_deb_data () {
+ extract_dpkg_deb_data () {
+ 	local pkg="$1"
+ 
+-	dpkg-deb --fsys-tarfile "$pkg" | tar $EXTRACT_DEB_TAR_OPTIONS -xf - || error 1 FILEEXIST "Tried to extract package, but tar failed. Exit..."
++	dpkg-deb --fsys-tarfile "$pkg" | gtar $EXTRACT_DEB_TAR_OPTIONS -xf - || error 1 FILEEXIST "Tried to extract package, but tar failed. Exit..."
  }
  
+ # Raw .deb extractors
+@@ -1065,7 +1065,7 @@ extract_ar_deb_field () {
+ 
+ 	if in_path $cat_cmd; then
+ 		ar -p "$pkg" "$tarball" | $cat_cmd |
+-		    tar -O -xf - control ./control 2>/dev/null |
++		    gtar -O -xf - control ./control 2>/dev/null |
+ 		    grep -i "^$field:" | sed -e 's/[^:]*: *//' | head -n 1
+ 	else
+ 		error 1 UNPACKCMDUNVL "Extracting %s requires the %s command, which is not available" "$pkg" "$cat_cmd"
+@@ -1087,7 +1087,7 @@ extract_ar_deb_data () {
+ 	esac
+ 
+ 	if in_path "$cat_cmd"; then
+-		ar -p "$pkg" "$tarball" | "$cat_cmd" | tar $EXTRACT_DEB_TAR_OPTIONS -xf -
++		ar -p "$pkg" "$tarball" | "$cat_cmd" | gtar $EXTRACT_DEB_TAR_OPTIONS -xf -
+ 	else
+ 		error 1 UNPACKCMDUNVL "Extracting %s requires the %s command, which is not available" "$pkg" "$cat_cmd"
+ 	fi
+@@ -1696,7 +1696,7 @@ while (read STDIN, $x, 1) {
+ }' "$@"
+ 		elif [ "$1" = "GETDEPS" ]; then
+ 			local pkgdest="$2"; shift; shift
+-LC_ALL=C grep "$gropt" '^$|^Package:|^Depends:|^Pre-Depends:' "${pkgdest}" | perl -e '
++LC_ALL=C pcre2grep '^$|^Package:|^Depends:|^Pre-Depends:' "${pkgdest}" | perl -e '
+ %seen = map { $_ => 1 } @ARGV;
+ while (<STDIN>) {
+ 	if (/^Package: (.*)$/) {
+@@ -1724,13 +1724,13 @@ while (<STDIN>) {
+ 			local m="$2"
+ 			local p="$3"
+ 			shift; shift; shift
+-			LC_ALL=C grep "$gropt" '^$|^Architecture:|^Filename:|^MD5sum:|^Package:|^Priority:|^SHA256:|^Size:|^Version:|^Depends:|^Pre-Depends:' "$p" | pkgdetails_field 1 Package: "$m" "$@"
++			LC_ALL=C pcre2grep '^$|^Architecture:|^Filename:|^MD5sum:|^Package:|^Priority:|^SHA256:|^Size:|^Version:|^Depends:|^Pre-Depends:' "$p" | pkgdetails_field 1 Package: "$m" "$@"
+ 		elif [ "$1" = "FIELD" ]; then
+ 			local f="$2"
+ 			local m="$3"
+ 			local p="$4"
+ 			shift; shift; shift; shift
+-			LC_ALL=C grep "$gropt" '^$|^Package:|^Priority:|^Essential:' "$p" | pkgdetails_field 0 "$f" "$m" "$@"
++			LC_ALL=C pcre2grep '^$|^Package:|^Priority:|^Essential:' "$p" | pkgdetails_field 0 "$f" "$m" "$@"
+ 		elif [ "$1" = "STANZAS" ]; then
+ 			local pkgdest="$2"; shift; shift
+ 			perl -e '

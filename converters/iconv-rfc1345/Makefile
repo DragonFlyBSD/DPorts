@@ -13,4 +13,5 @@ LIB_DEPENDS=	libbiconv.so:converters/iconv
 
 USES=		perl5 uidfix
 
+PLIST_FILES= @comment\ share/iconv/charset.aliases
 .include <bsd.port.mk>

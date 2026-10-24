@@ -16,7 +16,7 @@ RUN_DEPENDS=	setuidgid:sysutils/daemontools \
 
 USES=		ldap localbase:ldflags shebangfix tar:xz
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--prefix=${PREFIX}
+CONFIGURE_ARGS= --prefix=${PREFIX} CC=gcc
 USE_CSTD=	gnu89
 SHEBANG_FILES=	admin/*
 
@@ -40,5 +40,9 @@ do-install-EXAMPLES-on:
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-pthreads@-pthread@g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

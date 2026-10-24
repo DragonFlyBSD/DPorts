@@ -31,6 +31,7 @@ DOCS_BUILD_DEPENDS=	xsltproc:textproc/libxslt \
 
 NLS_USES=	gettext
 
+LDFLAGS= -L${LOCALBASE}/lib -lintl
 post-patch-DOCS-off:
 	${REINPLACE_CMD} 's|data doc include|data include|' \
 	${WRKSRC}/Makefile

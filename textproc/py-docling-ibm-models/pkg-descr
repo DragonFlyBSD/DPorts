@@ -1,0 +1,4 @@
+Docling IBM Models contains the AI models used by the Docling PDF
+conversion pipeline. It provides pre-trained deep learning models for
+document layout analysis, table structure recognition, and other document
+understanding tasks, optimized for use within the Docling ecosystem.

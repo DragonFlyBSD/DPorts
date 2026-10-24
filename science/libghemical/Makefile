@@ -1,6 +1,6 @@
 PORTNAME=	libghemical
 PORTVERSION=	3.0.0
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	science
 MASTER_SITES=	http://bioinformatics.org/ghemical/download/release20111012/	\
 		http://bioinformatics.org/ghemical/download/current/
@@ -36,4 +36,6 @@ LDFLAGS+=	-lSCbasis -lSCcints -lSCclass -lSCcontainer -lSCdft -lSCgroup \
 PLIST_SUB=	LIBGHEMICAL_VERSION="${PORTVERSION}"
 INSTALL_TARGET=	install-strip
 
+BUILD_DEPENDS:= ${BUILD_DEPENDS:N*binutils}
+CONFIGURE_ENV:= ${CONFIGURE_ENV:NLD_PRELOAD*}
 .include <bsd.port.mk>

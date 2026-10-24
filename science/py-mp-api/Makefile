@@ -1,8 +1,9 @@
 PORTNAME=	mp-api
-DISTVERSION=	0.34.0
+DISTVERSION=	0.46.5
 CATEGORIES=	science python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	mp_api-${DISTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	API for server for the Materials Project
@@ -11,24 +12,43 @@ WWW=		https://materialsproject.github.io/api/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61.0:devel/py-setuptools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}setuptools-scm>0:devel/py-setuptools-scm@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}boto3>0:www/py-boto3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}custodian>0:devel/py-custodian@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}emmet-core>=0.39.8:science/py-emmet-core@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}monty>=2022.3.12:devel/py-monty@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}mpcontribs-client>=5.0.10:science/py-mpcontribs-client@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}msgpack>0:devel/py-msgpack@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pydantic>=1.8.2:devel/py-pydantic@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pymatgen-analysis-alloys>=0.0.3:science/py-pymatgen-analysis-alloys@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pymatgen>=2022.3.7:science/py-pymatgen@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}requests>=2.27.1:www/py-requests@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}typing-extensions>=4.1.1:devel/py-typing-extensions@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}deltalake>=1.4.0:databases/py-deltalake@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}emmet-core>=0.87.1:science/py-emmet-core@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}monty>=2024.12.10:devel/py-monty@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}orjson>=3.10:devel/py-orjson@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyarrow>=20.0.0:databases/py-pyarrow@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pymatgen>2024.2.20:science/py-pymatgen@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}requests>=2.23.0:www/py-requests@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}typing-extensions>=3.7.4.1:devel/py-typing-extensions@${PY_FLAVOR}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest-asyncio>0:devel/py-pytest-asyncio@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pytest-cov>0:devel/py-pytest-cov@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pytest-mock>0:devel/py-pytest-mock@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pytest-xdist>0:devel/py-pytest-xdist@${PY_FLAVOR}
 
-USES=		python
+USES=		python:3.11+
 USE_PYTHON=	pep517 autoplist pytest
 
 NO_ARCH=	yes
+TEST_ARGS=	--disable-plugin-autoload -p pytest_asyncio \
+		--ignore=tests/client/materials/test_similarity.py \
+		--ignore=tests/client/test_client.py
+
+# tests as of 0.46.4: disable tests that require network access to the Materials
+# Project API or an API key (test_core_fetch_tools, test_core_search_tools,
+# test_blessed_entry, test_regression_batching) and the client-initialization
+# test (test_mix_in) that fails without an API key in the clean environment.
+# Ignore similarity/client tests until pymatgen's bibtexparser v2 incompatibility
+# in the current dependency stack is resolved.
+PYTEST_BROKEN_TESTS=	test_core_fetch_tools \
+			test_core_search_tools \
+			test_mix_in \
+			test_blessed_entry \
+			test_regression_batching
+
+# tests as of 0.46.5: 22 passed, 107 skipped, 7 deselected, 20 warnings in 127.22s (0:02:07)
 
 .include <bsd.port.mk>

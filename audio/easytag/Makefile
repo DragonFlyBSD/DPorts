@@ -50,6 +50,7 @@ SPEEX_CONFIGURE_ENABLE=	speex
 
 NLS_USES=		gettext-runtime
 
+CONFIGURE_ENV= LDVER=ld.bfd
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${PORTDOCS}

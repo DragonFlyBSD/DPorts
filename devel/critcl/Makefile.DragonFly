@@ -1,4 +1,0 @@
-
-# stage-qa
-dfly-install:
-	${STRIP_CMD} --strip-debug ${STAGEDIR}${PREFIX}/lib/critcl_callback1/dragonfly-x86_64/callback.so

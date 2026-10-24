@@ -1,22 +1,23 @@
 PORTNAME=	edfbrowser
-DISTVERSION=	1.95
+DISTVERSION=	2.15
 CATEGORIES=	misc
 MASTER_SITES=	https://www.teuniz.net/${PORTNAME}/
 DISTNAME=	${PORTNAME}_${DISTVERSION:S/.//}_source
 
-MAINTAINER=	yuri@FreeBSD.org
+MAINTAINER=	mce@FreeBSD.org
 COMMENT=	Viewer, annotator, toolbox for timeseries files EEG, EMG, ECG, etc
 WWW=		https://www.teuniz.net/edfbrowser/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		desktop-file-utils gl qmake qt:5 shared-mime-info
-USE_QT=		core gui network printsupport widgets buildtools:build
-USE_GL=		gl
+USES=		desktop-file-utils gl qmake qt:6 shared-mime-info
+USE_QT=		base tools:build
+USE_GL=		opengl
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/edfbrowser
 

@@ -1,20 +1,22 @@
 PORTNAME=	icinga2
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.13.7
-PORTREVISION=	0
+DISTVERSION=	2.16.5
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 
-MAINTAINER=	joneum@FreeBSD.org
+MAINTAINER=	flo@FreeBSD.org
 COMMENT=	Monitoring and management system for hosts, services and networks
 WWW=		https://www.icinga.org/icinga2/
 
-LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
+		libabsl_log_severity.so:devel/abseil \
+		libprotobuf-lite.so:devel/protobuf
 RUN_DEPENDS=	${LOCALBASE}/bin/bash:shells/bash
 
-USES=		alias bison cmake:insource compiler:c++0x libedit ssl
+USES=		bison cmake:insource compiler:c++0x libedit ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	icinga
 
@@ -35,8 +37,8 @@ UNITY_DESC=	Use icinga unity build system (faster, memory intensive)
 MONPLUGINS_RUN_DEPENDS=	${LOCALBASE}/libexec/nagios/check_nagios:net-mgmt/monitoring-plugins
 NAGPLUGINS_RUN_DEPENDS=	${LOCALBASE}/libexec/nagios/check_nagios:net-mgmt/nagios-plugins
 
-MYSQL_CMAKE_ON=		-DICINGA2_WITH_MYSQL:BOOL=true
-PGSQL_CMAKE_ON=		-DICINGA2_WITH_PGSQL:BOOL=true
+MYSQL_CMAKE_OFF=	-DICINGA2_WITH_MYSQL=OFF
+PGSQL_CMAKE_OFF=	-DICINGA2_WITH_PGSQL=OFF
 UNITY_CMAKE_OFF=	-DICINGA2_UNITY_BUILD=OFF
 
 ICINGA2USER?=	icinga
@@ -53,6 +55,7 @@ CMAKE_ARGS+=	-DCMAKE_EXE_LINKER_FLAGS=${PREFIX}/lib/icinga2 \
 		-DCMAKE_MODULE_LINKER_FLAGS=${PREFIX}/lib/icinga2 \
 		-DCMAKE_SHARED_LINKER_FLAGS=${PREFIX}/lib/icinga2 \
 		-DCMAKE_STATIC_LINKER_FLAGS=${PREFIX}/lib/icinga2 \
+		-DCMAKE_INSTALL_MANDIR=${PREFIX}/share/man \
 		-DICINGA2_COMMAND_GROUP=${ICINGA2USER} \
 		-DICINGA2_COMMAND_USER=${ICINGA2USER} \
 		-DICINGA2_GROUP=${ICINGA2GROUP} \
@@ -104,5 +107,8 @@ post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/vim/vimfiles
 	(cd ${WRKSRC}/tools/syntax/vim && ${COPYTREE_SHARE} . \
 		${STAGEDIR}${PREFIX}/share/vim/vimfiles)
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' ${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

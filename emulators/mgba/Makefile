@@ -1,6 +1,6 @@
 PORTNAME=	mgba
-DISTVERSION=	0.10.2
-PORTREVISION=	4
+DISTVERSION=	0.10.5
+PORTREVISION=	2
 CATEGORIES=	emulators
 
 MAINTAINER=	pkubaj@FreeBSD.org
@@ -68,4 +68,6 @@ QT5_USES=	desktop-file-utils qt:5
 QT5_USE=	qt=qmake:build,buildtools:build,core,gui,widgets,network,opengl,multimedia
 QT5_CMAKE_BOOL=	BUILD_QT
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NDEBUGGERS}
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

@@ -1,12 +1,11 @@
 PORTNAME=	wcd
-DISTVERSION=	6.0.5
-PORTREVISION=	1
+DISTVERSION=	6.0.7
 CATEGORIES=	shells
 MASTER_SITES=	SF
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jishanalam9128@gmail.com
 COMMENT=	Command-line program to change directory fast
-WWW=		http://wcd.sourceforge.net/
+WWW=		https://waterlander.net/wcd/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/copying.txt
@@ -30,6 +29,10 @@ post-patch:
 		${WRKSRC}/src/Makefile
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/wcd
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+
+dfly-patch:
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
+		${WRKSRC}/src/Makefile
 
 .include <bsd.port.mk>

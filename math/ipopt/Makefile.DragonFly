@@ -1,5 +1,0 @@
-EXTRACT_CMD=tar
-
-# avoid doxygen dep for now
-DOCS_ALL_TARGET:=	${DOCS_ALL_TARGET:Ndoxydoc}
-DOCS_BUILD_DEPENDS:=

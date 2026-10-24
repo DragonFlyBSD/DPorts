@@ -1,5 +1,5 @@
 PORTNAME=	kirigami-addons
-DISTVERSION=	1.8.1
+DISTVERSION=	1.15.0
 CATEGORIES=	x11-toolkits kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/
 DIST_SUBDIR=	KDE
@@ -13,9 +13,10 @@ LICENSE=	LGPL20
 
 BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
 
-USES=		cmake compiler:c++17-lang gettext gl kde:6 qt:6 tar:xz
+USES= cmake compiler:c++17-lang gettext gl kde:6 qt:6 tar:xz gmake
 USE_GL=		gl
-USE_KDE=	config coreaddons globalaccel guiaddons i18n kirigami2 \
+USE_KDE=	colorscheme config coreaddons crash globalaccel \
+		guiaddons i18n iconthemes kirigami2 \
 		ecm:build
 USE_QT=		base declarative
 

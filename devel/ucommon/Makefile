@@ -26,4 +26,8 @@ USE_CXXSTD=	c++11
 post-install:
 	${INSTALL_DATA} ${BUILD_WRKSRC}/ucommon-config.h ${STAGEDIR}${PREFIX}/include/ucommon
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@STREQUAL "FreeBSD"@MATCHES "^(FreeBSD|DragonFly)$$"@g'	\
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.post.mk>

@@ -31,6 +31,7 @@ USE_QT=		buildtools core gui linguisttools widgets
 
 PLIST_FILES=	bin/openrgb
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/openrgb ${STAGEDIR}${PREFIX}/bin
 

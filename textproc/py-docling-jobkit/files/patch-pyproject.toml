@@ -1,0 +1,12 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 20:28:26 UTC
++++ pyproject.toml
+@@ -7,7 +7,7 @@ readme = "README.md"
+ version = "2.0.0"  # DO NOT EDIT, updated automatically
+ description = "Running a distributed job processing documents with Docling."
+ readme = "README.md"
+-license = "MIT"
++license = {text = "MIT"}
+ authors = [
+     {name="Michele Dolfi", email="dol@zurich.ibm.com"},
+     {name="Viktor Kuropiatnyk", email="vku@zurich.ibm.com"},

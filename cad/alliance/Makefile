@@ -1,6 +1,6 @@
 PORTNAME=	alliance
 DISTVERSION=	5.1.1
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	cad
 
 MAINTAINER=	ports@FreeBSD.org
@@ -21,7 +21,8 @@ GL_SITE=	https://gitlab.lip6.fr
 GL_ACCOUNT=	vlsi-eda
 GL_TAGNAME=	ebece102e15c110fc79f1da50524c68fd9523f0c
 
-USES=		autoreconf:build gmake libtool magick:build motif tar:bz2 tex xorg
+USES= autoreconf:build gmake libtool magick:build motif tar:bz2 tex xorg guessfix
+USE_CSTD=	gnu11
 USE_GCC=	yes
 USE_TEX=	dvipsk:build latex:build
 USE_XORG=	ice sm x11 xext xt

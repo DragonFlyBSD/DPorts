@@ -27,6 +27,7 @@ USE_XORG=	x11
 
 MAKEFILE=	makefile
 
+MAKE_JOBS_UNSAFE= yes
 post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/lib/lv2/BHarvestr.lv2/LICENSE
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lv2/BHarvestr.lv2/BHarvestr*.so

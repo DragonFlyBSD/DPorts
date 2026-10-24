@@ -1,5 +1,5 @@
 PORTNAME=	gsequencer
-DISTVERSION=	7.5.5
+DISTVERSION=	9.0.20
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -21,9 +21,8 @@ LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libsamplerate.so:audio/libsamplerate \
 		libsndfile.so:audio/libsndfile \
 		libsoup-3.0.so:devel/libsoup3 \
-		libuuid.so:misc/e2fsprogs-libuuid \
-		libvulkan.so:graphics/vulkan-loader \
-		libwebkit2gtk-4.0.so:www/webkit2-gtk@40
+		libuuid.so:misc/libuuid \
+		libvulkan.so:graphics/vulkan-loader
 RUN_DEPENDS=	dssi>0:audio/dssi
 
 USES=		autoreconf desktop-file-utils gettext-runtime gettext-tools gmake gnome gstreamer \
@@ -38,13 +37,12 @@ USE_GITHUB=	yes
 
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
-CONFIGURE_ENV=	CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
-		INTROSPECTION_SCANNER=g-ir-scanner INTROSPECTION_COMPILER=g-ir-compiler MAKE=${GMAKE} CC=${CC} CXX=${CXX} LD=clang
+CONFIGURE_ENV=	INTROSPECTION_SCANNER=g-ir-scanner INTROSPECTION_COMPILER=g-ir-compiler MAKE=${GMAKE} CC=${CC} CXX=${CXX} LD=clang
 CONFIGURE_ARGS=	--disable-alsa --enable-oss --enable-introspection --disable-rt
 
 CPPFLAGS+=	-DAGS_LICENSE_FILENAME=\\\"${LOCALBASE}/share/licenses/${PKGNAME}/${LICENSE}\\\" \
 		-DAGS_LOGO_FILENAME=\\\"${DATADIR}/images/ags.png\\\" # there should be no need to supply AGS_LOGO_FILENAME here since the app knows its location
-LDFLAGS+=	-luuid
+LIBS=		-luuid
 
 INSTALL_TARGET=	install-strip
 
@@ -70,15 +68,24 @@ X11_USES=			xorg
 
 PORTDOCS=	*
 
+CFLAGS= -Wno-deprecated-declarations -Wno-incompatible-pointer-types -Wno-unused_variable -Wno-unused-but-set-variable
 post-extract:
 	@${RM} ${WRKSRC}/configure.ac.orig
+	@${CP} ${FILESDIR}/gen-symbols-all.pl ${WRKSRC}/gen-symbols-all.pl
+	@${CHMOD} +x ${WRKSRC}/gen-symbols-all.pl
 
-do-configure: # it fails to build with clang without this custom configure step
-	@${ECHO} "==> Configure, patch symbols, and re-run configure again"
+post-configure: # it fails to build with clang without this custom configure step
+	@${ECHO} "==> Patch symbols and re-run configure again"
 	@cd ${WRKSRC} && \
-		${CONFIGURE_ENV} ${CONFIGURE_CMD} ${CONFIGURE_ARGS} && \
 		${MAKE_CMD} gen-symbols-all-bsd && \
 		${MAKE_CMD} fix-symbols-all-bsd && \
+		${SETENVI} ${WRK_ENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
+		CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" CXXFLAGS="${CXXFLAGS}" \
+		LDFLAGS="${LDFLAGS}" LIBS="${LIBS}" \
+		INSTALL="/usr/bin/install -c" \
+		INSTALL_DATA="${INSTALL_DATA}" INSTALL_LIB="${INSTALL_LIB}" \
+		INSTALL_PROGRAM="${INSTALL_PROGRAM}" INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 		${CONFIGURE_ENV} ${CONFIGURE_CMD} ${CONFIGURE_ARGS}
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
 .include <bsd.port.mk>

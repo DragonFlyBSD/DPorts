@@ -29,6 +29,7 @@ BINARY_ALIAS=	make=${GMAKE} \
 
 PLIST_FILES=	bin/${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 pre-configure:
 	 @cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} config
 

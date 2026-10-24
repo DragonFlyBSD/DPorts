@@ -1,10 +1,10 @@
 PORTNAME=	liblxi
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.18
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for communicating with LXI compatible instruments
 WWW=		https://lxi-tools.github.io
 

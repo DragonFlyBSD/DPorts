@@ -28,6 +28,7 @@ MAKE_ENV=	PATH=${LOCALBASE}/bin:/usr/bin:/bin CXXFLAGS="${CXXFLAGS}" # 'ld' need
 MAKE_ARGS=	LIB_EXT=so
 LDFLAGS+=	-B${LOCALBASE}/bin # Use ld provided by USE_BINUTILS for GNU features, otherwise GNU ld isn't called
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	# SIMD level is wrongly determined during build, not during run: https://github.com/brummer10/GxPlugins.lv2/issues/8
 	@${REINPLACE_CMD} -E ' \

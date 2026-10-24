@@ -1,11 +1,12 @@
-
 PORTNAME=	ghq
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.7
+DISTVERSION=	1.10.1
+PORTREVISION=	8
 CATEGORIES=	devel
 
-MAINTAINER=	driesm.michiels@gmail.com
+MAINTAINER=	driesm@FreeBSD.org
 COMMENT=	Repository management tool (Git, Hg, SVN, Fossil, Bazaar, Darcs)
+WWW=		https://github.com/x-motemen/ghq
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

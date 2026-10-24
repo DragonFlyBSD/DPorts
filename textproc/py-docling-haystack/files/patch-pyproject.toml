@@ -1,0 +1,12 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 20:28:25 UTC
++++ pyproject.toml
+@@ -8,7 +8,7 @@ requires-python = ">=3.10"
+ description = "Haystack integration for docling"
+ readme = "README.md"
+ requires-python = ">=3.10"
+-license = "Apache-2.0"
++license = {text = "Apache-2.0"}
+ keywords = [
+     "Docling",
+     "Documents",

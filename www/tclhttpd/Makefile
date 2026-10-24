@@ -47,7 +47,7 @@ post-install:
 		${STAGEDIR}${PREFIX}/lib/${PORTNAME}${PORTVERSION}/pkgIndex.tcl
 
 .if ${COMPILER_TYPE} == "clang"
-CFLAGS+=	-std=c90 -Wno-deprecated-non-prototype
+CFLAGS+= -std=c90 -Wno-deprecated-non-prototype -Wformat=0
 .endif
 
 .include <bsd.port.post.mk>

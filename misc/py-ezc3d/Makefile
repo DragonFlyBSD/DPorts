@@ -1,7 +1,6 @@
 PORTNAME=	ezc3d
 DISTVERSIONPREFIX=	Release_
-DISTVERSION=	1.5.11
-PORTREVISION=	1
+DISTVERSION=	1.7.2
 CATEGORIES=	misc python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,26 +11,28 @@ WWW=		https://github.com/pyomeca/ezc3d
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYNUMPY} \
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scikit-build>0:devel/py-scikit-build@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR} \
 		cmake:devel/cmake-core \
+		ninja:devel/ninja \
 		swig:devel/swig
-RUN_DEPENDS=	${PYNUMPY}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}
 
 USES=		python
-USE_PYTHON=	distutils pytest # autoplist is broken due to https://github.com/pyomeca/ezc3d/issues/258 ; 3 tests fail, see https://github.com/pyomeca/ezc3d/issues/291
+USE_PYTHON=	pep517 autoplist pytest # autoplist is broken due to https://github.com/pyomeca/ezc3d/issues/258 ; 3 tests fail, see https://github.com/pyomeca/ezc3d/issues/291
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	pyomeca
 GH_TUPLE=	google:googletest:3880b13:googletest/external/gtest # https://github.com/pyomeca/ezc3d/issues/256
 
-TEST_ARGS=	${WRKSRC}/test/python3
+MAKE_ENV+=	SKBUILD_CONFIGURE_OPTIONS=-DEZC3D_INSTALL_HEADERS=OFF
+
+TEST_ARGS=	--disable-plugin-autoload ${WRKSRC}/test/python3
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 
 post-install:
-	# remove unnecessary C++ headers, see https://github.com/pyomeca/ezc3d/issues/258
-	@${RM} -r ${STAGEDIR}${PREFIX}/include/*
 	# strip binaries
 	@cd ${STAGEDIR}/${PYTHON_SITELIBDIR} && \
 		${STRIP_CMD} \
@@ -50,7 +51,10 @@ pre-test: # download test c3d files
 	@cd ${WRKSRC}/test/c3dFiles && ${MKDIR} ${n} && cd ${n} && ${TAR} -xf ../${n}.zip
 .endfor
 	# move *.c3d files into a flat folder
+	@${RM} -rf ${WRKSRC}/test/c3dTestFiles
 	@${MKDIR} ${WRKSRC}/test/c3dTestFiles
-	@${CP} `${FIND} ${WRKSRC} -name "*.c3d"` ${WRKSRC}/test/c3dTestFiles
+	@${CP} `${FIND} ${WRKSRC} -name "*.c3d" -not -path "${WRKSRC}/test/c3dTestFiles/*"` ${WRKSRC}/test/c3dTestFiles
+
+# tests as of 1.7.2: 30 passed in 8.44s
 
 .include <bsd.port.mk>

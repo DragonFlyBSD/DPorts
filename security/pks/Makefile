@@ -1,21 +1,19 @@
 PORTNAME=	pks
 PORTVERSION=	0.9.6.20040312
-PORTREVISION=	10
+PORTREVISION=	12
 CATEGORIES=	security www
 MASTER_SITES=	http://pks.sourceforge.net/ LOCAL/mandree
 DISTFILES=	pks-current.tgz
 
-MAINTAINER=	tphilipp@potion-studios.com
+MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	PGP Public Key Server
 WWW=		http://www.mit.edu/people/marc/pks/
 
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		bdb ssl
+USES=		bdb:18 ssl
 USE_RC_SUBR=	pksd
-
-WRKSRC=		${WRKDIR}/${PORTNAME}
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir=${DATADIR} \
@@ -28,12 +26,16 @@ CONFIGURE_ENV=	DBLIB="-L${BDB_LIB_DIR} -l${BDB_LIB_NAME}" \
 SUB_FILES=	pkg-message
 SUB_LIST=	PORTNAME="${PORTNAME}"
 
-OPTIONS_DEFINE=	DOCS
+WRKSRC=		${WRKDIR}/${PORTNAME}
+
 PORTDOCS=	pks_help.* README EMAIL
 
+OPTIONS_DEFINE=	DOCS
+
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
@@ -41,14 +43,20 @@ post-extract:
 	@${CP} -a ${FILESDIR}/EMAIL ${WRKSRC}
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/pgpsplit
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/pksdctl
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/pksclient
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/sbin/pksd
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/pgpsplit \
+	${STAGEDIR}${PREFIX}/bin/pksdctl \
+	${STAGEDIR}${PREFIX}/bin/pksclient \
+	${STAGEDIR}${PREFIX}/sbin/pksd
 	${MV} ${STAGEDIR}${PREFIX}/etc/pksd.conf ${STAGEDIR}${PREFIX}/etc/pksd.conf.sample
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
 	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
+
+.if ${PORTVERSION} == 0.9.6.20040312
+USES:=	${USES:Nssl}
+BUILD_DEPENDS+=	libressl-static>0:security/libressl-static
+CONFIGURE_ARGS+= --with-openssl=${LOCALBASE}/libressl-static
+.endif
 
 .include <bsd.port.mk>

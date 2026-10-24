@@ -1,5 +1,6 @@
 PORTNAME=	espeak-ng
 PORTVERSION=	1.52.0
+PORTREVISION=	1
 CATEGORIES=	audio
 #MASTER_SITES=	https://github.com/espeak-ng/${PORTNAME}/releases/download/${PORTVERSION}/
 
@@ -12,7 +13,7 @@ LICENSE=	GPLv3
 BUILD_DEPENDS=	ronn:textproc/rubygem-ronn
 LIB_DEPENDS=	libpcaudio.so:audio/pcaudiolib
 
-USES=		autoreconf gmake libtool localbase
+USES=		autoreconf cpe gmake libtool localbase
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 
@@ -24,6 +25,7 @@ CONFLICTS_INSTALL=	espeak speak
 
 OPTIONS_DEFINE=	DOCS
 
+CONFIGURE_ENV= ac_cv_prog_RONN=no
 pre-build:
 	@${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|' \
 		${WRKSRC}/Makefile.am ${WRKSRC}/src/libespeak-ng/speech.h
@@ -31,10 +33,8 @@ pre-build:
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
-	${RLN} ${STAGEDIR}${PREFIX}/share/man/man1/espeak-ng.1 \
-			${STAGEDIR}${PREFIX}/share/man/man1/espeak.1
 	${LN} -sf libespeak-ng.so ${STAGEDIR}${PREFIX}/lib/libespeak.so
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libespeak-ng.so*
 
+BUILD_DEPENDS:= ${BUILD_DEPENDS:Nronn*}
 .include <bsd.port.mk>

@@ -1,10 +1,10 @@
 PORTNAME=	phpvirtualbox
 DISTVERSION=	7.0
 CATEGORIES=	www
-SUFFIX=		-70
-PKGNAMESUFFIX=	${SUFFIX}${PHP_PKGNAMESUFFIX}
 MASTER_SITES=	https://sourceforge.net/code-snapshots/git/p/ph/${PORTNAME}-7-0/code.git/ \
 		LOCAL/vvd
+SUFFIX=		-70
+PKGNAMESUFFIX=	${SUFFIX}${PHP_PKGNAMESUFFIX}
 DISTNAME=	${PORTNAME}-7-0-code-0737ff1c4106661672e69ef5ff26c3f494f4c65f
 
 MAINTAINER=	vbox@FreeBSD.org
@@ -13,14 +13,19 @@ WWW=		https://sourceforge.net/projects/phpvirtualbox-7-0/
 
 LICENSE=	GPLv3
 
+DEPRECATED=		Upstream EOL reaches on 2025-04-15, use www/phpvirtualbox-72 instead
+EXPIRATION_DATE=	2026-12-31
+
 USES=		php:flavors zip
 USE_PHP=	session simplexml soap xml
 
 ETCDIR=		${WWWDIR}
 WWWDIR=		${PREFIX}/www/${PORTNAME}${SUFFIX}
-EXTRA_PATCHES+=	${.CURDIR}/../phpvirtualbox/files/patch-panes_mediumEncryptionPasswords.html
+EXTRA_PATCHES+=	${.CURDIR}/../phpvirtualbox-72/files/patch-endpoints_lib_vboxconnector.php \
+		${.CURDIR}/../phpvirtualbox-72/files/patch-panes_mediumEncryptionPasswords.html
 NO_ARCH=	yes
 NO_BUILD=	yes
+PORTSCOUT=	limit:^7\.0\.
 
 WRKSRC_SUBDIR=	${PORTNAME}-${DISTVERSION}
 

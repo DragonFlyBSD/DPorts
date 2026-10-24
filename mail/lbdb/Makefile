@@ -39,6 +39,7 @@ PLIST_SUB+=	YPCAT=""
 PLIST_SUB+=	YPCAT="@comment "
 .endif
 
+CONFIGURE_ARGS+= ac_cv_path_TAC=NONE
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGPG}

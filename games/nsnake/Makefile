@@ -1,6 +1,5 @@
 PORTNAME=	nsnake
-DISTVERSION=	2.2.0
-PORTREVISION=	1
+PORTVERSION=	3.0.0
 CATEGORIES=	games
 MASTER_SITES=	http://releases.malikania.fr/nsnake/${PORTVERSION}/
 
@@ -15,13 +14,8 @@ USES=		ncurses tar:xz
 OPTIONS_DEFINE=	DOCS
 OPTIONS_SUB=	yes
 
-MAKE_ENV=	CC="$CC" \
-		CFLAGS+="$CFLAGS" \
-		LDFLAGS+="$LDFLAGS"
+MAKE_ARGS=	VARDIR="/var"
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|VARDIR=.*|VARDIR=/var|' \
-		${WRKSRC}/config.mk
 do-install:
 	(cd ${WRKSRC} \
 		&& ${INSTALL_PROGRAM} ${PORTNAME} ${STAGEDIR}${PREFIX}/bin \
@@ -29,5 +23,10 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	(cd ${WRKSRC} && ${INSTALL_DATA} CHANGES.md ${STAGEDIR}${DOCSDIR})
 	@${MKDIR} ${STAGEDIR}/var/db/nsnake
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@^CFLAGS=@& ${CFLAGS}@g" \
+			 -e "s@^LDFLAGS=@& ${LDFLAGS}@g" \
+		${WRKSRC}/config.mk
 
 .include <bsd.port.mk>

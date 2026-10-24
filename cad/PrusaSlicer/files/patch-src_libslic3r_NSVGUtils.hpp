@@ -1,11 +1,11 @@
---- src/libslic3r/NSVGUtils.hpp.orig	2023-07-25 16:16:15 UTC
+--- src/libslic3r/NSVGUtils.hpp.orig	2024-09-18 13:39:04 UTC
 +++ src/libslic3r/NSVGUtils.hpp
-@@ -3,7 +3,7 @@
- 
+@@ -15,7 +15,7 @@
  #include "Polygon.hpp"
  #include "ExPolygon.hpp"
+ #include "EmbossShape.hpp" // ExPolygonsWithIds
 -#include "nanosvg/nanosvg.h"    // load SVG file
-+#include "libnanosvg/nanosvg.h"    // load SVG file
- 
- namespace Slic3r {
++#include <libnanosvg/nanosvg.h>
+ #include "libslic3r/Point.hpp"
+ #include "libslic3r/libslic3r.h"
  

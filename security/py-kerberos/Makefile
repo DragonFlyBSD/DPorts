@@ -35,4 +35,5 @@ post-patch:
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/kerberos*.so
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSSAPI_BASE} GSSAPI_MIT
 .include <bsd.port.mk>

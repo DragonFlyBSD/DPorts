@@ -1,10 +1,10 @@
 PORTNAME=	pdfarranger
-DISTVERSION=	1.10.1
+DISTVERSION=	1.12.1
 PORTREVISION=	2
 CATEGORIES=	print
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Split, Merge, Rotate and Reorder PDF Files
 WWW=		https://github.com/pdfarranger/pdfarranger
 
@@ -15,9 +15,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}python-dateutil>0:devel/py-python-dateutil@$
 		${PYTHON_PKGNAMEPREFIX}pikepdf>0:textproc/py-pikepdf@${PY_FLAVOR} \
 		poppler-glib>0:graphics/poppler-glib
 
-USES=		gettext gnome python
+USES=		desktop-file-utils gettext-tools gnome python
 USE_GITHUB=	yes
-USE_GNOME=	gtk30 intltool:build pygobject3:run
+#USE_GNOME=	gtk30 pygobject3:run
 USE_PYTHON=	distutils
 
 NO_ARCH=	yes

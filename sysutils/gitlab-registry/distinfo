@@ -1,0 +1,5 @@
+TIMESTAMP = 1785299417
+SHA256 (go/sysutils_gitlab-registry/container-registry-v4.41.0-gitlab/go.mod) = 4a51badf1ec175bb3ccde6b6450c9772f6849431effd2f10fbc607f9bdf8b802
+SIZE (go/sysutils_gitlab-registry/container-registry-v4.41.0-gitlab/go.mod) = 10684
+SHA256 (go/sysutils_gitlab-registry/container-registry-v4.41.0-gitlab/container-registry-v4.41.0-gitlab.tar.bz2) = 9dcaee16cd2280a0038a12a3f4bfe56e57ce4b8d9d97127d2647a53aa419d1b8
+SIZE (go/sysutils_gitlab-registry/container-registry-v4.41.0-gitlab/container-registry-v4.41.0-gitlab.tar.bz2) = 13884262

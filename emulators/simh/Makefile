@@ -20,7 +20,7 @@ NO_WRKSUBDIR=	yes
 USES=		gmake dos2unix zip
 DOS2UNIX_GLOB=	*.c *.h *.txt *.mak *.ini makefile
 CFLAGS+=	-Wno-format-extra-args -Wno-comment
-MAKE_ENV=	GCC="${CC}" CFLAGS_O="${CFLAGS}" USE_NETWORK=1
+MAKE_ENV= GCC="${CC}" CFLAGS_O="${CFLAGS}" USE_NETWORK=1 LDVER=ld.bfd
 MAKEFILE=	makefile
 
 CONFLICTS_INSTALL=	simh-hp2100

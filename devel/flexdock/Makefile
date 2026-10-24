@@ -1,8 +1,6 @@
 PORTNAME=	flexdock
-PORTVERSION=	1.2.4
-PORTREVISION=	1
+PORTVERSION=	1.2.5
 CATEGORIES=	devel java
-MASTER_SITES=	http://forge.scilab.org/index.php/p/${PORTNAME}/downloads/get/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Swing windowing and docking framework
@@ -11,7 +9,10 @@ WWW=		https://forge.scilab.org/index.php/p/flexdock/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		java:ant,run
+USES=		java:ant
+
+USE_GITLAB=	yes
+GL_ACCOUNT=	scilab/forge
 
 ALL_TARGET=	dist
 NO_ARCH=	yes

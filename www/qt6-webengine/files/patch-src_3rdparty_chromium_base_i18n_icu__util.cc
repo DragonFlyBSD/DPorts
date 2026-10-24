@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/base/i18n/icu_util.cc.orig	2024-07-03 01:14:49 UTC
+--- src/3rdparty/chromium/base/i18n/icu_util.cc.orig	2026-02-26 14:39:03 UTC
 +++ src/3rdparty/chromium/base/i18n/icu_util.cc
-@@ -51,7 +51,7 @@
+@@ -52,7 +52,7 @@
  #include "third_party/icu/source/common/unicode/unistr.h"
  #endif
  
@@ -9,12 +9,12 @@
      BUILDFLAG(IS_CHROMEOS) || (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CASTOS))
  #include "third_party/icu/source/i18n/unicode/timezone.h"
  #endif
-@@ -349,7 +349,7 @@ void InitializeIcuTimeZone() {
+@@ -322,7 +322,7 @@ void InitializeIcuTimeZone() {
        FuchsiaIntlProfileWatcher::GetPrimaryTimeZoneIdForIcuInitialization();
    icu::TimeZone::adoptDefault(
        icu::TimeZone::createTimeZone(icu::UnicodeString::fromUTF8(zone_id)));
--#elif BUILDFLAG(IS_CHROMEOS) || (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CASTOS))
-+#elif BUILDFLAG(IS_CHROMEOS) || (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CASTOS)) || BUILDFLAG(IS_BSD)
+-#elif BUILDFLAG(IS_CHROMEOS) || \
++#elif BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD) || \
+     (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CASTOS)) || BUILDFLAG(IS_ANDROID)
    // To respond to the time zone change properly, the default time zone
    // cache in ICU has to be populated on starting up.
-   // See TimeZoneMonitorLinux::NotifyClientsFromImpl().

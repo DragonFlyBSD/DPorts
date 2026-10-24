@@ -1,7 +1,6 @@
 PORTNAME=	octave-forge-zeromq
 DISTVERSIONPREFIX=	release-
-DISTVERSION=	1.5.6
-PORTREVISION=	3
+DISTVERSION=	1.5.8
 CATEGORIES=	math
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -22,4 +21,5 @@ OCTAVE_SRC=	${GH_PROJECT}-release-${DISTVERSION}
 
 GNU_CONFIGURE=	yes
 
+LDFLAGS= -L${LOCALBASE}/lib
 .include <bsd.port.mk>

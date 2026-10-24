@@ -1,3 +1,0 @@
-
-# avoid doxygen dep for now
-DOCS_BUILD_DEPENDS:=	${DOCS_BUILD_DEPENDS:Ndoxygen*}

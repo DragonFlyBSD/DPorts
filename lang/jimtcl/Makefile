@@ -1,5 +1,5 @@
 PORTNAME=	jimtcl
-PORTVERSION=	0.82
+PORTVERSION=	0.84
 CATEGORIES=	lang tcl
 
 MAINTAINER=	gahr@FreeBSD.org
@@ -28,6 +28,7 @@ PORTDOCS=		*
 
 TEST_TARGET=		test
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${STRIP_CMD} \
 		${STAGEDIR}${PREFIX}/bin/jimsh \

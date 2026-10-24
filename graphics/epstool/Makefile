@@ -32,6 +32,7 @@ PORTDOCS=	epstool.htm gsview.css
 
 OPTIONS_DEFINE=	DOCS
 
+MAKE_JOBS_UNSAFE= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/epstool ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/epstool.1 ${STAGEDIR}${PREFIX}/share/man/man1

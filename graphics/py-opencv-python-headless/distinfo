@@ -1,0 +1,11 @@
+TIMESTAMP = 1789498270
+SHA256 (opencv-opencv-python-5.0.0.93-93_GH0.tar.gz) = 319712e131f336dd5d1e3d6131d20ec7c7e922b93038858ef015c58f634ab1ee
+SIZE (opencv-opencv-python-5.0.0.93-93_GH0.tar.gz) = 1130272
+SHA256 (opencv-opencv-0654a42e19215ef25b1d367d822f3c630447e7c7_GH0.tar.gz) = 7a75663094ebd50bf212928423a24394e29d751db878044ad015ba28546a59db
+SIZE (opencv-opencv-0654a42e19215ef25b1d367d822f3c630447e7c7_GH0.tar.gz) = 96313878
+SHA256 (opencv-opencv_contrib-a8e9acd62cabd30419dba83007f2ac0d07de5e2c_GH0.tar.gz) = c96663affc1e6125fc5b630539db83f5bcff19f911c2bbc40e9b7566f86508c9
+SIZE (opencv-opencv_contrib-a8e9acd62cabd30419dba83007f2ac0d07de5e2c_GH0.tar.gz) = 55526794
+SHA256 (opencv-ade-v0.1.2e_GH0.tar.gz) = 107711887d413127955d64a0e42974ec379c1ebb81832c79a21a9e3a2110e4bf
+SIZE (opencv-ade-v0.1.2e_GH0.tar.gz) = 117054
+SHA256 (opencv-opencv_extra-4.14.0_GH0.tar.gz) = 2d532531e80dd8a073eab3d64c282643ebfa99fa31639029d3829e5f6ad76172
+SIZE (opencv-opencv_extra-4.14.0_GH0.tar.gz) = 507167516

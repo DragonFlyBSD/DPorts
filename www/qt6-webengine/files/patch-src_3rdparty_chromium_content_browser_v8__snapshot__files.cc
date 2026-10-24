@@ -1,9 +1,9 @@
---- src/3rdparty/chromium/content/browser/v8_snapshot_files.cc.orig	2023-03-09 06:31:50 UTC
+--- src/3rdparty/chromium/content/browser/v8_snapshot_files.cc.orig	2025-08-07 06:57:29 UTC
 +++ src/3rdparty/chromium/content/browser/v8_snapshot_files.cc
-@@ -13,7 +13,7 @@ namespace content {
- std::map<std::string, absl::variant<base::FilePath, base::ScopedFD>>
- GetV8SnapshotFilesToPreload() {
-   std::map<std::string, absl::variant<base::FilePath, base::ScopedFD>> files;
+@@ -35,7 +35,7 @@ void registerContextSnapshotAndroid(
+ std::map<std::string, std::variant<base::FilePath, base::ScopedFD>>
+ GetV8SnapshotFilesToPreload(base::CommandLine& process_command_line) {
+   std::map<std::string, std::variant<base::FilePath, base::ScopedFD>> files;
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #if BUILDFLAG(USE_V8_CONTEXT_SNAPSHOT)

@@ -16,7 +16,7 @@ LICENSE_NAME=	ICU license
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USES+=		compiler:c++11-lib cpe gmake pathfix python:build tar:tgz
+USES+=		compiler:c++11-lib cpe gmake python:build tar:tgz
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS?=--disable-layoutex
@@ -48,5 +48,13 @@ post-install:
 	@(cd ${STAGEDIR}${PREFIX} && ${ECHO_CMD} \
 		${DATADIR_REL}/${PORTVERSION:C/r.?/1/}/icudt*.dat >>${TMPPLIST})
 .endif # !defined(PKGNAMESUFFIX)
+
+post-extract:
+	${REINPLACE_CMD} \
+		-e '/ICULIBS_COMMON =/ s/$$/ -lstdc++/' \
+		-e '/ICULIBS_BASE =/ s|$$| -L/usr/lib/${MAKE_ENV:MCCVER=*:S/CCVER=//}|' \
+		${WRKSRC}/config/Makefile.inc.in
+	${REINPLACE_CMD} -e 's|-L$${libdir}|$${ICULIBS_BASE}|' \
+		${WRKSRC}/config/icu-config-bottom
 
 .include <bsd.port.mk>

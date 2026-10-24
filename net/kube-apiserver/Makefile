@@ -1,7 +1,7 @@
 PORTNAME=	kube-apiserver
 PORTVERSION=	1.27.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
+PORTREVISION=	34
 CATEGORIES=	net
 
 MAINTAINER=	loic.blot@unix-experience.fr
@@ -43,4 +43,5 @@ USE_RC_SUBR=	kube-apiserver
 
 PLIST_FILES=	bin/${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

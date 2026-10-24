@@ -28,6 +28,7 @@ PLIST_FILES=	include/sj3lib.h \
 POSTPATCHES=	${FILESDIR}/post-patch-Imakefile \
 		${FILESDIR}/post-patch-include-Const.h
 
+PLIST_FILES+= lib/libsj3lib.so.1.21
 post-patch:
 	cd ${WRKSRC} && ${CAT} ${POSTPATCHES} | ${PATCH}
 

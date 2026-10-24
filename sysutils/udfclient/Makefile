@@ -53,4 +53,8 @@ post-patch:
 	${CP} ${UDFCLIENTFS_DIR}/${UDFCLIENTFS_NAME}.c ${WRKSRC}
 .endif
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/uscsilib_machdep.h
+
 .include <bsd.port.mk>

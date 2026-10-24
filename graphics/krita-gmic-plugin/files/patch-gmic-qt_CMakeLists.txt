@@ -1,0 +1,22 @@
+--- gmic-qt/CMakeLists.txt.orig	2026-03-21 17:28:14 UTC
++++ gmic-qt/CMakeLists.txt
+@@ -327,6 +327,7 @@ if (UNIX)
+         set(gmic_qt_LIBRARIES
+             ${gmic_qt_LIBRARIES}
+             ${X11_LIBRARIES} # XXX: Search for X11: Wayland is coming!
++            Threads::Threads
+         )
+     endif()
+ endif()
+@@ -648,9 +649,9 @@ if (UNIX OR APPLE OR MSYS)
+ 
+ if (UNIX OR APPLE OR MSYS)
+   message("Producing translation .qm files")
+-  execute_process(COMMAND make WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/translations OUTPUT_QUIET)
++  execute_process(COMMAND gmake WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/translations OUTPUT_QUIET)
+   message("Producing filter translation .qm files")
+-  execute_process(COMMAND make WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/translations/filters OUTPUT_QUIET)
++  execute_process(COMMAND gmake WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/translations/filters OUTPUT_QUIET)
+ else()
+   set(gmic_translation_files
+       translations/cs.ts

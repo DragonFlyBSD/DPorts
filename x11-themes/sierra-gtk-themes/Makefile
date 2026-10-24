@@ -2,7 +2,7 @@ PORTNAME=	sierra-gtk-themes
 DISTVERSION=	2019-12-16
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	MacOS High Sierra like theme for GTK 3, GTK 2 and Gnome-Shell etc
 WWW=		https://github.com/vinceliuice/Sierra-gtk-theme
 

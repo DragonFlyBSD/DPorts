@@ -1,0 +1,4 @@
+Docling Google OCR integrates Google Cloud Vision OCR into the Docling
+document conversion pipeline. It enables cloud-based optical character
+recognition using Google's OCR services as an alternative to local
+OCR engines.

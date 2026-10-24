@@ -1,13 +1,21 @@
 PORTNAME=	chromium
-PORTVERSION=	137.0.7151.119
+PORTVERSION=	156.0.8078.47
 PULSEMV=	16
 PULSEV=		${PULSEMV}.1
+TSV=		7.0.2
 CATEGORIES=	www wayland
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
 		https://nerd.hu/distfiles/:external \
-		https://freedesktop.org/software/pulseaudio/releases/:pulseaudio
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		pulseaudio-${PULSEV}.tar.gz:pulseaudio
+		https://freedesktop.org/software/pulseaudio/releases/:pulseaudio \
+		https://github.com/chromium-linux-tarballs/chromium-tarballs/releases/download/${PORTVERSION}/:unofficial
+DISTFILES=	${DISTNAME}-lite${EXTRACT_SUFX} \
+		${DISTNAME}-profdata${EXTRACT_SUFX}:external \
+		pulseaudio-${PULSEV}.tar.gz:pulseaudio \
+		TypeScript-${TSV}-vendor.tar.gz:external
+
+USE_GITHUB=	nodefault
+GH_TUPLE=	evanw:esbuild:v${_ESBUILD_VERSION:sh}:esbuild/esbuild \
+		microsoft:TypeScript:v${TSV}:typescript/typescript
 
 MAINTAINER=	chromium@FreeBSD.org
 COMMENT=	Google web browser based on WebKit
@@ -22,10 +30,13 @@ BUILD_DEPENDS=	bash:shells/bash \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ply>0:devel/py-ply@${PY_FLAVOR} \
 		bindgen:devel/rust-bindgen-cli \
+		esbuild:devel/esbuild \
 		gperf:devel/gperf \
 		flock:sysutils/flock \
 		node:www/node \
 		rustc:lang/rust \
+		tsc:lang/typescript-go \
+		vulkan-headers>0:graphics/vulkan-headers \
 		xcb-proto>0:x11/xcb-proto \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
 		${LOCALBASE}/share/usbids/usb.ids:misc/usbids \
@@ -73,9 +84,13 @@ LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
 RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		noto-basic>0:x11-fonts/noto-basic
 
-USES=		bison compiler:c++17-lang cpe desktop-file-utils gl gmake gnome \
-		iconv:wchar_t jpeg localbase:ldflags ninja perl5 pkgconfig \
-		python:build qt:5 shebangfix tar:xz xorg
+USES=		bison compiler:c++17-lang cpe desktop-file-utils gl gmake \
+		go:no_targets gnome iconv:wchar_t jpeg localbase:ldflags ninja perl5 \
+		pkgconfig python:build qt:5 shebangfix tar:xz xorg
+
+WITHOUT_FBSD10_FIX=	Yes
+
+_ESBUILD_VERSION=	${MAKE} -C ${PORTSDIR}/devel/esbuild -V DISTVERSION
 
 CPE_VENDOR=	google
 CPE_PRODUCT=	chrome
@@ -102,7 +117,6 @@ BINARY_ALIAS=	python3=${PYTHON_CMD}
 GN_ARGS+=	clang_use_chrome_plugins=false \
 		enable_backup_ref_ptr_support=false \
 		enable_hangout_services_extension=true \
-		enable_nacl=false \
 		enable_remoting=false \
 		enable_widevine=true \
 		fatal_linker_warnings=false \
@@ -126,10 +140,12 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		use_system_libffi=true \
 		use_system_libjpeg=true \
 		use_udev=false \
-		extra_cflags="${CFLAGS}" \
+		v8_metagen_libclang_so="${LOCALBASE}/llvm${LLVM_DEFAULT}/lib/libclang.so" \
+		v8_metagen_libclang_bindings_dir="${LOCALBASE}/llvm${LLVM_DEFAULT}/lib/python${PYTHON_VER}/site-packages" \
 		extra_cxxflags="${CXXFLAGS} -I${LOCALBASE}/include/libepoll-shim ${PINCLUDES}" \
-		extra_ldflags="${LDFLAGS}" \
-		ffmpeg_branding="${FFMPEG_BRAND}"
+		extra_ldflags="${LDFLAGS} -Wl,--undefined-version" \
+		ffmpeg_branding="${FFMPEG_BRAND}" \
+		use_typescript_go=false
 
 # TODO: investigate building with these options:
 # use_system_minigbm
@@ -173,7 +189,6 @@ CUPS_LIB_DEPENDS=	libcups.so:print/cups
 CUPS_VARS=		GN_ARGS+=use_cups=true
 CUPS_VARS_OFF=		GN_ARGS+=use_cups=false
 
-DEBUG_BUILD_DEPENDS=	esbuild:devel/esbuild
 DEBUG_VARS=		BUILDTYPE=Debug \
 			GN_ARGS+=is_debug=true \
 			GN_ARGS+=is_component_build=false \
@@ -191,7 +206,7 @@ DEBUG_VARS_OFF=		BUILDTYPE=Release \
 
 DRIVER_MAKE_ARGS=	chromedriver
 
-HEIMDAL_LIB_DEPENDS=	libkrb.so.26:security/heimdal
+HEIMDAL_LIB_DEPENDS=	libkrb5.so.26:security/heimdal
 KERBEROS_VARS=		GN_ARGS+=use_kerberos=true
 KERBEROS_VARS_OFF=	GN_ARGS+=use_kerberos=false
 
@@ -201,7 +216,7 @@ LTO_VARS=		GN_ARGS+=use_thin_lto=true \
 			WANTMEM="16 GB"
 LTO_VARS_OFF=		GN_ARGS+=use_thin_lto=false
 
-MIT_LIB_DEPENDS=	libkrb.so.3:security/krb5
+MIT_LIB_DEPENDS=	libkrb5.so.3:security/krb5
 
 PIPEWIRE_DESC=		Screen capture via PipeWire
 PIPEWIRE_LIB_DEPENDS=	libpipewire-0.3.so:multimedia/pipewire
@@ -221,10 +236,15 @@ SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 WIDEVINE_DESC=		Depend on foreign-cdm to enable playback of DRM content
 WIDEVINE_RUN_DEPENDS=	foreign-cdm>0:www/foreign-cdm
 
+GN_ARGS+= extra_cflags="${CFLAGS}"
+GN_ARGS+= v8_enable_sandbox=false
+LTO_UNSAFE= yes
 .include "Makefile.tests"
-TEST_DISTFILES=		${PORTNAME}-${DISTVERSION}-testdata${EXTRACT_SUFX}
+#TEST_DISTFILES=		${PORTNAME}-${DISTVERSION}-testdata${EXTRACT_SUFX}
 TEST_ALL_TARGET=	${TEST_TARGETS}
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NKERBEROS}
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk> # for COMPILER_VERSION
 
@@ -232,7 +252,7 @@ TEST_ALL_TARGET=	${TEST_TARGETS}
 IGNORE=		you have selected HEIMDAL_BASE but do not have Heimdal installed in base
 .endif
 
-LLVM_DEFAULT=		19
+LLVM_DEFAULT=		22
 BUILD_DEPENDS+=		clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
 BINARY_ALIAS+=		cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} \
 			cc=${LOCALBASE}/bin/clang${LLVM_DEFAULT} \
@@ -256,8 +276,8 @@ PLIST_SUB+=	NOT_AARCH64=""
 FFMPEG_TARGET=	ia32
 .endif
 
-FFMPEG_BDIR=	${WRKSRC}/third_party/ffmpeg/build.${FFMPEG_TARGET}.${OPSYS:tl}/${FFMPEG_BRAND}
-FFMPEG_CDIR=	${WRKSRC}/third_party/ffmpeg/chromium/config/${FFMPEG_BRAND}/${OPSYS:tl}/${FFMPEG_TARGET}
+FFMPEG_BDIR= ${WRKSRC}/third_party/ffmpeg/build.${FFMPEG_TARGET}.${OPSYS:tl}/${FFMPEG_BRAND}
+FFMPEG_CDIR= ${WRKSRC}/third_party/ffmpeg/chromium/config/${FFMPEG_BRAND}/${OPSYS:tl}/${FFMPEG_TARGET}
 
 # Allow relocations against read-only segments (override lld default)
 LDFLAGS_i386=	-Wl,-znotext
@@ -268,11 +288,12 @@ MAKE_ENV+=	C_INCLUDE_PATH=${LOCALBASE}/include \
 		CPLUS_INCLUDE_PATH=${LOCALBASE}/include
 
 # rust
-RUSTC_VERSION!=	rustc -V 2>/dev/null || true
 MAKE_ENV+=	RUSTC_BOOTSTRAP=1
 GN_ARGS+=	enable_rust=true \
-		rust_sysroot_absolute="${LOCALBASE}" \
-		rustc_version="${RUSTC_VERSION}"
+		rust_sysroot_absolute="${LOCALBASE}"
+
+# go
+MAKE_ENV+=	GOCACHE=${WRKDIR}/go-cache
 
 pre-everything::
 	@${ECHO_MSG}
@@ -282,6 +303,10 @@ pre-everything::
 	@${ECHO_MSG} "- 1.5 million free inodes"
 	@${ECHO_MSG}
 
+post-patch:
+	patch -d ${WRKSRC}/typescript/tsc/internal/bundled/libs -Ep2 < \
+		${WRKSRC}/third_party/typescript/linux-amd64/3pp/patches/typescript_native_preview.patch
+
 pre-configure:
 	# We used to remove bundled libraries to be sure that chromium uses
 	# system libraries and not shipped ones.
@@ -289,28 +314,48 @@ pre-configure:
 	#./build/linux/unbundle/remove_bundled_libraries.py [list of preserved]
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${PYTHON_CMD} \
 		./build/linux/unbundle/replace_gn_files.py --system-libraries \
-		dav1d flac fontconfig harfbuzz-ng libdrm libpng \
+		dav1d flac fontconfig harfbuzz libdrm libpng \
 		libusb libwebp libxml libxslt openh264 opus || ${FALSE}
+	@cd ${WRKSRC}/chrome/build/pgo_profiles && _p=$$(echo *.profdata) && \
+		${LOCALBASE}/bin/llvm-profdata${LLVM_DEFAULT} merge $${_p}.txt --output=$${_p}
 	# Chromium uses an unreleased version of FFmpeg, so configure it
 	cd ${WRKSRC}/media/ffmpeg && \
 		${PYTHON_CMD} scripts/build_ffmpeg.py dragonfly ${FFMPEG_TARGET} \
 		--config-only --branding=${FFMPEG_BRAND}
-	cd ${FFMPEG_BDIR} && env && ${GMAKE} ffversion.h
+	cd ${FFMPEG_BDIR} && ${GMAKE} ffversion.h
 	${MKDIR} ${FFMPEG_CDIR}
-.for _e in config.h config.asm config_components.h libavcodec libavformat libavutil
+.for _e in config.h config.asm config_components.asm config_components.h libavcodec libavformat libavutil
 	-${CP} -pR ${FFMPEG_BDIR}/${_e} ${FFMPEG_CDIR}
 .endfor
 	touch ${WRKDIR}/pulseaudio-${PULSEV}/src/pulse/version.h
-	@${REINPLACE_CMD} -e 's|$${LOCALBASE}|${LOCALBASE}|;s|$${MODCLANG_VERSION}|${LLVM_DEFAULT}|' \
+	@${REINPLACE_CMD} -e 's|$${LOCALBASE}|${LOCALBASE}|g;s|$${MODCLANG_VERSION}|${LLVM_DEFAULT}|g' \
+		${WRKSRC}/build/linux/strip_binary.gni \
 		${WRKSRC}/build/rust/rust_bindgen.gni \
-		${WRKSRC}/build/rust/rust_bindgen_generator.gni
+		${WRKSRC}/build/rust/rust_bindgen_generator.gni \
+		${WRKSRC}/v8/BUILD.gn
+
+pre-build:
+	cd ${WRKSRC}/typescript/tsc && \
+		${SETENV} ${MAKE_ENV} go build -v -p ${MAKE_JOBS_NUMBER} -mod=vendor ./cmd/tsgo && \
+		ln -sf ${WRKSRC}/typescript/tsc/tsgo \
+		${WRKSRC}/third_party/typescript/linux-amd64/src/lib/tsc
 
 do-configure:
+	(cd ${WRKSRC}/esbuild && \
+		${LOCALBASE}/bin/node scripts/esbuild.js \
+		/usr/local/bin/esbuild --neutral && \
+		rm -rf ${WRKSRC}/third_party/devtools-frontend/src/node_modules/esbuild && \
+		ln -sf ${WRKSRC}/esbuild/npm/esbuild \
+		${WRKSRC}/third_party/devtools-frontend/src/node_modules/esbuild \
+	)
+
 	# GN generator bootstrapping and generating ninja files
+	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/linux64/gn
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} CC=${CC} CXX=${CXX} LD=${CXX} \
 		READELF=${READELF} AR=${AR} NM=${NM} \
-		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
-		${PYTHON_CMD} ./tools/gn/bootstrap/bootstrap.py ${GN_BOOTSTRAP_FLAGS}
+		CFLAGS="${CFLAGS:N-flto*}" CXXFLAGS="${CXXFLAGS:N-flto*}" LDFLAGS="${LDFLAGS:N-flto*}" \
+		${PYTHON_CMD} \
+		./tools/gn/bootstrap/bootstrap.py ${GN_BOOTSTRAP_FLAGS}
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./out/${BUILDTYPE}/gn \
 		gen --args='${GN_ARGS}' out/${BUILDTYPE}
 
@@ -318,7 +363,17 @@ do-configure:
 	@${MKDIR} ${WRKSRC}/third_party/node/${OPSYS:tl}/node-${OPSYS:tl}/bin
 	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/${OPSYS:tl}/node-${OPSYS:tl}/bin/node
 
-	# Setup buildtools/dragonfly
+	# Setup rustc dependency
+	@${MKDIR} ${WRKSRC}/third_party/rust-toolchain/bin
+	${LN} -sf ${LOCALBASE}/bin/rustc ${WRKSRC}/third_party/rust-toolchain/bin/rustc
+
+	# Setup esbuild dependency
+	${LN} -sf ${LOCALBASE}/bin/esbuild ${WRKSRC}/third_party/devtools-frontend/src/third_party/esbuild/esbuild
+
+	# Setup gperf dependency
+	${LN} -sf ${LOCALBASE}/bin/gperf ${WRKSRC}/third_party/gperf/cipd/bin/gperf
+
+	# Setup buildtools/freebsd
 	@${MKDIR} ${WRKSRC}/buildtools/${OPSYS:tl}
 	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/${OPSYS:tl}
 	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/${OPSYS:tl}
@@ -383,8 +438,64 @@ post-install-DRIVER-on:
 
 do-test-TEST-on:
 .for t in ${TEST_TARGETS}
-	cd ${WRKSRC}/out/${BUILDTYPE} && ${SETENV} LC_ALL=en_US.UTF-8 \
+	cd ${WRKSRC}/out/${BUILDTYPE} && \
 		./${t} --gtest_filter=-${EXCLUDE_${t}:ts:} || ${TRUE}
 .endfor
+
+.if !defined(GN_ONLY)
+# XXX - This is a hack to force llvm to use libc++ C++ includes instead of base's gcc
+CXXFLAGS+=	-nostdlib++ -stdlib=libc++ -I${LOCALBASE}/include
+CXXFLAGS+=	-cxx-isystem ${LOCALBASE}/llvm${LLVM_DEFAULT}/include/c++/v1
+LDFLAGS+=	-L${LOCALBASE}/llvm${LLVM_DEFAULT}/lib -L /lib -L /usr/lib -lpthread
+LDFLAGS+=	-stdlib=libc++ -lc++ -lc++abi -Wl,-rpath,${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
+
+# Since FreeBSD has libc++ in base we need to rely on DPorts' libcxx
+LIB_DIRS+=	${PREFIX}/llvm${LLVM_DEFAULT}/lib
+LIB_DEPENDS+=  	libc++.so.1:devel/libcxx${LLVM_DEFAULT}
+
+# for C programs
+#CFLAGS+=	-I /usr/include
+
+# we don't support libcuse so no audio/virtual_oss
+RUN_DEPENDS:=	${RUN_DEPENDS:Nvirtual_oss*}
+# Cargo forwards every LDFLAGS token to rustc as -C link-args, but rustc on
+# DragonFly links with cc -fuse-ld=bfd (binutils 2.34), which rejects the
+# lld-only -Wl,--undefined-version that Uses/qt.mk puts in LDFLAGS for the
+# main (lld) link. Drop that one token from LDFLAGS for every consumer and
+# re-add it explicitly to the gn extra_ldflags below, which is the only
+# consumer that needs it (chrome.map version script under lld).
+LDFLAGS:=	${LDFLAGS:N-Wl,--undefined-version}
+.endif
+
+dfly-install:
+	${RM} -rfv ${STAGEDIR}/construction
+
+dfly-patch:
+	# Sandbox stuff
+	@${MKDIR} ${WRKSRC}/sandbox/policy/dragonfly
+	@${CP} ${WRKSRC}/sandbox/policy/freebsd/sandbox_freebsd.h ${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.h
+	@${CP} ${WRKSRC}/sandbox/policy/freebsd/sandbox_freebsd.cc ${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.cc
+	${REINPLACE_CMD} -e "s|FreeBSD|DragonFly|g" \
+		-e "s|freebsd\/sandbox_freebsd.h|dragonfly\/sandbox_dragonfly.h|g" \
+		${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.h \
+		${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.cc \
+
+	# Chromium uses an unreleased version of FFmpeg, so configure it
+	${CP} -R \
+                ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux/ \
+                ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/dragonfly
+
+	# Setup buildtools/freebsd
+	@${MKDIR} ${WRKSRC}/buildtools/dragonfly
+	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/dragonfly
+	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/dragonfly
+
+	# XXX The correct solution is to pass variables to gn
+	# Use the current LLVM version by replacing the hardcoded one
+	${REINPLACE_CMD} -e "s|clang60|clang${LLVM_DEFAULT}|g" \
+		-e "s|clang\+\+60|clang++${LLVM_DEFAULT}|g" \
+		-e "s|llvm-ar|llvm-ar${LLVM_DEFAULT}|g" \
+		-e "s|llvm-nm|llvm-nm${LLVM_DEFAULT}|g" \
+		${WRKSRC}/build/toolchain/gcc_toolchain.gni
 
 .include <bsd.port.post.mk>

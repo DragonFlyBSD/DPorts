@@ -1,6 +1,6 @@
 PORTNAME=	tightvnc
 PORTVERSION=	1.3.10
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	net java
 MASTER_SITES=	SF/vnc-tight/TightVNC-unix/${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}_unixsrc
@@ -12,7 +12,7 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Enhanced version of VNC
 WWW=		https://www.tightvnc.com/
 
-LICENSE=	GPLv2
+LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENCE.TXT
 
 RUN_DEPENDS=	showrgb:x11/rgb \
@@ -40,13 +40,13 @@ MAKE_ARGS=	CC=${CC}
 OPTIONS_DEFINE=	JVNC_VIEWER
 OPTIONS_SUB=	yes
 JVNC_VIEWER_DESC=	Install Java-based vnc viewer
-JVNC_VIEWER_USE=	JAVA=yes
-JVNC_VIEWER_VARS=	JAVA_RUN=yes
+JVNC_VIEWER_USES=	java
 
 .ifdef(TIGHTVNC_BASE)
 PREFIX=${TIGHTVNC_BASE}
 .endif
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == aarch64

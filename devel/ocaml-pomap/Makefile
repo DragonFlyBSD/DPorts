@@ -1,10 +1,9 @@
 PORTNAME=	pomap
-PORTVERSION=	4.1.1
-PORTREVISION=	3
+PORTVERSION=	4.1.2
 CATEGORIES=	devel
 PKGNAMEPREFIX=	ocaml-
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	chris.longros@gmail.com
 COMMENT=	OCaml library to maintain a list of partially ordered elements
 WWW=		https://mmottl.github.io/pomap/
 

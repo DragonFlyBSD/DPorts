@@ -1,3 +1,0 @@
-USES+= alias
-
-CFLAGS+= -DMAXNAMLEN=255

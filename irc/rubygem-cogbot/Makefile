@@ -1,6 +1,6 @@
 PORTNAME=	cogbot
 PORTVERSION=	0.1.13
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	irc rubygems
 MASTER_SITES=	RG
 
@@ -26,5 +26,12 @@ NO_ARCH=	yes
 USES=		gem
 
 PLIST_FILES=	bin/cogbot
+
+IGNORE= unmaintained, please request fixing to users mailing list
+dfly-patch:
+	${REINPLACE_CMD} -e '/twitter/s@~>@>=@g'	\
+			 -e '/json/s@~>@>=@g'	\
+			 -e '/daemon/s@~>@>=@g'	\
+		${WRKSRC}/cogbot.gemspec
 
 .include <bsd.port.mk>

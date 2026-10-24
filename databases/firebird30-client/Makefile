@@ -9,4 +9,9 @@ PLIST=		${PKGDIR}/pkg-plist.client
 
 CLIENT_ONLY=	yes
 
+post-extract:
+	@${REINPLACE_CMD} -e 's,x86_64\*-\*-freebsd\* |,x86_64*-*-dragonfly* | x86_64*-*-freebsd* |,' \
+		-e 's,^  \*-\*-freebsd\* |,  *-*-dragonfly* | *-*-freebsd* |,' \
+		${WRKSRC}/configure
+
 .include "${MASTERDIR}/Makefile"

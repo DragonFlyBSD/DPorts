@@ -1,5 +1,5 @@
 PORTNAME=	gems
-PORTVERSION=	1.3.0
+PORTVERSION=	2.0.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -10,7 +10,10 @@ WWW=		https://github.com/rubygems/gems
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
-USES=		gem
+USES=		cpe gem
+
+CPE_PRODUCT=	rubygems
+CPE_VENDOR=	rubygems
 
 NO_ARCH=	yes
 

@@ -26,7 +26,7 @@ GH_PROJECT=	ThirdParty-Mumps
 
 GNU_CONFIGURE=	yes
 
-MAKE_JOBS_UNSAFE=	yes # otherwise build doesn't find some *.mod files
+MAKE_JOBS_UNSAFE= yes
 
 INSTALL_TARGET=	install-strip
 

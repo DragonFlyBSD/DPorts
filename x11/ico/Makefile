@@ -1,15 +1,16 @@
 PORTNAME=	ico
-PORTVERSION=	1.0.5
-PORTREVISION=	1
+DISTVERSION=	1.0.7
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Displays a wire-frame rotating plyhedron
+WWW=		https://gitlab.freedesktop.org/xorg/app/ico
+
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		xorg xorg-cat:app
-USE_XORG=	x11
-
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
+USE_XORG=	x11 xorgproto
 
 PLIST_FILES=	bin/ico share/man/man1/ico.1.gz
 

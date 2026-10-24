@@ -1,2 +1,0 @@
-
-BINARY_ALIAS:=	${BINARY_ALIAS:Npython*}

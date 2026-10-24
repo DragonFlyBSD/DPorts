@@ -1,7 +1,7 @@
 PORTNAME=	terraform
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.10.4
-PORTREVISION=	2
+DISTVERSION=	1.15.9
+PORTREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://raw.githubusercontent.com/${GH_ACCOUNT}/${GH_PROJECT}/${DISTVERSIONFULL}/:gomod
 DISTFILES=	${DISTVERSIONFULL}${EXTRACT_SUFX} \
@@ -11,6 +11,7 @@ DISTFILES=	${DISTVERSIONFULL}${EXTRACT_SUFX} \
 		internal/backend/remote-state/cos/go.mod:gomod \
 		internal/backend/remote-state/gcs/go.mod:gomod \
 		internal/backend/remote-state/kubernetes/go.mod:gomod \
+		internal/backend/remote-state/oci/go.mod:gomod \
 		internal/backend/remote-state/oss/go.mod:gomod \
 		internal/backend/remote-state/pg/go.mod:gomod \
 		internal/backend/remote-state/s3/go.mod:gomod \
@@ -21,11 +22,12 @@ MAINTAINER=	dutra@FreeBSD.org
 COMMENT=	Provides a common configuration to launch infrastructure
 WWW=		https://terraform.io/
 
-USES=		cpe go:1.23,modules
+USES=		cpe go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	hashicorp
 GH_PROJECT=	terraform
 
+LICENSE=	BUSL11
 LICENSE_NAME=	Business Source License 1.1
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror pkg-mirror pkg-sell auto-accept

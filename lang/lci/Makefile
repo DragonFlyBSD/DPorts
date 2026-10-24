@@ -1,7 +1,6 @@
 PORTNAME=	lci
-PORTVERSION=	0.11.2
+PORTVERSION=	1.3
 DISTVERSIONPREFIX=	v
-PORTREVISION=	4
 CATEGORIES=	lang
 
 MAINTAINER=	ports@FreeBSD.org
@@ -15,7 +14,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	justinmeza
 
 USES=		cmake readline
-CFLAGS+=	${CPPFLAGS}
+CFLAGS+= ${CPPFLAGS} -Wno-pointer-compare
 PLIST_FILES=	bin/lci
 
 .include <bsd.port.mk>

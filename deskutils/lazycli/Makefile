@@ -1,7 +1,7 @@
 PORTNAME=	lazycli
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.15
-PORTREVISION=	7
+PORTREVISION=	33
 CATEGORIES=	deskutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -100,7 +100,5 @@ CARGO_CRATES=	aho-corasick-0.7.15 \
 
 PLIST_FILES=	bin/${PORTNAME}
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

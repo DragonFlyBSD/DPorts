@@ -1,6 +1,6 @@
 PORTNAME=	efl
 DISTVERSION=	1.28.1
-PORTREVISION=	1
+PORTREVISION=	7
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.org/rel/libs/${PORTNAME}/
 DIST_SUBDIR=	enlightenment
@@ -205,6 +205,7 @@ EFL_BINDINGS=		${LUA_BINDING} ${CXX_BINDING}
 
 MESON_ARGS+=		-Dbindings="${EFL_BINDINGS:ts,}"
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
 .include <bsd.port.options.mk>
 
 # Work-around build failure, which is caused by subtle problem in lld and -as-needed flag

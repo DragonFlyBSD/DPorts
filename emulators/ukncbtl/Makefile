@@ -1,5 +1,5 @@
 PORTNAME=	ukncbtl
-DISTVERSION=	g20240813
+PORTVERSION=	1.0.g20260625
 CATEGORIES=	emulators
 
 MAINTAINER=	makc@FreeBSD.org
@@ -7,7 +7,7 @@ COMMENT=	UKNC (Elektronika MS-0511) emulator
 WWW=		https://github.com/nzeemin/ukncbtl-doc/wiki
 
 LICENSE=	LGPL3
-LICENSE_FILE=	${WRKSRC}/../LICENSE
+LICENSE_FILE= ${_LICENSE_STORE}/LGPL3
 
 USES=		compiler:c++11-lang gl qmake qt:5
 USE_GL=		gl
@@ -16,9 +16,9 @@ USE_QT=		core gui multimedia network script testlib widgets \
 USE_GITHUB=	yes
 GH_ACCOUNT=	nzeemin
 GH_PROJECT=	ukncbtl-qt
-GH_TAGNAME=	ae5021f8
+GH_TAGNAME=	3545c415
 
-PORTSCOUT=	limit:^[0-9]
+PORTSCOUT=	limit:^[0-9\.]*$$
 
 DESKTOP_ENTRIES=	"UkncBtl" \
 			"" \

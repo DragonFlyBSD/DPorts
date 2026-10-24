@@ -1,6 +1,6 @@
 PORTNAME=	gamescope
 DISTVERSION=	3.13.8
-PORTREVISION=	7
+PORTREVISION=	11
 CATEGORIES=	x11-wm wayland
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -61,6 +61,7 @@ PIPEWIRE_DESC=		Screen capture via PipeWire
 PIPEWIRE_LIB_DEPENDS=	libpipewire-0.3.so:multimedia/pipewire
 PIPEWIRE_MESON_ENABLED=	pipewire
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 # Merge patch_directory for subprojects without meson.build
 	@(cd ${WRKSRC}/subprojects/packagefiles && ${COPYTREE_SHARE} . ..)

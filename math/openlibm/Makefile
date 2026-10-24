@@ -1,9 +1,9 @@
 PORTNAME=	openlibm
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.6
+DISTVERSION=	0.8.8
 CATEGORIES=	math
 
-MAINTAINER=	laurent.chardon@gmail.com
+MAINTAINER=	laurent@FreeBSD.org
 COMMENT=	High quality system independent, portable, open source libm
 WWW=		https://openlibm.org
 
@@ -18,10 +18,13 @@ BROKEN_armv6=	fails to compile: a parameter list without types is only allowed i
 BROKEN_armv7=	fails to compile: a parameter list without types is only allowed in a function definition
 
 USES=		cmake
-USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	JuliaMath
+
+USE_LDCONFIG=	yes
+
+CMAKE_ARGS=	-DOPENLIBM_VERSION:STRING=${DISTVERSION}
 
 do-test:
 	(cd ${WRKSRC}/test && ${SETENVI} ${CC} test-double.c -o test-double \
@@ -54,5 +57,6 @@ PLIST_SUB+=	I386=""
 .else
 PLIST_SUB+=	I386="@comment "
 .endif
+PLIST_SUB+=	DISTVERSION=${DISTVERSION}
 
 .include <bsd.port.mk>

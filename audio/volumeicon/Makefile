@@ -31,6 +31,7 @@ NLS_USES=	gettext
 NOTIFY_LIB_DEPENDS=	libnotify.so:devel/libnotify
 NOTIFY_CONFIGURE_ENABLE=notify
 
+CONFIGURE_ARGS+= ac_cv_header_soundcard_h=yes
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 

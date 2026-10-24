@@ -19,6 +19,7 @@ CMAKE_ARGS+=	-DSC_INSTALL_PREFIX=${PREFIX} \
 
 MANDIRS=	${PREFIX}/man
 
+USE_CXXSTD= c++11
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/schema_scanner
 	@(cd ${STAGEDIR}${PREFIX} ; \

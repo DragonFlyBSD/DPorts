@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libg15.so:sysutils/libg15
 
-USES=		gmake libtool localbase
+USES= gmake libtool localbase localbase:ldflags
 USE_GITLAB=	yes
 USE_LDCONFIG=	yes
 

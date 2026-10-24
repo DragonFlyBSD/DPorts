@@ -1,6 +1,6 @@
 PORTNAME=	natscli
-PORTVERSION=	0.1.5
 DISTVERSIONPREFIX=	v
+DISTVERSION=	0.5.0
 PORTREVISION=	2
 CATEGORIES=	net
 
@@ -15,6 +15,7 @@ USES=		go:modules
 
 GO_MODULE=	github.com/nats-io/natscli
 GO_TARGET=	./nats
+GO_LDFLAGS=	-X main.version=${DISTVERSION}
 #GO_BUILDFLAGS=	-buildvcs=false
 
 PLIST_FILES=	bin/nats \
@@ -23,5 +24,11 @@ PLIST_FILES=	bin/nats \
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@^//go:build darwin || freebsd@//go:build darwin || dragonfly || freebsd@' \
+		${WRKSRC}/vendor/github.com/nsf/termbox-go/syscalls_bsd.go
+	${REINPLACE_CMD} -e 's@^//go:build !darwin \&\& @//go:build !darwin \&\& !dragonfly \&\& @' \
+		${WRKSRC}/vendor/github.com/nsf/termbox-go/syscalls_nonbsd.go
 
 .include <bsd.port.mk>

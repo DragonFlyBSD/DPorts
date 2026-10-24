@@ -1,0 +1,2 @@
+# swildner has a patch for this ioctl, but keep older version while it works
+XFAIL_DragonFly= go tc_dragonfly.go missing TIOCGPTN

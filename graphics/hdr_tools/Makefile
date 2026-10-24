@@ -1,6 +1,6 @@
 PORTNAME=	hdr_tools
 PORTVERSION=	0.0.2010.11.23	# unspecified by the author, so use the date
-PORTREVISION=	23
+PORTREVISION=	25
 CATEGORIES=	graphics
 MASTER_SITES=	http://ttic.uchicago.edu/~cotter/projects/hdr_tools/archives/ \
 		http://freebsd.nsu.ru/distfiles/
@@ -24,6 +24,7 @@ PROGRAMS=	hdr_adjust hdr_convert hdr_create hdr_denoise hdr_fix_ca \
 
 PLIST_FILES=	${PROGRAMS:S,^,bin/,}
 
+CXXFLAGS+= -DNDEBUG
 .include <bsd.port.pre.mk>
 
 .if ${MACHINE_CPU:Msse2}

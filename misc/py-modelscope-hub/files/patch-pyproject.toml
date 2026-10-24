@@ -1,0 +1,11 @@
+--- pyproject.toml.orig	2026-07-07 17:04:02 UTC
++++ pyproject.toml
+@@ -39,7 +39,7 @@ ms = "modelscope_hub.cli.main:run_cmd"
+ ms = "modelscope_hub.cli.main:run_cmd"
+ 
+ [build-system]
+-requires = ["setuptools>=68.0"]
++requires = ["setuptools"]
+ build-backend = "setuptools.build_meta"
+ 
+ [tool.setuptools.packages.find]

@@ -20,4 +20,6 @@ GH_ACCOUNT=	shekyan
 PLIST_FILES=	bin/slowhttptest \
 		share/man/man1/slowhttptest.1.gz
 
+CFLAGS= -I${OPENSSLINC} -L${OPENSSLLIB}
+LDFLAGS= -I${OPENSSLLIB}
 .include <bsd.port.mk>

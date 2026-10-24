@@ -1,6 +1,6 @@
 PORTNAME=	multicat
 PORTVERSION=	2.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net multimedia
 MASTER_SITES=	https://get.videolan.org/multicat/${PORTVERSION}/
 
@@ -29,6 +29,7 @@ BINARIES=	${ALL_TARGET}
 
 OPTIONS_DEFINE=	DOCS
 
+CFLAGS= -Wno-stringop-truncation
 do-install:
 .for file in ${BINARIES}
 	${INSTALL_PROGRAM} ${WRKSRC}/${file} ${STAGEDIR}${PREFIX}/bin

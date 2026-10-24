@@ -1,5 +1,0 @@
-
-# RJ: expose CMSG_SPACE() etc
-dfly-patch:
-	${REINPLACE_CMD} -e 's@D_POSIX_C_SOURCE@&__@g' \
-		${WRKSRC}/meson.build

@@ -38,6 +38,8 @@ CLIENT_PLIST_FILES=	bin/${PORTNAME}
 TEST_BUILD_DEPENDS=	googletest>=0:devel/googletest
 TEST_TEST_TARGET=	run_tests
 
+CFLAGS= -I${OPENSSLINC}
+LDFLAGS= -L${OPENSSLLIB}
 post-extract:
 	@${RM} -r ${WRKSRC}/src/engine/external/wavpack
 	@${RM} -r ${WRKSRC}/src/engine/external/pnglite

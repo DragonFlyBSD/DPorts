@@ -21,4 +21,7 @@ TEST_TARGET=	test
 USES+=		tcl:tea
 TCL_PKG=	Memchan${PORTVERSION}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' ${WRKSRC}/configure
+
 .include <bsd.port.mk>

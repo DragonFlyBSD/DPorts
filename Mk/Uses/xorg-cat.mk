@@ -14,8 +14,8 @@
 # 		* font     don't install .pc file
 # 		* lib      various dependencies, install .pc file, needs
 # 		           pathfix
-# 		* proto    install .pc file, needs pathfix, most only needed at
-# 		           build time.
+#		* proto    install .pc file, most only needed at build time
+# 		* test     no particular notes
 # 		* util     no particular notes
 #
 # 		These categories has to match upstream categories.  Don't invent
@@ -23,7 +23,7 @@
 #
 # 		builsystem is one of:
 # 		* autotools (default)
-# 		* meson (experimental)
+# 		* meson
 #
 #
 # By defining USE_GITLAB and GL_TAGNAME, it is possible to pull code straight
@@ -34,7 +34,7 @@
 .if !defined(_INCLUDE_USES_XORG_CAT_MK)
 _INCLUDE_USES_XORG_CAT_MK=yes
 
-_XORG_CATEGORIES=	app data doc driver font lib proto util
+_XORG_CATEGORIES=	app data doc driver font lib proto test util
 _XORG_BUILDSYSTEMS=	autotools meson
 
 _XORG_CAT=		# empty
@@ -69,7 +69,7 @@ _XORG_BUILDSYS=		autotools
 
 # Default variables, common to all new modular xorg ports.
 .  if empty(USES:Mtar)
-EXTRACT_SUFX?=		.tar.bz2
+EXTRACT_SUFX?=		.tar.xz
 .  endif
 
 DIST_SUBDIR=	xorg/${_XORG_CAT}
@@ -116,7 +116,10 @@ USE_XORG+=      xorg-macros
 # Nothing at the moment
 
 .  elif ${_XORG_CAT} == data
-# Nothing at the moment.
+NO_ARCH=	yes
+
+.  elif ${_XORG_CAT} == doc
+NO_ARCH=	yes
 
 .  elif ${_XORG_CAT} == driver
 USE_XORG+=	xi xorg-server xorgproto
@@ -144,22 +147,23 @@ BUILD_DEPENDS+=	mkfontscale>=0:x11-fonts/mkfontscale \
 		bdftopcf:x11-fonts/bdftopcf
 PLIST_FILES+=	"@comment ${FONTSDIR}/fonts.dir" \
 		"@comment ${FONTSDIR}/fonts.scale"
+NO_ARCH=	yes
 .    endif
 
 .  elif ${_XORG_CAT} == lib
 CFLAGS+=	-Werror=uninitialized
 .include "${USESDIR}/pathfix.mk"
+USE_LDCONFIG=	yes
 .    if ${_XORG_BUILDSYS} == meson
 # put meson stuff here
 .    else
 libtool_ARGS?=	# empty
 .include "${USESDIR}/libtool.mk"
-USE_LDCONFIG=	yes
 CONFIGURE_ARGS+=--enable-malloc0returnsnull
 .    endif
 
 .  elif ${_XORG_CAT} == proto
-.include "${USESDIR}/pathfix.mk"
+NO_ARCH=	yes
 
 .  endif # ${_XORG_CAT} == <category>
 

@@ -1,7 +1,6 @@
 PORTNAME=	driftnet
-DISTVERSION=	1.5.0
-PORTREVISION=	2
 DISTVERSIONPREFIX=	v
+DISTVERSION=	1.6.0
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	ehaupt@FreeBSD.org
@@ -22,7 +21,7 @@ USES=		autoreconf gettext-runtime gmake gnome jpeg localbase:ldflags \
 USE_CSTD=	c99
 USE_GITHUB=	yes
 GH_ACCOUNT=	deiv
-USE_GNOME=	gtk20
+USE_GNOME=	gtk30
 USE_XORG=	x11 xext xi
 
 GNU_CONFIGURE=		yes
@@ -30,11 +29,20 @@ CONFIGURE_ARGS+=	--disable-debug
 
 INSTALL_TARGET=	install-strip
 
-PLIST_FILES=	${DATADIR}/static-html/index.html \
-		bin/driftnet \
+PLIST_FILES=	bin/driftnet \
 		share/man/man1/driftnet.1.gz
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(freebsd\*\))@\1|dragonfly*)@g' \
+		${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e 's@\(D__FAVOR_BSD \)@\1 -D__FreeBSD__=13 @' \
+		${WRKSRC}/src/Makefile.am
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g' \
+			 -e 's@ifdef \(__FreeBSD__\)@if defined(\1) || defined(__DragonFly__)@' \
+		${WRKSRC}/src/pid.c ${WRKSRC}/src/compat/compat.h \
+		${WRKSRC}/src/network/layer2.c ${WRKSRC}/src/network/layer3.c
 
 .include <bsd.port.mk>

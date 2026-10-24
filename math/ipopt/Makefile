@@ -1,7 +1,6 @@
 PORTNAME=	Ipopt
 DISTVERSIONPREFIX=	releases/
-DISTVERSION=	3.14.17
-PORTREVISION=	1
+DISTVERSION=	3.14.20
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -43,6 +42,8 @@ OPTIONS_DEFINE=		DEBUG
 
 CONFLICTS_BUILD=	coin-or-hsl # coin-or-hsl doesn't contain required by Ipopt code
 
+EXTRACT_CMD= tar
+DOCS_BUILD_DEPENDS= 
 .include <bsd.port.pre.mk>
 
 .if ${GCC_DEFAULT} >= 10
@@ -50,4 +51,5 @@ CONFLICTS_BUILD=	coin-or-hsl # coin-or-hsl doesn't contain required by Ipopt cod
 FFLAGS+=	-fallow-argument-mismatch
 .endif
 
+DOCS_ALL_TARGET:= ${DOCS_ALL_TARGET:Ndoxydoc}
 .include <bsd.port.post.mk>

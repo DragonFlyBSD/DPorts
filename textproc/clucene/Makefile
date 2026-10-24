@@ -20,8 +20,13 @@ USE_LDCONFIG=	yes
 CMAKE_ARGS=	-DBUILD_CONTRIBS_LIB=ON
 CXXFLAGS+=	-D__LONG_LONG_SUPPORTED -D_WCHAR_H_CPLUSPLUS_98_CONFORMANCE_
 
+USE_CLANG_FALLBACK= default
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR_REL}|' \
 	    ${WRKSRC}/src/core/CMakeLists.txt
+
+pre-patch:
+	${ECHO_CMD} 'SET(CMAKE_NO_BUILTIN_CHRPATH OFF CACHE BOOL "" FORCE)' \
+	>> ${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

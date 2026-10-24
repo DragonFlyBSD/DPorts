@@ -1,5 +1,6 @@
 PORTNAME=	libcircllhist
 PORTVERSION=	g20221215
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	fuz@FreeBSD.org
@@ -23,6 +24,7 @@ OPTIONS_DEFINE=	DOCS
 DOCS_BUILD_DEPENDS=	doxygen:devel/doxygen
 DOCS_ALL_TARGET=	docs
 
+OPTIONS_EXCLUDE= DOCS
 post-install:
 	${LN} -s libcircllhist.so.0.0.1 \
 		${STAGEDIR}${PREFIX}/lib/libcircllhist.so.0
@@ -32,5 +34,9 @@ post-install:
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/docs && ${COPYTREE_SHARE} html ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*-\*-freebsd\*\))@\1|*-*-dragonfly*)@g' \
+		${WRKSRC}/configure.ac
 
 .include <bsd.port.mk>

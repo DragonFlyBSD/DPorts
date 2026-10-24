@@ -1,20 +1,20 @@
---- ui/gfx/font_util.cc.orig	2024-03-22 08:19:40 UTC
+--- ui/gfx/font_util.cc.orig	2026-10-18 13:29:39 UTC
 +++ ui/gfx/font_util.cc
-@@ -6,7 +6,7 @@
- 
+@@ -7,7 +7,7 @@
  #include "build/build_config.h"
+ #include "skia/ext/font_utils.h"
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include <fontconfig/fontconfig.h>
  #include "ui/gfx/linux/fontconfig_util.h"
  #endif
-@@ -24,7 +24,7 @@ void InitializeFonts() {
+@@ -25,7 +25,7 @@ void InitializeFonts() {
    // background (resources have not yet been granted to cast) since it prevents
    // the long delay the user would have seen on first rendering.
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   // Early initialize FontConfig.
-   InitializeGlobalFontConfigAsync();
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
+   // Ensures the config is created on this thread. It's generally safe to send
+   // concurrent match requests to fontconfig, but it's unsafe to send match
+   // requests concurrently to fontconfig initialization.

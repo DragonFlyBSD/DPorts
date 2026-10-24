@@ -1,0 +1,17 @@
+Remove scripts because these contain additional, undocumented dependencies and
+are not required as the package is used only as a library.
+
+--- pyproject.toml.orig	2026-07-01 11:42:17 UTC
++++ pyproject.toml
+@@ -36,11 +36,6 @@ packages = [
+ packages = [
+     "openstackdocstheme"
+ ]
+-script-files = [
+-    "bin/docstheme-build-translated.sh",
+-    "bin/docstheme-lang-display-name.py",
+-    "bin/docstheme-build-pdf",
+-]
+ 
+ [tool.mypy]
+ python_version = "3.10"

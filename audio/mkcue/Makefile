@@ -15,13 +15,14 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	docbook-to-man:textproc/docbook-to-man
 
 ORIGVERSION=	1
-DEBIANVERSION=	7
+DEBIANVERSION=	8
 
 GNU_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
 
 EXTRA_PATCHES=	${WRKDIR}/debian/patches/fix_msf_offset:-p1 \
-		${WRKDIR}/debian/patches/use_ldflags:-p1
+		${WRKDIR}/debian/patches/use_ldflags:-p1 \
+		${WRKDIR}/debian/patches/fix_compilation:-p1
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${ORIGVERSION}.orig
 
@@ -34,5 +35,9 @@ post-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mkcue ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/debian/mkcue.1 ${STAGEDIR}${PREFIX}/share/man/man1/
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*-freebsd\*\))@\1|*-dragonfly*)@g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

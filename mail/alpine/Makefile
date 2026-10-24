@@ -100,6 +100,8 @@ PORTDOCShtml=	tech-notes/background.html tech-notes/cmd-line.html \
 		tech-notes/tech-notes.txt
 PORTDOCS=	${PORTDOCSbase} ${PORTDOCSdoc} ${PORTDOCShtml}
 
+BROKEN_SSL= libressl
+BROKEN_SSL_REASON_libressl= too broken
 post-patch:
 	@${REINPLACE_CMD} -e "s#^\(all:.*\) bundled\$$#\1#" ${WRKSRC}/imap/Makefile
 	@${REINPLACE_CMD} -e "s#^bin_PROGRAMS = pico.*#bin_PROGRAMS =#" \

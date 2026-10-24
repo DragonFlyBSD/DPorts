@@ -18,6 +18,7 @@ GH_TAGNAME=	db0abbb
 
 PLIST_FILES=	sbin/ntimed-client
 
+CFLAGS= -Wno-nonnull-compare
 do-configure:
 	cd ${WRKSRC} && ${SH} configure
 

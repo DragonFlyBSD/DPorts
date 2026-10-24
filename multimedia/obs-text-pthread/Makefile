@@ -1,6 +1,5 @@
 PORTNAME=	obs-text-pthread
-DISTVERSION=	2.0.2
-PORTREVISION=	2
+DISTVERSION=	2.1.0
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,6 +9,7 @@ WWW=		https://github.com/norihiro/obs-text-pthread
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	simde>0:devel/simde
 LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz \
 		libobs.so:multimedia/obs-studio \
 		libpng16.so:graphics/png
@@ -25,6 +25,8 @@ CMAKE_OFF=	LINUX_PORTABLE
 CFLAGS+=	-I${WRKDIR}/src
 
 PLIST_FILES=	lib/obs-plugins/obs-text-pthread.so \
-		share/obs/obs-plugins/obs-text-pthread/textalpha.effect
+		share/obs/obs-plugins/obs-text-pthread/textalpha.effect \
+		share/obs/obs-plugins/obs-text-pthread/locale/en-US.ini
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

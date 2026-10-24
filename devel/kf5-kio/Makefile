@@ -1,6 +1,6 @@
 PORTNAME=	kio
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
@@ -24,5 +24,14 @@ USE_XORG=	x11
 
 # KF6 coinstallability
 CMAKE_ON=	KF6_COMPAT_BUILD
+
+USES+= gmake
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+			 -e '/HAVE_SYS_EXTATTR_H/s@sys/extattr.h@&__z@g' \
+		${WRKSRC}/src/ioslaves/file/ConfigureChecks.cmake \
+		${WRKSRC}/cmake/FindACL.cmake
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

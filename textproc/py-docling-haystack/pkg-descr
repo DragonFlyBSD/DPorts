@@ -1,0 +1,4 @@
+Docling Haystack provides Haystack integration for Docling, enabling
+Docling document conversion to be used as a component within Haystack
+pipelines. It allows Haystack users to leverage Docling's document
+understanding capabilities for RAG and search applications.

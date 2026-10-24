@@ -1,8 +1,8 @@
---- src/3rdparty/chromium/ui/platform_window/platform_window_delegate.cc.orig	2024-02-23 21:04:38 UTC
+--- src/3rdparty/chromium/ui/platform_window/platform_window_delegate.cc.orig	2025-04-04 08:52:13 UTC
 +++ src/3rdparty/chromium/ui/platform_window/platform_window_delegate.cc
-@@ -42,7 +42,7 @@ PlatformWindowDelegate::PlatformWindowDelegate() = def
- 
- PlatformWindowDelegate::~PlatformWindowDelegate() = default;
+@@ -56,7 +56,7 @@ gfx::Insets PlatformWindowDelegate::CalculateInsetsInD
+   return gfx::Insets();
+ }
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

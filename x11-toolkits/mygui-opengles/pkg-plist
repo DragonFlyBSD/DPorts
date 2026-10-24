@@ -1,0 +1,9 @@
+include/MYGUI/MyGUI_OpenGLESDataManager.h
+include/MYGUI/MyGUI_OpenGLESDiagnostic.h
+include/MYGUI/MyGUI_OpenGLESImageLoader.h
+include/MYGUI/MyGUI_OpenGLESPlatform.h
+include/MYGUI/MyGUI_OpenGLESRTTexture.h
+include/MYGUI/MyGUI_OpenGLESRenderManager.h
+include/MYGUI/MyGUI_OpenGLESTexture.h
+include/MYGUI/MyGUI_OpenGLESVertexBuffer.h
+lib/libMyGUI.OpenGLESPlatform.a

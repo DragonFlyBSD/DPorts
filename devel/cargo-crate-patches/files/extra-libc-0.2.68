@@ -1,0 +1,10 @@
+--- cargo-crates/libc-0.2.68/src/unix/bsd/freebsdlike/dragonfly/mod.rs.orig	2019-09-16 18:34:34 UTC
++++ cargo-crates/libc-0.2.68/src/unix/bsd/freebsdlike/dragonfly/mod.rs
+@@ -1054,6 +1054,7 @@ f! {
+ }
+ 
+ extern "C" {
++    pub fn __errno_location() -> *mut ::c_int;
+     pub fn setgrent();
+     pub fn mprotect(
+         addr: *mut ::c_void,

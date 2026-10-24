@@ -1,8 +1,9 @@
 PORTNAME=	pkgconf
-PORTVERSION=	2.3.0
-PORTEPOCH=	2
+DISTVERSION=	3.0.7
+PORTEPOCH= 2
 CATEGORIES=	devel
-MASTER_SITES=	https://distfiles.ariadne.space/${PORTNAME}/
+MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/ \
+		https://distfiles.ariadne.space/${PORTNAME}/
 
 # NOTE: before committing to this port, contact portmgr to arrange for an
 # experimental ports run.  Untested commits may be backed out at portmgr's
@@ -13,23 +14,27 @@ WWW=		https://gitea.treehouse.systems/ariadne/${PORTNAME}
 
 LICENSE=	ISCL
 
-TEST_DEPENDS=	kyua:devel/kyua
-
-USES=		cpe tar:xz libtool pathfix
-GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
-INSTALL_TARGET=	install-strip
+USES=		cpe meson:muon ninja:samurai tar:xz
 USE_LDCONFIG=	yes
-TEST_TARGET=	check
-CONFIGURE_ARGS=	--with-pkg-config-dir=${PREFIX}/libdata/pkgconfig:/usr/libdata/pkgconfig:${PREFIX}/share/pkgconfig \
-		--with-system-libdir=/usr/lib \
-		--with-system-includedir=/usr/include
+
+# eliminate PKG_CONFIG_LIBDIR from test env
+TEST_ENV=
+ALL_TARGET=
+MESON_ARGS=	--default-library both \
+		-Dwith-pkg-config-dir=${PREFIX}/libdata/pkgconfig:/usr/libdata/pkgconfig:${PREFIX}/share/pkgconfig \
+		-Dwith-system-libdir=/usr/lib \
+		-Dwith-system-includedir=/usr/include
 
 OPTIONS_DEFINE=	DOCS
 
-TESTING_UNSAFE=	tests/Kyuafile:5: Non-existent test program 'tests/basic'
-
 post-install:
-	${LN} -sf pkgconf ${STAGEDIR}${PREFIX}/bin/pkg-config
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/bomtool
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/pccritic
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/pkgconf
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/spdxtool
+	${RLN} ${STAGEDIR}${PREFIX}/bin/pkgconf ${STAGEDIR}${PREFIX}/bin/pkg-config
+
+do-test:
+	(cd ${TEST_WRKSRC} && ${SETENV} ${CONFIGURE_CMD} test -v -d dots)
 
 .include <bsd.port.mk>

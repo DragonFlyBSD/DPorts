@@ -1,5 +1,5 @@
 PORTNAME=	FreeCAD
-DISTVERSION=	0.21.1
+DISTVERSION=	1.1.4
 PORTREVISION=	1
 CATEGORIES=	cad
 
@@ -10,17 +10,22 @@ WWW=		https://www.freecadweb.org/
 LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+CONFLICTS_INSTALL=	freecad-devel # bin/FreeCAD
+
 BUILD_DEPENDS=	doxygen:devel/doxygen \
 		pybind11-config:devel/py-pybind11@${PY_FLAVOR} \
-		pyside_tool.py:devel/pyside2-tools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyside6-tools>0:devel/pyside6-tools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pivy>0:graphics/py-pivy@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/matplotlib/__init__.py:math/py-matplotlib@${PY_FLAVOR} \
-		${PYTHON_INCLUDEDIR}/CXX/Config.hxx:devel/py-cxx \
+		microsoft-gsl>0:devel/microsoft-gsl \
+		googletest>0:devel/googletest \
 		swig:devel/swig
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
+		libyaml-cpp.so:devel/yaml-cpp \
 		libfreetype.so:print/freetype2 \
+		libtbb.so:devel/onetbb \
 		${PY_BOOST} \
-		libpyside2.cpython-${PYTHON_SUFFIX}${PYTHON_ABIVER}.so:devel/pyside2@${PY_FLAVOR} \
+		libpyside6.abi3.so:devel/pyside6@${PY_FLAVOR} \
 		libCoin.so:graphics/Coin \
 		libfmt.so:devel/libfmt \
 		libpng.so:graphics/png \
@@ -29,44 +34,56 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libTKernel.so:cad/opencascade \
 		libxerces-c.so:textproc/xerces-c3 \
 		libboost_thread.so:devel/boost-libs \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreeimage.so:graphics/freeimage \
+		libavutil.so:multimedia/ffmpeg \
 		libmed.so:french/med \
-		libshiboken2.cpython-${PYTHON_SUFFIX}${PYTHON_ABIVER}.so:devel/shiboken2@${PY_FLAVOR} \
-		libhdf5.so:science/hdf5
+		libshiboken6.abi3.so:devel/shiboken6@${PY_FLAVOR} \
+		libhdf5.so:science/hdf5 \
+		libspnav.so:misc/libspnav
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pivy>0:graphics/py-pivy@${PY_FLAVOR} \
 		${PYTHON_SITELIBDIR}/matplotlib/__init__.py:math/py-matplotlib@${PY_FLAVOR}
 
-USES=		dos2unix compiler:c++17-lang cmake cpe gl eigen:3 fortran jpeg \
-		localbase:ldflags mpi:openmpi pkgconfig python localbase qt:5 xorg \
+PORTSCOUT=	limit:^[0-9\.]*$$
+
+USES=		dos2unix compiler:c++20-lang cmake cpe gl eigen:3 fortran gmake jpeg \
+		localbase:ldflags mpi:openmpi pkgconfig python localbase qt:6 xorg \
 		desktop-file-utils shared-mime-info shebangfix
 USE_GITHUB=	yes
+GH_ACCOUNT=	FreeCAD:ondselsolver \
+		FreeCAD:addonmgr
+GH_PROJECT=	OndselSolver:ondselsolver \
+		AddonManager:addonmgr
+GH_TAGNAME=	30e9b64e8bf881d438d4b88834f9ba3674865418:ondselsolver \
+		937b6877239dc78ef59eeefe8099e5f14243eda1:addonmgr
+GH_SUBDIR=	src/3rdParty/OndselSolver:ondselsolver \
+		src/Mod/AddonManager:addonmgr
 USE_XORG=	ice sm x11 xext xt
 USE_GL=		gl glu
-USE_QT=		buildtools concurrent core declarative designer gui \
-		linguisttools location network opengl printsupport \
-		qmake:build svg webchannel widgets xml xmlpatterns
+USE_QT=		base declarative svg tools
 USE_LDCONFIG=	yes
 
 CPE_VENDOR=	freecad_project
 
-VTK_VER=	9.2
-
 DOS2UNIX_GLOB=	*.txt *.h *.cpp *.py *.qss *.csv *.pov *.stp *.ui *.wrl *.WRL
-SHEBANG_FILES=	src/Tools/freecad-thumbnailer
+SHEBANG_FILES=	src/Tools/freecad-thumbnailer.in
 
 # our HDF5/CMake integration is messy, so workarounds are required below
 CMAKE_ARGS+=	-DOCC_INCLUDE_DIR="${LOCALBASE}/include/OpenCASCADE" \
 		-DOPENMPI_INCLUDE_DIRS="${LOCALBASE}/mpi/openmpi/include" \
-		-DBUILD_QT5="ON" \
+		-DFREECAD_QT_VERSION="6" \
 		-DPYTHON_LIBRARY="${PYTHONBASE}/lib/libpython${PYTHON_VER}${PYTHON_ABIVER}.so" \
 		-DPYTHON_INCLUDE_DIR="${PYTHON_INCLUDEDIR}" \
 		-DPYTHON_PACKAGES_PATH="${PYTHON_SITELIBDIR}" \
 		-DPYTHON_EXECUTABLE="${PYTHON_CMD}" \
-		-DPYCXX_INCLUDE_DIR="${PYTHON_INCLUDEDIR}" \
-		-DBUILD_ASSEMBLY="OFF" \
+		-DBUILD_ASSEMBLY="ON" \
 		-DBUILD_DESIGNER_PLUGIN="ON" \
 		-DBUILD_FLAT_MESH="ON" \
+		-DBUILD_TEST="OFF" \
+		-DENABLE_DEVELOPER_TESTS="OFF" \
 		-DBUILD_VR="OFF" \
+		-DFREECAD_LIBPACK_USE="OFF" \
 		-DFREECAD_USE_EXTERNAL_FMT="ON" \
 		-DFREECAD_CREATE_MAC_APP="OFF" \
 		-DFREECAD_FREECAD_LIBPACK_USE="OFF" \
@@ -74,6 +91,8 @@ CMAKE_ARGS+=	-DOCC_INCLUDE_DIR="${LOCALBASE}/include/OpenCASCADE" \
 		-DFREECAD_USE_EXTERNAL_SMESH="OFF" \
 		-DFREECAD_USE_FREETYPE="ON" \
 		-DFREECAD_USE_PYBIND11="ON" \
+		-DUSE_CUDA="OFF" \
+		-DUSE_OPENCV="OFF" \
 		-Dpybind11_DIR="${PYTHON_SITELIBDIR}/pybind11/share/cmake/pybind11" \
 		-DHDF5_CFLAGS="-I${LOCALBASE}/include" \
 		-DHDF5_FOUND=TRUE \
@@ -81,20 +100,17 @@ CMAKE_ARGS+=	-DOCC_INCLUDE_DIR="${LOCALBASE}/include/OpenCASCADE" \
 		-DHDF5_INCLUDE_DIRS="${LOCALBASE}/include/hdf5" \
 		-DHDF5_LIBRARIES="-L${LOCALBASE}/lib -lhdf5" \
 		-DHDF5_LIBRARY_DIRS="${LOCALBASE}/lib" \
-		-DPYSIDE2RCCBINARY="${RCC}" \
-		-DPYSIDE2UICBINARY="${UIC}" \
-		-DBUILD_ENABLE_CXX_STD=C++17
-
+		-DBUILD_ENABLE_CXX_STD=C++20 \
+		-DXDG_DATADIR="${PREFIX}/share"
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/${PORTNAME}
-# Install XDG icons and files to the standard path
-CMAKE_ARGS+=	-DXDG_DATADIR="${PREFIX}/share"
 
 OPTIONS_DEFINE=	COLLADA
 
 COLLADA_DESC=		Install pycollada for Collada files import
 COLLADA_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycollada>0:graphics/py-pycollada@${PY_FLAVOR}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386
@@ -105,7 +121,7 @@ CMAKE_ARGS+=	-DBUILD_WEB:BOOL=OFF
 PLIST_SUB=	WEBENGINE="@comment "
 .endif
 
-post-patch:
+pre-configure:
 	@${REINPLACE_CMD} -e '/self\.rev/s/Unknown/${DISTVERSION:C/.*-//}/' \
 		${WRKSRC}/src/Tools/SubWCRev.py
 # Install XDG icons and files to the standard path
@@ -116,7 +132,8 @@ post-patch:
 post-install:
 	${LN} -s ../${PORTNAME}/bin/FreeCAD ${STAGEDIR}${LOCALBASE}/bin/FreeCAD
 	${LN} -s ../${PORTNAME}/bin/FreeCADCmd ${STAGEDIR}${LOCALBASE}/bin/FreeCADCmd
-	${INSTALL_SCRIPT} ${WRKSRC}/src/Tools/freecad-thumbnailer \
-		${STAGEDIR}${PREFIX}/bin/freecad-thumbnailer
 
+.include <../../math/vtk9/Makefile.version>
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibmpi*}
+CMAKE_ARGS:= ${CMAKE_ARGS:N-DOPENMPI_INCLUDE_DIRS*}
 .include <bsd.port.mk>

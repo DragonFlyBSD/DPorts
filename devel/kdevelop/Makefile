@@ -12,52 +12,46 @@ WWW=		https://www.kdevelop.org/
 LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi
 
-BUILD_DEPENDS=	kdev-pg-qt:devel/kdevelop-pg-qt
-LIB_DEPENDS=	libKasten4Controllers.so:devel/okteta \
-		libapr-1.so:devel/apr1 \
+BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
+		kdev-pg-qt:devel/kdevelop-pg-qt
+LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libsvn_client-1.so:devel/subversion \
-		libboost_thread.so:devel/boost-libs \
 		libkomparediff2.so:textproc/libkomparediff2
-RUN_DEPENDS=	gmake:devel/gmake
+RUN_DEPENDS=	gmake:devel/gmake \
+		lldb-mi:devel/lldb-mi
 
-USES=		cmake compiler:c++11-lib desktop-file-utils gettext grantlee:5 \
-		kde:5 llvm:build,run qt:5 shared-mime-info shebangfix tar:xz xorg
-USE_KDE=	archive attica auth bookmarks codecs completion config configwidgets \
-		coreaddons crash guiaddons emoticons i18n iconthemes init \
-		itemmodels itemviews jobwidgets kcmutils kdeclarative \
-		kio libksysguard newstuff notifications \
-		notifyconfig package parts plasma-framework purpose \
-		runner service solid sonnet syntaxhighlighting texteditor \
-		textwidgets threadweaver \
+USES=		cmake compiler:c++17-lang desktop-file-utils gettext-tools gl \
+		kde:6 llvm:build,run,noexport pkgconfig qt:6 shared-mime-info \
+		shebangfix tar:xz xorg
+USE_GL=		gl opengl # GLX
+USE_KDE=	archive attica bookmarks codecs colorscheme completion config \
+		configwidgets coreaddons crash guiaddons i18n iconthemes \
+		itemmodels itemviews jobwidgets kcmutils kio \
+		libplasma newstuff notifications notifyconfig parts \
+		purpose runner service solid sonnet syntaxhighlighting \
+		texteditor texttemplate textwidgets threadweaver \
 		widgetsaddons windowsystem xmlgui
-USE_QT=		concurrent core dbus declarative gui help network printsupport \
-		script sql widgets xml buildtools:build qmake:build
+USE_QT=		5compat base declarative positioning tools webchannel webengine
 USE_XORG=	x11
+
 SHEBANG_FILES=	kdevplatform/util/kdevplatform_shell_environment.sh \
 		kdevplatform/util/.zshrc
+SHEBANG_LANG=	zsh
+zsh_OLD_CMD=	/bin/zsh
+zsh_CMD=	${LOCALBASE}/bin/zsh
+
 # Most ports have ecm:build, testlib:build, but because this is an
 # IDE, which **probably** is used for Qt / KDE development (also
 # other things, but let's guess a target market), pull in some
 # additional development things that are otherwise build-dep-only.
 USE_KDE+=	ecm
-USE_QT+=	testlib
 
-CMAKE_ARGS=	-DCMAKE_POLICY_DEFAULT_CMP0074=NEW -DLLVM_ROOT=${LLVM_PREFIX}
+CMAKE_ARGS=	-DCMAKE_POLICY_DEFAULT_CMP0074=NEW \
+		-DClang_DIR=${LLVM_PREFIX}/lib/cmake/clang
+CMAKE_OFF=	USE_QTWEBKIT
 
 # Versioning values, to reduce plist churn
-SO_VER=		510
-SO_VER_LONG=	5.10.221203
-PLIST_SUB+=	SO_VER=${SO_VER} SO_VER_LONG=${SO_VER_LONG}
-
-OPTIONS_DEFINE=	WEBENGINE
-WEBENGINE_DESC=	Use WebEngine as help reader
-WEBENGINE_USES=	qt:5
-WEBENGINE_USE=	QT=location,webchannel,webengine
-WEBENGINE_USE_OFF=	QT=webkit
-WEBENGINE_CMAKE_OFF=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
-
-SHEBANG_LANG=	zsh
-zsh_OLD_CMD=	/bin/zsh
-zsh_CMD=	${LOCALBASE}/bin/zsh
+USES+= gmake
+.include "${.CURDIR}/kdevelop.mk"
 
 .include <bsd.port.mk>

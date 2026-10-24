@@ -13,7 +13,7 @@ LICENSE_COMB=	multi
 LICENSE_FILE_BSD2CLAUSE=${WRKSRC}/include/picojson_LICENSE.txt
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${LOCALBASE}/include/CL/opencl.h:devel/opencl
+BUILD_DEPENDS= ${LOCALBASE}/include/CL/opencl.h:devel/opencl cxxfs_gcc8>0:misc/cxxfs_gcc8
 LIB_DEPENDS=	libopencv_imgcodecs.so:graphics/opencv
 
 USES=		cmake:testing compiler:c++17-lang localbase:ldflags
@@ -34,6 +34,8 @@ OPTIONS_DEFAULT=SIMD
 
 SIMD_CMAKE_OFF=	-DARMOPT:BOOL=false -DPPCOPT:BOOL=false -DX86OPT:BOOL=false
 
+CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
 post-patch:
 	@${REINPLACE_CMD} -e '/Darwin/,/FLAGS_RELEASE/d' \
 		-e 's,".*\(-m[^[:space:]]*\).*","\1",' \

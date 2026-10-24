@@ -1,6 +1,6 @@
 PORTNAME=	a2jmidid
 PORTVERSION=	9
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	audio
 
 MAINTAINER=	ports@FreeBSD.org
@@ -28,6 +28,7 @@ DBUS_MESON_OFF=	"-Ddisable-dbus=true"
 
 DEBUG_CFLAGS= "-DDEBUG"
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == riscv64

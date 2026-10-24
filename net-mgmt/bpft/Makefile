@@ -46,4 +46,10 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@net/ppp_defs\.h@net/ppp_layer/ppp_defs.h@g'	\
+		${WRKSRC}/lib/interfaces.c
+	${REINPLACE_CMD} -e "s@-lcurses -ltermcap@-L${LOCALBASE}/lib -lncurses@g"	\
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

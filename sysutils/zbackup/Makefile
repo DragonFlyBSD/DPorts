@@ -1,6 +1,6 @@
 PORTNAME=	zbackup
 PORTVERSION=	1.4.4
-PORTREVISION=	23
+PORTREVISION=	32
 CATEGORIES=	sysutils
 
 MAINTAINER=	ports@FreeBSD.org
@@ -9,10 +9,13 @@ WWW=		http://zbackup.org/
 
 LICENSE=	GPLv2
 
+DEPRECATED=	Last release 11 years ago, does not build with CMake 4
+EXPIRATION_DATE=2026-11-30
+
 LIB_DEPENDS=	libprotobuf.so:devel/protobuf \
 		liblzo2.so:archivers/lzo2
 
-USES=		alias cmake:insource compiler:c++17-lang ssl
+USES=		cmake:insource compiler:c++17-lang ssl
 USE_GITHUB=	yes
 
 CXXFLAGS+=	-Wno-dynamic-exception-spec
@@ -23,6 +26,7 @@ OPTIONS_DEFINE=	DOCS
 PLIST_FILES=	bin/zbackup
 PORTDOCS=	README.md
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's| CHECK(| ZBACKUP_CHECK(|' ${WRKSRC}/*.cc ${WRKSRC}/*.hh ${WRKSRC}/tests/*/*.cc
 

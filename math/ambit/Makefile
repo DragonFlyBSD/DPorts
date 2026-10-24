@@ -1,7 +1,7 @@
 PORTNAME=	ambit
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	math
 PKGNAMESUFFIX=	-tensor # avoid clash with shells/ambit
 
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libhdf5.so:science/hdf5 \
 		libopenblas.so:math/openblas \
 		libsz.so:science/libaec
 
-USES=		cmake:testing compiler:c++17-lang python:build
+USES= cmake:testing compiler:c++17-lang python:build python:2.7,build
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes

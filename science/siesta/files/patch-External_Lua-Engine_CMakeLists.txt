@@ -1,0 +1,24 @@
+-- Configure flook for FreeBSD instead of forcing the linux platform, and pass
+-- an explicit job count to the recursive make invocation that builds flook.
+-- A bare "-j" is propagated to the inner FreeBSD make, which requires an
+-- argument and aborts the build.
+--- External/Lua-Engine/CMakeLists.txt.orig	2025-12-16 02:10:34 UTC
++++ External/Lua-Engine/CMakeLists.txt
+@@ -139,6 +139,8 @@
+
+ if("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
+   set(FLOOK_PLATFORM "macosx")
++elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD")
++  set(FLOOK_PLATFORM "freebsd")
+ else()
+   set(FLOOK_PLATFORM "linux")
+ endif()
+@@ -198,7 +200,7 @@
+  ##CONFIGURE_HANDLED_BY_BUILD true
+  DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+  CONFIGURE_COMMAND ""
+- BUILD_COMMAND ${MAKE_EXECUTABLE} -j liball
++ BUILD_COMMAND ${MAKE_EXECUTABLE} -j1 liball
+  ## We avoid installing until we know how to specify the prefix...
+  ##  ... the following should work but does not.
+  ## INSTALL_COMMAND ${MAKE_EXECUTABLE} DESTDIR=<INSTALL_DIR> install

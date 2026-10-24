@@ -1,13 +1,12 @@
 PORTNAME=	cargo-c
-DISTVERSION=	0.10.11
-DISTVERSIONSUFFIX=	+cargo-0.86.0
-PORTREVISION=	1
+DISTVERSION=	0.10.26
+DISTVERSIONSUFFIX=	+cargo-0.100.0
 CATEGORIES=	devel
-MASTER_SITES=	CRATESIO
+MASTER_SITES=	CRATESIO/${PORTNAME}/${DISTNAME}${CARGO_CRATE_EXT}
 # XXX Teach USES=cargo to have proper default
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	vishwin@FreeBSD.org
 COMMENT=	Cargo C-ABI helpers
 WWW=		https://github.com/lu-zero/cargo-c
 
@@ -36,4 +35,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,libdir.join("pkgconfig,prefix.join("libdata/pkgconfig,' \
 		${WRKSRC}/src/install.rs
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.post.mk>

@@ -1,7 +1,7 @@
 PORTNAME=	rosenpass
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.2
-PORTREVISION=	1
+DISTVERSION=	0.2.3
+PORTREVISION=	2
 CATEGORIES=	net net-vpn security
 
 MAINTAINER=	fuz@FreeBSD.org
@@ -14,8 +14,7 @@ LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 
 LIB_DEPENDS=	libsodium.so:security/libsodium
-RUN_DEPENDS=	bash:shells/bash \
-		wireguard-tools>0:net/wireguard-tools
+RUN_DEPENDS=	bash:shells/bash
 
 USES=		cargo llvm:build pkgconfig shebangfix
 USE_GITHUB=	yes
@@ -26,12 +25,12 @@ PLIST_FILES=	bin/rosenpass \
 		share/man/man1/rosenpass.1.gz \
 		share/man/man1/rp.1.gz
 
+DFLY_UNMAINTAINED= yes
 pre-configure:
 	${REINPLACE_CMD} -e 's,%%BASH%%,${LOCALBASE}/bin/bash,' ${WRKSRC}/rp
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/rp ${STAGEDIR}${PREFIX}/bin/
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/rosenpass
 .for man in rp.1 rosenpass.1
 	${INSTALL_MAN} ${WRKSRC}/doc/${man} ${STAGEDIR}${PREFIX}/share/man/man${man:E}/${man}
 .endfor

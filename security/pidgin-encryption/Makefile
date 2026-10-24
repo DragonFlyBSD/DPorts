@@ -1,6 +1,6 @@
 PORTNAME=	pidgin
 PORTVERSION=	3.1
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	security
 MASTER_SITES=	SF/${PORTNAME}-encrypt/Releases/${PORTVERSION}
 PKGNAMESUFFIX=	-encryption
@@ -33,6 +33,7 @@ OPTIONS_SUB=	yes
 NLS_USES=	gettext
 NLS_CONFIGURE_ENABLE=	nls
 
+LDFLAGS= -pthread
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD

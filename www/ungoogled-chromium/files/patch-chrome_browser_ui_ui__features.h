@@ -1,26 +1,26 @@
---- chrome/browser/ui/ui_features.h.orig	2024-08-26 14:40:28 UTC
+--- chrome/browser/ui/ui_features.h.orig	2026-08-13 07:41:05 UTC
 +++ chrome/browser/ui/ui_features.h
-@@ -80,7 +80,7 @@ BASE_DECLARE_FEATURE(kAccessCodeCastUI);
+@@ -30,7 +30,7 @@ BASE_DECLARE_FEATURE(kCreateNewTabGroupAppMenuTopLevel
  
- BASE_DECLARE_FEATURE(kEvDetailsInPageInfo);
+ BASE_DECLARE_FEATURE(kCtrlTabMru);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ BASE_DECLARE_FEATURE(kDseIntegrity);
  BASE_DECLARE_FEATURE(kFewerUpdateConfirmations);
  #endif
+@@ -83,7 +83,7 @@ BASE_DECLARE_FEATURE_PARAM(int,
+ BASE_DECLARE_FEATURE_PARAM(int, kSeparateDefaultAndPinPromptMessageVersion);
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
  
-@@ -239,7 +239,7 @@ bool IsToolbarPinningEnabled();
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // When enabled, user may see the session restore UI flow.
+ BASE_DECLARE_FEATURE(kSessionRestoreInfobar);
  
- BASE_DECLARE_FEATURE(kTopChromeWebUIUsesSpareRenderer);
- 
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- BASE_DECLARE_FEATURE(kUpdateTextOptions);
- extern const base::FeatureParam<int> kUpdateTextOptionNumber;
+@@ -276,7 +276,7 @@ BASE_DECLARE_FEATURE(kManagedProfileRequiredInterstiti
+ BASE_DECLARE_FEATURE(kViewsJSAppModalDialog);
  #endif
-@@ -266,7 +266,7 @@ BASE_DECLARE_FEATURE(kViewsJSAppModalDialog);
- 
- BASE_DECLARE_FEATURE(kStopLoadingAnimationForHiddenWindow);
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

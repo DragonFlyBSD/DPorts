@@ -1,6 +1,6 @@
---- src/plugins/tls/openssl/qopenssl_p.h.orig	2023-09-21 19:24:26 UTC
+--- src/plugins/tls/openssl/qopenssl_p.h.orig	2026-05-11 20:54:55 UTC
 +++ src/plugins/tls/openssl/qopenssl_p.h
-@@ -70,6 +70,13 @@ QT_BEGIN_NAMESPACE
+@@ -77,6 +77,13 @@ QT_BEGIN_NAMESPACE
  
  QT_BEGIN_NAMESPACE
  

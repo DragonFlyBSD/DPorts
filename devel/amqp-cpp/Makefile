@@ -11,7 +11,7 @@ WWW=		https://github.com/CopernicaMarketingSoftware/AMQP-CPP
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake compiler:c++11-lib
+USES= cmake compiler:c++11-lib ssl
 USE_LDCONFIG=	yes
 
 CMAKE_ON=	AMQP-CPP_LINUX_TCP AMQP-CPP_BUILD_SHARED
@@ -20,4 +20,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	CopernicaMarketingSoftware
 GH_PROJECT=	AMQP-CPP
 
+CFLAGS= -I${OPENSSLINC}
+LDFLAGS= -L${OPENSSLLIB}
 .include <bsd.port.mk>

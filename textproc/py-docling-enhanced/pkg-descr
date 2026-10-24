@@ -1,0 +1,4 @@
+Docling Enhanced is an extended distribution of the Docling document
+conversion SDK and CLI. It parses PDF, DOCX, PPTX, XLSX, HTML, images,
+and other formats into a unified document representation, with additional
+enhanced models and capabilities beyond the standard docling package.

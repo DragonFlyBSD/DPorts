@@ -19,4 +19,5 @@ NO_ARCH=	yes
 USES=		gem
 PLIST_FILES=	bin/librarian-puppet
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

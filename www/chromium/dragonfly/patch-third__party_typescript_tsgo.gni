@@ -1,0 +1,11 @@
+--- third_party/typescript/tsgo.gni.orig
++++ third_party/typescript/tsgo.gni
+@@ -4,7 +4,7 @@
+ 
+ import("//build/toolchain/rbe.gni")
+ 
+-if (host_os == "linux" || use_remoteexec || host_os == "openbsd" || host_os == "freebsd") {
++if (host_os == "linux" || use_remoteexec || host_os == "openbsd" || host_os == "freebsd" || host_os == "dragonfly") {
+   _platform_dir = "linux-amd64"
+   _binary_name = "tsc"
+ } else if (host_os == "mac") {

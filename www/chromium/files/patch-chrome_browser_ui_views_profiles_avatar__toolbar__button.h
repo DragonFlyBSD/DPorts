@@ -1,11 +1,11 @@
---- chrome/browser/ui/views/profiles/avatar_toolbar_button.h.orig	2025-05-28 14:55:43 UTC
+--- chrome/browser/ui/views/profiles/avatar_toolbar_button.h.orig	2026-09-25 15:26:43 UTC
 +++ chrome/browser/ui/views/profiles/avatar_toolbar_button.h
-@@ -88,7 +88,7 @@ class AvatarToolbarButton : public ToolbarButton {
-   // Attempts showing the In-Produce-Help for profile Switching.
-   void MaybeShowProfileSwitchIPH();
- 
+@@ -66,7 +66,7 @@ class AvatarToolbarButton : public ToolbarButton,
+   void SetAnnounceCallbackForTesting(
+       base::OnceCallback<void(std::u16string)> callback) override;
+   void MaybeShowProfileSwitchIPH() override;
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   // Attempts showing the In-Produce-Help when a supervised user signs-in in a
-   // profile.
-   void MaybeShowSupervisedUserSignInIPH();
+   void MaybeShowSupervisedUserSignInIPH() override;
+   void MaybeShowSignInBenefitsIPH() override;
+ #endif

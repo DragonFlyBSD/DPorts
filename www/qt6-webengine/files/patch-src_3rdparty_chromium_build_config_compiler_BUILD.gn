@@ -1,15 +1,15 @@
---- src/3rdparty/chromium/build/config/compiler/BUILD.gn.orig	2024-07-03 01:14:49 UTC
+--- src/3rdparty/chromium/build/config/compiler/BUILD.gn.orig	2026-08-11 12:42:19 UTC
 +++ src/3rdparty/chromium/build/config/compiler/BUILD.gn
-@@ -210,7 +210,7 @@ declare_args() {
+@@ -200,7 +200,7 @@ declare_args() {
    # This greatly reduces the size of debug builds, at the cost of
    # debugging information which is required by some specialized
    # debugging tools.
--  simple_template_names = is_clang && !is_nacl && !is_win && !is_apple
-+  simple_template_names = is_clang && !is_nacl && !is_win && !is_apple && !is_bsd
- }
+-  simple_template_names = is_clang && !is_win && !is_apple
++  simple_template_names = is_clang && !is_win && !is_apple && !is_bsd
  
- declare_args() {
-@@ -274,13 +274,16 @@ config("no_unresolved_symbols") {
+   # This switch is used to enable -Wexit-time-destructors by default. This
+   # warning serves as a flip switch to allow a gradual migration of targets
+@@ -297,13 +297,16 @@ config("no_unresolved_symbols") {
  # Compiler instrumentation can introduce dependencies in DSOs to symbols in
  # the executable they are loaded into, so they are unresolved at link-time.
  config("no_unresolved_symbols") {
@@ -22,12 +22,12 @@
      ]
    }
 +  if (current_cpu == "x86" && is_openbsd) {
-+    ldflags = [ "-Wl,-z,notext" ]
++    ldflags = [ "-Wl,-z,notext", "-Wl,--strip-all" ]
 +  }
  }
  
  # compiler ---------------------------------------------------------------------
-@@ -568,6 +571,10 @@ config("compiler") {
+@@ -628,6 +631,10 @@ config("compiler") {
      }
    }
  
@@ -38,66 +38,62 @@
    # Linux-specific compiler flags setup.
    # ------------------------------------
    if (use_gold) {
-@@ -1232,7 +1239,7 @@ config("compiler_cpu_abi") {
-         ]
+@@ -1377,7 +1384,7 @@ config("compiler_cpu_abi") {
+     # CPU architecture. We may or may not be doing a cross compile now, so for
+     # simplicity we always explicitly set the architecture.
+     if (current_cpu == "x64") {
+-      if (is_clang && !is_android && !is_fuchsia && !is_chromeos_device) {
++      if (is_clang && !is_android && !is_fuchsia && !is_chromeos_device && !is_bsd) {
+         cflags += [ "--target=x86_64-unknown-linux-gnu" ]
+         ldflags += [ "--target=x86_64-unknown-linux-gnu" ]
+       } else {
+@@ -1386,7 +1393,7 @@ config("compiler_cpu_abi") {
        }
+       cflags += [ "-msse3" ]
+     } else if (current_cpu == "x86") {
+-      if (is_clang && !is_android && !is_chromeos_device) {
++      if (is_clang && !is_android && !is_chromeos_device && !is_bsd) {
+         cflags += [ "--target=i386-unknown-linux-gnu" ]
+         ldflags += [ "--target=i386-unknown-linux-gnu" ]
+       } else {
+@@ -1398,7 +1405,7 @@ config("compiler_cpu_abi") {
+         "-msse3",
+       ]
      } else if (current_cpu == "arm") {
--      if (is_clang && !is_android && !is_nacl &&
-+      if (is_clang && !is_android && !is_nacl && !is_bsd &&
-           !(is_chromeos_lacros && is_chromeos_device)) {
+-      if (is_clang && !is_android && !is_chromeos_device) {
++      if (is_clang && !is_android && !is_chromeos_device && !is_bsd) {
          cflags += [ "--target=arm-linux-gnueabihf" ]
          ldflags += [ "--target=arm-linux-gnueabihf" ]
-@@ -1250,7 +1257,7 @@ config("compiler_cpu_abi") {
+       }
+@@ -1413,7 +1420,7 @@ config("compiler_cpu_abi") {
          cflags += [ "-mtune=$arm_tune" ]
        }
      } else if (current_cpu == "arm64") {
--      if (is_clang && !is_android && !is_nacl && !is_fuchsia &&
-+      if (is_clang && !is_android && !is_nacl && !is_fuchsia && !is_bsd &&
-           !(is_chromeos_lacros && is_chromeos_device)) {
+-      if (is_clang && !is_android && !is_fuchsia && !is_chromeos_device && !is_ohos) {
++      if (is_clang && !is_android && !is_fuchsia && !is_chromeos_device && !is_ohos && !is_bsd) {
          cflags += [ "--target=aarch64-linux-gnu" ]
          ldflags += [ "--target=aarch64-linux-gnu" ]
-@@ -1585,7 +1592,7 @@ config("compiler_deterministic") {
-     # different build directory like "out/feature_a" and "out/feature_b" if
-     # we build same files with same compile flag.
-     # Other paths are already given in relative, no need to normalize them.
--    if (is_nacl) {
-+    if (is_nacl || is_bsd) {
-       # TODO(https://crbug.com/1231236): Use -ffile-compilation-dir= here.
-       cflags += [
-         "-Xclang",
-@@ -1637,7 +1644,7 @@ config("clang_revision") {
+       }
+@@ -1812,7 +1819,7 @@ config("clang_revision") {
  }
  
  config("clang_revision") {
--  if (is_clang && clang_base_path == default_clang_base_path) {
-+  if (is_clang && !is_bsd && clang_base_path == default_clang_base_path) {
-     update_args = [
-       "--print-revision",
-       "--verify-version=$clang_version",
-@@ -2102,12 +2109,9 @@ config("default_warnings") {
+-  if (is_clang && clang_base_path == default_clang_base_path &&
++  if (is_clang && !is_bsd && clang_base_path == default_clang_base_path &&
+       current_os != "zos") {
+     _perform_consistency_checks = current_toolchain == default_toolchain
+     if (llvm_force_head_revision) {
+@@ -2403,9 +2410,6 @@ config("default_warnings") {
  
-         # TODO(crbug.com/1494809): Evaluate and possibly enable.
-         "-Wno-vla-extension",
+       # TODO(crbug.com/40284799): Fix and re-enable.
+       "-Wno-thread-safety-reference-return",
 -
--        # TODO(https://crbug.com/1490607): Fix and re-enable.
--        "-Wno-thread-safety-reference-return",
-       ]
- 
--      if (!is_nacl) {
-+      if (!is_nacl && !is_bsd) {
-         cflags_cc += [
-           # TODO(https://crbug.com/1513724): Fix and re-enable.
-           "-Wno-c++11-narrowing-const-reference",
-@@ -2295,7 +2299,7 @@ config("no_chromium_code") {
-       # third-party libraries.
-       "-Wno-c++11-narrowing",
+-      # TODO(crbug.com/376641662): Fix and re-enable.
+-      "-Wno-nontrivial-memcall",
      ]
--    if (!is_nacl) {
-+    if (!is_nacl && !is_freebsd) {
-       cflags += [
-         # Disabled for similar reasons as -Wunused-variable.
-         "-Wno-unused-but-set-variable",
-@@ -2832,7 +2836,7 @@ config("afdo") {
+ 
+     cflags += [ "-Wno-deprecated-declarations" ]
+@@ -3201,7 +3205,7 @@ config("afdo") {
  # There are some targeted places that AFDO regresses, so we provide a separate
  # config to allow AFDO to be disabled per-target.
  config("afdo") {
@@ -106,7 +102,7 @@
      cflags = []
      if (clang_emit_debug_info_for_profiling) {
        # Add the following flags to generate debug info for profiling.
-@@ -2859,7 +2863,7 @@ config("afdo") {
+@@ -3228,7 +3232,7 @@ config("afdo") {
        cflags += [ "-Wno-backend-plugin" ]
        inputs = [ _clang_sample_profile ]
      }

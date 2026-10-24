@@ -1,21 +1,19 @@
 PORTNAME=	quantmod
-DISTVERSION=	0.4.26
+DISTVERSION=	0.4.29
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Quantitative Financial Modelling and Trading Framework for R
-WWW=		https://www.quantmod.com/
+WWW=		https://cran.r-project.org/package=quantmod
 
 LICENSE=	GPLv3
 
-CRAN_DEPENDS=	R-cran-curl>0:ftp/R-cran-curl \
+RUN_DEPENDS=	R-cran-curl>0:ftp/R-cran-curl \
 		R-cran-jsonlite>=1.1:converters/R-cran-jsonlite \
 		R-cran-TTR>=0.2:finance/R-cran-TTR \
 		R-cran-xts>=0.9.0:math/R-cran-xts \
 		R-cran-zoo>0:math/R-cran-zoo
-BUILD_DEPENDS=	${CRAN_DEPENDS}
-RUN_DEPENDS=	${CRAN_DEPENDS}
 
 USES=		cran:auto-plist
 

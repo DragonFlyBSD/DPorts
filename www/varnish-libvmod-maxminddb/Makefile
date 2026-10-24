@@ -1,7 +1,7 @@
 PORTNAME=	libvmod-maxminddb
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	www
 PKGNAMEPREFIX=	varnish-
 
@@ -30,4 +30,5 @@ INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=	DOCS
 
+MAKE_JOBS_UNSAFE= yes
 .include <bsd.port.mk>

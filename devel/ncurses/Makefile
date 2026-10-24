@@ -1,5 +1,5 @@
 PORTNAME=	ncurses
-DISTVERSION=	6.5
+DISTVERSION=	6.6
 CATEGORIES=	devel
 MASTER_SITES=	https://invisible-mirror.net/archives/ncurses/
 DIST_SUBDIR=	${PORTNAME}
@@ -79,6 +79,7 @@ PLIST_SUB+=	DEBUG=""
 PLIST_SUB+=	DEBUG="@comment "
 .endif
 
+CONFIGURE_ARGS+= --includedir=${PREFIX}/include
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/misc/ncurses-config.in
 
@@ -97,5 +98,9 @@ post-install-DOCS-on:
 .for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}/
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/includedir/s@include ]@includez ]@g' \
+		${WRKSRC}/misc/ncurses-config.in
 
 .include <bsd.port.mk>

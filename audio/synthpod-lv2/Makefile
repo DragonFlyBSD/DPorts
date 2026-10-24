@@ -1,6 +1,6 @@
 PORTNAME=	synthpod
 PORTVERSION=	g20230521
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio
 PKGNAMESUFFIX=	-lv2
 
@@ -40,7 +40,7 @@ GTK2_DESC=		Build GTK-2 sandbox
 GTK2_MESON_ON=		-Duse-gtk2=true
 GTK2_LIB_DEPENDS=	libxcb-icccm.so:x11/xcb-util-wm
 GTK2_USES=		gnome xorg
-GTK2_USE=		XORG=x11,xcb,xext GNOME=glib20,gtk20,gdkpixbuf2 gettext-runtime
+GTK2_USE=		XORG=x11,xcb,xext GNOME=glib20,gtk20,gdkpixbuf gettext-runtime
 
 GTK3_DESC=		Build GTK-3 sandbox
 GTK3_MESON_ON=		-Duse-gtk3=true
@@ -64,8 +64,9 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 			libxcb-icccm.so:x11/xcb-util-wm \
 			libvterm.so:devel/libvterm
 X11_USES=		gl gnome xorg
-X11_USE=		GL=glew,opengl XORG=xcb,x11 GNOME=cairo
+X11_USE= GL=glew,opengl XORG=xcb,x11 GNOME=cairo GL=gl
 
+DFLY_UNMAINTAINED= yes
 do-fetch:
 	@if [ "${FORCE_FETCH_ALL}" = "true" ] || ! [ -f "${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX}" ]; then \
 	  ${MKDIR} ${DISTDIR}/${DIST_SUBDIR} && \
@@ -74,7 +75,7 @@ do-fetch:
 	    git clone -q ${GIT_URL} ${PORTNAME}-${DISTVERSIONFULL} && \
 	    (cd ${PORTNAME}-${DISTVERSIONFULL} && git reset -q --hard ${GIT_TAGNAME} && ${RM} -r .git) && \
 	    ${FIND} ${PORTNAME}-${DISTVERSIONFULL} -and -exec ${TOUCH} -h -d 1970-01-01T00:00:00Z {} \; && \
-	    ${FIND} ${PORTNAME}-${DISTVERSIONFULL} -print0 | LC_ALL=C ${SORT} -z | \
+	    ${FIND} ${PORTNAME}-${DISTVERSIONFULL} -print0 | ${SORT} -z | \
 	        ${TAR} czf ${PORTNAME}-${DISTVERSIONFULL}${EXTRACT_SUFX} --format=ustar --gid 0 --uid 0 --options gzip:!timestamp --no-recursion --null -T - && \
 	    ${RM} -r ${PORTNAME}-${DISTVERSIONFULL}; \
 	fi

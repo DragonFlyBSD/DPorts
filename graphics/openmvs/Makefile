@@ -1,7 +1,7 @@
 PORTNAME=	openmvs
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.2.0
-PORTREVISION=	2
+DISTVERSION=	2.3.0
+PORTREVISION=	3
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,12 +11,7 @@ WWW=		https://github.com/cdcseacave/openMVS
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_aarch64=	use of undeclared identifier '__builtin_ia32_emms' # https://github.com/cdcseacave/openMVS/issues/847
-
-BUILD_DEPENDS=	cgal>0:math/cgal \
-		${LOCALBASE}/include/sys/sysinfo.h:devel/libsysinfo \
-		vcglib>0:devel/vcglib
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libceres.so:math/ceres-solver \
 		libgflags.so:devel/gflags \
 		libglog.so:devel/glog \
@@ -24,9 +19,14 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libmpfr.so:math/mpfr \
 		libopencv_core.so:graphics/opencv \
 		libpng16.so:graphics/png \
-		libtiff.so:graphics/tiff
+		libtiff.so:graphics/tiff \
+		${PY_BOOST} \
+		libpython${PYTHON_VER}${PYTHON_ABIVER}.so:lang/python${PYTHON_SUFFIX}
+BUILD_DEPENDS=	cgal>0:math/cgal \
+		${LOCALBASE}/include/sys/sysinfo.h:devel/libsysinfo \
+		vcglib>0:devel/vcglib
 
-USES=		cmake:testing compiler:c++17-lang eigen:3 jpeg
+USES=		cmake:testing compiler:c++14-lang eigen:3 jpeg python
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	cdcseacave
@@ -38,6 +38,7 @@ CMAKE_OFF+=	OpenMVS_ENABLE_TESTS
 CMAKE_ARGS=	-DVCG_ROOT=${LOCALBASE}/include/vcglib
 CMAKE_TESTING_ON=	OpenMVS_ENABLE_TESTS # tests fail to configure, see https://github.com/cdcseacave/openMVS/issues/911
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} != x86_64 && ${ARCH} != i386

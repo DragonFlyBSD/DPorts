@@ -1,6 +1,6 @@
 PORTNAME=	portupgrade
 PORTVERSION=	20180309
-PORTREVISION=	0
+PORTREVISION=	3
 PORTEPOCH=	3
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	GH \
@@ -32,20 +32,11 @@ DOCSDIR=	${PREFIX}/share/doc/pkgtools
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-.include <bsd.port.pre.mk>
-
 INSTALL_TARGET=		install
-.if ${PORT_OPTIONS:MDOCS}
-INSTALL_TARGET+=	install-doc
-.endif
+DOCS_INSTALL_TARGET=	install-doc
 
-.if ${RUBY_VER} >= 3.2
-# databases/ruby-bdb is BROKEN with Ruby 3.2
-RUN_DEPENDS+=	rubygem-dbm>0:databases/rubygem-dbm
-.else
 # For PKG_DBDRIVER={bdb_btree,bdb_hash}
 RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/bdb.so:databases/ruby-bdb
-.endif
 
 regression-test: patch
 	cd ${WRKSRC} && ${MAKE} test
@@ -53,8 +44,10 @@ regression-test: patch
 post-patch:	.SILENT
 	REVISION=`readlink "${_DISTDIR}/portupgrade/latest" | ${SED} -E -e 's,.*pkgtools-(.*).tar.gz,\1,g'` && ${SED} -E -e "s,%%DATE%%,${PORTVERSION},g;s,%%REVISION%%,$${REVISION},g" \
 	    ${WRKSRC}/lib/pkgtools/revision.rb.in > ${WRKSRC}/lib/pkgtools/revision.rb
+	cd ${WRKSRC} && ${FIND} bin etc lib -type f |\
+		${XARGS} ${REINPLACE_CMD} 's/File\.exists\?/File.exist?/'
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/compat/pkg
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

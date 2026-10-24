@@ -1,24 +1,23 @@
 PORTNAME=	elmerfem
 DISTVERSIONPREFIX=	release-
-DISTVERSION=	9.0
-PORTREVISION=	9
+DISTVERSION=	26.2.1
+PORTREVISION=	2
 CATEGORIES=	science
 
-MAINTAINER=	henrik@gulbra.net
+MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Multiphysical simulation software
-WWW=		https://www.csc.fi/web/elmer
+WWW=		https://www.elmerfem.org/blog/
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libblas.so:math/blas \
-		libhdf5.so:science/hdf5 \
+LIB_DEPENDS=	libhdf5.so:science/hdf5 \
 		libmetis.so:math/metis \
-		libmpich.so:net/mpich \
 		libnetcdf.so:science/netcdf \
-		libopenblas.so:math/openblas \
-		libparpack.so:math/arpack-ng
+		libparpack.so:math/arpack-ng@mpich \
+		libcholmod.so:math/suitesparse-cholmod \
+	        libumfpack.so:math/suitesparse-umfpack
 
-USES=		cmake compiler:c++11-lang fortran
+USES= blaslapack:openblas cmake compiler:c++11-lang fortran localbase mpi localbase:ldflags
 USE_CXXSTD=	c++14
 USE_GITHUB=	yes
 GH_ACCOUNT=	ElmerCSC
@@ -27,28 +26,31 @@ USE_LDCONFIG=	${PREFIX}/lib/elmersolver
 CMAKE_ARGS=	-DELMER_FEM_REVISION:STRING=${GH_TAGNAME}
 
 ALL_TARGET=	# empty
+TESTING_UNSAFE=	yes
 
-LDFLAGS+=	-L${LOCALBASE}/lib
-
-PORTSCOUT=	limit:^release-[1-9]
-
-CMAKE_ARGS+=	-DHAVE_INTTYPES_H=ON
+CMAKE_ARGS+=	-DHAVE_INTTYPES_H:BOOL=ON	\
+		-DEXTERNAL_ARPACK:BOOL=ON	\
+		-DEXTERNAL_PARPACK:BOOL=ON	\
+		-DEXTERNAL_UMFPACK:BOOL=ON
 .if !defined(MAINTAINER_MODE)
 CMAKE_ARGS+=	-Wno-dev
 .endif
 
-OPTIONS_DEFINE=		GUI OCC
+OPTIONS_DEFINE=		DOCS GUI OCC
 OPTIONS_DEFAULT=	GUI OCC
 OPTIONS_SUB=		yes
 
 GUI_DESC=		Build with ElmerGUI (Graphical User Interface)
 OCC_DESC=		Use OpenCASCADE for CAD import in ElmerGUI
 
-GUI_LIB_DEPENDS=	libqwt6.so:x11-toolkits/qwt6
+DOCS_USES=		tex
+DOCS_USE=		tex=pdftex:build
+
+GUI_LIB_DEPENDS=	libqwt.so:x11-toolkits/qwt6@qt5
 GUI_USES=		gl jpeg qt:5 xorg
 GUI_USE=		gl=gl,glu xorg=ice,sm,x11,xext,xt qt=${_QT5_LIBS:ts,}
 GUI_CMAKE_BOOL=		WITH_ELMERGUI WITH_PARAVIEW
-GUI_CMAKE_ON=		-DQWT_LIBRARY=${QT_LIBDIR}/libqwt6.so \
+GUI_CMAKE_ON=		-DQWT_LIBRARY=${QT_LIBDIR}/libqwt.so \
 			-DQWT_INCLUDE_DIR=${QT_INCDIR}/qwt6 \
 			-DDESIRED_QT_VERSION=5 \
 			-DWITH_QT5:BOOL=TRUE \
@@ -59,6 +61,7 @@ OCC_LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 			libfreetype.so:print/freetype2 \
 			libpng.so:graphics/png \
 			libpython${_PYVERSION}.so:lang/python${PYTHON_SUFFIX} \
+			libboost_thread.so:devel/boost-libs \
 			libtiff.so:graphics/tiff \
 			libTKernel.so:cad/opencascade \
 			libvtksys-${VTK_VER}.so:math/vtk${VTK_VER:R}
@@ -69,11 +72,17 @@ OCC_CMAKE_ON=		-DVTK_DIR=${LOCALBASE}/lib/cmake/vtk-9.0 \
 
 _LIBSTAGEDIR=	${STAGEDIR}/${PREFIX}/lib/elmersolver
 _PYVERSION=	${PYTHON_VER}${PYTHON_ABIVER}
-_QT5_LIBS=	buildtools:build concurrent core declarative gui location \
-		network opengl printsupport qmake:build script sensors \
-		sql svg webchannel webkit widgets xml
+_QT5_LIBS=	buildtools:build core declarative gui network opengl \
+		printsupport qmake:build script sql svg widgets xml
 
+SUB_FILES=	pkg-message
+
+CMAKE_OFF= WITH_MPI
+DFLY_PLIST= ${WRKSRC}/pkg-plist
+PLIST= ${DFLY_PLIST}
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <../../math/vtk9/Makefile.version>
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGUI:NOCC}
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
@@ -83,27 +92,33 @@ FCFLAGS+=	-fPIC
 FFLAGS+=	-fPIC
 .endif
 
+PDFS=	elmerice/Solvers/Documentation/m1qn3.pdf	\
+	elmerice/Solvers/Documentation/poroussolver.pdf	\
+	elmerice/Solvers/Documentation/siasolver.pdf	\
+	elmerice/UserFunctions/Documentation/usf_damage.pdf	\
+	fem/src/modules/contrib/ShellMultiSolver/ShellMutiSolverUserGuide.pdf
+PORTDOCS=	*
+
 .if ${GCC_DEFAULT} >= 10
 # workaround for Type mismatch between actual argument at (1) and actual argument at (2) (REAL(8)/COMPLEX(8)).
 # in theory, this should set FCFLAGS, but the port does not conform
 FFLAGS+=	-fallow-argument-mismatch
 .endif
 
-post-patch:
-	@${RM} ${WRKSRC}/cmake/Modules/CMakeParseArguments.cmake
-	@${RM} -r ${WRKSRC}/elmergrid/src/metis-5.1.0
-	@${REINPLACE_CMD} -e 's,"metis.*/metis\.h",<metis.h>,' \
+pre-configure:
+	${RM} ${WRKSRC}/cmake/Modules/CMakeParseArguments.cmake
+	${RM} -r ${WRKSRC}/elmergrid/src/metis-5.1.0
+	${REINPLACE_CMD} -e 's,"metis.*/metis\.h",<metis.h>,' \
 		${WRKSRC}/elmergrid/src/egparallel.c
 
-post-patch-OCC-on:
-	@${REINPLACE_CMD} -e "s|\$${VERSION}|`${PKG_QUERY} '%v' opencascade`|" \
-		"${WRKSRC}/cmake/Modules/FindOCE.cmake"
-	@${REINPLACE_CMD} -e 's|$${INCLUDE}|${LOCALBASE}/include/OpenCASCADE|' \
-		"${WRKSRC}/cmake/Modules/FindOCE.cmake"
+pre-configure-DOCS-off:
+	${REINPLACE_CMD} -e '/doc/s|ADD_SUB|#ADD_SUB|' ${WRKSRC}/fhutiter/CMakeLists.txt
 
-post-configure:
-	# workaround for https://github.com/ElmerCSC/elmerfem/issues/334
-	@${REINPLACE_CMD} -e 's| -lMPI::MPI_C | |' ${BUILD_WRKSRC}/ElmerGUI/Application/CMakeFiles/ElmerGUI.dir/link.txt
+pre-configure-OCC-on:
+	${REINPLACE_CMD} -e "s|\$${VERSION}|`${PKG_QUERY} '%v' opencascade`|" \
+		"${WRKSRC}/cmake/Modules/FindOCE.cmake"
+	${REINPLACE_CMD} -e 's|$${INCLUDE}|${LOCALBASE}/include/OpenCASCADE|' \
+		"${WRKSRC}/cmake/Modules/FindOCE.cmake"
 
 post-install:
 	${LN} -sf ElmerSolver_mpi ${STAGEDIR}${PREFIX}/bin/ElmerSolver
@@ -113,7 +128,20 @@ post-install:
 	${LN} -sf libmpi_stubs.so ${_LIBSTAGEDIR}/libmpi_stubs.so.0
 	@${STRIP_CMD} ${STAGEDIR}/${PREFIX}/bin/ElmerGrid
 
+post-install-DOCS-on:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${PDFS:C|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+
 do-test:
 	@cd ${TEST_WRKSRC} && ctest -C ${CMAKE_BUILD_TYPE} ${_MAKE_JOBS}
+
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibmpich*:Nlibparpack.so*}
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/elmerfem/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/ElmerSolver_mpi/d' ${DFLY_PLIST}
+	${REINPLACE_CMD} -e 's@-DUSE_ARPACK@&__z@g' \
+		${WRKSRC}/CMakeLists.txt
+	${REINPLACE_CMD} -e 's@binio arpack@binio@g' \
+		${WRKSRC}/fem/src/CMakeLists.txt
 
 .include <bsd.port.post.mk>

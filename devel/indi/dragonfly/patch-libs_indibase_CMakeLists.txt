@@ -1,0 +1,11 @@
+--- libs/indibase/CMakeLists.txt.orig
++++ libs/indibase/CMakeLists.txt
+@@ -113,7 +113,7 @@
+         COMPONENT Devel
+     )
+ 
+-    if(${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD|OpenBSD")
++    if(${CMAKE_SYSTEM_NAME} MATCHES "Linux|FreeBSD|DragonFly|OpenBSD")
+         list(APPEND ${PROJECT_NAME}_SOURCES
+             webcam/v4l2_colorspace.c
+             webcam/v4l2_base.cpp

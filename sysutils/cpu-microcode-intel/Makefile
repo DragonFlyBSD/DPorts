@@ -1,6 +1,6 @@
 PORTNAME=	microcode
 DISTVERSIONPREFIX=	microcode-
-DISTVERSION=	20250211
+DISTVERSION=	20260925
 CATEGORIES=	sysutils
 PKGNAMEPREFIX=	cpu-
 PKGNAMESUFFIX=	-intel
@@ -32,7 +32,7 @@ NO_ARCH=	yes
 NO_WRKSUBDIR=	yes
 
 OPTIONS_DEFINE=		RC SPLIT
-OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
+OPTIONS_DEFAULT=	SPLIT
 OPTIONS_SUB=		yes
 
 RC_DESC=	Depend on RC script port (automatic update method two)
@@ -43,6 +43,7 @@ RC_RUN_DEPENDS=	${LOCALBASE}/etc/rc.d/microcode_update:sysutils/cpu-microcode-rc
 
 SPLIT_VARS_OFF=	NO_BUILD=yes
 
+PLIST_FILES= "@dir /boot/firmware"
 post-extract:
 	${CAT} ${WRKSRC}/Intel-Linux-Processor-Microcode-Data-Files-${GH_TAGNAME}/intel-ucode/* \
 	  ${WRKSRC}/Intel-Linux-Processor-Microcode-Data-Files-${GH_TAGNAME}/intel-ucode-with-caveats/* \

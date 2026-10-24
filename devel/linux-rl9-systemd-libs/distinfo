@@ -1,0 +1,9 @@
+TIMESTAMP = 1783865272
+SHA256 (rocky/s/systemd-libs-252-67.el9_8.4.rocky.0.1.aarch64.rpm) = e2e45d72f7fa9278ec230d32c2549ef87abf592727b1e3c58af348d96f915ff3
+SIZE (rocky/s/systemd-libs-252-67.el9_8.4.rocky.0.1.aarch64.rpm) = 633039
+SHA256 (rocky/s/systemd-libs-252-67.el9_8.4.rocky.0.1.i686.rpm) = 187ebe644eece73aac66fc9dfe00f5029c30663914dcdd95a245134d1b8eaea0
+SIZE (rocky/s/systemd-libs-252-67.el9_8.4.rocky.0.1.i686.rpm) = 696562
+SHA256 (rocky/s/systemd-libs-252-67.el9_8.4.rocky.0.1.x86_64.rpm) = d3a71a6603abaf08a1065b075b17b3959002a325311cf775fd272d9f8092d7a0
+SIZE (rocky/s/systemd-libs-252-67.el9_8.4.rocky.0.1.x86_64.rpm) = 669357
+SHA256 (rocky/s/systemd-252-67.el9_8.4.rocky.0.1.src.rpm) = 9f328d2f42c13c72d80132a8912a7d1d6ab5c69b1fa44801af42817634970f12
+SIZE (rocky/s/systemd-252-67.el9_8.4.rocky.0.1.src.rpm) = 44694883

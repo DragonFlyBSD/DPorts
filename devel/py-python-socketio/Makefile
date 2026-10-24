@@ -1,5 +1,5 @@
 PORTNAME=	python-socketio
-PORTVERSION=	5.12.1
+PORTVERSION=	5.17.0
 CATEGORIES=	devel net python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -7,7 +7,9 @@ DISTNAME=	python_socketio-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python implementation of the Socket.IO realtime client and server
-WWW=		https://github.com/miguelgrinberg/python-socketio
+WWW=		https://python-socketio.readthedocs.io/en/stable/ \
+		https://code.miguelgrinberg.com/miguelgrinberg/python-socketio \
+		https://github.com/miguelgrinberg/python-socketio
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -15,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61.2:devel/py-setuptools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}bidict>=0.21.0:devel/py-bidict@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}python-engineio>=4.11.0:devel/py-python-engineio@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}python-engineio>=4.13.2:devel/py-python-engineio@${PY_FLAVOR}
 
 USES=		python
 USE_PYTHON=	autoplist concurrent pep517

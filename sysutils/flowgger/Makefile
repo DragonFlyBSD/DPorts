@@ -1,11 +1,11 @@
 PORTNAME=	flowgger
 DISTVERSION=	0.3.1
-PORTREVISION=	9
+PORTREVISION=	28
 CATEGORIES=	sysutils
-MASTER_SITES=	CRATESIO
+MASTER_SITES=	CRATESIO/${PORTNAME}/${DISTNAME}${CARGO_CRATE_EXT}
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
-MAINTAINER=	mikael@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast data collector
 WWW=		https://github.com/awslabs/flowgger
 
@@ -200,8 +200,8 @@ CARGO_CRATES=	addr2line-0.19.0 \
 		xml-rs-0.8.4
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/flowgger
 	${INSTALL_DATA} ${WRKSRC}/flowgger.toml \
 		${STAGEDIR}${PREFIX}/etc/flowgger.toml.sample
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

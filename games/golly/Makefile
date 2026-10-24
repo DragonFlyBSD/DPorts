@@ -1,12 +1,12 @@
 PORTNAME=	golly
-DISTVERSION=	4.2
+DISTVERSION=	5.0
 DISTVERSIONSUFFIX=	-src
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Conway's Game of Life and other cellular automata
-WWW=		http://golly.sourceforge.net/
+WWW=		https://golly.sourceforge.net/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/../docs/License.html
@@ -34,6 +34,8 @@ PLIST_FILES=	bin/bgolly \
 		share/pixmaps/golly.xpm
 PORTDATA=	Help Patterns Rules Scripts
 
+USE_CXXSTD= c++11
+IGNORE= unmaintained, please request fixing to users mailing list
 pre-build:
 	@${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|g' \
 		${WRKSRC}/wxmain.cpp ${WRKSRC}/wxhelp.cpp

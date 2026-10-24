@@ -11,7 +11,7 @@ WWW=		https://www.kismetwireless.net/
 
 LICENSE=	GPLv2
 
-USES=		gmake localbase:ldflags tar:xz
+USES= gmake localbase:ldflags tar:xz ncurses
 USE_CXXSTD=	c++14
 
 GNU_CONFIGURE=	yes
@@ -88,5 +88,9 @@ post-install:
 		${STAGEDIR}${PREFIX}/etc/kismet.conf.sample
 	${MV} ${STAGEDIR}${PREFIX}/etc/kismet_drone.conf \
 		${STAGEDIR}${PREFIX}/etc/kismet_drone.conf.sample
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/freebsd\*/freebsd*|dragonfly*/g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>

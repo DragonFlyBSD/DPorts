@@ -1,2 +1,0 @@
-# ffmpeg is compiled with pthread support (libavformat.so)
-LDFLAGS+= -pthread

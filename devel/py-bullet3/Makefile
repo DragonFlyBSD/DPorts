@@ -1,6 +1,6 @@
 PORTNAME=	bullet3
 DISTVERSION=	3.25
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	devel
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -11,7 +11,7 @@ WWW=		https://pybullet.org/wordpress/
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-RUN_DEPENDS=	${PYNUMPY} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}gym>0:math/py-gym@${PY_FLAVOR}
 
 USES=		compiler:c++11-lang gl localbase python
@@ -20,8 +20,6 @@ USE_GL=		gl glew
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	bulletphysics
-
-CFLAGS_powerpc64=	-mvsx
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 

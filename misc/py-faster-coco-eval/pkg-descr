@@ -1,0 +1,4 @@
+Faster COCO Eval provides a faster implementation of the original
+COCO evaluation metrics for object detection. It accelerates the
+computation of precision, recall, and mean Average Precision (mAP)
+metrics used in the COCO object detection benchmark.

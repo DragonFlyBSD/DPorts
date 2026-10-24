@@ -1,0 +1,6 @@
+sage: <<EOM
+To make the best use of Frescobaldi's features please install
+print/lilypond or print/lilypond-devel.
+EOM
+}
+]

@@ -1,6 +1,6 @@
 PORTNAME=	flatcc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.1
+DISTVERSION=	0.6.4
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,7 +10,8 @@ WWW=		https://github.com/dvidelabs/flatcc
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake compiler:c++11-lib
+USES=		cmake compiler:c++11-lib cpe
+CPE_VENDOR=	flatcc_project
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -26,5 +27,7 @@ do-test:
 		${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} -DFLATCC_TEST:BOOL=ON ${CMAKE_SOURCE_PATH} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${ALL_TARGET} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} test
+
+# tests as of 0.6.4: 100% tests passed, 0 tests failed out of 23
 
 .include <bsd.port.mk>

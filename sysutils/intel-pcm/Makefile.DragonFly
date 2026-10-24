@@ -1,3 +1,0 @@
-
-# to avoid orphans
-PLIST_FILES+=	sbin/c_example.x sbin/c_example_shlib.x

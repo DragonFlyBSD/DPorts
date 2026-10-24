@@ -8,7 +8,7 @@ COMMENT=	KDE template generator
 BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
 		docbook-xml>0:textproc/docbook-xml
 
-USES=		cmake compiler:c++11-lang gettext kde:6 qt:6 tar:xz xorg
+USES= cmake compiler:c++11-lang gettext kde:6 qt:6 tar:xz xorg gmake
 USE_KDE=	archive auth codecs completion config configwidgets coreaddons \
 		doctools i18n jobwidgets kio kirigami-addons newstuff service solid \
 		widgetsaddons windowsystem \

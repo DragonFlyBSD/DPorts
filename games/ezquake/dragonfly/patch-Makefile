@@ -1,0 +1,26 @@
+--- Makefile.bak	2015-12-06 17:02:15.000000000 +0200
++++ Makefile
+@@ -33,6 +33,10 @@ ifeq ($(OS),freebsd)
+ 	DEFAULT_TARGET = glx
+ 	OS_GL_CFLAGS = -DWITH_DGA -DWITH_VMODE
+ endif
++ifeq ($(OS),dragonfly)
++	DEFAULT_TARGET = glx
++	OS_GL_CFLAGS = -DWITH_DGA -DWITH_VMODE
++endif
+ 
+ LIB_PREFIX=$(OS)-$(ARCH)
+ 
+@@ -129,6 +133,12 @@ ifeq ($(OS),freebsd)
+ X11BASE ?= /usr/X11R6
+ LOCALBASE ?= /usr/local
+ CFLAGS += -I$(X11BASE)/include -I$(LOCALBASE)/include
++LDFLAGS += -L$(X11BASE)/lib -L$(LOCALBASE)/lib
++endif
++ifeq ($(OS),dragonfly)
++X11BASE ?= /usr/X11R6
++LOCALBASE ?= /usr/local
++CFLAGS += -I$(X11BASE)/include -I$(LOCALBASE)/include
+ LDFLAGS += -L$(X11BASE)/lib -L$(LOCALBASE)/lib
+ endif
+ 

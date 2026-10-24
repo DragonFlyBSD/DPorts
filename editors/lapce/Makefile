@@ -1,7 +1,7 @@
 PORTNAME=	lapce
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.8	# remove openssl-src-* from CARGO-CRATES each update
-PORTREVISION=	4
+DISTVERSION=	0.4.6 # Cargo.lock patched: `make patch cargo-crates`
+PORTREVISION=	6
 CATEGORIES=	editors
 
 MAINTAINER=	eduardo@FreeBSD.org
@@ -11,31 +11,44 @@ WWW=		https://lapce.dev/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS=	armv7 i386
+NOT_FOR_ARCHS_REASON_armv7=	[cranelift-codegen 0.101.4] error when identifying target: "no supported isa found for arch `armv7`"
 NOT_FOR_ARCHS_REASON_i386=	doesn't build: [zstd-sys 2.0.1+zstd.1.5.2] AR_i686_unknown_freebsd = None
+NOT_FOR_ARCHS_REASON=	${NOT_FOR_ARCHS_REASON_${ARCH}}
 
-BUILD_DEPENDS=	p5-Cairo-GObject>0:devel/p5-Cairo-GObject \
-		p5-FindBin-libs>0:devel/p5-FindBin-libs
-LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-		libgit2.so:devel/libgit2 \
-		libssh2.so:security/libssh2
+LIB_DEPENDS=	libssh2.so:security/libssh2 \
+		libgit2.so:devel/libgit2
+RUN_DEPENDS=	tree-sitter-grammars>0:textproc/tree-sitter-grammars \
+		xdg-desktop-portal>0:deskutils/xdg-desktop-portal
 
-USES=		cargo gmake gnome localbase:ldflags perl5 pkgconfig ssl
+USES=		cargo desktop-file-utils dos2unix gmake localbase:ldflags perl5 pkgconfig ssl xorg
 USE_GITHUB=	yes
-USE_GNOME=	atk gdkpixbuf2 gtk30 pango
+USE_XORG=	xcb
+
+DOS2UNIX_FILES=	cargo-crates/slotmap-1.0.7/src/lib.rs
 
 PLIST_FILES=	bin/lapce \
-		bin/lapce-proxy
+		bin/lapce-proxy \
+		share/applications/dev.lapce.lapce.desktop \
+		share/pixmaps/dev.lapce.lapce.png
 
-PORTSCOUT=	https://github.com/${PORTNAME}/${PORTNAME}/releases
+PORTSCOUT=	skipv:0.6.0
 
-#patch druid manually since it's not yet patched upstream
-post-patch:
-	@${FIND} ${WRKSRC}/../druid-0b9c00fcda238e392e758382f25166cd748fd305 \
-		 -name "*.toml" -o -name "*.rs" | ${XARGS} ${REINPLACE_CMD} -i '' -e 's|openbsd|freebsd|g'
+# OPENSSL_NO_VENDOR needs openssl-src present so I'm using Cargo.lock and lapce-proxy/Cargo.toml patches:
+# first to not fetch openssl-src tarball and later to remove git2 ossl vendored feature.
+CARGO_ENV=	RUSTC_BOOTSTRAP=1 OPENSSL_NO_VENDOR=1
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/lapce
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/lapce-proxy
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${WRKSRC}/extra/images/logo.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps/dev.lapce.lapce.png
+	${INSTALL_DATA} ${WRKSRC}/extra/linux/dev.lapce.lapce.desktop \
+		${STAGEDIR}${PREFIX}/share/applications
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/cargo-crates/fontdb-0.16.2/src/lib.rs
+	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/cargo-crates/fontdb-0.23.0/src/lib.rs
+	@${REINPLACE_CMD} -e 's|%%DATADIR%%|${PREFIX}/share|g' ${WRKSRC}/lapce-core/src/directory.rs
 
 .include <bsd.port.mk>

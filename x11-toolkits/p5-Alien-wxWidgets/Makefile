@@ -32,4 +32,8 @@ post-install:
 	@(cd ${STAGEDIR}${PREFIX}; ${FIND} * -type f -name gtk2_\* -print \
 		>> ${TMPPLIST})
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@g(cc@(cc@g' \
+		${WRKSRC}/lib/Alien/wxWidgets/Utility.pm
+
 .include <bsd.port.mk>

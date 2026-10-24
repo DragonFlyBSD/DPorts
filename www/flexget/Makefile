@@ -1,7 +1,7 @@
 PORTNAME=	FlexGet
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.9.10
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	www
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -33,11 +33,11 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlalchemy20>0:databases/py-sqlalchemy20@${P
 		${PYTHON_PKGNAMEPREFIX}feedparser>=6.0.2:textproc/py-feedparser@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}rich>=9.0.0:textproc/py-rich@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyrss2gen>0:textproc/py-pyrss2gen@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.5:www/py-beautifulsoup@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}beautifulsoup4>=4.5:www/py-beautifulsoup4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}cherrypy>=3.7.0:www/py-cherrypy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}flask>=0.7:www/py-flask@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Flask-Compress>=1.2.1:www/py-flask-compress@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}Flask-Cors>=2.1.2:www/py-flask-cors@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}flask-cors>=2.1.2:www/py-flask-cors@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Flask-Login>=0.4.0:www/py-flask-login@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}flask-restx>=0.5.1:www/py-flask-restx@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}html5lib>=0.11:www/py-html5lib@${PY_FLAVOR} \
@@ -52,10 +52,4 @@ USE_PYTHON=	autoplist pep517 pytest
 GH_PROJECT=	Flexget
 NO_ARCH=	yes
 
-.include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 31000
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}importlib-metadata>0:devel/py-importlib-metadata@${PY_FLAVOR}
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

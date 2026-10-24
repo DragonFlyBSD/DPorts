@@ -1,5 +1,5 @@
 PORTNAME=	dnscap
-PORTVERSION=	2.2.1
+PORTVERSION=	2.5.2
 PORTEPOCH=	1
 CATEGORIES=	dns
 MASTER_SITES=	https://www.dns-oarc.net/files/dnscap/ \
@@ -8,12 +8,14 @@ MASTER_SITES=	https://www.dns-oarc.net/files/dnscap/ \
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	DNS network traffic capture utility
 WWW=		https://www.dns-oarc.net/tools/dnscap \
-		https://github.com/DNS-OARC/dnscap
+		https://codeberg.org/DNS-OARC/dnscap
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libldns.so:dns/ldns
+LIB_DEPENDS=	libldns.so:dns/ldns \
+		liblz4.so:archivers/liblz4 \
+		libzstd.so:archivers/zstd
 
 USES=		autoreconf libtool localbase pkgconfig ssl
 

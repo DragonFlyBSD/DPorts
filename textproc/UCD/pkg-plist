@@ -19,6 +19,7 @@
 %%DATADIR%%/IndicPositionalCategory.txt
 %%DATADIR%%/IndicSyllabicCategory.txt
 %%DATADIR%%/Jamo.txt
+%%DATADIR%%/JurchenSources.txt
 %%DATADIR%%/LineBreak.txt
 %%DATADIR%%/NameAliases.txt
 %%DATADIR%%/NamedSequences.txt
@@ -34,12 +35,11 @@
 %%DATADIR%%/ReadMe.txt
 %%DATADIR%%/ScriptExtensions.txt
 %%DATADIR%%/Scripts.txt
+%%DATADIR%%/SealSources.txt
 %%DATADIR%%/SpecialCasing.txt
 %%DATADIR%%/StandardizedVariants.txt
 %%DATADIR%%/TangutSources.txt
 %%DATADIR%%/USourceData.txt
-%%DATADIR%%/USourceGlyphs.pdf
-%%DATADIR%%/USourceRSChart.pdf
 %%DATADIR%%/UnicodeData.txt
 %%HAN%%%%DATADIR%%/Unihan.zip
 %%HAN%%%%DATADIR%%/Unihan_DictionaryIndices.txt

@@ -1,10 +1,10 @@
 PORTNAME=	rav1e
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.6
-PORTREVISION?=	3
+DISTVERSION=	0.8.1
+PORTREVISION?=	11
 CATEGORIES=	multimedia
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast and safe AV1 encoder
 WWW=		https://github.com/xiph/rav1e
 
@@ -19,15 +19,12 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	xiph
 PLIST_FILES?=	bin/${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 # Extract (snapshot) version from the port instead of CARGO_PKG_VERSION
 	@${REINPLACE_CMD} -e 's/\<.*GIT_VERSION\.unwrap.*/"${DISTVERSIONFULL}"/' \
 		-e $$'/GIT_VERSION/,/UNKNOWN/c\\\n\t"${DISTVERSIONFULL}",\n' \
 		${WRKSRC}/src/bin/common.rs ${WRKSRC}/src/lib.rs
 
-.if !target(post-install)
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-.endif
-
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

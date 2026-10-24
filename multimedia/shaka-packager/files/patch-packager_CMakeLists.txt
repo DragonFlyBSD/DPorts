@@ -1,0 +1,20 @@
+--- packager/CMakeLists.txt.orig
++++ packager/CMakeLists.txt
+@@ -76,7 +76,6 @@
+   # define them here and not in the third_party subdirectory.
+   find_package(absl REQUIRED)
+   find_package(MbedTLS REQUIRED)
+-  find_package(GTest REQUIRED)
+   find_package(CURL REQUIRED)
+   find_package(LibXml2 REQUIRED)
+   find_package(PNG REQUIRED)
+@@ -86,9 +85,6 @@
+ 
+   # Alias to same names as vendored dependencies
+   add_library(mbedtls ALIAS MbedTLS::mbedtls)
+-  add_library(gmock ALIAS GTest::gmock)
+-  add_library(gtest ALIAS GTest::gtest)
+-  add_library(gtest_main ALIAS GTest::gtest_main)
+   add_library(libcurl ALIAS CURL::libcurl)
+   add_library(LibXml2 ALIAS LibXml2::LibXml2)
+   add_library(png_static ALIAS PNG::PNG) # not static but the expected library name

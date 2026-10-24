@@ -1,6 +1,5 @@
 PORTNAME=	prosody
-DISTVERSION=	0.12.5
-PORTREVISION=	1
+DISTVERSION=	13.0.7
 CATEGORIES=	net-im
 MASTER_SITES=	https://prosody.im/downloads/source/
 
@@ -21,9 +20,10 @@ RUN_DEPENDS=	${LUA_REFMODLIBDIR}/lfs.so:devel/luafilesystem@${LUA_FLAVOR} \
 		${LUA_REFMODLIBDIR}/socket/core.so:net/lua-luasocket@${LUA_FLAVOR} \
 		${LUA_REFMODLIBDIR}/ssl.so:security/luasec@${LUA_FLAVOR}
 
-USES=		cpe gmake lua:54 shebangfix ssl
+USES= cpe gmake lua:54,build,run shebangfix ssl gettext-runtime
+USE_RC_SUBR=	prosody
 SHEBANG_FILES=	prosody prosodyctl tools/migration/prosody-migrator.lua
-LUA_PREMK=	yes
+
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix="${PREFIX}" \
 		--datadir="/var/db/prosody" \
@@ -41,18 +41,30 @@ CONFIGURE_ARGS=	--prefix="${PREFIX}" \
 		--no-example-certs
 
 MAKEFILE=	GNUmakefile
+
+SUB_FILES=	pkg-message
+SUB_LIST=	USERS=${USERS} \
+		GROUPS=${GROUPS} \
+		LUA_PREFIX=${LUA_PREFIX} \
+		LUA_CMD=${LUA_CMD} \
+		PORTNAME="${PORTNAME}"
+
 USERS=		prosody
 GROUPS=		${USERS}
 
-USE_RC_SUBR=	prosody
-SUB_FILES=	pkg-message
-SUB_LIST=	USERS=${USERS} GROUPS=${GROUPS} LUA_PREFIX=${LUA_PREFIX} LUA_CMD=${LUA_CMD} PORTNAME="${PORTNAME}"
-PLIST_SUB=	PROSODY_USER=${USERS} PROSODY_GROUP=${GROUPS}
+PLIST_SUB=	PROSODY_USER=${USERS} \
+		PROSODY_GROUP=${GROUPS}
 
 post-install:
 	@${REINPLACE_CMD} -e "s|\"luarocks |\"luarocks${LUA_VER_STR} |" ${STAGEDIR}${PREFIX}/lib/prosody/util/prosodyctl.lua
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/prosody/util/*.so
 	@${MKDIR} ${STAGEDIR}/var/run/prosody
 	@${RM} ${STAGEDIR}${ETCDIR}/certs/*
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@[[:<:]]openssl[[:>:]]@${LOCALBASE}/bin/openssl@" \
+			 -e "s@${LOCALBASE}/bin/openssl.cnf@openssl.cnf@" \
+		${WRKSRC}/certs/makefile ${WRKSRC}/certs/GNUmakefile \
+		${WRKSRC}/util/openssl.lua
 
 .include <bsd.port.mk>

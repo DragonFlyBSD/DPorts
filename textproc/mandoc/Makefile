@@ -1,11 +1,11 @@
 PORTNAME=	mandoc
 PORTVERSION=	1.14.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	http://mandoc.bsd.lv/snapshots/ \
 		LOCAL/uqs
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	ziaee@FreeBSD.org
 COMMENT=	Suite of for tools compiling mdoc and man macros
 WWW=		https://mandoc.bsd.lv/
 
@@ -19,6 +19,8 @@ EXAMPLESDIR=	${PREFIX}/share/examples/mandoc
 HAS_CONFIGURE=	yes
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+CONFLICTS_INSTALL=	groff
 
 post-configure:
 	@${REINPLACE_CMD} -e '/^CFLAGS/s/=/?=/' -e '/^PREFIX/s/=/?=/' \

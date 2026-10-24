@@ -1,4 +1,0 @@
-MAKE_ENV+=	LDVER=ld.bfd
-
-post-extract:
-	${REINPLACE_CMD} -e 's|"FreeBSD"|"DragonFlyBSD"|g' ${WRKSRC}/build.xml

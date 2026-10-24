@@ -23,4 +23,9 @@ CMAKE_OFF=	CMAKE_C_EXTENSIONS \
 CMAKE_ON=	DISABLE_STATIC
 CMAKE_ARGS=	-DINSTALL_INC_DIR:STRING=include
 
+dfly-patch:
+	${REINPLACE_CMD} -e "/-shared -o/s/$$/ -lm/g"	\
+		${WRKSRC}/sqstdlib/Makefile	\
+		${WRKSRC}/squirrel/Makefile
+
 .include <bsd.port.mk>

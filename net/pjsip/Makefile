@@ -189,4 +189,8 @@ RESAMPLE_DLL_OR_SHARED=""
 
 PLIST_SUB+= RESAMPLE_DLL_OR_SHARED=${RESAMPLE_DLL_OR_SHARED}
 
+dfly-patch:
+	${REINPLACE_CMD} -e "/app=libilbccodec .*subst /s/$$/ ILBC_LDFLAGS=-lm/"	\
+		${WRKSRC}/third_party/build/ilbc/Makefile
+
 .include <bsd.port.post.mk>

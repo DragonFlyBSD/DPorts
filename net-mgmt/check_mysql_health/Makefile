@@ -1,6 +1,6 @@
 PORTNAME=	check_mysql_health
 DISTVERSION=	3.0.0.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://labs.consol.de/assets/downloads/nagios/
 

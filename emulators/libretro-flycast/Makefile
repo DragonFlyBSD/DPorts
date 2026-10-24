@@ -34,6 +34,7 @@ CMAKE_ARGS=     -DLIBRETRO=ON \
 		-DCMAKE_POSITION_INDEPENDENT_CODE=TRUE \
 		-DCMAKE_BUILD_TYPE=Release
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.pre.mk>
 
 PLIST_FILES=	lib/libretro/flycast_libretro.so

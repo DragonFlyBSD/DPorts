@@ -1,5 +1,5 @@
 PORTNAME=	rubyzip
-PORTVERSION=	2.3.2
+PORTVERSION=	3.7.0
 CATEGORIES=	archivers rubygems
 MASTER_SITES=	RG
 

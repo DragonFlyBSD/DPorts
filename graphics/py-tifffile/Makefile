@@ -1,5 +1,5 @@
 PORTNAME=	tifffile
-PORTVERSION=	2025.3.13
+PORTVERSION=	2026.9.20
 CATEGORIES=	graphics python
 MASTER_SITES=	PYPI \
 		https://github.com/cgohlke/tifffile/releases/download/v${PORTVERSION}/
@@ -7,31 +7,35 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Read and write TIFF(r) files
-WWW=		https://github.com/cgohlke/tifffile
+WWW=		https://www.cgohlke.com/docs/tifffile/ \
+		https://github.com/cgohlke/tifffile
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=0,1:math/py-numpy@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=2.1,1:math/py-numpy@${PY_FLAVOR}
 
-USES=		dos2unix python:3.10+
+USES=		dos2unix python:3.12+
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
 
 OPTIONS_DEFINE=	CODECS PLOT XML ZARR
+ALL_DESC=	All optional dependencies
+ALL_IMPLIES=	CODECS PLOT XML ZARR
 CODECS_DESC=	Codec for compression and predictor schemes
 PLOT_DESC=	Plotting support
 XML_DESC=	Validate and print XML
 ZARR_DESC=	Access zarr store
 
-CODECS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}imagecodecs>=2024.12.30:graphics/py-imagecodecs@${PY_FLAVOR}
+ALL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}xarray>=0:devel/py-xarray@${PY_FLAVOR}
+CODECS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}imagecodecs>=2026.8.16:graphics/py-imagecodecs@${PY_FLAVOR}
 PLOT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}matplotlib>=0:math/py-matplotlib@${PY_FLAVOR}
-XML_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}defusedxml>=0:devel/py-defusedxml@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml@${PY_FLAVOR}
+XML_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml@${PY_FLAVOR}
 ZARR_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fsspec>=0:filesystems/py-fsspec@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}zarr>=0<3:devel/py-zarr@${PY_FLAVOR}
+			${PYTHON_PKGNAMEPREFIX}kerchunk>=0:filesystems/py-kerchunk@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}zarr>=3.3.0:devel/py-zarr@${PY_FLAVOR}
 
 .include <bsd.port.mk>

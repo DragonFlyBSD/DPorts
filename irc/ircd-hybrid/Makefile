@@ -1,5 +1,6 @@
 PORTNAME=	ircd-hybrid
-PORTVERSION=	8.2.44
+PORTVERSION=	8.2.47
+PORTREVISION=	1
 CATEGORIES=	irc
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -16,7 +17,8 @@ GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-LIB_DEPENDS+=	libltdl.so:devel/libltdl
+LIB_DEPENDS+=	libltdl.so:devel/libltdl \
+		libjansson.so:devel/jansson
 
 CONFLICTS_INSTALL=	ircd-ratbox ircd-ratbox-devel
 
@@ -44,6 +46,8 @@ INSTALL_IGNORES=	charby* ircd-rat* ircu-*
 
 CERTSFILE=	${LOCALBASE}/share/certs/ca-root-nss.crt
 
+PLIST_FILES= %%DATADIR%%-%%PORTVERSION%%/ircd-hybrid/help/monitor
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}

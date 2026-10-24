@@ -32,6 +32,7 @@ LIBCLSYNC_DESC=	Build libclsync.so for control socket clients
 
 OPTIONS_DEFAULT=PARANOID
 
+LDFLAGS= -lexecinfo
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MVERYPARANOID}

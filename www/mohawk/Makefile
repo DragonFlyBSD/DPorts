@@ -1,6 +1,5 @@
 PORTNAME=	mohawk
-DISTVERSION=	2.0.21
-PORTREVISION=	1
+DISTVERSION=	2.1.1
 CATEGORIES=	www
 MASTER_SITES=	https://fossil.bsdsx.fr/mohawk/tarball/?r=${DISTVERSION}&name=/
 
@@ -15,7 +14,7 @@ LIB_DEPENDS=	libevent.so:devel/libevent
 USES=		localbase uidfix
 USE_RC_SUBR=	mohawk
 
-CFLAGS+=	-I${LOCALBASE}/include/event2/compat
+CFLAGS+= -I${LOCALBASE}/include/event2/compat -L${LOCALBASE}/lib
 
 MAKE_ARGS=	MANDIR="${PREFIX}/share/man/man"
 
@@ -39,5 +38,10 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/*.conf ${STAGEDIR}${EXAMPLESDIR}
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/ -Werror[[:>:]]//g' ${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e 's@-levent-2.0@-levent@g' \
+		${WRKSRC}/Makefile.inc
 
 .include <bsd.port.mk>

@@ -1,0 +1,12 @@
+# netdata configuration
+#
+# This file is a small subset of the full configuration which can be downloaded
+# from http://localhost:19999/netdata.conf
+
+[plugins]
+	freebsd = yes
+	statsd = no
+
+[web]
+	respect do not track policy = yes
+	bind to = 127.0.0.1

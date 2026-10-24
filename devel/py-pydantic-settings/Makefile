@@ -1,5 +1,5 @@
 PORTNAME=	pydantic-settings
-DISTVERSION=	2.6.0
+DISTVERSION=	2.15.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,17 +12,28 @@ WWW=		https://docs.pydantic.dev/latest/concepts/pydantic_settings/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	hatchling:devel/py-hatchling@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hatchling>=0:devel/py-hatchling@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pydantic2>=2.7.0:devel/py-pydantic2@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}python-dotenv>=0.21.0:www/py-python-dotenv@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}python-dotenv>=0.21.0:www/py-python-dotenv@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}typing-inspection>=0.4.0:devel/py-typing-inspection@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}coverage>=0:devel/py-coverage@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest-examples>0:devel/py-pytest-examples@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest-mock>=0:devel/py-pytest-mock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest-pretty>=0:devel/py-pytest-pretty@${PY_FLAVOR}
 
 USES=		cpe python
-USE_PYTHON=	pep517 autoplist pytest # 1 test fails
+USE_PYTHON=	pep517 autoplist pytest
+
+TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+TEST_ARGS=	--disable-plugin-autoload \
+		-p pytest_examples \
+		-p pytest_mock \
+		-p pytest_pretty
+
+NO_ARCH=	yes
 
 CPE_VENDOR=	pydantic_project
+
+# tests as of 2.15.0: 558 passed 136 skipped
 
 .include <bsd.port.mk>

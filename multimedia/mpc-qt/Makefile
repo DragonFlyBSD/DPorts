@@ -1,6 +1,6 @@
 PORTNAME=	mpc-qt
 DISTVERSIONPREFIX=	v
-DISTVERSION=	24.12.1
+DISTVERSION=	26.07
 CATEGORIES=	multimedia audio
 
 MAINTAINER=	eduardo@FreeBSD.org
@@ -13,12 +13,17 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	mpv>=0.37,1:multimedia/mpv
 LIB_DEPENDS=	libmpv.so:multimedia/mpv
 
-USES=		compiler:c++17-lang desktop-file-utils gl pkgconfig qmake qt:6
+USES= cmake compiler:c++17-lang desktop-file-utils gl pkgconfig qt:6 gmake
 USE_GITHUB=	yes
 USE_GL=		opengl
 USE_QT=		base svg tools:build
-QMAKE_ARGS=	MPCQT_VERSION="${DISTVERSION}"
+CMAKE_ARGS=	-DMPCQT_VERSION="${DISTVERSION}"
 
+PLIST_FILES=	bin/${PORTNAME} \
+		share/applications/io.github.mpc_qt.mpc-qt.desktop \
+		share/applications/io.github.mpc_qt.mpc-qt_enqueue.desktop \
+		share/icons/hicolor/scalable/apps/mpc-qt.svg \
+		share/metainfo/io.github.mpc_qt.mpc-qt.metainfo.xml
 PORTDOCS=	ipc.md
 
 OPTIONS_DEFINE=	DOCS

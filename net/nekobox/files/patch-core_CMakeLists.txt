@@ -1,0 +1,24 @@
+-- Disable TUN-based features on FreeBSD.
+--
+-- Features requiring TUN/TAP or gVisor are disabled on FreeBSD as they are
+-- not yet fully supported or integrated.
+--- core/CMakeLists.txt.orig	2026-06-12 06:03:42 UTC
++++ core/CMakeLists.txt
+@@ -186,13 +186,15 @@ message(STATUS "DESTINATION IS ${DESTDIR} FOR MACHINE 
+ # ----------------------------
+ # Tags
+ # ----------------------------
+-set(TAGS "with_clash_api,with_gvisor,with_quic,with_wireguard,with_utls,with_dhcp,with_shadowtls,with_grpc,with_acme,with_awg")
++set(TAGS "with_clash_api,with_quic,with_utls,with_grpc,with_acme")
+ 
+ if(NOT GOOS STREQUAL "freebsd")
+-    set(TAGS "${TAGS},with_tailscale")
++    set(TAGS "${TAGS},with_gvisor,with_wireguard,with_dhcp,with_tailscale,with_shadowtls,with_awg")
+     if(GOARCH STREQUAL "arm64" OR GOARCH STREQUAL "amd64")
+         set(TAGS "${TAGS},with_naive,with_naive_outbound,with_purego")
+     endif()
++else()
++    message(STATUS "FreeBSD: disabling TUN-based and gVisor features")
+ endif()
+ 
+ file(MAKE_DIRECTORY "${DESTDIR}")

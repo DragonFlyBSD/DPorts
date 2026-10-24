@@ -1,0 +1,14 @@
+krep is an optimized string search utility designed for maximum throughput,
+low-latency feedback, and modern command-line ergonomics when processing large
+files and source trees. It combines mmap-based I/O, adaptive algorithms, SIMD
+acceleration where available, multi-pattern search, recursive traversal
+controls, JSON Lines output, contextual display, and machine-friendly stats.
+
+Note: Krep is not intended to be a full replacement or direct competitor to
+feature-rich tools like grep or ripgrep. Instead, it aims to be a minimal,
+efficient, and pragmatic tool focused on speed and simplicity.
+
+Krep provides the essential features needed for fast searching, without the
+extensive options and complexity of more comprehensive search utilities. Its
+design philosophy is to deliver the fastest possible search for the most common
+use cases, with a clean and minimal interface.

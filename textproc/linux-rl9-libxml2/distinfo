@@ -1,0 +1,9 @@
+TIMESTAMP = 1783862739
+SHA256 (rocky/l/libxml2-2.9.13-14.el9_8.1.aarch64.rpm) = a1ba7ea6e7c258ccd0b82bd70e444b979eb5cd63c2119d97c01b2466888a1ed0
+SIZE (rocky/l/libxml2-2.9.13-14.el9_8.1.aarch64.rpm) = 746561
+SHA256 (rocky/l/libxml2-2.9.13-14.el9_8.1.i686.rpm) = a42a1dcb9e7e329afc1636db0bf0b63cff2b77b6953c3bd6ae25d1a562d8ac3f
+SIZE (rocky/l/libxml2-2.9.13-14.el9_8.1.i686.rpm) = 802976
+SHA256 (rocky/l/libxml2-2.9.13-14.el9_8.1.x86_64.rpm) = d458612d89d064d9d89569c95f78cb351459f18579d64248ad567521afe567bf
+SIZE (rocky/l/libxml2-2.9.13-14.el9_8.1.x86_64.rpm) = 763822
+SHA256 (rocky/l/libxml2-2.9.13-14.el9_8.1.src.rpm) = acadfb484380821959d06e2beb222ec6af6441ee2ef6215502a8b44d364b3fa9
+SIZE (rocky/l/libxml2-2.9.13-14.el9_8.1.src.rpm) = 3287107

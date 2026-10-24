@@ -26,6 +26,7 @@ LIBCLANG_MESON_OFF=	-Dlibclang=false
 
 LLVM_VERSION?=	${LLVM_DEFAULT}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e '/input : join_paths/d' \
 		${WRKSRC}/data/extra/templates/meson.build

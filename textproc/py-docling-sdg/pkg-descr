@@ -1,0 +1,4 @@
+Docling SDG (Synthetic Data Generation) provides tools to create
+artificial data from documents, leveraging generative AI and Docling's
+parsing capabilities. It enables the generation of synthetic document
+datasets for training and evaluation of document understanding models.

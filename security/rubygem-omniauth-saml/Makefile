@@ -1,5 +1,5 @@
 PORTNAME=	omniauth-saml
-PORTVERSION=	2.2.3
+PORTVERSION=	2.2.5
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 

@@ -1,51 +1,75 @@
-# Created by: Vasil Dimov <vd@FreeBSD.org>
-
 PORTNAME=	c-lightning
-# To build from an arbitrary git commit comment PORTVERSION and PORTREVISION (if present)
-PORTVERSION=	0.10.2
+# To build from an arbitrary git commit set PORTVERSION=0, comment PORTREVISION (if present)
+# and set PKGNAMESUFFIX.
+PORTVERSION=	26.06.8
 DISTVERSIONPREFIX=	v
-# and uncomment the following two lines (use for example -git-HEAD or -git-f8d8348c)
-#PORTVERSION=	0
 #PKGNAMESUFFIX=	-git-f8d8348c
 CATEGORIES=	net-p2p finance
 
 MAINTAINER=	vd@FreeBSD.org
 COMMENT=	Lightning Network implementation in C
+WWW=		https://github.com/ElementsProject/lightning
 
 LICENSE=	MIT
 
 BUILD_DEPENDS=	bash:shells/bash \
-		${PYTHON_PKGNAMEPREFIX}mako>=1.0.14:textproc/py-mako@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}mrkd>=0.2.0_1:devel/py-mrkd@${PY_FLAVOR}
-LIB_DEPENDS=	libgmp.so:math/gmp \
-		libsodium.so:security/libsodium \
-		libsqlite3.so:databases/sqlite3
+		gsed:textproc/gsed \
+		lowdown:textproc/lowdown \
+		jq:textproc/jq \
+		${PY_SETUPTOOLS} \
+		${PYTHON_PKGNAMEPREFIX}mako>=1.0.14:textproc/py-mako@${PY_FLAVOR}
+LIB_DEPENDS=	libsodium.so:security/libsodium
 RUN_DEPENDS=	bitcoin-cli:net-p2p/bitcoin-utils
 
-USES=		autoreconf:build compiler:c11 cpe gettext gmake libtool \
-		python:3.5+,build
-CPE_VENDOR=	elementsproject
-BINARY_ALIAS=	python=${PYTHON_CMD} python3=${PYTHON_CMD}
-ALL_TARGET=	default
+USES=		autoreconf:build \
+		compiler:c11 \
+		cpe \
+		gettext-tools:build \
+		gmake \
+		libtool \
+		python:build \
+		shebangfix
 
-OPTIONS_DEFINE=		COMPATIBILITY DEVELOPER EXPERIMENTAL
+CPE_VENDOR=	elementsproject
+BINARY_ALIAS=	python3=${PYTHON_CMD} sed=${LOCALBASE}/bin/gsed
+ALL_TARGET=	default
+SHEBANG_FILES=	tools/reckless
+
+OPTIONS_DEFINE=		COMPATIBILITY DEBUG RUST
+OPTIONS_MULTI=		STORAGE
+OPTIONS_MULTI_STORAGE=	POSTGRESQL SQLITE
 OPTIONS_RADIO=		TESTING
 OPTIONS_RADIO_TESTING=	ASAN VALGRIND
+OPTIONS_SUB=		yes
 
 COMPATIBILITY_CONFIGURE_ENABLE=	compat
 COMPATIBILITY_DESC=		Compatibility mode, good to disable to see if your software breaks
-DEVELOPER_CONFIGURE_ENABLE=	developer
-DEVELOPER_DESC=			Developer mode, good for testing
-EXPERIMENTAL_CONFIGURE_ENABLE=	experimental-features
-EXPERIMENTAL_DESC=		Enable experimental features
+DEBUG_CONFIGURE_ENABLE=		debugbuild
+DEBUG_DESC=			Extra debug checks in the build, good for testing
+POSTGRESQL_DESC=		Use PostgreSQL for storage
+POSTGRESQL_USES=		pgsql
+WANT_PGSQL=			client
+RUST_CONFIGURE_ENABLE=		rust
+RUST_DESC=			Install cln-grpc and clnrest plugins (Rust dependent)
+RUST_USES=			cargo
+RUST_BUILD_DEPENDS=		protobuf>=29:devel/protobuf
+CARGO_INSTALL=			no
+SQLITE_DESC=			Use SQLite for storage
+SQLITE_USES=			sqlite:3
 ASAN_CONFIGURE_ENABLE=		address-sanitizer
 ASAN_DESC=			Compile with address-sanitizer
 VALGRIND_CONFIGURE_ENABLE=	valgrind
 VALGRIND_DESC=			Run tests with Valgrind
 
-OPTIONS_DEFAULT=COMPATIBILITY
+OPTIONS_DEFAULT=COMPATIBILITY RUST SQLITE
+
+MAKE_ENV= LDVER=ld.bfd
+.include <bsd.port.options.mk>
 
 HAS_CONFIGURE=	yes
+
+# Print the compilation commands (verbose).
+MAKE_ARGS=	V=1 mandir=${PREFIX}/share/man
 
 USE_GITHUB=	yes
 .if defined(PKGNAMESUFFIX)
@@ -54,9 +78,9 @@ GIT_COMMIT=	${PKGNAMESUFFIX:C/-git-//}
 GIT_COMMIT=	${DISTVERSIONPREFIX}${PORTVERSION}
 .endif
 GH_TUPLE=	ElementsProject:lightning:${GIT_COMMIT} \
-		ElementsProject:libwally-core:46a3db9b7bce9:ext1/external/libwally-core \
-		ElementsProject:secp256k1-zkp:6da00ec6245e1:ext2/external/libwally-core/src/secp256k1 \
-		ianlancetaylor:libbacktrace:5a99ff7fed66b8e:ext3/external/libbacktrace \
+		ElementsProject:libwally-core:0c41f38fb1c20:ext1/external/libwally-core \
+		ElementsProject:secp256k1-zkp:45f6f0f158c5a:ext2/external/libwally-core/src/secp256k1 \
+		ianlancetaylor:libbacktrace:793921876c981ce:ext3/external/libbacktrace \
 		zserge:jsmn:18e9fe42cbfe21d65076f5c77ae2be3:ext4/external/jsmn \
 		valyala:gheap:67fc83bc953324f4759e52951921d:ext5/external/gheap
 
@@ -67,11 +91,52 @@ USE_RC_SUBR=	lightningd
 
 SUB_FILES=	lightningd-bitcoin.conf.sample pkg-message
 SUB_LIST=	U="${USERS}" G="${GROUPS}" LIGHTNINGD_BASE_DIR="${DESTDIR}/var/db/c-lightning"
-PLIST_SUB=	U="${USERS}" G="${GROUPS}"
+PLIST_SUB+=	U="${USERS}" G="${GROUPS}"
+
+.include <bsd.port.pre.mk>
 
 post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/lightning-cli
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/lightning-hsmtool
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/lightningd
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/lightning_channeld
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/lightning_closingd
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/lightning_connectd
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/lightning_dualopend
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/lightning_gossipd
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/lightning_hsmd
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/lightning_onchaind
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/lightning_openingd
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/lightning_websocketd
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/autoclean
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/bcli
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/bookkeeper
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/chanbackup
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/cln-askrene
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/cln-renepay
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/cln-xpay
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/commando
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/exposesecret
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/funder
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/keysend
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/offers
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/pay
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/recklessrpc
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/recover
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/spenderp
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/sql
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/topology
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/txprepare
+.if ${PORT_OPTIONS:MRUST}
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/cln-bip353
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/cln-grpc
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/cln-lsps-client
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/cln-lsps-service
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/clnrest
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/c-lightning/plugins/wss-proxy
+.endif
 	${INSTALL_DATA} \
 		${WRKDIR}/lightningd-bitcoin.conf.sample \
 		${STAGEDIR}${PREFIX}/etc/lightningd-bitcoin.conf.sample
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

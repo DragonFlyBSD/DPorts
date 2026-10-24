@@ -1,0 +1,19 @@
+--- vendor/CMakeLists.fastboot.txt.orig	2026-08-01 05:20:11 UTC
++++ vendor/CMakeLists.fastboot.txt
+@@ -121,6 +121,9 @@ if(APPLE)
+ if(APPLE)
+ 	list(APPEND fastboot_SOURCES
+ 		core/fastboot/usb_osx.cpp)
++elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++	list(APPEND fastboot_SOURCES
++		core/fastboot/usb_freebsd.cpp)
+ else()
+ 	list(APPEND fastboot_SOURCES
+ 		core/fastboot/usb_linux.cpp)
+@@ -144,4 +147,6 @@ if(APPLE)
+ 	target_link_libraries(fastboot
+ 		"-framework CoreFoundation"
+ 		"-framework IOKit")
++elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++	target_link_libraries(fastboot PkgConfig::libusb-1.0)
+ endif()

@@ -1,0 +1,10 @@
+--- crates/remote_server/Cargo.toml.orig	2026-09-04 14:25:12 UTC
++++ crates/remote_server/Cargo.toml
+@@ -29,7 +29,6 @@ collections.workspace = true
+ clap.workspace = true
+ client.workspace = true
+ collections.workspace = true
+-crashes.workspace = true
+ dap_adapters.workspace = true
+ debug_adapter_extension.workspace = true
+ env_logger.workspace = true

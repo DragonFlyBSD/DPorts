@@ -1,0 +1,63 @@
+PORTNAME=	OrcaSlicer
+DISTVERSIONPREFIX=	v
+DISTVERSION=	2.3.2
+PORTREVISION=	4
+CATEGORIES=	cad
+
+MAINTAINER=	kenrap@FreeBSD.org
+COMMENT=	Slicing Software for Precision 3D Prints
+WWW=		https://www.orcaslicer.com
+
+LICENSE=	AGPLv3
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+
+BUILD_DEPENDS=	cereal>=0:devel/cereal \
+		cgal>=0:math/cgal
+
+LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs \
+		libcurl.so:ftp/curl \
+		libdbus-1.so:devel/dbus \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2 \
+		libglfw.so:graphics/glfw \
+		libnlopt.so:math/nlopt \
+		libnoise.so:audio/libnoise \
+		libopencv_core.so:graphics/opencv \
+		libopenvdb.so:misc/openvdb \
+		libpango-1.0.so:x11-toolkits/pango \
+		libpng16.so:graphics/png \
+		libsecret-1.so:security/libsecret \
+		libspnav.so:misc/libspnav \
+		libtbb.so:devel/onetbb \
+		libTKernel.so:cad/opencascade \
+		libmpfr.so:math/mpfr \
+		libgmpxx.so:math/gmp \
+		libqhull_r.so:math/qhull \
+		libImath-3_2.so:math/Imath \
+		libexpat.so:textproc/expat2 \
+		libdraco.so:archivers/draco \
+		libsoup-3.0.so:devel/libsoup3 \
+		libwebkit2gtk-4.1.so:www/webkit2-gtk@41 \
+		libwx_baseu-3.2.so:x11-toolkits/wxgtk32
+
+USES=		cmake desktop-file-utils gl gnome gstreamer iconv jpeg \
+		localbase:ldflags pkgconfig ssl xorg
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	OrcaSlicer
+
+USE_GL=		gl glew
+USE_GNOME=	gtk30
+USE_XORG=	ice sm x11 xext
+
+CMAKE_ARGS=	-DBBL_INTERNAL_TESTING=0 \
+		-DBBL_RELEASE_TO_PUBLIC=1 \
+		-DORCA_TOOLS=1 \
+		-DSLIC3R_FHS=1 \
+		-DSLIC3R_GTK=3 \
+		-DSLIC3R_STATIC=0
+
+post-patch:
+	${CP} ${FILESDIR}/hid.c ${WRKSRC}/deps_src/hidapi/linux/hid.c
+
+.include <bsd.port.mk>

@@ -1,24 +1,24 @@
---- chrome/browser/printing/print_backend_service_manager.cc.orig	2024-08-26 14:40:28 UTC
+--- chrome/browser/printing/print_backend_service_manager.cc.orig	2026-08-13 07:41:05 UTC
 +++ chrome/browser/printing/print_backend_service_manager.cc
-@@ -36,7 +36,7 @@
+@@ -35,7 +35,7 @@
  #include "printing/printing_context.h"
  #include "printing/printing_features.h"
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "content/public/common/content_switches.h"
+ #include "ui/linux/linux_ui.h"
  #endif
+@@ -871,7 +871,7 @@ PrintBackendServiceManager::GetServiceFromBundle(
+             << remote_id << "`";
  
-@@ -877,7 +877,7 @@ PrintBackendServiceManager::GetServiceFromBundle(
-         host.BindNewPipeAndPassReceiver(),
-         content::ServiceProcessHost::Options()
-             .WithDisplayName(IDS_UTILITY_PROCESS_PRINT_BACKEND_SERVICE_NAME)
+     std::vector<std::string> extra_switches;
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-             .WithExtraCommandLineSwitches({switches::kMessageLoopTypeUi})
- #endif
-             .Pass());
-@@ -1054,7 +1054,7 @@ PrintBackendServiceManager::DetermineIdleTimeoutUpdate
+     if (auto* linux_ui = ui::LinuxUi::instance()) {
+       extra_switches = linux_ui->GetCmdLineFlagsForCopy();
+     }
+@@ -1043,7 +1043,7 @@ PrintBackendServiceManager::DetermineIdleTimeoutUpdate
        return kNoClientsRegisteredResetOnIdleTimeout;
  
      case ClientType::kQueryWithUi:

@@ -1,11 +1,11 @@
 PORTNAME=	withr
-PORTVERSION=	3.0.2
+PORTVERSION=	3.0.3
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Run Code 'With' Temporarily Modified Global State
-WWW=		https://cran.r-project.org/web/packages/withr/
+WWW=		https://cran.r-project.org/package=withr
 
 LICENSE=	MIT
 

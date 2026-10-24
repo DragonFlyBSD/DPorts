@@ -1,7 +1,7 @@
 PORTNAME=	grive2
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5.2-dev
-PORTREVISION=	10
+PORTREVISION=	14
 CATEGORIES=	net
 
 MAINTAINER=	samuel@andersentech.net
@@ -32,8 +32,11 @@ PLIST_FILES=	bin/grive \
 OPTIONS_DEFINE=	BACKTRACE
 
 BACKTRACE_DESC=	Enable backtrace support
-BACKTRACE_LIB_DEPENDS=	libbfd.so:devel/libbfd
+BACKTRACE_LIB_DEPENDS=	libbfd.so:devel/binutils
 BACKTRACE_LDFLAGS=	-lexecinfo
 BACKTRACE_CMAKE_OFF=	-DCMAKE_DISABLE_FIND_PACKAGE_BFD=true
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/FreeBSD/DragonFly/' ${WRKSRC}/grive/CMakeLists.txt
 
 .include <bsd.port.mk>

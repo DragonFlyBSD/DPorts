@@ -21,4 +21,8 @@ AVAHI_SLAVE=	autoipd
 
 MANPAGES=	avahi-autoipd.8
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^#ifdef __FreeBSD__$$/#if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		${WRKSRC}/avahi-autoipd/main.c
+
 .include "${MASTERDIR}/Makefile"

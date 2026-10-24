@@ -1,0 +1,52 @@
+--- nginx.conf.example.orig	2026-09-03 04:34:07 UTC
++++ nginx.conf.example
+@@ -7,8 +7,8 @@ server {
+ # ============================================================================
+ server {
+     listen 80;
+-    server_name your-domain.com;
+-    root /path/to/poweradmin;
++    server_name example.com;
++    root %%WWWDIR%%;
+     index index.php index.html;
+ 
+     # Static assets (caching)
+@@ -41,9 +41,9 @@ server {
+     # Handle PHP files
+     location ~ \.php$ {
+         # Adjust the fastcgi_pass directive based on your PHP-FPM configuration
+-        # For socket: fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
++        # For socket: fastcgi_pass unix:/var/run/php/php-fpm.sock;
+         # For TCP: fastcgi_pass 127.0.0.1:9000;
+-        fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
++        fastcgi_pass 127.0.0.1:9000;
+         fastcgi_index index.php;
+         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+         fastcgi_read_timeout 180;
+@@ -85,8 +85,8 @@ server {
+ 
+ server {
+     listen 80;
+-    server_name your-domain.com;
+-    root /var/www/html;
++    server_name example.com;
++    root %%WWWDIR%%;
+     index index.php index.html;
+ 
+     # Poweradmin subfolder location
+@@ -121,7 +121,7 @@ server {
+             # Adjust the fastcgi_pass directive based on your PHP-FPM configuration
+             # For socket: fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+             # For TCP: fastcgi_pass 127.0.0.1:9000;
+-            fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
++            fastcgi_pass 127.0.0.1:9000;
+             fastcgi_index index.php;
+             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+             fastcgi_read_timeout 180;
+@@ -154,4 +154,4 @@ server {
+     # rewrite_log on;
+     # error_log /var/log/nginx/poweradmin_error.log notice;
+     # access_log /var/log/nginx/poweradmin_access.log;
+-}
+\ No newline at end of file
++}

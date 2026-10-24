@@ -1,5 +1,5 @@
 PORTNAME=	btor2tools
-DISTVERSION=	g20320816
+DISTVERSION=	1.0.3
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,6 +11,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USES=		cmake cpe
 USE_LDCONFIG=	yes
+
+CMAKE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM:STRING=3.5 # CMake 4 compatibility, see https://github.com/hwmcc/btor2tools/issues/33
 
 CPE_VENDOR=	${PORTNAME}_project
 
@@ -26,7 +28,10 @@ PLIST_FILES=	bin/btorsim \
 		include/btor2parser.h \
 		lib/libbtor2parser.so
 
+DFLY_UNMAINTAINED= yes
 do-test:
-	@cd ${WRKSRC} && LD_PRELOAD=${WRKSRC}/build/libbtor2parser.so test/runtests.sh
+	@cd ${WRKSRC} && LD_LIBRARY_PATH=${STAGEDIR}${PREFIX}/lib BINDIR=${BUILD_WRKSRC}/bin test/runtests.sh
+
+# tests as of 1.0.3: 67 ok 67 total
 
 .include <bsd.port.mk>

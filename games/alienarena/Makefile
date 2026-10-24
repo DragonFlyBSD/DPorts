@@ -1,6 +1,5 @@
 PORTNAME=	alienarena
-DISTVERSION=	7.71.6
-PORTREVISION=	1
+DISTVERSION=	7.72.3
 PORTEPOCH=	1
 CATEGORIES=	games
 
@@ -49,12 +48,14 @@ CLIENT_LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libogg.so:audio/libogg \
 		libpng.so:graphics/png \
 		libvorbis.so:audio/libvorbis \
-		libode.so:devel/ode
+		libode.so:devel/ode@double
 CLIENT_USES=		gl jpeg openal:soft,alut minizip xorg
 CLIENT_USE=		GL=glu XORG=x11,xxf86dga,xxf86vm
 
 LIBDIR=		${PREFIX}/lib/${PORTNAME}
 
+DPMSG= ${WRKDIR}/dports-message
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${COMPILER_TYPE} == clang
@@ -91,5 +92,15 @@ do-install-CLIENT-on:
 do-install-DEDICATED-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}-ded \
 		${STAGEDIR}${PREFIX}/bin/${PORTNAME}-ded
+
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
+RUN_DEPENDS:=	${RUN_DEPENDS:N*alienarena-data}
+PKGMESSAGE=	${DPMSG}
+
+dfly-patch:
+	@${ECHO} "########################################################" >> ${DPMSG}
+	@${ECHO} "# Build games/alienarena-data from source to play this #" >> ${DPMSG}
+	@${ECHO} "########################################################" >> ${DPMSG}
+.endif
 
 .include <bsd.port.post.mk>

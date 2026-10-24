@@ -1,5 +1,5 @@
---- src/third_party/minizip/ioapi.h.orig	2020-03-18 12:46:39 UTC
-+++ src/third_party/minizip/ioapi.h
+--- a/src/third_party/minizip/ioapi.h	2020-03-18 12:46:39 UTC
++++ b/src/third_party/minizip/ioapi.h
 @@ -50,7 +50,7 @@
  #define ftello64 ftell
  #define fseeko64 fseek

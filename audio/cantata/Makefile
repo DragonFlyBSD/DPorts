@@ -1,7 +1,9 @@
 PORTNAME=	cantata
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.2.0
+DISTVERSION=	3.5.0
 CATEGORIES=	audio kde
+
+PATCH_SITES=	https://github.com/nullobsi/cantata/commit/
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Graphical client for MPD using Qt
@@ -10,11 +12,12 @@ WWW=		https://github.com/nullobsi/cantata
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake compiler:c++17-lang cpe gl pkgconfig qt:6 shebangfix
+USES=		cmake compiler:c++17-lang cpe gl kde:6 pkgconfig qt:6 shebangfix
 CPE_VENDOR=	craig_drummond
 USE_GITHUB=	yes
 GH_ACCOUNT=	nullobsi
 USE_GL=		opengl
+USE_KDE=	archive itemviews
 USE_QT=		base sqldriver-sqlite:run svg
 
 SHEBANG_FILES=	playlists/cantata-dynamic.cmake cantata-remote.cmake
@@ -64,7 +67,7 @@ MTP_LIB_DEPENDS=	libmtp.so:multimedia/libmtp
 MTP_CMAKE_BOOL=		ENABLE_MTP
 
 MUSICBRAINZ_IMPLIES=	CDPARANOIA
-MUSICBRAINZ_LIB_DEPENDS=libmusicbrainz5.so:audio/libmusicbrainz5
+MUSICBRAINZ_LIB_DEPENDS=libmusicbrainz5cc.so:audio/libmusicbrainz5
 MUSICBRAINZ_CMAKE_BOOL=	ENABLE_MUSICBRAINZ
 
 NLS_USE=		QT=tools:build
@@ -84,6 +87,7 @@ TAGLIB_CMAKE_BOOL=	ENABLE_TAGLIB
 VLC_LIB_DEPENDS=	libvlc.so:multimedia/vlc
 VLC_CMAKE_BOOL=		ENABLE_LIBVLC
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFFMPEG} || ${PORT_OPTIONS:MMPG123}

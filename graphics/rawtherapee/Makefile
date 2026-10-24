@@ -1,8 +1,8 @@
 PORTNAME=	rawtherapee
-PORTVERSION=	5.11
-PORTREVISION=	1
+PORTVERSION=	5.13
+PORTREVISION=	0
 CATEGORIES=	graphics
-MASTER_SITES=	https://github.com/Beep6581/RawTherapee/releases/download/${PORTVERSION}/ \
+MASTER_SITES=	https://github.com/RawTherapee/RawTherapee/releases/download/${PORTVERSION}/ \
 		https://rawtherapee.com/shared/source/ \
 		LOCAL/mandree/
 
@@ -18,6 +18,7 @@ LIB_DEPENDS=	\
 		libexpat.so:textproc/expat2 \
 		libfftw3.so:math/fftw3 \
 		libfftw3f.so:math/fftw3-float \
+		libfmt.so:devel/libfmt \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libiptcdata.so:graphics/libiptcdata \
@@ -36,22 +37,6 @@ USES=		autoreconf:build cmake desktop-file-utils compiler:c++11-lib gnome \
 
 USE_GNOME=	gtkmm30 librsvg2
 
-_LTO_FLAGS=	-flto=${MAKE_JOBS_NUMBER}
-# gcc needs -flto=${MAKE_JOBS_NUMBER} for parallel link (fixed in GCC 10?)
-#     and does not understand -flto=thin
-#
-# llvm/clang needs -flto=thin and will automatically parallelize the link
-
-# Fix <https://bugs.freebsd.org/251041>:
-# 11.x has binutils that don't accept a --plugin option,
-# and gcc-ar9 appears to grab those, so make sure that USE_BINUTILS
-# override those in /usr/bin which usually is first in the PATH,
-# before ${LOCALBASE}/bin.
-# (For some reason, poudriere does not trigger this.)
-BINARY_ALIAS+=	ar=${AR} ranlib=${RANLIB}
-#
-_AR=		${CC:S/gcc/gcc-ar/}
-_RANLIB=	${CC:S/gcc/gcc-ranlib/}
 CMAKE_ARGS+=	-DDOCDIR="${DOCSDIR}" \
 		-DCREDITSDIR="${DOCSDIR}" \
 		-DLICENCEDIR="${DOCSDIR}" \
@@ -59,10 +44,11 @@ CMAKE_ARGS+=	-DDOCDIR="${DOCSDIR}" \
 		-DDATADIR="${DATADIR}" \
 		-DCACHE_NAME_SUFFIX="" \
 		-Wno-dev \
+		-DWITH_SYSTEM_FMT="ON" \
 		-DCMAKE_AR:FILEPATH=${_AR} \
 		-DCMAKE_RANLIB:FILEPATH=${_RANLIB} \
 		-DCMAKE_POLICY_DEFAULT_CMP0056:STRING=NEW
-CONFIGURE_ENV+=	AR=${_AR} RANLIB=${_RANLIB} # for embedded RawTherapee
+CONFIGURE_ENV+=	AR=${_AR} RANLIB=${_RANLIB}  # for embedded LibRaw
 # 3.4.x: CMAKE_EXE_LINKER_FLAGS is not passed to TRY_COMPILE by default
 # any more. The CMP0056 policy must be explicitly set to NEW to ensure
 # linker flags are passed. Else -lomp is not found with clang.
@@ -70,14 +56,25 @@ CONFIGURE_ENV+=	AR=${_AR} RANLIB=${_RANLIB} # for embedded RawTherapee
 CFLAGS+=	-I${LOCALBASE}/include -fPIC ${_OPT_FLAGS}
 LDFLAGS+=	-Wl,--as-needed -lpthread ${_OPT_FLAGS}
 
-PIE_UNSAFE=	yes
+# Fix <https://bugs.freebsd.org/251041>:
+# Make sure that USE_BINUTILS override those in /usr/bin
+# which usually is first in the PATH, before ${LOCALBASE}/bin:
+# (For some reason, poudriere does not trigger this.)
+BINARY_ALIAS+=	ar=${_AR} ranlib=${_RANLIB}
 
-.if defined(PACKAGE_BUILDING) && empty(CFLAGS:M-march*) && (${ARCH} == i386 || ${ARCH} == x86_64 || ${ARCH} == aarch64)
-# this gets translated to -mtune=generic, see ${WRKSRC}/ProcessorTargets.cmake
-# and as of GCC 8.3, it appears that among FreeBSD's supported architectures,
-# only the three listed above support this GCC option.
-CMAKE_ARGS+=	-DPROC_TARGET_NUMBER="1"
-.endif
+OPTIONS_DEFINE=		DOCS GCC LTO NATIVE
+OPTIONS_DEFINE_x86_64=	OPENMP
+OPTIONS_DEFINE_i386=	OPENMP
+OPTIONS_DEFAULT=	OPENMP GCC LTO
+GCC_DESC=		Build with ports's GCC 14 (newer fail with libc++)
+NATIVE_DESC=		Use -march=native (avoid for generic packages!)
+OPENMP_DESC=		Enable OpenMP parallel processing (i386/amd64 only)
+
+LTO_CFLAGS=		${_LTO_FLAGS}
+LTO_LDFLAGS=		${_LTO_FLAGS}
+NATIVE_CMAKE_ON=	-DPROC_TARGET_NUMBER="2"
+OPENMP_CMAKE_BOOL=	OPTION_OMP
+OPENMP_LDFLAGS=		-lm -lomp
 
 # For gcc-based builds, rawtherapee's cmake ends up with GCC's absolute path
 # in the CC/CXX variables, effectively disabling ccache. Wrap compiler in ccache explicitly.
@@ -90,32 +87,42 @@ CMAKE_ARGS+=	-DCMAKE_C_COMPILER_LAUNCHER=${CCACHE_BIN} \
 		-DCMAKE_CXX_COMPILER_LAUNCHER=${CCACHE_BIN}
 .endif
 
-OPTIONS_DEFINE=		DOCS NATIVE LTO
-OPTIONS_DEFINE_x86_64=	OPENMP
-OPTIONS_DEFINE_i386=	OPENMP
-OPTIONS_DEFAULT=	OPENMP LTO
-NATIVE_DESC=		Use -march=native (avoid for generic packages!)
-OPENMP_DESC=		Enable OpenMP parallel processing (i386/amd64 only)
-
-LTO_CFLAGS=		${_LTO_FLAGS}
-LTO_LDFLAGS=		${_LTO_FLAGS}
-NATIVE_CMAKE_ON=	-DPROC_TARGET_NUMBER="2"
-OPENMP_CMAKE_BOOL=	OPTION_OMP
-OPENMP_LDFLAGS=		-lm -lomp
-
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NOPENMP}
 .include <bsd.port.options.mk>
 
 # -------------------------------------------------------------------
 
-# Older clang versions (for instance clang 9.0, as of 2019-09-29),
-# were known to miscompile RawTherapee, causing SIGSEGV or SIBGUS.
 # As of 2024-02, GCC-12.3 compiled RawTherapee appears to be
 # up to twice as fast as clang-16.0 compiled code.
 # So we shall stick to a modern GCC for now.
 #
-USE_GCC=	yes # default
+# However, as of 2026-02-20, GCC-15 fails to build with
+# -stdlib=libc++, and without it, we get link-time failures
+# because the C++ libraries such as Exiv2 and Glib-related
+# use the libc++ ABI, so we can't move to GCC 15.
+# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=293329 (port)
+# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=292692 (meta)
+#
+.if !empty(PORT_OPTIONS:MGCC)
+USE_GCC=	14 # pin 14 for now, 15 incompatible
+_LTO_FLAGS=	-flto=${MAKE_JOBS_NUMBER}
+_AR=		${CC:S/gcc/gcc-ar/}
+_RANLIB=	${CC:S/gcc/gcc-ranlib/}
+.else
+# default path, usually clang
+_LTO_FLAGS=	-flto=thin
+_AR=		${AR}
+_RANLIB=	${RANLIB}
+.endif
 
-.if (${OPSYS} == FreeBSD) && (${OSVERSION} >= 1500000)
+.if empty(PORT_OPTIONS:MNATIVE) && empty(CFLAGS:M-march*) && (${ARCH} == i386 || ${ARCH} == x86_64 || ${ARCH} == aarch64)
+# this gets translated to -mtune=generic, see ${WRKSRC}/ProcessorTargets.cmake
+# and as of GCC 8.3, it appears that among FreeBSD's supported architectures,
+# only the three listed above support this GCC option.
+CMAKE_ARGS+=	-DPROC_TARGET_NUMBER="1"
+.endif
+
+.if (${OPSYS} == FreeBSD) && (${OSVERSION} >= 1600000)
 # don't waste everybody's time with Tier-2 and moving targets.
 ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=only amd64 is supported on non-released FreeBSD versions
@@ -131,9 +138,9 @@ _OPT_FLAGS=	-O3 -funroll-loops
 
 # x86_64/amd64 includes -msse2 by default
 .if ${ARCH} == i386
-# -mstackrealign: workaround for values passed on the stack that cause SIGBUS on SSE2
 # -msse2: SSE2 has been around since the year 2003 latest
 _OPT_FLAGS+=	-msse2
+# -mstackrealign: workaround for values passed on the stack that cause SIGBUS on SSE2
 _OPT_FLAGS+=	-mstackrealign
 .endif
 
@@ -141,6 +148,7 @@ _OPT_FLAGS+=	-mstackrealign
 
 .include <bsd.port.pre.mk>
 
+# align Standard C++ Library with what every other port uses, to match ABI
 .if ${COMPILER_FEATURES:Mlibc++}
 CXXFLAGS+=	-stdlib=libc++
 .endif
@@ -158,7 +166,7 @@ TESTIMAGES=	${MASTERDIR}/testimages
 # _check_version strips stuffixes from distnames etc. that do not appear
 # in the program's version numbering
 _check_version=	${PKGVERSION:C/.g0//}
-_env=		LANG= LC_ALL=C LANGUAGE= DISPLAY= HOME="$$TMP" RT_SETTINGS=${WRKDIR}/rt-config RT_CACHE="$$TMP/rtcache"
+_env=		LANGUAGE= DISPLAY= HOME="$$TMP" RT_SETTINGS=${WRKDIR}/rt-config RT_CACHE="$$TMP/rtcache"
 post-install:
 	@${RM} -f ${WRKDIR}/selftest.exitcodes ${WRKDIR}/selftest.expect
 	@(set -e; _mp=$$(/bin/df -P ${STAGEDIR}${PREFIX}/bin/rawtherapee | ${AWK} 'NR==2{print $$NF}') ; \
@@ -197,4 +205,7 @@ post-install:
 	cmp ${WRKDIR}/selftest.expect ${WRKDIR}/selftest.exitcodes \
 	|| { ${ECHO_CMD} '===> !!! SELF-TEST FAILED !!! <===' ; exit 1 ; }
 
+_LTO_FLAGS:= 
+_AR:= ar
+_RANLIB:= ranlib
 .include <bsd.port.post.mk>

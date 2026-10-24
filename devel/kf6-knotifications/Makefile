@@ -2,8 +2,8 @@ PORTNAME=	knotifications
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	devel kde kde-frameworks
 
-COMMENT=	Cross-platform library for creating popup notifications
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Cross-platform library for creating popup notifications
 
 LIB_DEPENDS=	libcanberra.so:audio/libcanberra
 
@@ -16,5 +16,9 @@ USE_XORG=	x11 xtst
 
 # Requires PySide and Shiboken.
 CMAKE_OFF=	BUILD_PYTHON_BINDINGS
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

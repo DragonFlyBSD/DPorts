@@ -21,6 +21,7 @@ ALL_TARGET=	trafshow
 OPTIONS_DEFINE=	IPV6
 IPV6_CFLAGS=	-DINET6
 
+CFLAGS= -Wno-unused-but-set-variable
 post-patch:
 	@${REINPLACE_CMD} -e 's|-D_THREAD_SAFE||' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|' \

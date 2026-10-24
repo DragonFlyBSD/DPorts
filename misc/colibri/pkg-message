@@ -1,0 +1,14 @@
+[
+{ type: install
+  message: <<EOM
+You installed colibri: GLM-5.2 AI model runner.
+
+It requires a very large download of ~400GB from HuggingFace:
+https://huggingface.co/mateogrgic/GLM-5.2-colibri-int4-with-int8-mtp
+
+Install py312-huggingface-hub and then:
+$ hf download mateogrgic/GLM-5.2-colibri-int4-with-int8-mtp
+
+EOM
+}
+]

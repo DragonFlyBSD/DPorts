@@ -1,29 +1,30 @@
 PORTNAME=	isa-l
-PORTVERSION=	2.30.0
-PORTREVISION=	1
+PORTVERSION=	2.32.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Intel(R) Intelligent Storage Acceleration Libray
-WWW=		https://github.com/01org/isa-l
+WWW=		https://github.com/intel/isa-l
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	amd64 powerpc64le powerpc64 powerpc
+# FIXME: aarch64 uses portable base functions for now.
+# Upstream has optimized support for aarch64, but the code is not portable.
+ONLY_FOR_ARCHS=	aarch64 amd64 powerpc powerpc64 powerpc64le
 
-BUILD_DEPENDS=	yasm:devel/yasm
+BUILD_DEPENDS=	nasm:devel/nasm
+
+USES=		autoreconf gmake libtool
+
+CONFIGURE_ARGS=	--enable-programs
+GNU_CONFIGURE=	yes
+INSTALL_TARGET=	install-strip
+USE_LDCONFIG=	yes
+TEST_TARGET=	check
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	01org
-
-USES=		autoreconf gmake libtool:keepla
-
-GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
-USE_LDCONFIG=	yes
-
-INSTALL_TARGET=	install-strip
+GH_ACCOUNT=	intel
 
 .include <bsd.port.mk>

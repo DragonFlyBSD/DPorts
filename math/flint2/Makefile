@@ -1,6 +1,6 @@
 PORTNAME=	flint
 DISTVERSION=	2.9.0	# FLINT is known to change its API. When upgrading please check that it does not break its consumers (e.g. math/e-antic)
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	math
 MASTER_SITES=	http://www.flintlib.org/
 PKGNAMESUFFIX=	2
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libgmp.so:math/gmp \
 		libmpfr.so:math/mpfr \
 		libopenblas.so:math/openblas
 
-USES=		cmake compiler:c++11-lang python:build
+USES= cmake compiler:c++11-lang python:build python:2.7,build
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=		NTL

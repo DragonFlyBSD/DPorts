@@ -1,6 +1,6 @@
 PORTNAME=	frogatto
 PORTVERSION=	1.3.1
-PORTREVISION=	30
+PORTREVISION=	36
 CATEGORIES=	games
 
 MAINTAINER=	fiziologus@gmail.com
@@ -13,6 +13,8 @@ LICENSE_NAME_FROGATTO=	Frogatto license
 LICENSE_FILE_FROGATTO=	${WRKSRC}/LICENSE
 LICENSE_FILE_GPLv3=	${WRKSRC}/src/LICENSE
 LICENSE_PERMS_FROGATTO=	dist-mirror pkg-mirror auto-accept
+
+BROKEN=		fails to build with Boost>=1.87
 
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libpng.so:graphics/png
@@ -57,5 +59,9 @@ do-install:
 		${SED} 's,^${STAGEDIR}${PREFIX}/,,' | ${SORT} >> ${TMPPLIST}
 	@${FIND} ${STAGEDIR}${DATADIR} -not -type d | \
 		${SED} 's,^${STAGEDIR}${PREFIX}/,,' | ${SORT} >> ${TMPPLIST}
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	huge (430M packaged)
+.endif
 
 .include <bsd.port.mk>

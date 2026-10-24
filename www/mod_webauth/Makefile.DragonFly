@@ -1,3 +1,0 @@
-
-# missing dep
-LIB_DEPENDS+=	libkrb5.so:security/krb5

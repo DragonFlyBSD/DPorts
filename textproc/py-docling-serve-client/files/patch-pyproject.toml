@@ -1,0 +1,12 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 22:41:33 UTC
++++ pyproject.toml
+@@ -8,7 +8,7 @@ requires-python = ">=3.8.1"
+ description = "A Python SDK for interacting with Docling Serve API using Pydantic models"
+ readme = "README.md"
+ requires-python = ">=3.8.1"
+-license = "MIT"
++license = {text = "MIT"}
+ keywords = ["docling", "document", "processing", "ocr", "pdf", "conversion", "chunking"]
+ classifiers = [
+     "Development Status :: 4 - Beta",

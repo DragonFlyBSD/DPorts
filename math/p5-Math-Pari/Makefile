@@ -1,5 +1,6 @@
 PORTNAME=	Math-Pari
 PORTVERSION=	2.030518
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN  \
@@ -20,6 +21,8 @@ LIB_DEPENDS=	libgmp.so:math/gmp
 
 USES=		perl5
 USE_PERL5=	configure
+
+MAKE_JOBS_UNSAFE=yes
 
 PARI_WRKSRC=	${WRKDIR}/pari-2.3.5
 

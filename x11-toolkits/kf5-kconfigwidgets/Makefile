@@ -14,4 +14,8 @@ USE_QT=		core dbus gui widgets xml \
 
 SHEBANG_FILES=	src/preparetips5
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

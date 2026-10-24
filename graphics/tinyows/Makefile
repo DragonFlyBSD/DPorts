@@ -1,5 +1,6 @@
 PORTNAME=	tinyows
 PORTVERSION=	1.2.2
+PORTREVISION=	1
 CATEGORIES=	graphics www geography
 MASTER_SITES=	https://download.osgeo.org/mapserver/
 
@@ -10,11 +11,9 @@ WWW=		https://mapserver.org/tinyows/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
-BUILD_DEPENDS=	shp2pgsql:databases/postgis33
-RUN_DEPENDS:=	${BUILD_DEPENDS}
-
-USES=		autoreconf gnome pgsql
+USES=		autoreconf gnome postgis pgsql
 USE_GNOME=	libxml2
+WANT_POSTGIS=	build run
 
 GNU_CONFIGURE=	yes
 

@@ -329,4 +329,5 @@ VIRTUALJAGUAR_RUN_DEPENDS=	libretro-virtualjaguar>=0:games/libretro-virtualjagua
 XRICK_RUN_DEPENDS=		libretro-xrick>=0:games/libretro-xrick
 YABAUSE_RUN_DEPENDS=		libretro-yabause>=0:games/libretro-yabause
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPARALLELN64}
 .include <bsd.port.mk>

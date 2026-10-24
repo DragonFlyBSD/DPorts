@@ -1,11 +1,12 @@
 PORTNAME=	oj
-PORTVERSION=	3.16.11
+PORTVERSION=	3.17.6
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Fast JSON parser and serializer
-WWW=		https://www.ohler.com/oj/
+WWW=		https://www.ohler.com/oj/ \
+		https://github.com/ohler55/oj
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -21,4 +22,5 @@ post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/ext/oj
 	${INSTALL_DATA} ${WRKSRC}/ext/oj/*.h ${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/ext/oj/
 
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibunwind.so\:devel\/libunwind}
 .include <bsd.port.mk>

@@ -1,7 +1,8 @@
 PORTNAME=	cloc
-PORTVERSION=	2.04
+PORTVERSION=	2.10
+DISTVERSIONPREFIX=	v
 CATEGORIES=	misc
-MASTER_SITES=	https://github.com/AlDanial/cloc/releases/download/v${PORTVERSION}/
+#MASTER_SITES=	https://github.com/AlDanial/cloc/releases/download/v${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Count lines of code
@@ -19,6 +20,9 @@ NO_ARCH=	yes
 NO_BUILD=	yes
 
 PLIST_FILES=	bin/cloc
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	AlDanial
 
 SHEBANG_FILES=	cloc
 

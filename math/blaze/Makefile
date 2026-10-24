@@ -1,6 +1,5 @@
 PORTNAME=	blaze
-DISTVERSION=	3.8
-PORTREVISION=	5
+DISTVERSION=	3.8.2
 CATEGORIES=	math
 MASTER_SITES=	https://bitbucket.org/${BB_ACCOUNT}/${BB_PROJECT}/downloads/
 
@@ -25,4 +24,6 @@ SHEBANG_GLOB=	run
 
 NO_ARCH=	yes
 
+BUILD_DEPENDS:= ${BUILD_DEPENDS:Nopenmp*}
+RUN_DEPENDS:= ${RUN_DEPENDS:Nopenmp*}
 .include <bsd.port.mk>

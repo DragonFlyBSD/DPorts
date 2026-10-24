@@ -18,6 +18,7 @@ GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=--bindir=${PREFIX}/sbin
 
+CFLAGS= -Wno-stringop-truncation -Wno-format-truncation
 post-patch:
 	@${REINPLACE_CMD} -e '/^install-exec-am:/s|install-sysconfDATA||' \
 		${WRKSRC}/Makefile.in

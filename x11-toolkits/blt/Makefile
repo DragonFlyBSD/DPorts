@@ -51,4 +51,9 @@ CFLAGS+=	-DUSE_INTERP_RESULT -DUSE_INTERP_ERRORLINE
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(SHLIB_LIB_SPECS =\)@\1 -lm @g'		\
+			 -e 's@\(TCL_ONLY_LIB_SPECS =\)@\1 -lm @g'	\
+		${WRKSRC}/generic/shared/Makefile.in
+
 .include <bsd.port.post.mk>

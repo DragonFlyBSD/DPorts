@@ -1,10 +1,14 @@
 PORTNAME=	wlroots
-DISTVERSION=	0.18.2
+DISTVERSION=	0.18.3
+PORTREVISION=	4
 CATEGORIES=	x11-toolkits
 PKGNAMESUFFIX=	018
 
+PATCH_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
+PATCHFILES+=	47486545b196.patch:-p1 # https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/5203
+
 MAINTAINER=	jbeich@FreeBSD.org
-COMMENT=	Modular Wayland compositor library (current 0.18.* series)
+COMMENT=	Modular Wayland compositor library (deprecated 0.18.* series)
 WWW=		https://gitlab.freedesktop.org/wlroots/wlroots
 
 LICENSE=	MIT
@@ -21,7 +25,8 @@ USE_GL=		gbm
 USE_XORG=	pixman
 USE_LDCONFIG=	yes
 GL_SITE=	https://gitlab.freedesktop.org
-MESON_ARGS=	-Dexamples=false -Dbackends=${BACKENDS:ts,} -Drenderers=${RENDERERS:ts,}
+MESON_FALSE=	examples
+MESON_ARGS=	-Dbackends=${BACKENDS:ts,} -Drenderers=${RENDERERS:ts,}
 PLIST_SUB=	SUFFIX=-${DISTVERSION:R}
 
 PORTSCOUT=	limit:^0\.18\.
@@ -56,7 +61,8 @@ VULKAN_DESC=		Vulkan renderer
 VULKAN_BUILD_DEPENDS=	glslangValidator:graphics/glslang \
 			vulkan-headers>0:graphics/vulkan-headers
 VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
-VULKAN_RUN_DEPENDS=	mesa-dri>0:graphics/mesa-dri
+VULKAN_RUN_DEPENDS=	mesa-dri>0:graphics/mesa-dri \
+			vulkan-headers>0:graphics/vulkan-headers
 VULKAN_VARS=		RENDERERS+=vulkan
 
 X11_LIB_DEPENDS=	libxcb-errors.so:x11/xcb-util-errors \

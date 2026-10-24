@@ -1,25 +1,22 @@
 PORTNAME=	treesheets
-DISTVERSION=	1.0.20230915
+DISTVERSION=	3048
 CATEGORIES=	deskutils
 
-MAINTAINER=	eduardo@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Free form data organizer
 WWW=		https://strlen.com/treesheets/
 
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/ZLIB_LICENSE.txt
 
-USES=		cmake compiler:c++17-lang desktop-file-utils gnome \
-		shared-mime-info
+USES= cmake desktop-file-utils shared-mime-info gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	aardappel
-GH_TAGNAME=	6201240047
 USE_WX=		3.2
-
-PORTSCOUT=	ignore:1 # upstream uses CI run ids as releases
+GH_TUPLE=	aardappel:lobster:v2026.1:external/lobster-src
 
 PORTDATA=	images scripts
-PORTDOCS=	docs readme.html
+PORTDOCS=	docs readme-ko.html readme-zh_CN.html readme.html
 PORTEXAMPLES=	examples
 
 OPTIONS_DEFINE=	DOCS EXAMPLES NLS
@@ -27,7 +24,9 @@ OPTIONS_SUB=	yes
 
 NLS_USES=	gettext-tools
 
-pre-build:
-	@${REINPLACE_CMD} -e 's|%%EXAMPLESDIR%%|${EXAMPLESDIR}|' ${WRKSRC}/CMakeLists.txt
+IGNORE= unmaintained, please request fixing to users mailing list
+post-extract:
+	${MKDIR} ${WRKDIR}/.build/_deps
+	${LN} -s ${WRKSRC}/lobster-src ${WRKDIR}/.build/_deps/lobster-src
 
 .include <bsd.port.mk>

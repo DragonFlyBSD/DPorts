@@ -1,0 +1,7 @@
+bin/greptime
+@sample %%ETCDIR%%/datanode.toml.sample
+@sample %%ETCDIR%%/frontend.toml.sample
+@sample %%ETCDIR%%/metasrv.toml.sample
+@sample %%ETCDIR%%/standalone.toml.sample
+@dir(%%USER%%,%%GROUP%%,) /var/db/greptimedb
+@dir(%%USER%%,%%GROUP%%,) /var/log/greptimedb

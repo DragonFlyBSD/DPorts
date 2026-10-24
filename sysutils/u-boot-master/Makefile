@@ -16,7 +16,9 @@ WWW?=		https://www.denx.de/wiki/U-Boot
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS+=	gsed:textproc/gsed \
+BUILD_DEPENDS+=	bash:shells/bash \
+		gsed:textproc/gsed \
+		gdate:sysutils/coreutils \
 		swig:devel/swig \
 		dtc>=1.4.1:sysutils/dtc \
 		mkimage:sysutils/u-boot-tools \
@@ -24,12 +26,18 @@ BUILD_DEPENDS+=	gsed:textproc/gsed \
 BUILD_DEPENDS+=	${COMPILER}:devel/${COMPILER}
 
 # For mkeficapsule
-BUILD_DEPENDS+=	e2fsprogs-libuuid>=0:misc/e2fsprogs-libuuid \
-		gnutls>=0:security/gnutls
+BUILD_DEPENDS+=	gnutls>=0:security/gnutls
+LIB_DEPENDS+=	libuuid.so:misc/libuuid
 
-USES=		bison compiler:c11 gmake python:build pkgconfig shebangfix ssl \
+USES=		bison compiler:c11 gmake python:build perl5 pkgconfig shebangfix ssl \
 		tar:bz2
-BINARY_ALIAS=	bison=${LOCALBASE}/bin/bison dtc=${LOCALBASE}/bin/dtc sed=gsed python3=${PYTHON_CMD}
+USE_PERL5=	build
+BINARY_ALIAS=	bison=${LOCALBASE}/bin/bison \
+		date=${LOCALBASE}/bin/gdate \
+		dtc=${LOCALBASE}/bin/dtc \
+		python3=${PYTHON_CMD} \
+		sed=${LOCALBASE}/bin/gsed \
+		touch=${LOCALBASE}/bin/gtouch
 
 SHEBANG_FILES=	tools/binman/binman
 SSP_UNSAFE=	yes
@@ -115,6 +123,10 @@ UBOOT_ARCH_RK3399=	aarch64
 UBOOT_PLIST_RK356X=	idbloader.img u-boot.itb
 UBOOT_ARCH_RK356X=	aarch64
 
+# Override for RK3588 family
+UBOOT_PLIST_RK3588=	idbloader.img u-boot.itb
+UBOOT_ARCH_RK3588=	aarch64
+
 # Override for ARMADA38X family
 UBOOT_PLIST_ARMADA38X=	u-boot-with-spl.kwb
 UBOOT_METADATA_ARMADA38X_FILES=		${UBOOT_PLIST_ARMADA38X}
@@ -129,7 +141,7 @@ UBOOT_PLIST_QEMU=	u-boot.bin
 .if !defined(UBOOT_VERSION) && defined(UBOOT_VERSION_${FAMILY:tu})
 UBOOT_VERSION=${UBOOT_VERSION_${FAMILY:tu}}
 .endif
-UBOOT_VERSION?=	2024.07
+UBOOT_VERSION?=	2026.07
 
 # If a slave port defines a PORTREVISION use it
 .if defined(U_BOOT_SLAVE_PORTREVISION_${UBOOT_VERSION})
@@ -193,10 +205,17 @@ MAKE_ENV+=	BL31=${LOCALBASE}/share/atf-rk3399/bl31.elf
 .endif
 
 .if defined(FAMILY) && ${FAMILY} == rk356X
-BUILD_DEPENDS+=	${LOCALBASE}/share/rkbin/rk35/rk3566_ddr_1056MHz_v1.21.bin:sysutils/rkbin \
+BUILD_DEPENDS+=	${LOCALBASE}/share/rkbin/rk35/rk3566_ddr_1056MHz_v1.23.bin:sysutils/rkbin \
 		${PYTHON_PKGNAMEPREFIX}pyelftools>0:devel/py-pyelftools@${PY_FLAVOR}
-MAKE_ENV+=	BL31=${LOCALBASE}/share/rkbin/rk35/rk3568_bl31_v1.44.elf \
-		ROCKCHIP_TPL=${LOCALBASE}/share/rkbin/rk35/rk3566_ddr_1056MHz_v1.21.bin
+MAKE_ENV+=	BL31=${LOCALBASE}/share/rkbin/rk35/rk3568_bl31_v1.45.elf \
+		ROCKCHIP_TPL=${LOCALBASE}/share/rkbin/rk35/rk3566_ddr_1056MHz_v1.23.bin
+.endif
+
+.if defined(FAMILY) && ${FAMILY} == rk3588
+BUILD_DEPENDS+=	${LOCALBASE}/share/rkbin/rk35/rk3588_ddr_lp4_2112MHz_lp5_2400MHz_v1.18.bin:sysutils/rkbin \
+		${PYTHON_PKGNAMEPREFIX}pyelftools>0:devel/py-pyelftools@${PY_FLAVOR}
+MAKE_ENV+=	BL31=${LOCALBASE}/share/rkbin/rk35/rk3588_bl31_v1.47.elf \
+		ROCKCHIP_TPL=${LOCALBASE}/share/rkbin/rk35/rk3588_ddr_lp4_2112MHz_lp5_2400MHz_v1.18.bin
 .endif
 
 # Each u-boot family has different files to include, bring them in.
@@ -274,5 +293,18 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}/${INST}
 .endfor
 	${INSTALL_DATA} ${DESCR} ${STAGEDIR}/${INST}/README
+
+.if ${MODEL:Msopine-spi}
+BUILD_DEPENDS+=	mkimg:sysutils/mkimg
+.endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-DUSE_HOSTCC@-I${LOCALBASE}/include &@g" \
+		${WRKSRC}/tools/Makefile
+	${REINPLACE_CMD} -e "s@HOSTCC)@& -I${WRKSRC}/scripts/dtc/libfdt@g" \
+			 -e 's@--quiet@@g' \
+		${WRKSRC}/scripts/dtc/pylibfdt/Makefile
+	${REINPLACE_CMD} -e "s@fdatasync@fsync@g" \
+		${WRKSRC}/tools/mkimage.c
 
 .include <bsd.port.mk>

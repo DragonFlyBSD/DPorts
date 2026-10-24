@@ -1,5 +1,6 @@
 PORTNAME=	fish
-DISTVERSION=	3.7.1
+DISTVERSION=	4.9.1
+PORTREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	https://github.com/fish-shell/fish-shell/releases/download/${PORTVERSION}/
 
@@ -10,14 +11,19 @@ WWW=		https://fishshell.com/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BUILD_DEPENDS=	${RUST_DEFAULT}>=1.70.0:lang/${RUST_DEFAULT}
 LIB_DEPENDS=	libpcre2-32.so:devel/pcre2
 
 # The python dependency is only needed by shebangfix.  At runtime python is
 # only needed by some optional scripts that aren't in PATH.
-USES=		cmake compiler:c++11-lang cpe localbase ncurses python:env \
-		shebangfix tar:xz
+USES=		cargo cmake cpe localbase ncurses python:env shebangfix tar:xz
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 CPE_VENDOR=	fishshell
 SHEBANG_FILES=	share/tools/*.py share/tools/web_config/webconfig.py
+# We need USES=cargo for fetching crates.  But the actual build is done by
+# cmake.
+CARGO_BUILD=	no
+CARGO_INSTALL=	no
 
 CONFLICTS_INSTALL=	comms/mlan3
 
@@ -29,12 +35,12 @@ OPTIONS_DEFINE=		DOCS MANPAGES NLS
 OPTIONS_DEFAULT=	MANPAGES NLS
 OPTIONS_SUB=		yes
 
-DOCS_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx@${PY_FLAVOR}
-DOCS_CMAKE_BOOL=	BUILD_DOCS
-DOCS_VARS=		MAKE_JOBS_UNSAFE=yes
+MANPAGES_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx@${PY_FLAVOR}
+MANPAGES_CMAKE_BOOL=	WITH_DOCS
+MANPAGES_VARS=		MAKE_JOBS_UNSAFE=yes
 
 NLS_USES=	gettext
-NLS_CMAKE_BOOL=	WITH_GETTEXT
+NLS_CMAKE_BOOL=	WITH_MESSAGE_LOCALIZATION
 
 .include <bsd.port.pre.mk>
 
@@ -47,6 +53,7 @@ post-install:
 
 post-install-DOCS-on:
 	@${RM} ${STAGEDIR}${DOCSDIR}/.buildinfo
+	@${RMDIR} ${STAGEDIR}${DOCSDIR}/_sources
 
 post-install-DOCS-off:
 	# required because fish always installs documentation

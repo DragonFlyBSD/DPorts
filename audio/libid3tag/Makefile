@@ -1,5 +1,5 @@
 PORTNAME=	libid3tag
-PORTVERSION=	0.16.3
+PORTVERSION=	0.16.4
 CATEGORIES=	audio
 MASTER_SITES=	https://codeberg.org/tenacityteam/libid3tag/archive/${PORTVERSION}${EXTRACT_SUFX}?dummy=/
 
@@ -11,7 +11,9 @@ WWW=		https://www.underbit.com/products/mad/ \
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cmake cpe pathfix
+BUILD_DEPENDS=	gperf>=0:devel/gperf
+
+USES=		cmake cpe
 
 CMAKE_ON=	BUILD_SHARED_LIBS
 USE_LDCONFIG=	yes

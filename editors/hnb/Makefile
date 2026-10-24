@@ -11,7 +11,7 @@ WWW=		https://hnb.sourceforge.net/
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gmake
+USES= gmake ncurses
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	fraggerfox
@@ -36,5 +36,9 @@ do-install-DOCS-on:
 do-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/hnbrc ${STAGEDIR}${EXAMPLESDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-lncurses@-L${LOCALBASE}/lib &@g" \
+		${WRKSRC}/src/Makefile
 
 .include <bsd.port.mk>

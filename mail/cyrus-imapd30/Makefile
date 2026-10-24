@@ -1,6 +1,6 @@
 PORTNAME=	cyrus-imapd
 PORTVERSION=	3.0.18
-PORTREVISION=	6
+PORTREVISION=	11
 CATEGORIES=	mail
 MASTER_SITES=	https://github.com/cyrusimap/cyrus-imapd/releases/download/${PORTNAME}-${PORTVERSION}/
 PKGNAMESUFFIX=	30
@@ -70,7 +70,7 @@ LDAP_DESC=		Enable LDAP support (experimental)
 LDAP_USES=		ldap
 LDAP_CONFIGURE_ON=	--with-ldap=${LOCALBASE}
 LMDB_DESC=		Use LMDB backend
-LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
+LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb0
 LMDB_CONFIGURE_WITH=	lmdb
 MURDER_DESC=		Enable IMAP Murder support
 MURDER_CONFIGURE_ENABLE=murder
@@ -103,8 +103,12 @@ OPTIONS_RADIO_GSSAPI+=		GSSAPI_BASE
 OPTIONS_DEFAULT+=		GSSAPI_BASE
 .endif
 GSSAPI_BASE_USES=		gssapi
-GSSAPI_BASE_CONFIGURE_ON=	--enable-gssapi="${GSSAPIBASEDIR}" \
-				--with-gss_impl=heimdal
+GSSAPI_BASE_CONFIGURE_ON=	--enable-gssapi="${GSSAPIBASEDIR}"
+.if exists(/usr/libdata/pkgconfig/mit-krb5.pc)
+GSSAPI_BASE_CONFIGURE_ON+=	--with-gss_impl=mit
+.else
+GSSAPI_BASE_CONFIGURE_ON+=	--with-gss_impl=heimdal
+.endif
 GSSAPI_HEIMDAL_USES=		gssapi:heimdal,flags
 GSSAPI_HEIMDAL_CONFIGURE_ON=	--enable-gssapi="${GSSAPIBASEDIR}" \
 				--with-gss_impl=heimdal
@@ -145,6 +149,8 @@ CYRUS_PERL_MAN3=Cyrus::Annotator::Daemon Cyrus::Annotator::Message \
 		Cyrus::IMAP Cyrus::IMAP::Admin Cyrus::IMAP::IMSP \
 		Cyrus::IMAP::Shell Cyrus::SIEVE::managesieve
 
+MAKE_ENV= LDVER=ld.bfd
+LDFLAGS= -lm
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MHTTP} || ${PORT_OPTIONS:MSQLITE}

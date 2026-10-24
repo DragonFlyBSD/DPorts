@@ -1,0 +1,10 @@
+--- include/perfetto/public/BUILD.gn.orig	2026-07-07 14:09:45 UTC
++++ include/perfetto/public/BUILD.gn
+@@ -36,6 +36,7 @@ source_set("public") {
+     "thread_utils.h",
+     "tracing_session.h",
+     "track_event.h",
++    "cpu_info.h",
+   ]
+   public_deps = [
+     ":base",

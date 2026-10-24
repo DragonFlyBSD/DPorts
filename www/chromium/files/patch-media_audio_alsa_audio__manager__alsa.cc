@@ -1,38 +1,38 @@
---- media/audio/alsa/audio_manager_alsa.cc.orig	2025-05-28 14:55:43 UTC
+--- media/audio/alsa/audio_manager_alsa.cc.orig	2026-08-12 15:23:09 UTC
 +++ media/audio/alsa/audio_manager_alsa.cc
-@@ -106,7 +106,9 @@ void AudioManagerAlsa::GetAlsaAudioDevices(StreamType 
-   int card = -1;
- 
+@@ -106,7 +106,9 @@ bool AudioManagerAlsa::GetAlsaAudioDevices(StreamType 
    // Loop through the physical sound cards to get ALSA device hints.
-+#if !BUILDFLAG(IS_BSD) 
-   while (!wrapper_->CardNext(&card) && card >= 0) {
+   bool had_error = false;
+   int card_next_result = 0;
++#if !BUILDFLAG(IS_BSD)
+   while ((card_next_result = wrapper_->CardNext(&card)) == 0 && card >= 0) {
 +#endif
      void** hints = nullptr;
-     int error = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
-     if (!error) {
-@@ -118,7 +120,9 @@ void AudioManagerAlsa::GetAlsaAudioDevices(StreamType 
+     int hint_result = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
+     if (!hint_result) {
+@@ -119,7 +121,9 @@ bool AudioManagerAlsa::GetAlsaAudioDevices(StreamType 
        DLOG(WARNING) << "GetAlsaAudioDevices: unable to get device hints: "
-                     << wrapper_->StrError(error);
+                     << wrapper_->StrError(hint_result);
      }
-+#if !BUILDFLAG(IS_BSD) 
++#if !BUILDFLAG(IS_BSD)
    }
 +#endif
- }
  
- void AudioManagerAlsa::GetAlsaDevicesInfo(AudioManagerAlsa::StreamType type,
-@@ -202,7 +206,11 @@ bool AudioManagerAlsa::IsAlsaDeviceAvailable(
+   if (card_next_result != 0) {
+     had_error = true;
+@@ -211,7 +215,11 @@ bool AudioManagerAlsa::IsAlsaDeviceAvailable(AudioMana
    // goes through software conversion if needed (e.g. incompatible
    // sample rate).
    // TODO(joi): Should we prefer "hw" instead?
 +#if BUILDFLAG(IS_BSD)
-+  static const char kDeviceTypeDesired[] = "plug";
++  static constexpr std::string_view kDeviceTypeDesired = "plug";
 +#else
-   static const char kDeviceTypeDesired[] = "plughw";
+   static constexpr std::string_view kDeviceTypeDesired = "plughw";
 +#endif
-   return strncmp(kDeviceTypeDesired, device_name,
-                  std::size(kDeviceTypeDesired) - 1) == 0;
+   return device_name.starts_with(kDeviceTypeDesired);
  }
-@@ -254,7 +262,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDevice(
+ 
+@@ -262,7 +270,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDevice(
    // Loop through the sound cards.
    // Don't use snd_device_name_hint(-1,..) since there is an access violation
    // inside this ALSA API with libasound.so.2.0.0.
@@ -41,8 +41,8 @@
 +#endif
      int error = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
      if (!error) {
-       for (void** hint_iter = hints; *hint_iter != nullptr; hint_iter++) {
-@@ -279,7 +289,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDevice(
+       const std::string_view unwanted_type =
+@@ -291,7 +301,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDevice(
        DLOG(WARNING) << "HasAnyAudioDevice: unable to get device hints: "
                      << wrapper_->StrError(error);
      }

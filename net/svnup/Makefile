@@ -38,4 +38,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.conf ${STAGEDIR}${PREFIX}/etc/${PORTNAME}.conf.sample
 
+.include <bsd.port.options.mk>
+.if ${DFLYVERSION} > 500700
+LIB_DEPENDS+=	libmd.so:security/libmd
+.endif
+
 .include <bsd.port.mk>

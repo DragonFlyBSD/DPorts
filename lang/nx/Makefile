@@ -31,4 +31,8 @@ post-install:
 	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} \* ${STAGEDIR}${DOCSDIR}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${DISTNAME}/lib${DISTNAME}.so
 
+run-autotools-fixup:
+	${REINPLACE_CMD} -e 's@\(FreeBSD-\*\)@\1|DragonFly-*@g'		\
+		${WRKSRC}/configure
+
 .include <bsd.port.mk>

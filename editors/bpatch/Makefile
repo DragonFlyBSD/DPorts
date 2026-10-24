@@ -22,4 +22,6 @@ NO_WRKSUBDIR=	yes
 PLIST_FILES=	bin/bpatch \
 		share/man/man1/bpatch.1.gz
 
+USES= ncurses
+CFLAGS= -L${LOCALBASE}/lib
 .include <bsd.port.mk>

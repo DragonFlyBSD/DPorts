@@ -28,4 +28,5 @@ do-extract:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${STAGEDIR}${PREFIX}/bin/${DISTNAME}
 
+RUN_DEPENDS:= ${RUN_DEPENDS:Ncvs*}
 .include <bsd.port.mk>

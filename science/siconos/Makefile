@@ -1,6 +1,6 @@
 PORTNAME=	siconos
 DISTVERSION=	4.5.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -32,7 +32,7 @@ CMAKE_ON=	CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT SICONOS_SYSTEM_WIDE_INSTAL
 CMAKE_OFF=	WITH_GIT WITH_TESTING
 CMAKE_TESTING_ON=	WITH_TESTING # tests are broken, see https://github.com/siconos/siconos/issues/415
 
-CFLAGS+=	-DCLOCKTIME -DCLOCKS_PER_SEC=128 # workaround for 'Undefined symbol "ftime"', see https://github.com/siconos/siconos/issues/411
+CFLAGS+= -DCLOCKTIME -DCLOCKS_PER_SEC=128 # workaround for 'Undefined symbol "ftime"', see https://github.com/siconos/siconos/issues/411 -DRTLD_DEEPBIND=0
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
@@ -43,7 +43,7 @@ OPTIONS_SUB=		yes
 PYTHON_CMAKE_BOOL=	WITH_PYTHON_WRAPPER
 PYTHON_USES=		python
 PYTHON_USES_OFF=	python:build
-PYTHON_PY_DEPENDS=	${PYNUMPY} \
+PYTHON_PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR}
 PYTHON_BUILD_DEPENDS=	${PYTHON_PY_DEPENDS} \
 			swig:devel/swig

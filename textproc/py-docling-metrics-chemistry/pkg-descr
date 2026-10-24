@@ -1,0 +1,4 @@
+Docling Metrics Chemistry provides chemistry-specific evaluation metrics
+for the Docling metrics framework, including SMILES string comparison
+and Markush structure evaluation. It enables accuracy assessment of
+chemical structure extraction from documents.

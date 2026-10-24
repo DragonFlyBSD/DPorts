@@ -12,7 +12,7 @@ BUILD_DEPENDS=	bdftopcf:x11-fonts/bdftopcf \
 		mkfontscale>=0:x11-fonts/mkfontscale
 
 USES=		gmake fonts tar:bzip2
-MAKE_JOBS_UNSAFE=	yes
+MAKE_JOBS_UNSAFE= yes
 
 FONTNAME=	misc
 FONTS=		caption.pcf.gz captioni.pcf.gz led-iso10646-1.pcf.gz \

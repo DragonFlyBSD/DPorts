@@ -41,4 +41,9 @@ post-patch:
 		${WRKSRC}/*.cpp
 	${REINPLACE_CMD} -e '/INITDIR/d' ${WRKSRC}/Makefile
 
+dfly-patch:
+	${GREP} -q clearenv /usr/include/stdlib.h || \
+		${REINPLACE_CMD} -e 's@__DragonFly__@&z@g' \
+		${WRKSRC}/usertable.cpp
+
 .include <bsd.port.post.mk>

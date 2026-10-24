@@ -1,11 +1,8 @@
 PORTNAME=	guacamole-server
-DISTVERSION=	1.5.0
-PORTREVISION=	2
+DISTVERSION=	1.6.0
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	APACHE/guacamole/${DISTVERSION}/source/
-
-PATCH_SITES=	https://github.com/apache/${PORTNAME}/commit/
-PATCHFILES=	5cf408ebbba9544fb5dfb297d98d5a1e1751a56d.patch:-p1
 
 MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	HTML5 Clientless Remote Desktop
@@ -28,8 +25,10 @@ USE_RC_SUBR=	guacd
 SHEBANG_FILES=	${WRKSRC}/src/protocols/rdp/keymaps/generate.pl
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--with-guacd-conf=${ETCDIR}/guacd.conf
 INSTALL_TARGET=	install-strip
+CFLAGS+=	-Wno-error=newline-eof
 
 GUACAMOLE_HOME?=	${PREFIX}/guacamole
 USERS=		guacamole
@@ -65,18 +64,16 @@ GUACENC_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 GUACENC_CFLAGS=		-Wno-error=deprecated
 GUACLOG_CONFIGURE_ENABLE=	guaclog
 KUBERNETES_CONFIGURE_ENABLE=	kubernetes
-KUBERNETES_CONFIGURE_WITH=	pango terminal
-KUBERNETES_LIB_DEPENDS=		libwebsockets.so:net/libwebsockets
-KUBERNETES_USE=			GNOME=pango
+KUBERNETES_LIB_DEPENDS=		libwebsockets.so:net/libwebsockets \
+				libharfbuzz.so:print/harfbuzz
 NLS_USES=		gettext-runtime
 PULSEAUDIO_CONFIGURE_WITH=	pulse
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 RDP_CONFIGURE_WITH=	rdp
 RDP_LIB_DEPENDS=	libfreerdp2.so:net/freerdp
-SSH_CONFIGURE_WITH=	pango ssh terminal
+SSH_CONFIGURE_WITH=	ssh
 SSH_IMPLIES=		SSL
 SSH_LIB_DEPENDS=	libssh2.so:security/libssh2
-SSH_USE=		GNOME=pango
 SSL_CONFIGURE_WITH=	ssl
 SSL_USES=		ssl
 VNC_CONFIGURE_WITH=	vnc
@@ -87,10 +84,20 @@ VORBIS_LIB_DEPENDS=	libvorbis.so:audio/libvorbis \
 WEBP_CONFIGURE_WITH=	webp
 WEBP_LIB_DEPENDS=	libwebp.so:graphics/webp
 
-.include <bsd.port.pre.mk>
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
+.include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
-CFLAGS+=       -Wno-error=strict-prototypes \
+.if ${PORT_OPTIONS:MKUBERNETES}${PORT_OPTIONS:MSSH}
+CONFIGURE_ARGS+=	--with-pango --with-terminal
+PLIST_SUB+=		TERMINAL=""
+USE_GNOME+=		pango
+.else
+CONFIGURE_ARGS+=	--without-pango --without-terminal
+PLIST_SUB+=		TERMINAL="@comment "
+.endif
+
+.if ${OPSYS} == FreeBSD
+CFLAGS+=	-Wno-error=strict-prototypes \
 			   -Wno-error=unused-but-set-variable
 .endif
 
@@ -105,4 +112,9 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${ETCDIR} ${STAGEDIR}${GUACAMOLE_HOME}
 	${INSTALL_DATA} ${FILESDIR}/guacd.conf.sample ${STAGEDIR}${ETCDIR}
 
-.include <bsd.port.post.mk>
+dfly-patch:
+	${FIND} ${WRKSRC} -name Makefile.am | ${XARGS} \
+		${GREP} -rl "\-Werror " | ${XARGS} \
+		${REINPLACE_CMD} -e 's/-Werror //g'
+
+.include <bsd.port.mk>

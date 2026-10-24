@@ -1,6 +1,5 @@
 PORTNAME=	python-digitalocean
-PORTVERSION=	1.16.0
-PORTREVISION=	1
+PORTVERSION=	1.17.0
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +16,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=2.0.0:www/py-requests@${PY_FLAVOR}
 USES=		python
 USE_PYTHON=	distutils autoplist
 
-USE_LOCALE=	en_US.UTF-8
 NO_ARCH=	yes
 
 .include <bsd.port.mk>

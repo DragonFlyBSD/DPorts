@@ -19,4 +19,8 @@ WRKSRC_SUBDIR=	src/tools/${PORTNAME}
 PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man1/${PORTNAME}.1.gz
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/MATCHES/s@FreeBSD|@&DragonFly|@g' \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

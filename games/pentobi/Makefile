@@ -1,6 +1,5 @@
 PORTNAME=	pentobi
-PORTVERSION=	23.1
-PORTREVISION=	1
+PORTVERSION=	26.3
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}
 
@@ -11,12 +10,6 @@ WWW=		https://pentobi.sourceforge.io/ \
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
-
-BROKEN_FreeBSD_12=	does not build: no member named 'test' in 'std::__1::atomic_flag'
-
-BUILD_DEPENDS=	itstool:textproc/itstool \
-		xsltproc:textproc/libxslt \
-		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:textproc/docbook-xsl
 
 USES=		compiler:c++20-lang cmake desktop-file-utils gettext-tools gnome qt:6 \
 		shared-mime-info tar:xz
@@ -32,6 +25,7 @@ OPTIONS_DEFAULT=TEST
 TEST_CMAKE_BOOL=	BUILD_TESTING
 TEST_TEST_TARGET=	test
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS.md CONTRIBUTING.md NEWS.md \

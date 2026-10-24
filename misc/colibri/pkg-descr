@@ -1,0 +1,8 @@
+colibri allows to run GLM-5.2 (744B-parameter MoE) on a consumer machine with
+~25 GB of RAM - in pure C, with zero dependencies, by streaming experts from
+disk.
+
+Colibri is a lightweight, quality-preserving MoE runtime that treats VRAM, RAM,
+and storage as one managed memory hierarchy. Insufficient fast memory may reduce
+speed, but the default policy never silently changes model precision or router
+semantics.

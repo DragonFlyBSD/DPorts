@@ -1,6 +1,6 @@
 PORTNAME=	persepolis
 PORTVERSION=	3.2.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	www net ftp python
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -27,6 +27,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	${PORTNAME}dm
 
 # Preserve remote (as on server) modification time of downloaded files
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e "/aria2c/s/--no-conf/&', '-R/" \
 		${WRKSRC}/persepolis/scripts/download.py

@@ -1,6 +1,6 @@
 PORTNAME=	icinga-php-thirdparty
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.12.1
+DISTVERSION=	1.0.1
 CATEGORIES=	net-mgmt www
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
@@ -9,7 +9,7 @@ COMMENT=	Icinga PHP thirdparty
 WWW=		https://github.com/Icinga/icinga-php-thirdparty
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 USES=		php:web,flavors
 

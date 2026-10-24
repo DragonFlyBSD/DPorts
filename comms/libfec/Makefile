@@ -42,4 +42,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/${_man} ${STAGEDIR}${PREFIX}/share/man/man3
 .endfor
 
+BUILD_DEPENDS:= ${BUILD_DEPENDS:N*binutils}
 .include <bsd.port.mk>

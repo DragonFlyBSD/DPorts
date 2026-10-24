@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/media/base/audio_latency.cc.orig	2023-04-05 11:05:06 UTC
+--- src/3rdparty/chromium/media/base/audio_latency.cc.orig	2025-09-06 10:01:20 UTC
 +++ src/3rdparty/chromium/media/base/audio_latency.cc
-@@ -147,7 +147,7 @@ int AudioLatency::GetRtcBufferSize(int sample_rate, in
+@@ -143,7 +143,7 @@ int AudioLatency::GetRtcBufferSize(int sample_rate, in
    }
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_APPLE) || \

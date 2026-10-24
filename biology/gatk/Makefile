@@ -1,6 +1,5 @@
 PORTNAME=	gatk
-DISTVERSION=	4.6.1.0
-PORTREVISION=	1
+DISTVERSION=	4.7.0.0
 CATEGORIES=	biology java
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -31,7 +30,7 @@ NO_ARCH=	yes
 DEPS_CACHE_DIR=	${WRKDIR}
 
 TEST_ENV=	${MAKE_ENV} \
-		JAVA_TOOL_OPTIONS="-DLIBBWA_PATH=${PREFIX}/lib/libfml.so" \
+		JAVA_TOOL_OPTIONS="-DLIBBWA_PATH=${PREFIX}/lib/libfml.so -DLIBFML_PATH=${PREFIX}/lib/libfml.so" \
 		GATK_LOCAL_JAR=${STAGEDIR}${JAVAJARDIR}/GenomeAnalysisTK-${PORTVERSION}.jar
 
 PLIST_FILES=	bin/${PORTNAME} \
@@ -59,6 +58,7 @@ WITH_LARGE_FILES_FETCH_DEPENDS=	git:devel/git \
 # The large files under src/main/resources/large/ are required to build GATK, since they are packaged inside the GATK jar and used by tools at runtime. These are things like ML models and native C/C++ libraries used for acceleration of certain tools.
 # The large files under src/test/resources/large/, on the other hand, are only required by the test suite when running tests.
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MWITH_LARGE_FILES}
@@ -77,18 +77,28 @@ do-fetch:
 			${RM} -r ${WRKDIR} \
 		) && \
 		${FIND} ${PORTNAME}-${DISTVERSION} -and -exec ${TOUCH} -h -d 1970-01-01T00:00:00Z {} \; && \
-		${FIND} ${PORTNAME}-${DISTVERSION} -print0 | LC_ALL=C ${SORT} -z | \
+		${FIND} ${PORTNAME}-${DISTVERSION} -print0 | ${SORT} -z | \
 		${SETENV} -i ${TAR} czf ${DISTNAME}${EXTRACT_SUFX} --format=cpio --gid 0 --uid 0 --options gzip:!timestamp --no-recursion --null -T - && \
 		${RM} -r ${PORTNAME}-${DISTVERSION}; \
 	fi
 # fetch the deps distfile
 .  if (${DEV_UPDATE_MODE} == "no")
 	@if [ "${FORCE_FETCH_ALL}" = "true" ] || ! [ -f "${DISTDIR}/${DIST_SUBDIR}/${PORTNAME}-${DISTVERSION}-deps${EXTRACT_SUFX}" ]; then \
+		${MKDIR} ${WRKDIR}; \
+		${RM} ${_MASTER_SITES_FILE} ${_DISTFILES_FILE}; \
+		for site in ${_MASTER_SITES_ENV}; do \
+			printf '%s\n' "$${site}" | sed -e 's/ /\\ /g' >> ${_MASTER_SITES_FILE}; \
+		done; \
+		for file in ${DISTFILES:M*\:deps}; do \
+			printf '%s\n' "$${file}" >> ${_DISTFILES_FILE}; \
+		done; \
 		${ECHO} "==> Fetching the deps distfile for ${PORTNAME}" && \
 		${SETENV} \
-			${_DO_FETCH_ENV} ${_MASTER_SITES_ENV} \
+			${_DO_FETCH_ENV} \
+			dp_SITES_FILE=${_MASTER_SITES_FILE} \
+			dp_FILES_FILE=${_DISTFILES_FILE} \
 			dp_SITE_FLAVOR=MASTER \
-			${SH} ${SCRIPTSDIR}/do-fetch.sh ${DISTFILES:M*\:deps}; \
+			${SH} ${SCRIPTSDIR}/do-fetch.sh; \
 	fi
 .  endif
 .endif
@@ -117,9 +127,11 @@ do-install:
 
 do-test: # tests require WITH_LARGE_FILES=ON, and they use a lot of disk space
 	@cd ${WRKSRC} && \
-		${SETENV} ${TEST_ENV} gradle8 -DLIBBWA_PATH=${PREFIX}/lib/libfml.so test
+		${SETENV} ${TEST_ENV} gradle8 test
 
-# tests results as of version 4.6.1.0: 288552 tests, 301 failures, 37 ignored, 1h55m5.63s duration, 99% successful, see https://github.com/broadinstitute/gatk/issues/8940
-# see https://github.com/broadinstitute/gatk/issues/8939: Tests fail to find libgkl libraries in /usr/local/lib
+# tests as of 4.6.1.0: 288552 tests, 301 failures, 37 ignored, 1h55m5.63s duration, 99% successful, see https://github.com/broadinstitute/gatk/issues/8940
+# tests as of 4.6.2.0: 288719 tests completed, 300 failed, 37 skipped
+# tests as of 4.7.0.0: 288832 tests, 288495 successes, 300 failures, 37 skipped
+# see https://github.com/broadinstitute/gatk/issues/8939: Tests fail to find libgkl libraries in /usr/local/lib (~300 tests fail like this, the upstream is not responsive)
 
 .include <bsd.port.mk>

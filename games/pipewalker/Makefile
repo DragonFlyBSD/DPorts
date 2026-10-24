@@ -1,6 +1,6 @@
 PORTNAME=	pipewalker
 DISTVERSIONPREFIX=v
-DISTVERSION=	1.0
+DISTVERSION=	1.1
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -18,6 +18,7 @@ USE_SDL=	sdl2 image2
 
 PORTDATA=	*
 
+MAKE_ENV= LDVER=ld.bfd
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/games/pipewalker|${DATADIR}|' \
 		${WRKSRC}/extra/pipewalker.6

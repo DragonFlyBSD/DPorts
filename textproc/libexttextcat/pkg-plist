@@ -8,10 +8,9 @@ include/libexttextcat/textcat_properties.h
 include/libexttextcat/utf8misc.h
 lib/libexttextcat-2.0.a
 lib/libexttextcat-2.0.so
-lib/libexttextcat-2.0.so.0
-lib/libexttextcat-2.0.so.0.0.0
+lib/libexttextcat-2.0.so.1
+lib/libexttextcat-2.0.so.1.0.0
 libdata/pkgconfig/libexttextcat.pc
-share/vala/vapi/libexttextcat.vapi
 %%DATADIR%%/ab.lm
 %%DATADIR%%/ace.lm
 %%DATADIR%%/ada.lm
@@ -63,6 +62,7 @@ share/vala/vapi/libexttextcat.vapi
 %%DATADIR%%/fon.lm
 %%DATADIR%%/fpdb.conf
 %%DATADIR%%/fr.lm
+%%DATADIR%%/frp.lm
 %%DATADIR%%/fur.lm
 %%DATADIR%%/fy.lm
 %%DATADIR%%/ga.lm
@@ -72,7 +72,7 @@ share/vala/vapi/libexttextcat.vapi
 %%DATADIR%%/gu.lm
 %%DATADIR%%/gug.lm
 %%DATADIR%%/gv.lm
-%%DATADIR%%/ha-NG.lm
+%%DATADIR%%/ha-Latn-NG.lm
 %%DATADIR%%/haw.lm
 %%DATADIR%%/he.lm
 %%DATADIR%%/hi.lm
@@ -84,10 +84,13 @@ share/vala/vapi/libexttextcat.vapi
 %%DATADIR%%/hy.lm
 %%DATADIR%%/ia.lm
 %%DATADIR%%/id.lm
+%%DATADIR%%/ilo.lm
 %%DATADIR%%/is.lm
 %%DATADIR%%/it.lm
 %%DATADIR%%/ja.lm
 %%DATADIR%%/ka.lm
+%%DATADIR%%/kaa.lm
+%%DATADIR%%/kab.lm
 %%DATADIR%%/kbd.lm
 %%DATADIR%%/kk.lm
 %%DATADIR%%/kl.lm
@@ -108,6 +111,7 @@ share/vala/vapi/libexttextcat.vapi
 %%DATADIR%%/lt.lm
 %%DATADIR%%/lv.lm
 %%DATADIR%%/mai.lm
+%%DATADIR%%/mfe.lm
 %%DATADIR%%/mi.lm
 %%DATADIR%%/min.lm
 %%DATADIR%%/mk.lm
@@ -135,6 +139,7 @@ share/vala/vapi/libexttextcat.vapi
 %%DATADIR%%/plt.lm
 %%DATADIR%%/pt.lm
 %%DATADIR%%/quh.lm
+%%DATADIR%%/qul.lm
 %%DATADIR%%/quz.lm
 %%DATADIR%%/rm.lm
 %%DATADIR%%/ro.lm
@@ -149,8 +154,12 @@ share/vala/vapi/libexttextcat.vapi
 %%DATADIR%%/sg.lm
 %%DATADIR%%/shs.lm
 %%DATADIR%%/si.lm
+%%DATADIR%%/sid.lm
 %%DATADIR%%/sk.lm
+%%DATADIR%%/skr.lm
 %%DATADIR%%/sl.lm
+%%DATADIR%%/smn.lm
+%%DATADIR%%/sms.lm
 %%DATADIR%%/so.lm
 %%DATADIR%%/sq.lm
 %%DATADIR%%/sr-Cyrl.lm
@@ -162,6 +171,7 @@ share/vala/vapi/libexttextcat.vapi
 %%DATADIR%%/sw.lm
 %%DATADIR%%/swb.lm
 %%DATADIR%%/ta.lm
+%%DATADIR%%/te.lm
 %%DATADIR%%/tet.lm
 %%DATADIR%%/tg.lm
 %%DATADIR%%/th.lm
@@ -188,6 +198,8 @@ share/vala/vapi/libexttextcat.vapi
 %%DATADIR%%/xh.lm
 %%DATADIR%%/yi.lm
 %%DATADIR%%/yo.lm
+%%DATADIR%%/yrk.lm
 %%DATADIR%%/zh-Hans.lm
 %%DATADIR%%/zh-Hant.lm
 %%DATADIR%%/zu.lm
+share/vala/vapi/libexttextcat.vapi

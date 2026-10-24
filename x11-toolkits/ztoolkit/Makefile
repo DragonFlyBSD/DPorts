@@ -21,4 +21,9 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 MESON_ARGS=	-Denable_rsvg=true
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/meson.build \
+		${WRKSRC}/pugl/meson.build
+
 .include <bsd.port.mk>

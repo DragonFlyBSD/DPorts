@@ -1,0 +1,12 @@
+[
+{ type: upgrade
+  message: <<EOM
+This port (security/openssl) has updated from 3.0 to 3.5
+after end-of-life and first reported vulnerabilities
+of OpenSSL 3.0.
+
+All ports depending on security/openssl must be rebuilt
+for the changed shared library versions
+EOM
+},
+]

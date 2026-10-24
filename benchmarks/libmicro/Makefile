@@ -8,7 +8,6 @@ COMMENT=	Set of utilities to benchmark productivity of system calls
 
 LICENSE=	CDDL
 
-BROKEN_mips64=		Fails to build: bin-mips64: no such file or directory
 BROKEN_riscv64=		Fails to build: bin-riscv64: no such file or directory
 
 USES=		gmake
@@ -40,5 +39,21 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${PKGLIBDIR}/bin
 	(cd ${STAGEDIR}${PKGLIBDIR}/bin-${LIBMICRO_ARCH} ; for i in * ; do ${LN} -s \
 		../bin-${LIBMICRO_ARCH}/$$i ../bin ; done)
+
+dfly-patch:
+	${LN} -sv ${WRKSRC}/Makefile.FreeBSD ${WRKSRC}/Makefile.DragonFly
+	${REINPLACE_CMD} -e 's@\(\[ F"\`uname -s\`" = F"FreeBSD" \]\)@\1 \|\| \[ F"\`uname -s\`" = F"DragonFly" \]@g'	\
+			 -e '/c_lockf_10/s@cascade_lockf@#cascade_lockf@g'	\
+			 -e '/c_lockf_200/s@cascade_lockf@#cascade_lockf@g'	\
+			 -e '/c_flock_10/s@cascade_flock@#cascade_flock@g'	\
+			 -e '/c_flock_200/s@cascade_flock@#cascade_flock@g'	\
+			 -e '/c_fcntl_10/s@cascade_fcntl@#cascade_fcntl@g'	\
+			 -e '/c_fcntl_200/s@cascade_fcntl@#cascade_fcntl@g'	\
+			 -e '/fork_10/s@fork@#fork@g'				\
+			 -e '/exit_10/s@exit@#exit@g'				\
+			 -e '/close_tcp/s@close_tcp@#close_tcp@g'		\
+		${WRKSRC}/bench.sh
+	${REINPLACE_CMD} -e 's@jmp_buf@sigjmp_buf@g'			\
+		${WRKSRC}/siglongjmp.c
 
 .include <bsd.port.mk>

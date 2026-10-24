@@ -1,11 +1,13 @@
 PORTNAME=	gssdp
-PORTVERSION=	1.6.3
+PORTVERSION=	1.6.6
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Framework for UPnP devices
-WWW=		https://wiki.gnome.org/Projects/GUPnP
+WWW=		https://gnome.pages.gitlab.gnome.org/gssdp/docs/ \
+		https://gitlab.gnome.org/GNOME/gssdp \
+		https://github.com/GNOME/gssdp
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -18,8 +20,15 @@ LIB_DEPENDS=	libsoup-3.0.so:devel/libsoup3
 USES=		gnome meson pkgconfig tar:xz
 USE_GNOME=	glib20 introspection:build
 
-MESON_ARGS=	--default-library=both -Dexamples=false -Dgtk_doc=false -Dintrospection=true -Dmanpages=false
+MESON_ARGS=	--default-library=both \
+		-Dexamples=false \
+		-Dgtk_doc=false \
+		-Dintrospection=true \
+		-Dmanpages=false
+USE_CSTD=	c11
 USE_LDCONFIG=	yes
+
+PLIST_SUB=	PATCH_VERSION=${PORTVERSION:E}
 
 CONFLICTS_INSTALL=	gssdp14
 

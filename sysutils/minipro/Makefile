@@ -1,8 +1,9 @@
 PORTNAME=	minipro
-PORTVERSION=	0.5
+DISTVERSION=	0.7.4
+PORTREVISION=	0
 CATEGORIES=	sysutils
 
-MAINTAINER=	sbruno@freebsd.org
+MAINTAINER=	bofh@freebsd.org
 COMMENT=	CLI for MiniPRO TL866xx chip programmers
 WWW=		https://gitlab.com/DavidGriffith/minipro
 
@@ -11,20 +12,27 @@ LICENSE=	GPLv3
 BUILD_DEPENDS=	gsed:textproc/gsed
 RUN_DEPENDS=	bash:shells/bash
 
-USES=		compiler:c11 gmake pkgconfig shebangfix
+USES=		compiler:c11 gmake pkgconfig
 USE_GITLAB=	yes
-
 GL_ACCOUNT=	DavidGriffith
-GL_TAGNAME=	8be592c954264afdc3a2cb596ee45517cc5dc621
 GL_PROJECT=	${PORTNAME}
-BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
-SHEBANG_FILES=	miniprohex
-PLIST_FILES=	bin/minipro \
-		bin/miniprohex \
-		man/man1/minipro.1.gz
+GL_TAGNAME=	f124338492a3937dbf02f9c4bc5219892f10481e
 
+BINARY_ALIAS=	sed=${LOCALBASE}/bin/gsed
+
+PLIST_FILES=	bin/minipro \
+		share/man/man1/minipro.1.gz \
+		share/minipro/dump-alg-minipro.bash \
+		share/minipro/infoic.xml \
+		share/minipro/logicic.xml
+
+MAKE_JOBS_UNSAFE= yes
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
-	@${GZIP_CMD} ${STAGEDIR}${PREFIX}/man/man1/minipro.1
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+
+dfly-patch:
+	${REINPLACE_CMD} -e ' s|clang|gcc|g'  \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

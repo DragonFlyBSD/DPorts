@@ -1,10 +1,11 @@
 PORTNAME=	moin
-DISTVERSION=	2.0.0a1
+DISTVERSION=	2.0.0b3
+PORTREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	https://github.com/moinwiki/moin/releases/download/${DISTVERSION}/
 PKGNAMESUFFIX=	2
 
-MAINTAINER=	bofh@FreeBSD.org
+MAINTAINER=	ports@bsdserwis.com
 COMMENT=	Easy to use, full-featured and extensible wiki software package
 WWW=		https://moinmo.in/
 
@@ -26,7 +27,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Babel>=2.10.0:devel/py-babel@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}flask-theme>=0.3.6:www/py-flask-theme@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}flatland>=0.8:devel/py-flatland@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}markdown>=3.4.1:textproc/py-markdown@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}markupsafe<=2.2.0:textproc/py-markupsafe@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}markupsafe>=2.2.0:textproc/py-markupsafe@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mdx_wikilink_plus>=1.4.1:textproc/py-mdx_wikilink_plus@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}passlib>=1.6.0:security/py-passlib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pdfminer.six>0:textproc/py-pdfminer.six@${PY_FLAVOR} \
@@ -46,6 +47,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Babel>=2.10.0:devel/py-babel@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}xstatic-svg-edit-moin>=2012.11.15.1:devel/py-xstatic-svg-edit-moin@${PY_FLAVOR}
 
 USES=		cpe python shebangfix
+CPE_PRODUCT=	moinmoin
 CPE_VENDOR=	moinmo
 USE_PYTHON=	autoplist pep517
 

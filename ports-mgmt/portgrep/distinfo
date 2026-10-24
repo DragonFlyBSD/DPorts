@@ -1,0 +1,5 @@
+TIMESTAMP = 1779603909
+SHA256 (go/ports-mgmt_portgrep/portgrep-v1.4.2/v1.4.2.mod) = fa5ac020b1be2600475bae38c6359bf15ae336334473749d65d96bf228b6ee23
+SIZE (go/ports-mgmt_portgrep/portgrep-v1.4.2/v1.4.2.mod) = 202
+SHA256 (go/ports-mgmt_portgrep/portgrep-v1.4.2/v1.4.2.zip) = abab6b7523daa2a9c58e6513ff28f08b5f544cd7bc0eba92e98ad4dcf913fbb6
+SIZE (go/ports-mgmt_portgrep/portgrep-v1.4.2/v1.4.2.zip) = 14033

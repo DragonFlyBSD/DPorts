@@ -58,4 +58,7 @@ post-install:
 		${STAGEDIR}/${PREFIX}/etc/${i}.sample)
 .endfor
 
+dfly-patch:
+	${LN} -sv ${WRKSRC}/conf/init.freebsd ${WRKSRC}/conf/init.dragonfly
+
 .include <bsd.port.mk>

@@ -1,8 +1,9 @@
 PORTNAME=	massxpert
 DISTVERSION=	6.0.3
+PORTREVISION=	1
 CATEGORIES=	science
 
-MAINTAINER=	salvadore@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Software suite for (bio)chemists
 WWW=		http://www.msxpertsuite.org
 
@@ -24,4 +25,6 @@ USE_QT=		core gui printsupport svg widgets xml buildtools:build \
 		qmake:build
 USE_XORG=	ice sm x11 xau xcb xdmcp xext xrender
 
+MAKE_JOBS_UNSAFE= yes
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

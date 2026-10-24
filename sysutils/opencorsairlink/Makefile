@@ -28,4 +28,8 @@ post-stage:
 	${MV} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}.elf ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@libusb_set_auto_detach_kernel_driver@666; //&@g' \
+		${WRKSRC}/logic/scan.c
+
 .include <bsd.port.mk>

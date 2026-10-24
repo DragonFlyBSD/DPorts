@@ -1,6 +1,6 @@
 PORTNAME=	game.libretro.picodrive
-PORTVERSION=	2.00.0.45
-DISTVERSIONSUFFIX=	-Nexus
+PORTVERSION=	2.05.0.57.20260330
+DISTVERSIONSUFFIX=	-Piers
 CATEGORIES=	games
 
 MAINTAINER=	rozhuk.im@gmail.com
@@ -19,6 +19,7 @@ NO_ARCH=	yes
 USES=		kodi
 USE_GITHUB=	yes
 GH_ACCOUNT=	kodi-game
+GH_TAGNAME=	ab4850fdd2625230b036312a9b0b1d3e58c8e561
 
 do-build:
 	@${MKDIR} ${WRKSRC}/lib
@@ -36,5 +37,9 @@ do-install:
 		${STAGEDIR}${PREFIX}/share/kodi/addons
 	@(cd ${WRKSRC}/lib/ && ${COPYTREE_SHARE} * ${STAGEDIR}${PREFIX}/lib/kodi/addons/${PORTNAME})
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} ${PORTNAME} ${STAGEDIR}${PREFIX}/share/kodi/addons)
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/depends/common/picodrive/CMakeLists.txt
 
 .include <bsd.port.mk>

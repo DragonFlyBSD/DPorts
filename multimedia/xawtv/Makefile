@@ -92,4 +92,8 @@ post-patch:
 	@${REINPLACE_CMD} -e "s|-ljpeg|-L${LOCALBASE}/lib -ljpeg|g" ${WRKSRC}/$i
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(OpenBSD | FreeBSD | NetBSD\))@\1 | DragonFly)@g'	\
+		${WRKSRC}/configure
+
 .include <bsd.port.post.mk>

@@ -1,6 +1,7 @@
 PORTNAME=		yate
 DISTVERSION=		6.4.1
 DISTVERSIONSUFFIX=	-g${GH_TAGNAME}
+PORTREVISION=		1
 CATEGORIES=		net
 
 MAINTAINER=	ports@FreeBSD.org
@@ -9,13 +10,14 @@ WWW=		http://yate.ro
 
 LICENSE=	GPLv2
 
-ONLY_FOR_ARCHS=	amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
+ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libgsm.so:audio/gsm \
 		libspeex.so:audio/speex
 
 USES=		autoreconf bison gmake shebangfix
+USE_CSTD=	gnu11
 USE_GITHUB=	yes
 GH_ACCOUNT=	yatevoip
 GH_TAGNAME=	e0a20c4
@@ -37,7 +39,7 @@ CONFIGURE_ARGS=	--with-zlib=/usr \
 		--without-fdsize \
 		--without-libqt4
 
-MAKE_JOBS_UNSAFE=	yes
+MAKE_JOBS_UNSAFE= yes
 
 CXXFLAGS+=	-Wno-register
 
@@ -49,19 +51,18 @@ GROUPS=		yate
 
 PLIST_SUB=	VERSION="${PORTVERSION}"
 
-OPTIONS_DEFINE=		AMRNB DAHDI DOCS H323 ILBC MYSQL PGSQL SCTP SPANDSP \
+OPTIONS_DEFINE=		AMR DAHDI DOCS H323 ILBC MYSQL PGSQL SCTP SPANDSP \
 			SQLITE
 OPTIONS_DEFAULT=	SCTP
 OPTIONS_SUB=	yes
 
-AMRNB_DESC=	Adaptive Multi-Rate Narrowband support
 DAHDI_DESC=	Dahdi support
 H323_DESC=	H323 software channel/protocol support
 ILBC_DESC=	iLBC narrowband speech codec support
 SCTP_DESC=	Stream Control Transmission Protocol support
 
-AMRNB_LIB_DEPENDS=	libamrnb.so:audio/libamrnb
-AMRNB_CONFIGURE_WITH=	amrnb=${LOCALBASE}
+AMR_CONFIGURE_WITH=	amrnb=${LOCALBASE}
+AMR_LIB_DEPENDS=	libopencore-amrnb.so:audio/opencore-amr
 
 DAHDI_BUILD_DEPENDS=	${LOCALBASE}/include/dahdi/user.h:misc/dahdi \
 			libpri>=1.4.10:misc/libpri
@@ -92,6 +93,10 @@ SQLITE_CONFIGURE_WITH=	sqlite
 
 _USES_configure+=	471:post-autoreconf
 
+OPTIONS_EXCLUDE= SCTP
+LDFLAGS= -L${LOCALBASE}/lib
+CFLAGS= -I${LOCALBASE}/include
+DFLY_UNMAINTAINED= yes
 post-autoreconf:
 	cd ${WRKSRC} && ./yate-config.sh
 
@@ -104,5 +109,17 @@ post-install:
 .for dir in client server jabber sip
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/yate/${dir}/*.yate
 .endfor
+
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NSCTP}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(x\*BSD\))@\1|xDragonFly)@g'	\
+		${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e 's@defined[ ]*(\(__FreeBSD__\))@(defined(\1)||defined(__DragonFly__))@g'	\
+		${WRKSRC}/configure.ac			\
+		${WRKSRC}/modules/client/alsachan.cpp	\
+		${WRKSRC}/modules/client/osschan.cpp	\
+		${WRKSRC}/modules/server/cpuload.cpp	\
+		${WRKSRC}/engine/Mutex.cpp		\
+		${WRKSRC}/yateclass.h
 
 .include <bsd.port.mk>

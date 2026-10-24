@@ -1,6 +1,5 @@
 PORTNAME=	ocp
-PORTVERSION=	0.2.109
-PORTREVISION=	1
+PORTVERSION=	3.5.0
 PORTEPOCH=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://stian.cubic.org/ocp/
@@ -14,7 +13,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64 powerpc64le
 
-BUILD_DEPENDS=	xa65:devel/xa65
+BUILD_DEPENDS=	bash:shells/bash \
+		gsed:textproc/gsed \
+		xa65:devel/xa65
 LIB_DEPENDS=	libancient.so:archivers/ancient \
 		libcjson.so:devel/libcjson \
 		libdiscid.so:audio/libdiscid \
@@ -43,8 +44,8 @@ CONFLICTS_INSTALL=	alliance # man/man1/ocp.1.gz
 
 INFO=		ocp
 
-OPTIONS_DEFINE=		ADPLUG ALSA DOCS FLAC GME MIDI OSS SDL X11
-OPTIONS_DEFAULT=	ADPLUG ALSA FLAC GME MIDI OSS SDL X11
+OPTIONS_DEFINE=		ADPLUG ALSA DOCS FLAC GME MIDI OSS SDL SPEEX X11
+OPTIONS_DEFAULT=	ADPLUG ALSA FLAC GME MIDI OSS SDL SPEEX X11
 OPTIONS_SUB=		yes
 
 ADPLUG_DESC=	adplug support
@@ -79,6 +80,9 @@ SDL_CONFIGURE_WITH=	sdl2 \
 SDL_PLIST_SUB=		DESKTOP=''
 SDL_PLIST_SUB_OFF=	DESKTOP='@comment '
 
+SPEEX_LIB_DEPENDS=	libspeex.so:audio/speex
+SPEEX_CONFIGURE_WITH=	speex
+
 X11_BUILD_DEPENDS=	${LOCALBASE}/share/fonts/gnu-unifont-otf/unifont.otf:x11-fonts/gnu-unifont-otf
 X11_LIB_DEPENDS=	libfreetype.so:print/freetype2
 X11_RUN_DEPENDS=	${LOCALBASE}/share/fonts/gnu-unifont-otf/unifont.otf:x11-fonts/gnu-unifont-otf
@@ -93,6 +97,7 @@ X11_PLIST_SUB_OFF=	DESKTOP='@comment ' \
 
 TIMIDITY_CFG=	${LOCALBASE}/share/timidity/timidity.cfg
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${COMPILER_TYPE} == clang
@@ -103,5 +108,9 @@ post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ocp
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/ocp/*.so
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/ocp/autoload/*.so
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(4\.\*\|5\.\*\)@\1|8*@g'	\
+		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>

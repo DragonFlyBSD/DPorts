@@ -1,6 +1,7 @@
 PORTNAME=	coolreader
 DISTVERSIONPREFIX=	cr
 DISTVERSION=	3.2.59
+PORTREVISION=	2
 CATEGORIES=	deskutils
 
 MAINTAINER=	mistresssilvara@hotmail.com
@@ -33,5 +34,9 @@ CXXFLAGS+=	-D CR_EMULATE_GETTEXT=1 \
 
 OPTIONS_DEFINE=	DOCS NLS
 OPTIONS_SUB=	yes
+
+IGNORE= unmaintained, please request fixing to users mailing list
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${PREFIX}/share/cr3/hyph/obsolete
 
 .include <bsd.port.mk>

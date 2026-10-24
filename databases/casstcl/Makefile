@@ -20,4 +20,8 @@ GH_ACCOUNT=	flightaware
 USE_LDCONFIG=	${PREFIX}/lib/casstcl${PORTVERSION:R}
 PLIST_SUB+=	PORTVERSION=${PORTVERSION:R}
 
+pre-configure:
+	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' \
+		${WRKSRC}/tclconfig/tcl.m4
+
 .include <bsd.port.mk>

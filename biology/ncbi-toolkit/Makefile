@@ -1,6 +1,6 @@
 PORTNAME=	ncbi-toolkit
 DISTVERSION=	2017.01.06	# containing BLAST v2.2.27 (? is this true)
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	biology
 MASTER_SITES=	ftp://ftp.ncbi.nlm.nih.gov/toolbox/ncbi_tools/old/${PORTVERSION:S/.//g}/
 DISTNAME=	ncbi
@@ -83,5 +83,9 @@ do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	@(cd ${WRKSRC}/doc && \
 		${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR} '-not ( -name man -o -path ./man\/* )')
+
+dfly-patch:
+	${LN} -sv ${WRKSRC}/platform/freebsd.ncbi.mk	\
+		  ${WRKSRC}/platform/dragonfly.ncbi.mk
 
 .include <bsd.port.mk>

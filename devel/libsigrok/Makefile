@@ -1,6 +1,6 @@
 PORTNAME=	libsigrok
 PORTVERSION=	0.5.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://sigrok.org/download/source/libsigrok/
 
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libcheck.so:devel/check \
 		libvisa.so:devel/librevisa \
 		libzip.so:archivers/libzip
 
-USES=		compiler:c11 gnome libtool pathfix pkgconfig python:-3.9,build \
+USES=		compiler:c11 gnome libtool pathfix pkgconfig python:build \
 		shared-mime-info
 USE_GNOME=	glibmm
 USE_LDCONFIG=	yes
@@ -30,10 +30,12 @@ MAKE_JOBS_UNSAFE=	yes
 
 INSTALL_TARGET=	install-strip
 
-post-patch:
-# libusb can be disabled via src.conf(5), so detect via pkg-config
-	@${REINPLACE_CMD} -e 's/\(libusb-1\.0\) >= 1\.0\.[0-9]*/\1/' \
-		-e '/\*freebsd\*/,/;;/d' \
-		${WRKSRC}/configure
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_POSIX_C_SOURCE@&___@g' \
+		${WRKSRC}/config.h.in
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
+		${WRKSRC}/bindings/cxx/classes.cpp \
+		${WRKSRC}/src/std.c \
+		${WRKSRC}/src/strutil.c
 
 .include <bsd.port.mk>

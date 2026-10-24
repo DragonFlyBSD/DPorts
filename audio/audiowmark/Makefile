@@ -1,10 +1,11 @@
 PORTNAME=	audiowmark
-PORTVERSION=	0.6.1
-PORTREVISION=	1
+DISTVERSION=	0.6.5
+PORTREVISION=	2
 CATEGORIES=	audio
+MASTER_SITES=	https://github.com/swesterfeld/${PORTNAME}/releases/download/${DISTVERSION}/
 
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	99ffa6b4a4f311c88b6b38b31e579b2102453f3a.patch:-p1 # https://github.com/swesterfeld/audiowmark/issues/36
+PATCH_SITES=	https://github.com/swesterfeld/audiowmark/commit/
+PATCHFILES=	c9d1f8ccb0da91954b3362a0652a8770259ade73.patch:-p1
 
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Audio and video watermarking tool
@@ -13,8 +14,7 @@ WWW=		https://github.com/swesterfeld/audiowmark
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	${LOCALBASE}/include/fftw3.h:math/fftw3 \
-		autoconf-archive>=0:devel/autoconf-archive
+BUILD_DEPENDS=	${LOCALBASE}/include/fftw3.h:math/fftw3
 LIB_DEPENDS=	libfftw3f.so:math/fftw3-float \
 		libgcrypt.so:security/libgcrypt \
 		libgpg-error.so:security/libgpg-error \
@@ -22,10 +22,8 @@ LIB_DEPENDS=	libfftw3f.so:math/fftw3-float \
 		libsndfile.so:audio/libsndfile \
 		libzita-resampler.so:audio/zita-resampler
 
-USES=		autoreconf localbase:ldflags pkgconfig shebangfix
-USE_GITHUB=	yes
-GH_ACCOUNT=	swesterfeld
-
+USES=		compiler:c++14-lang gettext-tools libtool localbase:ldflags \
+		pkgconfig shebangfix tar:zst
 SHEBANG_FILES=	src/videowmark
 
 GNU_CONFIGURE=	yes
@@ -40,6 +38,7 @@ OPTIONS_DEFAULT=	FFMPEG
 FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 FFMPEG_CONFIGURE_ON=	--with-ffmpeg
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.adoc ${STAGEDIR}${DOCSDIR}

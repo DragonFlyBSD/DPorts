@@ -1,6 +1,6 @@
 PORTNAME=	gdb
 DISTVERSION=	15.1
-PORTREVISION=	2
+PORTREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
@@ -90,6 +90,9 @@ XXHASH_LIB_DEPENDS=	libxxhash.so:devel/xxhash
 
 ALL_TARGET=	all-gdb
 
+CXXFLAGS= -fpermissive
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NKGDB}
+KGDB_BROKEN= KGDB support not ready yet
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
@@ -127,6 +130,12 @@ EXCLUDE+=	zlib
 
 .if ${ARCH} == x86_64
 CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
+.endif
+
+# powerpc64le switched long double to IEEE-128 in FreeBSD 16; apply the gdb
+# long-double format fix only there so 14/15 packages keep the 64-bit format.
+.if ${ARCH} == powerpc64le && ${OSVERSION} >= 1600019
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-gdb_ppc-fbsd-tdep.c
 .endif
 
 post-patch:
@@ -192,5 +201,13 @@ do-install-GUILE-on:
 		${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install-guile )
 	(cd ${INSTALL_WRKSRC}/gdb/data-directory ; ${SETENVI} ${WRK_ENV} \
 		${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install-guile )
+
+CFLAGS:= ${CFLAGS:N-Wno-unknown-warning-option}
+CONFIGURE_TARGET:= x86_64-portbld-${OPSYS:tl}${OSREL}
+dfly-patch:
+	${CP} ${DFLY_FILESDIR}/dfly-tdep.* ${WRKSRC}/gdb/
+	${CP} ${DFLY_FILESDIR}/dfly-nat.* ${WRKSRC}/gdb/
+	${CP} ${DFLY_FILESDIR}/i386* ${WRKSRC}/gdb/
+	${CP} ${DFLY_FILESDIR}/amd64* ${WRKSRC}/gdb/
 
 .include <bsd.port.post.mk>

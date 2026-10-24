@@ -1,0 +1,4 @@
+bin/opengist
+%%ETCDIR%%/config.yml.sample
+@dir(opengist,opengist,750) /var/db/opengist
+@dir(opengist,opengist,750) /var/run/opengist

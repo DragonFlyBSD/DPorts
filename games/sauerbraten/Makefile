@@ -1,6 +1,6 @@
 PORTNAME=	sauerbraten
 PORTVERSION=	20201221
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/2020_11_29
 DISTNAME=	${PORTNAME}_2020_12_21_linux
@@ -64,5 +64,9 @@ do-install:
 .endfor
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} "${PORTDATA}" ${STAGEDIR}${DATADIR})
 	(cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR})
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	540M package (too big for mirrors)
+.endif
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	jfsw
-PORTVERSION=	20240303
+PORTVERSION=	20260105
 CATEGORIES=	games
 
 MAINTAINER=	martymac@FreeBSD.org
@@ -16,7 +16,7 @@ LICENSE_PERMS_BuildLic=	dist-mirror no-dist-sell pkg-mirror no-pkg-sell auto-acc
 LIB_DEPENDS=	libvorbisfile.so:audio/libvorbis \
 		libfluidsynth.so:audio/fluidsynth
 
-USES=		alias compiler:c++11-lang dos2unix gl gmake gnome \
+USES=		compiler:c++11-lang dos2unix gl gmake gnome \
 		perl5 pkgconfig:build sdl
 USE_GL=		gl
 USE_GNOME=	gtk20
@@ -31,12 +31,12 @@ GH_PROJECT=	jfbuild:build jfaudiolib:audio jfmact:mact
 # See GH listing to get current (tested) submodule hashes:
 # https://github.com/jonof/jfsw
 GH_TAGNAME=	${PORTVERSION} \
-		5b7e611:audio \
-		35e0670:build \
-		1f0746a:mact
+		68be97f:audio \
+		40a98be:build \
+		731c0cc:mact
 GH_SUBDIR=	jfbuild:build jfaudiolib:audio jfmact:mact
 
-MAKE_ENV+=	DATADIR="${DATADIR}"
+MAKE_ENV+= DATADIR="${DATADIR}" PLATFORM=BSD
 
 SUB_FILES=	pkg-message
 
@@ -44,6 +44,7 @@ PORTDOCS=	README.md releasenotes.html
 
 OPTIONS_DEFINE=	DOCS
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/X11R6|${LOCALBASE}|' \
 		${WRKSRC}/jfbuild/Makefile

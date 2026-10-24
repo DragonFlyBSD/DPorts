@@ -34,4 +34,5 @@ PLIST_FILES=	bin/mspdebug \
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ltermcap||' ${WRKSRC}/Makefile
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NLIBMSP430}
 .include <bsd.port.mk>

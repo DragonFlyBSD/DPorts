@@ -1,3 +1,0 @@
-
-# avoid fuse deps
-USES:=	${USES:Nfuse}

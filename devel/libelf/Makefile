@@ -2,7 +2,7 @@ PORTNAME=	libelf
 DISTVERSION=	0.8.13
 PORTREVISION=	3
 CATEGORIES=	devel
-MASTER_SITES=	NETBSD
+MASTER_SITES= NETBSD https://fossies.org/linux/misc/old/
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Public ELF file access library similar to libelf(3) in Solaris
@@ -15,7 +15,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=		--enable-shared --disable-compat
 
-CONFLICTS_INSTALL=	elfutils
+CONFLICTS_INSTALL= nothing
 
 OPTIONS_DEFINE=		EXTENDED NLS SANITY
 OPTIONS_DEFAULT=	EXTENDED SANITY

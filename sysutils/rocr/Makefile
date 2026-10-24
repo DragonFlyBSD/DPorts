@@ -11,9 +11,9 @@ LICENSE_FILE=	${WRKSRC}/src/LICENSE.md
 
 ONLY_FOR_ARCHS=	amd64
 
-LIB_DEPENDS=	libhsakmt.so:sysutils/roct
+LIB_DEPENDS= libhsakmt.so:sysutils/roct libelf.so:devel/libelf
 
-USES=		cmake
+USES= cmake localbase
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes

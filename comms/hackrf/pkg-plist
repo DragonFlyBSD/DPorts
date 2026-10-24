@@ -1,3 +1,4 @@
+bin/hackrf_biast
 bin/hackrf_clock
 bin/hackrf_cpldjtag
 bin/hackrf_debug
@@ -7,8 +8,21 @@ bin/hackrf_spiflash
 bin/hackrf_sweep
 bin/hackrf_transfer
 include/libhackrf/hackrf.h
+lib/cmake/HackRF/FindLIBUSB.cmake
+lib/cmake/HackRF/HackRFConfig.cmake
+lib/cmake/HackRF/HackRFConfigVersion.cmake
+lib/cmake/HackRF/HackRFTargets-%%CMAKE_BUILD_TYPE%%.cmake
+lib/cmake/HackRF/HackRFTargets.cmake
 lib/libhackrf.a
 lib/libhackrf.so
 lib/libhackrf.so.0
-lib/libhackrf.so.0.6.0
+lib/libhackrf.so.0.9.2
 libdata/pkgconfig/libhackrf.pc
+%%DATADIR%%/firmware-bin/hackrf_jawbreaker_usb.bin
+%%DATADIR%%/firmware-bin/hackrf_jawbreaker_usb.dfu
+%%DATADIR%%/firmware-bin/hackrf_one_usb.bin
+%%DATADIR%%/firmware-bin/hackrf_one_usb.dfu
+%%DATADIR%%/firmware-bin/hackrf_pro_usb.bin
+%%DATADIR%%/firmware-bin/hackrf_pro_usb.dfu
+%%DATADIR%%/firmware-bin/hackrf_rad1o_usb.bin
+%%DATADIR%%/firmware-bin/hackrf_rad1o_usb.dfu

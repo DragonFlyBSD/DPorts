@@ -57,6 +57,7 @@ JACK_USE=			qt=core,gui,opengl,widgets,xml,buildtools:build,qmake:build,linguist
 JACK_CONFIGURE_ENABLE=		jack
 JACK_CONFIGURE_ON=		--enable-qt
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO} JACK
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MPULSEAUDIO} && ! ${PORT_OPTIONS:MJACK}
@@ -64,7 +65,7 @@ CONFIGURE_ARGS+=	--disable-qt
 .endif
 
 .if ${PORT_OPTIONS:MPULSEAUDIO} || ${PORT_OPTIONS:MJACK}
-PLIST_FILES+=	share/icons/hicolor/scalable/apps/projectM.svg
+PLIST_FILES+= share/icons/hicolor/scalable/apps/projectM.svg share/pixmaps/prjm16-transparent.svg
 BINARY_ALIAS+=	qmake=${QMAKE} \
 		moc=${MOC} \
 		uic=${UIC} \
@@ -79,5 +80,10 @@ pre-configure:
 post-install:
 	@${MV} ${STAGEDIR}${PREFIX}/share/projectM/config.inp ${STAGEDIR}${PREFIX}/share/projectM/config.inp.sample
 	${INSTALL_DATA} ${WRKSRC}/fonts/Vera.ttf ${STAGEDIR}${PREFIX}/share/projectM/fonts/
+
+dfly-install:
+	${INSTALL_DATA} ${WRKSRC}/src/projectM-qt/images/icons/prjm16-transparent.svg \
+		${STAGEDIR}${PREFIX}/share/pixmaps
+
 
 .include <bsd.port.mk>

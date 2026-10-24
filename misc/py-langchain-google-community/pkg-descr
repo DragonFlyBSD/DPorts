@@ -1,0 +1,2 @@
+This package contains the LangChain integrations for Google products that
+are not part of langchain-google-vertexai or langchain-google-genai packages.

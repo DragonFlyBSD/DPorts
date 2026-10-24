@@ -1,21 +1,23 @@
-# Created by Markus Mann, CTS - FreeBSD Team <de-freebsd@ctseuro.com>
-
 PORTNAME=	owncast
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.7
+DISTVERSION=	0.2.1
+PORTREVISION=	17
 CATEGORIES=	www
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	de-freebsd@ctseuro.com
 COMMENT=	Self-hosted streaming service written in Go
+WWW=		https://owncast.online
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg
 
-USES=		go:modules
+USES=		cpe go:modules
 USE_RC_SUBR=	owncast
+
+CPE_VENDOR=	owncast_project
 
 GO_MODULE=	github.com/owncast/owncast
 
@@ -41,7 +43,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/bin/owncast ${STAGEDIR}${PREFIX}/sbin
 
 	${MKDIR} -m 750 ${STAGEDIR}${WWWDIR}/
-	cd ${WRKSRC} && ${COPYTREE_SHARE} "static webroot" ${STAGEDIR}${WWWDIR}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} "static" ${STAGEDIR}${WWWDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${STAGEDIR}${WWWDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${WWWDIR}
 	${INSTALL_DATA} ${WRKSRC}/VERSION ${STAGEDIR}${WWWDIR}

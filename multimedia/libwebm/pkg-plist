@@ -15,4 +15,7 @@ include/webm/mkvparser/mkvreader.h
 include/webm/reader.h
 include/webm/status.h
 include/webm/webm_parser.h
+lib/cmake/webm/webmConfig.cmake
+lib/cmake/webm/webmTargets-%%CMAKE_BUILD_TYPE%%.cmake
+lib/cmake/webm/webmTargets.cmake
 lib/libwebm.so

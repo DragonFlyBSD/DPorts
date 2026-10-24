@@ -1,5 +1,5 @@
 PORTNAME=	libxmlbird
-DISTVERSION=	1.2.12
+DISTVERSION=	1.2.15
 CATEGORIES=	textproc devel
 MASTER_SITES=	https://birdfont.org/xmlbird-releases/
 
@@ -36,5 +36,9 @@ do-build:
 do-install:
 	(cd ${WRKSRC} && ./install.py --dest="${STAGEDIR}")
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libxmlbird.so.1
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@lib64@lib@g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

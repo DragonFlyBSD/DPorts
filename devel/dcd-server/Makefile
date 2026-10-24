@@ -1,0 +1,56 @@
+PORTNAME=	dcd
+PORTVERSION=	0.16.4
+DISTVERSIONPREFIX=	v
+PORTREVISION?=	0
+CATEGORIES?=	devel
+PKGNAMESUFFIX?=	-server
+
+MAINTAINER=	acm@FreeBSD.org
+COMMENT?=	Auto-complete program for the D programming language (server)
+WWW=		https://github.com/dlang-community/DCD
+
+LICENSE=	BSL
+
+BUILD_DEPENDS=	ldmd2:lang/ldc \
+		dub:devel/dub \
+		rdmd:lang/dlang-tools \
+		${LOCALBASE}/lib/d/libemsi_containers.a:devel/containers \
+		${LOCALBASE}/lib/d/libmsgpack-d.a:devel/msgpack-d \
+		${LOCALBASE}/lib/d/libdparse.a:devel/libdparse
+
+USES=		pkgconfig
+USE_GITHUB=	yes
+GH_ACCOUNT=	dlang-community
+GH_PROJECT=	DCD
+
+DUB_CMD=	${LOCALBASE}/bin/dub build --build=release
+DUB_CONFIG?=	server
+D_INCLUDE_DIR=	${PREFIX}/include/d
+D_LIB_DIR=	${PREFIX}/lib/d
+DC=		${PREFIX}/bin/ldmd2
+
+post-patch:
+	${REINPLACE_CMD} '8d' ${WRKSRC}/common/dub.sdl
+	${REINPLACE_CMD} '9,10d' ${WRKSRC}/dsymbol/dub.json
+	${REINPLACE_CMD} -e "s|%%LOCALBASE%%|${LOCALBASE}|g" ${WRKSRC}/dub.json
+
+do-build:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} DC=${DC} ${DUB_CMD} --config=${DUB_CONFIG}
+.if ${PKGNAMESUFFIX} == "-server"
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} DC=${DC} ${DUB_CMD} --config=library
+.endif
+
+do-install:
+	@${MKDIR} ${STAGEDIR}/${D_INCLUDE_DIR}/dcd/${PKGNAMESUFFIX:S/-//}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/dcd${PKGNAMESUFFIX} ${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/man1/dcd${PKGNAMESUFFIX}.1 ${STAGEDIR}${PREFIX}/share/man/man1
+	cd ${WRKSRC}/src/dcd/${PKGNAMESUFFIX:S/-//} && ${COPYTREE_SHARE} . ${STAGEDIR}${D_INCLUDE_DIR}/dcd/${PKGNAMESUFFIX:S/-//} "-name *\.d"
+.if ${PKGNAMESUFFIX} == "-server"
+	@${MKDIR} ${STAGEDIR}/${D_LIB_DIR}
+	@${INSTALL_DATA} ${WRKSRC}/libdcd.a ${STAGEDIR}${D_LIB_DIR}
+	@${MKDIR} ${STAGEDIR}/${D_INCLUDE_DIR}/dsymbol
+	cd ${WRKSRC}/common/src/dcd/common && ${COPYTREE_SHARE} . ${STAGEDIR}${D_INCLUDE_DIR}/dcd/common "-name *\.d"
+	cd ${WRKSRC}/dsymbol/src/dsymbol && ${COPYTREE_SHARE} . ${STAGEDIR}${D_INCLUDE_DIR}/dsymbol "-name *\.d"
+.endif
+
+.include <bsd.port.mk>

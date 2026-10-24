@@ -16,4 +16,5 @@ USES=		gem
 
 CONFIGURE_ARGS=	--with-icu-include=${LOCALBASE}/include
 
+LIB_DEPENDS:= ${LIB_DEPENDS:N*/libunwind}
 .include <bsd.port.mk>

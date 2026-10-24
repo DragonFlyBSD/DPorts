@@ -1,4 +1,4 @@
---- tests/test-runner.c.orig	2024-08-24 15:43:55 UTC
+--- tests/test-runner.c.orig
 +++ tests/test-runner.c
 @@ -29,6 +29,7 @@
  #include <unistd.h>
@@ -18,7 +18,7 @@
  #ifndef PR_SET_PTRACER
  # define PR_SET_PTRACER 0x59616d61
  #endif
-@@ -276,17 +279,22 @@ is_debugger_attached(void)
+@@ -276,17 +279,22 @@
  		close(pipefd[0]);
  		if (buf == '-')
  			_exit(1);
@@ -41,7 +41,7 @@
  		rc = prctl(PR_SET_PTRACER, pid);
  		if (rc != 0 && errno != EINVAL) {
  			/* An error prevents us from telling if a debugger is attached.
-@@ -300,6 +308,7 @@ is_debugger_attached(void)
+@@ -300,6 +308,7 @@
  			/* Signal to client that parent is ready by passing '+' */
  			write(pipefd[1], "+", 1);
  		}
@@ -49,7 +49,7 @@
  		close(pipefd[1]);
  
  		waitpid(pid, &status, 0);
-@@ -327,13 +336,9 @@ int main(int argc, char *argv[])
+@@ -327,14 +336,10 @@
  	if (isatty(fileno(stderr)))
  		is_atty = 1;
  
@@ -60,34 +60,43 @@
 -		fd_leak_check_enabled = !getenv("WAYLAND_TEST_NO_LEAK_CHECK");
 -		timeouts_enabled = !getenv("WAYLAND_TEST_NO_TIMEOUTS");
 -	}
-+
+ 
 +	fd_leak_check_enabled = !getenv("WAYLAND_TEST_NO_LEAK_CHECK");
 +	timeouts_enabled = !getenv("WAYLAND_TEST_NO_TIMEOUTS");
- 
++
  	if (argc == 2 && strcmp(argv[1], "--help") == 0)
  		usage(argv[0], EXIT_SUCCESS);
-@@ -374,6 +379,20 @@ int main(int argc, char *argv[])
+ 
+@@ -374,12 +379,28 @@
  			abort();
  		}
  
 +		fprintf(stderr, "test \"%s\":\t", t->name);
 +#ifdef __DragonFly__
-+		if (WIFEXITED(info)) {
+ 		if (WIFEXITED(info)) {
 +			fprintf(stderr, "exit status %d", WEXITSTATUS(info));
-+			if (WEXITSTATUS(info) == EXIT_SUCCESS)
-+				success = 1;
-+			break;
+ 			if (WEXITSTATUS(info) == EXIT_SUCCESS)
+ 				success = !t->must_fail;
+ 			else
+ 				success = t->must_fail;
 +		} else if (WIFSIGNALED(info) || WCOREDUMP(info)) {
 +			fprintf(stderr, "signal %d", WTERMSIG(info));
-+			break;
++			if (t->must_fail)
++				success = 1;
 +		}
 +#else
 + 	
+ 
++		if (WIFEXITED(info)) {
++			if (WEXITSTATUS(info) == EXIT_SUCCESS)
++				success = !t->must_fail;
++			else
++				success = t->must_fail;
 +
- 		if (WIFEXITED(info)) {
- 			if (WEXITSTATUS(info) == EXIT_SUCCESS)
- 				success = !t->must_fail;
-@@ -392,6 +411,7 @@ int main(int argc, char *argv[])
+ 			stderr_set_color(success ? GREEN : RED);
+ 			fprintf(stderr, "test \"%s\":\texit status %d",
+ 				t->name, WEXITSTATUS(info));
+@@ -392,6 +413,7 @@
  			fprintf(stderr, "test \"%s\":\tsignal %d",
  				t->name, WTERMSIG(info));
  		}

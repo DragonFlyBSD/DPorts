@@ -1,6 +1,6 @@
 PORTNAME=	ggobi
 DISTVERSION=	2.1.12
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	math graphics
 
 MAINTAINER=	rhurlin@FreeBSD.org
@@ -31,6 +31,7 @@ SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=	DOCS
 
+LDFLAGS= -lm -L${LOCALBASE}/lib -lgmodule-2.0
 post-build:
 	@${REINPLACE_CMD} -e 's|plugin.la|plugin.so|g' ${WRKSRC}/ggobirc
 

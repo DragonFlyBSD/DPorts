@@ -1,9 +1,0 @@
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@ifndef \(__FreeBSD__\)@if \!(defined(\1)||defined(__DragonFly__))@g'	\
-		${WRKSRC}/cd_bsd.c
-	${REINPLACE_CMD} -e 's@lib64@lib@g' -e 's@amd64@x86_64@g'	\
-		${WRKSRC}/makefile
-	${REINPLACE_CMD} -e "s@LDFLAGS_UNIXCOMMON=@& -L${LOCALBASE}/lib @g" \
-			 -e "s@CFLAGS_COMMON=@& -I${LOCALBASE}/include @g" \
-		${WRKSRC}/makefile.inc

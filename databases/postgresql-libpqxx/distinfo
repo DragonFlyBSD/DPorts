@@ -1,3 +1,3 @@
-TIMESTAMP = 1717880546
-SHA256 (postgresql/jtv-libpqxx-7.9.1_GH0.tar.gz) = 4fafd63009b1d6c2b64b8c184c04ae4d1f7aa99d8585154832d28012bae5b0b6
-SIZE (postgresql/jtv-libpqxx-7.9.1_GH0.tar.gz) = 773890
+TIMESTAMP = 1786006896
+SHA256 (postgresql/jtv-libpqxx-8.0.2_GH0.tar.gz) = 028c5fba4982e759fe182af1103ccd08b02bb4e1f9f12a551e01d21cac0c4440
+SIZE (postgresql/jtv-libpqxx-8.0.2_GH0.tar.gz) = 838657

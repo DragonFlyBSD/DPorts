@@ -30,6 +30,7 @@ NLS_CONFIGURE_ENABLE=	nls
 NLS_LIBS=	-lintl
 NLS_USES=	gettext
 
+LIB_DEPENDS= libkrb5.so:security/krb5
 post-patch:
 	@${REINPLACE_CMD} -e 's|libdir)/security|libdir)|g' ${WRKSRC}/src/Makefile.in
 	@${REINPLACE_CMD} -e 's|/lib64/security|${LOCALBASE}/lib|g' \

@@ -1,0 +1,32 @@
+--- meson.build.orig	2026-08-01 05:52:22 UTC
++++ meson.build
+@@ -30,27 +30,8 @@ mupdf_required_version_minor = 26
+ 
+ mupdf_required_version_major = 1
+ mupdf_required_version_minor = 26
+-mupdf = dependency('mupdf', required: false, version: '>=@0@.@1@'.format(mupdf_required_version_major, mupdf_required_version_minor))
+-if not mupdf.found()
+-  # normal build of mupdf
+-  mupdf = cc.find_library('mupdf', has_headers: ['mupdf/fitz/version.h', 'mupdf/fitz.h', 'mupdf/pdf.h'], required: true)
+-  mupdfthird = cc.find_library('mupdf-third')
+-  version_check = '''
+-#include <mupdf/fitz/version.h>
+-
+-#if FZ_VERSION_MAJOR < @0@ || (FZ_VERSION_MAJOR == @0@ && FZ_VERSION_MINOR < @1@)
+-#error "mupdf @0@.@1@ or newer is requried"
+-#endif
+-'''.format(mupdf_required_version_major, mupdf_required_version_minor)
+-  if not cc.compiles(version_check, dependencies: [mupdf])
+-    error('mupdf @0@.@1@ or newer is required'.format(mupdf_required_version_major, mupdf_required_version_minor))
+-  endif
+-
+-  build_dependencies += [mupdf, mupdfthird]
+-else
+-  # build from Debian's libmupdf-dev
+-  build_dependencies += [mupdf]
+-endif
++mupdf = cc.find_library('mupdf')
++build_dependencies += [mupdf]
+ 
+ if get_option('plugindir') == ''
+   plugindir = zathura.get_variable(pkgconfig: 'plugindir')

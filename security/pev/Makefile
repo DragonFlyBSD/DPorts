@@ -23,4 +23,10 @@ MAKE_ARGS=	MAKE=${MAKE_CMD}
 CFLAGS+=	-I${OPENSSLINC} -I${LOCALBASE}/include
 LDFLAGS+=	-L${OPENSSLLIB}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g'	\
+		${WRKSRC}/src/plugins/Makefile \
+		${WRKSRC}/lib/libpe/Makefile \
+		${WRKSRC}/lib/libpe/Makefile
+
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	jfreechart
 PORTVERSION=	1.0.17
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	java graphics
 MASTER_SITES=	SF/${PORTNAME}/1.%20JFreeChart/${PORTVERSION}
 
@@ -19,9 +19,9 @@ COMPILE_DESC=	Build from source
 
 COMPILE_USES=		java:ant,run
 COMPILE_USES_OFF=	java
-COMPILE_USE=	LOCALE=en_US.UTF-8
 COMPILE_ALL_TARGET=	compile
 COMPILE_VARS_OFF=	NO_BUILD=yes
+COMPILE_MAKE_ARGS+=	-Dsrc.version=1.8 -Dtarget.version=1.8
 
 .include <bsd.port.options.mk>
 

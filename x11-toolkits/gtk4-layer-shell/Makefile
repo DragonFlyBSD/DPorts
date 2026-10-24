@@ -1,6 +1,6 @@
 PORTNAME=	gtk4-layer-shell
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.2
+DISTVERSION=	1.3.0
 CATEGORIES=	x11-toolkits
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -20,6 +20,7 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	wmww
 MESON_ARGS=	-Dsmoke-tests=false # Need luajit flavor of devel/lua-lgi
+PLIST_SUB=	VERSION=${PORTVERSION}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
@@ -28,6 +29,7 @@ DOCS_MESON_TRUE=	docs
 
 EXAMPLES_MESON_TRUE=	examples
 
+IGNORE= unmaintained, please request fixing to users mailing list
 pre-test:
 	@if [ ! -e ${WRKDIR}/.meson_build_tests ]; then \
 		${RM} ${CONFIGURE_COOKIE} ${BUILD_COOKIE}; \

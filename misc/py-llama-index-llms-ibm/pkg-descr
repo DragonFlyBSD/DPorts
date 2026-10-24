@@ -1,0 +1,4 @@
+LlamaIndex LLMs IBM provides IBM watsonx.ai integration for
+LlamaIndex. It enables the use of IBM's large language models
+within LlamaIndex pipelines for retrieval-augmented generation
+and other LLM-powered applications.

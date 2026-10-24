@@ -1,0 +1,7 @@
+Immanent Checker validates project structure and source-code expectations
+through configurable check suites. It can inspect full projects, filtered
+project trees, directories, and files, and can report findings in gcc-style or
+JSON output.
+
+This port installs the released PHAR executables for immanent-checker and
+immanent-parser.

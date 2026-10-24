@@ -1,3 +1,0 @@
-
-# zrj: not sure what changed, but now it builds internal expat
-CFLAGS+=	-DHAVE_MEMMOVE

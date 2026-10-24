@@ -61,4 +61,9 @@ post-install-EXAMPLES-on:
 		${PORTEXAMPLES:S|^|${WRKSRC}/api/python/|}
 	${INSTALL_DATA} ${PORTEXAMPLES:S|^|${WRKSRC}/api/python/|} ${STAGEDIR}${EXAMPLESDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-static-libstdc++@@g'	\
+		${WRKSRC}/src/Makefile.am		\
+		${WRKSRC}/src/Makefile.in
+
 .include <bsd.port.mk>

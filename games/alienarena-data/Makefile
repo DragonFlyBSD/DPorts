@@ -1,5 +1,5 @@
 PORTNAME=	alienarena
-DISTVERSION=    7.71.6
+DISTVERSION=    7.72.3
 PORTEPOCH=	1
 CATEGORIES=	games
 PKGNAMESUFFIX=	-data
@@ -41,5 +41,9 @@ do-install:
 	cd ${WRKSRC} && ${COPYTREE_SHARE} "arena data1" ${STAGEDIR}${DATADIR}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/docs && ${COPYTREE_SHARE} "*" ${STAGEDIR}${DOCSDIR}
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	474M package (too big for mirrors)
+.endif
 
 .include <bsd.port.mk>

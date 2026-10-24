@@ -23,4 +23,7 @@ CONFIGURE_ARGS+=--with-tcl=${TCL_LIBDIR} \
 		--with-mysql-lib=${LOCALBASE}/lib/mysql \
 		--exec-prefix=${PREFIX}
 
+pre-patch:
+	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' ${WRKSRC}/configure
+
 .include <bsd.port.mk>

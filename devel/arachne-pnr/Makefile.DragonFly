@@ -1,2 +1,0 @@
-
-CFLAGS_gcc:=	${CFLAGS_gcc:N-Wno-error=pessimizing-move}

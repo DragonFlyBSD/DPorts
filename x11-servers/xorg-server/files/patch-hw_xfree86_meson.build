@@ -1,5 +1,5 @@
---- hw/xfree86/meson.build.orig	2022-06-29 14:37:28.042085000 +0000
-+++ hw/xfree86/meson.build	2022-06-29 14:37:36.259147000 +0000
+--- hw/xfree86/meson.build.orig	2026-07-08 01:35:09 UTC
++++ hw/xfree86/meson.build
 @@ -152,7 +152,7 @@ if get_option('suid_wrapper')
          c_args: xorg_c_args,
          install: true,

@@ -1,18 +1,18 @@
---- src/slic3r/GUI/BitmapCache.cpp.orig	2023-07-21 12:45:35 UTC
+--- src/slic3r/GUI/BitmapCache.cpp.orig	2024-09-18 13:39:04 UTC
 +++ src/slic3r/GUI/BitmapCache.cpp
-@@ -15,8 +15,9 @@
+@@ -20,8 +20,9 @@
      #include <wx/rawbmp.h>
  #endif /* __WXGTK2__ */
  
 -#include <nanosvg/nanosvg.h>
 -#include <nanosvg/nanosvgrast.h>
 +#include <wx/display.h>
-+#include "libnanosvg/nanosvg.h"
-+#include "libnanosvg/nanosvgrast.h"
++#include <libnanosvg/nanosvg.h>
++#include <libnanosvg/nanosvgrast.h>
  
  namespace Slic3r { namespace GUI {
  
-@@ -68,7 +69,7 @@ wxBitmapBundle* BitmapCache::insert_bndl(const std::st
+@@ -73,7 +74,7 @@ wxBitmapBundle* BitmapCache::insert_bndl(const std::st
      wxVector<wxBitmap> bitmaps;
  
      std::set<double> scales = {1.0};
@@ -21,7 +21,7 @@
  
  #ifdef __APPLE__
      scales.emplace(m_scale);
-@@ -547,7 +548,7 @@ wxBitmapBundle BitmapCache::mksolid(size_t width_in, s
+@@ -554,7 +555,7 @@ wxBitmapBundle BitmapCache::mksolid(size_t width_in, s
      wxVector<wxBitmap> bitmaps;
  
      std::set<double> scales = { 1.0 };

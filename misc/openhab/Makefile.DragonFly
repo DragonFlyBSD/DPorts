@@ -1,3 +1,0 @@
-
-# orphan empty dir
-PLIST_FILES+=	"@dir libexec/openhab/runtime/system/org/ops4j/pax/logging/pax-logging-logback"

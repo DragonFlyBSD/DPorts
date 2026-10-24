@@ -1,0 +1,4 @@
+LlamaIndex Core is the central framework for building LLM-powered
+data applications. It provides the interface between large language
+models and external data sources, enabling indexing, retrieval, and
+querying of structured and unstructured data for RAG applications.

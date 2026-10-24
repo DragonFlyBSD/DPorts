@@ -1,14 +1,17 @@
---- media/audio/sndio/sndio_output.cc.orig	2023-02-08 09:03:45 UTC
+--- media/audio/sndio/sndio_output.cc.orig	2026-09-25 15:26:43 UTC
 +++ media/audio/sndio/sndio_output.cc
-@@ -0,0 +1,187 @@
+@@ -0,0 +1,194 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
++#include "base/containers/span.h"
 +#include "base/logging.h"
 +#include "base/time/time.h"
 +#include "base/time/default_tick_clock.h"
 +#include "media/audio/audio_manager_base.h"
++#include "media/base/audio_bus.h"
++#include "media/base/audio_sample_types.h"
 +#include "media/base/audio_timestamp_helper.h"
 +#include "media/audio/sndio/sndio_output.h"
 +
@@ -166,12 +169,16 @@
 +    const base::TimeDelta delay = AudioTimestampHelper::FramesToTime(hw_delay,
 +	params.sample_rate());
 +    count = source->OnMoreData(delay, base::TimeTicks::Now(), {}, audio_bus.get());
-+    audio_bus->ToInterleaved<SignedInt16SampleTypeTraits>(count, reinterpret_cast<int16_t*>(buffer));
 +    if (count == 0) {
 +      // We have to submit something to the device
 +      count = audio_bus->frames();
 +      memset(buffer, 0, count * params.GetBytesPerFrame(kSampleFormat));
 +      LOG(WARNING) << "No data to play, running empty cycle.";
++    } else {
++      audio_bus->ToInterleavedBytesPartial<SignedInt16SampleTypeTraits>(
++          /*read_offset=*/0u,
++          base::span(reinterpret_cast<uint8_t*>(buffer),
++		     static_cast<size_t>(count * params.GetBytesPerFrame(kSampleFormat))));
 +    }
 +
 +    // Submit data to the device

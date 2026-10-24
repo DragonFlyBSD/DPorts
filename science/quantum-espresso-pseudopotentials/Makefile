@@ -38,4 +38,8 @@ do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	${FIND} ${WRKSRC} -name "*.UPF" -and -exec ${INSTALL_DATA} {} ${STAGEDIR}${DATADIR} \;
 
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	719M package (too big for mirrors)
+.endif
+
 .include <bsd.port.mk>

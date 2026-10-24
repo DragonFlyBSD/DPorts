@@ -1,13 +1,14 @@
 PORTNAME=	vacuum
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.8
-PORTREVISION=	1
+DISTVERSION=	0.17.7
+PORTREVISION=	14
 CATEGORIES=	textproc
 PKGNAMESUFFIX=	-lint-tool
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	OpenAPI/Swagger linter and quality analysis tool
-WWW=		https://quobix.com/vacuum/
+WWW=		https://quobix.com/vacuum/ \
+		https://github.com/daveshanley/vacuum
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -18,6 +19,7 @@ GO_MODULE=	github.com/daveshanley/vacuum
 
 PLIST_FILES=	bin/${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-test:
 	${STAGEDIR}${PREFIX}/bin/${PORTNAME} lint ${WRKSRC}/model/test_files/petstorev3.json
 

@@ -1,20 +1,20 @@
---- src/3rdparty/chromium/third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2024-02-23 21:04:38 UTC
+--- src/3rdparty/chromium/third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc.orig	2026-08-11 12:42:19 UTC
 +++ src/3rdparty/chromium/third_party/blink/renderer/core/scroll/scrollbar_theme_aura.cc
-@@ -150,7 +150,7 @@ bool ScrollbarThemeAura::SupportsDragSnapBack() const 
+@@ -147,7 +147,7 @@ bool ScrollbarThemeAura::SupportsDragSnapBack() const 
+ // Disable snapback on desktop Linux to better integrate with the desktop
+ // behavior. Typically, Linux apps do not implement scrollbar snapback (this
  // is true for at least GTK and QT apps).
- // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
- // complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    return false;
  #else
    return true;
-@@ -363,7 +363,7 @@ bool ScrollbarThemeAura::ShouldCenterOnThumb(const Scr
-                                              const WebMouseEvent& event) {
- // TODO(crbug.com/1052397): Revisit once build flag switch of lacros-chrome is
- // complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+@@ -429,7 +429,7 @@ bool ScrollbarThemeAura::ShouldCenterOnThumb(const Scr
+ 
+ bool ScrollbarThemeAura::ShouldCenterOnThumb(const Scrollbar& scrollbar,
+                                              const WebMouseEvent& event) const {
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    if (event.button == WebPointerProperties::Button::kMiddle)
      return true;
  #endif

@@ -27,6 +27,7 @@ OPTIONS_DEFINE=	DOCS OPTIMIZED_CFLAGS
 OPTIMIZED_CFLAGS_MAKE_ARGS=	CFLAGS="${CFLAGS:S/O2/O3/g}"
 
 # This gets rid of extra optimization caused by opt?
+CFLAGS= -DDIRENT_HAS_TYPE -L${LOCALBASE}/lib
 post-extract:
 	${REINPLACE_CMD} -e '/OPT?=/d' ${WRKSRC}/Makefile
 

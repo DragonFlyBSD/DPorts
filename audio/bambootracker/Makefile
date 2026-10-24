@@ -43,6 +43,7 @@ ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 JACK_LIB_DEPENDS=	libjack.so:audio/jack
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO} ALSA
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MALSA}
@@ -69,5 +70,9 @@ post-install:
 try-latest: clean extract
 	@${RM} -rf ${WRKSRC}
 	@git clone --recurse-submodules https://github.com/BambooTracker/BambooTracker.git ${WRKSRC}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-pedantic -pedantic-errors@@g' \
+		${WRKSRC}/BambooTracker/BambooTracker.pro
 
 .include <bsd.port.mk>

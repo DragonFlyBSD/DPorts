@@ -28,6 +28,7 @@ CPE_VENDOR=	apache
 APMOD_FILE=	260_${PORTNAME}.conf.sample
 PLIST_SUB+=	APMOD_FILE=${APMOD_FILE}
 
+MAKE_JOBS_UNSAFE= yes
 .include <bsd.port.pre.mk>
 
 CONFIGURE_ARGS=	PREFIX=${PREFIX} MP_APXS=${APXS} \

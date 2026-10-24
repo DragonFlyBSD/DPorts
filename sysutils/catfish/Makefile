@@ -1,5 +1,6 @@
 PORTNAME=	catfish
-PORTVERSION=	4.20.0
+PORTVERSION=	4.20.1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
@@ -17,12 +18,12 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>0:devel/py-dbus@${PY_FLAVOR} \
 		pdftotext:graphics/poppler-utils
 
 USES=		cpe desktop-file-utils gettext-tools gnome meson pkgconfig \
-		python shebangfix tar:bz2 xfce
+		python shebangfix tar:xz xfce
 CPE_VENDOR=	catfish_project
 USE_GNOME=	gdkpixbuf gtk30 pygobject3
 USE_XFCE=	xfconf
-BINARY_ALIAS=	python3=${PYTHON_CMD}
 SHEBANG_FILES=	bin/catfish
+BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 NO_ARCH=	yes
 
@@ -39,8 +40,9 @@ ZEITGEIST_DESC=	Provide recent search suggestions (broken)
 
 POLKIT_RUN_DEPENDS=	pkexec:sysutils/polkit
 
-SUDO_RUN_DEPENDS=	sudo:security/sudo
-
 ZEITGEIST_LIB_DEPENDS=	libzeitgeist-2.0.so:sysutils/zeitgeist
 
+SUDO_USES=	sudo
+
+USES+= gettext
 .include <bsd.port.mk>

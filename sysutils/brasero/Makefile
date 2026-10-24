@@ -1,6 +1,6 @@
 PORTNAME=	brasero
 PORTVERSION=	3.12.3
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -43,8 +43,13 @@ LIBBURNIA_CONFIGURE_ENABLE=	libburnia
 
 PLIST_SUB=	FULL_VERSION=${PORTVERSION}
 
+LIB_DEPENDS+= libltdl.so:devel/libltdl
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/libbrasero-burn/burn-process.c
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/libbrasero-media/scsi-cam.c
 
 .include <bsd.port.mk>

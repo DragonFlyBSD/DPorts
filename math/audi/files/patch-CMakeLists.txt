@@ -1,0 +1,12 @@
+-- Disable the debug-runtime requirement so the release Boost libraries
+-- installed by devel/boost-libs are accepted on FreeBSD.
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -192,6 +192,7 @@
+     # We rely on the modern BoostConfig.cmake package (CONFIG mode + imported
+     # targets). First find only the Boost headers so we can inspect the detected
+     # version before deciding which compiled components to request: newer Boost
++    set(Boost_USE_DEBUG_RUNTIME OFF)
+     # releases (>= 1.90) no longer ship the separately-compiled Boost.System
+     # library (it is header-only and provided by Boost::headers).
+     set(_audi_MIN_BOOST_VERSION "1.73.0")

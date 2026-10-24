@@ -13,7 +13,7 @@ LICENSE=	GPLv3
 
 CONFLICTS=	dbh-[0-4]*
 
-USES=		libtool pkgconfig
+USES= libtool pkgconfig ltmainfix
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--with-pkglibdata

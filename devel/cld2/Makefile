@@ -13,7 +13,7 @@ LICENSE=	APACHE20
 USES=		compiler
 USE_LDCONFIG=	yes
 
-CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
+CXXFLAGS+= ${CXXFLAGS_${CHOSEN_COMPILER_TYPE}} -Wno-narrowing
 CXXFLAGS_clang=	-Wno-c++11-narrowing
 
 post-patch:

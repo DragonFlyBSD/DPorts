@@ -1,0 +1,36 @@
+--- libcxx/include/__config.orig	2026-09-08 21:30:00 UTC
++++ libcxx/include/__config
+@@ -370,7 +370,15 @@
+ #  else
+ #    define _LIBCPP_HIDE_FROM_ABI _LIBCPP_HIDDEN _LIBCPP_EXCLUDE_FROM_EXPLICIT_INSTANTIATION
+ #  endif
+-#  define _LIBCPP_HIDE_FROM_ABI_VIRTUAL _LIBCPP_HIDDEN _LIBCPP_EXCLUDE_FROM_EXPLICIT_INSTANTIATION
++// GCC has no exclude_from_explicit_instantiation attribute, so
++// _LIBCPP_EXCLUDE_FROM_EXPLICIT_INSTANTIATION falls back to always_inline. GCC
++// cannot honour that on a virtual function reached through a vtable, and
++// reports a hard error rather than declining to inline.
++#  if defined(_LIBCPP_COMPILER_GCC)
++#    define _LIBCPP_HIDE_FROM_ABI_VIRTUAL _LIBCPP_HIDDEN
++#  else
++#    define _LIBCPP_HIDE_FROM_ABI_VIRTUAL _LIBCPP_HIDDEN _LIBCPP_EXCLUDE_FROM_EXPLICIT_INSTANTIATION
++#  endif
+ 
+ // Clang modules take a significant compile time hit when pushing and popping diagnostics.
+ // Since all the headers are marked as system headers unless _LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER is defined, we can
+@@ -461,7 +469,7 @@
+ #    define _LIBCPP_DECLARE_STRONG_ENUM_EPILOG(x)
+ #  endif // _LIBCPP_CXX03_LANG
+ 
+-#  ifdef __FreeBSD__
++#  if defined(__FreeBSD__) || defined(__DragonFly__)
+ #    define _DECLARE_C99_LDBL_MATH 1
+ #  endif
+ 
+@@ -625,6 +633,7 @@
+         defined(__wasi__) ||                                                                                           \
+         defined(__NetBSD__) ||                                                                                         \
+         defined(__OpenBSD__) ||                                                                                        \
++        defined(__DragonFly__) ||                                                                                      \
+         defined(__NuttX__) ||                                                                                          \
+         defined(__linux__) ||                                                                                          \
+         defined(__GNU__) ||                                                                                            \

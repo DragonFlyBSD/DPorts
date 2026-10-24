@@ -1,14 +1,12 @@
-# Created by: Rob Zinkov
-
 PORTNAME=	gambit-c
-PORTVERSION=	4.9.3
 DISTVERSIONPREFIX=	v
-PORTREVISION=	0
+DISTVERSION=	4.9.8
 PORTEPOCH=	1
 CATEGORIES=	lang
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Gambit programming system where the compiler generates portable C code
+WWW=		https://gambitscheme.org
 
 LICENSE=	APACHE20 LGPL21
 LICENSE_COMB=	dual
@@ -17,29 +15,29 @@ USES=		compiler gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	gambit
 GH_PROJECT=	gambit
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--enable-single-host \
-		--enable-gcc-opts \
-		--docdir=${DOCSDIR} \
-		--includedir=${PREFIX}/include/gambit-c \
-		--libdir=${PREFIX}/lib/gambit-c \
-		--enable-compiler-name=gsc-gambit \
-		--enable-interpreter-name=gsi-gambit
-MAKEFILE=	makefile
 USE_LDCONFIG=	${PREFIX}/lib/gambit-c
+GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
+CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
+		--enable-compiler-name=gsc-gambit \
+		--enable-gcc-opts \
+		--enable-interpreter-name=gsi-gambit \
+		--enable-single-host \
+		--includedir=${PREFIX}/include/gambit-c \
+		--libdir=${PREFIX}/lib/gambit-c
+MAKEFILE=	makefile
+
+PORTSCOUT=	limit:^[0-9\.]*$$
 
 INFO=		gambit
 
-OPTIONS_DEFINE=	DOCS GCC
-OPTIONS_DEFAULT=GCC
+GAMBIT_VERSION=	409008
+PLIST_SUB=	GAMBIT_VERSION=${GAMBIT_VERSION}
 
-GCC_DESC=	Build with GCC from ports
+OPTIONS_DEFINE=	DOCS
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
-
-.if ${PORT_OPTIONS:MGCC}
-USE_GCC=	yes
-.endif
 
 post-patch:
 .for i in makefile.in gsc/makefile.in gsi/makefile.in lib/makefile.in

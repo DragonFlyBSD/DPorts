@@ -1,4 +1,0 @@
-USES+= alias
-
-# suppress false positives
-CFLAGS+=	-Wno-implicit-fallthrough -Wno-cast-function-type

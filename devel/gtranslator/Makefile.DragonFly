@@ -1,3 +1,0 @@
-# override -gnuregex
-
-LDFLAGS= -L${LOCALBASE}/lib -lintl

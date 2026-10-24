@@ -57,4 +57,8 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}/
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/libcards_la_LIBADD/s@=@= -lm @' \
+		${WRKSRC}/lib/Makefile.in
+
 .include <bsd.port.mk>

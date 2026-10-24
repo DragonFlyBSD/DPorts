@@ -1,6 +1,6 @@
 PORTNAME=	WinFF
 PORTVERSION=	1.6.4
-PORTREVISION=	4
+PORTREVISION=	11
 CATEGORIES=	multimedia
 MASTER_SITES=	https://github.com/WinFF/winff/archive/refs/tags/
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
@@ -14,7 +14,7 @@ LICENSE=	GPLv3
 
 LIB_DEPENDS=	libavutil.so:multimedia/ffmpeg
 
-ONLY_FOR_ARCHS=	aarch64 amd64 i386
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 
 USES=		fpc lazarus:flavors xorg
 USE_XORG=	x11
@@ -50,6 +50,7 @@ USE_GNOME+=	cairo
 
 OPTIONS_DEFINE=	DOCS
 
+USE_FPC= chm
 pre-configure:
 	${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' ${BUILD_WRKSRC}/unit1.pas
 .for fp in unit1.pas unit4.pas scripts/check_presets.sh

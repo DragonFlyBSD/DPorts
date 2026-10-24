@@ -1,5 +1,6 @@
 PORTNAME=	glpi
-DISTVERSION=	10.0.18
+DISTVERSION=	11.0.1
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/glpi-project/glpi/releases/download/${DISTVERSION}/
@@ -15,6 +16,7 @@ CPE_VENDOR=	glpi-project
 USE_PHP=	bz2 ctype curl dom exif fileinfo filter gd iconv intl json \
 		mbstring mysqli opcache session simplexml sodium xml xmlreader \
 		xmlrpc xmlwriter zip zlib
+IGNORE_WITH_PHP=	86
 
 NO_ARCH=	yes
 NO_BUILD=	yes

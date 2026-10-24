@@ -35,6 +35,7 @@ NO_OPTIONS_SORT=yes
 ENCRYPTED_PASSWORDS_DESC=	use encrypted passwords in etc/uucp/sys
 VAR_LOG_DESC=			put logfiles into /var/log
 
+CFLAGS= -D__FreeBSD_version=1300000
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPAM}

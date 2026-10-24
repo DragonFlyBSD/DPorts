@@ -4,9 +4,12 @@
 # REQUIRE: NETWORKING
 # KEYWORD: shutdown
 
-# Add the following line to /etc/rc.conf.local or /etc/rc.conf to enable garage:
+# Configuration settings for Garage in /etc/rc.conf
 #
-# garage_enable="YES"
+# garage_enable (bool):     Enable Garage. (default=NO)
+# garage_config (str):      Garage configuration file. (default=%%PREFIX%%/etc/garage.toml)
+# garage_log_file (str):    Log output. May be set to syslog. (default=/var/log/garage.log)
+# garage_runas (str):       User to run Garage as. (default=%%USER%%)
 #
 
 . /etc/rc.subr
@@ -19,13 +22,23 @@ rcvar=${name}_enable
 load_rc_config $name
 : ${garage_enable="NO"}
 : ${garage_config="%%PREFIX%%/etc/garage.toml"}
+: ${garage_log_file="/var/log/garage.log"}
+: ${garage_runas:="%%USER%%"}
 
-command="%%PREFIX%%/bin/${name}"
-required_files=${garage_config}
-command_args="-c ${garage_config} server"
+command=/usr/sbin/daemon
+procname="%%PREFIX%%/bin/${name}"
+required_files="${garage_config}"
+pidfile="/var/run/${name}.pid"
+command_args=
 
-start_cmd="${command} -c ${garage_config} server"
-stop_cmd="pkill -15 ${name}"
-status_cmd="${command} status"
+if [ "${garage_log_file}" = syslog ]; then
+	garage_env="${garage_env} GARAGE_LOG_TO_SYSLOG=1"
+else
+	command_args="-H -o ${garage_log_file}"
+fi
+
+command_args="${command_args} -f -u ${garage_runas} -p ${pidfile} ${procname} -c ${garage_config} server"
+
+status_cmd="${procname} -c ${garage_config} status"
 
 run_rc_command "$1"

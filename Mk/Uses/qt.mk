@@ -22,9 +22,9 @@ _QT_MK_INCLUDED=	qt.mk
 
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		5 6
-QT5_VERSION?=		5.15.16
-QT6_VERSION?=		6.8.3
-PYSIDE6_VERSION?=	6.8.3
+QT5_VERSION?=		5.15.19
+QT6_VERSION?=		6.11.2
+PYSIDE6_VERSION?=	6.11.2
 
 # Support for intermediate Qt6 releases. This partially defines
 # _QT6_MASTER_SITE_SUBDIR and would probably be better in qt-dist.mk,
@@ -109,7 +109,21 @@ QMAKESPEC?=		${QT_MKSPECDIR}/${QMAKESPECNAME}
 # better to support custom settings. Dereferencing the detection allows to
 # avoid forking a shell on each inclusion of this file, and to catch any CXX
 # customization (via USE_GCC, etc.).
+# Qt6 builds with the LLVM toolchain and libc++, Qt5 stays on gcc. Both are
+# stated rather than detected: the compiler is chosen here, not inherited.
+.  if ${_QT_VER:M6}
+.include "${USESDIR}/dfly-libcxx.mk"
+QMAKE_COMPILER=	clang
+# default_pre.prf probes QMAKE_CXX before qmake applies command-line
+# assignments, so it would run the spec's bare clang++, which DragonFly
+# lacks. -early hands qmake.mk's compiler to the probe as well.
+QMAKE_ARGS+=	-early QMAKE_CC="${CC}" QMAKE_CXX="${CXX}" -before
+# signond and qt6pas still hit a probe that runs the spec's bare clang++
+# despite -early; give the build a clang/clang++ that is the dfly-libcxx one.
+BINARY_ALIAS+=	clang=clang${DFLY_LIBCXX_VER} clang++=clang++${DFLY_LIBCXX_VER}
+.  else
 QMAKE_COMPILER=	g++
+.  endif
 
 .  for dir in BIN INC LIB ARCH PLUGIN LIBEXEC IMPORT \
 	QML SBOM DATA DOC L10N ETC EXAMPLE TEST MKSPEC \
@@ -121,13 +135,6 @@ QT_${dir}DIR=	${PREFIX}/${QT_${dir}DIR_REL}
 PLIST_SUB+=		QT_${dir}DIR="${QT_${dir}DIR_REL}"
 .    endif
 .  endfor
-
-# Suppress warnings from rcc about not using a UTF-8 locale.
-.  if ${_QT_VER:M6}
-USE_LOCALE?=		C.UTF-8
-# Avoid having the compiler specified per port
-USE_GCC_VERSION=	${GCC_DEFAULT}
-.  endif
 
 CONFIGURE_ENV+=		QT_SELECT=${_QT_RELNAME}
 MAKE_ENV+=		QT_SELECT=${_QT_RELNAME}
@@ -158,7 +165,7 @@ _USE_QT_COMMON=		3d charts connectivity datavis3d declarative doc \
 			examples imageformats location multimedia networkauth \
 			quick3d quicktimeline remoteobjects scxml sensors \
 			serialbus serialport speech svg virtualkeyboard wayland \
-			webchannel webengine websockets webview
+			webchannel websockets webview
 
 _USE_QT5_ONLY=		assistant buildtools concurrent core dbus \
 			declarative-test designer diag gamepad \
@@ -170,9 +177,10 @@ _USE_QT5_ONLY=		assistant buildtools concurrent core dbus \
 			uitools webglplugin websockets-qml \
 			widgets x11extras xml xmlpatterns
 
-_USE_QT6_ONLY=		5compat base coap graphs grpc httpserver languageserver \
-			lottie mqtt pdf positioning quick3dphysics quickeffectmaker \
-			shadertools tools translations sqldriver-sqlite \
+_USE_QT6_ONLY=		5compat base canvaspainter coap graphs grpc httpserver \
+			languageserver lottie mqtt openapi pdf positioning \
+			quick3dphysics quickeffectmaker shadertools tasktree \
+			tools translations webengine sqldriver-sqlite \
 			sqldriver-mysql sqldriver-psql sqldriver-odbc
 
 # Dependency tuples: _LIB should be preferred if possible.
@@ -206,6 +214,9 @@ qt-connectivity_LIB=	libQt${_QT_LIBVER}Bluetooth.so
 
 qt-core_PORT=		devel/${_QT_RELNAME}-core
 qt-core_LIB=		libQt${_QT_LIBVER}Core.so
+
+qt-canvaspainter_PORT=	x11-toolkits/${_QT_RELNAME}-canvaspainter
+qt-canvaspainter_LIB=	libQt${_QT_LIBVER}CanvasPainter.so
 
 qt-datavis3d_PORT=	x11-toolkits/${_QT_RELNAME}-datavis3d
 qt-datavis3d_LIB=	libQt${_QT_LIBVER}DataVisualization.so
@@ -259,7 +270,7 @@ qt-languageserver_PORT=	devel/${_QT_RELNAME}-languageserver
 qt-languageserver_PATH=	${LOCALBASE}/${QT_LIBDIR_REL}/libQt6LanguageServer.a
 
 qt-lottie_PORT=		graphics/${_QT_RELNAME}-lottie
-qt-lottie_LIB=		libQt${_QT_LIBVER}Bodymovin.so
+qt-lottie_LIB=		libQt${_QT_LIBVER}Lottie.so
 
 qt-linguist_PORT=	devel/${_QT_RELNAME}-linguist
 qt-linguist_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/linguist
@@ -284,6 +295,9 @@ qt-network_LIB=		libQt${_QT_LIBVER}Network.so
 
 qt-networkauth_PORT=	net/${_QT_RELNAME}-networkauth
 qt-networkauth_LIB=	libQt${_QT_LIBVER}NetworkAuth.so
+
+qt-openapi_PORT=	devel/${_QT_RELNAME}-openapi
+qt-openapi_LIB=		libQt${_QT_LIBVER}OpenApiCommon.so
 
 qt-opengl_PORT=		graphics/${_QT_RELNAME}-opengl
 qt-opengl_LIB=		libQt${_QT_LIBVER}OpenGL.so
@@ -390,6 +404,9 @@ qt-sqldriver-${db}_PATH?=	${LOCALBASE}/${QT_PLUGINDIR_REL}/sqldrivers/libqsql${d
 qt-svg_PORT=		graphics/${_QT_RELNAME}-svg
 qt-svg_LIB=		libQt${_QT_LIBVER}Svg.so
 
+qt-tasktree_PORT= 	devel/${_QT_RELNAME}-tasktree
+qt-tasktree_LIB=	libQt${_QT_LIBVER}TaskTree.so
+
 qt-testlib_PORT=	devel/${_QT_RELNAME}-testlib
 qt-testlib_LIB=		libQt${_QT_LIBVER}Test.so
 
@@ -409,7 +426,7 @@ qt-virtualkeyboard_PORT=	x11-toolkits/${_QT_RELNAME}-virtualkeyboard
 qt-virtualkeyboard_PATH=	${LOCALBASE}/${QT_PLUGINDIR_REL}/platforminputcontexts/libqtvirtualkeyboardplugin.so
 
 qt-wayland_PORT=	graphics/${_QT_RELNAME}-wayland
-qt-wayland_LIB=		libQt${_QT_LIBVER}WaylandClient.so
+qt-wayland_LIB=		libQt${_QT_LIBVER}WaylandCompositor.so
 
 qt-webchannel_PORT=	www/${_QT_RELNAME}-webchannel
 qt-webchannel_LIB=	libQt${_QT_LIBVER}WebChannel.so

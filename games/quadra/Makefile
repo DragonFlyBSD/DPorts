@@ -33,6 +33,7 @@ DESKTOP_ENTRIES=	"Quadra" "${COMMENT}" \
 SVN_REV=	757
 SVN_SRC=	http://quadra.googlecode.com/svn/trunk/quadra/
 
+USE_CXXSTD= c++11
 maint-gen-distfile:
 	@if [ -f ${DISTDIR}/${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} ]; then \
 		${ECHO_CMD} "ERROR: the distfile already exists."; \

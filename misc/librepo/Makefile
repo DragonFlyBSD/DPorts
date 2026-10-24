@@ -1,5 +1,5 @@
 PORTNAME=	librepo
-DISTVERSION=	1.17.1
+DISTVERSION=	1.21.1
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -15,7 +15,7 @@ LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libgpgme.so:security/gpgme
 TEST_DEPENDS=	bash:shells/bash \
 		check>0:devel/check \
-		${PYTHON_PKGNAMEPREFIX}gpgme>0:security/py-gpgme@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}gpg>=2.0.0:security/py-gpg@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}xattr>0:devel/py-xattr@${PY_FLAVOR}
 
 USES=		cpe gettext-runtime gnome cmake:testing localbase:ldflags pkgconfig python shebangfix ssl
@@ -51,5 +51,7 @@ ZCHUNK_LIB_DEPENDS=	libzck.so:archivers/zchunk
 post-patch:
 	@${RLN} ${FILESDIR}/xattr.c ${WRKSRC}/librepo/xattr.c
 	@${RLN} ${FILESDIR}/xattr.h ${WRKSRC}/librepo/xattr.h
+
+# test fails, see https://github.com/rpm-software-management/librepo/issues/389
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	liboqs
-DISTVERSION=	0.12.0
+DISTVERSION=	0.16.0
 CATEGORIES=	security
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -31,7 +31,7 @@ BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == x86_64
+.if ${ARCH} == x86_64 || ${ARCH} == aarch64 || ${ARCH} == risc64 || ${ARCH} == powerpc64le
 PLIST_SUB+=	KEM_BIKE="" # BIKE algorithm is limited by architecture in .CMake/alg_support.cmake
 .else
 PLIST_SUB+=	KEM_BIKE="@comment "
@@ -39,4 +39,5 @@ PLIST_SUB+=	KEM_BIKE="@comment "
 
 # tests as of 0.11.0: 9 failed, 476 passed, 558 skipped in 1182.21s (0:19:42), see https://github.com/open-quantum-safe/liboqs/issues/1986
 
+USES:= ${USES:Npython*} python:build
 .include <bsd.port.mk>

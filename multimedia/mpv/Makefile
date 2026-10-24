@@ -1,6 +1,7 @@
 PORTNAME=	mpv
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.40.0
+DISTVERSION=	0.41.0
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 
@@ -28,9 +29,10 @@ GH_ACCOUNT=	mpv-player
 MESON_ARGS=	--auto-features=auto \
 		-Dshaderc=disabled
 
-OPTIONS_DEFINE=		ARCHIVE DOCS LCMS2 MANPAGES MUJS RUBBERBAND UCHARDET EXAMPLES ZIMG
+OPTIONS_DEFINE=		ARCHIVE DOCS EXAMPLES LCMS2 MANPAGES MUJS RUBBERBAND \
+			UCHARDET YTDLP ZIMG
 OPTIONS_DEFAULT=	ARCHIVE DRM DVDNAV LCMS2 LUAJIT MANPAGES NVDEC OPENGL UCHARDET \
-			V4L VAAPI VDPAU VULKAN WAYLAND X11 YTDLP
+			V4L VAAPI VDPAU VULKAN WAYLAND X11
 OPTIONS_GROUP=		IN VO AO
 OPTIONS_GROUP_IN=	CDIO DVDNAV LIBBLURAY V4L VAPOURSYNTH
 OPTIONS_GROUP_VO=	CACA DRM NVDEC OPENGL SIXEL VAAPI VDPAU VULKAN WAYLAND X11
@@ -49,6 +51,7 @@ SIXEL_DESC=		Sixel graphics support
 UCHARDET_DESC=		Guess subtitle encoding via uchardet
 VAPOURSYNTH_DESC=	VapourSynth filter bridge
 VULKAN_DESC=		Vulkan output support
+YTDLP_DESC=		Support ytdl protocol (installs yt-dlp)
 ZIMG_DESC=		High quality software scaling via "z" library
 IN_DESC=		Input
 VO_DESC=		Video Output
@@ -93,6 +96,8 @@ LUAJIT_USES=			luajit
 LUAJIT_MESON_ON=		-Dlua=luajit
 
 LUA_NONE_MESON_ON=		-Dlua=disabled
+LUA_NONE_PREVENTS=		YTDLP
+LUA_NONE_PREVENTS_MSG=		Lua scripting is required for YouTube playback
 
 MANPAGES_BUILD_DEPENDS=		rst2man:textproc/py-docutils
 MANPAGES_MESON_ENABLED=		manpage-build
@@ -124,7 +129,7 @@ RUBBERBAND_MESON_ENABLED=	rubberband
 
 SDL_USES=			sdl
 SDL_USE=			SDL=sdl2
-SDL_MESON_ENABLED=		sdl2
+SDL_MESON_ENABLED=		sdl2-audio sdl2-gamepad sdl2-video
 
 SIXEL_LIB_DEPENDS=		libsixel.so:graphics/libsixel
 SIXEL_MESON_ENABLED=		sixel
@@ -164,8 +169,8 @@ WAYLAND_MESON_ENABLED=		wayland
 WAYLAND_IMPLIES=		OPENGL
 
 X11_USES=			gnome xorg
-X11_USE=			XORG=x11,xext,xinerama,xorgproto,xpresent,xrandr,xscrnsaver,xv,xxf86vm
-X11_MESON_ENABLED=		x11
+X11_USE=			XORG=x11,xext,xfixes,xinerama,xorgproto,xpresent,xrandr,xscrnsaver,xv,xxf86vm
+X11_MESON_ENABLED=		x11 x11-clipboard
 
 YTDLP_RUN_DEPENDS=		yt-dlp:www/yt-dlp
 
@@ -181,9 +186,10 @@ LIB_DEPENDS+=		libva-wayland.so:multimedia/libva
 MESON_ARGS+=		-Dvaapi-wayland=disabled
 .endif
 
-post-patch-MANPAGES-on:
-	@${FIND} ${WRKSRC}/DOCS/man -name '*.rst' | ${XARGS} ${REINPLACE_CMD} \
-		-e 's|/usr/local|${PREFIX}|g'
+post-patch:
+	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' \
+		${WRKSRC}/DOCS/man/mpv.rst ${WRKSRC}/DOCS/man/options.rst \
+		${WRKSRC}/etc/mpv.conf ${WRKSRC}/test/paths.c
 
 pre-test:
 	@if [ ! -e ${WRKDIR}/.meson_build_tests ]; then \
@@ -191,5 +197,9 @@ pre-test:
 		${MAKE} -C${.CURDIR} build MESON_ARGS="${MESON_ARGS} --reconfigure -Dtests=true"; \
 		${TOUCH} ${WRKDIR}/.meson_build_tests; \
 	fi
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\.stop_screensaver = \)1@\10@g'	\
+		${WRKSRC}/options/options.c
 
 .include <bsd.port.mk>

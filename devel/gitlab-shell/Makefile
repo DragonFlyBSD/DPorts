@@ -1,6 +1,7 @@
 PORTNAME=	gitlab-shell
-PORTVERSION=	14.42.0
+PORTVERSION=	14.57.3
 DISTVERSIONPREFIX=	v
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -12,8 +13,9 @@ LICENSE=	MIT
 # GSSAPI support can maybe be removed by disable CGO:
 # https://gitlab.com/gitlab-org/gitlab-shell/-/merge_requests/720
 #BUILD_DEPENDS=	heimdal>=0:security/heimdal
+BUILD_DEPENDS=	bash:shells/bash
 
-USES=		gmake go:modules,no_targets,1.23 pkgconfig
+USES=		gmake go:modules,no_targets pkgconfig
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org

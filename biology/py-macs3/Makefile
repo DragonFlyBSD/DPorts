@@ -1,6 +1,6 @@
 PORTNAME=		MACS3
 DISTVERSIONPREFIX=	v
-DISTVERSION=		3.0.3
+DISTVERSION=		3.0.5
 CATEGORIES=		biology python
 PKGNAMEPREFIX=		${PYTHON_PKGNAMEPREFIX}
 
@@ -20,8 +20,8 @@ COMMON_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scikit-learn>=1.3:science/py-scikit-learn@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}hmmlearn>=0.3.2:math/py-hmmlearn@${PY_FLAVOR}
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
 		simde>0:devel/simde \
-		${PYTHON_PKGNAMEPREFIX}cython3>0:lang/cython3 \
 		${COMMON_DEPENDS}
 RUN_DEPENDS=	${COMMON_DEPENDS}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR} \
@@ -30,7 +30,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR} \
 USES=		localbase perl5 python shebangfix
 USE_GITHUB=	yes
 USE_PERL5=	test
-USE_PYTHON=	autoplist concurrent distutils
+USE_PYTHON=	autoplist concurrent cython pep517
 
 GH_ACCOUNT=	macs3-project
 GH_PROJECT=	MACS

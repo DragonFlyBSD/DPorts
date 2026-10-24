@@ -1,6 +1,6 @@
 PORTNAME=	uuid
 PORTVERSION=	1.6.2
-PORTREVISION=	11
+PORTREVISION=	13
 CATEGORIES=	misc devel
 MASTER_SITES=	OSSP/lib/${PORTNAME}
 PKGNAMEPREFIX=	ossp-
@@ -32,7 +32,7 @@ TEST_TARGET=	check
 .endif
 
 pre-patch:
-### Fixes lib conflicts with misc/e2fsprogs-libuuid ###
+### Fixes lib conflicts with misc/libuuid ###
 	@${REINPLACE_CMD} 's/libuuid.la/libossp-uuid.la/ ; s/libuuid++.la/libossp-uuid++.la/' \
 		${WRKDIR}/${DISTNAME}/Makefile.in
 

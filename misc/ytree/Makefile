@@ -1,5 +1,5 @@
 PORTNAME=	ytree
-DISTVERSION=	2.05
+DISTVERSION=	2.13
 CATEGORIES=	misc
 MASTER_SITES=	http://www.han.de/~werner/
 
@@ -26,5 +26,9 @@ do-install-DOCS-on:
 .for file in CHANGES README THANKS
 	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${PREFIX}/share/doc/ytree
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(DNCURSES\)@\1 -D__FreeBSD__@'		\
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

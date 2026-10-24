@@ -1,6 +1,5 @@
 PORTNAME=	${MPORTNAME:tl}
-PORTVERSION=	1.0.0
-PORTREVISION=	1
+PORTVERSION=	1.1.2
 CATEGORIES=	math parallel
 
 COMMENT=	Parallel unsymmetric multifrontal method
@@ -16,6 +15,7 @@ CMAKE_ARGS+=	-DUMFPACK_DIR:PATH="${LOCALBASE}/lib/cmake/UMFPACK"
 MPORTNAME=	ParU
 USE_LDCONFIG=	yes
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include "${.CURDIR}/../../math/suitesparse/bsd.suitesparse.mk"
 
 post-stage-DOCS-on:

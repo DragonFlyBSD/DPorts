@@ -1,5 +1,5 @@
 PORTNAME=	qemu
-DISTVERSION=	9.2.0
+DISTVERSION=	11.1.2
 PORTREVISION=	1
 PORTREVISION=	1
 CATEGORIES=	emulators
@@ -17,7 +17,11 @@ ONLY_FOR_ARCHS=	aarch64 amd64 powerpc64 powerpc64le
 # We need to check if it build with other ARCHS
 .endif
 
-BUILD_DEPENDS=	bash:shells/bash
+BUILD_DEPENDS=	bash:shells/bash \
+		bison:devel/bison \
+		${PYTHON_PKGNAMEPREFIX}qemu.qmp>=0.0.5:emulators/py-qemu.qmp@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR} \
+		${PY_SETUPTOOLS}
 .if ${FLAVOR:U} != guestagent
 LIB_DEPENDS+=	libzstd.so:archivers/zstd
 .endif
@@ -53,8 +57,8 @@ guestagent_PLIST=		${.CURDIR}/pkg-plist-ga
 guestagent_CONFLICTS_INSTALL=	qemu qemu-devel qemu-nox11 qemu-tools qemu-utils qemu6* \
 				qemu7* qemu-guest-agent
 
-USES=		cpe gmake gnome ninja perl5 pkgconfig python:build shebangfix tar:xz
-SHEBANG_FILES=	scripts/xml-preprocess.py
+USES=		cpe gmake gnome ninja perl5 pkgconfig python shebangfix tar:xz
+SHEBANG_FILES= scripts/xml-preprocess.py scripts/signrom.py
 USE_GNOME=	glib20
 USE_PERL5=	build
 .if ${FLAVOR:U} != tools && ${FLAVOR:U} != guestagent
@@ -97,13 +101,13 @@ CONFIGURE_ARGS+=	--disable-attr \
 			--disable-curses \
 			--disable-fdt \
 			--disable-gcrypt \
-			--disable-glusterfs \
 			--disable-libnfs \
 			--disable-libusb \
 			--disable-lzo \
 			--disable-netmap \
 			--disable-nettle \
 			--disable-numa \
+			--disable-plugins \
 			--disable-rbd \
 			--disable-rdma \
 			--disable-seccomp \
@@ -114,7 +118,6 @@ CONFIGURE_ARGS+=	--disable-attr \
 			--disable-tpm \
 			--disable-user \
 			--disable-vhost-net \
-			--disable-virtfs \
 			--disable-vnc
 .endif
 .if ${FLAVOR:U} == tools
@@ -127,8 +130,9 @@ WITHOUT_CPU_CFLAGS=	yes #to avoid problems with register allocation
 BINARY_ALIAS=	python3=${PYTHON_VERSION}
 
 PORTDOCS=	.buildinfo _static/* about/* dbus-dbusindex.html devel/* docs \
-		genindex.html index.html interop/* objects.inv search.html \
-		searchindex.js specs/* system/* tools/* user/*
+		genindex.html glossary.html index.html interop/* objects.inv \
+		qapi-qga-index.html qapi-qmp-index.html qapi-qsd-index.html \
+		search.html searchindex.js specs/* system/* tools/* user/*
 
 OPTIONS_DEFINE=			CAPSTONE CDROM_DMA CURL DEBUG DOCS GNUTLS GTK3 \
 				ISCSI JPEG OPENGL PNG SAMBA SASL STATIC_LINK \
@@ -212,12 +216,24 @@ X11_USE=			GNOME=gdkpixbuf \
 X11_CONFIGURE_ENABLE=		sdl
 .if (empty(FLAVOR) || ${FLAVOR:U} == default || ${FLAVOR:U} == nox11) && \
 	(${FLAVOR:U} != tools || ${PKGNAMESUFFIX} != "-guest-agent")
-X86_TARGETS_LIB_DEPENDS_OFF=	libdw.so:devel/elfutils
+X86_TARGETS_LIB_DEPENDS_OFF=	libdw.so:devel/elfutils \
+	liblzo2.so:archivers/lzo2
 X86_TARGETS_USES_OFF=		xorg
 X86_TARGETS_USE_OFF=		XORG=pixman,x11
 X86_TARGETS_CONFIGURE_ON=	--target-list='i386-softmmu i386-bsd-user x86_64-softmmu x86_64-bsd-user'
 .endif
 
+USES+= ncurses
+OPTIONS_DEFINE+= SPICE
+SPICE_DESC= SPICE protocol support
+SPICE_LIB_DEPENDS= libspice-server.so:devel/libspice-server
+SPICE_BUILD_DEPENDS= spice-protocol>0:devel/spice-protocol
+SPICE_CONFIGURE_ON= --enable-spice
+SPICE_CONFIGURE_OFF= --disable-spice
+CONFIGURE_ARGS+= --disable-stack-protector
+CONFIGURE_ARGS+= --enable-curses
+LIB_DIRS= /lib /usr/lib ${LOCALBASE}/lib ${LOCALBASE}/lib/elfutils
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.options.mk>
 
 .if ${FLAVOR:U} == tools || ${FLAVOR:U} == guestagent
@@ -275,6 +291,30 @@ post-install:
 
 post-install-DOCS-on:
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} docs ${STAGEDIR}${DOCSDIR}/)
+	@${RMDIR} ${STAGEDIR}${DOCSDIR}/_sources
+.endif
+
+.if ${FLAVOR:U} == default || ${FLAVOR:U} == nox11
+OPTIONS_DEFAULT+=	SPICE
+OPTIONS_DEFAULT+=	X86_TARGETS
+X86_TARGETS_CONFIGURE_ON:=	--target-list='i386-softmmu x86_64-softmmu'
+.endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e "/find_library/s@'iconv',@& dirs: '${LOCALBASE}/lib',@g" \
+			 -e "/dirs =/s@'/usr/include/ncursesw'@&, '${LOCALBASE}/include/ncurses', '${LOCALBASE}/lib'@g" \
+			 -e "s@'ncursesw', 'ncurses', 'cursesw', 'pdcurses'@'ncurses'@" \
+			 -e "s@dependency(curses_libname,@dependency('ncurses_xxx',@g" \
+			 -e "s@links(curses_test,@& args: '-DNCURSES_WIDECHAR',@g" \
+		${WRKSRC}/meson.build
+	${REINPLACE_CMD} -e "s,-j1,-j${MAKE_JOBS_NUMBER},g" \
+		${WRKSRC}/Makefile
+
+dfly-install:
+.if ${FLAVOR:U} != tools && ${FLAVOR:U} != guestagent
+	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 \
+		${STAGEDIR}${PREFIX}/bin/qemu-x86_64 \
+		${STAGEDIR}${PREFIX}/bin/qemu-arm
 .endif
 
 .include <bsd.port.mk>

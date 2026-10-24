@@ -1,0 +1,14 @@
+--- toolchain_local/rules_go_dragonfly.patch.orig
++++ toolchain_local/rules_go_dragonfly.patch
+@@ -0,0 +1,11 @@
++--- a/go/private/sdk.bzl
+++++ b/go/private/sdk.bzl
++@@ -470,6 +470,8 @@
++     goos = ctx.os.name
++     if goos == "mac os x":
++         goos = "darwin"
+++    elif goos == "dragonflybsd":
+++        goos = "dragonfly"
++     elif goos.startswith("windows"):
++         goos = "windows"
++ 

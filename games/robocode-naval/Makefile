@@ -1,6 +1,6 @@
 PORTNAME=	robocode
 PORTVERSION=	0.9.2
-PORTREVISION=	2
+PORTREVISION=	4
 DISTVERSIONSUFFIX=	-setup
 CATEGORIES=	games education java
 MASTER_SITES=	SF/${PORTNAME}/naval-robocode/${PORTVERSION}
@@ -14,10 +14,9 @@ WWW=		https://robo-code.blogspot.com.br
 
 LICENSE=	EPL
 
-PORTSCOUT=	limit:^\d+\.\d+\.\d+$$
+PORTSCOUT=	ignore:1
 
 USES=		cpe dos2unix java:extract,run zip
-CPE_VENDOR=	${PORTNAME}_project
 DOS2UNIX_GLOB=	*.css *.team *.properties package-list MANIFEST.MF
 
 NO_WRKSUBDIR=	yes

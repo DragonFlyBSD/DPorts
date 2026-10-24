@@ -1,8 +1,8 @@
 PORTNAME=	termplay
 DISTVERSION=	2.0.6
-PORTREVISION=	36
+PORTREVISION=	55
 CATEGORIES=	multimedia
-MASTER_SITES=	CRATESIO
+MASTER_SITES=	CRATESIO/${PORTNAME}/${DISTNAME}${CARGO_CRATE_EXT}
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,8 +11,6 @@ WWW=		https://github.com/jD91mZM2/termplay
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN_powerpc64le=	rust compiler crashes, see https://github.com/rust-lang/rust/issues/120583
 
 LIB_DEPENDS=	libsixel.so:graphics/libsixel
 
@@ -113,7 +111,5 @@ CARGO_CRATES=	\
 
 PLIST_FILES=	bin/${PORTNAME}
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

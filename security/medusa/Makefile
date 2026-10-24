@@ -18,7 +18,7 @@ USES=	ssl
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--enable-module-ncp=no --enable-module-afp=no
-CFLAGS+=	-fcommon
+CFLAGS+= -fcommon -Wno-stringop-overflow
 
 OPTIONS_DEFINE=	DOCS PGSQL SUBVERSION
 OPTIONS_SUB=	yes

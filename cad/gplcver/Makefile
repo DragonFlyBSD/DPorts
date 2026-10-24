@@ -20,6 +20,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+MAKE_ENV= ARCHFLGS=-D__FreeBSD__
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/cver ${STAGEDIR}${PREFIX}/bin
 

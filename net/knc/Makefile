@@ -11,11 +11,12 @@ WWW=		https://oskt.secure-endpoints.com/knc.html
 LICENSE=	BSD2CLAUSE MIT
 LICENSE_COMB=	multi
 
-USES=		libtool
+USES= libtool localbase
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 PLIST_FILES=	bin/knc \
 		share/man/man1/knc.1.gz
 
+LIB_DEPENDS= libgssapi_krb5.so:security/krb5
 .include <bsd.port.mk>

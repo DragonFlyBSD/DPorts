@@ -1,5 +1,10 @@
 MAKE_ENV+=     DONT_ENABLE_IPV6="YES"
 
+# Upstream boots from a prebuilt FreeBSD JDK in ${WRKDIR}/boot-jdk, which is
+# FreeBSD-branded ELF and cannot exec here; boot from bootstrap-openjdk8.
+BOOTSTRAPJDKDIR=	${LOCALBASE}/bootstrap-openjdk8
+BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:java/bootstrap-openjdk8
+
 # developer only
 zdfly-patch:
 	-${REINPLACE_CMD} -e 's@*BSD @*BSD | DragonFly @g' \

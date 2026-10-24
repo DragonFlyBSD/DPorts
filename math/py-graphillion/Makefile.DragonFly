@@ -1,3 +1,0 @@
-# src/graphillion/zdd.cc:461:11: error: no match for 'operator=='
-# note one source is C (bddc.c) but hey
-CFLAGS+= -std=gnu++98

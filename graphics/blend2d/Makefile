@@ -1,5 +1,5 @@
 PORTNAME=	blend2d
-DISTVERSION=	g20200108
+DISTVERSION=	g20260703
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,13 +9,15 @@ WWW=		https://blend2d.com/
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
-LIB_DEPENDS=	libasmjit.so:devel/asmjit
-
 USES=		cmake localbase
 USE_GITHUB=	yes
-GH_TAGNAME=	592d1ba52672bbf6365aba476bfe26b7bd2dfab8
+GH_TAGNAME=	6dbc2cefbc996379e07104e34519a440b49b15d7
 USE_LDCONFIG=	yes
 
-LDFLAGS+=	${LOCALBASE}/lib/libasmjit.so # see https://github.com/blend2d/blend2d/issues/57
+CMAKE_ARGS=	-DBLEND2D_NO_JIT=ON
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(BLEND2D_NO_STDCXX\) 1@\1 0@g' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
---- cmake/FDBComponents.cmake.orig	2024-01-09 21:06:41 UTC
+--- cmake/FDBComponents.cmake.orig	2026-04-16 19:21:39 UTC
 +++ cmake/FDBComponents.cmake
-@@ -24,7 +24,7 @@ set(CMAKE_REQUIRED_INCLUDES ${OPENSSL_INCLUDE_DIR})
+@@ -28,7 +28,7 @@ set(CMAKE_REQUIRED_INCLUDES ${OPENSSL_INCLUDE_DIR})
  # Statically link OpenSSL to FDB, see
  #    https://cmake.org/cmake/help/v3.24/module/FindOpenSSL.html
  # Without the flags, OpenSSL is dynamically linked.
@@ -9,7 +9,7 @@
  if (WIN32)
    set(OPENSSL_MSVC_STATIC_RT ON)
  endif()
-@@ -193,6 +193,12 @@ else()
+@@ -199,6 +199,12 @@ endif()
  endif()
  
  ################################################################################
@@ -22,7 +22,7 @@
  # Coroutine implementation
  ################################################################################
  
-@@ -236,6 +242,7 @@ function(print_components)
+@@ -242,6 +248,7 @@ function(print_components)
    message(STATUS "Build Documentation (make html):      ${WITH_DOCUMENTATION}")
    message(STATUS "Build Python sdist (make package):    ${WITH_PYTHON_BINDING}")
    message(STATUS "Configure CTest (depends on Python):  ${WITH_PYTHON}")

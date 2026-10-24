@@ -18,4 +18,7 @@ PLIST_FILES=	lib/${TCL_PKG}/libtktray.so.1 \
 		lib/${TCL_PKG}/pkgIndex.tcl \
 		share/man/mann/${PORTNAME}.n.gz
 
+pre-patch:
+	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' ${WRKSRC}/configure
+
 .include <bsd.port.mk>

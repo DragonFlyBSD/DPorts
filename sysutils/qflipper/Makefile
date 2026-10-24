@@ -1,5 +1,5 @@
 PORTNAME=	qFlipper
-PORTVERSION=	1.3.0
+PORTVERSION=	1.3.3
 CATEGORIES=	sysutils
 
 MAINTAINER=	kbowling@FreeBSD.org
@@ -19,10 +19,13 @@ USE_GL=		gl
 USE_QT=		concurrent core declarative gui linguisttools network \
 		quickcontrols2 serialport svg widgets buildtools:build
 
+CFLAGS+=	-I${LOCALBASE}/include/nanopb
+
 PLIST_FILES=	bin/qFlipper \
 		bin/qFlipper-cli \
 		lib/qt5/plugins/libflipperproto0.so \
 		share/applications/qFlipper.desktop \
 		share/icons/hicolor/512x512/apps/qFlipper.png
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

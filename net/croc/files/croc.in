@@ -11,6 +11,10 @@
 # croc_ports (string):	List of comma-separated ports to be used.
 #			Service requires at least *two* ports.
 #			Default is "9009,9010,9011,9012,9013"
+# croc_host (string):	Address to bind the relay to. Empty by default,
+#			which listens on all interfaces. Set this to a
+#			local address on hosts where the relay's startup
+#			self-check cannot connect to the wildcard address.
 
 . /etc/rc.subr
 
@@ -21,10 +25,11 @@ load_rc_config $name
 
 : ${croc_enable:="NO"}
 : ${croc_ports="9009,9010,9011,9012,9013"}
+: ${croc_host=""}
 
 pidfile="/var/run/${name}.pid"
 procname="%%PREFIX%%/bin/croc"
 command="/usr/sbin/daemon"
-command_args="-f -t ${name} -T ${name} -p ${pidfile} /usr/bin/env ${croc_env} ${procname} relay --ports \"${croc_ports}\""
+command_args="-f -t ${name} -T ${name} -p ${pidfile} ${procname} relay ${croc_host:+--host ${croc_host}} --ports ${croc_ports}"
 
 run_rc_command "$1"

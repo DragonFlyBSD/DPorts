@@ -1,3 +1,0 @@
-
-CFLAGS+=	-Wno-error=empty-body -Wno-error=nonnull \
-		-Wno-error=unused-but-set-variable

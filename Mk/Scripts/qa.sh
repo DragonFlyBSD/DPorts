@@ -80,6 +80,7 @@ shebangonefile() {
 	/usr/sbin/dtrace) ;;
 	/usr/bin/make) ;;
 	/usr/libexec/atf-sh) ;;
+	/usr/libexec/flua) ;;
 	*)
 		badinterp="${interp}"
 		;;
@@ -125,6 +126,15 @@ baselibs() {
 	local rc
 	local found_openssl
 	local file
+
+	# list_stagedir_elfs() enters ${STAGEDIR}, but only inside the subshell
+	# that runs find.  In the pipeline below that feeds the while loop, the
+	# paths find prints are relative, so file(1) and readelf must be in
+	# ${STAGEDIR} too, hence the cd ${STAGEDIR} before the whole pipeline.
+	#
+	# readelf prints "File:" headers only when given two or more operands,
+	# hence the trailing ld-elf.so.2 (DragonFly's rtld).
+
 	[ "${PKGBASE}" = "pkg" -o "${PKGBASE}" = "pkg-devel" ] && return
 
 	while read -r f; do
@@ -145,7 +155,12 @@ baselibs() {
 			;;
 		esac
 	done <<-EOF
-	$(list_stagedir_elfs -exec readelf -d {} + 2>/dev/null)
+	$(cd ${STAGEDIR} && list_stagedir_elfs | \
+		file -F $'\1' -f - | \
+		grep -a 'ELF.*SYSV.*dynamically linked' | \
+		cut -f 1 -d $'\1' | \
+		{ tr '\n' '\000'; printf '%s\000' /libexec/ld-elf.so.2; } | \
+		xargs -0 readelf -d)
 	EOF
 
 	if ! list_stagedir_elfs | egrep -q 'lib(crypto|ssl).so*'; then
@@ -386,7 +401,6 @@ proxydeps_suggest_uses() {
 		${pkg} = "graphics/cairomm" -o \
 		${pkg} = "devel/dconf" -o \
 		${pkg} = "devel/gconf2" -o \
-		${pkg} = "devel/gconfmm26" -o \
 		${pkg} = "devel/glib20" -o \
 		${pkg} = "devel/glibmm" -o \
 		${pkg} = "audio/gsound" -o \
@@ -401,7 +415,6 @@ proxydeps_suggest_uses() {
 		${pkg} = "x11-toolkits/gtksourceviewmm3" -o \
 		${pkg} = "databases/libgda5" -o \
 		${pkg} = "databases/libgda5-ui" -o \
-		${pkg} = "databases/libgdamm5" -o \
 		${pkg} = "devel/libglade2" -o \
 		${pkg} = "graphics/libgnomecanvas" -o \
 		${pkg} = "x11/libgnomekbd" -o \
@@ -414,7 +427,6 @@ proxydeps_suggest_uses() {
 		${pkg} = "textproc/libxml++26" -o \
 		${pkg} = "textproc/libxml2" -o \
 		${pkg} = "textproc/libxslt" -o \
-		${pkg} = "x11-wm/metacity" -o \
 		${pkg} = "x11-toolkits/pango" -o \
 		${pkg} = "x11-toolkits/pangomm" -o \
 		${pkg} = "x11-toolkits/pangox-compat" -o \
@@ -430,7 +442,7 @@ proxydeps_suggest_uses() {
 	elif [ ${pkg} = "devel/gobject-introspection" ]; then warn "you need USE_GNOME+=introspection"
 	elif [ ${pkg} = "graphics/libart_lgpl" ]; then warn "you need USE_GNOME+=libartlgpl2"
 	elif [ ${pkg} = "devel/libIDL" ]; then warn "you need USE_GNOME+=libidl"
-	elif [ ${pkg} = "x11-fm/nautilus" ]; then warn "you need USE_GNOME+=nautilus3"
+	elif [ ${pkg} = "x11-fm/nautilus" ]; then warn "you need USE_GNOME+=nautilus4"
 	elif [ ${pkg} = "graphics/librsvg2-rust" ]; then warn "you need USE_GNOME+=librsvg2"
 	# mate
 	# grep LIB_DEPENDS= Mk/Uses/mate.mk |sed -e 's|\(.*\)_LIB_DEPENDS.*:\(.*\)\/\(.*\)|elif [ ${pkg} = "\2/\3" ]; then warn "you need USE_MATE+=\1"|'
@@ -587,9 +599,6 @@ proxydeps_suggest_uses() {
 	# bdb
 	elif expr ${pkg} : "^databases/db[456]" > /dev/null; then
 		warn "you need USES+=bdb"
-	# fam/gamin
-	elif [ ${pkg} = "devel/fam" -o ${pkg} = "devel/gamin" ]; then
-		warn "you need USES+=fam"
 	# firebird
 	elif [ ${pkg} = "databases/firebird25-client" ]; then
 		warn "you need USES+=firebird"
@@ -642,9 +651,9 @@ proxydeps_suggest_uses() {
 	# ssl
 	# When updating this, please also update the versions list in
 	# bsd.default-versions.mk and ssl.mk!
-	elif [ ${pkg} = "security/openssl" -o ${pkg} = "security/openssl111" \
-	  -o ${pkg} = "security/openssl31" -o ${pkg} = "security/openssl32" \
-	  -o ${pkg} = "security/openssl33" \
+	elif [ ${pkg} = "security/openssl" \
+	  -o ${pkg} = "security/openssl35" \
+	  -o ${pkg} = "security/openssl36" \
 	  -o ${pkg} = "security/libressl" -o ${pkg} = "security/libressl-devel" \
 	  ]; then
 		warn "you need USES=ssl"
@@ -673,7 +682,8 @@ proxydeps_suggest_uses() {
 }
 
 proxydeps() {
-	local file dep_file dep_file_pkg already rc dep_lib_file dep_lib_files zfor
+	local file dep_file dep_file_pkg already rc dep_lib_file dep_lib_files \
+		_checklib _soname zfor
 
 	rc=0
 
@@ -744,9 +754,16 @@ proxydeps() {
 		sed -e 's/^\.//')
 	EOT
 
-	# Check whether all files in LIB_DPEENDS are actually linked against
+	# Check whether all files in LIB_DEPENDS are actually linked against
 	for _library in ${WANTED_LIBRARIES} ; do
-		if ! listcontains ${_library} "${dep_lib_files}" ; then
+		# Resolve the LIB_DEPENDS library to its actual SONAME
+		_checklib=${_library}
+		if [ -f "${LOCALBASE}/lib/${_library}" ]; then
+			_soname=$(readelf -d "${LOCALBASE}/lib/${_library}" 2>/dev/null | \
+				awk '/SONAME/ {gsub(/[\[\]]/, "", $NF); print $NF}')
+			[ -n "${_soname}" ] && _checklib=${_soname}
+		fi
+		if ! listcontains ${_checklib%%.so*}.so "${dep_lib_files}" ; then
 			warn "you might not need LIB_DEPENDS on ${_library}"
 		fi
 	done
@@ -1069,6 +1086,40 @@ prefixman() {
 	return 0
 }
 
+pythonpackagedir() {
+	# Detects Python packages installing top-level directories like docs/, tests/,
+	# etc. into site-packages, which can cause conflicts between packages.
+
+	# Only check Python ports
+	[ -z "${USESPYTHON}" ] && return 0
+
+	# Only check if site-packages exists
+	[ -z "${PYTHONPREFIX_SITELIBDIR}" ] && return 0
+	[ ! -d "${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}" ] && return 0
+
+	# List of directories that should not be installed in site-packages.
+	# This is a subset of setuptools.discovery.FlatLayoutPackageFinder.DEFAULT_EXCLUDE,
+	# focusing on directories commonly shipped by mistake that cause file conflicts.
+	local problematic_dirs="docs doc tests test examples benchmarks scripts tools util utils htmlcov tasks ci"
+	local rc=0
+
+	for dir in ${problematic_dirs}; do
+		if [ -d "${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/${dir}" ]; then
+			# Check if it's actually a top-level directory and not part of a package
+			# (e.g., mypackage/tests is OK, but tests/ at top level is not)
+			err "Python package installs top-level '${dir}/' directory in site-packages"
+			err "  Location: ${PYTHONPREFIX_SITELIBDIR#${PREFIX}/}/${dir}"
+			err "This causes file conflicts with other packages. Exclude it via pyproject.toml:"
+			err "  [tool.setuptools.packages.find]"
+			err "  exclude = [\"${dir}\", \"${dir}.*\"]"
+			err "See: https://setuptools.pypa.io/en/latest/userguide/package_discovery.html"
+			rc=1
+		fi
+	done
+
+	return ${rc}
+}
+
 foreign_binaries() {
 	local filearch rc
 	rc=0
@@ -1124,7 +1175,7 @@ freebsd_binaries() {
 checks="shebang symlinks paths stripped desktopfileutils sharedmimeinfo"
 checks="$checks suidfiles libtool libperl prefixvar baselibs terminfo"
 checks="$checks proxydeps sonames perlcore no_arch gemdeps gemfiledeps flavors"
-checks="$checks license depends_blacklist pkgmessage reinplace prefixman"
+checks="$checks license depends_blacklist pkgmessage reinplace prefixman pythonpackagedir"
 checks="$checks foreign_binaries freebsd_binaries"
 
 ret=0

@@ -1,0 +1,11 @@
+--- scripts/CMakeLists.txt.orig	2026-09-11 07:02:47 UTC
++++ scripts/CMakeLists.txt
+@@ -275,7 +275,7 @@ IF(MY_COMPILER_IS_GNU_OR_CLANG)
+   STRING(REGEX REPLACE "-std=c..[0-9]+" "" CXXFLAGS "${CXXFLAGS}")
+ ENDIF()
+ 
+-IF(FREEBSD)
++IF(FREEBSD OR CMAKE_SYSTEM_NAME MATCHES "DragonFly")
+   SET (PERL_PATH "/usr/local/bin/perl")
+ ELSE()
+   SET (PERL_PATH "/usr/bin/perl")

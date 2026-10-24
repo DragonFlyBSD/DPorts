@@ -2,7 +2,7 @@ PORTNAME=	admiral
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.0-7
 DISTVERSIONSUFFIX=	-g5a9f33b
-PORTREVISION=	65
+PORTREVISION=	78
 CATEGORIES=	x11
 
 MAINTAINER=	ports@FreeBSD.org
@@ -52,4 +52,5 @@ post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} admiral.d ${STAGEDIR}${EXAMPLESDIR}/admiral.d)
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

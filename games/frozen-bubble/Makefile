@@ -43,4 +43,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/share/icons/frozen-bubble-icon-64x64.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps/frozen-bubble.png
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/inc/My/Builder.pm
+
 .include <bsd.port.post.mk>

@@ -1,7 +1,5 @@
 PORTNAME=	linenoise
-DISTVERSION=	1.0-34
-DISTVERSIONSUFFIX=	-g93b2db9
-PORTREVISION=	2
+DISTVERSION=	2.0
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,10 +9,12 @@ WWW=		https://github.com/antirez/linenoise
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USE_LDCONFIG=	yes
+USES=		cpe
 
+CPE_VENDOR=	antirez
 USE_GITHUB=	yes
 GH_ACCOUNT=	antirez
+USE_LDCONFIG=	yes
 
 PLIST_FILES=	include/linenoise.h \
 		lib/liblinenoise.so \
@@ -41,6 +41,6 @@ do-install:
 do-test:
 	@cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} ${MAKE} && \
-		./linenoise_example
+		./linenoise-test
 
 .include <bsd.port.mk>

@@ -26,4 +26,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/fix_bookmarks.sh ${STAGEDIR}${DATADIR}/
 	${INSTALL_MAN} ${WRKSRC}/*.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-lncurses@-L${LOCALBASE}/lib &@" \
+		${WRKSRC}/Makefile.in
+
 .include <bsd.port.mk>

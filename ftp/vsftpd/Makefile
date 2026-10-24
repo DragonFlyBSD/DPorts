@@ -13,7 +13,7 @@ LICENSE=	GPLv2
 
 USERS=		ftp
 GROUPS=		ftp
-USES=		cpe alias
+USES=		cpe
 ALL_TARGET=	vsftpd
 USE_RC_SUBR=	vsftpd vsftpd6
 DOCFILES=	AUDIT BENCHMARKS BUGS Changelog FAQ INSTALL LICENSE \
@@ -106,5 +106,8 @@ do-install-DOCS-on:
 	${CP} -p -R -L ${WRKSRC}/${i}/./ ${STAGEDIR}${DOCSDIR}/${i}/
 	${CHMOD} -R -L a+rX,go-w ${STAGEDIR}${DOCSDIR}/${i}/
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

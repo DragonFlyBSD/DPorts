@@ -16,12 +16,12 @@ r294563 was incomplete; re-add the client-side options as well.
 
 ------------------------------------------------------------------------
 
---- readconf.c.orig	2023-12-19 17:09:41.366788000 -0800
-+++ readconf.c	2023-12-19 17:10:24.155247000 -0800
-@@ -329,6 +329,12 @@
- 	{ "enableescapecommandline", oEnableEscapeCommandline },
- 	{ "obscurekeystroketiming", oObscureKeystrokeTiming },
- 	{ "channeltimeout", oChannelTimeout },
+--- readconf.c.orig	2025-10-05 19:25:16.000000000 -0700
++++ readconf.c	2025-10-06 08:47:03.024775000 -0700
+@@ -328,6 +328,12 @@ static struct {
+ 	{ "versionaddendum", oVersionAddendum },
+ 	{ "refuseconnection", oRefuseConnection },
+ 	{ "warnweakcrypto", oWarnWeakCrypto },
 +	{ "hpndisabled", oDeprecated },
 +	{ "hpnbuffersize", oDeprecated },
 +	{ "tcprcvbufpoll", oDeprecated },
@@ -31,16 +31,16 @@ r294563 was incomplete; re-add the client-side options as well.
  
  	{ NULL, oBadOption }
  };
---- servconf.c.orig	2023-12-19 17:11:52.320491000 -0800
-+++ servconf.c	2023-12-19 17:12:43.950318000 -0800
-@@ -693,6 +693,10 @@
- 	{ "requiredrsasize", sRequiredRSASize, SSHCFG_ALL },
- 	{ "channeltimeout", sChannelTimeout, SSHCFG_ALL },
- 	{ "unusedconnectiontimeout", sUnusedConnectionTimeout, SSHCFG_ALL },
-+	{ "noneenabled", sUnsupported, SSHCFG_ALL },
-+	{ "hpndisabled", sDeprecated, SSHCFG_ALL },
-+	{ "hpnbuffersize", sDeprecated, SSHCFG_ALL },
-+	{ "tcprcvbufpoll", sDeprecated, SSHCFG_ALL },
- 	{ NULL, sBadOption, 0 }
- };
+--- servconf.h.orig	2026-07-06 00:57:12.000000000 -0700
++++ servconf.h	2026-07-06 13:38:43.139752000 -0700
+@@ -251,6 +251,10 @@ SSHCONF_DEPRECATE(AFSTokenPassing, SSHCFG_GLOBAL, SSHC
+ SSHCONF_DEPRECATE(UsePrivilegeSeparation, SSHCFG_GLOBAL, SSHCONF_DEPRECATED) \
+ SSHCONF_DEPRECATE(KerberosTgtPassing, SSHCFG_GLOBAL, SSHCONF_DEPRECATED) \
+ SSHCONF_DEPRECATE(AFSTokenPassing, SSHCFG_GLOBAL, SSHCONF_DEPRECATED) \
++SSHCONF_DEPRECATE(NoneEnabled, SSHCFG_ALL, SSHCONF_DEPRECATED) \
++SSHCONF_DEPRECATE(HPNDisabled, SSHCFG_ALL, SSHCONF_DEPRECATED) \
++SSHCONF_DEPRECATE(HPNBufferSize, SSHCFG_ALL, SSHCONF_DEPRECATED) \
++SSHCONF_DEPRECATE(TCPRcvBufPoll, SSHCFG_ALL, SSHCONF_DEPRECATED) \
+ SSHCONF_DEPRECATE(Protocol, SSHCFG_GLOBAL, SSHCONF_IGNORE)
  
+ #define SSHD_CONFIG_ENTRIES_ALIASES \

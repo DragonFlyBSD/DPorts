@@ -1,6 +1,6 @@
 PORTNAME=	fflas-ffpack
 PORTVERSION=	2.5.0
-PORTREVISION=	3
+PORTREVISION=	4
 DISTVERSIONPREFIX=	v
 CATEGORIES=	math
 
@@ -30,10 +30,11 @@ NO_ARCH=	yes
 OPTIONS_DEFINE=	DOXYGEN
 
 .include <bsd.port.options.mk>
+CONFIGURE_ARGS+=	--with-blas-libs="-L${LOCALBASE}/lib -lopenblas"
 
 .if ${PORT_OPTIONS:MDOXYGEN}
 BUILD_DEPENDS+=		doxygen:devel/doxygen
-CONFIGURE_ARGS+=	--enable-doc --with-docdir="${DOCSDIR}"
+CONFIGURE_ARGS+= --enable-doc --with-docdir="${DOCSDIR}" --with-blas-libs="-L${LOCALBASE}/lib -lopenblas"
 PLIST_SUB+=	DOXYGEN=""
 .else
 PLIST_SUB+=	DOXYGEN="@comment "

@@ -1,0 +1,12 @@
+--- BUILD.gn.orig	2026-07-07 14:09:45 UTC
++++ BUILD.gn
+@@ -140,6 +140,9 @@ if (enable_perfetto_integration_tests) {
+     all_targets += [
+       "examples/shared_lib:example_shlib_data_source",
+       "examples/shared_lib:example_shlib_track_event",
++      "examples/dtrace:dtrace_probe",
++      "examples/freebsd:freebsd_power",
++      "examples/freebsd:freebsd_sys",
+     ]
+   }
+ }

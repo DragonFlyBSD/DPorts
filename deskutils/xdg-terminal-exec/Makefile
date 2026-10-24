@@ -1,6 +1,6 @@
 PORTNAME=	xdg-terminal-exec
 DISTVERSIONPREFIX=v
-DISTVERSION=	0.12.3
+DISTVERSION=	0.14.3
 CATEGORIES=	deskutils
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -18,7 +18,6 @@ USES=		gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	Vladimir-csp
 
-MAKE_ARGS=	prefix=${STAGEDIR}${PREFIX}
 TEST_ENV=	HOME=${WRKDIR}
 TEST_TARGET=	test
 

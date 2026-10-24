@@ -3,7 +3,7 @@ DISTVERSION=	2.0
 CATEGORIES=	converters
 MASTER_SITES=	${WWW}/releases/download/v${DISTVERSION}/
 
-MAINTAINER=	zirias@FreeBSD.org
+MAINTAINER=	grembo@FreeBSD.org
 COMMENT=	Converter for old MS-DOS/ANSI.SYS text files
 WWW=		https://github.com/Zirias/dos2ansi
 
@@ -50,4 +50,5 @@ SCALABLE_RUN_DEPENDS=	oldschool-pc-fonts>0:x11-fonts/oldschool-pc-fonts
 
 SHOWANSI_MAKE_ENV_OFF=	WITH_SHOWANSI=0
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

@@ -1,19 +1,16 @@
 PORTNAME=	open62541
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.0
+DISTVERSION=	1.5.8
 CATEGORIES=	devel
 
-PATCH_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/commit/
-PATCHFILES=	4d0b97ecbdc8b46930c368f8a5b45272982724cd.patch:-p1
-
-MAINTAINER=	nsonack@outlook.com
+MAINTAINER=	nsonack@herrhotzenplotz.de
 COMMENT=	Open source implementation of OPC UA
 WWW=		https://open62541.org/
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake python shebangfix
+USES=		cmake cpe python shebangfix
 SHEBANG_GLOB=	*.py
 USE_LDCONFIG=	yes
 
@@ -33,4 +30,5 @@ LTO_CMAKE_BOOL=	CMAKE_INTERPROCEDURAL_OPTIMIZATION
 OPENSSL_USES=	ssl
 OPENSSL_CMAKE_ON=	-DUA_ENABLE_ENCRYPTION=OPENSSL
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

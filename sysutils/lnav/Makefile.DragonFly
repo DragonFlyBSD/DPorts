@@ -1,3 +1,0 @@
-
-USES+=	libarchive
-DFLY_UNMAINTAINED= yes

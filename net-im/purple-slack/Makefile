@@ -31,4 +31,8 @@ PLIST_FILES=	lib/purple-2/libslack.so \
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${LOCALBASE}/lib/purple-2/libslack.so
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Werror @@g' \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

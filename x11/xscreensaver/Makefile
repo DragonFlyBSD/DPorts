@@ -1,9 +1,10 @@
 PORTNAME=	xscreensaver
-DISTVERSION=	6.09
+DISTVERSION=	6.16
 CATEGORIES=	x11
-MASTER_SITES=	http://www.jwz.org/xscreensaver/
+MASTER_SITES=	${WWW} \
+		LOCAL/vvd
 
-MAINTAINER=	zirias@FreeBSD.org
+MAINTAINER=	vsasjason@gmail.com
 COMMENT=	Save your screen while you entertain your cat
 WWW=		https://www.jwz.org/xscreensaver/
 
@@ -18,17 +19,16 @@ RUN_DEPENDS=	giftopnm:graphics/netpbm \
 		p5-LWP-Protocol-https>0:www/p5-LWP-Protocol-https \
 		unix-selfauth-helper>0:security/unix-selfauth-helper
 
-USES=		cpe gettext gl gmake gnome jpeg localbase:ldflags perl5 \
-		pkgconfig shebangfix xorg
+USES=		autoreconf cpe gettext-runtime gettext-tools gl gmake gnome \
+		jpeg localbase:ldflags perl5 pkgconfig shebangfix xorg
 CPE_VENDOR=	xscreensaver_project
 USE_GL=		gl glu
 USE_GNOME=	cairo gdkpixbuf gtk30 intltool libxml2
 USE_XORG=	ice sm x11 xext xft xi xinerama xmu xrandr xrender xt xxf86vm
 
-SHEBANG_FILES=	hacks/check-configs.pl
+SHEBANG_FILES=	hacks/check-configs.pl hacks/glx/xshadertoy-compile.pl
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--enable-locking \
 		--with-app-defaults=${PREFIX}/lib/X11/app-defaults \
 		--with-configdir=${PREFIX}/share/xscreensaver/config/ \
@@ -42,8 +42,6 @@ CONFIGURE_ARGS=	--enable-locking \
 		--with-pixbuf \
 		--with-randr-ext \
 		--with-xdbe-ext \
-		--with-xf86gamma-ext \
-		--with-xf86vmode-ext \
 		--with-xft \
 		--with-xinerama-ext \
 		--with-xshm-ext \
@@ -56,8 +54,8 @@ MAKE_ARGS=	install_prefix=${STAGEDIR}
 SUB_FILES=	xscreensaver-blank.desktop xscreensaver-lock.desktop \
 		xscreensaver-start.desktop xscreensaver-stop.desktop
 
-OPTIONS_DEFINE=	FIREF NLS NSFW SETUID_HACKS XAOS1 XDALI XEARTH XMOUN XPLANET \
-		XSNOW
+OPTIONS_DEFINE=	FIREF NLS NSFW SETUID_HACKS WAYLAND XAOS1 XDALI XEARTH XMOUN \
+		XPLANET XSNOW
 OPTIONS_SUB=	yes
 
 FIREF_DESC=		Add extra port x11/fireflies
@@ -71,9 +69,11 @@ XPLANET_DESC=		Add extra port astro/xplanet
 XSNOW_DESC=		Add extra port x11/xsnow
 
 FIREF_RUN_DEPENDS=		${FIREF_HACKBIN}:x11/fireflies
-NLS_USES=			gettext-runtime
 NLS_CONFIGURE_ENABLE=		nls
 SETUID_HACKS_CONFIGURE_WITH=	setuid-hacks
+WAYLAND_BUILD_DEPENDS=		wayland-protocols>0:graphics/wayland-protocols
+WAYLAND_LIB_DEPENDS=		libwayland-client.so:graphics/wayland
+WAYLAND_CONFIGURE_WITH=		wayland
 XAOS1_RUN_DEPENDS=		xaos:graphics/xaos
 XDALI_RUN_DEPENDS=		xdaliclock:x11-clocks/xdaliclock
 XEARTH_RUN_DEPENDS=		xearth:astro/xearth
@@ -83,23 +83,28 @@ XSNOW_RUN_DEPENDS=		xsnow:x11/xsnow
 
 FIREF_HACKBIN=	${LOCALBASE}/bin/xscreensaver-hacks/fireflies
 
+BUILD_DEPENDS= gsed:textproc/gsed
 post-patch:
 	${REINPLACE_CMD} -e "s|/etc/pam.d|${PREFIX}/etc/pam.d|g" \
 		${WRKSRC}/driver/passwd-pam.c \
 		${WRKSRC}/driver/xscreensaver.man
 
 post-patch-NSFW-off:
-	${REINPLACE_CMD} -e 's|Dick Pix|Stuff|' ${WRKSRC}/hacks/bsod.c
-	${REINPLACE_CMD} -e 's|dick pics|data, etc.|' ${WRKSRC}/hacks/bsod.c
+	${REINPLACE_CMD} -e 's|Dick Pix|Cat Pix|; s|dick pics|cat pics|' \
+		${WRKSRC}/hacks/bsod.c
 
-pre-configure-NLS-on:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/intltoolize -f -c
+#pre-configure-NLS-on:
+#	cd ${WRKSRC} && ${LOCALBASE}/bin/intltoolize -f -c
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/x*.xml ${STAGEDIR}${DATADIR}/config/
-	${INSTALL_DATA} ${WRKDIR}/*.desktop ${STAGEDIR}${PREFIX}/share/applications/
+	${INSTALL_DATA} ${WRKDIR}/*.desktop ${STAGEDIR}${DESKTOPDIR}/
 	${RM} ${STAGEDIR}${PREFIX}/etc/pam.d/xscreensaver
 	${LN} -s ${LOCALBASE}/etc/pam.d/unix-selfauth \
 		${STAGEDIR}${PREFIX}/etc/pam.d/xscreensaver
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]sed[[:>:]]@gsed@g' \
+		${WRKSRC}/hacks/glx/Makefile.in
 
 .include <bsd.port.mk>

@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-alsa --enable-oss \
 			--disable-version-check
 
 # Fix build on recent current (would require a handful of patches)
-CFLAGS+=		-fcommon
+CFLAGS+= -fcommon -D__FreeBSD__=9
 
 PORTDATA=	*
 
@@ -35,5 +35,9 @@ post-patch:
 		${WRKSRC}/libbristol/Makefile.in
 	@${REINPLACE_CMD} -e 's|-msse -mfpmath=sse||; s|-O2||' \
 		${WRKSRC}/bristol/Makefile.in
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSDx@DragonFlyx@g'	\
+		${WRKSRC}/bin/startBristol.in
 
 .include <bsd.port.mk>

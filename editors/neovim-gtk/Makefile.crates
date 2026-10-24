@@ -61,7 +61,7 @@ CARGO_CRATES=	aho-corasick-0.7.20 \
 		is-terminal-0.4.1 \
 		itoa-1.0.4 \
 		lazy_static-1.4.0 \
-		libc-0.2.138 \
+		libc-0.2.186 \
 		linux-raw-sys-0.1.4 \
 		lock_api-0.4.9 \
 		log-0.4.17 \
@@ -156,4 +156,3 @@ CARGO_CRATES=	aho-corasick-0.7.20 \
 		windows_x86_64_gnullvm-0.42.0 \
 		windows_x86_64_msvc-0.42.0 \
 		winres-0.1.12
-

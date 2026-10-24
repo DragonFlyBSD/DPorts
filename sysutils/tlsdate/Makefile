@@ -24,4 +24,6 @@ GH_ACCOUNT=	ioerror
 
 OPTIONS_DEFINE=	DOCS
 
+BROKEN_SSL= libressl
+BROKEN_SSL_REASON_libressl= port requires TLS_ST_CR_SRVR_HELLO
 .include <bsd.port.mk>

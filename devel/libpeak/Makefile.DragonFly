@@ -1,5 +1,0 @@
-
-# some strangeness
-dfly-configure:
-	${RM} -v ${WRKSRC}/peak/stdint.h
-	${CP} /usr/include/stdint.h ${WRKSRC}/peak/stdint.h

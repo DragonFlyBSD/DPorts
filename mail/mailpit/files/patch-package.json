@@ -1,11 +1,14 @@
---- package.json.orig	2023-09-22 04:40:49 UTC
+--- package.json.orig	1979-11-29 23:00:00 UTC
 +++ package.json
-@@ -28,7 +28,7 @@
+@@ -38,9 +38,9 @@
+     "@playwright/test": "^1.64.1",
      "@types/bootstrap": "^5.2.7",
-     "@types/tinycon": "^0.6.3",
      "@vue/compiler-sfc": "^3.2.37",
--    "esbuild": "^0.19.1",
-+    "esbuild-wasm": "^0.19.1",
+-    "esbuild": "^0.28.0",
++    "esbuild-wasm": "^0.28.0",
      "esbuild-plugin-vue-next": "^0.1.4",
-     "esbuild-sass-plugin": "^2.3.2"
-   }
+-    "esbuild-sass-plugin": "^3.0.0",
++    "esbuild-sass-plugin": "^3.2.0",
+     "eslint": "^10.0.1",
+     "eslint-config-prettier": "^10.1.5",
+     "eslint-plugin-vue": "^10.2.0",

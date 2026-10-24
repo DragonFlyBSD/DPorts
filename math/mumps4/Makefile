@@ -10,12 +10,12 @@ DISTNAME=	MUMPS_${PORTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	MUltifrontal Massively Parallel sparse direct Solver
-WWW=		https://graal.ens-lyon.fr/MUMPS/
+WWW=		https://mumps-solver.org/
 
 LICENSE=	PD
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		fortran
+USES=		fortran:gfortran
 
 MAKE_JOBS_UNSAFE=yes
 
@@ -117,4 +117,5 @@ regression-test:	install
 	./c_example ;						\
 	${ECHO_MSG} "The solution should be (1,2)")
 
+LDFLAGS:= -L${LOCALBASE}/lib ${LDFLAGS}
 .include <bsd.port.post.mk>

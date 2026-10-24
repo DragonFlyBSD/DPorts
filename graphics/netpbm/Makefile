@@ -51,6 +51,7 @@ SVGTOPAM_USE=	gnome=libxml2
 X11_USES=	xorg
 X11_USE=	xorg=x11,xau,xcb,xdmcp
 
+MAKE_JOBS_UNSAFE= yes
 post-patch:
 	${REINPLACE_CMD} -e 's|misc|share/netpbm|g' ${WRKSRC}/common.mk
 .ifdef WITH_PIE

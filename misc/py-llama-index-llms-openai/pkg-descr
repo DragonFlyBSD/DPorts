@@ -1,0 +1,4 @@
+LlamaIndex LLMs OpenAI provides OpenAI integration for LlamaIndex.
+It enables the use of OpenAI's language models (GPT-4, GPT-3.5, etc.)
+within LlamaIndex pipelines for RAG, agents, and other LLM-powered
+applications.

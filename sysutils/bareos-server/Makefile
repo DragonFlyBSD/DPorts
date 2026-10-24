@@ -1,6 +1,6 @@
 PORTNAME=	bareos
 DISTVERSIONPREFIX=	Release/
-DISTVERSION=	20.0.3
+DISTVERSION=	25.0.4
 PORTREVISION?=	0
 CATEGORIES?=	sysutils
 PKGNAMEPREFIX?=	#
@@ -8,19 +8,29 @@ PKGNAMESUFFIX?=	-server
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT?=	Backup archiving recovery open sourced (server)
+WWW=		https://www.bareos.org/
 
 LICENSE=	AGPLv3 LGPL3
 LICENSE_COMB=	multi
 
-CONFLICTS?=	bareos19-server bareos18-server bareos17-server
+CONFLICTS?=	bareos22-server bareos23-server bareos24-server
 
+BUILD_DEPENDS+=	utf8cpp>0:devel/utf8cpp \
+		microsoft-gsl>0:devel/microsoft-gsl \
+		xxhash>0:devel/xxhash \
+		tl-expected>0:devel/tl-expected \
+		cli11>0:devel/cli11
+RUN_DEPENDS=	bash:shells/bash
 LIB_DEPENDS+=	liblzo2.so:archivers/lzo2 \
-		libjansson.so:devel/jansson
+		libjansson.so:devel/jansson \
+		libfmt.so:devel/libfmt \
+		libxxhash.so:devel/xxhash
 
-USES+=		cmake compiler:c++11-lang cpe localbase perl5 pkgconfig readline \
+USES+=		cmake compiler:c++20-lang cpe localbase:ldflags perl5 pkgconfig readline \
 		shebangfix
 USE_GITHUB=	yes
 USE_PERL5=	run
+USE_CXXSTD?=	c++20
 
 USERS=		bareos
 GROUPS=		${USERS}
@@ -28,11 +38,11 @@ GROUPS=		${USERS}
 PLIST_SUB+=	LIB_VERSION=${PORTVERSION}
 
 USE_LDCONFIG=	yes
-SHEBANG_LANG=	perl
-SHEBANG_FILES=	${WRKSRC}/core/src/cats/make_catalog_backup.pl.in
+SHEBANG_LANG=	bash perl python
+SHEBANG_GLOB=	*.sh *.py
+SHEBANG_FILES=	${WRKSRC}/contrib/misc/bsmc/bin/bsmc
 
-CPPFLAGS+=	-I${LOCALBASE}/readline -I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/readline
 
 OPTIONS_DEFAULT=	OPENSSL
 OPTIONS_SINGLE=		CRYPTO
@@ -44,18 +54,13 @@ NDMP_DESC=		Enable build of NDMP support
 SCSICRYPTO_DESC=	Build LTO AME crypto plugin
 
 .if ${PKGNAMESUFFIX} == "-server"
-OPTIONS_GROUP=	BACKENDS
-OPTIONS_GROUP_BACKENDS=	CEPHFS GFAPI RADOS
 OPTIONS_DEFINE=		MTX PYTHON LMDB NDMP NLS SCSICRYPTO
 OPTIONS_DEFAULT+=	LMDB PGSQL SCSICRYPTO
-OPTIONS_SINGLE_DATABASE=	SQLITE3 MYSQL PGSQL
+OPTIONS_SINGLE_DATABASE=	PGSQL
 OPTIONS_SINGLE+=		DATABASE
 BACKENDS_DESC=		Storage backends
 DATABASE_DESC=		Database support
-CEPHFS_DESC=	CEPHFS backend support
-GFAPI_DESC=	GFAPI backend support
 LMDB_DESC=	Enable faster accurate backup support
-RADOS_DESC=	RADOS backend support
 
 NDMP_CMAKE_ON=	-Dndmp=ON
 NDMP_CMAKE_OFF=	-Dndmp=OFF
@@ -73,8 +78,8 @@ SCSICRYPTO_CMAKE_OFF=	-Dscsi-crypto=OFF
 
 .if ${PKGNAMESUFFIX} == "-client" || ${PKGNAMESUFFIX} == "-server"  #Till end of the file
 PYTHON_USES=		python
-PYTHON_CMAKE_ON=	-Dpython=ON
-PYTHON_CMAKE_OFF=	-Dpython=OFF
+PYTHON_CMAKE_ON=	-DENABLE_PYTHON=ON
+PYTHON_CMAKE_OFF=	-DENABLE_PYTHON=OFF
 PYTHON_PLUGIN=		yes
 
 .if !defined(WITH_CLIENT_ONLY)
@@ -110,7 +115,8 @@ CMAKE_ARGS+=	-Dtcp-wrappers=ON \
 		-Dsbin-perm=755 \
 		-Ddb_user=bareos \
 		-Dbaseport=9101 \
-		-Dpiddir=/var/run/bareos
+		-Dpiddir=/var/run/bareos \
+		-Dlocalbase=${LOCALBASE}
 
 .if defined(WITH_CLIENT_ONLY)
 CFLAGS+=	-DMDB_DSYNC=O_SYNC -DMDB_USE_POSIX_SEM=1
@@ -147,18 +153,15 @@ SUB_LIST=	BAREOS_USER=${BAREOS_USER} \
 		BAREOS_DIR=${BAREOS_DIR}
 
 NLS_USES=		gettext
-NLS_CMAKE_ON=		-Dnls=ON
-CEPHFS_CMAKE_ON=	-Dcephfs=ON
-CEPHFS_LIB_DEPENDS=	libcephfs.so:net/ceph14
-GFAPI_CMAKE_ON=		-Dgfapi=ON
-GFAPI_LIB_DEPENDS=	libglusterfs.so:net/glusterfs
-RADOS_CMAKE_ON=		-Drados=ON -Dcephfs=ON
-RADOS_LIB_DEPENDS=	librados.so:net/ceph14
+NLS_CMAKE_ON=		-Dnls=ON \
+			-DENABLE_NLS=ON
+NLS_CMAKE_OFF=		-DENABLE_NLS=OFF
 
 # Client only or full server version
 .if defined(WITH_CLIENT_ONLY)
 CONFFILES=	fd
-CMAKE_ARGS+=	-Dclient-only=ON
+CMAKE_ARGS+=	-Dclient-only=ON \
+		-DENABLE_WEBUI=OFF
 
 PKGDEINSTALL=	${FILESDIR}/pkg-deinstall.client
 PKGINSTALL=	${FILESDIR}/pkg-install.client
@@ -167,31 +170,15 @@ PKGINSTALL=	${FILESDIR}/pkg-install.client
 CONFFILES=		sd dir
 CMAKE_ARGS+=	-Dbuild-dird=ON \
 		-Dbuild-stored=ON \
-		-Dbuild_client_only=OFF
+		-Dbuild_client_only=OFF \
+		-DENABLE_WEBUI=OFF
 # Server default database
 
-MYSQL_CMAKE_ON=		-Dmysql=ON
-MYSQL_USES=	mysql
-SQLITE3_CMAKE_ON=	-Dsqlite3=ON
-SQLITE3_LIB_DEPENDS=	libsqlite3.so:databases/sqlite3
-PGSQL_CMAKE_ON=		-Dpostgresql=ON
-PGSQL_USES=	pgsql
-
 MTX_RUN_DEPENDS=	${LOCALBASE}/sbin/mtx:misc/mtx
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MMYSQL}
-DBTYPE=			mysql
-SUB_LIST+=		REQ_MYSQL=mysql REQ_PGSQL=""
-.elif ${PORT_OPTIONS:MSQLITE3}
-DBTYPE=			sqlite3
-.else
-DBTYPE=			postgresql
-SUB_LIST+=		REQ_MYSQL="" REQ_PGSQL=postgresql
-.endif
-PLIST_SUB+=		DBTYPE=${DBTYPE}
-
+PGSQL_CMAKE_ON=		-Dpostgresql=ON
+PGSQL_USES=		pgsql
+PGSQL_SUB_LIST=		REQ_PGSQL=postgresql
+PGSQL_SUB_LIST_OFF=	REQ_PGSQL=""
 .endif
 
 .if defined(WITH_CLIENT_ONLY)
@@ -205,12 +192,22 @@ MP1+=	bsmtp.1 bregex.1 bwild.1 bareos-tray-monitor.1
 
 MAKE_ENV+=	MAN8="${MP8}" MAN1="${MP1}"
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
+CMAKE_ARGS+= -Dacl=OFF -DHAVE_SYS_EXTATTR_H:BOOL=OFF
+NLS_LDFLAGS= -lintl
 post-patch:
-	@${REINPLACE_CMD}  '76,79d' ${WRKSRC}/CMakeLists.txt
 .if ${PKGNAMESUFFIX} == "-server"
-	@${REINPLACE_CMD}  '45d' ${WRKSRC}/core/src/CMakeLists.txt
 	@${REINPLACE_CMD}  '51d' ${WRKSRC}/core/src/plugins/CMakeLists.txt
 .endif
+.if ${PKGNAMESUFFIX} == "-client"
+	@${REINPLACE_CMD} -e 's|-Werror -Wall|-Wall|g' ${PATCH_WRKSRC}/core/CMakeLists.txt
+	@${REINPLACE_CMD} -e 's|enable_testing()||g' ${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} -e 's|CMAKE_CXX_STANDARD 20|CMAKE_CXX_STANDARD 17|g' ${WRKSRC}/core/CMakeLists.txt
+.endif
+
+	@${REINPLACE_CMD} -e 's/CMAKE_INSTALL_FULL_DATAROOTDIR/CMAKE_INSTALL_DATAROOTDIR/g' \
+		${WRKSRC}/cmake/BareosSetVariableDefaults.cmake \
+		${WRKSRC}/webui/CMakeLists.txt
 
 post-extract:
 .if defined(WITH_CLIENT_ONLY)
@@ -221,22 +218,31 @@ post-extract:
 .endif
 	@${MV} ${WRKSRC}/core/src/defaultconfigs/bareos-dir.d/fileset/'Windows All Drives.conf' \
 		${WRKSRC}/core/src/defaultconfigs/bareos-dir.d/fileset/'WindowsAllDrives.conf'
+	@${MV} ${WRKSRC}/contrib/misc/media_vault/media_vault.ini.example.in \
+		${WRKSRC}/contrib/misc/media_vault/media_vault.ini.in
+	@${MV} ${WRKSRC}/contrib/misc/media_vault/job_admin-media_vault.conf.example.in \
+		${WRKSRC}/contrib/misc/media_vault/job_admin-media_vault.conf.in
+	@${MV} ${WRKSRC}/contrib/misc/media_vault/console_media_vault.conf.example \
+		${WRKSRC}/contrib/misc/media_vault/console_media_vault.conf
+	@${MV} ${WRKSRC}/contrib/misc/media_vault/profile_media_vault.conf.example \
+		${WRKSRC}/contrib/misc/media_vault/profile_media_vault.conf
 
 .if !target(post-install)
 post-install:
 .if defined(WITH_CLIENT_ONLY)
 	${MKDIR} ${STAGEDIR}${ETCDIR}/bconsole.d/
-	${MV} ${STAGEDIR}${ETCDIR}/bconsole.conf ${STAGEDIR}${ETCDIR}/bconsole.d/bconsole.conf.sample
+	${MV} ${STAGEDIR}${ETCDIR}/bconsole.conf.sample ${STAGEDIR}${ETCDIR}/bconsole.d/bconsole.conf.sample
 .else
 	${INSTALL_SCRIPT} ${FILESDIR}/chio-bareos ${STAGEDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${FILESDIR}/bareos-barcodes ${STAGEDIR}${ETCDIR}/bareos-barcodes.sample
 	${CHMOD} o+x ${STAGEDIR}${PREFIX}/bin/bsmtp
 	${MV} ${STAGEDIR}${ETCDIR}/mtx-changer.conf ${STAGEDIR}${ETCDIR}/mtx-changer.conf.sample
-	${MV} ${STAGEDIR}${ETCDIR}/bareos-regress.conf ${STAGEDIR}${ETCDIR}//bareos-regress.conf.sample
 .endif
 	@${MKDIR} ${STAGEDIR}/var/run/bareos
 .endif
 .else
 .include "${MASTERDIR}/Makefile.common"
 .endif # -client and -server are defined
+
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NSCSICRYPTO}
 .include <bsd.port.mk>

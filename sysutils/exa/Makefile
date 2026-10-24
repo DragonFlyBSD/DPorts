@@ -1,15 +1,18 @@
 PORTNAME=	exa
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.10.1
-PORTREVISION=	41
+PORTREVISION=	55
 CATEGORIES=	sysutils
 
-MAINTAINER=	mikael@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Modern replacement for ls
 WWW=		https://the.exa.website/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENCE
+
+DEPRECATED=	Abandoned upstream, use sysutils/eza instead
+EXPIRATION_DATE=2026-11-30
 
 LIB_DEPENDS=	libgit2.so:devel/libgit2
 
@@ -75,4 +78,5 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions
 	${INSTALL_DATA} ${WRKSRC}/completions/completions.zsh ${STAGEDIR}${PREFIX}/share/zsh/site-functions/_exa
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

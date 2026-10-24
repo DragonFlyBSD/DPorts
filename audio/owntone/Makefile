@@ -1,6 +1,6 @@
 PORTNAME=	owntone
-DISTVERSION=	28.5
-PORTREVISION=	5
+DISTVERSION=	29.3
+PORTREVISION=	0
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/owntone/owntone-server/releases/download/${DISTVERSION}/
 
@@ -26,16 +26,17 @@ LIB_DEPENDS=	libavahi-client.so:net/avahi-app \
 		libsodium.so:security/libsodium \
 		libunistring.so:devel/libunistring \
 		libprotobuf-c.so:devel/protobuf-c \
-		libuuid.so:misc/e2fsprogs-libuuid
+		libuuid.so:misc/libuuid
 
-USES=		tar:xz localbase libtool iconv:wchar_t pkgconfig gnome gmake \
-		gperf sqlite gnome pathfix
+USES=		cpe tar:xz localbase libtool iconv:wchar_t pkgconfig gnome \
+		gmake gperf sqlite gnome
 USE_GNOME=	libxml2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-install_systemd \
 		--with-owntone-user=${OWNTONE_USER} \
 		--with-owntone-group=${OWNTONE_USER}
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 USE_RC_SUBR=	${PORTNAME}
 SUB_FILES=	pkg-message
 
@@ -77,6 +78,10 @@ WEBINTERFACE_LIB_DEPENDS=	libwebsockets.so:net/libwebsockets
 NLS_USES=			gettext-runtime
 NLS_CONFIGURE_ENABLE=		nls
 
+CPE_VENDOR=			${PORTNAME}
+CPE_PRODUCT=			${PORTNAME}_server
+
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/owntone/owntone-sqlext.so
 	${MV} ${STAGEDIR}${PREFIX}/etc/owntone.conf \

@@ -40,12 +40,7 @@ PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.pre.mk>
-
-.if defined(PPC_ABI) && ${PPC_ABI} == ELFv1
-CFLAGS+=	-mminimal-toc
-.endif
-
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/CMakeLists.txt ${WRKSRC}/cmake/*.cmake
@@ -56,4 +51,12 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}/
 .endfor
 
-.include <bsd.port.post.mk>
+dfly-patch:
+	${REINPLACE_CMD} -e 's@$${VERSION_COUNT}@5@g'		\
+			 -e 's@$${VERSION_0}@1.1.2@g'		\
+			 -e 's@$${VERSION_2}@10@g'		\
+			 -e 's@$${VERSION_4}@Rhaa Movis Z@g'	\
+			 -e 's@$${AUTHORS}@ARX LIBERTATIS CONTRIBUTORS@g'	\
+		${WRKSRC}/src/core/Version.cpp.in
+
+.include <bsd.port.mk>

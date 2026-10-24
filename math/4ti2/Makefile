@@ -1,11 +1,12 @@
 PORTNAME=	4ti2
 DISTVERSIONPREFIX=	Release_
-DISTVERSION=	1_6_10
+DISTVERSION=	1_6_15
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Solve algebraic, geometric, combinatorial problems on linear spaces
-WWW=		https://4ti2.github.io/
+WWW=		https://4ti2.github.io/ \
+		https://github.com/4ti2/4ti2
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -13,9 +14,11 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libglpk.so:math/glpk \
 		libgmp.so:math/gmp
 
-USES=		autoreconf compiler:c++11-lang gmake libtool
+USES=		autoreconf compiler:c++11-lang gmake libtool shebangfix
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
+
+SHEBANG_FILES=	test/check.template.in
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-static --enable-shared --with-glpk=${LOCALBASE} --with-gmp=${LOCALBASE}

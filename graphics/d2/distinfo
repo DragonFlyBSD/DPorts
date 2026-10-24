@@ -1,5 +1,5 @@
-TIMESTAMP = 1738815697
-SHA256 (go/graphics_d2/d2-v0.6.9/v0.6.9.mod) = c14310ac13457a48bd8040b2ab4c8552312e6b81abd2ca8d971cebca227dc060
-SIZE (go/graphics_d2/d2-v0.6.9/v0.6.9.mod) = 2267
-SHA256 (go/graphics_d2/d2-v0.6.9/v0.6.9.zip) = 1bc6ad103a364456896aa1feda8cd68ed6190a0f73cb73fe0c94b8686d118d64
-SIZE (go/graphics_d2/d2-v0.6.9/v0.6.9.zip) = 30022278
+TIMESTAMP = 1788820093
+SHA256 (go/graphics_d2/d2-v0.9.0/v0.9.0.mod) = 71307c0924ecbf4c51c825b44871aa6cf568921b7eb90bebc5f46623629bed86
+SIZE (go/graphics_d2/d2-v0.9.0/v0.9.0.mod) = 1635
+SHA256 (go/graphics_d2/d2-v0.9.0/v0.9.0.zip) = 39f3aa81c4c6801a290542cfb77f315d0c404d2b5c47bf1227d1e1ff37c59785
+SIZE (go/graphics_d2/d2-v0.9.0/v0.9.0.zip) = 34235729

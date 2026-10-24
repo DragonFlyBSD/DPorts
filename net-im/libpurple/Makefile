@@ -1,6 +1,6 @@
 PORTNAME?=	libpurple
 PORTVERSION=	2.14.14
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	net-im
 MASTER_SITES=	SF/pidgin/Pidgin/${PORTVERSION}
 DISTNAME=	pidgin-${PORTVERSION}
@@ -46,11 +46,12 @@ OPTIONS_DEFINE=	DBUS SASL GSTREAMER VV IDN PERL TCLTK
 OPTIONS_GROUP=		PROTOCOLS
 OPTIONS_RADIO=	TLS
 OPTIONS_RADIO_TLS=	NSS GNUTLS
-OPTIONS_GROUP_PROTOCOLS=BONJOUR GG SAMETIME SILC IRC JABBER \
+OPTIONS_GROUP_PROTOCOLS=BONJOUR GG SAMETIME IRC JABBER \
 			NOVELL QQ SIMPLE ZEPHYR
 OPTIONS_DEFAULT=	BONJOUR DBUS NSS GSTREAMER VV IDN GG IRC JABBER \
 			NOVELL QQ SASL SIMPLE ZEPHYR
 BONJOUR_DESC=	mDNS support and Bonjour protocol
+GEVOLUTION_DESC=Enable Evolution plugin
 GNUTLS_DESC=	Use GNUTLS for encryption support
 NSS_DESC=	Use Mozilla NSS for encryption support
 SASL_DESC=	Cyrus SASL support (for jabberd)
@@ -68,7 +69,7 @@ ZEPHYR_DESC=	The Zephyr chat protocol
 
 PLIST_SUB+=	SHLIB_VERSION=${PORTVERSION:R:E}.${PORTVERSION:E}
 .if defined(WITH_GTKUI)
-OPTIONS_DEFINE+=	GTKSPELL CAP
+OPTIONS_DEFINE+=	GEVOLUTION GTKSPELL CAP
 OPTIONS_DEFAULT+=	GTKSPELL CAP
 GTKSPELL_DESC=	Spell checking support
 CAP_DESC=	Contact Availability Prediction plugin
@@ -87,6 +88,10 @@ PLIST_SUB+=	CONSOLEUI="@comment not installed: "
 
 CONFIGURE_ARGS+=--disable-doxygen
 
+BUILD_DEPENDS= ca_root_nss>0:security/ca_root_nss
+CONFIGURE_ARGS+= --with-system-ssl-certs=/etc/ssl
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NVV}
+LDFLAGS= -lpthread
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
@@ -94,7 +99,7 @@ CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
 .if ${PORT_OPTIONS:MTCLTK}
-USES+=			tk
+USES+=			tk:86
 CFLAGS+=		-I${TK_INCLUDEDIR} -I${TCL_INCLUDEDIR}
 CONFIGURE_ARGS+=	--with-tclconfig=${TCL_LIBDIR} \
 			--with-tkconfig=${TK_LIBDIR}
@@ -119,7 +124,7 @@ PLIST_SUB+=		PERL:="@comment not installed: " \
 			PERLMAN:="@comment not installed: "
 .endif
 
-.if defined(WITH_GTKUI)
+.if defined(WITH_GEVOLUTION)
 USE_GNOME+=		evolutiondataserver3
 PLIST_SUB+=		EVO=""
 CONFIGURE_ARGS+=	--enable-gevolution
@@ -207,7 +212,7 @@ CONFIGURE_ARGS+=	--disable-gtkspell
 USES+=			python
 LIB_DEPENDS+=		libdbus-glib-1.so:devel/dbus-glib
 .if !defined(PIDGIN_SLAVE)
-RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}dbus>=0:devel/py-dbus@${PY_FLAVOR}
+RUN_DEPENDS+= ${PYTHON_PKGNAMEPREFIX}dbus>=0:devel/py-dbus@${PY_FLAVOR} ca_root_nss>0:security/ca_root_nss
 .endif
 CONFIGURE_ARGS+=	--enable-dbus --with-python3=${PYTHON_CMD}
 PLIST_SUB+=		DBUS=""
@@ -223,16 +228,6 @@ PRPL_MODULES:=	sametime,${PRPL_MODULES}
 .else
 PLIST_SUB+=	SAMETIME="@comment not installed: "
 CONFIGURE_ARGS+=--disable-meanwhile
-.endif
-
-.if ${PORT_OPTIONS:MSILC}
-LIB_DEPENDS+=		libsilcclient.so:devel/silc-toolkit
-CONFIGURE_ARGS+=	--with-silc-includes=${LOCALBASE}/include/silc \
-			--with-silc-libs=${LOCALBASE}/lib
-PLIST_SUB+=		SILC=""
-PRPL_MODULES:=		silc,${PRPL_MODULES}
-.else
-PLIST_SUB+=		SILC="@comment not installed: "
 .endif
 
 .if ${PORT_OPTIONS:MGG}

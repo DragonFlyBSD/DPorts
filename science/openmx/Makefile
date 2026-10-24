@@ -1,5 +1,6 @@
 PORTNAME=	openmx
 DISTVERSION=	3.9.9 # the 18June12 patch upgrades 3.9 -> 3.9.9
+PORTREVISION=	3
 CATEGORIES=	science
 MASTER_SITES=	https://www.openmx-square.org/ \
 		https://www.openmx-square.org/bugfixed/21Oct17/:patch
@@ -13,6 +14,10 @@ COMMENT=	Nanoscale material simulations using density functional theories (DFT)
 WWW=		https://www.openmx-square.org/
 
 LICENSE=	GPLv2
+
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
 BROKEN_i386=	undefined reference to `__atomic_load', see bug#229605 and https://reviews.llvm.org/D42154
 
@@ -74,5 +79,9 @@ do-install:
 	# autoplist for potentials: about 500 files in DATADIR
 	@cd ${STAGEDIR}${PREFIX} && \
 		${FIND} ${DATADIR:S/^${PREFIX}\///} -type f >> ${TMPPLIST}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lomp@@g' \
+		${WRKSRC}/makefile
 
 .include <bsd.port.mk>

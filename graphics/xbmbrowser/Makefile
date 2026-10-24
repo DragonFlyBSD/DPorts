@@ -11,4 +11,5 @@ COMMENT=	View complete directories of X bitmaps and X pixmaps
 USES=		gmake imake xorg
 USE_XORG=	xaw xmu
 
+CFLAGS= -DMAXNAMLEN=255
 .include <bsd.port.mk>

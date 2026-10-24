@@ -1,9 +1,9 @@
 PORTNAME=	Avro
-PORTVERSION=	1.12.0
+PORTVERSION=	1.12.2
 CATEGORIES=	devel perl5
-#MASTER_SITES=	CPAN
-#MASTER_SITE_SUBDIR=	CPAN:RSKRABA
-MASTER_SITES=	APACHE/avro/avro-${PORTVERSION}/perl
+MASTER_SITES=	APACHE/avro/avro-${PORTVERSION}/perl \
+		CPAN
+MASTER_SITE_SUBDIR=	CPAN:RSKRABA
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -28,9 +28,11 @@ TEST_DEPENDS=	p5-Perl-Critic>=0:textproc/p5-Perl-Critic \
 		p5-Test-Exception>=0:devel/p5-Test-Exception \
 		p5-Test-Pod>=0:devel/p5-Test-Pod
 
-USES=		perl5
+USES=		cpe perl5
 USE_PERL5=	configure
 
 NO_ARCH=	yes
+
+CPE_VENDOR=	apache
 
 .include <bsd.port.mk>

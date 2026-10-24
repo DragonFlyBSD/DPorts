@@ -28,7 +28,7 @@ MYC_ALL_TARGET=	myc
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
-USES+=	llvm:max=14
+USES+= llvm:max=14 ncurses
 .endif
 
 post-install:
@@ -36,5 +36,9 @@ post-install:
 
 post-install-MYC-on:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/myc
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lcurses@-lncurses@'	\
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

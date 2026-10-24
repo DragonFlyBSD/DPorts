@@ -47,4 +47,5 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/modules/*.* ${STAGEDIR}${DOCSDIR}/modules
 
+CFLAGS:= ${CFLAGS:N-Qunused-arguments}
 .include <bsd.port.mk>

@@ -32,6 +32,7 @@ SSL_CONFIGURE_ENABLE=	ssl
 SSL_CONFIGURE_ON=	--with-ssl-includes=-I${OPENSSLINC} \
 			--with-ssl-libs=-L${OPENSSLLIB}
 
+CONFIGURE_ARGS= --disable-werror
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/librudiments.so.8.1.1
 

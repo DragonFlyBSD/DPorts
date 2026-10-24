@@ -1,15 +1,15 @@
---- include/libwebsockets.h.orig	1970-01-01 00:00:00 UTC
+--- include/libwebsockets.h.orig	2026-03-27 03:22:53 UTC
 +++ include/libwebsockets.h
-@@ -120,7 +120,7 @@ typedef unsigned long long lws_intptr_t;
+@@ -167,7 +167,7 @@ typedef int suseconds_t;
  #include <sys/capability.h>
  #endif
  
--#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__QNX__) || defined(__OpenBSD__)
-+#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__QNX__) || defined(__OpenBSD__) || defined(__DragonFly__)
+-#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__QNX__) || defined(__OpenBSD__) || defined(__NuttX__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__QNX__) || defined(__OpenBSD__) || defined(__NuttX__) || defined(__DragonFly__)
  #include <sys/socket.h>
  #include <netinet/in.h>
  #endif
-@@ -147,7 +147,7 @@ typedef unsigned long long lws_intptr_t;
+@@ -200,7 +200,7 @@ typedef int suseconds_t;
  #endif
  #endif
  
@@ -17,4 +17,4 @@
 +#if defined(__FreeBSD__) || defined(__DragonFly__)
  #include <sys/signal.h>
  #endif
- 
+ #if defined(__GNUC__)

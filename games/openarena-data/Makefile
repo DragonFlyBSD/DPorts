@@ -30,4 +30,8 @@ do-install:
 		--strip-components 2 ${PKGNAMEPREFIX}\?.\?.\?/baseoa/
 .endfor
 
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	379M package (too big for mirrors)
+.endif
+
 .include <bsd.port.post.mk>

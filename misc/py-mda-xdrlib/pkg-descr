@@ -1,0 +1,2 @@
+Stand-alone XDRLIB module that was deprecated in the official Python
+distribution for the use in MDAnalysis modules.

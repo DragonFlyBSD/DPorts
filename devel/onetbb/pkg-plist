@@ -1,4 +1,6 @@
+include/oneapi/tbb.cppm
 include/oneapi/tbb.h
+include/oneapi/tbb/blocked_nd_range.h
 include/oneapi/tbb/blocked_range.h
 include/oneapi/tbb/blocked_range2d.h
 include/oneapi/tbb/blocked_range3d.h
@@ -36,6 +38,7 @@ include/oneapi/tbb/detail/_flow_graph_join_impl.h
 include/oneapi/tbb/detail/_flow_graph_node_impl.h
 include/oneapi/tbb/detail/_flow_graph_node_set_impl.h
 include/oneapi/tbb/detail/_flow_graph_nodes_deduction.h
+include/oneapi/tbb/detail/_flow_graph_resource_limiting.h
 include/oneapi/tbb/detail/_flow_graph_tagged_buffer_impl.h
 include/oneapi/tbb/detail/_flow_graph_trace_impl.h
 include/oneapi/tbb/detail/_flow_graph_types_impl.h
@@ -68,6 +71,7 @@ include/oneapi/tbb/memory_pool.h
 include/oneapi/tbb/mutex.h
 include/oneapi/tbb/null_mutex.h
 include/oneapi/tbb/null_rw_mutex.h
+include/oneapi/tbb/numa_allocation.h
 include/oneapi/tbb/parallel_for.h
 include/oneapi/tbb/parallel_for_each.h
 include/oneapi/tbb/parallel_invoke.h
@@ -91,6 +95,7 @@ include/oneapi/tbb/tbb_allocator.h
 include/oneapi/tbb/tbbmalloc_proxy.h
 include/oneapi/tbb/tick_count.h
 include/oneapi/tbb/version.h
+include/tbb/blocked_nd_range.h
 include/tbb/blocked_range.h
 include/tbb/blocked_range2d.h
 include/tbb/blocked_range3d.h
@@ -116,6 +121,7 @@ include/tbb/memory_pool.h
 include/tbb/mutex.h
 include/tbb/null_mutex.h
 include/tbb/null_rw_mutex.h
+include/tbb/numa_allocation.h
 include/tbb/parallel_for.h
 include/tbb/parallel_for_each.h
 include/tbb/parallel_invoke.h
@@ -146,14 +152,14 @@ lib/cmake/TBB/TBBTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/TBB/TBBTargets.cmake
 lib/libtbb%%DBGSUFX%%.so
 lib/libtbb%%DBGSUFX%%.so.12
-lib/libtbb%%DBGSUFX%%.so.12.14
-lib/libtbbbind_2_0%%DBGSUFX%%.so
-lib/libtbbbind_2_0%%DBGSUFX%%.so.3
-lib/libtbbbind_2_0%%DBGSUFX%%.so.3.14
+lib/libtbb%%DBGSUFX%%.so.12.19
+lib/libtbbbind_2_5%%DBGSUFX%%.so
+lib/libtbbbind_2_5%%DBGSUFX%%.so.3
+lib/libtbbbind_2_5%%DBGSUFX%%.so.3.19
 lib/libtbbmalloc%%DBGSUFX%%.so
 lib/libtbbmalloc%%DBGSUFX%%.so.2
-lib/libtbbmalloc%%DBGSUFX%%.so.2.14
+lib/libtbbmalloc%%DBGSUFX%%.so.2.19
 lib/libtbbmalloc_proxy%%DBGSUFX%%.so
 lib/libtbbmalloc_proxy%%DBGSUFX%%.so.2
-lib/libtbbmalloc_proxy%%DBGSUFX%%.so.2.14
+lib/libtbbmalloc_proxy%%DBGSUFX%%.so.2.19
 libdata/pkgconfig/tbb%%PCSUFX%%.pc

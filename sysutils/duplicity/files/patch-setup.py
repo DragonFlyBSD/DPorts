@@ -1,6 +1,6 @@
---- setup.py.orig	2024-02-06 08:04:58 UTC
+--- setup.py.orig	2026-10-19 18:32:48 UTC
 +++ setup.py
-@@ -99,18 +99,6 @@ def get_data_files():
+@@ -112,22 +112,6 @@ def get_data_files():
                  "man/duplicity.1",
              ],
          ),
@@ -11,8 +11,12 @@
 -                "AUTHORS.md",
 -                "COPYING",
 -                "README.md",
+-                "README-ARCH.md",
+-                "README-INSTALL.md",
 -                "README-LOG.md",
+-                "README-RELEASE.md",
 -                "README-REPO.md",
+-                "README-SNAP.md",
 -                "README-TESTING.md",
 -            ],
 -        ),

@@ -1,0 +1,11 @@
+--- configure.orig	2005-11-27 22:52:05.000000000 +0200
++++ configure
+@@ -183,7 +183,7 @@ else
+ #	osbsd="`uname -s|sed -e's/^.*[Bb][Ss][Dd]/BSD/'`"
+ 	oflags="-DOS_$os"
+ 	case "$os" in
+-		FreeBSD)
++		FreeBSD|DragonFly)
+ 			;;
+ 		SunOS)
+ 			if [ "$osver" = "5.8" -o "$osver" = "5.9" -o "$osver" = "5.10" ]; then

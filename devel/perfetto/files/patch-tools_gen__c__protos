@@ -1,0 +1,10 @@
+--- tools/gen_c_protos.orig	2026-05-07 14:48:33 UTC
++++ tools/gen_c_protos
+@@ -218,7 +218,6 @@ OUTPUT:
+           )
+ 
+           tmpfilename = os.path.join(tmpdirname, transform_extension(source))
+-          clang_format(tmpfilename)
+           if source.startswith(sources['path_strip_prefix']):
+             targetfilename = source[len(sources['path_strip_prefix']):]
+           else:

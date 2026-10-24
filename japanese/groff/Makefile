@@ -46,6 +46,7 @@ MDOCFILES=	ja.eucJP doc-common doc-syms
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+CXXFLAGS= -Wno-narrowing
 post-patch:
 	${REINPLACE_CMD} -E -e 's|^@setfilename +groff|&.info|g;' \
 	    ${WRKSRC}/doc/groff.texinfo

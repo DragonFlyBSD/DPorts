@@ -1,12 +1,13 @@
 PORTNAME=	buf
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.32.1
+DISTVERSION=	1.73.0
 PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	CLI tool for working with Protocol Buffers
-WWW=		https://buf.build/
+WWW=		https://buf.build/ \
+		https://github.com/bufbuild/buf
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -24,4 +25,5 @@ PLIST_FILES=	bin/buf \
 		bin/protoc-gen-buf-breaking \
 		bin/protoc-gen-buf-lint
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

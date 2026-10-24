@@ -18,6 +18,7 @@ GH_SUBDIR=	libs/baseconfig:bc libs/captainslog:cl
 
 PLIST_FILES=	bin/makemix bin/strgen bin/unmakemix
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} \
 		${PLIST_FILES:[1..3]:S,bin,${INSTALL_WRKSRC}/src,} \

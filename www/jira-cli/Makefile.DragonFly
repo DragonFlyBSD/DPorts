@@ -1,4 +1,0 @@
-
-# try to fix plist (orphans)
-PLIST_FILES+=	man/man7/jira-sprint-add.7.gz
-IGNORE=   unmaintained, please request fixing to users mailing list

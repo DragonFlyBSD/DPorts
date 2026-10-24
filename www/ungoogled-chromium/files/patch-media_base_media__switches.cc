@@ -1,28 +1,25 @@
---- media/base/media_switches.cc.orig	2024-08-26 14:40:28 UTC
+--- media/base/media_switches.cc.orig	2026-08-13 07:41:05 UTC
 +++ media/base/media_switches.cc
-@@ -21,7 +21,7 @@
+@@ -20,7 +20,7 @@
  #include "ui/gl/gl_features.h"
  #include "ui/gl/gl_utils.h"
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "base/cpu.h"
+ #include "components/system_media_controls/linux/buildflags/buildflags.h"
  #endif
+@@ -469,13 +469,35 @@ BASE_FEATURE(kApplicationAudioCaptureMac, base::FEATUR
  
-@@ -368,8 +368,8 @@ BASE_FEATURE(kMacLoopbackAudioForScreenShare,
-              "MacLoopbackAudioForScreenShare",
-              base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_MAC)
--
+ 
 -#if BUILDFLAG(IS_LINUX)
-+ 
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Enables system audio mirroring using pulseaudio.
- BASE_FEATURE(kPulseaudioLoopbackForCast,
-              "PulseaudioLoopbackForCast",
-@@ -379,6 +379,28 @@ BASE_FEATURE(kPulseaudioLoopbackForCast,
+ BASE_FEATURE(kPulseaudioLoopbackForCast, base::FEATURE_DISABLED_BY_DEFAULT);
+ 
+ // Enables system audio sharing using pulseaudio.
  BASE_FEATURE(kPulseaudioLoopbackForScreenShare,
-              "PulseaudioLoopbackForScreenShare",
               base::FEATURE_DISABLED_BY_DEFAULT);
 +
 +BASE_FEATURE(kAudioBackend,
@@ -49,84 +46,84 @@
  #endif  // BUILDFLAG(IS_LINUX)
  
  // When enabled, MediaCapabilities will check with GPU Video Accelerator
-@@ -676,7 +698,7 @@ BASE_FEATURE(kFeatureManagementLiveTranslateCrOS,
- // Show toolbar button that opens dialog for controlling media sessions.
- BASE_FEATURE(kGlobalMediaControls,
-              "GlobalMediaControls",
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+@@ -647,7 +669,7 @@ BASE_FEATURE(kRevokeMediaSourceObjectURLOnAttach,
+ // Android / Fuchsia are expected to launch in M150.
+ BASE_FEATURE(kSymphoniaAudioDecoding,
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -704,7 +726,7 @@ BASE_FEATURE(kGlobalMediaControlsUpdatedUI,
+@@ -657,7 +679,7 @@ BASE_FEATURE(kSymphoniaAudioDecoding,
+ // Android / Fuchsia are expected to launch in M150.
+ BASE_FEATURE(kSymphoniaMp3Decoding,
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT
+@@ -768,7 +790,7 @@ BASE_FEATURE(kMediaCodecColorSpaceCleanup, base::FEATU
+ #if !BUILDFLAG(IS_ANDROID)
  // If enabled, users can request Media Remoting without fullscreen-in-tab.
  BASE_FEATURE(kMediaRemotingWithoutFullscreen,
-              "MediaRemotingWithoutFullscreen",
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -716,7 +738,7 @@ BASE_FEATURE(kMediaRemotingWithoutFullscreen,
- BASE_FEATURE(kGlobalMediaControlsPictureInPicture,
-              "GlobalMediaControlsPictureInPicture",
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT
-@@ -745,7 +767,7 @@ BASE_FEATURE(kUnifiedAutoplay,
-              "UnifiedAutoplay",
-              base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -791,7 +813,7 @@ BASE_FEATURE(kSuspendMediaForFrozenFrames, base::FEATU
+ // autoplay policy.
+ BASE_FEATURE(kUnifiedAutoplay, base::FEATURE_ENABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // Enable vaapi video decoding on linux. This is already enabled by default on
- // chromeos, but needs an experiment on linux.
- BASE_FEATURE(kVaapiVideoDecodeLinux,
-@@ -836,7 +858,7 @@ BASE_FEATURE(kVaapiVp9SModeHWEncoding,
-              "VaapiVp9SModeHWEncoding",
-              base::FEATURE_ENABLED_BY_DEFAULT);
+ 
+ // Enable vaapi/v4l2 video decoding on linux. This is already enabled by default
+ // on chromeos, but needs an experiment on linux.
+@@ -869,7 +891,7 @@ BASE_FEATURE(kVaapiVp9SModeHWEncoding, base::FEATURE_E
+ // Enables VSync aligned MJPEG decoding.
+ BASE_FEATURE(kVSyncMjpegDecoding, base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // defined(ARCH_CPU_X86_FAMILY) && BUILDFLAG(IS_CHROMEOS)
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // Enables the new V4L2StatefulVideoDecoder instead of V4L2VideoDecoder.
- // Owners: frkoenig@ch40m1um.qjz9zk, mcasas@ch40m1um.qjz9zk
- // Expiry: When the |V4L2FlatVideoDecoder| flag handles stateful decoding on
-@@ -963,7 +985,7 @@ BASE_FEATURE(kLiveCaptionUseWaitK,
- // Live Caption can be used in multiple languages, as opposed to just English.
- BASE_FEATURE(kLiveCaptionMultiLanguage,
-              "LiveCaptionMultiLanguage",
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT
-@@ -993,7 +1015,7 @@ BASE_FEATURE(kLiveCaptionWebAudio,
- // Live Translate translates captions generated by Live Caption.
- BASE_FEATURE(kLiveTranslate,
-              "LiveTranslate",
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT
-@@ -1468,7 +1490,7 @@ BASE_FEATURE(kUseGTFOOutOfProcessVideoDecoding,
+ // Enable H264 temporal layer encoding with V4L2 HW encoder on ChromeOS.
+ BASE_FEATURE(kV4L2H264TemporalLayerHWEncoding,
               base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -1074,7 +1096,7 @@ BASE_FEATURE(kMediaFoundationMultiGpuAdapterSelection,
+ BASE_FEATURE(kHardwareMediaKeyHandling,
+ #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
+              base::FEATURE_ENABLED_BY_DEFAULT
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(USE_MPRIS)
+              base::FEATURE_ENABLED_BY_DEFAULT
+ #else
+@@ -1436,7 +1458,7 @@ BASE_FEATURE(kUseOutOfProcessVideoDecoding,
+ BASE_FEATURE(kUseSharedImageInOOPVDProcess, base::FEATURE_ENABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  // Spawn utility processes to perform hardware encode acceleration instead of
  // using the GPU process.
- BASE_FEATURE(kUseOutOfProcessVideoEncoding,
-@@ -1548,7 +1570,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
-              "RecordWebAudioEngagement",
-              base::FEATURE_ENABLED_BY_DEFAULT);
+ BASE_FEATURE(kUseOutOfProcessVideoEncoding, base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -1498,7 +1520,7 @@ BASE_FEATURE(kRecordMediaEngagementScores, base::FEATU
+ // Enables Media Engagement Index recording for Web Audio playbacks.
+ BASE_FEATURE(kRecordWebAudioEngagement, base::FEATURE_ENABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Reduces the number of buffers needed in the output video frame pool to
  // populate the Renderer pipeline for hardware accelerated VideoDecoder in
  // non-low latency scenarios.
+@@ -1823,7 +1845,7 @@ bool IsSystemLoopbackCaptureSupported() {
+ #elif BUILDFLAG(IS_MAC)
+   return (IsMacSckSystemLoopbackCaptureSupported() ||
+           IsMacCatapSystemLoopbackCaptureSupported());
+-#elif BUILDFLAG(IS_LINUX) && defined(USE_PULSEAUDIO)
++#elif (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(USE_PULSEAUDIO)
+   return true;
+ #else
+   return false;

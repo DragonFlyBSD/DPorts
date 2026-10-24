@@ -1,6 +1,6 @@
 PORTNAME=	groupoffice
 DISTVERSIONPREFIX=	com-
-DISTVERSION=	25.0.9
+DISTVERSION=	26.0.42
 CATEGORIES=	www
 MASTER_SITES=	SF/group-office/${DISTVERSION:R}
 DISTNAME=	${PORTNAME}-${DISTVERSION}
@@ -16,6 +16,7 @@ LICENSE_TEXT_PERSONAL=	Free for personal use only
 LICENSE_PERMS_PERSONAL=	auto-accept
 
 USES=		mysql shebangfix php:web python
+IGNORE_WITH_PHP=	86
 
 NO_ARCH=	yes
 NO_BUILD=	yes
@@ -28,7 +29,8 @@ SHEBANG_FILES=	groupoffice \
 		vendor/sabre/dav/bin/naturalselection \
 		vendor/bin/../sabre/dav/bin/naturalselection
 
-WWWDIR?=	${PREFIX}/www/${PORTNAME}${DISTVERSION:R:R}
+PLIST=		${WRKDIR}/pkg-plist
+GO_DIR=		www/groupoffice
 
 SUB_FILES=	pkg-message
 
@@ -47,12 +49,16 @@ IMAP_USE=		PHP=iconv imap
 WBXML_LIB_DEPENDS=	libwbxml2.so:textproc/libwbxml
 
 post-patch:
-	@${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-		${WRKSRC}/go/base/Config.php
 	@${REINPLACE_CMD} 's|/etc/groupoffice|${PREFIX}&|g' \
 		${WRKSRC}/go/modules/community/serverclient/model/HttpClient.php \
 		${WRKSRC}/install/configfile.php \
 		${WRKSRC}/modules/site/index.php
+
+pre-install:
+	@${FIND} -s -d ${WRKSRC} \( -type f -o -type l \) | ${SED} "s?${WRKSRC}?${GO_DIR}?g" >> ${PLIST}
+	@${FIND} -s -d ${WRKSRC} -type d  | ${SED} "s?${WRKSRC}?@dir ${GO_DIR}?g" >> ${PLIST}
+
+	@${ECHO_CMD} "${GO_DIR}/config.php.sample" >> ${PLIST}
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${WWWDIR}

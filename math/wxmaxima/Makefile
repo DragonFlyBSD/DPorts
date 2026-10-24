@@ -1,34 +1,32 @@
-# Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD$
-
 PORTNAME=	wxmaxima
-PORTVERSION=	20.04.0
 DISTVERSIONPREFIX=	Version-
+DISTVERSION=	26.07.0
+PORTEPOCH=	1
 CATEGORIES=	math
 
-MAINTAINER=	salvadore@FreeBSD.org
+MAINTAINER=	tiga@FreeBSD.org
 COMMENT=	WxWidgets GUI for the computer algebra system maxima
+WWW=		https://wxmaxima-developers.github.io/wxmaxima/
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	maxima:math/maxima
 
-USES=		cmake desktop-file-utils shared-mime-info
-USE_WX=		3.0
+USES=		cmake compiler:c++14-lang desktop-file-utils shared-mime-info
 USE_GITHUB=	yes
 GH_ACCOUNT=	wxMaxima-Developers
 
-PLIST_SUB=	DESKTOPDIR=${DESKTOPDIR:S,${PREFIX}/,,}
+USE_WX=		3.2
 WX_COMPS=	wx
 WX_CONF_ARGS=	absolute
 
-PORTDATA=	COPYING README README.md
+PLIST_SUB=	DESKTOPDIR=${DESKTOPDIR:S,${PREFIX}/,,}
 
-OPTIONS_DEFINE=	NLS
+OPTIONS_DEFINE=	DOCS NLS
 OPTIONS_SUB=	yes
 
+NLS_USES=		gettext
 NLS_EXTRA_PATCHES_OFF=	${PATCHDIR}/extra-patch-CMakeLists.txt
-NLS_USES=	gettext
 
 .include <bsd.port.mk>

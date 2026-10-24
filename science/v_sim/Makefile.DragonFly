@@ -1,6 +1,0 @@
-
-# include/FTGL/fgl.h has c++ style comments that are not allowed in ISO C90
-dfly-patch:
-	${REINPLACE_CMD} -e '/flags=/s@\(Wall W ansi\)@\1 std=c99@g'	\
-			 -e '/flags_cpp=/s@Wall W ansi@Wall W@g'	\
-		${WRKSRC}/configure.ac

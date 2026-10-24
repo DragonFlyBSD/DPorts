@@ -1,6 +1,8 @@
 bin/xsnow
 share/man/man6/xsnow.6.gz
 share/applications/xsnow.desktop
+%%NLS%%share/locale/bo/LC_MESSAGES/xsnow.mo
+%%NLS%%share/locale/cn/LC_MESSAGES/xsnow.mo
 %%NLS%%share/locale/cs/LC_MESSAGES/xsnow.mo
 %%NLS%%share/locale/da/LC_MESSAGES/xsnow.mo
 %%NLS%%share/locale/de/LC_MESSAGES/xsnow.mo
@@ -13,6 +15,7 @@ share/applications/xsnow.desktop
 %%NLS%%share/locale/hu/LC_MESSAGES/xsnow.mo
 %%NLS%%share/locale/is/LC_MESSAGES/xsnow.mo
 %%NLS%%share/locale/it/LC_MESSAGES/xsnow.mo
+%%NLS%%share/locale/ja/LC_MESSAGES/xsnow.mo
 %%NLS%%share/locale/lt/LC_MESSAGES/xsnow.mo
 %%NLS%%share/locale/lv/LC_MESSAGES/xsnow.mo
 %%NLS%%share/locale/nl/LC_MESSAGES/xsnow.mo

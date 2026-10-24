@@ -1,6 +1,6 @@
 PORTNAME=	cegui
 PORTVERSION=	0.8.7
-PORTREVISION=	20
+PORTREVISION=	23
 CATEGORIES=	graphics devel
 MASTER_SITES=	SF/crayzedsgui/CEGUI%20Mk-2/0.8
 
@@ -107,6 +107,7 @@ CMAKE_ARGS+=		-DCEGUI_HAS_MINIZIP_RESOURCE_PROVIDER=OFF \
 			-DCEGUI_BUILD_RENDERER_DIRECTFB=OFF
 CMAKE_ARGS+=		-DCEGUI_BUILD_PYTHON_MODULES=OFF # python support doesn't build
 
+CXXFLAGS= -I${LOCALBASE}/include
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MEXPAT} || ${PORT_OPTIONS:MXERCES} || ${PORT_OPTIONS:MLIBXML2} || ${PORT_OPTIONS:MRAPIDXML} || ${PORT_OPTIONS:MTINYXML}
@@ -124,5 +125,9 @@ PLIST_SUB+=	ANYOPENGL="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|\$${CEGUI_LIB_INSTALL_DIR}/pkgconfig|libdata/pkgconfig|g' \
 		${WRKSRC}/CMakeLists.txt
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@"\(FreeBSD\)"@"\1|DragonFly"@g'		\
+		${WRKSRC}/cegui/src/CMakeLists.txt
 
 .include <bsd.port.post.mk>

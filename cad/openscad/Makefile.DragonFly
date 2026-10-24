@@ -1,5 +1,0 @@
-
-# zrj: less noise!
-CFLAGS+= -Wno-deprecated-declarations -Wno-unused-variable
-
-IGNORE=   unmaintained, please request fixing to users mailing list

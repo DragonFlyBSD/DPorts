@@ -1,10 +1,10 @@
 PORTNAME=	abcde
 DISTVERSION=	2.9.3
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://abcde.einval.com/download/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	arved@FreeBSD.org
 COMMENT=	Front-end shell script to encode CDs in flac/mp3/ogg/speex format
 WWW=		https://abcde.einval.com/
 
@@ -16,7 +16,8 @@ RUN_DEPENDS=	cd-discid:audio/cd-discid \
 		lame:audio/lame \
 		eyeD3:audio/py-eyed3 \
 		oggenc:audio/vorbis-tools \
-		bash:shells/bash
+		bash:shells/bash \
+		eject:sysutils/eject
 
 USES=		shebangfix
 
@@ -27,7 +28,7 @@ SHEBANG_FILES=	abcde abcde-musicbrainz-tool cddb-tool
 SUB_FILES=	pkg-message
 
 OPTIONS_GROUP=		CODEC RIPPER
-OPTIONS_GROUP_CODEC=	AAC FLAC MPP OPUS SPEEX
+OPTIONS_GROUP_CODEC=	AAC FLAC OPUS SPEEX
 OPTIONS_GROUP_RIPPER=	CDDA2WAV DAGRAB
 OPTIONS_DEFINE=		MUSICBRAINZ NORMALIZE REPLAYGAIN
 OPTIONS_DEFAULT=	MUSICBRAINZ
@@ -36,7 +37,6 @@ AAC_RUN_DEPENDS=	faac:audio/faac
 CDDA2WAV_RUN_DEPENDS=	cdda2wav:sysutils/cdrtools
 DAGRAB_RUN_DEPENDS=	dagrab:audio/dagrab
 FLAC_RUN_DEPENDS=	flac:audio/flac
-MPP_RUN_DEPENDS=	mpcenc:audio/musepack
 MUSICBRAINZ_DESC=	Enable MusicBrainz DiscID support
 MUSICBRAINZ_USES=	perl5
 MUSICBRAINZ_USE=	PERL5=run
@@ -65,7 +65,7 @@ do-install:
 	(cd ${WRKSRC} && ${INSTALL_DATA} abcde.conf \
 		${STAGEDIR}${PREFIX}/etc/abcde.conf.sample)
 	(cd ${WRKSRC} && ${INSTALL_MAN} abcde.1 cddb-tool.1 \
-		${STAGEDIR}${MANPREFIX}/man/man1)
+		${STAGEDIR}${PREFIX}/share/man/man1)
 post-install-MUSICBRAINZ-on:
 	(cd ${WRKSRC} && ${INSTALL_SCRIPT} abcde-musicbrainz-tool \
 		${STAGEDIR}${PREFIX}/bin)

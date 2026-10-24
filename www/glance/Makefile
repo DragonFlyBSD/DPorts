@@ -1,6 +1,7 @@
 PORTNAME=	glance
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.8
+DISTVERSION=	0.8.6
+PORTREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	adamw@FreeBSD.org
@@ -10,7 +11,7 @@ WWW=		https://github.com/glanceapp/glance
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules
+USES=		go:1.27+,modules
 GO_MODULE=	github.com/glanceapp/glance
 
 OPTIONS_DEFINE=	DOCS EXAMPLES

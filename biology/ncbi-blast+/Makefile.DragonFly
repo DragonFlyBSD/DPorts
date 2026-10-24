@@ -1,2 +1,0 @@
-CONFIGURE_ARGS+=	--with-lmdb=${LOCALBASE} --with-lzo=${LOCALBASE} \
-			--with-sqlite3=${LOCALBASE}

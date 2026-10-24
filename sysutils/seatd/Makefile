@@ -1,7 +1,12 @@
 PORTNAME=	seatd
-DISTVERSION=	0.9.1
+DISTVERSION=	0.9.3
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://git.sr.ht/~kennylevinsen/${PORTNAME}/archive/${DISTVERSIONFULL}${EXTRACT_SUFX}?dummy=/
+
+PATCH_SITES=	https://git.sr.ht/~kennylevinsen/${PORTNAME}/commit/
+PATCHFILES+=	9d1f83e28254.patch:-p1 # sddm bugfix
+PATCHFILES+=	4bcdc8197215.patch:-p1 # sddm bugfix
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Minimal seat management daemon and universal library
@@ -14,7 +19,7 @@ USES=		compiler:c11 cpe meson pkgconfig
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	${PORTNAME}
 CPE_VENDOR=	${PORTNAME}_project
-MESON_ARGS=	-Dlibseat-logind=disabled
+MESON_DISABLED=	libseat-logind
 SUB_FILES=	pkg-message
 PLIST_FILES=	bin/${PORTNAME} \
 		"@(,video,4750) bin/${PORTNAME}-launch" \
@@ -42,4 +47,5 @@ MANPAGES_MESON_ENABLED=	man-pages
 MANPAGES_PLIST_FILES=	share/man/man1/${PORTNAME}.1.gz \
 			share/man/man1/${PORTNAME}-launch.1.gz
 
+CFLAGS= -DSIGRTMIN=50 -DSIGRTMAX=54
 .include <bsd.port.mk>

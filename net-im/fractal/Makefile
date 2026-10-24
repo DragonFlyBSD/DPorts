@@ -1,44 +1,43 @@
 PORTNAME=	fractal
-DISTVERSION=	4.4.0
-PORTREVISION=	3
+DISTVERSION=	4.4.2
+PORTREVISION=	32
 CATEGORIES=	net-im
-MASTER_SITES=	https://gitlab.gnome.org/World/fractal/uploads/${GL_HASH}/
+MASTER_SITES=	https://gitlab.gnome.org/GNOME/${PORTNAME}/-/archive/${DISTVERSION}/
+# XXX USES=cargo omits the default source archive by default
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	greg@unrelenting.technology
-COMMENT=	GTK+ Matrix IM client
+MAINTAINER=	vishwin@FreeBSD.org
+COMMENT=	GTK Matrix IM client
+WWW=		https://gitlab.gnome.org/GNOME/fractal
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-# gmake for the gettext-sys crate
-BUILD_DEPENDS=	cargo:lang/${RUST_DEFAULT} \
-		gmake:devel/gmake
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libgmp.so:math/gmp \
 		libgspell-1.so:textproc/gspell \
 		libhandy-0.0.so:x11-toolkits/libhandy0
 
-USES=		cpe gettext gnome meson pkgconfig python:3.5+,build ssl tar:xz
+USES=		cargo cpe desktop-file-utils gettext gnome gstreamer meson \
+		pkgconfig python:build shebangfix ssl
 CPE_VENDOR=	gnome
-USE_GNOME=	cairo gtk30 gtksourceview4
-USE_GSTREAMER1=	bad editing-services
+USE_GNOME=	cairo gdkpixbuf gtk30 gtksourceview4
+USE_GSTREAMER=	bad editing-services
 
-GL_HASH=	d4168ac40fd681240964705e000dd353
-BINARY_ALIAS=		python3=${PYTHON_CMD}
-GLIB_SCHEMAS=		org.gnome.Fractal.gschema.xml
+SHEBANG_FILES=	scripts
+BINARY_ALIAS=	python3=${PYTHON_CMD}
+GLIB_SCHEMAS=	org.gnome.Fractal.gschema.xml
 
-# for the gettext-sys crate
-MAKE_ENV+=	GETTEXT_BIN_DIR=${LOCALBASE}/bin \
-		GETTEXT_LIB_DIR=${LOCALBASE}/lib \
-		GETTEXT_INCLUDE_DIR=${LOCALBASE}/include \
-		RUSTFLAGS="${RUSTFLAGS} -C linker=${CC:Q} ${LDFLAGS:C/.+/-C link-arg=&/}"
+CARGO_BUILD=	no
+CARGO_INSTALL=	no
+CARGO_TEST=	no
+CARGO_TARGET_DIR=	${WRKSRC}/${MESON_BUILD_DIR}/target
+MAKE_ENV+=	${CARGO_ENV}
 
-post-patch:
-# Disable vendor checksums
-	@${REINPLACE_CMD} -e 's/"files":{[^}]*}/"files":{}/' \
-		${WRKSRC}/vendor/*/.cargo-checksum.json
+.include <bsd.port.options.mk>
 
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/fractal
+.if ${ARCH} == powerpc
+LTO_UNSAFE=	yes
+.endif
 
 .include <bsd.port.mk>

@@ -1,3 +1,0 @@
-
-# zrj: disable use of -fopenmp (little gains, but propagates to other ports)
-CONFIGURE_ARGS+= --disable-openmp

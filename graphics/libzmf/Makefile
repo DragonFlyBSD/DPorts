@@ -24,4 +24,5 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-tests --disable-werror --without-docs
 CPPFLAGS+=	-I${LOCALBASE}/include
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.mk>

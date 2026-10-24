@@ -8,15 +8,12 @@ CATEGORIES=	misc geography
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
 PATCHFILES=	21601eb4b8941b8d6d9b795b1d6db4bd376f5b28.patch:-p1
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library for parsing/normalizing street addresses around the world
 WWW=		https://github.com/openvenues/libpostal
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN_mips=		fails to compile: tagger.h:5: redefinition of typedef 'tagger_feature_function'
-BROKEN_mips64=		fails to compile: tagger.h:5: redefinition of typedef 'tagger_feature_function'
 
 RUN_DEPENDS=	curl:ftp/curl
 

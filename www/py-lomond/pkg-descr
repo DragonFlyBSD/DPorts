@@ -1,0 +1,4 @@
+Lomond is a WebSocket client library for Python. It provides a
+robust and flexible WebSocket implementation with support for
+connection management, message framing, compression, and automatic
+reconnection.

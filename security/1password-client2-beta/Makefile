@@ -1,5 +1,5 @@
 PORTNAME=	1password-client2-beta
-DISTVERSION=	2.15.0-beta.03
+DISTVERSION=	2.33.0-beta.02
 CATEGORIES=	security
 MASTER_SITES=	https://cache.agilebits.com/dist/1P/op2/pkg/v${DISTVERSION}/
 
@@ -17,6 +17,7 @@ NO_BUILD=	yes
 PLIST_FILES=		bin/op
 CONFLICTS_INSTALL=	security/1password-client security/op security/1password-client2
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/op \
 		${STAGEDIR}${PREFIX}/bin

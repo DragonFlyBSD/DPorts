@@ -37,6 +37,7 @@ OPTIONS_SUB=	yes
 BOOST_BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:devel/boost-libs
 BOOST_RUN_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:devel/boost-libs
 
+USE_CLANG_FALLBACK= default
 post-patch:
 	@${REINPLACE_CMD} -e 's|include(FindPkgMacros)|return()|g' \
 		${WRKSRC}/CMake/Packages/FindOIS.cmake \
@@ -60,5 +61,8 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/${docfile} ${STAGEDIR}${DOCSDIR}
 .endfor
 	cd ${WRKSRC} && ${COPYTREE_SHARE} Docs ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/latomic/d' ${WRKSRC}/OgreMain/CMakeLists.txt
 
 .include <bsd.port.mk>

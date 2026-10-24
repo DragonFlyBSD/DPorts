@@ -15,12 +15,12 @@ WWW=		https://www.isc.org/dhcp/
 
 LICENSE=	MPL20
 
-USES=		cpe gmake
+USES= cpe gmake localbase
 
 CPE_VENDOR=	isc
 
 PORTREVISION_SERVER=	2
-PORTREVISION_CLIENT=	1
+PORTREVISION_CLIENT=	2
 PORTREVISION_RELAY=	1
 
 SUBSYS?=	server

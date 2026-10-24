@@ -1,0 +1,31 @@
+diff --git a/build_defs.bzl b/build_defs.bzl
+--- a/build_defs.bzl
++++ b/build_defs.bzl
+@@ -345,7 +345,7 @@ def xnnpack_cc_library(
+             "//build_config:emscripten_wasm": wasm_srcs,
+             "//build_config:emscripten_wasmsimd": wasmsimd_srcs,
+             "//build_config:emscripten_wasmrelaxedsimd": wasmrelaxedsimd_srcs,
+-            "//conditions:default": [],
++            "//conditions:default": x86_srcs,
+         }),
+         copts = copts + select({
+             "//build_config:linux_k8": gcc_x86_copts,
+@@ -378,7 +378,7 @@ def xnnpack_cc_library(
+             "//build_config:emscripten_wasm": wasm_copts,
+             "//build_config:emscripten_wasmsimd": wasmsimd_copts,
+             "//build_config:emscripten_wasmrelaxedsimd": wasmrelaxedsimd_copts,
+-            "//conditions:default": [],
++            "//conditions:default": [opt for opt in gcc_x86_copts],
+         }) + select({
+             "//build_config:windows_x86_64_clangcl": ["/clang:" + opt for opt in gcc_copts],
+             "//build_config:windows_x86_64_clang": gcc_copts,
+@@ -402,7 +402,7 @@ def xnnpack_cc_library(
+             "//build_config:linux_armhf": ["-lpthread"],
+             "//build_config:linux_armv7a": ["-lpthread"],
+             "//build_config:linux_arm64": ["-lpthread"],
+             "//build_config:android": ["-lm"],
+-            "//conditions:default": [],
++            "//conditions:default": ["-lpthread"],
+         }),
+         hdrs = hdrs,
+         visibility = visibility,

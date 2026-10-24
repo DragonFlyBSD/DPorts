@@ -1,5 +1,5 @@
 PORTNAME=	haproxy
-DISTVERSION=	2.6.21
+DISTVERSION=	2.6.33
 CATEGORIES=	net www
 PKGNAMESUFFIX=	26
 MASTER_SITES=	http://www.haproxy.org/download/2.6/src/
@@ -21,7 +21,7 @@ default_CONFLICTS_INSTALL=	haproxy-lua
 lua_CONFLICTS_INSTALL=		haproxy
 lua_PKGNAMESUFFIX=		26-lua
 
-CONFLICTS_INSTALL=	haproxy haproxy-devel haproxy17 haproxy18 haproxy20 haproxy22 haproxy23 haproxy24 haproxy25
+CONFLICTS_INSTALL=	haproxy haproxy-devel haproxy24 haproxy28
 
 ALL_TARGET=	all admin/halog/halog
 MAKE_ARGS=	TARGET=freebsd DEFINE=-DFREEBSD_PORTS USE_GETADDRINFO=1 \
@@ -72,4 +72,5 @@ do-install:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR})
 
+MAKE_ARGS:= ${MAKE_ARGS:NUSE_CPU_AFF*}
 .include <bsd.port.mk>

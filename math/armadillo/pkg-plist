@@ -78,8 +78,7 @@ include/armadillo_bits/band_helper.hpp
 include/armadillo_bits/compiler_check.hpp
 include/armadillo_bits/compiler_setup.hpp
 include/armadillo_bits/compiler_setup_post.hpp
-include/armadillo_bits/cond_rel_bones.hpp
-include/armadillo_bits/cond_rel_meat.hpp
+include/armadillo_bits/cond_rel.hpp
 include/armadillo_bits/config.hpp
 include/armadillo_bits/constants.hpp
 include/armadillo_bits/constants_old.hpp
@@ -120,8 +119,10 @@ include/armadillo_bits/fn_all.hpp
 include/armadillo_bits/fn_any.hpp
 include/armadillo_bits/fn_approx_equal.hpp
 include/armadillo_bits/fn_as_scalar.hpp
+include/armadillo_bits/fn_balance.hpp
 include/armadillo_bits/fn_chi2rnd.hpp
 include/armadillo_bits/fn_chol.hpp
+include/armadillo_bits/fn_circshift.hpp
 include/armadillo_bits/fn_clamp.hpp
 include/armadillo_bits/fn_cond_rcond.hpp
 include/armadillo_bits/fn_conv.hpp
@@ -129,6 +130,7 @@ include/armadillo_bits/fn_conv_to.hpp
 include/armadillo_bits/fn_cor.hpp
 include/armadillo_bits/fn_cov.hpp
 include/armadillo_bits/fn_cross.hpp
+include/armadillo_bits/fn_cubemul.hpp
 include/armadillo_bits/fn_cumprod.hpp
 include/armadillo_bits/fn_cumsum.hpp
 include/armadillo_bits/fn_det.hpp
@@ -143,7 +145,6 @@ include/armadillo_bits/fn_eig_sym.hpp
 include/armadillo_bits/fn_eigs_gen.hpp
 include/armadillo_bits/fn_eigs_sym.hpp
 include/armadillo_bits/fn_elem.hpp
-include/armadillo_bits/fn_eps.hpp
 include/armadillo_bits/fn_expmat.hpp
 include/armadillo_bits/fn_eye.hpp
 include/armadillo_bits/fn_fft.hpp
@@ -156,8 +157,7 @@ include/armadillo_bits/fn_hist.hpp
 include/armadillo_bits/fn_histc.hpp
 include/armadillo_bits/fn_index_max.hpp
 include/armadillo_bits/fn_index_min.hpp
-include/armadillo_bits/fn_inplace_strans.hpp
-include/armadillo_bits/fn_inplace_trans.hpp
+include/armadillo_bits/fn_inplace_xtrans.hpp
 include/armadillo_bits/fn_interp1.hpp
 include/armadillo_bits/fn_interp2.hpp
 include/armadillo_bits/fn_intersect.hpp
@@ -183,8 +183,10 @@ include/armadillo_bits/fn_normalise.hpp
 include/armadillo_bits/fn_normcdf.hpp
 include/armadillo_bits/fn_normpdf.hpp
 include/armadillo_bits/fn_numel.hpp
+include/armadillo_bits/fn_omit.hpp
 include/armadillo_bits/fn_ones.hpp
 include/armadillo_bits/fn_orth_null.hpp
+include/armadillo_bits/fn_permute.hpp
 include/armadillo_bits/fn_pinv.hpp
 include/armadillo_bits/fn_polyfit.hpp
 include/armadillo_bits/fn_polyval.hpp
@@ -195,6 +197,7 @@ include/armadillo_bits/fn_prod.hpp
 include/armadillo_bits/fn_qr.hpp
 include/armadillo_bits/fn_quantile.hpp
 include/armadillo_bits/fn_qz.hpp
+include/armadillo_bits/fn_rande.hpp
 include/armadillo_bits/fn_randg.hpp
 include/armadillo_bits/fn_randi.hpp
 include/armadillo_bits/fn_randn.hpp
@@ -210,7 +213,6 @@ include/armadillo_bits/fn_resize.hpp
 include/armadillo_bits/fn_reverse.hpp
 include/armadillo_bits/fn_roots.hpp
 include/armadillo_bits/fn_schur.hpp
-include/armadillo_bits/fn_shift.hpp
 include/armadillo_bits/fn_shuffle.hpp
 include/armadillo_bits/fn_size.hpp
 include/armadillo_bits/fn_solve.hpp
@@ -223,7 +225,6 @@ include/armadillo_bits/fn_sprandu.hpp
 include/armadillo_bits/fn_spsolve.hpp
 include/armadillo_bits/fn_sqrtmat.hpp
 include/armadillo_bits/fn_stddev.hpp
-include/armadillo_bits/fn_strans.hpp
 include/armadillo_bits/fn_sum.hpp
 include/armadillo_bits/fn_svd.hpp
 include/armadillo_bits/fn_svds.hpp
@@ -231,7 +232,6 @@ include/armadillo_bits/fn_sylvester.hpp
 include/armadillo_bits/fn_symmat.hpp
 include/armadillo_bits/fn_toeplitz.hpp
 include/armadillo_bits/fn_trace.hpp
-include/armadillo_bits/fn_trans.hpp
 include/armadillo_bits/fn_trapz.hpp
 include/armadillo_bits/fn_trig.hpp
 include/armadillo_bits/fn_trimat.hpp
@@ -243,6 +243,7 @@ include/armadillo_bits/fn_var.hpp
 include/armadillo_bits/fn_vecnorm.hpp
 include/armadillo_bits/fn_vectorise.hpp
 include/armadillo_bits/fn_wishrnd.hpp
+include/armadillo_bits/fn_xtrans.hpp
 include/armadillo_bits/fn_zeros.hpp
 include/armadillo_bits/glue_affmul_bones.hpp
 include/armadillo_bits/glue_affmul_meat.hpp
@@ -256,6 +257,8 @@ include/armadillo_bits/glue_cov_bones.hpp
 include/armadillo_bits/glue_cov_meat.hpp
 include/armadillo_bits/glue_cross_bones.hpp
 include/armadillo_bits/glue_cross_meat.hpp
+include/armadillo_bits/glue_cubemul_bones.hpp
+include/armadillo_bits/glue_cubemul_meat.hpp
 include/armadillo_bits/glue_hist_bones.hpp
 include/armadillo_bits/glue_hist_meat.hpp
 include/armadillo_bits/glue_histc_bones.hpp
@@ -352,6 +355,8 @@ include/armadillo_bits/newarp_UpperHessenbergEigen_meat.hpp
 include/armadillo_bits/newarp_UpperHessenbergQR_bones.hpp
 include/armadillo_bits/newarp_UpperHessenbergQR_meat.hpp
 include/armadillo_bits/newarp_cx_attrib.hpp
+include/armadillo_bits/op_accu_bones.hpp
+include/armadillo_bits/op_accu_meat.hpp
 include/armadillo_bits/op_all_bones.hpp
 include/armadillo_bits/op_all_meat.hpp
 include/armadillo_bits/op_any_bones.hpp
@@ -360,6 +365,8 @@ include/armadillo_bits/op_chi2rnd_bones.hpp
 include/armadillo_bits/op_chi2rnd_meat.hpp
 include/armadillo_bits/op_chol_bones.hpp
 include/armadillo_bits/op_chol_meat.hpp
+include/armadillo_bits/op_circshift_bones.hpp
+include/armadillo_bits/op_circshift_meat.hpp
 include/armadillo_bits/op_clamp_bones.hpp
 include/armadillo_bits/op_clamp_meat.hpp
 include/armadillo_bits/op_col_as_mat_bones.hpp
@@ -388,10 +395,14 @@ include/armadillo_bits/op_dot_bones.hpp
 include/armadillo_bits/op_dot_meat.hpp
 include/armadillo_bits/op_dotext_bones.hpp
 include/armadillo_bits/op_dotext_meat.hpp
+include/armadillo_bits/op_elem_bones.hpp
+include/armadillo_bits/op_elem_meat.hpp
 include/armadillo_bits/op_expmat_bones.hpp
 include/armadillo_bits/op_expmat_meat.hpp
 include/armadillo_bits/op_fft_bones.hpp
 include/armadillo_bits/op_fft_meat.hpp
+include/armadillo_bits/op_find_aux_bones.hpp
+include/armadillo_bits/op_find_aux_meat.hpp
 include/armadillo_bits/op_find_bones.hpp
 include/armadillo_bits/op_find_meat.hpp
 include/armadillo_bits/op_find_unique_bones.hpp
@@ -422,8 +433,6 @@ include/armadillo_bits/op_median_bones.hpp
 include/armadillo_bits/op_median_meat.hpp
 include/armadillo_bits/op_min_bones.hpp
 include/armadillo_bits/op_min_meat.hpp
-include/armadillo_bits/op_misc_bones.hpp
-include/armadillo_bits/op_misc_meat.hpp
 include/armadillo_bits/op_nonzeros_bones.hpp
 include/armadillo_bits/op_nonzeros_meat.hpp
 include/armadillo_bits/op_norm2est_bones.hpp
@@ -432,8 +441,12 @@ include/armadillo_bits/op_norm_bones.hpp
 include/armadillo_bits/op_norm_meat.hpp
 include/armadillo_bits/op_normalise_bones.hpp
 include/armadillo_bits/op_normalise_meat.hpp
+include/armadillo_bits/op_omit_bones.hpp
+include/armadillo_bits/op_omit_meat.hpp
 include/armadillo_bits/op_orth_null_bones.hpp
 include/armadillo_bits/op_orth_null_meat.hpp
+include/armadillo_bits/op_permute_bones.hpp
+include/armadillo_bits/op_permute_meat.hpp
 include/armadillo_bits/op_pinv_bones.hpp
 include/armadillo_bits/op_pinv_meat.hpp
 include/armadillo_bits/op_powmat_bones.hpp
@@ -464,8 +477,6 @@ include/armadillo_bits/op_roots_bones.hpp
 include/armadillo_bits/op_roots_meat.hpp
 include/armadillo_bits/op_row_as_mat_bones.hpp
 include/armadillo_bits/op_row_as_mat_meat.hpp
-include/armadillo_bits/op_shift_bones.hpp
-include/armadillo_bits/op_shift_meat.hpp
 include/armadillo_bits/op_shuffle_bones.hpp
 include/armadillo_bits/op_shuffle_meat.hpp
 include/armadillo_bits/op_sort_bones.hpp
@@ -566,6 +577,10 @@ include/armadillo_bits/spglue_schur_bones.hpp
 include/armadillo_bits/spglue_schur_meat.hpp
 include/armadillo_bits/spglue_times_bones.hpp
 include/armadillo_bits/spglue_times_meat.hpp
+include/armadillo_bits/spop_accu_bones.hpp
+include/armadillo_bits/spop_accu_meat.hpp
+include/armadillo_bits/spop_circshift_bones.hpp
+include/armadillo_bits/spop_circshift_meat.hpp
 include/armadillo_bits/spop_diagmat_bones.hpp
 include/armadillo_bits/spop_diagmat_meat.hpp
 include/armadillo_bits/spop_htrans_bones.hpp
@@ -576,14 +591,14 @@ include/armadillo_bits/spop_norm_bones.hpp
 include/armadillo_bits/spop_norm_meat.hpp
 include/armadillo_bits/spop_normalise_bones.hpp
 include/armadillo_bits/spop_normalise_meat.hpp
+include/armadillo_bits/spop_omit_bones.hpp
+include/armadillo_bits/spop_omit_meat.hpp
 include/armadillo_bits/spop_relational_bones.hpp
 include/armadillo_bits/spop_relational_meat.hpp
 include/armadillo_bits/spop_repmat_bones.hpp
 include/armadillo_bits/spop_repmat_meat.hpp
 include/armadillo_bits/spop_reverse_bones.hpp
 include/armadillo_bits/spop_reverse_meat.hpp
-include/armadillo_bits/spop_shift_bones.hpp
-include/armadillo_bits/spop_shift_meat.hpp
 include/armadillo_bits/spop_strans_bones.hpp
 include/armadillo_bits/spop_strans_meat.hpp
 include/armadillo_bits/spop_symmat_bones.hpp
@@ -635,7 +650,7 @@ include/armadillo_bits/xtrans_mat_meat.hpp
 include/armadillo_bits/xvec_htrans_bones.hpp
 include/armadillo_bits/xvec_htrans_meat.hpp
 lib/libarmadillo.so
-lib/libarmadillo.so.14
+lib/libarmadillo.so.15
 lib/libarmadillo.so.%%PORTVERSION%%
 libdata/pkgconfig/armadillo.pc
 share/Armadillo/CMake/ArmadilloConfig.cmake

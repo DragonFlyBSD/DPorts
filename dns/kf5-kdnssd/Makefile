@@ -28,4 +28,8 @@ MDNSRESPONDER_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_DNSSD
 MDNSRESPONDER_USES=	qt:5
 MDNSRESPONDER_USE=		QT=dbus
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

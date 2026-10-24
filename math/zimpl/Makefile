@@ -1,5 +1,6 @@
 PORTNAME=	zimpl
-DISTVERSION=	3.6.2
+DISTVERSIONPREFIX=	v
+DISTVERSION=	3.7.1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -21,8 +22,11 @@ USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	scipopt
-GH_TAGNAME=	v${DISTVERSION:S/.//g}
 
 CMAKE_ON=	BUILD_SHARED_LIBS
+
+MAKE_JOBS_UNSAFE= yes
+dfly-patch:
+	${CP} ${WRKSRC}/make/make.freebsd.x86_64.gnu.opt ${WRKSRC}/make/make.dragonfly.x86_64.gnu.opt
 
 .include <bsd.port.mk>

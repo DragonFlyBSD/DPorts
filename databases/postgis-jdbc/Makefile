@@ -1,5 +1,6 @@
 PORTNAME=	postgis-jdbc
 PORTVERSION=	2.1.7
+PORTREVISION=	2
 CATEGORIES=	databases java geography
 MASTER_SITES=	http://postgis.net/stuff/
 EXTRACT_SUFX=	.jar
@@ -17,9 +18,9 @@ USES=		java zip:infozip
 NO_BUILD=	yes
 NO_ARCH=	yes
 
-PLIST_FILES=	%%JAVAJARDIR%%/postgis-jdbc-2.1.7.jar
+PLIST_FILES=	${JAVAJARDIR}/postgis-jdbc-2.1.7.jar
 
 do-install:
-	${INSTALL_DATA} ${_DISTDIR}${PORTNAME}-${PORTVERSION}.jar ${STAGEDIR}${JAVAJARDIR}
+	${INSTALL_DATA} ${_DISTDIR}/${PORTNAME}-${PORTVERSION}.jar ${STAGEDIR}${JAVAJARDIR}
 
 .include <bsd.port.mk>

@@ -1,0 +1,15 @@
+-- Convert the PEP 621 license field from the SPDX short-string form to the
+-- {text = ...} form expected by the setuptools version in the Ports tree.
+-- This is a compatibility fix for devel/py-setuptools as packaged.
+
+--- pyproject.toml.orig	2026-07-09 20:28:26 UTC
++++ pyproject.toml
+@@ -2,7 +2,7 @@
+ name = "docling-ibm-models"
+ version = "4.0.2" # DO NOT EDIT, updated automatically
+ description = "This package contains the AI models used by the Docling PDF conversion package"
+-license = "MIT"
++license = {text = "MIT"}
+ keywords = ["docling", "convert", "document", "pdf", "table structure", "table former"]
+ readme = "README.md"
+ authors = [

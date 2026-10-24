@@ -1,6 +1,9 @@
---- client/allocdir/fs_dragonfly.go.orig	2021-06-22 14:31:19 UTC
+--- client/allocdir/fs_dragonfly.go.orig
 +++ client/allocdir/fs_dragonfly.go
-@@ -0,0 +1,26 @@
+@@ -0,0 +1,29 @@
++// Copyright (c) HashiCorp, Inc.
++// SPDX-License-Identifier: BUSL-1.1
++
 +package allocdir
 +
 +import (
@@ -19,8 +22,8 @@
 +}
 +
 +// createSecretDir creates the secrets dir folder at the given path
-+func createSecretDir(dir string) error {
-+	return os.MkdirAll(dir, 0777)
++func createSecretDir(dir string, _ int) error {
++	return os.MkdirAll(dir, fileMode777)
 +}
 +
 +// removeSecretDir removes the secrets dir folder

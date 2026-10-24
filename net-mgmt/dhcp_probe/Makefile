@@ -26,6 +26,7 @@ USE_RC_SUBR=	dhcp_probe
 
 SUB_FILES=	pkg-message
 
+CFLAGS= -Wno-incompatible-pointer-types
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|g' ${WRKSRC}/src/defaults.h
 post-install:

@@ -1,6 +1,6 @@
 PORTNAME=	ncrystal
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.8.0
+DISTVERSION=	4.4.6
 CATEGORIES=	science # physics
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,26 +12,38 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PY_SETUPTOOLS} \
-		${PYNUMPY} \
-		${PYTHON_PKGNAMEPREFIX}scikit-build>0:devel/py-scikit-build@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}scikit-build-core>0:devel/py-scikit-build-core@${PY_FLAVOR} \
 		cmake:devel/cmake-core
-RUN_DEPENDS=	${PYNUMPY}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}
 
 USES=		python
-USE_PYTHON=	pep517 autoplist
+USE_PYTHON=	pep517 concurrent autoplist
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mctools
 
-POST_PLIST=	fix-plist
+TEST_ENV=	${MAKE_ENV} \
+		PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} \
+		PATH=${STAGEDIR}${PREFIX}/bin:${PATH}
+#TEST_WRKSRC=	${WRKSRC}/ncrystal_python
+
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 1500000
+BROKEN_i386=	error: static assertion failed due to requirement 'std::numeric_limits<unsigned int>::max() >= std::numeric_limits<unsigned long long>::max()': NCrystal is no longer supported on 32bit systems
+.endif
 
 post-install:
-	# delete scripts (they are installed by science/ncrystal)
-	@${RM} ${STAGEDIR}${PREFIX}/bin/*
 	# strip binary
-	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/NCrystal/ncrystal_pyinst_data/lib/libNCrystal.so
+	#@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/NCrystal/ncrystal_pyinst_data/lib/libNCrystal.so
 
-fix-plist: # see post-install
-	@${REINPLACE_CMD} -e "s|^bin/.*$$||" ${TMPPLIST}
+do-test:
+	@cd ${TEST_WRKSRC} && \
+		${SETENV} ${TEST_ENV} ${PYTHON_CMD} -m NCrystal.test all
 
-.include <bsd.port.mk>
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^#  ifndef __FreeBSD__$$/#  if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/ncrystal_core/src/utils/NCCFileUtils.cc
+
+.include <bsd.port.post.mk>

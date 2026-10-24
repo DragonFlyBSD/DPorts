@@ -1,0 +1,11 @@
+--- Cargo.toml.orig	2026-08-27 04:40:05 UTC
++++ Cargo.toml
+@@ -49,8 +49,6 @@ git2 = { version = "0.21", default-features = false, f
+ git2 = { version = "0.21", default-features = false, features = [
+     "https",
+     "ssh",
+-    "vendored-libgit2",
+-    "vendored-openssl",
+ ] }
+ tempfile = "3.27"
+ dirs = "6.0"

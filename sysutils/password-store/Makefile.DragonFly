@@ -1,7 +1,0 @@
-RUN_DEPENDS+=	base64:converters/base64
-
-dfly-patch:
-	${REINPLACE_CMD} -E \
-		-e 's|GETOPT="getopt"|GETOPT="${LOCALBASE}/bin/getopt"|' \
-		-e 's|SHRED="shred -f -z"|SHRED="rm -P -f"|' \
-		${WRKSRC}/src/password-store.sh

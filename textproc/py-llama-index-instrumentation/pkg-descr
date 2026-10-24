@@ -1,0 +1,4 @@
+LlamaIndex Instrumentation provides instrumentation and observability
+for LlamaIndex applications. It enables monitoring, tracing, and
+debugging of LlamaIndex pipelines through integration with
+OpenTelemetry and other observability frameworks.

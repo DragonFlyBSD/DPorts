@@ -1,6 +1,15 @@
---- configure.orig	2024-11-22 20:15:41 UTC
+--- configure.orig	2026-07-13 10:52:24 UTC
 +++ configure
-@@ -15372,6 +15372,11 @@ freebsd*)
+@@ -589,7 +589,7 @@ ac_hostname=`(hostname || uname -n) 2>/dev/null | sed 
+ #
+ # Initializations.
+ #
+-ac_default_prefix=/usr/local
++ac_default_prefix=%%LOCALBASE%%
+ ac_clean_files=
+ ac_config_libobj_dir=.
+ LIBOBJS=
+@@ -16084,6 +16084,11 @@ freebsd*)
          RTL_ARCH=PowerPC_64
          PLATFORMID=freebsd_powerpc64
          ;;
@@ -12,16 +21,106 @@
      powerpc|powerpcspe)
          CPUNAME=POWERPC
          RTL_ARCH=PowerPC
-@@ -39457,7 +39462,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+@@ -16359,7 +16364,7 @@ openbsd*)
+         as_fn_error $? "Unsupported host_cpu $host_cpu for host_os $host_os" "$LINENO" 5
+         ;;
+     esac
+-    SOLARINC="$SOLARINC -I/usr/local/include"
++    SOLARINC="$SOLARINC -I%%LOCALBASE%%/include"
+     ;;
+ 
+ solaris*)
+@@ -16388,7 +16393,7 @@ solaris*)
+         as_fn_error $? "Unsupported host_cpu $host_cpu for host_os $host_os" "$LINENO" 5
+         ;;
+     esac
+-    SOLARINC="$SOLARINC -I/usr/local/include"
++    SOLARINC="$SOLARINC -I%%LOCALBASE%%/include"
+     ;;
+ 
+ emscripten*)
+@@ -37015,7 +37020,7 @@ else case e in #(
+         else
+             search_libsubdirs="$multiarch_libsubdir $libsubdirs"
+         fi
+-        for _AX_BOOST_BASE_boost_path_tmp in /usr /usr/local /opt /opt/local /opt/homebrew ; do
++        for _AX_BOOST_BASE_boost_path_tmp in /usr %%LOCALBASE%% /opt /opt/local /opt/homebrew ; do
+             if test -d "$_AX_BOOST_BASE_boost_path_tmp/include/boost" && test -r "$_AX_BOOST_BASE_boost_path_tmp/include/boost" ; then
+                 for libsubdir in $search_libsubdirs ; do
+                     if ls "$_AX_BOOST_BASE_boost_path_tmp/$libsubdir/libboost_"* >/dev/null 2>&1 ; then break; fi
+@@ -37118,7 +37123,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+             fi
+         else
+             if test "x$cross_compiling" != "xyes" ; then
+-                for _AX_BOOST_BASE_boost_path in /usr /usr/local /opt /opt/local /opt/homebrew ; do
++                for _AX_BOOST_BASE_boost_path in /usr %%LOCALBASE%% /opt /opt/local /opt/homebrew ; do
+                     if test -d "$_AX_BOOST_BASE_boost_path" && test -r "$_AX_BOOST_BASE_boost_path" ; then
+                         for i in `ls -d $_AX_BOOST_BASE_boost_path/include/boost-* 2>/dev/null`; do
+                             _version_tmp=`echo $i | sed "s#$_AX_BOOST_BASE_boost_path##" | sed 's/\/include\/boost-//' | sed 's/_/./'`
+@@ -39525,7 +39530,7 @@ else case e in #(
+   ;;
+   *)
+   as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-as_dummy="$PATH:/usr/sbin:/sbin:/usr/local/sbin"
++as_dummy="$PATH:/usr/sbin:/sbin:%%LOCALBASE%%/sbin"
+ for as_dir in $as_dummy
+ do
+   IFS=$as_save_IFS
+@@ -39575,7 +39580,7 @@ else case e in #(
+   ;;
+   *)
+   as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-as_dummy="$PATH:/usr/sbin:/sbin:/usr/local/sbin"
++as_dummy="$PATH:/usr/sbin:/sbin:%%LOCALBASE%%/sbin"
+ for as_dir in $as_dummy
+ do
+   IFS=$as_save_IFS
+@@ -40470,13 +40475,13 @@ ac_x_header_dirs='
+ /usr/include/X11R5
+ /usr/include/X11R4
+ 
+-/usr/local/X11/include
++%%LOCALBASE%%/X11/include
+ /usr/local/X11R7/include
+ /usr/local/X11R6/include
+ /usr/local/X11R5/include
+ /usr/local/X11R4/include
+ 
+-/usr/local/include/X11
++%%LOCALBASE%%/include/X11
+ /usr/local/include/X11R7
+ /usr/local/include/X11R6
+ /usr/local/include/X11R5
+@@ -40489,7 +40494,7 @@ ac_x_header_dirs='
+ /usr/XFree86/include/X11
+ 
+ /usr/include
+-/usr/local/include
++%%LOCALBASE%%/include
+ /usr/unsupported/include
+ /usr/athena/include
+ /usr/local/x11r5/include
+@@ -42912,7 +42917,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
          save_CXXFLAGS=$CXXFLAGS
          save_IFS=$IFS
          IFS=$P_SEP
 -        for i in $CPLUS_INCLUDE_PATH /usr/include; do
-+        for i in $CPLUS_INCLUDE_PATH /usr/local/include /usr/include; do
++        for i in $CPLUS_INCLUDE_PATH %%LOCALBASE%%/include /usr/include; do
                                                                          IFS=$save_IFS
                                      if test -z "$i"; then
                  continue
-@@ -44422,7 +44427,7 @@ printf "%s\n" "no (oss-fuzz)" >&6; }
+@@ -43108,8 +43113,8 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+     BOX2D_VERSION=`$PKG_CONFIG --modversion box2d 2>/dev/null`
+     BOX2D_MAJOR=`echo $BOX2D_VERSION | cut -d"." -f1`
+     BOX2D_MINOR=`echo $BOX2D_VERSION | cut -d"." -f2`
+-    if test "$BOX2D_MAJOR" -eq "2"; then
+-        if test "$BOX2D_MINOR" -eq "4"; then
++    if test "$BOX2D_MAJOR" -eq "3"; then
++        if test "$BOX2D_MINOR" -eq "1"; then
+             _BOX2D_LIB=box2d
+             printf "%s\n" "#define BOX2D_HEADER <box2d/box2d.h>" >>confdefs.h
+ 
+@@ -48446,7 +48451,7 @@ printf "%s\n" "no (oss-fuzz)" >&6; }
  elif test "$enable_fuzzers" = "yes"; then
      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no (oss-fuzz)" >&5
  printf "%s\n" "no (oss-fuzz)" >&6; }
@@ -30,21 +129,39 @@
      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  printf "%s\n" "yes" >&6; }
                  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking which gpgmepp to use" >&5
-@@ -44436,7 +44441,7 @@ then :
+@@ -48460,7 +48465,7 @@ then :
          ac_fn_c_check_header_compile "$LINENO" "gpgme++/gpgmepp_version.h" "ac_cv_header_gpgmepp_gpgmepp_version_h" "$ac_includes_default"
  if test "x$ac_cv_header_gpgmepp_gpgmepp_version_h" = xyes
  then :
 -   GPGMEPP_CFLAGS=-I/usr/include/gpgme++
-+   GPGMEPP_CFLAGS=-I/usr/local/include/gpgme++
- else $as_nop
-   as_fn_error $? "gpgmepp headers not found, install gpgmepp >= 1.14 development package" "$LINENO" 5
- fi
-@@ -48095,7 +48100,7 @@ if test -z "$SHA256SUM"; then
++   GPGMEPP_CFLAGS=-I%%LOCALBASE%%/include/gpgme++
+ else case e in #(
+   e) as_fn_error $? "gpgmepp headers not found, install gpgmepp >= 1.14 development package" "$LINENO" 5 ;;
+ esac
+@@ -52634,7 +52639,7 @@ CURL=`command -v curl`
+ 
+ CURL=`command -v curl`
+ 
+-for i in wget /usr/bin/wget /usr/local/bin/wget /usr/sfw/bin/wget /opt/sfw/bin/wget /opt/local/bin/wget; do
++for i in wget /usr/bin/wget %%LOCALBASE%%/bin/wget /usr/sfw/bin/wget /opt/sfw/bin/wget /opt/local/bin/wget; do
+     # wget new enough?
+     $i --help 2> /dev/null | $GREP no-use-server-timestamps 2>&1 > /dev/null
+     if test $? -eq 0; then
+@@ -52657,7 +52662,7 @@ SHA256SUM=
+ #
+ SHA256SUM=
+ 
+-for i in shasum /usr/local/bin/shasum /usr/sfw/bin/shasum /opt/sfw/bin/shasum /opt/local/bin/shasum; do
++for i in shasum %%LOCALBASE%%/bin/shasum /usr/sfw/bin/shasum /opt/sfw/bin/shasum /opt/local/bin/shasum; do
+     eval "$i -a 256 --version" > /dev/null 2>&1
+     ret=$?
+     if test $ret -eq 0; then
+@@ -52667,7 +52672,7 @@ if test -z "$SHA256SUM"; then
  done
  
  if test -z "$SHA256SUM"; then
 -    for i in sha256sum /usr/local/bin/sha256sum /usr/sfw/bin/sha256sum /opt/sfw/bin/sha256sum /opt/local/bin/sha256sum; do
-+    for i in gsha256sum /usr/local/bin/sha256sum /usr/sfw/bin/sha256sum /opt/sfw/bin/sha256sum /opt/local/bin/sha256sum; do
++    for i in sha256sum %%LOCALBASE%%/bin/gsha256sum /usr/sfw/bin/sha256sum /opt/sfw/bin/sha256sum /opt/local/bin/sha256sum; do
          eval "$i --version" > /dev/null 2>&1
          ret=$?
          if test $ret -eq 0; then

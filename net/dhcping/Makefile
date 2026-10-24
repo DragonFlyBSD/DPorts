@@ -17,4 +17,5 @@ GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 PLIST_FILES=	bin/dhcping \
 		share/man/man8/dhcping.8.gz
 
+USES= guessfix
 .include <bsd.port.mk>

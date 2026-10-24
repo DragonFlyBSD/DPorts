@@ -1,6 +1,6 @@
 PORTNAME=	janus
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.0
+DISTVERSION=	1.4.2
 PORTREVISION=	0
 CATEGORIES=	www
 
@@ -23,8 +23,8 @@ LIB_DEPENDS=	libconfig.so:devel/libconfig \
 		libusrsctp.so:net/libusrsctp \
 		libwebsockets.so:net/libwebsockets
 
-USES=			autoreconf cpe gmake gnome libtool localbase pkgconfig \
-			ssl
+USES=			autoreconf cpe gmake gnome libtool localbase pathfix \
+			pkgconfig ssl
 USE_GNOME=		glib20
 USE_GITHUB=		yes
 GH_ACCOUNT=		meetecho
@@ -42,6 +42,7 @@ LDFLAGS+=		-L${OPENSSLLIB} -lcrypto -lssl -L${LOCALBASE} -lnice
 GNU_CONFIGURE=		yes
 USE_LDCONFIG=		yes
 SUB_FILES=		pkg-message
+PLIST_SUB+= 		SOVERSION=2.0.11
 
 OPTIONS_SUB=				yes
 OPTIONS_DEFINE=				JAVASCRIPT LUA MQTT NANOMSG \
@@ -65,4 +66,5 @@ LUA_CONFIGURE_ENV=			LUA_CFLAGS="-I${LUA_INCDIR}" \
 POSTPROCESSING_CONFIGURE_ENABLE=	post-processing
 POSTPROCESSING_LIB_DEPENDS=		libavcodec.so:multimedia/ffmpeg
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

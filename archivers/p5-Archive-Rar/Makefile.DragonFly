@@ -1,2 +1,0 @@
-# exclude binary blob in rar
-RUN_DEPENDS:=	${RUN_DEPENDS:Nrar*}

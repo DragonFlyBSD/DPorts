@@ -1,7 +1,7 @@
 PORTNAME=	shiori
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.0-rc.1
-PORTREVISION=	1
+DISTVERSION=	1.8.0
+PORTREVISION=	13
 CATEGORIES=	www
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -12,9 +12,36 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		go:modules
+USE_RC_SUBR=	${PORTNAME}
 
 GO_MODULE=	github.com/go-shiori/shiori
 
-PLIST_FILES=	bin/${PORTNAME}
+SUB_LIST=	USER=${USERS:[1]} \
+		HOMEDIR=${SHIORI_HOMEDIR}
+
+USERS=		${SHIORI_USER}
+GROUPS=		${SHIORI_GROUP}
+
+PLIST_FILES=	bin/${PORTNAME} \
+		"@dir(${SHIORI_USER},${SHIORI_GROUP},0700) ${SHIORI_HOMEDIR}"
+
+SHIORI_HOMEDIR=	/var/db/${SHIORI_USER}
+SHIORI_USER=	${PORTNAME}
+SHIORI_GROUP=	${SHIORI_USER}
+
+BUILD_DATE=	%FT%T
+
+# fix `shiori version` output
+IGNORE= unmaintained, please request fixing to users mailing list
+post-patch:
+	${REINPLACE_CMD} \
+		-e 's/"dev"/"${DISTVERSION}"/1' \
+		-e 's/"none"/"${OPSYS}"/1' \
+		-e 's/"unknown"/"${BUILD_DATE:gmtime}"/1' \
+		${WRKSRC}/main.go \
+		${WRKSRC}/internal/model/main.go
+
+post-install:
+	@${MKDIR} ${STAGEDIR}${SHIORI_HOMEDIR}
 
 .include <bsd.port.mk>

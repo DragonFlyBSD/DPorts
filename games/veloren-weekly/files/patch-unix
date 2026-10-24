@@ -1,0 +1,24 @@
+Relax Linux checks for the code works on any non-Windows platform.
+
+--- cargo-crates/wgpu-hal-27.0.4/src/vulkan/adapter.rs.orig	2006-07-24 01:21:28 UTC
++++ cargo-crates/wgpu-hal-27.0.4/src/vulkan/adapter.rs
+@@ -1207,7 +1207,7 @@ impl PhysicalDeviceProperties {
+         // don't risk confusing JS by exceeding the range of a double.
+         let is_nvidia = self.properties.vendor_id == crate::auxil::db::nvidia::VENDOR;
+         let max_buffer_size =
+-            if (cfg!(target_os = "linux") || cfg!(target_os = "android")) && !is_nvidia {
++            if (cfg!(all(unix, not(target_vendor = "apple")))) && !is_nvidia {
+                 i32::MAX as u64
+             } else {
+                 1u64 << 52
+--- cargo-crates/wgpu-hal-27.0.4/src/vulkan/instance.rs.orig	2006-07-24 01:21:28 UTC
++++ cargo-crates/wgpu-hal-27.0.4/src/vulkan/instance.rs
+@@ -988,7 +988,7 @@ impl crate::Instance for super::Instance {
+             exposed.info.device_type == wgt::DeviceType::DiscreteGpu
+                 && exposed.info.vendor == db::nvidia::VENDOR
+         });
+-        if cfg!(target_os = "linux") && has_nvidia_dgpu && self.shared.has_nv_optimus {
++        if cfg!(unix) && has_nvidia_dgpu && self.shared.has_nv_optimus {
+             for exposed in exposed_adapters.iter_mut() {
+                 if exposed.info.device_type == wgt::DeviceType::IntegratedGpu
+                     && exposed.info.vendor == db::intel::VENDOR

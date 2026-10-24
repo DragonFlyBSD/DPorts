@@ -1,20 +1,20 @@
---- chrome/browser/ui/ui_features.cc.orig	2025-05-28 14:55:43 UTC
+--- chrome/browser/ui/ui_features.cc.orig	2026-10-18 13:29:39 UTC
 +++ chrome/browser/ui/ui_features.cc
-@@ -35,7 +35,7 @@ BASE_FEATURE(kCloseOmniboxPopupOnInactiveAreaClick,
-              "CloseOmniboxPopupOnInactiveAreaClick",
-              base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -132,7 +132,7 @@ bool ShouldUseActionsForBrowserCommands() {
+          base::FeatureList::IsEnabled(kAppMenuGlowUp);
+ }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // Enables the feature to remove the last confirmation dialog when relaunching
- // to update Chrome.
- BASE_FEATURE(kFewerUpdateConfirmations,
-@@ -339,7 +339,7 @@ BASE_FEATURE(kViewsJSAppModalDialog,
-              base::FEATURE_DISABLED_BY_DEFAULT);
- #endif
+ BASE_FEATURE(kDseIntegrity, base::FEATURE_ENABLED_BY_DEFAULT);
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kUsePortalAccentColor,
-              "UsePortalAccentColor",
+ // Enables the dialog shown when user feedback is disabled.
+@@ -373,7 +373,7 @@ BASE_FEATURE(kTabsFromOtherDevicesSidePanelPinnedByDef
+ 
+ BASE_FEATURE(kNonMilestoneUpdateToast, base::FEATURE_ENABLED_BY_DEFAULT);
+ 
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kRespectShouldTriggerSessionRestoreOnDesktop,
               base::FEATURE_ENABLED_BY_DEFAULT);
+ 

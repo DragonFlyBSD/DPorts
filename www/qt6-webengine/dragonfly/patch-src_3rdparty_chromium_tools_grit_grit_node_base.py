@@ -1,8 +1,18 @@
-diff --git tools/grit/grit/node/base.py tools/grit/grit/node/base.py
-index 8f787d882dc..b139f3996f7 100644
---- src/3rdparty/chromium/tools/grit/grit/node/base.py
+--- src/3rdparty/chromium/tools/grit/grit/node/base.py.intermediate	2026-09-17 10:33:48 UTC
 +++ src/3rdparty/chromium/tools/grit/grit/node/base.py
-@@ -522,11 +522,12 @@ class Node(object):
+@@ -491,8 +491,9 @@ class Node:
+         value = defs
+ 
+       elif name == 'is_linux':
+-        value = (target_platform == 'linux'
+-                 or 'bsd' in target_platform)
++        value = (target_platform == 'linux' or
++                 'dragonfly' in target_platform or
++                 'bsd' in target_platform)
+       elif name == 'is_chromeos':
+         value = target_platform == 'chromeos'
+       elif name == 'is_macosx':
+@@ -506,11 +507,12 @@ class Node:
        elif name == 'is_fuchsia':
          value = target_platform == 'fuchsia'
        elif name == 'is_bsd':

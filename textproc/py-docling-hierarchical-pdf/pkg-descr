@@ -1,0 +1,4 @@
+Docling Hierarchical PDF enables inference of header hierarchy in the
+Docling PDF parsing pipeline. It detects and reconstructs the document
+heading structure (chapters, sections, subsections) from PDF layout
+features, improving the semantic structure of parsed documents.

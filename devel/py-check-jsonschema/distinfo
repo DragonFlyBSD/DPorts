@@ -1,3 +1,3 @@
-TIMESTAMP = 1712886422
-SHA256 (check-jsonschema-0.28.2.tar.gz) = 6bb5a7aa16ca9854a6fd45b6037c28bc548612aedec1df57b154ecfce1441bea
-SIZE (check-jsonschema-0.28.2.tar.gz) = 250298
+TIMESTAMP = 1787587802
+SHA256 (check_jsonschema-0.38.0.tar.gz) = bb6899cc24ab0ced664e4646423d35b72db245cea75109c0b9e64d13087d1b8c
+SIZE (check_jsonschema-0.38.0.tar.gz) = 436740

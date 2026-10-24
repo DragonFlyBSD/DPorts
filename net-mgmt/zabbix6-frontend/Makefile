@@ -7,6 +7,8 @@ USES+=		php:web,flavors
 USE_PHP=	bcmath ctype filter gd gettext ldap mbstring session \
 		simplexml sockets xml xmlreader xmlwriter
 
+CPE_PRODUCT=	frontend
+
 MASTERDIR=	${.CURDIR}/../${PORTNAME}-server
 PATCHDIR=
 NO_ARCH=	yes

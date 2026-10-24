@@ -1,3 +1,0 @@
-
-LDFLAGS:=
-LIBS+=	${LOCALBASE}/lib/libncurses.a ${LOCALBASE}/lib/libtinfo.a

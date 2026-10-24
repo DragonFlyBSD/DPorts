@@ -1,5 +1,5 @@
 PORTNAME=	mxml
-DISTVERSION=	3.1
+DISTVERSION=	3.3.1
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/michaelrsweet/mxml/releases/download/v${DISTVERSION}/
 
@@ -10,18 +10,21 @@ WWW=		http://www.minixml.org/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		desthack
 USE_LDCONFIG=	yes
 
+DESTDIRNAME=	DSTROOT
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 MAKE_ARGS=	INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_LIB="${INSTALL_LIB}" \
 		INSTALL_MAN="${INSTALL_MAN}"
+TEST_TARGET=	test
 
 OPTIONS_DEFINE=	DOCS
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^\.SILENT/d' -e '/(INSTALL_LIB) libmxml.a/ s/_LIB/_DATA/' \
 		${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e 's/bsd | haiku/bsd | dragonfly* | haiku/' ${WRKSRC}/configure
 
 .include <bsd.port.mk>

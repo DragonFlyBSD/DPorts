@@ -1,5 +1,5 @@
 PORTNAME=	chkrootkit
-PORTVERSION=	0.58b
+PORTVERSION=	0.59
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.chkrootkit.org/pub/seg/pac/
 
@@ -51,5 +51,9 @@ do-install:
 	${INSTALL_PROGRAM} ${PROG_FILES:C,^,${WRKSRC}/,} ${STAGEDIR}${PREFIX}/sbin
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:C,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/chkrootkit
 
 .include <bsd.port.post.mk>

@@ -22,6 +22,7 @@ PLIST_FILES=	bin/xli bin/xlito bin/xview bin/xsetbg \
 
 XLI_SNAPVER=	2006-11-10
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	${RLN} ${STAGEDIR}${PREFIX}/share/man/man1/xli.1.gz \
 		${STAGEDIR}${PREFIX}/share/man/man1/xview.1.gz

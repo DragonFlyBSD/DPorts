@@ -1,13 +1,13 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	7.0.16
-PORTREVISION=	2
+DISTVERSION=	7.0.43
 CATEGORIES=	databases net
-MASTER_SITES=	https://hg.mozilla.org/mozilla-central/raw-rev/:patches
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
-DISTFILES=	223087fdc29f18678f6174e9807b8780e439acf6:patches # https://bugzilla.mozilla.org/1894423
-EXTRACT_ONLY=	${GH_ACCOUNT}-${GH_PROJECT}-${DISTVERSIONPREFIX}${DISTVERSION}_GH0.tar.gz \
-		${GH_ACCOUNT}-forks-spidermonkey-${MOZJS_TAG}_GH0.tar.gz
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+# https://github.com/mongodb/mongo/pull/1619/
+# "Modernize dynamic module loading to work with Python3.12"
+PATCHFILES+=	0877732109589e441cbf234dce17ec0e7b614902.patch:-p1
 
 MAINTAINER=	ronald@FreeBSD.org
 COMMENT=	MongoDB Community Edition (7.0.x Branch)
@@ -27,8 +27,9 @@ BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pymongo>0:databases/py-pymongo@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pyyaml>=3.11:devel/py-pyyaml@${PY_FLAVOR}
-# build depends used while running ${WRKSRC}/src/third_party/mozjs/gen-config.sh
+		${PYTHON_PKGNAMEPREFIX}pyyaml>=3.11:devel/py-pyyaml@${PY_FLAVOR} \
+		rust-cbindgen>0:devel/rust-cbindgen
+# build depends used while running ${WRKSRC}/src/third_party/mozjs/scripts/gen-config.sh
 BUILD_DEPENDS+=	gm4:devel/m4 \
 		gsed:textproc/gsed
 LIB_DEPENDS=	libcurl.so:ftp/curl \
@@ -39,14 +40,16 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libzstd.so:archivers/zstd
 
 FLAVORS=	default armv80a
+
 armv80a_PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}-armv80a
 
 USES=		compiler:c++20-lang cpe python:build scons shebangfix ssl
-# gmake is used while running ${WRKSRC}/src/third_party/mozjs/gen-config.sh
+# gmake is used while running ${WRKSRC}/src/third_party/mozjs/scripts/gen-config.sh
 USES+=		gmake pkgconfig
+CPE_PRODUCT=	mongodb
 
-# mozjs tag comes from ${WRKSRC}/src/third_party/mozjs/get-sources.sh
-MOZJS_TAG=	22954e1ce6bf72c7cf36f3a29ef030fff4ff6d33
+# mozjs tag comes from ${WRKSRC}/src/third_party/mozjs/scripts/import.sh
+MOZJS_TAG=	7aeaf7a44d420360bde75db8453636092c3e2f56
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mongodb mongodb-forks:mozjs
@@ -57,7 +60,12 @@ USE_RC_SUBR=	mongod
 SHEBANG_FILES=	buildscripts/scons.py
 python_OLD_CMD=	@python_interpreter@
 
-CONFIGURE_ENV+=	M4=${LOCALBASE}/bin/gm4
+HAS_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	scripts/gen-config.sh
+CONFIGURE_ARGS=		${MOZJS_ARCH} \
+			freebsd
+CONFIGURE_ENV+=		PYTHON3="${PYTHON_CMD}"
+
 MAKE_ARGS=	--allocator=system \
 		--cxx-std=20 \
 		--disable-warnings-as-errors \
@@ -74,6 +82,7 @@ MAKE_ARGS=	--allocator=system \
 		AR=llvm-ar \
 		MONGO_VERSION=${DISTVERSION} \
 		VERBOSE=on
+ALL_TARGET=	install-core
 
 CFLAGS+=	-DBOOST_NO_CXX98_FUNCTION_BASE
 
@@ -87,15 +96,18 @@ EXTRACT_AFTER_ARGS=	--exclude src/third_party/snappy-* \
 			--exclude src/third_party/zstandard \
 			--no-same-owner --no-same-permissions
 
+# This ports is only following the Major Release.
+# https://docs.mongodb.com/manual/reference/versioning/
+PORTSCOUT=	limit:^7\.0\.
+
+CONFIGURE_WRKSRC=	${MOZJS_WRKSRC}
+
 USERS=		mongodb
 GROUPS=		mongodb
 
 OPTIONS_DEFINE=		LTO NOAVX SASL
 OPTIONS_DEFINE_aarch64=	ARMV80A
 OPTIONS_DEFAULT=	NOAVX SASL
-.if ${FLAVOR:U} == armv80a
-OPTIONS_SET+=	ARMV80A
-.endif
 
 # MongoDB on non-LSE ARM cpu like Raspberry Pi can work but is unsupported upstream.
 # Can give corruption on high concurrency.
@@ -114,19 +126,17 @@ NOAVX_EXTRA_PATCHES=	${FILESDIR}/extrapatch-src_third__party_mozjs_SConscript \
 SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 SASL_MAKE_ARGS=		--use-sasl-client
 
+MOZJS_WRKSRC=	${WRKSRC}/src/third_party/mozjs
+
+.if ${FLAVOR:U} == armv80a
+OPTIONS_SET+=	ARMV80A
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if ${FLAVOR:U} == armv80a && ${ARCH} != aarch64
 IGNORE=		flavor armv80a is only valid on aarch64
 .endif
-
-ALL_TARGET=	install-core
-
-# This ports is only following the Major Release.
-# https://docs.mongodb.com/manual/reference/versioning/
-PORTSCOUT=	limit:^7\.0\.
-
-CPE_PRODUCT=	mongodb
 
 .if ${ARCH} == x86_64
 MOZJS_ARCH=	x86_64
@@ -136,22 +146,14 @@ MOZJS_ARCH=	ppc64le
 MOZJS_ARCH=	${ARCH}
 .endif
 
-post-patch:
-# fix build with python-3.11
-	${REINPLACE_CMD} -e 's#rU#r#g' ${WRKDIR}/spidermonkey-${MOZJS_TAG}/python/mozbuild/mozbuild/util.py
-	${REINPLACE_CMD} -e 's#rU#r#g' ${WRKDIR}/spidermonkey-${MOZJS_TAG}/python/mozbuild/mozbuild/preprocessor.py
-	${REINPLACE_CMD} -e 's#rU#r#g' ${WRKDIR}/spidermonkey-${MOZJS_TAG}/python/mozbuild/mozbuild/backend/base.py
-	${REINPLACE_CMD} -e 's#rU#r#g' ${WRKDIR}/spidermonkey-${MOZJS_TAG}/python/mozbuild/mozbuild/action/process_define_files.py
-	${PATCH} -d ${WRKSRC}/src/third_party/mozjs/extract --quiet -p1 -V none < ${DISTDIR}/223087fdc29f18678f6174e9807b8780e439acf6
+post-extract:
+# Verify we downloaded the proper mozjs git tag.
+	${SH} -xc "test \"X`grep -E '^LIB_GIT_REVISION=' ${MOZJS_WRKSRC}/scripts/import.sh`\" = \"XLIB_GIT_REVISION=${MOZJS_TAG}\""
+	${PATCH} -d ${WRKDIR}/spidermonkey-${MOZJS_TAG} -p1 < ${PATCHDIR}/d497aa4f770ca02f6083e93b94996a8fe32c2ff4.patch
 
 pre-configure:
-# Verify we downloaded the proper mozjs git tag.
-	${SH} -c "test \"X`grep -E '^LIB_GIT_REVISION=' ${WRKSRC}/src/third_party/mozjs/get-sources.sh`\" = \"XLIB_GIT_REVISION=${MOZJS_TAG}\""
-
-do-configure:
-# Replacement of ${WRKSRC}/src/third_party/mozjs/get-sources.sh
-	${LN} -sF ${WRKDIR}/spidermonkey-${MOZJS_TAG} ${WRKSRC}/src/third_party/mozjs/mozilla-release
-	cd ${WRKSRC}/src/third_party/mozjs && PYTHON3="${PYTHON_CMD}" ${SH} ./gen-config.sh ${MOZJS_ARCH} freebsd
+# Replacement of ${WRKSRC}/src/third_party/mozjs/scripts/import.sh
+	${LN} -sF ${WRKDIR}/spidermonkey-${MOZJS_TAG} ${MOZJS_WRKSRC}/mozilla-release
 
 do-build:
 	${WRKSRC}/buildscripts/scons.py	-C ${WRKSRC} ${MAKE_ARGS}
@@ -173,4 +175,5 @@ do-install:
 do-test:
 	${SH} ${FILESDIR}/make.test.sh "${STAGEDIR}${PREFIX}/bin"
 
+IGNORE:= unmaintained, please request fixing to users mailing list
 .include <bsd.port.post.mk>

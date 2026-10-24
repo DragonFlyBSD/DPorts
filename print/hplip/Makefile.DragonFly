@@ -1,4 +1,0 @@
-USB_INCLUDE=	${LOCALBASE}/include
-
-# issue with c++ libgcc_pic.a and ld.gold
-MAKE_ENV+= LDVER=ld.bfd

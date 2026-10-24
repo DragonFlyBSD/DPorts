@@ -1,0 +1,4 @@
+IBM watsonx.ai API Client provides Python bindings for the IBM
+watsonx.ai platform. It enables interaction with IBM's AI and machine
+learning services, including foundation model inference, model training,
+and prompt engineering capabilities.

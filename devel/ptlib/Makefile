@@ -1,10 +1,10 @@
 PORTNAME=	ptlib
 PORTVERSION=	2.10.11
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
-MAINTAINER=	gnome@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cross platform C++ library, used by OPAL
 WWW=		http://www.opalvoip.org
 
@@ -14,12 +14,13 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2
 
 USES=		autoreconf:build bison:wrapper compiler:c11 gmake localbase:ldflags \
 		pathfix pkgconfig ssl tar:xz
-BROKEN_SSL=	openssl30 openssl31
+BROKEN_SSL=	openssl openssl31
 BROKEN_SSL_REASON=	Uses OpenSSL 3.0.0 deprecated BIO_s_file_internal
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=--disable-lua \
+CONFIGURE_ARGS=	--disable-bsdvideo \
+		--disable-lua \
 		--disable-sasl \
 		--enable-audio \
 		--enable-ipv6 \
@@ -41,18 +42,12 @@ PLIST_SUB+=	PORTVERSION=${PORTVERSION} \
 		PVERSION_MAJOR=${PVERSION_MAJOR} \
 		PVERSION_MINOR=${PVERSION_MINOR}
 
-OPTIONS_DEFINE=	DEBUG BSDVIDEO ODBC ALSA JABBER V4L SDL LDAP PULSEAUDIO
-OPTIONS_DEFAULT=BSDVIDEO SDL V4L JABBER
-OPTIONS_EXCLUDE_FreeBSD_13=	BSDVIDEO
-OPTIONS_EXCLUDE_FreeBSD_14=	BSDVIDEO
+OPTIONS_DEFINE=	DEBUG ODBC ALSA JABBER V4L SDL LDAP PULSEAUDIO
+OPTIONS_DEFAULT=SDL V4L JABBER
 OPTIONS_SUB=	yes
-
-BSDVIDEO_DESC=	BSD video support
 
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 ALSA_CONFIGURE_ENABLE=alsa
-BSDVIDEO_CONFIGURE_ENABLE=bsdvideo
-BSDVIDEO_VARS=	PTLIB_VIDEO=1
 DEBUG_ALL_TARGET=	debugshared
 JABBER_CONFIGURE_ON=--enable-jabber
 JABBER_VARS=	PTLIB_VIDEO=1
@@ -73,6 +68,9 @@ V4L_VARS=	PTLIB_VIDEO=1
 PVERSION_MAJOR=	${PORTVERSION:C/.[0-9]+.[0-9]+.//}
 PVERSION_MINOR=	${PORTVERSION:C/.[0-9]+$//g}
 
+BSDVIDEO_BROKEN= bsdvideo plugin doesn't build on DragonFly
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NBSDVIDEO}
+CFLAGS= -Wno-deprecated-declarations
 .include <bsd.port.options.mk>
 
 .if (${OPSYS} == FreeBSD && ${SSL_DEFAULT} == base) || ${SSL_DEFAULT} == openssl
@@ -119,13 +117,13 @@ CONFIGURE_ARGS+=	--disable-dc
 
 .include <bsd.port.pre.mk>
 
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
+.if ${COMPILER_TYPE} == clang
 CPPFLAGS+=	-Dregister= -Wno-error=dynamic-exception-spec
 .endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/RTF_WASCLONED/0x20000/' ${WRKSRC}/src/ptlib/unix/socket.cxx
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
+.if ${COMPILER_TYPE} == clang
 	@${REINPLACE_CMD} -e 's|auto_ptr|unique_ptr|' \
 		${WRKSRC}/include/ptlib/psharedptr.h
 	@${REINPLACE_CMD} -e 's|public binary_function|public __binary_function|' \
@@ -146,5 +144,9 @@ post-install:
 post-install-DEBUG-on:
 	${LN} -sf libpt_d.so.${PORTVERSION} ${STAGEDIR}${PREFIX}/lib/libpt_d.so.${PVERSION_MAJOR}
 	${LN} -sf libpt_d.so.${PORTVERSION} ${STAGEDIR}${PREFIX}/lib/libpt_d.so.${PVERSION_MINOR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@STDCXXFLAGS)@& -fpermissive@g' \
+		${WRKSRC}/make/common.mak
 
 .include <bsd.port.post.mk>

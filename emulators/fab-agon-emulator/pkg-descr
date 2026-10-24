@@ -1,0 +1,24 @@
+An emulator of the Agon Light, Olimex Agon Light 2, and Agon Console8 8-bit
+computers.
+
+The Agon Light is a modern, fully open-source, 8-bit microcomputer and
+microcontroller in one small, low-cost board, designed by Bernado Kastrup aka
+The Byte Attic. As a computer, it is a standalone device that requires no host
+PC: it puts out its own video (VGA), audio (2 identical mono channels), accepts
+a PS/2 keyboard and has its own mass-storage in the form of a micro-SD card. The
+Olimex Agon Light 2 is a variation on the original Agon Light design.
+
+The Agon Console8 is a version of the Agon Light that also includes two
+Atari-compatible joystick ports, and a PS/2 mouse port, and a stylish case. It
+was also designed by Bernado Kastrup aka The Byte Attic, and is manufactured by
+Heber Ltd.
+
+The Agon Light, Olimex Agon Light 2, and the Agon Console8 are all fully
+compatible with each other. Software written for one will run on the other, and
+the same firmware can be used on both.
+
+The information about the computer is available at
+https://www.thebyteattic.com/p/agon.html
+
+The port provides both graphical SDL3-based emulator (fab-agon-emulator) and a
+terminal emulator (agon-cli-emulator).

@@ -1,0 +1,4 @@
+Docling Metrics Table provides table structure evaluation metrics for
+Docling, based on the Tree-Edit-Distance Score (TEDS). It measures the
+accuracy of table structure recognition by comparing predicted and
+ground-truth table representations.

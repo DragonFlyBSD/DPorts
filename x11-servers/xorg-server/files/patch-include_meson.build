@@ -1,6 +1,6 @@
---- include/meson.build.orig	2022-07-12 13:27:57.000000000 +0000
-+++ include/meson.build	2022-08-09 00:48:12.688887000 +0000
-@@ -377,7 +377,7 @@
+--- include/meson.build.orig	2026-07-08 01:35:09 UTC
++++ include/meson.build
+@@ -382,7 +382,7 @@ if host_machine.system() == 'freebsd' or host_machine.
  xorg_data.set('HAVE_SYS_VT_H', cc.has_header('sys/vt.h') ? '1' : false)
  
  if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly'

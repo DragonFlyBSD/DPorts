@@ -1,0 +1,25 @@
+PORTNAME=	sdparm
+PORTVERSION=	1.12
+PORTREVISION=	1
+CATEGORIES=	sysutils
+MASTER_SITES=	http://sg.danny.cz/sg/p/
+
+MAINTAINER=	delphij@FreeBSD.org
+COMMENT=	Utilities to access SCSI device parameters
+WWW=		https://sg.danny.cz/sg/sdparm.html
+
+LICENSE=	BSD3CLAUSE
+
+USES=		shebangfix tar:tgz
+USE_LDCONFIG=	yes
+
+SHEBANG_FILES=	scripts/sas_disk_blink
+GNU_CONFIGURE=	yes
+
+PLIST_FILES=	bin/sas_disk_blink \
+		bin/sdparm \
+		share/man/man8/sas_disk_blink.8.gz \
+		share/man/man8/sdparm.8.gz
+
+IGNORE= FreeBSD specific
+.include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	librasterlite2
 PORTVERSION=	1.1.0
-PORTREVISION=	11
+PORTREVISION=	14
 DISTVERSIONSUFFIX=-beta1
 CATEGORIES=	graphics geography
 MASTER_SITES=	http://www.gaia-gis.it/gaia-sins/librasterlite2-sources/
@@ -34,7 +34,7 @@ USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+= -L${LOCALBASE}/lib -lm
 LIBS+=		-lsqlite3 -lm
 
 .include <bsd.port.mk>

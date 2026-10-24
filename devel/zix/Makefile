@@ -1,5 +1,5 @@
 PORTNAME=	zix
-DISTVERSION=	0.6.2
+DISTVERSION=	0.8.2
 CATEGORIES=	devel
 MASTER_SITES=	http://download.drobilla.net/
 
@@ -14,10 +14,16 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc:devel/glib20
 
 USES=		meson pkgconfig python:build tar:xz
 USE_LDCONFIG=	yes
-MESON_ARGS=	-Db_lundef=false \
-		-Ddocs=disabled
-#-Db_lundef=false: https://github.com/drobilla/zix/issues/9
+MESON_ARGS=	-Ddocs=disabled \
+		-Dtests=disabled
 
 PLIST_SUB=	VERSION=${DISTVERSION}
+
+USE_GCC_VERSION= ${GCC_DEFAULT}
+do-test:
+	cd ${WRKSRC} && \
+		${SETENV} ${CONFIGURE_ENV} ${CONFIGURE_CMD} ${CONFIGURE_ARGS} -Dtests=enabled && \
+	cd ${BUILD_WRKSRC} && \
+		${DO_MAKE_BUILD} test
 
 .include <bsd.port.mk>

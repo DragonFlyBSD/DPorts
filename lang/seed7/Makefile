@@ -1,30 +1,30 @@
 PORTNAME=	seed7
-DISTVERSION=	05_20230913
-PORTREVISION=	0
+DISTVERSION=	05_20260711
 CATEGORIES=	lang
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTNAME}/
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	High-level, extensible programming language
-WWW=		http://seed7.sourceforge.net/
+WWW=		https://seed7.sourceforge.net/
 
 # The interpreter and the example programs use the GPL license, while the
 # runtime library uses the LGPL license.
 LICENSE=	GPLv2 LGPL21
 LICENSE_COMB=	multi
 
-ONLY_FOR_ARCHS=	amd64 armv7 i386 powerpc powerpc64 powerpc64le sparc64
+ONLY_FOR_ARCHS=	amd64 armv7 i386 powerpc powerpc64 powerpc64le
 
 LIB_DEPENDS=	libodbc.so:databases/unixODBC
 
-USES=		mysql:client ncurses pgsql sqlite tar:tgz xorg
+USES= display:build mysql:client ncurses pgsql sqlite tar:tgz xorg localbase:ldflags ncurses
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
 USE_XORG=	x11 xrender
 WANT_PGSQL=	client
 
+PATCH_WRKSRC=	${WRKDIR}/${PORTNAME}
 WRKSRC=		${WRKDIR}/${PORTNAME}/src
 MAKE_ENV+=	S7_LIB_DIR=${S7_LIB_DIR} \
 		SEED7_LIBRARY=${SEED7_LIBRARY} \
@@ -40,6 +40,7 @@ PORTDOCS=	*
 
 MAKEFILE=	mk_freebsd.mk
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	${REINPLACE_CMD} \
 	    -e 's|%%LOCALBASE%%|${LOCALBASE}|g;' \
@@ -80,10 +81,19 @@ do-install:
 	${INSTALL} -d ${STAGEDIR}${EXAMPLESDIR}
 	cd ${WRKSRC}/../prg && ${COPYTREE_SHARE} '*.dna *.sd7 *.dat *.s7i' ${STAGEDIR}${EXAMPLESDIR}
 #	insall man pages
-	${INSTALL_DATA} ${WRKSRC}/../doc/s7.1 ${STAGEDIR}${PREFIX}/man/man1
-	${INSTALL_DATA} ${WRKSRC}/../doc/s7c.1 ${STAGEDIR}${PREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/../doc/s7.1 ${STAGEDIR}${PREFIX}/share/man/man1
+	${INSTALL_DATA} ${WRKSRC}/../doc/s7c.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 do-test:
 	cd ${WRKSRC} && ${MAKE} -f ${MAKEFILE} test
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@SYSTEM_CONSOLE_LIBS@&___@g' \
+		${WRKSRC}/chkccomp.c
+	${REINPLACE_CMD} -e '/SYSTEM_CONSOLE_LIBS/d' \
+		${WRKSRC}/cmd_rtl.c
+	${REINPLACE_CMD} -e "/define CC_FLAGS/s@-fdata-sections@& -I${LOCALBASE}/include@g" \
+			 -e "s@^SYSTEM_LIBS =@& -L${LOCALBASE}/lib -lncurses@g" \
+		${WRKSRC}/mk_freebsd.mk
 
 .include <bsd.port.mk>

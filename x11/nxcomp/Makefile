@@ -16,6 +16,7 @@ USE_XORG=	xorgproto
 GNU_CONFIGURE=	yes
 LIB_DEPENDS=	libpng.so:graphics/png
 
+CONFIGURE_ARGS= nxconf_cv_freebsd=yes
 post-patch:
 	@${REINPLACE_CMD} -e "s,libdir}/nx,libdir},g" ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e "s|/usr/NX/bin:/opt/NX/bin:/usr/local/NX|${PREFIX}|" \

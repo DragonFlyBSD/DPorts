@@ -19,7 +19,7 @@ USE_CXXSTD=	c++14
 USE_XORG=	xpm
 ALL_TARGET=	${PORTNAME}
 
-CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
+CXXFLAGS+= ${CXXFLAGS_${CHOSEN_COMPILER_TYPE}} -Wno-narrowing
 CXXFLAGS_clang=	-Wno-c++11-narrowing
 
 DESKTOP_ENTRIES="XMineHunter" "" "${PREFIX}/share/pixmaps/${PORTNAME}.xpm" \

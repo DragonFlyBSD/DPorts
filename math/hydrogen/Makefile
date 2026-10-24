@@ -1,7 +1,7 @@
 PORTNAME=	hydrogen
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.3
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	math
 PKGNAMESUFFIX=	-linear-algebra
 
@@ -30,6 +30,8 @@ CMAKE_ON=	BUILD_SHARED_LIBS \
 CMAKE_OFF=	Hydrogen_ENABLE_TESTING
 CMAKE_TESTING_ON=	Hydrogen_ENABLE_TESTING
 CMAKE_TESTING_TARGET=	test
+
+CXXFLAGS+=		-Wno-invalid-specialization # workaround for error: 'is_floating_point' cannot be specialized
 
 OPTIONS_SINGLE=		MPI
 OPTIONS_SINGLE_MPI=	MPICH OPENMPI

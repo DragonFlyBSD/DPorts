@@ -17,6 +17,7 @@ USE_RC_SUBR=	parpd
 NO_TEST=	yes
 PLIST_FILES=	sbin/parpd share/man/man8/parpd.8.gz
 
+CFLAGS= -DSLIST_FOREACH_SAFE=SLIST_FOREACH_MUTABLE -DTAILQ_FOREACH_SAFE=TAILQ_FOREACH_MUTABLE
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == gcc

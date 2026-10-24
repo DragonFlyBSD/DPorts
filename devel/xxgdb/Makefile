@@ -20,4 +20,11 @@ post-build:
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xxgdbiowin ${STAGEDIR}${PREFIX}/bin
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'	\
+		${WRKSRC}/calldbx.c						\
+		${WRKSRC}/command.c						\
+		${WRKSRC}/filemenu.c						\
+		${WRKSRC}/signals.c
+
 .include <bsd.port.mk>

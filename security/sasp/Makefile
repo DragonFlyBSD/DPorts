@@ -13,6 +13,7 @@ LIB_DEPENDS=	libnet.so:net/libnet
 NO_WRKSUBDIR=	yes
 PLIST_FILES=	sbin/sasp
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-build:
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} -I${LOCALBASE}/include -o sasp sasp.c \
 		${LDFLAGS} -L${LOCALBASE}/lib -lpcap -lnet)

@@ -1,5 +1,5 @@
 PORTNAME=	lynis
-PORTVERSION=	3.1.4
+PORTVERSION=	3.1.7
 CATEGORIES=	security
 MASTER_SITES=	https://cisofy.com/files/
 
@@ -41,4 +41,5 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
+RUN_DEPENDS:= ${RUN_DEPENDS:Nlsof*}
 .include <bsd.port.mk>

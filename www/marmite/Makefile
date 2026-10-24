@@ -1,5 +1,6 @@
 PORTNAME=	marmite
-DISTVERSION=	0.2.5
+DISTVERSION=	0.3.2
+PORTREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	dutra@FreeBSD.org
@@ -9,9 +10,9 @@ WWW=		https://github.com/rochacbruno/marmite
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libonig.so:devel/oniguruma
+LIB_DEPENDS=	libzstd.so:archivers/zstd
 
-USES=		cargo ssl pkgconfig
+USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	rochacbruno
 

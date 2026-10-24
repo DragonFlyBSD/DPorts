@@ -1,0 +1,4 @@
+langchain-aws is a LangChain integration package for Amazon Web Services.
+
+It provides chat models, embeddings, LLMs, retrievers, vector stores, and tools
+built on top of AWS services such as Amazon Bedrock, SageMaker, and Boto3.

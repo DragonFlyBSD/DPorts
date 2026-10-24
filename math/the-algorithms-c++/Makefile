@@ -1,5 +1,5 @@
 PORTNAME=	the-algorithms-c++
-DISTVERSION=	g20240212
+DISTVERSION=	g20251011
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -16,6 +16,6 @@ USE_XORG=	xi xmu
 USE_GITHUB=	yes
 GH_ACCOUNT=	TheAlgorithms
 GH_PROJECT=	C-Plus-Plus
-GH_TAGNAME=	2dadbf7
+GH_TAGNAME=	b9c118f
 
 .include <bsd.port.mk>

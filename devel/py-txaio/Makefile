@@ -1,6 +1,5 @@
 PORTNAME=	txaio
-PORTVERSION=	22.2.1
-PORTREVISION=	1
+DISTVERSION=	26.6.1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,10 +11,10 @@ WWW=		https://github.com/crossbario/txaio
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=2.6.4:devel/py-pytest@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hatchling>=0:devel/py-hatchling@${PY_FLAVOR}
 
 USES=		python
-USE_PYTHON=	autoplist distutils
+USE_PYTHON=	autoplist pep517 pytest
 
 NO_ARCH=	yes
 
@@ -24,10 +23,11 @@ OPTIONS_DEFAULT=	TWISTED
 
 TWISTED_DESC=	Twisted network backend support
 
-TWISTED_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}twisted>=20.3.0:devel/py-twisted@${PY_FLAVOR} \
+TWISTED_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}twisted>=22.10.0:devel/py-twisted@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}zope.interface>=5.2.0:devel/py-zope.interface@${PY_FLAVOR}
 
-do-test:
-	@cd ${WRKSRC} && ${PYTHON_CMD} -m pytest -v -rs
+post-patch:
+	@${REINPLACE_CMD} 's|^license = "MIT"|license = { text = "MIT" }|' \
+		${WRKSRC}/pyproject.toml
 
 .include <bsd.port.mk>

@@ -73,4 +73,11 @@ post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${TAR} -C ${WRKSRC}/examples -cf - . | ${TAR} -C ${STAGEDIR}${EXAMPLESDIR} -xf -
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifdef \(__FreeBSD__\)@if (defined(\1)||defined(__DragonFly__))@g'	\
+			 -e 's@ifndef \(__FreeBSD__\)@if \!(defined(\1)||defined(__DragonFly__))@g'	\
+		${WRKSRC}/config.h		\
+		${WRKSRC}/src/common/log.c	\
+		${WRKSRC}/src/toss/dbz.c
+
 .include <bsd.port.mk>

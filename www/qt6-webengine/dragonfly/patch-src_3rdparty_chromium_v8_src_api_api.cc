@@ -1,18 +1,16 @@
-diff --git v8/src/api/api.cc v8/src/api/api.cc
-index 7bad0c9ddcd..c5b9640e53e 100644
---- src/3rdparty/chromium/v8/src/api/api.cc
+--- src/3rdparty/chromium/v8/src/api/api.cc.orig	2026-10-23 12:00:00 UTC
 +++ src/3rdparty/chromium/v8/src/api/api.cc
-@@ -140,7 +140,8 @@
- #include "src/wasm/wasm-serialization.h"
- #endif  // V8_ENABLE_WEBASSEMBLY
+@@ -159,7 +159,8 @@
+ #include "src/objects/intl-objects.h"
+ #endif  // V8_INTL_SUPPORT
  
 -#if V8_OS_LINUX || V8_OS_DARWIN || V8_OS_FREEBSD || V8_OS_OPENBSD
 +#if V8_OS_LINUX || V8_OS_DARWIN || V8_OS_FREEBSD || V8_OS_OPENBSD || \
 +  V8_OS_DRAGONFLYBSD
  #include <signal.h>
+ #include <unistd.h>
  
- #if V8_ENABLE_WEBASSEMBLY
-@@ -6206,7 +6207,8 @@ bool v8::V8::Initialize(const int build_config) {
+@@ -6454,7 +6455,8 @@ bool v8::V8::Initialize(const int build_config) {
    return true;
  }
  

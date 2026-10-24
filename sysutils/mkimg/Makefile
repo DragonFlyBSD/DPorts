@@ -17,6 +17,6 @@ PLIST_FILES+=	bin/mkimg share/man/man1/mkimg.1.gz
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mkimg ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/mkimg.1 ${STAGEDIR}${MANPREFIX}/share/man/man1
+	${INSTALL_MAN} ${WRKSRC}/mkimg.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 .include <bsd.port.mk>

@@ -27,4 +27,8 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(FreeBSD\.*\)@DragonFly.*|\1@g'	\
+		${WRKSRC}/makedefs
+
 .include <bsd.port.mk>

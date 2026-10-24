@@ -1,7 +1,8 @@
 PORTNAME=	din
-PORTVERSION=	57
+PORTVERSION=	65
+PORTREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	https://archive.org/download/dinisnoise_source_code/
+MASTER_SITES=	https://dinisnoise.org/files/
 
 MAINTAINER=	fox@FreeBSD.org
 COMMENT=	Open source, cross-platform sound synthesizer
@@ -11,7 +12,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
-		libboost_system.so:devel/boost-libs \
+		libboost_thread.so:devel/boost-libs \
 		libjack.so:audio/jack
 
 USES=		autoreconf gl gnome sdl tcl:86+ xorg
@@ -30,7 +31,10 @@ ALSA_DESC=	Uses ALSA sound server
 ALSA_CXXFLAGS+=	-D__LINUX_ALSA__
 JACK_CXXFLAGS+=	-D__UNIX_JACK__
 
-CXXFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/tcl${TCL_VER}
+CXXFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/tcl${TCL_VER} -Wno-register
 LIBS+=		-L${LOCALBASE}/lib -ltcl${TCL_SHLIB_VER} -ljack
 
+LIBS:= ${LIBS:N-lthr}
+PLIST_FILES= %%DATADIR%%/factory/dummy.crv %%DATADIR%%/factory/gravmod.crv %%DATADIR%%/factory/gravmod.ed %%DATADIR%%/factory/spinners
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

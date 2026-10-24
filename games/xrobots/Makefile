@@ -1,6 +1,6 @@
 PORTNAME=	xrobots
 PORTVERSION=	1.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	http://www.mavetju.org/download/adopted/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-ss-10.20
@@ -12,6 +12,7 @@ USES=		imake xorg
 USE_XORG=	x11 xaw xext xmu xt sm ice
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+CFLAGS= -DSYSV
 post-install:
 	${CP} ${FILESDIR}/xrobotscores ${STAGEDIR}${PREFIX}/lib/X11
 

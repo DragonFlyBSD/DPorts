@@ -33,6 +33,7 @@ LDAP_CFLAGS=		-DUSELDAP
 LDAP_QMAKE_ON=		LIBS+="-lX11 -lXpm -lcups -lldap"
 LDAP_QMAKE_OFF=		LIBS+="-lX11 -lXpm -lcups"
 
+LIB_DEPENDS+= libkrb5.so:security/krb5
 post-patch:
 	@${FIND} ${WRKSRC}/src -name "*.cpp" -or -name "*.h" | ${XARGS} \
 		${REINPLACE_CMD} -e \

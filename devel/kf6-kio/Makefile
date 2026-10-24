@@ -2,13 +2,14 @@ PORTNAME=	kio
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	devel kde kde-frameworks
 
-COMMENT=	Network transparent access to files and data
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Network transparent access to files and data
 
 LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon
 
-USES=		cmake desktop-file-utils gettext gl gnome kde:6 qt:6 ssl \
+USES=		cmake cpe desktop-file-utils gettext gl gnome kde:6 qt:6 ssl \
 		tar:xz xorg
+CPE_VENDOR=	kde
 USE_GL=		gl opengl
 USE_GNOME=	libxml2 libxslt
 USE_KDE=	archive auth bookmarks colorscheme completion config \
@@ -16,7 +17,14 @@ USE_KDE=	archive auth bookmarks colorscheme completion config \
 		i18n iconthemes itemviews jobwidgets notifications service \
 		solid wallet widgetsaddons windowsystem \
 		ecm:build
-USE_QT=		5compat base
+USE_QT=		base declarative
 USE_XORG=	x11
+
+USES+= gmake
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+	${REINPLACE_CMD} -e 's,Q_OS_FREEBSD,Q_OS_DRAGONFLY,g' \
+		${WRKSRC}/src/gui/openfilemanagerwindowjob_p.h
 
 .include <bsd.port.mk>

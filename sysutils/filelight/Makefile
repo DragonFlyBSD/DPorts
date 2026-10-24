@@ -21,4 +21,5 @@ USE_XORG=	x11
 
 OPTIONS_DEFINE=	DOCS
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.mk>

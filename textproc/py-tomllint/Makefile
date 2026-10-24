@@ -1,0 +1,32 @@
+PORTNAME=	tomllint
+DISTVERSION=	0.3.6
+CATEGORIES=	textproc python
+MASTER_SITES=	PYPI
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	nivit@FreeBSD.org
+COMMENT=	Simple TOML linter
+WWW=		https://pypi.org/project/tomllint/
+
+LICENSE=	CC0-1.0
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=63.1.0_3:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>=0.46.3_1:devel/py-wheel@${PY_FLAVOR}
+
+USES=		python
+USE_PYTHON=	autoplist pep517 pytest
+
+# tests: 18 passed
+TEST_ENV=	PYTHONIOENCODING=utf-8 \
+		PYTHONPATH="${STAGEDIR}${PYTHON_SITELIBDIR}"
+
+NO_ARCH=	yes
+
+post-patch:
+	${REINPLACE_CMD} -E \
+		-e 's/^(license = )"([^"]+)"/\1{ text = "\2" }/1' \
+		-e '/^license-files/d' \
+		${WRKSRC}/pyproject.toml
+
+.include <bsd.port.mk>

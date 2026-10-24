@@ -16,6 +16,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_CSC=${LOCALBASE}/bin/mcs
 USES=		gmake pathfix pkgconfig tar:bzip2
-MAKE_JOBS_UNSAFE=yes
+MAKE_JOBS_UNSAFE= yes
 
 .include <bsd.port.mk>

@@ -1,14 +1,15 @@
 PORTNAME=	rssroll
 PORTVERSION=	0.11.0
+PORTREVISION=	2
 CATEGORIES=	www
 
-MAINTAINER=	koue@chaosophia.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	RSS collector in C
 WWW=		http://chaosophia.net/rssroll/
 
 LICENSE=	BSD2CLAUSE
 
-USES=		gnome sqlite:3
+USES= gnome sqlite:3 ssl
 USE_GNOME=	libxml2
 
 FSL_VERSION=	2.14
@@ -42,6 +43,10 @@ LDFLAGS+=	-L${WRKSRC_libfsl}/src/base \
 		-L${WRKSRC_libcez}/src/queue \
 		-L${WRKSRC_librender}/src
 
+CFLAGS+= -I${OPENSSLINC}
+LDFLAGS+= -L${OPENSSLLIB}
+CFLAGS+= -Wno-stringop-overflow
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e "s|/etc/rssrollrc|${PREFIX}/etc/rssrollrc|" \
 		${WRKSRC}/src/rss.h
@@ -59,5 +64,12 @@ do-install:
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} "html css" ${STAGEDIR}${PREFIX}/www/rssroll/)
 	${INSTALL_PROGRAM} ${WRKSRC}/src/index.cgi ${STAGEDIR}${PREFIX}/www/rssroll/index.cgi
 	${INSTALL_DATA} ${WRKSRC}/etc/rssrollrc ${STAGEDIR}${PREFIX}/etc/rssrollrc.sample
+
+dfly-patch:
+	-${REINPLACE_CMD} -e '/SUBDIR/s@ test@@g'	\
+		${WRKSRC_libcez}/Makefile
+	${REINPLACE_CMD} -e '/SUBDIR/s@ tests@@g'	\
+			 -e '/SUBDIR_TARGETS/d'	\
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

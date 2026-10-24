@@ -43,6 +43,7 @@ SSL_CONFIGURE_WITH=	ssl="${OPENSSLBASE}"
 PLUGIN_LIST=	abot acro autocycle blowfish cavlink cdrom encrypt \
 		europa fserv hint nap nicklist pkga possum qbx qmail wavplay
 
+CFLAGS= -Wno-pointer-sign -Wno-incompatible-pointer-types
 post-patch:
 	${REINPLACE_CMD} -e 's|bzip2|true|g' ${WRKSRC}/Makefile.in
 	${REINPLACE_CMD} -e 's|SSLeay|ERR_get_error|' ${WRKSRC}/configure

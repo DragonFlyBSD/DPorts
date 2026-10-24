@@ -1,0 +1,4 @@
+CVAT SDK is the Software Development Kit for CVAT (Computer Vision
+Annotation Tool). It provides Python bindings for interacting with
+the CVAT platform, enabling programmatic management of annotation
+tasks, datasets, and projects.

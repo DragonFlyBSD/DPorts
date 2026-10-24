@@ -1,0 +1,20 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 20:28:28 UTC
++++ pyproject.toml
+@@ -2,7 +2,7 @@ description = "Tree-Edit-Distance Score metric"
+ name = "docling-metrics-table"
+ version = "0.12.0" # DO NOT EDIT, updated automatically
+ description = "Tree-Edit-Distance Score metric"
+-license = "MIT"
++license = {text = "MIT"}
+ keywords = ["docling", "metrics", "evaluation", "example", "table", "teds", "tree-edit-distance-score", "cpp"]
+ readme = "README.md"
+ authors = [
+@@ -41,6 +41,7 @@ build-backend = "scikit_build_core.build"
+ build-backend = "scikit_build_core.build"
+ 
+ [tool.scikit-build]
++cmake.args = ["-DUSE_SYSTEM_DEPS=ON", "-DCMAKE_POSITION_INDEPENDENT_CODE=ON"]
+ wheel.packages = ["docling_metrics_table"]
+ 
+ [tool.uv]

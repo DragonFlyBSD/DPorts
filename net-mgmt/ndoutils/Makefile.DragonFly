@@ -1,3 +1,0 @@
-
-# mysql .pc config
-USES+=	localbase:ldflags

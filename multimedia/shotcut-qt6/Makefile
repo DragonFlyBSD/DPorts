@@ -1,5 +1,6 @@
 PORTNAME=	shotcut
-DISTVERSION=	25.01.25
+DISTVERSION=	25.08.16
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://github.com/mltframework/${PORTNAME}/releases/download/v${DISTVERSION}/
 PKGNAMESUFFIX=	-qt6
@@ -30,7 +31,8 @@ CXXFLAGS+=	-DSHOTCUT_NOUPGRADE
 
 CONFLICTS=	shotcut
 
-SUB_FILES=	${PORTNAME}.sh
+EXTRACT_AFTER_ARGS=	--include src/${PORTNAME} \
+			--no-same-owner --no-same-permissions
 
 WRKSRC=		${WRKDIR}/src
 WRKSRC_SUBDIR=	${PORTNAME}
@@ -41,9 +43,5 @@ OPTIONS_DEFAULT=FREI0R LADSPA
 FREI0R_RUN_DEPENDS=	frei0r-plugins>=0:graphics/frei0r-plugins
 
 LADSPA_RUN_DEPENDS=	swhplugins>=0:audio/swhplugins
-
-post-install:
-	${MV} ${STAGEDIR}${PREFIX}/bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}-real
-	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME}.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>

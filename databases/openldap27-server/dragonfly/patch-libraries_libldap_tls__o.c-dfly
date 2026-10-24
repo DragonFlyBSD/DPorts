@@ -1,0 +1,29 @@
+--- libraries/libldap/tls_o.c.orig	2026-09-08 18:00:58 UTC
++++ libraries/libldap/tls_o.c
+@@ -543,7 +543,7 @@
+ 
+ 				while ((info = OSSL_STORE_load( sctx ))) {
+ 					switch (OSSL_STORE_INFO_get_type( info )) {
+-					case OSSL_STORE_INFO_CERT:
++					case OSSL_STORE_INFO_CERT: ;
+ 						X509 *cert = OSSL_STORE_INFO_get0_CERT( info );
+ 						X509_STORE *store = SSL_CTX_get_cert_store( ctx );
+ 						if ( !X509_STORE_add_cert( store, cert ) ) {
+@@ -753,7 +753,7 @@
+ 						return -1;
+ 					}
+ 					break;
+-				case OSSL_STORE_INFO_CERT:
++				case OSSL_STORE_INFO_CERT: ;
+ 					X509 *cert = OSSL_STORE_INFO_get0_CERT(info);
+ 					int is_ca = X509_check_ca( cert );
+ 					if ( !is_ca && !SSL_CTX_use_certificate( ctx, cert )) {
+@@ -773,7 +773,7 @@
+ 						return -1;
+ 					}
+ 					break;
+-				case OSSL_STORE_INFO_CRL:
++				case OSSL_STORE_INFO_CRL: ;
+ 					X509_STORE *x509_s = SSL_CTX_get_cert_store( ctx );
+ 					if ( !X509_STORE_add_crl( x509_s,
+ 							OSSL_STORE_INFO_get0_CRL(info) )) {

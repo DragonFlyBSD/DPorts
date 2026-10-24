@@ -23,7 +23,7 @@ CFLAGS+=	-fPIC
 
 .include <bsd.port.options.mk>
 
-.if defined(NOPROFILE) || defined(NO_PROFILE) || ( ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400079 )
+.if defined(NOPROFILE) || defined(NO_PROFILE) || ${OPSYS} == FreeBSD
 PLIST_SUB+=	PROFILE="@comment "
 .else
 PLIST_SUB+=	PROFILE=""
@@ -35,5 +35,9 @@ post-patch:
 
 pre-build:
 	${MKDIR} ${STAGEDIR}${PREFIX}/tests/${PORTNAME}
+
+post-install:
+	(cd ${STAGEDIR}${PREFIX}/lib && ${LN} -s libdistance.a libdistance_p.a)
+	(cd ${STAGEDIR}${PREFIX}/lib && ${LN} -s libdistance_wrap.a libdistance_wrap_p.a)
 
 .include <bsd.port.mk>

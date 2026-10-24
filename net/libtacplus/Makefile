@@ -11,7 +11,7 @@ LICENSE=	BSD2CLAUSE
 
 USES=		ssl
 
-CFLAGS+=	-I${OPENSSLINC}
+CFLAGS+= -I${OPENSSLINC} -Wno-error=deprecated-declarations
 LDFLAGS+=	-L${OPENSSLLIB} -lcrypto
 
 SUB_FILES=	pkg-message

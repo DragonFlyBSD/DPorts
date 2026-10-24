@@ -1,11 +1,7 @@
 PORTNAME=	sdbus-cpp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.0
-PORTREVISION=	2
+DISTVERSION=	2.3.1
 CATEGORIES=	devel
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	1e2d13a04a98.patch:-p1 # https://github.com/Kistler-Group/sdbus-cpp/pull/358
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	High-level C++ D-Bus library
@@ -22,16 +18,16 @@ USES=		cmake:testing compiler:c++17-lang pkgconfig
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	Kistler-Group
-CMAKE_ON=	BUILD_CODE_GEN
-CMAKE_OFF=	BUILD_DOC
-CMAKE_TESTING_ON=	BUILD_TESTS
+CMAKE_ON=	SDBUSCPP_BUILD_CODEGEN
+CMAKE_OFF=	SDBUSCPP_BUILD_DOCS
+CMAKE_TESTING_ON=	SDBUSCPP_BUILD_TESTS
+PLIST_SUB=	VERSION=${PORTVERSION}
 
-# XXX Drop after FreeBSD 12.4 EOL around 2023-12-31
-# https://cgit.freebsd.org/src/commit/?id=7a202823aa54
-.if !exists(/usr/include/sys/eventfd.h)
-LIB_DEPENDS+=	libepoll-shim.so:devel/libepoll-shim
-CFLAGS+=	`pkg-config --cflags epoll-shim`
-LDFLAGS+=	`pkg-config --libs epoll-shim`
+USE_GCC_VERSION= ${GCC_DEFAULT}
+LIB_DEPENDS+= libepoll-shim.so:devel/libepoll-shim
+.if 1
+CXXFLAGS+=	-I${LOCALBASE}/include/libepoll-shim
+LDFLAGS+=	-L${LOCALBASE}/lib -lepoll-shim
 .endif
 
 .include <bsd.port.mk>

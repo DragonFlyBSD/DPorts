@@ -10,7 +10,7 @@ WWW=		https://github.com/Microsoft/pict
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 
-USES=		compiler:c++11-lang
+USES= compiler:c++11-lang gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	Microsoft
 USE_LDCONFIG=	yes

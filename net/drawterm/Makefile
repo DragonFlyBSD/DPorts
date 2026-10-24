@@ -21,6 +21,7 @@ PLIST_FILES=	bin/drawterm \
 
 MAKE_ARGS=	CONF=${OPSYS:tl}
 
+DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/drawterm ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/drawterm.1 ${STAGEDIR}${PREFIX}/share/man/man1/drawterm.1

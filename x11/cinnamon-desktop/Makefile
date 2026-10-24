@@ -1,6 +1,5 @@
 PORTNAME=	cinnamon-desktop
-PORTVERSION=	5.4.2
-PORTREVISION=	5
+DISTVERSION=	6.4.2
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome
 
@@ -14,13 +13,16 @@ LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
 LICENSE_FILE_LGPL20=	${WRKSRC}/COPYING.LIB
 
 BUILD_DEPENDS=	xkeyboard-config>=0:x11/xkeyboard-config \
-		libxkbfile>=0:x11/libxkbfile
-LIB_DEPENDS=	libpulse.so:audio/pulseaudio
+		libxkbfile>=0:x11/libxkbfile \
+		iso-codes>=0:misc/iso-codes
+LIB_DEPENDS=	libpulse.so:audio/pulseaudio \
+		libudev.so:devel/libudev-devd
 RUN_DEPENDS=	xkeyboard-config>=0:x11/xkeyboard-config \
-		libxkbfile>=0:x11/libxkbfile
+		libxkbfile>=0:x11/libxkbfile \
+		iso-codes>=0:misc/iso-codes
 
 USES=		gettext gnome localbase meson pkgconfig python:build shebangfix xorg
-USE_GNOME=	cairo gdkpixbuf gtk30 intltool introspection
+USE_GNOME=	cairo gdkpixbuf glib20 gtk30 introspection
 USE_XORG=	x11 xext xrandr
 USE_LDCONFIG=	yes
 
@@ -53,9 +55,20 @@ GLIB_SCHEMAS=	org.cinnamon.desktop.a11y.applications.gschema.xml \
 		org.cinnamon.desktop.thumbnailers.gschema.xml \
 		org.cinnamon.desktop.wm.preferences.gschema.xml
 
+MESON_ARGS=	-Dsystemd=disabled
+
 OPTIONS_DEFINE=	ALSA
 
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 ALSA_MESON_TRUE=	alsa
+
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
+OPTIONS_DEFAULT= ALSA
+PLIST= ${WRKDIR}/pulseless-plist
+dfly-patch:
+	${REINPLACE_CMD} -e '/pulse/d' -e '/libcvc/d' \
+		${WRKSRC}/meson.build
+	${RM} -rf ${WRKSRC}/libcvc
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/libcvc/d' -e '/Cvc/d' -e '/cvc.pc/d' > ${PLIST}
 
 .include <bsd.port.mk>

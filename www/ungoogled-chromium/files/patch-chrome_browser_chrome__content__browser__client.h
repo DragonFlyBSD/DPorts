@@ -1,9 +1,9 @@
---- chrome/browser/chrome_content_browser_client.h.orig	2024-08-26 14:40:28 UTC
+--- chrome/browser/chrome_content_browser_client.h.orig	2026-08-13 07:41:05 UTC
 +++ chrome/browser/chrome_content_browser_client.h
-@@ -523,7 +523,7 @@ class ChromeContentBrowserClient : public content::Con
-   bool IsPluginAllowedToUseDevChannelAPIs(
-       content::BrowserContext* browser_context,
-       const GURL& url) override;
+@@ -591,7 +591,7 @@ class ChromeContentBrowserClient : public content::Con
+       const GURL& site_url) override;
+   std::unique_ptr<content::TracingDelegate> CreateTracingDelegate() override;
+   bool IsSystemWideTracingEnabled() override;
 -#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_MAC) && !BUILDFLAG(IS_BSD)
    void GetAdditionalMappedFilesForChildProcess(

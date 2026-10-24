@@ -1,0 +1,33 @@
+[
+{ type: install
+  message: <<EOM
+BunkerWeb has been installed.
+
+BunkerWeb runs on OpenResty. Its settings are stored in the database
+and are managed through the web interface on port 7000 or the API on
+port 8888.
+
+Enable the services at boot time with:
+
+  sysrc bunkerweb_scheduler_enable=YES
+  sysrc bunkerweb_api_enable=YES
+  sysrc bunkerweb_ui_enable=YES
+  sysrc bunkerweb_enable=YES
+
+Start the services in this order:
+
+  service bunkerweb_scheduler start
+  service bunkerweb_api start
+  service bunkerweb_ui start
+  service bunkerweb start
+
+The nginx configuration in /usr/local/etc/nginx/ is generated from the
+templates in /usr/local/share/bunkerweb/common/confs/ and is rewritten
+on every scheduler run, changes made there are lost.
+
+Put your own nginx directives into the matching subdirectory of
+/usr/local/etc/bunkerweb/configs/ instead. The scheduler imports them
+into the database and includes them in the generated configuration.
+EOM
+}
+]

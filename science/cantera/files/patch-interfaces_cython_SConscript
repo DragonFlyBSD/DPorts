@@ -1,0 +1,40 @@
+-- Make the Python wheel build/install robust against platform tag mismatches.
+-- pip wheel derives the platform tag from sysconfig.get_platform(), which can
+-- differ from what SCons reconstructs (for example, host/jail OSVERSION
+-- differences in Poudriere). Instead of hardcoding the expected wheel filename,
+-- build a sentinel file and discover the actual .whl when installing.
+-- See https://github.com/Cantera/cantera/issues/1862
+
+--- interfaces/cython/SConscript.orig	2025-11-17 22:34:45 UTC
++++ interfaces/cython/SConscript
+@@ -86,16 +86,11 @@ if parse_version(localenv["py_version_short"]) >= env[
+ if parse_version(localenv["py_version_short"]) >= env["python_max_version"]:
+     build_cmd += " --ignore-requires-python"
+ 
+-# Setuptools 75.3.1 and later always lowercase the package name
+-if localenv["setuptools_version"] >= parse_version("75.3.1"):
+-    pkg_name = "cantera"
+-else:
+-    pkg_name = "Cantera"
+-
+-wheel_name = (pkg_name + "-${cantera_version}-cp${py_version_nodot}"
+-              "-cp${py_version_nodot}-${py_plat}.whl")
+-mod = build(localenv.Command(f"#build/python/dist/{wheel_name}", "setup.cfg",
+-                             build_cmd))
++# Use a sentinel target rather than a hardcoded wheel filename, because pip may
++# produce a different platform tag than the one computed from sysconfig.
++wheel_marker = "build/python/dist/.cantera-wheel-built"
++build_cmd += f" && touch {wheel_marker}"
++mod = build(localenv.Command(f"#{wheel_marker}", "setup.cfg", build_cmd))
+ env['python_module'] = mod
+ env['python_extension'] = ext
+ 
+@@ -184,7 +179,7 @@ install_cmd.extend(("--no-build-isolation", "--no-deps
+     install_cmd.append(f"--root={stage_dir.resolve()}")
+ 
+ install_cmd.extend(("--no-build-isolation", "--no-deps", "-v", "--force-reinstall",
+-                    "$SOURCE"))
++                    "$$(ls -1 build/python/dist/*.whl | head -n 1)"))
+ 
+ mod_inst = install(localenv.Command, "dummy", mod, " ".join(install_cmd))
+ env["install_python_action"] = mod_inst

@@ -13,6 +13,7 @@ HAS_CONFIGURE=	yes
 
 PLIST_FILES=	bin/xtail share/man/man1/xtail.1.gz
 
+CFLAGS= -DMAXNAMLEN=255
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xtail ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/xtail.1 ${STAGEDIR}${PREFIX}/share/man/man1

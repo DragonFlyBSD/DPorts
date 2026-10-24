@@ -1,5 +1,5 @@
 PORTNAME=	editorconfig-core-c
-PORTVERSION=	0.12.9
+PORTVERSION=	0.12.11
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors
 
@@ -25,5 +25,12 @@ CONFLICTS_INSTALL=	py*-editorconfig
 PLIST_SUB=	PORTVERSION=${PORTVERSION} \
 		SHLIB_MAJOR=${PORTVERSION:C/\..+//} \
 		SHLIB_VER=${PORTVERSION}
+
+BUILD_DEPENDS:= ${BUILD_DEPENDS:Ndoxygen*}
+DFLY_PLIST= ${WRKSRC}/pkg-plist
+PLIST= ${DFLY_PLIST}
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/editorconfig-core-c/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/man\/man/d' ${DFLY_PLIST}
 
 .include <bsd.port.mk>

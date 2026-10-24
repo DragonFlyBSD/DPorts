@@ -19,7 +19,7 @@ USE_QT=		qmake:build buildtools:build linguisttools:build core gui \
 		widgets svg:run
 USE_GL=		gl
 
-ALL_TARGET=	wpa_gui-qt4
+ALL_TARGET= wpa_gui-qt4-build
 
 INSTALL_WRKSRC=	${WRKSRC}/wpa_gui-qt4
 PATCH_WRKSRC=	${WRKDIR}/${DISTNAME}
@@ -39,6 +39,8 @@ NLS_PLIST_FILES=	${DATADIR_REL}/translations/wpa_gui_de.qm
 BINARY_ALIAS=	qmake=${QMAKE} \
 		lrelease=${LRELEASE}
 
+CONFIGURE_ENV= QMAKESPEC=${QMAKESPEC}
+CFLAGS= -Dfdatasync=fsync
 post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^Exec/s|=.*|=${PREFIX}/sbin/wpa_gui|' \
@@ -75,5 +77,14 @@ do-install-NLS-on:
 	@${MKDIR} ${STAGEDIR}${DATADIR}/translations
 	${INSTALL_DATA} ${INSTALL_WRKSRC}/lang/wpa_gui_de.qm \
 		${STAGEDIR}${DATADIR}/translations
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@wpa_gui-qt4:@wpa_gui-qt4-build:@g' \
+		${WRKSRC}/Makefile
+
+
+dfly-configure:
+	(cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${LRELEASE} wpa_gui-qt4/wpa_gui.pro)
+
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	gitlab-labkit
-PORTVERSION=	0.36.1
+PORTVERSION=	5.5.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -10,16 +10,26 @@ WWW=		https://about.gitlab.com/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	rubygem-actionpack70>=5<8:www/rubygem-actionpack70 \
-		rubygem-activesupport70>=5<8:devel/rubygem-activesupport70 \
-		rubygem-grpc>=1.62:net/rubygem-grpc \
+RUN_DEPENDS=	rubygem-actionpack-gitlab>=5<8.2:www/rubygem-actionpack-gitlab \
+		rubygem-activesupport-gitlab>=5<8.2:devel/rubygem-activesupport-gitlab \
+		rubygem-google-protobuf-gitlab>=3.25<5:devel/rubygem-google-protobuf-gitlab \
+		rubygem-grpc-gitlab>=1.75:net/rubygem-grpc-gitlab \
 		rubygem-jaeger-client>=1.1.0<1.2:devel/rubygem-jaeger-client \
-		rubygem-opentracing>=0.4<1.0:devel/rubygem-opentracing \
-		rubygem-pg_query>=4.2.3<6:databases/rubygem-pg_query \
-		rubygem-redis>3.0.0<6.0.0:databases/rubygem-redis
+		rubygem-json_schemer>=2.3.0<3:devel/rubygem-json_schemer \
+		rubygem-openssl3>=3.3.2<5:security/rubygem-openssl3 \
+		rubygem-opentelemetry-exporter-otlp-gitlab>=0.31.1<1:devel/rubygem-opentelemetry-exporter-otlp-gitlab \
+		rubygem-opentelemetry-instrumentation-all-gitlab>=0.89.1<1:devel/rubygem-opentelemetry-instrumentation-all-gitlab \
+		rubygem-opentelemetry-sdk-gitlab>=1.10<2:devel/rubygem-opentelemetry-sdk-gitlab \
+		rubygem-opentracing>=0.4<1:devel/rubygem-opentracing \
+		rubygem-pg_query>=6.1.0<7:databases/rubygem-pg_query \
+		rubygem-prometheus-client-mmap>=1.2.9<2:devel/rubygem-prometheus-client-mmap \
+		rubygem-redis-gitlab>3.0.0<6.0.0:databases/rubygem-redis-gitlab \
+		rubygem-thrift>=0<0.25,1:devel/rubygem-thrift
 
 USES=		gem
 
 NO_ARCH=	yes
+
+PLIST_FILES=	bin/labkit-logging
 
 .include <bsd.port.mk>

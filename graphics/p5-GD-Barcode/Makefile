@@ -1,7 +1,8 @@
 PORTNAME=	GD-Barcode
-PORTVERSION=	2.00
+DISTVERSION=	2.02
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:MICHIELB
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -17,4 +18,5 @@ RUN_DEPENDS=	p5-GD>=0:graphics/p5-GD
 USES=		perl5
 USE_PERL5=	configure
 
+NO_ARCH=	yes
 .include <bsd.port.mk>

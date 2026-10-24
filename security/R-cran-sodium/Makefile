@@ -1,11 +1,12 @@
 PORTNAME=	sodium
 DISTVERSION=	1.4.0
+PORTREVISION=	1
 CATEGORIES=	security
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	R bindings to libsodium
-WWW=		https://cran.r-project.org/web/packages/sodium/
+WWW=		https://cran.r-project.org/package=sodium
 
 LICENSE=	MIT
 

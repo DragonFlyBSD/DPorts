@@ -26,4 +26,7 @@ do-install:
 	${INSTALL_LIB} ${CONFIGURE_WRKSRC}/libmdnsd/liblibmdnsd.so \
 		${STAGEDIR}${PREFIX}/lib
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/libmdnsd/CMakeLists.txt
+
 .include <bsd.port.mk>

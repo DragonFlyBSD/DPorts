@@ -1,5 +1,5 @@
 PORTNAME=	geoserver
-DISTVERSION=	2.27.1
+DISTVERSION=	3.0.0
 CATEGORIES=	graphics geography java
 MASTER_SITES=	SF/${PORTNAME}/GeoServer/${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
@@ -28,22 +28,19 @@ GEOSERVERDIR=	${PREFIX}/${PORTNAME}
 GEODIRS=	data_dir etc lib logs modules resources webapps
 
 PLIST_SUB=	BATIK=1.18 \
-		ECLIPSE=2.15.0 \
 		G="${GEOSERVERDIR:S,^${PREFIX}/,,}" \
-		GT=33.1 \
-		GWC=1.27.1 \
-		IMAGEIO=1.4.15 \
-		JACKSON=2.18.2 \
-		JETTY=9.4.57.v20241219 \
-		JNA=5.16.0 \
-		JT=1.1.31 \
-		JT1=1.6.0 \
+		GT=35.0 \
+		GWC=2.0.0 \
+		IMAGEIO=2.1.0 \
+		JACKSON=3.1.2 \
+		JETTY=12.1.9 \
+		JNA=5.19.0 \
+		JT=0.9.2 \
 		MVER=${PORTVERSION} \
 		SI=2.2 \
-		SPRING=5.3.39 \
-		SPRINGS=5.8.16 \
-		VER3=1.1.3 \
-		WICKET=9.20.0
+		SPRING=7.0.8 \
+		SPRINGS=7.0.5 \
+		WICKET=10.9.1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$GEOSERVER_HOME|${GEOSERVERDIR}|g' \

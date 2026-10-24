@@ -1,0 +1,32 @@
+--- CMakeLists.txt.orig	2026-08-23 19:40:45 UTC
++++ CMakeLists.txt
+@@ -169,11 +169,6 @@ endif()
+     endif()
+ endif()
+ 
+-# remove CMake's idea of optimisation
+-foreach (CONFIG ${CMAKE_BUILD_TYPE} ${CMAKE_CONFIGURATION_TYPES})
+-    string(REGEX REPLACE "-O[^ ]*" "" CMAKE_C_FLAGS_${CONFIG} "${CMAKE_C_FLAGS_${CONFIG}}")
+-    string(REGEX REPLACE "-O[^ ]*" "" CMAKE_CXX_FLAGS_${CONFIG} "${CMAKE_CXX_FLAGS_${CONFIG}}")
+-endforeach ()
+ 
+ message(STATUS "ARCH_C_FLAGS   : ${ARCH_C_FLAGS}")
+ message(STATUS "ARCH_CXX_FLAGS : ${ARCH_CXX_FLAGS}")
+@@ -977,7 +972,7 @@ else ()
+ 
+ 	    if (NOT NO_SIMDE_IN_FAT)
+                 message(STATUS "Building SIMDE backend in static fat runtime..")
+-                include_directories(${PROJECT_SOURCE_DIR}/simde)
++
+                 add_fat_component("simde" "hs_exec_simde" "${SIMDE_FLAGS} -march=x86-64 -msse2" "${hs_exec_SRCS}" FALSE)
+                 list(APPEND RUNTIME_LIBS $<TARGET_OBJECTS:hs_exec_simde>)
+             endif()
+@@ -1027,7 +1022,7 @@ else ()
+ 
+             if (NOT NO_SIMDE_IN_FAT)
+                 message(STATUS "Building SIMDE backend in shared fat runtime..")
+-                include_directories(${PROJECT_SOURCE_DIR}/simde)
++
+                 add_fat_component("simde" "hs_exec_shared_simde" "${SIMDE_FLAGS} -march=x86-64 -msse2" "${hs_exec_SRCS}" TRUE)
+ 		list(APPEND RUNTIME_SHLIBS $<TARGET_OBJECTS:hs_exec_shared_simde>)
+             endif()

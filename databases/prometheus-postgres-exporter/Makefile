@@ -1,10 +1,10 @@
 PORTNAME=	prometheus-postgres-exporter
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.16.0
-PORTREVISION=	1
+DISTVERSION=	0.19.1
+PORTREVISION=	9
 CATEGORIES=	databases
 
-MAINTAINER=	lexi@hemlock.eden.le-fay.org
+MAINTAINER=	ivy@FreeBSD.org
 COMMENT=	PostgreSQL metric exporter for Prometheus
 WWW=		https://github.com/prometheus-community/postgres_exporter
 

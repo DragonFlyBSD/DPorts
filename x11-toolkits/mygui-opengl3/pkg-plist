@@ -1,0 +1,9 @@
+include/MYGUI/MyGUI_OpenGL3DataManager.h
+include/MYGUI/MyGUI_OpenGL3Diagnostic.h
+include/MYGUI/MyGUI_OpenGL3ImageLoader.h
+include/MYGUI/MyGUI_OpenGL3Platform.h
+include/MYGUI/MyGUI_OpenGL3RTTexture.h
+include/MYGUI/MyGUI_OpenGL3RenderManager.h
+include/MYGUI/MyGUI_OpenGL3Texture.h
+include/MYGUI/MyGUI_OpenGL3VertexBuffer.h
+lib/libMyGUI.OpenGL3Platform.a

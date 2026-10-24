@@ -1,0 +1,4 @@
+OpenTelemetry Exporter Prometheus provides a Prometheus metric exporter
+for OpenTelemetry. It enables exporting metrics collected through
+OpenTelemetry instrumentation to Prometheus for monitoring, alerting,
+and observability of Python applications.

@@ -18,6 +18,7 @@ CMAKE_ARGS=	-DLOCALBASE:PATH="${LOCALBASE}"
 
 OPTIONS_DEFINE=	DOCS
 
+CFLAGS= -Wno-unused-but-set-variable
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 

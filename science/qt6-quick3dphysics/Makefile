@@ -6,10 +6,12 @@ PKGNAMEPREFIX=	qt6-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	High-level API for physics simulation
 
-BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers
+BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers \
+		${PYTHON_PKGNAMEPREFIX}cyclonedx-python-lib>0:textproc/py-cyclonedx-python-lib@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}spdx-tools>=0.8.3:misc/py-spdx-tools@${PY_FLAVOR}
 LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon
 
-USES=		cmake compiler:c++17-lang gl pkgconfig qt-dist:6
+USES=		cmake compiler:c++17-lang gl pkgconfig python:build qt-dist:6
 USE_GL=		opengl
 USE_LDCONFIG=	yes
 USE_QT=		base declarative quick3d shadertools
@@ -22,6 +24,7 @@ OPTIONS_DEFAULT_aarch64=SIMD
 OPTIONS_DEFAULT_x86_64=	SIMD
 OPTIONS_DEFAULT_armv7=	SIMD
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 # Either SSE2 or NEON instruction sets are required on i386/amd64 or armv7/

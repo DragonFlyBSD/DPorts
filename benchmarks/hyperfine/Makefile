@@ -1,7 +1,7 @@
 PORTNAME=	hyperfine
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.19.0
-PORTREVISION=	1
+DISTVERSION=	1.20.0
+PORTREVISION=	4
 CATEGORIES=	benchmarks
 
 MAINTAINER=	pizzamig@FreeBSD.org
@@ -19,4 +19,5 @@ GH_ACCOUNT=	sharkdp
 
 PLIST_FILES=	bin/hyperfine
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

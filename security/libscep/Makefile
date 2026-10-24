@@ -31,6 +31,8 @@ PLIST_FILES=	include/scep.h \
 		lib/libscep.so \
 		share/man/man1/libscep.1.gz
 
+CFLAGS= -I${OPENSSLINC}
+LDFLAGS= -L${OPENSSLLIB}
 post-build:
 	(cd ${WRKSRC}/docs;\
 	BUILDDIR=${BUILD_WRKSRC} SPHINXBUILD=sphinx-build-${PYTHON_VER} ${GMAKE} -e man)

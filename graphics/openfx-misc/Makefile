@@ -21,6 +21,7 @@ GH_TUPLE=	NatronGitHub:openfx-supportext:79d8c22:openfx_supportext/SupportExt \
 
 MAKE_ENV+=	CONFIG=release
 
+PLIST_SUB= OPSYS=${OPSYS}
 post-extract:
 	${CP} ${WRKSRC_CImg}/CImg.h ${WRKSRC}/CImg/CImg.h
 	${CP} ${WRKSRC_CImg}/plugins/inpaint.h ${WRKSRC}/CImg/Inpaint/inpaint.h
@@ -38,5 +39,23 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${LOCALBASE}/OFX/Plugins/CImg.ofx.bundle/Contents/${OPSYS}-x86-64/CImg.ofx
 	${STRIP_CMD} ${STAGEDIR}${LOCALBASE}/OFX/Plugins/Misc.ofx.bundle/Contents/${OPSYS}-x86-64/Misc.ofx
 	${STRIP_CMD} ${STAGEDIR}${LOCALBASE}/OFX/Plugins/Shadertoy.ofx.bundle/Contents/${OPSYS}-x86-64/Shadertoy.ofx
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/openfx/Support/Plugins/Makefile.master
+	${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+		${WRKSRC}/openfx/Documentation/sources/Guide/Code/Example1/basics.cpp \
+		${WRKSRC}/openfx/Documentation/sources/Guide/Code/Example2/invert.cpp \
+		${WRKSRC}/openfx/Documentation/sources/Guide/Code/Example3/gain.cpp \
+		${WRKSRC}/openfx/Documentation/sources/Guide/Code/Example4/saturation.cpp \
+		${WRKSRC}/openfx/Documentation/sources/Guide/Code/Example5/circle.cpp \
+		${WRKSRC}/openfx/Examples/Basic/basic.cpp \
+		${WRKSRC}/openfx/Examples/Custom/custom.cpp \
+		${WRKSRC}/openfx/Examples/DepthConverter/depthConverter.cpp \
+		${WRKSRC}/openfx/Examples/Invert/invert.cpp \
+		${WRKSRC}/openfx/Examples/OpenGL/opengl.cpp \
+		${WRKSRC}/openfx/Examples/Overlay/overlay.cpp \
+		${WRKSRC}/openfx/Examples/Rectangle/rectangle.cpp \
+		${WRKSRC}/openfx/Examples/Test/testProperties.cpp
 
 .include <bsd.port.mk>

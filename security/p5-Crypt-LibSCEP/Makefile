@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/Readme.md
 BUILD_DEPENDS=	libscep>=0.09:security/libscep
 RUN_DEPENDS=	libscep>=0.09:security/libscep
 
-USES=		gmake localbase perl5 ssl
+USES= gmake localbase perl5 ssl localbase:ldflags
 USE_GITHUB=	yes
 GH_ACCOUNT=	openxpki
 GH_PROJECT=	libscep

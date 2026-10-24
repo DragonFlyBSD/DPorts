@@ -1,6 +1,6 @@
 PORTNAME=	shotman
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.5
+DISTVERSION=	0.5.1
 PORTREVISION=	1
 CATEGORIES=	x11 wayland
 MASTER_SITES=	https://git.sr.ht/~whynothugo/${PORTNAME}/archive/${DISTVERSIONFULL}${EXTRACT_SUFX}?dummy=/
@@ -36,6 +36,7 @@ MANPAGES_PLIST_FILES=	share/man/man1/${PORTNAME}.1.gz
 SLURP_DESC=		Interactive region selector
 SLURP_RUN_DEPENDS=	slurp:x11/slurp
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-build-MANPAGES-on:
 	scdoc < ${WRKSRC}/${PORTNAME}.1.scd >${WRKSRC}/${PORTNAME}.1
 
@@ -46,7 +47,7 @@ do-install-MANPAGES-on:
 post-install:
 .for _shell in bash fish zsh
 	@${ECHO_MSG} "Generating ${STAGEDIR}${PREFIX}/${PLIST_FILES:M*${_shell}*}"
-	${CARGO_TARGET_DIR}/${CARGO_BUILD_TARGET}/*/${PORTNAME}_completions ${_shell} \
+	${CARGO_TARGET_DIR}/*/${PORTNAME}_completions ${_shell} \
 		>${STAGEDIR}${PREFIX}/${PLIST_FILES:M*${_shell}*}
 .endfor
 

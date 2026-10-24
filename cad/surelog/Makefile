@@ -1,0 +1,87 @@
+PORTNAME=	surelog
+DISTVERSIONPREFIX=	v
+DISTVERSION=	1.87
+CATEGORIES=	cad java
+
+MAINTAINER=	yuri@FreeBSD.org
+COMMENT=	SystemVerilog 2017 Pre-processor, Parser, Elaborator, etc
+WWW=		https://github.com/chipsalliance/Surelog
+
+LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_armv6=	compilation fails: Creating OVM precompiled package... libunwind: personality function returned unknown result 5
+
+BUILD_DEPENDS=	utf8cpp>0:devel/utf8cpp \
+		${PYTHON_PKGNAMEPREFIX}orderedmultidict>0:devel/py-orderedmultidict@${PY_FLAVOR}
+LIB_DEPENDS=	libcapnp.so:devel/capnproto \
+		libuhdm.so:cad/uhdm
+TEST_DEPENDS=	googletest>0:devel/googletest
+
+USES=		cmake:testing compiler:c++17-lang java:build localbase:ldflags tcl:86,build
+USE_LDCONFIG=	${PREFIX}/lib ${PREFIX}/lib/surelog
+JAVA_VERSION=	17 # Java selection fails in cmake when Java 11 is also installed, see https://gitlab.kitware.com/cmake/cmake/-/issues/24674
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	chipsalliance
+GH_PROJECT=	Surelog
+GH_TUPLE=	antlr:antlr4:bd8f9930d0:antlr4/third_party/antlr4 \
+		nlohmann:json:867127c2f4:json/third_party/json
+
+CMAKE_ARGS=	-DFREEBSD_JAVA_VERSION=${JAVA_VERSION} \
+		-DPython3_EXECUTABLE=${PYTHON_CMD}
+CMAKE_ON=	BUILD_SHARED_LIBS \
+		SURELOG_USE_HOST_UHDM \
+		SURELOG_USE_HOST_CAPNP \
+		SURELOG_USE_HOST_GTEST
+CMAKE_OFF=	SURELOG_BUILD_TESTS
+CMAKE_TESTING_ON=	SURELOG_BUILD_TESTS
+CMAKE_TESTING_TARGET=	UnitTests
+
+CONFLICTS_BUILD=	openjdk8 openjdk11 openjdk18 openjdk19
+
+BINARY_ALIAS=	python3=${PYTHON_CMD} tclsh=${TCLSH}
+PORTSCOUT=	limit:^.*[0-9]\.[0-9] # prevent tags like 'show'
+
+PLIST_SUB=	SOVERSION=${DISTVERSION}
+
+OPTIONS_DEFINE=		PYTHON TCMALLOC
+OPTIONS_DEFAULT=	PYTHON TCMALLOC # should be the same TCMALLOC default as in cad/yosys, cad/uhdm because surelog's lib is used in the yosys plugin cad/yosys-systemverilog
+OPTIONS_SUB=		yes
+
+PYTHON_BUILD_DEPENDS=	swig:devel/swig
+PYTHON_USES=		python
+PYTHON_USES_OFF=	python:build
+PYTHON_CMAKE_BOOL=	SURELOG_WITH_PYTHON
+PYTHON_CMAKE_ON=	-DFREEBSD_PYTHON_DISTVERSION=${PYTHON_DISTVERSION}
+
+TCMALLOC_LIB_DEPENDS=	libtcmalloc.so:devel/google-perftools
+TCMALLOC_CMAKE_BOOL=	SURELOG_WITH_TCMALLOC
+
+BROKEN= compile time hog
+CMAKE_ARGS+= -DNO_TCMALLOC=On
+BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
+post-install:
+	# workaround for https://github.com/chipsalliance/Surelog/issues/3965
+	# - surelog fails to create package files on some systems, and succeeds on others
+	# - so we remove this directory altogether for now
+	@${RM} -r \
+		${STAGEDIR}${DATADIR}
+
+post-test:
+	@cd ${BUILD_WRKSRC} && ctest
+
+# tests as of 1.87: 100% tests passed, 0 tests failed out of 90
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@PRIVATE pthread@& stdc++fs@g' \
+		${WRKSRC}/CMakeLists.txt
+	${REINPLACE_CMD} -e 's@DT_UNKNOWN@&__z@g' \
+		${WRKSRC}/third_party/UHDM/third_party/capnproto/c++/ekam-provider/c++header/kj/filesystem-disk-unix.c++
+	${REINPLACE_CMD} -e 's@-O3@-O1@g' \
+		${WRKSRC}/third_party/UHDM/CMakeLists.txt \
+		${WRKSRC}/CMakeLists.txt
+
+.include <bsd.port.mk>

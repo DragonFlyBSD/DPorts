@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-06-09 12:40:08 UTC
+--- src/3rdparty/chromium/third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2026-10-23 12:00:00 UTC
 +++ src/3rdparty/chromium/third_party/blink/renderer/platform/wtf/stack_util.cc
-@@ -35,14 +35,15 @@ size_t GetUnderestimatedStackSize() {
+@@ -44,14 +44,15 @@ size_t GetUnderestimatedStackSize() {
  // correctly for the main thread.
  
  #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -18,7 +18,7 @@
    pthread_attr_init(&attr);
    error = pthread_attr_get_np(pthread_self(), &attr);
  #else
-@@ -56,7 +57,7 @@ size_t GetUnderestimatedStackSize() {
+@@ -65,7 +66,7 @@ size_t GetUnderestimatedStackSize() {
      pthread_attr_destroy(&attr);
      return size;
    }
@@ -27,9 +27,9 @@
    pthread_attr_destroy(&attr);
  #endif
  
-@@ -105,10 +106,10 @@ size_t GetUnderestimatedStackSize() {
+@@ -119,10 +120,10 @@ void* GetStackStartImpl() {
  
- void* GetStackStart() {
+ void* GetStackStartImpl() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
 -    BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_FUCHSIA)
 +    BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_DRAGONFLY)
@@ -40,7 +40,7 @@
    pthread_attr_init(&attr);
    error = pthread_attr_get_np(pthread_self(), &attr);
  #else
-@@ -122,7 +123,7 @@ void* GetStackStart() {
+@@ -136,7 +137,7 @@ void* GetStackStartImpl() {
      pthread_attr_destroy(&attr);
      return reinterpret_cast<uint8_t*>(base) + size;
    }

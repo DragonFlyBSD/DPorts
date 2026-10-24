@@ -10,7 +10,7 @@ WWW=		https://github.com/jiixyj/epoll-shim
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-FLAVORS=	default i386
+FLAVORS= default
 FLAVOR?=	${FLAVORS:[1]}
 i386_PKGNAMESUFFIX=	-i386
 i386_PLIST=	${.CURDIR}/pkg-plist.i386
@@ -22,6 +22,8 @@ GH_ACCOUNT=	jiixyj
 GH_PROJECT=	epoll-shim
 PLIST_SUB=	SHIM_EVENTFD="${exists(/usr/include/sys/eventfd.h):?@comment :}" \
 	SHIM_TIMERFD="${exists(/usr/include/sys/timerfd.h):?@comment :}"
+
+FORTIFY_UNSAFE=	Redefines ppoll, which conflicts with /usr/include/ssp/poll.h
 
 .include <bsd.port.pre.mk>
 

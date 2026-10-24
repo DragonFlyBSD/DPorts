@@ -1,6 +1,6 @@
 PORTNAME=	libkolabxml
 DISTVERSION=	1.3.1
-PORTREVISION=	4
+PORTREVISION=	9
 CATEGORIES=	textproc
 MASTER_SITES=	LOCAL/kde/${PORTNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -14,9 +14,12 @@ WWW=		https://kolab.org/
 # are considered LGPL3-licensed, though.
 LICENSE=	LGPL3+
 
+DEPRECATED=	Has no consumers in Ports, does not build with CMake 4
+EXPIRATION_DATE=2026-11-30
+
 BUILD_DEPENDS=	libxsd>=4.2.0:devel/libxsd \
 		xsdcxx:devel/xsd
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libcurl.so:ftp/curl \
 		libxerces-c.so:textproc/xerces-c3
 

@@ -2,8 +2,8 @@ PORTNAME=	kiconthemes
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	x11-themes kde kde-frameworks
 
-COMMENT=	Icon GUI utilities
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Icon GUI utilities
 
 LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon
 
@@ -12,5 +12,9 @@ USE_GL=		gl opengl
 USE_KDE=	archive breeze-icons colorscheme config configwidgets i18n widgetsaddons \
 		ecm:build
 USE_QT=		base declarative svg
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

@@ -26,6 +26,7 @@ include/gretl/gretl_bundle.h
 include/gretl/gretl_cmatrix.h
 include/gretl/gretl_commands.h
 include/gretl/gretl_data_io.h
+include/gretl/gretl_drivers.h
 include/gretl/gretl_errors.h
 include/gretl/gretl_f2c.h
 include/gretl/gretl_foreign.h
@@ -81,6 +82,7 @@ include/gretl/uservar.h
 include/gretl/var.h
 include/gretl/varprint.h
 include/gretl/vartest.h
+include/gretl/version.h
 lib/gretl-gtk%%GTK_VER%%/anova.so
 lib/gretl-gtk%%GTK_VER%%/arma.so
 lib/gretl-gtk%%GTK_VER%%/arma_x12.so
@@ -133,6 +135,7 @@ lib/gretl-gtk%%GTK_VER%%/spss_import.so
 lib/gretl-gtk%%GTK_VER%%/stata_export.so
 lib/gretl-gtk%%GTK_VER%%/stata_import.so
 lib/gretl-gtk%%GTK_VER%%/stats_tables.so
+lib/gretl-gtk%%GTK_VER%%/stepwise.so
 lib/gretl-gtk%%GTK_VER%%/svm.so
 lib/gretl-gtk%%GTK_VER%%/sysest.so
 %%GUI%%lib/gretl-gtk%%GTK_VER%%/tramo-x12a.so
@@ -141,11 +144,9 @@ lib/gretl-gtk%%GTK_VER%%/vif.so
 %%GUI%%lib/gretl-gtk%%GTK_VER%%/xlsx_import.so
 %%GUI%%lib/gretl-gtk%%GTK_VER%%/xml_get.so
 lib/libgretl-1.0.so
-lib/libgretl-1.0.so.45
-lib/libgretl-1.0.so.45.0.0
+lib/libgretl-1.0.so.55
+lib/libgretl-1.0.so.55.0.0
 libdata/pkgconfig/gretl.pc
-man/man1/gretl.1.gz
-%%GUI%%share/appdata/gretl.appdata.xml
 %%GUI%%share/applications/gretl.desktop
 %%GUI%%share/applications/gretl_edit.desktop
 %%GUI%%%%DATADIR%%/COPYING
@@ -175,6 +176,7 @@ man/man1/gretl.1.gz
 %%DATADIR%%/data/misc/AWM.gdt
 %%DATADIR%%/data/misc/AWM17.gdt
 %%DATADIR%%/data/misc/AWM18.gdt
+%%DATADIR%%/data/misc/AWM_update.gdt
 %%DATADIR%%/data/misc/CEL.gdt
 %%DATADIR%%/data/misc/abdata.gdt
 %%DATADIR%%/data/misc/anscombe.gdt
@@ -186,6 +188,7 @@ man/man1/gretl.1.gz
 %%DATADIR%%/data/misc/bjg.gdt
 %%DATADIR%%/data/misc/brand_cassola.gdt
 %%DATADIR%%/data/misc/broiler.gdt
+%%DATADIR%%/data/misc/card_krueger94.gdt
 %%DATADIR%%/data/misc/chomage.gdt
 %%DATADIR%%/data/misc/credscore.gdt
 %%DATADIR%%/data/misc/denmark.gdt
@@ -362,7 +365,6 @@ man/man1/gretl.1.gz
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/SetRestrictions/spaghetti_plot.inp
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/SetRestrictions/supply_demand.inp
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/Traditional/BlQuah.inp
-%%ADDONS%%%%DATADIR%%/functions/SVAR/examples/Traditional/BlQuah_hd.inp
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/Traditional/BlQuah_plus_shortrun.inp
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/Traditional/IS-LM.inp
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/Traditional/awm.inp
@@ -372,6 +374,7 @@ man/man1/gretl.1.gz
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/Traditional/plain.inp
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/Traditional/restr_example.inp
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/Traditional/simple_C.inp
+%%ADDONS%%%%DATADIR%%/functions/SVAR/examples/Traditional/simple_C_named.inp
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/Traditional/simple_C_wild.inp
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/UhligData.gdt
 %%ADDONS%%%%DATADIR%%/functions/SVAR/examples/chomoreno_fromeviewswf.gdt
@@ -387,9 +390,11 @@ man/man1/gretl.1.gz
 %%ADDONS%%%%DATADIR%%/functions/dbnomics/examples/get_other_example.inp
 %%ADDONS%%%%DATADIR%%/functions/dbnomics/examples/get_series_example.inp
 %%ADDONS%%%%DATADIR%%/functions/dbnomics/examples/get_single_example.inp
+%%ADDONS%%%%DATADIR%%/functions/dbnomics/examples/get_tree_example.inp
 %%ADDONS%%%%DATADIR%%/functions/dbnomics/examples/print_dims.inp
 %%ADDONS%%%%DATADIR%%/functions/extra/extra.gfn
 %%ADDONS%%%%DATADIR%%/functions/extra/extra.pdf
+%%ADDONS%%%%DATADIR%%/functions/geoplot/examples/GDPpc.plt
 %%ADDONS%%%%DATADIR%%/functions/geoplot/examples/MANIFEST
 %%ADDONS%%%%DATADIR%%/functions/geoplot/examples/Makefile
 %%ADDONS%%%%DATADIR%%/functions/geoplot/examples/Makefile.in
@@ -435,14 +440,16 @@ man/man1/gretl.1.gz
 %%ADDONS%%%%DATADIR%%/functions/gig/gig.gfn
 %%ADDONS%%%%DATADIR%%/functions/gig/gig.pdf
 %%DATADIR%%/functions/gretlfunc.dtd
+%%DATADIR%%/functions/gretlfunc.xsd
 %%ADDONS%%%%DATADIR%%/functions/ivpanel/ivpanel.gfn
 %%ADDONS%%%%DATADIR%%/functions/ivpanel/ivpanel.pdf
 %%ADDONS%%%%DATADIR%%/functions/logging/logging.gfn
 %%ADDONS%%%%DATADIR%%/functions/logging/logging.pdf
-%%DATADIR%%/functions/packages.xml
 %%ADDONS%%%%DATADIR%%/functions/regls/examples/README.txt
+%%ADDONS%%%%DATADIR%%/functions/regls/examples/doc.inp
 %%ADDONS%%%%DATADIR%%/functions/regls/examples/elnet_sequence.inp
 %%ADDONS%%%%DATADIR%%/functions/regls/examples/fat.inp
+%%ADDONS%%%%DATADIR%%/functions/regls/examples/fat_BIC.inp
 %%ADDONS%%%%DATADIR%%/functions/regls/examples/fatplus.inp
 %%ADDONS%%%%DATADIR%%/functions/regls/examples/lambda_sequence.inp
 %%ADDONS%%%%DATADIR%%/functions/regls/examples/multiprint.inp
@@ -454,7 +461,7 @@ man/man1/gretl.1.gz
 %%ADDONS%%%%DATADIR%%/functions/regls/regls.gfn
 %%ADDONS%%%%DATADIR%%/functions/regls/regls.pdf
 %%GUI%%%%DATADIR%%/gretl-icons.gresource
-%%GUI%%%%DATADIR%%/gretl-logo.xpm
+%%GUI%%%%DATADIR%%/gretl-logo.png
 %%DATADIR%%/gretl_cli_cmdref.en
 %%DATADIR%%/gretl_cli_cmdref.es
 %%DATADIR%%/gretl_cli_cmdref.gl
@@ -535,15 +542,18 @@ man/man1/gretl.1.gz
 %%DATADIR%%/scripts/misc/LLTestim.inp
 %%DATADIR%%/scripts/misc/arbond91.inp
 %%DATADIR%%/scripts/misc/armaloop.inp
+%%DATADIR%%/scripts/misc/auto_arima.inp
 %%DATADIR%%/scripts/misc/bbond98.inp
 %%DATADIR%%/scripts/misc/biprobit.inp
 %%DATADIR%%/scripts/misc/biprobit_via_ghk.inp
 %%DATADIR%%/scripts/misc/bjg.inp
 %%DATADIR%%/scripts/misc/camtriv.inp
+%%DATADIR%%/scripts/misc/casella_ex1.inp
 %%DATADIR%%/scripts/misc/convolve.inp
 %%DATADIR%%/scripts/misc/credscore.inp
 %%DATADIR%%/scripts/misc/denmark.inp
 %%DATADIR%%/scripts/misc/ects_nls.inp
+%%DATADIR%%/scripts/misc/fanchart.inp
 %%DATADIR%%/scripts/misc/frontier.inp
 %%DATADIR%%/scripts/misc/garch.inp
 %%DATADIR%%/scripts/misc/gdp_midas.inp
@@ -564,6 +574,7 @@ man/man1/gretl.1.gz
 %%DATADIR%%/scripts/misc/nile.inp
 %%DATADIR%%/scripts/misc/ooballot.inp
 %%DATADIR%%/scripts/misc/oprobit.inp
+%%DATADIR%%/scripts/misc/panel-robust.inp
 %%DATADIR%%/scripts/misc/penngrow.inp
 %%DATADIR%%/scripts/misc/pensions.inp
 %%DATADIR%%/scripts/misc/perron97.inp
@@ -679,4 +690,6 @@ man/man1/gretl.1.gz
 %%NLS%%share/locale/uk/LC_MESSAGES/gretl.mo
 %%NLS%%share/locale/zh_CN/LC_MESSAGES/gretl.mo
 %%NLS%%share/locale/zh_TW/LC_MESSAGES/gretl.mo
+share/man/man1/gretl.1.gz
+%%GUI%%share/metainfo/gretl.appdata.xml
 %%GUI%%share/mime/packages/gretl.xml

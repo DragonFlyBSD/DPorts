@@ -1,6 +1,6 @@
 PORTNAME=	erlang
 DISTVERSIONPREFIX=	OTP-
-DISTVERSION=	27.3.4
+DISTVERSION=	27.3.4.19
 CATEGORIES=	lang parallel java
 PKGNAMESUFFIX=	-runtime${PORTVERSION:C/\..*//}
 DIST_SUBDIR=	erlang
@@ -17,7 +17,7 @@ CPE_PRODUCT=	erlang/otp
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	erlang:otp,corba
 GH_PROJECT=	otp:otp corba:corba
-GH_TAGNAME=	5.2.1:corba
+GH_TAGNAME=	5.2.2:corba
 USE_PERL5=	build
 
 GNU_CONFIGURE=	yes
@@ -82,6 +82,8 @@ WX_VARS=			USE_GL="gl glu" \
 				USE_WX=3.2+ \
 				WX_COMPS="wx"
 
+LDFLAGS= "-L/usr/local/lib -rpath=/usr/local/lib -rpath,/usr/local/lib"
+USE_CLANG_FALLBACK= 14
 .include <bsd.port.pre.mk>
 
 .if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 130
@@ -94,7 +96,7 @@ CFLAGS+=	-DMAP_NORESERVE=0
 .endif
 
 .if ${ARCH} == i386
-MAKE_ARGS+=	ARCH=x86
+MAKE_ARGS+=		ARCH=x86
 CONFIGURE_ARGS+=	--disable-year2038
 .endif
 

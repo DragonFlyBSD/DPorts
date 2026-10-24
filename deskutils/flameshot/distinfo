@@ -1,3 +1,5 @@
-TIMESTAMP = 1662223311
-SHA256 (flameshot-org-flameshot-v12.1.0_GH0.tar.gz) = c82c05d554e7a6d810aca8417ca12b21e4f74864455ab4ac94602668f85ac22a
-SIZE (flameshot-org-flameshot-v12.1.0_GH0.tar.gz) = 15618560
+TIMESTAMP = 1789905460
+SHA256 (flameshot-org-flameshot-v15.0.rc1_GH0.tar.gz) = 945ac3b7998fb151db3da4f82c0a891b6e911a7728198398961070ff8774b516
+SIZE (flameshot-org-flameshot-v15.0.rc1_GH0.tar.gz) = 16450070
+SHA256 (mattbas-Qt-Color-Widgets-5d52e907e50dc88cf969b41cea44665ff6c475b1_GL0.tar.gz) = 99edd39dca0367b1cfd388bf031c4915137580bd73f87c65f7720b8a4af14efa
+SIZE (mattbas-Qt-Color-Widgets-5d52e907e50dc88cf969b41cea44665ff6c475b1_GL0.tar.gz) = 227547

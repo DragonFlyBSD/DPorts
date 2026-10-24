@@ -1,3 +1,3 @@
-TIMESTAMP = 1651412261
-SHA256 (azure-mgmt-loganalytics-13.0.0b4.zip) = 266d6deefe6fc858cd34cfdebd568423db1724a370264e97017b894914a72879
-SIZE (azure-mgmt-loganalytics-13.0.0b4.zip) = 180811
+TIMESTAMP = 1782966286
+SHA256 (azure_mgmt_loganalytics-14.0.0.tar.gz) = 200ecc8744b616c67b40a2e39d11831a0606021db8a199c79bfc246f8806ad35
+SIZE (azure_mgmt_loganalytics-14.0.0.tar.gz) = 148466

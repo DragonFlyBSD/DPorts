@@ -1,3 +1,0 @@
-
-# emoji dict generation is serial, but vala generation can be racy
-MAKE_JOBS_UNSAFE=yes

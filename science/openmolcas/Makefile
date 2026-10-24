@@ -1,5 +1,5 @@
 PORTNAME=	openmolcas
-DISTVERSION=	23.06
+DISTVERSION=	26.06
 CATEGORIES=	science # chemistry
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -14,8 +14,11 @@ BROKEN_i386=	build breaks: Symbol 'maxfilesize' at (1) has no IMPLICIT type; did
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyparsing>0:devel/py-pyparsing@${PY_FLAVOR} \
 		chemps2:science/chemps2
-LIB_DEPENDS=	libhdf5.so:science/hdf5 \
+LIB_DEPENDS=	libgmp.so:math/gmp \
+		libhdf5.so:science/hdf5 \
+		libmpfr.so:math/mpfr \
 		libsz.so:science/libaec \
+		libwignernj.so:science/libwignernj \
 		libxc.so:science/libxc
 
 USES=		cmake:testing fortran python shebangfix
@@ -24,13 +27,13 @@ USE_GCC=	yes # see https://gitlab.com/Molcas/OpenMolcas/-/issues/351
 USE_GITLAB=	yes
 GL_ACCOUNT=	Molcas
 GL_PROJECT=	OpenMolcas
-GL_COMMIT=	1cda3772686cbf99a4af695929a12d563c795ca2
+GL_TAGNAME=	8355057f32d65706a35996b5ab07cac2962bb728
 
 USE_GITHUB=	nodefault
-GH_TUPLE=	Reference-LAPACK:lapack:aa631b4b:lapack/External/lapack \
+GH_TUPLE=	Reference-LAPACK:lapack:04b044e0:lapack/External/lapack \
 		ilyak:libefp:7d1ff5fd:libefp/External/efp \
 		mcodev31:libmsym:0e0b831c:libmsym/External/libmsym \
-		libwfa:libwfa:da000b67:libwfa/External/libwfa
+		libwfa:libwfa:a44aca25:libwfa/External/libwfa
 
 SHEBANG_FILES=	sbin/help_doc sbin/help_func sbin/help_basis sbin/setup sbin/verify sbin/version
 SHEBANG_GLOB=	*.py
@@ -45,6 +48,7 @@ CMAKE_INSTALL_PREFIX=	${DATADIR} # installed into DATADIR because it doesn't res
 BINARY_ALIAS=	cpp=${CPP} # cpp is called from cmake scripts
 BINARY_ALIAS+=	python3=${PYTHON_CMD} # cpp is called from cmake scripts
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	# fix python path
 	@${REINPLACE_CMD} -e "s|'/usr/bin/env python3'|'${PYTHON_CMD}'|" ${WRKSRC}/Tools/pymolcas/export.py

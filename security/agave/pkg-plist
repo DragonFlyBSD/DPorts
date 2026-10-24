@@ -1,0 +1,15 @@
+bin/agave-install
+bin/agave-install-init
+bin/agave-store-histogram
+bin/agave-validator
+bin/agave-watchtower
+bin/solana
+bin/solana-accounts-cluster-bench
+bin/solana-faucet
+bin/solana-genesis
+bin/solana-gossip
+bin/solana-keygen
+bin/solana-poh-bench
+bin/solana-stake-accounts
+bin/solana-test-validator
+bin/solana-tokens

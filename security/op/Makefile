@@ -24,4 +24,8 @@ post-install:
 	${MV} ${STAGEDIR}${PREFIX}/etc/op.conf-dist \
 		${STAGEDIR}${PREFIX}/etc/op.conf.sample
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-fsanitize=address@-fsanitize_not@' \
+		${WRKSRC}/configure
+
 .include <bsd.port.mk>

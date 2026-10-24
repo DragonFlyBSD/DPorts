@@ -1,5 +1,5 @@
 PORTNAME=	time
-PORTVERSION=	0.4.1
+PORTVERSION=	0.4.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -14,8 +14,10 @@ LICENSE_FILE_RUBY=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	rubygem-date>=0:devel/rubygem-date
 
-USES=		gem
+USES=		cpe gem
 
 NO_ARCH=	yes
+
+CPE_VENDOR=	ruby-lang
 
 .include <bsd.port.mk>

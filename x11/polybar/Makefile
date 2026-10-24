@@ -1,7 +1,11 @@
 PORTNAME=	polybar
-DISTVERSION=	3.7.1
+DISTVERSION=	3.7.2
+PORTREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/polybar/polybar/releases/download/${DISTVERSION}/
+
+PATCH_SITES=	https://github.com/polybar/${PORTNAME}/commit/
+PATCHFILES=	455d63611a695ffe4fe372272be28f4f6d9b90d3.patch:-p1 # https://github.com/polybar/polybar/pull/3221
 
 MAINTAINER=	jbo@FreeBSD.org
 COMMENT=	Fast and easy-to-use status bar
@@ -13,7 +17,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	xcb-proto>=1.9:x11/xcb-proto
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
-		libinotify.so:devel/libinotify \
 		libuv.so:devel/libuv \
 		libxcb-ewmh.so:x11/xcb-util-wm \
 		libxcb-icccm.so:x11/xcb-util-wm \
@@ -83,6 +86,16 @@ ETCFIX =	include/utils/command.hpp \
 		doc/man/polybar.5.rst \
 		CHANGELOG.md
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO} ALSA
+DFLY_UNMAINTAINED= yes
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500050
+LIB_DEPENDS+=	libinotify.so:devel/libinotify
+.else
+CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_LibInotify
+.endif
+
 post-patch:
 .for f in ${ETCFIX}
 	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|g' ${WRKSRC}/${f}
@@ -91,5 +104,12 @@ post-patch:
 do-test-TESTS-on:
 	cd ${TEST_WRKSRC} && ${SETENV} BUILD_TESTS=ON \
 		${SH} ${WRKSRC}/common/travis/tests.sh
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@STREQUAL "FreeBSD"@MATCHES "FreeBSD|DragonFly"@g' \
+		${WRKSRC}/cmake/libpoly.cmake \
+		${WRKSRC}/cmake/cxx.cmake
+	${REINPLACE_CMD} -e 's@ifndef \(__FreeBSD__\)@if !defined(\1) \&\& !defined(__DragonFly__)@g' \
+		${WRKSRC}/include/adapters/alsa/generic.hpp
 
 .include <bsd.port.mk>

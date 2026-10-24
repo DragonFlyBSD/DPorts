@@ -1,5 +1,6 @@
 PORTNAME=	pstoedit
 DISTVERSION=	4.02
+PORTREVISION=	1
 CATEGORIES=	graphics print
 MASTER_SITES=	SF
 
@@ -41,6 +42,7 @@ MAGICK_CONFIGURE_WITH=		magick
 PLOTUTILS_LIB_DEPENDS=		libplotter.so:graphics/plotutils
 PLOTUTILS_CONFIGURE_WITH=	libplot
 
+CFLAGS= -Wundef
 post-patch:
 	@${REINPLACE_CMD} -e 's|CXXFLAGS="-g"|CXXFLAGS="$$CXXFLAGS"|g ; \
 		 s|GraphicsMagick|Magick|g ; \
@@ -56,5 +58,13 @@ post-install-DOCS-on:
 post-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/*.ps ${STAGEDIR}${EXAMPLESDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-D_BIG_ENDIAN@-DPS_BIG_ENDIAN@g' \
+			 -e 's@-D_LITTLE_ENDIAN@-DPS_LITTLE_ENDIAN@g' \
+		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's@[[:<:]]_BIG_ENDIAN[[:>:]]@PS_BIG_ENDIAN@g' \
+		${WRKSRC}/src/drvsvm.cpp \
+		${WRKSRC}/src/drvwmf.cpp
 
 .include <bsd.port.mk>

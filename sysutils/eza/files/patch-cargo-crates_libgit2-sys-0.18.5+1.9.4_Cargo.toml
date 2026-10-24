@@ -1,0 +1,10 @@
+--- cargo-crates/libgit2-sys-0.18.5+1.9.4/Cargo.toml.orig	2006-07-24 01:21:28 UTC
++++ cargo-crates/libgit2-sys-0.18.5+1.9.4/Cargo.toml
+@@ -41,7 +41,6 @@ vendored = []
+ ssh = ["libssh2-sys"]
+ unstable-sha256 = []
+ vendored = []
+-vendored-openssl = ["openssl-sys/vendored"]
+ zlib-ng-compat = [
+     "libz-sys/zlib-ng",
+     "libssh2-sys?/zlib-ng-compat",

@@ -1,5 +1,6 @@
 PORTNAME=	xfce4-terminal
-PORTVERSION=	1.1.5
+PORTVERSION=	1.2.0
+PORTREVISION=	2
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
@@ -22,7 +23,7 @@ USE_GNOME=	cairo gdkpixbuf glib20 gtk30 vte3
 USE_XFCE=	libmenu xfconf
 USE_XORG=	ice sm x11
 
-MESON_ARGS=	-Dlibutempter=enabled
+MESON_ARGS= -Dlibutempter=disabled
 
 OPTIONS_DEFINE=		NLS WAYLAND
 OPTIONS_DEFAULT=	WAYLAND

@@ -2,6 +2,7 @@ PORTNAME=	vipster
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.19.1b-109
 DISTVERSIONSUFFIX=	-gfb4a6ed
+PORTREVISION=	3
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -24,7 +25,7 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	sgsaenger
 
-LDFLAGS+=	-L${LOCALBASE}/lib -ltinyexpr
+LDFLAGS+= -L${LOCALBASE}/lib -ltinyexpr -L${LOCALBASE}/cxxfs_gcc8
 
 OPTIONS_DEFINE=		DESKTOP LAMMPS PYTHON
 OPTIONS_DEFAULT=	DESKTOP
@@ -51,10 +52,17 @@ PYTHON_BROKEN=		Bundles pybind11: https://github.com/sgsaenger/vipster/issues/23
 
 PORTSCOUT=	limit:^[0-9][0-9a-z\.]*$$
 
+BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
+DFLY_UNMAINTAINED= yes
 do-test:
 	@cd ${BUILD_WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} -DTESTS:BOOL=ON ${CMAKE_SOURCE_PATH} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${ALL_TARGET} && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} test
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@PUBLIC dl@PUBLIC stdc++fs@g' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

@@ -1,6 +1,7 @@
 PORTNAME=	gpaint
 DISTVERSIONPREFIX=	2-
 DISTVERSION=	0.3.4
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNU_ALPHA
 
@@ -11,7 +12,7 @@ WWW=		https://www.gnu.org/software/gpaint/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gnome libtool pkgconfig
+USES= gnome libtool pkgconfig ncurses
 USE_GNOME=	gtk20 libglade2
 
 GNU_CONFIGURE=	yes

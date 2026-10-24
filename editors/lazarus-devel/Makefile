@@ -1,5 +1,5 @@
 PORTNAME=	lazarus
-DISTVERSION=	3.1.0.20231222
+DISTVERSION=	4.99.20260901
 PKGNAMESUFFIX?=  -gtk2-devel
 PORTREVISION?=	0
 CATEGORIES=	editors devel
@@ -9,23 +9,25 @@ MAINTAINER?=	acm@FreeBSD.org
 COMMENT?=	Portable Delphi-like IDE for the FreePascal compiler (GTK2 devel)
 WWW=		https://www.lazarus-ide.org/
 
-CONFLICTS?=	lazarus-gtk2 lazarus-qt5 lazarus-qt5-devel lazarus-qt6-devel
+CONFLICTS?=	lazarus-gtk2 lazarus-gtk3-devel lazarus-qt5 lazarus-qt5-devel \
+		lazarus-qt6 lazarus-qt6-devel
 
 BUILD_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils@native
 RUN_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils@native \
 		gmake:devel/gmake \
-		${LOCALBASE}/share/fpc-source-${FPC_DEFAULT}/Makefile.fpc:lang/fpc${FPC_DEVELSUFFIX}-source
+		${LOCALBASE}/share/fpc${FPC_DEVELSUFFIX}-source-${FPC_DEFAULT}/Makefile.fpc:lang/fpc${FPC_DEVELSUFFIX}-source
 
-ONLY_FOR_ARCHS=	i386 amd64
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	freepascal.org/lazarus
 GL_PROJECT=	${PORTNAME}
-GL_COMMIT=	5cbbd5956a4d9ab55b6c30810ea7c5f55cc5c444
+GL_COMMIT=	2270c6db9ebdf57e7e74a33ea7afc52ee4e2cf2d
 
 USES=		desktop-file-utils fpc:run gettext gmake iconv shared-mime-info xorg
 USE_XORG=	x11
-OPT?=		"-Sgic "
+WANT_FPC_DEVEL=	yes
+OPT?=		"-Sgic -Ur"
 
 MAKE_ENV=	OPT=${OPT}
 PLIST=		${WRKDIR}/pkg-plist
@@ -39,7 +41,7 @@ OPTIONS_DEFAULT=	GDB
 .include <bsd.port.options.mk>
 
 LAZARUS_ARCH=	${ARCH:S,amd64,x86_64,}
-LAZARUS_BASE=	3.1.0
+LAZARUS_BASE=	4.99
 
 BUILDNAME=	${LAZARUS_ARCH}-${OPSYS:tl}
 LCL_PLATFORM?=	gtk2
@@ -54,7 +56,12 @@ RUN_DEPENDS+=	${LOCALBASE}/bin/gdb:devel/gdb
 
 .if ${PKGNAMESUFFIX} == "-gtk2-devel"
 USES+=		gnome
-USE_GNOME=	cairo gtk20 gdkpixbuf2
+USE_GNOME=	cairo gtk20 gdkpixbuf
+.endif
+
+.if ${PKGNAMESUFFIX} == "-gtk3-devel"
+USES+=		gnome
+USE_GNOME=	cairo glib20 gtk30 pango
 .endif
 
 post-extract:
@@ -98,7 +105,7 @@ pre-install:
 		@${ECHO_CMD} ${FILE} >> ${PLIST}
 .	endfor
 .	for m in ${MAN1S}
-		@${ECHO_CMD} man/man1/${m}.gz >> ${PLIST}
+		@${ECHO_CMD} share/man/man1/${m}.gz >> ${PLIST}
 .	endfor
 
 	@${ECHO_CMD} "%%DATADIR%%/docs" >> ${PLIST}
@@ -172,7 +179,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/lazarus-wrapper ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_DATA}	${WRKSRC}/Makefile* ${WRKSRC}/fpmake*  ${STAGEDIR}${DATADIR}
 .for FILE in ${MAN1S}
-	${INSTALL_MAN} ${WRKDIR}/man1/${FILE} ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKDIR}/man1/${FILE} ${STAGEDIR}${PREFIX}/share/man/man1
 .endfor
 	${LN} -sf ${DATADIR}/lazbuild ${STAGEDIR}${PREFIX}/bin/lazbuild
 

@@ -1,6 +1,6 @@
 PORTNAME=	mpb
-DISTVERSION=	1.11.1
-PORTREVISION=	4
+DISTVERSION=	1.12.0
+PORTREVISION=	1
 CATEGORIES=	science
 MASTER_SITES=	https://github.com/NanoComp/mpb/releases/download/v${DISTVERSION}/
 
@@ -21,15 +21,17 @@ USES=		fortran guile:2.2,alias libtool pkgconfig readline
 USE_GCC=	yes
 USE_LDCONFIG=	yes
 # Do not use --with-mpi, because it is not guaranted
-# that science/hdf5 also built with option PARALLEL
+# that science/hdf5 also built with option PARALLEL.
+# TODO: if bin/h5pcc exists, hdf5 is built with PARALLEL
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--enable-shared
 
 MAKE_JOBS_UNSAFE=	yes
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -fpermissive
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=		ATLAS OPENMP
@@ -43,6 +45,7 @@ ATLAS_CONFIGURE_ON=	--with-lapack=-lalapack
 ATLAS_CONFIGURE_OFF=	--with-blas=openblas --with-lapack=-lopenblas
 OPENMP_CONFIGURE_ON=	--with-openmp
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	(cd ${WRKSRC}/examples && \

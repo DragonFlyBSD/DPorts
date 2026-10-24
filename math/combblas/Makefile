@@ -1,7 +1,7 @@
 PORTNAME=	CombBLAS
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.0
-PORTREVISION=	2
+PORTREVISION=	3
 MASTER_SITES=	https://portal.nersc.gov/project/m1982/CombBLAS/:test_data
 CATEGORIES=	math
 DISTFILES=	testdata_combblas1.6.1.tgz:test_data
@@ -19,7 +19,7 @@ ONLY_FOR_ARCHS_REASON=	fails to build: uses x86 asm
 LIB_DEPENDS=	libmpi.so:net/mpich
 RUN_DEPENDS=	${LOCALBASE}/lib/gcc${GCC_DEFAULT}/libgcc_s.so.1:lang/gcc${GCC_DEFAULT} # because of the link flags induced by mpich
 
-USES=		cmake:testing compiler:c++14-lang localbase:ldflags tar:tgz
+USES= cmake:testing compiler:c++14-lang localbase:ldflags tar:tgz fortran
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -37,4 +37,5 @@ pre-test:
 		${RLN} ${WRKDIR}/TESTDATA ${TEST_WRKSRC}/; \
 	fi
 
+RUN_DEPENDS:= ${RUN_DEPENDS:N*gcc${GCC_DEFAULT}}
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	trilogy
-PORTVERSION=	2.8.1
+PORTVERSION=	2.13.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	databases
 
@@ -10,11 +10,14 @@ WWW=		https://github.com/trilogy-libraries/trilogy
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		gmake ssl
+USES=		cpe gmake ssl
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	trilogy-libraries
 
+CPE_VENDOR=	trilogy_project
+
+DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/example/trilogy_query ${STAGEDIR}${PREFIX}/bin/
 	cd ${WRKSRC}/inc/ && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/include/

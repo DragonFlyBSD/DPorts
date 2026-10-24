@@ -1,7 +1,7 @@
 PORTNAME=	toxcore-c
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.0
-PORTREVISION=	10
+PORTREVISION=	14
 PORTEPOCH=	1
 CATEGORIES=	net-im net-p2p python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -26,5 +26,8 @@ USE_PYTHON=	distutils autoplist
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/pytox*.so
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/"-Werror",/d' ${WRKSRC}/setup.py
 
 .include <bsd.port.mk>

@@ -1,7 +1,6 @@
 PORTNAME=	dma
-PORTREVISION=	1
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.13.20220128
+DISTVERSION=	0.14
 PORTEPOCH=	1
 CATEGORIES=	mail
 
@@ -18,8 +17,7 @@ GH_ACCOUNT=	corecode
 GH_TAGNAME=	92937587bbfeab53653b841afe76af2fa6dad345
 USE_RC_SUBR=	dma_flushq
 
-MAKE_ENV=	__MAKE_CONF=/dev/null \
-		MANDIR=${PREFIX}/share/man/man \
+MAKE_ENV=	MANDIR=${PREFIX}/share/man/man \
 		MK_WERROR=no \
 		SRCCONF=/dev/null
 
@@ -33,6 +31,7 @@ SUB_FILES=	dma_cron pkg-message
 BUILD_WRKSRC=	${WRKSRC}/bsd
 INSTALL_WRKSRC=	${WRKSRC}/bsd
 
+CFLAGS+= -Wno-error=implicit-fallthrough
 post-patch:
 	@${REINPLACE_CMD} -e 's,/etc/dma,${PREFIX}/etc/dma,g' \
 		${WRKSRC}/dma.8

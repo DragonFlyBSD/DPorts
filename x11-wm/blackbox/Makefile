@@ -11,7 +11,7 @@ WWW=		https://blackboxwm.sourceforge.net/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		pathfix pkgconfig iconv xorg
+USES= pathfix pkgconfig iconv xorg libtool
 USE_CXXSTD=	c++14
 USE_XORG=	x11 xft
 

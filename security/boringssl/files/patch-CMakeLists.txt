@@ -1,11 +1,12 @@
---- CMakeLists.txt.orig	2024-04-01 22:15:28 UTC
+--- CMakeLists.txt.orig	2026-07-13 13:03:17 UTC
 +++ CMakeLists.txt
-@@ -610,6 +610,8 @@ add_library(ssl ${SSL_SOURCES})
- # here.
- set_property(TARGET ssl PROPERTY EXPORT_NAME SSL)
- target_link_libraries(ssl crypto)
+@@ -769,6 +769,9 @@ endif()
+   target_link_libraries(generate_mldsa_certs crypto)
+ endif()
+ 
 +SET_TARGET_PROPERTIES(ssl PROPERTIES SOVERSION 1)
 +SET_TARGET_PROPERTIES(crypto PROPERTIES SOVERSION 1)
- 
- add_library(decrepit ${DECREPIT_SOURCES})
- target_link_libraries(decrepit crypto ssl)
++
+ if(FUZZ)
+   # TODO(crbug.com/42290412): Drive this build with build.json and flatten.
+   add_subdirectory(fuzz)

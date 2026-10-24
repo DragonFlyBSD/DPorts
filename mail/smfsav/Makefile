@@ -47,4 +47,9 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ChangeLog readme ${STAGEDIR}${DOCSDIR}
 
+.if !exists( /usr/include/libmilter/mfapi.h )
+USES+= localbase:ldflags
+BUILD_DEPENDS+= ${LOCALBASE}/include/libmilter/mfapi.h:mail/libmilter
+.endif
+
 .include <bsd.port.post.mk>

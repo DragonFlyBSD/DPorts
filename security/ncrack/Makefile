@@ -20,4 +20,5 @@ GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CPPFLAGS+=	-I${OPENSSLINC}
 LDFLAGS+=	-L${OPENSSLLIB}
 
+CXXFLAGS= -fpermissive
 .include <bsd.port.mk>

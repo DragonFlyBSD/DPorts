@@ -1,7 +1,7 @@
 PORTNAME=	namecoin
 DISTVERSIONPREFIX=	nc
 DISTVERSION=	24.0
-PORTREVISION=	15
+PORTREVISION=	22
 PORTEPOCH=	1
 CATEGORIES=	net-p2p dns
 MASTER_SITES+=	https://same.name/static/:icon
@@ -99,6 +99,7 @@ PLIST_FILES?=	bin/namecoin-qt share/applications/namecoin-qt.desktop \
 
 .if defined(SLAVE_PORT) && ${SLAVE_PORT} == "no"
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/namecoin-qt.desktop \
 		${STAGEDIR}${PREFIX}/share/applications/
@@ -108,7 +109,7 @@ post-install:
 .endif
 
 regression-test: build
-	# To use this sucessfully, remove --without-daemon and --without-utils
+	# To use this successfully, remove --without-daemon and --without-utils
 	# from CONFIGURE_ARGS above.
 
 	@cd ${WRKSRC} && ${GMAKE} check

@@ -1,7 +1,7 @@
 PORTNAME?=	proftpd
 .if !defined(DISTVERSION)
 PORTVERSION?=	${PROFTPD_VERSION}
-PORTREVISION?=	1
+PORTREVISION?=	3
 .endif
 CATEGORIES?=	ftp
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
@@ -177,6 +177,7 @@ LIBSODIUM_CONFIGURE_ENABLE=	sodium
 LIBSODIUM_LIB_DEPENDS=	libsodium.so:security/libsodium
 LIBSODIUM_VARS=		LIBS+="-L${LOCALBASE}/lib -lsodium"
 
+CONFIGURE_ARGS+= --disable-xattr
 .include <bsd.port.options.mk>
 
 # Generate modules configuration string

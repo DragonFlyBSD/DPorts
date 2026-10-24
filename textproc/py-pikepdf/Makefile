@@ -1,6 +1,5 @@
 PORTNAME=	pikepdf
-DISTVERSION=	9.5.2
-PORTREVISION=	1
+DISTVERSION=	9.11.0
 CATEGORIES=	textproc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +11,8 @@ WWW=		https://github.com/pikepdf/pikepdf
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pybind11>=2.10.1:devel/py-pybind11@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pybind11>=2.10.1:devel/py-pybind11@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0.37:devel/py-wheel@${PY_FLAVOR}
 LIB_DEPENDS=	libqpdf.so:print/qpdf
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}deprecated>0:devel/py-deprecated@${PY_FLAVOR} \
@@ -31,12 +31,10 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}attrs>=20.2.0:devel/py-attrs@${PY_FLAVOR} \
 		${PY_PILLOW} \
 		${PYTHON_PKGNAMEPREFIX}python-xmp-toolkit>=2.0.1:textproc/py-python-xmp-toolkit@${PY_FLAVOR}
 
-USES=		compiler:c++14-lang cpe localbase python
-USE_PYTHON=	distutils autoplist
+USES= compiler:c++14-lang cpe localbase python localbase:ldflags
+USE_PYTHON=	autoplist pep517
 
 CPE_VENDOR=	pikepdf_project
-
-TEST_ENV=	LC_ALL=en_US.UTF-8
 
 OPTIONS_DEFINE=	JBIG2
 OPTIONS_DEFAULT=	JBIG2
@@ -45,10 +43,12 @@ JBIG2_DESC=	Support for extracting JBIG2 images
 
 JBIG2_RUN_DEPENDS=	jbig2dec:graphics/jbig2dec
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/pikepdf/_*.so
 
 do-test:
 	@cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} -m pytest -rs -v -o addopts=
 
+USES:= ${USES:S/c++14-lang/c++20-lang/}
 .include <bsd.port.mk>

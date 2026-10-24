@@ -1,8 +1,0 @@
-
-USES+= ssl
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NBLACKLISTD}
-
-# suppress redefine warnings
-dfly-patch:
-	${REINPLACE_CMD} -e 's@define HAS_DEV_URANDOM@@g' \
-		${WRKSRC}/src/util/sys_defs.h

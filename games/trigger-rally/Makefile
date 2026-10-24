@@ -1,10 +1,10 @@
 PORTNAME=	trigger-rally
 PORTVERSION=	0.6.6.1
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	SF/trigger-rally/trigger-${PORTVERSION}
 
-MAINTAINER=	alfix86@gmail.com
+MAINTAINER=	asiciliano@FreeBSD.org
 COMMENT=	Rally car racing game
 WWW=		http://trigger-rally.sourceforge.net
 

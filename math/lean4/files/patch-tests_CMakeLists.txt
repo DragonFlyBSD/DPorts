@@ -1,0 +1,47 @@
+-- Add LD_LIBRARY_PATH to the test environment on FreeBSD/Linux.
+-- Lake-built shared objects have no RPATH embedded, so the dynamic linker cannot
+-- find libLake_shared.so at test runtime without LD_LIBRARY_PATH.
+
+-- On FreeBSD, prepend a test-bin directory (containing a 'make' symlink to gmake)
+-- to PATH so that tests using GNU make syntax (e.g. reverse-ffi) work correctly.
+
+-- Disable the lint.py test because it calls git to find the list of tracked files to lint.
+
+--- tests/CMakeLists.txt.orig	2026-08-21 10:26:01 UTC
++++ tests/CMakeLists.txt
+@@ -21,6 +21,13 @@ endif()
+ 
+ set(LEAN_BIN "${MANGLED_BINARY_DIR}/bin")
+ 
++# FreeBSD: prepend test-bin (contains 'make' -> gmake symlink) to PATH so that tests
++# using GNU make syntax (e.g. reverse-ffi) work correctly with FreeBSD's BSD make.
++if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++  get_filename_component(TEST_BIN_DIR "${CMAKE_BINARY_DIR}" DIRECTORY)
++  set(LEAN_BIN "'${TEST_BIN_DIR}/test-bin':'${MANGLED_BINARY_DIR}/bin'")
++endif()
++
+ # Use the current stage's lean binary instead of whatever lake thinks we want
+ string(APPEND TEST_VARS " PATH='${LEAN_BIN}':\"$PATH\"")
+ 
+@@ -51,6 +58,12 @@ endif()
+   string(APPEND TEST_VARS " LEAN_HEADER_SNAPSHOT_INIT='${MANGLED_CURRENT_BINARY_DIR}/lean_header_init.snap'")
+ endif()
+ 
++# FreeBSD/Linux: lake-built shared objects have no rpath embedded, so we need
++# LD_LIBRARY_PATH to find libLake_shared.so and other lean shared libs at test runtime.
++if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|Linux")
++  string(APPEND TEST_VARS " LD_LIBRARY_PATH='${MANGLED_BINARY_DIR}/lib/lean'")
++endif()
++
+ set(WITH_TEST_ENV "${CMAKE_CURRENT_SOURCE_DIR}/with_stage${STAGE}_test_env.sh")
+ set(WITH_BENCH_ENV "${CMAKE_CURRENT_SOURCE_DIR}/with_stage${STAGE}_bench_env.sh")
+ 
+@@ -309,7 +322,7 @@ endforeach(T)
+ endforeach(T)
+ 
+ # Lint test suite and parts of the repository.
+-add_test(NAME lint.py COMMAND python3 lint.py WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
++#add_test(NAME lint.py COMMAND python3 lint.py WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
+ 
+ add_test_pile(../doc/examples *.lean)
+ add_test_pile(compile *.lean BENCH PART2)

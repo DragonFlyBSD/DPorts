@@ -1,0 +1,11 @@
+--- configure.orig
++++ configure
+@@ -26364,7 +26364,7 @@
+ fi
+   fi
+ 
+-  if test "x$have_curses" = xncurses
++  if test "x$have_curses" = xncurses || test "$ac_sys_system" = DragonFly
+ then :
+ 
+ 

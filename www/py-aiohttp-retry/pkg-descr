@@ -1,0 +1,2 @@
+Simple retry client for aiohttp. Provides configurable retry policies for
+aiohttp client requests.

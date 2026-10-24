@@ -1,2 +1,2 @@
-This package contains xset, an application used to set various user preference
-options related to the display in the X Window System.
+This package contains xset, an application used to set or query various
+user preference options related to the display in the X Window System.

@@ -1,0 +1,3 @@
+AgentFolio identity, trust and reputation tools for smolagents.
+This package lets smolagents verify identities, perform trust-gated
+interactions, and access the AgentFolio agent marketplace.

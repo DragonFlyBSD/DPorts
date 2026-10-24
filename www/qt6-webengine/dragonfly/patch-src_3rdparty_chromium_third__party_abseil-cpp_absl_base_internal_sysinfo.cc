@@ -1,5 +1,5 @@
---- src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	Sat Mar  1 14:18:07 2025
-+++ src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/sysinfo.cc	Sat Mar
+--- src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/sysinfo.cc.orig	2026-10-23 12:00:00 UTC
++++ src/3rdparty/chromium/third_party/abseil-cpp/absl/base/internal/sysinfo.cc
 @@ -30,7 +30,7 @@
  #include <sys/syscall.h>
  #endif
@@ -9,12 +9,12 @@
  #include <sys/sysctl.h>
  #endif
  
-@@ -457,7 +457,7 @@ pid_t GetTID() {
-   return getthrid();
+@@ -450,7 +450,7 @@ pid_t GetTID() {
+   return static_cast<pid_t>(tid);
  }
  
 -#elif defined(__FreeBSD__)
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
  
- pid_t GetTID() {
-   return pthread_getthreadid_np();
+ pid_t GetTID() { return static_cast<pid_t>(pthread_getthreadid_np()); }
+ 

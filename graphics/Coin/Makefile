@@ -1,7 +1,6 @@
 PORTNAME=	Coin
-PORTVERSION=	4.0.2
+DISTVERSION=	4.0.10
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	cmt@FreeBSD.org
@@ -10,34 +9,37 @@ WWW=		https://github.com/coin3d
 
 LICENSE=	BSD3CLAUSE
 
-BUILD_DEPENDS=	boost-libs>0:devel/boost-libs
 LIB_DEPENDS=	libsimage.so:graphics/simage
 
-USES=		gl openal:al libtool pathfix xorg
+USES=		cmake gl openal:al pathfix xorg
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	coin3d
 GH_PROJECT=	coin
+# GH_TAGNAME= ${DISTVERSIONPREFIX}{PORTVERSION}
 
 USE_GL=		gl glu
 USE_XORG=	ice sm x11 xext xt
-GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
-CONFIGURE_ARGS=	--with-pthread=yes --enable-threadsafe	\
-		--enable-3ds-import --enable-sound	\
-		--enable-javascript-api --enable-debug=no
+CMAKE_ARGS+=	-DCOIN_BUILD_SHARED_LIBS="ON" \
+		-DCOIN_THREADSAFE="ON" \
+		-DCOIN_HAVE_JAVASCRIPT="ON" \
+		-DHAVE_SOUND="ON" \
+		-DHAVE_3DS_IMPORT_CAPABILITIES="ON" \
+		-DUSE_EXTERNAL_EXPAT="ON"
 USE_LDCONFIG=	yes
-INSTALL_TARGET=	install-strip
+
+PLIST_SUB=	VERSION=${PORTVERSION}
 
 pre-configure:
-	@${REINPLACE_CMD} -e 's|DATA install-data-local|DATA|g' \
-		${WRKSRC}/Makefile.in
 	@${FIND} ${WRKSRC} \( -name \*.cpp -o -name \*.h -a \! \
 		-name expat.h \) -a -print0 | ${XARGS} -0 \
 		${REINPLACE_CMD} 's/<stdlib.h>/<cstdlib>/g'
 
-post-build:
-	@${REINPLACE_CMD} -e '/^ldflags=/s|-R|-Wl,-rpath,|' \
-		${WRKSRC}/coin-default.cfg
+CXXFLAGS:= ${CXXFLAGS} -fpermissive
+dfly-patch:
+	${REINPLACE_CMD} -e 's/[[:<:]]isinf[[:>:]]/std::isinf/g' \
+		-e 's/[[:<:]]isnan[[:>:]]/std::isnan/g' \
+		${WRKSRC}/src/tidbits.cpp
+
 
 .include <bsd.port.mk>

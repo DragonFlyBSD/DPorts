@@ -1,11 +1,11 @@
 PORTNAME=	recipes
-PORTVERSION=	1.1.1
+PORTVERSION=	1.4.0
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Preprocessing Tools to Create Design Matrices
-WWW=		https://cran.r-project.org/web/packages/recipes/
+WWW=		https://cran.r-project.org/package=recipes
 
 LICENSE=	MIT
 
@@ -22,6 +22,7 @@ RUN_DEPENDS=	R-cran-cli>0:devel/R-cran-cli \
 		R-cran-magrittr>0:devel/R-cran-magrittr \
 		R-cran-purrr>=1.0.0:devel/R-cran-purrr \
 		R-cran-rlang>=1.1.0:devel/R-cran-rlang \
+		R-cran-sparsevctrs>=0.3.3:devel/R-cran-sparsevctrs \
 		R-cran-tibble>0:devel/R-cran-tibble \
 		R-cran-tidyr>=1.0.0:devel/R-cran-tidyr \
 		R-cran-tidyselect>=1.2.0:devel/R-cran-tidyselect \

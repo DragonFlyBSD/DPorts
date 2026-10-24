@@ -1,7 +1,7 @@
 PORTNAME=	arataga
 PORTVERSION=	0.5.4
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	SF/sobjectizer/oess/oess-2:oess
 DISTFILES=	oess-2.2.3-full.tar.bz2:oess
@@ -31,19 +31,24 @@ TEST_WRKSRC=	${WRKSRC}/../tests
 USE_GITHUB=	yes
 GH_ACCOUNT=	Stiffstream
 GH_PROJECT=	noexcept-ctcheck:nectc restinio:rinio so5extra:so5e
-GH_TAGNAME=	v.1.0.0:nectc v.0.6.16:rinio v.1.5.2:so5e
+GH_TAGNAME=	v.1.0.0:nectc v.0.6.16:rinio v.1.6.2:so5e
 
-_SO5_LIBVER=	5.7.4.2
+_SO5_LIBVER=	5.8.5
 
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	*.md
 
 OPTIONS_DEFINE=	DOCS
 
+CXXFLAGS= -Wno-deprecated-declarations -Wno-unused-variable -Wno-unused-parameter -isystem ${LOCALBASE}/cxxfs_gcc8
+BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
+LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
+MAKE_ARGS= LIBS="-lpthread $(LOCALBASE)/lib/libso.5.7.2.5.so -lfmt -lhttp_parser -lstdc++fs"
+IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	@${LN} -s ../../noexcept-ctcheck-v.1.0.0/noexcept_ctcheck \
 		../../restinio-v.0.6.16/dev/restinio \
-		../../so5extra-v.1.5.2/dev/so_5_extra \
+		../../so5extra-v.1.6.2/dev/so_5_extra \
 		../../oess-2.2.3/dev/cpp_util_2 \
 		../../oess-2.2.3/dev/oess_2 ${WRKSRC}
 

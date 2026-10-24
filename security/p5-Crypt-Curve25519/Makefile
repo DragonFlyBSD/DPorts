@@ -1,5 +1,5 @@
 PORTNAME=	Crypt-Curve25519
-PORTVERSION=	0.07
+PORTVERSION=	0.08
 CATEGORIES=	security perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -10,9 +10,6 @@ WWW=		https://metacpan.org/release/Crypt-Curve25519
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
-
-BROKEN_mips=	fails to build: -m32 flag is not supported by this configuration
-BROKEN_mips64=	fails to build: -m32 flag is not supported by this configuration
 
 USES=		perl5 ssl
 USE_PERL5=	configure

@@ -47,7 +47,7 @@ BINARY_ALIAS=	python=${PYTHON_CMD}
 
 USE_WX=		3.0+
 WX_COMPS=	wx:lib
-MAKE_ENV+=	JOBS=${_MAKE_JOBS}
+MAKE_ENV+= JOBS=${_MAKE_JOBS} MAKE=${MAKE_CMD}
 
 BROKEN_aarch64=		fails to compile: no member named verifyHeapAccessDisassembly
 BROKEN_armv6=		fails to link: fatal error: conftest: Unknown error: -1
@@ -88,5 +88,9 @@ do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}/mods/public ${STAGEDIR}${DATADIR}/mods/mod
 	${TAR} xf ${WRKSRC}/binaries/data/mods/public/public.zip -C ${STAGEDIR}${DATADIR}/mods/public --no-same-permissions
 	${TAR} xf ${WRKSRC}/binaries/data/mods/mod/mod.zip -C ${STAGEDIR}${DATADIR}/mods/mod --no-same-permissions
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	570M package (too big for mirrors)
+.endif
 
 .include <bsd.port.post.mk>

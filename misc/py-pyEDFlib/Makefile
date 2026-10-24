@@ -1,6 +1,7 @@
 PORTNAME=	pyEDFlib
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.37
+DISTVERSION=	0.1.42
+PORTREVISION=	2
 CATEGORIES=	misc
 #MASTER_SITES=	PYPI # PyPI version fails: https://github.com/holgern/pyedflib/issues/168
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,8 +13,8 @@ WWW=		https://github.com/holgern/pyedflib
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYNUMPY}
-RUN_DEPENDS=	${PYNUMPY}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}
 
 USES=		fortran python
 USE_PYTHON=	distutils cython autoplist
@@ -24,6 +25,7 @@ GH_PROJECT=	pyedflib
 
 USE_GCC=	yes # fails to build with clang: https://github.com/holgern/pyedflib/issues/104
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/pyedflib/_extensions/_pyedflib*.so
 

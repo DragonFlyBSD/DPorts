@@ -1,21 +1,27 @@
 PORTNAME=	urh
-DISTVERSION=	2.9.3
+DISTVERSION=	2.10.0
 CATEGORIES=	misc hamradio python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Universal Radio Hacker: investigate wireless protocols like a boss
+WWW=		https://github.com/jopohl/urh/
 
 LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYNUMPY}
-RUN_DEPENDS=	${PYNUMPY} \
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
+
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyzmq>0:net/py-pyzmq@${PY_FLAVOR}
 
-USES=		compiler:c++11-lang fortran python:3.4+ localbase pyqt:5
-USE_PYQT=	pyqt5
-USE_PYTHON=	distutils cython noflavors autoplist
+USES=		fortran localbase python pyqt:6
+USE_PYQT=	pyqt6
+USE_PYTHON=	autoplist cython distutils noflavors
 
 PLIST_FILES=	bin/urh.shadow
 

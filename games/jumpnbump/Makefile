@@ -29,6 +29,7 @@ LAUNCHER_USE=		gnome=pygobject3:run
 LAUNCHER_ALL_TARGET=	jnbmenu
 LAUNCHER_INSTALL_TARGET=jnbmenuinstall
 
+MAKE_JOBS_UNSAFE= yes
 post-install:
 .for f in jnbpack gobpack jnbunpack jumpnbump
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${f}

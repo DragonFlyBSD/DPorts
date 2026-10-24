@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=	compiler
 USE_CXXSTD=	c++14
 
-CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
+CXXFLAGS+= ${CXXFLAGS_${CHOSEN_COMPILER_TYPE}} -c -Wall -g -Wno-narrowing
 CXXFLAGS_clang=	-Wno-c++11-narrowing
 
 PLIST_FILES=	bin/jlint \
@@ -35,5 +35,9 @@ do-install:
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/manual.pdf ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/CPP/s@CFLAGS)@CXXFLAGS)@g'	\
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

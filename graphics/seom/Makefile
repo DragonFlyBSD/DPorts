@@ -58,4 +58,8 @@ do-fetch:
 .endif
 .endif # defined(BOOTSTRAP)
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\($$(ARCH)\)@$$(subst x86_64,amd64,\1)@g'	\
+		${WRKSRC}/Makefile
+
 .include <bsd.port.post.mk>

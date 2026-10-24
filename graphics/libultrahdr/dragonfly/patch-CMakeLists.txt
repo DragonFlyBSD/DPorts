@@ -1,0 +1,11 @@
+--- CMakeLists.txt.intermediate	2026-09-04 04:56:30 UTC
++++ CMakeLists.txt
+@@ -36,7 +36,7 @@ project(libuhdr
+ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Emscripten")
+ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Android")
+-elseif(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++elseif(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+ elseif(WIN32)
+ elseif(APPLE)
+ else()

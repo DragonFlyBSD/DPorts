@@ -1,7 +1,7 @@
 Gleam is a fast, friendly, and functional language for building
 type-safe, scalable systems.
 
-The Gleam compiler itself is written in rust.
+The Gleam compiler itself is written in Rust.
 
 Gleam uses the BEAM runtime, and using the same actor-based multi-core
 concurrency, with zero runtime overhead and full inter-operability with

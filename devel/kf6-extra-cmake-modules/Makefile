@@ -2,8 +2,9 @@ PORTNAME=	extra-cmake-modules
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	devel kde kde-frameworks
 
-COMMENT=	Extra modules and scripts for CMake
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Extra modules and scripts for CMake
+WWW=		https://api.kde.org/ecm-index.html
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING-CMAKE-SCRIPTS
@@ -39,5 +40,9 @@ MANPAGES_BUILD_DEPENDS=	${SPHINX_DEP}
 MANPAGES_CMAKE_BOOL=	BUILD_MAN_DOCS
 
 TESTING_UNSAFE=		requires reuse-tool port
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

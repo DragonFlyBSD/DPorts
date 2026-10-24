@@ -1,8 +1,8 @@
 PORTNAME=	zorin-gtk-themes
-DISTVERSION=	4.2.1
+DISTVERSION=	4.2.2
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Zorin OS GTK theme
 WWW=		https://github.com/ZorinOS/zorin-desktop-themes
 
@@ -18,6 +18,7 @@ NO_BUILD=	yes
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/themes
-	${CP} -R ${WRKSRC}/Zorin* ${STAGEDIR}${PREFIX}/share/themes
+	(cd ${WRKSRC} && \
+		${COPYTREE_SHARE} "Zorin*" ${STAGEDIR}${PREFIX}/share/themes)
 
 .include <bsd.port.mk>

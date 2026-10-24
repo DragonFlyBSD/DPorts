@@ -13,6 +13,7 @@ bin/1dRplot.R
 bin/1dSEM
 bin/1dSEMr.R
 bin/1dSVAR.R
+bin/1dTrdm
 bin/1dTsort
 bin/1dUpsample
 bin/1d_tool.py
@@ -94,6 +95,7 @@ bin/3dFFT
 bin/3dFWHMx
 bin/3dFriedman
 bin/3dGC.R
+bin/3dGLMM
 bin/3dGLMM.R
 bin/3dGenFeatureDist
 bin/3dGenPriors
@@ -165,6 +167,7 @@ bin/3dQwarp
 bin/3dREMLfit
 bin/3dROIMaker
 bin/3dROIstats
+bin/3dRSA
 bin/3dRSFC
 bin/3dRank
 bin/3dRankizer
@@ -177,11 +180,13 @@ bin/3dRprogDemo.R
 bin/3dSeg
 bin/3dSetupGroupInCorr
 bin/3dSharpen
+bin/3dShuffle
 bin/3dSignatures
 bin/3dSignatures.R
 bin/3dSkullStrip
 bin/3dSliceNDice
 bin/3dSpaceTimeCorr
+bin/3dSpaceTimeCorr2
 bin/3dSpatNorm
 bin/3dStatClust
 bin/3dSurf2Vol
@@ -446,11 +451,15 @@ bin/FATCAT_matplot
 bin/FIRdesign
 bin/FSread_annot
 bin/FiraCode-Bold.woff2
+bin/FiraCode-Medium.woff2
 bin/FiraCode-Regular.woff2
 bin/GLTsymtest
 bin/HalloSuma
 bin/InstaTract
 bin/IsoSurface
+bin/LICENSE_OFL_arimo.txt
+bin/LICENSE_OFL_cousine.txt
+bin/LICENSE_OFL_firacode.txt
 bin/Level2.R
 bin/MBA
 bin/MBA.R
@@ -461,6 +470,7 @@ bin/PTA.R
 bin/ParseName
 bin/RBA
 bin/RBA.R
+bin/README_fonts.txt
 bin/ROI2dataset
 bin/ROIgrow
 bin/RSFgen
@@ -475,6 +485,7 @@ bin/SpharmDeco
 bin/SpharmReco
 bin/Surf2VolCoord
 bin/SurfClust
+bin/SurfClustSim
 bin/SurfDist
 bin/SurfDsetInfo
 bin/SurfExtrema
@@ -506,6 +517,7 @@ bin/adjunct_deob_around_origin
 bin/adjunct_is_label.py
 bin/adjunct_make_script_and_rst.py
 bin/adjunct_middle_pair_mask
+bin/adjunct_refacer_make_master_addendum2
 bin/adjunct_select_str.py
 bin/adjunct_simplify_cost.py
 bin/adjunct_suma_fs_mask_and_qc
@@ -521,11 +533,13 @@ bin/afni_history
 bin/afni_open
 bin/afni_proc.py
 bin/afni_python_wrapper.py
+bin/afni_refacer2
 bin/afni_run_R
 bin/afni_seeds_per_space.txt
 bin/afni_skeleton.py
 bin/afni_system_check.py
 bin/afni_vcheck
+bin/afni_vlines_run_text.txt
 bin/afnisumafatcat_logo_128sq.png
 bin/afnisumafatcat_logo_905sq.png
 bin/afnisumagui_logo_128sq.jpg
@@ -541,6 +555,9 @@ bin/apqc_logo_main.svg
 bin/apqc_make_html.py
 bin/apqc_make_tcsh.py
 bin/apsearch
+bin/arimo-v36-latin-700.woff2
+bin/arimo-v36-latin-regular.woff2
+bin/asymm_report.csh
 bin/auto_warp.py
 bin/bayes_view
 bin/build_afni.py
@@ -555,6 +572,8 @@ bin/compute_ROI_stats.tcsh
 bin/convert_cdiflist_to_grads.py
 bin/count
 bin/count_afni
+bin/cousine-v31-latin-700.woff2
+bin/cousine-v31-latin-regular.woff2
 bin/dcm2niix_afni
 bin/demo.fixed.niml.do
 bin/demo.mobile.niml.do
@@ -594,6 +613,7 @@ bin/find_variance_lines.tcsh
 bin/float_scan
 bin/from3d
 bin/gen_cluster_table
+bin/gen_cluster_table.py
 bin/gen_epi_review.py
 bin/gen_group_command.py
 bin/gen_ss_review_scripts.py
@@ -601,6 +621,7 @@ bin/gen_ss_review_table.py
 bin/get_afni_model_PRF
 bin/get_afni_model_PRF_6
 bin/get_afni_model_PRF_6_BAD
+bin/get_afni_model_PRF_DN
 bin/gifti_tool
 bin/gtkyd_check.py
 bin/help_format
@@ -620,6 +641,7 @@ bin/imstat
 bin/imupsam
 bin/init_user_dotfiles.py
 bin/inspec
+bin/install_bootcamp_data.tcsh
 bin/lesion_align
 bin/lib_dataTable.R
 bin/make_pq_script.py
@@ -638,6 +660,7 @@ bin/nifti_tool
 bin/niml_feedme
 bin/niprobe
 bin/nsize
+bin/obliquity_remover.py
 bin/open_apqc.py
 bin/p2dsetstat
 bin/parse_fs_lt_log.py
@@ -755,6 +778,7 @@ lib/afni/model_constant.so
 lib/afni/model_conv_PRF.so
 lib/afni/model_conv_PRF_6.so
 lib/afni/model_conv_PRF_6_BAD.so
+lib/afni/model_conv_PRF_DN.so
 lib/afni/model_conv_PRF_DOG.so
 lib/afni/model_conv_cosine4.so
 lib/afni/model_conv_diffgamma.so
@@ -860,6 +884,8 @@ lib/afni/plug_zeropad.so
 %%PYTHON_SITELIBDIR%%/afnipy/lib_cbar_pbar.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_cbar_tool.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_cdiflist.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_cluster_rois.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_cluster_table.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_csv.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_decay_timing.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_dti_sundry.py
@@ -870,11 +896,15 @@ lib/afni/plug_zeropad.so
 %%PYTHON_SITELIBDIR%%/afnipy/lib_gssrt.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_gtkyd.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_info_dict.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_info_items.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_mat2d_base.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_mat2d_plot.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_mat2d_tableize.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_matplot.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_msar.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_obl_child.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_obl_name.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_obl_tool.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_physio_filt.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_physio_funcs.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_physio_interact.py
@@ -899,6 +929,7 @@ lib/afni/plug_zeropad.so
 %%PYTHON_SITELIBDIR%%/afnipy/lib_tedana_afni.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_textdata.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_timing.py
+%%PYTHON_SITELIBDIR%%/afnipy/lib_torch_util.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_tsv.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_uber_align.py
 %%PYTHON_SITELIBDIR%%/afnipy/lib_uber_proc.py
@@ -1042,6 +1073,7 @@ lib/afni/plug_zeropad.so
 %%DATADIR%%/funstuff/face_dan_dickstein.jpg
 %%DATADIR%%/funstuff/face_dante.jpg
 %%DATADIR%%/funstuff/face_dario.jpg
+%%DATADIR%%/funstuff/face_darwin.jpg
 %%DATADIR%%/funstuff/face_dave_jangraw.jpg
 %%DATADIR%%/funstuff/face_daveperlman.jpg
 %%DATADIR%%/funstuff/face_davepitcher.jpg
@@ -1199,7 +1231,6 @@ lib/afni/plug_zeropad.so
 %%DATADIR%%/funstuff/face_les_petits_beauchamps.jpg
 %%DATADIR%%/funstuff/face_lfrank.jpg
 %%DATADIR%%/funstuff/face_lin_zhu.jpg
-%%DATADIR%%/funstuff/face_lincoln1.jpg
 %%DATADIR%%/funstuff/face_lincoln2.jpg
 %%DATADIR%%/funstuff/face_lindachao.jpg
 %%DATADIR%%/funstuff/face_lindathede.jpg
@@ -1293,6 +1324,7 @@ lib/afni/plug_zeropad.so
 %%DATADIR%%/funstuff/face_psfb_serious.jpg
 %%DATADIR%%/funstuff/face_psfbx.jpg
 %%DATADIR%%/funstuff/face_pshukla.jpg
+%%DATADIR%%/funstuff/face_pt_cw_ohbm.jpg
 %%DATADIR%%/funstuff/face_pumpkin.jpg
 %%DATADIR%%/funstuff/face_qiulin.jpg
 %%DATADIR%%/funstuff/face_qutian.jpg
@@ -1313,8 +1345,8 @@ lib/afni/plug_zeropad.so
 %%DATADIR%%/funstuff/face_rjsquirrel.jpg
 %%DATADIR%%/funstuff/face_rmbirn.jpg
 %%DATADIR%%/funstuff/face_roadbrain.jpg
+%%DATADIR%%/funstuff/face_robertwill.jpg
 %%DATADIR%%/funstuff/face_robinkampe.jpg
-%%DATADIR%%/funstuff/face_robterwill.jpg
 %%DATADIR%%/funstuff/face_rory.jpg
 %%DATADIR%%/funstuff/face_roryd.jpg
 %%DATADIR%%/funstuff/face_rprost.jpg
@@ -1418,8 +1450,10 @@ lib/afni/plug_zeropad.so
 %%DATADIR%%/funstuff/face_wapostman2.jpg
 %%DATADIR%%/funstuff/face_watercubestud.jpg
 %%DATADIR%%/funstuff/face_wendyhasenkamp.jpg
+%%DATADIR%%/funstuff/face_will_e.jpg
 %%DATADIR%%/funstuff/face_wmluh.jpg
 %%DATADIR%%/funstuff/face_wpostman.jpg
+%%DATADIR%%/funstuff/face_x2zhang.jpg
 %%DATADIR%%/funstuff/face_xinianzuo.jpg
 %%DATADIR%%/funstuff/face_xue_zhang.jpg
 %%DATADIR%%/funstuff/face_xzhang.jpg
@@ -2026,6 +2060,7 @@ lib/afni/plug_zeropad.so
 %%DATADIR%%/shiny/bayes_view/server.R
 %%DATADIR%%/shiny/bayes_view/ui.R
 %%DATADIR%%/shiny/misc/OmicCircos_pkg_install.R
+%%DATADIR%%/funstuff/face_gcotter1.jpg
 %%PORTDOCS%%%%DOCSDIR%%/CMakeLists.txt
 %%PORTDOCS%%%%DOCSDIR%%/README
 %%PORTDOCS%%%%DOCSDIR%%/README.Ifile
@@ -2051,4 +2086,3 @@ lib/afni/plug_zeropad.so
 %%PORTDOCS%%%%DOCSDIR%%/README.volreg
 %%PORTDOCS%%%%DOCSDIR%%/README.web
 %%PORTDOCS%%%%DOCSDIR%%/README.ziad
-

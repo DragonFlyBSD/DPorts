@@ -28,7 +28,7 @@ USES=		compiler:c++11-lang gnome gstreamer perl5 pkgconfig \
 USE_CXXSTD=	c++11
 USE_GITHUB=	yes
 GH_ACCOUNT=	fbergo
-USE_GNOME=	cairo gdkpixbuf2 gtk20
+USE_GNOME=	cairo gdkpixbuf gtk20
 USE_PERL5=	build
 
 SHEBANG_FILES=	configure
@@ -52,6 +52,7 @@ OPTIONS_DEFINE=	DOCS
 
 EXTRAS=		1pl2 2
 
+DFLY_UNMAINTAINED= yes
 post-extract:
 .for e in ${EXTRAS}
 	@cd ${WRKDIR} && ${GZIP_CMD} -dc \

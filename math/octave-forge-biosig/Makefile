@@ -1,8 +1,7 @@
 PORTNAME=	octave-forge-biosig
-DISTVERSION=	3.0.1
-PORTREVISION=	5
+DISTVERSION=	3.9.7
 CATEGORIES=	math
-MASTER_SITES=	https://pub.ist.ac.at/~schloegl/biosig/prereleases/
+MASTER_SITES=	https://sourceforge.net/projects/biosig/files/Biosig%20for%20Octave/
 DISTNAME=	biosig4octave-${DISTVERSION}.src
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -20,4 +19,5 @@ ALL_TARGET=	# nada
 
 OCTAVE_SRC=		${DISTNAME:R}
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

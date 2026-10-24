@@ -1,13 +1,12 @@
 PORTNAME=	sagittarius
-PORTVERSION=	0.9.11
+PORTVERSION=	0.9.13
 CATEGORIES=	lang
-MASTER_SITES=	https://bitbucket.org/ktakashi/sagittarius-scheme/downloads/ \
-		LOCAL/ashish
+MASTER_SITES=	https://github.com/ktakashi/sagittarius-scheme/releases/download/v${PORTVERSION}/
 PKGNAMESUFFIX=	-scheme
 
 MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	R6RS/R7RS Scheme system
-WWW=		https://bitbucket.org/ktakashi/sagittarius-scheme/wiki/Home
+WWW=		https://github.com/ktakashi/sagittarius-scheme
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -31,10 +30,13 @@ ODBC_CMAKE_ON=		-DODBC_INCLUDE_DIR:STRING=${LOCALBASE}/include/libiodbc
 SIMD_CMAKE_BOOL=	USE_SSE
 OPTIONS_SUB=		yes
 
+LDFLAGS= -L${OPENSSLLIB}
+DFLY_PLIST= ${WRKSRC}/pkg-plist
+PLIST= ${DFLY_PLIST}
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD
-CFLAGS+=       -Wno-error=int-conversion
+CFLAGS+= -Wno-error=int-conversion -I${OPENSSLINC}
 .endif
 
 .if ${ARCH}=="i386"
@@ -55,5 +57,9 @@ post-patch-ODBC-off:
 
 post-install:
 	@${LN} -sf sagittarius ${STAGEDIR}${PREFIX}/bin/sash
+
+dfly-patch:
+	${CP} -v ${.CURDIR:H}/sagittarius-scheme/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e 's/pc-freebsd/pc-dragonfly/g' ${DFLY_PLIST}
 
 .include <bsd.port.post.mk>

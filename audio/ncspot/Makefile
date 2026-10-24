@@ -1,6 +1,6 @@
 PORTNAME=	ncspot
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.1
+DISTVERSION=	1.4.0
 PORTREVISION=	1
 CATEGORIES=	audio
 
@@ -11,6 +11,7 @@ WWW=		https://github.com/hrkfdn/ncspot
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	bindgen:devel/rust-bindgen-cli
 LIB_DEPENDS=	libdbus-1.so:devel/dbus
 
 USES=		cargo ssl
@@ -46,11 +47,9 @@ PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 PULSEAUDIO_USES=	localbase:ldflags
 PULSEAUDIO_VARS=	CARGO_FEATURES+=pulseaudio_backend
 
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ncspot
-
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

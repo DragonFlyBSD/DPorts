@@ -1,0 +1,4 @@
+Azure Search is the Microsoft Azure Cognitive Search client library
+for Python. It provides APIs for creating and managing search indexes,
+uploading documents, and executing search queries against Azure
+Cognitive Search services.

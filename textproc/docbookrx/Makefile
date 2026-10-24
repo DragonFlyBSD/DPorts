@@ -1,8 +1,9 @@
 PORTNAME=	docbookrx
 DISTVERSION=	1.0.0.dev
+PORTREVISION=	1
 CATEGORIES=	textproc
 
-MAINTAINER=	bofh@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DocBook to AsciiDoc converter
 WWW=		https://github.com/asciidoctor/docbookrx
 
@@ -17,11 +18,10 @@ RUN_DEPENDS=	rubygem-nokogiri>=1.8:textproc/rubygem-nokogiri
 
 USES=	ruby
 USE_GITHUB=	yes
-GH_ACCOUNT=	allanjude
+GH_ACCOUNT=	asciidoctor
 GH_PROJECT=	docbookrx
-GH_TAGNAME=	06cae39
-USE_LOCALE?=	en_US.UTF-8
-GEM_ENV+=	RB_USER_INSTALL=yes LANG=${USE_LOCALE} LC_ALL=${USE_LOCALE}
+GH_TAGNAME=	06f4336
+GEM_ENV+=	RB_USER_INSTALL=yes
 
 NO_ARCH=	yes
 
@@ -60,6 +60,7 @@ do-install:
 			${FIND} -ds ${STAGEDIR}${PREFIX}/${EXT_DIR} -type f -print | ${SED} -E -e \
 			's,^${STAGEDIR}${PREFIX}/?,,' >> ${TMPPLIST} ; \
 		fi
+	${ECHO} '@dir ${GEMS_BASE_DIR}/doc' >> ${TMPPLIST}
 	${ECHO} '@dir ${GEMS_BASE_DIR}/plugins' >> ${TMPPLIST}
 
 do-install-DOCS-on:

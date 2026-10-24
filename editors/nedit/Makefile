@@ -1,12 +1,10 @@
 PORTNAME=	nedit
-PORTVERSION=	5.7
-PORTREVISION=	1
+DISTVERSION=	5.8
 CATEGORIES=	editors
-#MASTER_SITES=	LOCAL/swills
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-source/
-DISTFILES=	nedit-${PORTVERSION}-src.tar.gz
+DISTFILES=	nedit-${DISTVERSION}-src.tar.gz
 
-MAINTAINER=	bofh@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X11/Motif GUI text editor for programs and plain text files
 WWW=		https://sourceforge.net/projects/nedit/
 
@@ -22,6 +20,7 @@ PLIST_FILES=	bin/nclient \
 		share/man/man1/nclient.1.gz \
 		share/man/man1/nedit.1.gz
 
+MAKE_JOBS_UNSAFE= yes
 post-build:
 	cd ${WRKSRC} && make docs
 

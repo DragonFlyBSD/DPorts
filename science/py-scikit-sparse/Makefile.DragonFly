@@ -1,8 +1,0 @@
-USE_GCC_VERSION=	${GCC_DEFAULT}
-NO_CCACHE=	yes
-
-# The brew check in setup.py is very brittle. Just remove the -f option
-# from the readlink call which is different from Linux
-dfly-patch:
-	${REINPLACE_CMD} -e 's/readlink -f/readlink/g' \
-		${WRKSRC}/setup.py

@@ -35,4 +35,7 @@ PORTSCOUT=	skipv:0.921111901
 USES=		perl5
 USE_PERL5=	configure
 
+dfly-install:
+	${RM} -fv ${STAGEDIR}${SITE_PERL}/perltidy.pl
+
 .include <bsd.port.mk>

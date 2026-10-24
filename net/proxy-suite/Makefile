@@ -52,10 +52,15 @@ MAKE_ARGS=	INST_ROOT=${STAGEDIR} CONF_DST=ftp-proxy.conf.sample
 
 SUB_FILES=	pkg-message
 
+MAKE_JOBS_UNSAFE= yes
 post-patch:
 	@${REINPLACE_CMD} 's,net/pfvar.h,,' ${WRKSRC}/configure
 
 pre-install:
 	${STRIP_CMD} ${WRKSRC}/ftp-proxy/ftp-proxy
+
+pre-build:
+	${ECHO} "#undef HAVE_NETINET_IP_FIL_H" >> ${WRKSRC}/config.h
+	${ECHO} "#undef HAVE_NETINET_IP_NAT_H" >> ${WRKSRC}/config.h
 
 .include <bsd.port.mk>

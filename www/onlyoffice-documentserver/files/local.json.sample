@@ -1,0 +1,54 @@
+{
+  "services": {
+    "CoAuthoring": {
+      "token": {
+        "enable": {
+          "request": {
+            "inbox": false,
+            "outbox": false
+          },
+          "browser": false
+        },
+        "inbox": {
+          "header": "Authorization"
+        },
+        "outbox": {
+          "header": "Authorization"
+        }
+      },
+      "secret": {
+        "browser": {
+          "string": "JWTsecretstring"
+        },
+        "inbox": {
+          "string": "JWTsecretstring"
+        },
+        "outbox": {
+          "string": "JWTsecretstring"
+        },
+        "session": {
+          "string": "JWTsecretstring"
+        }
+      }
+    }
+  },
+  "openpgpjs": {
+    "_comment": "https://helpcenter.onlyoffice.com/docs/installation/docs-developer-configuring.aspx#openpgpprotocol_block",
+    "encrypt": {
+      "passwords": ["PGPguardsecretstring"]
+    },
+    "decrypt": {
+      "passwords": ["PGPguardsecretstring"]
+    }
+  },
+  "aesEncrypt": {
+    "_comment": "https://helpcenter.onlyoffice.com/docs/installation/docs-developer-configuring.aspx#aes256gcmalgorithm_block",
+    "secret": "docpasswordsecretstring"
+  },
+  "storage": {
+    "name": "storage-fs",
+    "fs": {
+      "secretString": "verysecretstring"
+    }
+  }
+}

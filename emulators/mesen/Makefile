@@ -1,7 +1,5 @@
 PORTNAME=	mesen
-DISTVERSION=	0.9.8-4
-DISTVERSIONSUFFIX=	-g4c701ad6
-PORTREVISION=	4
+DISTVERSION=	0.9.9
 CATEGORIES=	emulators
 
 MAINTAINER=	ports@FreeBSD.org
@@ -10,7 +8,7 @@ WWW=		https://www.mesen.ca/
 
 LICENSE=	GPLv3
 
-# ARM/MIPS are only supported on Android
+# ARM is only supported on Android
 ONLY_FOR_ARCHS=	amd64 i386
 
 BUILD_DEPENDS=	zip:archivers/zip \
@@ -19,7 +17,7 @@ BUILD_DEPENDS=	zip:archivers/zip \
 LIB_DEPENDS=	libevdev.so:devel/libevdev \
 		libgdiplus.so:x11-toolkits/libgdiplus
 
-USES=		compiler:c++14-lang gmake pkgconfig sdl
+USES=		compiler:c++17-lang gmake pkgconfig sdl
 USE_GITHUB=	yes
 GH_ACCOUNT=	SourMesen
 GH_PROJECT=	Mesen
@@ -30,7 +28,7 @@ MAKE_ARGS=	MESENPLATFORM=${MESEN_ARCH} \
 		FSLIB=-lc++experimental \
 		LTO=true \
 		SYSTEM_LIBEVDEV=true
-MESEN_ARCH=	${ARCH:S/amd64/x64/:S/i386/x86/}
+MESEN_ARCH= x64
 
 OPTIONS_MULTI=			FRONTENDS
 OPTIONS_MULTI_FRONTENDS=	MONO LIBRETRO
@@ -48,6 +46,7 @@ MONO_DESKTOP_ENTRIES=	"Mesen" "NES/Famicom Emulator" \
 
 LIBRETRO_ALL_TARGET=	libretro
 
+MAKE_ARGS+= LTO=false MESENPLATFORM=x64 FSLIB=
 .include <bsd.port.pre.mk>
 
 .if defined(MONO_DEFAULT) && ${MONO_DEFAULT} > 6
@@ -78,5 +77,9 @@ do-install-LIBRETRO-on:
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/libretro
 	${INSTALL_LIB} ${WRKSRC}/bin/mesen_libretro.${MESEN_ARCH}.so \
 			${STAGEDIR}${PREFIX}/lib/libretro/mesen_libretro.so
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lstdc++fs@@g' \
+		${WRKSRC}/makefile
 
 .include <bsd.port.post.mk>

@@ -2,8 +2,8 @@ PORTNAME=	solid
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	devel kde kde-frameworks
 
-COMMENT=	Desktop hardware abstraction
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Desktop hardware abstraction
 
 RUN_DEPENDS=	bsdisks:sysutils/bsdisks
 
@@ -19,5 +19,11 @@ IMOBILE_LIB_DEPENDS=	libimobiledevice-1.0.so:comms/libimobiledevice \
 			libplist-2.0.so:devel/libplist
 IMOBILE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_IMobileDevice \
 			CMAKE_DISABLE_FIND_PACKAGE_PList
+
+RUN_DEPENDS:= ${RUN_DEPENDS:N*bsdisks} openbsdisks2:sysutils/openbsdisks2
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 
 .include <bsd.port.mk>

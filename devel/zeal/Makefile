@@ -1,28 +1,27 @@
 PORTNAME=	zeal
-PORTVERSION=	0.6.1
-PORTREVISION=	5
-DISTVERSIONPREFIX=v
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.9.1
 CATEGORIES=	devel
 
-MAINTAINER=	rakuco@FreeBSD.org
+MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Offline documentation browser
 WWW=		https://zealdocs.org
 
-LICENSE=	GPLv3
+LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libxcb.so:x11/libxcb \
-		libxcb-keysyms.so:x11/xcb-util-keysyms
+		libxcb-keysyms.so:x11/xcb-util-keysyms \
+		libxkbcommon.so:x11/libxkbcommon
 
-USES=		cmake compiler:c++11-lib desktop-file-utils gl gnome kde:5 \
-		libarchive pkgconfig qt:5 sqlite xorg
-USE_GL=		gl  # Dependency added by qt5-gui.
+USES=		cmake compiler:c++17-lang desktop-file-utils gl kde:6 \
+		libarchive pkgconfig qt:6 sqlite xorg
 USE_GITHUB=	yes
+GH_ACCOUNT=	zealdocs
+USE_GL=		opengl
 USE_KDE=	ecm
-USE_QT=		concurrent core gui network webkit widgets x11extras \
-		buildtools:build qmake:build
+USE_QT=		base declarative positioning webchannel webengine tools:build
 USE_XORG=	ice sm x11 xcb xext
 
-GH_ACCOUNT=	zealdocs
-
+USES+= gmake
 .include <bsd.port.mk>

@@ -13,7 +13,7 @@ LICENSE=	BSD4CLAUSE
 
 CONFLICTS=	rdist7
 
-MAKE_JOBS_UNSAFE=	yes
+MAKE_JOBS_UNSAFE= yes
 
 # Years ago base FreeBSD maintained /usr/bin/rdist, but since then it was
 # removed. Users who wish to continue to use the rdist6 name can set

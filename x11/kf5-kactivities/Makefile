@@ -13,4 +13,8 @@ USE_KDE=	config coreaddons service windowsystem \
 USE_QT=		core dbus declarative gui network sql \
 		buildtools:build qmake:build
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

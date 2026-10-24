@@ -1,0 +1,11 @@
+--- Makefile.am.orig	2026-04-19 12:31:47 UTC
++++ Makefile.am
+@@ -12,7 +12,7 @@ intl/de/vobcopy.1: vobcopy.1.de
+ 
+ intl/de/vobcopy.1: vobcopy.1.de
+ 	$(MKDIR_P) intl/de
+-	ln $< $@
++	ln ${.ALLSRC} $@
+ 
+ MOSTLYCLEANFILES = intl/de/vobcopy.1
+ 

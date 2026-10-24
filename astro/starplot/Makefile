@@ -16,6 +16,7 @@ USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
+USE_CXXSTD= c++98
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|$$(docdir)/examples|${EXAMPLESDIR}|g' ${WRKSRC}/configure

@@ -1,7 +1,7 @@
 PORTNAME=	cmus
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.12.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio
 
 MAINTAINER=	eduardo@FreeBSD.org
@@ -157,5 +157,9 @@ post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions
 	${INSTALL_DATA} ${WRKSRC}/contrib/_cmus \
 		${STAGEDIR}${PREFIX}/share/zsh/site-functions/_cmus
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(NCURSES_CFLAGS=\).*@\1""@g'	\
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

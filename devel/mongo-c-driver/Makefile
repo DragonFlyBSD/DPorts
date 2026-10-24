@@ -1,7 +1,7 @@
 PORTNAME=	mongo-c-driver
-DISTVERSION=	1.24.2
+# Note: devel/mongo-cxx-driver requires specific versions of this port
+DISTVERSION=	2.5.6
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/mongodb/${PORTNAME}/releases/download/${DISTVERSION}/
 
 MAINTAINER=	ports@bsdserwis.com
 COMMENT=	C Driver for MongoDB
@@ -10,12 +10,21 @@ WWW=		https://github.com/mongodb/mongo-c-driver
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libbson-1.0.so:devel/libbson \
+BUILD_DEPENDS=	libbson==${DISTVERSION}:devel/libbson
+LIB_DEPENDS=	libbson2.so:devel/libbson \
+		libutf8proc.so:textproc/utf8proc \
 		libzstd.so:archivers/zstd
 
 USES=		cmake cpe pathfix pkgconfig python:env
 CPE_VENDOR=	mongodb
+CPE_PRODUCT=	c_driver
+PATHFIX_WRKSRC=	${WRKSRC}/src/libmongoc
+USE_GITHUB=	yes
+GH_ACCOUNT=	mongodb
+GH_PROJECT=	mongo-c-driver
 USE_LDCONFIG=	yes
+
+PLIST_SUB=	VERSION=${DISTVERSION}
 
 CMAKE_ARGS=	-DENABLE_ZLIB=SYSTEM
 CMAKE_ON=	ENABLE_MONGOC \
@@ -24,23 +33,25 @@ CMAKE_ON=	ENABLE_MONGOC \
 CMAKE_OFF=	BUILD_TESTING \
 		ENABLE_EXAMPLES \
 		ENABLE_TESTS \
-		ENABLE_UNINSTALL
+		ENABLE_UNINSTALL \
+		USE_BUNDLED_UTF8PROC
 
 OPTIONS_DEFINE=		CRYPTOPROFILE DOCS ICU MONGODBAWS RDTSCP SASL SNAPPY \
-			SRV SSL UTF8PROC ZSTD
-OPTIONS_DEFAULT=	SSL
+			SRV SSL ZSTD
+OPTIONS_DEFAULT=	SRV SSL
 OPTIONS_SUB=		yes
 
 CRYPTOPROFILE_DESC=	Use system crypto profile (requires OpenSSL)
 MONGODBAWS_DESC=	Enable support for the MONGODB-AWS authentication mechanism
 RDTSCP_DESC=		Fast performance counters on Intel using the RDTSCP instruction
 SRV_DESC=		Enable support for mongodb+srv URIs
-UTF8PROC_DESC=		SCRAM-SHA-256 authentication with non-ASCII passwords
 
 CRYPTOPROFILE_CMAKE_ON=	-DENABLE_CRYPTO_SYSTEM_PROFILE=ON
 CRYPTOPROFILE_CMAKE_OFF=	-DENABLE_CRYPTO_SYSTEM_PROFILE=OFF
 
-DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR}
+DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}sphinx-design>0:textproc/py-sphinx-design@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}furo>0:textproc/py-furo@${PY_FLAVOR}
 DOCS_CMAKE_ON=		-DENABLE_HTML_DOCS=ON -DENABLE_MAN_PAGES=ON
 
 ICU_LIB_DEPENDS=	libicudata.so:devel/icu
@@ -67,9 +78,6 @@ SRV_CMAKE_OFF=		-DENABLE_SRV=OFF
 SSL_USES=		ssl
 SSL_CMAKE_OFF=		-DENABLE_SSL=OFF
 
-UTF8PROC_CMAKE_ON=	-DUSE_BUNDLED_UTF8PROC=ON
-UTF8PROC_CMAKE_OFF=	-DUSE_BUNDLED_UTF8PROC=OFF
-
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 ZSTD_CMAKE_ON=		-DENABLE_ZSTD=ON
 ZSTD_CMAKE_OFF=		-DENABLE_ZSTD=OFF
@@ -81,14 +89,10 @@ ZSTD_CMAKE_OFF=		-DENABLE_ZSTD=OFF
 CMAKE_ARGS+=	-DENABLE_SSL=LIBRESSL
 .endif
 CMAKE_ARGS+=	-DENABLE_SSL=OPENSSL
-.if ( ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400092 && ${SSL_DEFAULT} == base ) || ${SSL_DEFAULT:Mopenssl3*}
-CFLAGS+=	-DOPENSSL_API_COMPAT=0x30000000L
+.if ( ${OPSYS} == FreeBSD && ${SSL_DEFAULT} == base ) || ${SSL_DEFAULT:Mopenssl3*}
+CFLAGS+= -DOPENSSL_API_COMPAT=0x30000000L -DZ_HAVE_UNISTD_H
 .endif
 .endif
-
-# .if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1300523
-# EXTRA_PATCHES+=	${FILESDIR}/extra-patch-src_libmongoc_src_mongoc_mongoc-counters-private.h
-# .endif
 
 pre-configure-CRYPTOPROFILE-on:
 .if ${SSL_DEFAULT:Mlibressl*}

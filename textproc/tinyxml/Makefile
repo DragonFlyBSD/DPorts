@@ -21,6 +21,7 @@ CPE_VENDOR=	tinyxml_project
 OPTIONS_DEFINE=	DOCS PROFILE
 OPTIONS_SUB=	yes
 
+MAKE_ENV= CC_LINK=c++
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.prev
 	@${SED} -e "s=%%SHLIB_MAJOR%%=${SHLIB_MAJOR}=g" \

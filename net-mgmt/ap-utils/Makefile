@@ -20,6 +20,7 @@ OPTIONS_SUB=	yes
 NLS_USES=	gettext
 NLS_CONFIGURE_OFF=	--disable-nls
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MNLS}
@@ -30,5 +31,9 @@ post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/Documentation && \
 		${INSTALL_DATA} FAQ Ovislink-HOWTO.html HARDWARE-NOTES README.ap-gl ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*bsd\*\)@\1|*dragonfly*@g'	\
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

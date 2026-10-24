@@ -18,6 +18,7 @@ PLIST_FILES=	bin/2diff \
 		libexec/2diffh \
 		share/man/man1/2diff.1.gz
 
+MAKE_ARGS= SEPFLAG=""
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},g' \
 				${WRKSRC}/../../man/man1/diff.1

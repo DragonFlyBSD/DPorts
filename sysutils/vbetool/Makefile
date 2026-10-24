@@ -22,4 +22,9 @@ GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS+=--with-x86emu
 CFLAGS+=	-I${PREFIX}/include -L${PREFIX}/lib
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifndef \(__FreeBSD__\)@if \!defined(\1) \&\& \!defined(__DragonFly__)@g'	\
+			 -e 's@ifdef \(__FreeBSD__\)@if defined(\1) || defined(__DragonFly__)@g'	\
+		${WRKSRC}/vbetool.c
+
 .include <bsd.port.mk>

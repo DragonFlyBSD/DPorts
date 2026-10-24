@@ -1,6 +1,0 @@
-CONFIGURE_ARGS+=	--without-md5
-
-dfly-patch:
-	${REINPLACE_CMD} -e '/onestatus/s@\(freebsd\*\))@\1|dragonfly*)@g' \
-			 -e 's|which ntpd|which dntpd|' \
-		${WRKSRC}/configure

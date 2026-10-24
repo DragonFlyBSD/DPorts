@@ -14,9 +14,11 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libefl.so:devel/efl
 
-USES=		cmake desktop-file-utils pkgconfig
+USES= cmake desktop-file-utils pkgconfig localbase:ldflags
 USE_GITHUB=	yes
 GH_ACCOUNT=	Obsidian-StudiosInc
+
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4.5 compatibility
 
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
@@ -24,4 +26,5 @@ OPTIONS_SUB=	yes
 NLS_USES=	gettext
 NLS_CMAKE_BOOL=	ENABLE_NLS
 
+NLS_LDFLAGS= -lintl
 .include <bsd.port.mk>

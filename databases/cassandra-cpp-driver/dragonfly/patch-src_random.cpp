@@ -1,5 +1,5 @@
---- src/random.cpp.orig	2020-03-18 12:46:39 UTC
-+++ src/random.cpp
+--- a/src/random.cpp	2020-03-18 12:46:39 UTC
++++ b/src/random.cpp
 @@ -91,7 +91,8 @@ uint64_t get_random_seed(uint64_t seed)
  
  #define STRERROR_BUFSIZE_ 256

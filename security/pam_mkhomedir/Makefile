@@ -30,6 +30,7 @@ PLIST_FILES+=	lib/libpam_mkhomedir.a
 MAKE_ARGS+=	MK_INSTALLLIB=no
 .endif
 
+LDFLAGS= -lpam
 pre-everything::
 
 .if !defined(WITH_PROFILE) || !defined(WITH_STATIC)

@@ -1,0 +1,11 @@
+--- Makefile.am.orig	2026-04-21 05:19:06 UTC
++++ Makefile.am
+@@ -184,7 +184,7 @@ include grpc/subdir.am
+ include qpb/subdir.am
+ include fpm/subdir.am
+ include grpc/subdir.am
+-include tools/subdir.am
++# include tools/subdir.am
+ 
+ include mgmtd/subdir.am
+ 

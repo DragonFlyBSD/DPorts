@@ -1,5 +1,5 @@
 PORTNAME=	liborigin
-PORTVERSION=	3.0.3
+PORTVERSION=	3.0.4
 PORTEPOCH=	1
 CATEGORIES=	math
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/3.0
@@ -11,7 +11,7 @@ WWW=		https://sourceforge.net/projects/liborigin/
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING # GPLv3
 
-USES=		compiler:c++11-lang cmake pathfix
+USES=		compiler:c++17-lang cmake pathfix
 
 CMAKE_OFF=	BUILD_STATIC_LIBS
 USE_LDCONFIG=	yes

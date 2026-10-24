@@ -1,10 +1,11 @@
 PORTNAME=	galera
-PORTVERSION=	26.4.15
-DISTVERSIONPREFIX=	release_
+DISTVERSIONPREFIX=	mariadb-
+DISTVERSION=	26.4.27
+PORTREVISION=	1
 CATEGORIES=	databases
 PKGNAMESUFFIX=	26
 
-MAINTAINER=	devel@galeracluster.com
+MAINTAINER=	flo@FreeBSD.org
 COMMENT=	Synchronous multi-master replication engine
 WWW=		https://galeracluster.com/
 
@@ -23,28 +24,41 @@ NOT_FOR_ARCHS_REASON_i386=Uses 64 bit atomics that clang cannot generate on i386
 NOT_FOR_ARCHS_REASON_powerpc=Uses 64 bit atomics that clang cannot generate on powerpc
 
 BUILD_DEPENDS=	checkmk:devel/check \
-		${LOCALBASE}/include/boost/shared_ptr.hpp:devel/boost-libs \
 		objdump:devel/binutils
-LIB_DEPENDS=	libboost_date_time.so:devel/boost-libs
+LIB_DEPENDS=	libboost_program_options.so:devel/boost-libs
 
-USES=		compiler:c++11-lang python:build cmake ssl
+USES=		cmake compiler:c++11-lang python:build ssl
 
 USE_GITHUB=	yes
-GH_TUPLE?=	codership:galera:${DISTVERSIONPREFIX}${PORTVERSION}${DISTVERSIONSUFFIX} \
-		codership:wsrep-API:694d6ca47f5eec7873be99b7d6babccf633d1231:dummy/wsrep/src
-
-CMAKE_ARGS+=	-DGALERA_REVISION=${GH_TAGNAME}
-
+GH_TUPLE?=	mariadb:galera:${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}a \
+		codership:wsrep-API:e8313df29e9329521dced03a4cc558d0cf7d8032:dummy/wsrep/src
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	garb.sh
 
-CONFLICTS_INSTALL=      galera
+CMAKE_ARGS+=	-DGALERA_REVISION=${GH_TAGNAME}
+
+CONFLICTS_INSTALL=	galera
 
 PLIST_FILES=	bin/garbd \
 		lib/libgalera.so \
 		lib/libgalera_smm.so
 
+USE_CLANG_FALLBACK= default
+MAKE_ARGS= strict_build_flags=0
 post-install:
 	${RLN} ${STAGEDIR}/${PREFIX}/lib/libgalera_smm.so ${STAGEDIR}/${PREFIX}/lib/libgalera.so
+
+BUILD_DEPENDS:= ${BUILD_DEPENDS:N*binutils}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'       \
+		${WRKSRC}/asio/asio/detail/config.hpp   \
+		${WRKSRC}/asio/asio/detail/impl/socket_ops.ipp  \
+		${WRKSRC}/asio/asio/impl/error_code.ipp \
+		${WRKSRC}/galerautils/src/gu_errno.h    \
+		${WRKSRC}/galerautils/src/gu_limits.c   \
+		${WRKSRC}/galerautils/src/gu_limits.h   \
+		${WRKSRC}/galerautils/src/gu_mmap.cpp   \
+		${WRKSRC}/galerautils/src/gu_resolver.cpp       \
+		${WRKSRC}/galerautils/src/gu_system.h
 
 .include <bsd.port.mk>

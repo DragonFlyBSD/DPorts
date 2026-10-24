@@ -1,6 +1,5 @@
 PORTNAME=	librenms
-PORTVERSION=	25.2.0
-PORTREVISION=	1
+PORTVERSION=	26.9.1.1
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	LOCAL/dvl:vendor
@@ -19,28 +18,24 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR} \
 		bash:shells/bash \
 		dot:graphics/graphviz \
 		rrdtool:databases/rrdtool \
-		snmpget:net-mgmt/net-snmp \
-		sudo:security/sudo
+		snmpget:net-mgmt/net-snmp
 
-USES=		cpe php python shebangfix
+USES=		cpe php python shebangfix sudo
 USE_GITHUB=	yes
 # php hash/json/openssl extension is required but it's statically linked in default php
 USE_PHP=	ctype curl dom fileinfo filter gd iconv ldap mbstring mysqli \
-		pdo pdo_mysql phar posix session simplexml snmp sockets \
-		tokenizer xml xmlwriter zip zlib
+		pdo pdo_mysql phar posix readline session simplexml snmp \
+		sockets tokenizer xml xmlwriter zip zlib
 USE_RC_SUBR=	librenms
 
 SHEBANG_FILES=	../${PORTNAME}-vendor-${PORTVERSION}/paragonie/random_compat/build-phar.sh \
-		../${PORTNAME}-vendor-${PORTVERSION}/tecnickcom/tcpdf/tools/tcpdf_addfont.php \
 		../librenms-vendor-${PORTVERSION}/bin/carbon \
-		../librenms-vendor-${PORTVERSION}/bin/doctrine-dbal \
 		../librenms-vendor-${PORTVERSION}/bin/patch-type-declarations \
 		../librenms-vendor-${PORTVERSION}/bin/php-parse \
 		../librenms-vendor-${PORTVERSION}/bin/psysh \
 		../librenms-vendor-${PORTVERSION}/bin/validate-json \
 		../librenms-vendor-${PORTVERSION}/bin/var-dump-server \
 		../librenms-vendor-${PORTVERSION}/bin/yaml-lint \
-		../librenms-vendor-${PORTVERSION}/doctrine/dbal/bin/doctrine-dbal \
 		../librenms-vendor-${PORTVERSION}/justinrainbow/json-schema/bin/validate-json \
 		../librenms-vendor-${PORTVERSION}/nesbot/carbon/bin/carbon \
 		../librenms-vendor-${PORTVERSION}/nikic/php-parser/bin/php-parse \
@@ -49,20 +44,19 @@ SHEBANG_FILES=	../${PORTNAME}-vendor-${PORTVERSION}/paragonie/random_compat/buil
 		../librenms-vendor-${PORTVERSION}/symfony/error-handler/Resources/bin/patch-type-declarations \
 		../librenms-vendor-${PORTVERSION}/symfony/var-dumper/Resources/bin/var-dump-server \
 		../librenms-vendor-${PORTVERSION}/symfony/yaml/Resources/bin/yaml-lint \
-		addhost.php alerts.php artisan billing-calculate.php \
-		check-services.php config_to_json.php cronic daily.php daily.sh \
-		delhost.php discovery-wrapper.py discovery.php dist-pollers.php \
-		irc.php librenms-service.py LibreNMS/command_runner.py \
-		LibreNMS/wrapper.py lnms misc/lnms-completion.bash \
-		misc/smokeping-debian.example misc/smokeping-rhel.example \
-		pbin.sh ping.php poll-billing.php poller-wrapper.py poller.php \
-		renamehost.php scripts/auth_test.php scripts/bash_lint.sh \
+		alerts.php artisan billing-calculate.php check-services.php \
+		config_to_json.php cronic daily.php daily.sh delhost.php \
+		discovery-wrapper.py discovery.php irc.php librenms-service.py \
+		LibreNMS/command_runner.py LibreNMS/wrapper.py lnms \
+		misc/lnms-completion.bash misc/smokeping-debian.example \
+		misc/smokeping-rhel.example ping.php poll-billing.php \
+		poller-wrapper.py poller.php renamehost.php \
+		scripts/auth_test.php scripts/bash_lint.sh \
 		scripts/check_requirements.py scripts/collect-port-polling.php \
-		scripts/collect-snmp-data.php scripts/composer_wrapper.php \
+		scripts/composer_wrapper.php \
 		scripts/dynamic_check_requirements.py scripts/gen_rancid.php \
 		scripts/gen_smokeping.php scripts/git-pre-commit-hook.sh \
 		scripts/github-remove scripts/ifAlias scripts/json-app-tool.php \
-		scripts/manage_bills.php \
 		scripts/Migration/Standard_Conversion/convert_no_xml.sh \
 		scripts/Migration/Standard_Conversion/destwork_no_xml.sh \
 		scripts/Migration/Standard_Conversion/mkdir.sh \
@@ -71,11 +65,10 @@ SHEBANG_FILES=	../${PORTNAME}-vendor-${PORTVERSION}/paragonie/random_compat/buil
 		scripts/Migration/XML_Conversion/mkdir.sh scripts/new-os.php \
 		scripts/pre-commit.php scripts/purge-port.php \
 		scripts/removespikes.php scripts/removespikes.pl \
-		scripts/rename-mibs.php scripts/rrdstep.php \
-		scripts/save-test-data.php scripts/syslog-notify-oxidized.php \
+		scripts/rename-mibs.php scripts/syslog-notify-oxidized.php \
 		scripts/test-alert.php scripts/test-template.php \
-		scripts/tune_port.php scripts/watchmaillog/watchmaillog.pl \
-		snmp-scan.py snmptrap.php syslog.php validate.php
+		scripts/watchmaillog/watchmaillog.pl snmp-scan.py snmptrap.php \
+		syslog.php validate.php
 
 NO_ARCH=	yes
 NO_BUILD=	yes
@@ -108,28 +101,25 @@ FPING_RUN_DEPENDS=	fping:net/fping
 IPMITOOL_RUN_DEPENDS=	ipmitool:sysutils/ipmitool
 LIBVIRT_RUN_DEPENDS=	virsh:devel/libvirt
 MYSQLD_USES=		mysql:server
-MYSQLD_USES_OFF=	mysql:client
 NAGPLUGINS_RUN_DEPENDS=	${LOCALBASE}/libexec/nagios/check_nagios:net-mgmt/nagios-plugins
 NMAP_RUN_DEPENDS=	nmap:security/nmap
 WMIC_RUN_DEPENDS=	wmic:net-mgmt/wmi-client
 X11_RUN_DEPENDS=	mtr:net/mtr
 X11_RUN_DEPENDS_OFF=	mtr:net/mtr@nox11
-X11_USES=		magick:6
-X11_USES_OFF=		magick:6,nox11
 
-_ROOT_FILES=		addhost.php alerts.php artisan billing-calculate.php \
+_ROOT_FILES=		alerts.php artisan billing-calculate.php \
 			check-services.php composer.json composer.lock \
 			config.php.default config_to_json.php cronic daily.php \
-			delhost.php discovery-wrapper.py discovery.php \
-			dist-pollers.php irc.php librenms-service.py mkdocs.yml \
-			pbin.sh phpunit.xml ping.php poll-billing.php \
-			poller.php poller-wrapper.py renamehost.php \
-			snmp-scan.py snmptrap.php syslog.php validate.php
+			delhost.php discovery-wrapper.py discovery.php irc.php \
+			librenms-service.py mkdocs.yml phpunit.xml ping.php \
+			poll-billing.php poller.php poller-wrapper.py \
+			renamehost.php snmp-scan.py snmptrap.php syslog.php \
+			validate.php
 _SCRIPT_FILES=		daily.sh lnms
 # _RELEASE_TIMESTAMP is used for a patch inside the vendor code
 # it represents the release date via: git show --pretty='%H|%ct' -s 1.42.01
 # It sits here so you remember to update it with each release
-_RELEASE_TIMESTAMP=	1740048943
+_RELEASE_TIMESTAMP=	1790098407
 _ROOT_DIRS=		LibreNMS app bootstrap config database doc html \
 			includes lang licenses mibs misc resources routes \
 			scripts tests
@@ -145,6 +135,7 @@ _OTHER_DIRS=	database/seeders/config html/plugins html/js/lang \
 		resources/views/overview/custom tests/Browser/console \
 		tests/Browser/source tests/Browser/screenshots \
 		vendor/librenms/laravel-vue-i18n-generator/tests/output \
+		vendor/symfony/mime/Resources/bin \
 		vendor/symfony/string/Resources/bin
 
 post-patch:
@@ -155,7 +146,6 @@ post-patch:
 		${WRKSRC}/LibreNMS/Validations/Php.php \
 		${WRKSRC}/LibreNMS/Validations/System.php \
 		${WRKSRC}/config.php.default \
-		${WRKSRC}/includes/html/output/capture.inc.php \
 		${WRKSRC}/poller-wrapper.py \
 		${WRKSRC}/snmp-scan.py \
 		${WRKSRC}/daily.sh

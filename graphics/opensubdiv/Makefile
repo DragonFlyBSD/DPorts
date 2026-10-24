@@ -1,7 +1,7 @@
 PORTNAME=	opensubdiv
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3_6_0
-PORTREVISION=	3
+DISTVERSION=	3_7_0
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	FreeBSD@Shaneware.biz
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 BUILD_DEPENDS=	glfw>3.0.0:graphics/glfw
 
-USES=		cmake gl localbase:ldflags
+USES= cmake gl localbase:ldflags python:3.7+,build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	PixarAnimationStudios
@@ -58,9 +58,11 @@ OPENCL_LDFLAGS=		-lGLX
 OPENMP_CMAKE_BOOL_OFF=	NO_OMP
 
 PTEX_LIB_DEPENDS=	libPtex.so:graphics/ptex
+PTEX_USES=		compiler:c++17-lang
 PTEX_CMAKE_BOOL_OFF=	NO_PTEX
 PTEX_CMAKE_ON=		-DPTEX_INCLUDE_DIR:STRING=${LOCALBASE}/include/ptex \
-			-DPTEX_LOCATION:STRING=${LOCALBASE}
+			-DPTEX_LOCATION:STRING=${LOCALBASE} \
+			-DCMAKE_CXX_STANDARD:INTEGER=17
 
 TBB_LIB_DEPENDS=	libtbb.so:devel/onetbb
 TBB_CMAKE_BOOL_OFF=	NO_TBB
@@ -72,7 +74,9 @@ TEST_CMAKE_BOOL_OFF=	NO_REGRESSION NO_TESTS
 
 TUTORIALS_CMAKE_BOOL_OFF=	NO_TUTORIALS
 
-post-patch:
+OPTIONS_EXCLUDE= DOCS
+CMAKE_BOOL_OFF= NO_DOC
+pre-configure:
 	${FIND} ${WRKSRC}/tutorials -name CMakeLists.txt -exec \
 		${REINPLACE_CMD} -e 's|{CMAKE_BINDIR_BASE}/tutorials|{CMAKE_INSTALL_PREFIX}/${DATADIR_REL}/tutorials|g' {} +
 	${FIND} ${WRKSRC}/examples -name CMakeLists.txt -exec \
@@ -80,4 +84,5 @@ post-patch:
 	${FIND} ${WRKSRC}/regression -name CMakeLists.txt -exec \
 		${REINPLACE_CMD} -e 's|{CMAKE_BINDIR_BASE}|{CMAKE_INSTALL_PREFIX}/tests/${PORTNAME}|g' {} +
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NTBB}
 .include <bsd.port.mk>

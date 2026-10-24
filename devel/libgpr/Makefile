@@ -1,10 +1,9 @@
 PORTNAME=	libgpr
 DISTVERSIONPREFIX=	v
-DISTVERSION=	23.0.0
-PORTREVISION=	1
+DISTVERSION=	25.0.0
 CATEGORIES=	devel
 
-MAINTAINER=	thierry@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Library from GPRbuild
 WWW=		https://www.adacore.com/gems/gem-65
 
@@ -12,7 +11,7 @@ LICENSE=	GPLv3+ GPLv3RLE
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/COPYING3
 
-BUILD_DEPENDS=	gprbuild>=23:devel/gprbuild
+BUILD_DEPENDS=	gprbuild>=25:devel/gprbuild
 LIB_DEPENDS=	libxmlada_dom.so:textproc/xmlada
 
 USES=		ada:12,run gmake
@@ -27,6 +26,7 @@ ALL_TARGET=	libgpr.build
 INSTALL_TARGET=	libgpr.install
 
 GCC_VER=	12
+PLIST_SUB=	GCC_VER=${GCC_VER}
 
 pre-configure:
 	${REINPLACE_CMD} -e '/^LIB_INSTALLER/s|prefix=|prefix=${STAGEDIR}|'	\

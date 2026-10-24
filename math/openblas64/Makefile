@@ -1,12 +1,16 @@
 PORTNAME=	openblas
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.27
+DISTVERSION=	0.3.34
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	NL/lapack/timing/:lapack_tmg
 PKGNAMESUFFIX=	64
 DISTFILES=	large.tgz:lapack_tmg \
 		timing.tgz:lapack_tmg
 DIST_SUBDIR=	openblas
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	76e12db33be8c5ae981b36ef924168e1b1248219.patch:-p1
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	OpenBLAS with 8 byte integers on 64-bits architectures
@@ -29,12 +33,13 @@ CMAKE_ARGS=	-DINTERFACE64:BOOL=on	\
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenMathLib
 GH_PROJECT=	OpenBLAS
+
 LARGE_FILE=	large.tgz
 TIMING_FILE=	timing.tgz
 CPE_VENDOR=	openblas_project
 
 USE_LDCONFIG=	yes
-
+TESTING_UNSAFE=	yes
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
 OPTIONS_DEFINE=			BENCHMARKS DYNAMIC_ARCH OPENMP
@@ -54,17 +59,13 @@ DYNAMIC_ARCH_DESC=	Optimize for multiple CPU types, otherwise for this CPU
 BENCHMARKS_CMAKE_BOOL=	BUILD_BENCHMARKS
 DYNAMIC_ARCH_CMAKE_BOOL=DYNAMIC_ARCH DYNAMIC_OLDER
 OPENMP_CMAKE_BOOL=	USE_OPENMP
-OPENMP_LDFLAGS=		-lomp
+OPENMP_CMAKE_ON=	-DOpenMP_omp_LIBRARY="/usr/lib/libomp.so"
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc64
-USE_GCC=		yes
-.endif
-
-.if ${ARCH} == powerpc64le
-CFLAGS+=		-lm
-USE_GCC=		yes
+CMAKE_ARGS+=		-DTARGET=PPC970
 .endif
 
 post-extract:

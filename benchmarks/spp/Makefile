@@ -18,4 +18,5 @@ WRKSRC=		${WRKDIR}/caia-swin-${PORTNAME}-${BB_TAGNAME}
 
 PLIST_FILES=	bin/spp share/man/man1/spp.1.gz
 
+CFLAGS= -Wno-stringop-truncation
 .include <bsd.port.mk>

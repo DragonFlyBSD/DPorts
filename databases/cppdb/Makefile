@@ -104,4 +104,5 @@ PLIST_SUB+=	SQLITE3=""
 .endif
 .endif
 
+USES:= ${USES:Nninja}
 .include <bsd.port.mk>

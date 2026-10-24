@@ -20,6 +20,7 @@ SHEBANG_FILES=	configure
 
 HAS_CONFIGURE=	yes
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|gcc|${CC}|" ${WRKSRC}/configure
 

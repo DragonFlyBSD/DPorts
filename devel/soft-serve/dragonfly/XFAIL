@@ -1,0 +1,1 @@
+XFAIL_DragonFly= go console.go newMaster

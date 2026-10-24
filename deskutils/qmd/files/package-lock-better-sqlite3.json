@@ -1,0 +1,36 @@
+{
+  "name": "better-sqlite3-installer",
+  "version": "1.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "better-sqlite3-installer",
+      "version": "1.0.0",
+      "dependencies": {
+        "better-sqlite3": "^13.0.3"
+      }
+    },
+    "node_modules/better-sqlite3": {
+      "version": "13.0.3",
+      "resolved": "https://registry.npmjs.org/better-sqlite3/-/better-sqlite3-13.0.3.tgz",
+      "integrity": "sha512-RbOBxmLBG8uvFUc15X9+9SFemKcQ0WBuISBVkpuiaUB2qblC8UWlHEjdWVoZ8AdhSwmoEgsiXKfopX0CQxaACQ==",
+      "license": "MIT",
+      "dependencies": {
+        "node-addon-api": "^8.0.0"
+      },
+      "engines": {
+        "node": ">=22"
+      }
+    },
+    "node_modules/better-sqlite3/node_modules/node-addon-api": {
+      "version": "8.9.2",
+      "resolved": "https://registry.npmjs.org/node-addon-api/-/node-addon-api-8.9.2.tgz",
+      "integrity": "sha512-VijLXbi3UACN69I0JVXJsX4tjACjNoQDgv2gTF6sx2wWEi8tkSg2eX8p5gSIFi8z2+DL3oHmY6OyKce38SDolg==",
+      "license": "MIT",
+      "engines": {
+        "node": "^18 || ^20 || >= 21"
+      }
+    }
+  }
+}

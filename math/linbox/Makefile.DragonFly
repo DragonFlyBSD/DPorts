@@ -1,3 +1,0 @@
-
-# something strange
-CONFIGURE_ARGS+=	--disable-dependency-tracking

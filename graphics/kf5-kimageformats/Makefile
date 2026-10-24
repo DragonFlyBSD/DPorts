@@ -1,6 +1,6 @@
 PORTNAME=	kimageformats
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
-PORTREVISION=	2
+PORTREVISION=	7
 CATEGORIES=	graphics kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
@@ -38,5 +38,9 @@ RAW_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_libraw
 post-patch:
 		${REINPLACE_CMD} s,Imf::Int64,uint64_t, \
 			${WRKSRC}/src/imageformats/exr.cpp
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

@@ -78,4 +78,7 @@ do-install:
 	@${ECHO_MSG} "Configure your ${LOCALBASE}/etc/nfsen.conf to have necessary sources ";
 	@${ECHO_MSG} "Then run 'nfsen reconfig' to correctly setup source, RRD, and profile files";
 
+dfly-install:
+	-${RM} -v ${STAGEDIR}${PREFIX}/libexec/nfsen/Nfcomm.pm.bak
+
 .include <bsd.port.mk>

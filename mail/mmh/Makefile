@@ -34,6 +34,7 @@ LOCKF_CONFIGURE_ON=	--with-locking=lockf
 
 OPTIONS_DEFAULT=	FLOCK
 
+USES= iconv ncurses
 .include <bsd.port.options.mk>
 
 .if defined(WITH_DEBUG)

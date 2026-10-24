@@ -1,61 +1,51 @@
 PORTNAME=	Carla
-DISTVERSIONPREFIX=	v
-DISTVERSION=	2.4.3
+PORTVERSION=	2.6.0.a1.g20260319
 CATEGORIES=	audio
 
-MAINTAINER=	yuri@FreeBSD.org
+MAINTAINER=	vishwin@FreeBSD.org
 COMMENT=	Audio plugin host for Jack and PulseAudio
+WWW=		https://kx.studio/Applications:Carla \
+		https://github.com/falkTX/Carla
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/doc/GPL.txt
 
-BROKEN_powerpc64le=	fails to build, see https://github.com/falkTX/Carla/issues/1651
-
 LIB_DEPENDS=	liblo.so:audio/liblo \
 		libsndfile.so:audio/libsndfile
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyliblo>0:audio/py-pyliblo@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyliblo3>0:audio/py-pyliblo3@${PY_FLAVOR}
 
-USES=		compiler:c++11-lib desktop-file-utils gl gmake gnome localbase \
-		pkgconfig pyqt:5 python:3.4+ qt:5 shared-mime-info shebangfix \
+USES=		compiler:c++11-lib desktop-file-utils gl gmake localbase:ldflags \
+		pkgconfig pyqt:6 python qt:6 sdl shared-mime-info shebangfix \
 		tar:bz2 xorg
-USE_PYQT=	pyqt5 sip
-USE_GNOME=	gtk20 gtk30
-USE_QT=		core gui widgets buildtools_build
+USE_PYQT=	pyqt6
+USE_QT=		base
 USE_GL=		gl
 USE_XORG=	x11
+USE_SDL=	sdl2
 USE_LDCONFIG=	${PREFIX}/lib/carla
 
 CONFLICTS_BUILD=	rtaudio rtmidi
 
-SHEBANG_FILES=	data/carla-single data/carla-bridge-lv2-modgui source/native-plugins/resources/* source/frontend/*
+SHEBANG_FILES=	bin/ data/ source/native-plugins/resources/ source/frontend/
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	falkTX
+GH_TAGNAME=	97a9e0740baf6df2df942495c02532a624c44682
 
 MAKE_ARGS=	HAVE_QT4=false \
+		HAVE_QT5=false \
+		HAVE_FFMPEG=false \
 		EXTERNAL_PLUGINS=false \
 		PREFIX=${LOCALBASE}
-# Give the Makefile the proper versioned binaries of PyQt
-BINARY_ALIAS=	pyuic5=${LOCALBASE}/bin/pyuic5-${PYTHON_VER} \
-		pyrcc5=${LOCALBASE}/bin/pyrcc5-${PYTHON_VER}
 
-OPTIONS_DEFINE=		FFMPEG FLUIDSYNTH LINUXSAMPLER
-OPTIONS_DEFAULT=	FFMPEG FLUIDSYNTH JACK
-OPTIONS_DEFAULT_x86_64=	LINUXSAMPLER
-OPTIONS_DEFAULT_i386=	LINUXSAMPLER
+OPTIONS_DEFINE=		FLUIDSYNTH
+OPTIONS_DEFAULT=	FLUIDSYNTH JACK
 OPTIONS_MULTI=		BACKEND
 OPTIONS_MULTI_BACKEND=	JACK PULSEAUDIO
 BACKEND_DESC=		Audio backend
 
-FFMPEG_LIB_DEPENDS=		libavutil.so:multimedia/ffmpeg
-FFMPEG_MAKE_ARGS_OFF=		HAVE_FFMPEG=false
-
 FLUIDSYNTH_LIB_DEPENDS=		libfluidsynth.so:audio/fluidsynth
 FLUIDSYNTH_MAKE_ARGS_OFF=	HAVE_FLUIDSYNTH=false
-
-LINUXSAMPLER_DESC=		Use LinuxSampler: a software audio sampler
-LINUXSAMPLER_LIB_DEPENDS=	liblinuxsampler.so:audio/linuxsampler
-LINUXSAMPLER_MAKE_ARGS_OFF=	HAVE_LINUXSAMPLER=false
 
 JACK_BUILD_DEPENDS=		jackit>0:audio/jack
 JACK_RUN_DEPENDS=		${LOCALBASE}/lib/libjack.so:audio/jack
@@ -64,15 +54,22 @@ JACK_MAKE_ARGS_OFF=		HAVE_JACK=false
 PULSEAUDIO_LIB_DEPENDS=		libpulse-simple.so:audio/pulseaudio
 PULSEAUDIO_MAKE_ARGS_OFF=	HAVE_PULSEAUDIO=false
 
+CFLAGS_powerpc64=	-DEEL_TARGET_PORTABLE
+
 post-install:
-	@${REINPLACE_CMD} -i '' -e ' \
-		s|^PYTHON=.*|PYTHON=${PYTHON_CMD}|; \
-		s|#!/bin/bash|#!/bin/sh|' \
+	@${SED} -i '' -e 's|^PYTHON=.*|PYTHON=${PYTHON_CMD}|' \
 		${STAGEDIR}${PREFIX}/bin/carla*
 	${RMDIR} ${STAGEDIR}${PREFIX}/share/carla/resources/translations
 
 devel-features: patch
 	@${ECHO} "Developer command: show build features"
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} features
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/source/includes/CarlaDefines.h \
+		${WRKSRC}/source/modules/AppConfig.h \
+		${WRKSRC}/source/modules/audio_decoder/minimp3_ex.h \
+		${WRKSRC}/source/modules/juce_core/system/juce_TargetPlatform.h
 
 .include <bsd.port.mk>

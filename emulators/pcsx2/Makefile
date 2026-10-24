@@ -1,0 +1,103 @@
+PORTNAME=	pcsx2
+PORTVERSION=	2.8.2
+DISTVERSIONPREFIX=	v
+PORTREVISION=	1
+CATEGORIES=	emulators
+
+MAINTAINER=	martymac@FreeBSD.org
+COMMENT=	Free and open-source PlayStation 2 emulator
+WWW=		https://pcsx2.net
+
+LICENSE=	GPLv3 LGPL3
+LICENSE_COMB=	multi
+
+ONLY_FOR_ARCHS=	amd64
+
+BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers
+# Notes on dependencies (see cmake/SearchForStuff.cmake):
+# - glad comes from 3rdparty/ (conflicts with libglvnd)
+# - fmt, soundtouch, zydis, libzip
+#   are always included from 3rdparty/
+LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
+		libavformat.so:multimedia/ffmpeg \
+		libavutil.so:multimedia/ffmpeg \
+		libbacktrace.so:devel/libbacktrace \
+		libc4core.so:devel/c4core \
+		libcurl.so:ftp/curl \
+		libdbus-1.so:devel/dbus \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2 \
+		libjack.so:audio/jack \
+		libkddockwidgets-qt6.so:x11-toolkits/kddockwidgets \
+		liblz4.so:archivers/liblz4 \
+		libplutosvg.so:graphics/plutosvg \
+		libplutovg.so:graphics/plutovg \
+		libpng.so:graphics/png \
+		libpulse.so:audio/pulseaudio \
+		libryml.so:devel/rapidyaml \
+		libshaderc_shared.so:graphics/shaderc \
+		libsndio.so:audio/sndio \
+		libswresample.so:multimedia/ffmpeg \
+		libswscale.so:multimedia/ffmpeg \
+		libsysinfo.so:devel/libsysinfo \
+		libwebp.so:graphics/webp \
+		libxkbcommon.so:x11/libxkbcommon \
+		libzstd.so:archivers/zstd
+
+USES=		cmake compiler:c++20-lang desktop-file-utils elfctl gl jpeg \
+		kde:6 pkgconfig qt:6 sdl xorg
+
+USE_GITHUB=	yes
+GH_PROJECT=	pcsx2
+
+USE_GL=		egl
+USE_SDL=	sdl3 ttf3
+USE_XORG=	ice x11 xcb xext xi xpm xrandr xrender
+USE_QT=		base declarative tools
+USE_KDE=	ecm:build
+ELF_FEATURES=	+wxneeded:bin/pcsx2-qt
+
+# SSE 4.1 instructions are a hard requirement, if CPUTYPE is defined
+# use whatever is set and let the build fail if it falls below
+# baseline requirements. If it's undefined set penryn as target
+# as it's the oldest CPU arch that supports SSE 4.1
+.if defined(CPUTYPE)
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-no-march-native
+.else
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-no-march-minimum-req
+.endif
+
+# See: cmake/BuildParameters.cmake
+# XXX Vulkan comes from 3rdparty/
+CMAKE_ARGS+=	-DCMAKE_LOCALBASE:STRING=${LOCALBASE} \
+		-DCMAKE_REQUIRED_INCLUDES:STRING=${LOCALBASE}/include/ \
+		-DENABLE_TESTS:BOOL=OFF \
+		-DPCSX2_RESOURCES_PATH:STRING=${DATADIR}/resources \
+		-DUSE_VTUNE:BOOL=OFF \
+		-DWAYLAND_API=ON
+
+OPTIONS_DEFINE=	DOCS
+PORTDOCS=	GameIndex.pdf
+
+# Stable releases use an even minor number
+PORTSCOUT=	limit:^v[0-9]+.[02468].
+
+# - Program and resources are copied from target dir ${CONFIGURE_WRKSRC}/bin
+#   because only necessary resources are installed there (e.g. no dx11 stuff)
+do-install:
+	cd ${CONFIGURE_WRKSRC}/bin && \
+		${COPYTREE_SHARE} resources/ ${STAGEDIR}${DATADIR}/ && \
+		${RM} -rf ${STAGEDIR}${DATADIR}/resources/docs/
+	${INSTALL_PROGRAM} ${CONFIGURE_WRKSRC}/bin/pcsx2-qt \
+		${STAGEDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/pcsx2-qt/resources/icons/AppIcon64.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps/PCSX2.png
+	${INSTALL_DATA} ${WRKSRC}/.github/workflows/scripts/linux/pcsx2-qt.desktop \
+		${STAGEDIR}${PREFIX}/share/applications/PCSX2.desktop
+
+post-install-DOCS-on:
+	${MKDIR} ${STAGEDIR}${DOCSDIR} && \
+		${INSTALL_DATA} ${PORTDOCS:S|^|${CONFIGURE_WRKSRC}/bin/resources/docs/|} \
+			${STAGEDIR}${DOCSDIR}
+
+.include <bsd.port.mk>

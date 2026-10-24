@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/media/gpu/vaapi/vaapi_wrapper.cc.orig	2024-02-23 21:04:38 UTC
+--- src/3rdparty/chromium/media/gpu/vaapi/vaapi_wrapper.cc.orig	2026-08-11 12:42:19 UTC
 +++ src/3rdparty/chromium/media/gpu/vaapi/vaapi_wrapper.cc
-@@ -66,7 +66,7 @@
+@@ -87,7 +87,7 @@ using media_gpu_vaapi::kModuleVa_prot;
  using media_gpu_vaapi::kModuleVa_prot;
  #endif
  

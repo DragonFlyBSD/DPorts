@@ -18,4 +18,10 @@ NO_ARCH=	yes
 post-patch:
 	@${STRIP_CMD} ${WRKSRC}/lib/fonts/ttf2ufm/ttf2ufm
 
+.if defined(DEVELOPER)
+.MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+NO_ARCH_IGNORE=	ttf2ufm
+.endif
+
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	b3sum
-PORTVERSION=	1.6.1
+PORTVERSION=	1.8.7
 CATEGORIES=	sysutils
 
 MAINTAINER=	sunpoet@FreeBSD.org

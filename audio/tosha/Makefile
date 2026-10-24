@@ -9,4 +9,8 @@ COMMENT=	Read CD digital audio and video data via the SCSI bus
 
 LICENSE=	BSD3CLAUSE
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/toscsi.h
+
 .include <bsd.port.mk>

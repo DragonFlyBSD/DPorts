@@ -1,13 +1,16 @@
 LLVM_COMMANDS=	\
-		bugpoint \
 		dsymutil \
 		llc \
 		lli \
+		llubi \
 		llvm-addr2line \
 		llvm-ar \
 		llvm-as \
 		llvm-bcanalyzer \
 		llvm-bitcode-strip \
+		llvm-c-test \
+		llvm-calc-occupancy \
+		llvm-cas \
 		llvm-cat \
 		llvm-cfi-verify \
 		llvm-cgdata \
@@ -27,20 +30,25 @@ LLVM_COMMANDS=	\
 		llvm-dwp \
 		llvm-exegesis \
 		llvm-extract \
+		llvm-extract-bundle-entry \
+		llvm-gpu-loader \
 		llvm-gsymutil \
 		llvm-ifs \
 		llvm-install-name-tool \
+		llvm-ir2vec \
 		llvm-jitlink \
 		llvm-libtool-darwin \
 		llvm-link \
 		llvm-lipo \
 		llvm-mc \
 		llvm-ml \
+		llvm-ml64 \
 		llvm-modextract \
-		llvm-mt \
 		llvm-nm \
 		llvm-objcopy \
 		llvm-objdump \
+		llvm-offload-binary \
+		llvm-offload-wrapper \
 		llvm-opt-report \
 		llvm-otool \
 		llvm-pdbutil \
@@ -54,7 +62,6 @@ LLVM_COMMANDS=	\
 		llvm-reduce \
 		llvm-remarkutil \
 		llvm-rtdyld \
-		llvm-sim \
 		llvm-size \
 		llvm-split \
 		llvm-stress \
@@ -78,6 +85,7 @@ CLANG_COMMANDS=	\
 		clang++ \
 		clang-check \
 		clang-cpp \
+		clang-dxc \
 		clang-extdef-mapping \
 		clang-format \
 		clang-linker-wrapper \
@@ -85,11 +93,16 @@ CLANG_COMMANDS=	\
 		clang-offload-packager \
 		clang-repl \
 		clang-scan-deps \
+		clang-ssaf-analyzer \
+		clang-ssaf-format \
+		clang-ssaf-linker \
+		clang-ssaf-src-edit-merge \
 		clang-tblgen \
 		diagtool \
 		hmaptool \
 		intercept-build \
 		nvptx-arch \
+		offload-arch \
 		scan-build \
 		scan-build-py \
 		scan-view
@@ -138,10 +151,14 @@ LLDB_COMMANDS=	\
 		lldb-argdumper \
 		lldb-dap \
 		lldb-instr \
-		lldb-server
+		lldb-mcp \
+		lldb-server \
+		lldb-tblgen \
+		yaml2macho-core
 
 MLIR_COMMANDS=	\
 		mlir-cat \
+		mlir-irdl-to-cpp \
 		mlir-lsp-server \
 		mlir-minimal-opt \
 		mlir-minimal-opt-canonicalize \
@@ -152,6 +169,7 @@ MLIR_COMMANDS=	\
 		mlir-reduce \
 		mlir-rewrite \
 		mlir-runner \
+		mlir-src-sharder \
 		mlir-tblgen \
 		mlir-transform-opt \
 		mlir-translate \

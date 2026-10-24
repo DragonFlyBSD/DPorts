@@ -1,0 +1,3 @@
+The git-mfc script is a Git plugin which helps FreeBSD src developers identify
+commits that can or should be merged from the main branch to a stable or
+release branch, and then perform the merge.

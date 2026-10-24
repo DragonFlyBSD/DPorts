@@ -1,0 +1,4 @@
+Optype provides building blocks for precise and flexible type hints in
+Python. It offers utilities for creating expressive type annotations
+that go beyond the standard typing module, enabling more accurate static
+type checking and improved code documentation.

@@ -1,5 +1,5 @@
 PORTNAME=	fcft
-DISTVERSION=	3.3.1
+DISTVERSION=	3.3.3
 CATEGORIES=	x11-fonts
 MASTER_SITES=	https://codeberg.org/dnkl/${PORTNAME}/archive/${DISTVERSIONFULL}${EXTRACT_SUFX}?dummy=/
 
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	tllist>=1.0.1:devel/tllist \
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libfontconfig.so:x11-fonts/fontconfig
 
-USES=		compiler:c11 meson pkgconfig xorg
+USES= compiler:c11 meson pkgconfig xorg localbase:ldflags
 USE_LDCONFIG=	yes
 USE_XORG=	pixman
 WRKSRC=		${WRKDIR}/${PORTNAME}
@@ -35,4 +35,5 @@ UTF8PROC_LIB_DEPENDS=	libutf8proc.so:textproc/utf8proc
 UTF8PROC_MESON_ENABLED=	run-shaping
 UTF8PROC_IMPLIES=	HARFBUZZ
 
+LIB_DEPENDS+= libstdthreads.so:misc/libstdthreads
 .include <bsd.port.mk>

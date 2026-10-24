@@ -1,5 +1,6 @@
 PORTNAME=	hunspell
 PORTVERSION=	0.7.90
+PORTREVISION=	2
 CATEGORIES=	korean textproc
 
 MAINTAINER=	jkim@FreeBSD.org
@@ -28,7 +29,7 @@ PLIST_FILES=	${DATADIR}/ko_KR.aff \
 		${DATADIR}/ko_KR.dic
 
 TEST_TARGET=	test
-TEST_ENV+=	GMAKE=${GMAKE} LC_ALL=en_US.UTF-8
+TEST_ENV+=	GMAKE=${GMAKE}
 
 pre-build:
 .for f in Makefile tests/Makefile

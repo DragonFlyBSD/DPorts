@@ -1,6 +1,6 @@
 PORTNAME=	rancid
-PORTVERSION=	3.13
-PORTREVISION=	3
+PORTVERSION=	3.14
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	ftp://ftp.shrubbery.net/pub/rancid/
 PKGNAMESUFFIX=	3
@@ -57,6 +57,7 @@ SUBVERSION_CONFIGURE_ON=	--with-svn
 GIT_RUN_DEPENDS=	git:devel/git
 GIT_CONFIGURE_ON=	--with-git
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NCVS} GIT
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCOMWARE}

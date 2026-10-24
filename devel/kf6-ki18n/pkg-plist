@@ -45,6 +45,10 @@ lib/libKF6I18nQml.so.%%KDE_FRAMEWORKS_VERSION%%
 %%QT_QMLDIR%%/org/kde/i18n/localeData/ki18nlocaledataqmlplugin.qmltypes
 %%QT_QMLDIR%%/org/kde/i18n/localeData/libki18nlocaledataqmlplugin.so
 %%QT_QMLDIR%%/org/kde/i18n/localeData/qmldir
+%%QT_QMLDIR%%/org/kde/ki18n/KF6I18nQml.qmltypes
+%%QT_QMLDIR%%/org/kde/ki18n/kde-qmlmodule.version
+%%QT_QMLDIR%%/org/kde/ki18n/libKF6I18nQmlplugin.so
+%%QT_QMLDIR%%/org/kde/ki18n/qmldir
 share/locale/af/LC_MESSAGES/ki18n6.mo
 share/locale/ar/LC_MESSAGES/ki18n6.mo
 share/locale/as/LC_MESSAGES/ki18n6.mo
@@ -115,6 +119,7 @@ share/locale/mk/LC_MESSAGES/ki18n6.mo
 share/locale/ml/LC_MESSAGES/ki18n6.mo
 share/locale/mr/LC_MESSAGES/ki18n6.mo
 share/locale/ms/LC_MESSAGES/ki18n6.mo
+share/locale/nan_TW@latin/LC_MESSAGES/ki18n6.mo
 share/locale/nb/LC_MESSAGES/ki18n6.mo
 share/locale/nb/LC_SCRIPTS/ki18n6/ki18n6.js
 share/locale/nds/LC_MESSAGES/ki18n6.mo

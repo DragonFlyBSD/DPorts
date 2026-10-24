@@ -1,80 +1,70 @@
-# $FreeBSD$
-
 PORTNAME=	cp2k
 DISTVERSIONPREFIX=	v
-DISTVERSION=	7.1.0-20200518
+DISTVERSION=	2026.2
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Quantum chemistry and solid state physics software package
+WWW=		https://www.cp2k.org/ \
+		https://github.com/cp2k/cp2k
 
 LICENSE=	GPLv2+
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libblas.so:math/blas \
+BUILD_DEPENDS=	fypp:devel/py-fypp@${PY_FLAVOR}
+LIB_DEPENDS=	libdbcsr.so:math/dbcsr \
 		libfftw3.so:math/fftw3 \
-		liblapack.so:math/lapack
+		libopenblas.so:math/openblas
 RUN_DEPENDS=	cp2k-data>0:science/cp2k-data
+TEST_DEPENDS=	bash:shells/bash
 
-USES=		fortran gmake localbase:ldflags python:build tar:bz2
+USES=		cmake fortran localbase:ldflags python:build,test shebangfix tar:bz2
+USE_GCC=	yes # OpenMP is used from both Fortan and C code, therefore C code should be compiled with GCC, otherwise it fails at run-time (same in dbcsr)
+
 USE_GITHUB=	yes
-GH_TAGNAME=	2e995eec7fd208c8a72d9544807bd8b8ba8cd1cc
-GH_TUPLE=	cp2k:dbcsr:f385868eec7c89f40ac9d6d9783fc34a05d2f68e:cp2k_dbcsr/exts/dbcsr \
-		pseewald:fprettify:2b2801bf91dd651c417c232bb891d407bf81085c:pseewald_fprettify/tools/prettify/fprettify \
-		aradi:fypp:7895a7efb7d2f07dc284cece6cc9474297b8dc55:aradi_fypp/exts/dbcsr/tools/build_utils/fypp
 
-MAKE_ARGS=	XARCH=FreeBSD-gfortran VERSION=${VERSION} FC=gfortran${GCC_DEFAULT} CC=${CC} LD=gfortran${GCC_DEFAULT} \
+SHEBANG_GLOB=	*.py
+
+GCC_VERSION=	${GCC_DEFAULT}
+
+MAKE_ARGS=	XARCH=FreeBSD-gfortran VERSION=${VERSION} FC=gfortran${GCC_VERSION} CC=${CC} LD=gfortran${GCC_VERSION} \
 		DATA_DIR=${DATADIR}
 
-BINARY_ALIAS=	python=${PYTHON_CMD}
+FFLAGS+=	-D__NO_STATM_ACCESS
 
-OPTIONS_DEFINE=		LIBINT
-OPTIONS_SINGLE=		MULTIPROCESSING
-OPTIONS_SINGLE_MULTIPROCESSING=		SERIAL OPENMP MPI OPENMP_MPI # for the complete list see "3a. ARCH files" in https://www.cp2k.org/howto:compile
-OPTIONS_DEFAULT=	LIBINT SERIAL
-MULTIPROCESSING_DESC=	Multiprocessing
+BINARY_ALIAS=	python=${PYTHON_CMD} python3=${PYTHON_CMD}
+
+OPTIONS_DEFINE=		LIBINT MPIX
+OPTIONS_DEFAULT=	MPIX # LIBINT
 
 LIBINT_DESC=		Use libint to evaluate integrals
-LIBINT_LIB_DEPENDS=	libint.so:science/libint
+LIBINT_CMAKE_BOOL=	CP2K_USE_LIBINT2
+LIBINT_LIB_DEPENDS=	libint2.so:science/libint2
+LIBINT_BROKEN=		missing fortran support
 
-SERIAL_DESC=		Single core (no multiprocessing)
-SERIAL_VARS=		VERSION=sopt
+MPIX_DESC=		Enable MPI
+MPIX_CMAKE_BOOL=	CP2K_USE_MPI
+MPIX_USES=		mpi:mpich
+MPIX_LIB_DEPENDS=	libscalapack.so:math/scalapack
+MPIX_VARS=		EXE_VERSION=psmp
+MPIX_VARS_OFF=		EXE_VERSION=ssmp
 
-OPENMP_VARS=		VERSION=ssmp
+PLIST_SUB=		SUFFIX=.${EXE_VERSION}
 
-MPI_VARS=		VERSION=popt
-MPI_LIB_DEPENDS=	libmpich.so:net/mpich \
-			libscalapack.so:math/scalapack
-MPI_LDFLAGS=		-lmpifort
-
-OPENMP_MPI_DESC=	Enable both OpenMP and MPI
-OPENMP_MPI_VARS=	VERSION=psmp
-OPENMP_MPI_LIB_DEPENDS=	${MPI_LIB_DEPENDS}
-OPENMP_MPI_LDFLAGS=	${MPI_LDFLAGS}
-
-EXECUTABLES=		cp2k graph cp2k_shell
-
-PLIST_FILES=		${EXECUTABLES:C/(.*)/bin\/\1.${VERSION}/}
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MOPENMP} || ${PORT_OPTIONS:MOPENMP_MPI}
-pre-configure:
-	@if [ ! -e ${LOCALBASE}/lib/libfftw3_omp.so ] ; then \
-	  ${ECHO_MSG} "The OPENMP and OPENMP_MPI options require math/fftw3" ; \
-	  ${ECHO_MSG} "to be built and installed with the OPENMP option ON" ; \
-	  exit 1; \
-	fi
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
 .endif
 
-post-patch:
-	@${REINPLACE_CMD} -i '' 's|LIBS.*=.*|& ${LDFLAGS}|; s|^FCFLAGS.*=.*|& -I${LOCALBASE}/include|; s| -march=native||' ${WRKSRC}/arch/FreeBSD-*
+do-test: install
+	@cd ${WRKSRC}/ && \
+		${SETENV} ${MAKE_ENV} CP2K_STEM=${PREFIX}/bin/cp2k \
+			./tests/do_regtest.py ${BUILD_WRKSRC}/bin ${EXE_VERSION}
 
-pre-build:
-	@${ECHO} ${PORTVERSION} > ${WRKSRC}/REVISION
+# build instructions: https://github.com/cp2k/cp2k/blob/master/INSTALL.md
 
-do-install:
-.for e in ${EXECUTABLES}
-	${INSTALL_PROGRAM} ${WRKSRC}/exe/*/${e}.${VERSION} ${STAGEDIR}${PREFIX}/bin
-.endfor
+# tests as of 2026.2:
+# Summary: correct: 3096 / 3096; 23min
+# Status: OK
 
+MAKE_ARGS:= ${MAKE_ARGS:NFC*:NCC*:NLD*} FC=gfortran8 LD=gfortran8
 .include <bsd.port.mk>

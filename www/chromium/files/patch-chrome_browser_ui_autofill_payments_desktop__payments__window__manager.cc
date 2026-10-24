@@ -1,20 +1,20 @@
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2025-05-28 14:55:43 UTC
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc.orig	2026-09-25 15:26:43 UTC
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.cc
-@@ -58,7 +58,7 @@ gfx::Rect GetPopupSizeForBnpl() {
+@@ -59,7 +59,7 @@ gfx::Size GetPopupSizeForBnpl() {
  DesktopPaymentsWindowManager::DesktopPaymentsWindowManager(
      ContentAutofillClient* client)
      : client_(CHECK_DEREF(client)) {
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   scoped_observation_.Observe(BrowserList::GetInstance());
- #endif  // BUILDFLAG(IS_LINUX)
- }
-@@ -144,7 +144,7 @@ void DesktopPaymentsWindowManager::WebContentsDestroye
+   scoped_observation_.Observe(
+       ProfileBrowserCollection::GetForProfile(Profile::FromBrowserContext(
+           client_->GetWebContents().GetBrowserContext())));
+@@ -155,7 +155,7 @@ void DesktopPaymentsWindowManager::WebContentsDestroye
    }
  }
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- void DesktopPaymentsWindowManager::OnBrowserSetLastActive(Browser* browser) {
+ void DesktopPaymentsWindowManager::OnBrowserActivated(
+     BrowserWindowInterface* browser) {
    // If there is an ongoing payments window manager pop-up flow, and the
-   // original tab's WebContents become active, activate the pop-up's

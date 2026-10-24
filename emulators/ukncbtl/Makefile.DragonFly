@@ -1,3 +1,0 @@
-
-# fix bad license
-LICENSE_FILE:=	${_LICENSE_STORE}/LGPL3

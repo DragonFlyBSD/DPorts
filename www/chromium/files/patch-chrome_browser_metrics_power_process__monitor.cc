@@ -1,6 +1,15 @@
---- chrome/browser/metrics/power/process_monitor.cc.orig	2025-01-15 09:18:26 UTC
+--- chrome/browser/metrics/power/process_monitor.cc.orig	2026-10-18 13:29:39 UTC
 +++ chrome/browser/metrics/power/process_monitor.cc
-@@ -65,7 +65,7 @@ ProcessMonitor::Metrics SampleMetrics(base::ProcessMet
+@@ -69,7 +69,7 @@ class ProcessMetricsDelegateImpl : public ProcessMetri
+   }
+ 
+ #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
+-    BUILDFLAG(IS_AIX)
++    BUILDFLAG(IS_AIX) || BUILDFLAG(IS_BSD)
+   int GetIdleWakeupsPerSecond() override {
+     return process_metrics_->GetIdleWakeupsPerSecond();
+   }
+@@ -106,7 +106,7 @@ ProcessMonitor::Metrics SampleMetrics(ProcessMetricsDe
        process_metrics.GetPlatformIndependentCPUUsage());
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -9,7 +18,7 @@
    metrics.idle_wakeups = process_metrics.GetIdleWakeupsPerSecond();
  #endif
  #if BUILDFLAG(IS_MAC)
-@@ -83,7 +83,7 @@ void ScaleMetrics(ProcessMonitor::Metrics* metrics, do
+@@ -124,7 +124,7 @@ void ScaleMetrics(ProcessMonitor::Metrics* metrics, do
    }
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -18,7 +27,7 @@
    metrics->idle_wakeups *= factor;
  #endif
  
-@@ -157,7 +157,7 @@ ProcessMonitor::Metrics& operator+=(ProcessMonitor::Me
+@@ -208,7 +208,7 @@ ProcessMonitor::Metrics& operator+=(ProcessMonitor::Me
    }
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \

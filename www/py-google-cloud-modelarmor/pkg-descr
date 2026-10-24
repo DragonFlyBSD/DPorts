@@ -1,0 +1,5 @@
+google-cloud-modelarmor is the official Google Cloud client library for the
+Model Armor API.
+
+It provides a Python interface to the Model Armor service, which helps protect
+machine learning models and applications from security risks.

@@ -1,6 +1,6 @@
 PORTNAME=	pamtester
 PORTVERSION=	0.1.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	SF
 
@@ -9,7 +9,6 @@ COMMENT=	Command line pam authentication tester
 WWW=		https://pamtester.sourceforge.net/
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CPPFLAGS+=	${CFLAGS}
 USES=	gmake
 

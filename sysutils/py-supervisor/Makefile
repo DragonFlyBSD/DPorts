@@ -1,6 +1,5 @@
 PORTNAME=	supervisor
-PORTVERSION=	4.2.5
-PORTREVISION=	1
+PORTVERSION=	4.3.0
 PORTEPOCH=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	PYPI
@@ -18,15 +17,17 @@ LICENSE_FILE=	${WRKSRC}/LICENSES.txt
 LICENSE_PERMS_MEDUSA=	dist-mirror pkg-mirror auto-accept
 LICENSE_PERMS_REPOZE=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mock>=0.5.0:devel/py-mock@${PY_FLAVOR}
 
 USES=		cpe python shebangfix
-USE_PYTHON=	autoplist distutils
+CPE_VENDOR=	supervisord
+
+USE_PYTHON=	autoplist pep517
 USE_RC_SUBR=	supervisord
 SHEBANG_FILES=	supervisor/scripts/*.py supervisor/tests/fixtures/*.py
 python_OLD_CMD=	"<<PYTHON>>"
-
-CPE_VENDOR=	supervisord
 
 NO_ARCH=	yes
 SUB_LIST=	PIDDIR=${PIDDIR} \

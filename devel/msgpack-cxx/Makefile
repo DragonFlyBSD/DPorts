@@ -1,10 +1,10 @@
 PORTNAME=	msgpack
-PORTVERSION=	6.1.1
+PORTVERSION=	9.0.0
 DISTVERSIONPREFIX=	cpp-
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-cxx
 
-MAINTAINER=	adamw@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Efficient binary serialization protocol (C++ version)
 WWW=		https://msgpack.org/
 

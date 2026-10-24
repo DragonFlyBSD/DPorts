@@ -1,5 +1,5 @@
 PORTNAME=	apprise
-DISTVERSION=	1.8.1
+DISTVERSION=	1.11.0
 CATEGORIES=	net-im python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -28,4 +28,5 @@ USE_PYTHON=	autoplist concurrent cryptography pep517
 
 NO_ARCH=	yes
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

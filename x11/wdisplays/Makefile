@@ -1,6 +1,5 @@
 PORTNAME=	wdisplays
-DISTVERSION=	1.1.1
-PORTREVISION=	1
+DISTVERSION=	1.3.0
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -25,5 +24,6 @@ GH_ACCOUNT=	artizirk
 PLIST_FILES=	bin/${PORTNAME} \
 		share/applications/network.cycles.${PORTNAME}.desktop \
 		share/icons/hicolor/scalable/apps/network.cycles.${PORTNAME}.svg
+GLIB_SCHEMAS=	network.cycles.wdisplays.gschema.xml
 
 .include <bsd.port.mk>

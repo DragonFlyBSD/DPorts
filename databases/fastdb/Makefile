@@ -15,8 +15,10 @@ USE_GCC=	yes
 MAKE_ENV=	OSTYPE="${OPSYS}"
 MAKEFILE=	makefile
 USE_LDCONFIG=	yes
-DOS2UNIX_FILES=	${MAKEFILE}
-CXXFLAGS+=	-D_WANT_SEMUN
+DOS2UNIX_FILES=	${MAKEFILE} \
+		inc/stdtp.h \
+		src/unisock.cpp
+CXXFLAGS+= -D_WANT_SEMUN -fpermissive
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
@@ -30,5 +32,9 @@ USE_CXXSTD=	gnu++98
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/FastDB.htm ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/makefile
 
 .include <bsd.port.mk>

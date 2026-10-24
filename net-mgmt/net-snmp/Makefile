@@ -1,7 +1,6 @@
 PORTNAME=	snmp
-PORTVERSION=	5.9.4
+PORTVERSION=	5.9.5.2
 PORTEPOCH=	1
-PORTREVISION=	6
 CATEGORIES=	net-mgmt
 MASTER_SITES=	SF/net-${PORTNAME}/net-${PORTNAME}/${PORTVERSION} \
 		ZI
@@ -15,13 +14,10 @@ WWW=		http://net-snmp.sourceforge.net/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-NOT_FOR_ARCHS=		mips mips64
-NOT_FOR_ARCHS_REASON=	SSP is currently broken on MIPS
-
 OPTIONS_DEFINE=	MFD_REWRITES PERL PERL_EMBEDDED PYTHON DUMMY TKMIB \
 		MYSQL AX_SOCKONLY UNPRIVILEGED SMUX DOCS AX_DISABLE_TRAP \
-		TLS NEWSYSLOG NOLIBPKG SCTP
-OPTIONS_DEFAULT=PERL PERL_EMBEDDED DUMMY SMUX NEWSYSLOG
+		TLS NEWSYSLOG NOLIBPKG SCTP AES
+OPTIONS_DEFAULT= PERL PERL_EMBEDDED DUMMY SMUX NEWSYSLOG NOLIBPKG
 OPTIONS_SUB=	yes
 
 MFD_REWRITES_DESC=	Use new MFD rewrites of mib modules
@@ -35,6 +31,7 @@ SMUX_DESC=		Build with SNMP multiplexing (SMUX) support
 NEWSYSLOG_DESC=		Automatically rotate snmpd.log via newsyslog
 NOLIBPKG_DESC=		Build without libpkg
 SCTP_DESC=		Build with SCTP MIB support
+AES_DESC=		Build with Blumenthal AES support
 
 USERS=		snmpd
 GROUPS=		snmpd
@@ -48,8 +45,11 @@ CPE_PRODUCT=	net-snmp
 USE_PERL5=	build run
 USE_CSTD=	c99
 
-CFLAGS+=	-I${LOCALBASE}/include -I${PKG_PREFIX}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LIB_DEPENDS=	libpkg.so:${PKG_ORIGIN}
+
+CFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-lm -lkvm -ldevstat \
+		 -L${LOCALBASE}/lib ${LCRYPTO}
 CONFIGURE_ENV+=	PERLPROG="${PERL}" PSPROG="${PS_CMD}" SED="${SED}"
 CONFIGURE_ARGS+=--enable-shared --enable-internal-md5 \
 		--with-default-snmp-version="${DEFAULT_SNMP_VERSION}" \
@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=--enable-shared --enable-internal-md5 \
 		--with-persistent-directory="${NET_SNMP_PERSISTENTDIR}" \
 		--with-gnu-ld --without-libwrap --enable-ipv6 \
 		--without-kmem-usage \
-		--with-ldflags="-lm -lkvm -ldevstat -L${PKG_PREFIX}/lib -L${LOCALBASE}/lib ${LCRYPTO}"
+		--with-ldflags=${LDFLAGS:Q}
 SUB_FILES=	pkg-message
 
 .if defined(WITH_SSP)
@@ -71,7 +71,13 @@ CONFIGURE_ARGS+=--with-defaults
 .endif
 
 TLS_CONFIGURE_ON=	--with-security-modules=tsm --with-transports=TLSTCP,DTLSUDP
+MYSQL_BROKEN=		ISO C99 and later do not support implicit int
 
+USES+= ncurses
+CONFIGURE_ARGS+= --with-out-mib-modules=sctp-mib
+CONFIGURE_ARGS+= ac_cv_IFNET_NEEDS_KERNEL=no
+CONFIGURE_ARGS+= ac_cv_header_pkg_h=no
+CONFIGURE_ARGS+= netsnmp_cv_func_pkg_init_LIBS=no
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
@@ -82,7 +88,7 @@ RUN_DEPENDS+=	${PY_SETUPTOOLS}
 BUILD_DEPENDS+=	${PY_SETUPTOOLS}
 CONFIGURE_ARGS+=--with-python-modules
 CONFIGURE_ENV+=	PYTHONPROG="${PYTHON_CMD}"
-MAKE_ENV+=	PYDISTUTILS_INSTALLARGS="${PYDISTUTILS_INSTALLARGS}" STAGEDIR="${STAGEDIR}"
+MAKE_ENV+= PYDISTUTILS_INSTALLARGS="${PYDISTUTILS_INSTALLARGS}" STAGEDIR="${STAGEDIR}" OPSYS=${OPSYS} MIB_SYSTEM_LIBS=-lkinfo
 PLIST_SUB+=	WITH_PYTHON="" PYTHON_VER=${PYTHON_VER}
 PLIST_SUB+=	PYDISTUTILS_PKGVERSION=${PYDISTUTILS_PKGVERSION}
 .else
@@ -93,6 +99,10 @@ CONFIGURE_ARGS+=--with-openssl="${OPENSSLBASE}"
 
 .if ${PORT_OPTIONS:MDUMMY}
 CONFIGURE_ARGS+=--with-dummy-values
+.endif
+
+.if ${PORT_OPTIONS:MAES}
+CONFIGURE_ARGS+=--enable-blumenthal-aes
 .endif
 
 .if ! ${PORT_OPTIONS:MTKMIB}
@@ -137,8 +147,8 @@ CONFIGURE_ARGS+=--enable-agentx-dom-sock-only
 CONFIGURE_ARGS+=--without-root-access
 .endif
 
-SHLIB_VERSION=	40
-SHLIB_VERSION2=	.2.1
+SHLIB_VERSION=	45
+SHLIB_VERSION2=	.0.0
 PLIST_SUB+=	SHLIB_VERSION=${SHLIB_VERSION} SHLIB_VERSION2=${SHLIB_VERSION2}
 SCRIPTS_SUB=	PREFIX=${PREFIX} PERL=${PERL}
 
@@ -304,5 +314,15 @@ install-doc-files:
 # Maintainer's note:
 #   Don't forget to bump library version in these ports.
 #   french/plgrenouille,graphics/hpoj,lang/php4,lang/php5,mail/cyrus-imapd22,mail/cyrus-imapd23,misc/kdeutils3,net-mgmt/braa,net-mgmt/docsis,net-mgmt/mbrowse,net-mgmt/nagios-snmp-plugins,net-mgmt/p5-SNMP-Info,net-mgmt/py-yapsnmp,net-mgmt/sdig,net-mgmt/zabbix,net/cactid,net/wireshark,net/ifstat,net/quagga,net/rtg,print/hplip,security/libfwbuilder,sysutils/apcupsd,sysutils/jailadmin,sysutils/nut
+
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpkg.so*}
+CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--without-kmem-usage}
+dfly-patch:
+	cp ${DFLY_FILESDIR}/cpu_dragonfly.c \
+	   ${WRKSRC}/agent/mibgroup/hardware/cpu/cpu_nlist.c
+	${REINPLACE_CMD} -e 's@unset ac_cv_header_pkg_h@@g' \
+		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's@-lpkg@@g' \
+		${WRKSRC}/agent/Makefile.in
 
 .include <bsd.port.post.mk>

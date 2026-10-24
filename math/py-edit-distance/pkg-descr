@@ -1,0 +1,4 @@
+Edit Distance computes edit distance (Levenshtein distance) on
+arbitrary Python sequences. It provides efficient implementations
+of sequence comparison algorithms, supporting custom cost functions
+and operations for measuring similarity between sequences.

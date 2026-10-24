@@ -1,16 +1,20 @@
---- chrome/common/webui_url_constants.cc.orig	2024-08-26 14:40:28 UTC
+--- chrome/common/webui_url_constants.cc.orig	2026-08-13 07:41:05 UTC
 +++ chrome/common/webui_url_constants.cc
-@@ -197,21 +197,21 @@ base::span<const base::cstring_view> ChromeURLHosts() 
-       kChromeUIAssistantOptInHost,
+@@ -189,7 +189,7 @@ base::span<const base::cstring_view> ChromeURLHosts() 
+       kChromeUITermsHost,
+ #endif
+       kChromeUITranslateInternalsHost,
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       kChromeUIUpdaterHost,
+ #endif
+       kChromeUIUsbInternalsHost,
+@@ -257,17 +257,17 @@ base::span<const base::cstring_view> ChromeURLHosts() 
+       ash::kChromeUIInternetDetailDialogHost,
  #endif
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS_ASH)
-+    BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
-       kChromeUIConnectorsInternalsHost,
- #endif
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_DESKTOP_ANDROID)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_DESKTOP_ANDROID) || BUILDFLAG(IS_BSD)
        kChromeUIDiscardsHost,
  #endif
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
@@ -26,12 +30,3 @@
        kChromeUISandboxHost,
  #endif
  #if BUILDFLAG(IS_WIN)
-@@ -284,7 +284,7 @@ base::span<const base::cstring_view> ChromeDebugURLs()
-        blink::kChromeUIGpuJavaCrashURL,
-        kChromeUIJavaCrashURL,
- #endif
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-        kChromeUIWebUIJsErrorURL,
- #endif
-        kChromeUIQuitURL,

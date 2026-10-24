@@ -21,6 +21,7 @@ MAKE_ENV+=	BUILD_CC="${CC}" \
 		FLEX="${LOCALBASE}/bin/flex"
 PLIST_FILES=	bin/nsgenbind
 
+MAKE_JOBS_UNSAFE= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*
 

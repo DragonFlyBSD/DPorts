@@ -1,0 +1,169 @@
+PORTNAME=	zeek
+DISTVERSION=	9.0.0
+CATEGORIES=	security
+MASTER_SITES=	https://download.zeek.org/
+
+MAINTAINER=	leres@FreeBSD.org
+COMMENT=	System for detecting network intruders in real-time
+WWW=		https://www.zeek.org/
+
+LICENSE=	CC-BY-4.0
+
+BUILD_DEPENDS=	bison>=3.3:devel/bison \
+		flex>=2.6:textproc/flex \
+		swig>=4.0.2:devel/swig \
+		${PYTHON_PKGNAMEPREFIX}websockets>=11.0.0:devel/py-websockets@${PY_FLAVOR}
+LIB_DEPENDS=	libcares.so:dns/c-ares \
+		libzmq.so:net/libzmq4
+RUN_DEPENDS=	c-ares>=1.25.0:dns/c-ares \
+		${PYTHON_PKGNAMEPREFIX}websockets>=11.0.0:devel/py-websockets@${PY_FLAVOR}
+
+USES=		bison cmake compiler:c++20-lang cpe gettext-runtime perl5 \
+		python shebangfix ssl
+
+USE_LDCONFIG=	yes
+
+EXTRACT_AFTER_ARGS=	--exclude ${DISTNAME}/auxil/c-ares \
+			--no-same-owner --no-same-permissions
+
+BINARY_ALIAS=	python3=${PYTHON_CMD}
+
+PORTSCOUT=	limit:^[0-9]*\.0\.
+
+SHEBANG_FILES=	\
+	auxil/zeek-client/zeek-client \
+	auxil/zeekctl/auxil/trace-summary/trace-summary \
+	auxil/zeekctl/bin/stats-to-csv \
+	auxil/zeekctl/bin/zeekctl.in
+
+SUB_FILES=	pkg-message
+NO_MTREE=	yes
+
+CMAKE_ON=	BROKER_DISABLE_DOC_EXAMPLES BROKER_DISABLE_TESTS \
+		BUILD_SHARED_LIBS BUILD_STATIC_BROKER INSTALL_AUX_TOOLS
+CMAKE_ARGS=	-DCARES_ROOT_DIR:PATH=${PREFIX} \
+		-DCMAKE_EXE_LINKER_FLAGS="${OPENSSL_LDFLAGS}" \
+		-DDISABLE_JAVASCRIPT:BOOL=ON \
+		-DINSTALL_BTEST:BOOL=OFF \
+		-DINSTALL_BTEST_PCAPS:BOOL=OFF \
+		-DINSTALL_ZKG:BOOL=OFF \
+		-DPY_MOD_INSTALL_DIR:PATH=${PREFIX}/lib/zeekctl \
+		-DZEEK_ETC_INSTALL_DIR:PATH=${PREFIX}/etc \
+		-DZEEK_LOG_DIR:PATH=/var/log/zeek \
+		-DZEEK_ROOT_DIR:PATH=${PREFIX} \
+		-DZEEK_SCRIPT_INSTALL_PATH:PATH=${PREFIX}/share/zeek \
+		-DZEEK_SPOOL_DIR:PATH=/var/spool/zeek
+
+ZEEKUSER?=	zeek
+ZEEKGROUP?=	zeek
+PLIST_SUB+=	ZEEKGROUP=${ZEEKGROUP} \
+		ZEEKUSER=${ZEEKUSER}
+
+USERS=		${ZEEKUSER}
+GROUPS=		${ZEEKGROUP}
+
+OPTIONS_DEFINE=	GEOIP2 IPSUMDUMP LBL_CF LBL_HF PERFTOOLS SPICY ZEEKCTL \
+		ZKG
+
+OPTIONS_SINGLE=			BUILD_TYPE
+OPTIONS_SINGLE_BUILD_TYPE=	DEBUG MINSIZEREL RELEASE RELWITHDEBINFO
+
+OPTIONS_DEFAULT=	GEOIP2 IPSUMDUMP LBL_CF LBL_HF RELEASE ZEEKCTL \
+			ZKG
+OPTIONS_DEFAULT_aarch64=	SPICY
+OPTIONS_DEFAULT_x86_64=	SPICY
+OPTIONS_DEFAULT_armv6=	SPICY
+OPTIONS_DEFAULT_armv7=	SPICY
+OPTIONS_DEFAULT_i386=	SPICY
+OPTIONS_DEFAULT_powerpc64=	SPICY
+OPTIONS_DEFAULT_powerpc64le=	SPICY
+OPTIONS_SUB=		yes
+
+DEBUG_DESC=		Optimizations off, debug symbols/flags on
+GEOIP2_DESC=		Build with GeoIP2 (MaxMindDB) support
+IPSUMDUMP_DESC=		Enables traffic summaries
+LBL_CF_DESC=		Unix time to formated time/date filter support
+LBL_HF_DESC=		Address to hostname filter support
+MINSIZEREL_DESC=	Optimizations on, debug symbols/flags off
+PERFTOOLS_DESC=		Use Perftools to improve memory & CPU usage
+RELEASE_DESC=		Optimizations on, debug symbols/flags off
+RELWITHDEBINFO_DESC=	Optimizations/debug symbols on, debug flags off
+SPICY_DESC=		Enable the Spicy parser generator
+ZEEKCTL_DESC=		ZeekControl support (implies IPSUMDUMP)
+ZKG_DESC=		Zeek package manager support
+
+ZEEKCTL_IMPLIES=	IPSUMDUMP
+
+GEOIP2_LIB_DEPENDS=		libmaxminddb.so:net/libmaxminddb
+IPSUMDUMP_BUILD_DEPENDS=	ipsumdump:net/ipsumdump
+IPSUMDUMP_RUN_DEPENDS=		ipsumdump:net/ipsumdump
+LBL_CF_RUN_DEPENDS=		${LOCALBASE}/bin/cf:sysutils/lbl-cf
+LBL_HF_RUN_DEPENDS=		${LOCALBASE}/bin/hf:sysutils/lbl-hf
+PERFTOOLS_BUILD_DEPENDS=	${LOCALBASE}/include/gperftools/tcmalloc.h:devel/google-perftools \
+				${LOCALBASE}/bin/pprof:devel/pprof
+PERFTOOLS_CMAKE_BOOL=		ENABLE_PERFTOOLS
+PERFTOOLS_RUN_DEPENDS=		${LOCALBASE}/lib/libtcmalloc.so.4:devel/google-perftools \
+				${LOCALBASE}/bin/pprof:devel/pprof
+SPICY_CMAKE_OFF=		-DDISABLE_SPICY=ON
+ZEEKCTL_BUILD_DEPENDS=		${LOCALBASE}/bin/bash:shells/bash \
+				${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
+ZEEKCTL_CMAKE_BOOL=		INSTALL_ZEEKCTL
+ZEEKCTL_RUN_DEPENDS=		${LOCALBASE}/bin/bash:shells/bash \
+				${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
+ZKG_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}zkg>=2.7.1:security/py-zkg@${PY_FLAVOR}
+BROKEN= broken ninja use
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MDEBUG}
+CMAKE_BUILD_TYPE=	Debug
+STRIP=
+.elif ${PORT_OPTIONS:MMINSIZEREL}
+CMAKE_BUILD_TYPE=	MinSizeRel
+.elif ${PORT_OPTIONS:MRELEASE}
+CMAKE_BUILD_TYPE=	Release
+.elif ${PORT_OPTIONS:MRELWITHDEBINFO}
+CMAKE_BUILD_TYPE=	RelWithDebInfo
+STRIP=
+.endif
+
+.if ${PORT_OPTIONS:MZEEKCTL}
+USE_RC_SUBR=	zeek
+.endif
+
+# Let crash-diag find gdb (when installed)
+post-patch:
+	${REINPLACE_CMD} -e "2s,^\#,export PATH=${LOCALBASE}/bin"':$${PATH}', \
+	    ${WRKSRC}/auxil/zeekctl/bin/crash-diag
+
+post-install:
+	${MV} ${STAGEDIR}${DATADIR}/site/local.zeek \
+	    ${STAGEDIR}${DATADIR}/site/local.zeek.sample
+	${MV} ${STAGEDIR}${PREFIX}/etc/zeek/zeek.conf \
+	    ${STAGEDIR}${PREFIX}/etc/zeek/zeek.conf.sample
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/zeek-cut
+	@${RM} ${STAGEDIR}${PREFIX}/share/zeek/tests
+	${LN} -s ../btest/data ${STAGEDIR}${PREFIX}/share/zeek/tests
+	# upstream leaks a lot of empty include directories!
+	@${FIND} ${STAGEDIR}${PREFIX}/include/zeek -type d -empty -delete
+
+post-install-ZEEKCTL-on:
+	${MKDIR} ${STAGEDIR}/var/spool/zeek/installed-scripts-do-not-touch/auto
+	${MKDIR} ${STAGEDIR}/var/spool/zeek/installed-scripts-do-not-touch/site
+.for F in zeekctl.cfg networks.cfg node.cfg
+	${MV} ${STAGEDIR}${PREFIX}/etc/${F} ${STAGEDIR}${PREFIX}/etc/${F}.sample
+.endfor
+	# Do this here because later zeek won't be running as root
+	${RM} ${STAGEDIR}${PREFIX}/share/zeekctl/scripts/zeekctl-config.sh
+	${LN} -s ../../../../../var/spool/zeek/zeekctl-config.sh \
+	    ${STAGEDIR}${PREFIX}/share/zeekctl/scripts/zeekctl-config.sh
+	${RM} ${STAGEDIR}${PREFIX}/lib/broctl
+	${LN} -s zeek/python/zeekctl ${STAGEDIR}${PREFIX}/lib/broctl
+
+post-install-SPICY-on:
+	@${RM} -rf ${STAGEDIR}${PREFIX}/include/hilti/rt/3rdparty/SafeInt/Archive
+	@${RM} -rf ${STAGEDIR}${PREFIX}/include/hilti/rt/3rdparty/SafeInt/Test
+
+pre-install-ZEEKCTL-on:
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/rc.d
+
+.include <bsd.port.mk>

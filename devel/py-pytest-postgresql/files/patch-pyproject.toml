@@ -1,0 +1,20 @@
+--- pyproject.toml.orig	1970-01-01 00:00:00 UTC
++++ pyproject.toml
+@@ -1,6 +1,6 @@
+ [build-system]
+-build-backend = "uv_build"
+-requires = ["uv-build>=0.11,<0.13"]
++requires = ["flit-core >= 3.12"]
++build-backend = "flit_core.buildapi"
+ 
+ [project]
+ name = "pytest-postgresql"
+@@ -37,7 +37,7 @@ dependencies = [
+ dependencies = [
+     "mirakuru>=2.6.0",
+     "packaging",
+-    "port-for>=0.7.3",
++    "port-for>=0.4",
+     "psycopg>=3.0.0",
+     "pytest>=8.2",
+ ]

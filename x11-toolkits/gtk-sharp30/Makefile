@@ -5,7 +5,7 @@ CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	30
 
-MAINTAINER=	kwm@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GTK and GNOME interfaces for the .NET runtime
 WWW=		https://www.mono-project.com/Gtk
 
@@ -24,6 +24,7 @@ SHEBANG_FILES=	parser/*.pl
 USE_PERL5=	run
 MAKE_ENV=	INSTALL_STRIP_FLAG=${STRIP}
 
+CFLAGS= -Wno-pointer-to-int-cast
 post-patch:
 	@${REINPLACE_CMD} -e 's|gmcs|mcs|g' \
 		${WRKSRC}/configure

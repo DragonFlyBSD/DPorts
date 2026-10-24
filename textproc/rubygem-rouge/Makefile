@@ -1,5 +1,5 @@
 PORTNAME=	rouge
-PORTVERSION=	4.5.1
+PORTVERSION=	5.1.0
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
@@ -10,6 +10,8 @@ WWW=		https://github.com/jneen/rouge
 LICENSE=	BSD2CLAUSE MIT
 LICENSE_COMB=	dual
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+RUN_DEPENDS=	rubygem-strscan>=3.1<4:devel/rubygem-strscan
 
 USES=		gem
 

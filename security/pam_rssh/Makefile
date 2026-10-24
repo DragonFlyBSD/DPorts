@@ -1,7 +1,7 @@
 PORTNAME=	pam_rssh
 DISTVERSIONPREFIX=v
-DISTVERSION=	1.1.0
-PORTREVISION=	15
+DISTVERSION=	1.2.1
+PORTREVISION=	2
 CATEGORIES=	security
 
 MAINTAINER=	romain@FreeBSD.org
@@ -16,54 +16,60 @@ USE_GITHUB=	yes
 
 GH_ACCOUNT=	z4yx
 GH_PROJECT=	ssh-agent.rs:sshagent
-GH_TAGNAME=	91894139966e01941f17386a84c6b35e6ea155b8:sshagent
+GH_TAGNAME=	802b94ccf2e00ac33a3863300d0769f02b62d807:sshagent
 GH_SUBDIR=	dep/ssh-agent.rs:sshagent
 
-CARGO_CRATES=	base64-0.13.1 \
-		bitflags-1.3.2 \
-		byteorder-1.4.3 \
-		cc-1.0.79 \
-		cfg-if-1.0.0 \
-		error-chain-0.12.4 \
+CARGO_CRATES=	base64-0.22.1 \
+		bitflags-2.11.1 \
+		byteorder-1.5.0 \
+		cc-1.2.62 \
+		cfg-if-1.0.4 \
+		deranged-0.5.8 \
+		find-msvc-tools-0.1.9 \
 		foreign-types-0.3.2 \
 		foreign-types-shared-0.1.1 \
 		futures-0.1.31 \
-		hostname-0.3.1 \
-		itoa-1.0.6 \
-		libc-0.2.140 \
-		log-0.4.17 \
-		match_cfg-0.1.0 \
+		hostname-0.4.2 \
+		itoa-1.0.18 \
+		libc-0.2.186 \
+		log-0.4.30 \
+		memchr-2.8.0 \
 		multisock-1.0.0 \
-		num_threads-0.1.6 \
-		once_cell-1.17.1 \
-		openssl-0.10.55 \
-		openssl-macros-0.1.0 \
-		openssl-sys-0.9.90 \
-		pam-bindings-0.1.1 \
-		pkg-config-0.3.26 \
-		proc-macro2-1.0.52 \
+		num-conv-0.2.2 \
+		num_threads-0.1.7 \
+		openssl-0.10.80 \
+		openssl-macros-0.1.1 \
+		openssl-sys-0.9.116 \
+		pam-bindings-0.2.1 \
+		pkg-config-0.3.33 \
+		powerfmt-0.2.0 \
+		proc-macro2-1.0.106 \
 		pwd-1.4.0 \
-		quote-1.0.26 \
-		serde-1.0.157 \
-		serde_derive-1.0.157 \
-		syn-1.0.109 \
-		syn-2.0.0 \
-		syslog-6.0.1 \
-		thiserror-1.0.40 \
-		thiserror-impl-1.0.40 \
-		time-0.3.20 \
-		time-core-0.1.0 \
-		time-macros-0.2.8 \
-		unicode-ident-1.0.8 \
+		quote-1.0.45 \
+		serde-1.0.228 \
+		serde_core-1.0.228 \
+		serde_derive-1.0.228 \
+		shlex-1.3.0 \
+		subst-0.3.8 \
+		syn-2.0.117 \
+		syslog-7.0.0 \
+		thiserror-1.0.69 \
+		thiserror-impl-1.0.69 \
+		time-0.3.47 \
+		time-core-0.1.8 \
+		time-macros-0.2.27 \
+		unicode-ident-1.0.24 \
+		unicode-width-0.1.14 \
 		vcpkg-0.2.15 \
-		version_check-0.9.4 \
-		winapi-0.3.9 \
-		winapi-i686-pc-windows-gnu-0.4.0 \
-		winapi-x86_64-pc-windows-gnu-0.4.0
+		windows-link-0.2.1
 
 PLIST_FILES=	lib/pam_rssh.so
 
 do-install:
+.ifdef WITH_DEBUG
+	${INSTALL_LIB} ${CARGO_TARGET_DIR}/debug/libpam_rssh.so ${STAGEDIR}${PREFIX}/lib/pam_rssh.so
+.else
 	${INSTALL_LIB} ${CARGO_TARGET_DIR}/release/libpam_rssh.so ${STAGEDIR}${PREFIX}/lib/pam_rssh.so
+.endif
 
 .include <bsd.port.mk>

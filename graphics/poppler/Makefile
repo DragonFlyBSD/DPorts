@@ -1,7 +1,9 @@
 PORTNAME=	poppler
-DISTVERSION=	25.02.0
+DISTVERSION=	26.04.0
+PORTREVISION=	1
 CATEGORIES=	graphics print
 MASTER_SITES=	https://poppler.freedesktop.org/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	desktop@FreeBSD.org
 COMMENT?=	PDF rendering library
@@ -17,19 +19,16 @@ LIB_DEPENDS=	libnspr4.so:devel/nspr \
 		libfreetype.so:print/freetype2 \
 		libnss3.so:security/nss \
 		libfontconfig.so:x11-fonts/fontconfig \
-		libgpgme.so:security/gpgme \
-		libgpgmepp.so:security/gpgme-cpp \
 		libassuan.so:security/libassuan
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/container/small_vector.hpp:devel/boost-libs \
 		gsed:textproc/gsed
 RUN_DEPENDS=	poppler-data>0:graphics/poppler-data
 
-USES=		cmake:insource compiler:c++20-lang cpe gperf jpeg \
+USES=		cmake:testing compiler:c++20-lang cpe gperf jpeg \
 		localbase pathfix pkgconfig tar:xz
 CPE_VENDOR=	freedesktop
 USE_LDCONFIG=	yes
 CMAKE_ON=	ENABLE_BOOST \
-		ENABLE_GPGME \
 		ENABLE_LCMS \
 		ENABLE_LIBTIFF \
 		ENABLE_NSS3 \
@@ -42,7 +41,10 @@ CMAKE_OFF=	BUILD_GTK_TESTS
 # Note: since f3ba77e14cac05d43caf35100848eeaee3bc64b4 graphics/openjpeg15 installs
 # its cmake files to ${PREFIX}/lib/openjpeg15
 CMAKE_ARGS+=	-DCMAKE_IGNORE_PATH:PATH=${PREFIX}/lib/openjpeg-1.5 \
-		-DENABLE_DCTDECODER:STRING="libjpeg"
+		-DENABLE_DCTDECODER:STRING="libjpeg" \
+		-DTESTDATADIR:PATH=${WRKSRC}/testdata
+
+USE_GITLAB=	nodefault
 
 # Slave ports.
 _POPPLER_SLAVES=	library glib qt5 qt6 utils
@@ -59,10 +61,10 @@ CMAKE_OFF+=	${_POPPLER_SLAVES:N${_SLAVE_PORT}:tu:S/^/ENABLE_/}
 PORTSCOUT=	limitw:1,even
 USES+=		iconv
 CMAKE_ON+=	ENABLE_CPP
-PLIST_SUB+=	SHLIB_VER=146
+PLIST_SUB+=	SHLIB_VER=159
 
-OPTIONS_DEFINE=		CURL OPENJPEG
-OPTIONS_DEFAULT=	OPENJPEG
+OPTIONS_DEFINE=		CURL OPENJPEG GNUPG TEST
+OPTIONS_DEFAULT=	OPENJPEG GNUPG
 OPTIONS_SUB=		yes
 .else
 PORTSCOUT=		ignore:1
@@ -70,15 +72,16 @@ PORTSCOUT=		ignore:1
 LIB_DEPENDS+=		libpoppler.so:graphics/poppler
 PKGNAMESUFFIX=		-${_SLAVE_PORT}
 
-BUILD_WRKSRC=		${WRKSRC}/${_SLAVE_PORT}
-INSTALL_WRKSRC=		${WRKSRC}/${_SLAVE_PORT}
+BUILD_WRKSRC=		${CONFIGURE_WRKSRC}/${_SLAVE_PORT}
+INSTALL_WRKSRC=		${CONFIGURE_WRKSRC}/${_SLAVE_PORT}
 
 CMAKE_ARGS+=		-DENABLE_LIBOPENJPEG:STRING="none" \
-			-DENABLE_LIBCURL:BOOL=FALSE
+			-DENABLE_LIBCURL:BOOL=FALSE \
+			-DENABLE_GPGME:BOOL=FALSE
 
 .  if ${_SLAVE_PORT} == glib
 USES+=			gnome python:build
-USE_GNOME+=		cairo glib20 introspection:Build libxml2
+USE_GNOME+=		cairo glib20 introspection:build libxml2
 BINARY_ALIAS+=		python3=${PYTHON_CMD}
 .  elif ${_SLAVE_PORT} == qt5
 USES+=			qt:5
@@ -102,15 +105,22 @@ OPENJPEG_LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg
 OPENJPEG_CMAKE_ON=	-DENABLE_LIBOPENJPEG:STRING="openjpeg2"
 OPENJPEG_CMAKE_OFF=	-DENABLE_LIBOPENJPEG:STRING="none"
 
+GNUPG_CMAKE_BOOL=	ENABLE_GPGME
+GNUPG_LIB_DEPENDS=	libgpgme.so:security/gpgme \
+		libgpgmepp.so:security/gpgmepp
+
+TEST_GL_TUPLE=		https://gitlab.freedesktop.org:poppler:test:b85e4d1ce75636b3e727555a9d31da34ad771c1c:testdata/testdata
+
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-install:
 .if ${_SLAVE_PORT} == glib
-	${INSTALL_DATA} ${WRKSRC}/poppler-glib.pc \
+	${INSTALL_DATA} ${BUILD_WRKSRC}/../poppler-glib.pc \
 		${STAGEDIR}${PREFIX}/libdata/pkgconfig
 .elif ${_SLAVE_PORT} == qt5
-	${INSTALL_DATA} ${WRKSRC}/poppler-qt5.pc \
+	${INSTALL_DATA} ${BUILD_WRKSRC}/../poppler-qt5.pc \
 		${STAGEDIR}${PREFIX}/libdata/pkgconfig
 .elif ${_SLAVE_PORT} == qt6
-	${INSTALL_DATA} ${WRKSRC}/poppler-qt6.pc \
+	${INSTALL_DATA} ${BUILD_WRKSRC}/../poppler-qt6.pc \
 		${STAGEDIR}${PREFIX}/libdata/pkgconfig
 .endif
 

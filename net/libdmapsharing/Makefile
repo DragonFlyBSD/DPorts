@@ -35,6 +35,7 @@ MDNSRESPONDER_BROKEN=		undefined references to mDNSResponder symbols
 MDNSRESPONDER_LIB_DEPENDS=	libdns_sd.so:net/mDNSResponder
 MDNSRESPONDER_CONFIGURE_ON=	--with-mdns=mdns_sd
 
+LDFLAGS= -lm
 .include <bsd.port.options.mk>
 
 .ifdef WITH_DEBUG

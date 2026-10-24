@@ -1,6 +1,5 @@
 PORTNAME=	vtk
-DISTVERSION=	9.2.6
-PORTREVISION=	6
+DISTVERSION=	9.6.2
 CATEGORIES=	math graphics
 MASTER_SITES=	https://vtk.org/files/release/${VTK_SHORT_VER}/
 PKGNAMESUFFIX=	9
@@ -22,7 +21,8 @@ LIB_DEPENDS=	\
 		libpng.so:graphics/png \
 		libtiff.so:graphics/tiff
 
-USES=		alias cmake compiler:c++11-lang jpeg localbase xorg
+USES=		cmake compiler:c++11-lang gl jpeg localbase xorg
+USE_GL=		gl glu
 USE_LDCONFIG=	${PREFIX}/lib/vtk-${VTK_SHORT_VER}
 USE_XORG=	ice x11 xt xext sm xcursor xfixes xrender
 
@@ -53,9 +53,8 @@ DOCSDIR=	${PREFIX}/share/doc/vtk-${VTK_SHORT_VER}
 DATADIR=	${PREFIX}/share/vtk-${VTK_SHORT_VER}
 
 # Options
-OPTIONS_DEFINE=	DESIGNER DOCS OMPI OSMESA PYTHON QT5 EXAMPLES
+OPTIONS_DEFINE=	DESIGNER DOCS OMPI PYTHON QT5 EXAMPLES
 OPTIONS_DEFAULT=	OMPI PYTHON QT5 # vtk python binding is needed by other packages, and is unfortunately is unseparable. It is a candidate to be a subpackage.
-OSMESA_DESC=	Use Mesa for off-screen rendering
 OMPI_DESC=	OpenMPI (Message Passing Interface) support
 DESIGNER_DESC=	Build the Qt Designer plugin
 OPTIONS_SUB=	yes
@@ -93,13 +92,6 @@ OMPI_USES=		mpi:openmpi
 OMPI_CMAKE_ON=		-DMPI_HOME=${LOCALBASE}/mpi/openmpi
 OMPI_LDFLAGS=		${MPI_LIBS}
 
-OSMESA_CMAKE_ON=	-DVTK_OPENGL_HAS_OSMESA:BOOL=ON \
-			-DOSMESA_INCLUDE_DIR:PATH=${LOCALBASE}/include/Mesa \
-			-DOSMESA_LIBRARY:FILEPATH=${LOCALBASE}/lib/libOSMesa.so \
-			-DOPENGL_gl_LIBRARY:FILEPATH=${LOCALBASE}/lib/libOSMesa.so \
-			-DVTK_USE_X:BOOL=OFF
-OSMESA_LIB_DEPENDS=	libOSMesa.so:graphics/libosmesa
-
 JAVA_USES=		java
 JAVA_CMAKE_BOOL=	VTK_WRAP_JAVA
 JAVA_CMAKE_ON=		-DJAVA_INCLUDE_PATH:PATH=${JAVA_HOME}/include \
@@ -117,12 +109,9 @@ DOCS_BUILD_DEPENDS=	doxygen:devel/doxygen
 
 EXAMPLES_CMAKE_BOOL=	BUILD_EXAMPLES
 
+OPTIONS_EXCLUDE= DOCS
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NMPI}
 .include <bsd.port.options.mk>
-
-.if !${PORT_OPTIONS:MOSMESA}
-USES+=		gl
-USE_GL=		gl glu
-.endif
 
 .if ${PORT_OPTIONS:MPYTHON} && ${PORT_OPTIONS:MOMPI}
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpi4py>0:net/py-mpi4py@${PY_FLAVOR}
@@ -143,5 +132,28 @@ do-install-PYTHON-on:
 post-install: # autoplist: thousands of files, complex dependencies on options
 	@cd ${STAGEDIR}${PREFIX} && \
 		${FIND} * -type f -or -type l >> ${TMPPLIST}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__OpenBSD__)\)@(\1||defined(__DragonFly__))@g' \
+		${WRKSRC}/ThirdParty/viskores/vtkviskores/viskores/viskores/thirdparty/loguru/viskoresloguru/loguru.cpp \
+		${WRKSRC}/ThirdParty/loguru/vtkloguru/loguru.cpp
+	# OpenBSD's getthrid() does not exist on DragonFly; use a portable thread id instead
+	${REINPLACE_CMD} -e 's@pid_t thread_id = getthrid();@const auto thread_id = std::hash<std::thread::id>{}(std::this_thread::get_id());@' \
+		${WRKSRC}/ThirdParty/loguru/vtkloguru/loguru.cpp
+	${REINPLACE_CMD} -e 's@if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)@if defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)@g' \
+		${WRKSRC}/ThirdParty/ioss/vtkioss/Ioss_FileInfo.C
+	${REINPLACE_CMD} -e 's@if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)@if defined(__APPLE__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__) || defined(__OpenBSD__)@g' \
+		${WRKSRC}/ThirdParty/ioss/vtkioss/Ioss_FileInfo.C
+	${REINPLACE_CMD} -e 's@#include <sys/termios.h>@#include <termios.h>@' \
+		${WRKSRC}/ThirdParty/ioss/vtkioss/Ioss_Getline.C
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g' \
+		${WRKSRC}/ThirdParty/diy2/vtkdiy2/include/vtkdiy2/thirdparty/fmt/os.h \
+		${WRKSRC}/ThirdParty/eigen/vtkeigen/eigen/src/Core/util/Memory.h \
+		${WRKSRC}/IO/LSDyna/LSDynaFamily.cxx \
+		${WRKSRC}/Utilities/KWSys/vtksys/ProcessUNIX.c \
+		${WRKSRC}/Utilities/KWSys/vtksys/SharedForward.h.in
+	${REINPLACE_CMD} -e 's@\(defined __FreeBSD__\)@(\1||defined(__DragonFly__))@g' \
+		${WRKSRC}/IO/EnSight/vtkEnSight6BinaryReader.cxx \
+		${WRKSRC}/IO/EnSight/vtkEnSightGoldBinaryReader.cxx
 
 .include <bsd.port.mk>

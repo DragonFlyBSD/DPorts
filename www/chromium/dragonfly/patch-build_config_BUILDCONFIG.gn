@@ -1,0 +1,34 @@
+--- build/config/BUILDCONFIG.gn.orig	2026-09-09 12:00:00 UTC
++++ build/config/BUILDCONFIG.gn
+@@ -247,6 +247,8 @@
+     host_toolchain = "//build/toolchain/openbsd:clang_$host_cpu"
+   } else if (host_os == "freebsd") {
+     host_toolchain = "//build/toolchain/freebsd:clang_$host_cpu"
++  } else if (host_os == "dragonfly") {
++    host_toolchain = "//build/toolchain/dragonfly:clang_$host_cpu"
+   } else {
+     assert(false, "Unsupported host_os: $host_os")
+   }
+@@ -297,7 +299,7 @@
+   assert(
+       false,
+       "emscripten is not a supported target_os. It is available only as secondary toolchain.")
+-} else if (target_os == "openbsd" || target_os == "freebsd") {
++} else if (target_os == "openbsd" || target_os == "freebsd" || target_os == "dragonfly") {
+   _default_toolchain = host_toolchain
+ } else {
+   assert(false, "Unsupported target_os: $target_os")
+@@ -334,10 +336,11 @@
+ is_fuchsia = current_os == "fuchsia"
+ is_ios = current_os == "ios"
+ is_linux = current_os == "linux" || current_os == "openbsd" ||
+-           current_os == "freebsd"
++           current_os == "freebsd" || current_os == "dragonfly"
+ is_openbsd = current_os == "openbsd"
+ is_freebsd = current_os == "freebsd"
+-is_bsd = current_os == "openbsd" || current_os == "freebsd"
++is_dragonfly = current_os == "dragonfly"
++is_bsd = current_os == "openbsd" || current_os == "freebsd" || current_os == "dragonfly"
+ is_mac = current_os == "mac"
+ is_wasm = current_os == "emscripten"
+ is_watchos = current_os == "watchos"

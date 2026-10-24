@@ -21,6 +21,7 @@ PORTDOCS=	CHANGES README.md
 
 OPTIONS_DEFINE=	DOCS
 
+CFLAGS= -Wno-pointer-sign -Wno-stringop-truncation -Wno-format-truncation
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcpser ${STAGEDIR}${PREFIX}/bin
 

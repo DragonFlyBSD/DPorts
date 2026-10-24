@@ -12,7 +12,7 @@ WWW=		https://cunit.sourceforge.net/
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		autoreconf gmake libtool ncurses pathfix tar:bzip2
+USES=		autoreconf gmake libtool ncurses tar:bzip2
 
 CONFIGURE_ARGS=	--enable-automated --enable-basic --enable-console --enable-curses --enable-debug --enable-memtrace --enable-test
 GNU_CONFIGURE=	yes
@@ -31,6 +31,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 EXAMPLES_CONFIGURE_ENABLE=	examples
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/doc/@PACKAGE@|/share/doc/@PACKAGE@|g' ${WRKSRC}/doc/Makefile.am ${WRKSRC}/doc/headers/Makefile.am
 	@${REINPLACE_CMD} -e 's|/@PACKAGE@/Examples/|/examples/@PACKAGE@/|g' ${WRKSRC}/Examples/*/Makefile.am

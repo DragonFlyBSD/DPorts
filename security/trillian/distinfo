@@ -1,0 +1,5 @@
+TIMESTAMP = 1790603712
+SHA256 (go/security_trillian/trillian-v1.8.0/v1.8.0.mod) = d17de8d829ccbb2e76c96d2f1a5fcebbb136562f6a2c94526116fad9b9730790
+SIZE (go/security_trillian/trillian-v1.8.0/v1.8.0.mod) = 10927
+SHA256 (go/security_trillian/trillian-v1.8.0/v1.8.0.zip) = d8d77fd29d1cb84322590e725348550f4ca7690ec8a6ce7e3b39c2ad95b365a9
+SIZE (go/security_trillian/trillian-v1.8.0/v1.8.0.zip) = 2501472

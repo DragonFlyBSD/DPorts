@@ -17,6 +17,7 @@ PORTEXAMPLES=	fetchlog.cfg fetchlog_service.cfg notify.cfg.example \
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+CFLAGS= -Wno-unused-but-set-variable
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fetchlog ${STAGEDIR}${PREFIX}/bin
 	cd ${WRKSRC} && ${INSTALL_MAN} ${PORTNAME}.1 \

@@ -1,11 +1,11 @@
---- headless/lib/browser/headless_web_contents_impl.cc.orig	2024-06-22 08:49:42 UTC
+--- headless/lib/browser/headless_web_contents_impl.cc.orig	2026-08-13 07:41:05 UTC
 +++ headless/lib/browser/headless_web_contents_impl.cc
-@@ -62,7 +62,7 @@ namespace headless {
+@@ -76,7 +76,7 @@ BASE_FEATURE(kPrerender2InHeadlessMode, base::FEATURE_
  namespace {
  
  void UpdatePrefsFromSystemSettings(blink::RendererPreferences* prefs) {
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    content::UpdateFontRendererPreferencesFromSystemSettings(prefs);
  #endif
  

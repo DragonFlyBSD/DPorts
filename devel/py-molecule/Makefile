@@ -1,6 +1,5 @@
 PORTNAME=	molecule
-PORTVERSION=	5.0.1
-PORTREVISION=	1
+PORTVERSION=	26.6.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,18 +15,17 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pip>=19.3.1:devel/py-pip@${PY_FLAVOR} \
 	${PY_SETUPTOOLS} \
 	${PYTHON_PKGNAMEPREFIX}setuptools-scm>=7.0.0:devel/py-setuptools-scm@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}wheel>=0.33.6:devel/py-wheel@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ansi2html>=1.8.0:textproc/py-ansi2html@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}ansible-compat>=2.2.1:sysutils/py-ansible-compat@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ansible-compat>=25.1.4:sysutils/py-ansible-compat@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}ansible-core>=2.15.0:sysutils/py-ansible-core@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}click>=8.0:devel/py-click@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}click-help-colors>=0.9:devel/py-click-help-colors@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}cookiecutter>=1.7.3:devel/py-cookiecutter@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}enrich>=1.2.7:textproc/py-enrich@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonschema>=4.9.1:devel/py-jsonschema@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>=2.11.3:devel/py-Jinja2@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}packaging>=23.2:devel/py-packaging@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pluggy>=0.7.1:devel/py-pluggy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}rich>=9.5.1:textproc/py-rich@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pyyaml>=5.1:devel/py-pyyaml@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}pyyaml>=5.1:devel/py-pyyaml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wcmatch>=8.1.2:textproc/py-wcmatch@${PY_FLAVOR}
 # ansi2html >= 1.6.0
 # pytest-cov >= 2.10.1
 # pytest-testinfra >= 6.1.0
@@ -48,10 +46,6 @@ USE_PYTHON=	autoplist concurrent pep517 pytest
 #
 # Test failures. Only three tests fail:
 #  test/unit/test_util.py ......FFF.......................   [ 23%]
-#
-# The click module demands a UTF-8 locale when used with python-3.x
-TEST_ENV=	LANG=en_US.UTF-8 \
-		LC_ALL=en_US.UTF-8
 
 NO_ARCH=	yes
 

@@ -1,5 +1,0 @@
-
-MAKE_ENV+=	LDVER=ld.bfd
-LDFLAGS+= -lcrypto
-
-CFLAGS+=	-Wno-unused-parameter

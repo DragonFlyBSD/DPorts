@@ -1,3 +1,0 @@
-
-USES+=	gmake
-MAKE_JOBS_UNSAFE=yes

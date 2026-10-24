@@ -1,11 +1,10 @@
 PORTNAME=	gscheme
 PORTVERSION=	0.6
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	lang gnustep
 MASTER_SITES=	http://www.gnustep.it/marko/GScheme/ \
 		LOCAL/dinoex
 DISTNAME=	GScheme
-EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	repacked
 
 MAINTAINER=	ports@FreeBSD.org
@@ -14,9 +13,11 @@ WWW=		http://www.gnustep.it/marko/GScheme/index.html
 
 LICENSE=	GPLv2+
 
-USES=		gnustep
+USES=		gnustep tar:tgz
 USE_GNUSTEP=	back build
 
+ADDITIONAL_CFLAGS= -Wno-error=implicit-int -Wno-error=implicit-function-declaration -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types
+ADDITIONAL_OBJCFLAGS= -Wno-error=implicit-int -Wno-error=implicit-function-declaration -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types
 post-patch:
 	@${REINPLACE_CMD} -e 's|setMark:|setMarkScheme:|' \
 		${WRKSRC}/SchemeTypes.h ${WRKSRC}/SchemeTypes.m

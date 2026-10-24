@@ -1,7 +1,7 @@
 PORTNAME=	hcloud
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.50.0
-PORTREVISION=	2
+DISTVERSION=	1.67.0
+PORTREVISION=	5
 CATEGORIES=	sysutils
 
 MAINTAINER=	uzsolt@FreeBSD.org
@@ -11,7 +11,7 @@ WWW=		https://github.com/hetznercloud/cli
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules,1.23
+USES=		go:modules
 
 GO_MODULE=	github.com/hetznercloud/cli
 GO_TARGET=	./cmd/hcloud

@@ -1,11 +1,11 @@
---- folly/portability/SysSyscall.h.orig	2020-06-11 05:04:12 UTC
+--- folly/portability/SysSyscall.h.orig
 +++ folly/portability/SysSyscall.h
-@@ -23,6 +23,8 @@
- #define FOLLY_SYS_gettid SYS_thread_selfid
- #elif defined(SYS_gettid)
- #define FOLLY_SYS_gettid SYS_gettid
+@@ -34,6 +34,8 @@
+ #define FOLLY_SYS_gettid 0
+ #elif defined(__FreeBSD__)
+ #define FOLLY_SYS_gettid SYS_thr_self
 +#elif defined(__DragonFly__)
 +#define FOLLY_SYS_gettid SYS_lwp_gettid
+ #elif defined(SYS_gettid)
+ #define FOLLY_SYS_gettid SYS_gettid
  #else
- #define FOLLY_SYS_gettid __NR_gettid
- #endif

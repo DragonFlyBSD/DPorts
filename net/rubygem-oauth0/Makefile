@@ -6,7 +6,8 @@ PKGNAMESUFFIX=	0
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Rubygem for Creating both OAuth Consumers and Service Providers
-WWW=		https://github.com/oauth-xx/oauth-ruby
+WWW=		https://oauth.galtzo.com/ \
+		https://github.com/ruby-oauth/oauth
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

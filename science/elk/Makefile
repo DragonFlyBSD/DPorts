@@ -1,6 +1,5 @@
 PORTNAME=	elk
-DISTVERSION=	10.3.12
-PORTREVISION=	2
+DISTVERSION=	11.2.3
 CATEGORIES=	science
 MASTER_SITES=	SF/${PORTNAME}
 PKGNAMESUFFIX=	-chemistry
@@ -19,12 +18,14 @@ LIB_DEPENDS=	libblas.so:math/blas \
 		libfftw3f.so:math/fftw3-float \
 		liblapack.so:math/lapack \
 		libopenblas.so:math/openblas \
-		libwannier.so:science/wannier90 \
+		libwannier90.so:science/wannier90 \
 		libxc.so:science/libxc
 
 USES=		fortran gmake tar:tgz
 
 BINARY_ALIAS=	make=${GMAKE}
+
+MAKE_ARGS=	FREEBSD_FILESDIR=${FILESDIR}
 
 LDFLAGS+=	${LOCALBASE}/lib/gcc${GCC_DEFAULT}/libgcc_s.so
 
@@ -52,6 +53,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 PLIST_FILES=		bin/${PORTNAME}
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NMPI}
 .include <bsd.port.pre.mk>
 
 .if ${GCC_DEFAULT} >= 10
@@ -81,5 +83,10 @@ do-test: # several tests fail, see https://sourceforge.net/p/elk/discussion/8978
 	@cd ${WRKSRC}/tests && ./test.sh
 
 # 1 test (test_024) fails, reported to dewhurst@mpi-halle.mpg.de on 2026-06-26 (before was: see https://sourceforge.net/p/elk/discussion/897820/thread/f7b5859624/)
+
+LDFLAGS:= ${LDFLAGS:N*libgcc_s.so}
+dfly-patch:
+	${REINPLACE_CMD} -e "/F90/s@ -o @ -L${LOCALBASE}/lib &@g" \
+		${WRKSRC}/src/Makefile
 
 .include <bsd.port.post.mk>

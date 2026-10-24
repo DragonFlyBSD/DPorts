@@ -16,6 +16,7 @@ MAKE_ARGS=	LDADD="-lncurses -lutil"
 
 PLIST_FILES=	bin/window share/man/man1/window.1.gz
 
+MAKE_ENV= CWARNFLAGS=-fcommon
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/window ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/window.1 ${STAGEDIR}${PREFIX}/share/man/man1

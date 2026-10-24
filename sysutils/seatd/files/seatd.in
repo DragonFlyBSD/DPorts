@@ -18,6 +18,10 @@ rcvar="${name}_enable"
 
 load_rc_config "$name"
 
+# DragonFly: VT-less seat so gdm can hand the seat from the greeter to the
+# user session after authentication (no VT/logind to coordinate the switch).
+export SEATD_VTBOUND=0
+
 : ${seatd_enable="NO"}
 : ${seatd_args="-g video"}
 

@@ -113,8 +113,8 @@ bin/%%HACKNAME%%
 %%DATADIR%%/options
 %%DATADIR%%/oracle.lev
 %%DATADIR%%/oracles
-%%DATADIR%%/orcus.lev
 @mode 664
+%%DATADIR%%/orcus.lev
 %%DATADIR%%/perm
 @mode
 %%DATADIR%%/pet_mark.xbm

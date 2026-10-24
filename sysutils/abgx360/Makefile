@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/abgx360
 
+DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/abgx360 ${STAGEDIR}${PREFIX}/bin
 

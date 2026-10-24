@@ -1,8 +1,0 @@
-
-dfly-patch:
-	cands=`grep -rl __FreeBSD__ ${WRKSRC}`; \
-	${REINPLACE_CMD} 's|__FreeBSD__|__DragonFly__|g' $${cands}
-
-dfly-install:
-	${RM} -fv ${STAGEDIR}${PREFIX}/bin/passenger-install-apache2-module
-	${RM} -fv ${STAGEDIR}${PREFIX}/bin/passenger-install-nginx-module

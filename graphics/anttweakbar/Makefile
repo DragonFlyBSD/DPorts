@@ -47,4 +47,9 @@ do-install:
 		${LN} -s libAntTweakBar.so.${DISTVERSION} libAntTweakBar.so.${DISTVERSION:R} && \
 		${LN} -s libAntTweakBar.so.${DISTVERSION} libAntTweakBar.so
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/LoadOGLCore.h \
+		${WRKSRC}/TwPrecomp.h
+
 .include <bsd.port.mk>

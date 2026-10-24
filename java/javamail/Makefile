@@ -1,7 +1,7 @@
 PORTNAME=	javamail
 DISTVERSIONPREFIX=	${PORTNAME:tu}-
 DISTVERSION=	1_6_2
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	java mail
 
 MAINTAINER=	ale@FreeBSD.org
@@ -11,13 +11,10 @@ WWW=		https://javaee.github.io/javamail/
 LICENSE=	GPLv2 CDDL
 LICENSE_COMB=	dual
 
-OPTIONS_DEFINE=	DOCS EXAMPLES
-
-USES=		cpe java:ant,run
+USES=		cpe java:ant
+CPE_VENDOR=	sun
 USE_GITHUB=	yes
 GH_ACCOUNT=	javaee
-CPE_VENDOR=	sun
-JAVA_VERSION=	8
 
 NO_ARCH=	yes
 
@@ -26,10 +23,21 @@ PLIST_FILES=	%%JAVAJARDIR%%/mail.jar
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}
 ALL_TARGET=	all docs
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if ${JAVA_PORT_VERSION} != 8
+_JAF_JAR=	${JAVALIBDIR}/activation.jar
+BUILD_DEPENDS+=	${_JAF_JAR}:devel/javax-activation
+RUN_DEPENDS+=	${_JAF_JAR}:devel/javax-activation
+MAKE_ARGS+=	-Dactivation.jar=${_JAF_JAR}
 .endif
 
 do-install:
@@ -53,4 +61,4 @@ do-install:
 	@${ECHO_MSG} " [ DONE ]"
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

@@ -1,13 +1,13 @@
 PORTNAME=	stdlib
-PORTVERSION=	41.2.2
+PORTVERSION=	41.2.4
 DISTVERSIONPREFIX=	release-v
-PORTREVISION=	1
 CATEGORIES=	devel
 PKGNAMEPREFIX=	${LUA_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Standard Lua Libraries
-WWW=		https://github.com/lua-stdlib/lua-stdlib
+WWW=		https://lua-stdlib.github.io/lua-stdlib/ \
+		https://github.com/lua-stdlib/lua-stdlib
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

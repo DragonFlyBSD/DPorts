@@ -27,4 +27,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
 
+pre-patch:
+	${REINPLACE_CMD} -e 's/freebsd\*/freebsd*|dragonfly*/g' ${WRKSRC}/configure
+
 .include <bsd.port.mk>

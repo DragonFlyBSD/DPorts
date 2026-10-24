@@ -1,5 +1,5 @@
 PORTNAME=	yash
-DISTVERSION=	2.58.1
+DISTVERSION=	2.61
 CATEGORIES=	shells
 MASTER_SITES=	https://github.com/magicant/${PORTNAME}/releases/download/${DISTVERSION}/
 
@@ -21,5 +21,9 @@ OPTIONS_SUB=	yes
 
 NLS_USES=	gettext-runtime localbase:ldflags
 NLS_CONFIGURE_ENABLE=	nls
+
+post-extract:
+	@${REINPLACE_CMD} -e '/case "$${ostype}"/,/esac/ s,freebsd),freebsd|dragonfly),' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

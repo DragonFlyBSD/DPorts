@@ -1,6 +1,6 @@
 PORTNAME=	qemu-powernv
 PORTVERSION=	3.0.50
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	emulators
 MASTER_SITES=	http://people.freebsd.org/~kbowling/distfiles/
 
@@ -48,11 +48,17 @@ PLIST_FILES=	bin/qemu-system-powernv \
 		${DATADIR}/qemu/spapr-rtas.bin
 
 # remap names to avoid conflicts with mainline port
+NCURSES_USES= ncurses
+CONFIGURE_ARGS+= --disable-netmap --disable-stack-protector --enable-curses
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ppc64-softmmu/qemu-system-ppc64 ${STAGEDIR}${PREFIX}/bin/qemu-system-powernv
 	${MKDIR} ${STAGEDIR}${DATADIR}/qemu
 	${INSTALL_DATA} ${WRKSRC}/pc-bios/skiboot.lid ${STAGEDIR}${DATADIR}/qemu/skiboot.lid
 	${INSTALL_DATA} ${WRKSRC}/pc-bios/slof.bin ${STAGEDIR}${DATADIR}/qemu/slof.bin
 	${INSTALL_DATA} ${WRKSRC}/pc-bios/spapr-rtas.bin ${STAGEDIR}${DATADIR}/qemu/spapr-rtas.bin
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@curses_lib_list=\"@&-L${LOCALBASE}/lib @g" \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

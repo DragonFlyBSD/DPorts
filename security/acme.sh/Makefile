@@ -1,12 +1,13 @@
 PORTNAME=	acme.sh
-PORTVERSION=	3.1.0
+PORTVERSION=	3.1.6
 CATEGORIES=	security
 
 MAINTAINER=	dvl@FreeBSD.org
 COMMENT=	ACME protocol client written in shell
-WWW=		https://github.com/Neilpang/acme.sh/
+WWW=		https://github.com/acmesh-official/acme.sh
 
 LICENSE=	GPLv3+
+LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 USES=		shebangfix
 SHEBANG_FILES=	deploy/synology_dsm.sh

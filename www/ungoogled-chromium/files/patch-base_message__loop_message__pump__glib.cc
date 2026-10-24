@@ -1,8 +1,8 @@
---- base/message_loop/message_pump_glib.cc.orig	2022-10-01 07:40:07 UTC
+--- base/message_loop/message_pump_glib.cc.orig	2026-08-13 07:41:05 UTC
 +++ base/message_loop/message_pump_glib.cc
-@@ -8,6 +8,11 @@
+@@ -7,6 +7,11 @@
+ #include <fcntl.h>
  #include <glib.h>
- #include <math.h>
  
 +#if BUILDFLAG(IS_BSD)
 +#include <pthread.h>
@@ -11,16 +11,16 @@
 +
  #include "base/logging.h"
  #include "base/memory/raw_ptr.h"
- #include "base/notreached.h"
-@@ -51,9 +56,13 @@ int GetTimeIntervalMilliseconds(TimeTicks next_task_ti
+ #include "base/message_loop/io_watcher.h"
+@@ -58,9 +63,13 @@ int GetTimeIntervalMilliseconds(TimeTicks next_task_ti
  }
  
  bool RunningOnMainThread() {
 +#if BUILDFLAG(IS_BSD)
 +  return pthread_main_np();
 +#else
-   auto pid = getpid();
-   auto tid = PlatformThread::CurrentId();
+   pid_t pid = getpid();
+   pid_t tid = PlatformThread::CurrentId().raw();
    return pid > 0 && tid > 0 && pid == tid;
 +#endif
  }

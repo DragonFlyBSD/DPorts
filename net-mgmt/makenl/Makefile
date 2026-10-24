@@ -21,4 +21,5 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	zoomosis
 GH_TAGNAME=	ab7babe
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

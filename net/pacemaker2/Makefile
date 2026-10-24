@@ -1,11 +1,9 @@
-PORTVERSION=		2.1.6
+DISTVERSION=		2.1.11
 PKGNAMESUFFIX=		2
 
 WWW=		https://www.clusterlabs.org/pacemaker/
 
 .include "${.CURDIR}/Makefile.common"
-
-CONFIGURE_ARGS+=	--with-noarch-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 
 LIB_DEPENDS+=		libffi.so:devel/libffi \
 	libgmp.so:math/gmp \
@@ -15,9 +13,12 @@ LIB_DEPENDS+=		libffi.so:devel/libffi \
 	libp11-kit.so:security/p11-kit \
 	libpcre.so:devel/pcre \
 	libtasn1.so:security/libtasn1 \
-	libunistring.so:devel/libunistring
+	libunistring.so:devel/libunistring \
+	libxml2.so:textproc/libxml2
 
 USES+=	gettext
+
+CONFIGURE_ARGS+=	--with-noarch-pkgconfigdir=${PREFIX}/libdata/pkgconfig
 
 SHEBANG_FILES+=	agents/ocf/*
 

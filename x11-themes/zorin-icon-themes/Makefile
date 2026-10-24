@@ -1,8 +1,8 @@
 PORTNAME=	zorin-icon-themes
-DISTVERSION=	3.3.1
+DISTVERSION=	4.0.5
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Zorin OS icon theme
 WWW=		https://github.com/ZorinOS/zorin-icon-themes
 

@@ -1,13 +1,15 @@
 PORTNAME=	gnome-todo
 PORTVERSION=	41.0
-PORTREVISION=	4
+PORTREVISION=	7
 CATEGORIES=	deskutils gnome
-MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
+MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Small application to manage your personal tasks
 WWW=		https://wiki.gnome.org/Apps/Todo
+
+BROKEN=		fails to build, fatal error: 'girepository.h' file not found
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -17,7 +19,7 @@ BUILD_DEPENDS=	appstream-util:devel/appstream-glib \
 LIB_DEPENDS=	libgoa-1.0.so:net/gnome-online-accounts \
 		libgraphene-1.0.so:graphics/graphene \
 		libical.so:devel/libical \
-		libpeas-1.0.so:devel/libpeas \
+		libpeas-1.0.so:devel/libpeas1 \
 		libsecret-1.so:security/libsecret \
 		libsoup-2.4.so:devel/libsoup
 

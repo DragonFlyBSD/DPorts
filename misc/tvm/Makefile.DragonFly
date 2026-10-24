@@ -1,3 +1,0 @@
-
-# compatible with llvm90 only
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLLVM}

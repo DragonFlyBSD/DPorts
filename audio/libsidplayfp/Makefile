@@ -1,5 +1,5 @@
 PORTNAME=	libsidplayfp
-DISTVERSION=	2.7.1
+DISTVERSION=	3.0.2
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/
 
@@ -10,25 +10,27 @@ WWW=		https://github.com/libsidplayfp/libsidplayfp
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	libgcrypt-config:security/libgcrypt
-LIB_DEPENDS=	libgcrypt.so:security/libgcrypt
+LIB_DEPENDS=	libresidfp.so:audio/libresidfp
 
-USES=		compiler:c++17-lang libtool pathfix pkgconfig
+USES=		compiler:c++23-lang libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-static \
 		--with-exsid=no \
-		--with-gcrypt
+		--with-usbsid=no
 
 INSTALL_TARGET=	install-strip
+
+SIDPLAYFP_SHLIB_VERSION=        7.7.48
+STILVIEW_SHLIB_VERSION=         0.0.8
 
 PLIST_SUB+=	SIDPLAYFP_SHLIB_VER=${SIDPLAYFP_SHLIB_VERSION:C/\.[[:digit:].]+//} \
 		SIDPLAYFP_SHLIB_VERSION=${SIDPLAYFP_SHLIB_VERSION} \
 		STILVIEW_SHLIB_VER=${STILVIEW_SHLIB_VERSION:C/\.[[:digit:].]+//} \
 		STILVIEW_SHLIB_VERSION=${STILVIEW_SHLIB_VERSION}
 
-PORTDOCS1=	NEWS README TODO
+PORTDOCS1=	NEWS.md README.md TODO
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DEBUG DOCS DOXYGEN
@@ -38,19 +40,6 @@ DEBUG_CONFIGURE_ON=	--enable-debug=full
 
 DOXYGEN_BUILD_DEPENDS=		doxygen:devel/doxygen
 DOXYGEN_CONFIGURE_ENV_OFF=	ac_cv_prog_HAVE_DOXYGEN=false
-
-.include <bsd.port.options.mk>
-
-.if ${ARCH} == "aarch64"
-CONFIGURE_ARGS+=	--with-simd=neon
-.endif
-
-.if ${ARCH} == "x86_64"
-CONFIGURE_ARGS+=	--with-simd=sse2
-.endif
-
-SIDPLAYFP_SHLIB_VERSION=	6.4.31
-STILVIEW_SHLIB_VERSION=		0.0.4
 
 post-build-DOXYGEN-on:
 	${MAKE_CMD} doc -C ${WRKSRC}

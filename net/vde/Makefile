@@ -24,4 +24,11 @@ CFLAGS+=	-fPIC
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libvdetap.so
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@net/if_tun.h@net/tun/if_tun.h@g' \
+		${WRKSRC}/vdetaplib/test.c \
+		${WRKSRC}/vdetaplib/libvdetap.c \
+		${WRKSRC}/tuntap.c \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

@@ -1,5 +1,6 @@
 PORTNAME=	powerarchitect
 PORTVERSION=	1.0.9
+PORTREVISION=	2
 CATEGORIES=	databases java
 MASTER_SITES=	http://www.bestofbi.com/downloads/architect/${PORTVERSION}/
 DISTNAME=	SQL-Power-Architect-generic-${PORTVERSION}
@@ -21,7 +22,7 @@ WRKSRC=		${WRKDIR}/architect-${PORTVERSION}
 
 OPTIONS_DEFINE=	DOCS MYSQL_JDBC PGSQL_JDBC
 
-MYSQL_JDBC_RUN_DEPENDS=	${JAVALIBDIR}/mysql-connector-java.jar:databases/mysql-connector-j
+MYSQL_JDBC_RUN_DEPENDS= ${JAVALIBDIR}/mysql-connector-java.jar:databases/mysql-connector-j
 PGSQL_JDBC_RUN_DEPENDS=	${JAVALIBDIR}/postgresql.jar:databases/postgresql-jdbc
 
 do-install:

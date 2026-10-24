@@ -1,6 +1,7 @@
 PORTNAME=	avida
-PORTVERSION=	2.12.4
+DISTVERSION=	2.12.4
 DISTVERSIONSUFFIX=	-src
+PORTREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-stable/${PORTVERSION}
 
@@ -10,15 +11,14 @@ WWW=		https://avida.devosoft.org/
 
 LICENSE=	GPLv3
 
-BROKEN_aarch64=		invokes x86 assembler
-BROKEN_armv6=		invokes x86 assembler
-BROKEN_armv7=		invokes x86 assembler
-BROKEN_mips=		invokes x86 assembler
-BROKEN_mips64=		invokes x86 assembler
-BROKEN_riscv64=		invokes x86 assembler
+DEPRECATED=	Does not build with CMake 4
+EXPIRATION_DATE=2026-11-30
+
+ONLY_FOR_ARCHS=	amd64 i386
+ONLY_FOR_ARCHS_REASON=	invokes x86 assembler
 
 USES=		compiler:c11 cmake ncurses
-USE_CXXSTD=	gnu++98
+USE_CXXSTD= gnu++98
 CMAKE_ARGS=	-DAPTO_UNIT_TESTS:BOOL=OFF \
 		-DAVD_UNIT_TESTS:BOOL=OFF \
 		-DNCURSES_INCLUDE_PATH:STRING="${NCURSESINC}"
@@ -38,13 +38,9 @@ DATA_FILES=	analyze.cfg avida.cfg default-gx.org \
 
 OPTIONS_DEFINE=	DOCS
 
-post-patch:
-	@${FIND} ${WRKSRC} -name "CMakeLists.txt" | ${XARGS} \
-		${REINPLACE_CMD} -e \
-		's|-O[0-9]|| ; \
-		 s| pthread| -pthread|'
-	@${REINPLACE_CMD} -e '/long long int/s|std::abs|llabs|' \
-		${WRKSRC}/avida-core/source/main/cPopulationInterface.cc
+CFALGS= -Wundef
+DFLY_UNMAINTAINED= yes
+pre-configure:
 	@${REINPLACE_CMD} -e '/__PPC__/s|linux|${OPSYS}|' \
 		${WRKSRC}/libs/tcmalloc-1.4/src/atomicops.h
 
@@ -71,5 +67,15 @@ do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	@(cd ${WRKSRC}/avida-core/documentation && ${COPYTREE_SHARE} . \
 		${STAGEDIR}${DOCSDIR})
+
+dfly-patch:
+	${FIND} ${WRKSRC}/ -type f | ${XARGS} ${GREP} -l "APTO_PLATFORM(" | ${XARGS} \
+		${REINPLACE_CMD} -e 's@APTO_PLATFORM(WINDOWS)@APTO_PLATFORM_WINDOWS@g' \
+				 -e 's@APTO_PLATFORM(APPLE)@APTO_PLATFORM_APPLE@g' \
+				 -e 's@APTO_PLATFORM(UNIX)@APTO_PLATFORM_UNIX@g' \
+				 -e 's@APTO_PLATFORM(UNIX)@APTO_PLATFORM_UNIX@g' \
+				 -e 's@APTO_PLATFORM(GNUC)@APTO_PLATFORM_GNUC@g' \
+				 -e 's@APTO_PLATFORM(MSVC)@APTO_PLATFORM_MSVC@g' \
+				 -e 's@APTO_PLATFORM(THREADS)@APTO_PLATFORM_THREADS@g'
 
 .include <bsd.port.mk>

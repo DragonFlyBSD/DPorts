@@ -1,7 +1,8 @@
 PORTNAME=	perl
 DISTVERSION=	${PERL_VERSION}
 CATEGORIES=	lang devel perl5
-MASTER_SITES=	https://cpan.metacpan.org/authors/id/S/SH/SHAY/ CPAN/../../src/5.0
+MASTER_SITES=	https://cpan.metacpan.org/authors/id/S/SH/SHAY/ \
+		CPAN/../../src/5.0
 DIST_SUBDIR=	perl
 
 MAINTAINER=	mat@FreeBSD.org
@@ -13,9 +14,8 @@ LICENSE_COMB=	dual
 LICENSE_FILE_ART10=	${WRKSRC}/Artistic
 LICENSE_FILE_GPLv1+ =	${WRKSRC}/Copying
 
-# Uncomment when the default Perl is switched to 5.42+
-#DEPRECATED=	Support end three years after .0 release, please upgrade to a more recent version of Perl
-#EXPIRATION_DATE=<Release date of .0 + 3 years>
+DEPRECATED=	Support end three years after .0 release, please upgrade to a more recent version of Perl
+EXPIRATION_DATE=	2027-06-09
 
 USES=		cpe tar:xz
 
@@ -131,9 +131,7 @@ OPTIONS_DEFAULT=	DTRACE MULTIPLICITY PERL_64BITINT THREADS
 .if !exists(/usr/sbin/dtrace)
 OPTIONS_EXCLUDE=	DTRACE
 .endif
-.for a in aarch64 armv6 armv7 \
-	mips mips64 mips64el mips64elhf mips64hf mipsel mipselhf mipshf mipsn32 \
-	riscv64 riscv64sf
+.for a in aarch64 armv6 armv7 riscv64
 OPTIONS_EXCLUDE_${a}=	DTRACE
 .endfor
 OPTIONS_SUB=		yes
@@ -242,6 +240,10 @@ post-patch:
 		/^if.*nopods.*versiononly || /s/.*/if (1) {/' \
 		${WRKSRC}/installperl
 .endif
+	cd ${PATCHDIR}; for patch in patch-*; do \
+		${AWK} -v patch="$$patch" 'seen == 1 && /,NULL/ {print ",\"FreeBSD:" patch "\""} {print} /local_patches\[\]/ { seen=1 }' ${WRKSRC}/patchlevel.h > ${WRKDIR}/patchlevel.h; \
+		mv -f ${WRKDIR}/patchlevel.h ${WRKSRC}/patchlevel.h ; \
+	done
 
 post-install:
 	@${REINPLACE_CMD} -e '/^lddlflags/s|-L${WRKSRC} ||' \

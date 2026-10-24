@@ -1,6 +1,3 @@
-# Created by: Weongyo Jeong <weongyo@FreeBSD.org>
-# $FreeBSD$
-
 PORTNAME=	bwn-firmware
 PORTVERSION=	0.1.2
 CATEGORIES=	net
@@ -65,6 +62,7 @@ NO_PACKAGE=	this is a modified version of a restricted firmware
 
 USES=		kmod uidfix
 
+IGNORE= FreeBSD specific kmod
 do-build:
 	cd ${WRKSRC} && \
 	tar xjf ${DISTDIR}/${FWFILE}

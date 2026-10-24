@@ -1,5 +1,5 @@
 PORTNAME=	libressl
-PORTVERSION=	3.9.2
+PORTVERSION=	4.3.3
 CATEGORIES=	security devel
 MASTER_SITES=	OPENBSD/LibreSSL
 PKGNAMESUFFIX=	-devel
@@ -27,7 +27,7 @@ NC_DESC=	Install TLS-enabled netcat
 
 CONFLICTS_INSTALL=		libressl \
 				libretls
-default_CONFLICTS_INSTALL=	openssl openssl111 openssl3[12] openssl-quictls
+default_CONFLICTS_INSTALL=	openssl openssl[134]*
 
 .if ${FLAVOR:U} == default
 OPTIONS_EXCLUDE=	LIBTLS
@@ -50,13 +50,14 @@ LDFLAGS+=	-pthread
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 
-PLIST_SUB+=	LIBCRYPTO_SHLIBMAJ=53 \
-		LIBCRYPTO_SHLIBFULL=53.0.0 \
-		LIBSSL_SHLIBMAJ=56 \
-		LIBSSL_SHLIBFULL=56.0.0 \
-		LIBTLS_SHLIBMAJ=29 \
-		LIBTLS_SHLIBFULL=29.0.0
+PLIST_SUB+=	LIBCRYPTO_SHLIBMAJ=57 \
+		LIBCRYPTO_SHLIBFULL=57.0.2 \
+		LIBSSL_SHLIBMAJ=60 \
+		LIBSSL_SHLIBFULL=60.0.2 \
+		LIBTLS_SHLIBMAJ=33 \
+		LIBTLS_SHLIBFULL=33.0.2
 
+DFLY_UNMAINTAINED= yes
 post-patch-MAN3-off:
 	${REINPLACE_CMD} -e '/^install-man:/s/install-man3//' \
 		-e '/$$(MAKE) $$(AM_MAKEFLAGS) install-data-hook/d' \

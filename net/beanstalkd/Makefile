@@ -27,6 +27,7 @@ PORTDOCS=	protocol.txt
 
 OPTIONS_DEFINE=	DOCS
 
+DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/beanstalkd ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/${PORTNAME}.1 \
@@ -37,5 +38,8 @@ do-install-DOCS-on:
 .for i in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
+
+post-extract:
+	${MV} ${WRKSRC}/freebsd.c ${WRKSRC}/dragonfly.c
 
 .include <bsd.port.mk>

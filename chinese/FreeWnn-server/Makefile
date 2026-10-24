@@ -8,4 +8,5 @@ PKGDIR=		${.CURDIR}
 
 OPTIONS_DEFAULT=CWNN SERVER
 
+CPP= cpp -P
 .include "${MASTERDIR}/Makefile"

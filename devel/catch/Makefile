@@ -1,6 +1,7 @@
 PORTNAME=	catch
 PORTVERSION=	2.13.10
 DISTVERSIONPREFIX=	v
+PORTEPOCH=	1
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -10,13 +11,13 @@ WWW=		https://github.com/catchorg/Catch2
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		cmake compiler:c++14-lang pathfix python:build
+USES=		cmake compiler:c++14-lang python:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	catchorg
 GH_PROJECT=	Catch2
 
-CMAKE_ARGS=	-DCMAKE_INSTALL_DOCDIR=${DOCSDIR}
+CMAKE_ARGS= -DCMAKE_INSTALL_DOCDIR=${DOCSDIR} -DCATCH_ENABLE_WERROR:BOOL=OFF
 NO_ARCH=	yes
 
 PORTSCOUT=	limit:^2\.

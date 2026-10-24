@@ -1,9 +1,8 @@
 PORTNAME=	cdparanoia
-PORTVERSION=	3.9.8
-PORTREVISION=	10
+PORTVERSION=	3.10.2
 CATEGORIES=	audio sysutils
-MASTER_SITES=	http://www.xiph.org/paranoia/download/
-DISTNAME=	${PORTNAME}-${PORTVERSION:C/^3\./III-alpha/}
+MASTER_SITES=	http://downloads.xiph.org/releases/cdparanoia/
+DISTNAME=	${PORTNAME}-${PORTVERSION:S/^3./III-/}
 EXTRACT_SUFX=	.src.tgz
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -11,18 +10,19 @@ COMMENT=	CDDA extraction tool (also known as ripper)
 WWW=		https://www.xiph.org/paranoia/
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/GPL
+LICENSE_FILE=	${WRKSRC}/COPYING-GPL
 
 USES=		gmake
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 USE_LDCONFIG=	yes
 
+CFLAGS= -D__FreeBSD__ -D__FreeBSD_version=900001
 post-patch:
-	@${REINPLACE_CMD} -e 's/\(^ *default:\)/\1break;/' \
-		${WRKSRC}/interface/utils.h
+	@${REINPLACE_CMD} -e '/OPT=/s,".*","",' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's,unknown),portbld | *-&,' ${WRKSRC}/configure.sub
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libcdda_*.so
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/interface/low_interface.h
 
 .include <bsd.port.mk>

@@ -16,6 +16,7 @@ GH_TAGNAME=	b1a7a8e33ade59d43147a2f2531fe87c26de4093
 
 PLIST_FILES=	bin/gostsum
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 post-patch:

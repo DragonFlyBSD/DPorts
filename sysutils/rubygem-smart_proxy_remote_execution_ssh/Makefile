@@ -1,5 +1,5 @@
 PORTNAME=	smart_proxy_remote_execution_ssh
-PORTVERSION=	0.11.5
+PORTVERSION=	1.0.4
 CATEGORIES=	sysutils ruby
 MASTER_SITES=	RG
 
@@ -11,9 +11,11 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	foreman-proxy>=1.12.0:net/foreman-proxy \
+		rubygem-bcrypt_pbkdf>=1.0<2.0:security/rubygem-bcrypt_pbkdf \
+		rubygem-ed25519>=1.2<2.0:security/rubygem-ed25519 \
 		rubygem-mqtt>=0.5<1:net/rubygem-mqtt \
 		rubygem-net-ssh>=7.2,2<8,2:security/rubygem-net-ssh \
-		rubygem-smart_proxy_dynflow>=0.9.4<1:sysutils/rubygem-smart_proxy_dynflow
+		rubygem-smart_proxy_dynflow>=0.9.4<2.0.0:sysutils/rubygem-smart_proxy_dynflow
 
 USES=		gem
 

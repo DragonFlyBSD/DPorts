@@ -1,7 +1,7 @@
 PORTNAME=	itcl4
-DISTVERSION=	4.3.2
+DISTVERSION=	4.3.5
 CATEGORIES=	lang
-MASTER_SITES=	SF/tcl/Tcl/8.6.16
+MASTER_SITES=	SF/tcl/Tcl/9.0.3
 DISTNAME=	itcl${DISTVERSION}
 
 MAINTAINER=	tcltk@FreeBSD.org
@@ -20,5 +20,8 @@ TEST_TARGET=	test
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/itcl${DISTVERSION}/lib${TCL_PKG_LIB_PREFIX}itcl${DISTVERSION}.so
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' ${WRKSRC}/configure
 
 .include <bsd.port.mk>

@@ -1,2 +1,0 @@
-# force use of utmpx, __FreeBSD_version >= 900007
-CFLAGS+=	-D__FreeBSD_version=1300000

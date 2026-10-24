@@ -14,6 +14,7 @@ MANDIRS=	${PREFIX}/share/man/man1
 PLIST_FILES=	bin/filemon \
 		share/man/man1/filemon.1.gz
 
+DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1  ${STAGEDIR}${PREFIX}/share/man/man1

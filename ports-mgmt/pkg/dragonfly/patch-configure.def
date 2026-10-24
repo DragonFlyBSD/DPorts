@@ -1,0 +1,14 @@
+--- configure.def.orig
++++ configure.def
+@@ -142,9 +142,9 @@
+ 
+ # privatezstd
+ define ZSTDLIB ""
+-cc_with "-libs -lprivatezstd" cc_check_functions ZSTD_versionNumber
++cc_with "-libs -lprivate_zstd" cc_check_functions ZSTD_versionNumber
+ if [ "$(get_define HAVE_ZSTD_VERSIONNUMBER)" = "1" ]; then
+-	define ZSTDLIB "-lprivatezstd"
++	define ZSTDLIB "-lprivate_zstd"
+ fi
+ 
+ # Atomics

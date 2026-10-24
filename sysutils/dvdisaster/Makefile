@@ -36,7 +36,7 @@ FLAVORS_SUB=	yes
 .if ${FLAVOR} == default
 LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
 			libfreetype.so:print/freetype2
-USE_GNOME+=		cairo gdkpixbuf2 gtk20
+USE_GNOME+=		cairo gdkpixbuf gtk20
 CONFIGURE_ARGS+=	--with-gui=yes
 .endif
 
@@ -50,6 +50,7 @@ OPTIONS_SUB=	yes
 
 DOCS_CONFIGURE_ON=	--docdir=${DOCSDIR}
 
+DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/documentation/${PORTNAME}.en.1 ${STAGEDIR}${PREFIX}/share/man/man1/${PORTNAME}.1

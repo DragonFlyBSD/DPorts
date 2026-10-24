@@ -1,5 +1,5 @@
 PORTNAME=	bson
-PORTVERSION=	5.0.2
+PORTVERSION=	5.2.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -12,6 +12,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cpe gem
 
-CPE_VENDOR=	bson_project
+CPE_VENDOR=	mongodb
 
 .include <bsd.port.mk>

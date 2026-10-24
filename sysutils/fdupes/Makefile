@@ -20,7 +20,7 @@ OPTIONS_DEFINE=		NCURSES SQLITE
 OPTIONS_DEFAULT=	NCURSES
 
 NCURSES_LIB_DEPENDS=	libpcre2-32.so:devel/pcre2
-NCURSES_USES=		ncurses:base
+NCURSES_USES= ncurses
 NCURSES_CONFIGURE_OFF=	--without-ncurses
 NCURSES_PLIST_FILES=	share/man/man7/fdupes-help.7.gz
 SQLITE_USES=		sqlite

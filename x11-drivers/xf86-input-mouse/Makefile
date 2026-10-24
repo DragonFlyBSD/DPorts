@@ -10,8 +10,7 @@ WWW=		https://www.x.org/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		pathfix xorg-cat:driver
+USES=		pathfix tar:bz2 xorg-cat:driver
 
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
-
+CFLAGS= -Wno-array-bounds
 .include <bsd.port.mk>

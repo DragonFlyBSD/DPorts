@@ -1,6 +1,6 @@
 PORTNAME=	kraft
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.2
+DISTVERSION=	2.0.0
 CATEGORIES=	finance kde
 
 MAINTAINER=	kde@FreeBSD.org
@@ -12,19 +12,23 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	bash:shells/bash \
 		po4a:textproc/po4a \
-		rubygem-asciidoctor>=1.5.7<3:textproc/rubygem-asciidoctor
-LIB_DEPENDS=	libctemplate.so:textproc/google-ctemplate
+		asciidoctor:textproc/rubygem-asciidoctor
 
 # iconv is just used for run
-USES=		cmake compiler:c++11-lang gettext-tools grantlee:5 iconv \
-		kde:5 qt:5 shebangfix
+USES=		cmake compiler:c++17-lang gettext-tools iconv \
+		kde:6 qt:6 shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	dragotin
-USE_KDE=	config contacts i18n \
+USE_KDE=	config contacts i18n texttemplate \
 		ecm:build
-USE_QT=		core gui sql svg widgets xml xmlpatterns \
-		buildtools:build qmake:build testlib:build
+# KDE PIM
+USE_KDE+=	akonadi akonadicontacts
+USE_QT=		base svg
 
 SHEBANG_FILES=	manual/makeman.sh
+
+post-patch:
+	${REINPLACE_CMD} '/set(CMAKE_CXX_FLAGS.*-lstdc++fs")/d' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

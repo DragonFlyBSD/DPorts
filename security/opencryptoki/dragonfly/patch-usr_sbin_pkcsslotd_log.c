@@ -1,21 +1,20 @@
---- usr/sbin/pkcsslotd/log.c.orig	2018-11-16 14:53:03 UTC
+--- usr/sbin/pkcsslotd/log.c.orig
 +++ usr/sbin/pkcsslotd/log.c
-@@ -10,6 +10,7 @@
- 
- #include <stdio.h>
- #include <stdlib.h>
-+#include <stdint.h>
- #include <string.h>
- #include <syslog.h>
- #include <stdarg.h>
-@@ -463,8 +464,8 @@ BOOL PKCS_Log(pLogHandle phLog, char *Fo
- #endif                          /* DEV */
+@@ -464,7 +464,7 @@
  
          if (WriteNow) {
--            fprintf(stderr, "%s[%d.%d]: %s\n", pInfo->Descrip, getpid(),
--                    (int) pthread_self(), Buffer);
-+            fprintf(stderr, "%s[%d.%ju]: %s\n", pInfo->Descrip, getpid(),
-+                    (uintmax_t) pthread_self(), Buffer);
+             fprintf(stderr, "%s[%d.%lu]: %s\n", pInfo->Descrip, getpid(),
+-                    pthread_self(), buf);
++                    (unsigned long) pthread_self(), buf);
          }
      }
  
+@@ -483,7 +483,7 @@
+ 
+             /* Date/Time stamp, descrip, Error message */
+             fprintf(fd, "%s %s[%d.%lu]: ", timebuf, pInfo->Descrip, getpid(),
+-                    pthread_self());
++                    (unsigned long) pthread_self());
+             fprintf(fd, "%s\n", buf);
+             fflush(fd);
+             fclose(fd);

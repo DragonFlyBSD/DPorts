@@ -30,4 +30,8 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lcurses@-lncurses@'	\
+		${WRKSRC}/mk/build.mk
+
 .include <bsd.port.mk>

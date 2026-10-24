@@ -1,15 +1,18 @@
 PORTNAME=	clblas
-PORTVERSION=	2.10
+PORTVERSION=	2.12
+PORTREVISION=	5
 DISTVERSIONPREFIX=	v
-PORTREVISION=	15
 CATEGORIES=	math
 
-MAINTAINER=	jmd@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Software library containing BLAS functions written in OpenCL
 WWW=		https://github.com/clMathLibraries/clBLAS
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Abandoned upstream, does not build with CMake 4
+EXPIRATION_DATE=2026-11-30
 
 BUILD_DEPENDS=	opencl>=0:devel/opencl
 LIB_DEPENDS=	libOpenCL.so:devel/ocl-icd \
@@ -31,4 +34,5 @@ CMAKE_ARGS+=	-DBUILD_TEST=OFF \
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/src
 
+PLIST_FILES= libdata/pkgconfig/clBLAS.pc
 .include <bsd.port.mk>

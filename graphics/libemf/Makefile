@@ -1,6 +1,5 @@
 PORTNAME=	libEMF
-DISTVERSION=	1.0.13
-PORTREVISION=	1
+DISTVERSION=	1.0.14
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 DISTNAME=	libemf-${DISTVERSION}
@@ -28,6 +27,6 @@ OPTIONS_DEFINE=	DOCS
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-	cd ${WRKSRC}/doc/html && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
+	cd ${WRKSRC}/doc/doxygen-doc/html && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>

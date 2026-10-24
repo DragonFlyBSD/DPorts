@@ -1,7 +1,5 @@
 PORTNAME=	bifrost
-DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.1
-PORTREVISION=	1
+DISTVERSION=	1.3.9
 CATEGORIES=	biology
 
 MAINTAINER=	jwb@FreeBSD.org
@@ -19,6 +17,9 @@ USE_GITHUB=	yes
 
 CMAKE_ARGS=	-DCOMPILATION_ARCH=${CPUTYPE:UOFF}
 
+CXXFLAGS+=	-Wno-unqualified-std-cast-call
+
 GH_ACCOUNT=	pmelsted
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

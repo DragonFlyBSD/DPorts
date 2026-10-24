@@ -1,0 +1,18 @@
+modelscope-hub connects your code to the ModelScope ecosystem - models,
+datasets, Studio spaces, skills, and MCP servers - through a single
+HubApi class or the ms CLI.
+
+Features:
+* Unified repo interface — one set of methods for models, datasets,
+  studios, skills, and MCP servers
+* OpenAPI-first - built on the ModelScope OpenAPI surface with transparent
+  legacy fallback
+* Production-grade downloads - HTTP Range resume, parallel range download
+  for large files, per-file retry with backoff, SHA256 integrity checks,
+  file lock for multiprocess safety, offline mode, progress callbacks,
+  and intra-cloud acceleration
+* Full lifecycle CLI - download, upload, deploy, manage secrets, inspect
+  cache - all from the terminal
+* Deep ecosystem integration - seamless access to 100K+ models and datasets on
+  ModelScope Hub; works with the modelscope training framework, Studio
+  deployment platform, and MCP server infrastructure

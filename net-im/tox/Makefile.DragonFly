@@ -1,2 +1,0 @@
-SODIUM_CONFIGURE_ON=	--with-libsodium-libs=${LOCALBASE}/lib \
-			--with-libsodium-headers=${LOCALBASE}/include

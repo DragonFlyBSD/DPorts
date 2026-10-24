@@ -1,0 +1,5 @@
+langchain-huggingface is a LangChain integration package for Hugging Face.
+
+It provides chat models, embeddings, and pipelines built on top of the
+Hugging Face ecosystem, including transformers, sentence-transformers,
+tokenizers, and huggingface-hub.

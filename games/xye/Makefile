@@ -29,7 +29,7 @@ USES=		compiler gmake sdl
 USE_SDL=	sdl image ttf
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-docdir=${PREFIX}/share/doc
-CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
+CXXFLAGS+= ${CXXFLAGS_${CHOSEN_COMPILER_TYPE}} -Wno-narrowing
 CXXFLAGS_clang=	-Wno-c++11-narrowing
 
 LEVELS=		Xye%20level%20-%204corners Xye%20level%20-%20Against%20the%20force \

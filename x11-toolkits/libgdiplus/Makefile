@@ -24,7 +24,7 @@ USES=		autoreconf cpe gettext-runtime gmake gnome jpeg libtool:keepla \
 USE_GNOME=	cairo glib20 pango
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+= -L${LOCALBASE}/lib -lm -lX11
 INSTALL_TARGET=	install-strip
 CPE_VENDOR=	mono-project
 

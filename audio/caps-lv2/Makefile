@@ -17,4 +17,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	moddevices
 GH_TAGNAME=	5d52a0c
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g' \
+		${WRKSRC}/dsp/v4f_IIR2.h
+
 .include <bsd.port.mk>

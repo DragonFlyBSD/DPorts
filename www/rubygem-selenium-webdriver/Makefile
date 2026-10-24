@@ -1,5 +1,5 @@
 PORTNAME=	selenium-webdriver
-PORTVERSION=	4.29.1
+PORTVERSION=	4.49.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -14,11 +14,15 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	rubygem-base64>=0.2<1:converters/rubygem-base64 \
 		rubygem-logger>=1.4<2:devel/rubygem-logger \
 		rubygem-rexml>=3.2.5<4:textproc/rubygem-rexml \
-		rubygem-rubyzip>=1.2.2<3.0:archivers/rubygem-rubyzip \
+		rubygem-rubyzip>=1.2.2<4.0:archivers/rubygem-rubyzip \
 		rubygem-websocket>=1.0<2:www/rubygem-websocket
 
 USES=		gem
 
 NO_ARCH=	yes
+
+post-stage:
+	${RM} -rf ${STAGEDIR}/usr/local/lib/ruby/gems/3.1/gems/selenium-webdriver-${PORTVERSION}/bin
+	${RM} -rf ${STAGEDIR}/usr/local/lib/ruby/gems/3.2/gems/selenium-webdriver-${PORTVERSION}/bin/linux
 
 .include <bsd.port.mk>

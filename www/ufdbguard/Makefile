@@ -1,5 +1,5 @@
 PORTNAME=	ufdbGuard
-PORTVERSION=	1.35.7
+DISTVERSION=	1.35.8
 CATEGORIES=	www
 MASTER_SITES=	SF/${PORTNAME:tl}/1.35
 
@@ -55,6 +55,8 @@ DBDIR=		/var/db/${PORTNAME}
 LOGDIR=		/var/log/${PORTNAME}
 RUNDIR=		/var/run/${PORTNAME}
 
+CFLAGS= -Dfdatasync=fsync
+DFLY_UNMAINTAINED= yes
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ufdbguardd \
 		${STAGEDIR}${PREFIX}/bin/ufdbgclient \
@@ -62,5 +64,17 @@ post-install:
 		${STAGEDIR}${PREFIX}/bin/ufdbGenTable \
 		${STAGEDIR}${PREFIX}/bin/ufdbAnalyse \
 		${STAGEDIR}${PREFIX}/bin/ufdbhttpd
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/FLAGS/s@-D_XOPEN_SOURCE=600@@g' \
+		${WRKSRC}/configure ${WRKSRC}/src/Makefile.in
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
+		${WRKSRC}/src/rwtest.c \
+		${WRKSRC}/src/sg.h.in \
+		${WRKSRC}/src/ufdb.h.in
+
+
+dfly-install:
+	${RMDIR} ${STAGEDIR}/etc/urlfilterdb
 
 .include <bsd.port.mk>

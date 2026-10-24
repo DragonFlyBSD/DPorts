@@ -1,6 +1,6 @@
 PORTNAME=	freeorion
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5
+DISTVERSION=	0.5.1.2
 PORTREVISION=	2
 CATEGORIES=	games
 
@@ -41,6 +41,7 @@ CLIENT_GG_LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 			libvorbis.so:audio/libvorbis \
 			libpng.so:graphics/png
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_VER} != ${PYTHON_DEFAULT}
@@ -48,6 +49,15 @@ CLIENT_GG_LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 # not installed by boost-python-libs
 CMAKE_ARGS+=	-DBoost_NO_BOOST_CMAKE:BOOL=YES
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e '/        system/d' \
+		${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} -e '/^find_package(Boost /s| system||' \
+		${WRKSRC}/GG/CMakeLists.txt
+	@${REINPLACE_CMD} -e '/Boost::system/d' \
+		${WRKSRC}/GG/test/unit/CMakeLists.txt \
+		${WRKSRC}/test/UI/CMakeLists.txt
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

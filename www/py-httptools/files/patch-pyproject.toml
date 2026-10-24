@@ -1,0 +1,24 @@
+--- pyproject.toml.orig	2026-05-25 22:07:13 UTC
++++ pyproject.toml
+@@ -1,6 +1,6 @@ build-backend = "setuptools.build_meta"
+ [build-system]
+ build-backend = "setuptools.build_meta"
+-requires = ["setuptools>=80.9.0,<=82.0.1"]
++requires = ["setuptools>=61,<=82.0.1"]
+ 
+ [project]
+ name = "httptools"
+@@ -17,12 +17,7 @@ authors = [
+ authors = [
+     {name = "Yury Selivanov", email="yury@magic.io"},
+ ]
+-license = "MIT"
+-license-files = [
+-    "LICENSE",
+-    "vendor/http-parser/LICENSE-MIT",
+-    "vendor/llhttp/LICENSE",
+-]
++license = {text="MIT"}
+ description = "A collection of framework independent HTTP protocol utils."
+ readme = "README.md"
+ 

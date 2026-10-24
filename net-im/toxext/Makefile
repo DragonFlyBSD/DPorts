@@ -1,7 +1,7 @@
 PORTNAME=	toxext
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.0.3
-PORTREVISION=	6
+PORTREVISION=	10
 CATEGORIES=	net-im net-p2p
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -22,6 +22,13 @@ USE_GITHUB=	yes
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_TESTING_ON=	BUILD_TESTS
 
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4.5 compatibility, see https://github.com/toxext/toxext/issues/13
+
 CFLAGS+=	-fPIC # see https://github.com/toxext/toxext/issues/7
+
+CMAKE_OFF= REPORT_COVERAGE
+dfly-patch:
+	${REINPLACE_CMD} -e '/-fsanitize=address/d' \
+		${WRKSRC}/test/CMakeLists.txt
 
 .include <bsd.port.mk>

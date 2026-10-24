@@ -4,7 +4,7 @@ PORTREVISION=	7
 CATEGORIES=	mail
 MASTER_SITES=	SF/freebsdspamd/spamd
 
-MAINTAINER=	koue@chaosophia.net
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Traps spammers with a very slow smtp-login and return 4xx error
 WWW=		https://freebsdspamd.sourceforge.net/
 
@@ -76,5 +76,12 @@ do-install:
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/doc/|} ${STAGEDIR}${DOCSDIR}/
 
 	${INSTALL_SCRIPT} ${FILESDIR}/add-spamd-to-etc-service ${STAGEDIR}${PREFIX}/sbin/
+
+dfly-patch:
+	${CP} ${DFLY_FILESDIR}/sha1hl_compat.h ${WRKSRC}/spamd
+
+.if ${DFLYVERSION} > 500700
+LIB_DEPENDS+=	libmd.so:security/libmd
+.endif
 
 .include <bsd.port.post.mk>

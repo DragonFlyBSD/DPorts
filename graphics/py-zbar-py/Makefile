@@ -1,6 +1,6 @@
 PORTNAME=	zbar-py
 PORTVERSION=	1.0.4
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	graphics python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +18,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>0:math/py-numpy@${PY_FLAVOR}
 USES=		iconv:wchar_t python
 USE_PYTHON=	autoplist distutils
 
+LDFLAGS= ${ICONV_LIB}
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/zbar/_zbar*.so
 
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibzbar.so\:graphics\/zbar}
 .include <bsd.port.mk>

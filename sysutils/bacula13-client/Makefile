@@ -1,17 +1,15 @@
-yPORTNAME=	bacula
+PORTNAME=	bacula
 PKGNAMESUFFIX=	13-client
 
 COMMENT=	Network backup solution (client)
 
-BROKEN_aarch64=		Fails to link: missing sbrk
-BROKEN_riscv64=		Fails to link: missing sbrk
-
 WITH_CLIENT_ONLY=yes
-USE_RC_SUBR=	bacula-fd
+USE_RC_SUBR=	bacula_fd
 
 PLIST=		${PKGDIR}/pkg-plist.client
 MASTERDIR=	${.CURDIR}/../../sysutils/bacula13-server
 
 OPTIONS_DEFINE=	NLS PYTHON IPV6
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include "${MASTERDIR}/Makefile"

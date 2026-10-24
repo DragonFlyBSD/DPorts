@@ -1,8 +1,7 @@
 PORTNAME=	radarr
-DISTVERSION=	4.7.5.7809
-PORTREVISION=	2
+DISTVERSION=	6.4.4.10685
 CATEGORIES=	net-p2p
-MASTER_SITES=	https://github.com/Radarr/Radarr/releases/download/v${PORTVERSION}/
+MASTER_SITES=	https://github.com/Radarr/Radarr/releases/download/v${DISTVERSION}/
 DISTNAME=	Radarr.master.${DISTVERSION}.freebsd-core-x64
 
 MAINTAINER=	michiel@vanbaak.eu
@@ -17,10 +16,11 @@ ONLY_FOR_ARCHS=	amd64
 RUN_DEPENDS=	ca_root_nss>0:security/ca_root_nss \
 		icu>0:devel/icu \
 		krb5>0:security/krb5 \
+		libiconv>0:converters/libiconv \
 		libinotify>0:devel/libinotify \
 		libunwind>0:devel/libunwind
 
-USES=	ssl:run sqlite:3 iconv
+USES=		sqlite:3 ssl:run
 
 USE_RC_SUBR=	${PORTNAME}
 
@@ -39,18 +39,18 @@ WRKSRC=		${WRKDIR}/Radarr
 USERS=		${PORTNAME}
 GROUPS=		${PORTNAME}
 
-.include <bsd.port.options.mk>
-
+IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	${RM} -rf ${WRKSRC}/Radarr.Update
 
 do-install:
 	${INSTALL} -d -m 755 ${STAGEDIR}/${DATADIR}/bin/
 	cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${STAGEDIR}/${DATADIR}/bin/ "! -name Radarr -and ! -name ffprobe"
-	${INSTALL_PROGRAM} ${WRKSRC}/Radarr ${STAGEDIR}/${DATADIR}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/ffprobe ${STAGEDIR}/${DATADIR}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/Radarr ${WRKSRC}/ffprobe ${STAGEDIR}/${DATADIR}/bin
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/package_info ${STAGEDIR}/${DATADIR}/
+	@${ECHO_CMD} "e_sqlite3.so libsqlite3.so" \
+		>${STAGEDIR}${PREFIX}/etc/libmap.d/Radarr.conf
 
 .include <bsd.port.mk>

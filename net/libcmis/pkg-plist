@@ -36,10 +36,10 @@ include/libcmis-c-%%MAJVER%%/libcmis-c/vectors.h
 lib/libcmis-%%MAJVER%%.a
 lib/libcmis-%%MAJVER%%.so
 lib/libcmis-%%MAJVER%%.so.%%SHLIBVER%%
-lib/libcmis-%%MAJVER%%.so.%%SHLIBVER%%.1.1
+lib/libcmis-%%MAJVER%%.so.%%SHLIBVER%%.1.2
 lib/libcmis-c-%%MAJVER%%.a
 lib/libcmis-c-%%MAJVER%%.so
 lib/libcmis-c-%%MAJVER%%.so.%%SHLIBVER%%
-lib/libcmis-c-%%MAJVER%%.so.%%SHLIBVER%%.0.0
+lib/libcmis-c-%%MAJVER%%.so.%%SHLIBVER%%.0.1
 libdata/pkgconfig/libcmis-%%MAJVER%%.pc
 libdata/pkgconfig/libcmis-c-%%MAJVER%%.pc

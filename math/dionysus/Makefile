@@ -1,12 +1,12 @@
 PORTNAME=	dionysus
-PORTVERSION=	g20210521
-PORTREVISION=	1
+PORTVERSION=	2.2.3
 CATEGORIES=	math
 PKGNAMESUFFIX=	-topology-library
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Library for computing persistent homology
-WWW=		https://mrzv.org/software/dionysus2/
+WWW=		https://mrzv.org/software/dionysus2/ \
+		https://github.com/mrzv/dionysus
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -14,11 +14,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/range/adaptors.hpp:devel/boost-libs
 RUN_DEPENDS=	${LOCALBASE}/include/boost/range/adaptors.hpp:devel/boost-libs
 
-USES=		cmake
+USES=		cmake:testing
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mrzv
-GH_TAGNAME=	ae27bb1
 
 CMAKE_OFF=	build_examples build_python_bindings
 
@@ -27,5 +26,7 @@ NO_ARCH=	yes
 
 do-install:
 	cd ${WRKSRC}/include && ${COPYTREE_SHARE} ${PORTNAME} ${STAGEDIR}${PREFIX}/include
+
+# tests as of 2.2.3: 100% tests passed, 0 tests failed out of 1
 
 .include <bsd.port.mk>

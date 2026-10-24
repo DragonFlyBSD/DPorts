@@ -1,6 +1,7 @@
 PORTNAME=	frp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.61.2
+DISTVERSION=	0.71.0
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,14 +11,14 @@ WWW=		https://github.com/fatedier/frp
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.23,modules
-USE_GITHUB=	nodefault
-GH_TUPLE=	golang:net:v0.8.0:net \
-		golang:sys:v0.6.0:sys \
-		golang:text:v0.8.0:text
+USES=		go:modules
 
 GO_MODULE=	github.com/fatedier/frp
 GO_TARGET=	./cmd/frpc ./cmd/frps
+GO_BUILDFLAGS+=	-tags=noweb
+GO_TESTFLAGS+=	-tags=noweb
+# e2e tests need web assets not included with -tags=noweb
+GO_TESTTARGET=	./client/... ./cmd/... ./pkg/... ./server/...
 
 SUB_LIST=	DAEMON_USER=${DAEMON_USER}
 USE_RC_SUBR=	${PORTNAME}s
@@ -34,15 +35,11 @@ DAEMON_USER_DESC=	Daemon user
 ROOT_DESC=	Run as root
 NOBODY_DESC=	Run as nobody
 
-pre-patch:
-.for m in net sys test
-	${RM} -r ${WRKSRC}/vendor/golang.org/x/$m
-	${LN} -s ${WRKDIR}/$m-* ${WRKSRC}/vendor/golang.org/x/$m
-.endfor
-
 post-install:
 .for f in frpc.toml frps.toml
 	${INSTALL_DATA} ${WRKSRC}/conf/${f} ${STAGEDIR}${PREFIX}/etc/${f}.sample
 .endfor
+
+# as of 0.71.0: all tests pass
 
 .include <bsd.port.mk>

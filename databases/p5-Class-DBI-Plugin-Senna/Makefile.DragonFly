@@ -1,4 +1,0 @@
-
-# to avoid orphans
-dfly-install:
-	${RM} -v ${STAGEDIR}${LOCALBASE}/lib/perllocal.pod

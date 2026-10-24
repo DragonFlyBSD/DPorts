@@ -9,6 +9,7 @@ share/metainfo/com.corsixth.corsixth.metainfo.xml
 %%DATADIR%%/Bitmap/bootstrap_font.dat
 %%DATADIR%%/Bitmap/bootstrap_font.pal
 %%DATADIR%%/Bitmap/bootstrap_font.tab
+%%DATADIR%%/Bitmap/lose.pl8
 %%DATADIR%%/Bitmap/mainmenu1080.dat
 %%DATADIR%%/Bitmap/mainmenu1080.pal
 %%DATADIR%%/Bitmap/mainmenu480.dat
@@ -18,6 +19,7 @@ share/metainfo/com.corsixth.corsixth.metainfo.xml
 %%DATADIR%%/Bitmap/tree_ctrl.dat
 %%DATADIR%%/Bitmap/tree_ctrl.pal
 %%DATADIR%%/Bitmap/tree_ctrl.tab
+%%DATADIR%%/Bitmap/winlevel.pl8
 %%DATADIR%%/Campaigns/ChrizmanTV.campaign
 %%DATADIR%%/Campaigns/Coffalot.map
 %%DATADIR%%/Campaigns/Dethsdaw.map
@@ -110,6 +112,7 @@ share/metainfo/com.corsixth.corsixth.metainfo.xml
 %%DATADIR%%/Lua/dialogs/place_staff.lua
 %%DATADIR%%/Lua/dialogs/queue_dialog.lua
 %%DATADIR%%/Lua/dialogs/resizable.lua
+%%DATADIR%%/Lua/dialogs/resizables/adviser_history.lua
 %%DATADIR%%/Lua/dialogs/resizables/calls_dispatcher.lua
 %%DATADIR%%/Lua/dialogs/resizables/cheats_dialog.lua
 %%DATADIR%%/Lua/dialogs/resizables/customise.lua
@@ -117,6 +120,7 @@ share/metainfo/com.corsixth.corsixth.metainfo.xml
 %%DATADIR%%/Lua/dialogs/resizables/dropdown.lua
 %%DATADIR%%/Lua/dialogs/resizables/file_browser.lua
 %%DATADIR%%/Lua/dialogs/resizables/file_browsers/choose_font.lua
+%%DATADIR%%/Lua/dialogs/resizables/file_browsers/choose_soundfont.lua
 %%DATADIR%%/Lua/dialogs/resizables/file_browsers/load_game.lua
 %%DATADIR%%/Lua/dialogs/resizables/file_browsers/load_map.lua
 %%DATADIR%%/Lua/dialogs/resizables/file_browsers/save_game.lua
@@ -124,6 +128,7 @@ share/metainfo/com.corsixth.corsixth.metainfo.xml
 %%DATADIR%%/Lua/dialogs/resizables/folder_settings.lua
 %%DATADIR%%/Lua/dialogs/resizables/hotkey_assign.lua
 %%DATADIR%%/Lua/dialogs/resizables/lua_console.lua
+%%DATADIR%%/Lua/dialogs/resizables/machine_menu.lua
 %%DATADIR%%/Lua/dialogs/resizables/main_menu.lua
 %%DATADIR%%/Lua/dialogs/resizables/map_editor.lua
 %%DATADIR%%/Lua/dialogs/resizables/menu_list_dialog.lua
@@ -132,10 +137,12 @@ share/metainfo/com.corsixth.corsixth.metainfo.xml
 %%DATADIR%%/Lua/dialogs/resizables/menu_list_dialogs/make_debug_patient.lua
 %%DATADIR%%/Lua/dialogs/resizables/new_game.lua
 %%DATADIR%%/Lua/dialogs/resizables/options.lua
+%%DATADIR%%/Lua/dialogs/resizables/sound_setting.lua
 %%DATADIR%%/Lua/dialogs/resizables/tip_of_the_day.lua
 %%DATADIR%%/Lua/dialogs/resizables/update.lua
 %%DATADIR%%/Lua/dialogs/staff_dialog.lua
 %%DATADIR%%/Lua/dialogs/staff_rise.lua
+%%DATADIR%%/Lua/dialogs/subtitles.lua
 %%DATADIR%%/Lua/dialogs/tree_ctrl.lua
 %%DATADIR%%/Lua/dialogs/watch.lua
 %%DATADIR%%/Lua/diseases/alien_dna.lua
@@ -241,6 +248,7 @@ share/metainfo/com.corsixth.corsixth.metainfo.xml
 %%DATADIR%%/Lua/languages/hungarian.lua
 %%DATADIR%%/Lua/languages/iberic_portuguese.lua
 %%DATADIR%%/Lua/languages/italian.lua
+%%DATADIR%%/Lua/languages/japanese.lua
 %%DATADIR%%/Lua/languages/korean.lua
 %%DATADIR%%/Lua/languages/norwegian.lua
 %%DATADIR%%/Lua/languages/original_strings.lua
@@ -340,7 +348,6 @@ share/metainfo/com.corsixth.corsixth.metainfo.xml
 %%DATADIR%%/Lua/rooms/ultrascan.lua
 %%DATADIR%%/Lua/rooms/ward.lua
 %%DATADIR%%/Lua/rooms/x_ray_room.lua
-%%DATADIR%%/Lua/run_debugger.lua
 %%DATADIR%%/Lua/sprite_viewer.lua
 %%DATADIR%%/Lua/staff_profile.lua
 %%DATADIR%%/Lua/strict.lua

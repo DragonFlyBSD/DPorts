@@ -1,18 +1,18 @@
-# Created by: thierry@pompo.net
-
-BROKEN= pending checks
 PORTNAME=	aster
 DISTVERSION=	${ASTER_DISTVERSION}
-PORTREVISION=	4
+PORTREVISION=	14
 CATEGORIES=	french cad
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Code_Aster finite element method solver
+WWW=		http://www.code-aster.org/
 
 LICENSE=	GPLv2
 
-NOT_FOR_ARCHS=		armv6 armv7 i386 mips powerpc
+NOT_FOR_ARCHS=		armv6 armv7 i386 powerpc
 NOT_FOR_ARCHS_REASON=	ARG_MAX is too small for Code_Aster on 32 bits systems
+
+BROKEN=	fails to build the catalog of elements
 
 #-----------------------------------------------------------------------
 # You may define these options:
@@ -31,12 +31,12 @@ BUILD_DEPENDS+=	astk-serveur>0:cad/astk-serveur	\
 		${SHELL_INSTALL_ASTER}:shells/${SHIADEP}	\
 		gnproc:sysutils/coreutils			\
 		bash:shells/bash				\
-		getopt>0:misc/getopt				\
+		getopt>=0:misc/getopt				\
 		xterm:x11/xterm					\
-		${PYNUMPY}	\
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}	\
 		${PYTHON_PKGNAMEPREFIX}sympy>0:math/py-sympy@${PY_FLAVOR}
 #		pylupdate5:textproc/py-qt5-xml
-LIB_DEPENDS+=	libhdf5.so:science/hdf5				\
+LIB_DEPENDS+=	libhdf5-110.so:science/hdf5-110			\
 		libscotch.so:cad/scotch				\
 		libmetis.so:math/metis				\
 		libmed.so:french/med				\
@@ -44,21 +44,21 @@ LIB_DEPENDS+=	libhdf5.so:science/hdf5				\
 RUN_DEPENDS+=	${SHELL_INSTALL_ASTER}:shells/${SHIADEP}	\
 		astk-serveur>0:cad/astk-serveur			\
 		xterm:x11/xterm					\
-		${PYNUMPY}	\
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}	\
 		${PYTHON_PKGNAMEPREFIX}sympy>0:math/py-sympy@${PY_FLAVOR}
 
-USES=		bison blaslapack:openblas fortran gettext python:3.6+ qt:5 tk
+USES=		bison blaslapack:openblas fortran gettext python qt:5 tk
 USE_BINUTILS=	yes
-USE_QT=		linguisttools_build
+USE_QT=		linguisttools:build
 
 #CONFLICTS_BUILD=${PYTHON_PKGNAMEPREFIX}cysignals-1.*
 
 HAS_CONFIGURE=	yes
+CFLAGS+=	-I${LOCALBASE}/include/hdf5-110
 MAKE_ENV=	INCLUDES="${LOCALBASE}/include"	\
 		INCLUDEDIR="${LOCALBASE}/include"	\
 		LD_PRELOAD="${LOCALBASE}/lib/gcc${_GCC_VER}/libgcc_s.so.1"	\
 		PYTHONPATH="${PYTHON_SITELIBDIR}:${LOCALBASE}/aster/ASTK/ASTK_SERV"	\
-		PYTHONIOENCODING="utf-8" LANG=C LC_ALL="en_US.UTF-8"	\
 		LINKFLAGS="${LDFLAGS}" LD_LIBRARY_PATH="${LOCALBASE}/lib/gcc${_GCC_VER}"
 REINPLACE_ARGS=	-i ""
 
@@ -80,10 +80,6 @@ INTERACTIVE_SCRIPTS=	check_compilers.py setup.py
 
 .include "${.CURDIR}/../../french/aster/bsd.aster.mk"
 .include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300068
-BROKEN=	a larger value of ARG_MAX is needed for Code_Aster, please upgrade your system
-.endif
 
 .if ${ARCH} == "i386"
 FLAGARCH=	-DP_LINUX -DLINUX
@@ -257,7 +253,7 @@ pre-configure:
 	${ECHO_CMD} "HOME_GMSH = '${LOCALBASE}'"		>> ${WRKSRC}/setup.cfg
 	${ECHO_CMD} "HOME_GIBI = '${LOCALBASE}'"		>> ${WRKSRC}/setup.cfg
 	${ECHO_CMD} "HOME_HOMARD = '${LOCALBASE}'"		>> ${WRKSRC}/setup.cfg
-	${ECHO_CMD} "INCLUDEDIR = ['${LOCALBASE}/include', '${LOCALBASE}/include/metis', ]"\
+	${ECHO_CMD} "INCLUDEDIR = ['${LOCALBASE}/include/hdf5-110', '${LOCALBASE}/include', '${LOCALBASE}/include/metis', ]"\
 			>> ${WRKSRC}/setup.cfg
 	${ECHO_CMD} "HOME_MUMPS = '${LOCALBASE}'"		>> ${WRKSRC}/setup.cfg
 	${ECHO_CMD} "HOME_MFRONT = '${LOCALBASE}'"		>> ${WRKSRC}/setup.cfg
@@ -431,5 +427,14 @@ regression-test:	install
 	${LOCALBASE}/aster/bin/as_run astout.export) || ${TRUE}
 	@${ECHO_MSG} "Check /tmp/resu_test/NOOK"
 .endif
+
+dfly-install:
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/aster.conf.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/include/aster/asterf_config.h.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/include/aster/asterc_config.h.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/lib/aster/aster_pkginfo.py.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/share/aster/CTestTestfile.cmake.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/share/aster/config.txt.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/*/share/aster/profile.sh.bak
 
 .include <bsd.port.post.mk>

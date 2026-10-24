@@ -1,6 +1,6 @@
 PORTNAME=	afterstep
 PORTVERSION=	2.2.12
-PORTREVISION=	9
+PORTREVISION=	12
 CATEGORIES=	x11-wm afterstep
 MASTER_SITES=	AFTERSTEP/stable
 DISTNAME=	AfterStep-${PORTVERSION}
@@ -19,10 +19,11 @@ RUN_DEPENDS=	xli:graphics/xli
 
 USES=		gmake gnome jpeg pkgconfig shebangfix tar:bzip2 xorg
 USE_CSTD=	gnu89
-USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk20 librsvg2 pango
+USE_GNOME=	atk cairo gdkpixbuf glib20 gtk20 librsvg2 pango
 USE_XORG+=	ice sm x11 xcomposite xcursor xdamage xext xfixes xi xinerama \
 		xrandr xrender
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 SHEBANG_FILES=	tools/ascommand.pl \
 		tools/importasmenu
 MAKE_JOBS_UNSAFE=	yes
@@ -46,6 +47,7 @@ CONFIGURE_ARGS+=	--enable-different-looknfeels
 CONFIGURE_ARGS+=	--disable-savewindows
 .endif
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if exists(${PREFIX}/share/gnome/wm-properties)

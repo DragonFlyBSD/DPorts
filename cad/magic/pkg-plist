@@ -1,13 +1,12 @@
 bin/ext2sim
 bin/ext2spice
 bin/magic
-@comment bin/spice2sim
 lib/magic/doc/addendum6_5.ps
 lib/magic/doc/copyright.ps
-lib/magic/doc/html/Makefile
 lib/magic/doc/html/addcommandentry.html
 lib/magic/doc/html/addpath.html
 lib/magic/doc/html/antennacheck.html
+lib/magic/doc/html/archive.html
 lib/magic/doc/html/array.html
 lib/magic/doc/html/box.html
 lib/magic/doc/html/calma.html
@@ -54,8 +53,6 @@ lib/magic/doc/html/ext2sim.html
 lib/magic/doc/html/ext2spice.html
 lib/magic/doc/html/extract.html
 lib/magic/doc/html/extresist.html
-lib/magic/doc/html/exttosim.html
-lib/magic/doc/html/exttospice.html
 lib/magic/doc/html/feedback.html
 lib/magic/doc/html/fill.html
 lib/magic/doc/html/findbox.html
@@ -76,7 +73,8 @@ lib/magic/doc/html/graphics/corner2.gif
 lib/magic/doc/html/graphics/email_address.png
 lib/magic/doc/html/graphics/line1.gif
 lib/magic/doc/html/graphics/magic_OGL_sm.gif
-lib/magic/doc/html/graphics/magic_title2.gif
+lib/magic/doc/html/graphics/magic_title8_3.gif
+lib/magic/doc/html/graphics/magic_title8_3.png
 lib/magic/doc/html/graphics/techmgr.gif
 lib/magic/doc/html/graphics/toolbar.gif
 lib/magic/doc/html/graphics/writeall.gif
@@ -173,6 +171,7 @@ lib/magic/doc/html/tk_path_name.html
 lib/magic/doc/html/tool.html
 lib/magic/doc/html/undo.html
 lib/magic/doc/html/unexpand.html
+lib/magic/doc/html/units.html
 lib/magic/doc/html/unmeasure.html
 lib/magic/doc/html/updatedisplay.html
 lib/magic/doc/html/upsidedown.html
@@ -281,14 +280,13 @@ lib/magic/tcl/bsitools.tcl
 lib/magic/tcl/cellmgr.tcl
 lib/magic/tcl/console.tcl
 lib/magic/tcl/drcmgr.tcl
-@comment lib/magic/tcl/exttosim.so
-@comment lib/magic/tcl/exttospice.so
 lib/magic/tcl/libmgr.tcl
 lib/magic/tcl/magic.tcl
 lib/magic/tcl/magicdnull
 lib/magic/tcl/magicexec
 lib/magic/tcl/mazeroute.tcl
 lib/magic/tcl/readspice.tcl
+lib/magic/tcl/reorderLayers.tcl
 lib/magic/tcl/socketcmd.tcl
 lib/magic/tcl/strip_reflibs.tcl
 lib/magic/tcl/tclmagic.so
@@ -296,6 +294,7 @@ lib/magic/tcl/techbuilder.tcl
 lib/magic/tcl/texthelper.tcl
 lib/magic/tcl/tkcon.tcl
 lib/magic/tcl/tkshell.tcl
+lib/magic/tcl/toolbar.tcl
 lib/magic/tcl/toolkit.tcl
 lib/magic/tcl/toolkit_rev0.tcl
 lib/magic/tcl/tools.tcl

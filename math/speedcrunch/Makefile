@@ -15,9 +15,10 @@ BB_ACCOUNT=	heldercorreia
 BB_PROJECT=	${PORTNAME}
 BB_COMMIT=	c0fc9c68d292
 
-USES=		cmake compiler:c++11-lang qt:5 xorg
+USES= cmake compiler:c++11-lang qt:5 xorg gmake
 USE_QT=		buildtools:build qmake:build core gui help sql widgets
 USE_XORG=	x11
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM:STRING=3.5
 
 WRKSRC=		${WRKDIR}/${BB_ACCOUNT}-${BB_PROJECT}-${BB_COMMIT}
 WRKSRC_SUBDIR=	src

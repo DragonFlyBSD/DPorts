@@ -4,7 +4,7 @@ DISTVERSIONPREFIX=	v
 PORTREVISION=	2
 CATEGORIES=	games
 
-MAINTAINER=	amdmi3@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open source Touhou clone
 WWW=		https://taisei-project.org/ \
 		https://github.com/taisei-project/taisei
@@ -43,5 +43,9 @@ DOCS_MESON_TRUE=	docs
 
 post-install:
 	@${RM} ${STAGEDIR}${DOCSDIR}/COPYING.txt
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/200809/s@_POSIX_C_SOURCE@&___@g' \
+		${WRKSRC}/src/util/compat.h
 
 .include <bsd.port.mk>

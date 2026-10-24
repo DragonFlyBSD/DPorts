@@ -1,0 +1,11 @@
+--- build/moz.configure/init.configure.orig	2026-09-04 00:01:10 UTC
++++ build/moz.configure/init.configure
+@@ -944,7 +944,7 @@ set_define("XP_NETBSD", target_is_netbsd)
+ 
+ @depends(target)
+ def target_is_freebsd(target):
+-    if target.kernel == "FreeBSD":
++    if target.kernel == "FreeBSD" or target.kernel == "DragonFly":
+         return True
+ 
+ 

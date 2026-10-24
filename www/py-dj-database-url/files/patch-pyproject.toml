@@ -1,0 +1,13 @@
+Relax version requirements for py-uv-build.
+
+--- pyproject.toml.orig	2026-07-29 22:32:42 UTC
++++ pyproject.toml
+@@ -40,7 +40,7 @@ Bug = "https://github.com/jazzband/dj-database-url/iss
+ Bug = "https://github.com/jazzband/dj-database-url/issues"
+ 
+ [build-system]
+-requires = ["uv_build>=0.9.17,<0.10.0"]
++requires = ["uv_build>=0.9.17"]
+ build-backend = "uv_build"
+ 
+ [tool.uv.build-backend]

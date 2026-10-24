@@ -18,4 +18,5 @@ USES=		uidfix ssl tar:xz
 PLIST_FILES=	sbin/sst \
 		share/man/man1/sst.1.gz
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

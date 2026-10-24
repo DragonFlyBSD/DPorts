@@ -1,5 +1,5 @@
 PORTNAME=	netcdf-fortran
-PORTVERSION=	4.6.1
+PORTVERSION=	4.6.4
 CATEGORIES=	science
 MASTER_SITES=	https://downloads.unidata.ucar.edu/netcdf-fortran/${PORTVERSION}/ \
 		LOCAL/sunpoet
@@ -17,7 +17,7 @@ LICENSE_PERMS=	auto-accept dist-mirror dist-sell pkg-mirror pkg-sell
 BUILD_DEPENDS=	netcdf>=4.9.0:science/netcdf
 LIB_DEPENDS=	libnetcdf.so:science/netcdf
 
-USES=		fortran gmake libtool localbase makeinfo pathfix
+USES=		fortran gmake libtool localbase makeinfo
 
 CPPFLAGS+=	-fPIC -DPIC -DgFortran
 GNU_CONFIGURE=	yes

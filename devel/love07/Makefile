@@ -3,7 +3,7 @@ PORTVERSION=	0.7.2
 PORTREVISION=	26
 CATEGORIES=	devel games
 MASTER_SITES=	http://cdn.bitbucket.org/rude/love/downloads/ \
-		http://mirror.amdmi3.ru/distfiles/
+		https://mirror.amdmi3.ru/distfiles/
 PKGNAMESUFFIX=	07
 DISTNAME=	${PORTNAME}-${PORTVERSION}-linux-src
 
@@ -43,6 +43,8 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+CONFIGURE_ENV= LDVER=ld.bfd
+CXXFLAGS= -DGL_GLEXT_PROTOTYPES
 post-patch:
 	@${REINPLACE_CMD} -e '/^prefix=/ d; /^bindir=/ d; /^libdir=/ d' \
 		-e "s/lua5.1/lua-${LUA_VER}/g" \

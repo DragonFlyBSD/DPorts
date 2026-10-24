@@ -1,5 +1,5 @@
 PORTNAME=		cryptlib
-DISTVERSION=		3.4.6
+DISTVERSION=		3.4.7
 CATEGORIES=		security
 MASTER_SITES=		https://cryptlib-release.s3-ap-southeast-1.amazonaws.com/
 DISTNAME=		${PORTNAME}${PORTVERSION:S/.//g}
@@ -33,6 +33,7 @@ PLIST_FILES=		include/cryptlib.h \
 
 PORTDOCS=		README
 
+DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libcl.a ${WRKSRC}/libcl.so.${PORTVERSION} \
 		${STAGEDIR}${PREFIX}/lib
@@ -46,5 +47,19 @@ post-install-DOCS-on:
 
 do-test:
 	@cd ${BUILD_WRKSRC} && ./testlib -a
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined( __FreeBSD__ )\)@(\1||defined(__DragonFly__))@g'	\
+		${WRKSRC}/crypt/brg_endian.h					\
+		${WRKSRC}/crypt/osconfig.h					\
+		${WRKSRC}/io/file.c						\
+		${WRKSRC}/io/file.h						\
+		${WRKSRC}/io/tcp.h						\
+		${WRKSRC}/misc/os_spec.h					\
+		${WRKSRC}/test/test.h						\
+		${WRKSRC}/tools/dumpasn1.c
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'	\
+		${WRKSRC}/crypt/des.h						\
+		${WRKSRC}/misc/os_spec.h
 
 .include <bsd.port.mk>

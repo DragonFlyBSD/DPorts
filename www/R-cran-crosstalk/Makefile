@@ -1,11 +1,11 @@
 PORTNAME=	crosstalk
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.2
 CATEGORIES=	www
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Inter-Widget Interactivity for HTML Widgets
-WWW=		https://cran.r-project.org/web/packages/crosstalk/
+WWW=		https://cran.r-project.org/package=crosstalk
 
 LICENSE=	MIT
 

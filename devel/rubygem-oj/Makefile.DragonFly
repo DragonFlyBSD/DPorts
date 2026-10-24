@@ -1,2 +1,0 @@
-# libunwind is not mandatory
-LIB_DEPENDS:=	${LIB_DEPENDS:Nlibunwind.so\:devel\/libunwind}

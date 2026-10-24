@@ -1,55 +1,26 @@
---- ../CMakeLists.txt.orig	2021-10-15 04:21:04 UTC
+-- Build against the system dmlc-core package instead of the bundled
+-- submodule. XGBoost 3.4.1 gained an option for this, but the default still
+-- expects the missing submodule and one upstream typo links against a
+-- non-existent variable instead of the imported dmlc::dmlc CMake target.
+--- ../CMakeLists.txt.orig
 +++ ../CMakeLists.txt
-@@ -104,11 +104,11 @@ endif (PLUGIN_RMM AND NOT ((CMAKE_CXX_COMPILER_ID STRE
- if (PLUGIN_RMM AND NOT (CMAKE_SYSTEM_NAME STREQUAL "Linux"))
-   message(SEND_ERROR "`PLUGIN_RMM` must be used with Linux.")
- endif (PLUGIN_RMM AND NOT (CMAKE_SYSTEM_NAME STREQUAL "Linux"))
--if (ENABLE_ALL_WARNINGS)
--  if ((NOT CMAKE_CXX_COMPILER_ID MATCHES "Clang") AND (NOT CMAKE_CXX_COMPILER_ID STREQUAL "GNU"))
--    message(SEND_ERROR "ENABLE_ALL_WARNINGS is only available for Clang and GCC.")
--  endif ((NOT CMAKE_CXX_COMPILER_ID MATCHES "Clang") AND (NOT CMAKE_CXX_COMPILER_ID STREQUAL "GNU"))
--endif (ENABLE_ALL_WARNINGS)
-+#if (ENABLE_ALL_WARNINGS)
-+#  if ((NOT CMAKE_CXX_COMPILER_ID MATCHES "Clang") AND (NOT CMAKE_CXX_COMPILER_ID STREQUAL "GNU"))
-+#    message(SEND_ERROR "ENABLE_ALL_WARNINGS is only available for Clang and GCC.")
-+#  endif ((NOT CMAKE_CXX_COMPILER_ID MATCHES "Clang") AND (NOT CMAKE_CXX_COMPILER_ID STREQUAL "GNU"))
-+#endif (ENABLE_ALL_WARNINGS)
- if (BUILD_STATIC_LIB AND (R_LIB OR JVM_BINDINGS))
-   message(SEND_ERROR "Cannot build a static library libxgboost.a when R or JVM packages are enabled.")
- endif (BUILD_STATIC_LIB AND (R_LIB OR JVM_BINDINGS))
-@@ -168,7 +168,7 @@ msvc_use_static_runtime()
- if (FORCE_SHARED_CRT)
-   set(DMLC_FORCE_SHARED_CRT ON)
- endif ()
--add_subdirectory(${xgboost_SOURCE_DIR}/dmlc-core)
-+#add_subdirectory(${xgboost_SOURCE_DIR}/dmlc-core)
- 
- if (MSVC)
-   if (TARGET dmlc_unit_tests)
-@@ -177,7 +177,7 @@ endif (RABIT_BUILD_MPI)
- 
+@@ -54,7 +54,7 @@
+ option(BUILD_DEPRECATED_CLI "Build the deprecated command line interface" OFF)
+ option(FORCE_SHARED_CRT "Build with dynamic CRT on Windows (/MD)" OFF)
+ option(BUILD_WITH_GIT_HASH "Add a short git hash to the build info." OFF)
+-option(BUILD_WITH_SYSTEM_DMLC "Use system package for dmlc." OFF)
++option(BUILD_WITH_SYSTEM_DMLC "Use system package for dmlc." ON)
+ ## Bindings
+ option(JVM_BINDINGS "Build JVM bindings" OFF)
+ option(R_LIB "Build shared library for R package" OFF)
+@@ -323,8 +323,8 @@
  # core xgboost
  add_subdirectory(${xgboost_SOURCE_DIR}/src)
--target_link_libraries(objxgboost PUBLIC dmlc)
-+#target_link_libraries(objxgboost PUBLIC dmlc)
- 
- # Exports some R specific definitions and objects
- if (R_LIB)
-@@ -218,7 +218,7 @@ set_target_properties(runxgboost PROPERTIES OUTPUT_NAM
- #-- End CLI for xgboost
- 
- # Common setup for all targets
--foreach(target xgboost objxgboost dmlc runxgboost)
-+foreach(target xgboost objxgboost runxgboost)
-   xgboost_target_properties(${target})
-   xgboost_target_link_libraries(${target})
-   xgboost_target_defs(${target})
-@@ -269,7 +269,7 @@ install(DIRECTORY ${xgboost_SOURCE_DIR}/include/xgboos
- #
- # https://github.com/dmlc/xgboost/issues/6085
- if (BUILD_STATIC_LIB)
--  set(INSTALL_TARGETS xgboost runxgboost objxgboost dmlc)
-+  set(INSTALL_TARGETS xgboost runxgboost objxgboost)
- else (BUILD_STATIC_LIB)
-   set(INSTALL_TARGETS xgboost runxgboost)
- endif (BUILD_STATIC_LIB)
+ # dmlc-core
+-if(BUILD_WTIH_SYSTEM_DMLC)
+-  target_link_libraries(objxgboost PUBLIC ${dmlc-LIBRARIES})
++if(BUILD_WITH_SYSTEM_DMLC)
++  target_link_libraries(objxgboost PUBLIC dmlc::dmlc)
+ else()
+   target_link_libraries(objxgboost PUBLIC dmlc)
+ endif()

@@ -1,6 +1,6 @@
---- Telegram/lib_base/base/platform/linux/base_linux_xcb_utilities.cpp.orig	2025-01-04 14:57:59 UTC
+--- Telegram/lib_base/base/platform/linux/base_linux_xcb_utilities.cpp.orig	2026-07-14 05:25:20 UTC
 +++ Telegram/lib_base/base/platform/linux/base_linux_xcb_utilities.cpp
-@@ -139,7 +139,7 @@ rpl::lifetime InstallEventHandler(
+@@ -142,7 +142,7 @@ rpl::lifetime InstallEventHandler(
  		}
  	}
  

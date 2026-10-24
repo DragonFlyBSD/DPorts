@@ -1,11 +1,11 @@
---- garb/CMakeLists.txt.orig	2021-07-22 15:29:52 UTC
+--- garb/CMakeLists.txt.orig	2026-10-23 00:00:00 UTC
 +++ garb/CMakeLists.txt
-@@ -32,7 +32,7 @@ target_link_libraries(garbd gcs4garb gco
-   ${Boost_PROGRAM_OPTIONS_LIBRARIES})
+@@ -42,7 +42,7 @@
  
- install(TARGETS garbd DESTINATION bin)
+ install(TARGETS garbd DESTINATION ${INSTALL_GARBD})
+ 
 -if (NOT ${CMAKE_SYSTEM_NAME} MATCHES ".*BSD")
 +if (NOT ${CMAKE_SYSTEM_NAME} MATCHES ".*BSD|DragonFly")
-   install(FILES
-     ${CMAKE_CURRENT_SOURCE_DIR}/files/garb.cnf
-     ${CMAKE_CURRENT_SOURCE_DIR}/files/garb.service
+   # Make the install destination for garbd-systemd wrapper script configurable
+   if(NOT DEFINED INSTALL_GARBD_SYSTEMD)
+     set(INSTALL_GARBD_SYSTEMD "share" CACHE STRING "path to install garbd-systemd wrapper script to")

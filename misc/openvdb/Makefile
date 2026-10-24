@@ -1,6 +1,6 @@
 PORTNAME=	openvdb
 DISTVERSIONPREFIX=	v
-DISTVERSION=	12.0.0
+DISTVERSION=	13.1.0
 PORTREVISION=	1
 CATEGORIES=	misc
 
@@ -13,7 +13,7 @@ LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libblosc.so:archivers/c-blosc \
-		libboost_system.so:devel/boost-libs \
+		libboost_iostreams.so:devel/boost-libs \
 		libImath.so:math/Imath \
 		libtbb.so:devel/onetbb
 TEST_DEPENDS=	googletest>0:devel/googletest
@@ -26,7 +26,13 @@ GH_ACCOUNT=	AcademySoftwareFoundation
 
 CMAKE_ARGS=		-DCONCURRENT_MALLOC="Tbbmalloc" -DTbb_INCLUDE_DIR=${LOCALBASE}/include
 CMAKE_OFF=		OPENVDB_CORE_STATIC
-CMAKE_TESTING_ON=	OPENVDB_BUILD_UNITTESTS # one test fails: https://github.com/AcademySoftwareFoundation/openvdb/issues/1103
+CMAKE_TESTING_ON=	OPENVDB_BUILD_UNITTESTS
+
+TEST_ENV=		${MAKE_ENV} TMPDIR=${WRKDIR}/tmp GTEST_FILTER=-TestStreamCompression.testPagedStreams
+
+USE_GCC_VERSION= ${GCC_DEFAULT}
+pre-test:
+	@${MKDIR} ${WRKDIR}/tmp
 
 OPTIONS_DEFINE=		TOOLS #DOCS # TOOLS should be made into a subpackage
 OPTIONS_DEFAULT=	TOOLS
@@ -46,6 +52,9 @@ TOOLS_USE=		GL=gl,glu XORG=ice,sm,x11,xcursor,xext,xi,xinerama,xrandr,xxf86vm
 
 #PORTDOCS=	*
 
-# 100% tests passed, 0 tests failed out of 1
+# tests as of 13.1.0:
+# [==========] 769 tests from 148 test suites ran. (42610 ms total)
+# [  PASSED  ] 769 tests.
+# TestStreamCompression.testPagedStreams is excluded (flaky; upstream issue #2133).
 
 .include <bsd.port.mk>

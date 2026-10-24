@@ -12,7 +12,7 @@ USES=		compiler
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
-CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
+CXXFLAGS+= ${CXXFLAGS_${CHOSEN_COMPILER_TYPE}} -Wno-narrowing
 CXXFLAGS_clang=	-Wno-c++11-narrowing
 
 PLIST_FILES=	bin/npadmin share/man/man1/${PORTNAME}.1.gz

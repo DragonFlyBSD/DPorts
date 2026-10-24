@@ -47,4 +47,8 @@ post-install:
 	done
 
 .include "Makefile.list"
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	huge (331M packaged)
+.endif
+
 .include <bsd.port.mk>

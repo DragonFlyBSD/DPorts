@@ -1,3 +1,0 @@
-# must be invoked after autotools but before configure steo
-run-autotools-fixup:
-	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' ${WRKSRC}/configure

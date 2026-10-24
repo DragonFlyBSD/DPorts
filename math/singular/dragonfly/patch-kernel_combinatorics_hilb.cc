@@ -1,20 +1,20 @@
---- kernel/combinatorics/hilb.cc.orig	2022-11-16 17:02:42.496516000 +0100
-+++ kernel/combinatorics/hilb.cc	2022-11-16 17:03:34.995356000 +0100
-@@ -1716,7 +1716,7 @@
-   #endif
+--- kernel/combinatorics/hilb.cc.orig
++++ kernel/combinatorics/hilb.cc
+@@ -1805,7 +1805,7 @@
  }
  
--#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(_BSD_SOURCE)
-+#if defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(_BSD_SOURCE)
+ #ifdef HAVE_QSORT_R
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__CYGWIN__)
++#if defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__CYGWIN__)
  static int compare_rp(void *arg,const void *pp1, const void *pp2)
  #else
  static int compare_rp(const void *pp1, const void *pp2, void* arg)
-@@ -1869,7 +1869,7 @@
-   idSkipZeroes(AA);
+@@ -2042,7 +2042,7 @@
     /* sort */
    if (IDELEMS(AA)>1)
--  #if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(_BSD_SOURCE)
-+  #if defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(_BSD_SOURCE)
-     qsort_r(AA->m,IDELEMS(AA),sizeof(poly),src,compare_rp);
-   #else
-     qsort_r(AA->m,IDELEMS(AA),sizeof(poly),compare_rp,src);
+   #ifdef HAVE_QSORT_R
+-    #if defined(__APPLE__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__CYGWIN__)
++    #if defined(__APPLE__) || defined(__DragonFly__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__CYGWIN__)
+       qsort_r(AA->m,IDELEMS(AA),sizeof(poly),src,compare_rp);
+     #else
+       qsort_r(AA->m,IDELEMS(AA),sizeof(poly),compare_rp,src);

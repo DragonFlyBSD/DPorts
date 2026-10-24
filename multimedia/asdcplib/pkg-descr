@@ -1,0 +1,9 @@
+AS-DCP Lib is a library and set of command line tools that implement the
+SMPTE and MXF Interop standards used to package Digital Cinema (DCP) and
+IMF essence.
+
+It provides the libkumu platform-compatibility layer, the libasdcp library
+for SMPTE ST 429 and JPEG Interop DCP track files, and optional support for
+SMPTE ST 2067-5 (AS-02 / IMF) and JPEG XS wrapping.  Companion utilities such
+as asdcp-wrap, asdcp-unwrap, asdcp-info, as-02-wrap and as-02-unwrap read,
+write and inspect these files.

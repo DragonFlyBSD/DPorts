@@ -1,0 +1,8 @@
+include/getopt/getopts.adb
+include/getopt/getopts.ads
+lib/getopt/getopts.ali
+lib/getopt/libgetopt-ada.a
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/example.adb
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/getopt_example.gpr
+share/gpr/getopt.gpr
+share/gpr/manifests/getopt

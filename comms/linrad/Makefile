@@ -64,4 +64,7 @@ do-install:
 	${INSTALL_DATA}  ${WRKSRC}/$f ${STAGEDIR}${DOCSDIR}/$f
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/Makefile.in
+
 .include <bsd.port.post.mk>

@@ -1,5 +1,6 @@
 PORTNAME=	netatalk
-PORTVERSION=	4.2.0
+PORTVERSION=	4.6.0
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/netatalk-${PORTVERSION:S/./-/g}/
 PKGNAMESUFFIX=	4
@@ -13,14 +14,16 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	cmark:textproc/cmark
 LIB_DEPENDS=	libgcrypt.so:security/libgcrypt \
 		libevent.so:devel/libevent \
-		libiniparser.so:devel/iniparser
+		libiniparser.so:devel/iniparser \
+		libbstring.so:devel/bstring \
+		libcrack.so:security/cracklib \
+		libunwind.so:devel/libunwind
 
 USES=		bdb:18 cpe gettext iconv:wchar_t meson perl5 pkgconfig shebangfix ssl tar:xz
 USE_GNOME=	libxslt:build
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	netatalk
 #INSTALL_TARGET=install-strip
-CPE_VENDOR=	netatalk_project
 
 MESON_ARGS=		-Dwith-libgcrypt-path=${LOCALBASE} \
 			-Dwith-bdb-path=${LOCALBASE} \
@@ -68,11 +71,11 @@ DBUS_USE=	GNOME+=glib20
 DBUS_LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
 			libdbus-1.so:devel/dbus
 DBUS_RUN_DEPENDS=	${PYTHON_SITELIBDIR}/dbus/_dbus.py:devel/py-dbus@${PY_FLAVOR}
-DBUS_MESON_ON=		-Dwith-dbus-daemon-path=${LOCALBASE}/bin/dbus-daemon \
-			-Dwith-dbus-sysconf-path=${LOCALBASE}/etc/dbus-1/system.d
+DBUS_MESON_ON=		-Dwith-dbus-daemon-path=${LOCALBASE}/bin/dbus-daemon
 DBUS_MESON_OFF=		-Dwith-afpstats=false
 MYSQL_USES=	mysql
-MYSQL_MESON_OFF=-Dwith-cnid-mysql-backend=false
+MYSQL_MESON_ON=-Dwith-cnid-backends=mysql
+MYSQL_MESON_OFF=-Dwith-cnid-backends=dbd
 ACL_LIB_DEPENDS=	libsunacl.so:sysutils/libsunacl
 ACL_MESON_OFF=-Dwith-acls=false
 LIBWRAP_MESON_OFF=-Dwith-tcp-wrappers=false
@@ -99,9 +102,6 @@ post-patch:
 #		${WRKSRC}/contrib/shell_utils/afpstats
 
 post-install:
-	${INSTALL_SCRIPT} ${BUILD_WRKSRC}/contrib/macusers/macusers \
-		${STAGEDIR}${PREFIX}/bin/macusers
-
 .if ${PORT_OPTIONS:MPAM}
 	${INSTALL_DATA} ${FILESDIR}/pam.conf ${STAGEDIR}${PREFIX}/etc/pam.d/netatalk.sample
 .endif

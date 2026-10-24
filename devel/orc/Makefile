@@ -1,24 +1,31 @@
 PORTNAME=	orc
-DISTVERSION=	0.4.40
+PORTVERSION=	0.4.44
 CATEGORIES=	devel
-MASTER_SITES=	http://gstreamer.freedesktop.org/data/src/${PORTNAME}/
+MASTER_SITES=	https://gstreamer.freedesktop.org/data/src/orc/
 
-MAINTAINER=	kwm@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library and toolset to operate arrays of data
-WWW=		https://gstreamer.freedesktop.org/projects/orc.html
+WWW=		https://gstreamer.freedesktop.org/projects/orc.html \
+		https://gitlab.freedesktop.org/gstreamer/orc
 
 LICENSE=	BSD2CLAUSE BSD3CLAUSE
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		meson pkgconfig tar:xz
+USES=		cpe meson pkgconfig tar:xz
+
+MESON_ARGS=	--default-library=both \
+		-Dbenchmarks=auto \
+		-Dexamples=auto \
+		-Dorc-target=all \
+		-Dorc-test=auto \
+		-Dtests=auto
+MESON_DISABLED=	hotdoc
+MESON_ENABLED=	tools
 USE_LDCONFIG=	yes
 
-PLIST_SUB+=	LIBMINORVER=${DISTVERSION:E}
+PLIST_SUB=	LIBMINORVER=${PORTVERSION:E}
 
-OPTIONS_DEFINE=	DOCS
-
-DOCS_BUILD_DEPENDS=	gtkdoc-scan:textproc/gtk-doc
-DOCS_MESON_ENABLED=	gtk_doc
+CPE_VENDOR=	gstreamer
 
 .include <bsd.port.mk>

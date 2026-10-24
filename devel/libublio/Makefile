@@ -26,4 +26,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKDIR}/libublio.pc ${STAGEDIR}${PREFIX}/libdata/pkgconfig/
 
+PLIST_SUB:= ${PLIST_SUB:NPROFLIB*} PROFLIB="@comment "
 .include <bsd.port.mk>

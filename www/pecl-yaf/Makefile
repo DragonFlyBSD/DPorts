@@ -1,5 +1,5 @@
 PORTNAME=	yaf
-PORTVERSION=	3.3.6
+PORTVERSION=	3.3.8
 CATEGORIES=	www
 
 MAINTAINER=	sunpoet@freeBSD.org
@@ -13,5 +13,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		localbase php:pecl
 
 CFLAGS+=	-DZEND_HOT=
+IGNORE_WITH_PHP=86
 
 .include <bsd.port.mk>

@@ -1,0 +1,7 @@
+Smelter is a toolkit for real-time, low-latency, programmable video and audio
+composition.
+
+With Smelter, you can:
+- Combine multimedia from different sources into a single video or live stream
+- Enrich your content with text, custom shaders, and embedded websites
+- Do it all effortlessly with ready-to-use React components

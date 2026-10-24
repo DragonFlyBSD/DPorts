@@ -1,3 +1,0 @@
-
-CFLAGS+=	-Wno-unused-variable
-PLIST_FILES+=	"@dir /var/log/snort"

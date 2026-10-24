@@ -1,0 +1,4 @@
+pdfplumber extracts detailed information from PDF files, including
+character positions, rectangle coordinates, and line geometry. It
+provides a high-level API for PDF content extraction, table detection,
+and visual debugging of PDF layouts, built on top of pdfminer.six.

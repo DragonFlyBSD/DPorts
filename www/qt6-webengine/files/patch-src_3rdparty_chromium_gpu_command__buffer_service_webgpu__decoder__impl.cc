@@ -1,15 +1,15 @@
---- src/3rdparty/chromium/gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2024-02-23 21:04:38 UTC
+--- src/3rdparty/chromium/gpu/command_buffer/service/webgpu_decoder_impl.cc.orig	2026-08-11 12:42:19 UTC
 +++ src/3rdparty/chromium/gpu/command_buffer/service/webgpu_decoder_impl.cc
-@@ -1243,7 +1243,7 @@ void WebGPUDecoderImpl::RequestAdapterImpl(
-     force_fallback_adapter = true;
-   }
- 
--#if BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   if (!shared_context_state_->GrContextIsVulkan() &&
-       !shared_context_state_->IsGraphiteDawnVulkan() &&
-       use_webgpu_adapter_ != WebGPUAdapterName::kOpenGLES) {
-@@ -1895,7 +1895,7 @@ WebGPUDecoderImpl::AssociateMailboxDawn(
+@@ -1744,7 +1744,7 @@ wgpu::Adapter WebGPUDecoderImpl::CreatePreferredAdapte
+       backend_types = {wgpu::BackendType::D3D12};
+ #elif BUILDFLAG(IS_APPLE)
+       backend_types = {wgpu::BackendType::Metal};
+-#elif BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+       if (shared_context_state_->GrContextIsVulkan() ||
+           shared_context_state_->IsGraphiteDawnVulkan()) {
+         backend_types = {wgpu::BackendType::Vulkan};
+@@ -1989,7 +1989,7 @@ WebGPUDecoderImpl::AssociateMailboxDawn(
    }
  
  #if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_APPLE) && \

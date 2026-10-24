@@ -1,2 +1,0 @@
-USES:= ${USES:S/cargo/cargo:extra/}
-DFLY_UNMAINTAINED= yes

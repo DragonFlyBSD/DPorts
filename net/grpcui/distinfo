@@ -1,5 +1,5 @@
-TIMESTAMP = 1712996466
-SHA256 (go/net_grpcui/grpcui-v1.5.0/v1.5.0.mod) = e550b7779185d90060cd2a0e22123cf65d39937b531bc1886c208f948239ba09
-SIZE (go/net_grpcui/grpcui-v1.5.0/v1.5.0.mod) = 1389
-SHA256 (go/net_grpcui/grpcui-v1.5.0/v1.5.0.zip) = b85adfca66bc9950e1b3e9b5c8cab55bd2f725352ff87f787547207b63e837f7
-SIZE (go/net_grpcui/grpcui-v1.5.0/v1.5.0.zip) = 3006691
+TIMESTAMP = 1788938074
+SHA256 (go/net_grpcui/grpcui-v1.5.4/v1.5.4.mod) = 366f1c4578237b3c91672ad153764b3330a914ec4ac9f12753f6bd9922aae1f5
+SIZE (go/net_grpcui/grpcui-v1.5.4/v1.5.4.mod) = 2118
+SHA256 (go/net_grpcui/grpcui-v1.5.4/v1.5.4.zip) = 091b843a4a0c92c3899084fbb0f862c6a10c26f5e66d2d12b532af8c85eaa738
+SIZE (go/net_grpcui/grpcui-v1.5.4/v1.5.4.zip) = 2275870

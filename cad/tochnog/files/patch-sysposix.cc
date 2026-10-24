@@ -1,4 +1,4 @@
---- sysposix.cc.orig
+--- sysposix.cc.orig	2004-02-25 20:46:52 UTC
 +++ sysposix.cc
 @@ -20,20 +20,20 @@
  #include "tochnog.h"
@@ -24,7 +24,7 @@
  }
  
  void parallel_sys_next_of_loop( long int next_of_loop[], long int max_loop,
-@@ -96,5 +96,5 @@
+@@ -96,5 +96,5 @@ void parallel_sys_unlock( void )
  void parallel_sys_unlock( void )
  
  {

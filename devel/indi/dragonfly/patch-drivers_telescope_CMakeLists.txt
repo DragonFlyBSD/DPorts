@@ -1,0 +1,11 @@
+--- drivers/telescope/CMakeLists.txt.orig
++++ drivers/telescope/CMakeLists.txt
+@@ -79,7 +79,7 @@
+     lx200_esp32go.cpp
+     toup_sh20.cpp)
+ 
+-if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+     target_compile_definitions(indi_lx200generic PRIVATE -D_XOPEN_SOURCE=700)
+ ELSE()
+     target_compile_definitions(indi_lx200generic PRIVATE -D_XOPEN_SOURCE=600 -D_POSIX_C_SOURCE=200809L)

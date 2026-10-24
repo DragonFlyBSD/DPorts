@@ -1,5 +1,0 @@
-
-# just to get it to stage-qa
-dfly-patch:
-	${REINPLACE_CMD} -e '/addressable>/s,"< 2.8","<= 2.8.0",g' \
-		${WRKSRC}/diva.gemspec

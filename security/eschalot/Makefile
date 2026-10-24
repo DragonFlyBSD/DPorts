@@ -20,6 +20,7 @@ TEST_TARGET=	test
 
 PLIST_FILES=	bin/eschalot bin/worgen
 
+CFLAGS= -I${OPENSSLINC} -L${OPENSSLLIB} -DNEED_HTOBE32
 post-patch:
 	@${REINPLACE_CMD} -e '/CFLAGS.*-O2/d' ${WRKSRC}/Makefile
 

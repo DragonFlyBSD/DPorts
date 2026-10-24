@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS_INSTALL=	timidity++
 
-USES=		alias ncurses
+USES=		ncurses
 INSTALL_TARGET=	install.all
 
 OPTIONS_SINGLE=	FONTS
@@ -35,6 +35,7 @@ GOEMON_DISTFILES=	goemon.tgz:tiins
 GOEMON_VARS=		TDIR="${PREFIX}/lib/timidity" \
 			TCONFIG=goemon.cfg
 
+CFLAGS= -D__FreeBSD__
 post-patch:
 	${REINPLACE_CMD} -e 's,machine/soundcard.h,sys/soundcard.h,' \
 		${WRKSRC}/linux_a.c

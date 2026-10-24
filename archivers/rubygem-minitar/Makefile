@@ -1,5 +1,5 @@
 PORTNAME=	minitar
-PORTVERSION=	1.0.2
+PORTVERSION=	1.1.0
 CATEGORIES=	archivers rubygems
 MASTER_SITES=	RG
 
@@ -12,7 +12,7 @@ LICENSE_COMB=	dual
 LICENSE_FILE_BSD2CLAUSE=${WRKSRC}/docs/bsdl.txt
 LICENSE_FILE_RUBY=	${WRKSRC}/docs/ruby.txt
 
-USES=		gem
+USES=		cpe gem
 
 NO_ARCH=	yes
 

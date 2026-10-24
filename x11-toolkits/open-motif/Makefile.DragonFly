@@ -1,3 +1,0 @@
-LIB_DEPENDS+=	libexpat.so:textproc/expat2
-CFLAGS+=	-I${PREFIX}/include/freetype2
-LDFLAGS+=	-L${PREFIX}/lib -lXft -lfontconfig -lexpat ${ICONV_LIB}

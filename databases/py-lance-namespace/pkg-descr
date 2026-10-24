@@ -1,0 +1,2 @@
+Lance Namespace interface and plugin registry.
+It defines data-source schemas and dispatches access to storage backends.

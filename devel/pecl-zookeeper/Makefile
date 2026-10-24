@@ -1,5 +1,5 @@
 PORTNAME=	zookeeper
-PORTVERSION=	1.2.2
+PORTVERSION=	1.3.0
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -15,6 +15,7 @@ LIB_DEPENDS=	libzookeeper_mt.so:devel/libzookeeper
 
 USES=		php:pecl
 USE_PHP=	session:build
+IGNORE_WITH_PHP=	86
 
 PORTDATA=	zookeeper-api.php
 

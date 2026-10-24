@@ -1,5 +1,0 @@
-
-# deal with info orphans
-dfly-install:
-	-${RM} -fv ${STAGEDIR}${PREFIX}/share/info/guile-gnome-libgnome.info
-	-${RM} -fv ${STAGEDIR}${PREFIX}/share/info/guile-gnome-libgnomeui.info

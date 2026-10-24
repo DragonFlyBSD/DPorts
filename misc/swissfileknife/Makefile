@@ -1,5 +1,5 @@
 PORTNAME=	swissfileknife
-PORTVERSION=	1.9.9.0
+PORTVERSION=	2.0.0.3
 CATEGORIES=	misc
 MASTER_SITES=	SF/${PORTNAME}/1-${PORTNAME}/${PORTVERSION}
 DISTNAME=	sfk-${PORTVERSION:R}
@@ -15,10 +15,11 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-DVER_STR_OS=\\\"${OPSYS:tl}-${ARCH}\\\"
 
 PLIST_FILES=	bin/sfk ${DATADIR_REL}/mtk.tar.gz
-PORTDOCS=	ChangeLog README
+PORTDOCS=	AUTHORS ChangeLog README
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's,ifndef MAC_OS_X,ifdef __linux__, ;\
 		s,ifdef MAC_OS_X,ifdef __FreeBSD__,' ${WRKSRC}/sfkbase.hpp
@@ -34,6 +35,8 @@ post-install:
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
+.for f in ${PORTDOCS}
+	${TR} -d \\r < ${WRKSRC}/${f} > ${STAGEDIR}${DOCSDIR}/${f}
+.endfor
 
 .include <bsd.port.mk>

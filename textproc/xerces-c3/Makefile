@@ -12,7 +12,7 @@ WWW=		https://xerces.apache.org/xerces-c/ \
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		compiler cpe iconv libtool pathfix
+USES=		compiler cpe iconv libtool
 
 CONFIGURE_ARGS=	--enable-netaccessor-socket \
 		--enable-transcoder-iconv \
@@ -25,8 +25,8 @@ USE_LDCONFIG=	yes
 
 PLIST_SUB=	MAJOR_VER=${PORTVERSION:R}
 
-CPE_PRODUCT=	xerces-c++
 CPE_VENDOR=	apache
+CPE_PRODUCT=	xerces-c++
 
 .include <bsd.port.pre.mk>
 

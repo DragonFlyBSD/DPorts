@@ -1,7 +1,7 @@
 PORTNAME=	venom
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.0
-PORTREVISION=	5
+DISTVERSION=	1.3.0
+PORTREVISION=	13
 CATEGORIES=	devel
 
 MAINTAINER=	bapt@FreeBSD.org
@@ -19,4 +19,5 @@ GO_BUILDFLAGS=	-ldflags "-X github.com/ovh/venom.Version=v${PORTVERSION}"
 
 PLIST_FILES=	bin/venom
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

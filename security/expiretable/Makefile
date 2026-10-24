@@ -10,4 +10,9 @@ WWW=		https://expiretable.fnord.se/
 
 USE_RC_SUBR=	expiretable
 
+CFLAGS= -D_KERNEL_STRUCTURES
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<net/pfvar.h>@<net/pf/pfvar.h>@g' \
+		${WRKSRC}/ioctl_helpers.h
+
 .include <bsd.port.mk>

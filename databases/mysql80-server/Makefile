@@ -1,6 +1,6 @@
 PORTNAME?=		mysql
-PORTVERSION=		8.0.41
-PORTREVISION?=		0
+PORTVERSION=		8.0.46
+PORTREVISION?=		3
 CATEGORIES=		databases
 MASTER_SITES=		MYSQL/MySQL-8.0
 PKGNAMESUFFIX?=		80-server
@@ -12,6 +12,9 @@ WWW=		https://www.mysql.com/
 
 LICENSE=		GPLv2
 
+DEPRECATED=	EOLed upstream, switch to newer version
+EXPIRATION_DATE=2026-12-31
+
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}${DISTVERSIONSUFFIX}
 
 SLAVEDIRS=	databases/mysql80-client
@@ -19,6 +22,7 @@ USES=		bison:build cmake:noninja cpe groff:run libedit localbase \
 		ncurses perl5 pkgconfig shebangfix ssl
 
 CPE_VENDOR=	oracle
+CPE_PRODUCT?=	mysql_server
 
 USE_CXXSTD=	c++17
 USE_PERL5=	run
@@ -122,12 +126,12 @@ CONFLICTS_INSTALL=	mysql*-server \
 			mariadb*-server \
 			percona*-server
 
-USE_RC_SUBR=	mysql-server
+USE_RC_SUBR=	mysql-server mysqlrouter
 
-SUB_FILES=	my.cnf.sample pkg-message
+SUB_FILES=	my.cnf.sample mysqlrouter.conf.sample pkg-message
 
-USERS=		mysql
-GROUPS=		mysql
+USERS=		mysql mysqlrouter
+GROUPS=		mysql mysqlrouter
 
 USE_LDCONFIG+=	${PREFIX}/lib/mysql/plugin
 
@@ -174,6 +178,8 @@ FEDERATED_SUB_LIST+=		FEDER="--federated"
 FEDERATED_SUB_LIST_OFF+=	FEDER=""
 .endif
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NSASLCLIENT}
+CMAKE_ARGS+= -DWITHOUT_FIDO=1
 .include <bsd.port.options.mk>
 
 # Since 8.0.20 release innodb engine uses new memory alligned allocator
@@ -205,9 +211,20 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-boost-boost_1_77_0-boost-move-detail-typ
 post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKDIR}/my.cnf.sample ${STAGEDIR}${ETCDIR}/my.cnf.sample
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/mysqlrouter
+	${INSTALL_DATA} ${WRKDIR}/mysqlrouter.conf.sample \
+		${STAGEDIR}${PREFIX}/etc/mysqlrouter/mysqlrouter.conf.sample
 	${MKDIR} ${STAGEDIR}${ETCDIR}/keyring
 	${MKDIR} ${STAGEDIR}${MY_SECDIR}
 	${MKDIR} ${STAGEDIR}${MY_TMPDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${MV} ${STAGEDIR}${PREFIX}/LICENSE.router ${STAGEDIR}${PREFIX}/README.router ${STAGEDIR}${DOCSDIR}
 .endif
+
+CMAKE_ARGS:= ${CMAKE_ARGS:N-DWITH_AUTHENTICATION_FIDO*}
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibfido2.so*}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@test_stdx_io_file_handle.cc@@g' \
+		${WRKSRC}/router/src/harness/tests/CMakeLists.txt
 
 .include <bsd.port.post.mk>

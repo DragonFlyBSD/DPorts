@@ -33,6 +33,9 @@ INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=	DOCS
 
+LIB_DEPENDS+= libexpat.so:textproc/expat2
+CFLAGS= -I${PREFIX}/include/freetype2
+LDFLAGS= -L${PREFIX}/lib -lXft -lfontconfig -lexpat ${ICONV_LIB}
 post-patch:
 # fix sections
 	@${FIND} ${WRKSRC}/doc/man/man1 -name '*.1' -maxdepth 1 | \

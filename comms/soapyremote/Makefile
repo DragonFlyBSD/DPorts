@@ -22,4 +22,5 @@ PLIST_FILES=	bin/SoapySDRServer \
 		lib/SoapySDR/modules0.8/libremoteSupport.so \
 		share/man/man1/SoapySDRServer.1.gz
 
+CFLAGS= -DHAS_IFADDRS_H
 .include <bsd.port.mk>

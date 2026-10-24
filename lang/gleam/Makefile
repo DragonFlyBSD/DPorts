@@ -1,6 +1,7 @@
 PORTNAME=	gleam
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.1
+DISTVERSION=	1.18.1
+PORTREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	dch@FreeBSD.org
@@ -8,17 +9,18 @@ COMMENT=	ML-flavoured type-safe language using Erlang's BEAM runtime
 WWW=		https://gleam.run/
 
 LICENSE=	APACHE20
-LICENSE_FILE=	${WRKSRC}/compiler-core/LICENCE
+LICENSE_FILE=	${WRKSRC}/LICENCE
 
 BROKEN_i386=	needs SSE or SSE2 type extensions to compile
 
 TEST_DEPENDS=	erlang:lang/erlang
 
-USES=		cargo ssl
+USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	gleam-lang
 
-RUSTFLAGS+=	--cap-lints=warn
+CARGO_UPDATE_ARGS=	--offline
+RUSTFLAGS+=		--cap-lints=warn
 
 PORTSCOUT=	limit:[0-9.]+
 
@@ -28,11 +30,10 @@ PORTDOCS=	README.md
 
 OPTIONS_DEFINE=	DOCS
 
-PORTSCOUT=	limit:[0-9.]+
-
 do-build:
 	(cd ${WRKSRC} && \
-		cargo build --release)
+		env HOME=${WRKDIR} cargo install --path gleam-bin --force \
+		--locked)
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/bin/

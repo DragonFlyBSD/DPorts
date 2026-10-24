@@ -32,7 +32,7 @@ OPTIONS_DEFAULT=	GAMMA LAYERSHELL SCREENCOPY VIRTUALINPUT X11
 GAMMA_DESC=		Include gammacontrol protocol (required by, e.g., Redshift)
 LAYERSHELL_DESC=	Include layer_shell protocol (required by, e.g., waybar)
 SCREENCOPY_DESC=	Include screenshot protocol (required by, e.g., grim)
-VIRTUALINPUT_DESC=	needed for VNC support (requiered by e.g. wayvnc)
+VIRTUALINPUT_DESC=	needed for VNC support (required by e.g. wayvnc)
 
 GAMMA_MAKE_ARGS=	WITH_GAMMACONTROL=YES
 LAYERSHELL_MAKE_ARGS=	WITH_LAYERSHELL=YES
@@ -40,6 +40,7 @@ SCREENCOPY_MAKE_ARGS=	WITH_SCREENCOPY=YES
 VIRTUALINPUT_MAKE_ARGS=	WITH_VIRTUAL_INPUT=YES
 X11_MAKE_ARGS=		WITH_XWAYLAND=YES
 
+CFLAGS= -DHIKARI_USE_COMPAT_QUEUE
 post-install:
 .ifndef WITH_DEBUG
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/hikari

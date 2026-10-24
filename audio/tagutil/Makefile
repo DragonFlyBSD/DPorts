@@ -44,4 +44,8 @@ OGG_CMAKE_OFF=		-DWITHOUT_OGGVORBIS=yes
 TAGLIB_LIB_DEPENDS=	libtag_c.so:audio/taglib
 TAGLIB_CMAKE_OFF=	-DWITHOUT_TAGLIB=yes
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-fsanitize=undefined@@g' \
+		${WRKSRC}/src/CMakeLists.txt
+
 .include <bsd.port.mk>

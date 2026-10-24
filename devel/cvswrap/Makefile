@@ -11,4 +11,8 @@ USES=		desthack
 
 GNU_CONFIGURE=	yes
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@sys/types.h@sys/param.h@g' \
+		${WRKSRC}/cvswrap.c
+
 .include <bsd.port.mk>

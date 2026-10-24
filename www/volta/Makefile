@@ -33,4 +33,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${STAGEDIR}${DOCSDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/volta ${STAGEDIR}${PREFIX}/bin
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g'	\
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

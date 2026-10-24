@@ -1,6 +1,6 @@
 PORTNAME=	xonotic
 PORTVERSION=	0.8.6
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	https://dl.xonotic.org/ \
 		https://download.evil-ant-colony.org/xonotic/ \
@@ -73,5 +73,9 @@ do-install-DEDICATED-on:
 # Fixup lost +x permissions on scripts after COPYTREE_SHARE
 	${FIND} ${STAGEDIR}${DATADIR}/server -type f -name *.sh -o -name rcon*.pl | \
 		${XARGS} ${CHMOD} +x
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	867M package (too big for mirrors)
+.endif
 
 .include <bsd.port.mk>

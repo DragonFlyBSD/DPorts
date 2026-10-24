@@ -1,5 +1,5 @@
 PORTNAME?=	pycryptodome
-DISTVERSION=	3.21.0
+DISTVERSION=	3.24.1
 CATEGORIES=	security python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,9 +17,8 @@ BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycryptodome-test-vectors>=0:security/py-pycryptodome-test-vectors@${PY_FLAVOR} \
 		gmp>=0:math/gmp
 
-# Officially: 2.7, 3.6-3.13
+# Officially: 2.7, 3.8-3.14
 USES=		cpe python
-CPE_VENDOR=	python
 USE_PYTHON=	autoplist pep517
 
 CONFLICTS_INSTALL?=	${PYTHON_PKGNAMEPREFIX}pycrypto

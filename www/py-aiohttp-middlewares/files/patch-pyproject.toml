@@ -1,0 +1,19 @@
+--- pyproject.toml.orig	1970-01-01 00:00:00 UTC
++++ pyproject.toml
+@@ -1,6 +1,6 @@
+ [build-system]
+-build-backend = "uv_build"
+-requires = ["uv-build>=0.11.8,<0.13.0"]
++requires = ["flit-core >= 3.12"]
++build-backend = "flit_core.buildapi"
+ 
+ [project]
+ name = "aiohttp-middlewares"
+@@ -22,7 +22,6 @@ classifiers = [
+     "Framework :: aiohttp",
+     "Framework :: AsyncIO",
+     "Intended Audience :: Developers",
+-    "License :: OSI Approved :: BSD License",
+     "Operating System :: OS Independent",
+     "Programming Language :: Python :: 3 :: Only",
+     "Programming Language :: Python :: 3.10",

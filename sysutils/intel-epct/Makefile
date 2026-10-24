@@ -25,6 +25,7 @@ NO_BUILD=	yes
 
 PLIST_FILES=	sbin/epct
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${ARCH:S/amd64/FreeBSDx64/:S/i386/FreeBSD32/}/epct* ${STAGEDIR}${PREFIX}/sbin/epct
 

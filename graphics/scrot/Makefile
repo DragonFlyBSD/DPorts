@@ -1,6 +1,5 @@
 PORTNAME=	scrot
-DISTVERSION=	1.11.1
-PORTREVISION=	1
+DISTVERSION=	2.0.0
 CATEGORIES=	graphics
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -17,10 +16,8 @@ USES=		autoreconf pkgconfig xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	resurrecting-open-source-projects
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
-USE_XORG=	x11 xext xfixes xcomposite xinerama
+USE_XORG=	x11 xfixes xcomposite xrandr
 
-PLIST_FILES=	bin/${PORTNAME} share/man/man1/${PORTNAME}.1.gz
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS

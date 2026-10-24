@@ -1,5 +1,5 @@
 PORTNAME=	atf
-DISTVERSION=	0.23
+DISTVERSION=	0.25
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/freebsd/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/
 
@@ -9,8 +9,7 @@ WWW=		https://github.com/freebsd/atf
 
 LICENSE=	BSD3CLAUSE
 
-USES=		autoreconf libtool pathfix
-USE_CXXSTD=	gnu++14
+USES=		autoreconf compiler:c++20-lang libtool llvm pathfix
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
@@ -23,6 +22,7 @@ OPTIONS_SUB=	yes
 
 DOCS_MAKE_ARGS_OFF=	doc_DATA=
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-install-TEST-off:
 	@${RM} -r ${STAGEDIR}${PREFIX}/tests
 

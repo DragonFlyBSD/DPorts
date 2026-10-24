@@ -1,6 +1,6 @@
---- base/files/dir_reader_linux.h.orig	2024-06-22 08:49:42 UTC
+--- base/files/dir_reader_linux.h.orig	2026-02-15 10:01:45 UTC
 +++ base/files/dir_reader_linux.h
-@@ -21,10 +21,16 @@
+@@ -19,10 +19,16 @@
  #include "base/logging.h"
  #include "base/posix/eintr_wrapper.h"
  
@@ -15,25 +15,25 @@
 +typedef struct dirent linux_dirent;
 +#else
  struct linux_dirent {
-   uint64_t        d_ino;
-   int64_t         d_off;
-@@ -32,6 +38,7 @@ struct linux_dirent {
-   unsigned char   d_type;
-   char            d_name[0];
+   uint64_t d_ino;
+   int64_t d_off;
+@@ -30,6 +36,7 @@ struct linux_dirent {
+   unsigned char d_type;
+   char d_name[0];
  };
 +#endif
  
  class DirReaderLinux {
   public:
-@@ -66,7 +73,11 @@ class DirReaderLinux {
-     if (offset_ != size_)
+@@ -61,7 +68,11 @@ class DirReaderLinux {
        return true;
+     }
  
 +#if BUILDFLAG(IS_BSD)
-+    const int r = getdents(fd_, reinterpret_cast<char *>(buf_), sizeof(buf_));
++    const int r = getdents(fd_, reinterpret_cast<char *>(buf_.data()), buf_.size());
 +#else
-     const long r = syscall(__NR_getdents64, fd_, buf_, sizeof(buf_));
+     const long r = syscall(__NR_getdents64, fd_, buf_.data(), buf_.size());
 +#endif
-     if (r == 0)
+     if (r == 0) {
        return false;
-     if (r < 0) {
+     }

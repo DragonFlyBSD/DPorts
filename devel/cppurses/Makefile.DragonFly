@@ -1,2 +1,0 @@
-
-CMAKE_ARGS+=	-DCURSES_INCLUDE_PATH=STR:"${LOCALBASE}/include/ncurses"

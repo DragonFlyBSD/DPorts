@@ -1,7 +1,7 @@
 PORTNAME=	slurm
 DISTVERSIONPREFIX=	upstream/
 DISTVERSION=	0.4.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	vidar@karlsen.tech
@@ -20,6 +20,7 @@ PORTDOCS=	AUTHORS COPYING COPYRIGHT ChangeLog FAQ KEYS README.md THANKS \
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-build:
 	cd ${WRKSRC} && mandoc -mdoc -T man slurm.1 > slurm.1.tmp && \
 		${MV} slurm.1.tmp slurm.1

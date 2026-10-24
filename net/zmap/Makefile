@@ -1,6 +1,6 @@
 PORTNAME=	zmap
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.3.2
+DISTVERSION=	4.4.0
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,36 +11,42 @@ WWW=		https://zmap.io/ \
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	gengetopt>0:devel/gengetopt \
-		gmake:devel/gmake
-LIB_DEPENDS=	libjson-c.so:devel/json-c \
+BUILD_DEPENDS=	gengetopt>0:devel/gengetopt
+LIB_DEPENDS=	libgmp.so:math/gmp \
+		libjson-c.so:devel/json-c \
 		libJudy.so:devel/judy \
-		libgmp.so:math/gmp \
 		libpcap.so:net/libpcap \
 		libunistring.so:devel/libunistring
 
-USES=		cmake:insource pkgconfig
+FLAVORS=	default netmap
+FLAVOR?=	${FLAVORS:[1]}
+netmap_PKGNAMESUFFIX=	-netmap
+
+USES=		cmake pkgconfig
+
 USE_GITHUB=	yes
 
-CFLAGS+=	-D_SYSTYPE_BSD
+.if ${FLAVOR} == netmap
+COMMENT+=	(with netmap support)
+CMAKE_ON=	WITH_NETMAP
+IGNORE=		needs netmap, which DragonFly does not have
+.endif
 
-CMAKE_ON=	FORCE_CONF_INSTALL
-
-MANPAGE=	zblacklist.1 zmap.1 ztee.1
+CMAKE_ON+=	FORCE_CONF_INSTALL
 
 post-patch:
-	@${REINPLACE_CMD} -i '' -e 's|/etc/zmap|${LOCALBASE}/etc/zmap|g' -e 's|/usr/local|${LOCALBASE}|g' \
-		${WRKSRC}/CMakeLists.txt
-	@${REINPLACE_CMD} -i '' -e 's|/etc/zmap/zmap.conf|${LOCALBASE}/etc/zmap/zmap.conf|g' \
-		${WRKSRC}/src/zopt.ggo.in \
-		${WRKSRC}/src/zmap.c
-	@${REINPLACE_CMD} -i '' -e 's|/etc/zmap/blocklist.conf|${LOCALBASE}/etc/zmap/blocklist.conf|g' \
-		${WRKSRC}/conf/zmap.conf \
-		${WRKSRC}/src/zmap.c
+	@${REINPLACE_CMD} -e '\
+		s|/etc/zmap|${LOCALBASE}/etc/zmap|g; \
+		s|/usr/local|${LOCALBASE}|g' \
+		${PATCH_WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} -e 's|/etc/zmap/zmap.conf|${LOCALBASE}/etc/zmap/zmap.conf|g' \
+		${PATCH_WRKSRC}/src/zopt.ggo.in
+	@${REINPLACE_CMD} -e 's|/etc/zmap/blocklist.conf|${LOCALBASE}/etc/zmap/blocklist.conf|g' \
+		${PATCH_WRKSRC}/conf/zmap.conf
 
 post-install:
-.for cnf in blocklist.conf zmap.conf
-	@${MV} ${STAGEDIR}${ETCDIR}/${cnf} ${STAGEDIR}${ETCDIR}/${cnf}.sample
-.endfor
+	@${RM} ${STAGEDIR}${ETCDIR}/zmap.conf.bak
+	@${MV} ${STAGEDIR}${ETCDIR}/blocklist.conf ${STAGEDIR}${ETCDIR}/blocklist.conf.sample
+	@${MV} ${STAGEDIR}${ETCDIR}/zmap.conf ${STAGEDIR}${ETCDIR}/zmap.conf.sample
 
 .include <bsd.port.mk>

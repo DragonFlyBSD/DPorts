@@ -1,6 +1,6 @@
 PORTNAME=	dia
 PORTVERSION=	0.97.3
-PORTREVISION=	8
+PORTREVISION=	9
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
@@ -28,7 +28,7 @@ CONFIGURE_ENV=	LOCALBASE="${LOCALBASE}"
 
 INSTALL_TARGET=	install-strip
 
-LDFLAGS+=	`pkg-config --libs gmodule-2.0`
+LDFLAGS+= `pkg-config --libs gmodule-2.0` -L${LOCALBASE}/lib -lgmodule-2.0
 
 OPTIONS_DEFINE=	DOCS
 

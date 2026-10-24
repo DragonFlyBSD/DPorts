@@ -6,7 +6,7 @@ PKGNAMESUFFIX=	-edf
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	MUltifrontal Massively Parallel sparse direct Solver for Code_Aster
-WWW=		https://graal.ens-lyon.fr/MUMPS/
+WWW=		https://mumps-solver.org/
 
 LICENSE=	CeCILL_C
 LICENSE_NAME=	CeCILL-C
@@ -37,7 +37,7 @@ MPICH_PLIST_SUB=	WITH_LIBSEQ="@comment "
 MPICH_PLIST_SUB_OFF=	WITH_LIBSEQ=""
 MPICH_LIBS_OFF=		mpiseq
 
-MAKE_JOBS_UNSAFE=yes
+MAKE_JOBS_UNSAFE= yes
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../french/aster/bsd.aster.mk"
@@ -141,5 +141,9 @@ test:	install
 	./c_example ;						\
 	${ECHO_MSG} "The solution should be (1,2)")
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@\(-lblas\)@-L${LOCALBASE}/lib \1@g"	\
+		${WRKSRC}/src/Makefile
 
 .include <bsd.port.post.mk>

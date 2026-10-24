@@ -4,6 +4,8 @@ DISTVERSION=	${JDK_MAJOR_VERSION}.${JDK_MINOR_VERSION}.${JDK_PATCH_VERSION}+${JD
 PORTREVISION=	1
 CATEGORIES=	java devel
 PKGNAMESUFFIX?=	${JDK_MAJOR_VERSION}
+MASTER_SITES=	LOCAL/openjdk/:boot
+DISTFILES=	${BOOTSTRAPJDKFILE}:boot
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 
@@ -13,6 +15,8 @@ WWW=		https://openjdk.java.net/
 
 LICENSE=	GPLv2
 
+BROKEN_armv6=	missing bootstrap-jdk
+BROKEN_armv7=	missing bootstrap-jdk
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc powerpc64 powerpc64le
 
 BUILD_DEPENDS=	zip:archivers/zip \
@@ -30,7 +34,6 @@ RUN_DEPENDS=	javavm:java/javavmwrapper \
 
 USES=		compiler:features cpe gmake iconv jpeg pkgconfig xorg
 USE_XORG=	x11 xext xi xrandr xrender xt xtst
-USE_LDCONFIG=	${INSTALLDIR}/lib/server
 
 CPE_VENDOR=	oracle
 
@@ -40,18 +43,21 @@ GH_PROJECT=	jdk11u
 
 NO_CCACHE=	yes
 
+# Suppress passing -j to do-build target via Mk/bsd.port.mk
+# In the JDK build the number of parallel jobs is passed in via configure --with-num-cores=N
 _MAKE_JOBS=	#
-MAKE_ENV=	LANG="C" \
-		LC_ALL="C" \
-		CLASSPATH="" \
+MAKE_ENV=	CLASSPATH="" \
 		JAVA_HOME="" \
 		LD_LIBRARY_PATH="" \
 		CC=${CC} \
 		CXX=${CXX} \
 		CPP=${CPP} \
-		MAKEFLAGS=""
+		LOG=cmdlines \
+		MAKEFLAGS="CONF_CHECK=ignore"
 
-JDK_OSARCH=	bsd-${ARCH:S/amd64/x86_64/:C/armv.*/arm/:S/i386/x86/:S/powerpc/ppc/}
+JDK_ARCH=	${ARCH:S/amd64/x86_64/:C/armv.*/arm/:S/i386/x86/:S/powerpc/ppc/}
+BOOTSTRAPJDKFILE=	openjdk11-11.0.29+7.1.${JDK_ARCH}.tar.xz
+JDK_OSARCH=	bsd-${JDK_ARCH}
 JDK_BUILDDIR=	${WRKSRC}/build/${JDK_OSARCH}-normal-${JDK_BUILD_JVM}-${JDK_BUILD_TYPE}
 .if defined(BUILD_JRE)
 JDK_IMAGEDIR=	${JDK_BUILDDIR}/images/jre
@@ -59,14 +65,15 @@ JDK_IMAGEDIR=	${JDK_BUILDDIR}/images/jre
 JDK_IMAGEDIR=	${JDK_BUILDDIR}/images/jdk
 .endif
 INSTALLDIR=	${PREFIX}/${PKGBASE}
+BOOTSTRAPJDKDIR= ${LOCALBASE}/bootstrap-openjdk11
 
 NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	11
 JDK_MINOR_VERSION=	0
-JDK_PATCH_VERSION=	26
-JDK_BUILD_NUMBER=	4
-BSD_JDK_VERSION=	1
+JDK_PATCH_VERSION=	32
+JDK_BUILD_NUMBER=	9
+BSD_JDK_VERSION=	2
 
 JDK_BUG_URL=	https://bugs.freebsd.org/bugzilla/enter_bug.cgi?product=Ports%20%26%20Packages&component=Individual%20Port(s)&short_desc=java/${PORTNAME}${JDK_MAJOR_VERSION}%3A%20
 
@@ -102,6 +109,7 @@ CONFIGURE_ARGS=	--with-boot-jdk=${BOOTSTRAPJDKDIR} \
 		--with-giflib-include=${LOCALBASE}/include \
 		--with-giflib-lib=${LOCALBASE}/lib \
 		--with-libpng=system \
+		--with-num-cores=${MAKE_JOBS_NUMBER} \
 		--with-zlib=system \
 		--with-lcms=system \
 		--x-includes=${LOCALBASE}/include \
@@ -123,26 +131,15 @@ ALL_TARGET=		images
 .endif
 JDK_BUILD_TYPE=		release
 
+CONFIGURE_ARGS+= --with-extra-cflags="-Wno-int-conversion"
+MAKE_ARGS= CONF_CHECK=ignore
+CONFIGURE_ARGS+= --with-stdc++lib=dynamic
+BUILD_DEPENDS+= ${LOCALBASE}/bootstrap-openjdk11/bin/javac:java/bootstrap-openjdk11
+CONFIGURE_ARGS+= ELFCTL=/usr/bin/true
 .include <bsd.port.pre.mk>
 
 .if !${PORT_OPTIONS:MCUPS}
 MASTER_SITES+=	https://codeload.github.com/OpenPrinting/cups/tar.gz/v${CUPS_INC_VER}?dummy=/:cups
-.endif
-
-BOOTSTRAP_JDKS=	${LOCALBASE}/openjdk11 \
-		${LOCALBASE}/bootstrap-openjdk11
-
-# do we have valid native jdk installed?
-.for BJDK in ${BOOTSTRAP_JDKS}
-.  if !defined(BOOTSTRAPJDKDIR) && exists(${BJDK}/bin/javac)
-BOOTSTRAPJDKDIR=	${BJDK}
-.  endif
-.endfor
-
-# if no valid jdk found, set dependency
-.if !defined(BOOTSTRAPJDKDIR)
-BOOTSTRAPJDKDIR?=	${LOCALBASE}/bootstrap-openjdk11
-BUILD_DEPENDS+=		${BOOTSTRAPJDKDIR}/bin/javac:java/bootstrap-openjdk11
 .endif
 
 .if ${ARCH} == powerpc
@@ -164,6 +161,8 @@ CFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFAULT}
 CXXFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${GCC_DEFAULT}
 CONFIGURE_ARGS+=--disable-precompiled-headers
 .else
+# it is up to upstream project to fix these or not
+CFLAGS+=	-Wno-deprecated-builtins -Wno-inline-asm -Wno-unknown-attributes
 MAKE_ENV+=	USE_CLANG=true
 .if ${ARCH:Mpowerpc64*}
 LLVM_VER=	12
@@ -192,7 +191,7 @@ ICONV_LDFLAGS=	-L${LOCALBASE}/lib
 ICONV_LIBS=	${ICONV_LIB}
 .endif
 
-post-patch:
+pre-configure:
 	@${FIND} ${WRKSRC} -name '*.orig' -delete
 	@${CHMOD} 755 ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \

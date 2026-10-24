@@ -25,6 +25,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 CONFLICTS=	libdaq-3*
 
+CONFIGURE_ARGS= --disable-netmap-module
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.* ${STAGEDIR}${PREFIX}/lib/daq/*.so
 

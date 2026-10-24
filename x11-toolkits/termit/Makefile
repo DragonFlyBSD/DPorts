@@ -42,4 +42,8 @@ post-install:
 	${CP} ${WRKSRC}/etc/termit/${file} ${TERMIT_ETC}/${file}.sample
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/src/CMakeLists.txt
+
 .include <bsd.port.mk>

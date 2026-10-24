@@ -1,5 +1,5 @@
 PORTNAME=	sway
-DISTVERSION=	0.5
+DISTVERSION=	0.6
 CATEGORIES=	x11-wm wayland
 PKGNAMESUFFIX=	${GH_PROJECT:S/${PORTNAME}//}
 
@@ -11,15 +11,15 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
-		wayland-protocols>=1.24:graphics/wayland-protocols
+		wayland-protocols>=1.41:graphics/wayland-protocols
 LIB_DEPENDS=	libjson-c.so:devel/json-c \
 		libevdev.so:devel/libevdev \
 		libudev.so:devel/libudev-devd \
 		libpcre2-8.so:devel/pcre2 \
 		libdrm.so:graphics/libdrm \
 		libwayland-egl.so:graphics/wayland \
-		libscenefx-0.2.so:x11-toolkits/scenefx02 \
-		libwlroots-0.18.so:x11-toolkits/wlroots018 \
+		libscenefx-0.5.so:x11-toolkits/scenefx05 \
+		libwlroots-0.20.so:x11-toolkits/wlroots020 \
 		libinput.so:x11/libinput \
 		libxkbcommon.so:x11/libxkbcommon
 
@@ -30,6 +30,7 @@ USE_XORG=	pixman
 GH_ACCOUNT=	WillPower3309
 GH_PROJECT=	swayfx
 MESON_ARGS=	-Dsd-bus-provider=basu
+CFLAGS+=	-Wno-unused-function # scenefx05: *corner_radii*
 
 CONFLICTS_INSTALL=	${PORTNAME} ${PORTNAME}-devel
 

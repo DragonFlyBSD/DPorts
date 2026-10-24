@@ -1,20 +1,19 @@
---- config/meson.build.orig	2025-03-31 05:27:01 UTC
+--- config/meson.build.orig	2026-09-15 04:49:45 UTC
 +++ config/meson.build
-@@ -4,77 +4,23 @@ afp_conf = configure_file(
+@@ -4,62 +4,21 @@ afp_conf = configure_file(
      configuration: cdata,
  )
  
--if (
--    fs.exists(pkgconfdir / 'afp.conf')
--    and not get_option('with-overwrite')
--)
+-if fs.exists(pkgconfdir / 'afp.conf') and not overwrite_config
 -    message('will not replace existing', pkgconfdir / 'afp.conf')
 -else
--    install_data(afp_conf, install_dir: pkgconfdir)
+-    install_data(afp_conf, install_dir: pkgconfdir, install_tag: 'config')
 -endif
 +install_data(afp_conf, rename: 'afp.conf.sample', install_dir: pkgconfdir)
  
- if have_spotlight
+ if have_spotlight and use_spotlight_localsearch
+     subdir('dconf')
+ 
      dbus_session_conf = configure_file(
          input: 'dbus-session.conf.in',
 -        output: 'dbus-session.conf',
@@ -22,64 +21,49 @@
          configuration: cdata,
      )
  
--    if (
--        fs.exists(pkgconfdir / 'dbus-session.conf')
--        and not get_option('with-overwrite')
--    )
+-    if (fs.exists(pkgconfdir / 'dbus-session.conf') and not overwrite_config)
 -        message('will not replace existing', pkgconfdir / 'dbus-session.conf')
 -    else
--        install_data(dbus_session_conf, install_dir: pkgconfdir)
+-        install_data(dbus_session_conf, install_dir: pkgconfdir, install_tag: 'config')
 -    endif
 +    install_data(dbus_session_conf, install_dir: pkgconfdir)
  endif
  
- if have_afpstats
--    if (
--        fs.exists(dbus_sysconfpath / 'netatalk-dbus.conf')
--        and not get_option('with-overwrite')
--    )
--        message('will not replace existing', dbus_sysconfpath / 'netatalk-dbus.conf')
--    else
--        install_data('netatalk-dbus.conf', install_dir: dbus_sysconfpath)
--    endif
-+    install_data('netatalk-dbus.conf', install_dir: dbus_sysconfpath)
- endif
- 
 -static_conf_files = ['extmap.conf']
 -
--if have_appletalk
+-if enable_appletalk
 -    static_conf_files += ['atalkd.conf', 'macipgw.conf', 'papd.conf']
 -endif
 -
 -cups_libdir = ''
 -
--if host_os in ['netbsd']
+-if get_option('with-cups-libdir-path') != ''
+-    cups_libdir = get_option('with-cups-libdir-path')
+-elif host_os == 'netbsd'
 -    cups_libdir = '/usr/pkg/libexec'
--elif host_os in ['linux']
+-else
 -    cups_libdir = '/usr/lib'
 -endif
 -
--if have_appletalk and have_cups and cups_libdir != ''
+-if enable_appletalk and have_cups and install_cups_pap_backend
 -    configure_file(
 -        input: 'pap.in',
 -        output: 'pap',
 -        configuration: cdata,
 -        install: true,
 -        install_dir: cups_libdir / 'cups/backend',
+-        install_tag: 'runtime',
 -    )
 -endif
 -
 -foreach file : static_conf_files
--    if (
--        fs.exists(pkgconfdir / file)
--        and not get_option('with-overwrite')
--    )
+-    if fs.exists(pkgconfdir / file) and not overwrite_config
 -        message('will not replace existing', pkgconfdir / file)
 -    else
--        install_data(file, install_dir: pkgconfdir)
+-        install_data(file, install_dir: pkgconfdir, install_tag: 'config')
 -    endif
 -endforeach
 +install_data('extmap.conf', rename: 'extmap.conf.sample', install_dir: pkgconfdir)
  
- if (
-     fs.exists('/etc/ld.so.conf.d')
+ if fs.exists('/etc/ld.so.conf.d') and enable_ldsoconf
+     configure_file(

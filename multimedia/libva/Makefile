@@ -1,5 +1,5 @@
 PORTNAME=	libva
-DISTVERSION=	2.22.0
+DISTVERSION=	2.24.1
 CATEGORIES=	multimedia
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/

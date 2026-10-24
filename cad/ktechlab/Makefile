@@ -34,4 +34,8 @@ PORTDOCS=	*
 
 PORTSCOUT=	limit:^\d+\. # prevent alpha-numeric strings
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/-fsanitize=/d' \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

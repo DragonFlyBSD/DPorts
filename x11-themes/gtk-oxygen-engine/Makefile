@@ -7,7 +7,7 @@ PKGNAMEPREFIX=	gtk-
 PKGNAMESUFFIX=	-engine
 DISTNAME=	${PORTNAME}-gtk2-${PORTVERSION}
 
-MAINTAINER=	rakuco@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Oxygen-Gtk engine and theme
 WWW=		http://kde-look.org/content/show.php/?content=136216
 
@@ -18,5 +18,7 @@ LIB_DEPENDS=	libcairo.so:graphics/cairo \
 
 USES=		cmake compiler:c++11-lang gnome pkgconfig tar:bzip2
 USE_GNOME=	gtk20
+
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include <bsd.port.mk>

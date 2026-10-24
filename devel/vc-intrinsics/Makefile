@@ -10,14 +10,14 @@ WWW=		https://github.com/intel/vc-intrinsics
 
 LICENSE=	MIT
 
-FLAVORS=	${15 14 13 12 11:L:S/^/llvm/}
+FLAVORS=	${15 14 13 12:L:S/^/llvm/}
 
 BUILD_DEPENDS=	${FLAVOR}>0:devel/${FLAVOR}
 
-USES=		cmake compiler:c++11-lib
+USES= cmake compiler:c++11-lib python:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	intel
-CMAKE_ARGS=	-DLLVM_DIR:PATH="${LOCALBASE}/${FLAVOR}"
+CMAKE_ARGS= -DLLVM_DIR:PATH="${LOCALBASE}/${FLAVOR}" -DPYTHON_EXECUTABLE=${PYTHON_CMD}
 CMAKE_INSTALL_PREFIX=		${PREFIX}/${FLAVOR}
 _PLIST_FILES=	include/llvm/GenXIntrinsics/GenXIntrOpts.h \
 		include/llvm/GenXIntrinsics/GenXIntrinsicDescription.gen \

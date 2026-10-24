@@ -1,6 +1,7 @@
-bin/geth
 %%DEVTOOLS%%bin/abigen
-%%DEVTOOLS%%bin/bootnode
+%%DEVTOOLS%%bin/blsync
+%%DEVTOOLS%%bin/era
+%%DEVTOOLS%%bin/ethkey
 %%DEVTOOLS%%bin/evm
+bin/geth
 %%DEVTOOLS%%bin/rlpdump
-%%DEVTOOLS%%bin/clef

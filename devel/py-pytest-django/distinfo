@@ -1,3 +1,3 @@
-TIMESTAMP = 1708450734
-SHA256 (pytest-django-4.8.0.tar.gz) = 5d054fe011c56f3b10f978f41a8efb2e5adfc7e680ef36fb571ada1f24779d90
-SIZE (pytest-django-4.8.0.tar.gz) = 83291
+TIMESTAMP = 1787588346
+SHA256 (pytest_django-4.14.0.tar.gz) = 26787dd3f422cfbab8f55b80a776e2edea7a11092cb74e960bef1312515708ef
+SIZE (pytest_django-4.14.0.tar.gz) = 94700

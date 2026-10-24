@@ -21,6 +21,7 @@ GH_ACCOUNT=	USNavalResearchLaboratory
 CMAKE_ON=		BUILD_SHARED_LIBS
 CMAKE_TESTING_TARGET=
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-test: # 'make test' opens a lot of windows; 1 test fails, see https://github.com/USNavalResearchLaboratory/cxxplot/issues/10
 .for name in 01_test 02_test 03_test 04_test 05_test 06_test_csv 07_test_image
 	@${ECHO} "==> Running the test ${name}"

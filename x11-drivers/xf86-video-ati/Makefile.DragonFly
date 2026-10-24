@@ -1,2 +1,0 @@
-# Force enable just in case.
-CONFIGURE_ARGS+= --enable-glamor

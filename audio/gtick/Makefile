@@ -29,4 +29,9 @@ NLS_CONFIGURE_ENABLE=	nls
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||' ${WRKSRC}/configure
 
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@libpulse-simple@@' \
+		${WRKSRC}/configure
+
 .include <bsd.port.mk>

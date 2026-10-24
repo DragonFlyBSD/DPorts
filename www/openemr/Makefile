@@ -1,5 +1,5 @@
 PORTNAME=	openemr
-PORTVERSION=	7.0.2
+PORTVERSION=	8.0.0
 CATEGORIES=	www
 MASTER_SITES=	SF/openemr/OpenEMR%20Current/${PORTVERSION}/
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
@@ -15,6 +15,7 @@ USES=		cpe php:flavors
 USE_PHP=	ctype curl gd json ldap mcrypt \
 		mbstring openssl pdo pdo_mysql \
 		session xml xmlreader xmlrpc xsl zip zlib
+IGNORE_WITH_PHP=	86
 
 NO_BUILD=	yes
 PLIST=		${WRKDIR}/plist

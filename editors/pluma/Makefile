@@ -1,7 +1,8 @@
 PORTNAME=	pluma
-PORTVERSION=	1.28.0
+DISTVERSION=	1.28.1
+PORTREVISION=	1
 CATEGORIES=	editors mate
-MASTER_SITES=	MATE
+MASTER_SITES=	https://github.com/mate-desktop/${PORTNAME}/releases/download/v${DISTVERSION}/
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -12,23 +13,22 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	itstool:textproc/itstool \
-		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:misc/iso-codes
+		iso-codes>=0:misc/iso-codes
 LIB_DEPENDS=	libenchant-2.so:textproc/enchant2 \
-		libpeas-gtk-1.0.so:devel/libpeas
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:misc/iso-codes
-
-PORTSCOUT=	limitw:1,even
+		libpeas-gtk-1.0.so:devel/libpeas1
+RUN_DEPENDS=	iso-codes>=0:misc/iso-codes
 
 USES=		compiler:c11 desktop-file-utils gettext-tools gmake gnome libtool localbase \
-		pathfix pkgconfig python shebangfix tar:xz xorg mate
+		mate pathfix pkgconfig python shebangfix tar:xz xorg
 USE_XORG=	ice sm x11
 USE_GNOME=	cairo gdkpixbuf gnomeprefix gtk30 gtksourceview4 \
 		intltool introspection libxml2
-USE_MATE=	desktop:build
-USE_LDCONFIG=	yes
+USE_MATE=	desktop common:build
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 INSTALL_TARGET=	install-strip
+
+PORTSCOUT=	site:https://github.com/mate-desktop/pluma/releases/ limitw:1,even
 
 SHEBANG_FILES=	\
 		${WRKSRC}/data/pluma-bugreport.sh.in \
@@ -39,7 +39,7 @@ SHEBANG_FILES=	\
 		${WRKSRC}/plugins/externaltools/data/search-recursive.tool.in \
 		${WRKSRC}/plugins/externaltools/data/switch-c.tool.in
 SHEBANG_LANG=	sh
-sh_CMD=		/bin/sh
+sh_CMD=		${SH}
 
 GLIB_SCHEMAS=	org.mate.pluma.gschema.xml \
 		org.mate.pluma.plugins.filebrowser.gschema.xml \
@@ -48,5 +48,18 @@ GLIB_SCHEMAS=	org.mate.pluma.gschema.xml \
 		org.mate.pluma.plugins.time.gschema.xml
 
 OPTIONS_DEFINE=	DOCS
+
+# avoid generating "*.cpython3*.opt-2.pyc" by -OO on byte compiling
+post-patch:
+	@${REINPLACE_CMD} -e '/PYTHON/ s|-OO|-O|' ${WRKSRC}/py-compile
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,/usr/bin/sh,/bin/sh,g' \
+		${WRKSRC}/data/pluma-bugreport.sh.in \
+		${WRKSRC}/plugins/externaltools/data/build.tool.in \
+		${WRKSRC}/plugins/externaltools/data/open-terminal-here.tool.in \
+		${WRKSRC}/plugins/externaltools/data/remove-trailing-spaces.tool.in \
+		${WRKSRC}/plugins/externaltools/data/run-command.tool.in \
+		${WRKSRC}/plugins/externaltools/data/search-recursive.tool.in
 
 .include <bsd.port.mk>

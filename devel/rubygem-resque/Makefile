@@ -1,5 +1,5 @@
 PORTNAME=	resque
-PORTVERSION=	2.6.0
+PORTVERSION=	2.7.0
 CATEGORIES=	devel ruby
 MASTER_SITES=	RG
 
@@ -16,6 +16,6 @@ RUN_DEPENDS+=	rubygem-mono_logger>=1.0:devel/rubygem-mono_logger \
 		rubygem-sinatra>0.9.3:www/rubygem-sinatra
 
 NO_ARCH=	yes
-USES=		gem
+USES=		cpe gem
 
 .include <bsd.port.mk>

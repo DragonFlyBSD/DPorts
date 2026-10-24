@@ -1,8 +1,11 @@
 PORTNAME=	libosinfo
 DISTVERSION=	1.12.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://releases.pagure.org/${PORTNAME}/
+
+PATCH_SITES=	https://gitlab.com/libosinfo/libosinfo/-/commit/
+PATCHFILES+=	0adf385.patch:-p1
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Library for managing OS information for virtualization
@@ -18,7 +21,7 @@ RUN_DEPENDS=	${BUILD_DEPENDS} \
 		osinfo-db-import:sysutils/osinfo-db-tools \
 		${LOCALBASE}/share/osinfo/VERSION:misc/osinfo-db
 
-USES=		gettext gnome meson perl5 pkgconfig tar:xz
+USES=		cpe gettext gnome meson perl5 pkgconfig tar:xz
 USE_GNOME=	glib20 introspection:build libxml2 libxslt introspection:build
 USE_PERL5=	build
 USE_LDCONFIG=	yes

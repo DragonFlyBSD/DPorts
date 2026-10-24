@@ -1,15 +1,62 @@
-.include <bsd.port.subdir.mk>
-
-fetchindex: ${INDEXDIR}/${INDEXFILE}.bz2
-	@bunzip2 < ${INDEXDIR}/${INDEXFILE}.bz2 > ${INDEXDIR}/${INDEXFILE} && \
-	chmod a+r ${INDEXDIR}/${INDEXFILE} && ${RM} ${INDEXDIR}/${INDEXFILE}.bz2
-
-${INDEXDIR}/${INDEXFILE}.bz2: .PHONY
-	@${FETCHINDEX} ${INDEXDIR}/${INDEXFILE}.bz2 ${MASTER_SITE_INDEX}${INDEXFILE}.bz2
-
-MASTER_SITE_INDEX?=	http://muscles.dragonflybsd.org/
-SETENV?=	/usr/bin/env
-FETCHINDEX?=	${SETENV} fetch -am -o
-
-print-index:	${INDEXDIR}/${INDEXFILE}
-	@awk -F\| '{ printf("Port:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nE-deps:\t%s\nP-deps:\t%s\nF-deps:\t%s\nWWW:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$11, $$12, $$13, $$10); }' < ${INDEXDIR}/${INDEXFILE}
+SUBDIR += accessibility
+SUBDIR += arabic
+SUBDIR += archivers
+SUBDIR += astro
+SUBDIR += audio
+SUBDIR += benchmarks
+SUBDIR += biology
+SUBDIR += cad
+SUBDIR += chinese
+SUBDIR += comms
+SUBDIR += converters
+SUBDIR += databases
+SUBDIR += deskutils
+SUBDIR += devel
+SUBDIR += dns
+SUBDIR += editors
+SUBDIR += emulators
+SUBDIR += filesystems
+SUBDIR += finance
+SUBDIR += french
+SUBDIR += ftp
+SUBDIR += games
+SUBDIR += german
+SUBDIR += graphics
+SUBDIR += hebrew
+SUBDIR += hungarian
+SUBDIR += irc
+SUBDIR += japanese
+SUBDIR += java
+SUBDIR += korean
+SUBDIR += lang
+SUBDIR += mail
+SUBDIR += math
+SUBDIR += misc
+SUBDIR += multimedia
+SUBDIR += net
+SUBDIR += net-im
+SUBDIR += net-mgmt
+SUBDIR += net-p2p
+SUBDIR += news
+SUBDIR += polish
+SUBDIR += ports-mgmt
+SUBDIR += portuguese
+SUBDIR += print
+SUBDIR += russian
+SUBDIR += science
+SUBDIR += security
+SUBDIR += shells
+SUBDIR += sysutils
+SUBDIR += textproc
+SUBDIR += ukrainian
+SUBDIR += vietnamese
+SUBDIR += www
+SUBDIR += x11
+SUBDIR += x11-clocks
+SUBDIR += x11-drivers
+SUBDIR += x11-fm
+SUBDIR += x11-fonts
+SUBDIR += x11-servers
+SUBDIR += x11-themes
+SUBDIR += x11-toolkits
+SUBDIR += x11-wm

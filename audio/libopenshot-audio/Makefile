@@ -1,6 +1,6 @@
 PORTNAME=	libopenshot-audio
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.3
+DISTVERSION=	1.0.0
 CATEGORIES=	audio multimedia
 
 MAINTAINER=	tatsuki_makino@hotmail.com
@@ -10,11 +10,10 @@ WWW=		https://www.openshot.org/
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libasound.so:audio/alsa-lib \
-		libsysinfo.so:devel/libsysinfo
+LIB_DEPENDS=	libasound.so:audio/alsa-lib
 RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins
 
-USES=		cmake compiler:c++14-lang
+USES=		cmake compiler:c++17-lang
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenShot
 USE_LDCONFIG=	yes
@@ -36,4 +35,6 @@ JACK_USES=		pkgconfig
 JACK_CMAKE_BOOL=	ENABLE_JACK
 JACK_CMAKE_ON=		-DJUCE_JACK_CLIENT_NAME:STRING=
 
+OPTIONS_EXCLUDE= DOCS
+CMAKE_BOOL_OFF= CMAKE_DISABLE_FIND_PACKAGE_Doxygen CMAKE_DISABLE_FIND_PACKAGE_PythonInterp
 .include <bsd.port.mk>

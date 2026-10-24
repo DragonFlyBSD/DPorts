@@ -161,6 +161,7 @@ libdata/pkgconfig/pangoot.pc
 %%DOCS%%share/doc/Pango/enum.CoverageLevel.html
 %%DOCS%%share/doc/Pango/enum.Direction.html
 %%DOCS%%share/doc/Pango/enum.EllipsizeMode.html
+%%DOCS%%share/doc/Pango/enum.FontColor.html
 %%DOCS%%share/doc/Pango/enum.FontScale.html
 %%DOCS%%share/doc/Pango/enum.Gravity.html
 %%DOCS%%share/doc/Pango/enum.GravityHint.html
@@ -365,6 +366,7 @@ libdata/pkgconfig/pangoot.pc
 %%DOCS%%share/doc/Pango/method.FontDescription.copy_static.html
 %%DOCS%%share/doc/Pango/method.FontDescription.equal.html
 %%DOCS%%share/doc/Pango/method.FontDescription.free.html
+%%DOCS%%share/doc/Pango/method.FontDescription.get_color.html
 %%DOCS%%share/doc/Pango/method.FontDescription.get_family.html
 %%DOCS%%share/doc/Pango/method.FontDescription.get_features.html
 %%DOCS%%share/doc/Pango/method.FontDescription.get_gravity.html
@@ -380,6 +382,7 @@ libdata/pkgconfig/pangoot.pc
 %%DOCS%%share/doc/Pango/method.FontDescription.merge.html
 %%DOCS%%share/doc/Pango/method.FontDescription.merge_static.html
 %%DOCS%%share/doc/Pango/method.FontDescription.set_absolute_size.html
+%%DOCS%%share/doc/Pango/method.FontDescription.set_color.html
 %%DOCS%%share/doc/Pango/method.FontDescription.set_family.html
 %%DOCS%%share/doc/Pango/method.FontDescription.set_family_static.html
 %%DOCS%%share/doc/Pango/method.FontDescription.set_features.html
@@ -607,6 +610,7 @@ libdata/pkgconfig/pangoot.pc
 %%DOCS%%share/doc/Pango/method.TabArray.set_tab.html
 %%DOCS%%share/doc/Pango/method.TabArray.sort.html
 %%DOCS%%share/doc/Pango/method.TabArray.to_string.html
+%%DOCS%%share/doc/Pango/opensearch.xml
 %%DOCS%%share/doc/Pango/pango-name.png
 %%DOCS%%share/doc/Pango/pango-list.html
 %%DOCS%%share/doc/Pango/pango-segmentation.html
@@ -769,7 +773,6 @@ libdata/pkgconfig/pangoot.pc
 %%DOCS%%share/doc/PangoCairo/SourceCodePro-Regular.ttf.woff
 %%DOCS%%share/doc/PangoCairo/SourceCodePro-Semibold.ttf.woff
 %%DOCS%%share/doc/PangoCairo/callback.ShapeRendererFunc.html
-%%DOCS%%share/doc/PangoCairo/classes_hierarchy.html
 %%DOCS%%share/doc/PangoCairo/fonts.css
 %%DOCS%%share/doc/PangoCairo/func.context_get_font_options.html
 %%DOCS%%share/doc/PangoCairo/func.context_get_resolution.html
@@ -803,6 +806,7 @@ libdata/pkgconfig/pangoot.pc
 %%DOCS%%share/doc/PangoCairo/method.FontMap.get_resolution.html
 %%DOCS%%share/doc/PangoCairo/method.FontMap.set_default.html
 %%DOCS%%share/doc/PangoCairo/method.FontMap.set_resolution.html
+%%DOCS%%share/doc/PangoCairo/opensearch.xml
 %%DOCS%%share/doc/PangoCairo/pango-name.png
 %%DOCS%%share/doc/PangoCairo/pango_cairo.html
 %%DOCS%%share/doc/PangoCairo/rotated-text.png
@@ -872,6 +876,7 @@ libdata/pkgconfig/pangoot.pc
 %%DOCS%%share/doc/PangoFT2/method.FontMap.set_default_substitute.html
 %%DOCS%%share/doc/PangoFT2/method.FontMap.set_resolution.html
 %%DOCS%%share/doc/PangoFT2/method.FontMap.substitute_changed.html
+%%DOCS%%share/doc/PangoFT2/opensearch.xml
 %%DOCS%%share/doc/PangoFT2/pango-name.png
 %%DOCS%%share/doc/PangoFT2/search.js
 %%DOCS%%share/doc/PangoFT2/solarized-dark.css
@@ -949,6 +954,7 @@ libdata/pkgconfig/pangoot.pc
 %%DOCS%%share/doc/PangoFc/method.FontMap.set_default_substitute.html
 %%DOCS%%share/doc/PangoFc/method.FontMap.shutdown.html
 %%DOCS%%share/doc/PangoFc/method.FontMap.substitute_changed.html
+%%DOCS%%share/doc/PangoFc/opensearch.xml
 %%DOCS%%share/doc/PangoFc/pango-name.png
 %%DOCS%%share/doc/PangoFc/property.Font.fontmap.html
 %%DOCS%%share/doc/PangoFc/property.Font.pattern.html
@@ -1040,6 +1046,7 @@ libdata/pkgconfig/pangoot.pc
 %%DOCS%%share/doc/PangoOT/method.RulesetDescription.equal.html
 %%DOCS%%share/doc/PangoOT/method.RulesetDescription.free.html
 %%DOCS%%share/doc/PangoOT/method.RulesetDescription.hash.html
+%%DOCS%%share/doc/PangoOT/opensearch.xml
 %%DOCS%%share/doc/PangoOT/pango-name.png
 %%DOCS%%share/doc/PangoOT/search.js
 %%DOCS%%share/doc/PangoOT/solarized-dark.css
@@ -1114,6 +1121,7 @@ libdata/pkgconfig/pangoot.pc
 %%X11%%%%DOCS%%share/doc/PangoXft/method.Font.unlock_face.html
 %%X11%%%%DOCS%%share/doc/PangoXft/method.Renderer.set_default_color.html
 %%X11%%%%DOCS%%share/doc/PangoXft/method.Renderer.set_draw.html
+%%X11%%%%DOCS%%share/doc/PangoXft/opensearch.xml
 %%X11%%%%DOCS%%share/doc/PangoXft/pango-name.png
 %%X11%%%%DOCS%%share/doc/PangoXft/pango_xft.html
 %%X11%%%%DOCS%%share/doc/PangoXft/property.Renderer.display.html

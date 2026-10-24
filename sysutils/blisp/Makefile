@@ -23,6 +23,7 @@ PLIST_FILES=	bin/blisp \
 
 CMAKE_ON=	BLISP_BUILD_CLI
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/tools/blisp/blisp ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_DATA} files/devd-blisp.conf ${STAGEDIR}${PREFIX}/etc/devd/blisp.conf

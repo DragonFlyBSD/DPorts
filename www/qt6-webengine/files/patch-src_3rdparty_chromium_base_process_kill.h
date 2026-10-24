@@ -1,8 +1,8 @@
---- src/3rdparty/chromium/base/process/kill.h.orig	2024-02-23 21:04:38 UTC
+--- src/3rdparty/chromium/base/process/kill.h.orig	2025-02-19 07:43:18 UTC
 +++ src/3rdparty/chromium/base/process/kill.h
-@@ -121,7 +121,7 @@ BASE_EXPORT TerminationStatus GetTerminationStatus(Pro
- BASE_EXPORT TerminationStatus GetKnownDeadTerminationStatus(
-     ProcessHandle handle, int* exit_code);
+@@ -123,7 +123,7 @@ BASE_EXPORT TerminationStatus GetTerminationStatus(Pro
+ BASE_EXPORT TerminationStatus
+ GetKnownDeadTerminationStatus(ProcessHandle handle, int* exit_code);
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

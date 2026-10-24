@@ -1,7 +1,7 @@
 PORTNAME=	fts-flatcurve
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.0.5
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	mail
 PKGNAMEPREFIX=	dovecot-
 
@@ -43,6 +43,7 @@ PLIST_FILES=	include/dovecot-fts-flatcurve/fts-flatcurve-config.h \
 		lib/dovecot/lib21_fts_flatcurve_plugin.a \
 		lib/dovecot/lib21_fts_flatcurve_plugin.so
 
+USE_CXXSTD= gnu++17
 post-install:
 		${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/dovecot/lib21_fts_flatcurve_plugin.so
 		${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/dovecot/doveadm/lib21_doveadm_fts_flatcurve_plugin.so

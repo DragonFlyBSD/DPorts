@@ -1,36 +1,44 @@
 PORTNAME=	swaync
 DISTVERSIONPREFIX=	v
-PORTVERSION=	0.7.3
+DISTVERSION=	0.12.6
 CATEGORIES=	x11 wayland
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple Wayland notification daemon with GTK panel
 WWW=		https://github.com/ErikReider/SwayNotificationCenter
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BUILD_DEPENDS=	blueprint-compiler:devel/blueprint-compiler \
+		sassc:textproc/sassc
 LIB_DEPENDS=	libjson-glib-1.0.so:devel/json-glib \
-		libgtk-layer-shell.so:x11-toolkits/gtk-layer-shell \
-		libhandy-1.so:x11-toolkits/libhandy
+		libgee-0.8.so:devel/libgee \
+		libgraphene-1.0.so:graphics/graphene \
+		libwayland-client.so:graphics/wayland \
+		libgranite-7.so:x11-toolkits/granite7 \
+		libgtk4-layer-shell.so:x11-toolkits/gtk4-layer-shell
 
-USES=		compiler:c11 gnome localbase:ldflags meson pkgconfig \
+USES=		compiler:c11 gnome meson pkgconfig \
 		python:build shebangfix vala:build
 USE_GITHUB=	yes
-USE_GNOME=	cairo gdkpixbuf2 gtk30 introspection:build
 GH_ACCOUNT=	ErikReider
 GH_PROJECT=	SwayNotificationCenter
-SHEBANG_FILES=	build-aux/meson/postinstall.py
+USE_GNOME=	cairo gdkpixbuf gtk40 libadwaita
 GLIB_SCHEMAS=	org.erikreider.swaync.gschema.xml
+SHEBANG_FILES=	build-aux/meson/postinstall.py
 
-OPTIONS_DEFINE=	MANPAGES
-OPTIONS_DEFAULT=MANPAGES
+OPTIONS_DEFINE=	MANPAGES PULSEAUDIO
+OPTIONS_DEFAULT=MANPAGES PULSEAUDIO
 
 MANPAGES_BUILD_DEPENDS=	scdoc:textproc/scdoc
 MANPAGES_MESON_TRUE=	man-pages
-MANPAGES_PLIST_FILES=	man/man1/${PORTNAME}.1.gz \
-			man/man1/${PORTNAME}-client.1.gz \
-			man/man5/${PORTNAME}.5.gz
+MANPAGES_PLIST_FILES=	share/man/man1/${PORTNAME}.1.gz \
+			share/man/man1/${PORTNAME}-client.1.gz \
+			share/man/man5/${PORTNAME}.5.gz
+
+PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
+PULSEAUDIO_MESON_TRUE=	pulse-audio
 
 post-patch:
 # Extract (snapshot) version from the port instead of meson.build
@@ -40,8 +48,10 @@ post-patch:
 # Let @sample handle default files under etc/
 	@${REINPLACE_CMD} -e "s,'/',get_option('prefix')," \
 		-e "/output.*json/s/'[^']*/&.sample/" \
-		-e "/inst.*css/s/'[^']*/&', rename: &.sample/1" \
 		${WRKSRC}/src/meson.build
+	@${REINPLACE_CMD} -e "s,'/',get_option('prefix')," \
+		-e "/output.*css/s/'[^']*/&.sample/" \
+		${WRKSRC}/data/style/meson.build
 # Respect PREFIX in manpages
 	@${REINPLACE_CMD} 's,/etc,${PREFIX}&,' \
 		${WRKSRC}/man/${PORTNAME}.1.scd

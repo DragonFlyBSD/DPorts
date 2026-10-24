@@ -1,9 +1,9 @@
---- Telegram/lib_webview/webview/platform/linux/webview_linux_webkitgtk_library.cpp.orig	2024-06-07 13:31:52 UTC
+--- Telegram/lib_webview/webview/platform/linux/webview_linux_webkitgtk_library.cpp.orig	2026-07-14 07:48:16 UTC
 +++ Telegram/lib_webview/webview/platform/linux/webview_linux_webkitgtk_library.cpp
-@@ -12,10 +12,10 @@ namespace Webview::WebKitGTK::Library {
- 
- ResolveResult Resolve(bool wayland) {
- 	const auto lib = (wayland
+@@ -14,10 +14,10 @@ ResolveResult Resolve(Platform platform, WindowMode mo
+ 	const auto gtkPlug = (platform == Platform::X11)
+ 		&& (mode != WindowMode::External);
+ 	const auto lib = (!gtkPlug
 -			? base::Platform::LoadLibrary("libwebkitgtk-6.0.so.4", RTLD_NODELETE)
 +			? base::Platform::LoadLibrary("libwebkitgtk-6.0.so", RTLD_NODELETE)
  			: nullptr)

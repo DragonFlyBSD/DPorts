@@ -1,0 +1,9 @@
+TIMESTAMP = 1783862292
+SHA256 (rocky/l/libv4l-1.20.0-6.el9.aarch64.rpm) = e357bc4ebea3449b001facf3d395c8ed48d0eebfc735799cf6a16e09205150d5
+SIZE (rocky/l/libv4l-1.20.0-6.el9.aarch64.rpm) = 199994
+SHA256 (rocky/l/libv4l-1.20.0-6.el9.i686.rpm) = 2fb9fa64e4ca090018babaf20fed83aa8c6de15f2daf6b711ce0d21bcc547bfc
+SIZE (rocky/l/libv4l-1.20.0-6.el9.i686.rpm) = 200799
+SHA256 (rocky/l/libv4l-1.20.0-6.el9.x86_64.rpm) = 38e8e245a835651866520af5fce17a0d8812de89666e276e40eb32e9dc8038fd
+SIZE (rocky/l/libv4l-1.20.0-6.el9.x86_64.rpm) = 201579
+SHA256 (rocky/v/v4l-utils-1.20.0-6.el9.src.rpm) = ac6fa03c1a2a3ab5de2b0b3df2db620bc77adc37d2857b3df3020983df2ebcde
+SIZE (rocky/v/v4l-utils-1.20.0-6.el9.src.rpm) = 2039672

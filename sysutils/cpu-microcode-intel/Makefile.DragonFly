@@ -1,1 +1,0 @@
-PLIST_FILES+=	"@dir /boot/firmware"

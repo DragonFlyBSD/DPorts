@@ -1,9 +1,10 @@
 PORTNAME=	resource-agents
-PORTVERSION=	4.10.0
+PORTVERSION=	4.13.0
 DISTVERSIONPREFIX=v
+PORTREVISION=	2
 CATEGORIES=	net-mgmt
 
-MAINTAINER=	egypcio@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OCF Compliant Resource Agents
 WWW=		http://www.linux-ha.org/wiki/Resource_agents
 
@@ -12,6 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	bash:shells/bash \
 		redis-cli:databases/redis
+LIB_DEPENDS=	libqb.so:devel/libqb
 RUN_DEPENDS=	bash:shells/bash
 
 USES=		autoreconf gmake gnome pkgconfig python shebangfix
@@ -20,11 +22,10 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	ClusterLabs
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-fatal-warnings --with-version=${PORTVERSION} \
 		PACKAGE_STRING="${PORTNAME} ${PORTVERSION}" \
 		PACKAGE_VERSION="${PORTVERSION}"
-
-CONFLICTS=	heartbeat
 
 SHEBANG_LANG=	sh
 sh_OLD_CMD=	/bin/sh
@@ -44,6 +45,7 @@ OPTIONS_SUB=	yes
 MANPAGES_BUILD_DEPENDS=	docbook-xsl>0:textproc/docbook-xsl \
 			xsltproc:textproc/libxslt
 
+CONFIGURE_ARGS+= ac_cv_header_netinet_icmp6_h=no
 post-patch:
 	${REINPLACE_CMD} 's|v=UNKNOWN|v=${PORTVERSION}|g' \
 	  ${WRKSRC}/make/git-version-gen
@@ -58,5 +60,8 @@ post-patch:
 
 post-install:
 	${RM} ${STAGEDIR}/${LOCALBASE}/resource-agents.conf
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/configure.ac
 
 .include <bsd.port.mk>

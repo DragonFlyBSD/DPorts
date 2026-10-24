@@ -1,6 +1,6 @@
 PORTNAME=	dynare
-DISTVERSION=	5.4
-PORTREVISION=	3
+DISTVERSION=	7.0
+PORTREVISION=	1
 CATEGORIES=	science # economics
 MASTER_SITES=	https://www.dynare.org/release/source/
 
@@ -12,45 +12,36 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_aarch64=	cannot open module file 'ieee_arithmetic.mod' for reading at (1): No such file or directory
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
-BUILD_DEPENDS=	${LOCALBASE}/include/boost/tokenizer.hpp:devel/boost-libs
-LIB_DEPENDS=	libhdf5.so:science/hdf5 \
-		libmatio.so:math/matio \
-		libopenblas.so:math/openblas \
-		libsz.so:science/libaec
+BUILD_DEPENDS=	${LOCALBASE}/include/boost/tokenizer.hpp:devel/boost-libs \
+		octave:math/octave
+LIB_DEPENDS=	libopenblas.so:math/openblas \
+		libslicot.so:math/slicot \
+		libumfpack.so:math/suitesparse-umfpack
 RUN_DEPENDS=	epstool:graphics/epstool \
 		gnuplot:math/gnuplot \
+		octave:math/octave \
+		octave-forge-datatypes>0:math/octave-forge-datatypes \
+		octave-forge-statistics>0:math/octave-forge-statistics \
 		pstoedit:graphics/pstoedit \
-		xfig:graphics/xfig # README says that these executables are required for the test suite
+		xfig:graphics/xfig
 
-USES=		bison compiler:c++17-lang fortran gmake localbase tar:xz tex
-USE_TEX=	pdftex
+USES=		bison compiler:c++20-lang fortran localbase:ldflags meson pkgconfig tar:xz
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-matlab \
-		--disable-doc
+LDFLAGS+=	-Wl,-z,execstack # workaround for error on 16: ld.lld: error: libheterogeneity.a(libheterogeneity.a.p/mex_sources_heterogeneity_utils_time_iteration_tensor.f08.o): requires an executable stack, but -z execstack is not specified
 
-FCFLAGS+=	-fPIC # required because configure tests with -shared
+MESON_ARGS=	-Dbuild_for=octave \
+		-Dpardiso=disabled
 
 SUB_FILES=	pkg-message
 
-OPTIONS_DEFINE=			OCTAVE
-OPTIONS_DEFAULT=		OCTAVE
-OPTIONS_SUB=			yes
-
-OCTAVE_DESC=			Integrate with Octave (main way to use Dynare)
-OCTAVE_CONFIGURE_ENABLE=	octave
-OCTAVE_CONFIGURE_ON=		--disable-mex-kalman-steady-state # Kalman Steady State MEX file for Octave - requires the non-free library slicot-5.0
-OCTAVE_BUILD_DEPENDS=		octave:math/octave
-OCTAVE_LIB_DEPENDS=		libfftw3.so:math/fftw3 \
-				libfftw3f.so:math/fftw3-float \
-				libgsl.so:math/gsl \
-				libumfpack.so:math/suitesparse-umfpack
-OCTAVE_RUN_DEPENDS=		octave:math/octave \
-				octave-forge-statistics>0:math/octave-forge-statistics
-
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	# remove empty directories, see https://git.dynare.org/Dynare/dynare/-/issues/1835
 	@${FIND} ${STAGEDIR}${PREFIX} -type d -empty -delete
 
+USES:= ${USES:Nlocalbase} localbase:ldflags
 .include <bsd.port.mk>

@@ -21,4 +21,9 @@ IGNORE=	requires perl to be built with -DWITH_THREADS
 .endif
 .endif
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s@/usr/lib@${LOCALBASE}/lib@g" \
+			 -e "s@/usr/include@${LOCALBASE}/include@g" \
+		${WRKSRC}/Makefile.PL
+
 .include <bsd.port.post.mk>

@@ -1,11 +1,10 @@
-# Created by: Cy Schubert <cy@FreeBSD.org>
-
 PORTNAME=	zetaback
 DISTVERSION=	1.0.7
 CATEGORIES=	sysutils
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Zetaback ZFS backup and recovery management system
+WWW=		https://labs.omniti.com/trac/zetaback
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	omniti-labs
@@ -23,6 +22,8 @@ BETTER_COMPRESSION_EXTRA_PATCHES=	${PATCHDIR}/opt-compression.in
 USES=		autoreconf perl5
 USE_PERL5=	run
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX= ${PREFIX}/share
 NO_ARCH=	yes
 
+IGNORE= DragonFly has no ZFS support
 .include <bsd.port.mk>

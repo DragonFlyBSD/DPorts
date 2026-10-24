@@ -1,5 +1,5 @@
 PORTNAME=	libexttextcat
-PORTVERSION=	3.4.6
+PORTVERSION=	3.4.8
 CATEGORIES=	textproc
 MASTER_SITES=	https://dev-www.libreoffice.org/src/libexttextcat/
 

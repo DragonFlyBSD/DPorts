@@ -1,0 +1,4 @@
+LangChain Docling provides Docling integration for LangChain, enabling
+document loading and processing through Docling within LangChain
+pipelines. It allows LangChain users to leverage Docling's document
+understanding capabilities for RAG, agents, and LLM applications.

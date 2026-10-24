@@ -1,7 +1,7 @@
 PORTNAME=	headscale
-PORTVERSION=	0.16.4
 DISTVERSIONPREFIX=	v
-PORTREVISION=	11
+DISTVERSION=	0.29.3
+PORTREVISION=	2
 CATEGORIES=	security net-vpn
 
 MAINTAINER=	m.muenz@gmail.com
@@ -11,14 +11,15 @@ WWW=		https://github.com/juanfont/headscale
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_aarch64=	fails to compile: modernc.org/libc
 BROKEN_armv6=	fails to compile: modernc.org/libc
 BROKEN_armv7=	fails to compile: modernc.org/libc
+NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS_REASON=	version 0.27 removed i386 support
 
 RUN_DEPENDS=	ca_root_nss>0:security/ca_root_nss
 
 USES=		go:modules
-USE_RC_SUBR=	headscale
+USE_RC_SUBR=	${PORTNAME}
 
 GO_MODULE=	github.com/juanfont/headscale
 
@@ -29,20 +30,19 @@ PLIST_FILES=	"@sample ${ETCDIR}/config.yaml.sample" \
 		"@dir /var/db/${PORTNAME}" \
 		bin/${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
-	@${REINPLACE_CMD} -e 's|/etc/headscale|${PREFIX}/etc/${PORTNAME}|g' \
-		${WRKSRC}/cmd/headscale/cli/utils.go
+	@${REINPLACE_CMD} -e 's|/etc/headscale|${ETCDIR}|g' \
+		${WRKSRC}/cmd/headscale/cli/dump_config.go \
+		${WRKSRC}/cmd/headscale/cli/root.go \
+		${WRKSRC}/integration/hsic/hsic.go
 	@${REINPLACE_CMD} -e 's|/var/lib/headscale/db.sqlite|/var/db/${PORTNAME}/db.sqlite|g' \
-		${WRKSRC}/config-example.yaml
-	@${REINPLACE_CMD} -e 's|/var/lib/headscale/cache|/var/cache/${PORTNAME}|g' \
-		${WRKSRC}/config-example.yaml
-	@${REINPLACE_CMD} -e 's|/var/lib/headscale/private.key|${PREFIX}/etc/${PORTNAME}/private.key|g' \
 		${WRKSRC}/config-example.yaml
 
 post-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc/${PORTNAME}
-	${INSTALL_DATA} ${WRKSRC}/config-example.yaml ${STAGEDIR}${PREFIX}/etc/${PORTNAME}/config.yaml.sample
-	${MKDIR} ${STAGEDIR}/var/db/${PORTNAME}
-	${MKDIR} ${STAGEDIR}/var/cache/${PORTNAME}
+	${MKDIR} ${STAGEDIR}${ETCDIR} \
+		 ${STAGEDIR}/var/cache/${PORTNAME} \
+		 ${STAGEDIR}/var/db/${PORTNAME}
+	${INSTALL_DATA} ${WRKSRC}/config-example.yaml ${STAGEDIR}${ETCDIR}/config.yaml.sample
 
 .include <bsd.port.mk>

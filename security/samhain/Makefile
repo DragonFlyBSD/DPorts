@@ -11,9 +11,6 @@ WWW=		https://la-samhna.de/samhain/
 
 LICENSE=	GPLv2
 
-BROKEN_mips=		fails to configure: error: Could not find the libwrap library
-BROKEN_mips64=		fails to configure: error: Could not find the libwrap library
-
 USES=			shebangfix
 SHEBANG_FILES=		scripts/samhainadmin-gpg.pl.in \
 			scripts/samhainadmin-sig.pl.in
@@ -30,7 +27,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 OPTIONS_DEFINE=		ASM DB_RELOAD DEBUG DNMALLOC DOCS ENCRYPT GNUPG IPV6 \
 			LIBWRAP LOGFILE_MONITOR LOGIN_WATCH MAIL \
-			MOUNTS_CHECK PORT_CHECK POSIX_ACL PRELUDE PROCESS_CHECK \
+			MOUNTS_CHECK PORT_CHECK POSIX_ACL PROCESS_CHECK \
 			PTRACE SRP STATIC SUIDCHECK UDP USERFILES XML_LOGS
 OPTIONS_DEFAULT=	ASM DNMALLOC ENCRYPT LIBWRAP MAIL SRP
 OPTIONS_RADIO=		DB
@@ -47,7 +44,6 @@ MAIL_DESC=	Enable internal SMTP mailer
 MOUNTS_CHECK_DESC=	Enable check mount options on filesystems
 PORT_CHECK_DESC=	Enable check ports
 POSIX_ACL_DESC=	Enable check posix acls
-PRELUDE_DESC=	Enable Prelude Framework support
 PROCESS_CHECK_DESC=	Enable check processes
 PTRACE_DESC=	Enable use anti-debugger options
 SRP_DESC=	Enable SRP for authentication
@@ -97,9 +93,6 @@ PORT_CHECK_CONFIGURE_ENABLE=	port-check
 
 POSIX_ACL_CONFIGURE_ENABLE=	posix-acl
 
-PRELUDE_LIB_DEPENDS=		libprelude.so:security/libprelude
-PRELUDE_CONFIGURE_WITH=		prelude
-
 PROCESS_CHECK_CONFIGURE_ENABLE=	process-check
 
 PTRACE_CONFIGURE_ENABLE=	ptrace
@@ -116,6 +109,7 @@ USERFILES_CONFIGURE_ENABLE=	userfiles
 
 XML_LOGS_CONFIGURE_ENABLE=	xml-log
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NDNMALLOC}
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "x86_64"
@@ -196,5 +190,13 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/docs/BUGS ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/sh_mounts.txt ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/sh_userfiles.txt ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Werror -Wno-invalid-source-encoding@& -Wfoo@g' \
+		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's@-D__BSD_VISIBLE=1@@g' \
+		${WRKSRC}/Makefile.in
+	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
+		${WRKSRC}/src/slib.c
 
 .include <bsd.port.post.mk>

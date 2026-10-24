@@ -1,6 +1,6 @@
 PORTNAME=	liggghts
 DISTVERSION=	3.8.0-58
-PORTREVISION=	4
+PORTREVISION=	9
 DISTVERSIONSUFFIX=	-g6e28cfe3
 CATEGORIES=	science
 
@@ -21,7 +21,7 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libtiff.so:graphics/tiff \
 		libvtkViewsCore-${VTK_VER}.so:math/vtk${VTK_VER:R}
 
-USES=		compiler:c++17-lang cmake fortran gl jpeg python qt:5 xorg
+USES= compiler:c++17-lang cmake fortran gl jpeg python qt:5 xorg localbase:ldflags
 USE_XORG=	ice sm x11 xext xt
 USE_QT=		core declarative gui network opengl sql widgets qmake:build buildtools:build
 USE_GL=		gl
@@ -42,5 +42,6 @@ CXXFLAGS+=	-fPIC \
 
 BINARY_ALIAS=	sed=gsed
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <../../math/vtk9/Makefile.version>
 .include <bsd.port.mk>

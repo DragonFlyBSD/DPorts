@@ -1,0 +1,4 @@
+Analysis Framework Base provides base interfaces and models for document
+analysis frameworks. It defines common abstractions used across the
+analysis framework ecosystem, enabling interoperability between different
+document analysis and evaluation tools.

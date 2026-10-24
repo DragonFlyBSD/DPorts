@@ -1,6 +1,6 @@
 PORTNAME=	vuls
 DISTVERSIONPREFIX=v
-DISTVERSION=	0.25.4
+DISTVERSION=	0.41.0
 PORTREVISION=	2
 CATEGORIES=	security
 
@@ -11,7 +11,10 @@ WWW=		https://vuls.io
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.21,modules
+ONLY_FOR_ARCHS=	aarch64 amd64
+ONLY_FOR_ARCHS_REASON=	module modernc.org/sqlite only supported on aarch64 and amd64
+
+USES=		go:modules
 
 GO_MODULE=	github.com/future-architect/vuls
 GO_TARGET=	./cmd/${PORTNAME}
@@ -25,6 +28,9 @@ SUB_LIST=	PORTNAME=${PORTNAME} USERS=${USERS} GROUPS=${GROUPS}
 USERS=		vuls
 GROUPS=		vuls
 
+MAKE_ENV=	GOEXPERIMENT=jsonv2
+
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%ETCDIR%%,${ETCDIR},' \
 		${WRKSRC}/subcmds/configtest.go \

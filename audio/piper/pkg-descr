@@ -1,0 +1,3 @@
+Piper is a fast and local neural text-to-speech engine that embeds espeak-ng
+for phonemization. It is used in a variety of projects and runs well on
+single-board computers.

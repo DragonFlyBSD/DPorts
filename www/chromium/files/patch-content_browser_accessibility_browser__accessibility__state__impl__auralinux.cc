@@ -1,18 +1,14 @@
---- content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc.orig	2025-05-05 10:57:53 UTC
+--- content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc.orig	2026-09-25 15:26:43 UTC
 +++ content/browser/accessibility/browser_accessibility_state_impl_auralinux.cc
-@@ -32,7 +32,11 @@ bool CheckCmdlineForOrca(const std::string& cmdline_al
-   std::string cmdline;
-   std::stringstream ss(cmdline_all);
-   while (std::getline(ss, cmdline, '\0')) {
-+#if BUILDFLAG(IS_BSD)
-+    re2::RE2 orca_regex(R"((^|/)(usr/)?(local/)?bin/orca(\s|$))");
-+#else
-     re2::RE2 orca_regex(R"((^|/)(usr/)?bin/orca(\s|$))");
-+#endif
-     if (re2::RE2::PartialMatch(cmdline, orca_regex)) {
-       return true;  // Orca was found
-     }
-@@ -42,6 +46,10 @@ bool CheckCmdlineForOrca(const std::string& cmdline_al
+@@ -14,6 +14,7 @@
+ #include <sstream>
+ #include <string>
+ 
++#include "base/notimplemented.h"
+ #include "base/callback_list.h"
+ #include "base/debug/crash_logging.h"
+ #include "base/logging.h"
+@@ -61,6 +62,10 @@ namespace {
  
  // Returns true if Orca is active.
  bool DiscoverOrca() {
@@ -23,7 +19,7 @@
    // NOTE: this method is run from another thread to reduce jank, since
    // there's no guarantee these system calls will return quickly.
    std::unique_ptr<DIR, decltype(&CloseDir)> proc_dir(opendir("/proc"),
-@@ -79,6 +87,7 @@ bool DiscoverOrca() {
+@@ -107,6 +112,7 @@ bool DiscoverOrca() {
    }
  
    return is_orca_active;

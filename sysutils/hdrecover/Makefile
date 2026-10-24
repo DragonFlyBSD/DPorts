@@ -13,4 +13,5 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 PLIST_FILES=	bin/hdrecover
 
+CFLAGS= -D__FreeBSD_cc_version=400201
 .include <bsd.port.mk>

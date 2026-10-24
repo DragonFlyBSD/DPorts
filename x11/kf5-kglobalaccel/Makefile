@@ -21,4 +21,8 @@ USE_XORG=	x11 xcb
 # KF6 coinstallability
 CMAKE_ON=	KF6_COMPAT_BUILD
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

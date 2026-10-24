@@ -1,7 +1,7 @@
 PORTNAME=	OpenTomb
 DISTVERSIONPREFIX=	win32-
 DISTVERSION=	2018-02-03_alpha
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
@@ -11,6 +11,9 @@ WWW=		https://opentomb.github.io/
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+DEPRECATED=	Archived upstream, does not build with CMake 4
+EXPIRATION_DATE=2026-11-30
+
 LIB_DEPENDS=	libpng.so:graphics/png
 
 USES=		cmake:insource compiler:c++11-lang lua openal sdl
@@ -19,6 +22,7 @@ USE_SDL=	sdl2
 LDFLAGS_i386=	-Wl,-znotext
 SUB_FILES=	OpenTomb
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/src/render/shader_manager.cpp
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/scripts/entity/entity_functions.lua

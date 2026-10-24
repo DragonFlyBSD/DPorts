@@ -1,8 +1,9 @@
 PORTNAME=	portconfig
 DISTVERSION=	0.6.2
+PORTREVISION=	2
 CATEGORIES=	ports-mgmt
 
-MAINTAINER=	alfix86@gmail.com
+MAINTAINER=	asiciliano@FreeBSD.org
 COMMENT=	Utility to set up FreeBSD port options
 WWW=		https://gitlab.com/alfix/portconfig
 
@@ -11,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${LOCALBASE}/lib/libbsddialog.a:devel/bsddialog
 
-USES=		localbase:ldflags
+USES= localbase:ldflags ncurses
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	alfix
@@ -33,5 +34,10 @@ do-install:
 	${INSTALL_DATA} ${THEMES}/default.conf ${STAGEDIR}${ETCDIR}/default.conf.sample
 	${INSTALL_DATA} ${THEMES}/red-green.conf ${STAGEDIR}${ETCDIR}/red-green.conf.sample
 	${INSTALL_DATA} ${THEMES}/yellow-blue.conf ${STAGEDIR}${ETCDIR}/yellow-blue.conf.sample
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ncursesw@ncurses@g' \
+			 -e 's@tinfow@tinfo@g' -e 's@formw@form@g' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

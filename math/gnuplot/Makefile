@@ -1,6 +1,6 @@
 PORTNAME=	gnuplot
 PORTVERSION=	5.4.10
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math graphics
 MASTER_SITES=	SF
 
@@ -47,7 +47,6 @@ PLIST_SUB+=	X11="@comment "
 USES+=		gnome jpeg lua:53 ncurses tex xorg
 USE_TEX=	kpathsea
 USE_GNOME+=	atk cairo gtk30 gdkpixbuf
-USE_WX=		3.0+
 USE_XORG+=	x11
 LIB_DEPENDS+=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \

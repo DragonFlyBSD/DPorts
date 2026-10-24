@@ -1,5 +1,5 @@
 PORTNAME=	zita-jacktools
-DISTVERSION=	1.7.2
+DISTVERSION=	1.8.0
 CATEGORIES=	audio python
 MASTER_SITES=	https://kokkinizita.linuxaudio.org/linuxaudio/downloads/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,6 +22,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zita-audiotools>0:audio/py-zita-audiotools@$
 USES=		localbase python tar:bz2
 USE_PYTHON=	autoplist distutils
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/zita_jacktools/*.so
 

@@ -1,0 +1,19 @@
+[
+{ type: upgrade
+  maximum_version: "1.4.3.260429"
+  message: <<EOM
+
+The version naming scheme has changed to only include semantic versioning. eg: 1.x.x
+
+Bastille version 1.4.4 introduces a minor change to how it handles the rdr command.
+It requires an additional line inside `/etc/pf.conf` if you are using `bastille rdr`.
+Place the following line at the beginning of the `/etc/pf.conf` filtering section.
+
+anchor "bastille/*"
+
+See https://bastille.readthedocs.io/en/latest/chapters/networking.html#etc-pf-conf for
+details.
+
+EOM
+}
+]

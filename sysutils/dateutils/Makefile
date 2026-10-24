@@ -23,4 +23,10 @@ INFO=		dateutils
 
 OPTIONS_DEFINE=	DOCS
 
+CFLAGS= -D__BSD_VISIBLE
+dfly-patch:
+	${REINPLACE_CMD} -e "s@\(D_XOPEN_SOURCE\)=700@\1=600@g"	\
+		${WRKSRC}/build-aux/Makefile.in	\
+		${WRKSRC}/build-aux/yuck.am	# for vfork visibility
+
 .include <bsd.port.mk>

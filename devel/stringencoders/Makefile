@@ -15,6 +15,9 @@ USES=		libtool perl5
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-CFLAGS+=	-fsigned-char	# chars are unsigned on PowerPC and ARM
+CFLAGS+= -fsigned-char # chars are unsigned on PowerPC and ARM -Wno-unused-but-set-variable
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/EXTRACFLAGS/s/-Werror[[:>:]]//g'	${WRKSRC}/configure
 
 .include <bsd.port.mk>

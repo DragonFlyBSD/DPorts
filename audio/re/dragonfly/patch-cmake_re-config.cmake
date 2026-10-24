@@ -1,10 +1,11 @@
---- cmake/re-config.cmake.orig	2023-11-06 15:50:50 UTC
+--- cmake/re-config.cmake.orig	2026-09-30 17:40:28 UTC
 +++ cmake/re-config.cmake
-@@ -54,7 +54,6 @@ else()
+@@ -77,7 +77,7 @@
+ else()
    check_symbol_exists(res_ninit resolv.h HAVE_RESOLV)
  endif()
- if(HAVE_RESOLV)
--  set(RESOLV_LIBRARY resolv)
+-if(HAVE_RESOLV AND ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++if(HAVE_RESOLV AND ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
    list(APPEND RE_DEFINITIONS HAVE_RESOLV)
- else()
-   set(RESOLV_LIBRARY)
+   set(RESOLV_LIBRARY) # Provided by libc
+ elseif(HAVE_RESOLV)

@@ -1,9 +1,0 @@
-
-# to avoid orphans
-PLIST_FILES+=	%%PORTDOCS%%%%DOCSDIR%%/Xresources \
-		%%DATADIR%%/cwops.txt \
-		%%DATADIR%%/ok_om.txt \
-		%%DATADIR%%/okommults \
-		%%DATADIR%%/rules/cwops_mini_cwt \
-		%%DATADIR%%/rules/okom
-DFLY_UNMAINTAINED= yes

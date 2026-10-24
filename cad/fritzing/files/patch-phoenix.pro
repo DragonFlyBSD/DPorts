@@ -1,40 +1,24 @@
---- phoenix.pro.orig	2024-02-22 13:06:37 UTC
+--- phoenix.pro.orig	2026-07-28 07:36:38 UTC
 +++ phoenix.pro
-@@ -31,7 +31,7 @@
- # QTPLUGIN  += qjpeg qsqlite
+@@ -19,11 +19,10 @@ QT_LEAST=6.5.3
+ # ********************************************************************
  
+ QT_LEAST=6.5.3
+-QT_MOST=6.10.10
++QT_MOST=6.11.1
+ !versionAtLeast(QT_VERSION, $${QT_LEAST}):error("Use at least Qt version $${QT_LEAST}")
+ !versionAtMost(QT_VERSION, $${QT_MOST}):error("Use at most Qt version $${QT_MOST}")
  
 -CONFIG += debug_and_release
-+CONFIG += release
- win32 {
- # release build using msvc 2010 needs to use Multi-threaded (/MT) for the code generation/runtime library option
- # release build using msvc 2010 needs to add msvcrt.lib;%(IgnoreSpecificDefaultLibraries) to the linker/no default libraries option
-@@ -92,7 +92,7 @@ unix {
+ CONFIG += c++20
+ 
  unix {
-     !macx { # unix is defined on mac
-         HARDWARE_PLATFORM = $$system(uname -m)
--        contains( HARDWARE_PLATFORM, x86_64 ) {
-+        contains( HARDWARE_PLATFORM, amd64 ) {
-             DEFINES += LINUX_64
-         } else {
-             DEFINES += LINUX_32
-@@ -101,7 +101,7 @@ unix {
-     }
+@@ -130,7 +129,7 @@ unix {
+     manpage.files += Fritzing.1
  
-         isEmpty(PREFIX) {
--                PREFIX = /usr
-+                PREFIX = /usr/local
-         }
-         BINDIR = $$PREFIX/bin
-         DATADIR = $$PREFIX/share
-@@ -117,8 +117,8 @@ unix {
-         manpage.path = $$DATADIR/man/man1
-         manpage.files += Fritzing.1
+     icon.path = $$DATADIR/pixmaps
+-    icon.extra = install -D -m 0644 $$PWD/resources/images/fritzing_icon.png $(INSTALL_ROOT)$$DATADIR/pixmaps/fritzing.png
++    icon.extra = install -m 0644 $$PWD/resources/images/fritzing_icon.png $(INSTALL_ROOT)$$DATADIR/pixmaps/fritzing.png
  
--        icon.path = $$DATADIR/icons
--        icon.extra = install -D -m 0644 $$PWD/resources/images/fritzing_icon.png $(INSTALL_ROOT)$$DATADIR/icons/fritzing.png
-+        icon.path = $$DATADIR/icons/hicolor/64x64/apps
-+        icon.extra = install -m 0644 $$PWD/resources/images/fritzing_icon.png $(INSTALL_ROOT)$$DATADIR/icons/hicolor/64x64/apps/fritzing.png
- 
-         parts.path = $$PKGDATADIR
-         parts.files += parts
+     parts.path = $$PKGDATADIR
+     parts.files += parts

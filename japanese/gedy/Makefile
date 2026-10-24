@@ -1,5 +1,3 @@
-# Created by: Hajimu UMEMOTO <ume@FreeBSD.org>
-
 PORTNAME=	gedy
 PORTVERSION=	0.9.0
 PORTREVISION=	3
@@ -11,6 +9,7 @@ DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	GNOME Edy Viewer
+WWW=		http://hito.music.coocan.jp/pasori/gedyviewer.html
 
 LICENSE=	GPLv2
 
@@ -18,8 +17,7 @@ RUN_DEPENDS=	rubygem-gtk2>0:x11-toolkits/rubygem-gtk2 \
 		rubygem-gio2>=3.1.0:devel/rubygem-gio2 \
 		${RUBY_SITEARCHLIBDIR}/pasori.so:devel/libpafe-ruby
 
-USE_RUBY=		yes
-USES=		shebangfix
+USES=		ruby shebangfix
 SHEBANG_FILES=	${PORTNAME}
 ruby_OLD_CMD=	/usr/bin/ruby1.9.3
 

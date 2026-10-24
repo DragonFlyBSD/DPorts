@@ -1,0 +1,12 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 20:28:31 UTC
++++ pyproject.toml
+@@ -6,7 +6,7 @@ description = "Modular version of the Docling package:
+ name = "docling-slim"
+ version = "2.108.0"  # DO NOT EDIT, updated automatically
+ description = "Modular version of the Docling package: SDK and CLI for parsing PDF, DOCX, HTML, and more, to a unified document representation for powering downstream workflows such as gen AI applications."
+-license = "MIT"
++license = {text = "MIT"}
+ keywords = [
+   "docling",
+   "convert",

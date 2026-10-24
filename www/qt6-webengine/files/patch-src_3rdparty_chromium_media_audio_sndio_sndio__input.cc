@@ -1,11 +1,12 @@
---- src/3rdparty/chromium/media/audio/sndio/sndio_input.cc.orig	2023-04-28 17:01:32 UTC
+--- src/3rdparty/chromium/media/audio/sndio/sndio_input.cc.orig	2026-03-19 22:35:33 UTC
 +++ src/3rdparty/chromium/media/audio/sndio/sndio_input.cc
-@@ -0,0 +1,200 @@
+@@ -0,0 +1,201 @@
 +// Copyright 2013 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
 +#include "base/logging.h"
++#include "media/base/audio_sample_types.h"
 +#include "media/base/audio_timestamp_helper.h"
 +#include "media/audio/sndio/audio_manager_sndio.h"
 +#include "media/audio/audio_manager.h"
@@ -13,7 +14,7 @@
 +
 +namespace media {
 +
-+static const SampleFormat kSampleFormatAI = kSampleFormatS16;
++static const SampleFormat kSampleFormatSI = kSampleFormatS16;
 +
 +void SndioAudioInputStream::OnMoveCallback(void *arg, int delta)
 +{
@@ -59,7 +60,7 @@
 +  sio_initpar(&par);
 +  par.rate = params.sample_rate();
 +  par.rchan = params.channels();
-+  par.bits = SampleFormatToBitsPerChannel(kSampleFormatAI);
++  par.bits = SampleFormatToBitsPerChannel(kSampleFormatSI);
 +  par.bps = par.bits / 8;
 +  par.sig = sig = par.bits != 8 ? 1 : 0;
 +  par.le = SIO_LE_NATIVE;
@@ -79,7 +80,7 @@
 +
 +  if (par.rate  != (unsigned int)params.sample_rate() ||
 +      par.rchan != (unsigned int)params.channels() ||
-+      par.bits  != (unsigned int)SampleFormatToBitsPerChannel(kSampleFormatAI) ||
++      par.bits  != (unsigned int)SampleFormatToBitsPerChannel(kSampleFormatSI) ||
 +      par.sig   != (unsigned int)sig ||
 +      (par.bps > 1 && par.le != SIO_LE_NATIVE) ||
 +      (par.bits != par.bps * 8)) {
@@ -87,7 +88,7 @@
 +    goto bad_close;
 +  }
 +  state = kStopped;
-+  buffer = new char[audio_bus->frames() * params.GetBytesPerFrame(kSampleFormatAI)];
++  buffer = new char[audio_bus->frames() * params.GetBytesPerFrame(kSampleFormatSI)];
 +  sio_onmove(hdl, &OnMoveCallback, this);
 +  return OpenOutcome::kSuccess;
 +bad_close:
@@ -176,7 +177,7 @@
 +    GetAgcVolume(&normalized_volume);
 +
 +    // read one block
-+    todo = nframes * params.GetBytesPerFrame(kSampleFormatAI);
++    todo = nframes * params.GetBytesPerFrame(kSampleFormatSI);
 +    data = buffer;
 +    while (todo > 0) {
 +      n = sio_read(hdl, data, todo);

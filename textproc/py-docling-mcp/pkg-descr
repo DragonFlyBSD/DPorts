@@ -1,0 +1,4 @@
+Docling MCP enables running Docling as an agent using the Model Context
+Protocol (MCP). It exposes Docling's document processing capabilities
+as MCP tools, allowing AI assistants and agents to convert and analyze
+documents through the MCP interface.

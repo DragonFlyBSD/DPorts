@@ -1,6 +1,6 @@
---- chrome/browser/supervised_user/supervised_user_extensions_manager.h.orig	2024-07-31 14:19:23 UTC
+--- chrome/browser/supervised_user/supervised_user_extensions_manager.h.orig	2025-12-06 13:30:52 UTC
 +++ chrome/browser/supervised_user/supervised_user_extensions_manager.h
-@@ -154,7 +154,7 @@ class SupervisedUserExtensionsManager : public Extensi
+@@ -147,7 +147,7 @@ class SupervisedUserExtensionsManager : public Extensi
    // launched.
    bool ShouldBlockExtension(const std::string& extension_id) const;
  

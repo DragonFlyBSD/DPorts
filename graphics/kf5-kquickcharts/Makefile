@@ -12,4 +12,8 @@ USE_QT=		core declarative gui network quickcontrols2 \
 		buildtools:build qmake:build \
 		quickcontrols2:run
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

@@ -1,10 +1,9 @@
 PORTNAME=	gnustep-gui
 DISTVERSIONPREFIX=	gui-
-DISTVERSION=	0_31_1
-PORTREVISION=	1
+DISTVERSION=	0_32_0
 CATEGORIES=	x11-toolkits gnustep
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	joe.maloney@icloud.com
 COMMENT=	GNUstep GUI library
 WWW=		http://www.gnustep.org/
 
@@ -54,6 +53,10 @@ ASPELL_CONFIGURE_ENABLE=	aspell
 
 USE_LDCONFIG=	${GNUSTEP_SYSTEM_LIBRARIES}
 
+LLD_UNSAFE= yes
+LIB_DEPENDS+= libxml2.so:textproc/libxml2
+LIB_DEPENDS+= libxslt.so:textproc/libxslt
+ADDITIONAL_LIB_DIRS= -L${LOCALBASE}/libs
 post-patch:
 	${REINPLACE_CMD} -e "s|doc=no|doc=yes|" ${WRKSRC}/GNUmakefile
 

@@ -1,13 +1,15 @@
 PORTNAME=	symengine
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.14.0
+DISTVERSION=	0.14.1
+PORTREVISION=	2
 CATEGORIES=	math python
 #MASTER_SITES=	PYPI # latest release isn't compatible with math/symengine
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Python library providing wrappers to SymEngine
-WWW=		https://symengine.org/
+WWW=		https://symengine.org/ \
+		https://github.com/symengine/symengine.py
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -22,16 +24,18 @@ LIB_DEPENDS=	libarb.so:math/arb \
 		libzstd.so:archivers/zstd
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sympy>0:math/py-sympy@${PY_FLAVOR} # see https://github.com/symengine/symengine.py/issues/416
 
-USES=		cmake compiler:c++11-lang llvm:15 python
+USES=		cmake compiler:c++11-lang python
 USE_PYTHON=	cython flavors pytest
 
 USE_GITHUB=	yes
 GH_PROJECT=	symengine.py
 
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4.5 compatibility, see https://github.com/symengine/symengine.py/issues/533
+
 BINARY_ALIAS=	python=${PYTHON_CMD} # cmake scripts expect python executable
 
 # cmake scripts copy build type and flags from math/symengine, and ignore all local variables of that kind
 
-# tests as of 0.14.0: 362 passed, 2 skipped, 1 warning in 18.87s
+# tests as of 0.14.0: 363 passed, 1 skipped, 1 warning in 7.76s
 
 .include <bsd.port.mk>

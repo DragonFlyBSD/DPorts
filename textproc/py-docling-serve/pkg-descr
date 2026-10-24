@@ -1,0 +1,4 @@
+Docling Serve runs Docling as a web service, exposing document
+conversion capabilities through a REST API. It enables deployment of
+Docling as a standalone server for distributed document processing
+workloads and integration with other services.

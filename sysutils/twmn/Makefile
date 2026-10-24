@@ -1,16 +1,18 @@
 PORTNAME=	twmn
 PORTVERSION=	g20190917
-PORTREVISION=	6
+PORTREVISION=	12
 CATEGORIES=	sysutils
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Notification system for tiling window managers
 WWW=		https://github.com/sboli/twmn
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs
+BROKEN=		fails to build with Boost>=1.87
+
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
 USES=		compiler:c++11-lang qmake qt:5
 USE_GITHUB=	yes
@@ -39,5 +41,8 @@ post-install-DOCS-on:
 post-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/twmnd/twmnd.pro
 
 .include <bsd.port.mk>

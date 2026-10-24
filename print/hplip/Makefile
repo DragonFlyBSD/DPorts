@@ -1,6 +1,5 @@
 PORTNAME=	hplip
-PORTVERSION=	3.24.4
-PORTREVISION=	2
+PORTVERSION=	3.26.6
 CATEGORIES=	print
 MASTER_SITES=	SF
 
@@ -76,6 +75,8 @@ XSANE_DESC=		Install XSane for scanning (implies SCAN)
 XSANE_IMPLIES=		SCAN
 XSANE_RUN_DEPENDS=	xsane:graphics/xsane
 
+USB_INCLUDE= ${LOCALBASE}/include
+MAKE_ENV= LDVER=ld.bfd
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's,/usr/local,${PREFIX},g' \
@@ -98,6 +99,7 @@ post-patch:
 		${WRKSRC}/prnt/hpijs/foomatic-rip-hplip \
 		${WRKSRC}/prnt/filters/hpps \
 		${WRKSRC}/ui5/scandialog.py \
+		${WRKSRC}/ui5/setupdialog.py \
 		${WRKSRC}/ui5/devmgr5.py \
 
 post-install:

@@ -30,4 +30,7 @@ INSTALL_TARGET=	install-strip
 MAKE_ARGS=	PYTHON="${PYTHON_CMD}"
 USE_LDCONFIG=	yes
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/configure
+
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	lazygit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.42.0
+DISTVERSION=	0.65.1
 PORTREVISION=	2
 CATEGORIES=	devel
 
@@ -11,10 +11,11 @@ WWW=		https://github.com/jesseduffield/lazygit
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.22,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/jesseduffield/lazygit
 
 PLIST_FILES=	bin/${PORTNAME}
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

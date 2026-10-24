@@ -1,31 +1,39 @@
 PORTNAME=	filerunner
-PORTVERSION=	23.03.07.16
+DISTVERSION=	26.09.03.12
 CATEGORIES=	x11-fm tk
-MASTER_SITES=	SF/${PORTNAME}/release-${PORTVERSION}
-DISTNAME=	fr-${PORTVERSION}
+MASTER_SITES=	SF/${PORTNAME}/release-${DISTVERSION}
+DISTNAME=	fr-${DISTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	mce@FreeBSD.org
 COMMENT=	Tcl/Tk-based filemanager with FTP capabilities
 WWW=		https://sourceforge.net/projects/filerunner/
 
-LICENSE=	GPLv2
+LICENSE=	GPLv3
 
-USES=		tk:run
-USE_LDCONFIG=	yes
+USES=		desktop-file-utils python:run shebangfix tk:run
 
+SHEBANG_FILES=	fr fr.tcl frftp frlib/snitIndex.tcl Makefiles/INSTALL
+SHEBANG_LANG=	tclsh wish
+tclsh_CMD=	${TCLSH}
+wish_CMD=	${WISH}
+
+EXTRACT_AFTER_ARGS=	--exclude inotify --exclude trim-inotify.tcl
+NO_ARCH=	yes
 NO_BUILD=	yes
+SUB_FILES=	pkg-message
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+PORTDATA=	*
+
 post-patch:
-	${REINPLACE_CMD} -e 's|/usr/bin/env wish|${WISH}|' ${WRKSRC}/fr
+	${REINPLACE_CMD} -e \
+		'/python3/s,execok python3,execok ${PYTHON_VERSION},' \
+		 ${WRKSRC}/packages/expect/expect.tcl
 
 do-install:
-	@${MKDIR} ${STAGEDIR}${DATADIR}
-	cd ${WRKSRC} && ${COPYTREE_SHARE} \* ${STAGEDIR}${DATADIR}
-.for file in fr frftp
-	@${CHMOD} ${BINMODE} ${STAGEDIR}${DATADIR}/${file}
-.endfor
-	@${LN} -sf ${DATADIR}/fr ${STAGEDIR}${PREFIX}/bin/fr
+	cd ${WRKSRC}/Makefiles && ${SETENV} DESTDIR=${STAGEDIR} \
+		prefix=${PREFIX}/share GCONFIG=${PREFIX}/etc \
+		EXEC=${PREFIX}/bin ./INSTALL --verbose
 
 .include <bsd.port.mk>

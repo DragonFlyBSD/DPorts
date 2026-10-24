@@ -5,13 +5,13 @@ MASTER_SITES=	LOCAL/hrs
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Utility for ARIB STD-B25 ECM handling in MPEG2-TS stream
-WWW=		http://www.marumo.ne.jp/db2012_2.htm #13
+WWW=		http://www.marumo.ne.jp/db2012_2.htm\#13
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/licence.txt
 
 LIB_DEPENDS=	libpcsclite.so:devel/pcsc-lite
-RUN_DEPENDS=	${LOCALBASE}/lib/pcsc/drivers/ifd-ccid.bundle/Contents/${OPSYS}/libccid.so:devel/libccid
+RUN_DEPENDS= ${LOCALBASE}/lib/pcsc/drivers/ifd-ccid.bundle/Contents/${OPSYS}/libccid.so:devel/libccid
 
 USES=		uidfix
 USE_LDCONFIG=	yes
@@ -23,12 +23,7 @@ PLIST_FILES=	bin/b25 \
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} <= 1400079
-PLIST_FILES+=	lib/libab25_p.a
-.endif
-
+IGNORE= unmaintained, please request fixing to users mailing list
 pre-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/include/ab25
 
@@ -36,4 +31,7 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.post.mk>
+post-install:
+	${CP} ${STAGEDIR}${PREFIX}/lib/libab25.a ${STAGEDIR}${PREFIX}/lib/libab25_p.a
+
+.include <bsd.port.mk>

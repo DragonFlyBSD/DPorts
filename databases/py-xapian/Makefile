@@ -1,5 +1,5 @@
 PORTNAME=	xapian
-PORTVERSION=	1.4.27
+PORTVERSION=	2.1.0
 DISTVERSIONPREFIX=	bindings-
 CATEGORIES=	databases python
 MASTER_SITES=	https://oligarchy.co.uk/xapian/${PORTVERSION}/ \
@@ -8,7 +8,9 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python binding for Xapian
-WWW=		https://xapian.org/
+WWW=		https://xapian.org/ \
+		https://github.com/xapian/xapian/tree/main/xapian-bindings \
+		https://github.com/xapian/xapian
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -16,7 +18,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	xapian-core>=${PORTVERSION}:databases/xapian-core
 LIB_DEPENDS=	libxapian.so:databases/xapian-core
 
-USES=		compiler:c++11-lang libtool python tar:xz
+USES=		compiler:c++17-lang libtool python tar:xz
 USE_PYTHON=	flavors
 
 CONFIGURE_ARGS=	--datarootdir=${DATADIR} \
@@ -35,7 +37,7 @@ CONFIGURE_ARGS=	--datarootdir=${DATADIR} \
 CONFIGURE_ENV=	PYTHON3=${PYTHON_CMD}
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
-USE_CXXSTD=	c++11
+USE_CXXSTD=	c++17
 
 PORTDOCS=	*
 

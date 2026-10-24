@@ -11,7 +11,7 @@ WWW=		https://github.com/gnuradio/volk
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/mako/__init__.py:textproc/py-mako@${PY_FLAVOR}
+BUILD_DEPENDS= ${PYTHON_SITELIBDIR}/mako/__init__.py:textproc/py-mako@${PY_FLAVOR} cxxfs_gcc8>0:misc/cxxfs_gcc8
 LIB_DEPENDS=	libcpu_features.so:devel/cpu_features \
 		liborc-0.4.so:devel/orc
 
@@ -38,4 +38,6 @@ pre-install:
 	@${REINPLACE_CMD} -e 's|#!/usr/local/bin/python3|#!/usr/local/bin/python${PYTHON_VER}|' \
 		${WRKDIR}/.build/python/volk_modtool/volk_modtool.exe
 
+CXXFLAGS:= ${CXXFLAGS} -isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS:= ${LDFLAGS} -L${LOCALBASE}/cxxfs_gcc8
 .include <bsd.port.post.mk>

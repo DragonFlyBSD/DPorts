@@ -1,6 +1,6 @@
---- v8/src/base/platform/platform-posix.cc.orig	2025-04-04 08:52:13 UTC
+--- v8/src/base/platform/platform-posix.cc.orig	2026-09-25 15:26:43 UTC
 +++ v8/src/base/platform/platform-posix.cc
-@@ -76,7 +76,7 @@
+@@ -78,7 +78,7 @@
  #include <sys/syscall.h>
  #endif
  
@@ -9,7 +9,7 @@
  #define MAP_ANONYMOUS MAP_ANON
  #endif
  
-@@ -315,8 +315,15 @@ void OS::SetRandomMmapSeed(int64_t seed) {
+@@ -359,8 +359,15 @@ void OS::SetRandomMmapSeed(int64_t seed) {
    }
  }
  
@@ -25,7 +25,7 @@
    uintptr_t raw_addr;
    {
      MutexGuard guard(rng_mutex.Pointer());
-@@ -413,6 +420,7 @@ void* OS::GetRandomMmapAddr() {
+@@ -457,6 +464,7 @@ void* OS::GetRandomMmapAddr() {
  #endif
    return reinterpret_cast<void*>(raw_addr);
  }
@@ -33,7 +33,7 @@
  
  // TODO(bbudge) Move Cygwin and Fuchsia stuff into platform-specific files.
  #if !V8_OS_CYGWIN && !V8_OS_FUCHSIA
-@@ -701,7 +709,7 @@ void OS::DestroySharedMemoryHandle(PlatformSharedMemor
+@@ -772,7 +780,7 @@ void OS::DestroySharedMemoryHandle(SharedMemoryHandle 
  #if !V8_OS_ZOS
  // static
  bool OS::HasLazyCommits() {
@@ -42,7 +42,7 @@
    return true;
  #else
    // TODO(bbudge) Return true for all POSIX platforms.
-@@ -1346,7 +1354,7 @@ void Thread::SetThreadLocal(LocalStorageKey key, void*
+@@ -1423,7 +1431,7 @@ void Thread::SetThreadLocal(LocalStorageKey key, void*
  // keep this version in POSIX as most Linux-compatible derivatives will
  // support it. MacOS and FreeBSD are different here.
  #if !defined(V8_OS_FREEBSD) && !defined(V8_OS_DARWIN) && !defined(_AIX) && \
@@ -51,3 +51,48 @@
  
  namespace {
  #if DEBUG
+@@ -1485,19 +1493,13 @@ Stack::StackSlot Stack::ObtainCurrentThreadStackStart(
+   return stack_start;
+ #endif  // V8_OS_ZOS
+ }
++#endif  // !defined(V8_OS_FREEBSD) && !defined(V8_OS_DARWIN) &&
++        // !defined(_AIX) && !defined(V8_OS_SOLARIS)
+ 
+ // static
+ Stack::StackSlot Stack::ObtainCurrentThreadStackReservedLimit() {
+ #if V8_OS_ZOS
+   return nullptr;
+-#elif V8_OS_OPENBSD
+-  stack_t stack;
+-  int error = pthread_stackseg_np(pthread_self(), &stack);
+-  if (error) {
+-    DCHECK(MainThreadIsCurrentThread());
+-    return nullptr;
+-  }
+-  return stack.ss_sp;
+ #else
+ // For most libcs, pthread_getattr_np() returns the the stack reserved
+ // limit on the main thread, but musl only returns the current high-water
+@@ -1508,7 +1510,11 @@ Stack::StackSlot Stack::ObtainCurrentThreadStackReserv
+   if (syscall(__NR_gettid) == getpid()) return nullptr;
+ #endif
+   pthread_attr_t attr;
++#if V8_OS_BSD
++  int error = pthread_attr_init(&attr);
++#else
+   int error = pthread_getattr_np(pthread_self(), &attr);
++#endif
+   if (error) {
+     DCHECK(MainThreadIsCurrentThread());
+     return nullptr;
+@@ -1521,10 +1527,6 @@ Stack::StackSlot Stack::ObtainCurrentThreadStackReserv
+   return base;
+ #endif  // V8_OS_ZOS
+ }
+-
+-#endif  // !defined(V8_OS_FREEBSD) && !defined(V8_OS_DARWIN) &&
+-        // !defined(_AIX) && !defined(V8_OS_SOLARIS)
+-
+ 
+ 
+ // static

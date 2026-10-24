@@ -1,7 +1,7 @@
 PORTNAME=	cells
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.4.3
-PORTREVISION=	1
+DISTVERSION=	5.0.2
+PORTREVISION=	6
 CATEGORIES=	www
 PKGNAMEPREFIX=	pydio-
 
@@ -12,16 +12,16 @@ WWW=		https://github.com/pydio/cells
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-NOT_FOR_ARCHS=	i386
-NOT_FOR_ARCHS_REASON=	Not supported on i386
+ONLY_FOR_ARCHS=	aarch64 amd64
+ONLY_FOR_ARCHS_REASON=	module modernc.org/sqlite only supported on aarch64 and amd64
 
-USES=		cpe go:1.21,modules gmake
+USES=		cpe go:modules gmake
 CPE_VENDOR=	pydio
 USE_RC_SUBR=	${PORTNAME}
 
-GO_MODULE=	github.com/pydio/cells/v4
-GO_BUILDFLAGS=	-ldflags "-X github.com/pydio/cells/v4/common.version=${DISTVERSION}\
-		-X github.com/pydio/cells/v4/common.BuildStamp=1970-01-01T00:00:00"
+GO_MODULE=	github.com/pydio/cells/v5
+GO_BUILDFLAGS=	-ldflags "-X github.com/pydio/cells/v5/common.version=${DISTVERSION}\
+		-X github.com/pydio/cells/v5/common.BuildStamp=1970-01-01T00:00:00"
 
 USERS=		pydio
 GROUPS=		pydio
@@ -33,6 +33,7 @@ OPTIONS_DEFAULT=	BASH ZSH
 BASH_PLIST_FILES=	etc/bash_completion.d/${PORTNAME}
 ZSH_PLIST_FILES=	share/zsh/site-functions/_${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-build-BASH-on:
 	${SETENV} CELLS_WORKING_DIR=${WRKDIR}/wrkdir \
 		${GO_WRKDIR_BIN}/${PORTNAME} tools completion bash \

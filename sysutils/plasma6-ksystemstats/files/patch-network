@@ -1,0 +1,33 @@
+--- plugins/network/SysctlBackend.cpp.orig	2026-07-14 10:55:48 UTC
++++ plugins/network/SysctlBackend.cpp
+@@ -70,16 +70,15 @@ void SysctlNetDevice::update()
+     char addr_buf[NI_MAXHOST];
+     QStringList ipv4_addrs;
+     QStringList ipv6_addrs;
++    ifaddrs *ifap0 = nullptr;
++    ifaddrs *ifap;
+     struct sockaddr_in *sin;
+ 
+-    ipv4_addrs.clear();
+-    ipv6_addrs.clear();
+-    ifaddrs *ifap;
+-    bzero(&ifap, sizeof(ifap));
+-    for (getifaddrs(&ifap); ifap != nullptr; ifap = ifap->ifa_next) {
++    getifaddrs(&ifap0);
++    for (ifap = ifap0; ifap != nullptr; ifap = ifap->ifa_next) {
+         if (name() == QString::fromLatin1(ifap->ifa_name)) {
+             sin = reinterpret_cast<struct sockaddr_in *>(ifap->ifa_addr);
+-            if (sin == NULL)
++            if (sin == nullptr)
+                 return;
+ 
+             if(getnameinfo(ifap->ifa_addr, sin->sin_len, addr_buf, sizeof(addr_buf), NULL, 0, NI_NUMERICHOST)==0) {
+@@ -96,7 +95,7 @@ void SysctlNetDevice::update()
+     }
+     m_ipv4Sensor->setValue(ipv4_addrs.join("\n"));
+     m_ipv6Sensor->setValue(ipv6_addrs.join("\n"));
+-    freeifaddrs(ifap);
++    freeifaddrs(ifap0);
+ }
+ 
+ SysctlNetDevice::~SysctlNetDevice()

@@ -25,4 +25,15 @@ GH_ACCOUNT=	iurie-sw
 USE_GNOME=	cairo
 USE_XORG=	x11
 
+BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
+CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
+IGNORE= unmaintained, please request fixing to users mailing list
+dfly-patch:
+	${REINPLACE_CMD} -e '/lstdc++fs/s@^#@@g' \
+		${WRKSRC}/plugin/lv2/CMakeLists.txt \
+		${WRKSRC}/standalone/CMakeLists.txt
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/redkite/CMakeLists.txt
+
 .include <bsd.port.mk>

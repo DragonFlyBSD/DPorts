@@ -16,4 +16,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/monitord.conf.sample \
 		${STAGEDIR}${PREFIX}/etc/monitord.conf.sample
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@getdate@getdate0@g' \
+		${WRKSRC}/monitord.c ${WRKSRC}/monitord.h
+
 .include <bsd.port.mk>

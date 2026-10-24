@@ -1,5 +1,5 @@
 PORTNAME=	libvirt-java
-PORTVERSION=	0.5.3
+PORTVERSION=	0.5.4
 CATEGORIES=	devel java
 MASTER_SITES=	http://libvirt.org/sources/java/ \
 		ftp://libvirt.org/libvirt/java/
@@ -14,8 +14,8 @@ LIB_DEPENDS=	libvirt.so:devel/libvirt
 BUILD_DEPENDS=	jna>=4.0:devel/jna \
 		junit>=4.8.2:java/junit
 
-USE_JAVA=	YES
-USE_ANT=	YES
+USES=		java:ant
+
 ALL_TARGET=	jar
 
 PLIST_FILES=	%%JAVAJARDIR%%/libvirt-${PORTVERSION}.jar

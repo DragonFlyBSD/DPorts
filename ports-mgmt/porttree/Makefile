@@ -1,6 +1,6 @@
 PORTNAME=	porttree
 PORTVERSION=	1.1.r${SVN_REV}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	ports-mgmt python
 MASTER_SITES=	SF/${PORTNAME}
 
@@ -28,7 +28,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/src/porttree.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 do-test:
-	LC_ALL="en_US.UTF-8" ${WRKSRC}/tests/tests.sh
+	${WRKSRC}/tests/tests.sh
 
 # maintainer section:
 # require: devel/subversion-lts or devel/subversion

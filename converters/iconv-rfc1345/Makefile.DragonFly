@@ -1,3 +1,0 @@
-
-# to avoid orphans, hmmmm
-PLIST_FILES+=	@comment\ share/iconv/charset.aliases

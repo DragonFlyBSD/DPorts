@@ -1,6 +1,7 @@
 PORTNAME=	nginx
-PORTVERSION=	1.26.3
-PORTREVISION=	3
+PORTVERSION=	${NGINX_VERSION}
+NJS_LIB_DEPENDS= libpcre.so:devel/pcre
+.include "version.mk"
 PORTEPOCH=	3
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
@@ -16,9 +17,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 CONFLICTS_INSTALL=	nginx-devel
 
-PORTSCOUT=	limit:^1\.2[6-7]\.[0-9]*
+PORTSCOUT=	limit:^1\.30\.[0-9]*
 
-USES=		cpe
+USES= cpe gmake
 
 CPE_VENDOR=	f5
 CPE_PRODUCT=	nginx
@@ -47,7 +48,7 @@ SUB_LIST+=	WWWOWN=${WWWOWN} \
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${ETCDIR} \
-		--with-cc-opt="-I ${LOCALBASE}/include" \
+		--with-cc-opt="-I ${LOCALBASE}/include ${_NJS_QJS_CFLAGS}" \
 		--conf-path=${ETCDIR}/nginx.conf \
 		--sbin-path=${PREFIX}/sbin/nginx \
 		--pid-path=${NGINX_RUNDIR}/nginx.pid \
@@ -70,15 +71,14 @@ OPTIONS_GROUP_HTTPGRP=	GOOGLE_PERFTOOLS HTTP HTTP_ADDITION HTTP_AUTH_REQ \
 	HTTP_CACHE HTTP_DAV HTTP_DEGRADATION HTTP_FLV HTTP_GUNZIP_FILTER \
 	HTTP_GZIP_STATIC HTTP_IMAGE_FILTER HTTP_MP4 HTTP_PERL \
 	HTTP_RANDOM_INDEX HTTP_REALIP HTTP_SECURE_LINK HTTP_SLICE HTTP_SSL \
-	HTTP_STATUS HTTP_SUB HTTP_XSLT HTTPV2 HTTPV3 HTTPV3_BORING HTTPV3_LSSL \
-	HTTPV3_QTLS
+	HTTP_STATUS HTTP_SUB HTTP_XSLT HTTPV2 HTTPV3 HTTPV3_BORING HTTPV3_LSSL
 
 OPTIONS_GROUP_MAILGRP=	MAIL MAIL_IMAP MAIL_POP3 MAIL_SMTP MAIL_SSL
 
 OPTIONS_GROUP_STREAMGRP=	STREAM STREAM_REALIP STREAM_SSL \
 	STREAM_SSL_PREREAD
 
-OPTIONS_DEFINE=		DEBUG DEBUGLOG DSO FILE_AIO IPV6 NJS NJS_XML OTEL THREADS WWW
+OPTIONS_DEFINE=		DEBUG DEBUGLOG DSO FILE_AIO IPV6 NJS NJS_QJS NJS_XML OTEL THREADS WWW
 OPTIONS_DEFAULT?=	DSO FILE_AIO HTTP HTTP_ADDITION HTTP_AUTH_REQ HTTP_CACHE \
 		HTTP_DAV HTTP_FLV HTTP_GUNZIP_FILTER HTTP_GZIP_STATIC HTTP_MP4 \
 		HTTP_RANDOM_INDEX HTTP_REALIP HTTP_SECURE_LINK HTTP_SLICE HTTP_SSL \
@@ -125,7 +125,7 @@ DEBUGLOG_CONFIGURE_ON=	--with-debug
 DSO_CONFIGURE_ON=	--modules-path=${MODULESDIR}
 DSO_VARS=		MODULESDIR=${PREFIX}/libexec/${PORTNAME}
 FILE_AIO_CONFIGURE_ON=	--with-file-aio
-IPV6_CONFIGURE_OFF=	--with-cc-opt="-DNGX_HAVE_INET6=0 -I ${LOCALBASE}/include"
+IPV6_CONFIGURE_OFF=	--with-cc-opt="-DNGX_HAVE_INET6=0 -I ${LOCALBASE}/include ${_NJS_QJS_CFLAGS}"
 THREADS_CONFIGURE_ON=	--with-threads
 
 # Bundled modules
@@ -172,15 +172,11 @@ HTTPV3_CONFIGURE_ON=		--with-http_v3_module
 HTTPV3_BORING_BUILD_DEPENDS=	${LOCALBASE}/bin/bssl:security/boringssl
 HTTPV3_BORING_RUN_DEPENDS=	${LOCALBASE}/bin/bssl:security/boringssl
 HTTPV3_BORING_IMPLIES=		HTTPV3
-HTTPV3_BORING_PREVENTS=		HTTPV3_LSSL HTTPV3_QTLS
+HTTPV3_BORING_PREVENTS=		HTTPV3_LSSL
 HTTPV3_LSSL_BUILD_DEPENDS=	${LOCALBASE}/include/tls.h:security/libressl-devel
 HTTPV3_LSSL_RUN_DEPENDS=	${LOCALBASE}/include/tls.h:security/libressl-devel
 HTTPV3_LSSL_IMPLIES=		HTTPV3
-HTTPV3_LSSL_PREVENTS=		HTTPV3_BORING HTTPV3_QTLS
-HTTPV3_QTLS_BUILD_DEPENDS=	${LOCALBASE}/include/openssl/quic.h:security/openssl-quictls
-HTTPV3_QTLS_RUN_DEPENDS=	${LOCALBASE}/include/openssl/quic.h:security/openssl-quictls
-HTTPV3_QTLS_IMPLIES=		HTTPV3
-HTTPV3_QTLS_PREVENTS=		HTTPV3_BORING HTTPV3_LSSL
+HTTPV3_LSSL_PREVENTS=		HTTPV3_BORING
 MAIL_VARS=			DSO_BASEMODS+=mail
 MAIL_IMAP_CONFIGURE_OFF=	--without-mail_imap_module
 MAIL_POP3_CONFIGURE_OFF=	--without-mail_pop3_module
@@ -256,10 +252,22 @@ CONFIGURE_ENV+=		NJS_LIBXSLT=NO
 NJS_CONFIGURE_ARGS=	--no-libxml2
 .endif
 
+.if ${PORT_OPTIONS:MNJS_QJS}
+_NJS_QJS_CFLAGS=		-I ${LOCALBASE}/include/quickjs
+NJS_CONFIGURE_ARGS+=	--cc-opt="${CFLAGS} -I${LOCALBASE}/include/quickjs" \
+			--ld-opt="-L${LOCALBASE}/lib" \
+			--with-quickjs
+.endif
+
 pre-everything::
 	@${ECHO_MSG}
 .if ${PORT_OPTIONS:MHTTP_UPSTREAM_FAIR}
 	@${ECHO_MSG} "Enable http_ssl module to build upstream_fair with SSL support"
+.endif
+.if ${PORT_OPTIONS:MNJS}
+	@${ECHO_MSG} "The built-in njs scripting engine is EOL, deprecated since njs 1.0.0."
+	@${ECHO_MSG} "Upstream recommends the QuickJS engine instead: enable the NJS_QJS"
+	@${ECHO_MSG} "option and select it in nginx.conf via the js_engine qjs directive."
 .endif
 .if ${PORT_OPTIONS:MPASSENGER}
 	@${ECHO_MSG} "This port install Passenger module only"
@@ -269,9 +277,6 @@ pre-everything::
 post-extract-NAXSI-on:
 	@${RMDIR} ${WRKSRC_naxsi}/naxsi_src/libinjection
 	@${LN} -s ${WRKSRC_libinjection} ${WRKSRC_naxsi}/naxsi_src/libinjection
-
-pre-patch-HTTPV3-on:
-	@${MV} ${WRKSRC}/README ${WRKSRC}/README.1st
 
 post-patch:
 	@${REINPLACE_CMD} 's!%%HTTP_PORT%%!${HTTP_PORT}!; \
@@ -289,10 +294,6 @@ post-patch-FASTDFS-on:
 	@${REINPLACE_CMD} \
 		's!%%PREFIX%%!${PREFIX}!g;s!%%LOCALBASE%%!${LOCALBASE}!g' \
 		${WRKSRC_fastdfs}/src/config
-
-post-patch-GRIDFS-on:
-	@${REINPLACE_CMD} 's!\/usr!${LOCALBASE}!g' \
-		${WRKSRC_gridfs}/nginx-gridfs/config
 
 post-patch-HTTP_AUTH_KRB5-on:
 	@${REINPLACE_CMD} 's!%%GSSAPILIBS%%!${GSSAPILIBS}!g; \
@@ -328,6 +329,47 @@ post-patch-SFLOW-on:
 
 pre-configure-SMALL_LIGHT-on:
 	( cd ${WRKSRC_small_light} && ./setup )
+
+pre-configure-ARRAYVAR-on:
+	@${RM} -rf ${WRKSRC_arrayvar}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-array-var ${WRKSRC_arrayvar}
+	@${CHMOD} -R u+w ${WRKSRC_arrayvar}
+
+pre-configure-CACHE_PURGE-on:
+	@${RM} -rf ${WRKSRC_cache_purge}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-cache-purge ${WRKSRC_cache_purge}
+	@${CHMOD} -R u+w ${WRKSRC_cache_purge}
+
+pre-configure-DEVEL_KIT-on:
+	@${RM} -rf ${WRKSRC_devel_kit}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-ndk ${WRKSRC_devel_kit}
+	@${CHMOD} -R u+w ${WRKSRC_devel_kit}
+
+pre-configure-FORMINPUT-on:
+	@${RM} -rf ${WRKSRC_forminput}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-form-input ${WRKSRC_forminput}
+	@${CHMOD} -R u+w ${WRKSRC_forminput}
+
+pre-configure-LUA-on:
+	@${RM} -rf ${WRKSRC_lua}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-lua ${WRKSRC_lua}
+	@${CHMOD} -R u+w ${WRKSRC_lua}
+
+pre-configure-LUASTREAM-on:
+	@${RM} -rf ${WRKSRC_luastream}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-lua-stream ${WRKSRC_luastream}
+	@${CHMOD} -R u+w ${WRKSRC_luastream}
+
+pre-configure-NJS-on:
+	@${RM} -rf ${WRKSRC_njs}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-njs ${WRKSRC_njs}
+	@${CHMOD} -R u+w ${WRKSRC_njs}
+	@${CHMOD} u+x ${WRKSRC_njs}/configure
+
+pre-configure-VOD-on:
+	@${RM} -rf ${WRKSRC_vod}
+	@${CP} -R ${LOCALBASE}/share/nginx/modules/nginx-module-vod ${WRKSRC_vod}
+	@${CHMOD} -R u+w ${WRKSRC_vod}
 
 do-configure-NJS-on:
 	( cd ${WRKSRC_njs} && ${SETENV} ${CONFIGURE_ENV} ${CONFIGURE_CMD} ${NJS_CONFIGURE_ARGS} )
@@ -379,5 +421,24 @@ post-install-WWW-on:
 	(cd ${WRKSRC}/html && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/www/nginx-dist && \
 	${TOUCH} ${STAGEDIR}${PREFIX}/www/nginx-dist/EXAMPLE_DIRECTORY-DONT_ADD_OR_TOUCH_ANYTHING)
 .endif
+
+post-patch-NJS-on:
+	(cd ${WRKSRC_njs} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-auto_openssl.diff)
+	(cd ${WRKSRC_njs} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-njs-cli.diff)
+
+
+pre-patch-MODSECURITY-on:
+	-${REINPLACE_CMD} -e 's|\*-\*-freebsd\*|*-*-dragonfly*|' \
+		${WRKSRC_MODSECURITY}/configure
+
+
+pre-patch-HTTP_ZIP-on:
+	-${REINPLACE_CMD} -e 's@\(defined(__OpenBSD__)\)@(\1 || defined(__FreeBSD__) || defined(__DragonFly__))@g' \
+		${WRKSRC_mod_zip}/ngx_http_zip_endian.h
+
+
+pre-patch-NAXSI-on:
+	-${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+		${WRKSRC_naxsi}/naxsi_src/naxsi_net.h
 
 .include <bsd.port.post.mk>

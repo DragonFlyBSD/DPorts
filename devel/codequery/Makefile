@@ -1,6 +1,6 @@
 PORTNAME=	codequery
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.0
+DISTVERSION=	1.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	eduardo@FreeBSD.org
@@ -27,4 +27,5 @@ PLIST_FILES=	bin/codequery \
 		bin/cqmakedb \
 		bin/cqsearch
 
+USES:= ${USES:Nninja} gmake
 .include <bsd.port.mk>

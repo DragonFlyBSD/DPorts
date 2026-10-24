@@ -30,6 +30,7 @@ TEST_LIB_DEPENDS=		libfftw3.so:math/fftw3 \
 				libsndfile.so:audio/libsndfile
 TEST_CMAKE_BOOL=		BUILD_TESTING
 
+LDFLAGS= -L${PREFIX}/lib
 do-install-EXAMPLES-on:
 	${INSTALL_PROGRAM} ${WRKDIR}/.build/examples/timewarp-file ${STAGEDIR}${PREFIX}/bin/
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/timewarp-file

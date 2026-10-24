@@ -14,6 +14,7 @@ LICENSE_COMB=	dual
 USES=		perl5
 USE_PERL5=	configure
 
+MAKE_JOBS_UNSAFE= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Compress/LZ4/LZ4.so
 

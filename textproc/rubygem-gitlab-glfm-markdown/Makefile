@@ -1,5 +1,5 @@
 PORTNAME=	gitlab-glfm-markdown
-PORTVERSION=	0.0.31
+PORTVERSION=	0.0.45
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
@@ -10,7 +10,7 @@ WWW=		https://gitlab.com/gitlab-org/ruby/gems/gitlab-glfm-markdown
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	rubygem-rb_sys>=0.9.109<0.10:lang/rubygem-rb_sys
+RUN_DEPENDS=	rubygem-rb_sys>=0.9.128<0.10:lang/rubygem-rb_sys
 
 USES=		cargo gem gmake llvm:build
 
@@ -18,15 +18,19 @@ USES=		cargo gem gmake llvm:build
 GEMFILES:=	${DISTNAME}.gem
 DISTFILES+=	${DISTNAME}.gem
 GEMS_SKIP_SUBDIR=	1
-CARGO_VENDOR_DIR=	${WRKSRC}/ext/glfm_markdown/cargo-crates
-CARGO_CARGOTOML=	${WRKSRC}/ext/glfm_markdown/Cargo.toml
+CARGO_VENDOR_DIR=	${WRKSRC}/ext/gitlab_glfm_markdown/cargo-crates
+CARGO_CARGOTOML=	${WRKSRC}/ext/gitlab_glfm_markdown/Cargo.toml
 CARGO_BUILD=	no
 CARGO_INSTALL=	no
-GEM_ENV+=	MAKE=gmake
+GEM_ENV+= MAKE=gmake LIBCLANG_PATH=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
 
-# update the crates file with: make cargo-crates > Makefile.crates
+# update the crates file with:
+# make makesum
+# make clean extract
+# make cargo-crates > Makefile.crates
+# make makesum
 
 post-install:
-	@${ECHO_CMD} "${GEM_LIB_DIR}/ext/glfm_markdown/Cargo.lock" >> ${TMPPLIST}
+	@${ECHO_CMD} "${GEM_LIB_DIR}/ext/gitlab_glfm_markdown/Cargo.lock" >> ${TMPPLIST}
 
 .include <bsd.port.mk>

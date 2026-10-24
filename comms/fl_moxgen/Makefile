@@ -24,6 +24,7 @@ PDF_LIB_DEPENDS=	libhpdf.so:print/libharu
 PDF_ALL_TARGET=	fl_moxgen
 PDF_ALL_TARGET_OFF=	fl_moxgen_no_pdf
 
+MAKE_JOBS_UNSAFE= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' \
 		-e 's|%%LOCALBASE%%|${LOCALBASE}|' \

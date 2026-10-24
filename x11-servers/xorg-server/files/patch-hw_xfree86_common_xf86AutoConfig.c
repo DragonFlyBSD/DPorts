@@ -2,8 +2,8 @@
 *
 * Use our scfb driver as fallback instead of Linux's fbdev
 *
---- hw/xfree86/common/xf86AutoConfig.c.orig	2022-01-02 23:41:56.000000000 +0100
-+++ hw/xfree86/common/xf86AutoConfig.c	2022-06-29 11:57:25.400030000 +0200
+--- hw/xfree86/common/xf86AutoConfig.c.orig	2026-07-08 01:35:09 UTC
++++ hw/xfree86/common/xf86AutoConfig.c
 @@ -294,7 +294,7 @@ listPossibleVideoDrivers(XF86MatchedDrivers *md)
      xf86PciMatchDriver(md);
  #endif

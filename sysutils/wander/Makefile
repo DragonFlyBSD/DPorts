@@ -1,0 +1,21 @@
+PORTNAME=	wander
+DISTVERSIONPREFIX=	v
+DISTVERSION=	1.1.0
+PORTREVISION=	9
+CATEGORIES=	sysutils
+
+MAINTAINER=	olgeni@FreeBSD.org
+COMMENT=	Terminal user interface for HashiCorp Nomad
+WWW=		https://github.com/robinovitch61/wander
+
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+USES=		go:modules
+
+GO_MODULE=	github.com/robinovitch61/wander
+GO_LDFLAGS=	-X ${GO_MODULE}/cmd.Version=${DISTVERSIONFULL}
+
+PLIST_FILES=	bin/wander
+
+.include <bsd.port.mk>

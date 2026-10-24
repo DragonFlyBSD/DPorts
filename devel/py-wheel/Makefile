@@ -1,5 +1,6 @@
 PORTNAME=	wheel
-PORTVERSION=	0.45.1
+PORTVERSION=	0.48.0
+PORTREVISION=	0
 CATEGORIES=	devel
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -9,14 +10,19 @@ COMMENT=	Built-package format for Python
 WWW=		https://github.com/pypa/wheel
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flit-core>=3.8:devel/py-flit-core@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}packaging>=24.0:devel/py-packaging@${PY_FLAVOR}
 
-USES=		python
+USES=		cpe pytest python
+CPE_VENDOR=	wheel_project
 USE_PYTHON=	allflavors autoplist concurrent pep517
 
-# see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=268500
-EXTRACT_CMD=	${SETENV} LC_ALL=en_US.UTF-8 /usr/bin/bsdtar
+# tests: 70 passed
+PYTEST_ARGS=	--disable-plugin-autoload
+TEST_ENV=	PYTHONPATH="${STAGEDIR}${PYTHON_SITELIBDIR}"
+
 NO_ARCH=	yes
 
 .include <bsd.port.mk>

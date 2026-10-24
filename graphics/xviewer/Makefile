@@ -1,7 +1,10 @@
 PORTNAME=	xviewer
-PORTVERSION=	3.4.8
+DISTVERSION=	3.4.16
 CATEGORIES=	graphics gnome
 DIST_SUBDIR=	gnome
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	74d7d4ba2584c658ae6fb87208543671664943cc.patch:-p1
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Fast and functional image viewer
@@ -16,14 +19,14 @@ BUILD_DEPENDS=	itstool:textproc/itstool \
 		${LOCALBASE}/share/aclocal/yelp.m4:textproc/yelp-tools
 LIB_DEPENDS=	libcinnamon-desktop.so:x11/cinnamon-desktop \
 		libxapp.so:x11/xapp \
-		libpeas-1.0.so:devel/libpeas
+		libpeas-1.0.so:devel/libpeas1
 RUN_DEPENDS=	yelp:x11/yelp
 
 USES=		meson compiler:c++11-lang desktop-file-utils gettext-tools \
 		gnome localbase pkgconfig xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
-USE_GNOME=	atk cairo gdkpixbuf gtk30 introspection pango
+USE_GNOME=	atk cairo gdkpixbuf2xlib glib20 gtk30 introspection pango
 USE_XORG=	x11
 GLIB_SCHEMAS=	org.x.viewer.enums.xml org.x.viewer.gschema.xml
 

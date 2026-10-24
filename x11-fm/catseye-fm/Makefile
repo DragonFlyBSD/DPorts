@@ -14,6 +14,7 @@ LICENSE=	GPLv3
 USES=		gnome pkgconfig
 USE_GNOME=	gtk20
 
+DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/catseye-fm ${STAGEDIR}${PREFIX}/bin
 	@${MKDIR} ${STAGEDIR}/${DATADIR}

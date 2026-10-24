@@ -1,7 +1,7 @@
 PORTNAME=	terragrunt
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.72.4
-PORTREVISION=	2
+DISTVERSION=	1.0.8
+PORTREVISION=	6
 CATEGORIES=	sysutils
 
 MAINTAINER=	dutra@FreeBSD.org
@@ -11,9 +11,7 @@ WWW=		https://terragrunt.gruntwork.io/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-RUN_DEPENDS=	terraform:sysutils/terraform
-
-USES=		go:1.23,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/gruntwork-io/terragrunt
 

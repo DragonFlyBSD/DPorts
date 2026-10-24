@@ -1,2 +1,0 @@
-
-EXTRACT_DEPENDS+=	zstd>0:archivers/zstd

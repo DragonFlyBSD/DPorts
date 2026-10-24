@@ -1,13 +1,11 @@
-Fix build with SIP >= 6.8.0
-
---- cmake/modules/pyproject.toml.in.orig	2023-12-08 23:06:29 UTC
+--- cmake/modules/pyproject.toml.in.orig	2026-05-29 21:17:03 UTC
 +++ cmake/modules/pyproject.toml.in
 @@ -9,7 +9,7 @@ sip-files-dir = "@module_srcs@"
  sip-module = "@sip_name@"
  sip-include-dirs = @sip_include_dirs@
  sip-files-dir = "@module_srcs@"
--abi-version = "12"
-+abi-version = "12.13"
+-abi-version = "@abi_version@"
++abi-version = "13.8"
  
  [tool.sip.bindings.@module_name_toml@]
- tags = @module_tags@
+ pep484-pyi = true

@@ -20,4 +20,5 @@ CMAKE_ON=	Boost_USE_STATIC_LIBS
 
 PLIST_FILES=	sbin/usbtop
 
+LIB_DEPENDS= 
 .include <bsd.port.mk>

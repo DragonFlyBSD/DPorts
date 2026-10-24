@@ -1,10 +1,10 @@
 PORTNAME=	termshot
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.7
-PORTREVISION=	3
+DISTVERSION=	0.6.1
+PORTREVISION=	10
 CATEGORIES=	textproc graphics
 
-MAINTAINER=	lbartoletti@FreeBSD.org
+MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Creates screenshots based on terminal command output
 WWW=		https://github.com/homeport/termshot
 
@@ -14,11 +14,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		go:modules
 GO_MODULE=	github.com/homeport/termshot
 GO_TARGET=	./cmd/${PORTNAME}
-GO_BUILDFLAGS=	-tags noupdater \
-		-ldflags "\
+GO_BUILDFLAGS=	-ldflags "\
 		-s -w \
 		-X ${GO_MODULE}/internal/cmd.version=${DISTVERSION}"
 
 PLIST_FILES=	bin/${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

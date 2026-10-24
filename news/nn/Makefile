@@ -10,8 +10,8 @@ WWW=		http://www.nndev.org/
 
 SUB_FILES=	pkg-message
 
-USES=		tar:Z
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -Iconf -fcommon" LDFLAGS="${LDFLAGS} -s"
+USES= tar:Z ncurses
+MAKE_ARGS= CC="${CC}" CFLAGS="${CFLAGS} -Iconf -fcommon" LDFLAGS="${LDFLAGS} -s" CPP="${CC} -E -P"
 
 pre-patch:
 	@${CP} ${WRKSRC}/config.h-dist ${WRKSRC}/config.h.unparsed
@@ -27,5 +27,14 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/nntp_domain.dist \
 			${FILESDIR}/nntp_server.dist \
 			${STAGEDIR}${PREFIX}/etc
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-ltermcap@-lncurses@g'	\
+		${WRKSRC}/conf/s-freebsd.h
+	${REINPLACE_CMD} -e '/extern int      errno/d'	\
+		${WRKSRC}/account.c			\
+		${WRKSRC}/global.c			\
+		${WRKSRC}/global.h			\
+		${WRKSRC}/execute.c
 
 .include <bsd.port.mk>

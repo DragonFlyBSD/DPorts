@@ -1,10 +1,9 @@
 PORTNAME=	cstream
-PORTVERSION=	3.2.1
-PORTREVISION=	1
+DISTVERSION=	4.0.0
 CATEGORIES=	misc
-MASTER_SITES=	http://www.cons.org/cracauer/download/
+MASTER_SITES=	https://www.cons.org/cracauer/download/
 
-MAINTAINER=	olgeni@FreeBSD.org
+MAINTAINER=	cracauer@FreeBSD.org
 COMMENT=	Like dd(1) tool, precise bandwidth limiting/reporting, fifo, TCP
 WWW=		https://www.cons.org/cracauer/cstream.html
 

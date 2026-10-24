@@ -1,2 +1,0 @@
-USES+= pkgconfig
-USE_GCC_VERSION=        ${GCC_DEFAULT}

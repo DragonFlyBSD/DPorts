@@ -1,0 +1,9 @@
+-- Add Cython to the build-system requirements so that the PEP 517 build
+-- can regenerate the Cython extension source for Python 3.12 compatibility.
+
+--- pyproject.toml.orig	2026-07-06 16:12:26 UTC
++++ pyproject.toml
+@@ -1,2 +1,2 @@
+ [build-system]
+-requires = ["setuptools", "wheel", "numpy"]
++requires = ["setuptools", "wheel", "numpy", "cython"]

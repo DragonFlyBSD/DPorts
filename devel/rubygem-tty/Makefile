@@ -43,4 +43,8 @@ NO_ARCH=	yes
 
 PLIST_FILES=	bin/teletype
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/tty-command>/s@0.9.0@0.10.0@g' \
+		${WRKSRC}/tty.gemspec
+
 .include <bsd.port.mk>

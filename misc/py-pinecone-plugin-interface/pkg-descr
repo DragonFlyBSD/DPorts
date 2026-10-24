@@ -1,0 +1,2 @@
+Plugin interface for the Pinecone Python client. It defines the contract
+between the Pinecone client and its plugins.

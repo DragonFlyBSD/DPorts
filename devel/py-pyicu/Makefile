@@ -1,10 +1,8 @@
 PORTNAME=	pyicu
-PORTVERSION=	2.13.1
-PORTREVISION=	1
+PORTVERSION=	2.16.2
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	PyICU-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Python extension wrapping the ICU C++ API
@@ -20,8 +18,7 @@ LIB_DEPENDS=	libicudata.so:devel/icu
 USES=		compiler:c++17-lang pkgconfig python
 USE_PYTHON=	autoplist concurrent pep517
 
-WRKSRC=		${WRKDIR}/pyicu-${PORTVERSION}
-
+USE_CXXSTD= gnu++11
 post-install:
 	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -name '*.so' -exec ${STRIP_CMD} {} +
 

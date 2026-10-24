@@ -1,0 +1,8 @@
+Ever dreamed of getting rid of OpenSSL within CPython without creating a custom
+build of CPython for this? Tired of waiting half a decade for a solid and
+up-to-date TLS experience, shipping Post-quantum, and ECH support by default?
+
+Then rtls is made for you.
+
+It's a drop-in replacement for the ssl stdlib! Support CPython 3.7 onward.
+Including freethreaded.

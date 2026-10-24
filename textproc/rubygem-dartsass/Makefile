@@ -22,4 +22,9 @@ post-extract:
 	${CHMOD} 0755 ${WRKSRC}/exe/darwin/sass
 	${CHMOD} 0755 ${WRKSRC}/exe/darwin/src/dart
 
+.if defined(DEVELOPER)
+.MAKEFLAGS+=    DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+.endif
+
 .include <bsd.port.mk>

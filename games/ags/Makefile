@@ -1,5 +1,5 @@
 PORTNAME=	ags
-DISTVERSION=	3.6.0.52
+DISTVERSION=	3.6.2.21
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/adventuregamestudio/ags/releases/download/v${PORTVERSION}/
 DISTNAME=	ags_${DISTVERSION}_source
@@ -23,6 +23,7 @@ BUILD_WRKSRC=	${WRKSRC}/Engine
 
 PLIST_FILES=	bin/ags
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Engine/ags ${STAGEDIR}${PREFIX}/bin
 

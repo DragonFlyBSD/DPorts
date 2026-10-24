@@ -14,7 +14,7 @@ WWW=		http://www.code-aster.org/
 
 LICENSE=	GPLv2
 
-NOT_FOR_ARCHS=		armv6 armv7 i386 mips powerpc powerpcspe
+NOT_FOR_ARCHS=		armv6 armv7 i386 powerpc powerpcspe
 NOT_FOR_ARCHS_REASON=	ARG_MAX is too small for Code_Aster on 32 bits systems
 
 #-----------------------------------------------------------------------
@@ -280,4 +280,11 @@ do-install:
 .endif
 
 .include "${.CURDIR}/../../french/aster/bsd.aster.mk"
+dfly-install:
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/ASTK/ASTK_SERV/share/codeaster/asrun/data/mpirun_template.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/ASTK/ASTK_SERV/bin/parallel_cp.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/ASTK/ASTK_SERV/bin/as_run.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/ASTK/ASTK_CLIENT/bin/astk.bak
+	-${RM} -v ${STAGEDIR}${PREFIX}/aster/ASTK/ASTK_CLIENT/bin/bsf.bak
+
 .include <bsd.port.post.mk>

@@ -63,6 +63,8 @@ lib/libKF6ConfigQml.so.6
 lib/libKF6ConfigQml.so.%%KDE_FRAMEWORKS_VERSION%%
 lib/libexec/kf6/kconf_update
 lib/libexec/kf6/kconfig_compiler_kf6
+%%QT_LIBDIR%%/metatypes/qt6kf6configcore_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6kf6configgui_metatypes.json
 %%QT_QMLDIR%%/org/kde/config/KF6ConfigQml.qmltypes
 %%QT_QMLDIR%%/org/kde/config/kde-qmlmodule.version
 %%QT_QMLDIR%%/org/kde/config/libKF6ConfigQmlplugin.so
@@ -125,6 +127,8 @@ share/locale/mk/LC_MESSAGES/kconfig6_qt.qm
 share/locale/ml/LC_MESSAGES/kconfig6_qt.qm
 share/locale/mr/LC_MESSAGES/kconfig6_qt.qm
 share/locale/ms/LC_MESSAGES/kconfig6_qt.qm
+share/locale/nan_TW/LC_MESSAGES/kconfig6_qt.qm
+share/locale/nan_TW@latin/LC_MESSAGES/kconfig6_qt.qm
 share/locale/nb/LC_MESSAGES/kconfig6_qt.qm
 share/locale/nds/LC_MESSAGES/kconfig6_qt.qm
 share/locale/ne/LC_MESSAGES/kconfig6_qt.qm

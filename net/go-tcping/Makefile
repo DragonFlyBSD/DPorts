@@ -1,7 +1,7 @@
 PORTNAME=	tcping
-PORTVERSION=	2.4.0
-PORTREVISION=	1
 DISTVERSIONPREFIX=	v
+DISTVERSION=	2.8.0
+PORTREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	https://raw.githubusercontent.com/${GH_ACCOUNT}/${PORTNAME}/${DISTVERSIONFULL}/:gomod
 PKGNAMEPREFIX=	go-
@@ -13,6 +13,9 @@ WWW=		https://github.com/pouriyajamshidi/tcping
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+ONLY_FOR_ARCHS=	aarch64 amd64
+ONLY_FOR_ARCHS_REASON=	module modernc.org/sqlite only supported on aarch64 and amd64
 
 USES=		go:modules
 

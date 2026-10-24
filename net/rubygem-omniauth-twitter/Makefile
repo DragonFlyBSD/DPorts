@@ -1,5 +1,5 @@
 PORTNAME=	omniauth-twitter
-PORTVERSION=	1.4.0
+PORTVERSION=	1.5.0
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
@@ -9,7 +9,8 @@ WWW=		https://github.com/arunagw/omniauth-twitter
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	rubygem-omniauth-oauth>=1.1<2:net/rubygem-omniauth-oauth \
+RUN_DEPENDS=	rubygem-cgi>=0:www/rubygem-cgi \
+		rubygem-omniauth-oauth>=1.2<2:net/rubygem-omniauth-oauth \
 		rubygem-rack>=0,3:www/rubygem-rack
 
 USES=		gem

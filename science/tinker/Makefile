@@ -1,12 +1,12 @@
 PORTNAME=	tinker
-DISTVERSION=	8.11.3
-PORTREVISION=	1
+DISTVERSIONPREFIX=	v
+DISTVERSION=	26.1.2
 CATEGORIES=	science
-MASTER_SITES=	https://dasher.wustl.edu/tinker/downloads/
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	General purpose molecular modelling package
-WWW=		https://dasher.wustl.edu/tinker/
+WWW=		https://dasher.wustl.edu/tinker/ \
+		https://github.com/TinkerTools/tinker
 
 LICENSE=	TINKER
 LICENSE_NAME=	TINKER license agreement
@@ -16,8 +16,9 @@ LICENSE_PERMS=	auto-accept # internal academic purposes only, no commercial use
 LIB_DEPENDS=	libfftw3.so:math/fftw3
 
 USES=		fortran gmake
+USE_GITHUB=	yes
+GH_ACCOUNT=	TinkerTools
 
-WRKSRC=		${WRKDIR}/${PORTNAME}
 BUILD_WRKSRC=	${WRKSRC}/source
 INSTALL_WRKSRC=	${WRKSRC}/source
 
@@ -92,5 +93,10 @@ benchmarks: stage
 .for n in 1 2 3 4 5 6 7 8 9
 	@cd ${BUILD_WRKSRC}/../bench && ./bench${n}.run
 .endfor
+
+BINARY_ALIAS:= ${BINARY_ALIAS:Ngfortran=*} gfortran=gfortran${_GCC_VER}
+dfly-patch:
+	${REINPLACE_CMD} -e "s@\(-lfftw3_threads\)@-L${LOCALBASE}/lib \1@g" \
+		${WRKSRC}/make/Makefile
 
 .include <bsd.port.mk>

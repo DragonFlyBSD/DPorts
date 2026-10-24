@@ -1,5 +1,5 @@
 PORTNAME=	openhab
-PORTVERSION=	4.3.3
+PORTVERSION=	4.3.11
 PORTREVISION=	0
 CATEGORIES=	misc java
 MASTER_SITES=	https://openhab.jfrog.io/artifactory/libs-release-local/org/openhab/distro/openhab/${PORTVERSION}/
@@ -25,6 +25,7 @@ GROUPS=	openhab
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
+PLIST_FILES= "@dir libexec/openhab/runtime/system/org/ops4j/pax/logging/pax-logging-logback"
 post-patch:
 	@${REINPLACE_CMD} -e "s:%%LOCALBASE%%:${LOCALBASE}:g" ${WRKSRC}/runtime/bin/setenv
 

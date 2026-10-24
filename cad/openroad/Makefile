@@ -1,46 +1,85 @@
 PORTNAME=	openroad
-DISTVERSIONPREFIX=	v
-DISTVERSION=	2.0
+DISTVERSION=	26Q3
 PORTEPOCH=	1
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	ASIC physical design tool
+WWW=		https://theopenroadproject.org \
+		https://github.com/The-OpenROAD-Project
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_i386=	C++ issue on i386, should be resolved in the next update
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
+BROKEN_i386=	compilation fails: error: static assertion failed due to requirement 'alignof(odb::_dbITerm) % 8 == 0'
 
 BUILD_DEPENDS=	base64:converters/base64 \
+		bash:shells/bash \
 		boost-libs>0:devel/boost-libs \
 		coin-or-lemon>0:math/lemon \
+		gmake:devel/gmake \
 		swig:devel/swig
-LIB_DEPENDS=	libcudd.so:math/cudd \
+LIB_DEPENDS=	libabsl_flags_parse.so:devel/abseil \
+		libbzip2.so:misc/vxl \
+		libCbc.so:math/cbc \
+		libCgl.so:math/cgl \
+		libClpSolver.so:math/clp \
+		libcoinasl.so:math/asl \
+		libcoinmumps.so:math/coin-or-mumps \
+		libCoinUtils.so:math/coinutils \
+		libcudd.so:math/cudd \
 		libfmt.so:devel/libfmt \
-		libspdlog.so:devel/spdlog
+		libhighs.so:math/highs \
+		libnauty.so:math/nauty \
+		libopenblas.so:math/openblas \
+		libortools.so:math/or-tools \
+		libOsi.so:math/osi \
+		libprotobuf.so:devel/protobuf \
+		libre2.so:devel/re2 \
+		libspdlog.so:devel/spdlog \
+		libyaml-cpp.so:devel/yaml-cpp \
+		libzstd.so:archivers/zstd
+LIB_DEPENDS+=	libgtest.so:devel/googletest # because third-party/abc looks for it
+LIB_DEPENDS+=	libicudata.so:devel/icu
 
-USES=		bison compiler:c++17-lang cmake eigen:3 qt:5 localbase:ldflags python:3.7+,build tcl:86 # the code asks for tcl-87, but build fails: https://github.com/The-OpenROAD-Project/OpenROAD/issues/508
-USE_QT=		core gui widgets buildtools_build qmake_build
+TEST_DEPENDS=	${LOCALBASE}/lib/tcllib/json/json.tcl:devel/tcllib
+
+USES=		bison cmake compiler:c++20-lang eigen:3 gl localbase:ldflags \
+		pkgconfig python:build readline tcl:86
+USE_GL=		gl
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	The-OpenROAD-Project
 GH_PROJECT=	OpenROAD
-GH_TUPLE=	The-OpenROAD-Project:OpenSTA:be0d38e:The_OpenROAD_Project_OpenSTA/src/sta
+GH_TUPLE=	The-OpenROAD-Project:OpenSTA:8572175ac4:opensta/src/sta \
+		The-OpenROAD-Project:abc:d527cfab4a:abc/third-party/abc \
+		povik:sv-elab:82effc8d95:svelab/third-party/slang-elab \
+		fmtlib:fmt:553ec11:fmt/third-party/slang-elab/third_party/fmt \
+		MikePopoloski:slang:f04e815:slang/third-party/slang-elab/third_party/slang
 
-CMAKE_OFF=	BUILD_PYTHON FREEBSD_BUILD_TESTS
+CMAKE_ARGS=	-DFREEBSD_TCL_INCLUDEDIR=${TCL_INCLUDEDIR} -DFREEBSD_TCL_VER=${TCL_VER:S/.//}
 CMAKE_ON=	BUILD_TCL
-CMAKE_ARGS=	-DFREEBSD_TCL_VER=${TCL_VER:S/.//} -DFREEBSD_TCL_INCLUDEDIR=${TCL_INCLUDEDIR}
+CMAKE_OFF=	BUILD_PYTHON ENABLE_TESTS
 
-CXXFLAGS+=	-I${LOCALBASE}/include/eigen3
+CXXFLAGS+= -DBOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED -isystem ${LOCALBASE}/cxxfs_gcc8
 
-BINARY_ALIAS=	python3=${PYTHON_CMD} tclsh=${TCLSH}
+BINARY_ALIAS=	make=${GMAKE} python3=${PYTHON_CMD} tclsh=${TCLSH}
+PORTSCOUT=	limit:^[0-9][0-9]Q
 
 PLIST_FILES=	bin/openroad \
 		bin/sta
 
-PORTSCOUT=	limit:^[0-9]\. # prevent 2021_*
+OPTIONS_DEFINE=		GUI
+OPTIONS_DEFAULT=	GUI
 
+GUI_USES=	qt:5
+GUI_USE=	QT=charts,core,gui,widgets,buildtools:build,qmake:build
+
+BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
+LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
 post-patch: # override the TCL version to be the same as USES=tcl sets
 	@${FIND} ${WRKSRC} -name FindTCL.cmake \
 		| ${XARGS} ${REINPLACE_CMD} -e ' \
@@ -51,11 +90,15 @@ post-install: # unnecessarily installs bundled OpenSTA project: https://github.c
 	${RM} -r ${STAGEDIR}${PREFIX}/include/sta ${STAGEDIR}${PREFIX}/lib/libOpenSTA.a
 
 do-test: # some tests are known to fail
-	@${MKDIR} ${WRKSRC}/build/src
-	@[ -f ${WRKSRC}/build/src/openroad ] || ${LN} ${STAGEDIR}${PREFIX}/bin/openroad ${WRKSRC}/build/src/openroad
+	@${MKDIR} ${WRKSRC}/build/bin
+	@[ -f ${WRKSRC}/build/bin/openroad ] || ${LN} ${STAGEDIR}${PREFIX}/bin/openroad ${WRKSRC}/build/bin/openroad
 	@${ECHO} "==> Unit tests"
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} test/regression
 	@${ECHO} "==> Flow tests"
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} test/regression flow
+
+dfly-patch:
+	${MKDIR} ${BUILD_WRKSRC}
+	${TOUCH} ${BUILD_WRKSRC}/build.ninja
 
 .include <bsd.port.mk>

@@ -1,9 +1,9 @@
 PORTNAME=	seafile-client
 DISTVERSIONPREFIX=	v
-DISTVERSION=	9.0.6
+DISTVERSION=	9.0.19
 CATEGORIES=	net-mgmt
 
-MAINTAINER=	ultima@FreeBSD.org
+MAINTAINER=	d.stoye@cms.hu-berlin.de
 COMMENT=	Open Source Cloud Storage (Client)
 WWW=		https://github.com/haiwen/seafile
 
@@ -14,7 +14,8 @@ LIB_DEPENDS=	libsearpc.so:devel/libsearpc \
 		libcurl.so:ftp/curl \
 		libinotify.so:devel/libinotify \
 		libevent.so:devel/libevent \
-		libuuid.so:misc/e2fsprogs-libuuid \
+		libuuid.so:misc/libuuid \
+		libargon2.so:security/libargon2 \
 		libjansson.so:devel/jansson \
 		libwebsockets.so:net/libwebsockets
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
@@ -45,6 +46,7 @@ OPTIONS_DEFINE=	NLS
 
 NLS_USES=	gettext
 
+CFLAGS= -Wno-incompatible-pointer-types
 post-patch:
 # Fix P_KTHREAD r295435
 	${REINPLACE_CMD} 's/P_KTHREAD/P_KPROC/' ${WRKSRC}/lib/utils.c

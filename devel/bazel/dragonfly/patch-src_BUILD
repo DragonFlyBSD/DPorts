@@ -1,0 +1,10 @@
+--- src/BUILD.orig	1980-01-01 00:00:00 UTC
++++ src/BUILD
+@@ -40,6 +40,7 @@ filegroup(
+         "//src/conditions:darwin": md5_cmd % ("/sbin/md5", "/sbin/md5"),
+         "//src/conditions:darwin_x86_64": md5_cmd % ("/sbin/md5", "/sbin/md5"),
+         "//src/conditions:freebsd": md5_cmd % ("/sbin/md5", "/sbin/md5"),
++        "//src/conditions:dragonfly": md5_cmd % ("/sbin/md5", "/sbin/md5"),
+         "//conditions:default": md5_cmd % ("md5sum", "md5sum"),
+     }),
+ ) for suffix, embedded_tools_target in {

@@ -1,10 +1,8 @@
 PORTNAME=	mod_security
+PORTVERSION=	2.9.15
 DISTVERSIONPREFIX=	v
-PORTVERSION=	2.9.6
 CATEGORIES=	www security
-MASTER_SITES=	https://github.com/SpiderLabs/ModSecurity/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
-DISTNAME=	${PORTNAME:S/_//:S/2//}-${PORTVERSION}
 
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Intrusion detection and prevention engine
@@ -12,14 +10,20 @@ WWW=		https://www.modsecurity.org/
 
 LICENSE=	APACHE20
 
-LIB_DEPENDS+=	libpcre.so:devel/pcre \
+PORTSCOUT=	limit:^2\.
+
+LIB_DEPENDS+=	libpcre2-8.so:devel/pcre2 \
 		libapr-1.so:devel/apr1 \
 		libyajl.so:devel/yajl \
 		libcurl.so:ftp/curl \
 		libgdbm.so:databases/gdbm \
 		libexpat.so:textproc/expat2
 
-USES=		apache bdb gnome perl5 pkgconfig shebangfix
+USES=		apache gnome perl5 pkgconfig shebangfix autoreconf libtool:build
+USE_GITHUB=	yes
+GH_ACCOUNT=	owasp-modsecurity
+GH_PROJECT=	ModSecurity
+GH_TUPLE=	libinjection:libinjection:2117822:libinjection/apache2/others/libinjection
 USE_GNOME=	libxml2
 GNU_CONFIGURE=	yes
 SHEBANG_FILES=	tools/rules-updater.pl.in mlogc/mlogc-batch-load.pl.in
@@ -59,10 +63,10 @@ ETCDIR=		${PREFIX}/etc/modsecurity
 
 REINPLACE_ARGS=	-i ""
 AP_EXTRAS+=	-DWITH_LIBXML2
-CONFIGURE_ARGS+=--with-apxs=${APXS} --with-pcre=${LOCALBASE} --with-yajl=${LOCALBASE} --with-curl=${LOCALBASE}
-
-post-patch:
-	@${REINPLACE_CMD} -e "s/lua5.1/lua-${LUA_VER}/g" ${WRKSRC}/configure
+CONFIGURE_ARGS+=--with-apxs=${APXS} \
+		--with-pcre2=${LOCALBASE} \
+		--with-yajl=${LOCALBASE} \
+		--with-curl=${LOCALBASE}
 
 pre-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${APACHEMODDIR}
@@ -79,6 +83,9 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/README ${STAGEDIR}${DOCSDIR}
 
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${APACHEETCDIR}/modules.d
-	${INSTALL_DATA} ${WRKDIR}/${APMOD_FILE}.sample ${STAGEDIR}${PREFIX}/${APACHEETCDIR}/modules.d
+	${INSTALL_DATA} ${WRKDIR}/${APMOD_FILE}.sample \
+		${STAGEDIR}${PREFIX}/${APACHEETCDIR}/modules.d
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/mod_security2.so \
+		${STAGEDIR}${PREFIX}/${APACHEMODDIR}/mod_security2.so
 
 .include <bsd.port.mk>

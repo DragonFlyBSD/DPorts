@@ -4,7 +4,7 @@ PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${WWW}/releases/download/v${DISTVERSION}/
 
-MAINTAINER=	zirias@FreeBSD.org
+MAINTAINER=	fuz@FreeBSD.org
 COMMENT=	Local self-authentication for pam_exec
 WWW=		https://github.com/Zirias/${PORTNAME}
 
@@ -17,5 +17,12 @@ MAKE_ARGS+=	MANDIR=${PREFIX}/share/man/man
 PLIST_FILES=	etc/pam.d/unix-selfauth \
 		libexec/unix-selfauth-helper \
 		share/man/man8/unix-selfauth-helper.8.gz
+
+PLIST_SUB= PREFIX=${PREFIX}
+dfly-install:
+	# PLIST_SUB not picking this up, why?
+	${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},g' \
+		${WRKSRC}/unix-selfauth.in
+	${INSTALL_DATA} ${WRKSRC}/unix-selfauth.in ${STAGEDIR}${PREFIX}/etc/pam.d/unix-selfauth
 
 .include <bsd.port.mk>

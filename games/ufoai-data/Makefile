@@ -16,8 +16,6 @@ WWW=		https://ufoai.org/
 LICENSE=	GPLv2 CC-BY-SA-3.0
 LICENSE_COMB=	multi
 
-BROKEN_mips64=		Fails to install: runaway process
-
 EXTRACT_DEPENDS=	${UNZIP_CMD}:archivers/unzip
 
 NO_BUILD=	yes
@@ -39,5 +37,9 @@ pre-install:
 
 do-install:
 	cd ${WRKSRC}/base && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/${DATADIR}/base
+
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	1.0G package (too big for mirrors)
+.endif
 
 .include <bsd.port.mk>

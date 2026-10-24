@@ -1,0 +1,2 @@
+Shared utilities for CrewAI — version, paths, user-data, telemetry, printer.
+It provides common helpers used across the CrewAI framework and its CLI.

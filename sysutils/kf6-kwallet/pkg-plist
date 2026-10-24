@@ -15,7 +15,10 @@ lib/libKF6Wallet.so.%%KDE_FRAMEWORKS_VERSION%%
 lib/libKF6WalletBackend.so.6
 lib/libKF6WalletBackend.so.%%KDE_FRAMEWORKS_VERSION%%
 share/applications/org.kde.ksecretd.desktop
+share/applications/org.kde.kwalletd.desktop
+share/config.kcfg/kwalletsettings.kcfg
 share/dbus-1/interfaces/kf6_org.kde.KWallet.xml
+share/dbus-1/services/org.freedesktop.impl.portal.desktop.kwallet.service
 share/dbus-1/services/org.kde.kwalletd5.service
 share/dbus-1/services/org.kde.kwalletd6.service
 share/dbus-1/services/org.kde.secretservicecompat.service
@@ -60,6 +63,7 @@ share/locale/fi/LC_MESSAGES/kwalletd6.mo
 share/locale/fr/LC_MESSAGES/kwallet6-query.mo
 share/locale/fr/LC_MESSAGES/kwalletd6.mo
 share/locale/fy/LC_MESSAGES/kwalletd6.mo
+share/locale/ga/LC_MESSAGES/kwallet6-query.mo
 share/locale/ga/LC_MESSAGES/kwalletd6.mo
 share/locale/gd/LC_MESSAGES/kwallet6-query.mo
 share/locale/gd/LC_MESSAGES/kwalletd6.mo
@@ -145,6 +149,7 @@ share/locale/tg/LC_MESSAGES/kwalletd6.mo
 share/locale/th/LC_MESSAGES/kwalletd6.mo
 share/locale/tr/LC_MESSAGES/kwallet6-query.mo
 share/locale/tr/LC_MESSAGES/kwalletd6.mo
+share/locale/ug/LC_MESSAGES/kwallet6-query.mo
 share/locale/ug/LC_MESSAGES/kwalletd6.mo
 share/locale/uk/LC_MESSAGES/kwallet6-query.mo
 share/locale/uk/LC_MESSAGES/kwalletd6.mo

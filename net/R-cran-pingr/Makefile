@@ -1,12 +1,11 @@
 PORTNAME=	pingr
-DISTVERSION=	2.0.2
-PORTREVISION=	1
+DISTVERSION=	2.0.5
 CATEGORIES=	net
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
-MAINTAINER=	ygy@FreeBSD.org
+MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Check if a Remote Computer is Up
-WWW=		https://github.com/r-lib/pingr#readme
+WWW=		https://cran.r-project.org/package=pingr
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -17,4 +16,5 @@ TEST_DEPENDS=	R-cran-covr>0:devel/R-cran-covr \
 
 USES=		cran:auto-plist,compiles
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

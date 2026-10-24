@@ -9,9 +9,10 @@ set -o pipefail
 
 validate_env dp_DEVELOPER dp_DISABLE_SIZE dp_DISTDIR dp_DISTINFO_FILE \
 	dp_DIST_SUBDIR dp_ECHO_MSG dp_FETCH_AFTER_ARGS dp_FETCH_BEFORE_ARGS \
-	dp_FETCH_CMD dp_FETCH_ENV dp_FORCE_FETCH_ALL dp_FORCE_FETCH_LIST \
-	dp_MASTER_SITE_BACKUP dp_MASTER_SITE_OVERRIDE dp_MASTER_SORT_AWK \
-	dp_NO_CHECKSUM dp_RANDOMIZE_SITES dp_SITE_FLAVOR dp_TARGET
+	dp_FETCH_CMD dp_FETCH_ENV dp_FILES_FILE dp_FORCE_FETCH_ALL \
+	dp_FORCE_FETCH_LIST dp_MASTER_SITE_BACKUP dp_MASTER_SITE_OVERRIDE \
+	dp_MASTER_SORT_AWK dp_NO_CHECKSUM dp_RANDOMIZE_SITES dp_SITE_FLAVOR \
+	dp_SITES_FILE dp_TARGET
 
 [ -n "${DEBUG_MK_SCRIPTS}" -o -n "${DEBUG_MK_SCRIPTS_DO_FETCH}" ] && set -x
 
@@ -26,17 +27,35 @@ case ${dp_TARGET} in
 		;;
 esac
 
-if [ ! -n "${DO_FETCH_ISLOCKED:=}" ]; then
-	for _file in "${@}"; do
-		mkdir -p .locks
-		file=${_file%%:*}
-		lkfile="`echo "$file" | md5`"
-		DO_FETCH_ISLOCKED=YES lockf -k -s .locks/${lkfile}.lk sh $0 "${_file}" || exit 1
-	done
-	exit 0
-fi
+# Serialise fetches of the same distfile across parallel builders: re-run
+# this script under a per-file lock, once per line of the list. The list is
+# read from ${dp_FILES_FILE}, as the main loop below reads it, so each child
+# gets a one-line copy of it. Only the targets that download are wrapped;
+# the listing targets run in the port directory and write nothing.
+case ${dp_TARGET} in
+	do-fetch|makesum)
+		if [ ! -n "${DO_FETCH_ISLOCKED:=}" ]; then
+			_one="${dp_FILES_FILE}.locked.$$"
+			trap 'rm -f "${_one}"' EXIT
+			trap 'exit 1' HUP INT TERM
+			while IFS= read -r _file; do
+				mkdir -p .locks
+				file=${_file%%:*}
+				lkfile="`echo "$file" | md5`"
+				printf '%s\n' "${_file}" > "${_one}"
+				dp_FILES_FILE="${_one}" DO_FETCH_ISLOCKED=YES \
+					lockf -k -s .locks/${lkfile}.lk sh $0 || exit 1
+			done < "${dp_FILES_FILE}"
+			exit 0
+		fi
+		;;
+esac
 
-for _file in "${@}"; do
+. $dp_SITES_FILE
+
+# Read the list of files to fetch from stdin, one per line, instead of
+# from the command line to workatound ARG_MAX limits.
+while IFS= read -r _file; do
 	file=${_file%%:*}
 
 	# If this files has groups
@@ -191,5 +210,5 @@ for _file in "${@}"; do
 			echo "echo \"${file}\" not fetched; }"
 			;;
 	esac
-done
+done < $dp_FILES_FILE
 

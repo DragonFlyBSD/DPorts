@@ -1,5 +1,0 @@
-
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:N--with-pam=*} --with-pam=/usr
-
-# help to find ssl libs through pkgconf -libs mysql
-USES+=	localbase:ldflags

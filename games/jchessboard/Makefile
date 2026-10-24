@@ -1,6 +1,6 @@
 PORTNAME=	jchessboard
 PORTVERSION=	1.5
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	games java
 MASTER_SITES=	SF
 DISTNAME=	JChessBoard-${PORTVERSION}
@@ -12,7 +12,6 @@ WWW=		https://jchessboard.sourceforge.net/
 LICENSE=	GPLv2
 
 USES=		java:ant,run tar:tgz
-USE_LOCALE=	en_US.ISO8859-1
 
 NO_ARCH=	yes
 

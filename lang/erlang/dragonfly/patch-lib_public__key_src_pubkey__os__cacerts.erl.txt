@@ -1,0 +1,11 @@
+--- lib/public_key/src/pubkey_os_cacerts.erl.orig	2023-09-27 10:15:41 UTC
++++ lib/public_key/src/pubkey_os_cacerts.erl
+@@ -51,6 +51,8 @@ load() ->
+             load_from_file(bsd_paths());
+         {unix, freebsd} ->
+             load_from_file(bsd_paths());
++        {unix, dragonfly} ->
++            load_from_file(bsd_paths());
+         {unix, netbsd} ->
+             load_from_file(bsd_paths());
+         {unix, sunos} ->

@@ -14,12 +14,13 @@ LIB_DEPENDS=	libwayland-egl.so:graphics/wayland
 
 USES=		gl gnome meson perl5 pkgconfig
 USE_GL=		egl glesv2 glu
-USE_GNOME=	gdkpixbuf2
+USE_GNOME=	gdkpixbuf
 USE_PERL5=	build # pre-build (bin2c)
 WRKSRC_SUBDIR=	wayland
 CFLAGS+=	-Wno-incompatible-function-pointer-types # clang
 LDFLAGS+=	-lpthread # XXX dependency('threads')
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 # Skip configure
 	@${SED} '/@SET_MAKE@/d; s,@srcdir@,.,; s,@top_srcdir@,../..,' \

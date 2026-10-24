@@ -7,6 +7,3 @@ plots ready for publication and interactive visualizations for quick iteration
 and spatial data exploration. The primary goal of splot is to enable you to
 visualize popular PySAL objects and gives you different views on your spatial
 analysis workflow.
-
-WWW: https://splot.readthedocs.io/en/latest/
-WWW: https://github.com/pysal/splot

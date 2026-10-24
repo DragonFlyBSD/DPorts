@@ -1,7 +1,7 @@
 PORTNAME=	textadept
 PORTVERSION=	11.4
 DISTVERSIONPREFIX=	${PORTNAME}_
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	https://www.scintilla.org/:sci \
 		http://www.lua.org/ftp/:lua \
@@ -21,7 +21,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		compiler:c++17-lang desktop-file-utils gmake gnome iconv \
 		pkgconfig
 USE_CXXSTD=	c++17
-USE_GNOME=	cairo gdkpixbuf2 glib20
+USE_GNOME=	cairo gdkpixbuf glib20
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	orbitalquark keplerproject:lfs
@@ -69,6 +69,8 @@ NCURSES_GH_PROJECT=	scinterm:scitrm
 NCURSES_GH_TAGNAME=	${SCINTERM_HASH}:scitrm
 NCURSES_VARS=		_TARGETS+=curses
 
+USES+= ncurses
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	${LN} -s ${WRKDIR}/scintilla ${BUILD_WRKSRC}
 	${PATCH} -d ${BUILD_WRKSRC}/scintilla -N -p1 < \
@@ -118,5 +120,10 @@ post-install-DOCS-on:
 
 post-install-DOCS-off:
 	${RM} -r ${STAGEDIR}${DATADIR}/docs
+
+dfly-patch:
+	${CP} -v ${WRKSRC}/src/cdk/menu.h ${WRKSRC}/src/cdk/cdkmenu.h
+	${REINPLACE_CMD} -e 's,<menu.h>,<cdkmenu.h>,g' \
+		${WRKSRC}/src/cdk/cdk.h
 
 .include <bsd.port.mk>

@@ -41,6 +41,7 @@ PORTEXAMPLES=	*
 OPTIONS_DEFINE=	DOCS EXAMPLES NLS
 OPTIONS_SUB=	yes
 
+CONFIGURE_ENV= QMAKE_CC=${CC} QMAKE_CXX=${CXX} PATH=${LOCALBASE}/bin:${PATH}
 post-patch-NLS-off:
 	cd ${BUILD_WRKSRC} && ${REINPLACE_CMD} -e \
 		's|trans qsci|qsci|' qscintilla.pro
@@ -55,5 +56,10 @@ post-install:
 		${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/images &&\
 		${INSTALL_DATA} *.* ${STAGEDIR}${EXAMPLESDIR} &&\
 		${INSTALL_DATA} images/* ${STAGEDIR}${EXAMPLESDIR}/images
+
+.if ${FLAVOR} == qt6
+BINARY_ALIAS+=	clang=${LOCALBASE}/bin/clang${LLVM_DEFAULT}
+BINARY_ALIAS+=	clang++=${LOCALBASE}/bin/clang++${LLVM_DEFAULT}
+.endif
 
 .include <bsd.port.mk>

@@ -1,8 +1,8 @@
---- src/3rdparty/chromium/content/utility/utility_main.cc.orig	2024-07-03 01:14:49 UTC
+--- src/3rdparty/chromium/content/utility/utility_main.cc.orig	2026-08-11 12:42:19 UTC
 +++ src/3rdparty/chromium/content/utility/utility_main.cc
-@@ -39,17 +39,21 @@
- #include "third_party/icu/source/common/unicode/unistr.h"
- #include "third_party/icu/source/i18n/unicode/timezone.h"
+@@ -42,17 +42,21 @@
+ #include "services/tracing/public/cpp/trace_startup.h"
+ #include "services/video_effects/public/cpp/buildflags.h"
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
@@ -10,46 +10,43 @@
  #include "base/files/file_util.h"
  #include "base/pickle.h"
  #include "content/child/sandboxed_process_thread_type_handler.h"
-+#if BUILDFLAG(IS_LINUX)
++#if !BUILDFLAG(IS_BSD)
  #include "content/common/gpu_pre_sandbox_hook_linux.h"
 +#endif
  #include "content/public/common/content_descriptor_keys.h"
  #include "content/utility/speech/speech_recognition_sandbox_hook_linux.h"
- #include "gpu/config/gpu_info_collector.h"
- #include "media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.h"
+ #include "media/gpu/buildflags.h"
+ #include "media/media_buildflags.h"
 +#if !BUILDFLAG(IS_BSD)
  #include "sandbox/policy/linux/sandbox_linux.h"
 +#endif
  #include "services/audio/audio_sandbox_hook_linux.h"
  #include "services/network/network_sandbox_hook_linux.h"
- // gn check is not smart enough to realize that this include only applies to
-@@ -61,10 +65,15 @@
- #endif
- #endif
+ #include "services/screen_ai/buildflags/buildflags.h"
+@@ -87,7 +91,12 @@
  
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
- #include "media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.h"
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
+-#if BUILDFLAG(ENABLE_VIDEO_EFFECTS) && BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_BSD)
 +#include "sandbox/policy/sandbox.h"
 +#include "content/common/gpu_pre_sandbox_hook_bsd.h"
 +#endif
 +
- #if BUILDFLAG(IS_CHROMEOS_ASH)
- #include "chromeos/ash/components/assistant/buildflags.h"
- #include "chromeos/ash/services/ime/ime_sandbox_hook.h"
-@@ -76,7 +85,7 @@
- #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
++#if BUILDFLAG(ENABLE_VIDEO_EFFECTS) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
+ #include "services/video_effects/video_effects_sandbox_hook_linux.h"  // nogncheck
+ #endif  // BUILDFLAG(IS_LINUX)
  
- #if (BUILDFLAG(ENABLE_SCREEN_AI_SERVICE) && \
--     (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)))
-+     (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)))
- #include "components/services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.h"  // nogncheck
- #endif
+@@ -124,7 +133,7 @@ sandbox::TargetServices* g_utility_target_services = n
+ sandbox::TargetServices* g_utility_target_services = nullptr;
+ #endif  // BUILDFLAG(IS_WIN)
  
-@@ -102,7 +111,7 @@ namespace {
+-#if BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) && BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
+ #include "components/services/on_device_translation/sandbox_hook.h"
+ #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) && BUILDFLAG(IS_LINUX)
+ 
+@@ -132,7 +141,7 @@ namespace {
  
  namespace {
  
@@ -58,44 +55,54 @@
  std::vector<std::string> GetNetworkContextsParentDirectories() {
    base::MemoryMappedFile::Region region;
    base::ScopedFD read_pipe_fd = base::FileDescriptorStore::GetInstance().TakeFD(
-@@ -130,7 +139,7 @@ bool ShouldUseAmdGpuPolicy(sandbox::mojom::Sandbox san
- 
- bool ShouldUseAmdGpuPolicy(sandbox::mojom::Sandbox sandbox_type) {
-   const bool obtain_gpu_info =
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
-       sandbox_type == sandbox::mojom::Sandbox::kHardwareVideoDecoding ||
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)
-       sandbox_type == sandbox::mojom::Sandbox::kHardwareVideoEncoding;
-@@ -255,7 +264,8 @@ int UtilityMain(MainFunctionParams parameters) {
-     }
+@@ -290,7 +299,7 @@ int UtilityMain(MainFunctionParams parameters) {
    }
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+// XXX BSD
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && !BUILDFLAG(IS_BSD)
-   // Thread type delegate of the process should be registered before
-   // first thread type change in ChildProcess constructor.
-   // It also needs to be registered before the process has multiple threads,
-@@ -266,7 +276,7 @@ int UtilityMain(MainFunctionParams parameters) {
-   }
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
+ #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ 
+ #if BUILDFLAG(USE_LINUX_VIDEO_ACCELERATION) && BUILDFLAG(USE_VAAPI)
+   // Regardless of the sandbox status, the VaapiWrapper needs to be initialized
+@@ -305,7 +314,10 @@ int UtilityMain(MainFunctionParams parameters) {
+   // thread type change in ChildProcess constructor. It also needs to be
+   // registered before the process has multiple threads, which may race with
+   // application of the sandbox.
++// XXX BSD
++#if !BUILDFLAG(IS_BSD) 
+   SandboxedProcessThreadTypeHandler::Create();
++#endif
+ 
    // Initializes the sandbox before any threads are created.
    // TODO(jorgelo): move this after GTK initialization when we enable a strict
-   // Seccomp-BPF policy.
-@@ -307,7 +317,7 @@ int UtilityMain(MainFunctionParams parameters) {
+@@ -341,7 +353,7 @@ int UtilityMain(MainFunctionParams parameters) {
+           base::BindOnce(&speech::SpeechRecognitionPreSandboxHook);
  #endif
        break;
+-#if BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) && BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
+     case sandbox::mojom::Sandbox::kOnDeviceTranslation:
+       pre_sandbox_hook = base::BindOnce(
+           &on_device_translation::OnDeviceTranslationSandboxHook);
+@@ -357,7 +369,7 @@ int UtilityMain(MainFunctionParams parameters) {
+ #else
+       NOTREACHED();
  #endif
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_ASH) || BUILDFLAG(IS_BSD)
-     case sandbox::mojom::Sandbox::kHardwareVideoDecoding:
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+     case sandbox::mojom::Sandbox::kVideoEffects:
+ #if BUILDFLAG(ENABLE_VIDEO_EFFECTS)
        pre_sandbox_hook =
-           base::BindOnce(&media::HardwareVideoDecodingPreSandboxHook);
-@@ -334,6 +344,7 @@ int UtilityMain(MainFunctionParams parameters) {
+@@ -365,7 +377,7 @@ int UtilityMain(MainFunctionParams parameters) {
+ #endif
+       break;
+ #endif  // BUILDFLAG(IS_LINUX)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+     case sandbox::mojom::Sandbox::kShapeDetection:
+       pre_sandbox_hook =
+           base::BindOnce(&shape_detection::ShapeDetectionPreSandboxHook);
+@@ -400,6 +412,7 @@ int UtilityMain(MainFunctionParams parameters) {
      default:
        break;
    }
@@ -103,7 +110,7 @@
    if (!sandbox::policy::IsUnsandboxedSandboxType(sandbox_type) &&
        (parameters.zygote_child || !pre_sandbox_hook.is_null())) {
      sandbox_options.use_amd_specific_policies =
-@@ -341,6 +352,11 @@ int UtilityMain(MainFunctionParams parameters) {
+@@ -407,6 +420,11 @@ int UtilityMain(MainFunctionParams parameters) {
      sandbox::policy::Sandbox::Initialize(
          sandbox_type, std::move(pre_sandbox_hook), sandbox_options);
    }
@@ -113,5 +120,5 @@
 +      sandbox::policy::SandboxLinux::Options());
 +#endif
  
-   // Start the HangWatcher now that the sandbox is engaged, if it hasn't
-   // already been started.
+   // Startup tracing creates a tracing thread, which is incompatible on
+   // platforms that require single-threaded sandbox initialization. In these

@@ -1,0 +1,11 @@
+--- configure.orig
++++ configure
+@@ -2152,7 +2152,7 @@
+ MYCXXFLAGS="-std=c++17 -pthread -fPIC -fsigned-char"
+ MYCPPFLAGS="-I. -I\$(INCLUDEDIR)"
+ MYCPPFLAGS="$MYCPPFLAGS -DNDEBUG -D_GNU_SOURCE=1 -D_ISOC99_SOURCE=1"
+-if uname | egrep "(FreeBSD|SunOS)" >config.tmp
++if uname | egrep "(FreeBSD|DragonFly|SunOS)" >config.tmp
+ then
+   MYCPPFLAGS="$MYCPPFLAGS -U_POSIX_C_SOURCE"
+ else

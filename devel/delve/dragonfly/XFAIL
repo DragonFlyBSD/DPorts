@@ -1,0 +1,1 @@
+XFAIL_DragonFly= go debbuger.go proc.go

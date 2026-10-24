@@ -1,11 +1,11 @@
 PORTNAME=	snappymail
 DISTVERSION=	2.38.2
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	mail www
 MASTER_SITES=	https://github.com/the-djmaze/snappymail/releases/download/v${DISTVERSION}/
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
-MAINTAINER=	yasu@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple, modern, lightweight & fast web-based email client
 WWW=		https://snappymail.eu/
 
@@ -18,6 +18,7 @@ RUN_DEPENDS=	${PECL_PKGNAMEPREFIX}APCu>0:devel/pecl-APCu@${PHP_FLAVOR} \
 USES=		php:web,flavors
 USE_PHP=	ctype curl dom fileinfo gd iconv intl mbstring phar simplexml \
 		sodium tidy xml zip zlib
+IGNORE_WITH_PHP=	86
 
 NO_ARCH=	yes
 NO_BUILD=	yes

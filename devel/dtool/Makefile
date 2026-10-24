@@ -1,7 +1,7 @@
 PORTNAME=	dtool
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.12.0
-PORTREVISION=	21
+PORTREVISION=	40
 CATEGORIES=	devel
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -184,11 +184,9 @@ PORTDOCS=	${DOCS:T}
 
 OPTIONS_DEFINE=	DOCS
 
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${_DOCS} ${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

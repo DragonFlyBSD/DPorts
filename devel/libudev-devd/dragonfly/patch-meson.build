@@ -1,9 +1,9 @@
---- meson.build.orig	2021-09-04 13:20:25 UTC
+--- meson.build.orig
 +++ meson.build
-@@ -36,14 +36,9 @@ if cc.has_header('devinfo.h')
+@@ -36,14 +36,9 @@
  	config_h.set('HAVE_DEVINFO_H', '1')
  endif
- 
+
 -procstat_inc = '''#include <sys/param.h>
 -#include <sys/queue.h>
 -#include <sys/socket.h>
@@ -14,7 +14,16 @@
 -	config_h.set('HAVE_LIBPROCSTAT_H', '1')
 +procstat_dep = cc.find_library('procstat', required: false)
 +if procstat_dep.found()
-+ 	config_h.set('HAVE_LIBPROCSTAT_H', '1')
++	config_h.set('HAVE_LIBPROCSTAT_H', '1')
  endif
- 
+
  if cc.has_header('dev/hid/hidraw.h')
+@@ -147,7 +142,7 @@
+ 	name : 'libudev',
+ 	url : 'https://github.com/wulf7/libudev-devd',
+ 	description : 'Library to access udev device information',
+-	version : '243', # XXX - should be a proper version
++	version : '251', # DragonFly: bumped from upstream placeholder so libgudev>=238 configures
+ )
+
+ # output files

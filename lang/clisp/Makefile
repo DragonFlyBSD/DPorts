@@ -1,6 +1,6 @@
 PORTNAME=	clisp
 PORTVERSION=	2.49.95+20241228
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	lang lisp
 
 MAINTAINER=	kiri@TrueFC.org
@@ -16,9 +16,8 @@ LIB_DEPENDS=	libffcall.so:devel/libffcall \
 		libunistring.so:devel/libunistring
 RUN_DEPENDS=	cl-freebsd-asdf-init>=0:devel/cl-freebsd-asdf-init
 
-USES=		compiler gettext ghostscript iconv localbase:ldflags ncurses \
+USES=		gettext ghostscript iconv localbase:ldflags ncurses \
 		pkgconfig
-USE_GCC=	yes
 USE_GITLAB=	yes
 GL_ACCOUNT=	gnu-clisp
 GL_PROJECT=	clisp
@@ -36,11 +35,6 @@ CONFIGURE_TARGET=	${ARCH:S/amd64/x86_64/}-portbld-freebsd${OSREL}
 
 MAKE_ENV=		${CONFIGURE_ENV}
 MAKE_JOBS_UNSAFE=	yes
-
-# Complaints if the environment changes between build stages.
-CFLAGS+=	-fpermissive
-LDFLAGS+=	${LDFLAGS_${CHOSEN_COMPILER_TYPE}}
-LDFLAGS_gcc=	-lthr
 
 SUB_FILES=	pkg-message
 
@@ -72,7 +66,7 @@ SVM_DESC=	Support Vector Machine predictive analytics
 ZLIB_DESC=	Compress vectors
 
 ASDF_CONFIGURE_WITH=	module=asdf
-BDB_USES=		bdb
+BDB_USES=		bdb:18
 BDB_CONFIGURE_WITH=	module=berkeley-db
 BDB_CPPFLAGS=		-I${LOCALBASE}/include/db${BDB_VER}
 BDB_LDFLAGS=		-L${LOCALBASE}/lib/db${BDB_VER}
@@ -103,6 +97,9 @@ SVM_LIB_DEPENDS=	libsvm.so.2:science/libsvm
 SVM_CONFIGURE_WITH=	module=libsvm
 ZLIB_CONFIGURE_WITH=	module=zlib
 
+CFLAGS= -D__FreeBSD__=9
+LDFLAGS= -pthread
+LDFLAGS_gcc= 
 pre-install-CLX_MIT-on:
 	${CP} ${WRKSRC}/modules/clx/mit-clx/README.CLISP \
 		${WRKSRC}/src/clx/mit-clx/README.CLISP
@@ -120,6 +117,12 @@ do-test:
 # Segmentation fault in amd64 when using 'mmap(2)', errno = EINVAL.
 .if ${ARCH} == "x86_64"
 CONFIGURE_ARGS+=	--disable-mmap
+.endif
+
+.if ${DFLYVERSION} < 500902
+dfly-patch:
+	${REINPLACE_CMD} -e 's@HAVE_DECL_GETDATE_ERR@&__@g' \
+		${WRKSRC}/modules/syscalls/calls.c
 .endif
 
 .include <bsd.port.mk>

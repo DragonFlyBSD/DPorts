@@ -1,6 +1,0 @@
-GNU_CONFIGURE_MANPREFIX=       ${PREFIX}/share
-# chase devel/ncurses hacks
-# replacing just the suffix should work
-dfly-patch:
-	${REINPLACE_CMD} -e 's@NCURSESLIBSUFFIX="w"@NCURSESLIBSUFFIX=""@g' \
-		${WRKSRC}/configure

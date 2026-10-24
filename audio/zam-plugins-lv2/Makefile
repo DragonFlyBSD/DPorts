@@ -1,29 +1,36 @@
 PORTNAME=	zam-plugins
-DISTVERSION=	3.14
-PORTREVISION=	2
+DISTVERSION=	4.5
 CATEGORIES=	audio
 PKGNAMESUFFIX=	-lv2
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Collection of LADSPA/LV2/VST/JACK audio plugins
-WWW=		https://www.zamaudio.com/?p=976
+WWW=		https://www.zamaudio.com/?p=976 \
+		https://github.com/zamaudio/zam-plugins
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	lv2>0:audio/lv2 \
+		bash:shells/bash \
 		${LOCALBASE}/include/fftw3.h:math/fftw3
-LIB_DEPENDS=	libfftw3f.so:math/fftw3-float \
+LIB_DEPENDS=	libasound.so:audio/alsa-lib \
+		libdbus-1.so:devel/dbus \
+		libfftw3f.so:math/fftw3-float \
 		libjack.so:audio/jack \
+		libpulse.so:audio/pulseaudio \
 		libsamplerate.so:audio/libsamplerate \
 		libzita-convolver.so:audio/zita-convolver
 
-USES=		compiler:c++11-lib gl gmake localbase:ldflags pkgconfig xorg
+USES=		compiler:c++11-lib gl gmake localbase:ldflags pkgconfig sdl xorg
+USE_GL=		gl
+USE_SDL=	sdl2
+USE_XORG=	x11 xext xrandr
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	zamaudio
-GH_TUPLE=	DISTRHO:DPF:68b3a57:d/dpf
-USE_GL=		gl
-USE_XORG=	x11
+GH_TUPLE=	DISTRHO:DPF:461ea6d:DISTRHO_DPF/dpf \
+		DISTRHO:pugl:47b8f6d:DISTRHO_DPF_pugl/dpf/dgl/src/pugl-upstream
 
 CFLAGS+=	-I${FILESDIR}
 MAKE_ARGS+=	USE_SYSTEM_LIBS=1 HAVE_ZITA_CONVOLVER=true
@@ -34,7 +41,7 @@ post-extract:
 	@${RM} -r ${WRKSRC}/lib/zita-convolver-*
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|#!/bin/bash|#!/bin/sh|' ${WRKSRC}/dpf/utils/generate-ttl.sh
+	@${REINPLACE_CMD} -e 's|#!/bin/bash|#!/usr/bin/env bash|' ${WRKSRC}/dpf/utils/generate-ttl.sh
 	${REINPLACE_CMD} -e 's/-mtune=generic//' \
 		${WRKSRC}/dpf/Makefile.base.mk
 .if ! ${ARCH} == x86_64 && ! ${ARCH} == i386

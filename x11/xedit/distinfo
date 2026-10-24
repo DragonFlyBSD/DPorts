@@ -1,2 +1,3 @@
-SHA256 (xorg/app/xedit-1.2.2.tar.bz2) = 69aa42885dfc06332ca22eb01cc7187e49206e6d65b74113a8ee4cc345fc2927
-SIZE (xorg/app/xedit-1.2.2.tar.bz2) = 525861
+TIMESTAMP = 1782726354
+SHA256 (xorg/app/xedit-1.2.5.tar.xz) = 733460cbf20a9d88e2a482ff1b288f51a97150cff807c7ffb98d2430546c8867
+SIZE (xorg/app/xedit-1.2.5.tar.xz) = 488032

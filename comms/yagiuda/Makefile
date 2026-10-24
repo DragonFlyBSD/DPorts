@@ -33,4 +33,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/$f ${STAGEDIR}${DOCSDIR}
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@extern int errno;@#include <errno.h>@g'	\
+		${WRKSRC}/src/*.c
+
 .include <bsd.port.mk>

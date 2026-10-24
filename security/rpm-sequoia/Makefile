@@ -1,15 +1,17 @@
 PORTNAME=	rpm-sequoia
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.5.0
-PORTREVISION=	6
+DISTVERSION=	1.10.3
 CATEGORIES=	security archivers
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	OpenPGP backend for rpm using Sequoia PGP
-WWW=		https://sequoia-pgp.org/
+WWW=		https://sequoia-pgp.org/ \
+		https://github.com/rpm-software-management/rpm-sequoia
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+
+BROKEN_i386=	compilation fails, see https://gitlab.com/sequoia-pgp/nettle-sys/-/issues/20
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libnettle.so:security/nettle
@@ -21,229 +23,295 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	rpm-software-management
 
 CARGO_CRATES=	aead-0.5.2 \
-		aes-0.8.3 \
-		aho-corasick-1.0.4 \
-		android-tzdata-0.1.1 \
-		android_system_properties-0.1.5 \
-		anstyle-1.0.2 \
-		anyhow-1.0.75 \
-		ascii-canvas-3.0.0 \
-		assert_cmd-2.0.12 \
-		autocfg-1.1.0 \
+		aes-0.8.4 \
+		aes-gcm-0.10.3 \
+		aho-corasick-1.1.5 \
+		android_system_properties-0.1.6 \
+		annotate-snippets-0.11.5 \
+		anstyle-1.0.14 \
+		anyhow-1.0.104 \
+		argon2-0.5.3 \
+		ascii-canvas-4.0.0 \
+		assert_cmd-2.2.2 \
+		autocfg-1.5.1 \
 		base16ct-0.2.0 \
-		base64-0.21.3 \
-		base64ct-1.6.0 \
-		bindgen-0.63.0 \
-		bit-set-0.5.3 \
-		bit-vec-0.6.3 \
-		bitflags-1.3.2 \
-		bitflags-2.4.0 \
-		block-buffer-0.9.0 \
+		base64-0.22.1 \
+		base64ct-1.8.3 \
+		bindgen-0.72.1 \
+		bit-set-0.8.0 \
+		bit-vec-0.8.0 \
+		bitflags-2.13.1 \
+		bitvec-1.1.1 \
+		blake2-0.10.6 \
 		block-buffer-0.10.4 \
+		block-buffer-0.12.1 \
 		block-padding-0.3.3 \
 		blowfish-0.9.1 \
-		botan-0.10.6 \
-		botan-sys-0.10.5 \
-		bstr-1.6.0 \
-		buffered-reader-1.2.0 \
-		bumpalo-3.13.0 \
-		byteorder-1.4.3 \
+		botan-0.11.1 \
+		botan-sys-0.11.1 \
+		bstr-1.13.1 \
+		buffered-reader-1.4.1 \
+		bumpalo-3.20.3 \
+		byteorder-1.5.0 \
+		camellia-0.1.0 \
 		cast5-0.11.1 \
-		cc-1.0.83 \
-		cdylib-link-lines-0.1.4 \
+		cbc-0.1.2 \
+		cc-1.4.5 \
+		cdylib-link-lines-0.1.5 \
 		cexpr-0.6.0 \
 		cfb-mode-0.8.2 \
-		cfg-if-1.0.0 \
-		chrono-0.4.26 \
+		cfg-if-1.0.4 \
+		chrono-0.4.45 \
 		cipher-0.4.4 \
-		clang-sys-1.6.1 \
+		clang-sys-1.9.1 \
 		cmac-0.7.2 \
-		const-oid-0.9.5 \
-		core-foundation-sys-0.8.4 \
-		cpufeatures-0.2.9 \
-		crunchy-0.2.2 \
-		crypto-bigint-0.5.2 \
-		crypto-common-0.1.6 \
+		cmov-0.5.4 \
+		const-oid-0.9.6 \
+		core-foundation-sys-0.8.7 \
+		cpufeatures-0.2.17 \
+		cpufeatures-0.3.1 \
+		crypto-bigint-0.5.5 \
+		crypto-common-0.1.7 \
+		crypto-common-0.2.2 \
+		ctor-1.0.13 \
 		ctr-0.9.2 \
-		curve25519-dalek-3.2.0 \
-		curve25519-dalek-ng-4.1.1 \
+		ctutils-0.4.2 \
+		curve25519-dalek-4.1.3 \
+		curve25519-dalek-derive-0.1.1 \
+		cx448-0.1.1 \
 		dbl-0.3.2 \
-		der-0.7.8 \
+		der-0.7.10 \
 		des-0.8.1 \
-		diff-0.1.13 \
 		difflib-0.4.0 \
-		digest-0.9.0 \
 		digest-0.10.7 \
-		dirs-next-2.0.0 \
-		dirs-sys-next-0.1.2 \
-		doc-comment-0.3.3 \
-		dyn-clone-1.0.13 \
+		digest-0.11.3 \
+		displaydoc-0.2.7 \
+		doc-comment-0.3.4 \
+		dsa-0.6.3 \
+		dyn-clone-1.0.20 \
 		eax-0.5.0 \
 		ecb-0.1.2 \
-		ecdsa-0.16.8 \
-		ed25519-1.5.3 \
-		ed25519-dalek-1.0.1 \
-		either-1.9.0 \
-		elliptic-curve-0.13.5 \
-		ena-0.14.2 \
-		equivalent-1.0.1 \
-		errno-0.3.3 \
-		errno-dragonfly-0.1.2 \
-		fastrand-2.0.0 \
-		ff-0.13.0 \
-		fixedbitset-0.4.2 \
-		foreign-types-0.3.2 \
-		foreign-types-shared-0.1.1 \
+		ecdsa-0.16.9 \
+		ed25519-2.2.3 \
+		ed25519-dalek-2.2.0 \
+		either-1.18.0 \
+		elliptic-curve-0.13.8 \
+		ena-0.14.4 \
+		equivalent-1.0.2 \
+		errno-0.3.14 \
+		fastrand-2.5.0 \
+		ff-0.13.1 \
+		fiat-crypto-0.2.9 \
+		find-msvc-tools-0.1.12 \
+		fixedbitset-0.5.7 \
+		funty-2.0.0 \
+		futures-core-0.3.34 \
+		futures-task-0.3.34 \
+		futures-util-0.3.34 \
 		generic-array-0.14.7 \
-		getrandom-0.1.16 \
-		getrandom-0.2.10 \
-		glob-0.3.1 \
+		generic-array-1.4.5 \
+		getrandom-0.2.17 \
+		getrandom-0.3.4 \
+		getrandom-0.4.3 \
+		ghash-0.5.1 \
+		glob-0.3.4 \
 		group-0.13.0 \
-		hashbrown-0.14.0 \
-		hermit-abi-0.3.2 \
-		hkdf-0.12.3 \
+		hashbrown-0.17.1 \
+		hkdf-0.12.4 \
 		hmac-0.12.1 \
-		iana-time-zone-0.1.57 \
+		hybrid-array-0.3.1 \
+		hybrid-array-0.4.14 \
+		iana-time-zone-0.1.65 \
 		iana-time-zone-haiku-0.1.2 \
+		icu_collections-2.1.1 \
+		icu_locale_core-2.1.1 \
+		icu_normalizer-2.1.1 \
+		icu_normalizer_data-2.1.1 \
+		icu_properties-2.1.2 \
+		icu_properties_data-2.1.2 \
+		icu_provider-2.1.1 \
 		idea-0.5.1 \
-		idna-0.3.0 \
-		indexmap-2.0.0 \
-		inout-0.1.3 \
-		is-terminal-0.4.9 \
-		itertools-0.10.5 \
-		js-sys-0.3.64 \
-		lalrpop-0.19.12 \
-		lalrpop-util-0.19.12 \
-		lazy_static-1.4.0 \
-		lazycell-1.3.0 \
-		libc-0.2.147 \
-		libloading-0.7.4 \
-		libm-0.2.7 \
-		linux-raw-sys-0.4.5 \
-		lock_api-0.4.10 \
-		log-0.4.20 \
-		md-5-0.10.5 \
-		memchr-2.6.0 \
-		memsec-0.6.3 \
+		idna-1.1.0 \
+		idna_adapter-1.2.1 \
+		indexmap-2.14.2 \
+		inout-0.1.4 \
+		itertools-0.13.0 \
+		itertools-0.14.0 \
+		itoa-1.0.18 \
+		js-sys-0.3.105 \
+		keccak-0.1.6 \
+		keccak-0.2.2 \
+		kem-0.3.0 \
+		lalrpop-0.22.2 \
+		lalrpop-util-0.22.2 \
+		lazy_static-1.5.0 \
+		libc-0.2.189 \
+		libloading-0.8.9 \
+		libm-0.2.16 \
+		link-section-0.19.3 \
+		linktime-proc-macro-0.2.3 \
+		linux-raw-sys-0.12.1 \
+		litemap-0.8.3 \
+		lock_api-0.4.14 \
+		log-0.4.34 \
+		md-5-0.10.6 \
+		memchr-2.8.3 \
+		memsec-0.7.0 \
 		minimal-lexical-0.2.1 \
-		nettle-7.3.0 \
-		nettle-sys-2.2.0 \
-		new_debug_unreachable-1.0.4 \
+		ml-dsa-0.1.1 \
+		ml-kem-0.3.2 \
+		module-lattice-0.2.3 \
+		nettle-7.5.0 \
+		nettle-sys-2.3.2 \
+		new_debug_unreachable-1.0.6 \
 		nom-7.1.3 \
-		num-bigint-dig-0.8.4 \
-		num-integer-0.1.45 \
-		num-iter-0.1.43 \
-		num-traits-0.2.16 \
-		once_cell-1.18.0 \
-		opaque-debug-0.3.0 \
-		openssl-0.10.57 \
-		openssl-macros-0.1.1 \
-		openssl-sys-0.9.92 \
+		num-bigint-dig-0.8.6 \
+		num-integer-0.1.47 \
+		num-iter-0.1.46 \
+		num-traits-0.2.19 \
+		ocb3-0.1.0 \
+		once_cell-1.21.4 \
+		opaque-debug-0.3.1 \
+		openssl-sys-0.9.117 \
+		ossl-1.5.2 \
 		p256-0.13.2 \
-		parking_lot-0.12.1 \
-		parking_lot_core-0.9.8 \
-		peeking_take_while-0.1.2 \
+		p384-0.13.1 \
+		p521-0.13.3 \
+		parking_lot-0.12.5 \
+		parking_lot_core-0.9.12 \
+		password-hash-0.5.0 \
 		pem-rfc7468-0.7.0 \
-		petgraph-0.6.4 \
-		phf_shared-0.10.0 \
+		petgraph-0.7.1 \
+		phf_shared-0.11.3 \
+		pin-project-lite-0.2.17 \
 		pkcs1-0.7.5 \
 		pkcs8-0.10.2 \
-		pkg-config-0.3.27 \
-		ppv-lite86-0.2.17 \
+		pkg-config-0.3.34 \
+		polyval-0.6.2 \
+		potential_utf-0.1.6 \
+		ppv-lite86-0.2.21 \
 		precomputed-hash-0.1.1 \
-		predicates-3.0.3 \
-		predicates-core-1.0.6 \
-		predicates-tree-1.0.9 \
-		primeorder-0.13.2 \
-		proc-macro2-1.0.66 \
-		quote-1.0.33 \
-		rand-0.7.3 \
-		rand-0.8.5 \
-		rand_chacha-0.2.2 \
+		predicates-3.1.4 \
+		predicates-core-1.0.10 \
+		predicates-tree-1.0.13 \
+		prettyplease-0.2.37 \
+		primeorder-0.13.6 \
+		proc-macro2-1.0.107 \
+		quote-1.0.47 \
+		r-efi-5.3.0 \
+		r-efi-6.0.0 \
+		radium-0.7.0 \
+		rand-0.8.8 \
+		rand-0.9.5 \
 		rand_chacha-0.3.1 \
-		rand_core-0.5.1 \
 		rand_core-0.6.4 \
-		rand_hc-0.2.0 \
-		redox_syscall-0.2.16 \
-		redox_syscall-0.3.5 \
-		redox_users-0.4.3 \
-		regex-1.9.4 \
-		regex-automata-0.3.7 \
-		regex-syntax-0.6.29 \
-		regex-syntax-0.7.5 \
+		rand_core-0.9.5 \
+		rand_core-0.10.1 \
+		redox_syscall-0.5.18 \
+		regex-1.13.1 \
+		regex-automata-0.4.18 \
+		regex-syntax-0.8.11 \
 		rfc6979-0.4.0 \
 		ripemd-0.1.3 \
-		rsa-0.9.2 \
-		rustc-hash-1.1.0 \
-		rustix-0.38.10 \
-		rustversion-1.0.14 \
+		rsa-0.9.10 \
+		rustc-hash-2.1.3 \
+		rustc_version-0.4.1 \
+		rustix-1.1.4 \
+		rustversion-1.0.23 \
+		same-file-1.0.6 \
 		scopeguard-1.2.0 \
 		sec1-0.7.3 \
-		sequoia-openpgp-1.16.0 \
-		sequoia-policy-config-0.6.0 \
-		serde-1.0.188 \
-		serde_derive-1.0.188 \
-		sha-1-0.10.1 \
-		sha1collisiondetection-0.2.7 \
-		sha2-0.9.9 \
-		sha2-0.10.7 \
-		shlex-1.1.0 \
-		signature-1.6.4 \
-		signature-2.1.0 \
-		siphasher-0.3.11 \
-		smallvec-1.11.0 \
-		spin-0.5.2 \
-		spki-0.7.2 \
-		string_cache-0.8.7 \
-		subtle-2.5.0 \
-		subtle-ng-2.5.0 \
-		syn-1.0.109 \
-		syn-2.0.29 \
-		tempfile-3.8.0 \
-		term-0.7.0 \
-		termtree-0.4.1 \
-		thiserror-1.0.47 \
-		thiserror-impl-1.0.47 \
-		time-0.1.45 \
-		tiny-keccak-2.0.2 \
-		tinyvec-1.6.0 \
-		tinyvec_macros-0.1.1 \
-		toml-0.5.11 \
+		semver-1.0.28 \
+		sequoia-openpgp-2.4.1 \
+		sequoia-policy-config-0.8.2 \
+		serde-1.0.229 \
+		serde_core-1.0.229 \
+		serde_derive-1.0.229 \
+		serde_json-1.0.151 \
+		serde_spanned-1.1.1 \
+		serdect-0.2.0 \
+		sha1collisiondetection-0.3.4 \
+		sha2-0.10.9 \
+		sha3-0.10.9 \
+		sha3-0.11.0 \
+		shake-0.1.0 \
+		shlex-1.3.0 \
+		shlex-2.0.1 \
+		signature-2.2.0 \
+		signature-3.0.0 \
+		siphasher-1.0.3 \
+		slab-0.4.12 \
+		slh-dsa-0.0.3 \
+		smallvec-1.16.0 \
+		spin-0.9.9 \
+		spki-0.7.3 \
+		sponge-cursor-0.1.0 \
+		stable_deref_trait-1.2.1 \
+		string_cache-0.8.9 \
+		subtle-2.6.1 \
+		syn-2.0.119 \
+		syn-3.0.5 \
+		synstructure-0.13.2 \
+		tap-1.0.1 \
+		tempfile-3.27.0 \
+		term-1.2.1 \
+		termtree-0.5.1 \
+		thiserror-2.0.20 \
+		thiserror-impl-2.0.20 \
+		tinystr-0.8.4 \
+		toml-1.1.5+spec-1.1.0 \
+		toml_datetime-1.1.1+spec-1.1.0 \
+		toml_parser-1.1.3+spec-1.1.0 \
+		toml_writer-1.1.2+spec-1.1.0 \
 		twofish-0.7.1 \
-		typenum-1.16.0 \
-		unicode-bidi-0.3.13 \
-		unicode-ident-1.0.11 \
-		unicode-normalization-0.1.22 \
-		unicode-xid-0.2.4 \
+		typenum-1.20.1 \
+		unicode-ident-1.0.24 \
+		unicode-width-0.2.2 \
+		unicode-xid-0.2.6 \
+		universal-hash-0.5.1 \
+		utf8_iter-1.0.4 \
 		vcpkg-0.2.15 \
-		version_check-0.9.4 \
-		wait-timeout-0.2.0 \
-		wasi-0.9.0+wasi-snapshot-preview1 \
-		wasi-0.10.0+wasi-snapshot-preview1 \
-		wasi-0.11.0+wasi-snapshot-preview1 \
-		wasm-bindgen-0.2.87 \
-		wasm-bindgen-backend-0.2.87 \
-		wasm-bindgen-macro-0.2.87 \
-		wasm-bindgen-macro-support-0.2.87 \
-		wasm-bindgen-shared-0.2.87 \
-		win-crypto-ng-0.5.0 \
+		version_check-0.9.5 \
+		wait-timeout-0.2.1 \
+		walkdir-2.5.0 \
+		wasi-0.11.1+wasi-snapshot-preview1 \
+		wasip2-1.0.1+wasi-0.2.4 \
+		wasm-bindgen-0.2.128 \
+		wasm-bindgen-macro-0.2.128 \
+		wasm-bindgen-macro-support-0.2.128 \
+		wasm-bindgen-shared-0.2.128 \
+		win-crypto-ng-0.5.1 \
 		winapi-0.3.9 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
+		winapi-util-0.1.11 \
 		winapi-x86_64-pc-windows-gnu-0.4.0 \
-		windows-0.48.0 \
-		windows-sys-0.48.0 \
-		windows-targets-0.48.5 \
-		windows_aarch64_gnullvm-0.48.5 \
-		windows_aarch64_msvc-0.48.5 \
-		windows_i686_gnu-0.48.5 \
-		windows_i686_msvc-0.48.5 \
-		windows_x86_64_gnu-0.48.5 \
-		windows_x86_64_gnullvm-0.48.5 \
-		windows_x86_64_msvc-0.48.5 \
-		x25519-dalek-ng-1.1.1 \
-		xxhash-rust-0.8.6 \
-		zeroize-1.6.0 \
-		zeroize_derive-1.4.2
+		windows-core-0.62.2 \
+		windows-implement-0.60.2 \
+		windows-interface-0.59.3 \
+		windows-link-0.2.1 \
+		windows-result-0.4.1 \
+		windows-strings-0.5.1 \
+		windows-sys-0.61.2 \
+		winnow-1.0.4 \
+		wit-bindgen-0.46.0 \
+		writeable-0.6.4 \
+		wyz-0.5.1 \
+		x25519-dalek-2.0.1 \
+		xxhash-rust-0.8.18 \
+		yoke-0.8.3 \
+		yoke-derive-0.8.2 \
+		zerocopy-0.7.35 \
+		zerocopy-0.8.56 \
+		zerocopy-derive-0.7.35 \
+		zerocopy-derive-0.8.56 \
+		zerofrom-0.1.8 \
+		zerofrom-derive-0.1.7 \
+		zeroize-1.9.0 \
+		zeroize_derive-1.5.0 \
+		zerotrie-0.2.5 \
+		zerovec-0.11.8 \
+		zerovec-derive-0.11.6 \
+		zmij-1.0.23
 
 OPENSSLINC=	/usr/include
 OPENSSLLIB=	/usr/lib
@@ -251,10 +319,11 @@ OPENSSLLIB=	/usr/lib
 PLIST_FILES=	lib/librpm_sequoia.so \
 		libdata/pkgconfig/rpm-sequoia.pc
 
+DFLY_UNMAINTAINED= yes
 do-install:
 	# .so lib
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib
-	${INSTALL_LIB} ${WRKDIR}/target/*-unknown-freebsd/release/librpm_sequoia.so ${STAGEDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKDIR}/target/release/librpm_sequoia.so ${STAGEDIR}${PREFIX}/lib
 	# .pc file
 	${MKDIR} ${STAGEDIR}${PREFIX}/libdata/pkgconfig
 	${INSTALL_DATA} ${WRKDIR}/target/release/rpm-sequoia.pc ${STAGEDIR}${PREFIX}/libdata/pkgconfig/rpm-sequoia.pc

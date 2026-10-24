@@ -2,7 +2,7 @@ PORTNAME=	gnome-photos
 DISTVERSION=	44.0
 PORTREVISION=	1
 CATEGORIES=	deskutils gnome
-MASTER_SITES=	GNOME/sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\..*/\1/}
+MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -42,4 +42,6 @@ GLIB_SCHEMAS=	org.gnome.photos.gschema.xml
 MESON_ARGS=	--buildtype \
 		plain
 
+USES+= python:3.4+,build shebangfix
+SHEBANG_FILES= meson_post_install.py
 .include <bsd.port.mk>

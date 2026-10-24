@@ -1,0 +1,19 @@
+--- pyproject.toml.orig	2025-06-30 00:00:00 UTC
++++ pyproject.toml
+@@ -4,7 +4,7 @@
+ description = "Molecule aids in the development and testing of Ansible roles"
+ readme = "README.md"
+ requires-python = ">=3.10"
+-license = "MIT"
++license = {text = "MIT"}
+ authors = [{ "name" = "Ansible by Red Hat", "email" = "info@ansible.com" }]
+ maintainers = [{ "name" = "Ansible by Red Hat", "email" = "info@ansible.com" }]
+ keywords = ["ansible", "molecule", "roles", "testing"]
+@@ -48,7 +48,7 @@
+ [build-system]
+ requires = [
+   "setuptools_scm[toml] >= 7.0.5",  # required for "no-local-version" scheme
+-  "setuptools >= 65.3.0",  # required by pyproject+setuptools_scm integration and editable installs
++  "setuptools >= 63.0.0",  # relaxed for FreeBSD ports (PEP 639 license patched above)
+ ]
+ build-backend = "setuptools.build_meta"

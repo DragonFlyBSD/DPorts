@@ -1,8 +1,8 @@
 PORTNAME=	libglade2
 PORTVERSION=	2.6.4
-PORTREVISION?=	13
+PORTREVISION?=	14
 CATEGORIES=	devel gnome
-MASTER_SITES=	GNOME/sources/${PORTNAME:S/2$//}/${PORTVERSION:C/..$//}
+MASTER_SITES=	GNOME
 DISTNAME=	${PORTNAME:S/2$//}-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -30,6 +30,7 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 PLIST_SUB=	XMLCATALOG="${LOCALBASE}/bin/xmlcatalog" \
 		CATALOG_PORTS_XML="${LOCALBASE}/share/xml/catalog.ports"
 
+LDFLAGS= -L${LOCALBASE}/lib -lgmodule-2.0
 post-patch:
 	@${REINPLACE_CMD} -e 's|glib-2.0|gmodule-2.0 glib-2.0|g' \
 		${WRKSRC}/configure

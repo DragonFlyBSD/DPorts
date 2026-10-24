@@ -1,5 +1,5 @@
 PORTNAME=	moodle
-PORTVERSION=	4.5.4
+PORTVERSION=	4.5.14       # 4.5 is LTS version
 CATEGORIES=	www education
 MASTER_SITES=	https://packaging.moodle.org/stable405/ \
 		LOCAL/wen
@@ -11,14 +11,14 @@ WWW=		https://www.moodle.org/
 
 LICENSE=	GPLv3
 
-CONFLICTS=	moodle41-4.1.[0-9]* moodle43-4.3.[0-9]* moodle44-4.4.[0-9]* \
-		moodle50-5.0
+CONFLICTS=	moodle50-5.0.[0-9]* moodle51-5.1.[0-9]*  moodle52-5.2.[0-9]* moodle53-5.3
 
 USES=		cpe php:flavors tar:tgz
 USE_PHP=	ctype curl dom exif fileinfo filter gd \
 		iconv intl mbstring opcache \
 		session simplexml soap sodium tokenizer \
 		xml xmlreader xmlrpc zip zlib
+IGNORE_WITH_PHP=	86
 
 WRKSRC=		${WRKDIR}/moodle
 

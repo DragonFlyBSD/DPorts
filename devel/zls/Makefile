@@ -1,45 +1,31 @@
 PORTNAME=	zls
-DISTVERSION=	0.12.0
-PORTREVISION=	1
+DISTVERSION=	0.16.0
 CATEGORIES=	devel
-MASTER_SITES=	https://raw.githubusercontent.com/ziglang/:langref
-DISTFILES=	zig/${DISTVERSION}/doc/langref.html.in:langref
-EXTRACT_ONLY=	${DISTFILES:N*\:langref:C/\:.*//}
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	kenrap@FreeBSD.org
 COMMENT=	Zig LSP implementation + Zig Language Server
 WWW=		https://github.com/zigtools/zls
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	zig>=0.12.0:lang/zig
-RUN_DEPENDS=	zig:lang/zig
+RUN_DEPENDS=	${ZIG_CMD}:${ZIG_PORT}
+
+USES=		zig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	zigtools
-GH_TUPLE=	wolfpld:tracy:v0.10:tracy/src/tracy \
-		ziglibs:diffz:e10bf15:diffz/../.cache/zig/p/12200d71e4b7029ea56a429e24260c6c0e85a3069b0d4ba85eace21a0fd75910aa64 \
-		ziglibs:known-folders:0.7.0-34-gbf79988:known_folders/../.cache/zig/p/12201314cffeb40c5e4e3da166217d2c74628c74486414aaf97422bcd2279915b9fd
-MAKE_ENV=	DESTDIR="${STAGEDIR}"
-CONFIGURE_ARGS=	--prefix "${PREFIX}" \
-		${WITH_DEBUG:D:U-Doptimize=ReleaseFast} \
-		-Dcpu=${CPUTYPE:Ubaseline} \
-		-Ddata_version=${DISTVERSION} \
-		-Dversion_data_path=${DISTFILES:M*\:langref:C/\:.*//:S,^,${_DISTDIR},} \
-		--verbose
-NO_INSTALL=	yes # strip(1) breaks runtime
+
+ZIG_TUPLE= diffz:github.com/ziglibs/diffz/archive/b39fe07e7fdbcf56e43ba2890b9f484f16969f90.tar.gz:diffz-0.0.1-G2tlISzNAQCldmOcINavGmF1zdt20NFPXeM8d07jp_68 \
+		known_folders:github.com/ziglibs/known-folders/archive/d6d03830968cca6b7b9f24fd97ee348346a6905d.tar.gz:known_folders-0.0.0-Fy-PJk3KAACzUg2us_0JvQQmod1ZA8jBt7MuoKCihq88 \
+		lsp_kit:github.com/zigtools/lsp-kit/archive/b886a2b0d5cee85ecbcc3089b863f7517cc9ff7f.tar.gz:lsp_kit-0.1.0-bi_PL3IyDACfp1xdTnkiOHEok2YpPCCCJHuuOcNzjl1D \
+		tracy:github.com/wolfpld/tracy/archive/refs/tags/v0.13.1.tar.gz:N-V-__8AAOncKwEm1F9c5LrT7HMNmRMYX8-fAoqpc6YyTu9X
+
 PLIST_FILES=	bin/${PORTNAME}
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 # Respect PREFIX for global_configuration
-	@${REINPLACE_CMD} -e 's,/etc,${PREFIX}&,' \
-		${WRKSRC_known_folders}/known-folders.zig
-
-do-build:
-	@(cd ${WRKSRC} && ${MAKE_ENV} zig build ${CONFIGURE_ARGS})
-
-do-test:
-	@(cd ${WRKSRC} && ${TEST_ENV} zig build test ${CONFIGURE_ARGS})
+	${REINPLACE_CMD} -e 's,/etc,${PREFIX}&,' ${WRKSRC_known_folders}/known-folders.zig
 
 .include <bsd.port.mk>

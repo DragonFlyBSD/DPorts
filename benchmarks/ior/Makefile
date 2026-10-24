@@ -1,5 +1,5 @@
 PORTNAME=	ior
-DISTVERSION=	3.3.0-20230112
+DISTVERSION=	4.0.0
 PORTREVISION=	1
 CATEGORIES=	benchmarks
 
@@ -13,17 +13,18 @@ USES=		autoreconf gmake localbase:ldflags mpi:mpich pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	hpc
-GH_TAGNAME=	24d5d41
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
 TEST_TARGET=	check
 
 PLIST_FILES=	bin/ior \
 		bin/md-workbench \
 		bin/mdtest \
-		man/man1/mdtest.1.gz
+		share/man/man1/mdtest.1.gz
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install: # see https://github.com/hpc/ior/issues/454
 	@${RM} \
 		${STAGEDIR}${PREFIX}/lib/libaiori.a \

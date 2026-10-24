@@ -1,6 +1,6 @@
 PORTNAME=	libcelero
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.9.0
+DISTVERSION=	2.10.0
 CATEGORIES=	benchmarks
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/sys/sysinfo.h:devel/libsysinfo
 LIB_DEPENDS=	libsysinfo.so:devel/libsysinfo
 TEST_DEPENDS=	googletest>0:devel/googletest
 
-USES=		cmake compiler:c++14-lang localbase:ldflags
+USES= cmake compiler:c++14-lang localbase:ldflags ncurses
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes

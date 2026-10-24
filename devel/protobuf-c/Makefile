@@ -1,6 +1,5 @@
 PORTNAME=	protobuf-c
-DISTVERSION=	1.5.1
-PORTREVISION=	1
+PORTVERSION=	1.5.2
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/protobuf-c/protobuf-c/releases/download/v${DISTVERSION}/
 
@@ -14,17 +13,20 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libabsl_log_internal_check_op.so:devel/abseil \
 		libprotobuf.so:devel/protobuf
 
-USES=		compiler:c++17-lang gmake libtool pkgconfig
+USES=		autoreconf compiler:c++17-lang cpe gmake libtool pkgconfig
+CPE_VENDOR=	protobuf-c_project
+USE_CXXSTD=	c++17
+USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
-USE_LDCONFIG=	yes
+CONFIGURE_ARGS=	--disable-static
 
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
-USE_CXXSTD=	c++17
-PORTDOCS=	*
 
-CONFIGURE_ARGS=	--disable-static
+HAS_SYMBOL_VERSION=	${PREFIX}/lib/libprotobuf-c.so.1.0.0
+
+PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOXYGEN DOCS
 OPTIONS_DEFAULT=	DOXYGEN
@@ -37,4 +39,5 @@ post-install-DOXYGEN-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}/html
 	${INSTALL_DATA} ${WRKSRC}/html/* ${STAGEDIR}${DOCSDIR}/html
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NDOXYGEN}
 .include <bsd.port.mk>

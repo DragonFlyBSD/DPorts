@@ -1,11 +1,13 @@
---- CMakeLists.txt.orig	2023-09-19 04:20:31 UTC
+https://github.com/google/libphonenumber/pull/3903
+
+--- CMakeLists.txt.orig	2026-09-09 10:47:03 UTC
 +++ CMakeLists.txt
-@@ -100,7 +100,7 @@ endif ()
- endif ()
- 
- # Find all the required libraries and programs.
--find_package(absl)
-+find_package(absl REQUIRED)
- 
- if(NOT absl_FOUND)
-   # Overide abseil install rules for subprojects
+@@ -145,7 +145,7 @@ if (USE_BOOST)
+   if (WIN32)
+     set (Boost_USE_STATIC_LIBS ON)
+   endif ()
+-  find_package (Boost 1.40.0 COMPONENTS date_time system thread)
++  find_package (Boost 1.40.0 COMPONENTS date_time thread OPTIONAL_COMPONENTS system)
+   if (NOT Boost_FOUND)
+     print_error ("Boost Date_Time/System/Thread" "Boost")
+   endif ()

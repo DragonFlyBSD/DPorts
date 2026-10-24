@@ -2,8 +2,8 @@ PORTNAME=	kfilemetadata
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	devel kde kde-frameworks
 
-COMMENT=	Library for extracting the text and metadata from a number files
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Library for extracting the text and metadata from a number files
 
 LIB_DEPENDS=	libavutil.so:multimedia/ffmpeg \
 		libepub.so:textproc/ebook-tools \
@@ -23,6 +23,10 @@ OPTIONS_DEFAULT=	MOBIPOCKET
 OPTIONS_SUB=	yes
 
 MOBIPOCKET_DESC=	Mobipocket plugin to handle metadata
-MOBIPOCKET_LIB_DEPENDS=	libQMobipocket6.so:graphics/kdegraphics-mobipocket@qt6
+MOBIPOCKET_LIB_DEPENDS=	libQMobipocket6.so:graphics/kdegraphics-mobipocket
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

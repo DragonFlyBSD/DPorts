@@ -10,7 +10,9 @@ WWW=		https://github.com/boschmitt/tweedledum
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake:testing compiler:c++17-lang
+BUILD_DEPENDS=	${PY_SETUPTOOLS}
+
+USES=		cmake:testing compiler:c++17-lang python:env
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	boschmitt
@@ -19,9 +21,11 @@ CMAKE_OFF=	TWEEDLEDUM_PYBINDS # doesn't affect the build result, see https://git
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_TESTING_ON=	TWEEDLEDUM_TESTS
 CMAKE_TESTING_TARGET=	${ALL_TARGET} # hack to disable the target
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4.5 compatibility, see https://github.com/boschmitt/tweedledum/issues/191
 
 TEST_WRKSRC=	${BUILD_WRKSRC}/tests
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-test: # run tests, all tests pass with 3313 assertions in 73 test cases, see https://github.com/boschmitt/tweedledum/issues/177
 	@cd ${TEST_WRKSRC} && ./run_tests
 

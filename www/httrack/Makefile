@@ -1,9 +1,7 @@
 PORTNAME=	httrack
-PORTVERSION=	3.49.5
+PORTVERSION=	3.50.3
 CATEGORIES=	www
-
-PATCH_SITES=	https://github.com/xroche/httrack/commit/
-PATCHFILES=	ce2d2ce810cb1bbaf1c587a3947c31adb47d5244.patch:-p1
+MASTER_SITES=	https://github.com/xroche/httrack/releases/download/${PORTVERSION}/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Easy-to-use offline browser utility and website copier
@@ -13,24 +11,21 @@ WWW=		https://www.httrack.com/ \
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-USES=		alias cpe gmake iconv libtool shebangfix ssl
+USES= cpe gmake iconv libtool shebangfix ssl localbase
 
 CONFIGURE_ARGS=	--docdir=${DOCSDIR} --with-zlib=/usr
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	${PREFIX}/lib/httrack
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	xroche
-GH_TUPLE=	xroche:coucal:73ada07:xroche_coucal/src/coucal
-
-SHEBANG_FILES=	src/webhttrack
+SHEBANG_FILES=	src/webhttrack.in
 
 OPTIONS_DEFINE=	DOCS ICONS
 OPTIONS_SUB=	yes
 
 ICONS_USES=	gnome
 
+CONFIGURE_ENV= ac_cv_type_sa_family_t=yes
 .include <bsd.port.options.mk>
 
 .if empty(ICONV_LIB)
@@ -39,16 +34,10 @@ CONFIGURE_ARGS+=ac_cv_lib_iconv_iconv=no
 CONFIGURE_ARGS+=ac_cv_lib_iconv_iconv=yes
 .endif
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|' ${WRKSRC}/html/server/div/WebHTTrack*
-	@${REINPLACE_CMD} -e 's|gcc|${CC}|; s|-ldl ||' ${WRKSRC}/src/coucal/Makefile
-
-post-install:
-	${RM} ${STAGEDIR}${DATADIR}/html
-
 post-install-DOCS-off:
 # See PR/208875 for details
-	${MKDIR} ${STAGEDIR}${DATADIR}/html/
+	${RM} ${STAGEDIR}${DATADIR}/html/doc
+	${MKDIR} ${STAGEDIR}${DATADIR}/html/doc
 
 post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/html/httrack.css ${STAGEDIR}${DOCSDIR}/

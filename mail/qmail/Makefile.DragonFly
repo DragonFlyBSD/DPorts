@@ -1,3 +1,0 @@
-
-# help to find ssl libs through pkgconf -libs mysql
-USES+=	localbase:ldflags

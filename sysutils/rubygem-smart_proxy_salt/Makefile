@@ -1,6 +1,5 @@
 PORTNAME=	smart_proxy_salt
-PORTVERSION=	5.1.0
-PORTREVISION=	1
+PORTVERSION=	7.0.0
 CATEGORIES=	sysutils ruby
 MASTER_SITES=	RG
 
@@ -10,12 +9,9 @@ WWW=		https://github.com/theforeman/smart_proxy_salt
 
 LICENSE=	GPLv3
 
-DEPRECATED=	Depends on expired net/py-libcloud
-EXPIRATION_DATE=2025-06-01
-
 RUN_DEPENDS=	foreman-proxy>=1.8.0:net/foreman-proxy \
 		${PYTHON_PKGNAMEPREFIX}salt>0:sysutils/py-salt@${PY_FLAVOR} \
-		rubygem-smart_proxy_dynflow>=0.5.0<1:sysutils/rubygem-smart_proxy_dynflow
+		rubygem-smart_proxy_dynflow>=0.8<2.0.0:sysutils/rubygem-smart_proxy_dynflow
 
 USES=		cpe gem python shebangfix
 

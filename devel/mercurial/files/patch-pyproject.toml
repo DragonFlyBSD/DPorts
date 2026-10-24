@@ -1,0 +1,20 @@
+--- pyproject.toml.orig	2026-06-29 15:03:22 UTC
++++ pyproject.toml
+@@ -1,6 +1,6 @@ requires = [
+ [build-system]
+ requires = [
+-    "setuptools>=77",
++    "setuptools",
+     "setuptools-scm>=8.1.0",
+     ]
+ build-backend = "setuptools.build_meta"
+@@ -14,8 +14,7 @@ requires-python = ">=3.9"
+ description="Fast scalable distributed SCM (revision control, version control) system"
+ readme = "README.rst"
+ requires-python = ">=3.9"
+-license = "GPL-2.0-or-later"
+-license-files = ["COPYING"]
++license = {text = "GPL-2.0-or-later"}
+ classifiers=[
+     "Development Status :: 6 - Mature",
+     "Environment :: Console",

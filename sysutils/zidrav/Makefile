@@ -16,6 +16,7 @@ CFLAGS=		-std=gnu++98
 ALL_TARGET=	zidrav
 PLIST_FILES=	bin/zidrav share/man/man1/zidrav.1.gz
 
+CFLAGS+= -Wno-narrowing
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/zidrav ${STAGEDIR}${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/zidrav.1 ${STAGEDIR}${PREFIX}/share/man/man1/
@@ -28,7 +29,7 @@ CFLAGS+=	-Dcrc32_type=long
 CFLAGS+=	-Dcrc32_type=int
 .endif
 
-.if ${ARCH} == mips || ${ARCH} == mipshf || ${ARCH} == mipsn32 || ${ARCH} == mips64 || ${ARCH} == mips64hf || ${ARCH} == powerpc || ${ARCH} == powerpcspe || ${ARCH} == powerpc64
+.if ${ARCH} == powerpc || ${ARCH} == powerpcspe || ${ARCH} == powerpc64
 CFLAGS+=	-DCPU_BIGENDIAN
 .endif
 

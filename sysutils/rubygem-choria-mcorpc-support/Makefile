@@ -1,21 +1,25 @@
-# $FreeBSD$
-
 PORTNAME=	choria-mcorpc-support
-DISTVERSION=	2.23.3
+DISTVERSION=	2.27.0
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	puppet@FreeBSD.org
 COMMENT=	Ruby support for the Choria Orchestration Server
+WWW=		https://rubygems.org/gems/choria-mcorpc-support
 
 LICENSE=	APACHE20
 
 USES=		gem
-USE_RUBY=	yes
 
-RUN_DEPENDS=	rubygem-nats-pure>=0.6:net/rubygem-nats-pure \
-		rubygem-systemu>=2.6.4:devel/rubygem-systemu
+RUN_DEPENDS=	rubygem-nats-pure>=0.6<0.8.0:net/rubygem-nats-pure \
+		rubygem-systemu>=2.6.4<3:devel/rubygem-systemu
 
-PLIST_FILES=	bin/mco
+NO_ARCH=	yes
+
+PLIST_FILES=	bin/mco \
+		bin/execution_wrapper
+
+post-install:
+	${INSTALL_SCRIPT} ${FILESDIR}/execution_wrapper.rb ${STAGEDIR}${PREFIX}/bin/execution_wrapper
 
 .include <bsd.port.mk>

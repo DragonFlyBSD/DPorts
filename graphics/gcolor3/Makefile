@@ -25,4 +25,7 @@ USE_GNOME=	cairo gdkpixbuf gtk30 intltool
 
 MESON_ARGS=	-Dwerror=false
 
+dfly-patch:
+	${CHMOD} ${BINMODE} ${WRKSRC}/meson_install.sh
+
 .include <bsd.port.mk>

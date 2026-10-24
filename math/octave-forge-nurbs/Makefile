@@ -1,6 +1,6 @@
 PORTNAME=	octave-forge-nurbs
-PORTVERSION=	1.4.3
-PORTREVISION=	6
+PORTVERSION=	1.4.4
+PORTREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	SF/octave/Octave%20Forge%20Packages/Individual%20Package%20Releases
 DISTNAME=	${OCTAVE_PKGNAME}-${DISTVERSIONFULL}
@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKDIR}/${OCTAVE_SRC}/COPYING
 
 USES=		compiler octave
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 # Force newer GCC on platforms using GCC 4.2 as base

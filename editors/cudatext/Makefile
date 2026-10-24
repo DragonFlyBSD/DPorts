@@ -1,5 +1,5 @@
 PORTNAME=	cudatext
-PORTVERSION=	1.215.0
+PORTVERSION=	1.237.0.2
 CATEGORIES=	editors
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 
@@ -9,22 +9,24 @@ WWW=		https://uvviewsoft.com/
 
 LICENSE=	MPL20
 
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
+
 USES=		desktop-file-utils dos2unix fpc gnome lazarus:flavors python xorg
 USE_XORG=	x11
 USE_GITHUB=	yes
 GH_ACCOUNT=	Alexey-T
 GH_PROJECT=	CudaText
-GH_TUPLE=	bgrabitmap:bgrabitmap:d2a9b15:bgrabitmap/bgrabitmap \
-		Alexey-T:Python-for-Lazarus:e85e138:python4lazarus/python4lazarus \
-		Alexey-T:ATFlatControls:65b440e:atflatcontrols/atflatcontrols  \
-		Alexey-T:ATSynEdit:544a3a3:atsynedit/atsynedit \
+GH_TUPLE=	bgrabitmap:bgrabitmap:6ada359:bgrabitmap/bgrabitmap \
+		Alexey-T:EncConv:8caaa6b:encconv/encconv \
+		Alexey-T:ATBinHex-Lazarus:ac03d54:atbinhex/atbinhex \
+		Alexey-T:ATFlatControls:a118150:atflatcontrols/atflatcontrols  \
+		Alexey-T:ATSynEdit:ce9e2c6:atsynedit/atsynedit \
+		Alexey-T:ATSynEdit_Cmp:957dd37:atsyneditcmp/atsyneditcmp \
+		Alexey-T:EControl:99ca15d:econtrol/econtrol \
+		Alexey-T:ATSynEdit_Ex:c525ee5:atsyneditex/atsyneditex \
+		Alexey-T:Python-for-Lazarus:fda3fdb:python4lazarus/python4lazarus \
 		Alexey-T:Emmet-Pascal:df69312:emmet/emmet \
-		Alexey-T:EControl:bd07281:econtrol/econtrol \
-		Alexey-T:ATSynEdit_Ex:8f14fef:atsyneditex/atsyneditex \
-		Alexey-T:ATSynEdit_Cmp:9ab7e14:atsyneditcmp/atsyneditcmp \
-		Alexey-T:ATBinHex-Lazarus:e11195a:atbinhex/atbinhex \
-		Alexey-T:UniqueInstance:753f823:uniqueinstance/uniqueinstance \
-		Alexey-T:EncConv:ec878e9:encconv/encconv
+		Alexey-T:UniqueInstance:753f823:uniqueinstance/uniqueinstance
 
 DOS2UNIX_FILES=	app/settings_default/default.json setup/debfiles/cudatext.desktop
 
@@ -54,9 +56,11 @@ USE_GNOME+=	${USE_GNOME_${FLAVOR}}
 
 #WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	${REINPLACE_CMD} 's|-512||g' ${WRKSRC}/setup/debfiles/${PORTNAME}.desktop
-	${REINPLACE_CMD} 's|%%DATADIR%%|${DATADIR}|g' ${WRKSRC}/app/proc_globdata.pas
+	${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|g' -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+		${WRKSRC}/app/proc_globdata.pas
 	${REINPLACE_CMD} 's|TEncoding.UTF8|True|g' ${WRKSRC}/app/formmain_py_pluginwork.inc
 	${REINPLACE_CMD} 's|ifdef LCLGTK2|if defined(LCLGTK2) and not defined(freebsd)|g' ${WRKSRC}/atsynedit/atsynedit/atsynedit.pas
 
@@ -67,5 +71,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/setup/debfiles/${PORTNAME}-512.png ${STAGEDIR}${PREFIX}/share/icons/hicolor/512x512/apps/${PORTNAME}.png
 	@${MKDIR} ${STAGEDIR}${DATADIR}
 	cd ${WRKSRC}/app && ${COPYTREE_SHARE} "data py readme settings_default" ${STAGEDIR}${DATADIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/app/proc_globdata.pas
 
 .include <bsd.port.mk>

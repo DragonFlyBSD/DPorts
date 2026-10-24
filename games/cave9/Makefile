@@ -49,4 +49,7 @@ do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS.txt ${WRKSRC}/README.txt ${STAGEDIR}${DOCSDIR}/
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/src/GNUmakefile
+
 .include <bsd.port.mk>

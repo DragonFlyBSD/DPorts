@@ -1,0 +1,3 @@
+The Cohere Python SDK allows access to Cohere models across many different
+platforms: the Cohere platform, AWS (Bedrock, Sagemaker), Azure, GCP and
+Oracle OCI.

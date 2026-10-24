@@ -1,0 +1,10 @@
+--- man/xrandr.man.orig	2026-04-28 18:33:05 UTC
++++ man/xrandr.man
+@@ -465,7 +465,6 @@ using \fBxrandr\fP on a Wayland environment with \fBXw
+ .SH "SEE ALSO"
+ .BR Xrandr (__libmansuffix__),
+ .BR cvt (__appmansuffix__),
+-.BR xkeystone (__appmansuffix__),
+ .BR xbacklight (__appmansuffix__)
+ .SH AUTHORS
+ Keith Packard,

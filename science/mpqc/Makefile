@@ -1,6 +1,6 @@
 PORTNAME=	mpqc
 PORTVERSION=	2.3.1
-PORTREVISION=	52
+PORTREVISION=	54
 CATEGORIES=	science parallel
 MASTER_SITES=	SF
 
@@ -59,13 +59,14 @@ MPI_LDFLAGS=		-lmpich # build fails to supply libmpich.so to link
 OPTIFLAGS_CFLAGS=	-ffast-math
 OPTIFLAGS_CXXFLAGS=	-ffast-math
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NDOXYGEN:NMPI}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MICC}
 CC=		${LOCALBASE}/intel_cc_80/bin/icc
 CXX=		${LOCALBASE}/intel_cc_80/bin/icpc
 CFLAGS=		-O3 -tpp7 -xMKW -Vaxlib
-CXXFLAGS=	-O3 -tpp7 -xMKW -Vaxlib
+CXXFLAGS= -O3 -tpp7 -xMKW -Vaxlib -fpermissive
 LIBS+=		-lsvml
 .endif
 

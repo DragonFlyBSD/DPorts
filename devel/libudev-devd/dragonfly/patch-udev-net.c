@@ -3,7 +3,7 @@
 @@ -40,6 +40,8 @@
  #define	AF_LINK	AF_PACKET
  #endif
- 
+
 +#define LLINDEX(s) ((s)->sdl_index)
 +
  int

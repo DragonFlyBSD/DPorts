@@ -43,4 +43,8 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/doc/|} ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Wall @-Wall -Wno-restrict @g' \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

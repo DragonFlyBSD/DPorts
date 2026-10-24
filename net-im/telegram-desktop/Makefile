@@ -1,12 +1,12 @@
 PORTNAME=	telegram-desktop
-DISTVERSION=	5.13.1
+DISTVERSION=	7.2.9
 PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${DISTVERSION}/
 DISTNAME=	tdesktop-${DISTVERSION}-full
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	fluffy@FreeBSD.org
 COMMENT=	Telegram Desktop messaging app
 WWW=		https://desktop.telegram.org/
 
@@ -23,31 +23,16 @@ BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		microsoft-gsl>0:devel/microsoft-gsl \
 		range-v3>0:devel/range-v3 \
 		tl-expected>0:devel/tl-expected \
+		toomanycooks>0:devel/toomanycooks \
 		v4l_compat>0:multimedia/v4l_compat \
+		vulkan-headers>0:graphics/vulkan-headers \
 		yasm:devel/yasm \
-		${LOCALBASE}/lib/libtg_owt.a:net-im/tg_owt
-LIB_DEPENDS=	libabsl_base.so:devel/abseil \
-		libada.so:devel/libada \
-		libavformat.so:multimedia/ffmpeg \
-		libcrc32c.so:devel/crc32c \
-		libdbus-1.so:devel/dbus \
-		libfmt.so:devel/libfmt \
-		libgeoclue-2.so:net/geoclue \
-		libgeocode-glib-2.so:net/geocode-glib2 \
-		libhunspell-1.7.so:textproc/hunspell \
-		liblz4.so:archivers/liblz4 \
-		libopenh264.so:multimedia/openh264 \
-		libopus.so:audio/opus \
-		libpipewire-0.3.so:multimedia/pipewire \
-		libprotobuf-lite.so:devel/protobuf \
-		libqrcodegencpp.so:graphics/qr-code-generator \
-		librnnoise.so:audio/rnnoise \
-		libsrtp2.so:net/libsrtp2 \
-		libxxhash.so:devel/xxhash \
-		libvpx.so:multimedia/libvpx
+		${LOCALBASE}/lib/libtde2e.a:net-im/tde2e \
+		${LOCALBASE}/lib/libtg_owt.a:net-im/tg_owt \
+		${LOCALBASE}/lib/libtlottie.a:graphics/tlottie
+LIB_DEPENDS= libabsl_base.so:devel/abseil libada.so:devel/libada libavformat.so:multimedia/ffmpeg libcrc32c.so:devel/crc32c libdbus-1.so:devel/dbus libfido2.so:security/libfido2 libfmt.so:devel/libfmt libheif.so:graphics/libheif libhunspell-1.7.so:textproc/hunspell libjxl.so:graphics/libjxl liblz4.so:archivers/liblz4 libopenh264.so:multimedia/openh264 libopus.so:audio/opus libpipewire-0.3.so:multimedia/pipewire libqrcodegencpp.so:graphics/qr-code-generator librnnoise.so:audio/rnnoise libsrtp2.so:net/libsrtp2 libxxhash.so:devel/xxhash libvpx.so:multimedia/libvpx
 
-USES=		cmake desktop-file-utils gl gnome jpeg kde:6 localbase \
-		minizip openal pkgconfig python:build qt:6 ssl
+USES= cmake desktop-file-utils gl gnome jpeg kde:6 localbase minizip openal pkgconfig python:build qt:6 ssl gmake ninja
 
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	telegramdesktop
@@ -61,12 +46,15 @@ USE_GNOME=	glib20 glibmm26 introspection
 
 CMAKE_ARGS=	-DTDESKTOP_API_ID=${TELEGRAM_API_ID} -DTDESKTOP_API_HASH=${TELEGRAM_API_HASH} \
 		-DQT_VERSION_MAJOR=6
-CMAKE_ON=	DESKTOP_APP_USE_PACKAGED DESKTOP_APP_DISABLE_CRASH_REPORTS \
-		DESKTOP_APP_DISABLE_JEMALLOC \
-		DESKTOP_APP_DISABLE_SCUDO
+# The order of the variables is important here due to complex combination validation
+CMAKE_ON=	DESKTOP_APP_USE_PACKAGED \
+		DESKTOP_APP_DISABLE_CRASH_REPORTS \
+		DESKTOP_APP_DISABLE_QT_PLUGINS
 
 # Since cmake 3.25.0, BSDs are no longer recognised as Linux (in this port).
 CMAKE_ARGS+=	-DLINUX=true
+
+# libdispatch components
 
 # Telegram uses OpenAL for its audio, but libtgvoip (for voice calls) can use PulseAudio or ALSA.
 # It dynamically loads PulseAudio, and if this fails, it loads ALSA.
@@ -84,14 +72,11 @@ SYSTEM_FONTS_DESC=	Use system fonts instead of bundled patched ones
 
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
-ALSA_CMAKE_BOOL_OFF=	LIBTGVOIP_DISABLE_ALSA
-PULSEAUDIO_CMAKE_BOOL_OFF=	LIBTGVOIP_DISABLE_PULSEAUDIO
-SYSTEM_FONTS_CMAKE_BOOL_OFF=	DESKTOP_APP_USE_PACKAGED_FONTS
-WAYLAND_CMAKE_BOOL_OFF=	DESKTOP_APP_DISABLE_WAYLAND_INTEGRATION
+SYSTEM_FONTS_CMAKE_BOOL=	DESKTOP_APP_USE_PACKAGED_FONTS
 WAYLAND_USE=		qt=wayland
 X11_CMAKE_BOOL_OFF=	DESKTOP_APP_DISABLE_X11_INTEGRATION
 X11_USES=		xorg
-X11_USE=		xorg=x11,xcb,xcomposite,xdamage,xext,xfixes,xrandr,xrender,xtst
+X11_USE=		xorg=x11,xcb,xcomposite,xdamage,xext,xfixes,xrandr,xtst
 X11_LIB_DEPENDS=	libxcb-keysyms.so:x11/xcb-util-keysyms \
 			libxkbcommon.so:x11/libxkbcommon
 
@@ -99,15 +84,16 @@ X11_LIB_DEPENDS=	libxcb-keysyms.so:x11/xcb-util-keysyms \
 TELEGRAM_API_HASH=	20a3432aab43f24bb4460fceac5ba38d
 TELEGRAM_API_ID=	601761
 
-.include <bsd.port.pre.mk>
-USE_GCC_VERSION=	13
-
+USE_GCC_VERSION= 13
+CFLAGS= -I${OPENSSLINC}
+CXXFLAGS= -DWITHOUT_PULSE
 post-extract:
 	# Some of the third-party components already built, and
 	# can be safely removed
 	${RM} -rf \
 		${WRKSRC}/Telegram/ThirdParty/GSL \
 		${WRKSRC}/Telegram/ThirdParty/QR \
+		${WRKSRC}/Telegram/ThirdParty/TooManyCooks \
 		${WRKSRC}/Telegram/ThirdParty/expected \
 		${WRKSRC}/Telegram/ThirdParty/fcitx5-qt \
 		${WRKSRC}/Telegram/ThirdParty/hime \
@@ -129,4 +115,10 @@ post-patch:
 	${REINPLACE_CMD} -e /-Wno-maybe-uninitialized/d -e /-fstack-clash-protection/d \
 	    ${WRKSRC}/cmake/options_linux.cmake
 
-.include <bsd.port.post.mk>
+BUILD_DEPENDS:= ${BUILD_DEPENDS:Npulseaudio*} autoconf>0:devel/autoconf
+dfly-patch:
+	${REINPLACE_CMD} -e '/pkg_check_modules(PULSE/d' \
+			 -e '/PULSE_INCLUDE_DIRS/d' \
+		${WRKSRC}/Telegram/cmake/lib_tgvoip.cmake
+
+.include <bsd.port.mk>

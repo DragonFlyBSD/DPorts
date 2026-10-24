@@ -1,7 +1,7 @@
 PORTNAME=	dune-alugrid
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.8.0
-PORTREVISION=	13
+DISTVERSION=	2.11.0
+PORTREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libalberta_utilities.so:math/alberta \
 		libdunegrid.so:math/dune-grid \
 		libduneuggrid.so:math/dune-uggrid \
 		libmetis.so:math/metis \
-		libmpi_cxx.so:net/openmpi4 \
+		libmpi.so:net/openmpi \
 		libopenblas.so:math/openblas \
 		libtbb.so:devel/onetbb
 
@@ -28,7 +28,7 @@ USE_LDCONFIG=	yes
 
 GL_SITE=	https://gitlab.dune-project.org
 GL_ACCOUNT=	extensions
-GL_TAGNAME=	ffd6cd15dc7092593c3d5827c2a2b43b81d7a32f
+GL_TAGNAME=	3c17086ab906a35dbf290298d8d17b30452cc773
 
 CMAKE_ON=	BUILD_SHARED_LIBS
 
@@ -36,11 +36,22 @@ OPTIONS_DEFINE=	DOCS
 OPTIONS_SUB=	yes
 
 DOCS_CMAKE_BOOL=	FREEBSD_INSTALL_DOCS
-DOCS_BUILD_DEPENDS=	doxygen:devel/doxygen \
-			sphinx-build:textproc/py-sphinx
+DOCS_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
 
 PORTDOCS=	*
 
 CXXFLAGS+=	-fsigned-char
+
+CMAKE_OFF=	DUNE_ENABLE_PYTHONBINDINGS
+
+PLIST_SUB+= DUNE_ALUGRID_CMAKE_HASH=f482fe07d6e3bed36f1da49df98fc850
+
+CMAKE_ARGS= -DDUNE_CV_PTHREAD_TLS_COMPILES:bool=TRUE -DMPI_C_COMPILER="${LOCALBASE}/mpi/openmpi/bin/mpicc" -DMPI_CXX_COMPILER="${LOCALBASE}/mpi/openmpi/bin/mpicxx" -DMPI_Fortran_COMPILER="${LOCALBASE}/mpi/openmpi/bin/mpifort"
+USE_GCC_VERSION= ${GCC_DEFAULT}
+zdfly-patch:
+	${REINPLACE_CMD} -e 's@"include <pthread.h>@"#include <pthread.h>@g' \
+			 -e '/CMAKE_CXX_FLAGS/s@-DUSE_PTHREADS=1"@-pthread &@g' \
+			 -e 's@#message@message@g' \
+		${WRKSRC}/cmake/modules/FindPThreads.cmake
 
 .include <bsd.port.mk>

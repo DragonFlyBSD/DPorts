@@ -26,4 +26,5 @@ CONFIGURE_ARGS=	--with-lib-GL
 INSTALL_TARGET=	install-strip
 LIBS+=		-lm
 
+LDFLAGS= -L${LOCALBASE}/lib -lX11
 .include <bsd.port.mk>

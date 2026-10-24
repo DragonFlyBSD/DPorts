@@ -1,11 +1,11 @@
 PORTNAME=	raster
-DISTVERSION=	3.6-31
+DISTVERSION=	3.6-32
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Geographic Data Analysis and Modeling
-WWW=		https://cran.r-project.org/web/packages/raster/
+WWW=		https://cran.r-project.org/package=raster
 
 LICENSE=	GPLv3
 

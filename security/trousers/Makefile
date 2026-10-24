@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	tpm-emulator>=0.7.4_1:emulators/tpm-emulator
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		cpe dos2unix alias autoreconf gmake iconv libtool pkgconfig ssl
+USES=		cpe dos2unix autoreconf gmake iconv libtool pkgconfig ssl
 CPE_VENDOR=	${PORTNAME}_project
 DOS2UNIX_GLOB=	*.h *.c
 NO_WRKSUBDIR=	yes
@@ -30,7 +30,7 @@ CONFIGURE_ARGS=	--with-gui=none --enable-static \
 		RANLIB=:
 MAKE_ENV=	ICONV_LIB=${ICONV_LIB} \
 		ICONV_PREFIX=${ICONV_PREFIX}
-CFLAGS+=	-I${OPENSSLINC}
+CFLAGS+= -I${OPENSSLINC} -Wno-unused-variable
 LDFLAGS+=	-L${OPENSSLLIB}
 SUB_FILES=	pkg-message
 SUB_LIST=	USERS="${USERS}" GROUPS="${GROUPS}"

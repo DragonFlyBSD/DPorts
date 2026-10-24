@@ -1,7 +1,0 @@
-# c++ files are compiled with CFLAGS, not CXXFLAGS
-CPPFLAGS+= -std=c++11
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@CCVER@CxxVER@g'				\
-		${WRKSRC}/examples/Makefile
-IGNORE=   unmaintained, please request fixing to users mailing list

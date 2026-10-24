@@ -3,7 +3,7 @@ DISTVERSION=	20240201
 CATEGORIES=	x11-themes
 PKGNAMESUFFIX=	-icon-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Icon theme inspired by material design
 WWW=		https://github.com/daniruiz/flat-remix
 

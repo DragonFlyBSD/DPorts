@@ -1,5 +1,5 @@
 PORTNAME=	libgphoto2
-PORTVERSION=	2.5.31
+PORTVERSION=	2.5.33
 CATEGORIES=	graphics
 MASTER_SITES=	SF/gphoto/libgphoto/${PORTVERSION}
 
@@ -13,10 +13,11 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libltdl.so:devel/libltdl
 
 USES=		gnome libtool pathfix pkgconfig tar:xz
-USE_GNOME=	libxml2
 GNU_CONFIGURE=	yes
-INSTALL_TARGET=	install-strip
+USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
+INSTALL_TARGET=	install-strip
+TEST_TARGET=	check
 PATHFIX_MAKEFILEIN=	Makefile.in \
 			configure \
 			libgphoto2_port/Makefile.in \
@@ -46,6 +47,7 @@ LIBEXIF_CONFIGURE_OFF=	--with-libexif=no
 NLS_USES=		gettext
 NLS_CONFIGURE_OFF=	--disable-nls
 
+CONFIGURE_ARGS= --disable-serial
 post-patch:
 .for i in configure libgphoto2_port/configure
 	@${REINPLACE_CMD} -e \
@@ -56,5 +58,16 @@ post-patch:
 	@${REINPLACE_CMD} -e \
 		'/^doc_DATA/s|COPYING||' \
 		${WRKSRC}/Makefile.in
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_POSIX_C_SOURCE@&___@g' \
+			 -e 's@_POSIX_SOURCE@&___@g' \
+		${WRKSRC}/libgphoto2/gphoto2-file.c \
+		${WRKSRC}/camlibs/kodak/dc120/library.c \
+		${WRKSRC}/camlibs/kodak/dc120/dc120.c \
+		${WRKSRC}/camlibs/panasonic/coolshot/library.c \
+		${WRKSRC}/camlibs/st2205/st2205.c
+	${REINPLACE_CMD} -e 's@machine/endian.h@sys/endian.h@g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

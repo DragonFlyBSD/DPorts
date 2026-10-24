@@ -30,6 +30,7 @@ BZIP2_CONFIGURE_ENABLE=	bzip-mbox
 PORTDOCS=	NEWS README
 PORTEXAMPLES=	dotmairixrc.eg
 
+MAKE_JOBS_UNSAFE= yes
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/mairix
 	@${MKDIR} ${STAGEDIR}/${DOCSDIR}

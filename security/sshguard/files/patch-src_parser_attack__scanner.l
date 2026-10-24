@@ -1,11 +1,17 @@
---- src/parser/attack_scanner.l.orig	2021-03-01 01:01:21 UTC
+https://github.com/SSHGuard/sshguard/commit/06caf25a6abccdbba51e67ac99d83df9d412dc3f
+https://github.com/SSHGuard/sshguard/commit/f180843f6da34f9ca7a2557fa1b51ca85c561634
+
+--- src/parser/attack_scanner.l.orig	2025-04-28 18:20:39 UTC
 +++ src/parser/attack_scanner.l
-@@ -247,7 +247,7 @@ HTTP_LOGIN_200OK_BAD       .*({WORDPRESS_LOGIN}|{TYPO3
+@@ -95,8 +95,9 @@ HTTP_VERSION    HTTP"/"[0-9]("."[0-9])?
+ HTTP_REQUEST    (GET|HEAD|PUT|POST|DELETE)
+ HTTP_VERSION    HTTP"/"[0-9]("."[0-9])?
  
-  /* cyrus-imap login error */
- "badlogin: "[^\[]*"["                                           { BEGIN(cyrusimap_loginerr); return CYRUSIMAP_SASL_LOGINERR_PREF; }
--<cyrusimap_loginerr>"] ".*"SASL".*"failed".?$                   { BEGIN(INITIAL); return CYRUSIMAP_SASL_LOGINERR_SUFF; }
-+<cyrusimap_loginerr>"] ".*"SASL".*"fail".*$                   { BEGIN(INITIAL); return CYRUSIMAP_SASL_LOGINERR_SUFF; }
+- // host part of a hostname (without any domain parts)
+-SYSLOG_HOSTNAME   {WORD}
++ // RFC 5424 says HOSTNAME header field SHOULD contain the FQDN.
++ // IP addresss and hostname may also be present in HOSTNAME.
++SYSLOG_HOSTNAME   {WORD}|{HOSTADDR}
  
-  /* postfix */
- "warning: "({WORD}|{HOSTADDR})"["                               { BEGIN(postfix_loginerr); return POSTFIX_SASL_LOGINERR_PREF; }
+  // timestamp (optional PRI) hostname
+ SYSLOG_HEADER     ({TIMESTAMP_SYSLOG}|{TIMESTAMP_ISO8601})[ ]+{FACLEVEL}?[ ]*{SYSLOG_HOSTNAME}[ ]+

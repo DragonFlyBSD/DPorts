@@ -2,6 +2,7 @@ bin/tokodon
 %%QT_PLUGINDIR%%/kf6/purpose/tokodonplugin.so
 share/applications/org.kde.tokodon.desktop
 share/icons/hicolor/scalable/apps/org.kde.tokodon.svg
+share/icons/hicolor/scalable/apps/org.kde.tokodon.tray.svg
 share/knotifications6/tokodon.notifyrc
 share/locale/ar/LC_MESSAGES/tokodon.mo
 share/locale/ast/LC_MESSAGES/tokodon.mo
@@ -13,8 +14,10 @@ share/locale/en_GB/LC_MESSAGES/tokodon.mo
 share/locale/eo/LC_MESSAGES/tokodon.mo
 share/locale/es/LC_MESSAGES/tokodon.mo
 share/locale/eu/LC_MESSAGES/tokodon.mo
+share/locale/fa/LC_MESSAGES/tokodon.mo
 share/locale/fi/LC_MESSAGES/tokodon.mo
 share/locale/fr/LC_MESSAGES/tokodon.mo
+share/locale/ga/LC_MESSAGES/tokodon.mo
 share/locale/gl/LC_MESSAGES/tokodon.mo
 share/locale/he/LC_MESSAGES/tokodon.mo
 share/locale/hi/LC_MESSAGES/tokodon.mo
@@ -41,6 +44,7 @@ share/locale/sl/LC_MESSAGES/tokodon.mo
 share/locale/sq/LC_MESSAGES/tokodon.mo
 share/locale/sv/LC_MESSAGES/tokodon.mo
 share/locale/tr/LC_MESSAGES/tokodon.mo
+share/locale/ug/LC_MESSAGES/tokodon.mo
 share/locale/uk/LC_MESSAGES/tokodon.mo
 share/locale/zh_CN/LC_MESSAGES/tokodon.mo
 share/locale/zh_TW/LC_MESSAGES/tokodon.mo

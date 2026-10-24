@@ -1,2 +1,0 @@
-RUN_DEPENDS:=	${RUN_DEPENDS:N*lang/gcc}
-IGNORE=   unmaintained, please request fixing to users mailing list

@@ -1,6 +1,6 @@
 PORTNAME=	postfix
-DISTVERSION=	3.10.1
-PORTREVISION?=	0
+DISTVERSION=	3.11.7
+PORTREVISION?=	3
 PORTEPOCH=	1
 CATEGORIES=	mail
 MASTER_SITES=	https://postfix-mirror.horus-it.com/postfix-release/ \
@@ -78,27 +78,29 @@ COMMENT_pgsql=	(with PostgreSQL support)
 COMMENT_sasl=	(with Cyrus SASL support)
 COMMENT_sqlite=	(with SQLite support)
 
-USES=		cpe shebangfix ssl
+USES=		cpe pkgconfig shebangfix ssl
 USE_RC_SUBR=	postfix
 USE_SUBMAKE=	yes
 
 SHEBANG_FILES=	auxiliary/qshape/qshape.pl
 
 SCRIPTS_ENV+=	POSTFIX_DEFAULT_MTA="${POSTFIX_DEFAULT_MTA}"
-
-PORTSCOUT=	limit:^3\.9\.
+ALL_TARGET=		default
 
 CONFLICTS_INSTALL=	courier-0.* opensmtpd opensmtpd-devel \
 			postfix postfix-base postfix-ldap-sasl \
 			postfix-sasl sendmail sendmail-devel
 
+PORTSCOUT=	limit:^3\.11\.
+
 USERS=		postfix
 GROUPS=		mail maildrop postfix
 
-OPTIONS_DEFINE=		BDB BLACKLISTD CDB DOCS EAI INST_BASE LDAP LMDB MONGO \
-			MYSQL NIS PCRE2 PGSQL SASL SQLITE TEST TLS
-OPTIONS_DEFAULT?=	BLACKLISTD EAI PCRE2 TLS
-OPTIONS_RADIO=		RG1
+OPTIONS_DEFINE=		BDB BLOCKLISTD CDB DOCS EAI INST_BASE LDAP LMDB MONGO \
+			MYSQL NIS PCRE2 PGSQL SASL SQLITE TEST TLS TLSRPT
+OPTIONS_DEFAULT?=	BLOCKLISTD CDB EAI LMDB LMDB0 PCRE2 TLS TLSRPT
+OPTIONS_RADIO=		LMDBG1 RG1
+OPTIONS_RADIO_LMDBG1=	LMDB0 LMDB1
 OPTIONS_RADIO_RG1=	SASLKMIT SASLKRB5
 .if ${FLAVOR:U} == ldap
 OPTIONS_SLAVE=		LDAP
@@ -110,17 +112,22 @@ OPTIONS_SLAVE=		PGSQL
 OPTIONS_SLAVE=		SASL
 .elif ${FLAVOR:U} == sqlite
 OPTIONS_SLAVE=		SQLITE
+.elif ${FLAVOR:U} == mongo
+OPTIONS_SLAVE=		MONGO
 .endif
 .if !empty(FLAVOR) && ${FLAVOR:U} != default
 OPTIONS_FILE=	${PORT_DBDIR}/${OPTIONS_NAME}/${FLAVOR}-options
 .endif
 OPTIONS_SUB=		yes
 
-BLACKLISTD_DESC=	Enable blacklistd support
+BLOCKLISTD_DESC=	Enable blocklistd support
 CDB_DESC=		CDB maps lookups
 EAI_DESC=		Email Address Internationalization (SMTPUTF8) support
 INST_BASE_DESC=		Install into /usr and /etc/postfix
 LDAP_DESC=		LDAP maps (uses WITH_OPENLDAP_VER)
+LMDB0_DESC=		Use LMDB 0.9 library
+LMDB1_DESC=		Use LMDB 1.0 library
+LMDBG1_DESC=		LMDB version to use
 LMDB_DESC=		LMDB maps
 PCRE2_DESC=		Use Perl Compatible Regular Expressions, version 2
 RG1_DESC=		Kerberos network authentication protocol type
@@ -128,32 +135,39 @@ SASLKMIT_DESC=		If your SASL req. MIT Kerberos5, select this
 SASLKRB5_DESC=		If your SASL req. Kerberos5, select this
 SASL_DESC=		Cyrus SASL support (Dovecot SASL is always built in)
 TEST_DESC=		SMTP/LMTP test server and generator
+TLSRPT_DESC=		Enable sending RFC 8460 TLS reports
 
 BDB_USES=			bdb
-BLACKLISTD_EXTRA_PATCHES=	${FILESDIR}/extra-patch-blacklistd
 CDB_LIB_DEPENDS=		libcdb.so:databases/tinycdb
 EAI_LIB_DEPENDS=		libicuuc.so:devel/icu
 LDAP_USES=			ldap
-LMDB_LIB_DEPENDS=		liblmdb.so:databases/lmdb
-MONGO_LIB_DEPENDS=		libbson-1.0.so:devel/libbson \
-				libmongoc-1.0.so:devel/mongo-c-driver
+MONGO_LIB_DEPENDS=		libbson2.so:devel/libbson \
+				libmongoc2.so:devel/mongo-c-driver
 MYSQL_USES?=			mysql
 PCRE2_LIB_DEPENDS=		libpcre2-8.so:devel/pcre2
 PGSQL_USES=			pgsql
 SASLKMIT_LIB_DEPENDS=		libkrb5.so:security/krb5
 SASL_LIB_DEPENDS=		libsasl2.so:security/cyrus-sasl2
 SQLITE_USES=			sqlite
+TLSRPT_LIB_DEPENDS=		libtlsrpt.so:mail/libtlsrpt
 
-ALL_TARGET=		default
-
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NBLACKLISTD}
 .include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MBLOCKLISTD}
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-blacklistd
+.else
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-blocklistd
+.endif
+.endif
 
 HTML1=		body_checks.5.html bounce.5.html postfix-power.png \
 		scache.8.html tlsmgr.8.html
 
 STRIP_LIBEXEC=	anvil bounce cleanup discard dnsblog error flush lmtp local \
-		master nqmgr oqmgr pickup pipe postlogd postscreen proxymap \
-		qmgr qmqpd scache showq smtp smtpd spawn tlsmgr tlsproxy \
+		master nbdb_reindexd nqmgr oqmgr pickup pipe postlogd postscreen \
+		proxymap qmgr qmqpd scache showq smtp smtpd spawn tlsmgr tlsproxy \
 		trivial-rewrite verify virtual
 
 .if !defined(DEBUG)
@@ -162,7 +176,7 @@ MAKEFILEFLAGS+=	DEBUG=
 
 MAKEFILEFLAGS+=	pie=yes CC="${CC}" OPT="${CFLAGS}"
 
-.if ${SSL_DEFAULT} == libressl
+.if defined(TLS) && ${SSL_DEFAULT} == libressl
 BROKEN=		error: OpenSSL-1.1.1 is the minimum supported version. LibreSSL is not supported
 .endif
 
@@ -177,6 +191,8 @@ PKGNAMESUFFIX=	-base-pgsql
 PKGNAMESUFFIX=	-base-sasl
 .elif ${FLAVOR:U} == sqlite
 PKGNAMESUFFIX=	-base-sqlite
+.elif ${FLAVOR:U} == mongo
+PKGNAMESUFFIX=	-base-mongo
 .else
 PKGNAMESUFFIX=	-base
 .endif
@@ -260,8 +276,10 @@ POSTFIX_CCARGS+=	-DDEF_SERVER_SASL_TYPE=\\\"dovecot\\\"
 .endif
 
 .if ${PORT_OPTIONS:MSASLKRB5}
-POSTFIX_AUXLIBS+=	-lkrb5 -lhx509 -lcrypto -lcrypt -lcom_err -lasn1 \
-			-lroken
+POSTFIX_AUXLIBS+=      -lkrb5 -lcrypto -lcrypt -lcom_err
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
+POSTFIX_AUXLIBS+=      -lasn1 -lhx509 -lroken
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MSASLKMIT}
@@ -277,24 +295,32 @@ POSTFIX_AUXLIBS+=	-L${OPENSSLLIB} ${LDFLAGS} -lssl -lcrypto
 POSTFIX_CCARGS+=	-DNO_TLS
 .endif
 
+.if ${PORT_OPTIONS:MTLSRPT}
+POSTFIX_CCARGS+=	-DUSE_TLSRPT `pkg-config --cflags libtlsrpt`
+POSTFIX_AUXLIBS+=	`pkg-config --libs libtlsrpt`
+.endif
+
 .if ${PORT_OPTIONS:MBDB}
 POSTFIX_CCARGS+=	-I${BDB_INCLUDE_DIR}
 POSTFIX_AUXLIBS+=	-L${BDB_LIB_DIR} -l${BDB_LIB_NAME}
 .endif
 
-.if ${PORT_OPTIONS:MBLACKLISTD}
+.if ${PORT_OPTIONS:MBLOCKLISTD}
 . if ${OPSYS} == FreeBSD
+.  if ${OSVERSION} < 1500000
 POSTFIX_AUXLIBS+=	-lblacklist
+.  else
+POSTFIX_AUXLIBS+=	-lblocklist
+.  endif
 . else
-IGNORE=		blacklistd is only supported on FreeBSD
+IGNORE=		blocklistd is only supported on FreeBSD
 . endif
 .endif
 
 .if ${PORT_OPTIONS:MMONGO}
 DYN_EXT+=		mongodb
-POSTFIX_CCARGS+=	-DHAS_MONGODB -I${LOCALBASE}/include/libmongoc-1.0 \
-			-I${LOCALBASE}/include/libbson-1.0
-POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_MONGODB=-L${LOCALBASE}/lib -lmongoc-1.0 -lbson-1.0"
+POSTFIX_CCARGS+=	-DHAS_MONGODB `pkg-config --cflags mongoc2`
+POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_MONGODB=`pkg-config --libs mongoc2`"
 .endif
 
 .if ${PORT_OPTIONS:MMYSQL}
@@ -306,29 +332,29 @@ _REQUIRE+=		mysql
 
 .if ${PORT_OPTIONS:MPGSQL}
 DYN_EXT+=		pgsql
-POSTFIX_CCARGS+=	-DHAS_PGSQL -I${LOCALBASE}/include
-POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_PGSQL=-L${LOCALBASE}/lib -lpq"
+POSTFIX_CCARGS+=	-DHAS_PGSQL `pkg-config --cflags libpq`
+POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_PGSQL=`pkg-config --libs libpq`"
 _REQUIRE+=		postgresql
 .endif
 
 .if ${PORT_OPTIONS:MSQLITE}
 DYN_EXT+=		sqlite
-POSTFIX_CCARGS+=	-DHAS_SQLITE -I${LOCALBASE}/include
-POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_SQLITE=-L${LOCALBASE}/lib -lsqlite3 -lpthread"
+POSTFIX_CCARGS+=	-DHAS_SQLITE `pkg-config --cflags sqlite3`
+POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_SQLITE=`pkg-config --libs sqlite3`"
 .endif
 
 .if ${PORT_OPTIONS:MLDAP}
 DYN_EXT+=		ldap
-POSTFIX_CCARGS+=	-DHAS_LDAP -I${LOCALBASE}/include \
+POSTFIX_CCARGS+=	-DHAS_LDAP `pkg-config --cflags ldap` \
 			-I${LOCALBASE}/include/sasl -DUSE_LDAP_SASL
-POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_LDAP=-L${LOCALBASE}/lib -lldap -llber"
+POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_LDAP=`pkg-config --libs ldap`"
 _REQUIRE+=		slapd
 .endif
 
 .if ${PORT_OPTIONS:MCDB}
 DYN_EXT+=		cdb
-POSTFIX_CCARGS+=	-DHAS_CDB -I${LOCALBASE}/include
-POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_CDB=-L${LOCALBASE}/lib -lcdb"
+POSTFIX_CCARGS+=	-DHAS_CDB `pkg-config --cflags libcdb`
+POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_CDB=`pkg-config --libs libcdb`"
 .endif
 
 .if ${PORT_OPTIONS:MNIS}
@@ -342,9 +368,14 @@ MANTEST=	qmqp-sink.1 qmqp-source.1 smtp-sink.1 smtp-source.1
 .endif
 
 .if ${PORT_OPTIONS:MLMDB}
+.  if ${PORT_OPTIONS:MLMDB1}
+LIB_DEPENDS+=	liblmdb.so:databases/lmdb
+.  else
+LIB_DEPENDS+=	liblmdb.so:databases/lmdb0
+.  endif
 DYN_EXT+=		lmdb
-POSTFIX_CCARGS+=	-DHAS_LMDB -I${LOCALBASE}/include
-POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_LMDB=-L${LOCALBASE}/lib -llmdb"
+POSTFIX_CCARGS+=	-DHAS_LMDB `pkg-config --cflags lmdb`
+POSTFIX_DYN_AUXLIBS+=	"AUXLIBS_LMDB=`pkg-config --libs lmdb`"
 .endif
 
 # sed script for files in ${WRKSRC}/README_FILES ${WRKSRC}/conf ${WRKSRC}/man

@@ -19,4 +19,5 @@ GH_ACCOUNT=	pothosware
 
 PLIST_FILES=	lib/SoapySDR/modules0.8/libPlutoSDRSupport.so
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

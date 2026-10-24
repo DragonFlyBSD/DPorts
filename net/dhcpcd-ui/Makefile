@@ -1,7 +1,6 @@
 PORTNAME=		dhcpcd-ui
 DISTVERSIONPREFIX=	v
-DISTVERSION=		0.7.9
-PORTREVISION=	1
+DISTVERSION=		0.8.0
 CATEGORIES=		net
 
 MAINTAINER=	driesm@FreeBSD.org
@@ -13,7 +12,7 @@ LICENSE=	BSD2CLAUSE
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cairosvg>=0:graphics/py-cairosvg@${PY_FLAVOR}
 LIB_DEPENDS=	libnotify.so:devel/libnotify
 
-USES=		pkgconfig python
+USES= pkgconfig python ncurses
 USE_GITHUB=	yes
 GH_ACCOUNT=	NetworkConfiguration
 
@@ -32,7 +31,13 @@ GTK3_USES=		gnome
 GTK3_USE=		gnome=gdkpixbuf,gtk30
 GTK3_CONFIGURE_WITH=	gtk
 
+CFLAGS= -DTAILQ_FOREACH_SAFE=TAILQ_FOREACH_MUTABLE
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/dhcpcd-curses ${STAGEDIR}${PREFIX}/bin/dhcpcd-online
+
+dfly-patch:
+	${REINPLACE_CMD} -e "/XCC/s@-lcurses@-L${LOCALBASE}/lib -lncurses@g"	\
+			 -e "/LIB_CURSES/s@-lcurses@\"-L${LOCALBASE}/lib -lncurses\"@g"	\
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

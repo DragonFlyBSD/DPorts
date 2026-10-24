@@ -1,3 +1,3 @@
-TIMESTAMP = 1742891970
-SHA256 (libraries-qxmpp-2a99f5d14771bf79ffe90814cc17b74e934b9b31_GL0.tar.gz) = 8892ab605563c63740af6f55a8c401ba42a0b8c0b536835c7cb1c8f88f7ca3be
-SIZE (libraries-qxmpp-2a99f5d14771bf79ffe90814cc17b74e934b9b31_GL0.tar.gz) = 737759
+TIMESTAMP = 1791649651
+SHA256 (KDE/qxmpp/qxmpp-1.17.0.tar.xz) = 06247ba01a60f64aa679c241a880f3e68ebc6a7700bcd1dfe90bca22fc47bfb2
+SIZE (KDE/qxmpp/qxmpp-1.17.0.tar.xz) = 691192

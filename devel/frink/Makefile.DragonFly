@@ -1,2 +1,0 @@
-
-MAKE_ENV+=	NOMAN=yes NO_WERROR=yes

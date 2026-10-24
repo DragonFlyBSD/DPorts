@@ -1,11 +1,27 @@
---- pyproject.toml.orig	2025-03-06 00:32:42 UTC
+--- pyproject.toml.orig	2026-08-25 19:12:22 UTC
 +++ pyproject.toml
-@@ -49,7 +49,7 @@ keyring = ["keyring >= 12.2.0"]
- 
- [project.optional-dependencies]
- keyring = ["keyring >= 12.2.0"]
--sshtunnel = ["sshtunnel >= 0.4.0"]
-+sshtunnel = ["sshtunnel"]
+@@ -1,7 +1,7 @@ authors = [{ name = "Pgcli Core Team", email = "pgcli-
+ [project]
+ name = "pgcli"
+ authors = [{ name = "Pgcli Core Team", email = "pgcli-dev@googlegroups.com" }]
+-license = "BSD-3-Clause"
++license = { text = "BSD" }
+ description = "CLI for Postgres Database. With auto-completion and syntax highlighting."
+ readme = "README.rst"
+ classifiers = [
+@@ -65,7 +65,7 @@ dev = [
+ ]
  
  [build-system]
- requires = ["setuptools>=61.2"]
+-requires = ["setuptools>=64.0", "setuptools-scm>=8"]
++requires = ["setuptools>=61.0", "setuptools-scm>=8"]
+ build-backend = "setuptools.build_meta"
+ 
+ [tool.setuptools_scm]
+@@ -130,4 +130,4 @@ addopts = "--capture=sys --showlocals -rxs"
+ [tool.pytest.ini_options]
+ minversion = "6.0"
+ addopts = "--capture=sys --showlocals -rxs"
+-testpaths = ["tests"]
+\ No newline at end of file
++testpaths = ["tests"]

@@ -1,9 +1,18 @@
---- doc/CMakeLists.txt.orig	2018-03-15 06:08:59 UTC
+-- Ensure Doxygen documentation is built before the install phase when the
+-- DOCS option is enabled.  The upstream target is marked ALL, which is not
+-- guaranteed to run before ninja install.
+--- doc/CMakeLists.txt.orig	2026-09-07 13:09:04 UTC
 +++ doc/CMakeLists.txt
-@@ -1,5 +1,5 @@
- if (OPENDHT_TOOLS)
--	INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/dhtnode.1 DESTINATION ${CMAKE_INSTALL_PREFIX}/share/man/man1)
-+	INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/dhtnode.1 DESTINATION ${CMAKE_INSTALL_PREFIX}/man/man1)
- endif ()
- 
- if (OPENDHT_DOCUMENTATION)
+@@ -7,10 +7,11 @@
+          message(FATAL_ERROR "Doxygen is needed to build the documentation.")
+     endif()
+     configure_file (Doxyfile.in Doxyfile @ONLY)
+-    add_custom_target(doc ALL
++    add_custom_target(doc
+                       COMMAND ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
+                       WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+                       COMMENT "Generating API documentation with Doxygen"
+                       VERBATIM)
++    add_dependencies(opendht doc)
+     install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html DESTINATION ${CMAKE_INSTALL_DOCDIR}/opendht)
+ endif()

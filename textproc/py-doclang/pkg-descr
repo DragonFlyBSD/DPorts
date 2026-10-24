@@ -1,0 +1,4 @@
+DocLang is a reference toolkit for document language processing. It
+provides tools and utilities for working with document-oriented
+natural language data, supporting tasks such as document classification,
+information extraction, and content analysis.

@@ -12,7 +12,7 @@ USE_XORG=	x11
 PLIST_FILES=	bin/flying share/man/man1/flying.1.gz
 
 # build ignores CXXFLAGS, imake gets in the way of fixing it
-CFLAGS+=	${CFLAGS_${CHOSEN_COMPILER_TYPE}}
+CFLAGS+= ${CFLAGS_${CHOSEN_COMPILER_TYPE}} -Wno-narrowing
 CFLAGS_clang=	-Wno-c++11-narrowing
 
 .include <bsd.port.mk>

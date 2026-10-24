@@ -1,35 +1,38 @@
 PORTNAME=	video-trimmer
-DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.2
-CATEGORIES=	multimedia
+DISTVERSION=	26.03.1
+PORTREVISION=	1
+CATEGORIES=	multimedia gnome
+MASTER_SITES=	https://gitlab.gnome.org/-/project/11135/uploads/57ef53cf5544c3a06562aaccc7ee19c6/
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
+DIST_SUBDIR=	gnome
 
-MAINTAINER=	jbeich@FreeBSD.org
-COMMENT=	Trim videos quickly
+MAINTAINER=	nxjoseph@FreeBSD.org
+COMMENT=	Trim videos quickly without re-encoding and sacrificing video quality
 WWW=		https://gitlab.gnome.org/YaLTeR/video-trimmer
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	blueprint-compiler:devel/blueprint-compiler
+LIB_DEPENDS=	libgraphene-1.0.so:graphics/graphene
 RUN_DEPENDS=	ffmpeg:multimedia/ffmpeg
 
-USES=		cargo desktop-file-utils gettext gnome gstreamer meson pkgconfig
-USE_GITLAB=	yes
-USE_GNOME=	gtk40 libadwaita
+USES=		cargo desktop-file-utils gettext-tools gnome gstreamer meson \
+		pkgconfig tar:xz
+USE_GNOME=	gtk40 libadwaita pango
+GLIB_SCHEMAS=	org.gnome.gitlab.YaLTeR.VideoTrimmer.gschema.xml
 USE_GSTREAMER=	good libav
-GL_SITE=	https://gitlab.gnome.org
-GL_ACCOUNT=	YaLTeR
-MAKE_ENV=	${CARGO_ENV}
+
 CARGO_BUILD=	no
 CARGO_INSTALL=	no
 CARGO_TEST=	no
-GLIB_SCHEMAS=	org.gnome.gitlab.YaLTeR.VideoTrimmer.gschema.xml
 
+MAKE_ENV=	${CARGO_ENV}
+
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 # Make each cargo subcommand very verbose
-# Add explicit <triple> subdir for --target from USES=cargo
 	@${REINPLACE_CMD} -e '/cargo/s/ --/&verbose&verbose&/' \
-		-Ee '/cp/s,/(release|debug)/,/${CARGO_BUILD_TARGET}&,' \
 		${WRKSRC}/build-aux/cargo.sh
 
 .include <bsd.port.mk>

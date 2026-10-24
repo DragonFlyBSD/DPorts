@@ -21,4 +21,6 @@ GH_PROJECT=	BlazeIterative
 GH_TAGNAME=	e9f24b3
 NO_ARCH=	yes
 
+BUILD_DEPENDS:= ${BUILD_DEPENDS:Nopenmp*}
+RUN_DEPENDS:= ${RUN_DEPENDS:Nopenmp*}
 .include <bsd.port.mk>

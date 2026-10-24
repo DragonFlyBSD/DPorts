@@ -1,6 +1,5 @@
 PORTNAME=	zabbix6
-DISTVERSION=	6.0.22
-PORTREVISION?=	0
+DISTVERSION=	6.0.48
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${DISTVERSION:R}/
 PKGNAMESUFFIX?=	-server
@@ -19,17 +18,27 @@ CONFLICTS_INSTALL=	${PORTNAME}[0-9]${PKGNAMESUFFIX} \
 
 ZABBIX_BUILD=	${PKGNAMESUFFIX:S/^-//:S/-$//}
 
+USES+=		cpe
+
+CPE_PRODUCT?=	zabbix_server
+CPE_VENDOR=	zabbix
+
 .if ${ZABBIX_BUILD} != "frontend" # frontend only needs the version/distribution settings
+USES+=		iconv pkgconfig
 .if ${ZABBIX_BUILD} != "agent"
 CONFIGURE_ARGS+=	--cache-file=${WRKSRC}/config.cache \
-			--with-libevent=${LOCALBASE}
+			--with-libevent=${LOCALBASE} \
+			--with-libxml2
 LIB_DEPENDS+=		libevent.so:devel/libevent
 USE_RC_SUBR=		zabbix_${ZABBIX_BUILD}
+# -server and -proxy depends on libxml2
+.if ${ZABBIX_BUILD} != "java"
+USES+=		gnome
+USE_GNOME=	libxml2
+.endif
 .else
 USE_RC_SUBR=		zabbix_${ZABBIX_BUILD}d
 .endif
-
-USES=		iconv pkgconfig
 
 USERS=		zabbix
 GROUPS=		zabbix
@@ -51,6 +60,7 @@ SUB_LIST=	ZABBIX_BUILD=${ZABBIX_BUILD}
 
 MAKE_ARGS+=		ARCH=freebsd
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS+=	--datadir=${ETCDIR} \
 			--enable-${ZABBIX_BUILD} \
 			--sysconfdir=${ETCDIR} \
@@ -76,8 +86,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 
 SUB_FILES=	pkg-message
 
-OPTIONS_DEFAULT+=	CURL FPING IPMI IPV6 LIBXML2 MYSQL OPENSSL SNMP SSH UNIXODBC
-OPTIONS_DEFINE=		CURL FPING IPMI IPV6 LDAP LIBXML2 NMAP SNMP SSH UNIXODBC
+OPTIONS_DEFAULT+=	CURL FPING IPMI IPV6 MYSQLDV OPENSSL SNMP SSH UNIXODBC
+OPTIONS_DEFINE=		CURL FPING IPMI IPV6 LDAP NMAP SNMP SSH UNIXODBC
 OPTIONS_SINGLE+=	DB SSL
 OPTIONS_SINGLE_DB=	MDB5 MDB6 MYSQL MYSQLDV ORACLE PGSQL
 .if ${ZABBIX_BUILD} == "proxy"
@@ -93,9 +103,8 @@ NMAP_DESC=	Build/install nmap for o/s detection
 SNMP_DESC=	Support for SNMP checks
 SSH_DESC=	Support for SSH-based checks
 UNIXODBC_DESC=	Support for database checks via ODBC
-LIBXML2_DESC=	Support for libxml2 (required by monitoring VMware)
-MYSQL_DESC=	MySQL 8.0 database support
-MYSQLDV_DESC=	MYSQL DEFAULT_VERSIONS= (poudriere)
+MYSQL_DESC=	MySQL 8.4 database support
+MYSQLDV_DESC=	MySQL database support (per DEFAULT_VERSIONS)
 
 FPING_RUN_DEPENDS=	fping:net/fping
 
@@ -106,7 +115,7 @@ LDAP_CONFIGURE_WITH=	ldap
 LDAP_USES=		ldap
 
 MYSQL_CONFIGURE_ON=	--with-mysql
-MYSQL_USES+=		compiler:c11 mysql:80
+MYSQL_USES+=		compiler:c11 mysql:84
 
 MYSQLDV_CONFIGURE_ON=	--with-mysql
 MYSQLDV_USES+=		compiler:c11 mysql
@@ -116,7 +125,7 @@ MDB5_USES+=		compiler:c11 mysql:105m
 MDB5_DESC=		Mariadb 10.5 database support
 
 MDB6_CONFIGURE_ON=	--with-mysql=${LOCALBASE}/bin/mysql_config
-MDB6_USES+=		compiler:c11 mysql:106m
+MDB6_USES+=		compiler:c11 mysql:1011m
 MDB6_DESC=		Mariadb 10.6 database support
 
 ORACLE_CONFIGURE_WITH=	oracle
@@ -136,7 +145,6 @@ SSH_LIB_DEPENDS=	libssh2.so:security/libssh2
 UNIXODBC_CONFIGURE_WITH=	unixodbc
 UNIXODBC_LIB_DEPENDS=		libodbc.so:databases/unixODBC
 .elif ${ZABBIX_BUILD} == "agent"
-OPTOINS_DEFINE+=		PCRE
 OPTIONS_SINGLE+=		SSL
 OPTIONS_SINGLE_SSL=		GNUTLS OPENSSL
 .endif # if ${ZABBIX_BUILD} != "agent"
@@ -147,15 +155,12 @@ CURL_LIB_DEPENDS=	libcurl.so:ftp/curl
 
 IPV6_CONFIGURE_ENABLE=	ipv6
 
-LIBXML2_CONFIGURE_WITH=	libxml2=${LOCALBASE}
-LIBXML2_LIB_DEPENDS=	libxml2.so:textproc/libxml2
-
 MODBUS_DESC=		Support for Modbus checks
 MODBUS_CONFIGURE_WITH=	libmodbus
 MODBUS_LIB_DEPENDS=	libmodbus.so:comms/libmodbus
 
-NMAP_RUN_DEPENDS=	nmap:security/nmap \
-			sudo:security/sudo
+NMAP_RUN_DEPENDS=	nmap:security/nmap
+NMAP_USES=		sudo
 
 OPENSSL_CONFIGURE_WITH=	openssl
 OPENSSL_USES=		ssl
@@ -167,6 +172,13 @@ GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
 
 .endif # if ${ZABBIX_BUILD} != "java"
 
+.if ${ZABBIX_BUILD} == "java"
+USES+=         java
+JAVA_VERSION=	11+
+.endif
+
+USES+= autoreconf
+CFLAGS= -DCURL_DISABLE_TYPECHECK
 .include <bsd.port.pre.mk>
 
 post-patch:
@@ -208,7 +220,7 @@ post-patch:
 .endif
 
 .if ${ZABBIX_BUILD} != "agent"
-.  for d in mysql oracle postgresql sqlite3
+.  for d in mysql oracle postgresql
 	@${REINPLACE_CMD} \
 		-e 's|/usr/bin/traceroute|/usr/sbin/traceroute|g' \
 		-e 's|sudo /usr/bin/nmap|sudo ${LOCALBASE}/bin/nmap|g' \
@@ -230,7 +242,8 @@ post-install:
 
 .if ${ZABBIX_BUILD} != "agent" && ${ZABBIX_BUILD} != "java"
 	${MKDIR} ${STAGEDIR}${DATADIR}/${ZABBIX_BUILD:Q}/database
-	@${RM} ${WRKSRC}/database/*/Makefile*
+	${FIND} ${WRKSRC}/database -type f -name 'Makefile*' -exec ${RM} {} +
+	# @${RM} ${WRKSRC}/database/*/*/Makefile*
 	(cd ${WRKSRC}/database/ && \
 		${COPYTREE_SHARE} "mysql oracle postgresql sqlite3" \
 		${STAGEDIR}${DATADIR}/${ZABBIX_BUILD:Q}/database/)
@@ -252,5 +265,18 @@ post-install:
 .else # frontend
 .include <bsd.port.pre.mk>
 .endif
+
+.if ${ZABBIX_BUILD} != java
+CFLAGS+=        -I${OPENSSLINC}
+LDFLAGS+=       -L${OPENSSLLIB}
+.endif
+
+pre-patch:
+	${CP} -rv ${WRKSRC}/src/libs/zbxsysinfo/freebsd \
+	      ${WRKSRC}/src/libs/zbxsysinfo/dragonfly
+	${MV} -v ${WRKSRC}/src/libs/zbxsysinfo/dragonfly/freebsd.c \
+		${WRKSRC}/src/libs/zbxsysinfo/dragonfly/dragonfly.c
+	${REINPLACE_CMD} -e 's|freebsd|dragonfly|g' \
+		${WRKSRC}/src/libs/zbxsysinfo/dragonfly/Makefile.am
 
 .include <bsd.port.post.mk>

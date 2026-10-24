@@ -1,6 +1,6 @@
---- base/synchronization/lock_impl.h.orig	2025-05-05 10:57:53 UTC
+--- base/synchronization/lock_impl.h.orig	2026-09-25 15:26:43 UTC
 +++ base/synchronization/lock_impl.h
-@@ -110,6 +110,10 @@ void LockImpl::Unlock() {
+@@ -129,6 +129,10 @@ void LockImpl::Unlock() {
  }
  
  #elif BUILDFLAG(IS_POSIX) || BUILDFLAG(IS_FUCHSIA)
@@ -11,7 +11,7 @@
  
  #if DCHECK_IS_ON()
  BASE_EXPORT void dcheck_trylock_result(int rv);
-@@ -130,6 +134,9 @@ void LockImpl::Unlock() {
+@@ -149,6 +153,9 @@ void LockImpl::Unlock() {
    dcheck_unlock_result(rv);
  #endif
  }

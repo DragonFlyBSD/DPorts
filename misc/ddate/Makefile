@@ -29,6 +29,9 @@ KILLBOB_CFLAGS=		-DKILL_BOB=\"13013\"
 PRAISEBOB_CFLAGS=	-DPRAISE_BOB=\"13013\"
 USFORMAT_CFLAGS=	-DUS_FORMAT=\"1\"
 
+USES= gettext localbase:ldflags
+LDFLAGS= -lintl
+CONFIGURE_ARGS= --without-ncurses
 do-build:
 	${CC} ${CFLAGS} ${LDFLAGS} ${WRKSRC}/${PORTNAME}.c -o ${WRKSRC}/${PORTNAME}
 

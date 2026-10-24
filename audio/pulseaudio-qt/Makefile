@@ -1,5 +1,5 @@
 PORTNAME=	pulseaudio-qt
-DISTVERSION=	1.7.0
+DISTVERSION=	1.9.0
 MASTER_SITES=	KDE/stable/${PORTNAME}
 CATEGORIES=	audio kde
 PKGNAMESUFFIX=	6
@@ -22,4 +22,6 @@ USE_QT=		base
 
 PLIST_SUB=	SOVERSION=${DISTVERSION}
 
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
+BROKEN= uses pulseaudio
 .include <bsd.port.mk>

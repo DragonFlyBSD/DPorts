@@ -1,5 +1,6 @@
 PORTNAME=	libaccounts-glib
 DISTVERSION=	1.27
+PORTREVISION=	1
 CATEGORIES=	net-im
 DIST_SUBDIR=	KDE/${GL_ACCOUNT}
 
@@ -19,7 +20,7 @@ GL_TAGNAME=	26c54322304e9df598b2ba67427433a2e68b823e
 USE_GNOME=	introspection libxml2
 USE_LDCONFIG=	yes
 
-CONFIGURE_ARGS=	-Dtests=false
+MESON_ARGS=	-Dtests=false
 
 INSTALL_TARGET=	install-strip
 

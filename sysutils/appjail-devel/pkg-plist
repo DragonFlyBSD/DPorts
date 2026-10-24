@@ -4,6 +4,7 @@ bin/appjail-config-user
 bin/appjail-dns
 bin/appjail-user
 @sample %%ETCDIR%%/appjail.conf.sample
+etc/bash_completion.d/_appjail.bash
 etc/rc.d/appjail
 etc/rc.d/appjail-dns
 etc/rc.d/appjail-health
@@ -12,9 +13,14 @@ libexec/appjail/appjail-config/appjail-config
 libexec/appjail/appjail-config/tok
 libexec/appjail/find-number-from-start/find-number-from-start
 libexec/appjail/find-smallest-missing-number/find-smallest-missing-number
+libexec/appjail/get_assigned_rulesets/get_assigned_rulesets
 libexec/appjail/getservbyname/getservbyname
 libexec/appjail/ipcheck/ipcheck
+libexec/appjail/jexec/jexec
 libexec/appjail/network/network
+libexec/appjail/juexec/juexec
+libexec/appjail/mksock/mksock
+%%DATADIR%%/Isotype.png
 %%DATADIR%%/cmd/apply
 %%DATADIR%%/cmd/checkOld
 %%DATADIR%%/cmd/cmd
@@ -39,11 +45,13 @@ libexec/appjail/network/network
 %%DATADIR%%/cmd/makejail
 %%DATADIR%%/cmd/nat
 %%DATADIR%%/cmd/network
+%%DATADIR%%/cmd/oci
 %%DATADIR%%/cmd/pkg
 %%DATADIR%%/cmd/quick
 %%DATADIR%%/cmd/restart
 %%DATADIR%%/cmd/rstop
 %%DATADIR%%/cmd/run
+%%DATADIR%%/cmd/secrets
 %%DATADIR%%/cmd/service
 %%DATADIR%%/cmd/start
 %%DATADIR%%/cmd/startup
@@ -55,6 +63,7 @@ libexec/appjail/network/network
 %%DATADIR%%/cmd/usage
 %%DATADIR%%/cmd/version
 %%DATADIR%%/cmd/volume
+%%DATADIR%%/cmd/x11
 %%DATADIR%%/cmd/zfs
 %%DATADIR%%/files/config.conf
 %%DATADIR%%/files/default.conf
@@ -65,12 +74,14 @@ libexec/appjail/network/network
 %%DATADIR%%/files/rctl-actions
 %%DATADIR%%/files/rctl-resources
 %%DATADIR%%/files/rctl-subjects
+%%DATADIR%%/files/pkgbase/base.conf
 %%DATADIR%%/lib/atexit
 %%DATADIR%%/lib/check_func
 %%DATADIR%%/lib/colors
 %%DATADIR%%/lib/copy
 %%DATADIR%%/lib/devfs
 %%DATADIR%%/lib/files
+%%DATADIR%%/lib/initscript
 %%DATADIR%%/lib/jail
 %%DATADIR%%/lib/jail_types
 %%DATADIR%%/lib/kern_modules
@@ -80,6 +91,7 @@ libexec/appjail/network/network
 %%DATADIR%%/lib/mksum
 %%DATADIR%%/lib/mount
 %%DATADIR%%/lib/network
+%%DATADIR%%/lib/oci
 %%DATADIR%%/lib/random
 %%DATADIR%%/lib/repeat
 %%DATADIR%%/lib/replace
@@ -90,6 +102,7 @@ libexec/appjail/network/network
 %%DATADIR%%/lib/tempfile
 %%DATADIR%%/lib/version
 %%DATADIR%%/lib/whitespaces
+%%DATADIR%%/lib/x11
 %%DATADIR%%/lib/zfs
 %%DATADIR%%/makejail/cmd/all/ADD
 %%DATADIR%%/makejail/cmd/all/ARG
@@ -153,12 +166,16 @@ libexec/appjail/network/network
 %%DATADIR%%/scripts/ajconf.sh
 %%DATADIR%%/scripts/ajdns.sh
 %%DATADIR%%/scripts/ajuser.sh
+%%DATADIR%%/scripts/appjail-completion.bash
 %%DATADIR%%/scripts/ascii2oct.sh
+%%DATADIR%%/scripts/bind-ddns-hook.sh
 %%DATADIR%%/scripts/create-bridge.sh
 %%DATADIR%%/scripts/dns.sh
 %%DATADIR%%/scripts/dnsmasq-hook.sh
+%%DATADIR%%/scripts/dummy-hook.sh
 %%DATADIR%%/scripts/escape-env-val.sh
 %%DATADIR%%/scripts/get_depends.sh
+%%DATADIR%%/scripts/git.sh
 %%DATADIR%%/scripts/kill_child.sh
 %%DATADIR%%/scripts/kill_tree.sh
 %%DATADIR%%/scripts/load-devfs-rules.sh
@@ -166,11 +183,7 @@ libexec/appjail/network/network
 %%DATADIR%%/scripts/run_jail.sh
 %%DATADIR%%/scripts/runas.sh
 %%DATADIR%%/scripts/super-mv.sh
-%%EXAMPLESDIR%%/appjail.conf
-%%EXAMPLESDIR%%/templates/bridge.conf
-%%EXAMPLESDIR%%/templates/linux.conf
-%%EXAMPLESDIR%%/templates/vnet.conf
-%%EXAMPLESDIR%%/templates/xorg.conf
+%%DATADIR%%/scripts/xresize-exec.sh
 share/man/man1/appjail-apply.1.gz
 share/man/man1/appjail-checkOld.1.gz
 share/man/man1/appjail-cmd.1.gz
@@ -196,11 +209,13 @@ share/man/man1/appjail-logs.1.gz
 share/man/man1/appjail-makejail.1.gz
 share/man/man1/appjail-nat.1.gz
 share/man/man1/appjail-network.1.gz
+share/man/man1/appjail-oci.1.gz
 share/man/man1/appjail-pkg.1.gz
 share/man/man1/appjail-quick.1.gz
 share/man/man1/appjail-restart.1.gz
 share/man/man1/appjail-rstop.1.gz
 share/man/man1/appjail-run.1.gz
+share/man/man1/appjail-secrets.1.gz
 share/man/man1/appjail-service.1.gz
 share/man/man1/appjail-start.1.gz
 share/man/man1/appjail-startup.1.gz
@@ -223,3 +238,4 @@ share/man/man7/appjail-ephemeral.7.gz
 share/man/man7/appjail-tutorial.7.gz
 share/man/man8/appjail-dns.8.gz
 share/man/man8/appjail-user.8.gz
+share/man/man1/appjail-x11.1.gz

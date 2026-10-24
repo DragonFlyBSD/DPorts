@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/${PORTNAME} share/man/man1/pixz.1.gz
 
+CONFIGURE_ARGS= LZMA_CFLAGS="-I/usr/include" LZMA_LIBS="-llzma"
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/src/pixz.1 ${STAGEDIR}${PREFIX}/share/man/man1
 

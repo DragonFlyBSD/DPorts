@@ -1,5 +1,5 @@
 PORTNAME=	trash-cli
-DISTVERSION=	0.24.5.26
+DISTVERSION=	0.26.9.14
 CATEGORIES=	deskutils python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=63.1.0:devel/py-setuptools@${P
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psutil>=6.0.0:sysutils/py-psutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>=1.16.0:devel/py-six@${PY_FLAVOR}
 
-USES=		python:3.9+
+USES=		python
 USE_PYTHON=	autoplist pep517
 TRASH_CMDS=	trash-empty trash-list trash-restore trash-put trash
 

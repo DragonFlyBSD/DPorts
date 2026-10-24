@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GITHUB=	yes
 GH_ACCOUNT=	magnush
 
-USES=		autoreconf gnome localbase pathfix pkgconfig tar:bzip2
+USES=		autoreconf gnome localbase pkgconfig tar:bzip2
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
@@ -25,7 +25,6 @@ CONFIGURE_ARGS=	--without-alsalib \
 		--with-build-date="-" \
 		--with-build-time="-"
 
-BROKEN_powerpc64=	fails to compile on powerpc64: convert_inc.c: conflicting types for 'C_FLOAT_PCM32SBEPM'
 
 OPTIONS_DEFINE=		DOUBLE_SAMPLES JACK LADSPA OSS PORTAUDIO \
 			PULSEAUDIO SAMPLERATE SDL SNDFILE NLS

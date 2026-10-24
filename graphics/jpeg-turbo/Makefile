@@ -1,8 +1,11 @@
 PORTNAME=	jpeg-turbo
-DISTVERSION=	3.1.0
+DISTVERSION=	3.1.4.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/lib${PORTNAME}/lib${PORTNAME}/releases/download/${DISTVERSION}/
 DISTNAME=	lib${PORTNAME}-${DISTVERSION}
+
+PATCH_SITES=	https://github.com/lib${PORTNAME}/lib${PORTNAME}/commit/
+PATCHFILES=	7cdbf9144d40d68d97c498f54dd88a68aee4e36d.patch:-p1
 
 MAINTAINER=	desktop@FreeBSD.org
 COMMENT?=	SIMD-accelerated JPEG codec which replaces libjpeg
@@ -25,19 +28,16 @@ USES=		cmake cpe pathfix
 CPE_PRODUCT=	libjpeg-turbo
 USE_LDCONFIG=	yes
 
+# See https://github.com/libjpeg-turbo/libjpeg-turbo/issues/705
+
 TEST_TARGET=	test
 
 PORTDOCS=	*
 DOCSDIR=	${PREFIX}/share/doc/libjpeg-turbo
 
 CMAKE_ON=	WITH_JPEG8
-# See https://github.com/libjpeg-turbo/libjpeg-turbo/issues/705
-CMAKE_ARGS=	-DCMAKE_CTEST_ARGUMENTS="-E;'djpeg12-shared-3x2-float-prog-cmp|djpeg12-static-3x2-float-prog-cmp'"
 
-OPTIONS_DEFINE=		DOCS OPTIMIZED_CFLAGS
-OPTIONS_DEFAULT=	OPTIMIZED_CFLAGS
-
-OPTIMIZED_CFLAGS_CFLAGS=	-O3
+OPTIONS_DEFINE=		DOCS
 
 .include <bsd.port.options.mk>
 

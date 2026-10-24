@@ -1,3 +1,0 @@
-
-# libunwind.so
-MAKE_ENV+=	LDVER=ld.bfd

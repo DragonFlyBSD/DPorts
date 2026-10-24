@@ -1,0 +1,11 @@
+--- configure.in.orig
++++ configure.in
+@@ -517,7 +517,7 @@
+ *dec-osf*)
+   AC_DEFINE(_OSF_SOURCE)
+   ;;
+-*freebsd*)
++*freebsd*|*dragonfly*)
+   SHARED_EXT=".so.${MAJOR_VER}"
+   SHARED_ALT=".so"
+   VERSION_OPT='-Wl,--version-script=$$(srcdir)/libtecla.map'

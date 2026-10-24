@@ -47,6 +47,7 @@ LV2_DESC=		Build the LV2 plugin
 LV2_CONFIGURE_WITH=	lv2
 LV2_BUILD_DEPENDS=	lv2>0:audio/lv2
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	@cd ${STAGEDIR}${PREFIX} && ${STRIP_CMD} \
 		lib/vst/spectmorph_vst.so \

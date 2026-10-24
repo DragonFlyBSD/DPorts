@@ -1,0 +1,17 @@
+DISTVERSION=	1.43.3.10896
+DISTVERSIONSUFFIX=	cb3ebc72d
+PKGNAMESUFFIX=	-plexpass
+
+USE_RC_SUBR=	${PORTNAME}_plexpass
+
+DATADIR=	${PREFIX}/share/${PORTNAME}${PKGNAMESUFFIX}
+FILESDIR=	${.CURDIR}/files
+
+MASTERDIR=	${.CURDIR}/../plexmediaserver
+
+SUB_LIST=	PORTNAME=${PORTNAME}_plexpass
+
+DISTINFO_FILE=	${.CURDIR}/distinfo
+
+IGNORE= This is FreeBSD binary
+.include "${MASTERDIR}/Makefile"

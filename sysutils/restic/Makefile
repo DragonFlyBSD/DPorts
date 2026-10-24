@@ -1,6 +1,7 @@
 PORTNAME=	restic
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.17.1
+DISTVERSION=	0.19.1
+PORTREVISION=	6
 CATEGORIES=	sysutils
 
 MAINTAINER=	eduardo@FreeBSD.org
@@ -16,6 +17,7 @@ GO_TARGET=	./cmd/${PORTNAME}
 
 PLIST_SUB=	PORTNAME=${PORTNAME}
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/man/* ${STAGEDIR}${PREFIX}/share/man/man1
 	${INSTALL} -d ${STAGEDIR}${PREFIX}/etc/bash_completion.d/

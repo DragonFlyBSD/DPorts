@@ -1,14 +1,18 @@
 PORTNAME=	cmake
 DISTVERSION=	${_CMAKE_VERSION}
+PORTREVISION=	3
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-core
+
+PATCH_SITES+=	https://github.com/Kitware/CMake/commit/
+PATCHFILES+=	2bb8c6aec74bb658b9ef7b8b3c8db75f2fb6c2b5.patch:-p1 \
+		468873faab9971e470b1cd5addfc8a00a1114c84.patch:-p1 \
+		a1aa530be7b97a8b519b4a097db822e4b8cd837a.patch:-p1 \
+		8a4f5b0afbb4a22b248d9a28a19dd9a141773bbd.patch:-p1
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Cross-platform Makefile generator
 WWW=		https://www.cmake.org/
-
-PATCH_SITES=	https://gitlab.kitware.com/cmake/cmake/-/commit/
-PATCHFILES+=	1b0c92a3a1b782ff3e1c4499b6ab8db614d45bcd.patch:-p1 # Fix build with curl >= 8.13.0
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/Copyright.txt
@@ -19,7 +23,8 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		librhash.so:security/rhash \
 		libuv.so:devel/libuv
 
-USES=		cmake:_internal compiler:c++17-lang cpe localbase ncurses ssl
+USES=		cmake:_internal compiler:c++17-lang cpe localbase python:env \
+		ncurses ssl
 CPE_VENDOR=	cmake_project
 
 HAS_CONFIGURE=	yes
@@ -62,6 +67,10 @@ INSTALL_WRKSRC=		${BUILD_WRKSRC}
 OPTIONS_DEFINE=		DOCS
 OPTIONS_SUB=		yes
 
+USES+= libarchive
+CONFIGURE_ARGS+= --no-system-jsoncpp
+CONFIGURE_ARGS+= --bootstrap-system-libuv
+QA_ENV= IGNORE_QA_baselibs=1
 post-patch:
 	@(${FIND} ${WRKSRC}/Modules -name "*.cmake" -print0; \
 		${FIND} ${WRKSRC}/Tests -name "CMakeLists.txt" -print0 ) | \
@@ -79,6 +88,9 @@ post-patch:
 		${WRKSRC}/Modules/FindFLEX.cmake
 	@${REINPLACE_CMD} -e 's|/opt/kde4|${PREFIX}|g' \
 		${WRKSRC}/Modules/FindKDE4.cmake
+	@${REINPLACE_CMD} -e \
+		'/set(_$${_PYTHON_PREFIX}_VERSIONS 3/s/VERSIONS 3/VERSIONS ${PYTHON_VER} 3/' \
+		${WRKSRC}/Modules/FindPython/Support.cmake
 
 # cmake-gui(1) is installed by devel/cmake-gui. Remove the man page's source to
 # prevent it from being built/installed by devel/cmake.
@@ -95,5 +107,14 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Auxiliary/cmake-mode.el ${STAGEDIR}${PREFIX}/share/emacs/site-lisp
+
+.if exists(/usr/lib/priv/libprivate_ncursesw.so)
+dfly-patch:
+	${REINPLACE_CMD} -e "s@CYGWIN@true@g" \
+		${WRKSRC}/Modules/FindCurses.cmake
+	${REINPLACE_CMD} -e "s@<form.h>@<ncurses/form.h>@g" \
+		${WRKSRC}/Source/CursesDialog/ccmake.cxx \
+		${WRKSRC}/Source/CursesDialog/cmCursesStandardIncludes.h
+.endif
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
-TIMESTAMP = 1595294811
-SHA256 (mosra-corrade-v2020.06_GH0.tar.gz) = 2a62492ccc717422b72f2596a3e1a6a105b9574aa9467917f12d19ef3aab1341
-SIZE (mosra-corrade-v2020.06_GH0.tar.gz) = 737490
-SHA256 (mosra-toolchains-b0ea02e_GH0.tar.gz) = 2aeb19dc2d70b5a0c1d3ec988588115682c1e37db290a216be3e1f37d627fdb9
-SIZE (mosra-toolchains-b0ea02e_GH0.tar.gz) = 7480
+TIMESTAMP = 1790503262
+SHA256 (mosra-corrade-v2020.06-2125-gc028fd6e_GH0.tar.gz) = 214803f136989906771ef4a2a52ce9cf837d7d2f025822cafba2b030a4b9c2be
+SIZE (mosra-corrade-v2020.06-2125-gc028fd6e_GH0.tar.gz) = 1550800
+SHA256 (mosra-toolchains-fa282e8_GH0.tar.gz) = 2b396cf07f0b9fac4c672b3cb92da9ad644f51a1a80f7055292127d44d3e3809
+SIZE (mosra-toolchains-fa282e8_GH0.tar.gz) = 12499

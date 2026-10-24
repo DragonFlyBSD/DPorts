@@ -1,6 +1,5 @@
 PORTNAME=	mp
-DISTVERSION=	5.61
-PORTREVISION=	1
+DISTVERSION=	5.62
 CATEGORIES=	editors
 
 MAINTAINER=	jhale@FreeBSD.org
@@ -73,6 +72,8 @@ QT5_CONFIGURE_ENV=	CCLINK="${CXX}"
 QT5_CONFIGURE_ON=	--with-qt5 --with-moc="${MOC}"
 QT5_CONFIGURE_OFF=	--without-qt
 
+USES+= localbase:ldflags
+CFLAGS= -DCONFOPT_WGET_WCH
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGTK*} || ${PORT_OPTIONS:MQT5}

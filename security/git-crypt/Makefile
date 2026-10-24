@@ -1,6 +1,5 @@
 PORTNAME=	git-crypt
-PORTVERSION=	0.7.0
-PORTREVISION=	1
+PORTVERSION=	0.8.0
 CATEGORIES=	security
 MASTER_SITES=	https://www.agwa.name/projects/git-crypt/downloads/ \
 		LOCAL/ashish/
@@ -31,6 +30,8 @@ USES=		compiler:c++11-lang gmake ssl
 
 PLIST_FILES=	bin/${PORTNAME}
 
+CFLAGS= -I${OPENSSLINC}
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${SSL_DEFAULT} != base
@@ -38,7 +39,7 @@ CXXFLAGS+=	-I${OPENSSLINC}
 LDFLAGS+=	-L${OPENSSLLIB}
 .endif
 
-.if ( ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400092 && ${SSL_DEFAULT} == base ) || ${SSL_DEFAULT:Mopenssl3*}
+.if ( ${OPSYS} == FreeBSD && ${SSL_DEFAULT} == base ) || ${SSL_DEFAULT:Mopenssl3*}
 CXXFLAGS+=	-DOPENSSL_API_COMPAT=0x30000000L
 .endif
 

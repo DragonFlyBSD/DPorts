@@ -1,8 +1,8 @@
---- daemon/http-tx-mgr.c.orig	2019-06-04 02:14:53 UTC
+--- daemon/http-tx-mgr.c.orig	2026-06-18 08:15:42 UTC
 +++ daemon/http-tx-mgr.c
-@@ -69,6 +69,22 @@
- #define USER_AGENT_OS "BSD"
- #endif
+@@ -55,6 +55,22 @@
+ 
+ #define CLEAR_POOL_ERR_CNT 3
  
 +#ifdef __FreeBSD__
 +#define USER_AGENT_OS "FreeBSD"

@@ -1,5 +1,5 @@
 PORTNAME=	serviio
-PORTVERSION=	2.4
+PORTVERSION=	2.5
 PORTREVISION=	0
 CATEGORIES=	net multimedia java www
 MASTER_SITES=	https://download.serviio.org/releases/
@@ -53,5 +53,12 @@ do-install:
 gen-plist:
 	${FIND} ${STAGEDIR}${PREFIX}/ -type f | ${SED} -e "s:${STAGEDIR}${PREFIX}/::g ; s:share/java/classes:%%JAVAJARDIR%%:g ; s:etc/serviio:@sample %%ETCDIR%%:g" | ${GREP} -Ev '(etc/rc.d|licenses)' | ${SORT} >${PLIST}.new
 #	${FIND} ${STAGEDIR}${PREFIX}/ -type d | ${SED} -e "s:${STAGEDIR}${PREFIX}/:@dirrm :g ; s:etc/serviio:%%ETCDIR%%:g ; s:share/java/classes:%%JAVAJARDIR%%:g" | ${SORT} -r >>${PLIST}.new
+
+.if defined(DEVELOPER)
+PLIST_FILES+=	%%JAVAJARDIR%%/serviio/plugins/...
+
+dfly-install:
+	${TOUCH} ${STAGEDIR}${JAVAJARDIR}/serviio/plugins/...
+.endif
 
 .include <bsd.port.mk>

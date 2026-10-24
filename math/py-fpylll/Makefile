@@ -1,7 +1,8 @@
 PORTNAME=	fpylll
-PORTVERSION=	0.6.3
-PORTREVISION=	1
+PORTVERSION=	0.6.4
+PORTREVISION=	2
 CATEGORIES=	math python
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -10,8 +11,7 @@ WWW=		https://github.com/fplll/fpylll
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	${PYNUMPY}	\
-		${PYTHON_PKGNAMEPREFIX}cython3>0:lang/cython3@${PY_FLAVOR}	\
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}	\
 		${PYTHON_PKGNAMEPREFIX}black>0:devel/py-black@${PY_FLAVOR}	\
 		${PYTHON_PKGNAMEPREFIX}pythran>0:devel/py-pythran@${PY_FLAVOR}	\
 		${PYTHON_PKGNAMEPREFIX}cysignals>0:devel/py-cysignals@${PY_FLAVOR} \
@@ -21,17 +21,17 @@ LIB_DEPENDS=	libfplll.so:math/fplll	\
 		libmpfr.so:math/mpfr	\
 		libpari.so:math/pari	\
 		libqd.so:math/qd
-RUN_DEPENDS=	${PYNUMPY}	\
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}	\
 		${PYTHON_PKGNAMEPREFIX}black>0:devel/py-black@${PY_FLAVOR}	\
 		${PYTHON_PKGNAMEPREFIX}pythran>0:devel/py-pythran@${PY_FLAVOR}	\
 		${PYTHON_PKGNAMEPREFIX}cysignals>0:devel/py-cysignals@${PY_FLAVOR}
 TEST_DEPENDS=	py.test:devel/py-pytest@${PY_FLAVOR}
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	fplll
+#USE_GITHUB=	yes
+#GH_ACCOUNT=	fplll
 
 USES=		compiler:c++11-lang python
-USE_PYTHON=	distutils
+USE_PYTHON=	cython distutils
 .if !defined(WITH_DEBUG)
 LDFLAGS+=	-s
 .endif

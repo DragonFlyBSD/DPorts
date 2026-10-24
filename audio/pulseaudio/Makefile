@@ -4,7 +4,7 @@
 
 PORTNAME=	pulseaudio
 DISTVERSION=	17.0
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	https://freedesktop.org/software/pulseaudio/releases/
 
@@ -24,7 +24,7 @@ LIB_DEPENDS=	libsndfile.so:audio/libsndfile \
 		libck-connector.so:sysutils/consolekit2
 
 USES=		compiler:c11 cpe gettext-tools gmake gnome iconv localbase:ldflags \
-		meson pathfix pkgconfig python:run shebangfix ssl tar:xz
+		meson pkgconfig python:run shebangfix ssl tar:xz
 
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
@@ -92,6 +92,7 @@ MESON_ARGS=	-Db_lundef=false -Dasyncns=disabled -Dbluez5=disabled -Dbluez5-gstre
 PULSE_VERSION=	${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 PLIST_SUB=	PULSE_VERSION=${PULSE_VERSION}
 
+BROKEN= spins one cpu 100% and doesn't make any sound
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share|${LOCALBASE}/share|g' \
 		${WRKSRC}/src/daemon/default.pa.in

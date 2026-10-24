@@ -1,13 +1,25 @@
-diff --git base/BUILD.gn base/BUILD.gn
-index 2dff31e8b4d..0b799901dc2 100644
---- src/3rdparty/chromium/base/BUILD.gn
-+++ src/3rdparty/chromium/base/BUILD.gn
-@@ -2265,7 +2265,7 @@ mixed_component("base") {
-       "process/process_metrics_openbsd.cc",
-       "system/sys_info_openbsd.cc",
-     ]
--  } else if (is_freebsd) {
-+  } else if (is_freebsd || is_dragonfly) {
+--- src/3rdparty/chromium/base/BUILD.gn.orig	Fri Nov  7 00:28:19 2025
++++ src/3rdparty/chromium/base/BUILD.gn	Fri Nov
+@@ -967,7 +967,7 @@ jumbo_component("base") {
+     #"system/sys_info_openbsd.cc",
+   ]
+ 
+-  if (is_apple || current_os == "freebsd" || current_os == "openbsd") {
++  if (is_apple || current_os == "freebsd" || current_os == "openbsd" || current_os == "dragonfly") {
      sources += [
-       "process/process_handle_freebsd.cc",
+       "posix/sysctl.cc",
+       "posix/sysctl.h",
+@@ -2125,6 +2125,13 @@ jumbo_component("base") {
        "process/process_iterator_freebsd.cc",
+       "process/process_metrics_freebsd.cc",
+       "system/sys_info_freebsd.cc",
++    ]
++  } else if (is_dragonfly) {
++    sources += [
++      "process/process_handle_dragonfly.cc",
++      "process/process_iterator_dragonfly.cc",
++      "process/process_metrics_dragonfly.cc",
++      "system/sys_info_dragonfly.cc",
+     ]
+   }
+ 

@@ -1,25 +1,26 @@
 PORTNAME=	openmodelica
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.20.0
-PORTREVISION=	2
+DISTVERSION=	1.25.7
+PORTREVISION=	3
 CATEGORIES=	science cad java
-MASTER_SITES=	https://build.openmodelica.org/omc/bootstrap/:bootstrap
-DISTFILES=	sources.tar.gz:bootstrap
 DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
-PATCH_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/commit/
-PATCHFILES=	01b6764df51f4f097d1c2e093e945ebd9a2f15a3.patch:-p1 # backport of https://github.com/OpenModelica/OpenModelica/pull/10261
+#PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+#PATCHFILES=	6f8126fcd491d8c4d8b8c643bf0b6abd3a1f23f5.patch:-p1 # https://github.com/OpenModelica/OpenModelica/pull/13683
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Modelica-based modeling and simulation environment
-WWW=		https://openmodelica.org/
+WWW=		https://openmodelica.org/ \
+		https://github.com/OpenModelica/OpenModelica
 
 LICENSE=	OSMC-PL
 LICENSE_NAME=	Public license for OpenModelica
 LICENSE_TEXT=	See https://github.com/OpenModelica/OpenModelica/blob/master/OSMC-License.txt
 LICENSE_PERMS=	auto-accept dist-mirror dist-sell pkg-mirror pkg-sell
 
-BROKEN_aarch64=	link fails: /usr/local/bin/ld: cannot find -lquadmath: No such file or directory
+BROKEN_FreeBSD_16=	compilation fails: invalid C++ code in OMCompiler/3rdParty/tbb/include/tbb/task.h, the next release has this fixed but it fails for other resone
+BROKEN_aarch64=	compilation fails: OpenModelica expects libquadmath.so, which does not exist on aarch64 (PR 285692)
+BROKEN_armv7=	link fails: ld: cannot find -lquadmath: No such file or directory
 BROKEN_i386=	compilation fails: /wrkdirs/usr/ports/science/openmodelica/work/OpenModelica-1.20.0/OMCompiler/3rdParty/libffi/src/x86/sysv.S:841:1: error: changed section flags for .eh_frame, expected: 0x2
 
 BUILD_DEPENDS=	asciidoc:textproc/asciidoc \
@@ -27,67 +28,66 @@ BUILD_DEPENDS=	asciidoc:textproc/asciidoc \
 		automake:devel/automake \
 		gmake:devel/gmake \
 		libtool>0:devel/libtool \
-		${LOCALBASE}/include/readline/readline.h:devel/readline
+		${LOCALBASE}/include/readline/readline.h:devel/readline \
+		sundials>0:math/sundials
 LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs \
 		libcurl.so:ftp/curl \
+		libicuuc.so:devel/icu \
 		libosg.so:graphics/osg \
-		libuuid.so:misc/e2fsprogs-libuuid
+		libuuid.so:misc/libuuid
 RUN_DEPENDS=	bash:shells/bash \
 		gmake:devel/gmake
 
-USES=		cmake compiler:c++14-lang dos2unix iconv fortran gettext-runtime gl gnome blaslapack localbase:ldflags qt:5 pkgconfig python:build shebangfix
-USE_QT=		concurrent core gui network opengl printsupport svg webkit widgets xml xmlpatterns buildtools:build qmake:build
+USES=		cmake compiler:c++14-lang iconv fortran gettext-runtime gl \
+		gnome blaslapack localbase:ldflags qt:6 readline pkgconfig \
+		python:build shebangfix java
+USE_QT=		5compat base declarative positioning webchannel webengine svg tools:build
 USE_GL=		gl opengl
 USE_GNOME=	libxml2
-USE_JAVA=	yes
 USE_LDCONFIG=	${PREFIX}/lib/omc ${PREFIX}/lib/omc/OMSimulator ${PREFIX}/lib/omc/cpp ${PREFIX}/lib/omc/ffi # https://github.com/OpenModelica/OpenModelica/issues/9925
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenModelica
 GH_PROJECT=	OpenModelica
 
-DOS2UNIX_FILES=	OMSimulator/OMTLMSimulator/3rdParty/Makefile \
-		OMCompiler/3rdParty/FMIL/ThirdParty/Expat/expat-2.1.0/CMakeLists.txt
-
 SHEBANG_GLOB=	*.sh *.in *.ac
-SHEBANG_FILES=	OMSimulator/OMTLMSimulator/OMFMISimulatorWrapper/StartTLMOMFMISimulatorWrapper \
-		OMSimulator/OMTLMSimulator/Hopsan/StartTLMHopsan \
-		OMSimulator/testsuite/tlm/StartTLMFmiWrapper \
-		OMSimulator/OMTLMSimulator/FMIWrapper/StartTLMFmiWrapper \
-		OMSimulator/OMTLMSimulator/OpenModelica/StartTLMOpenModelica
 
 GH_TUPLE=	\
-		OpenModelica:OMOptim:4116ef7:OMOptim/OMOptim \
-			OpenModelica:OpenModelica-common:08a0180:OMOptim_common/OMOptim/common \
-		OpenModelica:OMSimulator:af996ad:OMSimulator/OMSimulator \
-			OpenModelica:OMSimulator-3rdParty:6202ca1:OMSimulator_3rdParty/OMSimulator/3rdParty \
-			OpenModelica:OMTLMSimulator:07d5353:OMSimulator_OMTLMSimulator/OMSimulator/OMTLMSimulator \
-		OpenModelica:OMCompiler-3rdParty:a60ba6c:OMCompiler_3rdParty/OMCompiler/3rdParty \
-		OpenModelica:OMSens:66b920b:OMSens/OMSens \
-		OpenModelica:OMSens_Qt:ef85128:OMSens_Qt/OMSens_Qt
-			#OpenModelica:OpenModelica-common:08a0180:OMSens_Qt_common/OMSens_Qt/common
+		OpenModelica:OMOptim:d53288b:OpenModelica_OMOptim/OMOptim \
+			OpenModelica:OpenModelica-common:08a01802db5ba5edb540383c46718b89ff229ef2:OpenModelica_OpenModelica_common/OMOptim/common \
+		OpenModelica:OMSimulator:e3a3aeb:OpenModelica_OMSimulator/OMSimulator \
+			OpenModelica:OMSimulator-3rdParty:5c10de1648d1134a577d9284b58580a72383d89f:OpenModelica_OMSimulator_3rdParty/OMSimulator/3rdParty \
+		OpenModelica:OMCompiler-3rdParty:3d2d50d:OpenModelica_OMCompiler_3rdParty/OMCompiler/3rdParty \
+		OpenModelica:OMSens_Qt:9c5dfb2:OpenModelica_OMSens_Qt/OMSens_Qt \
+			OpenModelica:OpenModelica-common:6e6d4fd:OpenModelica_OpenModelica_common/OMSens_Qt/common
+GH_TUPLE+=	OpenModelica:OMBootstrapping:04d16f7461e5401321f0f72613daf466ae2f76be:bootstrapping/OMCompiler/Compiler/boot/bomc # downloaded by cmake
 
 # this should change make program everywhere, but it doesn't,
 # hence the patches in OMCompiler/Compiler/runtime/CMakeLists.txt, OMEdit/OMEditLIB/Simulation/SimulationOutputWidget.cpp
-CMAKE_ARGS=	-DCMAKE_MAKE_PROGRAM=gmake \
+CMAKE_ARGS=	-DOM_QT_MAJOR_VERSION=6 \
+		-DCMAKE_MAKE_PROGRAM=gmake \
 		-DPython_EXECUTABLE=${PYTHON_CMD}
 
 CMAKE_ARGS+=	-DOM_USE_CCACHE:BOOL=${CCACHE_ENABLED:S/yes/ON/:S/no/OFF/} # if refuses to build w/out ccache by default
+#CMAKE_ARGS+=	-DOM_QT_MAJOR_VERSION=6 # broken, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287596
+CMAKE_ON=	OM_OMEDIT_ENABLE_QTWEBENGINE
+CMAKE_OFF=	OM_OMC_ENABLE_IPOPT # broken: omc::3rd::ipopt isn't found, see https://github.com/OpenModelica/OpenModelica/issues/14702
 
 LDFLAGS+=	-lexecinfo -lintl -pthread
 
-BINARY_ALIAS=	make=${GMAKE} gcc=${FILESDIR}/gcc.sh git=false
+BINARY_ALIAS=	make=${GMAKE}
 
-CONFLICTS_BUILD=	sundials
+CONFLICTS_INSTALL=	cminpack # see https://github.com/OpenModelica/OpenModelica/issues/14701
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	# remove stray *.orig files
 	@${FIND} ${WRKSRC} -name "*.orig" -delete
 	# remove rtime that isn't used on FreeBSD
 	@${RM} -r ${WRKSRC}/OMSimulator/OMTLMSimulator/3rdParty/rtime
-	# create symlink for sources.tar.gz
-	@${MKDIR} ${WRKSRC}/OMCompiler/Compiler/boot/bomc
-	@${LN} -s ${DISTDIR}/${DIST_SUBDIR}/sources.tar.gz ${WRKSRC}/OMCompiler/Compiler/boot/bomc/sources.tar.gz
+	# prevent bootstrap file download
+	#${MKDIR} ${WRKSRC}/bomc
+	${TOUCH} ${WRKSRC}/OMCompiler/Compiler/boot/bomc/sources.tar.gz
 	# workaround for broken fetch
 	@${RLN} ${WRKSRC}/OMOptim/common ${WRKSRC}/OMSens_Qt/common
 
@@ -103,8 +103,8 @@ post-patch:
 
 post-install:
 	# workaround for https://github.com/OpenModelica/OpenModelica/issues/9919
-	cd ${STAGEDIR}${PREFIX} && ${CHMOD} +x \
-		bin/OMSimulator bin/OMSimulatorPython3 bin/StartTLMFmiWrapper
+	#cd ${STAGEDIR}${PREFIX} && ${CHMOD} +x \
+	#	bin/OMSimulator bin/OMSimulatorPython3 bin/StartTLMFmiWrapper
 	# remove unnecessary files
 	${RM} -r \
 		${STAGEDIR}${PREFIX}/share/zmq \
@@ -113,7 +113,7 @@ post-install:
 	# remove empty directories
 	${FIND} ${STAGEDIR}${PREFIX}/include -type d -empty -delete
 	# strip binaries
-	cd ${STAGEDIR}${PREFIX} && ${STRIP_CMD} \
+	#cd ${STAGEDIR}${PREFIX} && ${STRIP_CMD} \
 		bin/OMSimulator bin/FMIWrapper \
 		lib/omc/OMSimulator/libomtlmsimulator.so lib/omc/OMSimulator/libOMSimulator.so \
 		lib/omc/libomtlmsimulator.so lib/omc/libOMSimulator.so

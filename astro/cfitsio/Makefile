@@ -1,9 +1,12 @@
 PORTNAME=	cfitsio
-PORTVERSION=	4.5.0
+PORTVERSION=	4.7.0
 CATEGORIES=	astro
 MASTER_SITES=	https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/ \
 		https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/oldvers/ \
-		LOCAL/sunpoet
+		https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/docs/:docs
+DISTFILES=	cfitsio-${PORTVERSION}${EXTRACT_SUFX}
+DIST_SUBDIR=	cfitsio/${PORTVERSION}
+EXTRACT_ONLY=	cfitsio-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library for reading and writing files in FITS data format
@@ -17,7 +20,7 @@ LICENSE_PERMS=	auto-accept dist-mirror dist-sell pkg-mirror pkg-sell
 
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
-USES=		cpe libtool localbase pathfix pkgconfig
+USES=		cpe libtool localbase pkgconfig
 
 CONFIGURE_ARGS=	--enable-reentrant --with-bzip2=/usr
 GNU_CONFIGURE=	yes
@@ -30,8 +33,26 @@ CPE_VENDOR=	nasa
 
 OPTIONS_DEFINE=	DOCS
 
+DOCS_DISTFILES=	cfitsio.pdf:docs \
+		fitsio.pdf:docs \
+		fpackguide.pdf:docs \
+		quick.pdf:docs
+
 do-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
-	${INSTALL_DATA} ${WRKSRC}/docs/*.pdf ${STAGEDIR}${DOCSDIR}/
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/*.pdf ${STAGEDIR}${DOCSDIR}/
+
+# maintainer section:
+
+.if defined(MAINTAINER_MODE)
+DISTFILES+=	cfitsio.pdf:docs \
+		fitsio.pdf:docs \
+		fpackguide.pdf:docs \
+		quick.pdf:docs
+.endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e "/SHLIB_LD}/s/$$/ -lz/g"	\
+		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>

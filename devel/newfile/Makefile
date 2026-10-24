@@ -20,6 +20,7 @@ PORTDOCS=	newfile.html
 
 OPTIONS_DEFINE=	DOCS
 
+BUILD_DEPENDS= bash:shells/bash
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/newfile.1 ${STAGEDIR}${PREFIX}/share/man/man1/
 

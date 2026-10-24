@@ -32,7 +32,6 @@ RUN_DEPENDS=	expect:lang/expect
 .endif
 
 INOTIFY_LIB_DEPENDS=	libinotify.so:devel/libinotify
-PRELUDE_LIB_DEPENDS=	libprelude.so:security/libprelude
 ZEROMQ_LIB_DEPENDS=	libczmq.so:net/czmq
 
 INOTIFY_USES=	pkgconfig
@@ -69,7 +68,7 @@ OPTIONS_SUB=			yes
 OPTIONS_DEFINE=			DOCS INOTIFY LUA
 
 .if ${OSSEC_TYPE} != agent
-OPTIONS_DEFINE+=		PRELUDE ZEROMQ
+OPTIONS_DEFINE+=		ZEROMQ
 
 OPTIONS_RADIO=			DATABASE
 OPTIONS_RADIO_DATABASE=		MYSQL PGSQL
@@ -78,13 +77,11 @@ OPTIONS_RADIO_DATABASE=		MYSQL PGSQL
 OPTIONS_DEFAULT=		INOTIFY
 
 INOTIFY_DESC=		Kevent based real time monitoring
-PRELUDE_DESC=		Sensor support from Prelude SIEM
 ZEROMQ_DESC=		ZeroMQ support (experimental)
 DATABASE_DESC=		Database output
 
 INOTIFY_VARS=	OSSEC_ARGS+=USE_INOTIFY=yes
 LUA_VARS=	OSSEC_ARGS+=LUA_ENABLE=yes STRIP_FILES+=ossec-lua STRIP_FILES+=ossec-luac
-PRELUDE_VARS=	OSSEC_ARGS+=USE_PRELUDE=yes
 ZEROMQ_VARS=	OSSEC_ARGS+=USE_ZEROMQ=yes
 MYSQL_VARS=	OSSEC_ARGS+=DATABASE=mysql PKGMSG_FILES+=message-database DB_TYPE=mysql DB_SCHEMA=mysql.schema
 PGSQL_VARS=	OSSEC_ARGS+=DATABASE=pgsql PKGMSG_FILES+=message-database DB_TYPE=postgresql DB_SCHEMA=postgresql.schema
@@ -189,8 +186,8 @@ PKGMSG_FILES=	message-header
 
 PKG_CONFIG=	${CONFIGURE_ENV:MPKG_CONFIG=*:S/PKG_CONFIG=//}
 CFLAGS+=	-I${LOCALBASE}/include
-INOTIFY_CFLAGS=	$$(${PKG_CONFIG} --cflags libinotify)
-INOTIFY_LDFLAGS=$$(${PKG_CONFIG} --libs libinotify)
+INOTIFY_CFLAGS=	 `${PKG_CONFIG} --cflags libinotify`
+INOTIFY_LDFLAGS= `${PKG_CONFIG} --libs libinotify`
 
 OSSEC_ARGS+=	TARGET=${OSSEC_TYPE} PCRE2_SYSTEM=yes INSTALL_LOCALTIME=no INSTALL_RESOLVCONF=no
 .if defined(OSSEC_MAX_AGENTS)

@@ -68,4 +68,12 @@ post-install-NLS-on:
 	    ${STAGEDIR}${PREFIX}/share/locale/${lang}/LC_MESSAGES/SCHILY_utils.mo
 .endfor
 
+.if defined(BUILDING_NRELEASE_DPORTS) && ${PORTNAME} == "cdrtools"
+OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NLAME:NVORBIS}
+.endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/libscg/scsi-bsd.c
+
 .include "Makefile.master"

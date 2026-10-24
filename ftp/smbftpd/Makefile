@@ -27,6 +27,7 @@ PGSQL_USES=	pgsql
 PGSQL_CONFIGURE_WITH=	pgsql
 SSL_CONFIGURE_WITH=		ssl
 
+CFLAGS= -D__FreeBSD__=13 -D__FreeBSD_version=1300000
 post-extract:
 	${MV} ${WRKDIR}/${PORTNAME} ${WRKSRC}
 

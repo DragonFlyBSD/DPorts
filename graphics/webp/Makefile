@@ -1,5 +1,5 @@
 PORTNAME=	webp
-PORTVERSION=	1.5.0
+PORTVERSION=	1.6.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://downloads.webmproject.org/releases/webp/ \
 		https://storage.googleapis.com/downloads.webmproject.org/releases/webp/
@@ -40,4 +40,5 @@ X11_CONFIGURE_ON=	build_vwebp=yes
 X11_USE=		GL=glut
 X11_USES=		gl
 
+LDFLAGS= -lm
 .include <bsd.port.mk>

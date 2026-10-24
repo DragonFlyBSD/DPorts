@@ -17,6 +17,8 @@ USE_XORG=	x11
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+DPMSG= ${WRKDIR}/dports-message
+PKGMESSAGE= ${DPMSG}
 pre-build:
 	@${TOUCH} ${WRKSRC}/client.man ${WRKSRC}/server.man
 
@@ -31,5 +33,15 @@ do-install:
 .for file in ANTIPOLIX_RULES CLIENT_USE COPYRIGHT SERVER_USE
 	${INSTALL_DATA} ${WRKSRC}/${file} ${STAGEDIR}${DOCSDIR}
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifdef \(__FreeBSD__\)@if defined(\1)||defined(__DragonFly__)@g'	\
+		${WRKSRC}/client.c					\
+		${WRKSRC}/server.c					\
+		${WRKSRC}/creation.c					\
+		${WRKSRC}/messages.c
+	@${ECHO} "########################################################" >> ${DPMSG}
+	@${ECHO} '# Prepare: ".server_defaults" , ".motd" and ".players" #' >> ${DPMSG}
+	@${ECHO} "########################################################" >> ${DPMSG}
 
 .include <bsd.port.mk>

@@ -34,4 +34,11 @@ do-install:
 	cd ${WRKSRC} && ${COPYTREE_SHARE} ${dir} ${STAGEDIR}${DATADIR}
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/common/prompts2.c \
+		${WRKSRC}/headers/port.h \
+		${WRKSRC}/unix/general.c \
+		${WRKSRC}/unix/unixscr.c
+
 .include <bsd.port.mk>

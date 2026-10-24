@@ -18,6 +18,7 @@ SHARED_LIB_DESC=	Build with shared library
 CXX_BINDINGS_DESC=	Build with C++ bindings
 DOUBLE_DESC=		Use double precision
 
+CFLAGS= -Wno-cast-function-type -Wno-implicit-fallthrough
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSHARED_LIB}

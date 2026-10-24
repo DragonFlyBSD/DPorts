@@ -1,7 +1,7 @@
 PORTNAME=	gnome-pie
 PORTVERSION=	0.7.3
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -50,5 +50,9 @@ post-patch:
 
 post-build-NLS-on:
 	(cd ${WRKSRC}/resources/locale && ./compile-po.sh)
+
+.if defined(DEVELOPER)
+REINPLACE_CMD:= ${SED} ${REINPLACE_ARGS}
+.endif
 
 .include <bsd.port.mk>

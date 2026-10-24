@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/ui/ozone/platform/headless/headless_surface_factory.cc.orig	2023-03-09 06:31:50 UTC
+--- src/3rdparty/chromium/ui/ozone/platform/headless/headless_surface_factory.cc.orig	2025-01-15 09:18:26 UTC
 +++ src/3rdparty/chromium/ui/ozone/platform/headless/headless_surface_factory.cc
 @@ -34,7 +34,7 @@
  #include "ui/ozone/platform/headless/headless_window_manager.h"

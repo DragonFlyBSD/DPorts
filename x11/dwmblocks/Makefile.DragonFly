@@ -1,5 +1,0 @@
-
-# use alias=openbsd for SIGRTMIN/SIGRTMAX handling
-dfly-patch:
-	${REINPLACE_CMD} -e 's,__OpenBSD__,__DragonFly__,g' \
-		${WRKSRC}/dwmblocks.c

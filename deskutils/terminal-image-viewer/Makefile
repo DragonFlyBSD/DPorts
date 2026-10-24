@@ -22,4 +22,11 @@ WRKSRC_SUBDIR=	src
 
 PLIST_FILES=	bin/tiv
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
+LDFLAGS= -lstdc++fs
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<experimental/filesystem>@<filesystem>@g' \
+			 -e 's@experimental::filesystem@filesystem@g' \
+		${WRKSRC}/tiv.cpp
+
 .include <bsd.port.mk>

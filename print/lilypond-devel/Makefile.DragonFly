@@ -1,3 +1,0 @@
-# unhurt lily
-CXXFLAGS+=	-Wno-sequence-point -Wno-suggest-override
-IGNORE=   unmaintained, please request fixing to users mailing list

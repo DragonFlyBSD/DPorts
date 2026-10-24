@@ -1,36 +1,35 @@
 PORTNAME=	dirac
-DISTVERSION=	22.0
-PORTREVISION=	3
+DISTVERSIONPREFIX=	v
+DISTVERSION=	26.1
 CATEGORIES=	science # chemistry
-MASTER_SITES=	https://zenodo.org/record/6010450/files/
 PKGNAMESUFFIX=	-quantum-chemistry-software
 DISTNAME=	${PORTNAME:tu}-${DISTVERSION}-Source
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Program for atomic & molecular relativistic all-electron calculations
-WWW=		http://diracprogram.org/doku.php
+WWW=		https://www.diracprogram.org/doku.php \
+		https://gitlab.com/dirac/dirac
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_armv7=		compilation fails: Error: Old-style type declaration REAL*16 not supported at (1)
 BROKEN_i386=		compilation fails: Error: Type mismatch in argument 'lu' at (1); passed INTEGER(8) to INTEGER(4) (and similar)
-BROKEN_powerpc64=	compilation fails: Error: Old-style type declaration REAL*16 not supported at (1)
-BROKEN_powerpc64le=	compilation fails: Error: Old-style type declaration REAL*16 not supported at (1)
 
 BUILD_DEPENDS=	gmake:devel/gmake
 LIB_DEPENDS=	libblas.so:math/blas \
 		libhdf5.so:science/hdf5 \
 		liblapack.so:math/lapack
+TEST_DEPENDS=	bash:shells/bash
 
 USES=		cmake:noninja,testing fortran localbase:ldflags python shebangfix
 
-#USE_GITLAB=	yes
-#GL_TAGNAME=	37b755410d9fdcd9b5e7bba6e43ceb7d5c7b9dae
+USE_GITLAB=	yes
 
 SHEBANG_FILES=	pam.in \
 		utils/process_schema.py \
-		utils/dirac_data.py
+		utils/dirac_data.py \
+		utils/merge_amf.py \
+		src/gen1int/subtree/tools/runtest.sh
 
 CMAKE_OFF=	ENABLE_EXATENSOR \
 		ENABLE_PCMSOLVER # PCMSolver integration is broken, see https://gitlab.com/dirac/dirac/-/issues/33 and https://gitlab.com/dirac/dirac/-/issues/34
@@ -44,6 +43,12 @@ LDFLAGS+=	-llapack -lblas
 BINARY_ALIAS=	make=${GMAKE} \
 		python=${PYTHON_CMD} \
 		python3=${PYTHON_CMD}
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == armv7 || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
+CMAKE_ARGS+=	-DENABLE_STIELTJES:BOOL=OFF
+.endif
 
 # 2 tests are known to fail, see https://gitlab.com/dirac/dirac/-/issues/35
 

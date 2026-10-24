@@ -1,8 +1,8 @@
 PORTNAME=	commons-daemon
-DISTVERSION=	1.4.1
+DISTVERSION=	1.6.0
 CATEGORIES=	devel java
-MASTER_SITES=	https://archive.apache.org/dist/commons/daemon/source/:src \
-		https://archive.apache.org/dist/commons/daemon/binaries/:bin
+MASTER_SITES=	APACHE_COMMONS_SOURCE:src \
+		APACHE_COMMONS_BINARIES:bin
 PKGNAMEPREFIX=	apache-
 DISTFILES=	${PORTNAME}-${DISTVERSION}-native-src${EXTRACT_SUFX}:src \
 		${PORTNAME}-${DISTVERSION}-bin${EXTRACT_SUFX}:bin
@@ -13,7 +13,7 @@ WWW=		https://commons.apache.org/proper/commons-daemon/
 
 LICENSE=	APACHE20
 
-USES=		java
+USES=		autoreconf java
 JAVA_OS=	native
 
 GNU_CONFIGURE=	yes
@@ -37,5 +37,9 @@ do-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKBIN}/${PORTNAME}-${DISTVERSION}-javadoc.jar \
 			${STAGEDIR}${DOCSDIR}/${PORTNAME}-javadoc.jar
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(freebsd\*\))@\1|dragonfly*)@g' \
+		${WRKSRC}/support/apsupport.m4
 
 .include <bsd.port.mk>

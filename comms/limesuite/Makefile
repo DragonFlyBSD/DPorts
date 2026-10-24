@@ -1,7 +1,7 @@
 PORTNAME=	limesuite
 DISTVERSIONPREFIX=	v
 DISTVERSION=	22.09.0
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	comms astro hamradio
 
 MAINTAINER=	tomek@cedro.info
@@ -67,6 +67,8 @@ SOAPYSDR_LIB_DEPENDS=	libSoapySDR.so:misc/soapysdr
 
 UTILITIES_CMAKE_BOOL=	ENABLE_UTILITIES
 
+USES+= localbase:ldflags
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MGUI}
@@ -87,10 +89,6 @@ PLIST_SUB+=		OCTAVE_OCT_SITE_DIR=${OCTAVE_OCT_SITE_DIR:sh}/
 PLIST_SUB+=		OCTAVE_M_SITE_DIR=${OCTAVE_M_SITE_DIR:sh}/
 .endif
 
-.if ${PORT_OPTIONS:MDEBUG}
-WITH_DEBUG=	yes
-.endif
-
 post-build:
 # N.B. COPYTREE_BIN here chmods 555 which breaks CMAKE_INSTALL in user mode!
 	(cd ${BUILD_WRKSRC}/bin && ${COPYTREE_BIN} . ${STAGEDIR}${PREFIX}/bin)
@@ -106,5 +104,9 @@ post-build:
 	(cd ${WRKSRC}/Desktop && ${CP} *.png ${STAGEDIR}${PREFIX}/share/pixmaps/)
 	(cd ${WRKSRC}/Desktop && ${CP} lime-suite.desktop ${STAGEDIR}${PREFIX}/share/applications/)
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@"FreeBSD@&|DragonFly@g' \
+		${WRKSRC}/cmake/Modules/Findlibusb-1.0.cmake
 
 .include <bsd.port.post.mk>

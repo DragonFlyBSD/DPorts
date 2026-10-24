@@ -1,6 +1,6 @@
 PORTNAME=	mailio
-DISTVERSION=	0.23.0-59
-DISTVERSIONSUFFIX=	-g5dab3ca
+DISTVERSION=	0.26.0
+PORTREVISION=	1
 CATEGORIES=	mail devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,7 +10,7 @@ WWW=		https://github.com/karastojko/mailio
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
 USES=		cmake:testing compiler:c++17-lang ssl
 USE_LDCONFIG=	yes
@@ -18,12 +18,21 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	karastojko
 
-CMAKE_OFF=	MAILIO_BUILD_TESTS MAILIO_BUILD_EXAMPLES MAILIO_BUILD_DOCUMENTATION
-CMAKE_ON=	MAILIO_DYN_LINK_TESTS # workaround for https://github.com/karastojko/mailio/issues/159
-CMAKE_TESTING_ON=	MAILIO_BUILD_TESTS # tests fail, see https://github.com/karastojko/mailio/issues/160
+CMAKE_OFF=	MAILIO_BUILD_TESTS \
+		MAILIO_DYN_LINK_TESTS \
+		MAILIO_BUILD_EXAMPLES \
+		MAILIO_BUILD_DOCUMENTATION
+CMAKE_TESTING_ON=	MAILIO_BUILD_TESTS \
+			MAILIO_DYN_LINK_TESTS
 CMAKE_TESTING_TARGET=	all
+
+LDFLAGS+=	-lpthread
 
 post-test:
 	@cd ${WRKSRC}/test && ${BUILD_WRKSRC}/test/test_message
+
+# tests as of 0.26.0:
+# Running 142 test cases...
+# *** No errors detected
 
 .include <bsd.port.mk>

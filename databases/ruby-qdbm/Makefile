@@ -25,6 +25,7 @@ MAKE_ENV=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 CFLAGS+=	-I${LOCALBASE}/include -fdeclspec
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-configure:
 	cd ${WRKSRC} && ${SETENV} RB_USER_INSTALL=yes ${MAKE_ENV} \
 	    ${MAKE} configure

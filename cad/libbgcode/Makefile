@@ -1,6 +1,6 @@
 PORTNAME=	libbgcode
 DISTVERSION=	0.2.0
-PORTREVISION=	4
+PORTREVISION=	7
 CATEGORIES=	cad
 
 MAINTAINER=	teodorsigaev@gmail.com

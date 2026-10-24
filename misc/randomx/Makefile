@@ -1,7 +1,6 @@
 PORTNAME=	randomx
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.10-28
-DISTVERSIONSUFFIX=	-g67ea010
+DISTVERSION=	2.0.1
 CATEGORIES=	misc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -24,6 +23,7 @@ CMAKE_TESTING_TARGET=
 PLIST_FILES=	include/randomx.h \
 		lib/librandomx.so
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-test: # run tests
 	@cd ${BUILD_WRKSRC} && ./randomx-tests
 

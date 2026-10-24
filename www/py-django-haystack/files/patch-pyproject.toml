@@ -1,0 +1,12 @@
+--- pyproject.toml.orig	2026-06-04 19:06:04 UTC
++++ pyproject.toml
+@@ -12,8 +12,7 @@ authors = [{name = "Daniel Lindsley", email = "daniel@
+ requires-python = ">=3.9"
+ readme = "README.rst"
+ authors = [{name = "Daniel Lindsley", email = "daniel@toastdriven.com"}]
+-license = "BSD-3-Clause"
+-license-files = ["LICENSE"]
++license = {text = "BSD-3-Clause"}
+ classifiers = [
+     "Development Status :: 5 - Production/Stable",
+     "Environment :: Web Environment",

@@ -15,10 +15,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libpulse.so:audio/pulseaudio
 
-USES=		cmake compiler:c++14-lang localbase:ldflags
+USES= cmake compiler:c++14-lang localbase:ldflags ncurses
 USE_GITHUB=	yes
 GH_ACCOUNT=	dpayne
 
 PLIST_FILES=	bin/vis
 
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
 .include <bsd.port.mk>

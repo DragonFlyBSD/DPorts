@@ -21,6 +21,7 @@ LIBS=		-lm
 
 OPTIONS_DEFINE=	DOCS
 
+LDFLAGS= -lm
 post-patch:
 	@${REINPLACE_CMD} -e '/^gtkimageview-marshal.[ch]:/s|$$[(]GLIB_GENMARSHAL[)]||'\
 		${WRKSRC}/src/Makefile.in

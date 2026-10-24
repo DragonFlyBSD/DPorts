@@ -1,0 +1,7 @@
+TIMESTAMP = 1783975434
+SHA256 (go/sysutils_backrest/backrest-v1.14.1/backrest-v1.14.1.frontend.tar.gz) = e8648cb9597b5e181e07d1244b73cce63e13dc038ef05670780208d89f12a712
+SIZE (go/sysutils_backrest/backrest-v1.14.1/backrest-v1.14.1.frontend.tar.gz) = 774596
+SHA256 (go/sysutils_backrest/backrest-v1.14.1/v1.14.1.mod) = 89c248b19ec359d40d958f8a4f621cb5ab6dc8c5e68f2598e1db10af5dac1705
+SIZE (go/sysutils_backrest/backrest-v1.14.1/v1.14.1.mod) = 2633
+SHA256 (go/sysutils_backrest/backrest-v1.14.1/v1.14.1.zip) = d86e5d99f3aa55405bda7aa5d717cb01e9bc5785317c702edd84709558d0a163
+SIZE (go/sysutils_backrest/backrest-v1.14.1/v1.14.1.zip) = 1292823

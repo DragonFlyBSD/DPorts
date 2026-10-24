@@ -11,7 +11,7 @@ WWW=		https://www.nagios.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		compiler:c11 mysql perl5 ssl
+USES= compiler:c11 mysql perl5 ssl localbase:ldflags
 USE_RC_SUBR=	ndo2db
 
 GNU_CONFIGURE=	yes

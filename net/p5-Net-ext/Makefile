@@ -12,4 +12,5 @@ WWW=		https://metacpan.org/release/Net-ext
 USES=		perl5
 USE_PERL5=	configure
 
+PLIST_FILES= %%SITE_ARCH%%/attrs.pm %%PERL5_MAN3%%/attrs.3.gz
 .include <bsd.port.mk>

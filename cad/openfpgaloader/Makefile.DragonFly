@@ -1,3 +1,0 @@
-
-CXXFLAGS+=	-DETIME=ETIMEDOUT
-IGNORE=   unmaintained, please request fixing to users mailing list

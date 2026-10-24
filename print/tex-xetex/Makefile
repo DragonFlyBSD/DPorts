@@ -1,5 +1,6 @@
 PORTNAME=	xetex
 DISTVERSION=	${TEXLIVE_VERSION}
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	TEX_CTAN/systems/texlive/${TEXLIVE_YEAR}/
 PKGNAMEPREFIX=	tex-
@@ -21,18 +22,16 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libpng.so:graphics/png \
 		libTECkit.so:textproc/teckit
 
-USES=		compiler:c++11-lib localbase gnome perl5 pkgconfig \
+USES=		compiler:c++17-lang localbase gnome perl5 pkgconfig \
 		python:build tar:xz tex xorg
-USE_CXXSTD=	gnu++11
+USE_CXXSTD=	c++17
 USE_GNOME=	cairo
 USE_PERL5=	build
 USE_TEX=	kpathsea web2c formats fmtutil dvipdfmx
 USE_XORG=	pixman
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=CC="${CC}" \
-		CXX="${CXX}" \
-		${EXCLUDE_ENGINES:S/^/--disable-/} \
+CONFIGURE_ARGS+=${EXCLUDE_ENGINES:S/^/--disable-/} \
 		--enable-xetex \
 		--with-system-freetype2 \
 		--with-freetype2-includes=${LOCALBASE}/include/freetype2 \
@@ -46,6 +45,7 @@ CONFIGURE_ARGS+=CC="${CC}" \
 		--with-teckit-libdir=${LOCALBASE}/lib \
 		--with-system-zziplib \
 		--with-system-zlib
+CONFIGURE_ENV+=	${MAKE_ENV}
 .for L in cairo gmp kpathsea libpng mpfr pixman ptexenc icu
 CONFIGURE_ARGS+=--with-system-$L \
 		--with-$L-include=${LOCALBASE}/include \

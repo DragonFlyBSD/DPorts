@@ -1,6 +1,6 @@
 PORTNAME=	neocmakelsp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.6
+DISTVERSION=	0.11.2
 CATEGORIES=	lang
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,199 +10,235 @@ WWW=		https://github.com/Decodetalkers/neocmakelsp
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	rust-nightly>0:lang/rust-nightly # feature `edition2024` is required
+LIB_DEPENDS=	libonig.so:devel/oniguruma
+
 USES=		cargo
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Decodetalkers
 
-CARGO_CRATES=	addr2line-0.22.0 \
-		adler-1.0.2 \
-		aho-corasick-1.1.3 \
-		anstream-0.6.14 \
-		anstyle-1.0.7 \
-		anstyle-parse-0.2.4 \
-		anstyle-query-1.1.0 \
-		anstyle-wincon-3.0.3 \
-		anyhow-1.0.86 \
-		async-trait-0.1.80 \
-		auto_impl-1.2.0 \
-		autocfg-1.3.0 \
-		backtrace-0.3.73 \
+CARGO_BUILDDEP=	no
+CARGO_CRATES=	adler2-2.0.1 \
+		aho-corasick-1.1.5 \
+		anstream-1.0.0 \
+		anstyle-1.0.14 \
+		anstyle-parse-1.0.0 \
+		anstyle-query-1.1.5 \
+		anstyle-wincon-3.0.11 \
+		anyhow-1.0.104 \
+		assert_cmd-2.2.2 \
+		auto_impl-1.3.0 \
+		base64-0.23.1 \
+		bincode-1.3.3 \
 		bitflags-1.3.2 \
-		bitflags-2.5.0 \
-		bstr-1.9.1 \
-		bytes-1.6.0 \
-		cc-1.0.99 \
-		cfg-if-1.0.0 \
-		clap-4.5.7 \
-		clap_builder-4.5.7 \
-		clap_complete-4.5.6 \
-		clap_derive-4.5.5 \
-		clap_lex-0.7.1 \
-		cli-table-0.4.7 \
-		cli-table-derive-0.4.5 \
-		colorchoice-1.0.1 \
+		bitflags-2.13.2 \
+		bstr-1.13.1 \
+		bytes-1.12.1 \
+		cc-1.4.6 \
+		cfg-if-1.0.4 \
+		clap-4.6.6 \
+		clap_builder-4.6.6 \
+		clap_complete-4.6.9 \
+		clap_derive-4.6.4 \
+		clap_lex-1.1.0 \
+		cli-table-0.5.0 \
+		cli-table-derive-0.5.0 \
+		colorchoice-1.0.5 \
+		console-0.16.6 \
 		const-random-0.1.18 \
 		const-random-macro-0.1.16 \
-		crossbeam-deque-0.8.5 \
-		crossbeam-epoch-0.9.18 \
-		crossbeam-utils-0.8.20 \
-		crunchy-0.2.2 \
-		csv-1.3.0 \
-		csv-core-0.1.11 \
-		dashmap-5.5.3 \
-		displaydoc-0.2.4 \
+		crc32fast-1.5.2 \
+		crossbeam-deque-0.8.8 \
+		crossbeam-epoch-0.9.21 \
+		crossbeam-utils-0.8.23 \
+		crunchy-0.2.4 \
+		csv-1.4.0 \
+		csv-core-0.1.13 \
+		dashmap-6.2.1 \
+		defmt-1.1.1 \
+		defmt-macros-1.1.1 \
+		defmt-parser-1.0.0 \
+		deranged-0.5.8 \
+		dialoguer-0.12.0 \
+		difflib-0.4.0 \
+		displaydoc-0.2.7 \
 		dlv-list-0.5.2 \
-		equivalent-1.0.1 \
-		form_urlencoded-1.2.1 \
-		futures-0.3.30 \
-		futures-channel-0.3.30 \
-		futures-core-0.3.30 \
-		futures-io-0.3.30 \
-		futures-macro-0.3.30 \
-		futures-sink-0.3.30 \
-		futures-task-0.3.30 \
-		futures-util-0.3.30 \
-		getrandom-0.2.15 \
-		gimli-0.29.0 \
-		glob-0.3.1 \
-		globset-0.4.14 \
+		encode_unicode-1.0.0 \
+		equivalent-1.0.2 \
+		errno-0.3.14 \
+		etcetera-0.11.0 \
+		fastrand-2.5.0 \
+		find-msvc-tools-0.1.12 \
+		flate2-1.1.10 \
+		fnv-1.0.7 \
+		form_urlencoded-1.2.2 \
+		futures-0.3.34 \
+		futures-channel-0.3.34 \
+		futures-core-0.3.34 \
+		futures-io-0.3.34 \
+		futures-macro-0.3.34 \
+		futures-sink-0.3.34 \
+		futures-task-0.3.34 \
+		futures-util-0.3.34 \
+		fuzzy-matcher-0.3.7 \
+		gen-lsp-types-0.9.0 \
+		getrandom-0.2.17 \
+		getrandom-0.4.3 \
+		glob-0.3.4 \
+		globset-0.4.20 \
 		hashbrown-0.14.5 \
+		hashbrown-0.17.1 \
 		heck-0.5.0 \
-		hermit-abi-0.3.9 \
-		httparse-1.9.3 \
-		icu_collections-1.5.0 \
-		icu_locid-1.5.0 \
-		icu_locid_transform-1.5.0 \
-		icu_locid_transform_data-1.5.0 \
-		icu_normalizer-1.5.0 \
-		icu_normalizer_data-1.5.0 \
-		icu_properties-1.5.0 \
-		icu_properties_data-1.5.0 \
-		icu_provider-1.5.0 \
-		icu_provider_macros-1.5.0 \
-		idna-1.0.0 \
-		ignore-0.4.22 \
-		indexmap-2.2.6 \
-		is_terminal_polyfill-1.70.0 \
-		itoa-1.0.11 \
-		lazy_static-1.4.0 \
-		libc-0.2.155 \
-		litemap-0.7.3 \
-		lock_api-0.4.12 \
-		log-0.4.21 \
-		lsp-types-0.94.1 \
-		memchr-2.7.4 \
-		miniz_oxide-0.7.3 \
-		mio-0.8.11 \
-		nu-ansi-term-0.46.0 \
-		nu-ansi-term-0.50.0 \
-		num_cpus-1.16.0 \
-		object-0.36.0 \
-		once_cell-1.19.0 \
+		httparse-1.10.1 \
+		icu_collections-2.3.0 \
+		icu_locale_core-2.3.0 \
+		icu_normalizer-2.3.0 \
+		icu_normalizer_data-2.3.0 \
+		icu_properties-2.3.0 \
+		icu_properties_data-2.3.0 \
+		icu_provider-2.3.1 \
+		idna-1.1.0 \
+		idna_adapter-1.2.2 \
+		ignore-0.4.33 \
+		indexmap-2.14.2 \
+		indoc-2.0.7 \
+		is_executable-1.0.6 \
+		is_terminal_polyfill-1.70.2 \
+		itoa-1.0.18 \
+		jiff-0.2.37 \
+		jiff-core-0.1.1 \
+		jiff-static-0.2.37 \
+		jiff-tzdb-0.1.8 \
+		jiff-tzdb-platform-0.1.3 \
+		lazy_static-1.5.0 \
+		libc-0.2.189 \
+		linked-hash-map-0.5.6 \
+		linux-raw-sys-0.12.1 \
+		litemap-0.8.3 \
+		lock_api-0.4.14 \
+		log-0.4.34 \
+		memchr-2.8.3 \
+		miniz_oxide-0.9.1 \
+		mio-1.2.3 \
+		nu-ansi-term-0.50.3 \
+		num-conv-0.2.2 \
+		once_cell-1.21.4 \
+		once_cell_polyfill-1.70.2 \
+		onig-6.5.3 \
+		onig_sys-69.9.3 \
 		ordered-multimap-0.7.3 \
-		overload-0.1.1 \
-		parking_lot-0.12.3 \
-		parking_lot_core-0.9.10 \
-		percent-encoding-2.3.1 \
-		pin-project-1.1.5 \
-		pin-project-internal-1.1.5 \
-		pin-project-lite-0.2.14 \
-		pin-utils-0.1.0 \
-		proc-macro2-1.0.85 \
-		quote-1.0.36 \
-		redox_syscall-0.5.2 \
-		regex-1.10.5 \
-		regex-automata-0.4.7 \
-		regex-syntax-0.8.4 \
-		rust-ini-0.21.0 \
-		rustc-demangle-0.1.24 \
-		ryu-1.0.18 \
+		parking_lot-0.12.5 \
+		parking_lot_core-0.9.12 \
+		path-absolutize-4.0.1 \
+		path-dedot-4.0.1 \
+		pathdiff-0.2.3 \
+		percent-encoding-2.3.2 \
+		pin-project-lite-0.2.17 \
+		pkg-config-0.3.34 \
+		plist-1.10.1 \
+		portable-atomic-1.15.0 \
+		portable-atomic-util-0.2.8 \
+		potential_utf-0.1.6 \
+		powerfmt-0.2.0 \
+		predicates-3.1.4 \
+		predicates-core-1.0.10 \
+		predicates-tree-1.0.13 \
+		proc-macro2-1.0.107 \
+		quick-xml-0.42.0 \
+		quote-1.0.47 \
+		r-efi-6.0.0 \
+		redox_syscall-0.5.18 \
+		regex-1.13.1 \
+		regex-automata-0.4.18 \
+		regex-syntax-0.8.11 \
+		rust-ini-0.21.3 \
+		rustix-1.1.4 \
+		rustversion-1.0.23 \
+		ryu-1.0.23 \
 		same-file-1.0.6 \
 		scopeguard-1.2.0 \
-		serde-1.0.203 \
-		serde_derive-1.0.203 \
-		serde_json-1.0.117 \
-		serde_repr-0.1.19 \
-		serde_spanned-0.6.6 \
+		serde-1.0.229 \
+		serde_core-1.0.229 \
+		serde_derive-1.0.229 \
+		serde_json-1.0.151 \
+		serde_spanned-1.1.1 \
 		sharded-slab-0.1.7 \
-		signal-hook-registry-1.4.2 \
-		slab-0.4.9 \
-		smallvec-1.13.2 \
-		socket2-0.5.7 \
-		stable_deref_trait-1.2.0 \
+		shell-words-1.1.1 \
+		shlex-2.0.1 \
+		signal-hook-registry-1.4.8 \
+		simd-adler32-0.3.10 \
+		similar-3.2.0 \
+		slab-0.4.12 \
+		smallvec-1.16.1 \
+		socket2-0.6.5 \
+		stable_deref_trait-1.2.1 \
+		streaming-iterator-0.1.9 \
 		strsim-0.11.1 \
-		syn-1.0.109 \
-		syn-2.0.66 \
-		synstructure-0.13.1 \
+		syn-2.0.119 \
+		syn-3.0.5 \
+		sync_wrapper-1.0.2 \
+		synstructure-0.13.2 \
+		syntect-5.3.0 \
+		tempfile-3.27.0 \
 		termcolor-1.4.1 \
-		thread_local-1.1.8 \
+		termtree-0.5.1 \
+		thiserror-2.0.20 \
+		thiserror-impl-2.0.20 \
+		thread_local-1.1.10 \
+		time-0.3.55 \
+		time-core-0.1.9 \
+		time-macros-0.2.32 \
 		tiny-keccak-2.0.2 \
-		tinystr-0.7.6 \
-		tokio-1.38.0 \
-		tokio-macros-2.3.0 \
-		tokio-util-0.7.11 \
-		toml-0.8.14 \
-		toml_datetime-0.6.6 \
-		toml_edit-0.22.14 \
-		tower-0.4.13 \
-		tower-layer-0.3.2 \
-		tower-lsp-0.20.0 \
-		tower-lsp-macros-0.9.0 \
-		tower-service-0.3.2 \
-		tracing-0.1.40 \
-		tracing-attributes-0.1.27 \
-		tracing-core-0.1.32 \
+		tinystr-0.8.4 \
+		tokio-1.53.1 \
+		tokio-macros-2.7.2 \
+		tokio-util-0.7.19 \
+		toml-1.1.6+spec-1.1.0 \
+		toml_datetime-1.1.1+spec-1.1.0 \
+		toml_parser-1.1.3+spec-1.1.0 \
+		toml_writer-1.1.2+spec-1.1.0 \
+		tower-0.5.3 \
+		tower-layer-0.3.3 \
+		tower-lsp-f-0.26.0 \
+		tower-service-0.3.3 \
+		tracing-0.1.44 \
+		tracing-attributes-0.1.31 \
+		tracing-core-0.1.36 \
 		tracing-log-0.2.0 \
-		tracing-subscriber-0.3.18 \
-		tree-sitter-0.22.6 \
-		tree-sitter-cmake-0.5.0 \
-		trim-in-place-0.1.7 \
-		unicode-ident-1.0.12 \
-		unicode-width-0.1.13 \
-		url-2.5.1 \
-		utf16_iter-1.0.5 \
+		tracing-subscriber-0.3.23 \
+		tree-sitter-0.26.13 \
+		tree-sitter-cmake-0.7.5 \
+		tree-sitter-language-0.1.7 \
+		treesitter_kind_collector-0.2.0 \
+		unicode-ident-1.0.24 \
+		unicode-segmentation-1.13.3 \
+		unicode-width-0.2.2 \
+		url-2.5.8 \
 		utf8_iter-1.0.4 \
 		utf8parse-0.2.2 \
-		valuable-0.1.0 \
+		valuable-0.1.1 \
+		wait-timeout-0.2.1 \
 		walkdir-2.5.0 \
-		wasi-0.11.0+wasi-snapshot-preview1 \
-		winapi-0.3.9 \
-		winapi-i686-pc-windows-gnu-0.4.0 \
-		winapi-util-0.1.8 \
-		winapi-x86_64-pc-windows-gnu-0.4.0 \
-		windows-sys-0.48.0 \
-		windows-sys-0.52.0 \
-		windows-targets-0.48.5 \
-		windows-targets-0.52.5 \
-		windows_aarch64_gnullvm-0.48.5 \
-		windows_aarch64_gnullvm-0.52.5 \
-		windows_aarch64_msvc-0.48.5 \
-		windows_aarch64_msvc-0.52.5 \
-		windows_i686_gnu-0.48.5 \
-		windows_i686_gnu-0.52.5 \
-		windows_i686_gnullvm-0.52.5 \
-		windows_i686_msvc-0.48.5 \
-		windows_i686_msvc-0.52.5 \
-		windows_x86_64_gnu-0.48.5 \
-		windows_x86_64_gnu-0.52.5 \
-		windows_x86_64_gnullvm-0.48.5 \
-		windows_x86_64_gnullvm-0.52.5 \
-		windows_x86_64_msvc-0.48.5 \
-		windows_x86_64_msvc-0.52.5 \
-		winnow-0.6.13 \
-		write16-1.0.0 \
-		writeable-0.5.5 \
-		yoke-0.7.4 \
-		yoke-derive-0.7.4 \
-		zerofrom-0.1.4 \
-		zerofrom-derive-0.1.4 \
-		zerovec-0.10.2 \
-		zerovec-derive-0.10.2
+		wasi-0.11.1+wasi-snapshot-preview1 \
+		winapi-util-0.1.11 \
+		windows-link-0.2.1 \
+		windows-sys-0.61.2 \
+		winnow-1.0.4 \
+		writeable-0.6.4 \
+		yaml-rust-0.4.5 \
+		yoke-0.8.3 \
+		yoke-derive-0.8.2 \
+		zerofrom-0.1.8 \
+		zerofrom-derive-0.1.7 \
+		zeroize-1.9.0 \
+		zerotrie-0.2.5 \
+		zerovec-0.11.8 \
+		zerovec-derive-0.11.6 \
+		zlib-rs-0.6.7 \
+		zmij-1.0.23
 
 PLIST_FILES=	bin/${PORTNAME}
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

@@ -1,3 +1,0 @@
-
-# zrj: stunnel prevents build with LibreSSL
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NSTUNNEL}

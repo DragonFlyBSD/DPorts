@@ -1,0 +1,2 @@
+LanceDB is a serverless, low-latency vector database for AI applications.
+It stores, indexes and queries vector embeddings with a Python-native API.

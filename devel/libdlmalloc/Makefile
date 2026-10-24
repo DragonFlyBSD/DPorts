@@ -10,6 +10,7 @@ COMMENT=	Small, fast malloc library by Doug Lea
 NO_WRKSUBDIR=	yes
 USE_LDCONFIG=	yes
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-extract:
 	@${MKDIR} ${WRKSRC}
 .for f in ${DISTFILES}

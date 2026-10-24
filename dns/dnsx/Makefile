@@ -1,7 +1,7 @@
 PORTNAME=	dnsx
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2.1
-PORTREVISION=	4
+DISTVERSION=	1.3.1
+PORTREVISION=	3
 CATEGORIES=	dns
 
 MAINTAINER=	dutra@FreeBSD.org
@@ -10,11 +10,12 @@ WWW=		https://github.com/projectdiscovery/dnsx
 
 LICENSE=	MIT
 
-USES=		go:1.21,modules
+USES=		go:modules
 
 GO_MODULE=	github.com/projectdiscovery/dnsx
 GO_TARGET=	./cmd/${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

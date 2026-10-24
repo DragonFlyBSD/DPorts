@@ -39,4 +39,8 @@ post-install-DOCS-on:
 do-test:
 	@cd ${TEST_WRKSRC} && ${SH} devel/test.sh
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's,SSLeay_version,OpenSSL_version,g' \
+		${WRKSRC}/ssl/configure
+
 .include <bsd.port.mk>

@@ -1,6 +1,5 @@
 PORTNAME=	h3
-PORTVERSION=	3.7.7
-PORTREVISION=	1
+PORTVERSION=	4.5.0
 CATEGORIES=	graphics python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,10 +12,8 @@ WWW=		https://uber.github.io/h3-py/ \
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	h3>=3.7.2:graphics/h3 \
-		${PYTHON_PKGNAMEPREFIX}scikit-build>=0:devel/py-scikit-build@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
+BUILD_DEPENDS=	h3>=4.4.1:graphics/h3 \
+		${PYTHON_PKGNAMEPREFIX}scikit-build-core>=0:devel/py-scikit-build-core@${PY_FLAVOR}
 LIB_DEPENDS=	libh3.so:graphics/h3
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=0,1:math/py-numpy@${PY_FLAVOR}
 
@@ -38,5 +35,9 @@ post-patch:
 
 post-install:
 	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -name '*.so' -exec ${STRIP_CMD} {} +
+
+.if defined(FLAVOR) && ${FLAVOR:Mpy27}
+BROKEN= py27 pending removal
+.endif
 
 .include <bsd.port.mk>

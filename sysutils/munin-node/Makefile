@@ -1,6 +1,6 @@
 PORTNAME=	munin
 PORTVERSION=	${MUNIN_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils perl5
 PKGNAMESUFFIX=	-node
 
@@ -34,6 +34,7 @@ USE_RC_SUBR=	munin-asyncd munin-node
 SHEBANG_FILES=	node/bin/munindoc node/sbin/munin-node \
 		node/sbin/munin-node-configure node/sbin/munin-run
 
+RUN_DEPENDS+= p5-IO-Socket-INET6>=0:net/p5-IO-Socket-INET6
 .include "${.CURDIR}/../munin-common/munin.mk"
 
 ALL_TARGET=	build-node build-plugins build/node/_bin/munin-async \
@@ -101,5 +102,8 @@ post-install:
 		${INSTALL_MAN} munin.8 ${STAGEDIR}${PREFIX}/share/man/man8; \
 	)
 	${INSTALL_DATA} ${FILESDIR}/newsyslog ${STAGEDIR}${ETCDIR}/munin-node.newsyslog
+
+dfly-install:
+	${RM} -vf ${STAGEDIR}${LOCALBASE}/man/man1/munin-*.bak.1
 
 .include <bsd.port.mk>

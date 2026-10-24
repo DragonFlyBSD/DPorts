@@ -1,5 +1,6 @@
 PORTNAME=	libretro-beetle_psx
-DISTVERSION=	0.20231020
+DISTVERSION=	0.20260614
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	ports@FreeBSD.org
@@ -8,17 +9,16 @@ WWW=		https://github.com/libretro/beetle-psx-libretro
 
 LICENSE=	GPLv2
 
-USES=		compiler:c++11-lib gmake gl
-USE_LDCONFIG=	yes
-USE_GL=		gl
-
+USES=		compiler:c++11-lib gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	libretro
 GH_PROJECT=	beetle-psx-libretro
-GH_TAGNAME=	e505f5a93eebba8f96a040f478d77b6ffb2015b1
+GH_TAGNAME=	d460f8342060526678e7fd8222048324c2a80d86
+USE_LDCONFIG=	yes
 
 PLIST_FILES=	lib/libretro/mednafen_psx_libretro.so
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.pre.mk>
 
 .if ${ARCH:Marmv?}

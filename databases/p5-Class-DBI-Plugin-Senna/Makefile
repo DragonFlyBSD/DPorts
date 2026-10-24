@@ -21,4 +21,7 @@ do-configure:
 		${SETENV} ${CONFIGURE_ENV} \
 		${PERL5} ${CONFIGURE_CMD} ${CONFIGURE_ARGS}
 
+dfly-install:
+	${RM} -v ${STAGEDIR}${LOCALBASE}/lib/perllocal.pod
+
 .include <bsd.port.mk>

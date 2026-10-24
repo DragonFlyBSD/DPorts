@@ -1,3 +1,7 @@
-TIMESTAMP = 1643127030
-SHA256 (osqp-0.6.2.post5.tar.gz) = b2fa17aae42a7ed498ec261b33f262bb4b3605e7e8464062159d9fae817f0d61
-SIZE (osqp-0.6.2.post5.tar.gz) = 226598
+TIMESTAMP = 1790240026
+SHA256 (osqp-1.1.3.tar.gz) = 48f53ef5ec89e6ce99ffa955bc6ea0cf2eec09ea3d40905f0c9fadc939609907
+SIZE (osqp-1.1.3.tar.gz) = 57816
+SHA256 (osqp-osqp-v1.0.0_GH0.tar.gz) = dd6a1c2e7e921485697d5e7cdeeb043c712526c395b3700601f51d472a7d8e48
+SIZE (osqp-osqp-v1.0.0_GH0.tar.gz) = 3265246
+SHA256 (osqp-qdldl-v0.1.8_GH0.tar.gz) = ecf113fd6ad8714f16289eb4d5f4d8b27842b6775b978c39def5913f983f6daa
+SIZE (osqp-qdldl-v0.1.8_GH0.tar.gz) = 21149

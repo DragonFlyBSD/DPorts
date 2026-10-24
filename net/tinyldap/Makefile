@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/lib/libowfat.a:${LIBOWFAT_PORT}
 SNAPSHOT=	20170319
 USES=		tar:bzip2 gmake localbase ssl
 WRKSRC=		${WRKDIR}/${PORTNAME}
-CFLAGS+=	-DATTRIBS=512
+CFLAGS+= -DATTRIBS=512 -I${OPENSSLINC}
 SBINFILES=	acl addindex bindrequest dumpacls dumpidx idx2ldif parse \
 		tinyldap_debug tinyldap_standalone
 BINFILES=	ldapclient ldapclient_str md5password mysql2ldif \

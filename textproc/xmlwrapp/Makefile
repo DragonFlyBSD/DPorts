@@ -1,6 +1,6 @@
 PORTNAME=	xmlwrapp
 PORTVERSION=	0.7.0
-PORTREVISION=	30
+PORTREVISION=	35
 CATEGORIES=	textproc
 MASTER_SITES=	SF
 
@@ -28,10 +28,9 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 
-LDFLAGS+=	-lboost_system
-
 PORTDOCS=	*
 
+CONFIGURE_ARGS= boost_cv_lib_version="1_72"
 post-patch:
 	@${REINPLACE_CMD} '/if test/s|==|=|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} '/^SUBDIRS/s|docs||' ${WRKSRC}/Makefile.in
@@ -40,4 +39,6 @@ post-install:
 	@(cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} \
 		${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
 
+CPPFLAGS:= -I${LOCALBASE}/include ${CPPFLAGS}
+LDFLAGS:= -L${LOCALBASE}/lib ${LDFLAGS}
 .include <bsd.port.mk>

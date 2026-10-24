@@ -32,6 +32,7 @@ NLS_USES=		gettext
 NLS_MAKE_ENV=		ENABLE_NLS=1
 NLS_MAKE_ENV_OFF=	ENABLE_NLS=0
 
+LDFLAGS= -L${LOCALBASE}/lib -lintl
 do-install:
 	cd ${WRKSRC}/data && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/
 	${INSTALL_MAN} ${WRKSRC}/dist/*.6 ${STAGEDIR}${PREFIX}/share/man/man6/

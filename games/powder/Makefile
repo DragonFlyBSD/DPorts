@@ -23,6 +23,7 @@ PORTDOCS=	README.TXT CREDITS.TXT
 
 OPTIONS_DEFINE=	DOCS
 
+CXXFLAGS= -Wno-narrowing
 do-build:
 	cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} buildall.sh
 

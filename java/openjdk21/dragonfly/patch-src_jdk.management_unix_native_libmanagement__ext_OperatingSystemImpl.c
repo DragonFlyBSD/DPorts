@@ -1,24 +1,43 @@
---- src/jdk.management/unix/native/libmanagement_ext/OperatingSystemImpl.c.orig	2021-09-14 03:59:48 UTC
+--- src/jdk.management/unix/native/libmanagement_ext/OperatingSystemImpl.c.orig	2026-10-23 00:00:00 UTC
 +++ src/jdk.management/unix/native/libmanagement_ext/OperatingSystemImpl.c
-@@ -57,7 +57,7 @@
- #include <stdlib.h>
- #include <unistd.h>
- 
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
+@@ -62,6 +62,10 @@
  #include <vm/vm_param.h>
  #endif
  
-@@ -177,7 +177,7 @@ Java_com_sun_management_internal_Operati
-         throw_internal_error(env, "task_info failed");
++#ifdef __DragonFly__
++#include <vm/vm_param.h>
++#endif
++
+ #if defined(_AIX)
+ #include <libperfstat.h>
+ #endif
+@@ -206,6 +210,25 @@
      }
-     return t_info.virtual_size;
--#elif defined(__FreeBSD__)
-+#elif defined(__FreeBSD__) || defined(__DragonFly__)
-     FILE *fp;
-     unsigned long end, start;
-     jlong total = 0;
-@@ -277,7 +277,7 @@ Java_com_sun_management_internal_Operati
+     free(buf);
+     return total;
++#elif defined(__DragonFly__)
++    FILE *fp;
++    unsigned long end, start;
++    jlong total = 0;
++
++    if ((fp = fopen("/proc/curproc/map", "r")) == NULL) {
++        throw_internal_error(env, "Unable to open /proc/curproc/map");
++        return -1;
++    }
++
++    for (;;) {
++       // Ignore everything except start and end entries
++       if (fscanf(fp, "0x%lx 0x%lx %*[^\n]\n", &start, &end) != 2 || start > end)
++           break;
++       total += end - start;
++    }
++
++    fclose(fp);
++    return total;
+ #else /* _ALLBSD_SOURCE */
+     /*
+      * XXXBSD: there's no way available to do it in FreeBSD, AFAIK.
+@@ -288,7 +311,7 @@
          return -1;
      }
      return (jlong)vm_stats.free_count * page_size;
@@ -27,7 +46,7 @@
      static const char *vm_stats[] = {
         "vm.stats.vm.v_free_count",
         "vm.stats.vm.v_cache_count",
-@@ -286,7 +286,11 @@ Java_com_sun_management_internal_Operati
+@@ -297,7 +320,11 @@
      };
      size_t size;
      jlong free_pages;

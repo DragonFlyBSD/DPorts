@@ -1,7 +1,7 @@
 PORTNAME=	gitlab-agent
 PORTVERSION=	${GITLAB_VERSION}
-PORTREVISION=	${GITLAB_PORTREVISION} # modify it in www/gitlab/Makefile.common
 DISTVERSIONPREFIX=	v
+PORTREVISION=	${GITLAB_PORTREVISION} # modify it in www/gitlab/Makefile.common
 CATEGORIES=	net
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -14,18 +14,39 @@ LICENSE=	MIT
 BUILD_DEPENDS=	git>=0:devel/git \
 		golangci-lint>=0:devel/golangci-lint
 
-USES=		go:modules,1.23
-GO_MODULE=	gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v18
+USES=		go:modules
+USE_GITLAB=	yes
+GL_ACCOUNT=	gitlab-org/cluster-integration
+GO_MOD_DIST=	gitlab
+GO_MODULE=	gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v19
 
 _BUILD_DATE=	$$(date -u "+%Y-%m-%d-%H%M UTC")
 GO_TARGET=     ./cmd/kas
 GO_BUILDFLAGS= -tags="tracer_static,tracer_static_jaeger" \
 		-ldflags=" \
-		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v16/cmd.Version=v${PORTVERSION}' \
-		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v16/cmd.Commit=${GL_TAGNAME:C/^(........).*/\1/}' \
-		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v16/cmd.BuildTime=${_BUILD_DATE}'"
+		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v19/cmd.Version=v${PORTVERSION}' \
+		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v19/cmd.Commit=${GL_TAGNAME:C/^(........).*/\1/}' \
+		-X 'gitlab.com/gitlab-org/cluster-integration/gitlab-agent/v19/cmd.BuildTime=${_BUILD_DATE}'"
 
 PLIST_FILES=	bin/kas
+
+# The go.mod has a local path replace (pkg/autoflow, pkg/tunnel). The framework's
+# go-post-fetch hook runs "go mod download all" from the distdir, where only
+# the bare go.mod has been fetched, and resolves that local path relative to
+# it. Extract the subtree from the main tarball first (this runs before
+# go-post-fetch).
+post-fetch:
+	if [ ! -d "${DISTDIR}/${DIST_SUBDIR}/pkg" ]; then \
+		${MKDIR} ${DISTDIR}/${DIST_SUBDIR} && \
+		cd ${DISTDIR}/${DIST_SUBDIR} && \
+			${TAR} -xf "${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}.tar.bz2" \
+			--strip-components 1 --no-same-owner --no-same-permissions \
+			"${DISTNAME}/pkg/autoflow/go.mod" "${DISTNAME}/pkg/autoflow/go.sum" && \
+		cd ${DISTDIR}/${DIST_SUBDIR} && \
+			${TAR} -xf ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}.tar.bz2 \
+			--strip-components 1 --no-same-owner --no-same-permissions \
+			"${DISTNAME}/pkg/tunnel/go.mod" "${DISTNAME}/pkg/tunnel/go.sum"; \
+	fi
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/kas ${STAGEDIR}${PREFIX}/bin/kas

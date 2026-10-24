@@ -1,5 +1,6 @@
 PORTNAME=	jinput
 DISTVERSION=	2.0.10
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	games java
 
@@ -10,7 +11,7 @@ WWW=		https://github.com/jinput/jinput
 LICENSE=	BSD2CLAUSE
 
 BUILD_DEPENDS=	${JAVAJARDIR}/jutils/jutils.jar:games/jutils \
-		maven>0:devel/maven
+		maven38>0:devel/maven38
 RUN_DEPENDS=	${JAVAJARDIR}/jutils/jutils.jar:games/jutils
 
 USES=		java
@@ -33,7 +34,8 @@ pre-build:
 
 do-build:
 	cd ${WRKSRC}; \
-		${SETENV} mvn -P windows,linux,osx,wintab ${MAVEN_REPO} ${MAVEN_ARGS} --offline package
+		${SETENV} MAVEN_HOME=${LOCALBASE}/share/java/apache-maven-3.8 \
+			mvn -P windows,linux,osx,wintab ${MAVEN_REPO} ${MAVEN_ARGS} --offline package
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${JAVAJARDIR}/${PORTNAME}

@@ -26,7 +26,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 #CONFIGURE_ENV+=	LDFLAGS=-L${LOCALBASE}/lib CPPFLAGS=-I${LOCALBASE}/include
 
-USES+=		gmake libtool ncurses pathfix pkgconfig autoreconf
+USES+=		gmake libtool ncurses pkgconfig autoreconf
 USE_LDCONFIG=	yes
 USE_CSTD=	gnu99
 WRKSRC=		${WRKDIR}/unixcw-${PORTVERSION}
@@ -55,5 +55,14 @@ post-install:
 .ifndef XCWCP
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libcw.so.${MAJOR_LIB_VER}.${MINOR_LIB_VER}
 .endif
+
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@curses@ncurses@' \
+		${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e 's@lcurses@lncurses@g' \
+		${WRKSRC}/configure \
+		${WRKSRC}/src/cwcp/Makefile.am \
+		${WRKSRC}/src/cwcp/Makefile.in
 
 .include <bsd.port.mk>

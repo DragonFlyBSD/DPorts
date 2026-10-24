@@ -1,13 +1,14 @@
-A terminal based Matrix client written in Go with the following
-features:
+A Matrix client written in Go using mautrix-go.
 
-- Session verification via security key or manual text comparison
-- Decryption of messages sent after initial login; older messages
-  require key import
-- Proxy support via `https_proxy` environment variable
-- Text copying using shift+drag, `/copy` command, or plaintext mode
-- Support for one account per instance; multiple instances possible with
-  different data directories
-- Customizable data storage paths through environment variables
-- Debug logging enabled with `DEBUG=1` and customizable log directory
-- System-specific default directories for config, cache, and data
+gomuks is split into a backend and various frontends. The backend can either be
+used as a traditional SDK that's built into the client, or as a remote server
+which acts more like a bouncer.
+
+gomuks web is the most mature frontend and is ready for daily use. The web
+frontend also has various wrappers, like the Android app. There's also a
+version with an embedded backend in wasm.
+
+gomuks terminal is a port of legacy gomuks, but it's still experimental and
+doesn't have many features beyond basic chatting. A version with the backend
+embedded is planned, but doesn't exist yet (#662). For legacy gomuks terminal,
+see the v0.3.1 tag and #476.

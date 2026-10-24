@@ -1,7 +1,7 @@
 PORTNAME=	openconnect-gui
 PORTVERSION=	1.5.3
 DISTVERSIONPREFIX=v
-PORTREVISION=	4
+PORTREVISION=	9
 MASTER_SITES=	https://gitlab.com/openconnect/openconnect-gui/-/archive/v${PORTVERSION}/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 CATEGORIES=	security net-vpn
@@ -20,13 +20,14 @@ LIB_DEPENDS=	libgnutls.so:security/gnutls \
 RUN_DEPENDS=	openconnect:security/openconnect \
 		vpnc-scripts>=0:sysutils/vpnc-scripts
 
-USES=		cmake:insource compiler:c++11-lang pkgconfig qt:5
+USES= cmake:insource compiler:c++11-lang pkgconfig qt:5 gmake
 USE_GITHUB=	nodefault
 GH_TUPLE=	qtproject:qt-solutions:a8dda66d:qtsolutions/external/src/qt-solutions-master
 USE_QT=		buildtools:build concurrent core gui network qmake:build widgets
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 PLIST_FILES=	bin/openconnect-gui
 
+MAKE_JOBS_UNSAFE= yes
 do-install:
 	${MV} ${WRKSRC}/bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 

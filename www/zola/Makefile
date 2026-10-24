@@ -1,9 +1,9 @@
 PORTNAME=	zola
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.19.1
+DISTVERSION=	0.23.6
 CATEGORIES=	www
 
-MAINTAINER=	mikael@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Fast static site generator
 WWW=		https://www.getzola.org/
 
@@ -14,7 +14,8 @@ NOT_FOR_ARCHS=	i386
 NOT_FOR_ARCHS_REASON=	the ring crate requires SSE2 instruction on intel cpu
 
 LIB_DEPENDS=	libonig.so:devel/oniguruma \
-		libsass.so:textproc/libsass
+		libsass.so:textproc/libsass \
+		libzstd.so:archivers/zstd
 
 USES=		cargo ssl
 USE_GITHUB=	yes
@@ -31,7 +32,6 @@ PORTDOCS=	*
 OPTIONS_DEFINE=	DOCS
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/zola
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d \
 		${STAGEDIR}${PREFIX}/share/fish/completions \
 		${STAGEDIR}${PREFIX}/share/zsh/site-functions
@@ -46,4 +46,5 @@ post-install-DOCS-on:
 	@cd ${WRKSRC}/docs && \
 		${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

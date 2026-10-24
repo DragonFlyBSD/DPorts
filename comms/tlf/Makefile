@@ -1,7 +1,7 @@
 PORTNAME=	tlf
 PORTVERSION=	1.4.1
 DISTVERSIONPREFIX=	${PORTNAME}-
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	comms hamradio
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -38,4 +38,6 @@ HAMLIB_CONFIGURE_ENABLE=hamlib
 FLDIGI_LIB_DEPENDS=	libxmlrpc.so:net/xmlrpc-c
 FLDIGI_CONFIGURE_ENABLE=fldigi-xmlrpc
 
+PLIST_FILES= %%PORTDOCS%%%%DOCSDIR%%/Xresources %%DATADIR%%/cwops.txt %%DATADIR%%/ok_om.txt %%DATADIR%%/okommults %%DATADIR%%/rules/cwops_mini_cwt %%DATADIR%%/rules/okom
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

@@ -16,6 +16,7 @@ PORTDOCS=	README
 
 OPTIONS_DEFINE=	DOCS
 
+MAKE_ENV= NO_WERROR=defined
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	${LN} -sf ${FILESDIR}/${PORTNAME}.c ${FILESDIR}/Makefile ${WRKSRC}

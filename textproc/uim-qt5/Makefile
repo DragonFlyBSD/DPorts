@@ -1,14 +1,14 @@
+PORTREVISION=	2
 PKGNAMESUFFIX=	-qt5
 
 COMMENT=	Qt5 modules of uim input method
 
 LIB_DEPENDS=	libuim.so:textproc/uim
 
-USES=		cmake:indirect compiler:c++11-lang gl iconv kde:5 libtool qt:5
+USES=		cmake:indirect compiler:c++11-lang gl iconv libtool qt:5
 USE_GL=		gl
-USE_KDE=	plasma-framework \
-		ecm:build
-USE_QT=		buildtools:build core declarative gui network qmake:build widgets x11extras
+USE_QT=		core gui widgets x11extras \
+		buildtools:build qmake:build
 
 MASTERDIR=	${.CURDIR}/../../textproc/uim
 PKGDIR=		${.CURDIR}
@@ -21,9 +21,10 @@ CFLAGS+=	-I${LOCALBASE}/include
 UIM_SLAVE=	yes
 
 .if defined(WITHOUT_X11)
-IGNORE=		cannot be built without X11. Please, unset WITHOUT_X11
+IGNORE= unmaintained, please request fixing to users mailing list
 .endif
 
+DFLY_UNMAINTAINED= yes
 do-build:
 	(cd ${WRKSRC}/uim && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} libuim-x-util.la libuim-counted-init.la)
 	(cd ${WRKSRC}/replace && ${SETENV} ${MAKE_ENV} ${MAKE_CMD})

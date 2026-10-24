@@ -1,4 +1,0 @@
-
-USES+=	ncurses
-
-CFLAGS+=	-Wno-discarded-qualifiers

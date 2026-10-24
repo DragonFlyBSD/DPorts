@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/base/debug/proc_maps_linux.cc.orig	2022-02-28 16:54:41 UTC
+--- src/3rdparty/chromium/base/debug/proc_maps_linux.cc.orig	2025-02-19 07:43:18 UTC
 +++ src/3rdparty/chromium/base/debug/proc_maps_linux.cc
-@@ -13,7 +13,7 @@
+@@ -22,7 +22,7 @@
  #include "base/strings/string_split.h"
  #include "build/build_config.h"
  

@@ -20,6 +20,7 @@ USES=		compiler:c++11-lib gmake pkgconfig
 PLIST_FILES=	bin/guetzli
 MAKE_FLAGS=	verbose=1
 
+MAKE_JOBS_UNSAFE= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/Release/guetzli ${STAGEDIR}${PREFIX}/bin
 

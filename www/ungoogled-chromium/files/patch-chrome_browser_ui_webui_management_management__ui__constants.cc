@@ -1,8 +1,8 @@
---- chrome/browser/ui/webui/management/management_ui_constants.cc.orig	2024-08-26 14:40:28 UTC
+--- chrome/browser/ui/webui/management/management_ui_constants.cc.orig	2026-05-09 18:09:27 UTC
 +++ chrome/browser/ui/webui/management/management_ui_constants.cc
-@@ -82,12 +82,12 @@ const char kProfileReportingBrowser[] = "profileReport
- const char kProfileReportingExtension[] = "profileReportingExtension";
+@@ -93,13 +93,13 @@ const char kProfileReportingExtension[] = "profileRepo
  const char kProfileReportingPolicy[] = "profileReportingPolicy";
+ const char kProfileReportingLearnMore[] = "profileReportingLearnMore";
  
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
@@ -10,8 +10,9 @@
  const char kManagementScreenCaptureData[] = "managementScreenCaptureData";
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
  
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    (BUILDFLAG(IS_ANDROID) && BUILDFLAG(ENABLE_EXTENSIONS_CORE))
++    (BUILDFLAG(IS_ANDROID) && BUILDFLAG(ENABLE_EXTENSIONS_CORE)) || BUILDFLAG(IS_BSD)
  const char kManagementDeviceSignalsDisclosure[] =
      "managementDeviceSignalsDisclosure";
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||

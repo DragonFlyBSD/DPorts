@@ -1,5 +1,5 @@
 PORTNAME=	mixlib-install
-PORTVERSION=	3.12.30
+PORTVERSION=	3.19.2
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -13,6 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	rubygem-mixlib-shellout>=0:devel/rubygem-mixlib-shellout \
 		rubygem-mixlib-versioning>=0:devel/rubygem-mixlib-versioning \
+		rubygem-ostruct>=0:devel/rubygem-ostruct \
 		rubygem-thor>=0:devel/rubygem-thor
 
 USES=		gem

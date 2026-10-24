@@ -1,5 +1,6 @@
 PORTNAME=	jekyll
 PORTVERSION=	4.4.1
+PORTREVISION=	3
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -18,15 +19,15 @@ RUN_DEPENDS=	rubygem-addressable>=2.4<3:www/rubygem-addressable \
 		rubygem-i18n>=1.0,2<2,2:devel/rubygem-i18n \
 		rubygem-jekyll-sass-converter>=2.0<4.0:textproc/rubygem-jekyll-sass-converter \
 		rubygem-jekyll-watch>=2.0<3:www/rubygem-jekyll-watch \
-		rubygem-json>=2.6<3:devel/rubygem-json \
+		rubygem-json2>=2.6<3:devel/rubygem-json2 \
 		rubygem-kramdown>=2.3.1<3:textproc/rubygem-kramdown \
 		rubygem-kramdown-parser-gfm>=1.0<2:textproc/rubygem-kramdown-parser-gfm \
 		rubygem-liquid4>=4.0<5:textproc/rubygem-liquid4 \
 		rubygem-mercenary>=0.3.6<1:devel/rubygem-mercenary \
 		rubygem-pathutil>=0.9<1:devel/rubygem-pathutil \
-		rubygem-rouge>=3.0<5.0:textproc/rubygem-rouge \
+		rubygem-rouge4>=3.0<5.0:textproc/rubygem-rouge4 \
 		rubygem-safe_yaml>=1.0<2:devel/rubygem-safe_yaml \
-		rubygem-terminal-table>=1.8<4.0:textproc/rubygem-terminal-table \
+		rubygem-terminal-table3>=1.8<4.0:textproc/rubygem-terminal-table3 \
 		rubygem-webrick>=1.7<2:www/rubygem-webrick
 
 USES=		cpe gem

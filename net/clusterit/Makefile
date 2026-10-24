@@ -21,9 +21,14 @@ OPTIONS_SUB=	yes
 X11_USES=	xorg
 X11_USE=	XORG=x11
 
+USES= ncurses
 .include <bsd.port.options.mk>
 
 post-patch-X11-off:
 	${REINPLACE_CMD} -E 's,^(SUBDIRS) = .*,\1 = barrier dsh jsd pcp dtop tools,' ${WRKSRC}/Makefile.in
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lcurses@-lncurses@'	\
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

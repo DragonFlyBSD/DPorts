@@ -25,4 +25,8 @@ LDFLAGS+=	-L${OPENSSLLIB}
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${LUA_MODLIBDIR}/ssl.so
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/BSD_LDFLAGS/ s|-O -fPIC|${LDFLAGS}|' \
+		${WRKSRC}/src/Makefile
+
 .include <bsd.port.mk>

@@ -1,8 +1,8 @@
---- include/cpu_features_macros.h.intermediate	2021-12-24 06:25:18.000000000 +0000
+--- include/cpu_features_macros.h.orig	2026-06-01 12:49:57 UTC
 +++ include/cpu_features_macros.h
-@@ -83,7 +83,7 @@
- #define CPU_FEATURES_OS_DARWIN
- #endif
+@@ -91,7 +91,7 @@
+ // Os
+ ////////////////////////////////////////////////////////////////////////////////
  
 -#if (defined(__freebsd__) || defined(__FreeBSD__))
 +#if (defined(__freebsd__) || defined(__FreeBSD__) || defined(__DragonFly__))

@@ -1,6 +1,6 @@
 PORTNAME=	cassandra-cpp-driver
 PORTVERSION=	2.17.1
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	gahr@FreeBSD.org
@@ -11,12 +11,13 @@ LICENSE=	APACHE20
 
 LIB_DEPENDS=	libuv.so:devel/libuv
 
-USES=		cmake compiler:c++11-lang pkgconfig pathfix ssl
+USES=		cmake compiler:c++11-lang pkgconfig ssl
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
-GH_ACCOUNT=	datastax
-GH_PROJECT=	cpp-driver
+GH_ACCOUNT=	apache
+GH_PROJECT=	cassandra-cpp-driver
 
+PATCH_ARGS=	-p1
 CMAKE_ARGS=	-DCMAKE_INSTALL_LIBDIR:STRING=lib \
 		-DCASS_BUILD_STATIC:BOOL=ON
 

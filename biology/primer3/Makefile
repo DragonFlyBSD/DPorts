@@ -15,6 +15,7 @@ MAKE_ARGS=	CC="${CC}" CPP="${CXX}"
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 PLIST_FILES=	bin/primer3
 
+CFLAGS= -fpermissive
 post-patch:
 	@${REINPLACE_CMD} \
 		-e 's#^CFLAGS.*#CFLAGS  += \$$\(CC_OPTS\)#;' \

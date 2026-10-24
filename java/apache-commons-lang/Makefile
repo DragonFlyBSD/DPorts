@@ -1,6 +1,6 @@
 PORTNAME=	commons-lang
 PORTVERSION=	2.6
-PORTREVISION=	1
+PORTREVISION=	6
 CATEGORIES=	java devel
 MASTER_SITES=	APACHE_COMMONS_SOURCE
 PKGNAMEPREFIX=	apache-
@@ -11,6 +11,9 @@ COMMENT=	Apache library with helper utilities for the java.lang API
 WWW=		https://commons.apache.org/proper/commons-lang/
 
 LICENSE=	APACHE20
+
+DEPRECATED=	Unpatched CVE, last release in 2011, does not compile with Java 11+, not actively maintained. Superseded by port java/apache-commons-lang3.
+EXPIRATION_DATE=	2026-10-31
 
 USES=		java:ant,run
 JAVA_VERSION=	8

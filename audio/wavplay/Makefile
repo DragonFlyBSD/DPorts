@@ -26,6 +26,7 @@ X11_USES=		localbase:ldflags xorg
 X11_USE=		XORG=x11,xmu,xt
 X11_LIB_DEPENDS=	libXm.so:x11-toolkits/lesstif
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|machine/soundcard|sys/soundcard|g' ${WRKSRC}/src/*.c
 

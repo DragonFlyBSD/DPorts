@@ -1,23 +1,29 @@
 PORTNAME=	psi4
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.7
+DISTVERSION=	1.11
 CATEGORIES=	science # quantum-chemistry
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	1ddd0b3a85d949347bfc6fb9c40571aecffacc9e.patch:-p1 # backport fix for pybind11 incompatibility caused by latest pybind11 update
+
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Open-source suite of ab initio quantum chemistry programs
-WWW=		https://psicode.org/
+WWW=		https://psicode.org/ \
+		https://github.com/psi4/psi4/
 
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}gau2grid>0:math/py-gau2grid@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}optking>0:science/py-optking@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}optking>=0.4.2:science/py-optking@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}qcelemental>0:science/py-qcelemental@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}qcengine>0:science/py-qcengine@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}qcengine>0:science/py-qcengine@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}qcmanybody>=0.5.1:science/py-qcmanybody@${PY_FLAVOR}
 BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		${LOCALBASE}/include/pybind11/pybind11.h:devel/pybind11 \
 		${PY_DEPENDS} \
+		${PY_SETUPTOOLS} \
 		libint2-psi4>0:science/libint2-psi4 # has to be this library
 LIB_DEPENDS=	libgg.so:math/gau2grid \
 		libxc.so:science/libxc
@@ -25,13 +31,14 @@ RUN_DEPENDS=	${PY_DEPENDS} \
 		libint2-psi4>0:science/libint2-psi4
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest@${PY_FLAVOR}
 
-USES=		blaslapack:openblas cmake compiler:c++17-lang eigen:3 fortran localbase:ldflags python:3.8+
+USES=		blaslapack:openblas cmake compiler:c++17-lang eigen:3 fortran localbase:ldflags python
 USE_GITHUB=	yes
 
 CMAKE_ARGS=	-DLibxc_DIR=${LOCALBASE} \
 		-DFREEBSD_PYTHON_VER=${PYTHON_VER} \
 		-DPython_EXECUTABLE=${PYTHON_CMD} \
-		-DPYMOD_INSTALL_LIBDIR=${PYTHONPREFIX_SITELIBDIR:S|${PREFIX}/lib||}
+		-DPYMOD_INSTALL_LIBDIR=${PYTHONPREFIX_SITELIBDIR:S|${PREFIX}/lib||} \
+		-DCMAKE_INSIST_FIND_PACKAGE_Libint2=ON
 CONFIGURE_ENV=	FREEBSD_PYTHON_VER=${PYTHON_VER}
 
 LDFLAGS+=	-lexecinfo # for backtrace_symbols
@@ -40,6 +47,7 @@ TEST_ENV=	${MAKE_ENV} \
 		PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}:${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/psi4/tests \
 		PSIDATADIR=${STAGEDIR}${DATADIR} \
 		PSIPATH=${STAGEDIR}${DATADIR}/basis
+TEST_WRKSRC=	${WRKSRC}/tests/pytests
 
 BINARY_ALIAS=	python=${PYTHON_CMD} # only for tests
 
@@ -50,7 +58,7 @@ NATIVE_CMAKE_BOOL=	ENABLE_XHOST
 post-patch:
 	# correct the default data dir
 	@${REINPLACE_CMD} \
-		-E 's|%%DATADIR%%|${DATADIR}|' \
+		-e 's|%%DATADIR%%|${DATADIR}|' \
 		${WRKSRC}/psi4/run_psi4.py
 
 do-install: # project fails to install itself into a stage directory due to a convoluted cmake code structure (DESTDIR isn't handled correctly)
@@ -72,27 +80,9 @@ do-install: # project fails to install itself into a stage directory due to a co
 
 	# psi4 sometimes fails to print its version: https://github.com/psi4/psi4/issues/2831
 
-do-test: # tests are generally broken, but virtually all individual tests pass separately
-	# based on https://psicode.org/psi4manual/master/build_planning.html#faq-minutetests
-	#@cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} pytest # pytest-based tests fail, see https://github.com/psi4/psi4/issues/2802 https://github.com/psi4/psi4/issues/2830
+do-test:
+	@cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} pytest -p no:black -p no:ruff -p no:mypy # tests can run without this target too, but this way tests output is more concise and it looks more appealing
 
-	# samples as tests, this also fails down the line: https://github.com/psi4/psi4/issues/2803
-	#@cd ${WRKSRC} && ( \
-	#	for f in $$(${FIND} samples/cc24 -name test.in | ${XARGS} dirname); do \
-	#		echo "===> runing test in $$f"; \
-	#		(cd $$f && ${SETENV} ${TEST_ENV} ${STAGEDIR}${PREFIX}/bin/psi4 test.in) \
-	#	done \
-	#)
-
-	# api tests
-	@cd ${WRKSRC}/tests/pytests && ${SETENV} ${TEST_ENV} pytest
-
-	# cli tests
-	#@cd ${WRKSRC}/tests && ( \
-	#	for f in $$(${FIND} . -name input.dat | ${XARGS} dirname); do \
-	#		echo "===> runing input.dat $$f"; \
-	#		(cd $$f && ${SETENV} ${TEST_ENV} ${STAGEDIR}${PREFIX}/bin/psi4 input.dat) \
-	#	done \
-	#)
+# tests as of 1.11: 6102 passed, 1509 skipped, 52 xfailed in 5305.43s (1:28:25)
 
 .include <bsd.port.mk>

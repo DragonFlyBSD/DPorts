@@ -1,5 +1,5 @@
 PORTNAME=	freeradius
-DISTVERSION=	3.2.4
+DISTVERSION=	3.2.10
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/FreeRADIUS/freeradius-server/releases/download/release_${DISTVERSION:S/./_/g}/ \
 		https://freeradius.org/ftp/pub/radius/%SUBDIR%/ \
@@ -20,7 +20,7 @@ BROKEN_SSL_REASON_libressl=	LibreSSL is no longer supported
 BROKEN_SSL_REASON_libressl-devel=	${BROKEN_SSL_REASON_libressl}
 
 LIB_DEPENDS=	libgdbm.so:databases/gdbm \
-		libtalloc.so:devel/talloc
+		libtalloc.so:${SAMBA_TALLOC_PORT}
 
 FLAVORS=	default ldap mysql pgsql sqlite3
 FLAVOR?=	${FLAVORS:[1]}
@@ -150,20 +150,28 @@ UNBOUND_CONFIGURE_WITH=		rlm_unbound
 UNBOUND_LIB_DEPENDS=		libunbound.so:dns/unbound
 UNIXODBC_CONFIGURE_WITH=	rlm_sql_unixodbc
 UNIXODBC_LIB_DEPENDS=		libodbc.so:databases/unixODBC
-WINBIND_USES=			samba:build,lib
-WINBIND_CONFIGURE_ON=		--with-winbind-include-dir=${LOCALBASE}/include/samba4 \
-				--with-winbind-lib-dir=${LOCALBASE}/lib/samba4
+WINBIND_CONFIGURE_ON=		--with-winbind-include-dir=${SAMBA_INCLUDEDIR} \
+				--with-winbind-lib-dir=${SAMBA_LIBDIR}
 JSON_CONFIGURE_WITH=		rlm_json
 JSON_CONFIGURE_ON=		--with-jsonc-lib-dir=${LOCALBASE}/lib \
 				--with-jsonc-include-dir=${LOCALBASE}/include
 JSON_LIB_DEPENDS=		libjson-c.so:devel/json-c
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NHEIMDAL} MITKRB_PORT
+MAKE_ENV= LDVER=ld.bfd
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUSER}
 SUB_LIST+=	RUN_AS_USER="yes"
 .else
 SUB_LIST+=	RUN_AS_USER="no"
+.endif
+
+.if ${PORT_OPTIONS:MWINBIND}
+USES+=		samba:build,lib
+.else
+USES+=		samba:env
 .endif
 
 # User and group to use if USER option is chosen

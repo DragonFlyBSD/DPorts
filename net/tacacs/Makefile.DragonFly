@@ -1,5 +1,0 @@
-
-OPTIONS_DEFAULT:=	${OPTIONS_DEFEAULT:NSCTP}
-
-MAKE_ARGS+=	INCDIR_SSL=${OPENSSLINC} LIBDIR_SSL=${OPENSSLLIB}
-IGNORE=   unmaintained, please request fixing to users mailing list

@@ -1,6 +1,7 @@
 PORTNAME=	amnesia-tdd
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.3.2
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	shamaz.mazum@gmail.com
@@ -32,6 +33,7 @@ CMAKE_SOURCE_PATH=	${WRKSRC}/amnesia/src
 
 SUB_FILES=	pkg-message
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/${PORTNAME}
 

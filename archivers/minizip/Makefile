@@ -1,5 +1,6 @@
 PORTNAME=	minizip
-DISTVERSION=	1.3.1
+DISTVERSION=	1.3.2
+PORTREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	https://github.com/madler/zlib/releases/download/v${DISTVERSION}/
 DISTNAME=	zlib-${DISTVERSION}
@@ -10,7 +11,7 @@ WWW=		https://www.winimage.com/zLibDll/minizip.html
 
 LICENSE=	ZLIB
 
-USES=		autoreconf cpe libtool pathfix tar:xz
+USES=		autoreconf cpe libtool tar:xz
 CPE_VENDOR=	minizip_project
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

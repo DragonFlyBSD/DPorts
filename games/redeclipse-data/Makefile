@@ -35,4 +35,8 @@ Makefile.tuples::
 			| awk '{printf("%sredeclipse:%s:%s:%s/%s \\\n", NR==1 ? "GH_TUPLE=\t" : "\t\t", $$2, $$1, $$2, $$2, $$2)}' \
 			>> ${.CURDIR}/Makefile.tuples
 
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	766M package (too big for mirrors)
+.endif
+
 .include <bsd.port.mk>

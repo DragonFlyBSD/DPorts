@@ -41,6 +41,7 @@ OPTIONS_MULTI_CLIENT=CORE GUI
 
 CORE_DESC=	Client 'core' support
 
+LDFLAGS= -L${LOCALBASE}/lib -lpng
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGUI} && ${PORT_OPTIONS:MCORE}

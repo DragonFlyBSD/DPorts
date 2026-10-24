@@ -1,4 +1,4 @@
---- src/plugins/tls/openssl/qtls_openssl.cpp.orig	2023-09-21 19:24:26 UTC
+--- src/plugins/tls/openssl/qtls_openssl.cpp.orig	2026-05-11 20:54:55 UTC
 +++ src/plugins/tls/openssl/qtls_openssl.cpp
 @@ -1438,13 +1438,13 @@ bool TlsCryptographOpenSSL::initSslContext()
      else if (mode == QSslSocket::SslServerMode)

@@ -1,6 +1,5 @@
 PORTNAME=	libdisplay-info
-DISTVERSION=	0.2.0
-PORTREVISON=	1
+DISTVERSION=	0.4.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -20,11 +19,16 @@ GL_ACCOUNT=	emersion
 SHEBANG_FILES=	tool/*.py
 PLIST_SUB=	VERSION=${DISTVERSION:C/-.*//}
 
+CFLAGS= -std=c11 -Wno-conversion -Wno-maybe-uninitialized
 pre-test:
 	@if [ ! -e ${WRKDIR}/.meson_build_tests ]; then \
 		${RM} ${CONFIGURE_COOKIE} ${BUILD_COOKIE}; \
 		${MAKE} -C${.CURDIR} build MESON_ARGS="${MESON_ARGS} --reconfigure"; \
 		${TOUCH} ${WRKDIR}/.meson_build_tests; \
 	fi
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/POSIX_C_SOURCE/d' \
+		${WRKSRC}/meson.build
 
 .include <bsd.port.mk>

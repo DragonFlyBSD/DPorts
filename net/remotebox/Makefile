@@ -1,5 +1,6 @@
 PORTNAME=	remotebox
 DISTVERSION=	3.2
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://remotebox.knobgoblin.org.uk/downloads/
 DISTNAME=	RemoteBox-${DISTVERSION}
@@ -63,4 +64,5 @@ do-install:
 	       ${STAGEDIR}${PREFIX}/share/pixmaps
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/applications
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NFREERDP}
 .include <bsd.port.mk>

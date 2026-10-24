@@ -46,4 +46,5 @@ PORTEXAMPLES=	example
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
+MAKE_ENV+= LIBCURSES=-lncurses
 .include <bsd.port.mk>

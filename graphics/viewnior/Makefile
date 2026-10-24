@@ -28,6 +28,8 @@ OPTIONS_SUB=	yes
 
 NLS_USES=	gettext-runtime
 
+USES+= python
+BINARY_ALIAS= python3=${PYTHON_CMD}
 pre-configure:
 	${MKDIR} ${WRKSRC}/m4
 

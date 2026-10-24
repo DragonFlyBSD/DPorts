@@ -12,6 +12,7 @@ USES=		ncurses
 MAKE_ARGS=	LDADD="-lncurses"
 PLIST_FILES=	bin/nifmon share/man/man8/nifmon.8.gz
 
+MAKE_ENV= CWARNFLAGS=-fcommon
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nifmon ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/nifmon.8 ${STAGEDIR}${PREFIX}/share/man/man8

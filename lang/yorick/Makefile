@@ -30,6 +30,7 @@ PORTDOCS=	FILE_FORMATS README drat.doc graph.doc hex.doc \
 OPTIONS_DEFINE=	DOCS
 
 # Change "cd foo; $(MAKE)" into "$(MAKE) -C foo" to unbreak parallel builds
+CFLAGS= -DNO_EXP10
 post-patch:
 	@${REINPLACE_CMD} -e 's|libyor\.a$$|libyor|' ${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -E 's|cd (.+); (\$$\(MAKE\))|\2 -C \1|' \

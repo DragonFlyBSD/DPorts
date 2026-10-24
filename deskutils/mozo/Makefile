@@ -1,8 +1,8 @@
 PORTNAME=	mozo
-PORTVERSION=	1.28.0
-PORTREVISION=	1
+DISTVERSION=	1.28.0
+PORTREVISION=	3
 CATEGORIES=	deskutils mate
-MASTER_SITES=	MATE
+MASTER_SITES=	https://github.com/mate-desktop/${PORTNAME}/releases/download/v${DISTVERSION}/
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	${LOCALBASE}/bin/mate-desktop-item-edit:x11/mate-panel
 
-USES=		gettext-tools gmake gnome localbase mate pathfix pkgconfig \
+USES=		gettext-tools gmake gnome localbase mate pkgconfig \
 		python tar:xz
 USE_GNOME=	gtk30 intltool pygobject3
 USE_MATE=	menus
@@ -22,7 +22,7 @@ GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 NO_ARCH=	yes
 
-PORTSCOUT=	limitw:1,even
+PORTSCOUT=	site:https://github.com/mate-desktop/mozo/releases/ limitw:1,even
 
 NLS_USES=	gettext
 OPTIONS_DEFINE=	NLS

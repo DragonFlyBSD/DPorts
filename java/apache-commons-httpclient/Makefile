@@ -1,6 +1,6 @@
 PORTNAME=	commons-httpclient
 DISTVERSION=	3.1
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=	java www
 MASTER_SITES=	APACHE/httpcomponents/${PORTNAME}/source
 PKGNAMEPREFIX=	apache-
@@ -11,6 +11,9 @@ COMMENT=	Package implementing the client side of the HTTP standard
 WWW=		https://hc.apache.org/httpclient-3.x/
 
 LICENSE=	APACHE20
+
+DEPRECATED=	The Commons HttpClient project is end of life. Replaced by the Apache HttpComponents project in port www/httpclient.
+EXPIRATION_DATE=	2026-10-31
 
 BUILD_DEPENDS=	${JAVALIBDIR}/commons-logging.jar:java/apache-commons-logging
 BUILD_DEPENDS+=	${JAVALIBDIR}/commons-codec.jar:java/apache-commons-codec
@@ -31,11 +34,6 @@ ALL_TARGET=	dist
 PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
 PORTDOCS=	*
-
-post-patch:
-	@${REINPLACE_CMD} 's/Ortwin Gl.*ck/Ortwin Glueck/' \
-		${WRKSRC}/src/java/org/apache/commons/httpclient/*.java \
-		${WRKSRC}/src/java/org/apache/commons/httpclient/*/*.java
 
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR file as ${JAVAJARDIR}/${PORTNAME}.jar..."

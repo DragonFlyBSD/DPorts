@@ -1,4 +1,0 @@
-
-USES+=	alias
-
-# XXX needs "/dev/iic%d"

@@ -1,31 +1,26 @@
 PORTNAME=	mew
-DISTVERSION=	6.9
-PORTREVISION=	9
+DISTVERSION=	6.11
 CATEGORIES=	mail elisp
 MASTER_SITES=	http://www.mew.org/Release/
-PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
-DISTFILES=	${DISTNAME}a${EXTRACT_SUFX}
 
-MAINTAINER=	yasu@FreeBSD.org
+MAINTAINER=	t.masub@gmail.com
 COMMENT=	Messaging in the Emacs World for emacs
 WWW=		https://www.Mew.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		emacs
+USES=		emacs:build
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-elispdir=${LOCALBASE}/${EMACS_VERSION_SITE_LISPDIR}/mew \
-		--with-etcdir=${LOCALBASE}/${EMACS_VERSION_SITE_LISPDIR}/mew/etc
-
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
+CONFIGURE_ARGS=	--with-elispdir=${LOCALBASE}/${EMACS_SITE_LISPDIR}/mew \
+		--with-etcdir=${LOCALBASE}/${EMACS_SITE_LISPDIR}/mew/etc
 
 # target name for make build and install
 ALL_TARGET=	all info jinfo
 INSTALL_TARGET=	install install-jinfo
 
-CONFLICTS_INSTALL=	mew-devel mew-devel-emacs_* mew-emacs_* # bin/cmew bin/incm
+CONFLICTS_INSTALL=	mew-devel mew-emacs_*
 
 SUB_FILES=	pkg-message
 
@@ -50,4 +45,5 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/*.md ${WRKSRC}/CHANGES/*.md ${STAGEDIR}${DOCSDIR}
 	(cd ${STAGEDIR}${DOCSDIR}; for f in v*.md ; do ${MV} $$f CHANGES.$$f; done)
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NSTUNNEL}
 .include <bsd.port.mk>

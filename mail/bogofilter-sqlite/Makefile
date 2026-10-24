@@ -1,18 +1,21 @@
 PORTNAME=	bogofilter
-PORTREVISION=	5
-CATEGORIES=	mail
+PORTREVISION=	2
 PKGNAMESUFFIX=	-sqlite
 
-MAINTAINER=	mandree@FreeBSD.org
+COMMENT?=	Fast, teachable, learning spam detector (SQLite3 database)
+
+DEPRECATED=	# override master port
 
 USES=		sqlite
-CONFLICTS_INSTALL=	bogofilter bogofilter-lmdb bogofilter-kc
 
 CONFIGURE_ARGS=	--with-database=sqlite
-BF_CPPFLAGS=	-I${LOCALBASE}/include
-BF_LIBS=
+
+CONFLICTS_INSTALL=	bogofilter bogofilter-kc bogofilter-lmdb1
+MASTERDIR=	${.CURDIR}/../bogofilter
 DESCR=		${PKGDIR}/pkg-descr
 
-MASTERDIR=	${.CURDIR}/../bogofilter-bdb
+BF_CPPFLAGS=	-I${LOCALBASE}/include
+BF_LIBS=
 
+DFLY_UNMAINTAINED= yes
 .include "${MASTERDIR}/Makefile"

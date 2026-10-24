@@ -1,5 +1,5 @@
 PORTNAME=	sfeed
-PORTVERSION=	1.9
+PORTVERSION=	2.4
 CATEGORIES=	www
 MASTER_SITES=	https://codemadness.org/releases/sfeed/
 
@@ -11,9 +11,11 @@ LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 CFLAGS+=	-D__BSD_VISIBLE
+MAKE_ARGS=	MANPREFIX=${PREFIX}/share/man
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	cd ${STAGEDIR}${PREFIX}/bin && ${STRIP_CMD} sfeed sfeed_atom sfeed_curses sfeed_frames sfeed_gopher sfeed_html sfeed_mbox sfeed_json sfeed_opml_import sfeed_plain sfeed_twtxt sfeed_web sfeed_xmlenc
 

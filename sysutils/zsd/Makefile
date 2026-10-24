@@ -1,28 +1,29 @@
-# Created by: Fabian Keil <fk@fabiankeil.de>
-
 PORTNAME=	zsd
-PORTVERSION=	0.0.2014.12.07
+DISTVERSION=	2025-02-23
+DISTVERSIONSUFFIX=	-5243dad
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.fabiankeil.de/sourcecode/zfs-snapshot-destroyer/
-DISTNAME=	${PORTNAME}-2014-12-07-c2d3662
+MASTER_SITES=	https://www.fabiankeil.de/sourcecode/zfs-snapshot-destroyer/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	fk@fabiankeil.de
 COMMENT=	Destroys ZFS snapshots
+WWW=		https://www.fabiankeil.de/gehacktes/zsd/
 
-LICENSE=	MIT
-
-PORTSCOUT=	ignore:1
+LICENSE=	ISCL
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		perl5 shebangfix
+
 SHEBANG_FILES=	zsd
-NO_BUILD=	yes
 NO_ARCH=	yes
+NO_BUILD=	yes
+PORTSCOUT=	ignore:1
 
 PLIST_FILES=	sbin/zsd \
-		man/man8/zsd.8.gz
+		share/man/man8/zsd.8.gz
 
+IGNORE= DragonFly has no ZFS support
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/zsd ${STAGEDIR}${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/zsd.8 ${STAGEDIR}${MANPREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/zsd.8 ${STAGEDIR}${PREFIX}/share/man/man8
 
 .include <bsd.port.mk>

@@ -1,6 +1,5 @@
 PORTNAME=	qmediamanager
-DISTVERSION=	0.1.1
-PORTREVISION=	1
+DISTVERSION=	0.1.2
 CATEGORIES=	deskutils
 
 MAINTAINER=	jwb@FreeBSD.org
@@ -14,7 +13,7 @@ BUILD_DEPENDS=	libxtend>=0.1.8:devel/libxtend
 LIB_DEPENDS=	libxtend.so:devel/libxtend
 RUN_DEPENDS=	npmount>0:sysutils/npmount \
 		devd-mount>0:sysutils/devd-mount \
-		auto-admin>=0.7.18:sysutils/auto-admin \
+		auto-admin>=0.8.0:sysutils/auto-admin \
 		rxvt-unicode>0:x11/rxvt-unicode
 
 USES=		gl qmake qt:6
@@ -24,12 +23,12 @@ USE_GITHUB=	yes
 
 GH_ACCOUNT=	outpaddling
 
-WITH_DEBUG=	yes
+PLIST_FILES=	bin/qmediamanager share/man/man1/qmediamanager.1.gz
 
-PLIST_FILES=	bin/qmediamanager man/man1/qmediamanager.1.gz
-
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL} -c ${WRKSRC}/qmediamanager ${STAGEDIR}${PREFIX}/bin
-	${INSTALL} -c ${WRKSRC}/Man/qmediamanager.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/qmediamanager
+	${INSTALL} -c ${WRKSRC}/Man/qmediamanager.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 .include <bsd.port.mk>

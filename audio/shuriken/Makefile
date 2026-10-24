@@ -2,7 +2,7 @@ PORTNAME=	shuriken
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5.2-5
 DISTVERSIONSUFFIX=	-gd09afc7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -35,6 +35,7 @@ LDFLAGS+=	-lexecinfo \
 
 PLIST_FILES=	bin/${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 pre-patch: # remove all .orig files
 	@${FIND} ${WRKSRC} -name "*.orig" | ${XARGS} ${RM}
 

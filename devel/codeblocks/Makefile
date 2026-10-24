@@ -1,6 +1,6 @@
 PORTNAME=	codeblocks
 PORTVERSION=	20.03
-PORTREVISION=	15
+PORTREVISION=	20
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}/Sources/${PORTVERSION}
 
@@ -12,16 +12,17 @@ LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	zip:archivers/zip
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
+		libfam.so.0:devel/gamin \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libhunspell-1.7.so:textproc/hunspell \
 		libtinyxml.so:textproc/tinyxml
 
 USES=		autoreconf compiler:c++11-lang desktop-file-utils \
-		fam:gamin gettext-runtime gnome libtool localbase \
+		gettext-runtime gnome libtool localbase \
 		pathfix pkgconfig shared-mime-info tar:xz xorg
-USE_CXXSTD=	c++11
+USE_CXXSTD= c++0x
 USE_GNOME=	gtk30 cairo
 USE_LDCONFIG=	yes
 USE_WX=		3.0+
@@ -47,5 +48,13 @@ PLIST_SUB=	X86="@comment "
 CONFIGURE_ARGS+=	--with-contrib-plugins=all
 PLIST_SUB=	X86=""
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e '/boost_system/d'  -e '/AX_BOOST_SYSTEM/d' \
+		${WRKSRC}/configure.ac
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@!(defined(__clang__) && __has_feature(cxx_nullptr))@ __cplusplus < 201103L @' \
+		${WRKSRC}/src/include/prep.h
 
 .include <bsd.port.post.mk>

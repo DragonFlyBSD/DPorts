@@ -1,5 +1,5 @@
 PORTNAME=	swig
-PORTVERSION=	4.2.1
+PORTVERSION=	4.4.1
 CATEGORIES=	devel
 MASTER_SITES=	SF/swig/swig/swig-${PORTVERSION}
 
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE-GPL
 
 LIB_DEPENDS=	libpcre2-8.so:devel/pcre2
 
-USES=		lua:build
+USES=		cpe gmake lua:build
 
 ALL_TARGET=	# empty
 CFLAGS+=	-fPIC -DPIC
@@ -26,10 +26,9 @@ TEST_TARGET=	check
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
-OPTIONS_DEFINE=	DOCS EXAMPLES
+CPE_VENDOR=	swig_project
 
-post-configure:
-	@${REINPLACE_CMD} -e 's#null#&|| true#' ${WRKSRC}/Makefile
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ccache-swig ${STAGEDIR}${PREFIX}/bin/swig

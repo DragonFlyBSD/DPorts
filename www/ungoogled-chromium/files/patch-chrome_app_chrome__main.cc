@@ -1,7 +1,7 @@
---- chrome/app/chrome_main.cc.orig	2024-08-26 14:40:28 UTC
+--- chrome/app/chrome_main.cc.orig	2026-08-13 07:41:05 UTC
 +++ chrome/app/chrome_main.cc
-@@ -30,11 +30,11 @@
- #include "chrome/app/chrome_main_mac.h"
+@@ -33,11 +33,11 @@
+ #include "chrome/common/mac/detect_inappropriate_exit.h"
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
@@ -14,16 +14,7 @@
  #include "chrome/app/chrome_main_linux.h"
  #endif
  
-@@ -55,7 +55,7 @@
- #endif  // BUILDFLAG(IS_WIN)
- 
- #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
--    BUILDFLAG(IS_WIN)
-+    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- #define ENABLE_OLD_HEADLESS
- #endif
- 
-@@ -119,7 +119,7 @@ int ChromeMain(int argc, const char** argv) {
+@@ -107,7 +107,7 @@ int ChromeMain(int argc, const char** argv) {
  #error Unknown platform.
  #endif
  
@@ -32,7 +23,7 @@
    PossiblyDetermineFallbackChromeChannel(argv[0]);
  #endif
  
-@@ -185,7 +185,7 @@ int ChromeMain(int argc, const char** argv) {
+@@ -180,7 +180,7 @@ int ChromeMain(int argc, const char** argv) {
    SetUpBundleOverrides();
  #endif
  

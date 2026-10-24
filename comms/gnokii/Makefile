@@ -1,6 +1,6 @@
 PORTNAME=	gnokii
 PORTVERSION=	0.6.31
-PORTREVISION=	15
+PORTREVISION=	16
 PORTEPOCH=	1
 CATEGORIES=	comms
 MASTER_SITES=	http://www.gnokii.org/download/gnokii/ \
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser
 
 GROUPS=		${PORTNAME}
-USES=		gettext gmake gnome iconv libtool localbase pathfix pkgconfig \
+USES=		gettext gmake gnome iconv libtool localbase pkgconfig \
 		readline shebangfix tar:bzip2
 USE_LDCONFIG=	yes
 USE_CSTD=	gnu89
@@ -116,5 +116,9 @@ post-install-MYSQL-on:
 post-install-PGSQL-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/smsd
 	${INSTALL_DATA} ${WRKSRC}/smsd/sms.tables.pq.sql ${STAGEDIR}${PREFIX}/share/smsd
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ -lroken @ @'	\
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

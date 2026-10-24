@@ -1,5 +1,5 @@
 PORTNAME=	pcsc-tools
-PORTVERSION=	1.7.2
+PORTVERSION=	1.7.5
 CATEGORIES=	security
 MASTER_SITES=	https://pcsc-tools.apdu.fr/
 
@@ -7,7 +7,7 @@ MAINTAINER=	arved@FreeBSD.org
 COMMENT=	Tools to test a PCSC driver, card, or reader
 WWW=		https://pcsc-tools.apdu.fr/
 
-LICENSE=	GPLv2
+LICENSE=	GPLv2+
 
 LIB_DEPENDS=	libpcsclite.so:devel/pcsc-lite
 RUN_DEPENDS=	p5-PCSC-Card>=0:devel/p5-PCSC-Card \
@@ -15,7 +15,7 @@ RUN_DEPENDS=	p5-PCSC-Card>=0:devel/p5-PCSC-Card \
 
 USES=		gmake pkgconfig tar:bzip2 gettext-tools
 
-LDFLAGS=	-pthread
+LDFLAGS+=	-pthread
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 

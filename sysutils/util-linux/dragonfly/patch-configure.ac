@@ -1,0 +1,12 @@
+--- configure.ac.orig
++++ configure.ac
+@@ -2320,7 +2320,8 @@
+ AM_CONDITIONAL([BUILD_SCRIPTLIVE], [test "x$build_scriptlive" = xyes])
+ 
+ 
+-UL_BUILD_INIT([bits], [yes])
++UL_BUILD_INIT([bits], [check])
++UL_REQUIRES_HAVE([bits], [cpu_set_t], [cpu_set_t type])
+ AM_CONDITIONAL([BUILD_BITS], [test "x$build_bits" = xyes])
+ 
+ UL_BUILD_INIT([col], [check])

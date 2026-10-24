@@ -1,4 +1,4 @@
---- ui/base/accelerators/command.cc.orig	2025-04-04 08:52:13 UTC
+--- ui/base/accelerators/command.cc.orig	2026-07-01 06:24:19 UTC
 +++ ui/base/accelerators/command.cc
 @@ -81,7 +81,7 @@ std::string Command::CommandPlatform() {
    return ui::kKeybindingPlatformMac;

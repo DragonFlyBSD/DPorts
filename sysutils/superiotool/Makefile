@@ -1,5 +1,6 @@
 PORTNAME=	superiotool
 DISTVERSION=	4.18
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://coreboot.org/releases/
@@ -19,13 +20,14 @@ LIB_DEPENDS=	libpci.so:devel/libpci
 USES=		gmake tar:bzip2
 
 PLIST_FILES=	sbin/superiotool \
-		man/man8/superiotool.8.gz
+		share/man/man8/superiotool.8.gz
 
 WRKSRC=		${WRKDIR}/coreboot-${DISTVERSION}
 WRKSRC_SUBDIR=	util/superiotool
 #UPSTREAM_VERS=	4.17-8da4bfe5b
 MAKE_ENV+=	VERSION=-DSUPERIOTOOL_VERSION='\"${UPSTREAM_VERS}\"'
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' ${WRKSRC}/Makefile
 

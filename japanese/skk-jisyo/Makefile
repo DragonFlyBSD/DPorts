@@ -1,28 +1,27 @@
 PORTNAME=	skk-jisyo
 DISTVERSIONPREFIX=	g
-DISTVERSION=	20240130
-PORTREVISION=	1
+DISTVERSION=	20260411
 CATEGORIES=	japanese
 .if defined(WITH_SKKJISYO_CDB)
 PKGNAMESUFFIX=	-cdb
 .endif
 
-MAINTAINER=	mew14930xvi@inbox.lv
+MAINTAINER=	mce@FreeBSD.org
 COMMENT?=	Jisyo (dictionary) files for the SKK Japanese-input software
 WWW=		http://openlab.jp/skk/dic.html
 
 LICENSE=	GPLv2+
 
 .if defined(WITH_SKKJISYO_CDB)
-BUILD_DEPENDS=	${LOCALBASE}/bin/cdb:databases/tinycdb
+BUILD_DEPENDS=	${LOCALBASE}/bin/cdbmake:databases/cdb
 .endif
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	skk-dev
 GH_PROJECT=	dict
-GH_TAGNAME=	b798a46
+GH_TAGNAME=	0a164e6
 
-NOARCH=		yes
+NO_ARCH=	yes
 
 .if defined(WITH_SKKJISYO_CDB)
 CDBSUFFIX=		.cdb
@@ -32,7 +31,7 @@ NO_BUILD=		yes
 .endif
 
 SKKDIR?=	share/skk
-SKK_JISYO_TYPE?=L M S JIS2 JIS3_4
+SKK_JISYO_TYPE?=L JIS2 JIS3_4
 
 .for type in ${SKK_JISYO_TYPE}
 PLIST_FILES+=		${SKKDIR}/SKK-JISYO.${type}${CDBSUFFIX}
@@ -58,7 +57,7 @@ post-patch:
 # See also: <URL:http://cr.yp.to/cdb/cdbmake.html>.
 do-build:
 .for type in ${SKK_JISYO_TYPE}
-	${AWK} '/^[^;]/ { \
+	LC_ALL=C ${AWK} '/^[^;]/ { \
 			s = substr($$0, index($$0, " ") + 1); \
 			print "+" length($$1) "," length(s) ":" $$1 "->" s; \
 		} \
@@ -66,13 +65,14 @@ do-build:
 			print ""; \
 		}' \
 		< ${WRKSRC}/SKK-JISYO.${type} | \
-	${LOCALBASE}/bin/cdb -c -t - \
-		${WRKSRC}/SKK-JISYO.${type}${CDBSUFFIX}
+	${LOCALBASE}/bin/cdbmake \
+		${WRKSRC}/SKK-JISYO.${type}${CDBSUFFIX} \
+		${WRKSRC}/SKK-JISYO.${type}.tmp
 .endfor
 .endif
 
 do-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/${SKKDIR}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${SKKDIR}
 .for type in ${SKK_JISYO_TYPE}
 	${INSTALL_DATA} ${WRKSRC}/SKK-JISYO.${type}${CDBSUFFIX} \
 		${STAGEDIR}${PREFIX}/${SKKDIR}/

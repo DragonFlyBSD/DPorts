@@ -1,0 +1,7 @@
+P4VERSION?=	r${PORTVERSION:S/^20//:C/\.[0-9]+$//}
+YEAR=		2026
+MAJOR=		1
+MINOR=		3062361
+
+JAM?=		${LOCALBASE}/bin/jam
+OSVER?=		${OSREL:S/.//}

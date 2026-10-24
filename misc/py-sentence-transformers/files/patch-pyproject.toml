@@ -1,0 +1,24 @@
+-- Remove license field that is incompatible with setuptools 63.1.0
+-- The LICENSE_FILE is already set in the Makefile
+--
+-- Lower setuptools requirement to match FreeBSD port version
+
+--- pyproject.toml.orig	2026-09-08 00:03:10 UTC
++++ pyproject.toml
+@@ -2,7 +2,6 @@ description = "Embeddings, Retrieval, and Reranking"
+ name = "sentence-transformers"
+ version = "6.0.1"
+ description = "Embeddings, Retrieval, and Reranking"
+-license = "Apache-2.0"
+ readme = "README.md"
+ authors = [
+     { name = "Nils Reimers", email = "info@nils-reimers.de" },
+@@ -100,7 +99,7 @@ docs = [
+ ]
+ 
+ [build-system]
+-requires = ["setuptools>=77.0.3"]
++requires = ["setuptools>=63.1.0"]
+ build-backend = "setuptools.build_meta"
+ 
+ [tool.setuptools.packages.find]

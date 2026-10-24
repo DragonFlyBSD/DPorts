@@ -60,4 +60,5 @@ post-patch:
 	@${REINPLACE_CMD} $$'/fi_ops.*close/${SED_WRAP_CLOSE}' ${WRKSRC}/src/fabric.c
 	@${REINPLACE_CMD} $$'/[*>]close/${SED_WRAP_CLOSE}' ${WRKSRC}/include/rdma/fabric.h
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NVERBS}
 .include <bsd.port.mk>

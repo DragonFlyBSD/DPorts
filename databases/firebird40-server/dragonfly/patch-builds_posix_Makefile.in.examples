@@ -1,0 +1,10 @@
+--- builds/posix/Makefile.in.examples.orig
++++ builds/posix/Makefile.in.examples
+@@ -141,5 +141,5 @@ $(EXAMPLES_DEST)% : $(EXAMPLES_SRC)%
+ $(EMPLOYEE_DB):	$(EXAMPLES_DEST)/empbuild$(EXEC_EXT) $(INPUT_Sources) $(EXAMPLES_DEST)/isql$(EXEC_EXT)
+ 	-$(RM) $(EMPLOYEE_DB)
+-	./empbuild $(EMPLOYEE_DB)
+-	$(GFIX) -write sync $(EMPLOYEE_DB)
++	-./empbuild $(EMPLOYEE_DB)
++	-$(GFIX) -write sync $(EMPLOYEE_DB)
+ 	-$(CHMOD_6) $(EMPLOYEE_DB)

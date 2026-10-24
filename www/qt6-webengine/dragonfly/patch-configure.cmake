@@ -1,15 +1,48 @@
---- configure.cmake.orig	Thu Nov  6 18:09:00 2025
-+++ configure.cmake	Thu Nov
-@@ -73,7 +73,7 @@ if(Python3_EXECUTABLE)
+--- configure.cmake.intermediate	2026-09-17 07:06:56 UTC
++++ configure.cmake
+@@ -124,7 +124,7 @@ if(Python3_EXECUTABLE)
+     )
  endif()
  
- #### Tests
--if(LINUX OR FREEBSD)
-+if(LINUX OR FREEBSD OR DRAGONFLY)
-    check_for_ulimit()
+-if(LINUX)
++if(LINUX OR FREEBSD)
+    qt_webengine_configure_check_for_ulimit()
  endif()
  
-@@ -434,7 +434,7 @@ qt_feature("webengine-system-libpci" PRIVATE
+@@ -310,12 +310,12 @@ unset(targets_to_check)
+ 
+ qt_webengine_configure_check("supported-platform"
+     MODULES QtWebEngine
+-    CONDITION LINUX OR WIN32 OR MACOS OR FREEBSD
++    CONDITION LINUX OR WIN32 OR MACOS OR FREEBSD OR DRAGONFLY
+     MESSAGE "Build can be done only on Linux, Windows or macOS."
+ )
+ qt_webengine_configure_check("supported-platform"
+     MODULES QtPdf
+-    CONDITION LINUX OR WIN32 OR MACOS OR IOS OR ANDROID OR FREEBSD
++    CONDITION LINUX OR WIN32 OR MACOS OR IOS OR ANDROID OR FREEBSD OR DRAGONFLY
+     MESSAGE "Build can be done only on Linux, Windows, macO, iOS and Android."
+ )
+ 
+@@ -427,6 +427,8 @@ qt_webengine_configure_check("compiler"
+         (LINUX AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
+         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
+         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
++        (DRAGONFLY AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
++        (DRAGONFLY AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
+         (MACOS AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
+     MESSAGE
+         "${CMAKE_CXX_COMPILER_ID} compiler is not supported."
+@@ -438,6 +440,8 @@ qt_webengine_configure_check("compiler"
+         (LINUX AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
+         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
+         (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
++        (DRAGONFLY AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
++        (DRAGONFLY AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
+         (APPLE AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang") OR
+         (ANDROID AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
+         (MINGW AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
+@@ -787,7 +791,7 @@ qt_feature("webengine-rust-build" PRIVATE
  
  qt_feature("webengine-ozone-x11" PRIVATE
      LABEL "Support X11 on qpa-xcb"
@@ -17,37 +50,4 @@
 +    CONDITION LINUX OR FREEBSD OR DRAGONFLY
          AND TARGET Qt::Gui
          AND QT_FEATURE_xcb
-         AND X11_FOUND
-@@ -474,12 +474,12 @@ assertTargets(
- )
- add_check_for_support(
-    MODULES QtWebEngine
--   CONDITION LINUX OR (WIN32 AND NOT WIN_ARM_64) OR MACOS OR FREEBSD
-+   CONDITION LINUX OR (WIN32 AND NOT WIN_ARM_64) OR MACOS OR FREEBSD OR DRAGONFLY
-    MESSAGE "Build can be done only on Linux, Windows or macOS."
- )
- add_check_for_support(
-    MODULES QtPdf
--   CONDITION LINUX OR (WIN32 AND NOT WIN_ARM_64) OR MACOS OR IOS OR ANDROID OR FREEBSD
-+   CONDITION LINUX OR (WIN32 AND NOT WIN_ARM_64) OR MACOS OR IOS OR ANDROID OR FREEBSD OR DRAGONFLY
-    MESSAGE "Build can be done only on Linux, Windows, macO, iOS and Android."
- )
- if(LINUX AND CMAKE_CROSSCOMPILING)
-@@ -567,6 +567,8 @@ add_check_for_support(
-    CONDITION MSVC OR
-        (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
-        (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
-+       (DRAGONFLY AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
-+       (DRAGONFLY AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
-        (MACOS AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
-    MESSAGE
-        "${CMAKE_CXX_COMPILER_ID} compiler is not supported."
-@@ -577,6 +579,8 @@ add_check_for_support(
-    CONDITION MSVC OR
-        (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
-        (FREEBSD AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
-+       (DRAGONFLY AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
-+       (DRAGONFLY AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
-        (APPLE AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang") OR
-        (ANDROID AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
-        (MINGW AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
+         AND qpa_xcb_support_check

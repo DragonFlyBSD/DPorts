@@ -12,7 +12,7 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	${LOCALBASE}/include/uthash.h:devel/uthash
 
-USES=		gmake libtool pkgconfig compiler:c11
+USES= gmake libtool pkgconfig compiler:c11 autoreconf
 
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
@@ -78,6 +78,7 @@ OWFS_USES=			fuse
 ZERO_CONFIGURE_ENABLE=		zero
 USB_CONFIGURE_ENABLE=		usb
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NOWFS}
 .include <bsd.port.options.mk>
 
 # If OW Network and C API is requested, build libownet as well

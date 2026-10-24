@@ -1,5 +1,5 @@
 PORTNAME=	opencart
-PORTVERSION=	4.1.0.3
+PORTVERSION=	4.1.0.4
 CATEGORIES=	www misc
 
 MAINTAINER=	wen@FreeBSD.org
@@ -13,6 +13,7 @@ GH_ACCOUNT=	opencart
 
 USES=		cpe php
 USE_PHP=	filter mysqli curl mbstring gd zlib mcrypt session zip
+IGNORE_WITH_PHP=	86
 WRKSRC_SUBDIR=	upload
 
 NO_BUILD=	yes

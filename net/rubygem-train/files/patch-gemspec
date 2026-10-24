@@ -1,6 +1,14 @@
---- train.gemspec.orig	2024-12-30 05:09:01 UTC
+--- train.gemspec.orig	2026-07-05 10:05:45 UTC
 +++ train.gemspec
-@@ -30,13 +30,13 @@ Gem::Specification.new do |s|
+@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
+   s.add_runtime_dependency(%q<train-core>.freeze, ["= 3.16.5".freeze])
+   s.add_runtime_dependency(%q<train-winrm>.freeze, ["~> 0.4.0".freeze])
+   s.add_runtime_dependency(%q<activesupport>.freeze, ["~> 7.2".freeze, ">= 7.2.3.1".freeze])
+-  s.add_runtime_dependency(%q<bigdecimal>.freeze, ["< 4".freeze])
+   s.add_runtime_dependency(%q<inifile>.freeze, ["~> 3.0".freeze])
+   s.add_runtime_dependency(%q<azure_graph_rbac>.freeze, ["~> 0.16".freeze])
+   s.add_runtime_dependency(%q<azure_mgmt_key_vault>.freeze, ["~> 0.17".freeze])
+@@ -31,14 +30,14 @@ Gem::Specification.new do |s|
    s.add_runtime_dependency(%q<azure_mgmt_security>.freeze, ["~> 0.18".freeze])
    s.add_runtime_dependency(%q<azure_mgmt_storage>.freeze, ["~> 0.18".freeze])
    s.add_runtime_dependency(%q<docker-api>.freeze, [">= 1.26".freeze, "< 3.0".freeze])
@@ -20,5 +28,6 @@
 +  s.add_runtime_dependency(%q<google-apis-cloudresourcemanager_v1>.freeze, ["~> 0.35".freeze])
 +  s.add_runtime_dependency(%q<google-apis-storage_v1>.freeze, ["~> 0.30".freeze])
 +  s.add_runtime_dependency(%q<google-apis-iam_v1>.freeze, ["~> 0.50".freeze])
+   s.add_runtime_dependency(%q<ostruct>.freeze, ["~> 0.6.0".freeze])
  end
  

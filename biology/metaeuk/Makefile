@@ -1,7 +1,6 @@
 PORTNAME=	metaeuk
-DISTVERSION=	6
-DISTVERSIONSUFFIX=	-a5d39d9
-PORTREVISION=	2
+DISTVERSION=	7
+DISTVERSIONSUFFIX=	-bba0d80
 CATEGORIES=	biology
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,6 +10,9 @@ WWW=		https://github.com/soedinglab/metaeuk
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENCE.md
 
+NOT_FOR_ARCHS=	armv6 armv7 i386 powerpc # 32-bit platforms produce wrong results based on https://github.com/soedinglab/metaeuk/issues/85#issuecomment-1888379107
+NOT_FOR_ARCHS+=	powerpc64 # many modules produce wrong results on big-endian architectures
+
 BUILD_DEPENDS=	xxd:editors/vim
 TEST_DEPENDS=	bash:shells/bash
 
@@ -19,18 +21,19 @@ USE_PERL5=	build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	soedinglab
-GH_TUPLE=	soedinglab:metaeuk-regression:6404519:metaeuk_regression/tests \
-		soedinglab:MMseqs2-Regression:f69b185:MMseqs2_Regression/lib/mmseqs/util/regression
+GH_TUPLE=	soedinglab:metaeuk-regression:f7c3999:metaeuk_regression/tests \
+		soedinglab:MMseqs2-Regression:5e3bc17:MMseqs2_Regression/lib/mmseqs/util/regression
 
 SHEBANG_GLOB=	*.sh
 
 PLIST_FILES=	bin/metaeuk
 
-OPTIONS_DEFINE=		NATIVE
+CMAKE_OFF=	NATIVE_ARCH
 
-NATIVE_CMAKE_BOOL=	NATIVE_ARCH
+IGNORE= unmaintained, please request fixing to users mailing list
+.include <bsd.port.options.mk>
 
-.if !exists(/usr/include/omp.h)
+.if !exists(/usr/include/omp.h) # https://github.com/soedinglab/metaeuk/issues/85
 CMAKE_ARGS+=	-DREQUIRE_OPENMP:BOOL=OFF
 
 post-patch: # workaround for https://github.com/soedinglab/metaeuk/issues/55

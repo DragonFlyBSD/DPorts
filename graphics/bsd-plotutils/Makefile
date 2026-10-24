@@ -1,6 +1,6 @@
 PORTNAME=	bsd-plotutils
 DISTVERSION=	1.4.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 
 MAINTAINER=	toranktto@gmail.com
@@ -25,6 +25,10 @@ FORTRAN_DESC=	FORTRAN 77 support
 
 FORTRAN_USES=	fortran
 
+USES= ncurses
+DFLY_PLIST= ${WRKSRC}/pkg-plist
+PLIST= ${DFLY_PLIST}
+MAKE_ENV= CWARNFLAGS=-fcommon
 .include <bsd.port.pre.mk>
 
 .if defined(NO_PROFILE) || ${OPSYS} == FreeBSD
@@ -39,5 +43,14 @@ post-patch:
 
 post-patch-FORTRAN-on:
 	@${REINPLACE_CMD} -e "s/f77plot//g" ${WRKSRC}/libplot/bindings/Makefile
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-ltermcap@-ltinfo@"	\
+		${WRKSRC}/libplot/dumb/Makefile
+	${REINPLACE_CMD} -e "s@-lcurses@-lncurses@"	\
+		${WRKSRC}/libplot/crt/Makefile
+	${CP} -v ${.CURDIR:H}/bsd-plotutils/pkg-plist ${DFLY_PLIST}
+	${REINPLACE_CMD} -e '/_p.a/d' ${DFLY_PLIST}
+
 
 .include <bsd.port.post.mk>

@@ -24,7 +24,7 @@ MAINTAINER=	ports@virtual-estates.net
 COMMENT=	Multi-lingual speech synthesis system
 WWW=		https://www.cstr.ed.ac.uk/projects/festival/
 
-USES=		gmake
+USES= gmake ncurses
 USE_CXXSTD=	gnu++11
 
 OPTIONS_DEFINE=	NAS
@@ -42,6 +42,7 @@ WRKSRC=		${WRKDIR}
 SPT_PATCHES=	include_ling__class_EST__FeatureFunctionPackage.h	\
 		include_unix_EST__socket__unix.h
 
+CONFIGURE_ARGS= ac_cv_lib_ncurses_tputs=yes
 do-build:
 .for d in speech_tools festival
 	${MAKE_CMD} -C ${WRKDIR}/$d ${MAKE_FLAGS} Makefile ${MAKE_ARGS}

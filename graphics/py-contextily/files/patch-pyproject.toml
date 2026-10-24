@@ -1,0 +1,18 @@
+--- pyproject.toml.orig	2026-07-10 07:45:58 UTC
++++ pyproject.toml
+@@ -1,5 +1,5 @@
+ [build-system]
+-requires = ["setuptools>=77", "setuptools_scm[toml]>=6.2"]
++requires = ["setuptools>=61", "setuptools_scm[toml]>=6.2"]
+ build-backend = "setuptools.build_meta"
+ 
+ [tool.setuptools_scm]
+@@ -13,7 +13,7 @@ maintainers = [
+ maintainers = [
+     {name = "contextily contributors"},
+ ]
+-license = "BSD-3-Clause"
++license = {text = "3-Clause BSD"}
+ description = "Context geo-tiles in Python"
+ readme = "README.md"
+ classifiers = [

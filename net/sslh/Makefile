@@ -1,5 +1,5 @@
 PORTNAME=	sslh
-PORTVERSION=	2.1.3
+PORTVERSION=	2.3.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 
@@ -14,7 +14,8 @@ LIB_DEPENDS=	libconfig.so:devel/libconfig \
 		libpcre2-8.so:devel/pcre2 \
 		libev.so:devel/libev
 
-USES=		gmake
+USES=		cpe gmake
+CPE_VENDOR=	sslh_project
 USE_RC_SUBR=	sslh
 USE_GITHUB=	yes
 GH_ACCOUNT=	yrutschle
@@ -32,8 +33,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 PLIST_FILES=	sbin/sslh-fork \
 		sbin/sslh-select \
 		sbin/sslh-ev \
-		"@sample etc/sslh.conf.sample" \
-		share/man/man8/sslh.8.gz
+		"@sample etc/sslh.conf.sample"
 
 PORTEXAMPLES=	example.cfg test.cfg udp.cfg
 
@@ -48,7 +48,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sslh-ev ${STAGEDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/basic.cfg \
 		${STAGEDIR}${PREFIX}/etc/${PORTNAME}.conf.sample
-	${INSTALL_MAN} ${WRKSRC}/sslh.8.gz ${STAGEDIR}${PREFIX}/share/man/man8
 
 do-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}

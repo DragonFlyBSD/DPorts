@@ -3,7 +3,7 @@ DISTVERSION=	0.0.4
 CATEGORIES=	astro
 MASTER_SITES=	https://github.com/Haruno19/starfetch/releases/download/${DISTVERSION}/
 
-MAINTAINER=	DtxdF@disroot.org
+MAINTAINER=	dtxdf@FreeBSD.org
 COMMENT=	Command line tool that displays constellations
 WWW=		https://github.com/Haruno19/starfetch
 
@@ -12,6 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 CXXFLAGS+=	-std=c++17
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e '/^string path = /s#=.*#= "${DATADIR}/";#' ${WRKSRC}/src/starfetch.cpp
 

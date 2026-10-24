@@ -1,7 +1,16 @@
 PORTNAME=	cvise
-DISTVERSION=	2.11.0
 DISTVERSIONPREFIX=	v
+DISTVERSION=	2.12.0
+PORTREVISION=	1
 CATEGORIES=	devel python
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	68262f7d6de584b6474801827cb7dfc68011de25.patch:-p1 # Add support for LLVM 21 as of 2025.06.24 (#183)
+PATCHFILES+=	42da06fd108c351c5f4a42657c16208300121545.patch:-p1 # clang_delta: Add tests for replace-dependent-typedef (#275)
+PATCHFILES+=	59e9058c43b12b802893bde668113c8b3b3525b7.patch:-p1 # clang_delta: Skip non-dep typedefs in replace-dependent-typedef (#276)
+PATCHFILES+=	fa1be9523d569adfe207c85a1e44f074172bc305.patch:-p1 # Support for LLVM 22 (#373)
+PATCHFILES+=	b17bbacdb279babd87dc9ef24756f3003746717c.patch:-p1 # clang_delta: Support for LLVM 22 20251014 (#430)
+PATCHFILES+=	c7f9642340eb61c09a05c96498fd21c9b7293770.patch:-p1 # Support for LLVM 22 updated, as of 2025-10-25 (#439)
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	C-Vise is a super-parallel Python port of the C-Reduce

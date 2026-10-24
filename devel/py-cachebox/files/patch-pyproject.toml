@@ -1,0 +1,9 @@
+--- pyproject.toml.orig	2026-09-06 04:26:30 UTC
++++ pyproject.toml
+@@ -1,5 +1,5 @@
+ [build-system]
+-requires = ["maturin == 1.14.1"]
++requires = ["maturin >= 1.14.1"]
+ build-backend = "maturin"
+ 
+ [tool.maturin]

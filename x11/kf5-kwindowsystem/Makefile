@@ -13,4 +13,8 @@ USE_QT=		core gui linguisttools widgets x11extras \
 		buildtools:build qmake:build testlib:build
 USE_XORG=	ice sm x11 xcb xext xfixes xrender
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

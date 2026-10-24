@@ -1,7 +1,7 @@
 PORTNAME=		plink
 DISTVERSIONPREFIX=	v
 DISTVERSION=		1.90b6.17
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=		biology
 
 MAINTAINER=	mzaki@e-mail.ne.jp
@@ -11,7 +11,7 @@ WWW=		https://www.cog-genomics.org/plink/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-NOT_FOR_ARCHS=		aarch64 mips64 powerpc64 powerpc64le
+NOT_FOR_ARCHS=		aarch64 powerpc64
 NOT_FOR_ARCHS_REASON=	64bit code requires SSE2 instructions
 
 USES=		gmake fortran
@@ -24,7 +24,8 @@ GH_TAGNAME=	79b2df8c
 WRKSRC_SUBDIR=	1.9
 MAKEFILE=	Makefile.std
 MAKE_ARGS=	ZLIB=-lz BLASFLAGS="${BLASLIB} ${LAPACKLIB}"
-CFLAGS+=	-DDYNAMIC_ZLIB -I${LOCALBASE}/include
+CFLAGS+= -DDYNAMIC_ZLIB -I${LOCALBASE}/include -Wno-stringop-truncation -Wno-stringop-overflow
+CFLAGS_powerpc64le=	-DNO_WARN_X86_INTRINSICS -D__SSE2__
 INSTALL_TARGET=	install-strip
 
 CONFLICTS_INSTALL=	putty putty-nogtk # bin/plink
@@ -45,6 +46,7 @@ NETLIB_LDFLAGS=		-lcblas
 
 EXAMPLES=	toy.map toy.ped
 
+LDFLAGS= -pthread
 post-build:
 	(cd ${WRKSRC}; ${CC} ${CFLAGS} prettify.c -o prettify)
 

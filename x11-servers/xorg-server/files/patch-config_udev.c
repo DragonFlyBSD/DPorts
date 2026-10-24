@@ -2,7 +2,7 @@
 *
 * Specify a driver to use for basic devices (keyboard and mouse), otherwise none attaches
 *
---- config/udev.c.orig	2017-03-15 18:05:25 UTC
+--- config/udev.c.orig	2026-07-08 01:35:09 UTC
 +++ config/udev.c
 @@ -29,6 +29,7 @@
  
@@ -12,7 +12,7 @@
  #include <unistd.h>
  
  #include "input.h"
-@@ -188,7 +189,21 @@ device_added(struct udev_device *udev_de
+@@ -198,7 +199,21 @@ device_added(struct udev_device *udev_device)
          attrs.product = strdup(name);
      input_options = input_option_new(input_options, "name", name);
      input_options = input_option_new(input_options, "path", path);
@@ -35,10 +35,13 @@
      input_options = input_option_new(input_options, "major", itoa(major(devnum)));
      input_options = input_option_new(input_options, "minor", itoa(minor(devnum)));
      if (path)
-@@ -272,6 +287,18 @@ device_added(struct udev_device *udev_de
-         }
-     }
- 
+@@ -277,6 +292,18 @@ device_added(struct udev_device *udev_device)
+                     m++;
+                 }
+             }
++        }
++    }
++
 +    if (attrs.flags & (ATTR_KEY | ATTR_KEYBOARD)) {
 +        if (!feature_present("evdev_support"))
 +            input_options = input_option_new(input_options, "driver", "kbd");
@@ -48,9 +51,6 @@
 +        else {
 +            if (!feature_present("evdev_support"))
 +                input_options = input_option_new(input_options, "driver", "mouse");
-+        }
-+    }
-+
-     input_options = input_option_new(input_options, "config_info", config_info);
+         }
+     }
  
-     /* Default setting needed for non-seat0 seats */

@@ -10,6 +10,7 @@ WWW=		https://www.nitpicker.de/
 
 PLIST_FILES=	bin/dumpit bin/parse_flowfile sbin/nitpicker
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/nitpicker ${STAGEDIR}${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/tools/parse_flowfile/src/parse_flowfile \

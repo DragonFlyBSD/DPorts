@@ -14,7 +14,7 @@ BROKEN_i386=	fails to compile: error: static_assert failed due to requirement 's
 
 BUILD_DEPENDS=	boost-libs>0:devel/boost-libs
 
-USES=		cmake compiler:c++11-lang llvm:15 python shebangfix
+USES=		cmake python shebangfix
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -23,6 +23,13 @@ GH_PROJECT=	OpenSYCL
 
 SHEBANG_FILES=	bin/syclcc-clang cmake/syclcc-launcher
 
+.if !exists(/usr/include/omp.h)
+USES+=	compiler:gcc-c++11-lib llvm:15
+.else
+USES+=	compiler:c++11-lang llvm:15
+.endif
+
+IGNORE= unmaintained, please request fixing to users mailing list
 do-test: # many tests fail, see https://github.com/OpenSYCL/OpenSYCL/issues/996
 	@cd ${WRKSRC}/tests && \
 		mkdir -p build && \

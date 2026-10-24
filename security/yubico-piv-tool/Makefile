@@ -1,5 +1,5 @@
 PORTNAME=	yubico-piv-tool
-PORTVERSION=	2.7.1
+PORTVERSION=	2.7.2
 PORTREVISION=	0
 CATEGORIES=	security
 MASTER_SITES=	https://developers.yubico.com/yubico-piv-tool/Releases/
@@ -14,9 +14,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/check.pc:devel/check \
 		gengetopt:devel/gengetopt \
 		help2man:misc/help2man
-LIB_DEPENDS=	libpcsclite.so:devel/pcsc-lite
+LIB_DEPENDS= libpcsclite.so:devel/pcsc-lite libcheck.so:devel/check
 
-USES=		compiler cmake:noninja gmake pathfix pkgconfig ssl
+USES= compiler cmake:noninja gmake pathfix pkgconfig ssl localbase:ldflags
 USE_LDCONFIG=	yes
 CMAKE_ARGS=	-D LIBCRYPTO_CFLAGS="-I${OPENSSLINC}" \
 		-D LIBCRYPTO_LDFLAGS="-L${OPENSSLLIB} -lcrypto -L${LOCALBASE}/lib -pthread" \
@@ -38,6 +38,7 @@ PLIST_FILES=	bin/yubico-piv-tool \
 		libdata/pkgconfig/ykpiv.pc \
 		share/man/man1/yubico-piv-tool.1.gz
 
+CFLAGS= -DBSD
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == gcc

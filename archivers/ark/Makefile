@@ -10,6 +10,7 @@ LICENSE=	GPLv2+
 
 USES=		cmake compiler:c++11-lang cpe desktop-file-utils gettext gl \
 		kde:6 libarchive qt:6 tar:xz xorg
+CPE_VENDOR=	kde
 USE_KDE=	bookmarks colorscheme completion config configwidgets \
 		coreaddons crash dbusaddons doctools filemetadata i18n \
 		iconthemes itemviews jobwidgets kio parts pty service solid \
@@ -21,8 +22,7 @@ USE_XORG=	x11
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	7ZIP RAR ZIP DOCS
-OPTIONS_DEFAULT=	7ZIP ZIP DOCS
-OPTIONS_DEFAULT_x86_64=	RAR
+OPTIONS_DEFAULT=	7ZIP RAR ZIP DOCS
 OPTIONS_SUB=		YES
 
 # The 7ZIP and RAR options only need runtime dependencies;
@@ -32,13 +32,13 @@ OPTIONS_SUB=		YES
 
 RAR_DESC=	Support for RAR archives (runtime)
 RAR_RUN_DEPENDS=	unrar:archivers/unrar \
-			rar:archivers/rar
+			${RAR_RUN_DEPENDS_${ARCH}}
+RAR_RUN_DEPENDS_x86_64=	rar:archivers/rar
+RAR_RUN_DEPENDS_i386=	rar:archivers/rar-i386
 
 ZIP_DESC=	Support for ZIP archives
 ZIP_LIB_DEPENDS=	libzip.so:archivers/libzip
 ZIP_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_LibZip
 
-# Override shared library version
-KDE_APPLICATIONS_SHLIB_VER=	${KDE_APPLICATIONS_VERSION}
-
+RAR_RUN_DEPENDS:= ${RAR_RUN_DEPENDS:Nrar*}
 .include <bsd.port.mk>

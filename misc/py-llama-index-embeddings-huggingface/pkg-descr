@@ -1,0 +1,4 @@
+LlamaIndex Embeddings HuggingFace provides HuggingFace embedding model
+integration for LlamaIndex. It enables the use of HuggingFace sentence
+transformers and embedding models within LlamaIndex data pipelines for
+semantic search and retrieval applications.

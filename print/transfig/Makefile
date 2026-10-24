@@ -11,7 +11,7 @@ COMMENT=	Tools to convert Xfig .fig files
 RUN_DEPENDS=	ppmtogif:graphics/netpbm
 LIB_DEPENDS=	libpng.so:graphics/png
 
-USES=		alias ghostscript:run imake xorg
+USES=		ghostscript:run imake xorg
 CFLAGS+=	-Wno-return-type
 USE_XORG=	xpm
 
@@ -33,5 +33,9 @@ post-install:
 	for i in ko ko_KR.EUC ko_KR.eucKR ko_KR ko_KR.ujis; do \
 		${LN} -sf korean.ps ${STAGEDIR}${PREFIX}/lib/X11/fig2dev/$${i}.ps; \
 	done
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/!defined(__FreeBSD__)/!defined(__FreeBSD__) \&\& !defined(__DragonFly__)/g' \
+		${WRKSRC}/fig2dev/fig2dev.h
 
 .include <bsd.port.mk>

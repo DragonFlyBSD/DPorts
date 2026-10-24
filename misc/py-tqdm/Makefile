@@ -1,5 +1,5 @@
 PORTNAME=	tqdm
-PORTVERSION=	4.67.1
+PORTVERSION=	4.70.1
 CATEGORIES=	misc python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -30,9 +30,12 @@ NOTEBOOK_DESC=	Notebook support
 SLACK_DESC=	Slack support
 TELEGRAM_DESC=	Telegram support
 
-DISCORD_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
+DISCORD_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}envwrap>=0:devel/py-envwrap@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
 NOTEBOOK_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ipywidgets>=6:devel/py-ipywidgets@${PY_FLAVOR}
-SLACK_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}slack-sdk>=0:net-im/py-slack-sdk@${PY_FLAVOR}
-TELEGRAM_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
+SLACK_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}envwrap>=0:devel/py-envwrap@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}slack-sdk>=0:net-im/py-slack-sdk@${PY_FLAVOR}
+TELEGRAM_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}envwrap>=0:devel/py-envwrap@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
 
 .include <bsd.port.mk>

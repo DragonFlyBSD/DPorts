@@ -1,6 +1,5 @@
 PORTNAME=	network
 PORTVERSION=	${QT5_VERSION}${QT5_KDE_PATCH}
-PORTREVISION=	1
 CATEGORIES=	net
 PKGNAMEPREFIX=	qt5-
 
@@ -48,5 +47,10 @@ post-install:
 	@cd ${WRKSRC}/src/plugins/bearer/generic && \
 		${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} \
 		${MAKE_ARGS} ${INSTALL_TARGET}
+
+dfly-patch:
+	${GREP} -q SIOCGHWADDR /usr/include/sys/sockio.h || \
+	${REINPLACE_CMD} -e 's|Q_OS_FREEBSD|__FreeBSD__|g' \
+	${WRKSRC}/src/plugins/bearer/generic/qgenericengine.cpp
 
 .include <bsd.port.post.mk>

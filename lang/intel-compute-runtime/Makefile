@@ -11,6 +11,7 @@ WWW=		https://01.org/compute-runtime
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
+BROKEN=		Does not build with latest level-zero
 ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=	only Intel GPUs on x86 are supported
 
@@ -47,6 +48,7 @@ L0_PLIST_FILES=		lib/libze_intel_gpu.so.1 \
 VAAPI_BUILD_DEPENDS=	${LOCALBASE}/include/va/va.h:multimedia/libva
 VAAPI_CMAKE_BOOL_OFF=	DISABLE_LIBVA
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e '/-Werror/d' \
 		-e '/FORCE_RESPONSE_FILE/d' \

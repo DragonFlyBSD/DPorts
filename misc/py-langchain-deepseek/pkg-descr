@@ -1,0 +1,4 @@
+langchain-deepseek is an integration package connecting DeepSeek and LangChain.
+
+It provides chat model components that use DeepSeek models through the
+OpenAI-compatible API within the LangChain framework.

@@ -1,7 +1,7 @@
 PORTNAME=	gscloud
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.13.0
-PORTREVISION=	2
+PORTREVISION=	33
 CATEGORIES=	net devel
 
 MAINTAINER=	egypcio@FreeBSD.org
@@ -78,4 +78,5 @@ CGO_ENABLED=	0
 
 PLIST_FILES=	bin/${PORTNAME}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

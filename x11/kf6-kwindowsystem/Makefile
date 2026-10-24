@@ -2,8 +2,8 @@ PORTNAME=	kwindowsystem
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	x11 kde kde-frameworks
 
-COMMENT=	Access to the windowing system
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Access to the windowing system
 
 BUILD_DEPENDS=	wayland-protocols>0:graphics/wayland-protocols
 LIB_DEPENDS=	libwayland-client.so:graphics/wayland \
@@ -16,5 +16,9 @@ USE_KDE=	ecm:build \
 		plasma-wayland-protocols:build
 USE_QT=		base declarative tools wayland
 USE_XORG=	ice sm x11 xcb xext xfixes
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

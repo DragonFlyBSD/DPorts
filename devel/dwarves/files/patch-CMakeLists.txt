@@ -1,0 +1,40 @@
+--- CMakeLists.txt.orig	2025-11-04 17:49:40 UTC
++++ CMakeLists.txt
+@@ -34,7 +34,7 @@ endif (NOT CMAKE_BUILD_TYPE)
+             FORCE)
+ endif (NOT CMAKE_BUILD_TYPE)
+
+-set(CMAKE_C_FLAGS_DEBUG "-Wall -Werror -ggdb -O0")
++set(CMAKE_C_FLAGS_DEBUG "-Wall -O0")
+ set(CMAKE_C_FLAGS_RELEASE "-Wall -O2")
+ SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pthread")
+
+@@ -52,6 +52,7 @@ find_package(Python3 QUIET)
+ find_package(argp REQUIRED)
+ find_package(obstack REQUIRED)
+ find_package(Python3 QUIET)
++find_package(epoll-shim REQUIRED)
+ 
+ # make sure git submodule(s) are checked out
+ find_package(Git QUIET)
+@@ -100,6 +101,7 @@ if (NOT LIBBPF_FOUND)
+ 	target_include_directories(bpf PRIVATE
+ 				   ${CMAKE_CURRENT_SOURCE_DIR}/lib/bpf/include
+ 				   ${CMAKE_CURRENT_SOURCE_DIR}/lib/bpf/include/uapi)
++	target_link_libraries(bpf PRIVATE epoll-shim::epoll-shim)
+ endif()
+ 
+ set(dwarves_LIB_SRCS dwarves.c dwarves_fprintf.c gobuffer.c
+@@ -108,10 +110,11 @@ endif()
+ if (NOT LIBBPF_FOUND)
+ 	list(APPEND dwarves_LIB_SRCS $<TARGET_OBJECTS:bpf>)
+ endif()
++list(APPEND dwarves_LIB_SRCS obstack.c exitfail.c)
+ add_library(dwarves ${dwarves_LIB_SRCS})
+ set_target_properties(dwarves PROPERTIES VERSION 1.0.0 SOVERSION 1)
+ set_target_properties(dwarves PROPERTIES INTERFACE_LINK_LIBRARIES "")
+-target_link_libraries(dwarves ${DWARF_LIBRARIES} ${ZLIB_LIBRARIES} ${LIBBPF_LIBRARIES} ${ARGP_LIBRARY} ${OBSTACK_LIBRARY})
++target_link_libraries(dwarves ${DWARF_LIBRARIES} ${ZLIB_LIBRARIES} ${LIBBPF_LIBRARIES} ${ARGP_LIBRARY} ${OBSTACK_LIBRARY} epoll-shim::epoll-shim)
+ 
+ set(dwarves_emit_LIB_SRCS dwarves_emit.c)
+ add_library(dwarves_emit ${dwarves_emit_LIB_SRCS})

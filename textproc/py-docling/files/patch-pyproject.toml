@@ -1,0 +1,23 @@
+-- Fix license declaration format for PEP 621 compatibility and remove console_scripts entry points (provided by docling-slim dependency).
+--- pyproject.toml.orig	2026-07-09 20:28:22 UTC
++++ pyproject.toml
+@@ -6,7 +6,7 @@ description = "SDK and CLI for parsing PDF, DOCX, HTML
+ name = "docling"
+ version = "2.108.0"  # DO NOT EDIT, updated automatically
+ description = "SDK and CLI for parsing PDF, DOCX, HTML, and more, to a unified document representation for powering downstream workflows such as gen AI applications."
+-license = "MIT"
++license = {text = "MIT"}
+ keywords = [
+   "docling",
+   "convert",
+@@ -64,10 +64,6 @@ changelog = "https://github.com/docling-project/doclin
+ # links these entry points into ~/.local/bin. uv only exposes the named
+ # package's own scripts, never a dependency's. The referenced modules are
+ # provided at runtime by the docling-slim dependency.
+-[project.scripts]
+-docling = "docling.cli.main:app"
+-docling-tools = "docling.cli.tools:app"
+-
+ [tool.uv.sources]
+ # For local development: use workspace member
+ docling-slim = { workspace = true }

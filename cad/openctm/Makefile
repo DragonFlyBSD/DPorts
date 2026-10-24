@@ -29,6 +29,7 @@ USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/OpenCTM-${DISTVERSION}
 
+MAKE_JOBS_UNSAFE= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' \
 		-e 's|%%STAGEDIR%%|${STAGEDIR}|' ${WRKSRC}/Makefile.linux

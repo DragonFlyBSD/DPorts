@@ -1,0 +1,11 @@
+--- crates/ruff/Cargo.toml.orig	2026-06-25 17:00:55 UTC
++++ crates/ruff/Cargo.toml
+@@ -71,7 +71,7 @@ tracing = { workspace = true, features = ["log"] }
+ walkdir = { workspace = true }
+ wild = { workspace = true }
+ 
+-[target.'cfg(all(not(target_os = "windows"), not(target_os = "openbsd"), not(target_os = "aix"), not(target_os = "android"), any(target_arch = "x86_64", target_arch = "aarch64", target_arch = "powerpc64", target_arch = "riscv64")))'.dependencies]
++[target.'cfg(all(not(target_os = "windows"), not(target_os = "openbsd"), not(target_os = "dragonfly"), not(target_os = "aix"), not(target_os = "android"), any(target_arch = "x86_64", target_arch = "aarch64", target_arch = "powerpc64", target_arch = "riscv64")))'.dependencies]
+ tikv-jemallocator = { workspace = true }
+ 
+ [target.'cfg(target_os = "windows")'.dependencies]

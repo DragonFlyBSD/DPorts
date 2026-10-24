@@ -22,15 +22,15 @@ LICENSE=	GPLv2
 
 USE_GITHUB=	yes
 GH_TUPLE=	CTSRD-CHERI:qemu:${QEMU_COMMIT} \
-		qemu:dtc:85e5d83:qemu_dtc/dtc \
-		qemu:libslirp:487f4bf4:qemu_libslirp/slirp \
+		qemu:dtc:b6910be:qemu_dtc/dtc \
+		qemu:libslirp:a88d9ac:qemu_libslirp/slirp \
 		qemu:berkeley-softfloat-3:b64af41:qemu_berkeley_softfloat_3/tests/fp/berkeley-softfloat-3 \
-		qemu:berkeley-testfloat-3:ca9fa2b:qemu_berkeley_testfloat_3/tests/fp/berkeley-testfloat-3 \
-		qemu:keycodemapdb:6b3d716:qemu_keycodemapdb/ui/keycodemapdb \
+		qemu:berkeley-testfloat-3:40619cb:qemu_berkeley_testfloat_3/tests/fp/berkeley-testfloat-3 \
+		qemu:keycodemapdb:d21009b:qemu_keycodemapdb/ui/keycodemapdb \
 
 HAS_CONFIGURE=	yes
 MAKEFILE=	GNUmakefile
-USES=		cpe gmake gnome ninja:build perl5 pkgconfig python:build xorg
+USES= cpe gmake gnome ninja:build perl5 pkgconfig python:build xorg ncurses
 USE_XORG=	pixman
 USE_GNOME+=	glib20 libxml2
 USE_PERL5=	build
@@ -39,12 +39,14 @@ ONLY_FOR_ARCHS=	amd64 powerpc64 powerpc64le
 
 OPTIONS_DEFINE=	DOCS
 
+USE_CLANG_FALLBACK= default
+CONFIGURE_ARGS+= --disable-netmap --disable-stack-protector --enable-curses
+DFLY_UNMAINTAINED= yes
 .include "Makefile.snapshot"
 
 CONFIGURE_ARGS+= \
 		--target-list=riscv64cheri-softmmu,morello-softmmu \
 		--disable-curl \
-		--disable-git-update \
 		--disable-gtk \
 		--disable-linux-user \
 		--disable-linux-aio \
@@ -61,17 +63,21 @@ CONFIGURE_ARGS+= \
 EXTRA_CFLAGS=	-DCHERI_UNALIGNED
 
 PLIST_FILES=	bin/qemu-system-morello \
-		bin/qemu-system-riscv64cheri
+		bin/qemu-system-riscv64xcheri
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302507 && ${OSVERSION} < 1400000 ))
-CFLAGS+=	-Wno-error=int-conversion
+.if ${OPSYS} == FreeBSD
+CFLAGS+= -Wno-error=int-conversion -Wno-int-conversion
 .endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/qemu-system-morello \
-	    ${WRKSRC}/build/qemu-system-riscv64cheri \
+	    ${WRKSRC}/build/qemu-system-riscv64xcheri \
 	    ${STAGEDIR}${PREFIX}/bin/
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@curses_lib_list=\"@&-L${LOCALBASE}/lib @g" \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

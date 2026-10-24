@@ -1,0 +1,11 @@
+--- make/common/JdkNativeCompilation.gmk.orig
++++ make/common/JdkNativeCompilation.gmk
+@@ -35,7 +35,7 @@
+   # This protects internal library dependencies within the JDK from being
+   # overridden using LD_LIBRARY_PATH. See JDK-8326891 for more information.
+   SetExecutableOrigin = \
+-      -Wl,-rpath,\$(DOLLAR)ORIGIN$1 -Wl,--disable-new-dtags
++      -Wl,-z,origin -Wl,-rpath,\$(DOLLAR)ORIGIN$1 -Wl,--disable-new-dtags
+   SetSharedLibraryOrigin = \
+       -Wl,-z,origin -Wl,-rpath,\$(DOLLAR)ORIGIN$1 -Wl,--disable-new-dtags
+ else ifeq ($(call isCompiler, clang), true)

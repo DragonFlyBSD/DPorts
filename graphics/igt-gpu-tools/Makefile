@@ -1,5 +1,6 @@
 PORTNAME=	igt-gpu-tools
 DISTVERSION=	1.26.1266
+PORTREVISION=	3
 CATEGORIES=	graphics
 
 MAINTAINER=	jfree@FreeBSD.org
@@ -8,8 +9,6 @@ WWW=		https://drm.pages.freedesktop.org/igt-gpu-tools/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-IGNORE_FreeBSD_12=	unsupported on FreeBSD versions < 13.1
 
 BUILD_DEPENDS=	rst2man:textproc/py-docutils@${PY_FLAVOR}
 LIB_DEPENDS=	libdrm.so:graphics/libdrm \
@@ -31,10 +30,12 @@ USE_LDCONFIG=	yes
 USE_XORG=	pixman
 
 SHEBANG_FILES=	scripts/code_cov_gather_on_test scripts/code_cov_parse_info
-MESON_ARGS=	-Dvalgrind=disabled
+PLIST_SUB+=	DOCS="@comment "
+MESON_ARGS=	-Ddocs=disabled -Dvalgrind=disabled
 
-OPTIONS_DEFINE=		CHAMELIUM DOCS RUNNER TEST
-OPTIONS_DEFAULT=	DOCS RUNNER TEST
+#OPTIONS_DEFINE=		CHAMELIUM DOCS RUNNER TEST
+OPTIONS_DEFINE=		CHAMELIUM RUNNER TEST
+OPTIONS_DEFAULT=	RUNNER TEST
 
 OPTIONS_SUB=	yes
 
@@ -48,9 +49,9 @@ CHAMELIUM_LIB_DEPENDS=		libasound.so:audio/alsa-lib \
 				libxmlrpc.so:net/xmlrpc-c
 CHAMELIUM_MESON_ENABLED=	chamelium
 
-DOCS_IMPLIES=		TEST
-DOCS_BUILD_DEPENDS=	gtkdoc-mkhtml:textproc/gtk-doc
-DOCS_MESON_ENABLED=	docs
+#DOCS_IMPLIES=		TEST
+#DOCS_BUILD_DEPENDS=	gtkdoc-mkhtml:textproc/gtk-doc
+#DOCS_MESON_ENABLED=	docs
 
 RUNNER_IMPLIES=		TEST
 RUNNER_LIB_DEPENDS=	libjson-c.so:devel/json-c \
@@ -60,6 +61,7 @@ RUNNER_MESON_ENABLED=	runner
 TEST_LIB_DEPENDS=	libunwind.so:devel/libunwind
 TEST_MESON_ENABLED=	tests
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "x86_64"
@@ -70,7 +72,7 @@ PLIST_SUB+=	AMD64="@comment "
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=int-conversion
 .endif
 

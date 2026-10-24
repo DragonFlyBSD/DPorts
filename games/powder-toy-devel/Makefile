@@ -1,6 +1,5 @@
 PORTNAME=	powder-toy
-DISTVERSION=	snapshot-361
-PORTREVISION=	1
+DISTVERSION=	snapshot-397
 CATEGORIES=	games
 PKGNAMESUFFIX=	-devel
 
@@ -40,8 +39,9 @@ SSE_DESC=		Enable SSE optimizations
 SSE_MESON_ON=		-Dx86_sse=auto
 SSE_MESON_OFF=		-Dx86_sse=none
 
+DFLY_UNMAINTAINED= yes
 post-patch:
-	@${REINPLACE_CMD} -e 's|python3|${PYTHON_CMD}|' ${WRKSRC}/meson.build
+	@${REINPLACE_CMD} -e "s|'python3'|'${PYTHON_CMD}'|" ${WRKSRC}/meson.build
 
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/powder-toy ${STAGEDIR}${PREFIX}/bin/

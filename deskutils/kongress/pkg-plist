@@ -34,6 +34,8 @@ share/locale/fi/LC_MESSAGES/kongress.mo
 share/locale/fi/LC_MESSAGES/kongressac.mo
 share/locale/fr/LC_MESSAGES/kongress.mo
 share/locale/fr/LC_MESSAGES/kongressac.mo
+share/locale/ga/LC_MESSAGES/kongress.mo
+share/locale/ga/LC_MESSAGES/kongressac.mo
 share/locale/gl/LC_MESSAGES/kongress.mo
 share/locale/gl/LC_MESSAGES/kongressac.mo
 share/locale/he/LC_MESSAGES/kongress.mo
@@ -79,6 +81,8 @@ share/locale/sv/LC_MESSAGES/kongress.mo
 share/locale/sv/LC_MESSAGES/kongressac.mo
 share/locale/tr/LC_MESSAGES/kongress.mo
 share/locale/tr/LC_MESSAGES/kongressac.mo
+share/locale/ug/LC_MESSAGES/kongress.mo
+share/locale/ug/LC_MESSAGES/kongressac.mo
 share/locale/uk/LC_MESSAGES/kongress.mo
 share/locale/uk/LC_MESSAGES/kongressac.mo
 share/locale/zh_CN/LC_MESSAGES/kongress.mo

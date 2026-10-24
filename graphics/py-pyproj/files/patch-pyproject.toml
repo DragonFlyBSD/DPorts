@@ -1,0 +1,20 @@
+--- pyproject.toml.orig	2026-09-05 18:30:44 UTC
++++ pyproject.toml
+@@ -1,6 +1,6 @@ requires = [
+ [build-system]
+ requires = [
+-    "setuptools>=77.0.1",
++    "setuptools>=61",
+     "cython>=3.1",
+ ]
+ build-backend = "setuptools.build_meta"
+@@ -16,8 +16,7 @@ maintainers = [
+ maintainers = [
+     {name = "pyproj contributors"},
+ ]
+-license = "MIT"
+-license-files = ["LICENSE", "LICENSE_proj"]
++license = {text = "MIT"}
+ keywords = [
+     "GIS",
+     "map",

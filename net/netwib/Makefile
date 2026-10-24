@@ -33,4 +33,8 @@ post-patch:
 do-configure:
 	(cd ${WRKSRC} && ${SH} genemake)
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\("FreeBSD" )\)@"DragonFly"|\1@g'	\
+		${WRKSRC}/genemake
+
 .include <bsd.port.mk>

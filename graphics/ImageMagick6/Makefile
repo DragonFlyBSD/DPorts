@@ -1,5 +1,6 @@
 PORTNAME=	ImageMagick
-DISTVERSION=	6.9.13-23
+DISTVERSION=	6.9.13-50
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	https://ftp.acc.umu.se/mirror/imagemagick.org/ftp/releases/ \
@@ -322,6 +323,10 @@ post-patch:
 		${WRKSRC}/wand/Wand.pc.in \
 		${WRKSRC}/wand/MagickWand-config.in \
 		${WRKSRC}/wand/MagickWand.pc.in
+	@${REINPLACE_CMD} -e '/^export PKG_CONFIG_LIBDIR/d' \
+		${WRKSRC}/magick/MagickCore-config.in \
+		${WRKSRC}/wand/MagickWand-config.in \
+		${WRKSRC}/Magick++/bin/Magick++-config.in
 
 pre-configure:
 .if defined(_IMAGEMAGICK_THREADS_PERL_MSG)
@@ -335,6 +340,9 @@ post-install:
 	@${MV} ${STAGEDIR}${PREFIX}/etc/ImageMagick-6/${i} \
 		${STAGEDIR}${PREFIX}/etc/ImageMagick-6/${i}.sample
 .endfor
+
+post-install-PERL-on:
+	${STRIP_CMD} ${STAGEDIR}${SITE_ARCH}/auto/Image/Magick/*/*.so
 
 do-test:
 	-cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} limits -m 20m ${MAKE} ${_MAKE_JOBS} check

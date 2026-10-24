@@ -1,6 +1,6 @@
 PORTNAME=	netsurf
 PORTVERSION=	3.11
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://download.netsurf-browser.org/netsurf/releases/source/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
@@ -37,7 +37,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss \
 USES=		bison cpe desktop-file-utils gmake gnome iconv:translit jpeg \
 		localbase pkgconfig shebangfix ssl
 CPE_VENDOR=	${PORTNAME}-browser
-USE_GNOME=	cairo glib20 gtk30 librsvg2
+USE_GNOME=	cairo gdkpixbufextra glib20 gtk30 librsvg2
 
 MAKE_ARGS=	CC="${CC}" \
 		CCOPT="" \
@@ -76,5 +76,10 @@ post-install:
 		${STAGEDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/frontends/gtk/res/netsurf.xpm \
 		${STAGEDIR}${PREFIX}/share/pixmaps
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@D_XOPEN_SOURCE@&__@g' \
+			 -e 's@D_POSIX_C_SOURCE@&__@g' \
+		${WRKSRC}/frontends/gtk/Makefile
 
 .include <bsd.port.mk>

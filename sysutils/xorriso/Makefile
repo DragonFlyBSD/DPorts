@@ -2,7 +2,7 @@ PORTNAME=	xorriso
 DISTVERSION=	1.5.6
 PORTREVISION=	2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://files.libburnia-project.org/releases/
+MASTER_SITES=	https://files.libburnia-project.org/releases/
 DISTNAME=	libisoburn-${PORTVERSION}
 
 MAINTAINER=	wen@FreeBSD.org
@@ -46,6 +46,7 @@ TK_INFO=			xorriso-tcltk
 XATTR_CONFIGURE_ENABLE=		xattr
 ZLIB_CONFIGURE_ENABLE=		zlib
 
+CONFIGURE_ARGS= --enable-pkgconfig-path=${LOCALBASE}/libdata/pkgconfig
 post-patch:
 	@${REINPLACE_CMD} 's/-liconv/${ICONV_LIB}/' ${WRKSRC}/configure
 

@@ -60,4 +60,9 @@ maintainer-docs-distfiles: ${MAINTAINER_DISTFILE}
 	    freefall.freebsd.org:public_distfiles/
 .endif
 
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibclang*} libclang.so:devel/llvm${LLVM_DEFAULT}
+dfly-patch:
+	${REINPLACE_CMD} -e "/CLANG_EXECUTABLE/s@ clang)@ clang${LLVM_DEFAULT})@g" \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

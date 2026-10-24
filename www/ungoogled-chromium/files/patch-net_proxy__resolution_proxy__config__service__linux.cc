@@ -1,6 +1,6 @@
---- net/proxy_resolution/proxy_config_service_linux.cc.orig	2024-07-31 14:19:23 UTC
+--- net/proxy_resolution/proxy_config_service_linux.cc.orig	2026-01-16 13:40:34 UTC
 +++ net/proxy_resolution/proxy_config_service_linux.cc
-@@ -11,7 +11,9 @@
+@@ -6,7 +6,9 @@
  
  #include <errno.h>
  #include <limits.h>
@@ -10,7 +10,7 @@
  #include <unistd.h>
  
  #include <map>
-@@ -510,6 +512,7 @@ bool SettingGetterImplGSettings::CheckVersion(
+@@ -498,6 +500,7 @@ bool SettingGetterImplGSettings::CheckVersion() {
  }
  #endif  // defined(USE_GIO)
  
@@ -26,7 +26,7 @@
  
  }  // namespace
  
-@@ -1256,9 +1260,11 @@ ProxyConfigServiceLinux::Delegate::Delegate(
+@@ -1258,9 +1262,11 @@ ProxyConfigServiceLinux::Delegate::Delegate(
      case base::nix::DESKTOP_ENVIRONMENT_KDE4:
      case base::nix::DESKTOP_ENVIRONMENT_KDE5:
      case base::nix::DESKTOP_ENVIRONMENT_KDE6:

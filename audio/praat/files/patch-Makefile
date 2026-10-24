@@ -1,0 +1,42 @@
+--- Makefile.orig	2026-08-19 01:44:01 UTC
++++ Makefile
+@@ -145,6 +145,13 @@ $(info ARCHITECTURE: given as "$(PRAAT_ARCH)", resolve
+ endif
+ $(info ARCHITECTURE: given as "$(PRAAT_ARCH)", resolved as "$(ARCH_COMPILER_FLAGS)")
+ 
++INC = $(LOCALBASE)/include
++CPPFLAGS += -DUNIX -I$(INC)
++CPPFLAGS += -I$(INC)/gtk-3.0 -I$(INC)/glib-2.0 -I$(LOCALBASE)/lib/glib-2.0/include -I$(INC)/pango-1.0 -I$(INC)/harfbuzz -I$(INC)/cairo -I$(INC)/gdk-pixbuf-2.0 -I$(INC)/atk-1.0
++EXECUTABLE_FILE = praat
++LINKER_COMMAND = $(CXX)
++GRAPHICS_LINKER_FLAGS := `pkg-config --libs gtk+-3.0`
++NON_PRAAT_LIBRARIES = -L$(LOCALBASE) $(GRAPHICS_LINKER_FLAGS) -lpthread
+ ifeq ($(OS_IS_FREEBSD),1)
+   # by Paul Boersma, Jason Bacon, Adriaan de Groot
+ 
+@@ -185,7 +192,7 @@ ifeq ($(OS_IS_FREEBSD),1)
+ 
+   EXECUTABLE_FILE := praat
+ 
+-  NON_PRAAT_LIBRARIES := $(GRAPHICS_LINKER_FLAGS) -L$(LOCALBASE)/lib $(AUDIO_LINKER_FLAGS) -lm -lpthread -ltinfow
++  NON_PRAAT_LIBRARIES := $(GRAPHICS_LINKER_FLAGS) -L$(LOCALBASE)/lib $(AUDIO_LINKER_FLAGS) -lm -lpthread -ltinfow -lz
+ 
+   AR = ar
+   RANLIB = ls
+@@ -406,7 +413,6 @@ all: all-external all-self
+ 		external/opusfile/libopusfile.a \
+ 		external/whispercpp/libwhisper.a \
+ 		external/blake3/libblake3.a \
+-		external/zlib/libzlib.a \
+                $(NON_PRAAT_LIBRARIES) $(LDFLAGS)
+ 
+ all-external:
+@@ -423,7 +429,7 @@ all-external:
+ 	$(MAKE) -C external/opusfile
+ 	$(MAKE) -C external/whispercpp
+ 	$(MAKE) -C external/blake3
+-	$(MAKE) -C external/zlib
++	# $(MAKE) -C external/zlib
+ 
+ all-self:
+ 	$(MAKE) -C kar

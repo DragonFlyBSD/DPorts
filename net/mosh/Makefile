@@ -1,7 +1,7 @@
 PORTNAME=	mosh
 PORTVERSION=	1.4.0
 DISTVERSIONPREFIX=	${PORTNAME}-
-PORTREVISION=	8
+PORTREVISION=	10
 CATEGORIES=	net
 
 MAINTAINER=	zi@FreeBSD.org
@@ -16,7 +16,7 @@ USES=		autoreconf compiler:c++17-lang ncurses perl5 pkgconfig ssl
 USE_PERL5=	run
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
-CONFIGURE_ARGS=	--with-utempter --without-ncurses
+CONFIGURE_ARGS= --without-utempter
 CONFIGURE_ENV+=	OpenSSL_CFLAGS="-I${OPENSSLINC}" OpenSSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto" \
 		TINFO_CFLAGS="-I/usr/include" ac_cv_have_decl_bswap64=yes \
 		ac_cv_have_decl___builtin_bswap64=yes

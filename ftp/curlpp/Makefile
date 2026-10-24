@@ -16,13 +16,14 @@ LIB_DEPENDS=	libcurl.so:ftp/curl
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-USES=		cmake compiler:c++11-lang localbase pathfix
+USES=		cmake compiler:c++11-lang localbase
 
 USE_LDCONFIG=	yes
 
 GH_ACCOUNT=	jpbarrette
 USE_GITHUB=	yes
 
+DFLY_UNMAINTAINED= yes
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
 	${INSTALL_DATA} ${WRKSRC}/doc/guide.pdf ${STAGEDIR}${DOCSDIR}/

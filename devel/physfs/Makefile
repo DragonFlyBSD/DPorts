@@ -14,4 +14,7 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	icculus
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror//g' ${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

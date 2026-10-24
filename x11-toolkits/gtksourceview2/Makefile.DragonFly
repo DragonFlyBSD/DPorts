@@ -1,3 +1,0 @@
-
-# XXX some strangeness, exclude explicit gconf2 for now
-USE_GNOME:=	${USE_GNOME:Ngconf2}

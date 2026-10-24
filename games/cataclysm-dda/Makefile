@@ -1,6 +1,5 @@
 PORTNAME=	cataclysm-dda
-DISTVERSION=	0.G
-PORTREVISION=	1
+PORTVERSION=	0.I # Preserve PORTVERSION so uppercase is respected
 PORTEPOCH=	1
 CATEGORIES=	games
 
@@ -16,10 +15,12 @@ FLAVOR?=	curses
 FLAVORS_SUB=	yes
 
 tiles_PKGNAMESUFFIX=		-tiles
+tiles_LIB_DEPENDS=		libFLAC.so:audio/flac \
+				libfreetype.so:print/freetype2
 curses_CONFLICTS_INSTALL=	cataclysm-dda-tiles
 tiles_CONFLICTS_INSTALL=	cataclysm-dda
 
-USES=		cmake compiler:c++14-lang
+USES=		cmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	CleverRaven
 GH_PROJECT=	Cataclysm-DDA
@@ -30,7 +31,9 @@ CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_Git
 OPTIONS_DEFINE=	DOCS NLS
 OPTIONS_SUB=	yes
 NLS_USES=	gettext-tools
+NLS_CMAKE_ON=	-DCMAKE_INSTALL_LOCALEDIR="${PREFIX}/share/locale"
 NLS_CMAKE_OFF=	-DLOCALIZE=OFF
+
 PORTDOCS=	*
 
 .if ${FLAVOR} == tiles
@@ -38,6 +41,8 @@ PORTDOCS=	*
 USES+=		pkgconfig sdl
 USE_SDL=	image2 mixer2 ttf2
 CMAKE_ON+=	SOUND TILES
+CXXFLAGS+=	-I${LOCALBASE}/include/freetype2
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 .else
 
@@ -48,6 +53,9 @@ CMAKE_ARGS+=	-DCURSES_INCLUDE_PATH:STRING="${NCURSESINC}"
 
 PORTSCOUT=	limit:^0\.[A-Z]
 
+CXXFLAGS+=	-Wno-error=for-loop-analysis
+
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%DISTVERSION%%|${DISTVERSION}|' ${WRKSRC}/src/version.cmake
 
@@ -58,5 +66,31 @@ post-install:
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
+
+.include <bsd.port.options.mk>
+
+# Clang 21.1.8 introduced stricter flow analysis on 16-CURRENT (2026-04-25)
+# This workaround prevents build failure in math_parser.cpp and others.
+# Ref: https://github.com/llvm/llvm-project/issues/154493
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1600017
+CXXFLAGS+=	-Wno-error=missing-noreturn -Wno-error=deprecated-declarations
+.endif
+
+# Avoid build failure due to strict Clang range-loop warning combined with -Werror
+CXXFLAGS+=		-Wno-error=range-loop-construct
+
+.if !defined(_INCLUDE_GAMES_CATACLYSM__DDA_MK)
+_INCLUDE_GAMES_CATACLYSM__DDA_MK=     yes
+
+CXXFLAGS+= -Wno-deprecated-declarations
+
+MAKE_ARGS+=		BSD=1
+NLS_MAKE_ARGS_ON=	LOCALIZE=1
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@ncursesw5-config@ncursesw6-config@g" \
+			 -e 's/-Werror[[:>:]]//g' \
+		${WRKSRC}/Makefile
+.endif
 
 .include <bsd.port.mk>

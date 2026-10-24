@@ -24,4 +24,7 @@ PLIST_FILES=	lib/${TCL_PKG}/lib${TCL_PKG}.so \
 		lib/${TCL_PKG}/pkgIndex.tcl \
 		share/man/mann/udp.n.gz
 
+pre-patch:
+	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' ${WRKSRC}/configure
+
 .include <bsd.port.mk>

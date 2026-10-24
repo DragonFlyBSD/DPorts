@@ -1,37 +1,48 @@
-PORTNAME=		git-cola
+PORTNAME=	git-cola
 DISTVERSIONPREFIX=	v
-DISTVERSION=		3.10.1
-PORTREVISION=	2
-CATEGORIES=		devel
+DISTVERSION=	4.14.0
+PORTREVISION=	1
+CATEGORIES=	devel
 
-MAINTAINER=		dch@FreeBSD.org
-COMMENT=		Sleek and powerful Git GUI
+MAINTAINER=	dch@FreeBSD.org
+COMMENT=	Sleek and powerful Git GUI
 WWW=		https://git-cola.github.io/
 
-LICENSE=		GPLv2+
-LICENSE_FILE=		${WRKSRC}/COPYING
+LICENSE=	GPLv2+
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=		git>=0:devel/git
-RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}QtPy>=1.7.1:devel/py-QtPy@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools-scm>=3.4.1:devel/py-setuptools-scm@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR} \
+		git>=0:devel/git
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}QtPy>=1.7.1:devel/py-QtPy@${PY_FLAVOR}
 
-USES=			desktop-file-utils gmake gnome python pyqt:5 qt:5 shebangfix
-USE_GITHUB=		yes
-USE_PYQT=		pyqt5
+USES=		desktop-file-utils gmake gnome pyqt:6 python \
+		shebangfix
+USE_GITHUB=	yes
+USE_PYQT=	pyqt6
+USE_PYTHON= autoplist noflavors pep517 autoplist distutils
 
-NO_ARCH=		yes
+NO_ARCH=	yes
 
-# NO_VENDOR_LIBS ensures we use ports QtPy not embedded version
-MAKE_ARGS=		prefix=${PREFIX} PYTHON=${PYTHON_CMD} NO_VENDOR_LIBS=1
+MAKE_ARGS=	prefix=${PREFIX} \
+		PYTHON=${PYTHON_CMD}
 
-OPTIONS_DEFINE=		DOCS NLS
-OPTIONS_SUB=		yes
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
 
-NLS_USES=		gettext
+NLS_USES=	gettext
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|LN_S = $$(LN) -s -f|LN_S = ${RLN}|;\
-	s|$$(LN_S) "$$(datadir)/icons/git-cola.svg"|$$(LN_S) \
-	"$$(DESTDIR)$$(datadir)/icons/git-cola.svg"|' \
-		${WRKSRC}/Makefile
+DFLY_PLIST= ${WRKSRC}/pkg-plist
+PLIST= ${DFLY_PLIST}
+dfly-patch:
+	${TOUCH} ${DFLY_PLIST}
+	${REINPLACE_CMD} -e "/icons\/dark', '\*\.png'/d" \
+			 -e "/icons', '\*\.png'/d" \
+		${WRKSRC}/setup.py
+
+
+dfly-install:
+	${MKDIR} ${STAGEDIR}${DATADIR}/icons/dark
 
 .include <bsd.port.mk>

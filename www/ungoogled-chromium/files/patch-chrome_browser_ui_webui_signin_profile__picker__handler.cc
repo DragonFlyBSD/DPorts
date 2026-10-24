@@ -1,11 +1,11 @@
---- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2024-08-26 14:40:28 UTC
+--- chrome/browser/ui/webui/signin/profile_picker_handler.cc.orig	2026-08-13 07:41:05 UTC
 +++ chrome/browser/ui/webui/signin/profile_picker_handler.cc
-@@ -203,7 +203,7 @@ base::Value::Dict CreateProfileEntry(const ProfileAttr
- 
-   if (AccountInfo::IsManaged(entry->GetHostedDomain())) {
+@@ -218,7 +218,7 @@ base::DictValue CreateProfileState(const ProfileAttrib
+       IDS_PROFILE_PICKER_PROFILE_CARD_LABEL, local_profile_name);
+   if (entry->GetIsManaged() == signin::Tribool::kTrue) {
      profile_entry.Set("avatarBadge", "cr:domain");
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-   } else if (base::FeatureList::IsEnabled(
-                  supervised_user::kShowKiteForSupervisedUsers) &&
-              entry->IsSupervised()) {
+   } else if (entry->IsSupervised()) {
+     profileCardButtonLabel = l10n_util::GetStringFUTF16(
+         IDS_PROFILE_PICKER_PROFILE_CARD_LABEL_SUPERVISED, local_profile_name);

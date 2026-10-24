@@ -1,5 +1,5 @@
 PORTNAME=	gworkspace
-PORTVERSION=	1.0.0
+PORTVERSION=	1.1.0
 PORTREVISION=	1
 CATEGORIES=	deskutils gnustep
 MASTER_SITES=	GNUSTEP/usr-apps
@@ -30,5 +30,9 @@ post-patch:
 		${WRKSRC}/Preferences/GNUmakefile
 	${CP} ${FILESDIR}/MDFinder-GNUmakefile \
 		${WRKSRC}/MDFinder/GNUmakefile
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|-lFSNode|-lFSNode -lgnustep-gui|' \
+		${WRKSRC}/gmds/mdfind/GNUmakefile
 
 .include <bsd.port.mk>

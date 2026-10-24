@@ -15,4 +15,8 @@ USE_LDCONFIG=	yes
 MESON_ARGS=	-Ddocumentation=disabled -Dtests=disabled
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
+dfly-patch:
+	${CP} -r ${WRKSRC}/include/linux/freebsd \
+	      ${WRKSRC}/include/linux/dragonfly
+
 .include <bsd.port.mk>

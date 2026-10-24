@@ -1,20 +1,22 @@
 PORTNAME=	ncbi-cxx-toolkit
-DISTVERSIONPREFIX=	release-
-DISTVERSION=	27.0.0
-PORTREVISION=	1
+DISTVERSIONPREFIX=	release/
+DISTVERSION=	30.7.0
 CATEGORIES=	biology science devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	NCBI C++ Toolkit
-WWW=		https://ncbi.github.io/cxx-toolkit/
+WWW=		https://ncbi.github.io/cxx-toolkit/ \
+		https://github.com/ncbi/ncbi-cxx-toolkit-public
 
 LICENSE=	PD
-LICENSE_FILE=	${WRKSRC}/doc/public/LICENSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_armv6=	platform not defined for FreeBSD arm, see https://github.com/ncbi/ncbi-cxx-toolkit-public/issues/2
+# uses intrincs for CRC computation, probably easy to port if desired
+ONLY_FOR_ARCHS=	aarch64 amd64
+ONLY_FOR_ARCHS_REASON=	deflate.c:149:2: error: "Only 64-bit Intel and ARM architectures are supported"
 
 LIB_DEPENDS=	libcdd.so:math/cddlib \
-		liblmdb.so:databases/lmdb \
+		liblmdb.so:databases/lmdb0 \
 		libpcre.so:devel/pcre \
 		libunwind.so:devel/libunwind \
 		libzstd.so:archivers/zstd
@@ -37,6 +39,7 @@ CONFIGURE_ARGS=	--without-debug --with-dll --without-static \
 CONFLICTS_INSTALL=	dakota libxdiff ncbi-blast+ ncbi-toolkit proj \
 			py*-speedtest-cli # bin/blast_formatter bin/speedtest bin/test_regexp lib/libeutils.so lib/libproj.so lib/libxdiff.so
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	# strip
 	@${FIND} ${STAGEDIR}${PREFIX}/bin -type f | ${GREP} -v -E '\.(sh|py|pl)$$' | ${XARGS} ${STRIP_CMD}

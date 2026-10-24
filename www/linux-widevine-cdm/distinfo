@@ -1,3 +1,5 @@
-TIMESTAMP = 1740940325
-SHA256 (google-chrome-stable_133.0.6943.53-1_amd64.deb) = ef75f672885ba08f866c50e4e62923c674f53ca8c6e14a32ce103d4fd41ef559
-SIZE (google-chrome-stable_133.0.6943.53-1_amd64.deb) = 114071328
+TIMESTAMP = 1788351654
+SHA256 (google-chrome-stable_152.0.7977.75-1_arm64.deb) = 3854b6525037f8d29704812a2681849c4ecdf69797750da3742381403f37e1d2
+SIZE (google-chrome-stable_152.0.7977.75-1_arm64.deb) = 133049792
+SHA256 (google-chrome-stable_152.0.7977.75-1_amd64.deb) = a0b7a64f768ffc0ff5ccc9260ad9ebb53fd16f7a131e2e36994da58b82d913df
+SIZE (google-chrome-stable_152.0.7977.75-1_amd64.deb) = 140834800

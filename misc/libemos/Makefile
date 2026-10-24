@@ -27,4 +27,11 @@ LDFLAGS+=	-leccodes
 post-stage: # installs the file from eccodes: https://jira.ecmwf.int/browse/SUP-2693
 	@${RM} ${STAGEDIR}${PREFIX}/bin/bufr_filter
 
+LDFLAGS:= -L${LOCALBASE}/lib ${LDFLAGS}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]LITTLE_ENDIAN[[:>:]]@EMOS_LITTLE_ENDIAN@g' \
+		${WRKSRC}/CMakeLists.txt
+	${FIND} ${WRKSRC}/gribex -type f | ${XARGS} ${GREP} -l "LITTLE_ENDIAN" | ${XARGS} \
+		${REINPLACE_CMD} -e 's@[[:<:]]LITTLE_ENDIAN[[:>:]]@EMOS_LITTLE_ENDIAN@g'
+
 .include <bsd.port.mk>

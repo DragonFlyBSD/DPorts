@@ -61,7 +61,7 @@ MOZILLA_VER?=	${PORTVERSION}
 MOZILLA_BIN?=	${PORTNAME}-bin
 MOZILLA_EXEC_NAME?=${MOZILLA}
 USES+=		compiler:c++17-lang cpe gl gmake gnome iconv \
-			llvm:min=17,noexport localbase \
+			llvm:min=17,noexport localbase nodejs:24,build,env \
 			pkgconfig python:build desktop-file-utils
 CPE_VENDOR?=mozilla
 USE_GL=		gl
@@ -76,15 +76,15 @@ ELF_FEATURES+=	+wxneeded:dist/bin/${MOZILLA} +wxneeded:dist/bin/${MOZILLA}-bin
 
 BUNDLE_LIBS=	yes
 
-BUILD_DEPENDS+=	rust-cbindgen>=0.28.0:devel/rust-cbindgen \
-				${RUST_DEFAULT}>=1.85.0:lang/${RUST_DEFAULT} \
-				node:www/node
+BUILD_DEPENDS+=	rust-cbindgen>=0.29.4:devel/rust-cbindgen \
+				${RUST_DEFAULT}>=1.98.0:lang/${RUST_DEFAULT}
 LIB_DEPENDS+=	libdrm.so:graphics/libdrm
 RUN_DEPENDS+=	${LOCALBASE}/lib/libpci.so:devel/libpci
 LIB_DEPENDS+=	libepoll-shim.so:devel/libepoll-shim
 MOZ_EXPORT+=	${CONFIGURE_ENV} \
 				PYTHON3="${PYTHON_CMD}" \
-				RUSTFLAGS="${RUSTFLAGS}"
+				RUSTFLAGS="${RUSTFLAGS}" \
+				BINDGEN_CFLAGS="-I${LOCALBASE}/include"
 MOZ_OPTIONS+=	--prefix="${PREFIX}"
 MOZ_MK_OPTIONS+=MOZ_OBJDIR="${BUILD_WRKSRC}"
 
@@ -116,12 +116,10 @@ RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/}
 .    endif
 
 # Standard depends
-_ALL_DEPENDS=	av1 event ffi graphite harfbuzz icu jpeg nspr nss png pixman sqlite vpx webp
+_ALL_DEPENDS=	av1 event ffi graphite harfbuzz jpeg nspr nss png pixman sqlite vpx webp
 
-.    if exists(${FILESDIR}/patch-bug1559213)
 av1_LIB_DEPENDS=	libaom.so:multimedia/aom libdav1d.so:multimedia/dav1d
 av1_MOZ_OPTIONS=	--with-system-av1
-.    endif
 
 event_LIB_DEPENDS=	libevent.so:devel/libevent
 event_MOZ_OPTIONS=	--with-system-libevent
@@ -204,11 +202,6 @@ MOZ_EXPORT+=	MOZ_OPTIMIZE_FLAGS="${CFLAGS:M-O*}"
 MOZ_OPTIONS+=	--enable-optimize
 .    else
 MOZ_OPTIONS+=	--disable-optimize
-.      if ${/usr/bin/ld:L:tA} != /usr/bin/ld.lld
-# ld 2.17 barfs on Stylo built with -C opt-level=0
-USE_BINUTILS=	yes
-LDFLAGS+=		-B${LOCALBASE}/bin
-.      endif
 .    endif
 
 .    if ${PORT_OPTIONS:MCANBERRA}
@@ -365,6 +358,11 @@ gecko-post-patch:
 # Disable vendor checksums like lang/rust
 	@${REINPLACE_CMD} 's,"files":{[^}]*},"files":{},' \
 		${MOZSRC}/third_party/rust/*/.cargo-checksum.json
+# Thunderbird has rust crates in the comm dir
+	@if [ -d ${MOZSRC}/comm/third_party/rust ] ; then \
+		${REINPLACE_CMD} 's,"files":{[^}]*},"files":{},' \
+			${MOZSRC}/comm/third_party/rust/*/.cargo-checksum.json; \
+	fi
 
 pre-configure-script:
 # Check that the running kernel has COMPAT_FREEBSD11 required by lang/rust post-ino64

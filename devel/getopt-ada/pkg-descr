@@ -1,0 +1,6 @@
+An Ada library implementing a POSIX-compliant getopt(3) parser.
+
+POSIX-compliant and portable Ada-2012 library to the familiar get option
+(getopt(3)) character and command line argument parser function common in the
+Standard C Library. This library can be used as replacement for getopt(3) for
+users of Ada working on POSIX supporting systems.

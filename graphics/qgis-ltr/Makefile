@@ -1,5 +1,5 @@
 PORTNAME=	qgis
-DISTVERSION=	3.40.8
+DISTVERSION=	3.44.15
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://qgis.org/downloads/
 PKGNAMESUFFIX=	-ltr
@@ -50,13 +50,11 @@ LIB_DEPENDS=	libabsl_log_internal_check_op.so:devel/abseil \
 		libpdalcpp.so:math/pdal \
 		libproj.so:graphics/proj \
 		libprotobuf-lite.so:devel/protobuf \
-		libqca-qt5.so:devel/qca@qt5 \
-		libqjson-qt5.so:devel/qjson \
-		libqscintilla2_qt5.so:devel/qscintilla2@qt5 \
-		libqt5keychain.so:security/qtkeychain@qt5 \
-		libqwt.so:x11-toolkits/qwt6@qt5 \
+		libqca-qt6.so:devel/qca@qt6 \
+		libqscintilla2_qt6.so:devel/qscintilla2@qt6 \
+		libqt6keychain.so:security/qtkeychain@qt6 \
+		libqwt.so:x11-toolkits/qwt6@qt6 \
 		librttopo.so:devel/librttopo \
-		libspatialindex.so:devel/spatialindex \
 		libspatialite.so:databases/spatialite \
 		libsz.so:science/libaec \
 		libxerces-c.so:textproc/xerces-c3 \
@@ -67,7 +65,7 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		${PYTHON_PKGNAMEPREFIX}black>=22.10:devel/py-black@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}cycler>=0.11.0:devel/py-cycler@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}python-dateutil>=2.8.2:devel/py-python-dateutil@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}Fiona>=1.8.21:graphics/py-fiona@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}fiona>=1.8.21:graphics/py-fiona@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}future>=0.18.2:devel/py-future@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}gdal>=3.5.2:graphics/py-gdal@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}geojson>=2.3.0:devel/py-geojson@${PY_FLAVOR} \
@@ -83,7 +81,7 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		${PYTHON_PKGNAMEPREFIX}netCDF4>=1.6.2:science/py-netCDF4@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}networkx>=2.8.8:math/py-networkx@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}nltk>=3.7:textproc/py-nltk@${PY_FLAVOR} \
-		${PYNUMPY} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}OWSLib>=0.27.2:graphics/py-OWSLib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pandas>=1.5.0:math/py-pandas@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pbr>=5.10.0:devel/py-pbr@${PY_FLAVOR} \
@@ -110,34 +108,39 @@ RUN_DEPENDS=	astyle:devel/astyle \
 
 ### Fortran is needed by numpy, GRASS, etc.
 USES=		bison cmake compiler:features desktop-file-utils \
-		fortran gl gmake gnome iconv pgsql pyqt:5 python qt:5 \
+		fortran gl gmake gnome iconv pgsql pyqt:6 python qt:6 \
 		shebangfix sqlite:3 tar:bz2
 USE_GL=		gl
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
-USE_PYQT=	pyqt5 pysip qscintilla2 qtbuilder:build sip:build webengine
-USE_QT=		3d buildtools:build core concurrent dbus declarative \
-		designer:build qdoc:build gamepad gui linguist:build location \
-		multimedia network printsupport qmake:build script serialport \
-		sql sql-pgsql sql-sqlite3 svg testlib uitools:build \
-		webchannel webengine widgets xml
+USE_PYQT=	pyqt6 pysip qscintilla2 qtbuilder:build sip:build webengine
+USE_QT=		3d 5compat base declarative location multimedia pdf positioning \
+		sensors serialport sqldriver-psql sqldriver-sqlite svg tools \
+		webchannel webengine
+# https://www.freebsd.org/doc/de_DE.ISO8859-1/books/porters-handbook/dads-pthread.html
+#MAKE_ARGS=	PTHREAD_LIBS="-lpthread"
+#CONFIGURE_ENV=	LD=${CC}
 
 SHEBANG_FILES=	src/plugins/grass/scripts/*.py
 
 # Python_EXECUTABLE: Use the default version if multiple Pythons are available
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE:STRING=Release \
 		-DHAVE_PGCONFIG=1 \
-		-DPYRCC_PROGRAM:FILEPATH=${LOCALBASE}/bin/pyrcc5-${PYTHON_VER} \
-		-DPYUIC_PROGRAM:FILEPATH=${LOCALBASE}/bin/pyuic5-${PYTHON_VER} \
 		-DPython_EXECUTABLE=${PYTHON_CMD} \
 		-DQSCI_SIP_DIR:PATH=${PYQT_SIPDIR}/Qsci \
-		-DQWT_INCLUDE_DIR:PATH=${LOCALBASE}/include/qt5/qwt6 \
-		-DQWT_LIBRARY:FILEPATH=${LOCALBASE}/lib/qt5/libqwt.so \
+		-DQWT_INCLUDE_DIR:PATH=${LOCALBASE}/include/qt6/qwt6 \
+		-DQWT_LIBRARY:FILEPATH=${LOCALBASE}/lib/qt6/libqwt.so \
 		-DQGIS_MANUAL_SUBDIR:PATH=share/man
-CMAKE_ON=	USE_OPENCL WITH_3D WITH_ASTYLE WITH_BINDINGS WITH_COPC \
-		WITH_CUSTOM_WIDGETS WITH_DRACO WITH_EPT WITH_INTERNAL_LAZPERF \
-		WITH_POSTGRESQL WITH_QTWEBENGINE
-CMAKE_OFF=	ENABLE_TESTS USE_CCACHE WITH_INTERNAL_MDAL WITH_QTWEBKIT WITH_QWTPOLAR
+# BINDINGS_GLOBAL_INSTALL SIP_GLOBAL_INSTALL
+CMAKE_ON=	BUILD_WITH_QT6 USE_OPENCL WITH_3D WITH_ANALYSIS WITH_ASTYLE \
+		WITH_AUTH WITH_BINDINGS WITH_COPC WITH_CUSTOM_WIDGETS WITH_DRACO \
+		WITH_EPT WITH_INTERNAL_LAZPERF WITH_INTERNAL_SPATIALINDEX \
+		WITH_PDAL WITH_POSTGRESQL WITH_PYTHON \
+		WITH_QTWEBENGINE WITH_QUICK \
+		WITH_SPATIALITE WITH_STAGED_PLUGINS
+CMAKE_ON+=	WITH_PDF4QT
+CMAKE_OFF=	ENABLE_TESTS USE_CCACHE PDF4QT_INSTALL_TO_USR WITH_QSPATIALITE WITH_QTWEBKIT
+#CMAKE_OFF+=	WITH_QWTPOLAR
 
 CONFLICTS_INSTALL=	qgis
 
@@ -145,23 +148,31 @@ PLIST_SUB=	DISTVERSION=${PORTVERSION}
 
 .if !defined(MAINTAINER_MODE)
 CMAKE_ARGS+=	-Wno-dev
-CMAKE_OFF+=	SUPPRESS_QT_WARNINGS
 .endif
 
-OPTIONS_DEFINE=		SERVER GRASS
+OPTIONS_DEFINE=		SERVER MDAL GRASS
 OPTIONS_DEFAULT=	SERVER GRASS
 NO_OPTIONS_SORT=	yes
 OPTIONS_SUB=		yes
 
 GRASS_DESC=		Add GRASS GIS to processing tools
+MDAL_DESC=		Use external MDAL
 SERVER_DESC=		Enable QGIS server
 
 GRASS_BUILD_DEPENDS=	grass8:databases/grass8
 GRASS_RUN_DEPENDS=	${GRASS_BUILD_DEPENDS}
 GRASS_CMAKE_BOOL=	WITH_GRASS8
-SERVER_LIB_DEPENDS=	libfcgi.so:www/fcgi
-SERVER_CMAKE_BOOL=	WITH_SERVER WITH_SERVER_PLUGINS WITH_QSPATIALITE
 
+MDAL_LIB_DEPENDS=	libmdal.so:math/mdal
+MDAL_CMAKE_ON=		-DWITH_INTERNAL_MDAL:BOOL=false
+MDAL_CMAKE_OFF=		-DWITH_INTERNAL_MDAL:BOOL=true
+
+SERVER_LIB_DEPENDS=	libfcgi.so:www/fcgi
+SERVER_CMAKE_BOOL=	WITH_SERVER WITH_SERVER_PLUGINS
+
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGRASS}
+CXXFLAGS= -Wno-deprecated-declarations
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 pre-patch:
@@ -189,5 +200,14 @@ post-install:
 
 check:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} check
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@STREQUAL "FreeBSD"@MATCHES "FreeBSD|DragonFly"@g' \
+		${WRKSRC}/cmake/FindGRASS.cmake \
+		${WRKSRC}/src/app/CMakeLists.txt
+	${REINPLACE_CMD} -e '/-lulog/d' \
+		${WRKSRC}/src/plugins/grass/CMakeLists.txt
+	${REINPLACE_CMD} -e 's@txt2tags --encoding=utf-8@txt2tags@g' \
+		${WRKSRC}/scripts/release.pl
 
 .include <bsd.port.post.mk>

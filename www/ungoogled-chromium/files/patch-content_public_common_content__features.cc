@@ -1,27 +1,37 @@
---- content/public/common/content_features.cc.orig	2024-08-26 14:40:28 UTC
+--- content/public/common/content_features.cc.orig	2026-08-13 07:41:05 UTC
 +++ content/public/common/content_features.cc
-@@ -36,7 +36,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
- // TODO(crbug.com/40118868): Remove !IS_CHROMEOS_LACROS once lacros starts being
- // built with OS_CHROMEOS instead of OS_LINUX.
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
--    (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_LACROS))
-+    (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
+@@ -147,7 +147,7 @@ BASE_FEATURE(kAttachUnownedInnerWebContents, base::FEA
+ 
+ // Runs the audio service in a separate process.
+ BASE_FEATURE(kAudioServiceOutOfProcess,
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -1128,9 +1128,9 @@ BASE_FEATURE(kWebAssemblyTiering,
+@@ -157,7 +157,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
+ // Enables the audio-service sandbox. This feature has an effect only when the
+ // kAudioServiceOutOfProcess feature is enabled.
+ BASE_FEATURE(kAudioServiceSandbox,
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT
+@@ -1251,10 +1251,10 @@ BASE_FEATURE(kWebAssemblyTiering, base::FEATURE_ENABLE
+ 
+ // Enable WebAssembly trap handler.
  BASE_FEATURE(kWebAssemblyTrapHandler,
-              "WebAssemblyTrapHandler",
- #if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) ||  \
--      BUILDFLAG(IS_MAC)) &&                                                  \
-+      BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)) &&                                                  \
+-#if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) ||  \
++#if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) ||  \
+       BUILDFLAG(IS_MAC)) &&                                                  \
       defined(ARCH_CPU_X86_64)) ||                                            \
 -    ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)) && \
-+    ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)) && \
++    ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)) && \
       defined(ARCH_CPU_ARM64))
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
-@@ -1167,7 +1167,11 @@ BASE_FEATURE(kWebUICodeCache,
+@@ -1315,7 +1315,11 @@ BASE_FEATURE(kWebUIInProcessResourceLoadingV2,
  
  // Controls whether the WebUSB API is enabled:
  // https://wicg.github.io/webusb
@@ -31,5 +41,5 @@
  BASE_FEATURE(kWebUsb, "WebUSB", base::FEATURE_ENABLED_BY_DEFAULT);
 +#endif
  
- // Controls whether the WebXR Device API is enabled.
- BASE_FEATURE(kWebXr, "WebXR", base::FEATURE_ENABLED_BY_DEFAULT);
+ // Apply `PrefetchPriority::kHighest` for Webview Prefetch API.
+ BASE_FEATURE(kWebViewPrefetchHighestPrefetchPriority,

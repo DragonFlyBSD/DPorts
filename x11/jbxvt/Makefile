@@ -25,4 +25,5 @@ ALL_TARGET=	jbxvt
 PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man1/${PORTNAME}.1.gz
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

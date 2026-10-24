@@ -12,8 +12,6 @@ WWW=		https://github.com/CSCsw/ColPack
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_FreeBSD_13_armv7=	compilation fails: error: expected identifier before '__is_convertible'
-
 USES=		cmake
 USE_LDCONFIG=	yes
 
@@ -22,6 +20,7 @@ GH_ACCOUNT=	CSCsw
 GH_PROJECT=	ColPack
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/build/cmake
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM:STRING=3.5 # CMake 4 compatibility
 
 .if !exists(/usr/include/omp.h)
 USES+=		compiler:gcc-c++11-lib

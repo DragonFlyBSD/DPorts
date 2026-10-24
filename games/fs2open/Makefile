@@ -1,7 +1,6 @@
 PORTNAME=	fs2open
 DISTVERSIONPREFIX=	release_
-DISTVERSION=	23_2_1
-PORTREVISION=	1
+DISTVERSION=	26_0_1
 CATEGORIES=	games
 
 MAINTAINER=	pkubaj@FreeBSD.org
@@ -23,15 +22,23 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	scp-fs2open
 GH_PROJECT=	fs2open.github.com
 GH_TUPLE=	asarium:cmake-modules:7cef957:cmakemodules/cmake/external/rpavlik-cmake-modules \
-		asarium:libRocket:ecd648a:libRocket/lib/libRocket
+		asarium:libRocket:b0c18e1:libRocket/lib/libRocket
 USE_SDL=	sdl2
 
+CMAKE_OFF=	FSO_BUILD_WITH_OPENXR
 LDFLAGS_i386=	-Wl,-znotext
 
 PLIST_FILES=	bin/fs2_open
 
+DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/bin/fs2_open \
 		${STAGEDIR}${PREFIX}/bin
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/MATCHES/s@\("FreeBSD\)"@\1|DragonFly"@g' \
+		${WRKSRC}/cmake/platforms.cmake
+	${REINPLACE_CMD} -e 's@HAVE_EXECINFO_H@do_not_use@g' \
+		${WRKSRC}/code/windows_stub/stubs.cpp
 
 .include <bsd.port.mk>

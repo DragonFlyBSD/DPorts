@@ -1,6 +1,5 @@
 PORTNAME=	cminpack
-PORTVERSION=	1.3.11
-PORTREVISION=	1
+PORTVERSION=	1.3.14
 DISTVERSIONPREFIX=	v
 CATEGORIES=	math
 
@@ -18,8 +17,11 @@ GH_ACCOUNT=	devernay
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	USE_BLAS
 
+PLIST_SUB=	SHLIB_VER=${PORTVERSION}
+
 OPTIONS_DEFINE=	EXAMPLES
 
+LDFLAGS= -lm
 .include <bsd.port.options.mk>
 
 # libcminpackld is only built on platforms where

@@ -1,5 +1,5 @@
 PORTNAME=	log4cxx
-PORTVERSION=	1.4.0
+PORTVERSION=	1.8.0
 CATEGORIES=	devel
 MASTER_SITES=	https://archive.apache.org/dist/logging/log4cxx/${PORTVERSION}/
 DISTNAME=	apache-log4cxx-${PORTVERSION}
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libfmt.so:devel/libfmt
 TEST_DEPENDS=	zip:archivers/zip
 
-USES=		cmake:testing compiler:c++17-lang pathfix
+USES=		cmake:testing compiler:c++17-lang cpe
 
 CMAKE_OFF=	APACHE_MAINTAINER \
 		APR_STATIC \
@@ -34,9 +34,13 @@ CMAKE_ON=	BUILD_SHARED_LIBS \
 		LOG4CXX_WCHAR_T
 USE_LDCONFIG=	yes
 
+CPE_VENDOR=	apache
+
 OPTIONS_DEFINE=	BOOST
 
 BOOST_BUILD_DEPENDS=	${LOCALBASE}/include/boost/regex.hpp:devel/boost-libs
 BOOST_CMAKE_BOOL=	PREFER_BOOST
 
+CXXFLAGS= -Wno-narrowing
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.mk>

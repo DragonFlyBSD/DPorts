@@ -1,6 +1,6 @@
 PORTNAME=	spotifyd
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.5
+DISTVERSION=	0.4.2
 PORTREVISION=	7
 CATEGORIES=	audio
 
@@ -9,11 +9,11 @@ COMMENT=	Spotify daemon
 WWW=		https://github.com/Spotifyd/spotifyd
 
 LICENSE=	GPLv3
-LICENSE_FILE=	${WRKSRC}/cargo-crates/ansi_term-0.12.1/LICENCE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libogg.so:audio/libogg
 
-USES=		cargo ssl:build
+USES=		cargo llvm ssl:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	Spotifyd
 USE_RC_SUBR=	spotifyd
@@ -45,15 +45,16 @@ PORTAUDIO_VARS=		CARGO_FEATURES+=portaudio_backend
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 PULSEAUDIO_VARS=	CARGO_FEATURES+=pulseaudio_backend
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} 's,/etc/,${PREFIX}/etc/,g' ${WRKSRC}/src/config.rs
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/spotifyd
 	${INSTALL_DATA} ${FILESDIR}/spotifyd.conf ${STAGEDIR}${PREFIX}/etc/spotifyd.conf.sample
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -1,9 +1,8 @@
 PORTNAME=	flightgear-aircraft
-PORTVERSION=	20190826
+PORTVERSION=	20260901
 CATEGORIES=	games
 # See http://www.flightgear.org/templates.js
-MASTER_SITES=	http://mirrors.ibiblio.org/flightgear/ftp/Aircraft/ \
-	http://ftp.igh.cnrs.fr/pub/flightgear/ftp/Aircraft/
+MASTER_SITES=	http://mirrors.ibiblio.org/flightgear/ftp/Aircraft-2024/
 # Selection of production-ready/well-known planes
 # (planes already included in flightgear-data are excluded)
 # Please contact MAINTAINER if a plane is missing
@@ -62,6 +61,7 @@ DATADIR=	${PREFIX}/share/flightgear/Aircraft
 PLIST=		${WRKDIR}/pkg-plist
 PLIST_DIRS=	%%DATADIR%%
 
+DPMSG= ${WRKDIR}/dports-message
 pre-extract:
 	@${MKDIR} ${WRKSRC}
 
@@ -82,5 +82,15 @@ pre-install:
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	(cd ${WRKSRC}/ && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR})
+
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
+RUN_DEPENDS:=	${RUN_DEPENDS:N*flightgear-data}
+PKGMESSAGE=	${DPMSG}
+
+dfly-patch:
+	@${ECHO} "########################################################" >> ${DPMSG}
+	@${ECHO} "# Build games/flightgear-data from source to play this #" >> ${DPMSG}
+	@${ECHO} "########################################################" >> ${DPMSG}
+.endif
 
 .include <bsd.port.mk>

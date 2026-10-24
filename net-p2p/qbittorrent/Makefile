@@ -1,5 +1,6 @@
 PORTNAME=	qbittorrent
-DISTVERSION=	4.6.5
+DISTVERSION=	5.2.4
+PORTREVISION=	1
 CATEGORIES=	net-p2p
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -25,7 +26,8 @@ USE_GITHUB=		nodefault
 GH_ACCOUNT=		qBittorrent
 GH_PROJECT=		qBittorrent
 
-CMAKE_ON=		QT6
+# temporary workaround for https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291988
+WITH_DEBUG=		yes
 
 .if ${FLAVOR} == default
 USES+=			desktop-file-utils gl
@@ -48,7 +50,7 @@ OPTIONS_EXCLUDE=	DBUS
 OPTIONS_DEFINE=			DBUS PYTHON DEBUG
 OPTIONS_RADIO=			LIBTORRENT
 OPTIONS_RADIO_LIBTORRENT=	LIBTORRENT1 LIBTORRENT2
-OPTIONS_DEFAULT=		DBUS PYTHON LIBTORRENT1
+OPTIONS_DEFAULT=		DBUS PYTHON LIBTORRENT2
 
 LIBTORRENT_DESC=	libtorrent version number to use
 LIBTORRENT1_DESC=	Version 1.x (default)
@@ -65,6 +67,10 @@ LIBTORRENT2_EXTRA_PATCHES=	${FILESDIR}/extrapatch-libtorrent-rasterbar2-settings
 
 PYTHON_DESC=		Install Python to support some plugin functionality
 PYTHON_USES=		python:run
+
+LDFLAGS= ${EXECINFO_LDFLAGS} -lexecinfo
+DFLY_UNMAINTAINED= yes
+.include <bsd.port.options.mk>
 
 post-patch-PYTHON-on:
 	@${REINPLACE_CMD} \

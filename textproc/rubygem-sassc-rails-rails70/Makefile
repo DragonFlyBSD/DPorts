@@ -22,4 +22,9 @@ USES=		gem
 
 NO_ARCH=	yes
 
+.if defined(DEVELOPER)
+.MAKEFLAGS+=    DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+.endif
+
 .include <bsd.port.mk>

@@ -1,8 +1,8 @@
 PORTNAME=	xarcan
-DISTVERSION=	0.6.1
+DISTVERSION=	0.6.3
 CATEGORIES=	x11-servers
 
-MAINTAINER=	jbeich@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	X11 server as Arcan client
 WWW=		https://arcan-fe.com/
 
@@ -43,6 +43,12 @@ DEFAULT_FONTPATH_LIST= \
 	${FONTPATH_ROOT}/100dpi/ \
 	${FONTPATH_ROOT}/75dpi/ \
 	catalogue:${FONTPATHD}
+
+IGNORE= unmaintained, please request fixing to users mailing list
+post-patch:
+	@${REINPLACE_CMD} -e '/_FBDEV_H_/ { x; \
+		s/^/unsigned long long arcan_timemillis();/; G; }' \
+			${WRKSRC}/hw/kdrive/arcan/arcan.h
 
 do-install:
 # XXX Prevent Meson from installing unrelated files

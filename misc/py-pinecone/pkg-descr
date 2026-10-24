@@ -1,0 +1,3 @@
+Pinecone Python client and SDK for the Pinecone vector database service.
+Provides data and control plane clients for managing indexes and querying
+vectors.

@@ -1,6 +1,0 @@
-MAKE_JOBS_UNSAFE= yes
-
-# zrj: fix up after MF
-pre-build:
-	${ECHO} "#undef HAVE_NETINET_IP_FIL_H" >> ${WRKSRC}/config.h
-	${ECHO} "#undef HAVE_NETINET_IP_NAT_H" >> ${WRKSRC}/config.h

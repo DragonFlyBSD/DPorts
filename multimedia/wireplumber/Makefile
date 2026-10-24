@@ -1,5 +1,5 @@
 PORTNAME=	wireplumber
-DISTVERSION=	0.5.8
+DISTVERSION=	0.5.17
 CATEGORIES=	multimedia
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -18,6 +18,7 @@ GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	pipewire
 
 USE_GNOME=	glib20
+USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	DOCS DOXYGEN NLS
 
@@ -42,9 +43,7 @@ OPTIONS_SUB=	yes
 
 PORTDOCS=	*
 
-post-patch:
-	${REINPLACE_CMD} -e "s|'python3'|'python${PYTHON_VER}'|" \
-		${WRKSRC}/docs/meson.build
+BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/pipewire/pipewire.conf.d

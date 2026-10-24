@@ -1,0 +1,17 @@
+--- lib/trace/CMakeLists.txt.orig	2026-01-30 15:43:06 UTC
++++ lib/trace/CMakeLists.txt
+@@ -30,11 +30,13 @@ add_convenience_library (common
+     trace_ostream_zstd.cpp
+ )
+ 
++find_package(Snappy REQUIRED)
++
+ target_link_libraries(common
+     guids
+     highlight
+     os
+-    Snappy::snappy
++    ${Snappy_LIBRARIES}
+     ZLIB::ZLIB
+     PkgConfig::BROTLIDEC
+     PkgConfig::ZSTD

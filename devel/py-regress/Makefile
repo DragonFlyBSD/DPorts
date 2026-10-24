@@ -1,8 +1,8 @@
 PORTNAME=	regress
-PORTVERSION=	0.4.2
-PORTREVISION=	13
+PORTVERSION=	2026.9.1
 CATEGORIES=	devel python
-MASTER_SITES=	PYPI
+MASTER_SITES=	PYPI \
+		https://github.com/crate-py/regress/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -13,12 +13,13 @@ WWW=		https://github.com/crate-py/regress
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}maturin>=1.0<2.0:devel/py-maturin@${PY_FLAVOR}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}maturin>=1.2<2.0:devel/py-maturin@${PY_FLAVOR}
 
-USES=		cargo python
+USES=		cargo python:3.11+
 USE_PYTHON=	autoplist concurrent pep517
 
 CARGO_BUILD=	no
 CARGO_INSTALL=	no
+CARGO_TEST=	no
 
 .include <bsd.port.mk>

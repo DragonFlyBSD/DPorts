@@ -17,6 +17,7 @@ OPTIONS_DEFAULT?=	WNN SERVER
 MANLANG?=		ja
 USERS=			wnn
 
+CPP= cpp -P
 .include "${.CURDIR}/../../japanese/FreeWnn-lib/Makefile.common"
 
 WNN_LIB_DEPENDS+=	libwnn.so:japanese/FreeWnn-lib

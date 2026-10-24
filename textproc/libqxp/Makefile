@@ -36,4 +36,5 @@ DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen
 DOXYGEN_CONFIGURE_OFF=	--without-docs
 DOXYGEN_IMPLIES=	DOCS
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.mk>

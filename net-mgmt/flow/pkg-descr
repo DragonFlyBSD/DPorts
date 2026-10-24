@@ -1,0 +1,4 @@
+flow is a minimalist terminal dashboard that displays real-time network
+throughput. It shows upload and download rates per interface with a compact
+TUI, giving you an at-a-glance view of network activity without any external
+monitoring stack.

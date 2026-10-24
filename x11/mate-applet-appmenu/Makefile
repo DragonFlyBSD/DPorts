@@ -36,4 +36,7 @@ GL_ACCOUNT=	vala-panel-project
 GL_PROJECT=	vala-panel-appmenu
 GL_TAGNAME=	4e362c22ab3a23c98f13fb379c782786ee057cf6
 
+dfly-install:
+	${RM} -rfv ${STAGEDIR}${PREFIX}/share/locale
+
 .include <bsd.port.mk>

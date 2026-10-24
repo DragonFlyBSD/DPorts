@@ -1,2 +1,0 @@
-CPPFLAGS+=              -I${OPENSSLINC}
-LDFLAGS+=               -L${OPENSSLLIB}

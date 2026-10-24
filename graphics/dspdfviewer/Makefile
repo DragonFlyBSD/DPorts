@@ -1,7 +1,7 @@
 PORTNAME=	dspdfviewer
 PORTVERSION=	1.15.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	64
+PORTREVISION=	79
 CATEGORIES=	graphics
 
 MAINTAINER=	fox@FreeBSD.org
@@ -29,9 +29,10 @@ CMAKE_ARGS=	-DBuildTests=OFF \
 		-DPOPPLER_LIBRARIES=${LOCALBASE}/lib/libpoppler-qt5.so
 
 PLIST_FILES=	bin/dspdfviewer \
-		man/man1/dspdfviewer.1.gz \
-		share/applications/dspdfviewer.desktop
+		share/applications/dspdfviewer.desktop \
+		share/man/man1/dspdfviewer.1.gz
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == clang
@@ -43,27 +44,22 @@ CFLAGS+=	-Wno-error=undefined-func-template
 .if ${OPSYS} == FreeBSD && ${CHOSEN_COMPILER_TYPE} == clang
 # (rene) also related to issue #191 which is still open as of 2020-10-21
 CFLAGS+=	-Wno-error=zero-as-null-pointer-constant
-.endif
-
 # Fixes build failure for Clang 8.0.0
-.if ${OPSYS} == FreeBSD && ${CHOSEN_COMPILER_TYPE} == clang
 CFLAGS+=	-Wno-error=extra-semi-stmt
-.endif
-
 # Fixes build failure for Clang 11.0.0
-.if ${OPSYS} == FreeBSD && ${CHOSEN_COMPILER_TYPE} == clang
 CFLAGS+=	-Wno-error=suggest-destructor-override
 CFLAGS+=	-Wno-error=suggest-override
-.endif
-
 # Fixes build failure for Clang 14.0.3
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400059 && ${CHOSEN_COMPILER_TYPE} == clang
 CFLAGS+=       -Wno-error=bitwise-instead-of-logical
-.endif
-
 # Fixes build failure for Clang 16.0.6
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400059 && ${CHOSEN_COMPILER_TYPE} == clang
 CFLAGS+=       -Wno-error=unsafe-buffer-usage
+# Fixes build failure for Clang 18.1.4
+CFLAGS+=       -Wno-error=switch-default
+# Fixes build failure for Clang 21.1.8
+.if ${OSVERSION} >= 1600018
+CFLAGS+=	-Wno-error=nrvo
+CFLAGS+=	-Wno-error=thread-safety-negative
+.endif
 .endif
 
 # Prepare for Qt5-5.15

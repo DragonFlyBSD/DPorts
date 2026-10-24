@@ -1,10 +1,10 @@
 PORTNAME=	shards
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.17.3
+DISTVERSION=	0.20.0
 PORTREVISION=	1
 CATEGORIES=	devel
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Dependency manager for the Crystal programming language
 WWW=		https://github.com/crystal-lang/shards
 
@@ -25,13 +25,13 @@ GH_TUPLE=	crystal-lang:crystal-molinillo:v0.2.0:molinillo/lib/molinillo
 
 MAKE_ARGS+=	CRYSTAL="${LOCALBASE}/bin/crystal" \
 		FLAGS="--release --no-debug" \
-		SHARDS_CONFIG_BUILD_COMMIT="d75b004dd3d0"
+		SHARDS_CONFIG_BUILD_COMMIT="b2b98ca36ce1"
 
 PLIST_FILES=	bin/shards \
 		share/man/man1/shards.1.gz \
 		share/man/man5/shard.yml.5.gz
 
 post-install:
-		@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/shards
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/shards
 
 .include <bsd.port.mk>

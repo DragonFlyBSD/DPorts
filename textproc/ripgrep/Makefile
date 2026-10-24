@@ -1,6 +1,6 @@
 PORTNAME=	ripgrep
-DISTVERSION=	14.1.1
-PORTREVISION=	4
+DISTVERSION=	15.2.0
+PORTREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -41,6 +41,7 @@ SIMD_VARS=	${SIMD_VARS_${ARCH}}
 SIMD_VARS_i386=	RUSTFLAGS+="-C target-feature=+sse2"
 
 post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/rg
 	${STAGEDIR}${PREFIX}/bin/rg --generate man > ${WRKDIR}/rg.1
 	${INSTALL_MAN} ${WRKDIR}/rg.1 ${STAGEDIR}${PREFIX}/share/man/man1
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d/
@@ -54,4 +55,5 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

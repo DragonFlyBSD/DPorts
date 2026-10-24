@@ -77,6 +77,7 @@ include/aws/common/task_scheduler.h
 include/aws/common/thread.h
 include/aws/common/thread_scheduler.h
 include/aws/common/time.h
+include/aws/common/tribool.h
 include/aws/common/uri.h
 include/aws/common/uuid.h
 include/aws/common/xml_parser.h
@@ -89,6 +90,7 @@ lib/cmake/aws-c-common/modules/AwsCRuntime.cmake
 lib/cmake/aws-c-common/modules/AwsCheckHeaders.cmake
 lib/cmake/aws-c-common/modules/AwsFeatureTests.cmake
 lib/cmake/aws-c-common/modules/AwsFindPackage.cmake
+lib/cmake/aws-c-common/modules/AwsGetVersion.cmake
 lib/cmake/aws-c-common/modules/AwsLibFuzzer.cmake
 lib/cmake/aws-c-common/modules/AwsSIMD.cmake
 lib/cmake/aws-c-common/modules/AwsSanitizers.cmake
@@ -97,5 +99,5 @@ lib/cmake/aws-c-common/modules/AwsTestHarness.cmake
 lib/cmake/aws-c-common/shared/aws-c-common-targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/aws-c-common/shared/aws-c-common-targets.cmake
 lib/libaws-c-common.so
-lib/libaws-c-common.so.1
-lib/libaws-c-common.so.1.0.0
+lib/libaws-c-common.so.%%SOVERSION_R%%
+lib/libaws-c-common.so.%%SOVERSION%%

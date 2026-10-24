@@ -1,6 +1,6 @@
 PORTNAME=	gvm
 DISTVERSIONPREFIX=	v
-DISTVERSION=	22.7.3
+DISTVERSION=	23.9.2
 CATEGORIES=	security
 PKGNAMESUFFIX=	-libs
 
@@ -12,15 +12,18 @@ LICENSE=	GPLv2+
 
 BUILD_DEPENDS=	doxygen>0:devel/doxygen
 LIB_DEPENDS=	libassuan.so:security/libassuan \
+		libcjson.so:devel/libcjson \
+		libgcrypt.so:security/libgcrypt \
+		libgnutls.so:security/gnutls \
 		libgpgme.so:security/gpgme \
 		libgpg-error.so:security/libgpg-error \
-		libgnutls.so:security/gnutls \
-		libuuid.so:misc/e2fsprogs-libuuid \
-		libssh.so:security/libssh \
 		libhiredis.so:databases/hiredis \
 		libnet.so:net/libnet \
-		libgcrypt.so:security/libgcrypt \
-		libpaho-mqtt3a.so:net/libpaho-mqtt3
+		libpaho-mqtt3a.so:net/libpaho-mqtt3 \
+		libssh.so:security/libssh \
+		libuuid.so:misc/libuuid \
+		libjson-glib-1.0.so:devel/json-glib \
+		libcurl.so:ftp/curl
 RUN_DEPENDS=	doxygen>0:devel/doxygen
 
 USES=		cmake gnome pkgconfig
@@ -39,9 +42,12 @@ RADIUS_CMAKE_ON=	-DBUILD_WITH_RADIUS=1
 RADIUS_CMAKE_OFF=	-DBUILD_WITH_RADIUS=0
 RADIUS_LIB_DEPENDS=	libfreeradius-client.so:net/freeradius-client
 
+PLIST_FILES= "@dir /var/run/gvm"
 post-patch:
 	@${REINPLACE_CMD} -e 's|2.25.0|1.45.6|g' ${WRKSRC}/util/libgvm_util.pc.in
 	@${REINPLACE_CMD} -e 's|uuid>=2.25.0|uuid>=1.45.6|g' ${WRKSRC}/util/CMakeLists.txt
 	@${REINPLACE_CMD} '17d' ${WRKSRC}/base/proctitle.c
 
+BUILD_DEPENDS:= ${BUILD_DEPENDS:Ndoxygen*}
+RUN_DEPENDS:= ${RUN_DEPENDS:Ndoxygen*}
 .include <bsd.port.mk>

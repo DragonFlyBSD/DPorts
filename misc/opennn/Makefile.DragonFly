@@ -1,3 +1,0 @@
-
-LDFLAGS:=	${LDFLAGS:N-lomp} -fopenmp
-IGNORE=   unmaintained, please request fixing to users mailing list

@@ -1,0 +1,75 @@
+# Makefile.common - shared code between MesaLib ports.
+#
+# !!! Here be dragons !!! (they seem to be everywhere these days)
+#
+# Remember to upgrade the following ports everytime you bump MESAVERSION:
+#
+#    - graphics/mesa-dri
+#    - graphics/mesa-libs
+
+MESAVERSION=	26.1.4
+
+MASTER_SITES=	https://mesa.freedesktop.org/archive/
+
+DISTFILES=	mesa-${MESAVERSION}${EXTRACT_SUFX}
+USE_GCC_VERSION=${GCC_DEFAULT}
+LIB_DEPENDS+=	libinotify.so:devel/libinotify
+LDFLAGS+=	-L${LOCALBASE}/lib -linotify
+
+MAINTAINER=	x11@FreeBSD.org
+
+LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/docs/license.rst
+
+COMPONENT=	${PORTNAME:tl:C/^lib//:C/mesa26-//}
+
+BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyyaml>0:devel/py-pyyaml@${PY_FLAVOR}
+
+LIB_DEPENDS+=	libdrm.so:graphics/libdrm \
+		libexpat.so:textproc/expat2
+
+USES+=		compiler:c++11-lib bison meson pathfix pkgconfig \
+		python:build shebangfix tar:xz
+
+.if ${PORT_OPTIONS:MX11}
+USES+=	xorg
+.endif
+
+# only have one port to check with portscout.
+.if ${PORTNAME} != mesa26-dri
+PORTSCOUT=	ignore:1
+.endif
+
+MASTERDIR=	${.CURDIR:H:H}/graphics/mesa26-dri
+PATCHDIR=	${MASTERDIR}/files
+WRKSRC=		${WRKDIR}/mesa-${MESAVERSION}
+DESCR=		${.CURDIR}/pkg-descr
+PLIST=		${.CURDIR}/pkg-plist
+PKGHELP=	${.CURDIR}/pkg-help
+PKGINSTALL=	${.CURDIR}/pkg-install
+PKGDEINSTALL=	${.CURDIR}/pkg-deinstall
+
+LTO_UNSAFE=	Upstream recommends against LTO https://gitlab.freedesktop.org/mesa/mesa/-/commit/cb571550cc63f6bb22e0212dc681d8a2cd90926c
+
+.include <bsd.port.pre.mk>
+
+BINARY_ALIAS+=	python3=${PYTHON_VERSION}
+
+CONFIGURE_ENV+=	LLVM_CONFIG=${LLVM_CONFIG}
+# Needed to locate libclc
+CONFIGURE_ENV+=	PKG_CONFIG_PATH="${LLVM_PREFIX}/libdata/pkgconfig"
+
+# Mesa auto-detects libelf; make the dependency independent of host headers.
+LIB_DEPENDS+=	libelf.so:devel/libelf
+
+# Some symbols in mesa's linker version scripts are not always defined,
+# depending on configuration options. Suppress errors with lld >= 17 due to
+# these undefined symbols.
+LDFLAGS+=	-Wl,--undefined-version
+
+LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/llvm${LLVM_VERSION}/lib
+MESON_ARGS+=	-Dllvm=enabled \
+		-Dlibunwind=disabled \
+		-Dgallium-mediafoundation=disabled

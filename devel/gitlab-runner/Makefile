@@ -1,6 +1,6 @@
 PORTNAME=	gitlab-runner
 DISTVERSIONPREFIX=	v
-DISTVERSION=	18.1.0
+DISTVERSION=	19.5.1
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab-runner-downloads.s3.amazonaws.com/master/docker/:dockerx64 \
 		https://gitlab-runner-downloads.s3.amazonaws.com/master/docker/:dockerarm
@@ -8,7 +8,7 @@ DISTFILES=	prebuilt-x86_64.tar.xz:dockerx64 \
 		prebuilt-arm.tar.xz:dockerarm
 
 #PATCH_SITES=	https://gitlab.com/gitlab-org/gitlab-runner/-/merge_requests/
-#PATCHFILES+=	4551.patch:-p1 # https://gitlab.com/gitlab-org/gitlab-runner/-/merge_requests/4551, Allow FreeBSD to be used with Docker builds
+#PATCHFILES+=	5966.patch:-p1 # https://gitlab.com/gitlab-org/gitlab-runner/-/merge_requests/5966, Fix bash shell cleanup to support variable expansion in paths
 #PATCH_SITES=	https://gitlab.com/mfechner/gitlab-runner/-/commit/
 #PATCHFILES+=	2f12af03ccd5fe875d583ddc8b976329b635fd22.patch:-p1
 
@@ -22,16 +22,18 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	go-bindata:devel/go-bindata
 RUN_DEPENDS=	bash:shells/bash \
 		ca_root_nss>=0:security/ca_root_nss \
-		git:devel/git
+		git:devel/git \
+		gitlab-analyzers-secrets>=0:security/gitlab-analyzers-secrets
 
-USES=		go:modules,1.23
+USES=		cpe go:modules
+CPE_PRODUCT=	runner
+CPE_VENDOR=	gitlab
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 USE_RC_SUBR=	gitlab_runner
-# this branch removes the replace line in go.mod which breaks the way FreeBSD ports build go packages
-GO_MOD_DIST=	https://gitlab.com/mfechner/gitlab-runner/-/raw/18-1-stable/
+GO_MOD_DIST=	gitlab
 
-GITBRANCH=	18-1-stable
+GITBRANCH=	19-5-stable
 GO_MODULE=	gitlab.com/gitlab-org/gitlab-runner
 
 _BUILD_DATE=	$$(date -u +%Y-%m-%dT%H:%M:%S%z)
@@ -57,6 +59,20 @@ USERS=		gitlab-runner
 GROUPS=		gitlab-runner
 
 PLIST_FILES=	bin/gitlab-runner
+
+# Since v19.x the go.mod has a local path replace
+# (helpers/runner_wrapper/api). The framework's go-post-fetch hook runs
+# "go mod download all" from the distdir, where only the bare go.mod has
+# been fetched, and resolves that local path relative to it. Extract the
+# subtree from the main tarball first (this runs before go-post-fetch).
+post-fetch:
+	if [ ! -d "${DISTDIR}/${DIST_SUBDIR}/helpers" ]; then \
+		${MKDIR} ${DISTDIR}/${DIST_SUBDIR} && \
+		cd ${DISTDIR}/${DIST_SUBDIR} && \
+			${TAR} -xf "${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}.tar.bz2" \
+			--strip-components 1 --no-same-owner --no-same-permissions \
+			"${DISTNAME}/helpers/runner_wrapper/api/go.mod" "${DISTNAME}/helpers/runner_wrapper/api/go.sum"; \
+	fi
 
 post-patch:
 	@${MKDIR} ${WRKSRC}/out/docker/

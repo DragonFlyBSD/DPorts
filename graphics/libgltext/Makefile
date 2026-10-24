@@ -27,6 +27,7 @@ EXAMPLES_USE=	GL=glut
 
 BINARY_ALIAS=	freetype-config=true
 
+CONFIGURE_ARGS= CC=c++
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/.libs/${PORTNAME}-${PORTVERSION}.so \
 		${STAGEDIR}${PREFIX}/lib/${PORTNAME}.so.0

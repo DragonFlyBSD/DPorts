@@ -1,0 +1,6 @@
+Set of tools for the CrewAI framework.
+
+CrewAI Tools provides a collection of ready-to-use tools for CrewAI agents,
+including file system, web scraping, document parsing, search, and
+vector-store integrations. Optional extras for third-party services are
+not installed by default.

@@ -1,0 +1,176 @@
+PORTNAME=	signal-desktop
+DISTVERSIONPREFIX=	v
+DISTVERSION=	8.29.0
+CATEGORIES=	net-im
+MASTER_SITES=	LOCAL/mikael/signal-desktop/:npm
+DISTFILES=	signal-desktop-${DISTVERSION}-npm-cache.tar.gz:npm
+
+MAINTAINER=	mikael@FreeBSD.org
+COMMENT=	Cross-platform centralized encrypted messaging service
+WWW=		https://signal.org/
+
+LICENSE=	AGPLv3
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+ONLY_FOR_ARCHS=	amd64
+
+BUILD_DEPENDS=	${LOCALBASE}/lib/libringrtc.so:multimedia/ringrtc \
+		${LOCALBASE}/lib/libsignal_node.so:net-im/libsignal-node \
+		${LOCALBASE}/lib/libsignal_sqlcipher_extension.a:devel/signal-sqlcipher-extension \
+		${LOCALBASE}/lib/node_sqlcipher.node:security/node-sqlcipher \
+		app-builder>0:devel/app-builder \
+		electron${ELECTRON_VER_MAJOR}:devel/electron${ELECTRON_VER_MAJOR} \
+		npm:www/npm${NODEJS_SUFFIX}
+LIB_DEPENDS=	libasound.so:audio/alsa-lib \
+		libatk-bridge-2.0.so:accessibility/at-spi2-core \
+		libcups.so:print/cups \
+		libdbus-1.so:devel/dbus \
+		libdrm.so:graphics/libdrm \
+		libepoll-shim.so:devel/libepoll-shim \
+		libevent.so:devel/libevent \
+		libexpat.so:textproc/expat2 \
+		libFLAC.so:audio/flac \
+		libffi.so:devel/libffi \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2 \
+		libharfbuzz.so:print/harfbuzz \
+		libicuuc.so:devel/icu \
+		libnspr4.so:devel/nspr \
+		libnss3.so:security/nss \
+		libopenh264.so:multimedia/openh264 \
+		libopus.so:audio/opus \
+		libpci.so:devel/libpci \
+		libpipewire-0.3.so:multimedia/pipewire \
+		libpng16.so:graphics/png \
+		libpulse.so:audio/pulseaudio \
+		libsnappy.so:archivers/snappy \
+		libsndio.so:audio/sndio \
+		libwayland-client.so:graphics/wayland \
+		libwebp.so:graphics/webp \
+		libxkbcommon.so:x11/libxkbcommon \
+		libxshmfence.so:x11/libxshmfence
+
+USES=		desktop-file-utils gettext-runtime gl gnome jpeg nodejs:24,build pkgconfig python:build ssl xorg
+USE_GITHUB=	yes
+GH_ACCOUNT=	signalapp
+GH_PROJECT=	Signal-Desktop
+
+USE_GL=		gbm gl
+USE_GNOME=	atk cairo gdkpixbuf glib20 gtk30 libxml2 libxslt pango
+USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xi xrandr xrender xtst
+
+PACKAGE_ENV=	SIGNAL_ENV=production \
+		npm_config_runtime=electron \
+		npm_config_target=${ELECTRON_VER_MAJOR} \
+		npm_config_nodedir=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/node_headers
+MAKE_ENV+=	ELECTRON_OVERRIDE_DIST_PATH=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR} \
+		HOME=${WRKDIR} \
+		USE_SYSTEM_APP_BUILDER=true \
+		SOURCE_DATE_EPOCH=${_BUILD_DATE} \
+		PATH=${WRKSRC}/node_modules/.bin:${WRKSRC}/pnpmbin/node_modules/.bin:${LOCALBASE}/bin:${PATH} \
+		PYTHON=${PYTHON_CMD} 
+
+# Don't download electron binary distribution on electron node_modules installation
+MAKE_ENV+=	ELECTRON_SKIP_BINARY_DOWNLOAD=1
+
+# Don't create __pycache__ directory when executing node-gyp
+# This is a workaround to avoid filesystem violations during poudriere build
+MAKE_ENV+=	PYTHONDONTWRITEBYTECODE=1
+
+_BUILD_DATE=	$$(date +'%s')
+
+ELECTRON_VER_MAJOR=	44
+PNPM_VERS=		11.24.0
+
+.include <bsd.port.pre.mk>
+
+do-build:
+# electron-builder is stupid and tries to open ${LOCALBASE}/share/electron44/electron with WRITE priv
+# copy ${LOCALBASE}/share/electron44 in WRKDIR
+# it's needed for the do-install phase, it's here because of this issue
+# https://github.com/MikaelUrankar/signal-desktop/issues/6 (I don't know why it fails though)
+	@${RM} -r ${WRKDIR}/electron${ELECTRON_VER_MAJOR}
+	@${CP} -pR ${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR} ${WRKDIR}/electron${ELECTRON_VER_MAJOR}
+	${CHMOD} -R a+w ${WRKDIR}/electron${ELECTRON_VER_MAJOR}
+
+	${ECHO_CMD} offline=true >> ${WRKSRC}/.npmrc
+	${ECHO_CMD} store-dir=true >> ${WRKSRC}/.pnpm-store
+
+	${CP} ${FILESDIR}/pnpm-lock.yaml ${WRKSRC}
+	${CP} ${FILESDIR}/pnpmfile.cjs ${WRKSRC}/.pnpmfile.cjs
+
+	# Install pnpm in its own dir otherwise all hell breaks loose
+	${MKDIR} ${WRKSRC}/pnpmbin
+	${CP} ${FILESDIR}/pnpm/package* ${WRKSRC}/pnpmbin
+	cd ${WRKSRC}/pnpmbin && \
+		${SETENV} ${MAKE_ENV} npm install --ignore-scripts pnpm@${PNPM_VERS}
+
+	cd ${WRKSRC} && \
+		${SETENV} ${MAKE_ENV} npm_config_nodedir=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/node_headers pnpm install --ignore-scripts || ${TRUE}
+
+	# Install libsignal_node.so, libringrtc.so and node_sqlcipher.node binaries in node_modules
+	${MKDIR} ${WRKSRC}/node_modules/@signalapp/libsignal-client/prebuilds/freebsd-x64 \
+		 ${WRKSRC}/node_modules/@signalapp/ringrtc/build/freebsd \
+		 ${WRKSRC}/node_modules/@signalapp/sqlcipher/prebuilds/freebsd-x64
+
+	${CP} ${LOCALBASE}/lib/libsignal_node.so \
+		${WRKSRC}/node_modules/@signalapp/libsignal-client/prebuilds/freebsd-x64/@signalapp+libsignal-client.node
+	${CP} ${LOCALBASE}/lib/libringrtc.so \
+		${WRKSRC}/node_modules/@signalapp/ringrtc/build/freebsd/libringrtc-x64.node
+	${CP} ${LOCALBASE}/lib/node_sqlcipher.node \
+		${WRKSRC}/node_modules/@signalapp/sqlcipher/prebuilds/freebsd-x64
+
+	cd ${WRKSRC} && \
+		${SETENV} ${MAKE_ENV} npm_config_nodedir=${LOCALBASE}/share/electron${ELECTRON_VER_MAJOR}/node_headers pnpm install
+	cd ${WRKSRC}/packages/types && \
+		${SETENV} ${MAKE_ENV} pnpm run prepare
+
+	# found in reproducible-builds/docker-entrypoint.sh
+	cd ${WRKSRC}/sticker-creator && \
+		${SETENV} ${MAKE_ENV} pnpm install --frozen-lock
+	cd ${WRKSRC}/sticker-creator && \
+		${SETENV} ${MAKE_ENV} pnpm run build
+
+	cd ${WRKSRC} && \
+		${SETENV} ${MAKE_ENV} pnpm run generate
+
+do-install:
+# taken from https://github.com/tagattie/FreeBSD-Electron/blob/master/Mk/Uses/electron.mk#L387
+# and editors/vscode
+	cd ${WRKSRC} && \
+		${SETENV} ${MAKE_ENV} ${PACKAGE_ENV} npm run build:electron -- \
+			--linux --dir --config.npmRebuild=false \
+			--config.electronDist=${WRKDIR}/electron${ELECTRON_VER_MAJOR}
+
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC}/dist/linux-unpacked && \
+		${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
+
+	# install polkit policies so that backup works
+	cd ${WRKSRC}/build/policy-templates  && \
+		${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/share/polkit-1/actions
+
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${WRKSRC}/images/signal-logo-desktop-linux.png \
+		${STAGEDIR}${PREFIX}/share/pixmaps/signal-desktop.png
+	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.desktop \
+		${STAGEDIR}${PREFIX}/share/applications
+
+.for f in chromedriver mksnapshot v8_context_snapshot_generator version resources/*.policy
+	${RM} ${STAGEDIR}${DATADIR}/${f}
+.endfor
+	${RM} -r ${STAGEDIR}${DATADIR}/gen
+	${RM} -r ${STAGEDIR}${DATADIR}/node_headers
+	${RM} -r ${STAGEDIR}${DATADIR}/resources/completions
+	${RLN} ${STAGEDIR}${DATADIR}/signal-desktop ${STAGEDIR}${PREFIX}/bin
+
+	${RM} -r ${STAGEDIR}${DATADIR}/resources/app.asar.unpacked/node_modules/pnpm
+
+create-caches-tarball:
+	# do some cleanup first
+	${RM} -r ${WRKDIR}/.npm/_logs ${WRKDIR}/.npm/_update-notifier-last-checked
+
+	cd ${WRKDIR} && \
+		${TAR} czf signal-desktop-${DISTVERSION}-npm-cache.tar.gz .npm pnpm .cache
+
+.include <bsd.port.post.mk>

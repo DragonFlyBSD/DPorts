@@ -15,7 +15,7 @@ LIB_DEPENDS=	librudiments.so:devel/rudiments \
 		libcurl.so:ftp/curl \
 		libiconv.so:converters/libiconv
 
-USES=		gmake iconv libedit libtool pathfix python readline ssl
+USES=		gmake iconv libedit libtool python readline ssl
 
 PATHFIX_MAKEFILEIN=	Makefile
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -92,6 +92,7 @@ TOSTRIP=	bin/sqlr-start \
 		libexec/sqlrelay/sqlrtranslation_normalize.so \
 		libexec/sqlrelay/sqlrtranslation_patterns.so
 
+LDFLAGS= -lpthread
 .include "${.CURDIR}/Makefile.common"
 
 OPTIONS_DEFINE=	MYSQL ODBC ORACLE PGSQL SQLITE3 FREETDS FIREBIRD DOCS

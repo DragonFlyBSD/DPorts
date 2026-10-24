@@ -31,6 +31,7 @@ HARFBUZZ_DESC=	Enable HarfBuzz support
 HARFBUZZ_LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
 HARFBUZZ_CMAKE_BOOL=	SDL2TTF_HARFBUZZ
 
+LDFLAGS= -lm
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/CHANGES.txt ${WRKSRC}/README.txt ${STAGEDIR}${DOCSDIR}/

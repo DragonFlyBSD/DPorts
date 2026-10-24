@@ -9,7 +9,7 @@ MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Move colored balls through the maze connecting it with each other
 WWW=		https://sourceforge.net/projects/interlogic/
 
-USES=		gmake sdl
+USES= gmake sdl ltmainfix
 USE_SDL=	image sdl
 GNU_CONFIGURE=	yes
 

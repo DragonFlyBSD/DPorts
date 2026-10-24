@@ -1,3 +1,0 @@
-# zrj: fix CRLF for dragonfly patches
-USES+=	dos2unix
-DOS2UNIX_FILES+=	misc.cpp

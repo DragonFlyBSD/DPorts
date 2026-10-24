@@ -1,3 +1,0 @@
-
-# zrj: for bundled qmltermwidget-0.2.0
-CXXFLAGS+=	-DHAVE_OS_DRAGONFLYBSD

@@ -1,6 +1,7 @@
 PORTNAME=	3proxy
 DISTVERSION=	0.9.5
 CATEGORIES=	net
+PORTREVISION=	1
 
 MAINTAINER=	timp87@gmail.com
 COMMENT=	Proxy servers set (support HTTP(S), FTP, SOCKS, POP3, TCP & UDP)
@@ -47,5 +48,8 @@ do-install:
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@LN \?=@LN =@g' ${WRKSRC}/Makefile.FreeBSD
 
 .include <bsd.port.mk>

@@ -26,4 +26,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|malloc\.h|stdlib.h|g ; \
 		 s|localtime(|localtime((const time_t *)|g' ${WRKSRC}/debugmalloc.cc
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/typedef \$$ac_cv_type_getgroups/typedef int/g'	\
+		${WRKSRC}/configure
+
 .include <bsd.port.mk>

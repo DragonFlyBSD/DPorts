@@ -1,11 +1,11 @@
 PORTNAME=	maxminddb
-PORTVERSION=	1.6.0
+PORTVERSION=	1.14.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel net
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
-MAINTAINER=	danger@FreeBSD.org
-COMMENT=	MaxMind DB Reader extension for PHP
+MAINTAINER=	sunpoet@FreeBSD.org
+COMMENT=	PHP Reader for the MaxMind DB Database Format
 WWW=		https://github.com/maxmind/MaxMind-DB-Reader-php
 
 LICENSE=	APACHE20
@@ -14,11 +14,12 @@ LICENSE_FILE=	${WRKSRC}/../LICENSE
 LIB_DEPENDS=	libmaxminddb.so:net/libmaxminddb
 
 USES=		compiler:c11 localbase:ldflags php:ext
+IGNORE_WITH_PHP=	86
+
+WRKSRC_SUBDIR=	ext
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	maxmind
 GH_PROJECT=	MaxMind-DB-Reader-php
-
-WRKSRC_SUBDIR=	ext
 
 .include <bsd.port.mk>

@@ -1,62 +1,77 @@
-# Created by: Juergen Lock <nox@jelal.kn-bremen.de>
-
 PORTNAME=	qemu
-DISTVERSION=	6.1.0.20210928
-PORTREVISION=	2
+DISTVERSION=	11.1.20260930
 CATEGORIES=	emulators
 PKGNAMESUFFIX=	-devel
 DIST_SUBDIR=	qemu/${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	QEMU CPU Emulator - development version
+WWW=		https://www.qemu.org/
 
 LICENSE=	GPLv2
 
 ONLY_FOR_ARCHS=	amd64 powerpc powerpc64 powerpc64 powerpc64le
 
 BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx \
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sphinx_rtd_theme>0:textproc/py-sphinx_rtd_theme@${PY_FLAVOR} \
 		bash:shells/bash
 LIB_DEPENDS=	libepoxy.so:graphics/libepoxy \
-		libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2 \
-		libnettle.so:security/nettle \
-		libpcre2-8.so:devel/pcre2 \
-		libzstd.so:archivers/zstd
+		libinotify.so:devel/libinotify \
+		liblzo2.so:archivers/lzo2 \
+		libzstd.so:archivers/zstd \
+		libslirp.so:net/libslirp
 
-USES=		bison compiler:c11 cpe gmake gnome iconv:wchar_t ninja perl5 \
-		pkgconfig python:build tar:xz xorg
+USES=		bison compiler:c11 cpe gmake gnome iconv:wchar_t localbase:ldflags \
+		ninja:build perl5 pkgconfig python:build shebangfix tar:xz xorg
 USE_GITLAB=	yes
-USE_GNOME=	cairo glib20 libxml2
+GL_ACCOUNT=	qemu-project
+GL_TAGNAME=	f7ada39edacaa5c26b30e98b94017b0b2ccbcf94
+GL_TUPLE=	qemu-project:keycodemapdb:f5772a62ec52591ff6870b7e8ef32482371f22c6:keycodemapdb/subprojects/keycodemapdb \
+		qemu-project:dtc:b6910bec11614980a21e46fbccc35934b671bd81:dtc/subprojects/dtc \
+		qemu-project:libvfio-user:4d9f663450fa80ff375612dbbafe073700e3d3d8:libvfio/subprojects/libvfio-user \
+		qemu-project:meson:3f1673ae45b8d6beb1631a76e1def0e8fb85d9d8:meson/meson \
+		qemu-project:berkeley-softfloat-3:b64af41c3276f97f0e181920400ee056b9c88037:berkeleysoftfloat3/subprojects/berkeley-softfloat-3 \
+		qemu-project:berkeley-testfloat-3:e7af9751d9f9fd3b47911f51a5cfd08af256a9ab:berkeleytestfloat3/subprojects/berkeley-testfloat-3
+USE_GNOME=	cairo glib20
 USE_PERL5=	build
-USE_PYTHON=	distutils noflavors
 USE_XORG=	pixman
 
-GL_COMMIT=	de8ed1055c2ce18c95f597eb10df360dcb534f99
-GL_TUPLE=	qemu-project:keycodemapdb:d21009b1c9f94b740ea66be8e48a1d8ad8124023:keycodemapdb/ui/keycodemapdb \
-		qemu-project:dtc:e33ce1d6a8c7e54e3ad12cff33690b6da0aee1dc:dtc/dtc \
-		qemu-project:meson:5fa0fd3b473f792bd7333cf6ae6e2f4c851b6108:meson/meson \
-		qemu-project:berkeley-softfloat-3:b64af41c3276f97f0e181920400ee056b9c88037:berkeleysoftfloat3/tests/fp/berkeley-softfloat-3 \
-		qemu-project:berkeley-testfloat-3:5a59dcec19327396a011a17fd924aed4fec416b3:berkeleytestfloat3/tests/fp/berkeley-testfloat-3
-
-#.if !defined(PKGNAMESUFFIX) || (${PKGNAMESUFFIX} != "-utils" && ${PKGNAMESUFFIX} != "-guest-agent")
-#.endif
+SHEBANG_FILES=	scripts/xml-preprocess.py
 
 HAS_CONFIGURE=	yes
+CONFIGURE_ARGS=	--localstatedir=/var --mandir=share/man --extra-ldflags=-L\"/usr/lib\" \
+		--extra-ldflags=-L\"${LOCALBASE}/lib\" --enable-debug \
+		--prefix=${PREFIX} --cc=${CC} --enable-netmap --disable-kvm \
+		--disable-linux-user --disable-linux-aio --disable-xen \
+		--enable-debug-info --python=${PYTHON_CMD} --disable-guest-agent \
+		--extra-cflags=-I${WRKSRC}\ -I${LOCALBASE}/include\ -DPREFIX=\\\"\"${PREFIX}\\\"\"
 
-OPTIONS_SINGLE=	NCURSES
-OPTIONS_SINGLE_NCURSES=	NCURSES_DEFAULT NCURSES_BASE NCURSES_PORT
+CFLAGS:=	${CFLAGS:C/-fno-tree-vrp//}
+WITHOUT_CPU_CFLAGS=yes	#to avoid problems with register allocation
+
+BINARY_ALIAS=	python3=${PYTHON_VERSION}
+
+PORTDOCS=	.buildinfo _static/* about/* dbus-dbusindex.html devel/* \
+		docs genindex.html glossary.html index.html interop/* \
+		objects.inv qapi-qga-index.html qapi-qmp-index.html \
+		qapi-qsd-index.html search.html searchindex.js specs/* system/* \
+		tools/* user/*
+
 OPTIONS_DEFINE=	SAMBA X11 GTK3 OPENGL GNUTLS SASL JPEG PNG CURL VDE \
 		CDROM_DMA USBREDIR X86_TARGETS STATIC_LINK DOCS CAPSTONE
 OPTIONS_DEFAULT=X11 GTK3 OPENGL GNUTLS SASL JPEG PNG CDROM_DMA CURL NCURSES_DEFAULT VDE \
 		CAPSTONE
+OPTIONS_SINGLE=	NCURSES
+OPTIONS_SINGLE_NCURSES=	NCURSES_DEFAULT NCURSES_BASE NCURSES_PORT
 OPTIONS_SUB=	yes
+
 CAPSTONE_DESC=		Disassembly framework support
 CDROM_DMA_DESC=		IDE CDROM DMA
 GNUTLS_DESC=		gnutls dependency (vnc encryption)
 JPEG_DESC=		jpeg dependency (vnc lossy compression)
-NCURSES_DEFAULT_DESC=	Depend on ncurses (ports if installed, otherwise base)
 NCURSES_BASE_DESC=	Depend on ncurses in base
+NCURSES_DEFAULT_DESC=	Depend on ncurses (ports if installed, otherwise base)
 NCURSES_PORT_DESC=	Depend on devel/ncurses in ports
 PNG_DESC=		png dependency (vnc compression)
 SAMBA_DESC=		samba dependency (for -smb)
@@ -65,58 +80,46 @@ STATIC_LINK_DESC=	Statically link the executables
 USBREDIR_DESC=		usb device network redirection (experimental!)
 VDE_DESC=		vde dependency (for vde networking)
 X86_TARGETS_DESC=	Build only x86 system targets
-CAPSTONE_CONFIGURE_ON=	--enable-capstone=system --extra-cflags=-I${LOCALBASE}/include/capstone
+
+CAPSTONE_LIB_DEPENDS=	libcapstone.so:devel/capstone
+CAPSTONE_CONFIGURE_ON=	--enable-capstone --extra-cflags=-I${LOCALBASE}/include/capstone
 CAPSTONE_CONFIGURE_OFF=	--disable-capstone
-CAPSTONE_LIB_DEPENDS=	libcapstone.so:devel/capstone4
-CURL_CONFIGURE_OFF=	--disable-curl
 CURL_LIB_DEPENDS=	libcurl.so:ftp/curl
-DOCS_CONFIGURE_ENABLE=	docs
+CURL_CONFIGURE_OFF=	--disable-curl
 DOCS_USES=		makeinfo
-GNUTLS_CONFIGURE_OFF=	--disable-gnutls
+DOCS_CONFIGURE_ENABLE=	docs
 GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
-GTK3_CONFIGURE_OFF=	--disable-gtk --disable-vte
+GNUTLS_CONFIGURE_OFF=	--disable-gnutls
 GTK3_LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon
-GTK3_USE=	GNOME=gdkpixbuf2,gtk30,vte3 XORG=x11,xext
 GTK3_USES=	gettext gl
-JPEG_CONFIGURE_OFF=	--disable-vnc-jpeg
+GTK3_USE=	GNOME=gdkpixbuf,vte3 XORG=x11,xext
+GTK3_CONFIGURE_OFF=	--disable-gtk --disable-vte
 JPEG_USES=		jpeg
-NCURSES_DEFAULT_USES=	ncurses
+JPEG_CONFIGURE_OFF=	--disable-vnc-jpeg
 NCURSES_BASE_USES=	ncurses:base
+NCURSES_DEFAULT_USES=	ncurses
 NCURSES_PORT_USES=	ncurses:port
-OPENGL_CONFIGURE_OFF=	--disable-opengl
-OPENGL_USE=	GL=gbm,gl
 OPENGL_USES=	gl
+OPENGL_USE=	GL=gbm
+OPENGL_CONFIGURE_OFF=	--disable-opengl
+PNG_LIB_DEPENDS=	libpng16.so:graphics/png
 PNG_CONFIGURE_OFF=	--disable-vnc-png
-PNG_LIB_DEPENDS=	libpng.so:graphics/png
+SAMBA_USES=		samba:run # smbd
 SAMBA_CONFIGURE_ON=	--smbd=${LOCALBASE}/sbin/smbd
 SASL_CONFIGURE_OFF=	--disable-vnc-sasl
-SAMBA_USES=		samba:run # smbd
-SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
-STATIC_LINK_CONFIGURE_ON=	--static
 STATIC_LINK_PREVENTS=		GTK3 X11
 STATIC_LINK_PREVENTS_MSG=	X11 ui cannot be built static
+STATIC_LINK_CONFIGURE_ON=	--static
 USBREDIR_BUILD_DEPENDS=	usbredir>=0.6:net/usbredir
-USBREDIR_CONFIGURE_OFF=	--disable-usb-redir
 USBREDIR_RUN_DEPENDS=	usbredir>=0.6:net/usbredir
+USBREDIR_CONFIGURE_OFF=	--disable-usb-redir
 VDE_CONFIGURE_OFF=	--disable-vde
-VDE_LIB_DEPENDS=	libvdeplug.so:net/vde2
-X11_CONFIGURE_ENABLE=	sdl
-X11_USE=	SDL=sdl2 XORG=x11,xext GNOME=gdkpixbuf2
 X11_USES=	sdl
+X11_USE=	SDL=sdl2 XORG=x11,xext GNOME=gdkpixbuf
+X11_CONFIGURE_ENABLE=	sdl
 
-PORTDOCS=	.buildinfo _static/* about/* devel/* docs genindex.html \
-		index.html interop/* objects.inv search.html searchindex.js \
-	       	specs/* system/* tools/* user/*
-
-WITHOUT_CPU_CFLAGS=yes	#to avoid problems with register allocation
-CFLAGS:=	${CFLAGS:C/-fno-tree-vrp//}
-CONFIGURE_ARGS=	--localstatedir=/var --extra-ldflags=-L\"/usr/lib\" \
-		--extra-ldflags=-L\"${LOCALBASE}/lib\" --enable-debug \
-		--prefix=${PREFIX} --cc=${CC} --enable-netmap --disable-kvm \
-		--disable-linux-user --disable-linux-aio --disable-xen \
-		--enable-debug-info --python=${PYTHON_CMD} \
-		--extra-cflags=-I${WRKSRC}\ -I${LOCALBASE}/include\ -DPREFIX=\\\"\"${PREFIX}\\\"\"
-
+USES+= ncurses
+CONFIGURE_ARGS+= --disable-netmap --disable-stack-protector --enable-curses
 .include <bsd.port.options.mk>
 
 .if !defined(STRIP) || ${STRIP} == ""
@@ -133,24 +136,31 @@ MAKE_ARGS+=	ARCH=ppc
 USE_GCC=	yes
 .endif
 
-.if ${ARCH} == "powerpc64"
+.if ${ARCH:Mpowerpc64*}
+CONFIGURE_ARGS+=	--disable-bsd-user
 MAKE_ARGS+=	ARCH=ppc64
-.endif
-
-.if ${ARCH} == "sparc64"
-CONFIGURE_ARGS+=	--sparc_cpu=v9
+PLIST_SUB+=	BSDUSER="@comment "
+.else
+PLIST_SUB+=	BSDUSER=""
 .endif
 
 PLIST_SUB+=	LINUXBOOT_DMA=""
+
+post-extract:
+	${CP} ${WRKSRC}/subprojects/packagefiles/berkeley-softfloat-3/* \
+		${WRKSRC}/subprojects/berkeley-softfloat-3/
+	${CP} ${WRKSRC}/subprojects/packagefiles/berkeley-testfloat-3/* \
+		${WRKSRC}/subprojects/berkeley-testfloat-3/
 
 post-patch-CDROM_DMA-off:
 	@${REINPLACE_CMD} -e '/USE_DMA_CDROM/d' ${WRKSRC}/include/hw/ide/internal.h
 
 do-build:
-	cd ${WRKSRC} && ${GMAKE}
+# Don't build with -j, because the development branch of QEMU regresses from time to time
+	cd ${WRKSRC} && ${SETENVI} ${WRK_ENV} ${GMAKE}
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} DESTDIR=${STAGEDIR} ${GMAKE} install
+	cd ${WRKSRC} && ${SETENVI} ${WRK_ENV} DESTDIR=${STAGEDIR} ${GMAKE} install
 
 .if !target(post-install)
 post-install:
@@ -160,6 +170,22 @@ post-install:
 
 post-install-DOCS-on:
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} docs ${STAGEDIR}${DOCSDIR}/)
+	@${RMDIR} ${STAGEDIR}${DOCSDIR}/_sources
 .endif
+
+do-test:
+	cd ${WRKSRC} && ${SETENVI} ${WRK_ENV} ${GMAKE} test
+
+dfly-patch:
+	${REINPLACE_CMD} -e "/find_library/s@'iconv',@& dirs: '${LOCALBASE}/lib',@g" \
+			 -e "/dirs =/s@'/usr/include/ncursesw'@&, '${LOCALBASE}/include/ncurses', '${LOCALBASE}/lib'@g" \
+			 -e "s@'ncursesw', 'ncurses', 'cursesw', 'pdcurses'@'ncurses'@" \
+			 -e "s@dependency(curses_libname,@dependency('ncurses_xxx',@g" \
+			 -e "s@links(curses_test,@& args: '-DNCURSES_WIDECHAR',@g" \
+		${WRKSRC}/meson.build
+
+
+dfly-install:
+	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 ${STAGEDIR}${PREFIX}/bin/qemu-x86_64
 
 .include <bsd.port.mk>

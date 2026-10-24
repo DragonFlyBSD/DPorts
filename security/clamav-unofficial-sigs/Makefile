@@ -16,7 +16,7 @@ COMMON_DEPENDS=	clamscan:security/clamav \
 		gpg:security/gnupg \
 		gsed:textproc/gsed \
 		bash:shells/bash
-BUILD_DEPENDS=	${COMMON_DEPENDS}
+BUILD_DEPENDS= ${COMMON_DEPENDS} bind-tools>0:dns/bind-tools
 RUN_DEPENDS=	${COMMON_DEPENDS}
 
 USES=		perl5 shebangfix

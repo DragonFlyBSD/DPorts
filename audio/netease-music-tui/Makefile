@@ -1,7 +1,7 @@
 PORTNAME=	netease-music-tui
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.1.5
-PORTREVISION=	7
+PORTREVISION=	33
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -312,7 +312,5 @@ OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/ncmt
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ncmt
-
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

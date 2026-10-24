@@ -1,6 +1,6 @@
 PORTNAME=	photivo
 PORTVERSION=	0.0.2015.03.21
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	graphics
 MASTER_SITES=	https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/${PORTNAME}/
 DISTNAME=	source-archive
@@ -43,5 +43,9 @@ post-patch:
 		${WRKSRC}/Sources/filters/ptFilter_WaveletDenoise.cpp
 	@${REINPLACE_CMD} -e '/static const char src/s,char,int8_t,' \
 		${WRKSRC}/Sources/ptDcRaw.cpp
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/APPVERSION/s@compiled at@tarball version" ) #@g' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

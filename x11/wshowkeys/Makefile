@@ -23,4 +23,8 @@ USES=		compiler:c11 gnome meson pkgconfig
 USE_GNOME=	cairo pango
 PLIST_FILES=	"@(,video,4750) bin/${PORTNAME}"
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@D_POSIX_C_SOURCE@&__@g' \
+		${WRKSRC}/meson.build
+
 .include <bsd.port.mk>

@@ -1,7 +1,7 @@
 PORTNAME=	mroonga
-PORTVERSION=	13.05
+DISTVERSION=	16.11
 CATEGORIES=	databases textproc
-MASTER_SITES=	http://packages.groonga.org/source/mroonga/
+MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Open-source fulltext search engine for MySQL
@@ -10,31 +10,34 @@ WWW=		https://mroonga.org/
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	${NONEXISTENT}:${_MYSQL_SERVER}:configure
+BUILD_DEPENDS=	${NONEXISTENT}:${_MYSQL_SERVER}:build \
+		${LOCALBASE}/lib/groonga/plugins/normalizers/mysql.so:databases/groonga-normalizer-mysql
 LIB_DEPENDS=	libgroonga.so:textproc/groonga
 
-USES=		compiler:c11 libtool mysql pkgconfig shebangfix
-IGNORE_WITH_MYSQL=	57p 57w
+USES=		cmake compiler:c11 libtool mysql pkgconfig shebangfix
+IGNORE_WITH_MYSQL=	105m 106m 1011m 81
 
 SHEBANG_FILES=	data/rpm/post.sh data/rpm/preun.sh
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-mysql-build="$$(cd ${PORTSDIR}/${_MYSQL_SERVER}; ${MAKE} -V BUILD_WRKSRC)" \
-		--with-mysql-config=${PREFIX}/bin/mysql_config \
-		--with-mysql-source="$$(cd ${PORTSDIR}/${_MYSQL_SERVER}; ${MAKE} -V WRKSRC)"
+CMAKE_ARGS=	-DMYSQL_BUILD_DIR="$$(cd ${PORTSDIR}/${_MYSQL_SERVER}; ${MAKE} -V BUILD_WRKSRC)" \
+		-DMYSQL_CONFIG=${PREFIX}/bin/mysql_config \
+		-DMYSQL_SOURCE_DIR="$$(cd ${PORTSDIR}/${_MYSQL_SERVER}; ${MAKE} -V WRKSRC)"
 
 SUB_FILES=	pkg-message
 
+PORTDOCS=	*
+
 OPTIONS_DEFINE=	DOCS
 
+DOCS_CMAKE_BOOL=	MRN_WITH_DOC
+
+BUILD_DEPENDS+= bison>=0:devel/bison
+BUILD_DEPENDS+= cmake>=0:devel/cmake
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
-	@${REINPLACE_CMD} -i .c++20 's,srcdir)/version[[:>:]],&.txt,' \
-		${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} -e '/deb/d' \
-		-e '/rpm/d' \
-		${WRKSRC}/data/Makefile.in
+	@${REINPLACE_CMD} -e 's| ja||g' ${WRKSRC}/doc/CMakeLists.txt
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/mysql/plugin/ha_mroonga.so.0.0.0
+	${INSTALL_MAN} ${WRKSRC}/doc/locale/en/man/mroonga.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 .include <bsd.port.mk>

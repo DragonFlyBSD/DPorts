@@ -1,20 +1,11 @@
---- src/3rdparty/chromium/content/common/features.h.orig	2024-02-23 21:04:38 UTC
+--- src/3rdparty/chromium/content/common/features.h.orig	2026-08-11 12:42:19 UTC
 +++ src/3rdparty/chromium/content/common/features.h
-@@ -37,7 +37,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDocumentPolicyNeg
- CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableBackForwardCacheForScreenReader);
- CONTENT_EXPORT BASE_DECLARE_FEATURE(
-     kEnableBackForwardCacheForOngoingSubframeNavigation);
+@@ -63,7 +63,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDumpOnUnexpectedO
+ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDocumentPolicyNegotiation);
+ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDumpOnOriginHeaderMismatch);
+ CONTENT_EXPORT BASE_DECLARE_FEATURE(kDumpOnUnexpectedOriginHeader);
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnableDevToolsJsErrorReporting);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
- CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnsureAllowBindingsIsAlwaysForWebUI);
-@@ -58,7 +58,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kForwardMemoryPres
- CONTENT_EXPORT BASE_DECLARE_FEATURE(kGpuInfoCollectionSeparatePrefetch);
- #endif
- CONTENT_EXPORT BASE_DECLARE_FEATURE(kGroupNIKByJoiningOrigin);
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- CONTENT_EXPORT BASE_DECLARE_FEATURE(kHandleChildThreadTypeChangesInBrowser);
- #endif
- CONTENT_EXPORT BASE_DECLARE_FEATURE(kHighPriorityBeforeUnload);
+ CONTENT_EXPORT BASE_DECLARE_FEATURE(kEnforceSameDocumentOriginInvariants);

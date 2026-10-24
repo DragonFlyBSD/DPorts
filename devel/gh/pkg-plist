@@ -1,3 +1,7 @@
+%%MANPAGES%%share/man/man1/gh-agent-task.1.gz
+%%MANPAGES%%share/man/man1/gh-agent-task-create.1.gz
+%%MANPAGES%%share/man/man1/gh-agent-task-list.1.gz
+%%MANPAGES%%share/man/man1/gh-agent-task-view.1.gz
 %%MANPAGES%%share/man/man1/gh-alias-delete.1.gz
 %%MANPAGES%%share/man/man1/gh-alias-import.1.gz
 %%MANPAGES%%share/man/man1/gh-alias-list.1.gz
@@ -105,6 +109,8 @@
 %%MANPAGES%%share/man/man1/gh-pr-update-branch.1.gz
 %%MANPAGES%%share/man/man1/gh-pr-view.1.gz
 %%MANPAGES%%share/man/man1/gh-pr.1.gz
+%%MANPAGES%%share/man/man1/gh-preview-prompter.1.gz
+%%MANPAGES%%share/man/man1/gh-preview.1.gz
 %%MANPAGES%%share/man/man1/gh-project-close.1.gz
 %%MANPAGES%%share/man/man1/gh-project-copy.1.gz
 %%MANPAGES%%share/man/man1/gh-project-create.1.gz
@@ -132,8 +138,15 @@
 %%MANPAGES%%share/man/man1/gh-release-edit.1.gz
 %%MANPAGES%%share/man/man1/gh-release-list.1.gz
 %%MANPAGES%%share/man/man1/gh-release-upload.1.gz
+%%MANPAGES%%share/man/man1/gh-release-verify.1.gz
+%%MANPAGES%%share/man/man1/gh-release-verify-asset.1.gz
 %%MANPAGES%%share/man/man1/gh-release-view.1.gz
 %%MANPAGES%%share/man/man1/gh-release.1.gz
+%%MANPAGES%%share/man/man1/gh-repo-autolink-create.1.gz
+%%MANPAGES%%share/man/man1/gh-repo-autolink-delete.1.gz
+%%MANPAGES%%share/man/man1/gh-repo-autolink-list.1.gz
+%%MANPAGES%%share/man/man1/gh-repo-autolink-view.1.gz
+%%MANPAGES%%share/man/man1/gh-repo-autolink.1.gz
 %%MANPAGES%%share/man/man1/gh-repo-archive.1.gz
 %%MANPAGES%%share/man/man1/gh-repo-clone.1.gz
 %%MANPAGES%%share/man/man1/gh-repo-create.1.gz
@@ -157,6 +170,7 @@
 %%MANPAGES%%share/man/man1/gh-repo-unarchive.1.gz
 %%MANPAGES%%share/man/man1/gh-repo-view.1.gz
 %%MANPAGES%%share/man/man1/gh-repo.1.gz
+%%MANPAGES%%share/man/man1/gh-pr-revert.1.gz
 %%MANPAGES%%share/man/man1/gh-ruleset-check.1.gz
 %%MANPAGES%%share/man/man1/gh-ruleset-list.1.gz
 %%MANPAGES%%share/man/man1/gh-ruleset-view.1.gz

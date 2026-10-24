@@ -1,5 +1,5 @@
 PORTNAME=	libvmod-redis
-PORTVERSION=	20230315
+PORTVERSION=	20250318
 CATEGORIES=	www
 PKGNAMEPREFIX=	varnish-
 
@@ -19,6 +19,7 @@ USES=		autoreconf compiler:c11 gmake libtool pkgconfig \
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-static --disable-tls
 INSTALL_TARGET=	install-strip
 DOCSDIR=	${PREFIX}/share/doc/vmod-redis
@@ -28,10 +29,11 @@ CFLAGS+=	-I${WRKSRC}/src
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	carlosabalde
-GH_TAGNAME=	da883d1
+GH_TAGNAME=	87d9231
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	${REINPLACE_CMD} 's|$${VARNISHAPI_DATAROOTDIR}|${LOCALBASE}/share|' \
 		${WRKSRC}/Makefile.am

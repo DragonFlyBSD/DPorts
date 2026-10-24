@@ -10,14 +10,14 @@ MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	Virtual Private Network (VPN) daemon
 WWW=		https://www.tinc-vpn.org/
 
-LICENSE=	GPLv2+
+LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	liblzo2.so:archivers/lzo2
 
 USERS=	tinc
 GROUPS=	tinc
-USES=		cpe ssl makeinfo readline localbase:ldflags
+USES= cpe ssl makeinfo readline localbase:ldflags ncurses
 CPE_VENDOR=	tinc-vpn
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share

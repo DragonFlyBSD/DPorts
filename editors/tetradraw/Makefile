@@ -16,4 +16,5 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/tetradraw bin/tetraview
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

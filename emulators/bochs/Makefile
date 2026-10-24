@@ -1,5 +1,5 @@
 PORTNAME=	bochs
-PORTVERSION=	2.8
+PORTVERSION=	3.1
 PORTEPOCH=	2
 CATEGORIES=	emulators
 MASTER_SITES=	SF
@@ -29,6 +29,8 @@ CFLAGS+=	-fomit-frame-pointer \
 CXXFLAGS+=	-fno-exceptions
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+WRKSRC=		${WRKDIR}/${PORTNAME}
 
 OPTIONS_DEFINE=		A20_PIN ALIGN_CHECK ASSERT_CHECK AVX BUSMOUSE CDROM \
 			CHAINING CLGD54XX CONF_MSRS DEBUGGER DEBUGGER_GUI \
@@ -204,6 +206,7 @@ XPM_USE=			XORG=xpm
 XPM_CONFIGURE_ENABLE=		xpm
 XPM_IMPLIES=			X11
 
+TERM_USES= ncurses
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDEBUGGER_GUI} && empty(PORT_OPTIONS:MSDL1) && \
@@ -289,5 +292,11 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}/html
 	(cd ${WRKSRC}/docs-html && ${INSTALL_DATA} *.html \
 		${STAGEDIR}${DOCSDIR}/html)
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/iodev/network/eth_socket.cc
+	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/iodev/serial.h
 
 .include <bsd.port.mk>

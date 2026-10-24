@@ -1,0 +1,42 @@
+--- configure.ac.orig	2026-09-09 00:44:04 UTC
++++ configure.ac
+@@ -122,7 +122,38 @@ AC_FUNC_STRERROR_R
+ AC_C_RESTRICT
+ AC_FUNC_STRERROR_R
+ 
+-AC_PATH_TOOL([PKG_CONFIG], [pkg-config], [pkg-config])
++PKG_PROG_PKG_CONFIG
++
++dnl Float word order can differ from integer endianness on some ABIs.
++dnl Prefer Autoconf's macro if available; otherwise fall back to autoconf-archive.
++m4_ifdef([AC_C_FLOAT_WORDS_BIGENDIAN],
++         [AC_C_FLOAT_WORDS_BIGENDIAN],
++         [m4_ifdef([AX_C_FLOAT_WORDS_BIGENDIAN],
++                   [AX_C_FLOAT_WORDS_BIGENDIAN],
++                   [AC_MSG_ERROR([need AC_C_FLOAT_WORDS_BIGENDIAN or AX_C_FLOAT_WORDS_BIGENDIAN])])])
++
++AC_CHECK_HEADERS([sys/eventfd.h sys/timerfd.h])
++AC_CHECK_HEADERS([netinet/in.h arpa/inet.h])
++
++dnl brk()/sbrk() detection itself is performed by config/m4/ucm.m4.
++dnl Keep a common feature define for FreeBSD UCM compatibility code.
++AS_IF([test "x$ac_cv_func_brk" = "xyes" && test "x$ac_cv_func_sbrk" = "xyes"],
++      [have_brk_sbrk=yes],
++      [have_brk_sbrk=no])
++
++AM_CONDITIONAL([HAVE_BRK_SBRK],
++               [test "x$have_brk_sbrk" = "xyes"])
++
++AS_IF([test "x$have_brk_sbrk" = "xyes"],
++      [AC_DEFINE([HAVE_BRK_SBRK], [1],
++                 [Define if both brk() and sbrk() are available])])
++
++case "$host_os" in
++  freebsd*) build_gtest=no ;;
++  *)        build_gtest=yes ;;
++esac
++AM_CONDITIONAL([BUILD_GTEST],
++               [test "x$build_gtest" = xyes])
+ 
+ AS_IF([test "x$enable_module_deepbind" = xyes],
+       [AC_CHECK_DECLS([RTLD_DEEPBIND],

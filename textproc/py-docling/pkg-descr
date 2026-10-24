@@ -1,0 +1,8 @@
+Docling is a document conversion SDK and CLI that parses PDF, DOCX, PPTX,
+XLSX, HTML, images, and other formats into a unified document representation
+suitable for powering downstream workflows such as retrieval-augmented
+generation (RAG) and gen AI applications.
+
+This is the user-facing meta-package that depends on docling-slim with the
+standard extras enabled, providing the full Docling feature set including
+OCR, table structure recognition, and document layout analysis.

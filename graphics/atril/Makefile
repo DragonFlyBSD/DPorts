@@ -2,10 +2,10 @@
 # Please update update atril-lite also
 
 PORTNAME=	atril
-PORTVERSION=	1.28.1
-PORTREVISION=	2
+DISTVERSION=	1.28.1
+PORTREVISION=	8
 CATEGORIES=	graphics print mate
-MASTER_SITES=	MATE
+MASTER_SITES=	https://github.com/mate-desktop/${PORTNAME}/releases/download/v${DISTVERSION}/
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -23,9 +23,6 @@ LIB_DEPENDS=	libpoppler-glib.so:graphics/poppler-glib \
 		libtiff.so:graphics/tiff \
 		libspectre.so:print/libspectre
 
-PORTSCOUT=	limitw:1,even
-SLAVEPORT?=	no
-
 USES=		compiler:c11 desktop-file-utils gettext gmake gnome libarchive \
 		libtool mate pathfix pkgconfig tar:xz xorg
 USE_MATE=	icontheme desktop:build
@@ -34,6 +31,9 @@ USE_GNOME=	cairo gtk30 intlhack libxml2
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
+PORTSCOUT=	site:https://github.com/mate-desktop/atril/releases/ limitw:1,even
+
+SLAVEPORT?=	no
 CONFIGURE_ARGS=	--disable-static \
 		--disable-synctex
 CPPFLAGS+=	-I${LOCALBASE}/include

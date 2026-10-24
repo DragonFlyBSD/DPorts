@@ -11,8 +11,8 @@ WWW=		https://arthurdejong.org/cvsd
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	cvs:devel/cvs
-RUN_DEPENDS=	cvs:devel/cvs
+BUILD_DEPENDS= 
+RUN_DEPENDS= 
 
 USE_RC_SUBR=	cvsd
 USES=		perl5

@@ -1,6 +1,6 @@
 PORTNAME=	gkrellm
-PORTVERSION=	2.4.0
-PORTREVISION=	1
+PORTVERSION=	2.5.1
+PORTREVISION=	0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://gkrellm.srcbox.net/releases/ \
 		LOCAL/ume
@@ -8,7 +8,7 @@ PKGNAMESUFFIX=	2
 
 MAINTAINER=	ume@FreeBSD.org
 COMMENT=	GTK based system monitor
-WWW=		http://gkrellm.net
+WWW=		https://gkrellm.srcbox.net/
 
 LICENSE=	GPLv3
 
@@ -29,6 +29,7 @@ CLIENT_VARS_OFF=	BUILD_WRKSRC=${WRKSRC}/server \
 NTLM_LIB_DEPENDS=	libntlm.so:security/libntlm
 NTLM_VARS_OFF=		MAKE_ENV+=without-ntlm=1
 
+LDFLAGS= -lkvm -lkinfo
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCLIENT}
@@ -48,12 +49,11 @@ MAKE_ENV+=	without-gnutls=1 without-ssl=1
 PORTDOCS=	COPYRIGHT CREDITS README Themes.html
 
 ALL_TARGET=	freebsd
+INSTALL_TARGET=	install_freebsd
 
 MAKE_ENV+=	INSTALLROOT=${PREFIX} INSTALL_PREFIX=${STAGEDIR} \
-		PKGCONFIGDIR=${PREFIX}/libdata/pkgconfig \
-		SINSTALLDIR=${PREFIX}/sbin \
-		MANDIR=${PREFIX}/share/man/man1 SMANDIR=${PREFIX}/share/man/man8 \
-		VERSION=${PORTVERSION}
+		PKGCONFIGDIR=${PREFIX}/libdata/pkgconfig CFGDIR=${EXAMPLESDIR} \
+		SINSTALLDIR=${PREFIX}/sbin SMANSECTION=8 VERSION=${PORTVERSION}
 
 CFLAGS+=	-DSYSTEM_THEMES_DIR='\"${LOCALBASE}/share/gkrellm2/themes\"' \
 		-DSYSTEM_PLUGINS_DIR='\"${LOCALBASE}/libexec/gkrellm2/plugins\"' \
@@ -70,14 +70,15 @@ post-install-CLIENT-on:
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins-gkrellmd
-	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/server/gkrellmd.conf \
-		${STAGEDIR}${EXAMPLESDIR}/gkrellmd.conf
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${DOCSDIR}
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lmd[[:>:]]@@g' ${WRKSRC}/Makefile \
+		${WRKSRC}/server/Makefile ${WRKSRC}/src/Makefile
 
 .include <bsd.port.mk>

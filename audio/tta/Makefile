@@ -4,11 +4,11 @@ CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}enc-src
 DISTNAME=	${PORTNAME}enc-${PORTVERSION}-src
 
-MAINTAINER=	multimedia@FreeBSD.org
+MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	The True Audio Encoder, lossless (de)compressor
-WWW=		http://www.true-audio.com/
+WWW=		https://tta.sourceforge.net/en/true-audio-codec-tta/
 
-LICENSE=	GPLv2
+LICENSE=	GPLv2+
 
 USES=		gmake tar:tgz
 ALL_TARGET=	ttaenc

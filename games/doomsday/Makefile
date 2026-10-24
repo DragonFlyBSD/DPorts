@@ -1,6 +1,6 @@
 PORTNAME=	doomsday
 PORTVERSION=	2.3.1
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	SF/deng/Doomsday%20Engine/${PORTVERSION}
 
@@ -30,13 +30,13 @@ WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}/${PORTNAME}
 
 PORTSCOUT=	limit:^\d+\.\d+\.\d+$$
 
+CFLAGS= -I{NCURSESINC}
+LIBS= -lz
 post-patch:
-	# Removing (three) non-ascii bytes from the beginning of the file
-	@${REINPLACE_CMD} '1s,^...,,' \
-		${WRKSRC}/apps/client/src/client/cl_sound.cpp
 	@${REINPLACE_CMD} -E -e 's|(DENG_DISTRIB_DIR /usr)|\1/local|' \
 		-e 's|python3|${PYTHON_VERSION}|' \
 		${WRKSRC}/cmake/Config.cmake
 	@cd ${WRKSRC} && ${FIND} . -name '*.orig' -delete
 
+USES:= ${USES:Nninja} ncurses
 .include <bsd.port.mk>

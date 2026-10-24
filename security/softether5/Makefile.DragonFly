@@ -1,5 +1,0 @@
-
-USES+=	alias
-
-CFLAGS+=	-DUNIX_BSD
-IGNORE=   unmaintained, please request fixing to users mailing list

@@ -1,3 +1,0 @@
-
-# to avoid missing plist entries, finds /usr/bin/tac
-CONFIGURE_ARGS+=	ac_cv_path_TAC=NONE

@@ -1,6 +1,5 @@
 PORTNAME=	libe-book
-DISTVERSION=	0.1.3
-PORTREVISION=	29
+DISTVERSION=	0.1.4
 CATEGORIES=	textproc
 MASTER_SITES=	SF/libebook/${PORTNAME}-${DISTVERSION}/
 
@@ -27,11 +26,14 @@ PORTDOCS=	*
 
 CPPFLAGS+=	-DBOOST_ERROR_CODE_HEADER_ONLY
 
-CONFIGURE_ARGS=	--disable-werror --disable-tests
+CONFIGURE_ARGS= --disable-werror --disable-tests --without-docs
 
 OPTIONS_DEFINE=	DOCS
 
-DOCS_BUILD_DEPENDS=	doxygen:devel/doxygen
+DOCS_BUILD_DEPENDS= 
 DOCS_CONFIGURE_OFF=	--without-docs
 
+OPTIONS_EXCLUDE= DOCS
+LDFLAGS= -lz
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.mk>

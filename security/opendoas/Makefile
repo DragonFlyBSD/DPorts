@@ -34,6 +34,7 @@ MAKEFILE=	GNUmakefile
 
 CONFLICTS=	doas
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/doas
 

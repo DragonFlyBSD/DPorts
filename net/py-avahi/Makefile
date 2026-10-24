@@ -22,7 +22,7 @@ PLIST=		${.CURDIR}/pkg-plist
 AVAHI_SLAVE=	python
 
 USE_GNOME=	pygobject3 gtk30
-USES=		python
+USES=		autoreconf python
 USE_PYTHON=	flavors py3kplist
 MANPAGES=	avahi-bookmarks.1
 
@@ -37,8 +37,10 @@ do-build:
 	@${DO_MAKE_BUILD} -C ${WRKSRC}/service-type-database
 
 do-install:
-	@(cd ${BUILD_WRKSRC}; ${MAKE_CMD} ${MAKE_ARGS} install-strip)
-	@(cd ${WRKSRC}/service-type-database; ${MAKE_CMD} ${MAKE_ARGS} install)
+	@(cd ${BUILD_WRKSRC} && ${SETENVI} ${WRK_ENV} \
+		${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install-strip)
+	@(cd ${WRKSRC}/service-type-database && ${SETENVI} ${WRK_ENV} \
+		${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} install)
 
 post-install:
 	(cd ${STAGEDIR}${PREFIX} && ${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \

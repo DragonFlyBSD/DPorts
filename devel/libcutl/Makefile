@@ -1,10 +1,10 @@
 PORTNAME=	libcutl
 PORTVERSION=	1.11.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://www.codesynthesis.com/download/xsd/4.2/
 
-MAINTAINER=	rakuco@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ utility library with generic and independent components
 WWW=		https://www.codesynthesis.com/projects/libcutl/
 
@@ -20,6 +20,8 @@ OPTIONS_DEFINE=	DOCS
 B_CMD=		${LOCALBASE}/bin/b
 B_ARGS=		-V -j ${MAKE_JOBS_NUMBER} -J ${MAKE_JOBS_NUMBER}
 
+USE_CXXSTD= c++11
+NO_CCACHE= yes
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${B_CMD} configure ${B_ARGS} \
 		config.cxx=${CXX} \

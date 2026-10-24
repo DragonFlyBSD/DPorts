@@ -14,10 +14,11 @@ USE_LDCONFIG=	yes
 
 .include <bsd.port.pre.mk>
 
-.if defined(NO_PROFILE) || ( ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400079 )
+.if defined(NO_PROFILE) || ${OPSYS} == FreeBSD
 PLIST_SUB+=	HURRRR="@comment "
 .else
 PLIST_SUB+=	HURRRR=""
 .endif
 
+PLIST_SUB:= ${PLIST_SUB:NHURR*} HURRRR="@comment "
 .include <bsd.port.post.mk>

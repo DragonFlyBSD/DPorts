@@ -1,6 +1,5 @@
 PORTNAME=	cppcheck
-DISTVERSION=	2.17.1
-PORTREVISION=	1
+DISTVERSION=	2.21.1
 CATEGORIES=	devel
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -12,12 +11,15 @@ LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libtinyxml2.so:textproc/tinyxml2
+BUILD_DEPENDS=	${LOCALBASE}/include/boost/container/small_vector.hpp:devel/boost-libs
 
-USES=		compiler:c++11-lib shebangfix tar:bzip2
+USES=		compiler:c++11-lib cpe shebangfix tar:bzip2
+CPE_VENDOR=	cppchecksolutions
 USE_GITHUB=	yes
 GH_ACCOUNT=	danmar
 SHEBANG_FILES=	htmlreport/cppcheck-htmlreport
 CMAKE_OFF=	USE_BUNDLED_TINYXML2
+CMAKE_ON=	USE_BOOST
 
 PORTDATA=		*
 
@@ -30,16 +32,14 @@ RULES_CMAKE_BOOL=	HAVE_RULES
 RULES_LIB_DEPENDS=	libpcre.so:devel/pcre
 RULES_USES=		localbase:ldflags
 
-TEST_CMAKE_BOOL=	BUILD_TESTS
+TEST_CMAKE_BOOL=	BUILD_TESTS BUILD_TESTING
 TEST_IMPLIES=		GUI
-TEST_USE=		QT=testlib
 TEST_USES=		cmake:testing
 TEST_USES_OFF=		cmake
 
 HTMLREPORT_DESC=	Install cppcheck-htmlreport
 HTMLREPORT_USES=	python:${PYUSE:C/ /,/W}
 HTMLREPORT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pygments>0:textproc/py-pygments@${PY_FLAVOR}
-HTMLREPORT_PLIST_FILES=	bin/cppcheck-htmlreport
 HTMLREPORT_VARS=	PYUSE+=run
 
 MANPAGES_BUILD_DEPENDS=	xsltproc:textproc/libxslt \
@@ -53,8 +53,8 @@ MATCHCOMPILER_VARS=	PYUSE+=build
 
 GUI_DESC=		Build the Qt GUI application
 GUI_CMAKE_BOOL=		BUILD_GUI
-GUI_USES=		qt:5
-GUI_USE=		QT=core,gui,widgets,printsupport,help,network,qmake:build,buildtools:build,linguisttools:build
+GUI_USES=		qt:6
+GUI_USE=		QT=base,tools:build
 
 CHARTS_DESC=		Enable QtCharts usage in the GUI
 CHARTS_CMAKE_BOOL=	WITH_QCHART

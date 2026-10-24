@@ -1,6 +1,6 @@
 PORTNAME=		kexi
 DISTVERSION=		3.2.0
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=		databases kde
 MASTER_SITES=		KDE/stable/${PORTNAME}/src
 DIST_SUBDIR=		KDE/${PORTNAME}
@@ -8,6 +8,9 @@ DIST_SUBDIR=		KDE/${PORTNAME}
 MAINTAINER=		kde@FreeBSD.org
 COMMENT=		Visual database applications creator
 WWW=		https://www.kexi-project.org/
+
+DEPRECATED=		Abandoned, unlikely to be ported to Qt6
+EXPIRATION_DATE=	2026-12-31
 
 LIB_DEPENDS=		libKDb3.so:databases/kdb \
 			libKPropertyCore3.so:x11-toolkits/kproperty \
@@ -26,8 +29,6 @@ USE_QT=		concurrent core dbus declarative gui network printsupport \
 		widgets xml \
 		buildtools:build qmake:build testlib:build
 USE_XORG=	x11
-
-CONFLICTS_INSTALL=	calligra-2*
 
 CMAKE_OFF=		BUILD_TESTING \
 			KEXI_ENABLE_QTGUI_FOR_TESTS

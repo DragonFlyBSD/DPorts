@@ -50,6 +50,13 @@ SQLITE_DESC=	Use SQLite for storing pre-computed key tables
 SQLITE_USES=	sqlite
 SQLITE_CONFIGURE_OFF=	--without-sqlite3
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NHWLOC}
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64 && !defined(CPUTYPE)
+CFLAGS+=	-mcpu=power8
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH:Mpowerpc*}

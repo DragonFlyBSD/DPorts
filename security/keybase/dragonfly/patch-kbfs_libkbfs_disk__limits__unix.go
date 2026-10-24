@@ -1,9 +1,9 @@
---- kbfs/libkbfs/disk_limits_unix.go.intermediate	2019-09-22 17:32:29 UTC
+--- kbfs/libkbfs/disk_limits_unix.go.intermediate
 +++ kbfs/libkbfs/disk_limits_unix.go
-@@ -29,13 +29,13 @@ func getDiskLimits(path string) (
- 
- 	// Bavail is the free block count for an unprivileged user.
+@@ -33,13 +33,13 @@
+ 	// #nosec G115 -- Bsize is typically uint32 or int64 depending on platform, conversion to uint64 is safe
  	availableBytes = uint64(stat.Bavail) * uint64(stat.Bsize)
+ 	// #nosec G115 -- Bsize is typically uint32 or int64 depending on platform, conversion to uint64 is safe
 -	totalBytes = stat.Blocks * uint64(stat.Bsize)
 +	totalBytes = uint64(stat.Blocks) * uint64(stat.Bsize)
  	// Some filesystems, like btrfs, don't keep track of inodes.

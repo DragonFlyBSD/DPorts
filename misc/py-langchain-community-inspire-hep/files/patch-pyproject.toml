@@ -1,0 +1,12 @@
+-- Relax setuptools lower bound to match the version shipped by the FreeBSD
+-- Python ports framework.
+
+--- pyproject.toml.orig	2026-07-14 17:38:26 UTC
++++ pyproject.toml
+@@ -1,5 +1,5 @@
+ [build-system]
+-requires = ["setuptools>=68", "wheel"]
++requires = ["setuptools>=61.0", "wheel"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]

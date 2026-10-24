@@ -1,5 +1,5 @@
 PORTNAME=	libmtp
-DISTVERSION=	1.1.22
+DISTVERSION=	1.1.23
 CATEGORIES=	multimedia audio
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/ \
 		SF
@@ -31,5 +31,9 @@ MTPZ_DESC=	Enable functionality to connect to MTPZ devices
 
 MTPZ_LIB_DEPENDS=	libgcrypt.so:security/libgcrypt
 MTPZ_CONFIGURE_ENABLE=	mtpz
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@machine/endian.h@sys/endian.h@g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

@@ -3,7 +3,7 @@ PORTVERSION=	1.4.1528
 PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://braingames.jorito.net/goonies/downloads/ \
-		http://mirror.amdmi3.ru/distfiles/
+		https://mirror.amdmi3.ru/distfiles/
 DISTNAME=	${PORTNAME}.src_${PORTVERSION}
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -15,7 +15,7 @@ LICENSE=	NONE
 USES=		gl gmake sdl tar:tgz
 USE_SDL=	sdl mixer image
 USE_GL=		gl glu
-USE_CXXSTD=	c++98
+USE_CXXSTD= gnu++98
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 

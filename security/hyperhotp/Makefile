@@ -16,4 +16,5 @@ GH_ACCOUNT=	casept
 PLIST_FILES=	bin/hyperhotp \
 		share/man/man1/hyperhotp.1.gz
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

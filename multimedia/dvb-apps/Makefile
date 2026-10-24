@@ -7,7 +7,7 @@ DISTNAME=	${PORTNAME}-3d43b280298c
 
 MAINTAINER=	decke@FreeBSD.org
 COMMENT=	Linux DVB API applications and utilities
-WWW=		https://linuxtv.org/hg/dvb-apps/
+WWW=		https://www.linuxtv.org/wiki/index.php/LinuxTV_dvb-apps
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LGPL
@@ -22,6 +22,7 @@ USE_PERL5=	build
 
 MAKE_ARGS+=	prefix="${PREFIX}"
 
+PERL5_NO_ALIAS= 1
 .include <bsd.port.pre.mk>
 
 post-patch:
@@ -48,6 +49,11 @@ post-patch:
 		${WRKSRC}/test/test_vevent.c \
 		${WRKSRC}/test/test_stillimage.c \
 		${WRKSRC}/test/test_av.c
+	@${REINPLACE_CMD} -e 's,#ifdef __FreeBSD__,#if defined(__FreeBSD__) || defined(__DragonFly__),' \
+		${WRKSRC}/include/dmx.h \
+		${WRKSRC}/include/frontend.h \
+		${WRKSRC}/util/av7110_loadkeys/av7110_loadkeys.c \
+		${WRKSRC}/util/dib3000-watch/dib-i2c.h
 .if ${CHOSEN_COMPILER_TYPE} == gcc
 	@${REINPLACE_CMD} -e 's/-Wno-packed-bitfield-compat//' \
 		${WRKSRC}/util/scan/Makefile

@@ -1,9 +1,6 @@
 PORTNAME=	octave-forge-signal
-PORTVERSION=	1.4.3
-PORTREVISION=	1
+DISTVERSION=	1.4.8
 CATEGORIES=	math
-MASTER_SITES=	SF/octave/Octave%20Forge%20Packages/Individual%20Package%20Releases
-DISTNAME=	${OCTAVE_PKGNAME}-${DISTVERSIONFULL}
 
 MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	Octave-forge package ${OCTAVE_PKGNAME}
@@ -15,8 +12,10 @@ LICENSE_FILE=	${WRKDIR}/${OCTAVE_SRC}/COPYING
 RUN_DEPENDS+=	${OCTAVE_TARBALLS_DIR}/control.tar.gz:math/octave-forge-control
 
 USES=		octave
+USE_GITHUB=	yes
+GH_ACCOUNT=	gnu-octave
+GH_PROJECT=	octave-signal
 
-post-patch:
-	${REINPLACE_CMD} s/-Wall// ${WRKSRC}/Makefile
+OCTAVE_SRC=	${GH_PROJECT}-${DISTVERSION}
 
 .include <bsd.port.mk>

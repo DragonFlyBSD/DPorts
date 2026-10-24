@@ -1,3 +1,0 @@
-post-configure:
-	${REINPLACE_CMD} -e 's|<net/pfvar.h>|<net/pf/pfvar.h>|' \
-		${WRKSRC}/src/tables.c

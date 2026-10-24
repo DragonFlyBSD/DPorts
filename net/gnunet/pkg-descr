@@ -1,0 +1,6 @@
+GNUnet is an alternative network stack for building secure, decentralized
+and privacy-preserving distributed applications. Our goal is to replace
+the old insecure Internet protocol stack. Starting from an application
+for secure publication of files, it has grown to include all kinds of
+basic protocol components and applications towards the creation of a
+GNU internet.

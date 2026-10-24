@@ -1,0 +1,12 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 20:28:29 UTC
++++ pyproject.toml
+@@ -8,7 +8,7 @@ requires-python = ">=3.10,<4.0"
+ description = "Mistral OCR plugin for Docling"
+ readme = "README.md"
+ requires-python = ">=3.10,<4.0"
+-license = "MIT"
++license = {text = "MIT"}
+ authors = [{ name = "Georg Heiler" }]
+ keywords = ["docling", "ocr", "mistral", "plugin"]
+ classifiers = [

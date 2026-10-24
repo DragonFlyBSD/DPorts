@@ -1,5 +1,5 @@
 PORTNAME=	suitesparse
-PORTVERSION=	7.10.1
+PORTVERSION=	7.14.1
 CATEGORIES=	math
 
 MAINTAINER=	fortran@FreeBSD.org
@@ -25,7 +25,8 @@ RUN_DEPENDS=	suitesparse-config>0:math/suitesparse-config		\
 		suitesparse-spqr>0:math/suitesparse-spqr		\
 		suitesparse-umfpack>0:math/suitesparse-umfpack
 .if !defined(PACKAGE_BUILDING)
-RUN_DEPENDS+=	suitesparse-csparse>0:math/suitesparse-csparse
+RUN_DEPENDS+=	suitesparse-csparse>0:math/suitesparse-csparse		\
+		suitesparse-example>0:math/suitesparse-Example
 .endif
 
 USES=		metaport

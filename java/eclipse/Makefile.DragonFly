@@ -1,3 +1,0 @@
-# org.eclipse.sdk.ide-freebsd.gtk.x86_64.tar.gz
-MAVEN_ECLIPSE:= -Dnative=gtk.freebsd.amd64 -Dmaven.repo.local=${WRKDIR}/eclipse-maven-repo-${PORTVERSION} -DforceContextQualifier=v${ECLIPSE_TSTAMP}
-ECLIPSE_RESULT:= eclipse.platform.releng.tychoeclipsebuilder/eclipse.platform.repository/target/products/org.eclipse.sdk.ide-freebsd.gtk.amd64.tar.gz

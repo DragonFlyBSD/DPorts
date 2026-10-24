@@ -1,0 +1,5 @@
+Math-Verify is a HuggingFace library for verifying mathematical answers.
+
+It provides evaluation metrics and verification utilities for assessing
+the correctness of mathematical solutions, supporting both numeric and
+symbolic answer comparison.

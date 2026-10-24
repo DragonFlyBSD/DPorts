@@ -13,15 +13,18 @@ LICENSE=	BSD3CLAUSE
 LIB_DEPENDS=	libyajl.so:devel/yajl
 TEST_DEPENDS=	dtplite:devel/tcllib
 
-USES=		autoreconf pkgconfig tcl:tea
+USES=		autoreconf pkgconfig tcl:86+,tea
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	flightaware
 
 TEST_TARGET=	test
 
-PLIST_FILES=	lib/yajltcl${PORTVERSION}/libyajltcl${PORTVERSION}.so \
+PLIST_FILES=	lib/yajltcl${PORTVERSION}/lib${TCL_PKG_LIB_PREFIX}yajltcl${PORTVERSION}.so \
 		lib/yajltcl${PORTVERSION}/pkgIndex.tcl \
 		lib/yajltcl${PORTVERSION}/yajl.tcl
+
+run-autotools-fixup:
+	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' ${WRKSRC}/configure
 
 .include <bsd.port.mk>

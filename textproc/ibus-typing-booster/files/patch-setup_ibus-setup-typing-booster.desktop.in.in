@@ -1,10 +1,7 @@
---- setup/ibus-setup-typing-booster.desktop.in.in.orig	2016-12-14 02:45:06 UTC
+--- setup/ibus-setup-typing-booster.desktop.in.in.orig	2026-04-07 17:03:26 UTC
 +++ setup/ibus-setup-typing-booster.desktop.in.in
-@@ -5,4 +5,5 @@ Exec=${LIBEXECDIR}/ibus-setup-typing-boo
- Icon=${PKGDATADIR}/icons/ibus-hunspell-table.svg
- NoDisplay=true
+@@ -7,3 +7,4 @@ Categories=Settings;
  Type=Application
--StartupNotify=true
-\ No newline at end of file
-+StartupNotify=true
+ StartupNotify=true
+ Categories=Settings;
 +Categories=Settings;

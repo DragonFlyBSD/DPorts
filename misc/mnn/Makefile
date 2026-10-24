@@ -1,5 +1,5 @@
 PORTNAME=	mnn
-DISTVERSION=	2.6.0
+DISTVERSION=	3.6.1
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -44,6 +44,7 @@ CONVERTER_LIB_DEPENDS=	libprotobuf.so:devel/protobuf
 HARD_FP_DESC=		Hard floating point numbers
 HARD_FP_CMAKE_BOOL=	MNN_BUILD_HARD
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != x86_64 && ${ARCH} != i386
@@ -52,8 +53,16 @@ CMAKE_ARGS+=	-DMNN_USE_AVX:BOOL=OFF \
 .endif
 
 do-install-APPS-on:
-.for f in	MNNV2Basic.out mobilenetTest.out backendTest.out testModel.out getPerformance.out checkInvalidValue.out timeProfile.out quantized.out \
-		transformer.out train.out rawDataTransform.out dataTransformer.out runTrainDemo.out
+.for f in	extractForInfer fuseTest \
+		MNNDump2Json MNNRevert2Buffer MNNV2Basic.out \
+		ModuleBasic.out \
+		mobilenetTest.out backendTest.out testModel.out getPerformance.out checkInvalidValue.out \
+		mobilenetTest.out \
+		OnnxClip \
+		SequenceModuleTest.out \
+		timeProfile.out quantized.out \
+		runTrainDemo.out \
+		testModel_expr.out testModelWithDescribe.out testTrain.out timeProfile.out transformer winogradExample.out
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${f} ${STAGEDIR}${PREFIX}/bin
 .endfor
 
@@ -65,6 +74,6 @@ post-test:
 	@cd ${BUILD_WRKSRC} && \
 		cd ${BUILD_WRKSRC} && ./run_test.out
 
-# 5 tests fail, see https://github.com/alibaba/MNN/issues/2358
+# tests as of 3.6.1: all tests passed
 
 .include <bsd.port.post.mk>

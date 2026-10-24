@@ -1,34 +1,35 @@
 PORTNAME=	ispc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.24.0
+DISTVERSION=	1.31.0
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Intel's compiler for high-performance SIMD programming
-WWW=		https://ispc.github.io/
+WWW=		https://ispc.github.io/ \
+		https://github.com/ispc/ispc
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-ONLY_FOR_ARCHS=		aarch64 amd64 i386
+ONLY_FOR_ARCHS=		aarch64 amd64 i386 powerpc64le
 ONLY_FOR_ARCHS_REASON=	only available for these architectures
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex \
 		m4:devel/m4
-LIB_DEPENDS=	libLLVM.so:devel/llvm${LLVM_VERSION} \
+LIB_DEPENDS=	${LLVM_LIBLLVM}:devel/llvm${LLVM_VERSION} \
 		libtbb.so:devel/onetbb
 
-USES=		bison cmake compiler:c++17-lang llvm:lib,min=15,max=15 python:build,test shebangfix
+USES= bison cmake compiler:c++17-lang llvm:lib,min=20,max=20 python:build,test shebangfix ncurses
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_TUPLE=	google:googletest:6a7ed31:googletest/ispcrt/tests/vendor/google/googletest
 
-SHEBANG_FILES=	*.py
+SHEBANG_GLOB=	*.py
 
 CONFIGURE_ENV=	PATH=${LOCALBASE}/llvm${LLVM_VERSION}/bin:${PATH} # see https://github.com/ispc/ispc/issues/2318
 CMAKE_OFF=	ISPC_NO_DUMPS ISPCRT_BUILD_GPU ISPC_INCLUDE_TESTS ISPCRT_BUILD_TESTS ISPC_INCLUDE_EXAMPLES
-CMAKE_ARGS=	-DLLVM_CONFIG_EXECUTABLE=${LOCALBASE}/llvm${LLVM_VERSION}/bin/llvm-config
+CMAKE_ARGS= -DLLVM_CONFIG_EXECUTABLE=${LOCALBASE}/llvm${LLVM_VERSION}/bin/llvm-config -DISPCRT_BUILD_TASKING:BOOL=OFF -DCURSES_CURSES_LIBRARY=${PREFIX}/lib/libncurses.so
 
 BINARY_ALIAS=	flex=${LOCALBASE}/bin/flex python=${PYTHON_CMD} m4=${LOCALBASE}/bin/gm4
 
@@ -63,19 +64,38 @@ XE_PLIST_FILES=		include/ispcrt/ispcrt.h \
 			lib/libispcrt_static.a
 XE_BROKEN=		Unknown architecture
 
+USE_CLANG_FALLBACK= 15
+OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NGENX}
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64le
+CMAKE_ON+=	PPC64_ENABLED
+CMAKE_OFF+=	ARM_ENABLED
+.endif
+
 do-test: # all tests pass
-	@cd ${WRKSRC} && ISPC_HOME=${BUILD_WRKSRC}/bin ./run_tests.py
+	@cd ${WRKSRC} && ISPC_HOME=${BUILD_WRKSRC}/bin ./scripts/run_tests.py
 
 test-check-all: # the upstream claims that some of these checks are broken without using their patched llvm version, hence using llvm-devel
 	@cd ${BUILD_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} check-all
 
 run-examples: build
-	@[ -f ${LOCALBASE}/lib/libtbb.so ] || ! echo "ERROR run-examples target requires devel/tbb package installed"
+	@[ -f ${LOCALBASE}/lib/libtbb.so ] || ! echo "ERROR run-examples target requires devel/onetbb package installed"
 .for e in simple sort mandelbrot stencil
 	@cd ${WRKSRC}/examples/${e} && \
 	${ECHO} "===> Running example ${e}" && \
 	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} && \
 	./${e}
 .endfor
+
+# tests as of 1.31.0:
+# 752 / 757 tests PASSED
+# 0 / 757 tests FAILED compilation
+# 0 / 757 tests FAILED execution
+# 5 / 757 tests SKIPPED
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ curses@ ncurses@g'	\
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

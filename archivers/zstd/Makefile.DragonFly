@@ -1,2 +1,0 @@
-# TODO(tuxillo): dfly does not have md5sum, use coreutils' one
-BINARY_ALIAS:=

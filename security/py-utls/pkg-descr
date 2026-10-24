@@ -1,0 +1,4 @@
+Drop-in replacement for the ssl stdlib with a Fingerprint API for Chrome
+impersonation. Built on stock BoringSSL through boring-sys - no vendored
+patches, no curl-impersonate, no Go runtime at import time. Use it with any
+known Python http client you like or used to.

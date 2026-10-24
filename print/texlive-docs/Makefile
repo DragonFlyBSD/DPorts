@@ -48,4 +48,8 @@ do-install:
 	${FIND} -s ${STAGEDIR}${PREFIX}/share/texmf-dist -type d -empty | ${SORT} -r | \
 		${SED} -e 's#^${STAGEDIR}${PREFIX}/#@dir #' >> ${TMPPLIST}
 
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	1.1G package (too big for mirrors)
+.endif
+
 .include <bsd.port.mk>

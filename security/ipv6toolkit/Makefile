@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 
 USES=		shebangfix uidfix
 SHEBANG_FILES=	tools/blackhole6 tools/script6
-MAKE_ENV=	DATADIR=${DATADIR} WRKSRC=${WRKSRC} MANDIR=${PREFIX}/share/man/man
+MAKE_ENV= DATADIR=${DATADIR} WRKSRC=${WRKSRC} MANDIR=${PREFIX}/share/man/man CWARNFLAGS=-fcommon
 SUB_FILES=	BSDMakefile Makefile Makefile.lib
 MAKEFILE=	BSDMakefile
 PORTDOCS=	README.TXT CHANGES.TXT CREDITS.TXT
@@ -27,6 +27,7 @@ LIBDIRS=	libipv6
 
 OPTIONS_DEFINE=	DOCS
 
+MAKE_JOBS_UNSAFE= yes
 post-extract:
 	@cd ${WRKSRC} && ${MKDIR} ${PROGDIRS} ${LIBDIRS}
 

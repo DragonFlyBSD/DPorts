@@ -1,7 +1,7 @@
 PORTNAME=	libpki
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.9.2
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	security
 
 PATCH_SITES=	https://github.com/openca/libpki/commit/
@@ -46,6 +46,7 @@ MYSQL_CONFIGURE_ENABLE=	mysql
 PGSQL_USES=		pgsql
 PGSQL_CONFIGURE_ENABLE=	pg
 
+DFLY_UNMAINTAINED= yes
 post-stage:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/libpki/etc; \
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/libpki/etc/libpki; \

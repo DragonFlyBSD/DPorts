@@ -36,4 +36,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/upgrade-config.pl ${STAGEDIR}${WWWOFFLE_SPOOL}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}* ${STAGEDIR}${PREFIX}/sbin/${PORTNAME}d
 
+LIBS:= ${LIBS:N-lmd}
 .include <bsd.port.mk>

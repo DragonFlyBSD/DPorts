@@ -1,6 +1,6 @@
 PORTNAME=	hotkeys
 PORTVERSION=	0.5.7.1
-PORTREVISION=	21
+PORTREVISION=	22
 CATEGORIES=	misc
 MASTER_SITES=	https://BSDforge.com/projects/source/misc/hotkeys/${PORTVERSION}/
 DISTNAME=	hotkeys_${PORTVERSION}
@@ -37,7 +37,7 @@ OSD_CONFIGURE_WITH=	xosd
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
-CFLAGS+=	-Wno-error=incompatible-function-pointer-types
+CFLAGS+= -Wno-error=incompatible-function-pointer-types -DHAVE_LOCALE_H -Wno-unused-function -Wno-incompatible-pointer-types -Wno-pointer-sign
 .endif
 
 post-extract:

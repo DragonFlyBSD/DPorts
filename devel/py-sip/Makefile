@@ -25,4 +25,5 @@ USE_PYQT=	#
 
 NO_ARCH=	yes
 
+CONFIGURE_ARGS= -p freebsd-g++
 .include <bsd.port.mk>

@@ -1,9 +1,9 @@
 PORTNAME=	tecnoballz
 PORTVERSION=	0.93.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://linux.tlk.fr/games/TecnoballZ/download/ \
-		http://mirror.amdmi3.ru/distfiles/
+		https://mirror.amdmi3.ru/distfiles/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Brick breaker (Arkanoid-like game)
@@ -33,7 +33,6 @@ DESKTOP_ENTRIES="TecnoballZ" \
 		false
 
 post-patch:
-	@${REINPLACE_CMD} -e '/CXXFLAGS=[^$$]*$$/ s|^|#|' ${WRKSRC}/configure.ac
 	@${REINPLACE_CMD} -e 's|$$(prefix)/games|$$(prefix)/bin|; \
 		/chmod/ d; /chown/ d' ${WRKSRC}/src/Makefile.am
 .for f in tecnoballz.cc tiles_background.cc sprite_ship.cc controller_magnetic_eyes.cc

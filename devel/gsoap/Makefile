@@ -1,12 +1,12 @@
 PORTNAME=	gsoap
-DISTVERSION=	2.8.138
+DISTVERSION=	2.8.144
 CATEGORIES=	devel
 MASTER_SITES=	SF/${PORTNAME}2
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Generator Tools for Coding SOAP/XML Web Services in C and C++
-WWW=		https://www.cs.fsu.edu/~engelen/soap.html
+WWW=		https://www.genivia.com/dev.html
 
 LICENSE=	GPLv2
 
@@ -52,5 +52,9 @@ post-install:
 	    ${STAGEDIR}${PREFIX}/lib/gsoap
 	@${LN} -fs stdsoap2.c ${STAGEDIR}${PREFIX}/lib/gsoap/stdsoap2.cpp
 	@${LN} -fs dom.cpp ${STAGEDIR}${PREFIX}/lib/gsoap/dom.c
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*-\*-freebsd\*\))@\1|*-*-dragonfly*)@g'	\
+		${WRKSRC}/configure.ac
 
 .include <bsd.port.mk>

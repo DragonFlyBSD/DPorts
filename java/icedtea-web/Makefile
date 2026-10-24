@@ -1,7 +1,7 @@
 PORTNAME=	icedtea-web
 PORTVERSION=	1.8.8
 DISTVERSIONPREFIX=	icedtea-web-
-PORTREVISION=	24
+PORTREVISION=	39
 CATEGORIES=	java www
 
 MAINTAINER=	java@FreeBSD.org
@@ -46,9 +46,6 @@ CONFIGURE_SHELL=	${bash_CMD}
 
 TEST_TARGET=	check
 
-# Upstream archive contains files with UTF-8 names
-EXTRACT_CMD=	${SETENV} LC_ALL=en_US.UTF-8 /usr/bin/bsdtar
-
 OPTIONS_DEFINE=	DOCS PLUGIN PLUGINJAR RHINO RUST TAGSOUP
 OPTIONS_DEFAULT=PLUGINJAR RUST
 OPTIONS_SUB=	yes
@@ -92,6 +89,7 @@ PLUGINJAR_PORTDOCS=		plugin
 HAMCREST_JAR=	${JAVALIBDIR}/hamcrest.jar
 JUNIT_JAR=	${JAVALIBDIR}/junit.jar
 
+BROKEN= needs porting
 .include <bsd.port.pre.mk>
 
 post-patch:

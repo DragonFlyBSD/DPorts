@@ -1,10 +1,10 @@
 PORTNAME=	redis
-DISTVERSION=	6.2.18
+DISTVERSION=	6.2.24
 CATEGORIES=	databases
 MASTER_SITES=	https://download.redis.io/releases/
 PKGNAMESUFFIX=	62
 
-MAINTAINER=	yasu@FreeBSD.org
+MAINTAINER=	bofh@freebsd.org
 COMMENT=	Persistent key-value database with built-in net interface
 WWW=		https://redis.io/
 
@@ -19,9 +19,9 @@ USE_RC_SUBR=	redis sentinel
 MAKE_ENV=	OPTIMIZATION= \
 		V=yo
 
-LDFLAGS+=	-lpthread -lm -lexecinfo
+LDFLAGS+= -lpthread -lm -lexecinfo -L/usr/local/lib
 
-CONFLICTS_INSTALL=	redis redis-devel redis72
+CONFLICTS_INSTALL=	redis redis-devel redis72 redis74 redis80
 
 PORTSCOUT=	limit:^6\.2
 SUB_FILES=	pkg-message
@@ -58,6 +58,7 @@ REDIS_DBDIR?=	/var/db/redis
 REDIS_RUNDIR?=	/var/run/redis
 REDIS_LOGDIR?=	/var/log/redis
 
+CFLAGS= -I/usr/local/include
 post-patch-JEMALLOC-on:
 	@${REINPLACE_CMD} '58s!Linux!FreeBSD!g' ${WRKSRC}/src/Makefile
 

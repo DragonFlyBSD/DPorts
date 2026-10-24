@@ -26,4 +26,7 @@ post-install:
 		${STAGEDIR}${PREFIX}/share/man/man1/
 	${INSTALL_DATA} ${WRKSRC}/cov++.cfg ${STAGEDIR}${PREFIX}/etc/cov++.cfg.sample
 
+dfly-patch:
+	${LN} -sv ${WRKSRC}/rules.FreeBSD ${WRKSRC}/rules.DragonFly
+
 .include <bsd.port.mk>

@@ -1,15 +1,15 @@
---- common/cpu.c.orig	2022-06-01 22:31:50 UTC
+--- common/cpu.c.orig	2026-08-13 20:46:48 UTC
 +++ common/cpu.c
-@@ -40,7 +40,7 @@
+@@ -39,7 +39,7 @@
  #if SYS_BEOS
  #include <kernel/OS.h>
  #endif
--#if SYS_MACOSX || SYS_OPENBSD || SYS_FREEBSD
-+#if SYS_MACOSX || SYS_OPENBSD || SYS_FREEBSD || SYS_DRAGONFLY
+-#if SYS_MACOSX || SYS_FREEBSD || SYS_NETBSD || SYS_OPENBSD
++#if SYS_MACOSX || SYS_FREEBSD || SYS_NETBSD || SYS_OPENBSD || SYS_DRAGONFLY
  #include <sys/types.h>
  #include <sys/sysctl.h>
  #endif
-@@ -465,7 +465,7 @@ int x264_cpu_num_processors( void )
+@@ -658,7 +658,7 @@
      get_system_info( &info );
      return info.cpu_count;
  

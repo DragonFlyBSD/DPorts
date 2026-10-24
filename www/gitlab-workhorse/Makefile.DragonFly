@@ -1,6 +1,0 @@
-BUILD_DEPENDS+=     ca_root_nss>=0:security/ca_root_nss
-
-# XXX This is a hack, please help me finding a better way
-dfly-patch:
-	${REINPLACE_CMD} -e 's,freebsd,dragonfly,g' \
-		${GO_GOPATH}/pkg/mod/github.com/?azure/azure-sdk-for-go/sdk/storage/azblob@v1.0.0/blockblob/mmf_unix.go

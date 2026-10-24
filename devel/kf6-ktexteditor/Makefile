@@ -2,12 +2,13 @@ PORTNAME=	ktexteditor
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	devel kde kde-frameworks
 
-COMMENT=	Full text editor component
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Full text editor component
 
 LIB_DEPENDS=	libeditorconfig.so:editors/editorconfig-core-c
 
-USES=		cmake gettext gl kde:6 qt:6 tar:xz xorg
+USES= cmake cpe gettext gl kde:6 qt:6 tar:xz xorg gmake
+CPE_VENDOR=	kde
 USE_GL=		gl opengl
 USE_KDE=	archive auth codecs colorscheme completion config \
 		configwidgets coreaddons guiaddons i18n itemviews jobwidgets \
@@ -16,5 +17,9 @@ USE_KDE=	archive auth codecs colorscheme completion config \
 		ecm:build
 USE_QT=		base declarative speech multimedia
 USE_XORG=	x11
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

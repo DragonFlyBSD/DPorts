@@ -1,8 +1,8 @@
---- tools/depends/m4/xbmc_arch.m4.orig	2020-03-18 09:45:02 UTC
+--- tools/depends/m4/xbmc_arch.m4.orig
 +++ tools/depends/m4/xbmc_arch.m4
-@@ -14,6 +14,9 @@ case $build in
-   amd64-*-freebsd*)
-      AC_SUBST(NATIVE_ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_FREEBSD")
+@@ -17,6 +17,9 @@
+   arm-apple-darwin*|aarch64-apple-darwin*)
+      AC_SUBST(NATIVE_ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_DARWIN -DTARGET_DARWIN_OSX")
       ;;
 +  x86_64-*-dragonfly*)
 +     AC_SUBST(NATIVE_ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_DRAGONFLY")
@@ -10,7 +10,7 @@
    x86_64-apple-darwin*)
       AC_SUBST(NATIVE_ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_DARWIN -DTARGET_DARWIN_OSX")
       ;;
-@@ -45,6 +48,9 @@ case $host in
+@@ -48,6 +51,9 @@
    amd64-*-freebsd*)
       AC_SUBST(ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_FREEBSD")
       ;;
@@ -18,5 +18,5 @@
 +     AC_SUBST(ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_DRAGONFLY")
 +     ;;
    aarch64-apple-darwin*)
-      AC_SUBST(ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_DARWIN -DTARGET_DARWIN_EMBEDDED")
-      ;;
+      if test "$target_platform" = "macosx" ; then
+         AC_SUBST(ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_DARWIN -DTARGET_DARWIN_OSX")

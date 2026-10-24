@@ -1,5 +1,5 @@
 PORTNAME=	libfido2
-PORTVERSION=	1.15.0
+PORTVERSION=	1.17.0
 CATEGORIES=	security
 MASTER_SITES=	https://developers.yubico.com/libfido2/Releases/
 
@@ -13,9 +13,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libcbor.so:devel/libcbor
 
-USES=		cmake:testing compiler:c11 pathfix pkgconfig ssl
+USES=		cmake:testing compiler:c11 pkgconfig ssl
 
-CFLAGS+=	-DOPENSSL_API_COMPAT=0x10100000L
+CFLAGS+= -DOPENSSL_API_COMPAT=0x10100000L -I${OPENSSLINC}
 CMAKE_OFF=	BUILD_TESTS \
 		FUZZ \
 		NFC_LINUX \
@@ -33,7 +33,5 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 OPTIONS_DEFINE=	DOCS
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|-D_POSIX_C_SOURCE=200809L|-D_POSIX_C_SOURCE=202405L|' ${WRKSRC}/CMakeLists.txt
-
+LDFLAGS= -L${OPENSSLLIB}
 .include <bsd.port.mk>

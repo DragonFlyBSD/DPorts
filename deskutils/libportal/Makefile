@@ -1,5 +1,5 @@
 PORTNAME=	libportal
-PORTVERSION=	0.9.1
+PORTVERSION=	0.11.0
 CATEGORIES=	deskutils
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -11,7 +11,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	gtkdoc-scan:textproc/gtk-doc
 
-USES+=		gnome meson pkgconfig
+USES+=		gnome meson pkgconfig python:env
 
 USE_GNOME+=	glib20 introspection:build
 USE_LDCONFIG=	yes
@@ -19,8 +19,15 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	flatpak
 
-OPTIONS_DEFINE=		VAPI
+BINARY_ALIAS=	python3=${PYTHON_CMD}
+
+OPTIONS_DEFINE=		TEST VAPI
 OPTIONS_DEFAULT=	VAPI
+
+TEST_BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}python-dbusmock>0:devel/py-python-dbusmock@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
+TEST_USES+=		python:build,test
+TEST_MESON_TRUE=	portal-tests tests
 
 VAPI_MESON_TRUE=	vapi
 VAPI_USES=		vala:build

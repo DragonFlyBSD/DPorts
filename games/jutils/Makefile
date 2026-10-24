@@ -1,6 +1,6 @@
 PORTNAME=	jutils
 PORTVERSION=	1.0.1
-PORTREVISION=	1
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	games java
 
@@ -10,7 +10,7 @@ WWW=		https://github.com/jinput/jutils
 
 LICENSE=	BSD2CLAUSE
 
-BUILD_DEPENDS=	maven>0:devel/maven
+BUILD_DEPENDS=	maven38>0:devel/maven38
 
 USES=		java
 # Using a fork because of maven dependencies
@@ -26,7 +26,8 @@ MAVEN_REPO=	-Dmaven.repo.local=${WRKSRC}/repository
 
 do-build:
 	cd ${WRKSRC}; \
-		${SETENV} mvn ${MAVEN_REPO} ${MAVEN_ARGS} --offline package
+		${SETENV} MAVEN_HOME=${LOCALBASE}/share/java/apache-maven-3.8 \
+			mvn ${MAVEN_REPO} ${MAVEN_ARGS} --offline package
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${JAVAJARDIR}/${PORTNAME}

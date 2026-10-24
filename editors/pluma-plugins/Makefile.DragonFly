@@ -1,2 +1,0 @@
-USES+=	libtool
-DFLY_UNMAINTAINED= yes

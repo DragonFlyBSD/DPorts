@@ -1,6 +1,6 @@
 PORTNAME=	neomutt
-PORTVERSION=	20250113
-PORTREVISION=	0
+PORTVERSION=	20260616
+PORTREVISION=	1
 CATEGORIES=	mail
 
 MAINTAINER=	gahr@FreeBSD.org
@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 RUN_DEPENDS=	${LOCALBASE}/etc/mime.types:misc/mime-support \
 		urlview:textproc/urlview
-LIB_DEPENDS=	libpcre2-posix.so:devel/pcre2
+LIB_DEPENDS=	libpcre2-8.so:devel/pcre2
 
 USES=		cpe iconv:translit localbase ncurses perl5 pkgconfig python:env shebangfix ssl
 
@@ -23,7 +23,7 @@ MAKE_JOBS_UNSAFE=	yes
 HAS_CONFIGURE=	yes
 
 OPTIONS_SUB=	yes
-SHEBANG_FILES=	contrib/smime_keys \
+SHEBANG_FILES=	smime/smime_keys \
 		contrib/oauth2/mutt_oauth2.py \
 		data/account-command/macos-keychain/keychain.py
 
@@ -60,7 +60,7 @@ GDBM_LIB_DEPENDS=		libgdbm.so:databases/gdbm
 KYOTOCABINET_CONFIGURE_ON=	--kyotocabinet
 KYOTOCABINET_LIB_DEPENDS=	libkyotocabinet.so:databases/kyotocabinet
 LMDB_CONFIGURE_ON=		--lmdb
-LMDB_LIB_DEPENDS=		liblmdb.so:databases/lmdb
+LMDB_LIB_DEPENDS=		liblmdb.so:databases/lmdb0
 QDBM_CONFIGURE_ON=		--qdbm
 QDBM_LIB_DEPENDS=		libqdbm.so:databases/qdbm
 TOKYOCABINET_CONFIGURE_ON=	--tokyocabinet
@@ -70,7 +70,7 @@ NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext
 
 IDN_LIB_DEPENDS=	libidn2.so:dns/libidn2
-IDN_CONFIGURE_ON=	--idn2
+IDN_CONFIGURE_OFF=	--disable-idn2
 
 FLOCK_CONFIGURE_ON=	--with-lock=flock
 
@@ -78,7 +78,6 @@ SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 SASL_CONFIGURE_ON=	--sasl
 
 GPGME_LIB_DEPENDS=	libgpgme.so:security/gpgme \
-			libassuan.so:security/libassuan \
 			libgpg-error.so:security/libgpg-error
 GPGME_CONFIGURE_ENABLE=	gpgme
 
@@ -105,4 +104,5 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/neomutt \
 		${STAGEDIR}${PREFIX}/libexec/neomutt/pgpewrap
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSSAPI_BASE} GSSAPI_MIT
 .include <bsd.port.mk>

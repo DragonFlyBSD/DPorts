@@ -44,6 +44,7 @@ WAYLAND_LIB_DEPENDS=	libdrm_intel.so:graphics/libdrm \
 			libwayland-client.so:graphics/wayland
 WAYLAND_CMAKE_BOOL=	ENABLE_WAYLAND
 
+MAKE_ENV= LDVER=ld.bfd
 post-patch:
 # Pick git commit from port and use reproducible time
 	@${REINPLACE_CMD} -e "/COMMAND/s/date/& -r `${AWK} '/TIMESTAMP/ \

@@ -1,6 +1,6 @@
 PORTNAME=	qsstv
 PORTVERSION=	9.5.8
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	comms hamradio
 MASTER_SITES=	${WWW}/${PORTNAME}/downloads/
 DISTNAME=	${PORTNAME}_${PORTVERSION}
@@ -58,5 +58,21 @@ post-install:
 	-${RM} ${STAGEDIR}/${DOCSDIR}/doxygen_sqlite3.db
 	-${RM} ${STAGEDIR}/${DOCSDIR}/*.bak
 	-${RM} ${STAGEDIR}/${DOCSDIR}/*.orig
+
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
+dfly-patch:
+	${RM} -f ${WRKSRC}/sound/soundpulse.*
+	${REINPLACE_CMD} -e 's@-lpulse-simple@@g' -e 's@-lpulse@@g' \
+			  -e 's@sound/soundpulse.cpp@@g' \
+			  -e 's@sound/soundpulse.h@@g' \
+		${WRKSRC}/qsstv.pro
+	${REINPLACE_CMD} -e '/<malloc\.h>/d' \
+		${WRKSRC}/drmrx/channeldecode.cpp \
+		${WRKSRC}/drmrx/deinterleaver.cpp \
+		${WRKSRC}/drmrx/getmode.cpp \
+		${WRKSRC}/drmrx/mkfacmap.cpp \
+		${WRKSRC}/drmrx/mkmscmap.cpp \
+		${WRKSRC}/drmrx/psdcmean.cpp \
+		${WRKSRC}/drmrx/psdmean.cpp
 
 .include <bsd.port.mk>

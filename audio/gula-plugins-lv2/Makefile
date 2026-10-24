@@ -28,4 +28,5 @@ do-install: # https://github.com/steveb/gula-plugins/issues/3
 	cd ${WRKSRC} && ${COPYTREE_SHARE} lv2 ${STAGEDIR}${PREFIX}/lib
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lv2/*.lv2/*.so
 
+CXXFLAGS:= ${CXXFLAGS:N-fbracket-depth*}
 .include <bsd.port.mk>

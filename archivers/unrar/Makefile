@@ -1,9 +1,10 @@
 PORTNAME=	unrar
-PORTVERSION=	7.10
+PORTVERSION=	7.23
+PORTREVISION=	1
 PORTEPOCH=	6
 CATEGORIES=	archivers
 MASTER_SITES=	https://www.rarlab.com/rar/
-DISTNAME=	unrarsrc-7.1.4
+DISTNAME=	unrarsrc-7.2.7
 
 MAINTAINER?=	sunpoet@FreeBSD.org
 COMMENT=	Extract, view & test RAR archives
@@ -16,6 +17,7 @@ LICENSE_PERMS=	auto-accept dist-mirror pkg-mirror
 
 USES=		compiler:c++11-lang cpe
 
+CFLAGS_aarch64+=-march=armv8-a+crc+crypto
 LDFLAGS+=	-lpthread
 MAKE_ARGS=	CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" STRIP="${STRIP_CMD}"
 MAKEFILE=	makefile
@@ -35,6 +37,7 @@ OPENSSL_AES_CPPFLAGS=	-DOPENSSL_AES -I${OPENSSLINC}
 OPENSSL_AES_LDFLAGS=	${${OPENSSLLIB} == /usr/lib :? :-L${OPENSSLLIB}} -lcrypto
 OPENSSL_AES_USES=	ssl
 
+MAKE_JOBS_UNSAFE= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unrar ${STAGEDIR}${PREFIX}/bin/
 

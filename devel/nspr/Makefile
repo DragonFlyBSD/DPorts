@@ -1,5 +1,5 @@
 PORTNAME=	nspr
-DISTVERSION=	4.36
+DISTVERSION=	4.39
 CATEGORIES=	devel
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/v${PORTVERSION}/src
 
@@ -21,6 +21,7 @@ OPTIONS_DEFINE=	DEBUG TEST
 
 DEBUG_CONFIGURE_ENABLE=debug
 
+PLIST_FILES= include/nspr/md/_dragonfly.cfg
 post-patch:
 # Do not install tools to build itself
 	@${REINPLACE_CMD} -e '/RELEASE_BINS/d' \

@@ -1,0 +1,1 @@
+XFAIL_DragonFly= go termios_nonbsd.go TCGETS

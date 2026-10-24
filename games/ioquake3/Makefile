@@ -116,10 +116,13 @@ DLRENDERER_MAKE_ARGS=	USE_RENDERER_DLOPEN=1
 DLRENDERER_MAKE_ARGS_OFF=	USE_RENDERER_DLOPEN=0
 
 .if !defined(Q3TOTALCONV)
+MAKE_ARGS+= COMPILE_PLATFORM=freebsd
+DPMSG= ${WRKDIR}/dports-message
 .include "${.CURDIR}/../quake3-data/Makefile.include"
 .endif
 
 .include <bsd.port.options.mk>
+DPMSG=	${WRKDIR}/dports-message
 
 .if !defined(DESKTOP_ENTRIES)
 . if ${IOQ3:MCLIENT}
@@ -214,6 +217,37 @@ do-install: ${Q3INSTALL}
 	${MKDIR} ${STAGEDIR}${Q3DIR}
 	${INSTALL_DATA} ${FILESDIR}/server.cfg \
 		${STAGEDIR}${Q3DIR}/server.cfg
+.endif
+
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING) && ${PORTNAME:Miourbanterror*}
+RUN_DEPENDS:=	${RUN_DEPENDS:N*urbanterror-data}
+PKGMESSAGE=	${DPMSG}
+.endif
+
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING) && ${PORTNAME:Mopenarena*}
+RUN_DEPENDS:=	${RUN_DEPENDS:N*openarena-data}
+PKGMESSAGE=	${DPMSG}
+.endif
+
+dfly-patch:
+	-${REINPLACE_CMD} -e 's@#ifndef MACOS_X@#if \!defined(MACOS_X) || \!defined(__DragonFly__)@g'	\
+		${WRKSRC}/code/tools/lcc/cpp/unix.c
+	-${REINPLACE_CMD} -e 's/-DMAP_ANONYMOUS=MAP_ANON//g' -e 's/-O2/-O1/g' ${WRKSRC}/Makefile
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING) && ${PORTNAME:Miourbanterror*}
+.  if exists(${.CURDIR}/pkg-message)
+	@${CP} ${.CURDIR}/pkg-message ${DPMSG}
+.  endif
+	@${ECHO} "#########################################################" >> ${DPMSG}
+	@${ECHO} "# Build games/urbanterror-data from source to play this #" >> ${DPMSG}
+	@${ECHO} "#########################################################" >> ${DPMSG}
+.endif
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING) && ${PORTNAME:Mopenarena*}
+.  if exists(${.CURDIR}/pkg-message)
+	@${CP} ${.CURDIR}/pkg-message ${DPMSG}
+.  endif
+	@${ECHO} "#######################################################" >> ${DPMSG}
+	@${ECHO} "# Build games/openarena-data from source to play this #" >> ${DPMSG}
+	@${ECHO} "#######################################################" >> ${DPMSG}
 .endif
 
 .include <bsd.port.mk>

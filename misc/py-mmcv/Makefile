@@ -1,0 +1,41 @@
+PORTNAME=	mmcv
+#DISTVERSIONPREFIX=	v
+DISTVERSION=	2.2.0
+PORTREVISION=	5
+CATEGORIES=	misc # machine-learning
+MASTER_SITES=	PYPI
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	yuri@FreeBSD.org
+COMMENT=	OpenMMLab: Foundational library for computer vision research
+WWW=		https://mmcv.readthedocs.io/en/latest/ \
+		https://github.com/open-mmlab/mmcv
+
+LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BUILD_DEPENDS=	ninja:devel/ninja \
+		${PREFIX}/include/pybind11/pybind11.h:devel/pybind11 \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pytorch>0:misc/py-pytorch@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}addict>0:devel/py-addict@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}mmengine>=0.3.0:misc/py-mmengine@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR} \
+		${PY_PILLOW} \
+		${PYTHON_PKGNAMEPREFIX}yapf>0:textproc/py-yapf@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyyaml>=0:devel/py-pyyaml@${PY_FLAVOR}
+
+USES=		compiler:c++17-lang localbase python
+USE_PYTHON=	distutils cython autoplist # pytest: many test dependencies are missing
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "aarch64"
+MAKE_ENV=	LD_STATIC_TLS_EXTRA=4096 # see pkg-message in misc/py-pytorch
+.endif
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/mmcv/_ext${PYTHON_TAG}.so
+
+.include <bsd.port.post.mk>

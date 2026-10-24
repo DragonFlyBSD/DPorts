@@ -1,0 +1,13 @@
+TIMESTAMP = 1783863259
+SHA256 (rocky/p/python3-3.9.25-7.el9_8.aarch64.rpm) = 244a3dfb9e1baba2150125759f5e198c1a5693740390ae7e3e8e0943016398f4
+SIZE (rocky/p/python3-3.9.25-7.el9_8.aarch64.rpm) = 26939
+SHA256 (rocky/p/python3-3.9.25-7.el9_8.x86_64.rpm) = 72d06d933e27641a0448369db05f7aa38d0fe8a0c75727c41cd453dacba88552
+SIZE (rocky/p/python3-3.9.25-7.el9_8.x86_64.rpm) = 26979
+SHA256 (rocky/p/python3-libs-3.9.25-7.el9_8.aarch64.rpm) = 7bffe7b259f2c79ae8918368f0d5476276c0e0c9ded44af948b96bf7c1557372
+SIZE (rocky/p/python3-libs-3.9.25-7.el9_8.aarch64.rpm) = 7891805
+SHA256 (rocky/p/python3-libs-3.9.25-7.el9_8.i686.rpm) = 51b0b6dfb01d9ff406dfa42607a0c14313f1b072a9d41aad5694fe6120db2c71
+SIZE (rocky/p/python3-libs-3.9.25-7.el9_8.i686.rpm) = 7957387
+SHA256 (rocky/p/python3-libs-3.9.25-7.el9_8.x86_64.rpm) = aa4188764382af57f04e410095df020e0ec3b8d7074b4ed3026407de567c614e
+SIZE (rocky/p/python3-libs-3.9.25-7.el9_8.x86_64.rpm) = 7905994
+SHA256 (rocky/p/python3.9-3.9.25-7.el9_8.src.rpm) = e37c10c84bc1b8c8ca31dcc87df4c01cf4fe9fc4653593993cbbb06ae3c95824
+SIZE (rocky/p/python3.9-3.9.25-7.el9_8.src.rpm) = 20816746

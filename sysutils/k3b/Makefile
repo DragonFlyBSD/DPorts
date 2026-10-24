@@ -49,4 +49,9 @@ VCDIMAGER_RUN_DEPENDS=	vcdxrip:multimedia/vcdimager
 CDRSKIN_DESC=		Burning: cdrskin (improved performance)
 CDRSKIN_RUN_DEPENDS=	cdrskin:devel/libburn
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/libk3bdevice/k3bscsicommand_bsd.cpp \
+		${WRKSRC}/libk3bdevice/k3bdevicemanager.cpp
+
 .include <bsd.port.mk>

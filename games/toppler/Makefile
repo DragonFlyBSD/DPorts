@@ -1,6 +1,6 @@
 PORTNAME=	toppler
 PORTVERSION=	1.3
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -30,6 +30,7 @@ NLS_LIBS=	-L${LOCALBASE}/lib -lintl
 NLS_USES=	gettext
 NLS_USES_OFF=	gettext-tools
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	@${MV} ${WRKSRC}/src/version ${WRKSRC}
 

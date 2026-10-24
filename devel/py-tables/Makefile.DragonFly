@@ -1,6 +1,0 @@
-
-CFLAGS+=	-DZ_HAVE_UNISTD_H
-
-.if defined(FLAVOR) && ${FLAVOR:Mpy27}
-BROKEN= py27 pending removal
-.endif

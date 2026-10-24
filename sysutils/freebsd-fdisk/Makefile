@@ -23,4 +23,5 @@ MAKE_ENV+=		MAKESYSPATH=/usr/src/share/mk \
 
 WRKSRC_SUBDIR=		fdisk
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

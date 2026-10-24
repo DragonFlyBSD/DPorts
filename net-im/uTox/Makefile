@@ -1,19 +1,16 @@
 PORTNAME=	uTox
-DISTVERSION=	0.17.2
+DISTVERSION=	0.18.1
 DISTVERSIONSUFFIX=	-full
-PORTREVISION=	9
+PORTREVISION=	3
 CATEGORIES=	net-im net-p2p
 MASTER_SITES=	https://github.com/uTox/uTox/releases/download/v${DISTVERSION}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Lightweight Tox client
-WWW=		https://utox.io/
+WWW=		https://github.com/uTox/uTox
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-DEPRECATED=	Unmaintained upstream, consider using net-im/qTox
-EXPIRATION_DATE=2025-04-30
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
@@ -39,7 +36,6 @@ OPTIONS_DEFAULT=	DBUS
 DBUS_LIB_DEPENDS=	libdbus-1.so:devel/dbus
 DBUS_CMAKE_BOOL=	ENABLE_DBUS
 
-.if ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
 # ld.lld lacks default output emulation.  Using -b binary without
 # explicit -m will fail.  Mapping taken from lld/ELF/Driver.cpp.
 _LLD_EMUL_aarch64=	aarch64elf_fbsd
@@ -51,10 +47,10 @@ _LLD_EMUL_powerpc=	elf32ppc_fbsd
 _LLD_EMUL_powerpc64=	elf64ppc_fbsd
 _LLD_EMUL_powerpc64le=	elf64lppc_fbsd
 
+CFLAGS= -Wno-cast-function-type -Wno-implicit-fallthrough
 post-patch:
 	@${REINPLACE_CMD} 's,[[:<:]]ld[[:>:]],ld -m${_LLD_EMUL_${ARCH}},' \
 		${WRKSRC}/src/xlib/CMakeLists.txt
-.endif
 
 do-test:
 	@cd ${TEST_WRKSRC} && \

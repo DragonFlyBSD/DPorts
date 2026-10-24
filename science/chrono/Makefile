@@ -1,12 +1,13 @@
 PORTNAME=	chrono
-DISTVERSION=	8.0.0
-PORTREVISION=	3
+DISTVERSION=	9.0.1
+PORTREVISION=	6
 CATEGORIES=	science devel
 PKGNAMESUFFIX=	-physics-simulation-engine
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	C++ library for multi-physics simulation
-WWW=		https://projectchrono.org/
+WWW=		https://projectchrono.org/ \
+		https://github.com/projectchrono/chrono
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -49,7 +50,7 @@ HDF5_LIB_DEPENDS=		libhdf5.so:science/hdf5
 
 DEMOS_DESC=			Build and install demo programs
 DEMOS_CMAKE_BOOL=		BUILD_DEMOS
-DEMOS_BROKEN=			/usr/local/lib/libdmumps.so: undefined reference to `mpi_pack_'
+DEMOS_BROKEN=			/usr/local/lib/libdmumps.so: undefined reference to `mpi_pack_' # '
 
 CASCADE_CMAKE_ON=		-DCASCADE_INCLUDE_DIR:STRING=${LOCALBASE}/include/OpenCASCADE -DCASCADE_LIBDIR:STRING=${LOCALBASE}/lib
 CASCADE_LIB_DEPENDS=		libTKernel.so:cad/opencascade740
@@ -73,9 +74,10 @@ PARDISO_PROJECT_BROKEN=		Not available for FreeBSD; License is restrictive
 SENSOR_BROKEN=			requires CUDA
 
 SYNCHRONO_USES=			localbase
-SYNCHRONO_BUILD_DEPENDS=	flatc:devel/flatbuffers205 # until https://github.com/projectchrono/chrono/issues/391 is fixed
+SYNCHRONO_BUILD_DEPENDS=	flatc:devel/flatbuffers # until https://github.com/projectchrono/chrono/issues/391 is fixed
 SYNCHRONO_LIB_DEPENDS=		libmpi.so:net/mpich
 SYNCHRONO_IMPLIES=		VEHICLE
+SYNCHRONO_BROKEN= needs mpi
 
 OPENGL_USES=			gl
 OPENGL_USE=			GL=gl,glu,glew
@@ -86,6 +88,11 @@ VEHICLE_LIB_DEPENDS=		libsz.so:science/libaec \
 				libmpi.so:net/openmpi
 
 .for module in ${ALL_MODULES}
+CASCADE_BROKEN= needs mpi
+IRRLICHT_BROKEN= needs cascade
+MUMPS_BROKEN= implicit mpi
+VEHICLE_BROKEN= needs mpi
+IGNORE= unmaintained, please request fixing to users mailing list
 ${module:tu}_DESC=		Chrono ${module} module
 ${module:tu}_CMAKE_BOOL=	ENABLE_MODULE_${module:tu}
 .if "${${module:tu}_BROKEN}" == ""
@@ -94,10 +101,15 @@ OPTIONS_DEFAULT+=	${module:tu}
 .endfor
 
 #.include <bsd.port.options.mk>
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NCASCADE:NIRRLICHT:NMUMPS:NSYNCHRONO:NVEHICLE}
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MVEHICLE} && ${PORT_OPTIONS:MIRRLICHT}
 PLIST_FILES+=	lib/libChronoEngine_vehicle_irrlicht.so
+.endif
+
+.if ${PORT_OPTIONS:MVEHICLE} && ${PORT_OPTIONS:MOPENGL}
+PLIST_FILES+=	lib/libChronoEngine_vehicle_opengl.so
 .endif
 
 #.include <bsd.port.pre.mk>
@@ -118,4 +130,5 @@ do-test:
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${ALL_TARGET} && \
 		ctest -C ${CMAKE_BUILD_TYPE} ${_MAKE_JOBS}
 
+BUILD_DEPENDS:= ${BUILD_DEPENDS:Nopenmpi*}
 .include <bsd.port.post.mk>

@@ -73,6 +73,8 @@ SAMBA_DESC=	Enable the use of smbclient
 S3_DESC=	Enable Amazon S3 device support
 .endif
 
+PAT= --help={target,optimizers,warnings,undocumented,params,c}
+REP= --help=target --help=optimizers --help=warnings --help=undocumented --help=params --help=c
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MGNUTAR}
@@ -180,5 +182,8 @@ post-patch:
 #   Prefix @WANT_SERVER_TRUE@ for server only files.
 #   Prefix @WANT_CLIENT_TRUE@ for client only files.
 #   For debugging: dbprintf(_("getcmd: %s\n"), line);
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|${PAT}|${REP}|' ${WRKSRC}/configure
 
 .include <bsd.port.mk>

@@ -1,15 +1,15 @@
 PORTNAME=	httr
-PORTVERSION=	1.4.7
+PORTVERSION=	1.4.9
 CATEGORIES=	www
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Tools for Working with URLs and HTTP
-WWW=		https://cran.r-project.org/web/packages/httr/
+WWW=		https://cran.r-project.org/package=httr
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	R-cran-curl>=5.0.2:ftp/R-cran-curl \
+RUN_DEPENDS=	R-cran-curl>=5.1.0:ftp/R-cran-curl \
 		R-cran-jsonlite>0:converters/R-cran-jsonlite \
 		R-cran-mime>0:misc/R-cran-mime \
 		R-cran-openssl>=0.8:security/R-cran-openssl \

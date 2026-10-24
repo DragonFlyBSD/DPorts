@@ -1,12 +1,14 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	appleseed
 DISTVERSION=	2.1.0-beta
-PORTREVISION=	8
+PORTREVISION=	23
 CATEGORIES=	graphics
+
+PATCH_SITES=	http://vault.101011010.xyz/distfiles/ LOCAL/danfe
+PATCHFILES=	OSL-01.13.7.patch:-p1
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Modern, physically-based production renderer
+WWW=		https://appleseedhq.net/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -16,7 +18,7 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libpng.so:graphics/png \
 		libIlmThread.so:graphics/openexr \
 		libImath.so:math/Imath \
-		libOpenColorIO.so:graphics/opencolorio \
+		libOpenColorIOv1.so:graphics/opencoloriov1 \
 		libOpenImageIO.so:graphics/openimageio \
 		libxerces-c.so:textproc/xerces-c3 \
 		liboslexec.so:graphics/openshadinglanguage
@@ -29,9 +31,6 @@ ONLY_FOR_ARCHS_REASON=	not ported to it yet
 
 USES=		cmake compiler:c++11-lang shebangfix
 SHEBANG_FILES=	scripts/*.py
-
-CFLAGS+=	-I${LOCALBASE}/include/Imath
-CFLAGS+=	-I${LOCALBASE}/include/OpenEXR
 
 CMAKE_ARGS=	-DWITH_PYTHON2_BINDINGS:BOOL=OFF \
 		-DWITH_DOXYGEN:BOOL=OFF \
@@ -56,26 +55,26 @@ OPTIONS_DEFAULT=	PYTHON STUDIO
 OPTIONS_SUB=	yes
 
 EMBREE_DESC=	Embree intersection backend support
-EMBREE_LIB_DEPENDS=	libembree3.so:graphics/embree
+EMBREE_LIB_DEPENDS=	libembree3.so:graphics/embree3
 EMBREE_CMAKE_ON=	-DWITH_EMBREE:BOOL=ON
 
-PYTHON_USES=	gl python:3.5+,build,run
+PYTHON_USES=	gl python:build,run
 PYTHON_USE=	GL=gl
 PYTHON_CMAKE_ON=	-DWITH_PYTHON3_BINDINGS:BOOL=ON
 
 STUDIO_DESC=	Build appleseed.studio (Qt-based)
 STUDIO_LIB_DEPENDS=	${PY_BOOST}
 STUDIO_USES=	qt:5
-STUDIO_USE=	QT=buildtools_build,qmake_build,concurrent,core,gui,opengl,widgets
+STUDIO_USE=	QT=buildtools:build,qmake:build,concurrent,core,gui,opengl,widgets
 STUDIO_CMAKE_OFF=	-DWITH_STUDIO:BOOL=OFF
 STUDIO_IMPLIES=	PYTHON
 
 post-patch:
 	@${RMDIR} ${WRKSRC}/sandbox/docs/api
 	@${RM} ${WRKSRC}/sandbox/share/cmake/Modules/FindOpenImageIO.cmake
-	${REINPLACE_CMD} 's,OpenEXR/Imath,Imath/Imath,' \
-                ${WRKSRC}/sandbox/share/cmake/Modules/FindImath.cmake \
-                ${WRKSRC}/src/appleseed/foundation/meta/tests/test_quaternion.cpp \
+	@${REINPLACE_CMD} -e 's,OpenEXR,Imath, ; /[ {]IMATH_HALF_LIBRARY/d' \
+		${WRKSRC}/cmake/modules/FindImath.cmake
+	@${REINPLACE_CMD} -e 's,OpenEXR/Imath,Imath/Imath,' \
                 ${WRKSRC}/src/appleseed/foundation/meta/tests/test_matrix.cpp \
                 ${WRKSRC}/src/appleseed/foundation/meta/tests/test_quaternion.cpp \
                 ${WRKSRC}/src/appleseed/foundation/meta/tests/test_vector.cpp \
@@ -86,6 +85,36 @@ post-patch:
                 ${WRKSRC}/src/appleseed/foundation/math/matrix.h \
                 ${WRKSRC}/src/appleseed/foundation/math/quaternion.h \
                 ${WRKSRC}/src/appleseed/foundation/image/color.h
+	@${REINPLACE_CMD} -e '/return Product/s,trt\.derived(),trt,' \
+		${WRKSRC}/src/thirdparty/bcd/ext/eigen/Eigen/src/Core/Transpositions.h
+	@${REINPLACE_CMD} -e 's/impl->m_input->read_image(/&0, 0, 0, -1,/' \
+		${WRKSRC}/src/appleseed/foundation/image/genericprogressiveimagefilereader.cpp
+	@${REINPLACE_CMD} -e 's/clamp(/foundation::&/' \
+		${WRKSRC}/src/appleseed/renderer/kernel/lighting/lighttree.cpp \
+		${WRKSRC}/src/appleseed/renderer/kernel/shading/closures.cpp \
+		${WRKSRC}/src/appleseed/renderer/modeling/bsdf/glassbsdf.cpp \
+		${WRKSRC}/src/appleseed/renderer/modeling/environmentedf/hosekenvironmentedf.cpp \
+		${WRKSRC}/src/appleseed/renderer/modeling/environmentedf/preethamenvironmentedf.cpp \
+		${WRKSRC}/src/appleseed/renderer/modeling/input/texturesource.cpp \
+		${WRKSRC}/src/appleseed/renderer/modeling/postprocessingstage/colormappostprocessingstage.cpp \
+		${WRKSRC}/src/appleseed/renderer/utility/transformsequence.cpp \
+		${WRKSRC}/src/appleseed.studio/utility/widgetzoomhandler.cpp
+	@${REINPLACE_CMD} -e 's/TypeDesc::Type/Type/' \
+		${WRKSRC}/src/appleseed/renderer/kernel/rendering/final/texturecontrolledpixelrenderer.cpp \
+		${WRKSRC}/src/appleseed/renderer/kernel/rendering/rendererservices.cpp \
+		${WRKSRC}/src/appleseed/renderer/modeling/postprocessingstage/renderstamppostprocessingstage.cpp \
+		${WRKSRC}/src/appleseed/renderer/modeling/shadergroup/shaderparam.cpp \
+		${WRKSRC}/src/appleseed/renderer/modeling/shadergroup/shaderquery.cpp
+	@${REINPLACE_CMD} -e 's/using OSL::TypeDesc/&, OSL::TypeColor, OSL::TypeFloat, OSL::TypeInt, OSL::TypeString, OSL::TypeVector/' \
+		${WRKSRC}/src/appleseed/renderer/kernel/shading/closures.cpp
+	@${REINPLACE_CMD} -e '/OSL::ShadingSystem(/s,texturesystem,&->get(),' \
+		${WRKSRC}/src/appleseed/renderer/kernel/shading/oslshadingsystem.cpp
+	@${REINPLACE_CMD} -e 's/filesystem::path/bf::path/' \
+		${WRKSRC}/src/appleseed/renderer/modeling/project/projectfilewriter.cpp
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>
 

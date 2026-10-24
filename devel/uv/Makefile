@@ -1,0 +1,61 @@
+PORTNAME=	uv
+DISTVERSION=	0.12.19
+PORTREVISION=	1
+CATEGORIES=	devel
+
+MAINTAINER=	yuri@FreeBSD.org
+COMMENT=	Extremely fast Python package installer and resolver, written in Rust
+WWW=		https://astral.sh/ \
+		https://docs.astral.sh/uv/ \
+		https://github.com/astral-sh/uv
+
+LICENSE=	APACHE20 MIT
+LICENSE_COMB=	dual
+LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
+LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
+
+LIB_DEPENDS=	libzstd.so:archivers/zstd
+
+USES=		cargo gmake localbase perl5 pkgconfig
+USE_PERL5=	build
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	astral-sh
+
+OPENSSLINC=	/usr/include
+OPENSSLLIB=	/usr/lib
+
+RUSTFLAGS+=	-C link-args=-Wl,-rpath=${LOCALBASE}/lib
+CARGO_INSTALL=	no
+
+PROGS=		uv \
+		uvx \
+		uv-build \
+		uv-globfilter
+
+PLIST_FILES=	${PROGS:S/^/bin\//}
+
+PORTSCOUT=	limit:.*\..*$$ # prevent tags like perma-39
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH:Marmv?}
+LTO_UNSAFE=	yes
+CARGO_ENV+=	CARGO_PROFILE_RELEASE_LTO=false
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/etc/uv|${PREFIX}/etc/uv|g' \
+		-e 's|/etc/xdg|${PREFIX}/etc/xdg|g' \
+		${WRKSRC}/crates/uv-dirs/src/lib.rs \
+		${WRKSRC}/crates/uv-settings/src/settings.rs
+
+do-install:
+# workaround for error: found a virtual manifest at `xx` instead of a package manifest
+.for p in ${PROGS}
+	${INSTALL_PROGRAM} \
+		${WRKDIR}/target/release/${p} \
+		${STAGEDIR}${PREFIX}/bin
+.endfor
+
+.include <bsd.port.post.mk>

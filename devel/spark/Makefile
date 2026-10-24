@@ -1,11 +1,12 @@
 PORTNAME=	spark
-PORTVERSION=	3.3.4
+DISTVERSION=	3.3.4
+PORTREVISION=	4
 CATEGORIES=	devel java
-MASTER_SITES=	https://archive.apache.org/dist/${PORTNAME}/${PORTNAME}-${PORTVERSION}/ \
+MASTER_SITES=	https://archive.apache.org/dist/${PORTNAME}/${PORTNAME}-${DISTVERSION}/ \
 		LOCAL/vvd:deps
 PKGNAMEPREFIX=	apache-
-DISTFILES=	${PORTNAME}-${PORTVERSION}.tgz \
-		${PORTNAME}-${PORTVERSION}-deps.tgz:deps
+DISTFILES=	${PORTNAME}-${DISTVERSION}.tgz \
+		${PORTNAME}-${DISTVERSION}-deps.tgz:deps
 
 MAINTAINER=	freebsd@sysctl.cz
 COMMENT=	Fast big data processing engine
@@ -25,7 +26,7 @@ RUN_DEPENDS=	bash:shells/bash
 
 USES=		cpe java python shebangfix
 CPE_VENDOR=	apache
-JAVA_VERSION=	8 11 17
+JAVA_VERSION=	8 11
 
 USE_RC_SUBR=	spark_master spark_worker
 SHEBANG_FILES=	bin/sparkR
@@ -38,7 +39,7 @@ SUB_LIST=	SPARK_GROUP=spark \
 USERS=		spark
 GROUPS=		spark
 
-PLIST_SUB=	VER=${PORTVERSION}
+PLIST_SUB=	VER=${DISTVERSION}
 
 .include <bsd.port.pre.mk>
 
@@ -60,7 +61,7 @@ JAVA_ARCH=	${ARCH}
 
 # Update spark-*-dist.tgz if the hadoop version is changed!
 HADOOP_VERSION=	3.3.4
-# Comment out next line for download m2 and update ${PORTNAME}-${PORTVERSION}-deps.tgz
+# Comment out next line for download m2 and update ${PORTNAME}-${DISTVERSION}-deps.tgz
 OFFLINE=	-o
 
 do-build:
@@ -82,7 +83,7 @@ post-build:
 
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}/lib ${STAGEDIR}${DATADIR}/examples/jars ${STAGEDIR}${DATADIR}/bin ${STAGEDIR}${DATADIR}/sbin ${STAGEDIR}${DATADIR}/conf
-	${ECHO_CMD} "Spark ${PORTVERSION} built for Hadoop ${HADOOP_VERSION}" > ${STAGEDIR}${DATADIR}/RELEASE
+	${ECHO_CMD} "Spark ${DISTVERSION} built for Hadoop ${HADOOP_VERSION}" > ${STAGEDIR}${DATADIR}/RELEASE
 	(cd  ${WRKSRC}/assembly/target/scala* && ${COPYTREE_SHARE} jars  ${STAGEDIR}${DATADIR})
 	${INSTALL_DATA} ${WRKSRC}/examples/target/spark-examples*.jar ${STAGEDIR}${DATADIR}/examples/jars
 	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} src ${STAGEDIR}${DATADIR}/examples

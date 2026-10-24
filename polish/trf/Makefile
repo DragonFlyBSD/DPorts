@@ -17,4 +17,8 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(FreeBSD)\)@DragonFly|\1@g'	\
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

@@ -17,4 +17,5 @@ USES=		cmake
 
 USE_LDCONFIG=	yes
 
+USE_CXXSTD= c++98
 .include <bsd.port.mk>

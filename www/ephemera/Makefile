@@ -17,4 +17,8 @@ USES=		sqlite
 MAKE_ARGS=	MANDIR="${STAGEDIR}${PREFIX}/share/man/man1/"
 DATADIR=	${PREFIX}/share/ephemera
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/malloc_np.h/d'	\
+		${WRKSRC}/data.c
+
 .include <bsd.port.mk>

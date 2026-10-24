@@ -1,5 +1,5 @@
 PORTNAME=	dimod
-DISTVERSION=	0.12.20
+DISTVERSION=	0.12.22
 CATEGORIES=	science python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -10,14 +10,13 @@ WWW=		https://github.com/dwavesystems/dimod
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYNUMPY} \
-		${PYTHON_PKGNAMEPREFIX}cython3>0:lang/cython3@${PY_FLAVOR}
-RUN_DEPENDS=	${PYNUMPY}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}parameterized>0:devel/py-parameterized@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mypy>0:devel/py-mypy@${PY_FLAVOR}
 
 USES=		compiler:c++11-lang python
-USE_PYTHON=	distutils autoplist unittest
+USE_PYTHON=	autoplist cython distutils unittest
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	dwavesystems
@@ -26,8 +25,8 @@ TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 TEST_WRKSRC=	${WRKSRC}/tests
 
 post-install:
-	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/${PORTNAME} -name "*${PYTHON_EXT_SUFFIX}.so" | ${XARGS} ${STRIP_CMD}
+	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR}/${PORTNAME} -name "*${PYTHON_TAG}.so" | ${XARGS} ${STRIP_CMD}
 
-# tests as of 0.12.20: Ran 2913 tests in 34.742s
+# tests as of 0.12.21: Ran 2914 tests in 35.706s
 
 .include <bsd.port.mk>

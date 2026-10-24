@@ -24,6 +24,7 @@ MAKE_ENV+=		MAKESYSPATH=/usr/src/share/mk \
 
 WRKSRC_SUBDIR=		bsdlabel
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == "x86_64" || ${ARCH} == "i386"

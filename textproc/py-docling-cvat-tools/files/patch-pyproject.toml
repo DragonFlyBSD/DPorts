@@ -1,0 +1,12 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 20:28:23 UTC
++++ pyproject.toml
+@@ -2,7 +2,7 @@ description = "CVAT annotation tools for Docling docum
+ name = "docling-cvat-tools"
+ version = "0.1.0" # DO NOT EDIT, updated automatically
+ description = "CVAT annotation tools for Docling document processing and evaluation"
+-license = "MIT"
++license = {text = "MIT"}
+ keywords = ["docling", "cvat", "annotation", "evaluation"]
+ readme = "README.md"
+ authors = [

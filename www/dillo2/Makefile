@@ -109,4 +109,5 @@ post-install-HYPHENATION-on:
 	${STAGEDIR}${PREFIX}/libexec/dillo/hyphenation/${_l:C/-.*\$//}.pat
 .endfor
 
+LDFLAGS:= ${LDFLAGS:N-lthr}
 .include <bsd.port.post.mk>

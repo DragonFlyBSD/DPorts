@@ -16,7 +16,12 @@ BUILD_DEPENDS=	gmake:devel/gmake
 USES=		perl5
 USE_PERL5=	modbuild
 
+MAKE_JOBS_UNSAFE= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Compress/Zstd/Zstd.so
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@CCVER@zstd&@g' \
+		${WRKSRC}/ext/zstd/lib/Makefile
 
 .include <bsd.port.mk>

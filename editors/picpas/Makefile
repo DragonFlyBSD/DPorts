@@ -1,6 +1,6 @@
 PORTNAME=	picpas
 PORTVERSION=	0.9.0
-PORTREVISION=	17
+PORTREVISION=	22
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
@@ -47,5 +47,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/PicPas-${OPSYS:tl} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	@${MKDIR} ${STAGEDIR}${DATADIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} "devices10 devices16 devices17 syntax samples temp themes units" ${STAGEDIR}${DATADIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+		${WRKSRC}/Source/Globales.pas
 
 .include <bsd.port.mk>

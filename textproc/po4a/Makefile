@@ -1,7 +1,6 @@
 PORTNAME=	po4a
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.68
-PORTREVISION=	1
+DISTVERSION=	0.74
 CATEGORIES=	textproc perl5
 
 MAINTAINER=	dbaio@FreeBSD.org
@@ -34,4 +33,5 @@ GH_ACCOUNT=	mquinson
 
 NO_ARCH=	yes
 
+MAKE_ENV= LC_ALL=en_US.UTF-8
 .include <bsd.port.mk>

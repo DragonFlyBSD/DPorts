@@ -1,6 +1,6 @@
---- inputmethod/ibus/im_ibus.c.orig	2023-04-01 13:54:40 UTC
+--- inputmethod/ibus/im_ibus.c.orig	2026-07-05 16:18:25 UTC
 +++ inputmethod/ibus/im_ibus.c
-@@ -1024,7 +1024,7 @@ im_info_t *im_ibus_get_info(char *locale, char *encodi
+@@ -1059,7 +1059,7 @@ im_info_t *im_ibus_get_info(char *locale, char *encodi
    }
  
    result->id = strdup("ibus");

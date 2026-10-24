@@ -1,9 +1,7 @@
-TIMESTAMP = 1577315225
-SHA256 (apitrace-apitrace-9.0_GH0.tar.gz) = 0eec81ba7d3799622336319785465a2982a0621898842517a07894d7e2aa18eb
-SIZE (apitrace-apitrace-9.0_GH0.tar.gz) = 3623693
-SHA256 (cd3486343001d6a47.patch) = 2cb56f451791f2155aa5f5f12aa19eb92cb44dd00ca51ca9a5f0d5645ca6eb77
-SIZE (cd3486343001d6a47.patch) = 1840
-SHA256 (b0f5a220c41af013d.patch) = e2f46c862d97ff45b57fed043342b8875b310c5d6bb6d7d7f7122bb2f1ac5bb0
-SIZE (b0f5a220c41af013d.patch) = 2866
-SHA256 (2d31d49eac9bcc010.patch) = 315733330ab80a19b5565a439bdac8c62a80605302db03721e05c93e6ce9db52
-SIZE (2d31d49eac9bcc010.patch) = 633
+TIMESTAMP = 1774968214
+SHA256 (apitrace-apitrace-14.0_GH0.tar.gz) = 53469052b28ca56dc0d28153d218dee6c2c128c53b2aa32d6e7f906f7a5c6c7a
+SIZE (apitrace-apitrace-14.0_GH0.tar.gz) = 2281429
+SHA256 (microsoft-DirectXMath-apr2025_GH0.tar.gz) = 8ac7f060d7fcc971d77c5a9f3ff98548ecf119c144a7c2dd9d21f4b66ba94cd4
+SIZE (microsoft-DirectXMath-apr2025_GH0.tar.gz) = 236461
+SHA256 (facebook-zstd-v1.5.7_GH0.tar.gz) = 37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3
+SIZE (facebook-zstd-v1.5.7_GH0.tar.gz) = 2451884

@@ -48,4 +48,6 @@ DOCS_CONFIGURE_WITH=	docs
 FFI_LIB_DEPENDS=	libffi.so:devel/libffi
 SQLITE3_LIB_DEPENDS=	libsqlite3.so:databases/sqlite3
 
+CONFIGURE_ARGS+= --mandir=${MANPREFIX}/man
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

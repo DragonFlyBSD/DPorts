@@ -1,3 +1,0 @@
-
-USES+=	localbase:ldflags
-DFLY_UNMAINTAINED= yes

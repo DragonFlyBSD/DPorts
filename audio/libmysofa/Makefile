@@ -1,6 +1,6 @@
 PORTNAME=	libmysofa
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.3
+DISTVERSION=	1.3.5
 CATEGORIES=	audio
 
 MAINTAINER=	jhale@FreeBSD.org
@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 TEST_DEPENDS=	node:www/node
 
-USES=		cmake cpe pathfix
+USES=		cmake cpe
 CPE_VENDOR=	symonics
 USE_GITHUB=	yes
 GH_ACCOUNT=	hoene
@@ -38,6 +38,7 @@ TEST_EXTRA_PATCHES=	${PATCHDIR}/extrapatch-tests_compare.sh \
 # directory and the build results are expected to be in build/ relative
 # to ${WRKSRC}.  USES=cmake does not allow overwriting ${WRKDIR}/.build
 # as the build directory.
+CMAKE_ARGS= -DCODE_COVERAGE:BOOL=OFF
 post-extract-TEST-on:
 	@${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
 	    -C ${WRKDIR} --include ${PORTNAME}-${DISTVERSION}/tests \

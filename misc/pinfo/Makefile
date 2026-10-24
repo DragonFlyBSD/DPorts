@@ -35,6 +35,7 @@ OPTIONS_DEFAULT=		READLINE
 READLINE_USES=			readline
 READLINE_CONFIGURE_WITH=	readline
 
+CFLAGS= -Wno-error=format
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}

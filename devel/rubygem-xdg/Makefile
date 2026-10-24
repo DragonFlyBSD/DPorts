@@ -1,26 +1,24 @@
-# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
-# $FreeBSD$
-
 PORTNAME=	xdg
-PORTVERSION=	3.1.1
+PORTVERSION=	10.4.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	XDG Base Directory Standard Library for Ruby
+WWW=		https://alchemists.io/projects/xdg \
+		https://github.com/bkuhlmann/xdg
 
-LICENSE=	APACHE20
-LICENSE_FILE=	${WRKSRC}/LICENSE.md
+LICENSE=	HIPPOCRATIC
+LICENSE_NAME=	Hippocratic License 2.1.0
+LICENSE_FILE=	${WRKSRC}/LICENSE.adoc
+LICENSE_PERMS=	auto-accept dist-mirror pkg-mirror
 
-BROKEN_RUBY24=	yes
-BROKEN_RUBY25=	yes
+BROKEN_RUBY32=	yes
+BROKEN_RUBY33=	yes
+BROKEN_RUBY34=	yes
 
 USES=		gem
-USE_RUBY=	yes
 
 NO_ARCH=	yes
-
-# xdg 4.0.0+ requires ruby 2.7+
-PORTSCOUT=	limit:^3\.
 
 .include <bsd.port.mk>

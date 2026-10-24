@@ -26,6 +26,12 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_SUB=	SHLIB_VER=${PORTVERSION:R}
 
+# The bundled waf's waflib still imports the 'imp' module removed in
+# Python 3.12.  Provide a minimal shim on PYTHONPATH so waflib can be
+# imported on 3.12 while still working on earlier versions.
+CONFIGURE_ENV+=	PYTHONPATH=${FILESDIR}${PYTHONPATH:S/^/:/}
+MAKE_ENV+=		PYTHONPATH=${FILESDIR}${PYTHONPATH:S/^/:/}
+
 post-patch:
 	@${REINPLACE_CMD} -e " \
 		s|conf\.env\['LIB_DL'\] = \['dl'\]|conf.env['LIB_DL'] = []|; \

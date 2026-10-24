@@ -1,17 +1,22 @@
-PORTNAME=	rubyzip2
-PORTVERSION=	2.0.2
+PORTNAME=	rubyzip
+PORTVERSION=	2.4.1
 CATEGORIES=	archivers rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	2
 
-MAINTAINER=	hhyou@cs.nctu.edu.tw
-COMMENT=	Ruby compatible Zip library
-WWW=		https://github.com/postmodern/rubyzip2
+MAINTAINER=	sunpoet@FreeBSD.org
+COMMENT=	Ruby module for reading and writing zip files
+WWW=		https://github.com/rubyzip/rubyzip
 
-NO_ARCH=	yes
+LICENSE=	BSD2CLAUSE RUBY
+LICENSE_COMB=	dual
 
 USES=		cpe gem
 
+NO_ARCH=	yes
+
 CPE_VENDOR=	rubyzip_project
-CPE_PRODUCT=	rubyzip
+
+PORTSCOUT=	limit:^2\.
 
 .include <bsd.port.mk>

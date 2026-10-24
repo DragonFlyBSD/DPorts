@@ -1,6 +1,6 @@
 PORTNAME=	glade
 PORTVERSION=	3.40.0
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -21,8 +21,9 @@ BUILD_DEPENDS=	itstool:textproc/itstool \
 CONFLICTS=	glade3-3.*
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c11 desktop-file-utils gettext gnome \
+USES=		compiler:c11 cpe desktop-file-utils gettext gnome \
 		localbase:ldflags meson pathfix pkgconfig tar:xz
+CPE_VENDOR=	gnome
 USE_GNOME=	cairo gtk30 intlhack introspection:build
 
 DOCSDIR=	${PREFIX}/share/doc/gladeui-2
@@ -44,4 +45,8 @@ WEBKIT_MESON_ENABLED=	webkit2gtk
 WEBKIT_LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
 			libwebkit2gtk-4.0.so:www/webkit2-gtk@40
 
+CPE_VENDOR=		gnome
+
+LDFLAGS= -lm
+BINARY_ALIAS= python3=${PYTHON_CMD}
 .include <bsd.port.mk>

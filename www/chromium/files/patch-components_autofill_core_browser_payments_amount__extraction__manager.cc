@@ -1,38 +1,38 @@
---- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2025-05-28 14:55:43 UTC
+--- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2026-10-18 13:29:39 UTC
 +++ components/autofill/core/browser/payments/amount_extraction_manager.cc
-@@ -109,7 +109,7 @@ bool AmountExtractionManager::ShouldTriggerAmountExtra
+@@ -319,7 +319,7 @@ void AmountExtractionManager::OnCheckoutAmountReceived
+       .Run(parsed_extracted_amount,
+            /*timeout_reached=*/false);
+   if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+-                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)) {
++                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)) {
+     if (base::FeatureList::IsEnabled(
+             features::kAutofillEnableAmountExtractionTesting)) {
+       VLOG(3) << "The result of amount extraction on domain "
+@@ -389,7 +389,7 @@ void AmountExtractionManager::OnTimeoutReached(
    }
  
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
--                BUILDFLAG(IS_CHROMEOS)) {
-+                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) {
+-                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)) {
++                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)) {
      if (base::FeatureList::IsEnabled(
-             ::autofill::features::
-                 kAutofillEnableAmountExtractionDesktopLogging)) {
-@@ -123,7 +123,7 @@ bool AmountExtractionManager::ShouldTriggerAmountExtra
-   }
+             features::kAutofillEnableAmountExtractionTesting)) {
+       VLOG(3) << "The amount extraction on domain "
+@@ -414,7 +414,7 @@ void AmountExtractionManager::OnTimeoutReachedWithAi(
+   std::move(callback).Run(std::move(result));
  
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
--                BUILDFLAG(IS_CHROMEOS)) {
-+                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) {
-     return base::FeatureList::IsEnabled(
-         ::autofill::features::kAutofillEnableAmountExtractionDesktop);
-   } else {
-@@ -190,7 +190,7 @@ void AmountExtractionManager::OnCheckoutAmountReceived
-     bnpl_manager->OnAmountExtractionReturned(parsed_extracted_amount);
-   }
-   if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
--                BUILDFLAG(IS_CHROMEOS)) {
-+                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) {
+-                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)) {
++                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)) {
      if (base::FeatureList::IsEnabled(
-             ::autofill::features::
-                 kAutofillEnableAmountExtractionDesktopLogging)) {
-@@ -214,7 +214,7 @@ void AmountExtractionManager::OnTimeoutReached() {
-       autofill_metrics::AmountExtractionResult::kTimeout);
-   // TODO(crbug.com/378517983): Add BNPL flow action logic here.
+             features::kAutofillEnableAmountExtractionTesting)) {
+       VLOG(3) << "The amount extraction on domain "
+@@ -434,7 +434,7 @@ AmountExtractionManager::CheckEligibilityForFeaturesRe
+ 
+   // Check eligibility of BNPL feature.
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
--                BUILDFLAG(IS_CHROMEOS)) {
-+                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)) {
-     if (base::FeatureList::IsEnabled(
-             ::autofill::features::
-                 kAutofillEnableAmountExtractionDesktopLogging)) {
+-                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)) {
++                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)) {
+     if (IsEligibleForBnpl(autofill_manager_->client())) {
+       eligible_features.insert(EligibleFeature::kBnpl);
+     }

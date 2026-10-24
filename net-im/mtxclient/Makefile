@@ -1,7 +1,7 @@
 PORTNAME=		mtxclient
 DISTVERSIONPREFIX=	v
-DISTVERSION=		0.9.2
-PORTREVISION=	5
+DISTVERSION=		0.10.1
+PORTREVISION=	3
 CATEGORIES=		net-im
 
 MAINTAINER=	adridg@FreeBSD.org
@@ -13,9 +13,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	nlohmann-json>=3:devel/nlohmann-json
 LIB_DEPENDS=	\
+		libabsl_strings.so:devel/abseil \
 		libcoeurl.so:ftp/coeurl \
+		libfmt.so:devel/libfmt \
 		libolm.so:security/olm \
-		libsodium.so:security/libsodium \
 		libre2.so:devel/re2 \
 		libspdlog.so:devel/spdlog
 
@@ -28,4 +29,9 @@ GH_ACCOUNT=	Nheko-Reborn
 
 PLIST_SUB=	SOVER=${DISTVERSION}
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
+LDFLAGS= -lstdc++fs
+BROKEN_SSL= libressl
+BROKEN_SSL_REASON_libressl= port requires openssl/kdf.h
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

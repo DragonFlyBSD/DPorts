@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/third_party/cpuinfo/cpuinfo.gni.orig	2023-10-11 18:22:24 UTC
+--- src/3rdparty/chromium/third_party/cpuinfo/cpuinfo.gni.orig	2025-08-07 06:57:29 UTC
 +++ src/3rdparty/chromium/third_party/cpuinfo/cpuinfo.gni
 @@ -7,7 +7,7 @@ use_cpuinfo =
      current_cpu != "ppc64" && current_cpu != "ppc64le" &&

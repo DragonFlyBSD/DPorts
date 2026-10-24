@@ -1,45 +1,56 @@
 PORTNAME=	musikcube
-DISTVERSION=	0.96.7
+DISTVERSION=	3.0.5
 PORTREVISION=	2
 CATEGORIES=	multimedia audio
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Terminal-based music player, audio engine, metadata indexer, server
+WWW=		https://musikcube.com/ \
+		https://github.com/clangen/musikcube
 
-LICENSE=	GPLv2
+LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
-		libboost_system.so:devel/boost-libs \
+BUILD_DEPENDS=	asio130>0:net/asio130 # pending https://github.com/clangen/musikcube/issues/733
+LIB_DEPENDS=	libasound.so:audio/alsa-lib \
+		libavcodec.so:multimedia/ffmpeg \
+		libbasu.so:devel/basu \
 		libcurl.so:ftp/curl \
 		libev.so:devel/libev \
-		libfaad.so:audio/faad \
 		libFLAC.so:audio/flac \
+		libgme.so:audio/libgme \
 		libmicrohttpd.so:www/libmicrohttpd \
 		libmp3lame.so:audio/lame \
+		libmpg123.so:audio/mpg123 \
 		libogg.so:audio/libogg \
 		libopenmpt.so:audio/libopenmpt \
+		libpipewire-0.3.so:multimedia/pipewire \
+		libportaudio.so:audio/portaudio \
+		libpulse.so:audio/pulseaudio \
 		libsndio.so:audio/sndio \
 		libtag.so:audio/taglib \
 		libvorbis.so:audio/libvorbis
 
-USES=		cmake:noninja compiler:c++14-lang pkgconfig ssl
+USES=		cmake compiler:c++17-lang ncurses pkgconfig ssl
+USES+=		localbase # workaround for https://github.com/clangen/musikcube/issues/600
 USE_LDCONFIG=	yes
+
+CMAKE_ON=	USE_BASU
+CMAKE_ARGS+=	-DNCURSES_DISABLE_LIB_SUFFIXES=false
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	clangen
 
-.include <bsd.port.options.mk>
+post-install:
+	@cd ${STAGEDIR}${PREFIX} && ${STRIP_CMD} \
+		share/musikcube/libmusikcore.so \
+		share/musikcube/musikcube \
+		share/musikcube/musikcubed \
+		share/musikcube/plugins/*.so
 
-.if ${OPSYS} == "FreeBSD" && ${OSVERSION} >= 1300079
-USES+=		ncurses
-CMAKE_ARGS=	-DNCURSES_DISABLE_LIB_SUFFIXES=false
-CMAKE_ON=	FREEBSD_USE_BASE_NCURSES
-.else
-USES+=		ncurses:port
-CFLAGS+=	-I${LOCALBASE}/include/ncurses
-CMAKE_ARGS=	-DNCURSES_DISABLE_LIB_SUFFIXES=true
-CMAKE_OFF=	FREEBSD_USE_BASE_NCURSES
-.endif
+dfly-patch:
+	${REINPLACE_CMD} -e '/MATCHES/s@\(FreeBSD\)"@\1|DragonFly"@g'	\
+		${WRKSRC}/src/musikcube/CMakeLists.txt	\
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

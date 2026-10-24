@@ -1,6 +1,8 @@
 PORTNAME=	zerotier
-DISTVERSION=	1.14.0
+DISTVERSION=	1.16.2
 CATEGORIES=	net
+
+PATCH_SITES+=	https://github.com/zerotier/zerotierone/commit/
 
 MAINTAINER=	dch@FreeBSD.org
 COMMENT=	Network virtualization everywhere
@@ -30,6 +32,7 @@ DBG_ALL_TARGET=	debug
 
 PLIST_FILES=	bin/zerotier-cli bin/zerotier-idtool sbin/zerotier-one
 
+SUB_LIST+= ZEROTIER_SYSLOG="-s debug -T zerotier"
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == "FreeBSD"
@@ -48,4 +51,5 @@ do-install:
 	${RLN} ${STAGEDIR}${PREFIX}/sbin/zerotier-one ${STAGEDIR}${PREFIX}/bin/${l}
 .endfor
 
+BUILD_DEPENDS:= ${BUILD_DEPENDS:N*binutils}
 .include <bsd.port.post.mk>

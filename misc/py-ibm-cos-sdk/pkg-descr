@@ -1,0 +1,4 @@
+IBM COS SDK is the IBM Cloud Object Storage SDK for Python. It provides
+a high-level interface for interacting with IBM Cloud Object Storage
+services, supporting object upload, download, management, and bucket
+operations.

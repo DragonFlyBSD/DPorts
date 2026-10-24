@@ -33,4 +33,7 @@ bgp.so
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/sendip/${slib}
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/Makefile
+
 .include <bsd.port.post.mk>

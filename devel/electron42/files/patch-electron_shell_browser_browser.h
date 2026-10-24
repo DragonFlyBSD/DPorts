@@ -1,0 +1,15 @@
+--- electron/shell/browser/browser.h.orig	2026-08-24 01:09:19 UTC
++++ electron/shell/browser/browser.h
+@@ -296,10 +296,10 @@ class Browser : private WindowListObserver {
+   PCWSTR GetAppUserModelID();
+ #endif  // BUILDFLAG(IS_WIN)
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // Whether Unity launcher is running.
+   bool IsUnityRunning();
+-#endif  // BUILDFLAG(IS_LINUX)
++#endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ 
+   // Tell the application to open a file.
+   bool OpenFile(const std::string& file_path);

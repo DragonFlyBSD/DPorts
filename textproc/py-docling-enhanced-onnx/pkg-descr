@@ -1,0 +1,4 @@
+Docling Enhanced ONNX provides enhanced Docling AI models with ONNX
+auto-detection and air-gapped support. It enables running Docling models
+in ONNX Runtime format, suitable for offline and air-gapped environments
+where network access is restricted.

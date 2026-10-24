@@ -1,6 +1,6 @@
 PORTNAME=	colord-gtk
 PORTVERSION=	0.3.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
 
@@ -23,4 +23,5 @@ USE_LDCONFIG=	yes
 MESON_ARGS=	-Ddocs=false \
 		-Dtests=false
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NMANPAGES}
 .include <bsd.port.mk>

@@ -23,6 +23,7 @@ GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
 CONFLICTS_INSTALL=	ja-mh mmh nmh nmh-devel # man/man1/show.1.gz
 
+LDFLAGS= -lposix1e
 post-patch:
 	@${REINPLACE_CMD} 's/-lncursesw/${NCURSESLIBS}/g' ${WRKSRC}/Makefile.am
 

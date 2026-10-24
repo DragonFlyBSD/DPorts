@@ -1,0 +1,17 @@
+--- MODULE.bazel.orig
++++ MODULE.bazel
+@@ -64,6 +64,14 @@
+     module_name = "rules_python",
+     patch_strip = 1,
+     patches = ["//toolchain_local:rules_python_freebsd.patch"],
++)
++
++# DragonFly: Java reports os.name "dragonflybsd", which rules_go takes as
++# GOOS; map it to "dragonfly" so the host Go toolchain label exists.
++single_version_override(
++    module_name = "rules_go",
++    patch_strip = 1,
++    patches = ["//toolchain_local:rules_go_dragonfly.patch"],
+ )
+ 
+ # The following Bazel modules are not direct dependencies for building Bazel,

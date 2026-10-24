@@ -19,4 +19,5 @@ USE_LDCONFIG=	yes
 USES=		gmake libtool ncurses
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+CFLAGS= -Wno-stringop-truncation -Wno-maybe-uninitialized
 .include <bsd.port.mk>

@@ -26,4 +26,8 @@ do-test:
 	    ${MAKE} $$alltests && ${SETENV} PERL5LIB=. ./test-suite.pl $$alltests \
 	)
 
+dfly-configure:
+	${RM} -v ${WRKSRC}/peak/stdint.h
+	${CP} /usr/include/stdint.h ${WRKSRC}/peak/stdint.h
+
 .include <bsd.port.mk>

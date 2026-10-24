@@ -1,6 +1,6 @@
 PORTNAME=	netradiant
 PORTVERSION=	20150621
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	games cad
 MASTER_SITES=	http://ingar.intranifty.net/gtkradiant/files/ LOCAL/danfe \
 		http://ingar.intranifty.net/gtkradiant/files/gamepacks/:gp
@@ -45,6 +45,7 @@ GAMES=	DarkPlaces Doom3 ET Neverball Nexuiz OpenArena Osirion Quake1 \
 	Unvanquished Warsow Xonotic
 GAMEPACK_DISTFILES=	${GAMES:S/$/Pack.zip:gp/}
 
+CFLAGS= -Wno-maybe-uninitialized -Wno-int-to-pointer-cast -Wno-pointer-sign -Wno-implicit-fallthrough -Wno-cast-qual -Wno-sign-compare -Wno-format-overflow
 post-patch:
 	@${REINPLACE_CMD} -e 's,register ,,' \
 		${WRKSRC}/libs/container/hashfunc.h
@@ -71,5 +72,16 @@ do-install-GAMEPACK-on:
 	${CP} -a ${WRKDIR}/${g}Pack/games ${WRKDIR}/${g}Pack/*.game \
 		${STAGEDIR}${DATADIR}
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(Linux FreeBSD\)@\1 DragonFly@g'	\
+		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e 's@\(defined( __FreeBSD__ )\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/radiant/url.cpp
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/contrib/bobtoolz/misc.cpp
+	${REINPLACE_CMD} -e 's@\(defined ( __FreeBSD__ )\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/radiant/mainframe.cpp				\
+		${WRKSRC}/radiant/watchbsp.cpp
 
 .include <bsd.port.mk>

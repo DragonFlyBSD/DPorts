@@ -1,6 +1,6 @@
 PORTNAME=	libtranslate
 PORTVERSION=	0.99
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	textproc
 MASTER_SITES=	SAVANNAH
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} # May append to this
@@ -28,6 +28,7 @@ OPTIONS_DEFAULT=	GENERIC TALKFILTERS
 GENERIC_DESC=	generic module
 TALKFILTERS_DESC=	talkfilters module
 
+PLIST_FILES= lib/libtranslate/modules/generic.a lib/libtranslate/modules/talkfilters.a
 post-patch::
 	@${REINPLACE_CMD} -e 's|libsoup-2.2|libsoup-2.4|g' ${WRKSRC}/configure
 

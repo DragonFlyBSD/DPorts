@@ -1,2 +1,0 @@
-
-CFLAGS+=	-Wno-unused-variable -Wno-int-to-pointer-cast -Wno-pointer-sign

@@ -1,6 +1,6 @@
 PORTNAME=	pikopixel
 DISTVERSION=	1.0-b10
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	graphics gnustep
 MASTER_SITES=	http://twilightedge.com/downloads/
@@ -19,5 +19,9 @@ USE_GNUSTEP=	base build gui
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${GNUSTEP_SYSTEM_ROOT}/Applications/PikoPixel.app/PikoPixel
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/PikoPixel_Prefix.pch/d' \
+		${WRKSRC}/GNUmakefile
 
 .include <bsd.port.mk>

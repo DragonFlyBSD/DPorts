@@ -1,13 +1,19 @@
 PORTNAME=	tblite
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.1
+DISTVERSION=	0.7.0
 CATEGORIES=	science # chemistry
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Light-weight tight-binding framework
+WWW=		https://tblite.readthedocs.io/ \
+		https://github.com/tblite/tblite/
 
-LICENSE=	GPLv3
-LICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE=	LGPL3+
+LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
+
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
 BUILD_DEPENDS=	mstore>0:science/mstore # unclear if this is really needed
 LIB_DEPENDS=	libdftd4.so:science/dftd4 \
@@ -22,6 +28,8 @@ USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 
 CMAKE_ON=	BUILD_SHARED_LIBS
+CMAKE_OFF=	WITH_TESTS
+CMAKE_TESTING_ON=	WITH_TESTS
 
 post-patch: # see https://github.com/toml-f/toml-f/issues/51
 	@${REINPLACE_CMD} -e 's|$${CMAKE_Fortran_COMPILER_ID}-$${CMAKE_Fortran_COMPILER_VERSION}||' ${WRKSRC}/config/CMakeLists.txt

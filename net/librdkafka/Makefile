@@ -10,9 +10,6 @@ WWW=		https://github.com/edenhill/librdkafka/
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_mips=		fails to build: undefined reference to __sync_add_and_fetch_4
-BROKEN_mips64=		fails to build: undefined reference to __sync_add_and_fetch_4
-
 BUILD_DEPENDS=	bash:shells/bash \
 	${LOCALBASE}/include/rapidjson/schema.h:devel/rapidjson
 LIB_DEPENDS=	libcurl.so:ftp/curl \
@@ -33,4 +30,10 @@ LDFLAGS+=      -Wl,--undefined-version
 
 USE_LDCONFIG=	yes
 
+CFLAGS:= ${CFLAGS} -D__FreeBSD__=9
+LIB_DEPENDS+= libnghttp2.so:www/libnghttp2
+LIB_DEPENDS+= libssh2.so:security/libssh2
+LIB_DEPENDS+= libpsl.so:dns/libpsl
+LIB_DEPENDS+= libidn2.so:dns/libidn2
+LIB_DEPENDS+= libunistring.so:devel/libunistring
 .include <bsd.port.mk>

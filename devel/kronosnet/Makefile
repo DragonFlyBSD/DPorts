@@ -1,6 +1,6 @@
 PORTNAME=	kronosnet
 PORTVERSION=	1.26
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://kronosnet.org/releases/
 
@@ -17,7 +17,8 @@ LIB_DEPENDS=	liblzo2.so:archivers/lzo2 \
 		libqb.so:devel/libqb \
 		libzstd.so:archivers/zstd
 
-USES=		autoreconf gmake localbase libtool pkgconfig ssl
+USES=		autoreconf gmake gnome localbase libtool pkgconfig ssl
+USE_GNOME=	libxml2
 USE_BINUTILS=	yes
 USE_GCC=	yes
 USE_LDCONFIG=	yes
@@ -35,6 +36,7 @@ OPTIONS_SUB=	yes
 MANPAGES_BUILD_DEPENDS=		doxygen:devel/doxygen
 MANPAGES_CONFIGURE_ENABLE=	man
 
+CONFIGURE_ARGS= --disable-libknet-sctp
 .include <bsd.port.options.mk>
 
 .if ${SSL_DEFAULT} == base

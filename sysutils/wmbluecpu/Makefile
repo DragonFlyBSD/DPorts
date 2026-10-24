@@ -18,4 +18,9 @@ do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	@${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@#if __FreeBSD_version > 500100@#if defined(__FreeBSD__) || defined(__DragonFly__)@g' \
+			 -e 's@<osreldate.h>@<sys/sysctl.h>@g' \
+		${WRKSRC}/cpu_freebsd.c
+
 .include <bsd.port.mk>

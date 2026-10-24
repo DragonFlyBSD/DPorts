@@ -1,5 +1,6 @@
 PORTNAME=	lux
-PORTVERSION=	1.1.8
+DISTVERSION=	1.2.2
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://bitbucket.org/kfj/pv/get/
 PKGNAMESUFFIX=	-pv	# distinguish from www/lux
@@ -15,20 +16,23 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BROKEN_armv6=	address space exhaustion in compiler
 
 LIB_DEPENDS=	libhwy.so:devel/highway \
-		libsfml-window.so:devel/sfml \
+		libsfml-window.so:multimedia/sfml2 \
 		libexiv2.so:graphics/exiv2 \
-		libvigraimpex.so:graphics/vigra
-RUN_DEPENDS=	${GUIFONT}:x11-fonts/noto-basic
+		libvigraimpex.so:graphics/vigra \
+		libOpenImageIO.so:graphics/openimageio
+RUN_DEPENDS=	${GUIFONT}:x11-fonts/noto-sans
 GUIFONT=	${LOCALBASE}/share/fonts/noto/NotoSans-Regular.ttf
 
-USES=		cmake desktop-file-utils dos2unix pkgconfig tar:bz2
+USES=		cmake desktop-file-utils dos2unix localbase:ldflags pkgconfig tar:bz2 gl
+USE_GL=		gl
+
 DOS2UNIX_FILES=	tinyfiledialogs.c
 CMAKE_ON=	USE_HWY_LIBRARY
 CXXFLAGS+=	-Wno-deprecated-declarations
 CONFLICTS=	lux
 
 WRKSRC=		${WRKDIR}/kfj-pv-${COMMIT}
-COMMIT=		15b1fd742285
+COMMIT=		02d14627bc75
 OPTIONS_DEFINE_x86_64=	SSSE3 SSE42 AVX AVX2 AVX512
 OPTIONS_DEFINE_i386=	SSE2 SSSE3 SSE42 AVX AVX2 AVX512
 OPTIONS_DEFAULT_x86_64=	SSSE3 SSE42 AVX AVX2 AVX512
@@ -41,7 +45,7 @@ AVX_DESC=	support AVX flavor
 AVX2_DESC=	support AVX2 flavor
 AVX512_DESC=	support AVX-512F flavor
 
-SSE2_CXXFLAGS_OFF=	${${OSVERSION}>=1300000:?-march=i686:}
+SSE2_CXXFLAGS_OFF=	-march=i686
 SSE2_CXXFLAGS=		-march=pentium4
 SSSE3_CMAKE_BOOL=	FLV_SSSE3
 SSE42_CMAKE_BOOL=	FLV_SSE42
@@ -49,6 +53,7 @@ AVX_CMAKE_BOOL=		FLV_AVX
 AVX2_CMAKE_BOOL=	FLV_AVX2
 AVX512_CMAKE_BOOL=	FLV_AVX512f
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 # cannot use CMAKE_ON after bsd.port.pre.mk

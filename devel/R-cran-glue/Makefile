@@ -1,11 +1,11 @@
 PORTNAME=	glue
-PORTVERSION=	1.8.0
+PORTVERSION=	1.8.1
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Interpreted String Literals
-WWW=		https://cran.r-project.org/web/packages/glue/
+WWW=		https://cran.r-project.org/package=glue
 
 LICENSE=	MIT
 

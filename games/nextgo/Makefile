@@ -1,6 +1,6 @@
 PORTNAME=	nextgo
 PORTVERSION=	3.0
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	games gnustep
 MASTER_SITES=	SAVANNAH/gap
 DISTNAME=	NeXTGo-${PORTVERSION}
@@ -15,6 +15,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		gnustep
 USE_GNUSTEP=	back build
 
+ADDITIONAL_CFLAGS= -Wno-error=implicit-int -Wno-error=implicit-function-declaration -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types
+ADDITIONAL_OBJCFLAGS= -Wno-error=implicit-int -Wno-error=implicit-function-declaration -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types
 post-patch:
 	${REINPLACE_CMD} -e 's|^GNUSTEP_INSTALLATION_DIR|#GNUSTEP_INSTALLATION_DIR|' \
 		${WRKSRC}/GNUmakefile

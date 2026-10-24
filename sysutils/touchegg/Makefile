@@ -1,5 +1,5 @@
 PORTNAME=	touchegg
-DISTVERSION=	2.0.17
+DISTVERSION=	2.0.18
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz \
 		libudev.so:devel/libudev-devd
 
 USES=		cmake:testing compiler:c++17-lang desktop-file-utils gnome localbase:ldflags pkgconfig xorg
-USE_GNOME=	cairo gdkpixbuf2 gtk30
+USE_GNOME=	cairo gdkpixbuf gtk30
 USE_XORG=	x11 xi xrandr xtst
 
 USE_GITHUB=	yes
@@ -29,6 +29,7 @@ CMAKE_ARGS=	-DCMAKE_INSTALL_FULL_DATAROOTDIR=${LOCALBASE}/etc \
 
 LDFLAGS+=	-linotify
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${MV} \
 		${STAGEDIR}${ETCDIR}/touchegg.conf \

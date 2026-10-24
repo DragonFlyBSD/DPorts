@@ -1,0 +1,5 @@
+TIMESTAMP = 1787734376
+SHA256 (go/sysutils_docker-buildx/docker-buildx-v0.36.1/v0.36.1.mod) = c8aa1c61e3554a526e074cab129a8e667d1028fde569db200433a1bdce2d16c1
+SIZE (go/sysutils_docker-buildx/docker-buildx-v0.36.1/v0.36.1.mod) = 12346
+SHA256 (go/sysutils_docker-buildx/docker-buildx-v0.36.1/v0.36.1.zip) = ae437c637f9a59d86eed160b861ba53cc8566b1646f0db313cc6afe5558f793c
+SIZE (go/sysutils_docker-buildx/docker-buildx-v0.36.1/v0.36.1.zip) = 891386

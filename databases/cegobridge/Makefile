@@ -1,5 +1,5 @@
 PORTNAME=	cegobridge
-PORTVERSION=	1.6.4
+PORTVERSION=	1.10.0
 CATEGORIES=	databases
 MASTER_SITES=	http://www.lemke-it.com/
 
@@ -20,4 +20,5 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 PLIST_FILES=	bin/cegobridge
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

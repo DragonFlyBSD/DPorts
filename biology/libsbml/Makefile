@@ -1,7 +1,6 @@
 PORTNAME=	libsbml
-PORTVERSION=	5.20.4
+PORTVERSION=	5.21.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	biology devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -13,7 +12,7 @@ WWW=		https://sbml.org/software/libsbml/ \
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
 
-USES=		cmake:testing iconv:build pathfix
+USES=		cmake:testing cpe iconv:build
 
 CMAKE_OFF=	EXIT_ON_ERROR \
 		LIBSBML_SKIP_SHARED_LIBRARY \
@@ -40,13 +39,15 @@ CMAKE_ON=	LIBSBML_SHARED_VERSION \
 		WITH_THREADSAFE_PARSER \
 		WITH_ZLIB
 CMAKE_TESTING_ON=	WITH_CHECK
-USE_CXXSTD=	c++98
+USE_CXXSTD= c++11
 USE_LDCONFIG=	yes
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	sbmlteam
+
+CPE_VENDOR=	libsbml_project
 
 OPTIONS_DEFINE=	EXAMPLES PYTHON RUBY
 OPTIONS_SINGLE=	XML
@@ -74,7 +75,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' ${WRKSRC}/CMakeLists.txt
 
 post-install-EXAMPLES-on:
-	${MV} ${STAGEDIR}${DATADIR}/examples ${STAGEDIR}${EXAMPLESDIR}
-	${RMDIR} ${STAGEDIR}${DATADIR}
+	${MV} ${STAGEDIR}${DATADIR}examples ${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>

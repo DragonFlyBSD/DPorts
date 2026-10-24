@@ -34,7 +34,6 @@ GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USE_LDCONFIG=	yes
 
-# we can't use pathfix with USES=autoreconf
 MAKE_ARGS=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"
 
 INSTALL_TARGET=	install-strip
@@ -75,4 +74,6 @@ SASL_CONFIGURE_ON=	--with-sasl=yes
 SASL_CONFIGURE_OFF=	--with-sasl=no
 SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 
+LDFLAGS= -lm
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
 .include <bsd.port.mk>

@@ -1,12 +1,14 @@
 PORTNAME=	mox
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.13
+DISTVERSION=	0.0.17
+PORTREVISION=	2
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-mail-server
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Modern, secure, all-in-one email server
-WWW=		https://www.xmox.nl/
+WWW=		https://www.xmox.nl \
+		https://github.com/mjl-/mox
 
 LICENSE=	MIT MPL20
 LICENSE_COMB=	dual

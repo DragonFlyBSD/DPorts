@@ -1,6 +1,6 @@
 PORTNAME=	bolt-lmm
-DISTVERSION=	2.3.6
-PORTREVISION=	15
+DISTVERSION=	2.5
+PORTREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	https://data.broadinstitute.org/alkesgroup/BOLT-LMM/downloads/
 DISTNAME=	BOLT-LMM_v${PORTVERSION}
@@ -14,7 +14,8 @@ LICENSE_FILE=	${WRKSRC}/license.txt
 
 LIB_DEPENDS=	libnlopt.so:math/nlopt \
 		libopenblas.so:math/openblas \
-		libboost_program_options.so:devel/boost-libs
+		libboost_program_options.so:devel/boost-libs \
+		libzstd.so:archivers/zstd
 
 USES=		gmake
 
@@ -48,5 +49,9 @@ do-install:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/bolt ${STAGEDIR}${PREFIX}/bin
 	(cd ${WRKSRC}/example && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} tables ${STAGEDIR}${DATADIR})
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ -lgfortran@@g' \
+		${WRKSRC}/src/Makefile
 
 .include <bsd.port.mk>

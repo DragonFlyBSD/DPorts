@@ -1,5 +1,5 @@
 PORTNAME=	libgme
-DISTVERSION=	0.6.4
+DISTVERSION=	0.6.5
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/${PORTNAME}/game-music-emu/releases/download/${DISTVERSION}/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-src

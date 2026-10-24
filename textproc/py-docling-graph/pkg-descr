@@ -1,0 +1,4 @@
+Docling Graph converts documents into knowledge graphs using the Docling
+document understanding platform. It extracts entities, relationships, and
+structured information from documents and represents them as graph data
+structures suitable for knowledge management and reasoning applications.

@@ -1,8 +1,8 @@
 PORTNAME=	doh-proxy
-DISTVERSION=	0.9.8
-PORTREVISION=	12
+DISTVERSION=	0.9.16
+PORTREVISION=	3
 CATEGORIES=	dns
-MASTER_SITES=	CRATESIO
+MASTER_SITES=	CRATESIO/${PORTNAME}/${DISTNAME}${CARGO_CRATE_EXT}
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
 MAINTAINER=	ashish@FreeBSD.org
@@ -15,11 +15,18 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BROKEN_i386=	fails to build
 USES=		cargo
 
+USE_RC_SUBR=	doh-proxy
+
 PLIST_FILES=	bin/doh-proxy
 
 # make cargo-crates > Makefile.crates
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/doh-proxy
+.include <bsd.port.options.mk>
 
+.if ${ARCH} == powerpc
+LIB_DEPENDS+=	libatomic.so:lang/gcc${GCC_DEFAULT}
+LDFLAGS+=	-L/usr/local/lib/gcc${GCC_DEFAULT} -latomic
+.endif
+
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

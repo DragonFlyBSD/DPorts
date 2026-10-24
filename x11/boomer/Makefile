@@ -23,6 +23,7 @@ GH_SUBDIR=	nimbledeps/pkgs2/x11-1.2:x11 \
 
 PLIST_FILES=	bin/${PORTNAME}
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 .for pkg in x11 opengl
 	${LN} -s ${FILESDIR}/${pkg}-nimblemeta.json \
@@ -32,7 +33,8 @@ post-patch:
 
 do-build:
 	cd ${BUILD_WRKSRC} && nimble build --nim=${LOCALBASE}/nim/bin/nim \
-	--localdeps --offline --reject --verbose -d:release -d:nimDebugDlOpen
+	--nimcache:${WRKDIR}/.nimcache --localdeps --offline --reject \
+	--verbose -d:release -d:nimDebugDlOpen
 
 do-install:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/${PORTNAME} \

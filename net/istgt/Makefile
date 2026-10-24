@@ -26,13 +26,16 @@ VBOXVD_DESC=	VirtualBox VD support (no X11 required)
 
 SYMLNKDEV_CONFIGURE_ON=	--enable-symlink-device
 
+USES= ssl
+CFLAGS= -I${OPENSSLINC}
+LDFLAGS= -L${OPENSSLLIB}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MVBOXVD}
 VBOX_WRKSRC=	`${MAKE} -C ${PORTSDIR}/emulators/virtualbox-ose -V WRKSRC`
 RUN_DEPENDS+=	${LOCALBASE}/lib/virtualbox/VBoxRT.so:emulators/virtualbox-ose
 BUILD_DEPENDS+=	${NONEXISTENT}:emulators/virtualbox-ose:patch
-CONFIGURE_ARGS+=	--with-vbox=${VBOX_WRKSRC}/include
+CONFIGURE_ARGS+= --with-vbox=${VBOX_WRKSRC}/include ac_cv_lib_md_MD5Update=no
 .endif
 
 post-extract:
@@ -41,5 +44,9 @@ post-extract:
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${DOCFILES:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<cam/@<bus/cam/@g' \
+		${WRKSRC}/src/istgt_lu_pass.c
 
 .include <bsd.port.mk>

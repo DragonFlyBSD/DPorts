@@ -1,6 +1,6 @@
 PORTNAME=	reallyslick
 PORTVERSION=	0.9.1
-PORTREVISION=	26
+PORTREVISION=	27
 CATEGORIES=	graphics
 MASTER_SITES=	SF/rss-glx/rss-glx/${PORTVERSION}
 DISTNAME=	rss-glx_${PORTVERSION}
@@ -33,6 +33,7 @@ GLEW_DESC=	Enable GLEW support
 GLEW_USE=	GL=glew
 GLEW_CONFIGURE_ENV_OFF=	ac_cv_header_GL_glew_h=no
 
+LDFLAGS= -lstdc++
 post-patch:
 	@${REINPLACE_CMD} '/LINK.*pixelcity/s/LINK/CXXLINK/' ${WRKSRC}/src/Makefile.in
 

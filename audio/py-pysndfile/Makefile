@@ -1,6 +1,6 @@
 PORTNAME=	pysndfile
-DISTVERSION=	1.4.4
-PORTREVISION=	2
+DISTVERSION=	1.5.3
+PORTREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,11 +11,19 @@ WWW=		https://forge-2.ircam.fr/roebel/pysndfile
 
 LICENSE=	LGPL3
 
-BUILD_DEPENDS=	${PYNUMPY}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pkgconfig>0:devel/py-pkgconfig@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 LIB_DEPENDS=	libsndfile.so:audio/libsndfile
-RUN_DEPENDS=	${PYNUMPY}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR}
 
 USES=		python localbase
-USE_PYTHON=	distutils autoplist cython
+USE_PYTHON=	pep517 autoplist cython
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/platform.system() == "FreeBSD":/platform.system() in ("FreeBSD", "DragonFly"):/' \
+		${WRKSRC}/setup.py
 
 .include <bsd.port.mk>

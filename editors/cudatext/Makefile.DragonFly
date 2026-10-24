@@ -1,6 +1,0 @@
-
-# FP patches break logic, use sed
-dfly-patch:
-	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
-		${WRKSRC}/app/proc_globdata.pas
-DFLY_UNMAINTAINED= yes

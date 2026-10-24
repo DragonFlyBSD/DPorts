@@ -1,20 +1,19 @@
 PORTNAME=	rgexf
-PORTVERSION=	0.16.2
-PORTREVISION=	1
+PORTVERSION=	0.17.0
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Build, Import and Export GEXF Graph Files
-WWW=		https://cran.r-project.org/web/packages/rgexf/
+WWW=		https://cran.r-project.org/package=rgexf
 
 LICENSE=	MIT
 
-CRAN_DEPENDS=	R-cran-XML>0:textproc/R-cran-XML \
+RUN_DEPENDS=	R-cran-htmlwidgets>0:www/R-cran-htmlwidgets \
 		R-cran-igraph>0:math/R-cran-igraph \
-		R-cran-servr>0:www/R-cran-servr
-BUILD_DEPENDS=	${CRAN_DEPENDS}
-RUN_DEPENDS=	${CRAN_DEPENDS}
+		R-cran-jsonlite>0:converters/R-cran-jsonlite \
+		R-cran-servr>0:www/R-cran-servr \
+		R-cran-XML>0:textproc/R-cran-XML
 
 USES=		cran:auto-plist
 

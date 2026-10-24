@@ -33,19 +33,21 @@ bin/expireover
 bin/expirerm
 bin/fastrm
 bin/filter/INN.py
-bin/filter/filter_innd.pl
-bin/filter/filter_innd.py
-bin/filter/filter_nnrpd.pl
 bin/filter/nnrpd.py
-bin/filter/nnrpd_access.pl
-bin/filter/nnrpd_access.py
-bin/filter/nnrpd_auth.pl
-bin/filter/nnrpd_auth.py
-bin/filter/nnrpd_dynamic.py
-bin/filter/startup_innd.pl
+@sample %%NEWSBASE%%/bin/filter/filter_innd.pl.sample
+@sample %%NEWSBASE%%/bin/filter/filter_innd.py.sample
+@sample %%NEWSBASE%%/bin/filter/filter_nnrpd.pl.sample
+@sample %%NEWSBASE%%/bin/filter/nnrpd_access.pl.sample
+@sample %%NEWSBASE%%/bin/filter/nnrpd_access.py.sample
+@sample %%NEWSBASE%%/bin/filter/nnrpd_auth.pl.sample
+@sample %%NEWSBASE%%/bin/filter/nnrpd_auth.py.sample
+@sample %%NEWSBASE%%/bin/filter/nnrpd_dynamic.py.sample
+@sample %%NEWSBASE%%/bin/filter/startup_innd.pl.sample
 bin/gencancel
 bin/getlist
 bin/grephistory
+bin/hissqlite-convert
+bin/hissqlite-util
 bin/imapfeed
 @(,news,%%MODE_INEWS%%) bin/inews
 bin/inncheck
@@ -84,7 +86,8 @@ bin/procbatch
 bin/prunehistory
 bin/pullnews
 bin/rc.news
-@(,uucp,4550) bin/rnews
+%%UUCP_RNEWS%%@(,uucp,4550) bin/rnews
+%%NO_UUCP_RNEWS%%bin/rnews
 bin/rnews.libexec/c7unbatch
 bin/rnews.libexec/decode
 bin/rnews.libexec/encode
@@ -123,6 +126,7 @@ doc/hook-perl
 doc/hook-python
 doc/sample-control
 http/innreport.css
+include/inn/bloom.h
 include/inn/buffer.h
 include/inn/concat.h
 include/inn/confparse.h
@@ -155,9 +159,11 @@ include/inn/portable-stdbool.h
 include/inn/qio.h
 include/inn/secrets.h
 include/inn/sequence.h
+include/inn/sqlite-helper.h
 include/inn/storage.h
 include/inn/system.h
 include/inn/timer.h
+include/inn/tombstone.h
 include/inn/tst.h
 include/inn/utility.h
 include/inn/vector.h
@@ -188,7 +194,6 @@ lib/libinnstorage.so.%%LIBSTORAGEVER_LONG%%
 @comment --------------------------------------------------------------
 @cwd
 share/man/man1/convdate.1.gz
-share/man/man1/delayer.1.gz
 share/man/man1/fastrm.1.gz
 share/man/man1/gencancel.1.gz
 share/man/man1/getlist.1.gz
@@ -200,10 +205,8 @@ share/man/man1/nntpget.1.gz
 share/man/man1/pgpverify.1.gz
 share/man/man1/pullnews.1.gz
 share/man/man1/rnews.1.gz
-share/man/man1/shlock.1.gz
 share/man/man1/shrinkfile.1.gz
 share/man/man1/simpleftp.1.gz
-share/man/man1/sm.1.gz
 share/man/man3/INN::Config.3pm.gz
 share/man/man3/INN::Utils::Shlock.3pm.gz
 share/man/man3/INN::ovsqlite_client.3pm.gz
@@ -226,7 +229,9 @@ share/man/man5/cycbuff.conf.5.gz
 share/man/man5/distrib.pats.5.gz
 share/man/man5/distributions.5.gz
 share/man/man5/expire.ctl.5.gz
+share/man/man5/hissqlite.5.gz
 share/man/man5/history.5.gz
+share/man/man5/hisv6.5.gz
 share/man/man5/incoming.conf.5.gz
 share/man/man5/inn-radius.conf.5.gz
 share/man/man5/inn-secrets.conf.5.gz
@@ -251,6 +256,7 @@ share/man/man5/passwd.nntp.5.gz
 share/man/man5/readers.conf.5.gz
 share/man/man5/storage.conf.5.gz
 share/man/man5/subscriptions.5.gz
+share/man/man8/actmerge.8.gz
 share/man/man8/actsync.8.gz
 share/man/man8/actsyncd.8.gz
 share/man/man8/archive.8.gz
@@ -260,14 +266,18 @@ share/man/man8/buffchan.8.gz
 share/man/man8/ckpasswd.8.gz
 share/man/man8/cnfsheadconf.8.gz
 share/man/man8/cnfsstat.8.gz
+share/man/man8/controlbatch.8.gz
 share/man/man8/controlchan.8.gz
 share/man/man8/ctlinnd.8.gz
 share/man/man8/cvtbatch.8.gz
+share/man/man8/delayer.8.gz
 share/man/man8/docheckgroups.8.gz
 share/man/man8/domain.8.gz
 share/man/man8/expire.8.gz
 share/man/man8/expireover.8.gz
 share/man/man8/expirerm.8.gz
+share/man/man8/hissqlite-convert.8.gz
+share/man/man8/hissqlite-util.8.gz
 share/man/man8/ident.8.gz
 share/man/man8/imapfeed.8.gz
 share/man/man8/innbind.8.gz
@@ -309,6 +319,8 @@ share/man/man8/send-ihave.8.gz
 share/man/man8/send-uucp.8.gz
 share/man/man8/sendinpaths.8.gz
 share/man/man8/sendxbatches.8.gz
+share/man/man8/shlock.8.gz
+share/man/man8/sm.8.gz
 share/man/man8/tally.control.8.gz
 share/man/man8/tdx-util.8.gz
 share/man/man8/tinyleaf.8.gz
@@ -353,14 +365,13 @@ share/man/man8/writelog.8.gz
 @comment --------------------------------------------------------------
 @sample %%DBDIR%%/active.sample
 @sample %%DBDIR%%/active.times.sample
+@sample %%DBDIR%%/history.sample
 @sample %%DBDIR%%/newsgroups.sample
 @comment --------------------------------------------------------------
-%%WITHOUT_TAGGED_HASH%%@postunexec f=history.hash;  if cmp -s %%DBDIR%%/$f %%EXAMPLESDIR%%/db/$f; then rm -f %%DBDIR%%/$f; fi
-%%WITHOUT_TAGGED_HASH%%@postunexec f=history.index; if cmp -s %%DBDIR%%/$f %%EXAMPLESDIR%%/db/$f; then rm -f %%DBDIR%%/$f; fi
-%%WITHOUT_TAGGED_HASH%%@postunexec rm -f %%EXAMPLESDIR%%/db/history.hash  2> /dev/null || true
-%%WITHOUT_TAGGED_HASH%%@postunexec rm -f %%EXAMPLESDIR%%/db/history.index 2> /dev/null || true
-%%WITH_TAGGED_HASH%%@postunexec f=history.pag; if cmp -s %%DBDIR%%/$f %%EXAMPLESDIR%%/db/$f; then rm -f %%DBDIR%%/$f; fi
-%%WITH_TAGGED_HASH%%@postunexec rm -f %%EXAMPLESDIR%%/db/history.pag 2> /dev/null || true
+@sample %%DBDIR%%/history.dir.sample
+%%WITHOUT_TAGGED_HASH%%@sample %%DBDIR%%/history.hash.sample
+%%WITHOUT_TAGGED_HASH%%@sample %%DBDIR%%/history.index.sample
+%%WITH_TAGGED_HASH%%@sample %%DBDIR%%/history.pag.sample
 @sample %%CONFDIR%%/actsync.cfg.sample
 @sample %%CONFDIR%%/actsync.ign.sample
 @sample %%CONFDIR%%/buffindexed.conf.sample
@@ -371,6 +382,8 @@ share/man/man8/writelog.8.gz
 @sample %%CONFDIR%%/distributions.sample
 @sample %%CONFDIR%%/expire.ctl.sample
 @sample %%CONFDIR%%/incoming.conf.sample
+@sample %%CONFDIR%%/inn-radius.conf.sample
+@sample %%CONFDIR%%/inn-secrets.conf.sample
 @sample %%CONFDIR%%/inn.conf.sample
 @sample %%CONFDIR%%/innfeed.conf.sample
 @sample %%CONFDIR%%/innreport.conf.sample

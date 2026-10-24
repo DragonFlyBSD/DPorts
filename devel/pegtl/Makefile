@@ -1,13 +1,13 @@
 PORTNAME=	pegtl
-DISTVERSION=	3.2.7
+DISTVERSION=	4.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Parsing Expression Grammar Template Library
 WWW=		https://github.com/taocpp/PEGTL
 
-LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE=	BSL
+LICENSE_FILE=	${WRKSRC}/LICENSE_1_0.txt
 
 USES=		cmake:testing
 USE_GITHUB=	yes
@@ -21,4 +21,7 @@ CMAKE_TESTING_ON=	PEGTL_BUILD_TESTS
 NO_BUILD=	yes
 NO_ARCH=	yes
 
+# tests as of 4.0.1: 100% tests passed, 0 tests failed out of 257
+
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

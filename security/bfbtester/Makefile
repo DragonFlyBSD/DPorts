@@ -12,4 +12,5 @@ GNU_CONFIGURE=	yes
 PLIST_FILES=	bin/bfbtester
 USES=		gmake
 
+CFLAGS= -Wno-discarded-qualifiers
 .include <bsd.port.mk>

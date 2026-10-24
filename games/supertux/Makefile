@@ -9,7 +9,7 @@ COMMENT=	Side-scroller game similar to Super Mario Brothers
 WWW=		http://supertuxproject.org/
 
 USES=		gl gmake sdl tar:bzip2 xorg
-USE_CXXSTD=	c++14
+USE_CXXSTD= gnu++98
 USE_GL=		gl
 USE_SDL=	image mixer
 USE_XORG=	x11

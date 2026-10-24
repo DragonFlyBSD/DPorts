@@ -1,9 +1,9 @@
 PORTNAME=	leftwm
 DISTVERSION=	0.5.4
-PORTREVISION=	1
+PORTREVISION=	14
 CATEGORIES=	x11-wm
 
-MAINTAINER=	bofh@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tiling window manager for Adventurers
 WWW=		https://leftwm.org/
 

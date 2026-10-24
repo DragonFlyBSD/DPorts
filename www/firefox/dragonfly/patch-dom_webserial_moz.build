@@ -1,0 +1,11 @@
+--- dom/webserial/moz.build.intermediate	2026-09-07 11:55:16 UTC
++++ dom/webserial/moz.build
+@@ -26,7 +26,7 @@ if CONFIG["OS_TARGET"] == "WINNT":
+         "cfgmgr32",
+         "setupapi",
+     ]
+-elif (CONFIG["OS_TARGET"] == "Darwin" and CONFIG["TARGET_OS"] != "iOS") or CONFIG["OS_TARGET"] == "FreeBSD" or CONFIG[
++elif (CONFIG["OS_TARGET"] == "Darwin" and CONFIG["TARGET_OS"] != "iOS") or CONFIG["OS_TARGET"] in ("DragonFly", "FreeBSD") or CONFIG[
+     "OS_TARGET"
+ ] == "Linux":
+     UNIFIED_SOURCES += [

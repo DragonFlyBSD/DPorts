@@ -1,16 +1,18 @@
 PORTNAME=	SoapyUHD
 DISTVERSIONPREFIX=	soapy-uhd-
-DISTVERSION=	0.4.1
+DISTVERSION=	0.4.1-27
+DISTVERSIONSUFFIX=	-g4ac9dc6
 PORTREVISION=	1
 CATEGORIES=	comms hamradio
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Soapy SDR plugin for the Airspy
+WWW=		https://github.com/pothosware/SoapyUHD/wiki
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libSoapySDR.so:misc/soapysdr \
 		libuhd.so:comms/uhd
 

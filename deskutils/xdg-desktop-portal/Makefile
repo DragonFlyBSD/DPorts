@@ -1,6 +1,5 @@
 PORTNAME=	xdg-desktop-portal
-PORTVERSION=	1.20.0
-PORTREVISION=	2
+DISTVERSION=	1.22.1
 CATEGORIES=	deskutils
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -12,15 +11,21 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libfuse3.so:filesystems/fusefs-libs3 \
 		libgeoclue-2.so:net/geoclue \
-		libgudev-1.0.so.0:devel/libgudev \
+		libgudev-1.0.so:devel/libgudev \
 		libjson-glib-1.0.so:devel/json-glib \
 		libpipewire-0.3.so:multimedia/pipewire \
 		libportal.so:deskutils/libportal
 
-USES=		gettext-tools gmake gnome gstreamer meson pkgconfig python:build shebangfix
+USES=		cpe gettext-tools gmake gnome gstreamer meson pkgconfig \
+		python:build shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	flatpak
 USE_GNOME=	gdkpixbuf glib20
+USE_GITLAB=	nodefault
+GL_TUPLE=	https://gitlab.gnome.org:arrowd:libglnx:c210033e145361b5f5125d79dff4f901c01aa3f7:libglnx/subprojects/libglnx \
+		https://gitlab.gnome.org:GNOME:gvdb:c6f2359cc1d00f16e0a0e2527fa0bc1882b8b5ab:gvdb/subprojects/gvdb
+
+SHEBANG_FILES=	src/generate-method-info.py
 
 MESON_ARGS=	-Ddocumentation=disabled \
 		-Dflatpak-interfaces=disabled \
@@ -29,16 +34,27 @@ MESON_ARGS=	-Ddocumentation=disabled \
 		-Dsystemd=disabled \
 		-Dtests=disabled
 
-SHEBANG_FILES=	src/generate-method-info.py
-
 OPTIONS_DEFINE=	MANPAGES
+OPTIONS_SUB=	yes
 
 MANPAGES_BUILD_DEPENDS=	rst2man:textproc/py-docutils
 MANPAGES_MESON_ENABLED=	man-pages
 
-OPTIONS_SUB=	yes
+CPE_VENDOR=	flatpak
+
+IGNORE= FreeBSD specific
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1500000 && ${OSVERSION} < 1501000
+BUILD_DEPENDS+=		${LOCALBASE}/include/linuxapi/string.h:devel/linuxapi
+CFLAGS+=		-I${WRKDIR}/linuxapi
+
+pre-build:
+	@${MKDIR} ${WRKDIR}/linuxapi
+	${CP} ${LOCALBASE}/include/linuxapi/string.h ${WRKDIR}/linuxapi
+.endif
 
 post-install:
 	@${RM} -r ${STAGEDIR}${PREFIX}/lib/systemd
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

@@ -1,4 +1,4 @@
---- pyproject.toml.orig	2024-09-23 03:54:55 UTC
+--- pyproject.toml.orig	2026-08-04 00:05:50 UTC
 +++ pyproject.toml
 @@ -1,7 +1,7 @@ requires = [
  [build-system]
@@ -9,12 +9,21 @@
  ]
  
  [project]
-@@ -32,7 +32,7 @@ dependencies = [
+@@ -31,7 +31,7 @@ dependencies = [
  dependencies = [
    "certifi",
    "packaging>=22",
 -  "setuptools>=67",
 +  "setuptools>=61",
-   "virtualenv>=20.24.2",
+   "virtualenv>=20.26.6",
  ]
- optional-dependencies.dev = [
+ optional-dependencies.completion = [
+@@ -64,7 +64,7 @@ where = [ "." ]
+ 
+ [tool.setuptools.packages.find]
+ where = [ "." ]
+-exclude = [ "tests*", "tests.*", "tasks*", "tasks.*", "docs*", "docs.*" ]
++exclude = [ "tests*", "tests.*", "tasks*", "tasks.*", "docs*", "docs.*", "benchmarks", "benchmarks.*" ]
+ 
+ [tool.setuptools.package-data]
+ "*" = [ "LICENSE", "NOTICES" ]

@@ -18,4 +18,8 @@ NO_ARCH=	yes
 
 PLIST_FILES=	bin/scss-lint
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/rake>/s@, "< 13"@@g' \
+		${WRKSRC}/scss_lint.gemspec
+
 .include <bsd.port.mk>

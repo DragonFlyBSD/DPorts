@@ -1,5 +1,5 @@
 PORTNAME=	twofactor_gauthenticator
-PORTVERSION=	g20231119
+PORTVERSION=	g20260408
 CATEGORIES=	mail security
 PKGNAMEPREFIX=	roundcube-
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
@@ -17,7 +17,7 @@ USES=		php:flavors
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	alexandregz
-GH_TAGNAME=	23d8f4c
+GH_TAGNAME=	b143061
 
 NO_BUILD=	yes
 NO_ARCH=	yes
@@ -25,6 +25,10 @@ NO_ARCH=	yes
 SUB_FILES=	pkg-message
 
 WWWDIR=		${PREFIX}/www/roundcube/plugins/${PORTNAME}
+
+DFLY_UNMAINTAINED= yes
+post-patch:
+	@${RM} ${WRKSRC}/docker-compose.yaml
 
 do-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}

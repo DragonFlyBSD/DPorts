@@ -1,5 +1,5 @@
 PORTNAME=	libfontenc
-DISTVERSION=	1.1.8
+DISTVERSION=	1.1.9
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	x11@FreeBSD.org
@@ -9,7 +9,7 @@ WWW=		https://www.x.org/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		tar:xz xorg xorg-cat:lib
+USES=		xorg xorg-cat:lib
 USE_XORG=	xorgproto
 
 CONFIGURE_ARGS=	--with-encodingsdir=${LOCALBASE}/share/fonts/encodings

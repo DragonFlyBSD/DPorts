@@ -1,6 +1,6 @@
 PORTNAME=	tiemu3
 PORTVERSION=	3.03
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	emulators
 MASTER_SITES=	SF/gtktiemu/tiemu-linux/TIEmu%20${DISTVERSION}
 DISTNAME=	tiemu-${DISTVERSION}
@@ -40,6 +40,10 @@ post-patch: .SILENT
 	${REINPLACE_CMD} -e 's,defined(__LINUX__),& || defined(__BSD__),' \
 		${WRKSRC}/src/gui/calc/pckeys.h ${WRKSRC}/src/misc/paths.h
 	${REINPLACE_CMD} -e 's|-D.*_DISABLE_DEPRECATED||g' \
+		${WRKSRC}/configure
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*-\*-\*bsd\*\))@\1|*-*-dragonfly*)@g'	\
 		${WRKSRC}/configure
 
 .include <bsd.port.mk>

@@ -30,6 +30,7 @@ OPTIONS_SUB=	yes
 THREADS_DESC=	Build thread support
 THREADS_CONFIGURE_ON=	--enable-threads=pthreads
 
+LDFLAGS= -lm
 post-patch:
 	@${REINPLACE_CMD} 's/dir=@/dir=$${DESTDIR}@/' \
 		 ${WRKSRC}/Makefile.config.in

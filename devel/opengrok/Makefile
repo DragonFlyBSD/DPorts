@@ -1,10 +1,10 @@
 PORTNAME=	opengrok
-PORTVERSION=	1.13.27
+DISTVERSION=	1.14.19
 CATEGORIES=	devel java
 # Doesn't currently work with portscout, but the release tarball is required.
-MASTER_SITES=	https://github.com/oracle/opengrok/releases/download/${PORTVERSION}/
+MASTER_SITES=	https://github.com/oracle/opengrok/releases/download/${DISTVERSION}/
 
-MAINTAINER=	truckman@FreeBSD.org
+MAINTAINER=	siva@FreeBSD.org
 COMMENT=	Fast and powerful code search and cross-reference engine
 WWW=		https://opengrok.github.io/OpenGrok/
 
@@ -26,7 +26,7 @@ RUN_DEPENDS=	uctags:devel/universal-ctags
 
 USES=		cpe java
 CPE_VENDOR=	oracle
-JAVA_VERSION=	11+
+JAVA_VERSION=	21+
 SHAREOWN=	www
 SHAREGRP=	www
 NO_BUILD=	yes
@@ -42,7 +42,7 @@ OPTIONS_SINGLE=		AS
 OPTIONS_SINGLE_AS=	GLASSFISH TOMCAT101
 OPTIONS_DEFAULT=	TOMCAT101
 
-GLASSFISH_DESC?=	Glassfish support
+GLASSFISH_DESC=		Glassfish support
 
 GLASSFISH_VARS=	WEBAPP_HOME=${LOCALBASE}/glassfish-5.1.0/glassfish
 TOMCAT101_VARS=	WEBAPP_HOME=${LOCALBASE}/apache-tomcat-10.1

@@ -1,20 +1,20 @@
 PORTNAME=	pyinstaller-hooks-contrib
-DISTVERSION=	2023.12
+DISTVERSION=	2026.6
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=       pyinstaller_hooks_contrib-${PORTVERSION}
 
-MAINTAINER=	hsw@bitmark.com
+MAINTAINER=	bsd.hsw@gmail.com
 COMMENT=	Community maintained hooks for pyinstaller
 WWW=		https://pypi.org/project/pyinstaller-hooks-contrib/
 
 LICENSE=	APACHE20 GPLv2+
 LICENSE_COMB=	multi
-LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE.APL.txt
-LICENSE_FILE_GPLv2+ =	${WRKSRC}/LICENSE.GPL.txt
+LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE
+LICENSE_FILE_GPLv2+ =	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}towncrier>0:textproc/py-towncrier@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}towncrier>0:textproc/py-towncrier@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}twine>0:devel/py-twine@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}

@@ -15,4 +15,8 @@ GH_ACCOUNT=	afify
 
 PLIST_FILES=	bin/sfm share/man/man1/sfm.1.gz
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700@@g' \
+		${WRKSRC}/config.mk
+
 .include <bsd.port.mk>

@@ -1,7 +1,7 @@
 PORTNAME=	librespot
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.2
-PORTREVISION=	12
+DISTVERSION=	0.8.0
+PORTREVISION=	7
 CATEGORIES=	multimedia
 
 MAINTAINER=	driesm@FreeBSD.org
@@ -11,12 +11,14 @@ WWW=		https://github.com/librespot-org/librespot
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cargo
+BUILD_DEPENDS=	bindgen:devel/rust-bindgen-cli
+
+USES=		cargo ssl
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	librespot-org
 
-CARGO_FEATURES=	--no-default-features
+CARGO_FEATURES=	--no-default-features native-tls
 
 PLIST_FILES=	bin/librespot
 
@@ -40,7 +42,5 @@ SDL_USES=		sdl
 SDL_USE=		SDL=sdl2
 SDL_VARS=		CARGO_FEATURES+=sdl-backend
 
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/librespot
-
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

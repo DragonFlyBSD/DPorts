@@ -1,3 +1,0 @@
-
-# for acl_free()
-LDFLAGS+= -lposix1e

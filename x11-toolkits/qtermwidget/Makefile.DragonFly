@@ -1,3 +1,0 @@
-
-# work around CMakelist.txt nonsense
-CFLAGS+=	-DHAVE_UTMPX -DHAVE_UPDWTMPX -DHAVE_LOGINX

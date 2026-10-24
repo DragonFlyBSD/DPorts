@@ -1,0 +1,8 @@
+[
+{ type: install
+  message: <<EOM
+Refer to the fahclient(8) manual page for instructions
+on how to get started with Folding@home on FreeBSD.
+EOM
+}
+]

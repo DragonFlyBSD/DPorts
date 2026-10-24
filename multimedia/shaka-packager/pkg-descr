@@ -1,0 +1,12 @@
+Shaka Packager is a media packaging SDK and tool for use with DASH and HLS
+playback. It can prepare and package media content for online streaming,
+supporting features such as:
+
+- Fragmented MP4, WebM, and MPEG-2 TS output
+- DASH and HLS manifest generation
+- Common Encryption (CENC) and key rotation
+- Integration with several DRM key servers (Widevine, PlayReady, Marlin,
+  FairPlay) and raw keys
+- Live and on-demand packaging
+
+The port installs the "packager" and "mpd_generator" command line tools.

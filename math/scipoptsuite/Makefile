@@ -1,5 +1,6 @@
 PORTNAME=	scipoptsuite
-DISTVERSION=	9.1.0
+DISTVERSION=	10.0.0
+PORTREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	https://scipopt.org/download/release/
 
@@ -10,9 +11,12 @@ WWW=		https://scipopt.org/
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/variant.hpp:devel/boost-libs
-LIB_DEPENDS=	libgmp.so:math/gmp \
+LIB_DEPENDS=	libboost_iostreams.so:devel/boost-libs \
+		libcliquer.so:math/cliquer \
+		libgmp.so:math/gmp \
 		libgsl.so:math/gsl \
 		libipopt.so:math/ipopt \
+		libjansson.so:devel/jansson \
 		libmpfr.so:math/mpfr \
 		libtbb.so:devel/onetbb
 
@@ -21,4 +25,15 @@ USE_LDCONFIG=	yes
 
 CMAKE_ON=	BUILD_SHARED_LIBS
 
+LDFLAGS+=	-lpthread # fix build after it began breaking on 2025-11-03 for unclear reason
+
+INSTALL_CONFLICTS=	SCIP
+
+.if exists(/usr/include/omp.h)
+PLIST_SUB+=	OPENMP=""
+.else
+PLIST_SUB+=	OPENMP="@comment "
+.endif
+
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

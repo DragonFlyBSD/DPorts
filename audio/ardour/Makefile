@@ -1,11 +1,12 @@
 PORTNAME=	ardour
-DISTVERSION=	7.5.0
+DISTVERSION=	8.12.0
+PORTREVISION=	3
 CATEGORIES=	audio
 # Official source download is tailored to browsers, downloads from github are
 # deliberately made empty. Put the badly named distfile into a subdirectory.
 MASTER_SITES=	https://community.ardour.org/download/release/
 DISTNAME=	Ardour-${DISTVERSION}
-DISTFILES=	534
+DISTFILES=	610
 DIST_SUBDIR=	${DISTNAME}
 
 MAINTAINER=	dev@submerge.ch
@@ -15,7 +16,8 @@ WWW=		https://ardour.org/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	lv2>=1.18.0:audio/lv2 \
+BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
+		lv2>=1.18.0:audio/lv2 \
 		itstool>2.0.0:textproc/itstool \
 		${BUILD_DEPENDS_${ARCH}}
 BUILD_DEPENDS_aarch64=	as:devel/binutils
@@ -32,7 +34,6 @@ LIB_DEPENDS=	libserd-0.so:devel/serd \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
-		libboost_date_time.so:devel/boost-libs \
 		libvamp-hostsdk.so:audio/vamp-plugin-sdk \
 		libsamplerate.so:audio/libsamplerate \
 		libsndfile.so:audio/libsndfile \
@@ -42,34 +43,45 @@ LIB_DEPENDS=	libserd-0.so:devel/serd \
 		libcurl.so:ftp/curl \
 		libogg.so:audio/libogg \
 		libFLAC.so:audio/flac \
-		libSoundTouch.so:audio/soundtouch \
 		libwebsockets.so:net/libwebsockets
 
-USES=		compiler:c++11-lang desktop-file-utils gettext gnome \
-		libarchive pkgconfig python:build readline tar:bzip2 \
+USES=		compiler:c++14-lang desktop-file-utils gettext gnome \
+		libarchive pkgconfig python:build readline ssl tar:bzip2 \
 		waf xorg shared-mime-info
-USE_CXXSTD=	c++11
-USE_GNOME=	atk cairo cairomm gdkpixbuf2 glib20 glibmm gtk20 gtkmm24 pango
+USE_CXXSTD=	c++14
+USE_GNOME=	atk cairo cairomm gdkpixbuf glib20 glibmm gtk20 gtkmm24 libxml2 pango
 USE_LDCONFIG=	yes
 USE_XORG=	x11
 
 CONFIGURE_ARGS=	--optimize --ptformat --freedesktop --no-phone-home \
-		--with-backends=jack,dummy --internal-shared-libs --no-vst3 \
+		--with-backends=jack,dummy --internal-shared-libs --no-ytk \
 		${CONFIGURE_ARGS_${ARCH}}
 CONFIGURE_ARGS_x86_64=	--arch='-msse -mfpmath=sse -DARCH_X86' --dist-target=x86_64
 # only support for i686 or better
 CONFIGURE_ARGS_i386=	--arch='-msse -mfpmath=sse -march=i686 -DARCH_X86' --dist-target=i686
 
+CONFIGURE_ENV+=		PYTHONDONTWRITEBYTECODE=1
+MAKE_ENV+=		PYTHONDONTWRITEBYTECODE=1
+
 LDFLAGS_powerpc=	-Wl,-z,notext
 
+ARDOUR_MAJOR=	ardour8
+ETCDIR=		${PREFIX}/etc/${ARDOUR_MAJOR}
+DATADIR=	${PREFIX}/share/${ARDOUR_MAJOR}
 BINARY_ALIAS+=	gas=${CC}
 
-ARDOUR_MAJOR=	ardour7
-DATADIR=	${PREFIX}/share/${ARDOUR_MAJOR}
-ETCDIR=		${PREFIX}/etc/${ARDOUR_MAJOR}
 PLIST_SUB+=	VERSION=${PORTVERSION} \
 		ARDOUR_MAJOR=${ARDOUR_MAJOR}
 
+OPTIONS_DEFINE=		VST3
+OPTIONS_SUB=		yes
+
+VST3_DESC=		Build with VST3 plugin support
+
+VST3_BUILD_DEPENDS=	vst3sdk>0:audio/vst3sdk
+VST3_CONFIGURE_OFF=	--no-vst3
+
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's/obj\.use            = '\''libsmf libpbd'\''/obj\.use            = '\''libsmf_internal libpbd'\''/g' ${WRKSRC}/libs/evoral/wscript
 	@${REINPLACE_CMD} -e 's/libsmf\.name         = '\''libsmf'\''/libsmf\.name         = '\''libsmf_internal'\''/g' ${WRKSRC}/libs/evoral/wscript
@@ -98,5 +110,8 @@ post-install:
 		${STAGEDIR}${PREFIX}/bin/${ARDOUR_MAJOR}-new_empty_session
 	@${LN} -sf ffmpeg ${STAGEDIR}${PREFIX}/bin/ffmpeg_harvid
 	@${LN} -sf ffprobe ${STAGEDIR}${PREFIX}/bin/ffprobe_harvid
+
+post-install-VST3-on:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${ARDOUR_MAJOR}/ardour-vst3-scanner
 
 .include <bsd.port.mk>

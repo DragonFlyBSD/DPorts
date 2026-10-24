@@ -1,6 +1,6 @@
 PORTNAME=	libvmod-dynamic
-PORTVERSION=	20230321
-PORTREVISION=	6
+PORTVERSION=	20250521
+PORTREVISION=	1
 CATEGORIES=	www
 PKGNAMEPREFIX=	varnish-
 
@@ -25,11 +25,11 @@ INSTALL_TARGET=	install-strip
 DOCSDIR=	${PREFIX}/share/doc/vmod-dynamic
 MAKE_JOBS_UNSAFE=	yes
 
-CFLAGS+=	-I${WRKSRC}/src
+CFLAGS+= -I${WRKSRC}/src -Wno-deprecated-declarations
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	nigoroll
-GH_TAGNAME=	af9c51c
+GH_TAGNAME=	490068b
 
 OPTIONS_DEFINE=	DOCS
 

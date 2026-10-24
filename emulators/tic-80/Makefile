@@ -1,6 +1,7 @@
 PORTNAME=	TIC-80
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.2736
+DISTVERSION=	1.1.2837
+PORTREVISION=	3
 CATEGORIES=	emulators games
 
 MAINTAINER=	fuz@FreeBSD.org
@@ -10,9 +11,6 @@ WWW=		https://tic80.com
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-# only available as a static library
-# bump TIC-80 when quickjs is updated!
-BUILD_DEPENDS=	quickjs>0:lang/quickjs
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libcurl.so:ftp/curl \
 		libdbus-1.so:devel/dbus \
@@ -20,6 +18,8 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libinotify.so:devel/libinotify \
 		libjanet.so:lang/janet \
 		libpng16.so:graphics/png \
+		libquickjs.so:lang/quickjs \
+		libs7.so:lang/s7 \
 		libsquirrel.so:lang/squirrel \
 		libunwind.so:devel/libunwind
 
@@ -36,9 +36,9 @@ GH_TUPLE=	nesbox:blip-buf:330226d9b55ecbeea644e17b5e0f096a165ca07e:blip_buf/vend
 		nesbox:moonscript:17179283012b392bff972ad66231d73bfeec6e90:moonscript/vendor/moonscript \
 		cofyc:argparse:0d5f5d0745df14a3f373f7eed85bf524714f4524:argparse/vendor/argparse \
 		wasm3:wasm3:a3abb3f2d320994be59dfbe2cdafa8d0b6a8253e:wasm3/vendor/wasm3 \
-		blueloveTH:pocketpy:v1.0.0:pocketpy/vendor/pocketpy \
+		blueloveTH:pocketpy:7312afdad24bb308037088d34b32ed0078fed7d2:pocketpy/vendor/pocketpy \
 		erkkah:naett:v0.3.1:naett/vendor/naett \
-		notnullnotvoid:msf_gif:v2.2:msfgif/vendor/msf_gif
+		notnullnotvoid:msf_gif:v2.4:msfgif/vendor/msf_gif
 USE_GL=		gl glu glut
 USE_SDL=	sdl2
 
@@ -75,4 +75,5 @@ PRO_CMAKE_BOOL=	BUILD_PRO
 SDLGPU_LIB_DEPENDS=	libSDL2_gpu.so:graphics/sdl2_gpu
 SDLGPU_CMAKE_BOOL=	BUILD_SDLGPU
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

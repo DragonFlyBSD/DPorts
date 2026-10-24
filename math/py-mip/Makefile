@@ -23,6 +23,7 @@ NO_ARCH=	yes
 
 POST_PLIST=	fix-plist
 
+DFLY_UNMAINTAINED= yes
 fix-plist: # remove platform-specific libraries
 	@${REINPLACE_CMD} ' \
 		/\/mip\/libraries/d ; \
@@ -33,5 +34,9 @@ post-install:
 	@${RM} -r ${STAGEDIR}${PYTHON_SITELIBDIR}/mip/libraries
 	# update the PREFIX
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' ${STAGEDIR}${PYTHON_SITELIBDIR}/mip/cbc.py
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@, "mip.libraries"@@g' \
+		${WRKSRC}/setup.py
 
 .include <bsd.port.mk>

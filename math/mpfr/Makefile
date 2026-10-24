@@ -38,4 +38,6 @@ INFO_EXTRA_PATCHES_OFF=	${PATCHDIR}/extra-patch-no-info
 INFO_USES=		makeinfo
 INFO_INFO=		mpfr
 
+PATCH_DEPENDS= gpatch:devel/patch
+PATCH= ${LOCALBASE}/bin/gpatch
 .include <bsd.port.mk>

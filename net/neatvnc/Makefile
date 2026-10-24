@@ -1,6 +1,6 @@
 PORTNAME=	neatvnc
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.1
+DISTVERSION=	1.0.3
 CATEGORIES=	net
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -18,6 +18,7 @@ USE_GITHUB=	yes
 USE_XORG=	pixman
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	any1
+PLIST_SUB=	VERSION=${PORTVERSION}
 
 OPTIONS_DEFINE=	FFMPEG GNUTLS JPEG NETTLE OPENGL
 OPTIONS_DEFAULT=FFMPEG GNUTLS JPEG NETTLE OPENGL
@@ -41,6 +42,7 @@ OPENGL_USES=		gl
 OPENGL_USE=		GL=gbm
 OPENGL_MESON_ENABLED=	gbm
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 # Extract (snapshot) version from the port instead of meson.build
 	@${REINPLACE_CMD} -i .nogit -e 's/git.found()/false/' \

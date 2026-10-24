@@ -23,4 +23,7 @@ PORTSCOUT=	limit:^[0-9\.]*$$
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Tcl/Tcl.so
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s@eq 'freebsd'@=~/freebsd|dragonfly/@g" ${WRKSRC}/Makefile.PL
+
 .include <bsd.port.mk>

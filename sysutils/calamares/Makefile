@@ -29,4 +29,8 @@ USE_QT=		base
 
 CMAKE_OFF=	INSTALL_POLKIT
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/CMakeModules/FindCrypt.cmake
+
 .include <bsd.port.mk>

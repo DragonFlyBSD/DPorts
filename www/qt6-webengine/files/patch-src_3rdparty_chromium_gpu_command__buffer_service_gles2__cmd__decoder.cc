@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2024-07-03 01:14:49 UTC
+--- src/3rdparty/chromium/gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2026-08-11 12:42:19 UTC
 +++ src/3rdparty/chromium/gpu/command_buffer/service/gles2_cmd_decoder.cc
 @@ -3001,7 +3001,7 @@ GLES2Decoder* GLES2Decoder::Create(
  // Fix for Qt WebEngine Crash when QSG_RHI_BACKEND=opengl

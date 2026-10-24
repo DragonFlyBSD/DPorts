@@ -68,4 +68,5 @@ replace:
 	@${ECHO_CMD} "hoststat	/usr/bin/true" >> ${_MAILERCONF}
 	@${ECHO_CMD} "purgestat	/usr/bin/true" >> ${_MAILERCONF}
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NCRAMMD5}
 .include <bsd.port.mk>

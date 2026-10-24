@@ -1,5 +1,5 @@
-TIMESTAMP = 1740836184
-SHA256 (sphinx_book_theme-1.1.4.tar.gz) = 73efe28af871d0a89bd05856d300e61edce0d5b2fbb7984e84454be0fedfe9ed
-SIZE (sphinx_book_theme-1.1.4.tar.gz) = 439188
-SHA256 (sphinx_book_theme-1.1.4-static.tar.gz) = b4ddbbd8d356ff870c3101b15ae5c29fc195ea97cf4abc58a2294a3fe91b4ec9
-SIZE (sphinx_book_theme-1.1.4-static.tar.gz) = 505344
+TIMESTAMP = 1787268256
+SHA256 (sphinx_book_theme-1.4.0.tar.gz) = fee3cd70573d9a8cd4ab380a3cb1f11139c24dcaa2cf47d06d7f924f1b44eaff
+SIZE (sphinx_book_theme-1.4.0.tar.gz) = 406113
+SHA256 (sphinx_book_theme-1.4.0-static.tar.gz) = ccd3cad17299313a6585b77fd63b1b86450158dbe3589857b435d441db6f7519
+SIZE (sphinx_book_theme-1.4.0-static.tar.gz) = 536064

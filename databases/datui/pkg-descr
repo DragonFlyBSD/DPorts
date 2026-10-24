@@ -1,0 +1,9 @@
+Datui is a terminal user interface for exploring and analyzing tabular
+data.  It reads files stored locally, on S3 or Google Cloud Storage, or
+over HTTP/HTTPS, and supports the Parquet, CSV, JSON, Avro, Arrow, ORC
+and Excel formats.
+
+Data is queried with SQL and transformed using streaming expressions
+backed by Polars, so files larger than memory can be browsed
+interactively.  Charts and summary statistics are rendered directly in
+the terminal.

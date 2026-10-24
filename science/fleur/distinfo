@@ -1,3 +1,5 @@
-TIMESTAMP = 1641371174
-SHA256 (fleur-fleur-0d3b9c4b71dc42ec0ba60fe5c6d2fce212e6fcd4_GL0.tar.gz) = 5de9c06f283db361764fe3e278c4840576d63f0c4742c9499fcaa537f97b3f0f
-SIZE (fleur-fleur-0d3b9c4b71dc42ec0ba60fe5c6d2fce212e6fcd4_GL0.tar.gz) = 53095199
+TIMESTAMP = 1786047963
+SHA256 (fleur-8.1.tar.gz) = e800d11d63be68fd45a6a9568866536fd6ffb6d0cd734ce22917908ad9da6245
+SIZE (fleur-8.1.tar.gz) = 36142137
+SHA256 (wannier-developers-wannier90-v3.1.0_GH0.tar.gz) = 40651a9832eb93dec20a8360dd535262c261c34e13c41b6755fa6915c936b254
+SIZE (wannier-developers-wannier90-v3.1.0_GH0.tar.gz) = 101211573

@@ -5,7 +5,7 @@ COMMENT=	GStreamer plugin for QR recognition
 
 LIB_DEPENDS=	libZXing.so:textproc/zxing-cpp
 
-USES=		compiler:c++17-lang
+USES= compiler:c++17-lang dfly-libcxx
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 

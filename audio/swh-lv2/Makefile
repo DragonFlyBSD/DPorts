@@ -20,7 +20,11 @@ USES=		gmake pkgconfig localbase
 USE_GITHUB=	yes
 GH_PROJECT=	lv2
 
+PLIST= ${WRKDIR}/dfly-plist
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lv2/*.lv2/*.so
+
+dfly-patch:
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e 's@FreeBSD@DragonFly@g' > ${PLIST}
 
 .include <bsd.port.mk>

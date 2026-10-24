@@ -7,7 +7,10 @@ To enable Nexus, add the following line to /etc/rc.conf[.local]:
 
   %%NEXUS_RC%%_enable="YES"
 
-IMPORTANT: Nexus runs by default as user %%USER%%!
+IMPORTANT:
+* Nexus runs by default as user %%USER%%!
+* javaservicewrapper must be compiled with a Java version which supports
+  Java 8 bytecode: OpenJDK older than version 25!
 
 Configuration
 =============
@@ -30,6 +33,14 @@ Documentation
 =============
 Further documentation can be found at:
   https://help.sonatype.com/repomanager2
+EOM
+},
+{
+  type: upgrade
+  maximum_version: "2.15.2_1"
+  message: <<EOM
+With the upgrade to javaservicewrapper-3.7.3 Nexus won't start unless you
+review properties in your %%ETCDIR%%/wrapper.conf.
 EOM
 },
 { type: remove

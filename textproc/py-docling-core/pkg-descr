@@ -1,0 +1,4 @@
+Docling Core defines and validates data types used throughout the Docling
+ecosystem. It provides the core document model, type definitions, and
+validation utilities that form the foundation of the Docling document
+conversion pipeline.

@@ -1,5 +1,5 @@
 PORTNAME=	httparty
-PORTVERSION=	0.22.0
+PORTVERSION=	0.24.2
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -21,6 +21,6 @@ NO_ARCH=	yes
 
 PLIST_FILES=	bin/httparty
 
-CPE_VENDOR=	john_nunemaker
+CPE_VENDOR=	jnunemaker
 
 .include <bsd.port.mk>

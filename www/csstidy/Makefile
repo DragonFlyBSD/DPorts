@@ -11,7 +11,7 @@ WWW=		https://csstidy.sourceforge.net/
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKDIR}/COPYING
 
-USES=		zip
+USES= zip dos2unix
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/csstidy
@@ -19,6 +19,7 @@ PORTDOCS=	AUTHORS BUGS ChangeLog NEWS README TODO
 
 OPTIONS_DEFINE=	DOCS
 
+DOS2UNIX_FILES= misc.cpp
 do-build:
 	${CXX} ${CXXFLAGS} ${LDFLAGS} -o ${WRKSRC}/${PORTNAME} ${WRKSRC}/*.cpp
 

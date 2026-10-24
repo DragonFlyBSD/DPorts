@@ -1,5 +1,6 @@
 PORTNAME=	xfce
 PORTVERSION=	4.20
+PORTREVISION=	2
 CATEGORIES=	x11-wm xfce
 
 MAINTAINER=	xfce@FreeBSD.org
@@ -33,6 +34,7 @@ TERMINAL_DESC=		Terminal emulator
 XPM_RUN_DEPENDS=	xfce4-power-manager:sysutils/xfce4-power-manager
 XPM_DESC=		Power manager
 
+RUN_DEPENDS+= dragonfly-wallpapers>0:x11-themes/dragonfly-wallpapers
 do-install:	# empty
 
 .include <bsd.port.mk>

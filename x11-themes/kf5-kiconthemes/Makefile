@@ -17,4 +17,8 @@ OPTIONS_DEFAULT=	ICONS
 ICONS_DESC=	Install Breeze Icons
 ICONS_USE=	KDE=breeze-icons:run
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

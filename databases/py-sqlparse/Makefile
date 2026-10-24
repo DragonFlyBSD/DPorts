@@ -1,5 +1,5 @@
 PORTNAME=	sqlparse
-PORTVERSION=	0.5.3
+PORTVERSION=	0.6.0
 CATEGORIES=	databases python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,10 +13,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hatchling>=0:devel/py-hatchling@${PY_FLAVOR}
 
-USES=		python shebangfix
+USES=		cpe python shebangfix
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
+
+CPE_VENDOR=	sqlparse_project
 
 SHEBANG_FILES=	sqlparse/cli.py
 

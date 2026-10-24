@@ -1,6 +1,6 @@
 PORTNAME=	visualization.projectm
-PORTVERSION=	21.0.1.20240504
-DISTVERSIONSUFFIX=	-Omega
+PORTVERSION=	22.2.0.20260531
+DISTVERSIONSUFFIX=	-Piers
 CATEGORIES=	multimedia
 
 MAINTAINER=	rozhuk.im@gmail.com
@@ -16,7 +16,7 @@ USES=		cmake compiler:c++14-lang gl kodi localbase
 USE_CXXSTD=	c++14
 USE_GITHUB=	yes
 GH_ACCOUNT=	xbmc
-GH_TAGNAME=	d39cad13e6e3c2c11f4ba4768d0b27dd890a706f
+GH_TAGNAME=	047d05e4f711895f7ec95e9121c07d41843b7cb3
 USE_GL=		egl gl glu
 
 PLIST_SUB=	SOVERSION=${PORTVERSION}

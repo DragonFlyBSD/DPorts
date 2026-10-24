@@ -1,2 +1,0 @@
-# -Werror=misleading-indentation
-CPPFLAGS+=	-Wno-error

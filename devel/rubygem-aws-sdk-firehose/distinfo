@@ -1,3 +1,3 @@
-TIMESTAMP = 1739962802
-SHA256 (rubygem/aws-sdk-firehose-1.89.0.gem) = 316c0095983b6b6d1a31ad829c2c368cc9e747ac67b445796b459427dd813eeb
-SIZE (rubygem/aws-sdk-firehose-1.89.0.gem) = 95232
+TIMESTAMP = 1789227552
+SHA256 (rubygem/aws-sdk-firehose-1.114.0.gem) = 4e3cbc8fa14d85dc06250b14faa9f6e8a074c252d107881ef4806658d9c08537
+SIZE (rubygem/aws-sdk-firehose-1.114.0.gem) = 93696

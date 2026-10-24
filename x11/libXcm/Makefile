@@ -21,4 +21,8 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+dfly-patch:
+	${REINPLACE_CMD} -e "/libXcmEDID_la_LINK) -rpath/s/$$/ -lm/g"	\
+		${WRKSRC}/src/Makefile.in
+
 .include <bsd.port.mk>

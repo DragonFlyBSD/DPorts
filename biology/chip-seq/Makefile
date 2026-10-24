@@ -1,0 +1,32 @@
+PORTNAME=	chip-seq
+# Update major version only if the metaport is overhauled
+# Update minor version when adding or removing dependencies
+# Update revision for all other changes
+DISTVERSION=	0.3.1
+CATEGORIES=	biology python
+MASTER_SITES=	# empty
+
+MAINTAINER=	jwb@FreeBSD.org
+COMMENT=	Metaport for ChIP-Seq analysis
+WWW=		https://github.com/auerlab/
+
+LICENSE=	BSD2CLAUSE
+
+RUN_DEPENDS=	sra-tools>0:biology/sra-tools \
+		fastq-trim>0:biology/fastq-trim \
+		fastqc>0:biology/fastqc \
+		${PYTHON_PKGNAMEPREFIX}multiqc>0:biology/py-multiqc@${PY_FLAVOR} \
+		biolibc-tools>0:biology/biolibc-tools \
+		bwa>0:biology/bwa \
+		bowtie2>0:biology/bowtie2 \
+		samtools>0:biology/samtools \
+		${PYTHON_PKGNAMEPREFIX}MACS3>0:biology/py-macs3@${PY_FLAVOR} \
+		fasda>0:biology/fasda \
+		fasda-utils>0:biology/fasda-utils \
+		peak-classifier>0:biology/peak-classifier \
+		webbrowser>0:www/webbrowser \
+		curl>0:ftp/curl
+
+USES=		metaport python
+
+.include <bsd.port.mk>

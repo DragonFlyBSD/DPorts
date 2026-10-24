@@ -1,0 +1,5 @@
+The Wine (https://www.winehq.org) fork used by Proton, a Windows
+compatibility tool for the Linux Steam client.
+
+Note that this port is mostly intended to work together with
+games/linux-steam-utils.

@@ -25,4 +25,9 @@ post-install:
 	${RLN} ${STAGEDIR}${QT_BINDIR}/${f} ${STAGEDIR}${PREFIX}/bin/${f}-qt5
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s@dragonfly-g++@${QMAKESPEC}@g" \
+			 -e "s@QT_LIBDIR@${QT_LIBDIR}@g" \
+		${WRKSRC}/src/linguist/shared/qmakeevaluator.cpp
+
 .include <bsd.port.mk>

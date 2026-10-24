@@ -1,9 +1,9 @@
 PORTNAME=		sogo
-PORTVERSION=		5.12.0
+PORTVERSION=		5.12.11
 CATEGORIES=		www gnustep
 MASTER_SITES=		https://packages.sogo.nu/sources/
-DISTNAME=		SOGo-${PORTVERSION}
 PKGNAMESUFFIX=		-${FLAVOR}
+DISTNAME=		SOGo-${PORTVERSION}
 
 MAINTAINER=		acm@FreeBSD.org
 COMMENT=		Groupware server with a focus on scalability and open standards
@@ -11,32 +11,30 @@ WWW=			https://sogo.nu/
 
 LICENSE=		GPLv2
 
-FLAVORS=		mysql mysqlactivesync pgsql pgsqlactivesync
-FLAVOR?=		${FLAVORS[1]}
-
 LIB_DEPENDS=		libmemcached.so:databases/libmemcached \
 			libcurl.so:ftp/curl \
 			libsodium.so:security/libsodium \
 			libzip.so:archivers/libzip \
 			libytnef.so:converters/ytnef
-
 RUN_DEPENDS=		zip:archivers/zip
 
+FLAVORS=		mysql mysqlactivesync pgsql pgsqlactivesync
+FLAVOR?=		${FLAVORS:[1]}
+
 USES=			cpe gettext-runtime gnustep objc pkgconfig shebangfix ssl
-CPE_VENDOR=		inverse
+CPE_VENDOR=		alinto
 USE_GNUSTEP=		base build
 USE_LDCONFIG=		${GNUSTEP_LOCAL_LIBRARIES}/sogo
 USE_RC_SUBR=		sogod
 
-SHEBANG_LANG=		python
 SHEBANG_FILES=		${WRKSRC}/SoObjects/SOGo/gen-saml2-exceptions.py
 
 CONFIGURE_ARGS+=	--disable-debug --disable-strip
 
-mysql_CONFLICTS_INSTALL=        sogo2 ${PORTNAME}-pgsql ${PORTNAME}-pgsqlactivesync
-pgsql_CONFLICTS_INSTALL=        sogo2 ${PORTNAME}-mysql ${PORTNAME}-mysqlactivesync
-mysqlactivesync_CONFLICTS_INSTALL=sogo2 ${PORTNAME}-pgsql ${PORTNAME}-pgsqlactivesync
-pgsqlactivesync_CONFLICTS_INSTALL=sogo2 ${PORTNAME}-mysql ${PORTNAME}-mysqlactivesync
+mysql_CONFLICTS_INSTALL=        sogo2 ${PORTNAME}-pgsql ${PORTNAME}-pgsqlactivesync ${PORTNAME}-mysqlactivesync
+pgsql_CONFLICTS_INSTALL=        sogo2 ${PORTNAME}-mysql ${PORTNAME}-mysqlactivesync ${PORTNAME}-pgsqlactivesync
+mysqlactivesync_CONFLICTS_INSTALL=sogo2 ${PORTNAME}-mysql ${PORTNAME}-pgsql ${PORTNAME}-pgsqlactivesync
+pgsqlactivesync_CONFLICTS_INSTALL=sogo2 ${PORTNAME}-mysql ${PORTNAME}-pgsql ${PORTNAME}-mysqlactivesync
 
 OPTIONS_DEFAULT=	MEMCACHED MFA SAML2
 OPTIONS_DEFINE=		ACTIVESYNC MEMCACHED MFA SAML2
@@ -100,6 +98,12 @@ post-patch:
 	@${GREP} -rlF '/etc/sogo' ${WRKSRC} \
 		| ${XARGS} ${REINPLACE_CMD} 's#/etc/sogo#${PREFIX}/etc/sogo#g'
 	@${REINPLACE_CMD} -e 's|/usr/lib/GNUstep/|${LOCALBASE}/GNUstep/Local/Library|g' ${WRKSRC}/Apache/SOGo.conf
+	@${REINPLACE_CMD} -E -e 's|(su )sogo sogo|\1${USERS} ${GROUPS}|' \
+		${WRKSRC}/Scripts/logrotate
+	@${REINPLACE_CMD} -E -e 's|^(#!/bin/)bash|\1sh|; \
+		s|^function ([^[:space:]]*)|\1\(\)|; \
+		s|^(SOGO_TOOL=).*(sogo-tool)|\1${LOCALBASE}/GNUstep/Local/Tools/Admin/\2|' \
+		${WRKSRC}/Scripts/sogo-backup.sh
 	@${REINPLACE_CMD} -e 's|srcBuffer\[stringLength\]|srcBuffer\[stringLength+1\]|g' \
 		${WRKSRC}/SoObjects/SOGo/NSData+Crypto.m
 	@${RM} ${WRKSRC}/Scripts/*.bak
@@ -122,5 +126,6 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/cron-ealarms-notify.sample ${STAGEDIR}${PREFIX}/GNUstep/Local/Tools/Admin/
 	${INSTALL_DATA} ${FILESDIR}/cron-expire-autoreply.sample ${STAGEDIR}${PREFIX}/GNUstep/Local/Tools/Admin/
 	cd ${WRKSRC}/Scripts && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
+	@${CHMOD} a+x ${STAGEDIR}${DATADIR}/sogo-backup.sh
 
 .include <bsd.port.post.mk>

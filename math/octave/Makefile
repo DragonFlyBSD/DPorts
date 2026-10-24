@@ -1,6 +1,6 @@
 PORTNAME=	octave
 PORTVERSION=	${OCTAVE_VERSION}
-CATEGORIES=	math
+CATEGORIES=	math java
 MASTER_SITES=	GNU
 
 MAINTAINER=	stephen@FreeBSD.org
@@ -13,43 +13,16 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/gperf:devel/gperf \
 		${LOCALBASE}/bin/makeinfo:print/texinfo \
 		gnuplot:math/gnuplot \
 		gsed:textproc/gsed \
-		${LOCALBASE}/include/rapidjson/rapidjson.h:devel/rapidjson
+		${LOCALBASE}/include/rapidjson/rapidjson.h:devel/rapidjson \
+		${LOCALBASE}/include/fast_float/fast_float.h:math/fast_float
 RUN_DEPENDS=	${LOCALBASE}/bin/makeinfo:print/texinfo \
 		gnuplot:math/gnuplot \
 		gsed:textproc/gsed
-LIB_DEPENDS=	libamd.so:math/suitesparse-amd \
-		libarpack.so:math/arpack-ng \
-		libcamd.so:math/suitesparse-camd \
-		libccolamd.so:math/suitesparse-ccolamd \
-		libcholmod.so:math/suitesparse-cholmod \
-		libcolamd.so:math/suitesparse-colamd \
-		libcurl.so:ftp/curl \
-		libcxsparse.so:math/suitesparse-cxsparse \
-		libdrm.so:graphics/libdrm \
-		libfftw3.so:math/fftw3 \
-		libfftw3f.so:math/fftw3-float \
-		libfltk.so:x11-toolkits/fltk \
-		libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2 \
-		libftgl.so:graphics/ftgl \
-		libgl2ps.so:print/gl2ps \
-		libglpk.so:math/glpk \
-		libGraphicsMagick.so:graphics/GraphicsMagick \
-		libhdf5.so:science/hdf5 \
-		libklu.so:math/suitesparse-klu \
-		libOSMesa.so:graphics/libosmesa \
-		libpcre.so:devel/pcre \
-		libportaudio.so:audio/portaudio \
-		libqhull_r.so:math/qhull \
-		libqrupdate.so:math/qrupdate \
-		libspqr.so:math/suitesparse-spqr \
-		libsuitesparseconfig.so:math/suitesparse-config \
-		libsundials_arkode.so:math/sundials \
-		libumfpack.so:math/suitesparse-umfpack
+LIB_DEPENDS= libamd.so:math/suitesparse-amd libarpack.so:math/arpack-ng@mpich libcamd.so:math/suitesparse-camd libccolamd.so:math/suitesparse-ccolamd libcholmod.so:math/suitesparse-cholmod libcolamd.so:math/suitesparse-colamd libcurl.so:ftp/curl libcxsparse.so:math/suitesparse-cxsparse libdrm.so:graphics/libdrm libfftw3.so:math/fftw3 libfftw3f.so:math/fftw3-float libfltk.so:x11-toolkits/fltk libfontconfig.so:x11-fonts/fontconfig libfreetype.so:print/freetype2 libftgl.so:graphics/ftgl libgl2ps.so:print/gl2ps libglpk.so:math/glpk libhdf5.so:science/hdf5 libklu.so:math/suitesparse-klu libpcre.so:devel/pcre libportaudio.so:audio/portaudio libqhull_r.so:math/qhull libqrupdate.so:math/qrupdate libspqr.so:math/suitesparse-spqr libsuitesparseconfig.so:math/suitesparse-config libsundials_arkode.so:math/sundials libumfpack.so:math/suitesparse-umfpack
 
 USES=		charsetfix compiler:c++17-lang desktop-file-utils fortran gl \
 		gmake iconv libtool localbase:ldflags ncurses octave:env perl5 \
-		pkgconfig readline tar:xz xorg
+		pkgconfig readline tar:xz xorg python:3.0+
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}/${PORTVERSION}
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
@@ -57,7 +30,7 @@ USE_QT=		base 5compat tools sqldriver-sqlite
 USE_XORG=	x11 xcursor xext xfixes xft xinerama xrender
 USE_GL=		gl glu
 
-GNU_HOST=	${CONFIGURE_TARGET}
+GNU_HOST= ${CONFIGURE_TARGET}
 PLIST_SUB=	GNU_HOST=${GNU_HOST} \
 		OCTAVE_VERSION=${OCTAVE_VERSION}
 LDFLAGS+=	-L${LOCALBASE}/lib/qt6
@@ -80,8 +53,7 @@ CONFIGURE_ARGS=	--disable-jit \
 		--enable-shared \
 		--host=${GNU_HOST} \
 		--with-blas="-L${LOCALBASE}/lib ${BLASLIB}" \
-		--with-lapack="${LAPACKLIB}" \
-		--with-osmesa
+		--with-lapack="${LAPACKLIB}"
 
 INFO=		octave liboctave
 
@@ -105,12 +77,17 @@ DOCS_USES=	tex
 DOCS_USE=	TEX=dvipsk:build,formats:build
 JAVA_USES=	java
 JAVA_CFLAGS=	-I${JAVA_HOME}/include/${OPSYS:tl}
+JAVA_VARS=	JAVA_VERSION=11+
 QT6_USES=	qt:6
 OPENBLAS_USES=	blaslapack:openblas
 NETLIB_USES=	blaslapack:netlib
 ATLAS_USES=	blaslapack:atlas
 
 BINARY_ALIAS=	sed=gsed
+
+CONFIGURE_ARGS+= --without-magick
+post-patch:
+	${REINPLACE_CMD} -e s+python3+${PYTHON_CMD}+g ${WRKSRC}/scripts/miscellaneous/python.m
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

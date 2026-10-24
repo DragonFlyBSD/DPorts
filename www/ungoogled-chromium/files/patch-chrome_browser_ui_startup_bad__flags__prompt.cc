@@ -1,11 +1,11 @@
---- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2024-06-22 08:49:42 UTC
+--- chrome/browser/ui/startup/bad_flags_prompt.cc.orig	2026-08-13 07:41:05 UTC
 +++ chrome/browser/ui/startup/bad_flags_prompt.cc
-@@ -106,7 +106,7 @@ const char* const kBadFlags[] = {
+@@ -119,7 +119,7 @@ const char* const kBadFlags[] = {
+     extensions::switches::kAllowlistedExtensionID,
+ #endif
  
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
      // Speech dispatcher is buggy, it can crash and it can make Chrome freeze.
-     // http://crbug.com/327295
+     // http://crbug.com/40078530
      switches::kEnableSpeechDispatcher,

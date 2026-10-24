@@ -5,3 +5,4 @@ bin/htm
 bin/htmd
 @sample etc/etserver/et.cfg.sample
 etc/rc.d/etserver
+share/zsh/site-functions/_et

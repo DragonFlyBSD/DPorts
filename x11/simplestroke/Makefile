@@ -32,4 +32,9 @@ SUID_DESC=	Install with setuid bit for opening evdev(4) devices
 SUID_VARS=	_MAYBE_SUID="@(,,4755) "
 SUID_VARS_OFF=	_MAYBE_SUID=""
 
+LIB_DEPENDS= libmd.so:security/libmd
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-lmd@-I${LOCALBASE}/include -L${LOCALBASE}/lib &@g" \
+		${WRKSRC}/configure
+
 .include <bsd.port.mk>

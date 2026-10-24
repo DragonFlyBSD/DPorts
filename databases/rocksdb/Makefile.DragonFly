@@ -1,3 +1,0 @@
-CFLAGS+=	-Wno-error=unused-parameter
-CXXFLAGS+=	-Wno-unused-variable
-DFLY_UNMAINTAINED= yes

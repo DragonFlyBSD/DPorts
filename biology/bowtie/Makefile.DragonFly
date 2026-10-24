@@ -1,6 +1,0 @@
-# current version breaks with gcc80
-
-# zrj: not whole world uses amd64!
-dfly-patch:
-	${REINPLACE_CMD} -e 's@amd64@x86_64@g'	\
-		${WRKSRC}/Makefile

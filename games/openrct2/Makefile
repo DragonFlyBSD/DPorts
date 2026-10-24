@@ -1,15 +1,18 @@
 PORTNAME=	openrct2
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.6
+DISTVERSION=	0.5.5
 CATEGORIES=	games
-MASTER_SITES=	https://github.com/OpenRCT2/title-sequences/releases/download/v0.4.6/:sequence \
-		https://github.com/OpenRCT2/objects/releases/download/v1.3.11/:object \
-		https://github.com/OpenRCT2/OpenMusic/releases/download/v1.3.1/:openmsx \
-		https://github.com/OpenRCT2/OpenSoundEffects/releases/download/v1.0.3/:opensfx
+MASTER_SITES=	https://github.com/OpenRCT2/title-sequences/releases/download/v0.4.26/:sequence \
+		https://github.com/OpenRCT2/objects/releases/download/v1.7.11/:object \
+		https://github.com/OpenRCT2/OpenMusic/releases/download/v1.6.1/:openmsx \
+		https://github.com/OpenRCT2/OpenSoundEffects/releases/download/v1.0.6/:opensfx \
+		https://github.com/OpenRCT2/replays/releases/download/v0.0.97/:replay
 DISTFILES=	title-sequences.zip:sequence \
-		objects.zip:object\
+		objects.zip:object \
 		openmusic.zip:openmsx \
-		opensound.zip:opensfx
+		opensound.zip:opensfx \
+		replays.zip:replay
+DIST_SUBDIR=	${PORTNAME}/${DISTVERSION}
 
 MAINTAINER=	pkubaj@FreeBSD.org
 COMMENT=	Open source re-implementation of RollerCoaster Tycoon 2
@@ -18,23 +21,24 @@ WWW=		https://openrct2.io/
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/licence.txt
 
-NOT_FOR_ARCHS=	mips mips64 powerpc powerpc64 powerpcspe sparc64
+NOT_FOR_ARCHS=	powerpc powerpc64 powerpcspe
 NOT_FOR_ARCHS_REASON=	Only for little-endian architectures
 
-BUILD_DEPENDS=	nlohmann-json>0:devel/nlohmann-json
-LIB_DEPENDS=	libpng.so:graphics/png \
-		libzip.so:archivers/libzip \
-		libFLAC.so:audio/flac \
-		libvorbisfile.so:audio/libvorbis \
-		libspeexdsp.so:audio/speexdsp \
-		libfontconfig.so:x11-fonts/fontconfig \
+BUILD_DEPENDS= nlohmann-json>0:devel/nlohmann-json cxxfs_gcc8>0:misc/cxxfs_gcc8
+LIB_DEPENDS=	libbenchmark.so:devel/benchmark \
 		libcurl.so:ftp/curl \
+		libFLAC.so:audio/flac \
+		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libicuuc.so:devel/icu \
-		libbenchmark.so:devel/benchmark \
-		libogg.so:audio/libogg
+		libogg.so:audio/libogg \
+		libpng.so:graphics/png \
+		libvorbisfile.so:audio/libvorbis \
+		libzip.so:archivers/libzip \
+		libzstd.so:archivers/zstd
+TEST_DEPENDS=	googletest>0:devel/googletest
 
-USES=		cmake compiler:c++17-lang desktop-file-utils gnome gl iconv \
+USES=		cmake:testing compiler:c++17-lang desktop-file-utils gl \
 		localbase:ldflags pkgconfig sdl shared-mime-info ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenRCT2
@@ -44,12 +48,18 @@ USE_LDCONFIG=	yes
 USE_SDL=	sdl2
 
 CMAKE_ON=	BUILD_SHARED_LIBS
+CMAKE_TESTING_ON=	WITH_TESTS
+# Replays are supplied via DISTFILES; unlike the other assets this download
+# has no SKIP_IF_EXISTS guard, so it would run even with them already staged.
+CMAKE_TESTING_OFF=	DOWNLOAD_REPLAYS
 
 OPTIONS_DEFINE=	DOCS
 
+CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
+LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
+MAKE_ENV= LDVER=ld.bfd
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
-	@${REINPLACE_CMD} -e 's|%%DATADIR%%|${DATADIR}|' \
-		${WRKSRC}/src/openrct2/config/Config.cpp
 	${MKDIR} ${WRKSRC}/data/sequence
 	${MKDIR} ${WRKSRC}/data/object
 	${MKDIR} ${WRKSRC}/data/assetpack
@@ -58,5 +68,13 @@ post-patch:
 		${WRKDIR}/rct2tt ${WRKDIR}/rct2ww ${WRKDIR}/object/official \
 		${WRKSRC}/data/object/
 	${CP} -r ${WRKDIR}/assetpack ${WRKSRC}/data/
+	${MKDIR} ${WRKSRC}/test/tests/testdata/replays
+	${CP} ${WRKDIR}/*.parkrep ${WRKSRC}/test/tests/testdata/replays/
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@gcc_s gcc@gcc_pic gcc@g' \
+		${WRKSRC}/src/openrct2/CMakeLists.txt
+	${REINPLACE_CMD} -e '/ -Wnull-dereference)/d' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

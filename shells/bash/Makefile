@@ -1,6 +1,6 @@
 PORTNAME=		bash
-PATCHLEVEL=		37
-PORTVERSION=		5.2.${PATCHLEVEL:S/^0//g}
+PATCHLEVEL=		20
+PORTVERSION=		5.3.${PATCHLEVEL:S/^0//g}
 CATEGORIES=		shells
 MASTER_SITES=		GNU
 DISTNAME=		${PORTNAME}-${PORTVERSION:R}
@@ -19,7 +19,7 @@ WWW=			https://www.gnu.org/software/bash/
 LICENSE=		GPLv3+
 LICENSE_FILE=		${WRKSRC}/COPYING
 
-USES=			bison cpe iconv localbase pathfix
+USES= bison cpe iconv localbase pathfix ncurses
 CPE_VENDOR=		gnu
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-bash-malloc \
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--without-bash-malloc \
 			--enable-disabled-builtins \
 			--with-libiconv-prefix=${ICONV_PREFIX}
 
-MAKE_ARGS+=		TERMCAP_LIB=-ltinfow
+MAKE_ARGS+= TERMCAP_LIB=-ltinfow TERMCAP_LIB=-ltinfo
 
 INFO=			bash
 PORTDOCS=		FAQ INTRO CHANGES COMPAT NEWS POSIX RBASH README \
@@ -35,7 +35,7 @@ PORTDOCS=		FAQ INTRO CHANGES COMPAT NEWS POSIX RBASH README \
 
 OPTIONS_DEFINE=		FDESCFS PORTS_READLINE HELP NLS STATIC SYSBASHRC \
 			SYSLOG DOCS
-OPTIONS_DEFAULT=	HELP PORTS_READLINE
+OPTIONS_DEFAULT=	HELP SYSBASHRC
 OPTIONS_SUB=		yes
 
 FDESCFS_DESC=		Enable use of /dev/fd
@@ -50,18 +50,24 @@ HELP_CONFIGURE_ENABLE=	help-builtin
 NLS_USES=		gettext
 NLS_CONFIGURE_ENABLE=	nls
 
-PORTS_READLINE_BUILD_DEPENDS=	readline>=8.2:devel/readline
+PORTS_READLINE_BUILD_DEPENDS=	readline>=8.3:devel/readline
 PORTS_READLINE_USES=	readline
 PORTS_READLINE_CONFIGURE_WITH=	installed-readline
 
 .if empty(PKGNAMESUFFIX)
-CONFLICTS+=	bash-static bash52-static
+CONFLICTS+=	bash-static
 .else
-CONFLICTS+=	bash bash52
+CONFLICTS+=	bash
 .endif
 CONFLICTS+=	bashc
 
 .include <bsd.port.options.mk>
+
+# clang crashes (XSCMPUQP requires Power9) building IEEE-128 long double at
+# -O1+ on the powerpc64le POWER8 baseline; build at -O0. CPUTYPE (POWER9+) is fine.
+.if ${ARCH} == powerpc64le && !defined(CPUTYPE) && ${OSVERSION} >= 1600019
+CFLAGS+=	-O0
+.endif
 
 .if ${PORT_OPTIONS:MSTATIC} || defined(NO_DYNAMICROOT) || (defined(NOSHARED) && ${NOSHARED:tl} != "no")
 CONFIGURE_ARGS+=	--enable-static-link
@@ -81,6 +87,7 @@ post-patch:
 	${TOUCH} ${WRKSRC}/parse.y
 	${RM} ${WRKSRC}/y.tab.c
 	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|g" -e "s|%%LOCALBASE%%|${LOCALBASE}|g" \
+		-e "s|\(/etc/profile\)|${PREFIX}\1|g" \
 		${WRKSRC}/doc/bash.1
 .if ${PORT_OPTIONS:MSYSLOG}
 	@${REINPLACE_CMD} \

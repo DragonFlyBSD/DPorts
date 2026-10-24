@@ -1,5 +1,5 @@
 PORTNAME=	postgis
-DISTVERSION=	3.3.8
+DISTVERSION=	3.3.10
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 PKGNAMESUFFIX=	33
@@ -17,8 +17,8 @@ LIB_DEPENDS=	libproj.so:graphics/proj \
 		libgdal.so:graphics/gdal \
 		libpcre2-8.so:devel/pcre2
 
-USES=		alias compiler:c++14-lang cpe gmake gnome iconv:wchar_t libtool:keepla \
-		localbase perl5 pkgconfig pgsql:11+ shebangfix
+USES=		compiler:c++14-lang cpe gmake gnome iconv:wchar_t libtool:keepla \
+		localbase perl5 pkgconfig pgsql:14-17 shebangfix
 USE_GNOME=	libxml2
 USE_PERL5=	build
 
@@ -70,6 +70,10 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION}${DISTVERSIONSUFFIX} \
 		VER=${VER}
 
 .include <bsd.port.pre.mk>
+
+.if ${PGSQL_VER} != ${PGSQL_DEFAULT}
+IGNORE=		only supports PostgreSQL 14 to 17, and the default version is ${PGSQL_DEFAULT}
+.endif
 
 .if ${CHOSEN_COMPILER_TYPE} == gcc
 post-patch:

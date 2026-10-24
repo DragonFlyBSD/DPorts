@@ -20,6 +20,7 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/dwarfdump share/man/man1/dwarfdump.1.gz
 
+LDFLAGS= -lz
 .include <bsd.port.pre.mk>
 
 .if (${ARCH} == "x86_64")

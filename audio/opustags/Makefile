@@ -1,5 +1,6 @@
 PORTNAME=	opustags
-DISTVERSION=	1.9.0
+DISTVERSION=	1.10.1-13
+DISTVERSIONSUFFIX=	-g37deeb3
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -21,4 +22,5 @@ TEST_TARGET=	check # 1 test fails, see https://github.com/fmang/opustags/issues/
 PLIST_FILES=	bin/opustags \
 		share/man/man1/opustags.1.gz
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

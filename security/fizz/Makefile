@@ -1,6 +1,7 @@
 PORTNAME=	fizz
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2024.01.01.00
+DISTVERSION=	2026.08.31.00
+PORTREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -38,7 +39,10 @@ WRKSRC_SUBDIR=	${PORTNAME}
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	BUILD_TESTS BUILD_EXAMPLES
 CMAKE_TESTING_ON=	BUILD_TESTS
+CXXFLAGS+= -DGLOG_USE_GLOG_EXPORT -isystem ${LOCALBASE}/cxxfs_gcc8
 
+BUILD_DEPENDS= cxxfs_gcc8>0:misc/cxxfs_gcc8
+LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
 post-install: # https://github.com/facebookincubator/fizz/issues/55
 	cd ${STAGEDIR}${PREFIX} && ${RMDIR} include/fizz/tool/test include/fizz/util/test
 

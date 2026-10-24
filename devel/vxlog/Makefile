@@ -17,4 +17,5 @@ USE_LDCONFIG=	yes
 
 CMAKE_ARGS+=	-DTESTING:BOOL=OFF
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

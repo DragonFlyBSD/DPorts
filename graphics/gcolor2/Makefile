@@ -10,7 +10,7 @@ WWW=		https://gcolor2.sourceforge.net/
 
 LICENSE=	GPLv2
 
-USES=		gnome pkgconfig
+USES= gnome pkgconfig ltmainfix
 USE_GNOME=	gtk20 gnomeprefix intltool
 GNU_CONFIGURE=	yes
 

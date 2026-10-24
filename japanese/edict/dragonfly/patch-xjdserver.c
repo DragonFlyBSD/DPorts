@@ -1,15 +1,10 @@
---- xjdserver.c.intermediate	2016-06-23 10:00:38.000000000 +0300
+--- xjdserver.c.orig
 +++ xjdserver.c
-@@ -56,7 +56,12 @@ int jiver = 14;
- int thisdic = 0;
- int DicNum;
- 
-+#ifdef __DragonFly__
+@@ -29,6 +29,7 @@
+ #include <netdb.h>
+ #include <stdlib.h>
+ #include <signal.h>
 +#include <unistd.h>
-+#include <errno.h>
-+#else
- extern int errno;
-+#endif
+ #include "xjdic.h"
  
- extern unsigned char Dnamet[10][100],XJDXnamet[10][100];
- extern unsigned char *dicbufft[10];
+ #define SVERBOSE 0

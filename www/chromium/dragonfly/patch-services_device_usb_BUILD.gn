@@ -1,0 +1,13 @@
+diff --git services/device/usb/BUILD.gn services/device/usb/BUILD.gn
+index 0d90e163ab0e..703a46de72f1 100644
+--- services/device/usb/BUILD.gn
++++ services/device/usb/BUILD.gn
+@@ -113,7 +113,7 @@ static_library("usb") {
+     deps += [ "//third_party/libusb" ]
+   }
+ 
+-  if (is_freebsd) {
++  if (is_freebsd || is_dragonfly) {
+     sources += [
+       "usb_service_fake.cc",
+       "usb_service_fake.h",

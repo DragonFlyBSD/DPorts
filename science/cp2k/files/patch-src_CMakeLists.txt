@@ -1,0 +1,11 @@
+--- src/CMakeLists.txt.orig	2026-07-24 05:26:45 UTC
++++ src/CMakeLists.txt
+@@ -2123,7 +2123,7 @@ if(NOT CMAKE_INSTALL_Fortran_MODULES)
+ 
+ if(NOT CMAKE_INSTALL_Fortran_MODULES)
+   set(CMAKE_INSTALL_Fortran_MODULES
+-      "${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}/${CMAKE_Fortran_COMPILER_ID}-${CMAKE_Fortran_COMPILER_VERSION}/mod_files"
++      "${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}/mod_files"
+   )
+ endif()
+ 

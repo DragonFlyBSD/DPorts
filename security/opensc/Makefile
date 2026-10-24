@@ -1,5 +1,5 @@
 PORTNAME=	opensc
-DISTVERSION=	0.26.1
+DISTVERSION=	0.27.0
 CATEGORIES=	security devel
 
 MAINTAINER=	ale@FreeBSD.org
@@ -57,6 +57,7 @@ NOTIFY_CONFIGURE_ENABLE=	notify
 
 DOCS_CONFIGURE_ENABLE=		doc
 
+CFLAGS= -Wno-unused-but-set-variable
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS} || ${PORT_OPTIONS:MMANPAGES}

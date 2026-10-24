@@ -18,12 +18,4 @@
    struct cam_device *dev;
    union ccb *ccb;
  #endif
-@@ -98,7 +98,7 @@
-   unsigned char *sg;
-   unsigned char *sg_buffer;
-   unsigned char inqbytes[4];
--#elif defined(__FreeBSD__)
-+#elif defined(__FreeBSD__) || defined(__DragonFly__)
-   unsigned char *sg_buffer;
- #endif
  

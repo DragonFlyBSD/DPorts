@@ -13,4 +13,8 @@ USE_QT=		base
 
 OPTIONS_DEFINE=	DOCS
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/add_subdirectory(tests)/d' \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

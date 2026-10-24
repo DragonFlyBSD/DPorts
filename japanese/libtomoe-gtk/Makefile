@@ -20,6 +20,7 @@ USE_LDCONFIG=	yes
 LDFLAGS_powerpc=	-lm
 #OPTIONS=	GUCHARMAP	"Compile with gucharmap"		on
 
+LDFLAGS= -lm
 .include <bsd.port.options.mk>
 
 #.if defined(WITHOUT_GUCHARMAP)

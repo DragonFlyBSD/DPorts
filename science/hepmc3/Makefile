@@ -1,5 +1,5 @@
 PORTNAME=	hepmc3
-DISTVERSION=	3.3.0
+DISTVERSION=	3.3.1
 CATEGORIES=	science
 MASTER_SITES=	https://hepmc.web.cern.ch/hepmc/releases/
 DISTNAME=	HepMC3-${DISTVERSION}
@@ -16,5 +16,7 @@ USE_LDCONFIG=	yes
 
 CMAKE_OFF=	HEPMC3_ENABLE_PYTHON HEPMC3_BUILD_STATIC_LIBS HEPMC3_ENABLE_ROOTIO HEPMC3_INSTALL_EXAMPLES
 CMAKE_TESTING_ON=	HEPMC3_ENABLE_TEST
+
+# tests as of 3.3.1: 100% tests passed, 0 tests failed out of 33
 
 .include <bsd.port.mk>

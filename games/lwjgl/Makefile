@@ -1,6 +1,6 @@
 PORTNAME=	lwjgl
 DISTVERSION=	2.9.4.20161208
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	games java
 
 MAINTAINER=	freebsd@skinc.ru
@@ -24,8 +24,10 @@ GH_TAGNAME=	2df01dd
 
 USE_LDCONFIG=	yes
 USE_XORG=	x11 xcursor xext xrandr xxf86vm
-MAKE_ENV+=	CLASSPATH=${JAVAJARDIR}/jutils/jutils.jar:${JAVAJARDIR}/jinput/jinput.jar:${WRKSRC}/${DISTNAME}/jar/
+MAKE_ENV+= CLASSPATH=${JAVAJARDIR}/jutils/jutils.jar:${JAVAJARDIR}/jinput/jinput.jar:${WRKSRC}/${DISTNAME}/jar/ LDVER=ld.bfd
 ALL_TARGET=	jars compile_native
+
+NO_SHLIB_REQUIRES_GLOB=	libjawt.so
 
 PLIST_DIRS=	${JAVAJARDIR}/${PORTNAME} \
 		lib/${PORTNAME}
@@ -87,5 +89,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/libs/freebsd/lib${PORTNAME}64.so \
 		${STAGEDIR}${PREFIX}/lib/${PORTNAME}
 .endif
+
+post-extract:
+	${REINPLACE_CMD} -e 's|"FreeBSD"|"DragonFlyBSD"|g' ${WRKSRC}/build.xml
 
 .include <bsd.port.post.mk>

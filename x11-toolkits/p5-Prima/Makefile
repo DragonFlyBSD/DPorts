@@ -1,10 +1,9 @@
 PORTNAME=	Prima
-PORTVERSION=	1.68.002
-PORTREVISION=	3
+DISTVERSION=	1.78
 CATEGORIES=	x11-toolkits graphics perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:KARASIK
 PKGNAMEPREFIX=	p5-
-DISTNAME=	${PORTNAME}-${PORTVERSION:R}${PORTVERSION:E}
 
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Extensible Perl toolkit for multi-platform GUI development
@@ -60,6 +59,7 @@ XFT_USE=		XORG=xft
 
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Prima/Prima.so
 	@${REINPLACE_CMD} -e 's|${STAGEDIR}||' ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/Prima/Config.pm

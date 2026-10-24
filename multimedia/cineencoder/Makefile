@@ -1,6 +1,6 @@
 PORTNAME=	${GH_ACCOUNT:tl}
 PORTVERSION=	3.5.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -21,7 +21,7 @@ USE_QT=		buildtools:build qmake:build core gui multimedia \
 		network svg widgets x11extras
 USE_XORG=	x11 xext
 
-PLIST_FILES=	bin/cine_encoder man/man1/cine-encoder.1.gz \
+PLIST_FILES=	bin/cine_encoder share/man/man1/cine-encoder.1.gz \
 		share/applications/cine-encoder.desktop \
 		share/icons/hicolor/64x64/apps/cine-encoder.png \
 		share/sounds/cine-encoder.wav
@@ -41,7 +41,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/builddir/cine_encoder \
 		${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/distros/debian/cine-encoder.1 \
-		${STAGEDIR}${MANPREFIX}/man/man1
+		${STAGEDIR}${PREFIX}/share/man/man1
 	${INSTALL_DATA} ${WRKSRC}/share/cine-encoder.desktop \
 		${STAGEDIR}${PREFIX}/share/applications
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/64x64/apps
@@ -55,5 +55,9 @@ do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/share/ABOUT ${WRKSRC}/AUTHORS \
 		${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@Q_OS_D.*@__unix__@g' \
+		${WRKSRC}/app/mainwindow.cpp
 
 .include <bsd.port.mk>

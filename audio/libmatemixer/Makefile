@@ -1,8 +1,8 @@
 PORTNAME=	libmatemixer
-PORTVERSION=	1.28.0
-PORTREVISION=	1
+DISTVERSION=	1.28.0
+PORTREVISION=	3
 CATEGORIES=	audio mate
-MASTER_SITES=	MATE
+MASTER_SITES=	https://github.com/mate-desktop/${PORTNAME}/releases/download/v${DISTVERSION}/
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -11,10 +11,9 @@ WWW=		https://github.com/mate-desktop/libmatemixer
 
 LICENSE=	LGPL21
 
-PORTSCOUT=	limitw:1,even
-
-USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pkgconfig tar:xz
 USE_GNOME=	glib20 intlhack
+PORTSCOUT=	site:https://github.com/mate-desktop/libmatemixer/releases/ limitw:1,even
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-null \
 		--enable-oss \
@@ -31,4 +30,5 @@ PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
 ALSA_CONFIGURE_ENABLE=		alsa
 ALSA_LIB_DEPENDS=		libasound.so:audio/alsa-lib
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO} ALSA
 .include <bsd.port.mk>

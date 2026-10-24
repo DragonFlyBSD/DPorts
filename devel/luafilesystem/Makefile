@@ -10,7 +10,7 @@ WWW=		http://www.keplerproject.org/luafilesystem/index.html
 
 LICENSE=	MIT
 
-USES=		lua:module
+USES= lua:module gmake
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	keplerproject

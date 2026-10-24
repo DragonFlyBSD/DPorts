@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2026-09-20 15:03:41 UTC
++++ CMakeLists.txt
+@@ -216,7 +216,7 @@ install(
+ # Install header files for devel.
+ install(
+   DIRECTORY "${INCLUDE_DIR}/"
+-  DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/centreon-clib"
++  DESTINATION "${CMAKE_INSTALL_PREFIX}/include/centreon-clib"
+   COMPONENT "development"
+   FILES_MATCHING PATTERN "*.hh"
+ )

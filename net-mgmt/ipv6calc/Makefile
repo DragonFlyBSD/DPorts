@@ -1,5 +1,5 @@
 PORTNAME=	ipv6calc
-PORTVERSION=	4.3.0
+PORTVERSION=	4.4.0
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -23,5 +23,8 @@ SHEBANG_FILES=	tools/*
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/CFLAGS_EXTRA/s/-Werror //g' ${WRKSRC}/configure
 
 .include <bsd.port.mk>

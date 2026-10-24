@@ -1,6 +1,6 @@
 PORTNAME=	rodent
 PORTVERSION=	5.3.16.3
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11-fm
 MASTER_SITES=	SF/xffm/${PORTVERSION}
 
@@ -36,5 +36,11 @@ OPTIONS_SUB=	yes
 
 NLS_USES=		gettext
 NLS_CONFIGURE_ENABLE=	nls
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|"FreeBSD"|"DragonFly"|' \
+		${WRKSRC}/apps/*/configure
+	${REINPLACE_CMD} -e 's@G_STATIC_MUTEX_INIT@PTHREAD_MUTEX_INITIALIZER@g' \
+		${WRKSRC}/apps/rodent-fstab/src/fstab-bsd.i
 
 .include <bsd.port.mk>

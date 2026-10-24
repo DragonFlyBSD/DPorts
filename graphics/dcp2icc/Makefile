@@ -18,6 +18,8 @@ USE_GCC=	yes	# segfaults on exit when built with Clang
 
 PLIST_FILES=	bin/${PORTNAME}
 
+EXTRACT_DEPENDS= ${UNZIP_CMD}:archivers/unzip
+UNZIP_NATIVE_CMD= ${UNZIP_CMD}
 post-extract:
 	@${UNZIP_NATIVE_CMD} -qo ${WRKSRC}/XMP-Toolkit-SDK-4.4.2.zip \
 		-d ${WRKSRC}

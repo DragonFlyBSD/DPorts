@@ -24,4 +24,14 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/DOC/Tcpview ${STAGEDIR}${PREFIX}/lib/X11/app-defaults
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@<nfs/@<vfs/nfs/@g' \
+			 -e 's@<fs/nfs/@<vfs/nfs/@g' \
+		${WRKSRC}/detail-udp.c \
+		${WRKSRC}/nametoaddr.c \
+		${WRKSRC}/print-nfs.c \
+		${WRKSRC}/print-udp.c
+	${REINPLACE_CMD} -e 's@index@index_@g' \
+		${WRKSRC}/detail-domain.c
+
 .include <bsd.port.mk>

@@ -1,0 +1,18 @@
+--- meson.build.orig	2026-02-07 06:29:30 UTC
++++ meson.build
+@@ -3,6 +3,7 @@ cc = meson.get_compiler('c')
+ 
+ cc = meson.get_compiler('c')
+ 
++if get_option('git')
+ # use git describe if that's available
+ git = find_program('git', required: false)
+ if git.found()
+@@ -20,6 +21,7 @@ if git.found()
+ 	if git_repository.returncode() == 0
+ 		repository = git_repository.stdout().strip()
+ 	endif
++endif
+ endif
+ 
+ add_global_arguments('-DPICOM_VERSION="v'+meson.project_version()+'"', language: 'c')

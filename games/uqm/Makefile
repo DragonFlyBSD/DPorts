@@ -116,4 +116,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/users/manual.txt ${STAGEDIR}${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/doc/users/uqm.6 ${STAGEDIR}${PREFIX}/share/man/man6
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's,FreeBSD|OpenBSD),DragonFly|&,g' \
+		${WRKSRC}/build/unix/config_proginfo_host
+
 .include <bsd.port.mk>

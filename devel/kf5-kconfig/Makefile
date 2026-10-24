@@ -14,4 +14,8 @@ USE_KDE=	ecm:build
 USE_QT=		core dbus declarative gui linguisttools network xml \
 		buildtools:build qmake:build testlib:build
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

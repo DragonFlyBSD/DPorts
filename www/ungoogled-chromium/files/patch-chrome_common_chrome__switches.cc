@@ -1,19 +1,20 @@
---- chrome/common/chrome_switches.cc.orig	2024-08-26 14:40:28 UTC
+--- chrome/common/chrome_switches.cc.orig	2026-08-13 07:41:05 UTC
 +++ chrome/common/chrome_switches.cc
-@@ -898,14 +898,14 @@ const char kAllowNaClSocketAPI[] = "allow-nacl-socket-
+@@ -937,7 +937,7 @@ const char kDebugPrint[] = "debug-print";
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_WIN)
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- const char kEnableNewAppMenuIcon[] = "enable-new-app-menu-icon";
  
  // Causes the browser to launch directly in guest mode.
  const char kGuest[] = "guest";
- #endif
+@@ -984,7 +984,7 @@ const char kGlicGuestUrlPresetStaging[] = "glic-guest-
+ const char kGlicGuestUrlPresetPreprod[] = "glic-guest-url-preset-preprod";
+ const char kGlicGuestUrlPresetProd[] = "glic-guest-url-preset-prod";
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  // Writes open and installed web apps for each profile to the specified file
- // without launching a new browser window or tab. Pass a absolute file path to
- // specify where to output the information. Can be used together with optional
+ // without launching a new browser window or tab. Pass a absolute file path
+ // to specify where to output the information. Can be used together with

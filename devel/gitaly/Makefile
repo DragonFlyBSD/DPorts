@@ -4,6 +4,8 @@ DISTVERSION=	${GITLAB_VERSION}
 PORTREVISION=	${GITLAB_PORTREVISION} # modify it in www/gitlab/Makefile.common
 CATEGORIES=	devel
 
+PATCH_SITES=	https://gitlab.com/gitlab-org/gitaly/-/merge_requests/
+#PATCHFILES+=	8309.patch:-p1 # https://gitlab.com/gitlab-org/gitaly/-/merge_requests/8309, Fix build on i386 system
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Smart reverse proxy for GitLab
 WWW=		https://gitlab.com/gitlab-org/gitaly
@@ -11,23 +13,30 @@ WWW=		https://gitlab.com/gitlab-org/gitaly
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN_i386=	Platform i386 is not supported upstream, see https://gitlab.com/gitlab-org/gitaly/-/merge_requests/8309
+
 BUILD_DEPENDS=	bash>0:shells/bash \
 		${LOCALBASE}/bin/cmake:devel/cmake-core \
+		meson:devel/meson \
 		pcre2>0:devel/pcre2 \
 		http-parser>0:www/http-parser
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libiconv.so:converters/libiconv \
 		libpcre2-8.so:devel/pcre2
 
-USES=		cpe gmake go:modules,no_targets,1.23 iconv pkgconfig
+USES=		cpe gmake go:modules,no_targets iconv pkgconfig
 
 CPE_VENDOR=	gitlab
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
+GL_TUPLE=	gitlab-org:git:v${GITLAB_GIT_VERSION}:git_dep/_build/deps/git-v${GITLAB_GIT_VERSION_SHORT} \
+		gitlab-org:git:${GITLAB_GIT_MASTER_VERSION}:git_master_dep/_build/deps/git-master \
+		gitlab-org:git:${GITLAB_GIT_PREV_VERSION}:git_prev_dep/_build/deps/git-prev \
+		gitlab-org:git:${GITLAB_GIT_VERSION_MVCC}:git_mvcc_dep/_build/deps/git-mvcc
+
 GO_MOD_DIST=	gitlab
-GO_MODULE=	gitlab.com/gitlab-org/gitaly/v18
-GL_TUPLE=	gitlab-org:git:v${GITLAB_GIT_VERSION}:_build/_build/deps/git-v${GITLAB_GIT_VERSION_SHORT}
+GO_MODULE=	gitlab.com/gitlab-org/gitaly/v19
 
 MAKE_ENV=	GOFLAGS="${GO_BUILDFLAGS}"
 # make sure to pass go build options into make process
@@ -40,7 +49,6 @@ post-patch:
 	${MV} ${WRKSRC}/config.toml.example ${WRKSRC}/config.toml.sample
 
 do-install:
-	${MKDIR} ${STAGEDIR}${DATADIR}
 	${MKDIR} ${STAGEDIR}${DATADIR}/bin
 	${FIND} ${WRKSRC} -name '*.orig' -delete
 	(cd ${WRKSRC}/_build/bin/ && ${COPYTREE_BIN} .  ${STAGEDIR}${DATADIR}/bin && \
@@ -54,4 +62,10 @@ post-install:
 		s#${DATADIR_REL}/bin#@(,,555) ${DATADIR_REL}/bin#; ' >> ${TMPPLIST}
 
 .include "${.CURDIR}/../../www/gitlab/Makefile.common"
+dfly-patch:
+	${REINPLACE_CMD} -e 's,freebsd,dragonfly,g' \
+		${GO_GOPATH}/pkg/mod/github.com/?azure/azure-sdk-for-go/sdk/storage/azblob@v1.0.0/blockblob/mmf_unix.go
+	${REINPLACE_CMD} -e 's,sha1sum,sha1,g' \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

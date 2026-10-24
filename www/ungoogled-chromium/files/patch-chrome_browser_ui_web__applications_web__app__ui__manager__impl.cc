@@ -1,20 +1,20 @@
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2024-07-31 14:19:23 UTC
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc.orig	2026-08-13 07:41:05 UTC
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.cc
-@@ -577,7 +577,7 @@ void WebAppUiManagerImpl::MaybeShowIPHPromoForAppsLaun
-     content::WebContents* web_contents,
-     Profile* profile,
-     const std::string& app_id) {
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   WebAppProvider* provider = WebAppProvider::GetForWebApps(profile);
-   CHECK(provider);
- 
-@@ -797,7 +797,7 @@ void WebAppUiManagerImpl::ClearWebAppSiteDataIfNeeded(
+@@ -341,7 +341,7 @@ bool WebAppUiManagerImpl::IsAppMigrationDialogShowing(
+     return false;
    }
+ #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || \
+-    BUILDFLAG(IS_MAC)
++    BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+   BrowserView* browser_view = BrowserView::GetBrowserViewForBrowser(window);
+   return browser_view &&
+          browser_view->GetProperty(kIsPwaUpdateDialogShowingKey) &&
+@@ -930,7 +930,7 @@ void WebAppUiManagerImpl::ClearWebAppSiteDataIfNeeded(
  }
  
--#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- void WebAppUiManagerImpl::ShowIPHPromoForAppsLaunchedViaLinkCapturing(
-     const Browser* browser,
-     const webapps::AppId& app_id,
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ 
+ const base::Feature& GetPromoFeatureEngagementFromBrowser(
+     const BrowserWindowInterface* browser) {

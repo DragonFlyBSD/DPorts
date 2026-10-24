@@ -21,4 +21,7 @@ INFO=		${PORTNAME}
 
 TEST_TARGET=	check
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s|300|20|" ${WRKSRC}/config/unix.exp
+
 .include <bsd.port.mk>

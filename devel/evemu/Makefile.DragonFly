@@ -1,5 +1,0 @@
-
-# to avoid bad orphans
-dfly-install:
-	${RM} -fv ${STAGEDIR}${LOCALBASE}/man/man1/*.bak
-DFLY_UNMAINTAINED= yes

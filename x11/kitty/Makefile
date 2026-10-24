@@ -1,7 +1,7 @@
 PORTNAME=	kitty
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.30.0
-PORTREVISION=	1
+DISTVERSION=	0.49.2
+PORTREVISION=	2
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -13,56 +13,61 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}furo>0:textproc/py-furo@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}sphinx-autobuild>=2025.8.25:textproc/py-sphinx-autobuild@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sphinx-copybutton>0:textproc/py-sphinx-copybutton@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}sphinx-design>=0.7.0_1:textproc/py-sphinx-design@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sphinx-inline-tabs>0:textproc/py-sphinx-inline-tabs@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sphinxext-opengraph>0:textproc/py-sphinxext-opengraph@${PY_FLAVOR} \
-		roboto-fonts-ttf>0:x11-fonts/roboto-fonts-ttf \
+		evdev-proto>=5.8:devel/evdev-proto \
+		nerd-fonts-symbols>=3.1.1:x11-fonts/nerd-fonts-symbols \
+		roboto-fonts-ttf>=2.134:x11-fonts/roboto-fonts-ttf \
+		simde>=0.7.6:devel/simde \
 		sphinx-build:textproc/py-sphinx@${PY_FLAVOR} \
+		urw-base35-fonts>=20200910:x11-fonts/urw-base35-fonts \
+		slangc:graphics/linux-slang \
 		wayland-protocols>=0:graphics/wayland-protocols
-LIB_DEPENDS=	libcanberra.so:audio/libcanberra \
+LIB_DEPENDS=	libcairo.so:graphics/cairo \
+		libcanberra.so:audio/libcanberra \
 		libdbus-1.so:devel/dbus \
 		libepoll-shim-interpose.so:devel/libepoll-shim \
 		libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
 		liblcms2.so:graphics/lcms2 \
-		libpng.so:graphics/png \
-		librsync.so:net/librsync \
+		libpixman-1.so:x11/pixman \
+		libpng16.so:graphics/png \
+		libudev.so:devel/libudev-devd \
 		libwayland-client.so:graphics/wayland \
 		libwayland-cursor.so:graphics/wayland \
 		libxkbcommon.so:x11/libxkbcommon \
 		libxxhash.so:devel/xxhash
+RUN_DEPENDS=	slangc:graphics/linux-slang
 
+# ncursesw and tinfo >= 6.1 seem to be needed
 USES=		compiler:c11 cpe desktop-file-utils gettext-runtime gl gmake \
-		go:1.21,modules magick pkgconfig python shebangfix ssl tar:xz \
+		go:modules linux:rl9 ncurses pkgconfig python shebangfix ssl tar:xz \
 		terminfo xorg
-CPE_VENDOR=	kitty_project
-GH_TUPLE=	ALTree:bigfloat:38c8b72a9924:altree_bigfloat/vendor/github.com/ALTree/bigfloat \
-		disintegration:imaging:v1.6.2:disintegration_imaging/vendor/github.com/disintegration/imaging \
-		golang:exp:54bba9f4231b:golang_exp/vendor/golang.org/x/exp \
-		golang:image:v0.3.0:golang_image/vendor/golang.org/x/image \
-		golang:sys:v0.4.0:golang_sys/vendor/golang.org/x/sys \
-		google:go-cmp:v0.5.8:google_go_cmp/vendor/github.com/google/go-cmp \
-		google:uuid:v1.3.0:google_uuid/vendor/github.com/google/uuid \
-		jamesruan:go-rfc1924:2767ca7c638f:jamesruan_go_rfc1924/vendor/github.com/jamesruan/go-rfc1924 \
-		seancfoley:bintree:v1.2.1:seancfoley_bintree/vendor/github.com/seancfoley/bintree \
-		seancfoley:ipaddress-go:v1.5.3:seancfoley_ipaddress_go/vendor/github.com/seancfoley/ipaddress-go
+CPE_VENDOR=	kovidgoyal
 
 USE_GL=		gl
-USE_XORG=	x11 xcb xcursor xi xinerama xrandr
+USE_LINUX=	base
+USE_XORG=	pixman x11 xcb xcursor xi xinerama xrandr
 
-SHEBANG_FILES=	build-terminfo count-lines-of-code mypy-editor-integration \
-		update-on-ox
+SHEBANG_FILES=	build-terminfo count-lines-of-code update-on-ox
 SHEBANG_GLOB=	*.py
 
 GO_MODULE=	github.com/kovidgoyal/kitty
 
-MAKE_ENV=	PYTHONDONTWRITEBYTECODE=1
+MAKE_ENV=	BUILD_MANPAGES=yes
+# see: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291485#c13
+MAKE_ENV+=	TZ=UTC
+
 TEST_ENV=	PATH="${STAGEDIR}${PREFIX}/bin:${PATH}"
 TEST_TARGET=	test
 
 CPPFLAGS+=	`pkg-config --cflags epoll-shim-interpose`
 LDFLAGS+=	`pkg-config --libs epoll-shim-interpose`
+
+PIE_UNSAFE=	yes
 
 BINARY_ALIAS=	python3=${PYTHON_CMD} python=${PYTHON_CMD}
 
@@ -78,10 +83,10 @@ _EMPTY_DIRS=	kittens/choose kittens/diff kittens/unicode_input kittens kitty
 OPTIONS_DEFINE=	DOCS
 DOCS_MAKE_ENV=	BUILD_DOCS=yes
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && (${OSVERSION} >= 1400079 || (${OSVERSION} >= 1302505 && \
-	${OSVERSION} < 1400000))
+.if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=invalid-utf8 -Winvalid-utf8
 .endif
 
@@ -89,20 +94,18 @@ CFLAGS+=	-Wno-error=invalid-utf8 -Winvalid-utf8
 MAKE_ENV+=	KITTY_NO_LTO=1
 .endif
 
-# ncursesw and tinfo >= 6.1 seem to be neededd
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1400035
-USES+=		ncurses:port
-.else
-USES+=		ncurses
-.endif
-
-# fix clang static_assert on 12.x releases, https://github.com/kovidgoyal/kitty/pull/5398
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300000
-EXTRA_PATCHES=	${PATCHDIR}/extra-patch-kitty_data-types.h
+.if ${ARCH} == "i386" || ${ARCH} == "powerpc" || ${ARCH:Marmv?}
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-vendor_github.com_sgtdi_fswatcher_watcher__kqueue.go
 .endif
 
 post-patch:
-	${REINPLACE_CMD} -i.bak -e "s:'go':'${GO_CMD}':1" ${WRKSRC}/setup.py
+	${REINPLACE_CMD} -E \
+		-e "s:'go':'${GO_CMD}':1" \
+		-e "s:(dirs_exist_ok=True):\1, ignore=shutil.ignore_patterns('*.orig', '*.bak'):1" \
+		${WRKSRC}/setup.py
+	${REINPLACE_CMD} -e "s:%%DATADIR%%:${DATADIR}:1" \
+		${WRKSRC}/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish \
+		${WRKSRC}/kitty/shaders/custom/demo.py
 
 # For librsync, we need to set header and library path
 do-build:
@@ -125,12 +128,13 @@ do-install:
 	       	${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/terminfo/kitty.terminfo \
 		${STAGEDIR}${PREFIX}/share/misc/
-	${INSTALL_MAN} ${BUILD_DIR}/share/man/man1/kitty.1 ${STAGEDIR}${MANPREFIX}/share/man/man1
-	${INSTALL_MAN} ${BUILD_DIR}/share/man/man5/kitty.conf.5 ${STAGEDIR}${MANPREFIX}/share/man/man5
 	${STRIP_CMD} ${_STRIP_TARGETS:S|^|${STAGEDIR}${DATADIR}/|}
+	${INSTALL_MAN} ${BUILD_DIR}/share/man/man1/kitty.1 ${STAGEDIR}${PREFIX}/share/man/man1
+	${INSTALL_MAN} ${BUILD_DIR}/share/man/man5/kitty.conf.5 ${STAGEDIR}${PREFIX}/share/man/man5
 
 do-install-DOCS-on:
 	cd ${BUILD_DIR}/share/doc/kitty/html && \
-		${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
+		${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR} \
+			"-not ( -name .buildinfo -or -name .nojekyll )"
 
 .include <bsd.port.mk>

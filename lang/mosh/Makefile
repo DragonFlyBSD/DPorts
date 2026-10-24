@@ -1,8 +1,7 @@
 PORTNAME=	mosh
-PORTVERSION=	0.2.7
-PORTREVISION=	7
+DISTVERSION=	0.2.9-rc1
 CATEGORIES=	lang
-MASTER_SITES=	https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/mosh-scheme/
+MASTER_SITES=	https://github.com/higepon/mosh/releases/download/${DISTNAME}/
 PKGNAMESUFFIX=	-scheme
 
 MAINTAINER=	mjt@cltn.org
@@ -13,22 +12,24 @@ LICENSE=	BSD2CLAUSE
 
 BROKEN_armv6=		fails to link: os_dep.c: undefined reference to '__stack_base__'
 BROKEN_armv7=		fails to link: os_dep.c: undefined reference to '__stack_base__'
-BROKEN_mips64=		fails to compile: os_dep.c: redefinition of 'GC_register_dynamic_libraries'
 NOT_FOR_ARCHS=		aarch64 riscv64
 NOT_FOR_ARCHS_REASON=	gcconfig.h: the collector has not been ported to this machine/OS combination
 
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libonig.so:devel/oniguruma
 
+USES=		gmake ssl
+
 CONFLICTS_INSTALL=	mosh-1.[0-9].*
 
-USES=		gmake ssl
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--datadir=${PREFIX}/lib
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+PLIST_SUB=	VERSION=${DISTVERSION}
 
 .if ${MACHINE_CPU:Msse3}
 CONFIGURE_ENV+=	MOSH_OPTS="-msse3 -mfpmath=sse"
@@ -45,5 +46,12 @@ x-generate-plist: stage
 		'*mosh*' ; ${FIND} ${STAGEDIR}${PREFIX}/lib/mosh -type f) \
 		| ${SORT} | ${SED} -e 's,^${STAGEDIR}${PREFIX}/,,' \
 		> pkg-plist.new
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(\*freebsd\*\))@\1|*dragonfly*)@g' \
+			 -e 's@^freebsd\*@&|dragonfly*@g' \
+			 -e 's@\(ptracestub_common\)=true@\1=false@g' \
+			 -e 's@HAVE_PTRACE_COMMON@&___@g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

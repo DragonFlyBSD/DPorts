@@ -1,7 +1,10 @@
 PORTNAME=	APCu
-PORTVERSION=	5.1.24
+PORTVERSION=	5.1.28
 CATEGORIES=	devel
 DISTNAME=	apcu-${PORTVERSION}
+
+PATCH_SITES=	https://github.com/krakjoe/apcu/commit/
+PATCHFILES=	90899684be91c4f750512c2f840f487286ecb807.patch:-p1
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	APC User Caching

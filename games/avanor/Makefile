@@ -18,6 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 PLIST_FILES=	bin/${PORTNAME}
 PORTDATA=	*
 
+MAKE_JOBS_UNSAFE= yes
 post-patch:
 	@${REINPLACE_CMD} -e "s|g++|${CXX}|; \
 		s|CFLAGS =|CFLAGS+=|;" \

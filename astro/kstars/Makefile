@@ -1,9 +1,8 @@
 PORTNAME=	kstars
-DISTVERSION=	3.6.6
-PORTREVISION=	1
+DISTVERSION=	3.8.5
 PORTEPOCH=	1
 CATEGORIES=	astro kde
-MASTER_SITES=	KDE/stable/${PORTNAME}
+MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}/
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE desktop planetarium
@@ -11,36 +10,37 @@ WWW=		https://edu.kde.org/kstars
 
 LICENSE=	GPLv2
 
+# ld: error: failed to open kstars/kstars: Cannot allocate memory
+IGNORE_i386=	fails to build on i386
+
 LIB_DEPENDS=	libXISF.so:graphics/libxisf \
 		libcfitsio.so:astro/cfitsio \
-		libqt5keychain.so:security/qtkeychain@qt5 \
+		libqt6keychain.so:security/qtkeychain@qt6 \
 		libraw.so:graphics/libraw \
 		libgsl.so:math/gsl \
-		libsecret-1.so:security/libsecret \
+		libindiclient.so:devel/indi \
+		libopencv_core.so:graphics/opencv \
 		libnova.so:astro/libnova \
-		libstellarsolver.so:astro/stellarsolver \
-		libwcs.so:astro/wcslib
-BUILD_DEPENDS=	xplanet:astro/xplanet
-RUN_DEPENDS=	xplanet:astro/xplanet
+		libstellarsolver6.so:astro/stellarsolver \
+		libwcs.so:astro/wcslib \
+		libcurl.so:ftp/curl
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
+		xplanet:astro/xplanet
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
+		xplanet:astro/xplanet
 
 USES=		cmake compiler:c++11-lib desktop-file-utils eigen:3 \
-		gettext gnome kde:5 localbase:ldflags pkgconfig qt:5 tar:xz xorg
+		gettext gnome kde:6 localbase:ldflags pkgconfig \
+		python qt:6 tar:xz xorg
 USE_GNOME=	glib20
-USE_KDE=	attica auth bookmarks codecs completion config configwidgets\
-		coreaddons crash dbusaddons guiaddons i18n \
-		iconthemes init itemviews jobwidgets kio newstuff notifications \
-		notifyconfig parts plotting service solid texteditor \
-		widgetsaddons windowsystem xmlgui \
-		doctools:build ecm:build
-USE_QT=		concurrent core datavis3d dbus declarative gui multimedia \
-		network opengl printsupport sql svg testlib websockets widgets \
-		xml \
-		buildtools:build qmake:build
+USE_KDE=	config crash i18n kio newstuff notifications \
+		notifyconfig plotting widgetsaddons xmlgui \
+		ecm:build
+USE_QT=		base datavis3d declarative \
+		svg websockets
 USE_XORG=	x11
 
-# Requires devel/indi >= 2.0.0 which is not in the ports tree yet. KStars builds
-# fine with INDI 2.0.3, but support for the INDI 2.0 API in astro/phd2 and
-# astro/stellarium as of 2023-08-10 appear to be works in progress.
-CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_INDI
+CMAKE_ON=	BUILD_WITH_QT6
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

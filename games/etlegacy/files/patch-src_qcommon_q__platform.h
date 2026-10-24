@@ -1,23 +1,19 @@
---- src/qcommon/q_platform.h.orig	2023-03-12 18:33:03 UTC
+--- src/qcommon/q_platform.h.orig	2026-08-02 10:13:43 UTC
 +++ src/qcommon/q_platform.h
-@@ -264,12 +264,20 @@
- 
- #ifdef __i386__
- #define ARCH_STRING "i386"
-+#elif defined __aarch64__
-+#define ARCH_STRING "aarch64"
- #elif defined __amd64__
- #undef idx64
- #define idx64 1
+@@ -278,6 +278,16 @@
  #define ARCH_STRING "x86_64"
  #elif defined __axp__
  #define ARCH_STRING "alpha"
 +#elif defined __powerpc64__
-+#define ARCH_STRING "ppc64"
++#if BYTE_ORDER == BIG_ENDIAN
++#define ARCH_STRING "powerpc64"
++#else
++#define ARCH_STRING "powerpc64le"
++#endif
 +#elif defined __powerpc__
-+#define ARCH_STRING "ppc"
++#define ARCH_STRING "powerpc"
 +#elif defined __arm__
-+#define ARCH_STRING "arm" // __ARM_ARCH_'V'__ FIXME: add ARM version to the ARCH_STRING
++#define ARCH_STRING "armv7"
  #endif
  
  #if BYTE_ORDER == BIG_ENDIAN

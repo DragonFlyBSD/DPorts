@@ -1,46 +1,69 @@
 PORTNAME=	appjail
-DISTVERSION=	3.3.0.20240506
+DISTVERSION=	5.9.1.20261012
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
-MAINTAINER=	acm@FreeBSD.org
+MAINTAINER=	dtxdf@FreeBSD.org
 COMMENT=	Simple and easy-to-use tool for creating portable jails (devel)
 WWW=		https://github.com/DtxdF/AppJail
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-CONFLICTS=	appjail
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	DtxdF
 GH_PROJECT=	AppJail
-GH_TAGNAME=	fbe8792bc494bc94cedf112917db5889bb1c2cca
+GH_TAGNAME=	2ab6fa6d9c8e91a43e1197af2ff945a4a145cdde
 
 MAKE_ARGS=	APPJAIL_VERSION=${DISTVERSION}+${GH_TAGNAME}
 ALL_TARGET=	utils-strip
 
+CONFLICTS=	appjail
 
 SUB_FILES=	pkg-message
 
 PORTDOCS=	README.md
+PORTEXAMPLES=	*
 
-OPTIONS_DEFINE=			DEBOOTSTRAP DOAS DOCS GIT
+OPTIONS_DEFINE=		DEBOOTSTRAP DOAS DOCS EXAMPLES GIT OCI PKGBASE X11
+OPTIONS_DEFAULT=	OCI PKGBASE
+OPTIONS_RADIO=		SECRETS
+OPTIONS_RADIO_SECRETS=	AGE RAGE
 
-DEBOOTSTRAP_DESC=		Support for Debian and Ubuntu jails
-DOAS_DESC=			Add support for unprivileged users
+AGE_DESC=		Use security/age as secrets backend
+DEBOOTSTRAP_DESC=	Support for Debian and Ubuntu jails
+DOAS_DESC=		Add support for unprivileged users
+OCI_DESC=		Add support for OCI
+PKGBASE_DESC=		Add support for pkgbase
+RAGE_DESC=		Use security/rage as secrets backend
+X11_DESC=		Add support for x11
 
+AGE_RUN_DEPENDS=		age:security/age
 DEBOOTSTRAP_RUN_DEPENDS=	debootstrap>0:sysutils/debootstrap
 DOAS_RUN_DEPENDS=		doas>0:security/doas
 GIT_RUN_DEPENDS=		git>0:devel/git
-
-do-install-DOCS-on:
-	@${MKDIR} ${STAGEDIR}/${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}/${DOCSDIR}
+OCI_RUN_DEPENDS=		buildah>0:sysutils/buildah \
+				jq>0:textproc/jq
+PKGBASE_RUN_DEPENDS=		${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
+RAGE_RUN_DEPENDS=		rage:security/rage-encryption
+X11_RUN_DEPENDS=		xauth:x11/xauth \
+				xdotool:x11/xdotool \
+				Xephyr:x11-servers/xorg-server@xephyr \
+				xev:x11/xev \
+				xseticon:x11/xseticon
 
 post-install:
 	${MKDIR} ${STAGEDIR}/${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/share/examples/appjail/appjail.conf ${STAGEDIR}/${ETCDIR}/appjail.conf.sample
+
+post-install-DOCS-on:
+	@${MKDIR} ${STAGEDIR}/${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}/${DOCSDIR}
+
+post-install-EXAMPLES-on:
+	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
+	@cd ${WRKSRC}/share/examples/appjail && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
+	@cd ${WRKSRC}/share/examples/appjail && ${CHMOD} +x hooks/pre.d/*.sh
 
 .include <bsd.port.mk>

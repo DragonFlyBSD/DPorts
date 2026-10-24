@@ -1,0 +1,12 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 20:28:28 UTC
++++ pyproject.toml
+@@ -2,7 +2,7 @@ description = "Metric types and evaluation utilities f
+ name = "docling-metrics-core"
+ version = "0.14.0" # DO NOT EDIT, updated automatically
+ description = "Metric types and evaluation utilities for Docling document processing"
+-license = "MIT"
++license = {text = "MIT"}
+ keywords = ["docling", "metrics", "evaluation", "types"]
+ readme = "README.md"
+ authors = [

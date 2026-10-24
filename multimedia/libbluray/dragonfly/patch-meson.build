@@ -1,0 +1,13 @@
+--- meson.build.orig	2026-01-26 20:37:11 UTC
++++ meson.build
+@@ -48,6 +48,10 @@ if host_machine.system() == 'windows'
+     else
+         test_args += ['-D_CRT_NONSTDC_NO_WARNINGS', '-D_CRT_SECURE_NO_WARNINGS']
+     endif
++elif host_machine.system() == 'dragonfly'
++    # DragonFly's sys/cdefs.h hides non-POSIX declarations when
++    # _POSIX_C_SOURCE is defined. Build with default (BSD) visibility
++    # instead, as the former autotools build did on DragonFly.
+ else
+     test_args += '-D_POSIX_C_SOURCE=200809L'
+ endif

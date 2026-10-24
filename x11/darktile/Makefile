@@ -1,7 +1,7 @@
 PORTNAME=	darktile
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.0.11
-PORTREVISION=	6
+PORTREVISION=	31
 CATEGORIES=	x11
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -24,4 +24,5 @@ GO_TARGET=	./cmd/darktile \
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/packfont
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

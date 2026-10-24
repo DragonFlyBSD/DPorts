@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # PROVIDE: bareos_dir
-# REQUIRE: DAEMON %%REQ_MYSQL%% %%REQ_PGSQL%%
+# REQUIRE: DAEMON %%REQ_PGSQL%%
 # KEYWORD: shutdown
 #
 # Add the following lines to /etc/rc.conf.local or /etc/rc.conf
@@ -20,13 +20,15 @@ rcvar=${name}_enable
 
 load_rc_config $name
 
+export PATH="${PATH}:%%LOCALBASE%%/bin:%%LOCALBASE%%/sbin"
+
 : ${bareos_dir_enable="NO"}
 : ${bareos_dir_flags="-u bareos -g bareos -v"}
 : ${bareos_dir_config="%%PREFIX%%/etc/bareos/"}
 : ${bareos_dir_pidfile="/var/run/bareos/bareos-dir.9101.pid"}
 
 command=%%PREFIX%%/sbin/bareos-dir
-command_args="-c ${bareos_dir_config}"
+command_args="-c ${bareos_dir_config} -p ${bareos_dir_pidfile}"
 pidfile="${bareos_dir_pidfile}"
 bconsole_command=/usr/local/bin/bconsole
 start_precmd="bareos_start_precmd"
@@ -42,7 +44,7 @@ bareos_start_precmd() {
 
 bareos_dir_configtest() {
 	echo "Performing sanity check on ${bareos_dir_config} configuration:"
-	eval ${command} -t
+	eval ${command} -c ${bareos_dir_config} -t
 }
 
 bareos_dir_reload() {

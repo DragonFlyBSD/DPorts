@@ -1,7 +1,7 @@
 PORTNAME=	cloud-nuke
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.36.0
-PORTREVISION=	2
+DISTVERSION=	0.52.0
+PORTREVISION=	6
 CATEGORIES=	sysutils
 
 MAINTAINER=	dutra@FreeBSD.org
@@ -11,7 +11,7 @@ WWW=		https://github.com/gruntwork-io/cloud-nuke
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-USES=		cpe go:1.22,modules
+USES=		cpe go:modules
 
 CPE_VENDOR=	gruntwork-io
 GO_MODULE=	github.com/gruntwork-io/cloud-nuke
@@ -21,4 +21,5 @@ GO_BUILDFLAGS=	-ldflags "\
 
 PLIST_FILES=	bin/${PORTNAME}
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

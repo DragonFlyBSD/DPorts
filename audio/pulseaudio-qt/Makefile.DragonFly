@@ -1,4 +1,0 @@
-
-# no pulse
-LIB_DEPENDS:=	${LIB_DEPENDS:Nlibpulse*}
-BROKEN= uses pulseaudio

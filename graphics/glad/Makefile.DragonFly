@@ -1,3 +1,0 @@
-
-# missing build dep
-USES+=	python:build

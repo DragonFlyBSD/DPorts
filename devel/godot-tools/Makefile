@@ -9,4 +9,5 @@ PKGMESSAGE=	${.CURDIR}/pkg-message
 
 MASTERDIR=	${.CURDIR}/../godot
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include "${MASTERDIR}/Makefile"

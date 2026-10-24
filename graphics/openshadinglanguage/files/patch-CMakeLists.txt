@@ -1,0 +1,18 @@
+--- CMakeLists.txt.orig	2025-12-01 12:53:35 UTC
++++ CMakeLists.txt
+@@ -323,13 +323,13 @@ install (FILES "${OSL_PROJECT_CONFIG}" "${OSL_VERSION_
+ install (FILES "${OSL_PROJECT_CONFIG}" "${OSL_VERSION_CONFIG}"
+         DESTINATION "${OSL_CONFIG_INSTALL_DIR}")
+ 
+-install (FILES src/cmake/llvm_macros.cmake DESTINATION cmake)
++install (FILES src/cmake/llvm_macros.cmake DESTINATION ${OSL_CONFIG_INSTALL_DIR})
+ 
+ set (PERMISSION_FLAGS OWNER_EXECUTE OWNER_READ OWNER_WRITE
+                       GROUP_EXECUTE GROUP_READ
+                       WORLD_EXECUTE WORLD_READ)
+ install (FILES src/build-scripts/serialize-bc.py
+-         DESTINATION build-scripts
++         DESTINATION %%DATADIR%%/build-scripts
+          PERMISSIONS ${PERMISSION_FLAGS})
+ 
+ # install targets files

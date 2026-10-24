@@ -1,6 +1,6 @@
 CATEGORIES=	dns net
 # Always set PORTREVISION explicitly as otherwise it is inherited from net/mDNSResponder
-PORTREVISION=	1
+PORTREVISION=	0
 PKGNAMESUFFIX=	_nss
 
 MAINTAINER=	mazhe@alkumuna.eu
@@ -20,6 +20,8 @@ DESCR=		${.CURDIR}/pkg-descr
 # Disable some master port targets
 TARGET_ORDER_OVERRIDE=	-1:post-install -1:install-rc-script
 
+IGNORE= unmaintained, please request fixing to users mailing list
+DFLY_UNMAINTAINED= yes
 post-extract:
 	@${CP} ${.CURDIR}/files/nss_mdns_freebsd.c ${WRKSRC}/mDNSPosix
 

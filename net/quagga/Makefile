@@ -99,6 +99,7 @@ PLIST_SUB+=	LOCALSTATE_DIR=${LOCALSTATE_DIR} \
 		ENABLE_USER=${ENABLE_USER} \
 		ENABLE_GROUP=${ENABLE_GROUP}
 
+CPPFLAGS= -DHAVE_BSD_STRUCT_IP_MREQ_HACK
 pre-everything::
 	@${ECHO} "============================================================="
 	@${ECHO}

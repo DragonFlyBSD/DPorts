@@ -1,2 +1,0 @@
-MAKE_ENV+=	NO_WERROR=defined
-MAKE_ENV+=	CWARNFLAGS=-fcommon

@@ -1,13 +1,12 @@
 PORTNAME=	Clp
 DISTVERSIONPREFIX=	releases/
-DISTVERSION=	1.17.9
-PORTREVISION=	2
+DISTVERSION=	1.17.11
 CATEGORIES=	math
 PKGNAMEPREFIX=	coin-or-
 
 MAINTAINER=	co9co9@gmail.com
 COMMENT=	Linear Programming Solver
-WWW=		https://www.coin-or.org/Clp/index.html
+WWW=		https://github.com/coin-or/Clp
 
 LICENSE=	EPL
 
@@ -48,4 +47,5 @@ PORTDOCS=	*
 CXXFLAGS+=	-ffast-math
 DEBUG_CXXFLAGS=	-fomit-frame-pointer
 
+USE_CXXSTD= c++11
 .include <bsd.port.mk>

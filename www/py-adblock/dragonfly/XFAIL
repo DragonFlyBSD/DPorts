@@ -1,0 +1,2 @@
+XFAIL_DragonFly= python maturin wheel creation
+# ERROR: adblock-0.5.0-cp36-abi3-dragonfly_6_1_amd64.whl is not a supported wheel on this platform.

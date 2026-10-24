@@ -1,4 +1,0 @@
-
-# some bad stuff
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NDEBUGGERS}
-IGNORE=   unmaintained, please request fixing to users mailing list

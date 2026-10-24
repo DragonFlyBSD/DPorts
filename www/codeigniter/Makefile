@@ -2,7 +2,7 @@ PORTNAME=	codeigniter
 PORTVERSION=	3.1.13
 CATEGORIES=	www
 
-MAINTAINER=	sunpoet@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Framework for developing PHP web applications
 WWW=		https://codeigniter.com/
 
@@ -11,6 +11,7 @@ LICENSE_FILE=	${WRKSRC}/license.txt
 
 USES=		cpe php:web
 USE_PHP=	mcrypt session
+IGNORE_WITH_PHP=	86
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	bcit-ci

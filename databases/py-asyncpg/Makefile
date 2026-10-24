@@ -1,5 +1,5 @@
 PORTNAME=	asyncpg
-PORTVERSION=	0.30.0
+PORTVERSION=	0.31.0
 PORTREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	PYPI
@@ -12,9 +12,12 @@ WWW=		https://github.com/MagicStack/asyncpg/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
+
 USES=		cpe pgsql:11+ python
 CPE_VENDOR=	magic
-USE_PYTHON=	autoplist concurrent cython distutils
+USE_PYTHON=	autoplist concurrent cython pep517
 
 OPTIONS_DEFINE=	DOCS
 PORTDOCS=	PKG-INFO README.rst
@@ -31,4 +34,5 @@ post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
 	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
 
+CFLAGS:= ${CFLAGS} -D__STDC_NO_THREADS__
 .include <bsd.port.mk>

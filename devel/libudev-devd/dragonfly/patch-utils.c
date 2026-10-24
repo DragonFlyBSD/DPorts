@@ -3,7 +3,7 @@
 @@ -42,6 +42,10 @@
  #include <libprocstat.h>
  #endif
- 
+
 +#ifndef DTTOIF
 +#define DTTOIF(dirtype) ((dirtype) << 12)
 +#endif

@@ -1,6 +1,6 @@
---- media/audio/sndio/audio_manager_sndio.cc.orig	2024-07-31 14:19:23 UTC
+--- media/audio/sndio/audio_manager_sndio.cc.orig	2026-08-13 07:41:05 UTC
 +++ media/audio/sndio/audio_manager_sndio.cc
-@@ -0,0 +1,213 @@
+@@ -0,0 +1,217 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -8,6 +8,8 @@
 +#include "base/command_line.h"
 +#include "base/metrics/histogram_macros.h"
 +#include "base/memory/ptr_util.h"
++
++#include "base/logging.h"
 +
 +#include "media/audio/sndio/audio_manager_sndio.h"
 +
@@ -50,19 +52,21 @@
 +  return true;
 +}
 +
-+void AudioManagerSndio::GetAudioInputDeviceNames(
++bool AudioManagerSndio::GetAudioInputDeviceNames(
 +    AudioDeviceNames* device_names) {
 +  DCHECK(device_names->empty());
 +  AddDefaultDevice(device_names);
++  return true;
 +}
 +
-+void AudioManagerSndio::GetAudioOutputDeviceNames(
++bool AudioManagerSndio::GetAudioOutputDeviceNames(
 +    AudioDeviceNames* device_names) {
 +  AddDefaultDevice(device_names);
++  return true;
 +}
 +
 +#if defined(USE_SNDIO)
-+const char* AudioManagerSndio::GetName() {
++const std::string_view AudioManagerSndio::GetName() {
 +  return "SNDIO";
 +}
 +#endif

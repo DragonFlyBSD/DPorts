@@ -1,9 +1,9 @@
 PORTNAME=	suricata
-DISTVERSION=	7.0.10
+DISTVERSION=	8.0.7
 CATEGORIES=	security
 MASTER_SITES=	https://www.openinfosecfoundation.org/download/
 
-MAINTAINER=	franco@opnsense.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	High Performance Network IDS, IPS and Security Monitoring engine
 WWW=		https://suricata.io
 
@@ -18,9 +18,7 @@ LIB_DEPENDS=	libjansson.so:devel/jansson \
 		libyaml.so:textproc/libyaml
 
 USES=		autoreconf cpe gmake iconv:translit libtool localbase pathfix \
-		pkgconfig shebangfix
-SHEBANG_FILES=	python/suricata/sc/suricatasc.py
-
+		pkgconfig
 CPE_VENDOR=	openinfosecfoundation
 
 USE_LDCONFIG=	yes
@@ -30,12 +28,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gccmarch-native \
 			--enable-bundled-htp \
 			--enable-gccprotect
-MAKE_ENV=		RUSTFLAGS="${RUSTFLAGS} -C linker=${CC:Q} ${LDFLAGS:C/.+/-C link-arg=&/}"
 
+MAKE_ENV=		RUSTFLAGS="${RUSTFLAGS} -C linker=${CC:Q} ${LDFLAGS:C/.+/-C link-arg=&/}"
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
-
-CONFLICTS_INSTALL=	libhtp
 
 SUB_FILES=	pkg-message
 
@@ -93,6 +89,8 @@ REDIS_LIB_DEPENDS=	libevent_pthreads.so:devel/libevent \
 REDIS_CONFIGURE_ON=	--enable-hiredis
 TESTS_CONFIGURE_ENABLE=	unittests
 
+LDFLAGS= -lm
+IGNORE= unmaintained, please request fixing to users mailing list
 pre-patch:
 	@${CP} ${FILESDIR}/ax_check_compile_flag.m4 ${WRKSRC}/m4
 
@@ -113,6 +111,8 @@ post-install:
 .for f in suricata.yaml threshold.config
 	${INSTALL_DATA} ${WRKSRC}/${f} ${STAGEDIR}${ETCDIR}/${f}.sample
 .endfor
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/suricatactl
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/suricatasc
 
 post-install-PYTHON-on:
 	(cd ${STAGEDIR}${PREFIX} \
@@ -123,4 +123,5 @@ post-install-PYTHON-on:
 	${STAGEDIR}${PREFIX}/lib/suricata/python/suricata/update/configs
 .endfor
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NNETMAP}
 .include <bsd.port.mk>

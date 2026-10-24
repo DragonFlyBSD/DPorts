@@ -27,4 +27,8 @@ post-patch:
 	${REINPLACE_CMD} '/CMAKE_SYSTEM_NAME STREQUAL/s,Linux,FreeBSD,' \
 	    ${WRKSRC}/src/klftools/CMakeLists.txt
 
+dfly-patch:
+	${REINPLACE_CMD} '/CMAKE_SYSTEM_NAME STREQUAL/s,FreeBSD,DragonFly,' \
+		${WRKSRC}/src/klftools/CMakeLists.txt
+
 .include <bsd.port.mk>

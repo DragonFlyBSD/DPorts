@@ -23,4 +23,10 @@ post-patch:
 	${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' \
 		-e 's|CcCmd gcc|CcCmd ${CC}|' '${WRKSRC}/XDiary.tmpl'
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifndef \(__FreeBSD__\)@if \!(defined(\1)||defined(__DragonFly__))@g'	\
+		${WRKSRC}/ndbm/xdndbm.c
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'	\
+		${WRKSRC}/tools/SigHandler.c
+
 .include <bsd.port.mk>

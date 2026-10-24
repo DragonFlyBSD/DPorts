@@ -35,6 +35,7 @@ USES+=	ssl
 USERS=		www
 GROUPS=		www
 
+LDFLAGS= -lz
 post-configure:
 	${REINPLACE_CMD} 's/^\(#define[[:space:]]*HAVE_SENDFILE[[:space:]]*\).*/\1\0/' ${WRKSRC}/framework/common/config.h
 

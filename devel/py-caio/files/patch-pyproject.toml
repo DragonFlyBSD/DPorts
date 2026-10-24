@@ -1,0 +1,16 @@
+--- pyproject.toml.orig
++++ pyproject.toml
+@@ -1,12 +1,10 @@
+ [build-system]
+-requires = ["setuptools>=77"]
++requires = ["setuptools"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "caio"
+ version = "0.12.4"
+-license = "Apache-2.0"
+-license-files = ["COPYING"]
+ description = "Asynchronous file IO for Linux MacOS or Windows."
+ readme = "README.md"
+ authors = [{ name = "Dmitry Orlov", email = "me@mosquito.su"}]

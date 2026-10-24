@@ -15,4 +15,5 @@ WRKSRC_SUBDIR=	src
 
 PLIST_FILES=	bin/xmbibtex lib/X11/app-defaults/XmBibTeX
 
+CXXFLAGS= -fpermissive
 .include <bsd.port.mk>

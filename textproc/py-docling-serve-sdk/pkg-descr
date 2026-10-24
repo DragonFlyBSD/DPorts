@@ -1,0 +1,3 @@
+Docling Serve SDK is a Python SDK for interacting with the Docling
+Serve API using Pydantic models. It provides programmatic access to
+Docling's document conversion capabilities when deployed as a service.

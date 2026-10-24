@@ -1,3 +1,0 @@
-
-# zrj: test somehow splips up and thinks exp10 is in libm ...
-CFLAGS+= -DNO_EXP10

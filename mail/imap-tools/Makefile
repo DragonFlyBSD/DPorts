@@ -1,0 +1,24 @@
+PORTNAME=	imap-tools
+DISTVERSION=	1.13.0
+CATEGORIES=	mail
+MASTER_SITES=	CRATESIO/${PORTNAME}/${DISTNAME}${CARGO_CRATE_EXT}
+DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
+
+MAINTAINER=	mat@FreeBSD.org
+COMMENT=	A collection of tools to manipulate IMAP mailboxes
+WWW=		https://gitlab.com/mat813/imap-tools-rs
+
+LICENSE=	MIT
+
+USES=		cargo
+
+PLIST_FILES=	bin/imap-tools
+
+OPTIONS_DEFINE=	RATATUI
+
+RATATUI_DESC=	Display nice curses listings using ratatui
+RATATUI_VARS=	CARGO_FEATURES+=ratatui
+
+# make cargo-crates > Makefile.crates
+
+.include <bsd.port.mk>

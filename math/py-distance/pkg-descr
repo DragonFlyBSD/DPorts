@@ -1,0 +1,4 @@
+Distance provides utilities for comparing sequences in Python. It
+implements various distance metrics and similarity measures for
+sequence comparison, including Levenshtein distance and related
+algorithms for text and sequence analysis.

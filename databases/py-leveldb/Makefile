@@ -26,4 +26,7 @@ post-patch:
 post-install:
 	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -name '*.so' -exec ${STRIP_CMD} {} +
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' ${WRKSRC}/setup.py
+
 .include <bsd.port.mk>

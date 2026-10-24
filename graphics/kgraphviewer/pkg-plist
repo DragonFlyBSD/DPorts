@@ -57,6 +57,10 @@ share/doc/HTML/it/kgraphviewer/index.cache.bz2
 share/doc/HTML/it/kgraphviewer/index.docbook
 share/doc/HTML/nl/kgraphviewer/index.cache.bz2
 share/doc/HTML/nl/kgraphviewer/index.docbook
+share/doc/HTML/pt_BR/kgraphviewer/index.cache.bz2
+share/doc/HTML/pt_BR/kgraphviewer/index.docbook
+share/doc/HTML/ru/kgraphviewer/index.cache.bz2
+share/doc/HTML/ru/kgraphviewer/index.docbook
 share/doc/HTML/sl/kgraphviewer/index.cache.bz2
 share/doc/HTML/sl/kgraphviewer/index.docbook
 share/doc/HTML/sv/kgraphviewer/index.cache.bz2
@@ -82,7 +86,6 @@ share/icons/hicolor/16x16/apps/kgraphviewer.png
 share/icons/hicolor/32x32/apps/kgraphviewer.png
 share/locale/ar/LC_MESSAGES/kgraphviewer.mo
 share/locale/be/LC_MESSAGES/kgraphviewer.mo
-share/locale/bg/LC_MESSAGES/kgraphviewer.mo
 share/locale/bs/LC_MESSAGES/kgraphviewer.mo
 share/locale/ca/LC_MESSAGES/kgraphviewer.mo
 share/locale/ca@valencia/LC_MESSAGES/kgraphviewer.mo
@@ -113,6 +116,7 @@ share/locale/km/LC_MESSAGES/kgraphviewer.mo
 share/locale/ko/LC_MESSAGES/kgraphviewer.mo
 share/locale/ku/LC_MESSAGES/kgraphviewer.mo
 share/locale/lt/LC_MESSAGES/kgraphviewer.mo
+share/locale/lv/LC_MESSAGES/kgraphviewer.mo
 share/locale/mai/LC_MESSAGES/kgraphviewer.mo
 share/locale/mr/LC_MESSAGES/kgraphviewer.mo
 share/locale/nb/LC_MESSAGES/kgraphviewer.mo

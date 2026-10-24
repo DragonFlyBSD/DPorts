@@ -1,5 +1,5 @@
 PORTNAME=	ds
-PORTVERSION=	1.5.0
+PORTVERSION=	2.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -11,5 +11,6 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		localbase php:build,pecl
+IGNORE_WITH_PHP=	86
 
 .include <bsd.port.mk>

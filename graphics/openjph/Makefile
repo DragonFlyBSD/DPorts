@@ -1,5 +1,5 @@
 PORTNAME=	openjph
-PORTVERSION=	0.21.2
+PORTVERSION=	0.32.0
 CATEGORIES=	graphics
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -11,12 +11,13 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libtiff.so:graphics/tiff
 
-USES=		cmake compiler:c++11-lang pathfix
+USES=		cmake compiler:c++14-lang
 
-CMAKE_OFF=	OJPH_BUILD_STREAM_EXPAND \
+CMAKE_OFF=	OJPH_BUILD_FUZZER \
 		OJPH_BUILD_TESTS
 CMAKE_ON=	BUILD_SHARED_LIBS \
 		OJPH_BUILD_EXECUTABLES \
+		OJPH_BUILD_STREAM_EXPAND \
 		OJPH_ENABLE_TIFF_SUPPORT
 USE_LDCONFIG=	yes
 
@@ -34,5 +35,9 @@ CMAKE_ON+=	OJPH_DISABLE_SIMD
 
 post-install:
 	${LN} -s libopenjph.so.${PORTVERSION} ${STAGEDIR}${PREFIX}/lib/libopenjph.so.${PORTVERSION:R:R}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

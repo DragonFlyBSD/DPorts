@@ -1,3 +1,0 @@
-USES+=	alias
-
-ARCH:=	amd64

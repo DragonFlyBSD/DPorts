@@ -1,9 +1,9 @@
 PORTNAME=	svgbob
 DISTVERSION=	0.7.1
-PORTREVISION=	17
+PORTREVISION=	30
 CATEGORIES=	graphics
 
-MAINTAINER=	mikael@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert ASCII diagrams to SVG
 WWW=		https://github.com/ivanceras/svgbob
 
@@ -161,4 +161,5 @@ CARGO_CRATES=	ansi_term-0.12.1 \
 
 PLIST_FILES=	bin/svgbob_cli
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

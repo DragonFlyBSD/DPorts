@@ -19,6 +19,7 @@ MAKE_ENV=	XPREFIX=${LOCALBASE}
 
 PLIST_FILES=	bin/sdwmbar
 
+CFLAGS= -Wno-format
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/sdwmbar
 

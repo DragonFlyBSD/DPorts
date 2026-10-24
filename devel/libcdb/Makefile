@@ -17,4 +17,8 @@ MAKE_ENV=	DESTDIR=${STAGEDIR}${PREFIX} \
 		INCDIR=${LOCALBASE}/include \
 		LIBDIR=${LOCALBASE}/lib
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

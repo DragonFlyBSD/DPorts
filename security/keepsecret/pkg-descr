@@ -1,0 +1,4 @@
+KeepSecret is a password manager for viewing, editing, creating, or deleting
+passwords, suitable for both desktop and mobile platforms.  It works with
+KeepassXC, KWallet, Gnome Keyring, oo7, and any other password backend
+compatible with the Secret Service system.

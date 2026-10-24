@@ -1,0 +1,18 @@
+--- lisp/Makefile.am.orig	2018-02-09 12:17:06 UTC
++++ lisp/Makefile.am
+@@ -35,13 +35,13 @@ SOURCES = bocu.el stem-english.el hanzi-py-table.el vi
+ 	 support-files/support-xszd.el					\
+ 	 support-files/support-zhongri.el				\
+ 	 support-files/support-zigen.el
+-ELCFILES = $(SOURCES:.el=.elc)
++ELCFILES =
+ EXTRA_DIST = $(SOURCES) lookup-compile.el lookup-logo.png
+ INSTALLFILES = $(SOURCES) $(ELCFILES) lookup-autoloads.el
+ CLEANFILES = $(ELCFILES)
+ MAINTAINERCLEANFILES = Makefile.in lookup-autoloads.el
+ 
+-all: lookup.elc lookup-autoloads.el
++all: lookup-autoloads.el
+ 
+ lookup.elc: $(SOURCES)
+ 	@$(EMACS) -batch -l lookup-compile.el -f lookup-bytecomp $(SOURCES)

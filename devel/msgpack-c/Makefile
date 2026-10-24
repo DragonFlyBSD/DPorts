@@ -1,10 +1,10 @@
 PORTNAME=	msgpack
-PORTVERSION=	6.1.0
+PORTVERSION=	7.0.2
 DISTVERSIONPREFIX=	c-
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-c
 
-MAINTAINER=	adamw@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Efficient binary serialization, like JSON but smaller and faster
 WWW=		https://msgpack.org/
 

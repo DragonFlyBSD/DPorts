@@ -16,4 +16,8 @@ USES=		gem
 
 NO_ARCH=	yes
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/asciidoctor>/s@~>@>=@g' \
+		${WRKSRC}/asciidoctor-diagram.gemspec
+
 .include <bsd.port.mk>

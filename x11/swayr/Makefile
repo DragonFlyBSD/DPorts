@@ -1,13 +1,13 @@
 PORTNAME=	swayr
-DISTVERSION=	0.28.1
+DISTVERSION=	0.28.3
 CATEGORIES=	x11
-MASTER_SITES=	CRATESIO
+MASTER_SITES=	CRATESIO/${PORTNAME}/${DISTNAME}${CARGO_CRATE_EXT}
 # XXX Teach USES=cargo to have proper default
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Urgent-first/LRU window switcher for sway
-WWW=		https://sr.ht/~tsdh/swayr/#swayr
+WWW=		https://sr.ht/~tsdh/swayr/\#swayr
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${_LICENSE_STORE}/GPLv3

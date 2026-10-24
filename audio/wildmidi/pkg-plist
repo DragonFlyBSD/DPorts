@@ -1,10 +1,14 @@
 %%PLAYER%%bin/wildmidi
 %%PLAYERSTATIC%%bin/wildmidi-static
 include/wildmidi_lib.h
+lib/cmake/WildMidi/WildMidiConfig.cmake
+lib/cmake/WildMidi/WildMidiConfigVersion.cmake
+lib/cmake/WildMidi/WildMidiTargets-%%CMAKE_BUILD_TYPE%%.cmake
+lib/cmake/WildMidi/WildMidiTargets.cmake
 %%STATIC%%lib/libWildMidi.a
 lib/libWildMidi.so
 lib/libWildMidi.so.2
-lib/libWildMidi.so.2.0.1
+lib/libWildMidi.so.2.1.0
 libdata/pkgconfig/wildmidi.pc
 share/man/man1/wildmidi.1.gz
 share/man/man3/WildMidi_ClearError.3.gz
@@ -20,6 +24,7 @@ share/man/man3/WildMidi_GetOutput.3.gz
 share/man/man3/WildMidi_GetString.3.gz
 share/man/man3/WildMidi_GetVersion.3.gz
 share/man/man3/WildMidi_Init.3.gz
+share/man/man3/WildMidi_InitVIO.3.gz
 share/man/man3/WildMidi_MasterVolume.3.gz
 share/man/man3/WildMidi_Open.3.gz
 share/man/man3/WildMidi_OpenBuffer.3.gz

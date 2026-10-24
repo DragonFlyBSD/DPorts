@@ -1,5 +1,5 @@
 PORTNAME=	zathura
-DISTVERSION=	0.5.6
+DISTVERSION=	2026.07.18
 CATEGORIES=	graphics print
 MASTER_SITES=	https://pwmt.org/projects/zathura/download/
 
@@ -10,15 +10,17 @@ WWW=		https://pwmt.org/projects/zathura/
 LICENSE=	ZLIB
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libgirara-gtk3.so:x11-toolkits/girara \
-		libjson-glib-1.0.so:devel/json-glib
+LIB_DEPENDS=	libgirara.so:x11-toolkits/girara \
+		libgraphene-1.0.so:graphics/graphene \
+		libjson-glib-1.0.so:devel/json-glib \
+		libxxhash.so:devel/xxhash
 
-USES=		compiler:c11 desktop-file-utils gettext-tools:build gnome meson \
-		ninja pkgconfig python sqlite tar:xz
-USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30
-MESON_ARGS=	-Dmanpages=disabled \
+USES=		compiler:c17 gettext gnome meson pkgconfig sqlite tar:xz
+USE_GNOME=	cairo glib20 gtk40
+MESON_ARGS=	-Dlandlock=disabled \
 		-Dseccomp=disabled \
-		-Dtests=disabled
+		-Dtests-wayland=disabled \
+		-Dtests-x11=disabled
 
 OPTIONS_DEFINE=		MANPAGES SYNCTEX
 OPTIONS_DEFAULT=	MANPAGES SYNCTEX
@@ -27,11 +29,17 @@ OPTIONS_SUB=		yes
 SYNCTEX_DESC=	Direct and reverse synchronisation support with SyncTeX
 
 MANPAGES_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>0:devel/py-pytz@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}sphinx>=1.2.2,1:textproc/py-sphinx@${PY_FLAVOR}
+			${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR}
+MANPAGES_USES=		python:build
 MANPAGES_MESON_ENABLED=	manpages
 
-SYNCTEX_BUILD_DEPENDS=	tex-synctex>=1.19.0:devel/tex-synctex
-SYNCTEX_RUN_DEPENDS=	${SYNCTEX_BUILD_DEPENDS}
+SYNCTEX_USES=		tex
+SYNCTEX_USE=		TEX=synctex
 SYNCTEX_MESON_ENABLED=	synctex
+
+LDFLAGS= -lz
+USE_GCC_VERSION= 14
+post-patch-MANPAGES-on:
+	@${REINPLACE_CMD} -e 's|^/etc|${PREFIX}/etc|' ${WRKSRC}/doc/man/zathurarc.5.rst
 
 .include <bsd.port.mk>

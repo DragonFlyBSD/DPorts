@@ -15,7 +15,7 @@ RUN_DEPENDS+=	eu-readelf:devel/elfutils
 OPTIONS_DEFINE=	DOCS PORTS_BINUTILS
 PORTS_BINUTILS_DESC=	Use binutils from ports
 
-USES=		gmake perl5 shebangfix
+USES= gmake perl5 shebangfix localbase:ldflags
 USE_PERL5=	run
 
 # abi-compliance-checker release 2.3 -> 8e81982
@@ -33,6 +33,9 @@ CTAGS?=		exctags
 
 PICFLAG?=	-fpic
 
+BUILD_DEPENDS= eu-readelf:devel/elfutils
+LIB_DEPENDS= libelf.so:devel/libelf
+CFLAGS= -I${LOCALBASE}/include/libelf
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPORTS_BINUTILS}
@@ -76,5 +79,13 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
 	(cd ${WRKSRC}/checker && ${COPYTREE_SHARE} \
 		"modules/Internals modules/*.xml" ${STAGEDIR}${DATADIR})
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/vdumper/Makefile
+	${REINPLACE_CMD} -e 's@freebsd|@&dragonfly|@g' \
+		${WRKSRC}/checker/modules/Internals/Basic.pm \
+		${WRKSRC}/checker/modules/Internals/CallConv.pm \
+		${WRKSRC}/checker/modules/Internals/SysCheck.pm
 
 .include <bsd.port.mk>

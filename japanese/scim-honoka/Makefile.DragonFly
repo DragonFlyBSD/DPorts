@@ -1,2 +1,0 @@
-# zrj: prevent linking w/ non-pic static lib
-LDFLAGS+= -lintl

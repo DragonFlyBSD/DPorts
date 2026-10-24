@@ -16,7 +16,7 @@ RUN_DEPENDS=	p5-Tk>=0:x11-toolkits/p5-Tk
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--mandir=${PREFIX}/share/man
 CONFIGURE_ENV=	--with-debug-lvl=3
-USES=		perl5 shebangfix
+USES= perl5 shebangfix guessfix
 SHEBANG_FILES=	grude/grude
 
 WRKSRC=		${WRKDIR}/${PORTNAME}

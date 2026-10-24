@@ -1,6 +1,6 @@
 PORTNAME=	opendx
 PORTVERSION=	4.4.4
-PORTREVISION=	40
+PORTREVISION=	43
 CATEGORIES=	graphics math java
 MASTER_SITES=	http://www.sfr-fresh.com/unix/misc/
 DISTNAME=	dx-${PORTVERSION}
@@ -18,6 +18,7 @@ LIB_DEPENDS=	libtiff.so:graphics/tiff		\
 		libcdf.so:science/cdf
 
 USES=		bison compiler:c++17-lang gl gmake libtool localbase:ldflags magick:6 motif sbrk xorg
+USE_CXXSTD= c++11
 USE_GL=		gl glu
 USE_LDCONFIG=	yes
 USE_XORG=	x11 xt xinerama xext xpm xmu sm ice
@@ -27,9 +28,7 @@ GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--enable-shared
 CONFIGURE_ENV=	ARCH=freebsd
 
-MAKE_JOBS_UNSAFE=	yes
-
-CPPFLAGS+=	${CXXFLAGS}
+MAKE_JOBS_UNSAFE= yes
 
 NO_MTREE=	yes
 
@@ -69,15 +68,12 @@ PLIST_SUB+=	JAVA="@comment "
 
 PLIST_SUB+=	UNAMEP=${ARCH}
 
-.include <bsd.port.options.mk>
+CXXFLAGS= -Wno-narrowing -fpermissive
+.include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD
-USES+=	llvm:max=15
-CONFIGURE_ENV+=	ac_cv_requires_lstdcxx=yes
+.if ${COMPILER_TYPE} == clang
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
-
-.include <bsd.port.pre.mk>
 
 post-patch:
 	@${RM} ${WRKSRC}/include/stamp-h.in

@@ -1,0 +1,12 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 20:28:27 UTC
++++ pyproject.toml
+@@ -2,7 +2,7 @@ description = "Chemistry evaluation metrics (SMILES, M
+ name = "docling-metrics-chemistry"
+ version = "0.10.0" # DO NOT EDIT, updated automatically
+ description = "Chemistry evaluation metrics (SMILES, Markush) for Docling metrics"
+-license = "MIT"
++license = {text = "MIT"}
+ keywords = ["docling", "metrics", "evaluation", "chemistry", "smiles", "markush"]
+ readme = "README.md"
+ authors = [

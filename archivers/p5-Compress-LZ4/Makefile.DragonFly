@@ -1,3 +1,0 @@
-
-# mkdir -p obj race
-MAKE_JOBS_UNSAFE=yes

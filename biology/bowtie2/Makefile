@@ -1,6 +1,6 @@
 PORTNAME=		bowtie2
 DISTVERSIONPREFIX=	v
-DISTVERSION=		2.5.4
+DISTVERSION=		2.5.5
 CATEGORIES=		biology perl5 python
 
 MAINTAINER=	jwb@FreeBSD.org
@@ -28,6 +28,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 SUB_FILES=	bowtie2-test
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.options.mk>
 
 .if ${ARCH} != x86_64
@@ -36,6 +37,14 @@ post-extract:
 		${COPYTREE_SHARE} . ${WRKSRC}/third_party/simde/)
 
 MAKE_ENV=	POPCNT_CAPABILITY=0
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == x86_64
+PLIST_SUB+=	X86_64_ONLY=""
+.else
+PLIST_SUB+=	X86_64_ONLY="@comment "
 .endif
 
 pre-configure:
@@ -50,6 +59,9 @@ post-install:
 		${WRKSRC}/bowtie2*-s \
 		${WRKSRC}/bowtie2*-l \
 		${STAGEDIR}${PREFIX}/bin
+.if ${ARCH} == x86_64
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*256
+.endif
 	${INSTALL_SCRIPT} \
 		${WRKSRC}/scripts/*.sh \
 		${WRKSRC}/scripts/*.pl \
@@ -62,4 +74,4 @@ post-install-DOCS-on:
 post-install-EXAMPLES-on:
 	(cd ${WRKSRC}/example && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

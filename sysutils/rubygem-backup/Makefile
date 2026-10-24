@@ -1,6 +1,6 @@
 PORTNAME=	backup
 PORTVERSION=	4.4.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
@@ -80,4 +80,5 @@ NO_ARCH=	yes
 
 PLIST_FILES=	bin/backup
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

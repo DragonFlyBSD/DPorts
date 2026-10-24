@@ -19,4 +19,8 @@ IMOBILE_LIB_DEPENDS=	libimobiledevice-1.0.so:comms/libimobiledevice \
 IMOBILE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_IMobileDevice \
 			CMAKE_DISABLE_FIND_PACKAGE_PList
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

@@ -1,6 +1,5 @@
 PORTNAME=	polyml
-PORTVERSION=	5.9.1
-PORTREVISION=	1
+PORTVERSION=	5.9.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	lang
 DIST_SUBDIR=	${PORTNAME}
@@ -11,7 +10,7 @@ WWW=		https://www.polyml.org
 
 LICENSE=	LGPL21
 
-ONLY_FOR_ARCHS=	aarch64 amd64 i386
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64le powerpc64
 
 LIB_DEPENDS=	libffi.so:devel/libffi
 
@@ -37,6 +36,7 @@ MOTIF_USES=		motif xorg
 MOTIF_USE=		xorg=x11,xext,xt
 MOTIF_CONFIGURE_WITH=	x
 
+CXXFLAGS= -Wno-narrowing
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lstdc++ ||' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's| modules||' ${WRKSRC}/Makefile.in

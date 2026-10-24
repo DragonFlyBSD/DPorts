@@ -1,6 +1,6 @@
 PORTNAME=	flexemu
 DISTVERSIONPREFIX=	V
-DISTVERSION=	3.22
+DISTVERSION=	3.32.1
 CATEGORIES=	emulators
 
 MAINTAINER=	rhurlin@FreeBSD.org
@@ -9,22 +9,30 @@ WWW=		https://flexemu.neocities.org/
 
 LICENSE=	GPLv2
 
-USES=		desktop-file-utils gl libtool qt:5 shared-mime-info xorg
+USES=		cmake compiler:c++17-lang desktop-file-utils gl \
+		ncurses qt:6 shared-mime-info xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	aladur
-GH_TUPLE=	google:googletest:e1a38bc3:googletest/googletest
-USE_GL=		gl
-USE_QT=		buildtools:build core dbus gui network printsupport \
-		qmake:build widgets x11extras
+GH_TUPLE=	fmtlib:fmt:e424e3f:fmt/fmt \
+		google:googletest:b514bdc:googletest/googletest \
+		open-source-parsers:jsoncpp:8214f71:jsoncpp/jsoncpp
+USE_GL=		gl opengl
+USE_QT=		base declarative
 USE_XORG=	ice sm x11
 
-GNU_CONFIGURE=	yes
+# The minimum supported clang-tidy version is 19.0.0
+CMAKE_ARGS+=	-DFLEXEMU_QT_MAJOR_VERSION=6 \
+		-DCLANG_TIDY=${LOCALBASE}/bin/clang-tidy${COMPILER_VERSION:C/.$//} \
+		-DRUN_CLANG_TIDY=${LOCALBASE}/llvm${COMPILER_VERSION:C/.$//}/bin/run-clang-tidy
 
+# test target should be executed as a regular user
+# ON FAILURE:
+# cd /poudriere/ports/default/emulators/flexemu/work/.build
+# /usr/local/bin/ctest --parallel XX --force-new-ctest-process --rerun-failed --output-on-failure -V
+TEST_TARGET=	test
+
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
-
 post-install:
-	@${RM} ${STAGEDIR}${PREFIX}/bin/rcvflex
-	@${RM} ${STAGEDIR}${PREFIX}/bin/send2flx
-	@${RM} ${STAGEDIR}${PREFIX}/bin/testdaa
-
+	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DATADIR}
 .include <bsd.port.post.mk>

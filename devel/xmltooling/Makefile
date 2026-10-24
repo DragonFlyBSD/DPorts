@@ -26,6 +26,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+CXXFLAGS= -Wno-deprecated -Wno-unused-parameter
 post-patch:
 	@${REINPLACE_CMD} -e 's,^pkgdocdir.*=.*,pkgdocdir = ${DOCSDIR},' \
 		${WRKSRC}/doc/Makefile.am

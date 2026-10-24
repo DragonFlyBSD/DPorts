@@ -1,14 +1,16 @@
 PORTNAME=	font-bitstream-type1
-PORTVERSION=	1.0.3
-PORTREVISION=	4
+DISTVERSION=	1.0.4
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	x11@FreeBSD.org
-COMMENT=	X.Org Bitstream Vera Type1 font
-WWW=		https://www.x.org/
+COMMENT=	X.Org Bitstream Type1 font
+WWW=		https://gitlab.freedesktop.org/xorg/font/bitstream-type1
+
+LICENSE=	BITSTREAM
+LICENSE_NAME=	Bitstream Inc. fonts license
+LICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USES=		xorg-cat:font
-
-NO_ARCH=	yes
 
 .include <bsd.port.mk>

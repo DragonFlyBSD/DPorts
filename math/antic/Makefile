@@ -1,7 +1,7 @@
 PORTNAME=	antic
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.2.5
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	math
 
@@ -21,6 +21,8 @@ USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	wbhart
+
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM:STRING=3.5 # CMake 4 compatibility
 
 PLIST_FILES=	include/antic/nf.h \
 		include/antic/nf_elem.h \

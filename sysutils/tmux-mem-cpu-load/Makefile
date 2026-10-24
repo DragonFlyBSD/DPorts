@@ -1,5 +1,5 @@
 PORTNAME=	tmux-mem-cpu-load
-PORTVERSION=	3.8.1
+PORTVERSION=	3.8.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
@@ -15,4 +15,5 @@ GH_ACCOUNT=	thewtex
 
 PLIST_FILES=	bin/tmux-mem-cpu-load
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

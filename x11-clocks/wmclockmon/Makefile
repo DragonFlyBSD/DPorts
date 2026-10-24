@@ -1,6 +1,6 @@
 PORTNAME=	wmclockmon
 PORTVERSION=	0.8.1
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	x11-clocks windowmaker
 MASTER_SITES=	http://tnemeth.free.fr/projets/programmes/
 
@@ -16,10 +16,12 @@ LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz \
 
 USES=		xorg gnome pkgconfig
 USE_XORG=	xpm x11 xext
-USE_GNOME=	gtk20 cairo gdkpixbuf2
+USE_GNOME=	gtk20 cairo gdkpixbuf
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's|gtk-config|pkgconf gtk+-2.0|g'\
 		${WRKSRC}/wmclockmon-config/Makefile.in

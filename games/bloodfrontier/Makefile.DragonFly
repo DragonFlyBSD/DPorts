@@ -1,5 +1,0 @@
-CXXFLAGS+=	-Wno-narrowing
-
-.if !defined(DPORTS_BUILDER)
-MANUAL_PACKAGE_BUILD=	380M package (too big for mirrors)
-.endif

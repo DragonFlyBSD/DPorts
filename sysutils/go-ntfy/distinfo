@@ -1,0 +1,7 @@
+TIMESTAMP = 1791434369
+SHA256 (go/sysutils_go-ntfy/binwiederhier-ntfy-v2.29.0_GH0/ntfy-v2.29.0.frontend.tar.gz) = 2463a649be2730fcc2cf76bc49b31b5cbadcbc2a631c1e1309090a9f837731b5
+SIZE (go/sysutils_go-ntfy/binwiederhier-ntfy-v2.29.0_GH0/ntfy-v2.29.0.frontend.tar.gz) = 2452853
+SHA256 (go/sysutils_go-ntfy/binwiederhier-ntfy-v2.29.0_GH0/go.mod) = 5e6dcb753d54c59699c487a35ccf969d4a57d082011d88bb4cf7138669fd5126
+SIZE (go/sysutils_go-ntfy/binwiederhier-ntfy-v2.29.0_GH0/go.mod) = 4771
+SHA256 (go/sysutils_go-ntfy/binwiederhier-ntfy-v2.29.0_GH0/binwiederhier-ntfy-v2.29.0_GH0.tar.gz) = 95e672f954b0453f27237e98faecf4fdb92caa1ddf2b54b03ac27d4c0850c9c7
+SIZE (go/sysutils_go-ntfy/binwiederhier-ntfy-v2.29.0_GH0/binwiederhier-ntfy-v2.29.0_GH0.tar.gz) = 16059031

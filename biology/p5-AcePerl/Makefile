@@ -27,4 +27,11 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Ace/Freesubs/Freesubs.so
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Ace/RPC/RPC.so
 
+dfly-patch:
+	${SED} -e 's@FREEBSD@DRAGONFLY@g' 				\
+	       -e 's@XX__CC__XX@${CC} -DPIC -fPIC @g'			\
+	       -e "s@/usr/X11R6/@${LOCALBASE}/@g"			\
+	  < ${FILESDIR}/FREEBSD_DEF \
+	  > ${WRKSRC}/acelib/wmake/DRAGONFLY_DEF
+
 .include <bsd.port.mk>

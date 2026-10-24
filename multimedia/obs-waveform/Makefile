@@ -1,16 +1,18 @@
 PORTNAME=	obs-waveform
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.7.0
+DISTVERSION=	1.9.1
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	OBS Studio Plugin: Audio spectral analyser
-WWW=		https://obsproject.com/forum/resources/waveform.1423/
+WWW=		https://obsproject.com/forum/resources/waveform.1423/ \
+		https://github.com/phandasm/waveform
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	cpu_features>0:devel/cpu_features
+BUILD_DEPENDS=	cpu_features>0:devel/cpu_features \
+		simde>0:devel/simde
 LIB_DEPENDS=	libcpu_features.so:devel/cpu_features \
 		libfftw3f.so:math/fftw3-float \
 		libobs.so:multimedia/obs-studio
@@ -23,13 +25,18 @@ GH_PROJECT=	waveform
 
 CMAKE_ON=	PACKAGED_INSTALL
 
-LDFLAGS+=	-lcpu_features
-
 PLIST_FILES=	lib/obs-plugins/waveform.so \
 		share/obs/obs-plugins/waveform/gradient.effect \
 		share/obs/obs-plugins/waveform/locale/en-US.ini \
 		share/obs/obs-plugins/waveform/locale/it-IT.ini \
 		share/obs/obs-plugins/waveform/locale/zh-CN.ini \
 		share/obs/obs-plugins/waveform/locale/zh-TW.ini
+
+IGNORE= unmaintained, please request fixing to users mailing list
+.include <bsd.port.options.mk>
+
+.if empty(ARCH:Mamd64) && empty(ARCH:Mi386)
+CMAKE_OFF+=	ENABLE_X86_SIMD
+.endif
 
 .include <bsd.port.mk>

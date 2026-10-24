@@ -1,3 +1,4 @@
+bin/qqem6
 %%QT_BINDIR%%/qqem
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/basic/brightness_contrast.qen
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/basic/colorize.qen
@@ -33,6 +34,7 @@
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/extra/ledscreen.qen
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/extra/maskedblur.qen
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/extra/normalmapping.qen
+%%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/extra/rectangularshadow.qen
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/extra/spriteanimation.qen
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/extra/sunburst.qen
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/extra/swirl.qen
@@ -105,4 +107,6 @@
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/nature/snowing.qen
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/nature/thunder.qen
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/nature/water.qen
+%%QT_SBOMDIR%%/qqeffectmaker-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qqeffectmaker-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qqeffectmaker-%%FULLVER%%.spdx.json

@@ -1,0 +1,3 @@
+bin/c3c
+share/man/man1/c3c.1.gz
+@comment lib/c3 generated dynamically in post-stage

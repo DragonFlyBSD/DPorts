@@ -1,5 +1,5 @@
 PORTNAME=	baikal
-PORTVERSION=	0.10.1
+PORTVERSION=	0.11.1
 PORTREVISION=	0
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/fruux/Baikal/releases/download/${PORTVERSION}/
@@ -15,6 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		php:web,flavors zip
 USE_PHP=	ctype dom filter imap mbstring pdo_sqlite \
 		session xml xmlreader xmlwriter
+IGNORE_WITH_PHP=	86
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes

@@ -1,3 +1,0 @@
-
-CFLAGS+=	-Wno-stringop-truncation -Wno-stringop-overflow
-LDFLAGS+=	-pthread

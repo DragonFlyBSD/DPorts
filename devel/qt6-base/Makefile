@@ -7,8 +7,10 @@ PKGNAMEPREFIX=	qt6-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt base (core, gui, widgets, network,...)
 
-BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
-		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
+BUILD_DEPENDS=	evdev-proto>=5.8:devel/evdev-proto \
+		${PYTHON_PKGNAMEPREFIX}cyclonedx-python-lib>0:textproc/py-cyclonedx-python-lib@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}spdx-tools>=0.8.3:misc/py-spdx-tools@${PY_FLAVOR} \
+		vulkan-headers>=1.4:graphics/vulkan-headers
 LIB_DEPENDS=	libatk-1.0.so:accessibility/at-spi2-core \
 		libatk-bridge-2.0.so:accessibility/at-spi2-core \
 		libatspi.so:accessibility/at-spi2-core \
@@ -31,7 +33,6 @@ LIB_DEPENDS=	libatk-1.0.so:accessibility/at-spi2-core \
 		libpng16.so:graphics/png \
 		libudev.so:devel/libudev-devd \
 		libvulkan.so:graphics/vulkan-loader \
-		libwayland-client.so:graphics/wayland \
 		libxkbcommon.so:x11/libxkbcommon \
 		libzstd.so:archivers/zstd
 
@@ -40,7 +41,6 @@ USES=		cmake compiler:c++17-lang gl gnome jpeg perl5 pkgconfig python \
 USE_GL=		egl opengl
 USE_GNOME=	cairo gdkpixbuf glib20 gtk30 pango
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
-USE_LOCALE=	C.UTF-8
 
 SHEBANG_FILES=	${WRKSRC}/libexec/qt-android-runner.py \
 		${WRKSRC}/mkspecs/features/uikit/device_destinations.sh \
@@ -50,11 +50,13 @@ SHEBANG_FILES=	${WRKSRC}/libexec/qt-android-runner.py \
 
 CMAKE_ARGS=	-DOPENSSL_ROOT_DIR="${OPENSSLBASE}"
 CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_LTTngUST \
+		CMAKE_DISABLE_FIND_PACKAGE_md4c \
 		QT_AVOID_CMAKE_ARCHIVING_API \
 		QT_FIND_ALL_PACKAGES_ALWAYS \
 		QT_FEATURE_openssl_linked
 CMAKE_OFF=	QT_FEATURE_eglfs \
-		QT_FEATURE_gssapi
+		QT_FEATURE_gssapi \
+		QT_FEATURE_reduce_relocations
 # sql drivers are handled in the databases/qt6-base_sqldriver port
 CMAKE_OFF+=	FEATURE_sql_mysql \
 		FEATURE_sql_odbc \
@@ -64,23 +66,29 @@ CMAKE_OFF+=	FEATURE_sql_mysql \
 # zstd from base fails to compress files during the build (error 11: unsupported argument)
 BINARY_ALIAS=	zstd=${LOCALBASE}/bin/zstd
 
-OPTIONS_DEFINE=		CUPS X11
-OPTIONS_DEFAULT=	CUPS X11
+OPTIONS_DEFINE=		CUPS WAYLAND X11
+OPTIONS_DEFAULT=	CUPS WAYLAND X11
 OPTIONS_SUB=		yes
 
 CUPS_LIB_DEPENDS=	libcups.so:print/cups
 CUPS_CMAKE_BOOL=	FEATURE_cups
 
+WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
+WAYLAND_CMAKE_BOOL=	FEATURE_qtwaylandscanner \
+			FEATURE_wayland
+
 X11_LIB_DEPENDS=	libxcb-cursor.so:x11/xcb-util-cursor \
 			libxcb-icccm.so:x11/xcb-util-wm \
 			libxcb-image.so:x11/xcb-util-image \
 			libxcb-keysyms.so:x11/xcb-util-keysyms \
-			libxcb-render-util.so:x11/xcb-util-renderutil
+			libxcb-render-util.so:x11/xcb-util-renderutil \
+			libxcb-util.so:x11/xcb-util
 X11_USES=		xorg
 X11_USE=		XORG=ice,pixman,sm,x11,xau,xcb,xcomposite,xcursor,xdamage,xdmcp,xext,xfixes,xi,xinerama,xrandr,xrender
 X11_CMAKE_BOOL=		FEATURE_xcb \
 			FEATURE_xlib
 
+PLIST_FILES= %%QT_MKSPECDIR%%/dragonfly-g++/qmake.conf %%QT_MKSPECDIR%%/dragonfly-g++/qplatformdefs.h %%QT_MKSPECDIR%%/dragonfly-clang/qmake.conf %%QT_MKSPECDIR%%/dragonfly-clang/qplatformdefs.h
 .include <bsd.port.pre.mk>
 
 # LibreSSL does not currently support BIO_ADDR in DTLSv1_listen()
@@ -96,6 +104,13 @@ BUILD_DEPENDS+=	as:devel/binutils
 CMAKE_ARGS+=	-DCMAKE_ASM_FLAGS=-no-integrated-as
 .endif
 
+.if exists(/usr/include/sys/inotify.h)
+PLIST_SUB+=	INOTIFY="" KQUEUE="@comment "
+EXTRA_PATCHES+=	${FILESDIR}/extrapatch-inotify
+.else
+PLIST_SUB+=	INOTIFY="@comment " KQUEUE=""
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%OPENSSLLIB%%|${OPENSSLLIB}|g' \
 		${WRKSRC}/src/plugins/tls/openssl/qsslsocket_openssl_symbols.cpp
@@ -107,5 +122,9 @@ post-install:
 		target="${STAGEDIR}${PREFIX}/$$(${ECHO_CMD} $${line} | ${AWK} '{print $$2}')"; \
 		${RLN} $${source} $${target}; \
 	done <${BUILD_WRKSRC}/user_facing_tool_links.txt
+
+post-extract:
+	${MKDIR} ${WRKSRC}/dragonfly-g++
+	${MKDIR} ${WRKSRC}/dragonfly-clang
 
 .include <bsd.port.post.mk>

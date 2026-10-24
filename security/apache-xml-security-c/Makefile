@@ -22,4 +22,6 @@ CONFIGURE_ENV+=	openssl_LIBS="-L${OPENSSLLIB} -lcrypto" openssl_CFLAGS=-I${OPENS
 CPE_PRODUCT=	xml_security_for_c++
 CPE_VENDOR=	apache
 
+CPPFLAGS= -I${OPENSSLINC}
+LDFLAGS= -L${OPENSSLLIB}
 .include <bsd.port.mk>

@@ -29,6 +29,7 @@ SKKSERVER_DESC=			Skkserver selection
 DBSKKD_RUN_DEPENDS=		${LOCALBASE}/libexec/dbskkd-cdb:japanese/dbskkd-cdb
 SKK9_RUN_DEPENDS=		${LOCALBASE}/sbin/skkserv:japanese/skkserv
 
+MAKE_JOBS_UNSAFE= yes
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 # One of the docfiles lives in its own subdirectory; link it relative to

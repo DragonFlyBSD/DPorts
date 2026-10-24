@@ -39,6 +39,7 @@ WAYLAND_RUN_DEPENDS=	wl-clipboard>=0:x11/wl-clipboard
 
 SUB_FILES=		pass
 
+RUN_DEPENDS+= base64:converters/base64
 .include <bsd.port.options.mk>
 
 post-patch:
@@ -69,5 +70,11 @@ do-install-CONTRIB-on:
 do-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/man/example-filter.sh ${STAGEDIR}${EXAMPLESDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -E \
+		-e 's|GETOPT="getopt"|GETOPT="${LOCALBASE}/bin/getopt"|' \
+		-e 's|SHRED="shred -f -z"|SHRED="rm -P -f"|' \
+		${WRKSRC}/src/password-store.sh
 
 .include <bsd.port.mk>

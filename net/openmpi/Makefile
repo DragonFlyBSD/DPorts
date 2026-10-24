@@ -1,94 +1,110 @@
 PORTNAME=	openmpi
-DISTVERSION=	5.0.7
-PORTREVISION=	1
+DISTVERSION=	5.0.11
 CATEGORIES=	net parallel
-MASTER_SITES=	https://download.open-mpi.org/release/open-mpi/v${PORTVERSION:R}/
+MASTER_SITES=	https://download.open-mpi.org/release/open-mpi/v${DISTVERSION:R}/
 
-MAINTAINER=	laurent.chardon@gmail.com
+PATCH_SITES=	https://github.com/open-mpi/ompi/commit/
+PATCHFILES+=	c46e33470c9490670118fce101809d52d76ee478.patch:-p1 # https://github.com/open-mpi/ompi/pull/14058
+
+MAINTAINER=	laurent@FreeBSD.org
 COMMENT=	High Performance Message Passing Library
 WWW=		https://www.open-mpi.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-NOT_FOR_ARCHS=		armv6 armv7 i386 powerpc
-NOT_FOR_ARCHS_REASON=	Not supported on 32-bits - see net/openmpi4
+NOT_FOR_ARCHS=	armv6 armv7 i386 powerpc
+NOT_FOR_ARCHS_REASON=	Not supported on 32-bits
 
-LIB_DEPENDS=	libhwloc.so:devel/hwloc2 \
-		libevent.so:devel/libevent \
-		libmunge.so:security/munge
+BUILD_DEPENDS=	prterun:net/prrte
+LIB_DEPENDS=	libevent_core.so:devel/libevent \
+		libhwloc.so:devel/hwloc2 \
+		libpmix.so:net/pmix
+RUN_DEPENDS=	prterun:net/prrte
 
 # :keepla because port uses lt_dlopen
 USES=		compiler:c11 fortran gmake libtool:keepla localbase perl5 \
 		pkgconfig python:build shebangfix tar:bzip2
 USE_LDCONFIG=	${PREFIX}/${MPIDIR}/lib
 USE_PERL5=	build
-SHEBANG_FILES=	ompi/mca/common/monitoring/profile2mat.pl \
-		ompi/mca/common/monitoring/aggregate_profile.pl
+SHEBANG_FILES=	ompi/mca/common/monitoring/aggregate_profile.pl \
+		ompi/mca/common/monitoring/profile2mat.pl
 
 MPIBASE?=	mpi
 MPIDIR?=	${MPIBASE}/${PKGBASE}
 
-GNU_CONFIGURE=	yes
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/${MPIDIR}/share
 GNU_CONFIGURE_PREFIX=	${PREFIX}/${MPIDIR}
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/${MPIDIR}/share
-CONFIGURE_ARGS+=	--program-prefix= \
-			--with-hwloc=external \
-			--without-ofi \
+CONFIGURE_ARGS+=	--enable-mca-no-build=verbs,btl_openib,oob_ud \
 			--enable-mpi-fortran=usempif08 \
+			--program-prefix= \
+			--with-hwloc=external \
 			--with-libevent=external \
-			--with-pmix=internal \
-			--enable-mca-no-build=verbs,btl_openib,oob_ud \
-			--with-wrapper-ldflags=-Wl,-rpath=-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER}
+			--with-pmix=${LOCALBASE} \
+			--with-prrte=${LOCALBASE} \
+			--with-wrapper-ldflags=-Wl,-rpath=-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER} \
+			--without-ofi
 TEST_TARGET=		check
 CFLAGS+=		${CFLAGS_F2018}
+LDFLAGS+=		-lpthread
 PIE_UNSAFE=		yes
 CONFLICTS_INSTALL=	openmpi4-4*
 
 DOCSDIR=	${PREFIX}/${MPIDIR}/share/doc
 MANDIRS=	${PREFIX}/${MPIDIR}/share/man
 BINARY_ALIAS=	python3=${PYTHON_CMD}
+SUB_FILES=	${PORTNAME}
+SUB_LIST=	DISTVERSION=${DISTVERSION} \
+		MPIDIR=${MPIDIR}
 PLIST_SUB+=	MPIDIR=${MPIDIR}
 PORTDOCS=	*
 
-OPTIONS_DEFINE=			AVX DEBUG DOCS IPV6 ROMIO SLURM
-OPTIONS_DEFAULT=		ROMIO
+OPTIONS_DEFINE=		AVX DEBUG DOCS IPV6 ROMIO SLURM UCX
+OPTIONS_DEFAULT=	ROMIO SLURM
 OPTIONS_EXCLUDE_aarch64=	AVX
-OPTIONS_EXCLUDE_armv6=		AVX SLURM
-OPTIONS_EXCLUDE_armv7=		AVX SLURM
-OPTIONS_EXCLUDE_i386=		SLURM
-OPTIONS_EXCLUDE_mips=		AVX SLURM
-OPTIONS_EXCLUDE_mips64=		AVX
+OPTIONS_EXCLUDE_armv6=	AVX SLURM
+OPTIONS_EXCLUDE_armv7=	AVX SLURM
+OPTIONS_EXCLUDE_i386=	SLURM
 OPTIONS_EXCLUDE_powerpc=	AVX SLURM
-OPTIONS_EXCLUDE_powerpc64=	AVX
+OPTIONS_EXCLUDE_powerpc64=	AVX UCX
 OPTIONS_EXCLUDE_powerpc64le=	AVX
-OPTIONS_EXCLUDE_riscv64=	AVX
-OPTIONS_SUB=			yes
+OPTIONS_EXCLUDE_riscv64=	AVX UCX
+OPTIONS_SUB=		yes
 
 AVX_DESC=	Enable AVX instructions
 ROMIO_DESC=	Enable romio mpi-io support
 SLURM_DESC=	Enable SLURM support
+UCX_DESC=	Enable UCX support
 
 AVX_CONFIGURE_OFF=	--enable-mca-no-build=op-avx
 
 DEBUG_CONFIGURE_ENABLE=		debug
 DEBUG_INSTALL_TARGET_OFF=	install-strip
 
-DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR}	\
-			${PYTHON_PKGNAMEPREFIX}recommonmark>0:textproc/py-recommonmark@${PY_FLAVOR} \
+DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}recommonmark>0:textproc/py-recommonmark@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}sphinx_rtd_theme>0:textproc/py-sphinx_rtd_theme@${PY_FLAVOR}
 
 IPV6_CONFIGURE_ENABLE=	ipv6
 
 ROMIO_CONFIGURE_OFF=	--disable-io-romio
 
-SLURM_LIB_DEPENDS=	libslurm.so:sysutils/slurm-wlm
 SLURM_CONFIGURE_WITH=	slurm
 
+UCX_LIB_DEPENDS=	libucp.so:net/ucx
+UCX_CONFIGURE_ON=	--with-ucx
+UCX_CONFIGURE_OFF=	--without-ucx
+
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NSLURM}
 .include <bsd.port.pre.mk>
 
-.if ${FORTRAN_DEFAULT} == gfortran && ${GCC_DEFAULT} >= 10
+.if ${FORTRAN_DEFAULT} == gfortran
 FCFLAGS+=	-fallow-argument-mismatch
+# gfortran doesn't find libgfortran.spec on riscv64
+.if ${ARCH} == "riscv64"
+FCFLAGS+=	-B${LOCALBASE}/lib/gcc${GCC_DEFAULT}
+.endif
 .endif
 
 # Both clang and gcc support half precision on these platforms
@@ -105,13 +121,18 @@ PLIST_SUB+=	SHORTFLOAT="@comment "
 CFLAGS+=	-mcx16
 .endif
 
-LIBDIR2FIX=	oshmem/tools/wrappers opal/tools/wrappers \
-		3rd-party/openpmix ompi/tools/wrappers
+LIBDIR2FIX=	oshmem/tools/wrappers opal/tools/wrappers 3rd-party/openpmix \
+		ompi/tools/wrappers
 
 pre-configure:
 .for d in ${LIBDIR2FIX}
 	${REINPLACE_CMD} -e 's|$$(libdir)/pkgconfig|${LOCALBASE}/libdata/pkgconfig|g' \
 		${WRKSRC}/${d}/Makefile.in
 .endfor
+
+post-install:
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/modulefiles/mpi
+	${INSTALL_DATA} ${WRKDIR}/${PORTNAME} \
+		${STAGEDIR}${PREFIX}/etc/modulefiles/mpi/${PORTNAME}
 
 .include <bsd.port.post.mk>

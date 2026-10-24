@@ -65,4 +65,7 @@ do-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Wl, @@g' ${WRKSRC}/make/make_unix_64/z88o.mk.gcc64
+
 .include <bsd.port.mk>

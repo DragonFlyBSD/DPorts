@@ -1,2 +1,0 @@
-USES+= ncurses
-CONFIGURE_ARGS+= ac_cv_lib_ncurses_tputs=yes

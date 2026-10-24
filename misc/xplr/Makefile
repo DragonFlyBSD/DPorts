@@ -1,7 +1,7 @@
 PORTNAME=	xplr
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.21.9
-PORTREVISION=	2
+DISTVERSION=	1.0.0
+PORTREVISION=	8
 CATEGORIES=	misc
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -53,5 +53,9 @@ post-install-EXAMPLES-on:
 	cd ${WRKSRC} && \
 		${INSTALL_DATA} ${_EXAMPLES} \
 		${STAGEDIR}${EXAMPLESDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@define LJ_TARGET_HAS_GETENTROPY@& 0 //@g' \
+		${WRKSRC}/cargo-crates/luajit-src*/luajit2/src/lj_prng.c
 
 .include <bsd.port.mk>

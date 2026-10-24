@@ -29,6 +29,7 @@ CONFIGURE_ARGS=	--prefix="${STAGEDIR}${PREFIX}" --build-prefix="${WRKSRC}/build"
 
 ALL_TARGET=	ngs-sdk
 
+MAKE_ARGS= OS=bsd TOOLS=gcc
 post-extract:
 	@cd ${WRKSRC}/ngs-sdk/ngs/unix && ${LN} -s x86_64 amd64
 
@@ -42,5 +43,11 @@ do-install: # install target from the project breaks: https://github.com/ncbi/ng
 		# This is intentional, see comments https://github.com/ncbi/ncbi-vdb/issues/36#issuecomment-817990790 This may change in future versions.
 	# strip
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libngs-sdk.so.2.11.2
+
+dfly-patch:
+	${RM} -f ${WRKSRC}/interfaces/os/bsd/endian.h
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@g' \
+			 -e "/TOOLS =/s@'clang'@'gcc'@g" \
+		${WRKSRC}/ngs-*/setup/konfigure.perl
 
 .include <bsd.port.mk>

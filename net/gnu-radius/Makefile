@@ -1,6 +1,5 @@
 PORTNAME=	gnu-radius
-PORTVERSION=	1.6.1
-PORTREVISION=	17
+PORTVERSION=	1.7
 CATEGORIES=	net
 MASTER_SITES=	GNU/radius
 DISTNAME=	radius-${PORTVERSION}
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libltdl.so:devel/libltdl
 
-USES=		cpe gmake libtool
+USES=		cpe gmake libtool tar:bz2
 USE_RC_SUBR=	radiusd
 USE_SUBMAKE=	yes
 USE_LDCONFIG=	yes
@@ -25,6 +24,7 @@ CONFLICTS=	freeradius-0.* openradius-0.* radiusd-cistron-1.*
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 INSTALL_TARGET=	install-strip
+TEST_TARGET=	check
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 DATADIR=	${PREFIX}/share/radius
@@ -45,7 +45,7 @@ EMACS_DESC=	Install Emacs dotfiles
 
 SNMP_CONFIGURE_ENABLE=		snmp
 CLIENT_CONFIGURE_ENABLE=	client
-CLIENT_USES=			guile:1.8,alias
+CLIENT_USES=			guile:3.0,alias
 CLIENT_CONFIGURE_OFF=		--without-guile
 MYSQL_USES=			mysql
 MYSQL_CONFIGURE_WITH=		mysql
@@ -53,8 +53,6 @@ PGSQL_USES=			pgsql
 PGSQL_CONFIGURE_WITH=		postgres
 DBM_CONFIGURE_ENABLE=		dbm=ndbm
 EMACS_USES=			emacs
-EMACS_CONFIGURE_WITH=		lispdir=${PREFIX}/${EMACS_SITE_LISPDIR}
-EMACS_NO_DEPENDS=		yes
 NLS_USES=			gettext
 NLS_CONFIGURE_OFF=		--disable-nls
 PAM_CONFIGURE_ENABLE=		pam
@@ -70,5 +68,10 @@ post-install:
 	( cd ${WRKSRC}/examples && ${COPYTREE_SHARE} .\
 		${STAGEDIR}${EXAMPLESDIR}\
 		"! ( -name Makefile -o -name Makefile\.* ) " )
+
+post-install-EMACS-on:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}
+	${INSTALL_DATA} ${WRKSRC}/elisp/*.el \
+		${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}
 
 .include <bsd.port.mk>

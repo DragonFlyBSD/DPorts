@@ -1,6 +1,6 @@
 PORTNAME=	kfilemetadata
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
-PORTREVISION=	2
+PORTREVISION=	7
 CATEGORIES=	devel kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
@@ -21,11 +21,8 @@ USE_KDE=	archive config coreaddons i18n \
 USE_QT=		core gui xml \
 		buildtools:build qmake:build
 
-OPTIONS_DEFINE=	MOBIPOCKET
-OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
-OPTIONS_SUB=	yes
-
-MOBIPOCKET_DESC=	Mobipocket plugin to handle metadata
-MOBIPOCKET_LIB_DEPENDS=	libqmobipocket.so:graphics/kdegraphics-mobipocket@qt5
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

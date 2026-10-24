@@ -8,7 +8,6 @@ COMMENT=	Common startup and shutdown subroutines used by GNOME scripts
 WWW=		https://www.FreeBSD.org/gnome/
 
 LICENSE=	BSD2CLAUSE
-LICENSE_FILE=	${PORTSDIR}/COPYRIGHT
 
 NO_BUILD=	yes
 NO_ARCH=	yes

@@ -1,6 +1,7 @@
 PORTNAME=	wangle
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2024.01.01.00
+DISTVERSION=	2026.08.31.00
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,7 +11,7 @@ WWW=		https://github.com/facebook/wangle
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libdouble-conversion.so:devel/double-conversion \
 		libevent.so:devel/libevent \
 		libfizz.so:security/fizz \
@@ -35,8 +36,11 @@ WRKSRC_SUBDIR=	${PORTNAME}
 
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	BUILD_TESTS
+CXXFLAGS+= -DGLOG_USE_GLOG_EXPORT -isystem ${LOCALBASE}/cxxfs_gcc8
 
-post-install: # https://github.com/facebook/wangle/issues/179
+BUILD_DEPENDS= cxxfs_gcc8>0:misc/cxxfs_gcc8
+LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
+xpost-install: # https://github.com/facebook/wangle/issues/179
 	cd ${STAGEDIR}${PREFIX} && \
 		${RMDIR} \
 			include/wangle/service/test \

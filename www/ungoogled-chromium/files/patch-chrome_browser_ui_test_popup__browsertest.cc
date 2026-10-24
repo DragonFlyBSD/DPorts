@@ -1,15 +1,15 @@
---- chrome/browser/ui/test/popup_browsertest.cc.orig	2024-06-22 08:49:42 UTC
+--- chrome/browser/ui/test/popup_browsertest.cc.orig	2026-08-13 07:41:05 UTC
 +++ chrome/browser/ui/test/popup_browsertest.cc
-@@ -74,7 +74,7 @@ IN_PROC_BROWSER_TEST_F(PopupTest, OpenLeftAndTopZeroCo
+@@ -79,7 +79,7 @@ IN_PROC_BROWSER_TEST_F(PopupTest, OpenLeftAndTopZeroCo
    const display::Display display = GetDisplayNearestBrowser(popup);
-   gfx::Rect expected(popup->window()->GetBounds().size());
+   gfx::Rect expected(popup->GetWindow()->GetBounds().size());
    expected.AdjustToFit(display.work_area());
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // TODO(crbug.com/40815883) Desktop Linux window bounds are inaccurate.
    expected.Outset(50);
-   EXPECT_TRUE(expected.Contains(popup->window()->GetBounds()))
-@@ -106,7 +106,7 @@ IN_PROC_BROWSER_TEST_F(PopupTest, OpenClampedToCurrent
+   EXPECT_TRUE(expected.Contains(popup->GetWindow()->GetBounds()))
+@@ -111,7 +111,7 @@ IN_PROC_BROWSER_TEST_F(PopupTest, OpenClampedToCurrent
      // The popup should be constrained to the opener's available display space.
      EXPECT_EQ(display, GetDisplayNearestBrowser(popup));
      gfx::Rect work_area(display.work_area());

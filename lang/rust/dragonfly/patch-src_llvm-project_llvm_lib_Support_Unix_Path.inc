@@ -1,12 +1,11 @@
---- src/llvm-project/llvm/lib/Support/Unix/Path.inc.orig	2023-05-31 19:29:26 UTC
+--- src/llvm-project/llvm/lib/Support/Unix/Path.inc.orig
 +++ src/llvm-project/llvm/lib/Support/Unix/Path.inc
-@@ -74,13 +74,14 @@ extern char **environ;
- 
+@@ -73,13 +73,13 @@
  #include <sys/types.h>
  #if !defined(__APPLE__) && !defined(__OpenBSD__) && !defined(__FreeBSD__) &&   \
--    !defined(__linux__) && !defined(__FreeBSD_kernel__) && !defined(_AIX)
-+    !defined(__linux__) && !defined(__FreeBSD_kernel__) && !defined(_AIX) && \
-+    !defined(__DragonFly__)
+     !defined(__linux__) && !defined(__FreeBSD_kernel__) && !defined(_AIX) &&   \
+-    !defined(__managarm__)
++    !defined(__DragonFly__) && !defined(__managarm__)
  #include <sys/statvfs.h>
  #define STATVFS statvfs
  #define FSTATVFS fstatvfs
@@ -16,8 +15,8 @@
 +#if defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
  #include <sys/mount.h>
  #include <sys/param.h>
- #elif defined(__linux__)
-@@ -111,7 +112,7 @@ typedef uint_t uint;
+ #elif defined(__linux__) || defined(__managarm__)
+@@ -110,7 +110,7 @@
  #define STATVFS_F_FRSIZE(vfs) static_cast<uint64_t>(vfs.f_bsize)
  #endif
  

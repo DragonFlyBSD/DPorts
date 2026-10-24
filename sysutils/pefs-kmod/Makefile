@@ -1,0 +1,29 @@
+PORTNAME=	pefs
+DISTVERSION=	g20260829
+PORTEPOCH=	1
+CATEGORIES=	sysutils
+PKGNAMESUFFIX=	-kmod
+
+MAINTAINER=	darius@dons.net.au
+COMMENT=	PEFS kernel level stacked cryptographic filesystem
+WWW=		https://wiki.freebsd.org/PEFS
+
+LICENSE=	BSD2CLAUSE
+
+USES=		kmod uidfix
+USE_GITHUB=	yes
+GH_ACCOUNT=	freebsd-pefs
+GH_TAGNAME=	5648456b44dc21a3c013891ef28cfa04d7968947
+
+MAKE_ENV=	BINDIR="${PREFIX}/sbin" MANDIR="${PREFIX}/share/man/man"
+MAKE_JOBS_UNSAFE=yes
+
+PLIST_FILES=	sbin/pefs \
+		lib/pam_pefs.so \
+		lib/pam_pefs.so.6 \
+		share/man/man8/pam_pefs.8.gz \
+		share/man/man8/pefs.8.gz \
+		${KMODDIR}/pefs.ko
+
+IGNORE= FreeBSD specific kmod
+.include <bsd.port.mk>

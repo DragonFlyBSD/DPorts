@@ -20,4 +20,5 @@ NO_ARCH=	yes
 USES=		perl5
 USE_PERL5=	configure
 
+RUN_DEPENDS:= ${RUN_DEPENDS:Nrar*}
 .include <bsd.port.mk>

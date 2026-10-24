@@ -1,5 +1,5 @@
 PORTNAME=	bemenu
-DISTVERSION=	0.6.21
+DISTVERSION=	0.6.23
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/Cloudef/${PORTNAME}/releases/download/${DISTVERSION}/
 
@@ -17,9 +17,9 @@ LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
 
 USES=		gmake
 USE_LDCONFIG=	yes
-MAKEFILE=	GNUmakefile
+MAKEFILE= GNUmakefile
 ALL_TARGET=	clients
-PLIST_SUB=	SOVERSION=${DISTVERSION}
+PLIST_SUB= SOVERSION=${DISTVERSION} WAYLAND="@comment "
 
 OPTIONS_DEFAULT=	${OPTIONS_MULTI_BACKEND}
 OPTIONS_MULTI=		BACKEND
@@ -43,6 +43,8 @@ X11_USE=		GNOME=cairo,glib20,pango \
 			XORG=x11,xinerama
 X11_ALL_TARGET=		x11
 
+CFLAGS= -fPIC
+DFLY_UNMAINTAINED= yes
 post-extract:
 	${REINPLACE_CMD} -e 's,$$(shell $$(PKG_CONFIG) --libs ncursesw),${NCURSES_LIB},' \
 		${WRKSRC}/${MAKEFILE}
@@ -54,5 +56,16 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}-run
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lib${PORTNAME}.so.${DISTVERSION}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/*.so
+
+OPTIONS_MULTI_BACKEND:= ${OPTIONS_MULTI_BACKEND:NWAYLAND}
+dfly-patch:
+	${REINPLACE_CMD} -e "/renderers/s@bemenu-renderer-wayland.so@@g" \
+			 -e "/install-renderers/s@install-wayland@@g" \
+		${WRKSRC}/GNUmakefile
+
+
+dfly-install:
+	ln -fv ${STAGEDIR}${PREFIX}/share/man/man1/bemenu.1 \
+	       ${STAGEDIR}${PREFIX}/share/man/man1/bemenu-run.1
 
 .include <bsd.port.mk>

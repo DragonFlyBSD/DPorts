@@ -1,5 +1,6 @@
 PORTNAME=	vkmark
 DISTVERSION=	2025.01
+PORTREVISION=	2
 CATEGORIES=	benchmarks
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -44,4 +45,5 @@ post-patch:
 		-e '/project_version/s/@0@/${DISTVERSIONFULL}/' \
 		${WRKSRC}/meson.build
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NDRM}
 .include <bsd.port.mk>

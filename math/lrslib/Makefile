@@ -37,4 +37,5 @@ BINARY_ALIAS=	gcc=${CC}
 post-install:
 	@cd ${STAGEDIR}${PREFIX} && ${STRIP_CMD} bin/* lib/*.so
 
+LDFLAGS:= ${LDFLAGS:N-lthr}
 .include <bsd.port.mk>

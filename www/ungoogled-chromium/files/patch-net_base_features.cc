@@ -1,24 +1,29 @@
---- net/base/features.cc.orig	2024-08-26 14:40:28 UTC
+--- net/base/features.cc.orig	2026-08-13 07:41:05 UTC
 +++ net/base/features.cc
-@@ -28,7 +28,7 @@ BASE_FEATURE(kCapReferrerToOriginOnCrossOrigin,
+@@ -43,7 +43,7 @@ BASE_FEATURE(kDeriveConnectionTypeFromCapabilities,
+ 
  BASE_FEATURE(kAsyncDns,
-              "AsyncDns",
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_ANDROID) || \
 -    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -508,7 +508,12 @@ BASE_FEATURE(kSpdyHeadersToHttpResponseUseBuilder,
-              "SpdyHeadersToHttpResponseUseBuilder",
+@@ -323,7 +323,7 @@ inline constexpr auto kMigrateSessionsOnNetworkChangeV
+ BASE_FEATURE(kMigrateSessionsOnNetworkChangeV2,
+              kMigrateSessionsOnNetworkChangeV2Default);
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kAddressTrackerLinuxIsProxied, base::FEATURE_ENABLED_BY_DEFAULT);
+ #endif  // BUILDFLAG(IS_LINUX)
+ 
+@@ -435,7 +435,7 @@ BASE_FEATURE(kReportingApiEnableEnterpriseCookieIssues
               base::FEATURE_DISABLED_BY_DEFAULT);
  
-+#if BUILDFLAG(IS_OPENBSD)
-+// No IP_RECVTOS support
- BASE_FEATURE(kReportEcn, "ReportEcn", base::FEATURE_DISABLED_BY_DEFAULT);
-+#else
-+BASE_FEATURE(kReportEcn, "ReportEcn", base::FEATURE_DISABLED_BY_DEFAULT);
-+#endif
- 
- BASE_FEATURE(kUseNewAlpsCodepointHttp2,
-              "UseNewAlpsCodepointHttp2",
+ BASE_FEATURE(kSimdutfBase64Support,
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT

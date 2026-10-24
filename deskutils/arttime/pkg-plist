@@ -60,6 +60,7 @@ bin/arttime
 %%DATADIR%%/textart/bowling
 %%DATADIR%%/textart/boyskateboard
 %%DATADIR%%/textart/braille
+%%DATADIR%%/textart/bridge
 %%DATADIR%%/textart/buddha
 %%DATADIR%%/textart/buddha2
 %%DATADIR%%/textart/buddha5
@@ -112,6 +113,8 @@ bin/arttime
 %%DATADIR%%/textart/cow4
 %%DATADIR%%/textart/crow
 %%DATADIR%%/textart/cubesonparade
+%%DATADIR%%/textart/deer
+%%DATADIR%%/textart/deer2
 %%DATADIR%%/textart/demon
 %%DATADIR%%/textart/dental
 %%DATADIR%%/textart/desktop
@@ -137,6 +140,7 @@ bin/arttime
 %%DATADIR%%/textart/eagle
 %%DATADIR%%/textart/einstein
 %%DATADIR%%/textart/einstein2
+%%DATADIR%%/textart/elephant
 %%DATADIR%%/textart/elephant2
 %%DATADIR%%/textart/elephant3
 %%DATADIR%%/textart/elephant4
@@ -157,6 +161,7 @@ bin/arttime
 %%DATADIR%%/textart/fish
 %%DATADIR%%/textart/fizzer
 %%DATADIR%%/textart/floorplan
+%%DATADIR%%/textart/flower
 %%DATADIR%%/textart/footsteps
 %%DATADIR%%/textart/fractals
 %%DATADIR%%/textart/freebsd1
@@ -190,6 +195,7 @@ bin/arttime
 %%DATADIR%%/textart/horse2
 %%DATADIR%%/textart/horse3
 %%DATADIR%%/textart/horse4
+%%DATADIR%%/textart/horse5
 %%DATADIR%%/textart/hourglass
 %%DATADIR%%/textart/house
 %%DATADIR%%/textart/house2
@@ -305,8 +311,10 @@ bin/arttime
 %%DATADIR%%/textart/passport
 %%DATADIR%%/textart/pattern
 %%DATADIR%%/textart/pattern2
+%%DATADIR%%/textart/pattern3
 %%DATADIR%%/textart/peacock
 %%DATADIR%%/textart/peacock2
+%%DATADIR%%/textart/peacock3
 %%DATADIR%%/textart/pharoah
 %%DATADIR%%/textart/phonenix
 %%DATADIR%%/textart/phonenix2
@@ -327,6 +335,7 @@ bin/arttime
 %%DATADIR%%/textart/poem_surfing
 %%DATADIR%%/textart/pointsettias
 %%DATADIR%%/textart/pointsettias2
+%%DATADIR%%/textart/police
 %%DATADIR%%/textart/pomodoro
 %%DATADIR%%/textart/prayer
 %%DATADIR%%/textart/pride50

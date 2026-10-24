@@ -1,6 +1,6 @@
 PORTNAME=	scummvm-tools
-PORTVERSION=	2.7.0
-PORTREVISION=	4
+PORTVERSION=	2.9.0
+PORTREVISION=	5
 CATEGORIES=	games emulators
 MASTER_SITES=	https://downloads.scummvm.org/frs/${PORTNAME}/${PORTVERSION}/
 
@@ -14,10 +14,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	lame:audio/lame \
 		flac:audio/flac \
 		oggenc:audio/vorbis-tools
-RUN_DEPENDS=	lame:audio/lame \
-		flac:audio/flac \
-		oggenc:audio/vorbis-tools
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
+RUN_DEPENDS= lame:audio/lame flac:audio/flac oggenc:audio/vorbis-tools
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libpng.so:graphics/png \
 		libmad.so:audio/libmad \
 		libogg.so:audio/libogg \
@@ -46,6 +44,7 @@ WXGTK_USE=	WX=3.2
 WXGTK_VARS=	WX_COMPS=wx WX_CONFIG_ARGS=absolute
 WXGTK_CONFIGURE_ENABLE=	wxwidgets
 
+DFLY_UNMAINTAINED= yes
 pre-patch:
 	@${REINPLACE_CMD} -e 's|^\(_wxconfig=\).*|\1${WX_CONFIG:C/.*\///}|' \
 		${WRKSRC}/configure

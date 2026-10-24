@@ -1,11 +1,11 @@
 PORTNAME=	fragroute
 PORTVERSION=	1.2
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	security net
 MASTER_SITES=	http://monkey.org/~dugsong/fragroute/ \
 		PACKETSTORM/UNIX/security
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	mauroeldritch@gmail.com
 COMMENT=	Tool for intercepting, modifying, and rewriting egress traffic
 WWW=		https://www.monkey.org/~dugsong/fragroute/
 
@@ -18,6 +18,7 @@ LIB_DEPENDS=	libdnet.so:net/libdnet \
 		libevent.so:devel/libevent
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--with-libdnet=${LOCALBASE} \
 		--with-libevent=${LOCALBASE} --with-pcap
 
@@ -30,5 +31,10 @@ pre-install:
 .for FILE in ${SCRIPTS}
 	${INSTALL_DATA} ${WRKSRC}/scripts/${FILE} ${STAGEDIR}${DATADIR}
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@pcap_open(@pcap_open1(@' \
+		${WRKSRC}/pcaputil.h ${WRKSRC}/fragtest.c \
+		${WRKSRC}/pcaputil.c ${WRKSRC}/tun-loop.c
 
 .include <bsd.port.mk>

@@ -19,7 +19,7 @@ LIB_DEPENDS=	libgd.so:graphics/gd \
 
 USES=		tcl uidfix
 
-MAKEFILE=	${FILESDIR}/Makefile.bsd
+MAKEFILE= ${WRKSRC}/Makefile.bsd
 MAKE_ENV=	TCL_VER=${TCL_VER} MKDIR="${MKDIR}" \
 			TCL_SHLIB_VER=${TCL_SHLIB_VER} \
 			INSTALL_DATA="${INSTALL_DATA}" STAGEDIR="${STAGEDIR}"
@@ -35,5 +35,9 @@ post-patch:
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/${MANNPAGE} ${STAGEDIR}${PREFIX}/share/man/mann
+
+dfly-patch:
+	${CP} -f ${FILESDIR}/Makefile.bsd ${WRKSRC}/Makefile.bsd
+	${REINPLACE_CMD} -e 's|include/gd|include|g' ${WRKSRC}/Makefile.bsd
 
 .include <bsd.port.mk>

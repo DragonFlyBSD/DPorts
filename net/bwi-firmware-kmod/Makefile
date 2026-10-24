@@ -1,6 +1,3 @@
-# Created by: Andrew Thompson <thompsa@FreeBSD.org>
-# $FreeBSD$
-
 PORTNAME=	bwi-firmware
 PORTVERSION=	${FWVERSION}
 CATEGORIES=	net
@@ -35,6 +32,7 @@ NO_PACKAGE=	this is a modified version of a restricted firmware
 
 USES=		kmod uidfix
 
+IGNORE= FreeBSD specific kmod
 do-build:
 	cd ${WRKSRC} &&  \
 	b43-fwcutter -w ${WRKSRC} ${DISTDIR}/${FWFILE}

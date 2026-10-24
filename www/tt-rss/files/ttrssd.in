@@ -17,54 +17,37 @@ rcvar=ttrssd_enable
 
 # read settings, set default values
 load_rc_config "${name}"
-: ${ttrssd_enable="NO"}
+: ${ttrssd_enable=NO}
+: ${ttrssd_user="$name"}
+: ${ttrssd_group="$name"}
 
 long_name="Tiny Tiny RSS updating feeds daemon."
 required_files="%%WWWDIR%%/config.php"
-pidfile="/var/run/${name}.pid"
-cpidfile="/var/run/${name}_child.pid"
+pidfile="/var/run/${name}/${name}.pid"
+cpidfile="/var/run/${name}/${name}_child.pid"
 phpcli="%%LOCALBASE%%/bin/php"
 
 initdb_php="%%WWWDIR%%/update.php"
 phpupd="%%WWWDIR%%/update_daemon2.php"
-ttrssd_log="/var/log/${name}.log"
+ttrssd_log="/var/log/${name}/${name}.log"
 
+ttrssd_cmd="%%WWWDIR%%/start.sh"
+ttrssd_umask="0003"
 command="/usr/sbin/daemon"
-command_args="-rR 10 -H -u %%WWWOWN%% \
-		-P $pidfile -p $cpidfile \
-		-o $ttrssd_log sh -c \
-		'$initdb_php --update-schema=force-yes; \
-			$phpupd;'"
+command_args="-rR 10 -H -P $pidfile -p $cpidfile \
+		-o $ttrssd_log $ttrssd_cmd"
 
-stop_cmd="${name}_stop"
+start_precmd="${name}_start_precmd"
 
-# daemon doesn't process signals if it lacks a child process.
-# See https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=277959
-ttrssd_stop() {
-	local pid_daemon
-	local pid_child
-	local signal="TERM"
-
-	pid_daemon=$(check_pidfile ${pidfile} ${command})
-	pid_child=$(check_pidfile ${cpidfile} ${phpcli})
-
-	if [ -n "$pid_daemon" ]; then
-		echo "Stopping ${name}."
-
-		if [ -z "${pid_child}" ]; then
-		    signal="INT"
-		fi
-
-		kill -"$signal" "${pid_daemon}"
-
-		wait_for_pids "${pid_daemon}" "${pid_child}"
-	else
-	    if [ -n "$pid_child" ]; then
-		echo "${name} not running? (check ${cpidfile})."
-	    else
-		echo "${name} not running? (check ${pidfile})."
-	    fi
+ttrssd_start_precmd()
+{
+    # daemon defaults to 0600 when using -o
+    if [ -f "$ttrssd_log" ]; then
+	if ! chown "$ttrssd_user" "$ttrssd_log"; then
+		echo "Setting ${ttrssd_log} owner failed"
+		exit 1
 	fi
+    fi
 }
 
 run_rc_command "$1"

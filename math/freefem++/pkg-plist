@@ -8,6 +8,7 @@ bin/ff-pkg-download
 bin/ffglut
 bin/ffmaster
 bin/ffmedit
+bin/md2edp
 lib/ff++/%%VER%%/bin/ff-get-dep
 lib/ff++/%%VER%%/bin/ff-pkg-download
 lib/ff++/%%VER%%/%%ETCDIR%%.pref
@@ -120,7 +121,6 @@ lib/ff++/%%VER%%/include/endian.hpp
 lib/ff++/%%VER%%/include/environment.hpp
 lib/ff++/%%VER%%/include/error.hpp
 lib/ff++/%%VER%%/include/fem.hpp
-lib/ff++/%%VER%%/include/fem3.hpp
 lib/ff++/%%VER%%/include/ff++.hpp
 lib/ff++/%%VER%%/include/ffapi.hpp
 lib/ff++/%%VER%%/include/ffstack.hpp
@@ -165,6 +165,7 @@ lib/ff++/%%VER%%/lib/Element_Mixte.so
 lib/ff++/%%VER%%/lib/Element_Mixte3d.so
 lib/ff++/%%VER%%/lib/Element_P1bl.so
 lib/ff++/%%VER%%/lib/Element_P1dc1.so
+lib/ff++/%%VER%%/lib/Element_P1nc_3d.so
 lib/ff++/%%VER%%/lib/Element_P1ncdc.so
 lib/ff++/%%VER%%/lib/Element_P2bulle3.so
 lib/ff++/%%VER%%/lib/Element_P2pnc.so
@@ -177,10 +178,14 @@ lib/ff++/%%VER%%/lib/Element_P3pnc_3d.so
 lib/ff++/%%VER%%/lib/Element_P4.so
 lib/ff++/%%VER%%/lib/Element_P4dc.so
 lib/ff++/%%VER%%/lib/Element_PkEdge.so
+lib/ff++/%%VER%%/lib/Element_PkLagrange.so
 lib/ff++/%%VER%%/lib/Element_QF.so
 lib/ff++/%%VER%%/lib/FreeFemQA.so
+lib/ff++/%%VER%%/lib/GrundmannMoller.so
 lib/ff++/%%VER%%/lib/Helmholtz_FD.so
 lib/ff++/%%VER%%/lib/IncompleteCholesky.so
+lib/ff++/%%VER%%/lib/MUMPS.so
+lib/ff++/%%VER%%/lib/MUMPS_seq.so
 lib/ff++/%%VER%%/lib/MatD-VFP0.so
 lib/ff++/%%VER%%/lib/MatrixMarket.so
 lib/ff++/%%VER%%/lib/MetricKuate.so
@@ -233,6 +238,7 @@ lib/ff++/%%VER%%/lib/pcm2rnm.so
 lib/ff++/%%VER%%/lib/plotPDF.so
 lib/ff++/%%VER%%/lib/ppm2rnm.so
 lib/ff++/%%VER%%/lib/qf11to25.so
+lib/ff++/%%VER%%/lib/scotch.so
 lib/ff++/%%VER%%/lib/shell.so
 lib/ff++/%%VER%%/lib/splitedges.so
 lib/ff++/%%VER%%/lib/splitmesh12.so

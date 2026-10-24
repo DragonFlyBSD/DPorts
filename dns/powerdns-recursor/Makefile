@@ -1,10 +1,10 @@
 PORTNAME=	recursor
-DISTVERSION=	4.9.1
-PORTREVISION=	1
+DISTVERSION=	5.4.8
 CATEGORIES=	dns
-MASTER_SITES=	http://downloads.powerdns.com/releases/
+MASTER_SITES=	https://downloads.powerdns.com/releases/
 PKGNAMEPREFIX=	powerdns-
 DISTNAME=	pdns-${PORTNAME}-${DISTVERSION}
+DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	tremere@cainites.net
 COMMENT=	Advanced DNS recursor
@@ -13,48 +13,71 @@ WWW=		https://www.PowerDNS.com/recursor.html
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_armv6=	fails to compile: use of overloaded operator << is ambiguous
-BROKEN_armv7=	fails to compile: use of overloaded operator << is ambiguous
-BROKEN_FreeBSD_12_powerpc64=	fails to compile: Assembler messages: unaligned opcodes detected in executable segment
 NOT_FOR_ARCHS=	i386
 NOT_FOR_ARCHS_REASON=	archs with 32-bits time_t are no longer supported by upstream
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/shared_ptr.hpp:devel/boost-libs
-LIB_DEPENDS=	libboost_context.so:devel/boost-libs
+LIB_DEPENDS=	libboost_context.so:devel/boost-libs \
+		libcurl.so:ftp/curl \
+		libsodium.so:security/libsodium
 
-USES=		autoreconf compiler:c++11-lib cpe gmake libtool \
-		localbase:ldflags pkgconfig ssl tar:bzip2
+USES=		cargo compiler:c++17-lang cpe localbase meson pkgconfig \
+		python:build ssl tar:xz
 
 CPE_VENDOR=	powerdns
-USE_RC_SUBR=	pdns-recursor
+USE_RC_SUBR=	pdns_recursor
 
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/pdns \
-		--with-libsodium=no \
-		--without-net-snmp \
-		--without-systemd
+MESON_ARGS=	--sysconfdir=${PREFIX}/etc/pdns \
+		-Dhardening=disabled \
+		-Dlibcap=disabled \
+		-Dsigners-libsodium=enabled \
+		-Dsystemd-service=disabled
 
+CARGO_CARGOLOCK=	${WRKSRC}/rec-rust-lib/rust/Cargo.lock
+CARGO_CARGOTOML=	${WRKSRC}/rec-rust-lib/rust/Cargo.toml
+CARGO_BUILD=		no
+CARGO_INSTALL=		no
+CARGO_TEST=		no
+
+BINARY_ALIAS=	python3=${PYTHON_CMD}
 SUB_FILES=	pkg-message
+TARGET_ORDER_OVERRIDE=	750:cargo-configure
 
 USERS=		pdns_recursor
 GROUPS=		pdns
 
-OPTIONS_DEFINE=		DNSTAP
-OPTIONS_DEFAULT=	LUA
+OPTIONS_DEFINE=		DNSTAP GNUTLS NOD SNMP
+OPTIONS_DEFAULT=	LUA NOD
 OPTIONS_SINGLE=		EXTLUA
 OPTIONS_SINGLE_EXTLUA=	LUA LUAJIT
 
 DNSTAP_DESC=	dnstap support (see dnstap.info)
 LUAJIT_DESC=	Use luajit
 LUA_DESC=	Use lang/lua
+NOD_DESC=	Newly Observed Domain Tracking support
 
-DNSTAP_LIB_DEPENDS=		libfstrm.so:devel/fstrm
-DNSTAP_CONFIGURE_ENABLE=	dnstap
+DNSTAP_LIB_DEPENDS=	libfstrm.so:devel/fstrm
+DNSTAP_MESON_ENABLED=	dnstap
+
+GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
+GNUTLS_MESON_ENABLED=	tls-gnutls
 
 LUAJIT_USES=		luajit
-LUAJIT_CONFIGURE_ON=	--with-lua=luajit
+LUAJIT_MESON_ON=	-Dlua=luajit
 
 LUA_USES=	lua
+LUA_MESON_ON=	-Dlua=lua
+
+NOD_MESON_ENABLED=	nod
+
+SNMP_LIB_DEPENDS=	libnetsnmp.so:net-mgmt/net-snmp
+SNMP_MESON_ENABLED=	snmp
+
+CFLAGS= -Wno-nonnull -Wno-uninitialized
+IGNORE= unmaintained, please request fixing to users mailing list
+pre-configure:
+	@${ECHO_MSG} "===> Generating stub lib.rs to satisfy cargo configure"
+	@echo "// stub" > ${WRKSRC}/rec-rust-lib/rust/src/lib.rs
 
 post-install:
 	@${MKDIR} ${STAGEDIR}/var/run/pdns-recursor

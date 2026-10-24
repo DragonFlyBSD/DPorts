@@ -1,7 +1,7 @@
 PORTNAME=	axel
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.17.11-21
-DISTVERSIONSUFFIX=	-gd65dffa
+DISTVERSION=	2.17.14
+PORTREVISION=	1
 CATEGORIES=	ftp
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -20,14 +20,14 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	axel-download-accelerator
 
 GNU_CONFIGURE=	yes
-
-.if exists(/usr/libdata/pkgconfig/openssl.pc)
 CONFIGURE_ARGS=	--with-ssl=openssl
-.else
-CONFIGURE_ARGS=	--without-ssl # no easy workaround
-.endif
 
-PLIST_FILES=	bin/axel \
-		man/man1/axel.1.gz
+OPTIONS_DEFINE=	NLS
+OPTIONS_DEFAULT=NLS
+OPTIONS_SUB=	yes
 
+NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
+
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

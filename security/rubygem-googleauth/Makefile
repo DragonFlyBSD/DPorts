@@ -1,5 +1,5 @@
 PORTNAME=	googleauth
-PORTVERSION=	1.13.1
+PORTVERSION=	1.17.4
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
@@ -13,9 +13,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	rubygem-faraday>=1.0<3.0:www/rubygem-faraday \
 		rubygem-google-cloud-env>=2.2<3:net/rubygem-google-cloud-env \
 		rubygem-google-logging-utils>=0.1<1:devel/rubygem-google-logging-utils \
-		rubygem-jwt>=1.4<3.0:www/rubygem-jwt \
-		rubygem-multi_json>=1.11<2:devel/rubygem-multi_json \
+		rubygem-jwt>=1.4<4.0:www/rubygem-jwt \
 		rubygem-os>=0.9<2.0:devel/rubygem-os \
+		rubygem-pstore>=0.1<1:devel/rubygem-pstore \
 		rubygem-signet>=0.16<2:security/rubygem-signet
 
 USES=		gem

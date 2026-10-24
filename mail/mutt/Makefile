@@ -1,8 +1,8 @@
 PORTNAME=	mutt
-DISTVERSION=	2.2.14
-CATEGORIES+=	mail
-MASTER_SITES=	ftp://ftp.mutt.org/pub/mutt/ \
-		https://bitbucket.org/mutt/mutt/downloads/
+DISTVERSION=	2.4.3
+CATEGORIES=	mail
+MASTER_SITES=	http://ftp.mutt.org/pub/mutt/ \
+		ftp://ftp.mutt.org/pub/mutt/
 DIST_SUBDIR=	mutt
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -89,7 +89,9 @@ AUTOCRYPT_DEPENDS=		gnupg>=2.1:security/gnupg \
 
 DEBUG_LOGS_CONFIGURE_ON=	--enable-debug
 
-DOCS_BUILD_DEPENDS=	lynx:www/lynx
+DOCS_BUILD_DEPENDS=	docbook-xsl>0:textproc/docbook-xsl \
+			lynx:www/lynx \
+			xsltproc:textproc/libxslt
 DOCS_CONFIGURE_OFF=	--disable-doc
 
 FLOCK_CONFIGURE_ENABLE=	flock
@@ -121,7 +123,7 @@ HCACHE_GDBM_LIB_DEPENDS=		libgdbm.so:databases/gdbm
 HCACHE_GDBM_CONFIGURE_WITH=		gdbm=${LOCALBASE}
 HCACHE_KYOTOCABINET_LIB_DEPENDS=	libkyotocabinet.so:databases/kyotocabinet
 HCACHE_KYOTOCABINET_CONFIGURE_WITH=	kyotocabinet=${LOCALBASE}
-HCACHE_LMDB_LIB_DEPENDS=		liblmdb.so:databases/lmdb
+HCACHE_LMDB_LIB_DEPENDS=		liblmdb.so:databases/lmdb0
 HCACHE_LMDB_CONFIGURE_WITH=		lmdb=${LOCALBASE}
 HCACHE_NONE_CONFIGURE_ON=		--disable-hcache
 HCACHE_NONE_CONFIGURE_OFF=		--enable-hcache
@@ -168,7 +170,7 @@ pre-configure:
 	@${REINPLACE_CMD} \
 		-e '/if test.*mutt_dotlock.*DOTLOCK_GROUP/s/if/if ${FALSE} \&\&/' \
 		${WRKSRC}/Makefile.in
-# Base FreeBSD krb5-config --version returns "FreeBSD heimdal"
+# <15 Base FreeBSD krb5-config --version returns "FreeBSD heimdal"
 	@${REINPLACE_CMD} -e 's,?eimdal\*),?eimdal*|\"FreeBSD heimdal\"*),' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
 # Install contrib samples to ${EXAMPLESDIR}
@@ -180,8 +182,8 @@ post-install:
 
 # Undo some dist. installed files
 post-stage:
-	@${MV} ${STAGEDIR}/${LOCALBASE}/etc/Muttrc.dist \
-		${STAGEDIR}/${LOCALBASE}/etc/Muttrc.sample
-	@${RM} ${STAGEDIR}/${LOCALBASE}/etc/mime.types*
+	@${MV}  ${STAGEDIR}/${PREFIX}/etc/Muttrc.dist \
+		${STAGEDIR}/${PREFIX}/etc/Muttrc.sample
+	@${RM}  ${STAGEDIR}/${PREFIX}/etc/mime.types*
 
 .include <bsd.port.mk>

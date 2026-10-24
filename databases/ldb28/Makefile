@@ -1,6 +1,6 @@
 PORTNAME=	ldb
 PORTVERSION=	2.8.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	SAMBA
 PKGNAMESUFFIX?=	${PORTVERSION:C/([[:digit:]]+)[.]([[:digit:]]+).*/\1\2/}
@@ -67,18 +67,18 @@ MANPAGES_CONFIGURE_ENV_OFF=	XSLTPROC="false"
 PYTHON3_USES=		gettext-runtime python
 PYTHON3_USES_OFF=	python:build,test
 PYTHON3_CONFIGURE_OFF=	--disable-python
-PYTHON3_PLIST_FILES=	${PKGCONFIGDIR}/pyldb-util${PYTHON_EXT_SUFFIX}.pc \
+PYTHON3_PLIST_FILES=	${PKGCONFIGDIR}/pyldb-util${PYTHON_TAG}.pc \
 			${PYTHON_SITELIBDIR}/_ldb_text.py \
-			${PYTHON_SITELIBDIR}/ldb${PYTHON_EXT_SUFFIX}.so \
+			${PYTHON_SITELIBDIR}/ldb${PYTHON_TAG}.so \
 			include/pyldb.h \
-			lib/libpyldb-util${PYTHON_EXT_SUFFIX}.so \
-			lib/libpyldb-util${PYTHON_EXT_SUFFIX}.so.2
+			lib/libpyldb-util${PYTHON_TAG}.so \
+			lib/libpyldb-util${PYTHON_TAG}.so.2
 
 # No fancy color error messages
 _CFLAGS_clang=	-fno-color-diagnostics
 
 _LDB_DEPENDS=	talloc>=2.2.0:devel/talloc tevent>=0.10.0:devel/tevent \
-		tdb>=1.4.0:databases/tdb lmdb>=0.9.23:databases/lmdb \
+		tdb>=1.4.0:databases/tdb lmdb0>=0.9.23:databases/lmdb0 \
 		popt>=0:devel/popt
 _LDB_BINS=	bin/ldbedit bin/ldbmodify bin/ldbadd bin/ldbdel bin/ldbsearch \
 		bin/ldbrename
@@ -104,7 +104,7 @@ CONFIGURE_ARGS+=	--enable-debug \
 .endif
 
 # Only for 64-bit architectures
-.if ${ARCH} != armv6 && ${ARCH} != armv7 && ${ARCH} != i386 && ${ARCH} != mips && \
+.if ${ARCH} != armv6 && ${ARCH} != armv7 && ${ARCH} != i386 && \
 	${ARCH} != powerpc && ${ARCH} != powerpcspe
 _LDB_LIBS_64=	lib/ldb/libldb-mdb-int.so lib/shared-modules/ldb/mdb.so
 .endif
@@ -137,7 +137,7 @@ post-install:
 .endfor
 
 post-install-PYTHON3-on:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpyldb-util${PYTHON_EXT_SUFFIX}.so
-	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/ldb${PYTHON_EXT_SUFFIX}.so
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libpyldb-util${PYTHON_TAG}.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/ldb${PYTHON_TAG}.so
 
 .include <bsd.port.mk>

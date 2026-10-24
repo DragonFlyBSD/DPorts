@@ -1,0 +1,5 @@
+bin/electric-ng
+%%PLUGINS%%libexec/electric-ng/electricSFS-%%VERSION%%.jar
+%%DOCS%%%%PORTDOCS%%%%DOCSDIR%%/ElectricManual-%%VERSION%%.pdf
+%%JAVAJARDIR%%/electricBinary-%%VERSION%%.1.jar
+share/pixmaps/electric-ng.png

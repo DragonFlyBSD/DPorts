@@ -1,7 +1,7 @@
 PORTNAME=	msl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.7.4
-PORTREVISION=	1
+DISTVERSION=	1.8.4
+PORTREVISION=	2
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,7 +12,7 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 BUILD_DEPENDS=	flatc:devel/flatbuffers
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs
+LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
 USES=		cmake:testing compiler:c++14-lang python:build
 
@@ -26,9 +26,12 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	akb825
 GH_PROJECT=	ModularShaderLanguage
 
-GH_TUPLE=	akb825:glslang:09a5596:akb825_glslang/Compile/glslang \
-		KhronosGroup:SPIRV-Cross:bccaa94:KhronosGroup_SPIRV_Cross/Compile/SPIRV-Cross \
-		akb825:SPIRV-Tools:f343c83:akb825_SPIRV_Tools/Compile/SPIRV-Tools \
-			KhronosGroup:SPIRV-Headers:124a966:KhronosGroup_SPIRV_Headers/Compile/SPIRV-Tools/external/spirv-headers
+GH_TUPLE=	akb825:glslang:22683c8:akb825_glslang/Compile/glslang \
+		KhronosGroup:SPIRV-Cross:68413a9:KhronosGroup_SPIRV_Cross/Compile/SPIRV-Cross \
+		akb825:SPIRV-Tools:0b24642:akb825_SPIRV_Tools/Compile/SPIRV-Tools \
+			KhronosGroup:SPIRV-Headers:04f10f6:KhronosGroup_SPIRV_Headers/Compile/SPIRV-Tools/external/spirv-headers
 
+# tests as of 1.8.4: 100% tests passed, 0 tests failed out of 25
+
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

@@ -1,5 +1,6 @@
 PORTNAME=	runelite
 PORTVERSION=	2.2.0
+PORTREVISION=	2
 CATEGORIES=	games java
 MASTER_SITES+=	https://github.com/runelite/launcher/releases/download/${PORTVERSION}/:game \
 		https://raw.githubusercontent.com/runelite/launcher/${PORTVERSION}/appimage/:icon \
@@ -10,7 +11,7 @@ DISTFILES=	RuneLite.jar:game \
 DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 EXTRACT_ONLY=
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Open source Old School RuneScape client
 WWW=		https://runelite.net
 

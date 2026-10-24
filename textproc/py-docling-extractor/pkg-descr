@@ -1,0 +1,4 @@
+Docling Extractor provides production-grade document extraction with an
+intelligent fallback chain: Docling, PyMuPDF, pdfplumber, and Tesseract.
+It automatically selects the best available extraction backend for each
+document, ensuring robust text extraction across diverse document types.

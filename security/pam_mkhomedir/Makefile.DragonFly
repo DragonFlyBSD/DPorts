@@ -1,4 +1,0 @@
-LDFLAGS+= -lpam
-
-# to avoid orphans
-PLIST_FILES+=	lib/libpam_mkhomedir.a

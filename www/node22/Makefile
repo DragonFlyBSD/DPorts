@@ -1,6 +1,7 @@
 PORTNAME=	node
 PORTVERSION=	${NODEJS_PORTVERSION}
 DISTVERSIONPREFIX=	v
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${PORTVERSION}/
 PKGNAMESUFFIX=	${PORTVERSION:R:R}
@@ -18,29 +19,41 @@ BROKEN_SSL_REASON=	Node.js ${PORTVERSION:R:R}.x requires OpenSSL or the BUNDLED_
 ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386 powerpc64 powerpc64le
 
 BUILD_DEPENDS=	objdump:devel/binutils
-LIB_DEPENDS=	libbrotlidec.so:archivers/brotli \
+LIB_DEPENDS=	libada.so:devel/libada \
+		libbrotlidec.so:archivers/brotli \
 		libcares.so:dns/c-ares \
 		libicui18n.so:devel/icu \
+		libllhttp.so:www/llhttp \
 		libnghttp2.so:www/libnghttp2 \
 		libnghttp3.so:www/libnghttp3 \
 		libngtcp2.so:net/libngtcp2 \
 		libsimdjson.so:devel/simdjson \
+		libsqlite3.so:databases/sqlite3 \
 		libuv.so:devel/libuv \
+		libuvwasi.so:devel/uvwasi \
 		libzstd.so:archivers/zstd
+RUN_DEPENDS=	corepack>=0:www/corepack
 
-USES=		compiler:c++11-lang gmake localbase pkgconfig python:build shebangfix tar:xz
+USES=		compiler:c++20-lang gmake localbase pkgconfig python:build shebangfix tar:xz
 
 CONFIGURE_ARGS=	--prefix=${PREFIX:S|^${DESTDIR}||} \
+		--shared-ada \
 		--shared-brotli \
 		--shared-cares \
+		--shared-http-parser \
+		--shared-http-parser-libname=llhttp \
 		--shared-libuv \
 		--shared-nghttp2 \
 		--shared-nghttp3 \
 		--shared-ngtcp2 \
 		--shared-simdjson \
+		--shared-sqlite \
+		--shared-uvwasi \
+		--shared-uvwasi-includes=${LOCALBASE}/include \
 		--shared-zlib \
 		--shared-zstd \
 		--with-intl=system-icu \
+		--without-corepack \
 		--without-npm
 CXXFLAGS_powerpc64=	-mpower8-vector
 HAS_CONFIGURE=	yes
@@ -66,10 +79,10 @@ BUNDLED_SSL_DESC=	Use bundled OpenSSL implementation from node.js
 JIT_DESC=		Use Just In Time compiler
 
 BUNDLED_SSL_CONFIGURE_OFF=	--openssl-use-def-ca-store --shared-openssl
-BUNDLED_SSL_RUN_DEPENDS_OFF=	ca_root_nss>=0:security/ca_root_nss
 BUNDLED_SSL_USES_OFF=	ssl
 JIT_CONFIGURE_OFF=	--v8-lite-mode
 
+USE_GCC_VERSION= 14
 .include "Makefile.version"
 .include <bsd.port.options.mk>
 
@@ -80,13 +93,19 @@ CONFIGURE_ARGS+=--openssl-no-asm
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' ${WRKSRC}/tools/v8_gypfiles/v8.gyp
 # Clean up bundled libraries
+	@${RM} -r ${WRKSRC}/deps/ada/
 	@${RM} -r ${WRKSRC}/deps/brotli/
 	@${RM} -r ${WRKSRC}/deps/cares/
+	@${RM} -r ${WRKSRC}/deps/corepack/
+	@${RM} -r ${WRKSRC}/deps/icu-small/
+	@${RM} -r ${WRKSRC}/deps/llhttp/
 	@${RM} -r ${WRKSRC}/deps/nghttp2/
 	@${RM} -r ${WRKSRC}/deps/ngtcp2/
 	@${RM} -r ${WRKSRC}/deps/npm/
 	@${RM} -r ${WRKSRC}/deps/simdjson/
+	@${RM} -r ${WRKSRC}/deps/sqlite/
 	@${RM} -r ${WRKSRC}/deps/uv/
+	@${RM} -r ${WRKSRC}/deps/uvwasi/
 	@${RM} -r ${WRKSRC}/deps/zlib/
 	@${RM} -r ${WRKSRC}/deps/zstd/
 
@@ -95,11 +114,19 @@ post-configure:
 	# all occurrences of -I${LOCALBASE}/include. C*FLAGS include this
 	# before all -I../deps/* for bundled code. This can cause build
 	# breakages if the dependency is installed in ${LOCALBASE}. The
-	# USES+=localbase # above will ensure that we pick up includes for real
+	# USES+=localbase above will ensure that we pick up includes for real
 	# external dependencies.
-	${FIND} ${WRKSRC}/out -type f -print0 | ${XARGS} -0 ${REINPLACE_CMD} -e "s|-I${LOCALBASE}/include||g"
+	@${FIND} ${WRKSRC}/out -type f -print0 | ${XARGS} -0 ${REINPLACE_CMD} -e 's|-I${LOCALBASE}/include||g'
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/node
+# Fail if two simdutf copies end up in one process (node exports its bundled
+# simdutf; a DSO linking the system libsimdutf.so, e.g. libmerve, then binds
+# to the wrong one and CJS export lexing SIGBUSes). Importing a CommonJS
+# module from ESM runs that lexer; stdin avoids a temp file.
+	${ECHO_CMD} 'exports.ok = 1' | ${STAGEDIR}${PREFIX}/bin/node --input-type=module -e 'import "/dev/stdin"'
+
+post-install-BUNDLED_SSL-on:
+	cd ${STAGEDIR}${PREFIX} && ${FIND} include/node/openssl/ -type f >> ${TMPPLIST}
 
 .include <bsd.port.mk>

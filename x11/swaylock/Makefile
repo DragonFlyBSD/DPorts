@@ -1,7 +1,7 @@
 PORTNAME=	swaylock
 DISTVERSIONPREFIX?=	v
-DISTVERSION?=	1.7.2
-PORTREVISION?=	1
+DISTVERSION?=	1.8.6
+PORTREVISION?=	0
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -34,15 +34,25 @@ OPTIONS_DEFAULT=MANPAGES PIXBUF
 
 MANPAGES_BUILD_DEPENDS=	scdoc:textproc/scdoc
 MANPAGES_MESON_ENABLED=	man-pages
-MANPAGES_PLIST_FILES=	man/man1/${PORTNAME}.1.gz
+MANPAGES_PLIST_FILES=	share/man/man1/${PORTNAME}.1.gz
 
-PIXBUF_USE=		GNOME=gdkpixbuf2
+PIXBUF_USE=		GNOME=gdkpixbuf
 PIXBUF_MESON_ENABLED=	gdk-pixbuf
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 # Extract (snapshot) version from the port instead of meson.build
 	@${REINPLACE_CMD} -i .nogit -e 's/git.found()/false/' \
-		-e '/project_version/s/@0@/${DISTVERSIONFULL}/' \
+		-e "s/meson.project_version()/'${DISTVERSIONFULL}'/" \
 		${WRKSRC}/meson.build
+# https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=275328
+	@${REINPLACE_CMD} -e 's/_POSIX_C_SOURCE=200809L/_XOPEN_SOURCE=700/' \
+		${WRKSRC}/meson.build
+
+.if defined(PKGNAMESUFFIX) && ${PKGNAMESUFFIX:M-effects}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@#ifdef __SSE2__@#if defined(__SSE2__) \&\& __GNUC__ \!= 8@g' \
+		${WRKSRC}/fade.c
+.endif
 
 .include <bsd.port.mk>

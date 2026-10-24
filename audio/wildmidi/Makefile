@@ -1,10 +1,9 @@
 PORTNAME=	wildmidi
-PORTVERSION=	0.4.2
-PORTREVISION=	1
-DISTVERSIONPREFIX=	${PORTNAME}-
+DISTVERSION=	0.4.6
 CATEGORIES=	audio
+MASTER_SITES=	https://github.com/Mindwerks/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/
 
-MAINTAINER=	liangtai.s16@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple software midi player and core softsynth library
 WWW=		https://www.mindwerks.net/projects/wildmidi/
 
@@ -15,27 +14,25 @@ USES=		cmake cpe
 CPE_VENDOR=	mindwerks
 USE_LDCONFIG=	yes
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	Mindwerks
-
-OPTIONS_SUB=	yes
-OPTIONS_RADIO=	BACKEND
+OPTIONS_DEFINE=		PLAYER PLAYERSTATIC STATIC
+OPTIONS_DEFAULT=	OSS PLAYER
+OPTIONS_RADIO=		BACKEND
 OPTIONS_RADIO_BACKEND=	ALSA OPENAL OSS
-OPTIONS_DEFINE=	PLAYER PLAYERSTATIC STATIC
-OPTIONS_DEFAULT=	ALSA PLAYER
+OPTIONS_SUB=		yes
 
-STATIC_CMAKE_BOOL=	WANT_STATIC
-
-PLAYER_DESC=	Simple player
+BACKEND_DESC=		Sound system PLAYER and PLAYERSTATIC use
 PLAYERSTATIC_DESC=	Simple player using STATIC libWildMidi
-BACKEND_DESC=	Sound system PLAYER and PLAYERSTATIC use
-PLAYER_CMAKE_BOOL=	WANT_PLAYER
-PLAYERSTATIC_CMAKE_BOOL=	WANT_PLAYERSTATIC
-PLAYERSTATIC_IMPLIES=	STATIC
-ALSA_CMAKE_BOOL=	WANT_ALSA
-OPENAL_CMAKE_BOOL=	WANT_OPENAL
-OSS_CMAKE_BOOL=	WANT_OSS
+PLAYER_DESC=		Simple player
 
+ALSA_CMAKE_BOOL=		WANT_ALSA
+OPENAL_CMAKE_BOOL=		WANT_OPENAL
+OSS_CMAKE_BOOL=			WANT_OSS
+PLAYERSTATIC_IMPLIES=		STATIC
+PLAYERSTATIC_CMAKE_BOOL=	WANT_PLAYERSTATIC
+PLAYER_CMAKE_BOOL=		WANT_PLAYER
+STATIC_CMAKE_BOOL=		WANT_STATIC
+
+CONFIGURE_ARGS= --disable-werror
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MPLAYER} || ${PORT_OPTIONS:MPLAYERSTATIC}
@@ -57,14 +54,11 @@ post-patch:
 		-e 's@/etc/@${DATADIR}/@' ${WRKSRC}/docs/man/man1/wildmidi.1 \
 		${WRKSRC}/docs/man/man5/wildmidi.cfg.5 \
 		${WRKSRC}/CMakeLists.txt
-	${REINPLACE_CMD} \
-		-e '/pkgconfig/s/$${WILDMIDILIB_INSTALLDIR}/libdata/' \
-		${WRKSRC}/src/CMakeLists.txt
 
 pre-install:
 	@${RM} ${WRKSRC}/docs/man/man1/wildmidi.1${REINPLACE_ARGS:S/-i//} \
 		${WRKSRC}/docs/man/man5/wildmidi.cfg.5${REINPLACE_ARGS:S/-i//}
-	${MKDIR} ${STAGEDIR}${DATADIR} ; \
-	${CP} ${WRKSRC}/cfg/wildmidi.cfg ${STAGEDIR}${DATADIR}/wildmidi.cfg.sample
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/cfg/wildmidi.cfg ${STAGEDIR}${DATADIR}/wildmidi.cfg.sample
 
 .include <bsd.port.mk>

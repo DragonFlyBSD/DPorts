@@ -11,4 +11,6 @@ CONFLICTS=	conky
 OPTIONS_EXCLUDE=	ARGB DOUBLE_BUFFER IMLIB2 MOUSE_EVENTS XFT XINERAMA LUA_CAIRO \
 			LUA_IMLIB2 LUA_RSVG WAYLAND
 
+IGNORE= unmaintained, please request fixing to users mailing list
+DFLY_UNMAINTAINED= yes
 .include "${MASTERDIR}/Makefile"

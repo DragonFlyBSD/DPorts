@@ -11,4 +11,8 @@ USE_KDE=	config coreaddons i18n kio service \
 USE_QT=		concurrent core dbus network xml \
 		buildtools:build qmake:build
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

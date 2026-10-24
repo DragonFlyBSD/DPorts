@@ -72,8 +72,8 @@ post-patch:
 .endif
 
 pre-build:
-	cd ${WRKSRC} && ${SETENV} LLVM_CONFIG="${LLVM_CONFIG}" ${MAKE_CMD} llvm_ext
-	cd ${WRKSRC} && ${CC} -o .build/crystal-bootstrap  \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} LLVM_CONFIG="${LLVM_CONFIG}" ${MAKE_CMD} llvm_ext
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${CC} -o .build/crystal-bootstrap  \
 		.build/crystal.o src/llvm/ext/llvm_ext.o \
 		-rdynamic \
 		`${LLVM_CONFIG} --libs --system-libs --ldflags 2> /dev/null` \

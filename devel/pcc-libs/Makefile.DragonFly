@@ -1,3 +1,0 @@
-
-dfly-patch:
-	${LN} -sv ${WRKSRC}/csu/linux ${WRKSRC}/csu/dragonfly

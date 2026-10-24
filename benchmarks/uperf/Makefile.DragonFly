@@ -1,2 +1,0 @@
-
-CONFIGURE_ARGS+=	--with-ssl-includes=${OPENSSLINC} --with-ssl-libs=${OPENSSLLIB}

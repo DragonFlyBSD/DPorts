@@ -56,4 +56,8 @@ do-install-EXAMPLES-on:
 	${INSTALL_DATA} ${WRKSRC}/togl.c ${WRKSRC}/togl.h ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/tree2.rgba ${STAGEDIR}${EXAMPLESDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/MAKE_SHARED_LIB=/s/"$$/ -lc"/g' \
+		${WRKSRC}/configure
+
 .include <bsd.port.mk>

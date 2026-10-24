@@ -14,4 +14,8 @@ PLIST_FILES+=	sbin/mfid
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mfid ${STAGEDIR}${PREFIX}/sbin/mfid
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@dev/mfi/@dev/raid/mfi/@g'	\
+		${WRKSRC}/mfid.c
+
 .include <bsd.port.mk>

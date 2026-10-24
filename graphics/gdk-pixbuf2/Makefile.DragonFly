@@ -1,3 +1,0 @@
-dfly-patch:
-	# Make the scripts executable
-	${CHMOD} ${BINMODE} ${WRKSRC}/build-aux/gen-*.py

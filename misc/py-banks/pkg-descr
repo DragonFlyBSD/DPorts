@@ -1,0 +1,4 @@
+Banks is a prompt programming language that enables structured prompt
+engineering for LLM applications. It provides a templating system and
+DSL for composing, managing, and optimizing prompts used with large
+language models.

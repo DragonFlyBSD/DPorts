@@ -1,11 +1,11 @@
 PORTNAME=	django_compressor
 PORTVERSION=	4.5
-PORTREVISION=	1
+PORTREVISION=	4
 CATEGORIES=	www python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	ultima@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Compresses linked and inline JavaScript/CSS into a single cached file
 WWW=		https://github.com/jezdez/django_compressor
 
@@ -25,7 +25,7 @@ BEAUTIFULSOUP_DESC=	Enable BeautifulSoupParser
 LXML_DESC=		Enable LxmlParser
 HTML5LIB_DESC=		Enable Html5LibParser
 
-BEAUTIFULSOUP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4:www/py-beautifulsoup@${PY_FLAVOR}
+BEAUTIFULSOUP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup4>=4:www/py-beautifulsoup4@${PY_FLAVOR}
 LXML_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR}
 HTML5LIB_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}html5lib>0:www/py-html5lib@${PY_FLAVOR}
 

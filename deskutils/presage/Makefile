@@ -1,6 +1,6 @@
 PORTNAME=	presage
 DISTVERSION=	0.9.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils kde
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${DISTVERSION}
 
@@ -9,16 +9,17 @@ COMMENT=	Intelligent predictive text entry system
 WWW=		https://presage.sourceforge.io/
 
 BUILD_DEPENDS=	help2man:misc/help2man \
-		${PYTHON_PKGNAMEPREFIX}dbus>0:devel/py-dbus@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}dbus>0:devel/py-dbus@${PY_FLAVOR} \
+		${PY_SETUPTOOLS}
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
 		libtinyxml.so:textproc/tinyxml \
-		libuuid.so:misc/e2fsprogs-libuuid
+		libuuid.so:misc/libuuid
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dbus>0:devel/py-dbus@${PY_FLAVOR}
 
-USES=		gmake libtool:build localbase shebangfix python sqlite
+USES= gmake libtool:build localbase shebangfix python sqlite ncurses
 
 SHEBANG_FILES=	apps/dbus/presage_dbus_python_demo \
 		apps/dbus/presage_dbus_python_demo.in \
@@ -37,5 +38,11 @@ CONFIGURE_ARGS=	--disable-documentation \
 INSTALL_TARGET=	install-strip
 
 CONFLICTS_INSTALL=	soothsayer # share/man/man1/text2ngram.1.gz
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lcurses@-lncurses@g' \
+		${WRKSRC}/configure \
+		${WRKSRC}/src/tools/Makefile.am \
+		${WRKSRC}/src/tools/Makefile.in
 
 .include <bsd.port.mk>

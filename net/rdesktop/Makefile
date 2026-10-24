@@ -78,4 +78,8 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's,FreeBSD,DragonFly,g' \
+			 ${WRKSRC}/xwin.c
+
 .include <bsd.port.mk>

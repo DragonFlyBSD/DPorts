@@ -1,6 +1,6 @@
 PORTNAME=	libdaq
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.0.19
+DISTVERSION=	3.0.27
 CATEGORIES=	net
 
 PATCH_SITES=	https://github.com/glebius/${PORTNAME}/commit/
@@ -24,5 +24,9 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
 CONFLICTS=	daq-2*
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd*|openbsd*)@dragonfly*|&@' \
+		${WRKSRC}/configure.ac
 
 .include <bsd.port.mk>

@@ -1,0 +1,22 @@
+-- Remove -Werror flags that break the build with newer compilers/headers.
+
+--- Makefile.am.orig	2026-07-16 17:14:19 UTC
++++ Makefile.am
+@@ -30,7 +30,7 @@ else
+ else
+ if WITH_OSXAPI
+ else
+-CPPFLAGS += -D_FORTIFY_SOURCE=2 -Wall -Wformat -Werror=format-security -Werror=return-type -Werror=uninitialized -Werror=maybe-uninitialized -Werror=missing-parameter-type -Werror=int-conversion -Werror=implicit-function-declaration
++CPPFLAGS += -D_FORTIFY_SOURCE=2 -Wall -Wformat
+ endif
+ endif
+ 
+@@ -910,7 +910,7 @@ else
+ libags_audio_la_CPPFLAGS += -DAGS_VECTORIZED_BUILTIN_FUNCTIONS=1 -DAGS_OSXAPI=1 -I/usr/include -I/opt/local/include -I/opt/local/include/dssi -DAGS_LIBRARY_SUFFIX=\".dylib\"
+ libags_audio_la_LDFLAGS += -Wl,-headerpad_max_install_names -Wl,-install_name,libags_audio.dylib
+ else
+-libags_audio_la_CPPFLAGS += -DAGS_VECTORIZED_BUILTIN_FUNCTIONS=1 -DAGS_VECTOR_256_FUNCTIONS=1 -DAGS_LIBRARY_SUFFIX=\".so\" -Werror=return-type -Werror=uninitialized -Werror=maybe-uninitialized
++libags_audio_la_CPPFLAGS += -DAGS_VECTORIZED_BUILTIN_FUNCTIONS=1 -DAGS_VECTOR_256_FUNCTIONS=1 -DAGS_LIBRARY_SUFFIX=\".so\"
+ libags_audio_la_LDFLAGS += -Wl,-soname,libags_audio.so
+ libags_audio_la_LIBADD += -ldl
+ endif

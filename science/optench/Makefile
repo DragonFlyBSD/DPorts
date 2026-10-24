@@ -21,6 +21,7 @@ GL_ACCOUNT=	amini-allight
 CMAKE_ARGS+=	-DOPTENCH_DEPLOYMENT:BOOL=OFF
 .endif
 
+DFLY_UNMAINTAINED= yes
 pre-configure:
 	${REINPLACE_CMD} -e 's|/usr/include/qt6|${QT_INCDIR}|'	\
 		${WRKSRC}/CMakeLists.txt

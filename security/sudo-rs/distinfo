@@ -1,0 +1,7 @@
+TIMESTAMP = 1788170203
+SHA256 (rust/crates/glob-0.3.4.crate) = e4eba85ea1d0a966a983acd07deee566e67395d2d96b6fb39e62b5a833f1eb0b
+SIZE (rust/crates/glob-0.3.4.crate) = 23511
+SHA256 (rust/crates/libc-0.2.189.crate) = 3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2
+SIZE (rust/crates/libc-0.2.189.crate) = 851502
+SHA256 (trifectatechfoundation-sudo-rs-v0.2.15_GH0.tar.gz) = ae857c3cde962a1ade2b981f7e01cf95e9fa05d5c5f95f94cf5f35394c1bf899
+SIZE (trifectatechfoundation-sudo-rs-v0.2.15_GH0.tar.gz) = 1234018

@@ -17,10 +17,15 @@ NO_WRKSUBDIR=	yes
 ALL_TARGET=	bsdansi
 MAKEFILE=	makefile
 
+CFLAGS= -D__OpenBSD__
 do-install:
 .for f in fiz zoo
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${f}.1 ${STAGEDIR}${PREFIX}/share/man/man1
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@/varargs.h@/stdarg.h@g'	\
+		${WRKSRC}/makefile
 
 .include <bsd.port.mk>

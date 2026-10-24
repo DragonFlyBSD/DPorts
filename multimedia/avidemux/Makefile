@@ -4,13 +4,13 @@
 
 PORTNAME=	avidemux
 PORTVERSION=	${AVIDEMUX_VERSION}
-PORTREVISION=	1
+PORTREVISION=	5
 CATEGORIES=	multimedia
 
-MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Simple GUI based video editor
 WWW=		https://avidemux.org/
 
+CXXFLAGS= -fpermissive
 .include "${.CURDIR}/Makefile.common"
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/avidemux_core
@@ -21,5 +21,10 @@ post-install:
 .for l in swscale.so.5 postproc.so.55 avutil.so.56 avcodec.so.58 avformat.so.58
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libADM6${l}
 .endfor
+
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
+dfly-patch:
+	${ECHO_MSG} 'target_link_libraries(ADM_core6 "-lexecinfo")' >> \
+		${WRKSRC}/avidemux_core/ADM_core/src/CMakeLists.txt
 
 .include <bsd.port.post.mk>

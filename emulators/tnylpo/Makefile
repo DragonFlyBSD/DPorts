@@ -10,7 +10,7 @@ WWW=		https://gitlab.com/gbrein/tnylpo
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		gmake
+USES= gmake localbase ncurses
 USE_GITLAB=	yes
 GL_ACCOUNT=	gbrein
 GL_TAGNAME=	3216c00c7a97d373b51192a96da46510f75f1adb
@@ -29,5 +29,11 @@ do-install:
 		${STAGEDIR}${PREFIX}/share/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/mine/README.md \
 		${STAGEDIR}${PREFIX}/share/${PORTNAME}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,<curses.h>,<ncurses/ncurses.h>,g' \
+		${WRKSRC}/screen.c
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/makefile
 
 .include <bsd.port.mk>

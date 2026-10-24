@@ -6,7 +6,7 @@ include/uade/uadeconfstructure.h
 lib/libuade.so
 lib/uade/uadecore
 libdata/pkgconfig/libuade.pc
-man/man1/uade123.1.gz
+share/man/man1/uade123.1.gz
 %%DATADIR%%/eagleplayer.conf
 %%DATADIR%%/players/ADPCM_mono
 %%DATADIR%%/players/AM-Composer
@@ -77,7 +77,6 @@ man/man1/uade123.1.gz
 %%DATADIR%%/players/Janne_Salmijarvi_Optimizer
 %%DATADIR%%/players/JasonBrooke
 %%DATADIR%%/players/JasonPage
-%%DATADIR%%/players/JasonPage_JP
 %%DATADIR%%/players/JeroenTel
 %%DATADIR%%/players/JesperOlsen
 %%DATADIR%%/players/JesperOlsen_EP
@@ -90,7 +89,7 @@ man/man1/uade123.1.gz
 %%DATADIR%%/players/KrisHatlelid
 %%DATADIR%%/players/Laxity
 %%DATADIR%%/players/LegglessMusicEditor
-%%DATADIR%%/players/Lionheart_Game
+%%DATADIR%%/players/Protracker4
 %%DATADIR%%/players/MCMD
 %%DATADIR%%/players/MED
 %%DATADIR%%/players/MIDI-Loriciel
@@ -126,6 +125,7 @@ man/man1/uade123.1.gz
 %%DATADIR%%/players/PeterVerswyvelen
 %%DATADIR%%/players/PierreAdane
 %%DATADIR%%/players/Pokeynoise
+%%DATADIR%%/players/PreTracker
 %%DATADIR%%/players/ProfessionalSoundArtists
 %%DATADIR%%/players/PumaTracker
 %%DATADIR%%/players/QuadraComposer

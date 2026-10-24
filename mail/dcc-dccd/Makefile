@@ -13,7 +13,7 @@ LICENSE_NAME=	DCC
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	no-pkg-sell no-dist-mirror no-pkg-mirror no-dist-sell
 
-USES=		tar:Z
+USES= tar:Z gmake
 
 USERS=		${DCCUSER}
 GROUPS=		${DCCGROUP}
@@ -73,6 +73,7 @@ DCCGROUP?=	dcc
 DCCHOME=	${PREFIX}/dcc
 DCCDATA=	/var/db/dcc
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NDCCM}
 .include <bsd.port.options.mk>
 
 ## dccm milter support
@@ -106,5 +107,10 @@ post-install:
 		${STAGEDIR}${PREFIX}/dcc/cgi-bin/footer.sample
 	@${MV} ${STAGEDIR}${PREFIX}/dcc/cgi-bin/header-dist \
 		${STAGEDIR}${PREFIX}/dcc/cgi-bin/header.sample
+
+CONFIGURE_ARGS:= ${CONFIGURE_ARGS:N--without-DCC-MD5:N--with-installroot=*}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@lock_open.c@& md5.c@' \
+		${WRKSRC}/clntlib/Makefile.in
 
 .include <bsd.port.mk>

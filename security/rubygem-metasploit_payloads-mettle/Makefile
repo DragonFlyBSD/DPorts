@@ -14,4 +14,10 @@ USES=		gem
 NO_ARCH=	yes
 STRIP=
 
+.if defined(DEVELOPER)
+.MAKEFLAGS+=	DFLY_ALLOW_FOREIGN_BINARIES=yes
+DFLY_ALLOW_FOREIGN_BINARIES=yes
+NO_ARCH_IGNORE+=	mettle sniffer
+.endif
+
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	widelands
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.2
+DISTVERSION=	1.3.1
 PORTREVISION=	2
 CATEGORIES=	games
 
@@ -13,11 +13,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libicuuc.so:devel/icu \
-		libboost_system.so:devel/boost-libs \
 		libminizip.so:archivers/minizip
 BUILD_DEPENDS=	${PREFIX}/include/asio.hpp:net/asio
 
-USES=		cmake compiler:c++11-lib cpe gettext gl pkgconfig \
+USES=		cmake compiler:c++11-lib cpe gl pkgconfig \
 		python:build sdl
 USE_GITHUB=	yes
 USE_GL=		gl glew
@@ -36,12 +35,11 @@ PORTSCOUT=	limit:^[0-9]+\.
 PORTDATA=	*
 PORTDOCS=	*
 
-OPTIONS_DEFINE=	DOCS LTO NLS TEST
+OPTIONS_DEFINE=	DOCS LTO TEST
 OPTIONS_DEFAULT=LTO
 OPTIONS_EXCLUDE_riscv64=	LTO
 
 LTO_CMAKE_ON=	-DUSE_FLTO_IF_AVAILABLE:STRING="yes"
-NLS_CMAKE_BOOL=	OPTION_BUILD_TRANSLATIONS
 TEST_CMAKE_BOOL=OPTION_BUILD_TESTS
 
 post-extract:
@@ -50,5 +48,15 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
 		${WRKSRC}/cmake/Modules/*.cmake
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined (__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/src/io/filesystem/disk_filesystem.cc
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/src/wlapplication.cc
+	${REINPLACE_CMD} -e 's@"\(FreeBSD\)"@"\1|DragonFly"@g'		\
+			 -e '/-Werror=uninitialized/d'			\
+		${WRKSRC}/CMakeLists.txt				\
+		${WRKSRC}/src/CMakeLists.txt
 
 .include <bsd.port.mk>

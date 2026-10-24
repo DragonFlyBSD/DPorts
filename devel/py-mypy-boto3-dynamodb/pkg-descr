@@ -1,0 +1,2 @@
+mypy-boto3-dynamodb contains type annotations for the boto3 DynamoDB client,
+resources, paginators, waiters, and type definitions.

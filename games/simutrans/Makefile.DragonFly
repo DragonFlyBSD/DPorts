@@ -1,5 +1,0 @@
-
-# bauer/../tpl/sparse_tpl.h:60:11: error: binding reference of type 'koord&' to 'const koord' discards qualifiers
-#    return size;
-CXXFLAGS= -Wno-c++11-narrowing
-USE_CLANG_FALLBACK= default

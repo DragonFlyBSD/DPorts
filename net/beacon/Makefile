@@ -24,11 +24,15 @@ IPV6_DESC=		Enable IPv6 PTR lookups
 IPV6_CONFIGURE_ENABLE=	ipv6
 IPV6_BUILD_DEPENDS=	p5-Socket6>=0:net/p5-Socket6
 
+CFLAGS= -Wno-pointer-sign -Wno-stringop-truncation
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Net/Multicast/Beacon/Beacon.so
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}/
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/@HAVE_FREEBSD_TRUE@//' ${WRKSRC}/src/Makefile.in
 
 .include <bsd.port.mk>

@@ -24,6 +24,7 @@ X11_USES=		localbase
 X11_LIBS=		-lpthread
 X11_PLIST_FILES=	bin/ed2k_hash_gui
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -E 's, ?-O2,,' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}

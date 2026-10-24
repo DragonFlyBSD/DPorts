@@ -1,5 +1,5 @@
 PORTNAME=	lazarus
-DISTVERSION=	3.8.0
+DISTVERSION=	4.8
 PKGNAMESUFFIX?=  -gtk2
 PORTREVISION?=	0
 CATEGORIES=	editors devel
@@ -9,26 +9,26 @@ MAINTAINER?=	acm@FreeBSD.org
 COMMENT?=	Portable Delphi-like IDE for the FreePascal compiler (GTK2)
 WWW=		https://www.lazarus-ide.org/
 
-CONFLICTS?=	lazarus-gtk2-devel lazarus-qt5 lazarus-qt5-devel lazarus-qt6 \
-		lazarus-qt6-devel
+CONFLICTS?=	lazarus-gtk2-devel lazarus-gtk3-devel lazarus-qt5 lazarus-qt5-devel \
+		lazarus-qt6 lazarus-qt6-devel
 
-BUILD_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils@native
-RUN_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils@native \
+BUILD_DEPENDS?= ${LOCALBASE}/bin/as:devel/binutils ${LOCALBASE}/bin/fpcmake:lang/fpc
+RUN_DEPENDS?=	${LOCALBASE}/bin/as:devel/binutils \
 		gmake:devel/gmake \
-		${LOCALBASE}/share/fpc-source-${FPC_DEFAULT}/Makefile.fpc:lang/fpc${FPC_DEVELSUFFIX}-source
+		${LOCALBASE}/share/fpc${FPC_DEVELSUFFIX}-source-${FPC_DEFAULT}/Makefile.fpc:lang/fpc${FPC_DEVELSUFFIX}-source
 
-ONLY_FOR_ARCHS=	i386 amd64
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64le powerpc64
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	freepascal.org/lazarus
 GL_PROJECT=	${PORTNAME}
-GL_COMMIT=	57e899e4bbe50b6653ec20434bdb7799aa629e06
+GL_COMMIT=	62c14a4d18c81f222127d42ce9b89b922c63fcbf
 
 USES=		desktop-file-utils fpc:run gettext gmake iconv shared-mime-info xorg
 USE_XORG=	x11
 OPT?=		"-Sgic "
 
-MAKE_ENV=	OPT=${OPT}
+MAKE_ENV= OPT=${OPT} FPCDIR="${LOCALBASE}/lib/fpc/${FPC_DEFAULT}"
 PLIST=		${WRKDIR}/pkg-plist
 #WRKSRC?=	${WRKDIR}/${PORTNAME}
 DATADIR?=	${PREFIX}/share/${PORTNAME}-${LAZARUS_BASE}
@@ -40,7 +40,7 @@ OPTIONS_DEFAULT=	GDB
 .include <bsd.port.options.mk>
 
 LAZARUS_ARCH=	${ARCH:S,amd64,x86_64,}
-LAZARUS_BASE=	3.8.0
+LAZARUS_BASE=	4.8
 
 BUILDNAME=	${LAZARUS_ARCH}-${OPSYS:tl}
 LCL_PLATFORM?=	gtk2
@@ -71,8 +71,15 @@ post-extract:
 	@${RM} ${WRKSRC}/.git*
 
 post-patch:
+.if ${ARCH} == "aarch64"
+	@${REINPLACE_CMD} -e 's|Scale(Pen.Width)|Self.Scale(Pen.Width)|g' ${WRKSRC}/components/tachart/tadrawercanvas.pas
+.endif
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' -e 's|%%DATADIR%%|${DATADIR}|g' ${WRKSRC}/${MAKEFILE}
 	@${REINPLACE_CMD} -e 's|startlazarus|${PORTNAME}|g' ${WRKSRC}/install/${PORTNAME}.desktop
+	@${REINPLACE_CMD} \
+		-e 's|powerpc64-linux powerpc64-darwin|powerpc64-linux powerpc64-freebsd powerpc64-darwin|' \
+		-e 's|ifeq ($$(CPU_OS_TARGET),powerpc64-linux)|ifneq ($$(filter $$(CPU_OS_TARGET),powerpc64-linux powerpc64-freebsd),)|g' \
+		${WRKSRC}/lcl/interfaces/*/Makefile
 
 do-build:
 	@cd ${WRKSRC} && \
@@ -178,4 +185,91 @@ do-install:
 .endfor
 	${LN} -sf ${DATADIR}/lazbuild ${STAGEDIR}${PREFIX}/bin/lazbuild
 
+pre-build-script:
+	cd ${WRKSRC}/packager/registration && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/lazutils && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/lazcontrols && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/ideintf && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/synedit && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/lcl/interfaces && \
+		${SETENV} ${MAKE_ENV} fpcmake
+.if defined(PKGNAMESUFFIX)
+.if ${PKGNAMESUFFIX} == "-lcl-nogui"
+	cd ${WRKSRC}/lcl/interfaces/nogui && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/debuggerintf && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/lazdebuggergdbmi && \
+		${SETENV} ${MAKE_ENV} fpcmake
+.endif
+.if ${PKGNAMESUFFIX} == "-lcl-qt"
+	cd ${WRKSRC}/lcl/interfaces/qt && \
+		${SETENV} ${MAKE_ENV} fpcmake
+.endif
+.else
+	cd ${WRKSRC}/lcl/interfaces/nogui && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/rtticontrols && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/cairocanvas && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/printers && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/printers/design && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/turbopower_ipro && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/turbopower_ipro/design && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/fpcunit && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/fpcunit/ide && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/projecttemplates && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/leakview && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/memds && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/sdf && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/tachart && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/todolist && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/datetimectrls && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/jcf2/IdePlugin/lazarus && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/chmhelp/packages/help && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/chmhelp/packages/idehelp && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/externhelp && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/chmhelp/lhelp && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/instantfpc && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/tdbf && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/macroscript && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/tools && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/debuggerintf && \
+		${SETENV} ${MAKE_ENV} fpcmake
+	cd ${WRKSRC}/components/lazdebuggergdbmi && \
+		${SETENV} ${MAKE_ENV} fpcmake
+.endif
+
+BUILD_DEPENDS:= ${BUILD_DEPENDS:S,devel/binutils,devel/binutils@native,g}
+RUN_DEPENDS:= ${RUN_DEPENDS:S,devel/binutils,devel/binutils@native,g}
 .include <bsd.port.mk>

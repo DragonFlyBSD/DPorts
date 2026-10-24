@@ -1,6 +1,6 @@
 PORTNAME=	brz
 DISTVERSION=	3.2.2
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -21,8 +21,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}configobj>=0:devel/py-configobj@${PY_FLAVOR}
 		${PYTHON_PKGNAMEPREFIX}six>=0:devel/py-six@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}testtools>=0:devel/py-testtools@${PY_FLAVOR}
 
-USES=		gettext python shebangfix
-USE_PYTHON=	autoplist cython concurrent distutils
+USES=		gettext-tools python shebangfix
+USE_PYTHON=	autoplist concurrent cython distutils
 
 SHEBANG_FILES=	brz
 MAKE_ENV=	BRZ_LOG=/dev/null

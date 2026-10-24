@@ -1,6 +1,6 @@
 PORTNAME=	tables
-PORTVERSION=	3.7.0
-PORTREVISION=	2
+PORTVERSION=	3.10.2
+PORTREVISION=	5
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,17 +11,18 @@ WWW=		https://www.pytables.org/
 
 LICENSE=	BSD3CLAUSE
 
-BUILD_DEPENDS=	${PYNUMPY} \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}numexpr>=1.4.1:math/py-numexpr@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}packaging>=0:devel/py-packaging@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}packaging>=0:devel/py-packaging@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}py-cpuinfo2>=0:sysutils/py-py-cpuinfo2@${PY_FLAVOR}
 LIB_DEPENDS=	libhdf5.so:science/hdf5 \
 		liblzo2.so:archivers/lzo2 \
-		libucl.so:archivers/ucl
+		libucl.so:archivers/ucl \
+		libblosc2.so:archivers/c-blosc2
 RUN_DEPENDS:=	${BUILD_DEPENDS} \
 		${PYTHON_PKGNAMEPREFIX}six>=1.9.0:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mock>=2.0:devel/py-mock@${PY_FLAVOR}
 
-CONFLICTS_BUILD=	zstd # conflicting version of zstd is bundled
 
 USES=		fortran localbase python
 USE_PYTHON=	autoplist concurrent distutils cython
@@ -45,5 +46,10 @@ post-install:
 post-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/*.py ${STAGEDIR}${EXAMPLESDIR}
+
+CFLAGS:= ${CFLAGS} -DZ_HAVE_UNISTD_H
+.if defined(FLAVOR) && ${FLAVOR:Mpy27}
+BROKEN=	py27 pending removal
+.endif
 
 .include <bsd.port.mk>

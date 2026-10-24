@@ -21,4 +21,8 @@ OPTIONS_DEFAULT=	AUDIO
 AUDIO_DESC=		Audio notifications/text-to-speech support
 AUDIO_USE=		QT=speech
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

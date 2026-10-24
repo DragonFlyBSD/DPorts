@@ -3,7 +3,7 @@ PORTVERSION=	4.2.1
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-nomos-standalone
 
-MAINTAINER=	amdmi3@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Standalone Nomos license scanner from fossology project
 WWW=		https://www.fossology.org/
 
@@ -15,7 +15,8 @@ LIB_DEPENDS=	libjson-c.so:devel/json-c
 
 USE_GITHUB=	yes
 
-USES=		gnome gmake gettext pkgconfig
+USES=		cpe gnome gmake gettext pkgconfig
+CPE_VENDOR=	linuxfoundation
 USE_GNOME=	glib20
 
 BUILD_WRKSRC=	${WRKSRC}/src/nomos/agent

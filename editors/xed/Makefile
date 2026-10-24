@@ -1,5 +1,5 @@
 PORTNAME=	xed
-PORTVERSION=	3.8.2
+PORTVERSION=	3.8.9
 CATEGORIES=	editors gnome
 DIST_SUBDIR=	gnome
 
@@ -12,10 +12,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	itstool:textproc/itstool
 LIB_DEPENDS=	libenchant-2.so:textproc/enchant2 \
-		libpeas-1.0.so:devel/libpeas \
+		libpeas-1.0.so:devel/libpeas1 \
 		libxapp.so:x11/xapp
 RUN_DEPENDS=	${LOCALBASE}/share/glib-2.0/schemas/org.gnome.desktop.interface.gschema.xml:devel/gsettings-desktop-schemas \
-		${PYTHON_PKGNAMEPREFIX}libpeas>=0:devel/py-libpeas@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}libpeas1>=0:devel/py-libpeas1@${PY_FLAVOR} \
 		yelp:x11/yelp
 
 USES=		compiler:c++11-lang desktop-file-utils gettext-tools gnome meson \
@@ -23,7 +23,7 @@ USES=		compiler:c++11-lang desktop-file-utils gettext-tools gnome meson \
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
 USE_GNOME=	atk cairo gdkpixbuf glib20 gtk30 gtksourceview4 intltool \
-		introspection pango
+		introspection pango pygobject3
 USE_LDCONFIG=	yes
 USE_XORG=	x11
 GLIB_SCHEMAS=	org.x.editor.gschema.xml \

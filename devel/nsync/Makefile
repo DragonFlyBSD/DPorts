@@ -1,8 +1,8 @@
 PORTNAME=	nsync
-DISTVERSION=	1.27.0
+DISTVERSION=	1.30.0
 CATEGORIES=	devel
 
-MAINTAINER=	amzo1337@gmail.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C library that exports various synchronization primitives like mutexes
 WWW=		https://github.com/google/nsync
 

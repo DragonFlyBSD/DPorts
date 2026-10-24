@@ -34,6 +34,7 @@ PLIST_FILES=	bin/havoc \
 
 SUB_FILES=	pkg-message
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-build:
 	(cd ${WRKSRC} && ${MAKE_CMD} havoc)
 

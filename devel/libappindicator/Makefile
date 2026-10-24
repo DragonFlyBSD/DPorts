@@ -47,6 +47,7 @@ MAJOR_VER=	12.10.1
 SNAPSHOT_VER=	20.10.20200706.1
 PATCH_VER=	0ubuntu1
 
+MAKE_JOBS_UNSAFE= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,has_mono=true,has_mono=disabled,' \
 		${WRKSRC}/configure.ac

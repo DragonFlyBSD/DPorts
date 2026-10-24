@@ -1,6 +1,6 @@
 PORTNAME=	openblas
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.29
+DISTVERSION=	0.3.34
 PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	math
@@ -8,10 +8,6 @@ MASTER_SITES=	NL/lapack/timing/:lapack_tmg
 DISTFILES=	large.tgz:lapack_tmg \
 		timing.tgz:lapack_tmg
 DIST_SUBDIR=	openblas
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES=	e8b11a126bbbcabdfa0ca06bbf4dcca44b8e650f.patch:-p1 \
-		643966d9c7eba16de75da14e60c3e554d4019595.patch:-p1
 
 MAINTAINER=	phd_kimberlite@yahoo.co.jp
 COMMENT=	Optimized BLAS library based on GotoBLAS2
@@ -25,10 +21,12 @@ USES=		compiler:c11 cpe fortran gmake perl5 pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenMathLib
 GH_PROJECT=	OpenBLAS
+
 LARGE_FILE=	large.tgz
 TIMING_FILE=	timing.tgz
 CPE_VENDOR=	openblas_project
 
+MAKE_ARGS+= FC=${FC} OSNAME=FreeBSD
 USE_LDCONFIG=	yes
 USE_PERL5=	build
 
@@ -77,16 +75,12 @@ TARGET_CPU_ARCH=	POWER8
 .else
 TARGET_CPU_ARCH=	PPC970
 .  endif
+CFLAGS+=		-lm
 .endif
 
 .if ${ARCH} == powerpc
 USE_GCC=		yes
 TARGET_CPU_ARCH=	PPCG4
-.endif
-
-.if ${ARCH} == powerpc64le
-CFLAGS+=		-lm
-USE_GCC=		yes
 .endif
 
 MAXTHREADS?=	64
@@ -97,40 +91,46 @@ post-extract:
 	cd ${DISTDIR}/${DIST_SUBDIR} ; \
 	${CP} ${LARGE_FILE} ${TIMING_FILE} ${WRKSRC}
 
-post-patch:
-	@${ECHO_CMD} MAKE_NB_JOBS=-1 >> ${WRKSRC}/Makefile.rule
-	@${ECHO_CMD} NUM_THREADS=${MAXTHREADS} >> ${WRKSRC}/Makefile.rule
-	@${ECHO_CMD} USE_THREAD=1 >> ${WRKSRC}/Makefile.rule
+pre-configure:
+	${ECHO_CMD} MAKE_NB_JOBS=-1 >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} NUM_THREADS=${MAXTHREADS} >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} USE_THREAD=1 >> ${WRKSRC}/Makefile.rule
 .if ! ${PORT_OPTIONS:MAVX}
-	@${ECHO_CMD} NO_AVX=1 >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} NO_AVX=1 >> ${WRKSRC}/Makefile.rule
 .endif
 .if ! ${PORT_OPTIONS:MAVX2}
-	@${ECHO_CMD} NO_AVX2=1 >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} NO_AVX2=1 >> ${WRKSRC}/Makefile.rule
 .endif
 .if ! ${PORT_OPTIONS:MAVX512}
-	@${ECHO_CMD} NO_AVX512=1 >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} NO_AVX512=1 >> ${WRKSRC}/Makefile.rule
 .endif
 .if ${PORT_OPTIONS:MDYNAMIC_ARCH}
-	@${ECHO_CMD} DYNAMIC_ARCH=1 >> ${WRKSRC}/Makefile.rule
-	@${ECHO_CMD} DYNAMIC_OLDER=1 >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} DYNAMIC_ARCH=1 >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} DYNAMIC_OLDER=1 >> ${WRKSRC}/Makefile.rule
 .endif
 .if defined(TARGET_CPU_ARCH)
-	@${ECHO_CMD} TARGET=${TARGET_CPU_ARCH} >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} TARGET=${TARGET_CPU_ARCH} >> ${WRKSRC}/Makefile.rule
 .endif
 .if ${PORT_OPTIONS:MINTERFACE64}
-	@${ECHO_CMD} INTERFACE64=1 >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} INTERFACE64=1 >> ${WRKSRC}/Makefile.rule
 .endif
 .if ${PORT_OPTIONS:MOPENMP}
-	@${ECHO_CMD} USE_OPENMP=1 >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} USE_OPENMP=1 >> ${WRKSRC}/Makefile.rule
 .endif
 .if ${ARCH:M*64*} == ""
-	@${ECHO_CMD} BINARY=32 >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} BINARY=32 >> ${WRKSRC}/Makefile.rule
 .else
-	@${ECHO_CMD} BINARY=64 >> ${WRKSRC}/Makefile.rule
+	${ECHO_CMD} BINARY=64 >> ${WRKSRC}/Makefile.rule
 .endif
+.if ${ARCH} == "i386"
+	${ECHO_CMD} FCOMMON_OPT+=-mpreferred-stack-boundary=2 >> ${WRKSRC}/Makefile.rule
+.endif
+.for f in exports/Makefile Makefile.system
+	${REINPLACE_CMD} -e 's|-lgfortran|${LDFLAGS} -lgfortran|' ${WRKSRC}/${f}
+.endfor
 
-post-patch-OPENMP-on:
-	@${REINPLACE_CMD} -e "s+OPENBLAS_NUM_THREADS+OMP_NUM_THREADS+g" \
+pre-configure-OPENMP-on:
+	${REINPLACE_CMD} -e "s+OPENBLAS_NUM_THREADS+OMP_NUM_THREADS+g" \
 		${WRKSRC}/test/Makefile \
 		${WRKSRC}/ctest/Makefile
 

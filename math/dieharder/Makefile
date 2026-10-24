@@ -1,6 +1,6 @@
 PORTNAME=	dieharder
 PORTVERSION=	3.31.1
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	math
 MASTER_SITES=	http://www.phy.duke.edu/~rgb/General/dieharder/ LOCAL/bf
 
@@ -26,5 +26,13 @@ CFLAGS+=	-fcommon
 
 check test: build
 	${WRKSRC}/dieharder/dieharder -a
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-DLITTLE_ENDIAN@-DBRG_LITTLE_ENDIAN@g' \
+		${WRKSRC}/libdieharder/Makefile.in \
+		${WRKSRC}/libdieharder/Makefile.am \
+		${WRKSRC}/libdieharder/Makefile
+	${REINPLACE_CMD} -e 's@[[:<:]]LITTLE_ENDIAN[[:>:]]@BRG_LITTLE_ENDIAN@g' \
+		${WRKSRC}/include/dieharder/brg_endian.h
 
 .include <bsd.port.mk>

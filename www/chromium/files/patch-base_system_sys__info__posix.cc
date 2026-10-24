@@ -1,6 +1,18 @@
---- base/system/sys_info_posix.cc.orig	2025-05-05 10:57:53 UTC
+--- base/system/sys_info_posix.cc.orig	2026-06-04 10:12:25 UTC
 +++ base/system/sys_info_posix.cc
-@@ -143,7 +143,7 @@ void GetKernelVersionNumbers(int32_t* major_version,
+@@ -59,7 +59,11 @@ base::ByteSize AmountOfVirtualMemory() {
+   if (result != 0) {
+     NOTREACHED();
+   }
++#if BUILDFLAG(IS_FREEBSD)
++  return base::ByteSize(limit.rlim_cur == RLIM_INFINITY ? 0 : base::checked_cast<uint64_t>(limit.rlim_cur));
++#else
+   return base::ByteSize(limit.rlim_cur == RLIM_INFINITY ? 0 : limit.rlim_cur);
++#endif
+ }
+ using LazyVirtualMemory =
+     base::internal::LazySysInfoValue<base::ByteSize, AmountOfVirtualMemory>;
+@@ -110,7 +114,7 @@ void GetKernelVersionNumbers(int32_t* major_version,
  
  namespace base {
  
@@ -9,7 +21,7 @@
  // static
  int SysInfo::NumberOfProcessors() {
  #if BUILDFLAG(IS_MAC)
-@@ -199,7 +199,7 @@ int SysInfo::NumberOfProcessors() {
+@@ -166,7 +170,7 @@ int SysInfo::NumberOfProcessors() {
  
    return cached_num_cpus;
  }
@@ -17,8 +29,8 @@
 +#endif  // !BUILDFLAG(IS_BSD)
  
  // static
- uint64_t SysInfo::AmountOfVirtualMemory() {
-@@ -285,6 +285,8 @@ std::string SysInfo::OperatingSystemArchitecture() {
+ ByteSize SysInfo::AmountOfVirtualMemory() {
+@@ -275,6 +279,8 @@ std::string SysInfo::OperatingSystemArchitecture() {
      arch = "x86";
    } else if (arch == "amd64") {
      arch = "x86_64";

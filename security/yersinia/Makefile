@@ -32,6 +32,7 @@ PORTS_PCAP_CONFIGURE_ON=	--with-pcap-includes=${LOCALBASE}/include
 PORTS_PCAP_CONFIGURE_OFF=	--with-pcap-includes=/usr/include
 PORTS_PCAP_BUILD_DEPENDS=	${LOCALBASE}/lib/libpcap.a:net/libpcap
 
+CFLAGS= -Wno-deprecated-declarations -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast -Wno-int-conversion
 post-patch:
 	@${REINPLACE_CMD} -e 's,-O3 -Wall -g,${CFLAGS} -fcommon,' \
 		${WRKSRC}/configure.ac

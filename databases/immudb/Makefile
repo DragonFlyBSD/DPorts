@@ -1,7 +1,7 @@
 PORTNAME=	immudb
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.0
-PORTREVISION=	3
+PORTREVISION=	35
 CATEGORIES=	databases net
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
 
@@ -15,11 +15,16 @@ WWW=		https://immudb.io/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+DEPRECATED=	Not actively maintained. Multiple versions behind on upstream. Please take maintainership if you use this.
+EXPIRATION_DATE=	2026-10-27
+
 BUILD_DEPENDS=	bash:shells/bash
 
-USES=		gmake go:modules,no_targets
+USES=		cpe gmake go:modules,no_targets
+CPE_VENDOR=	codenotary
 GO_MODULE=	github.com/codenotary/immudb
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 post-patch:

@@ -1,0 +1,70 @@
+--- CMakeLists.txt.orig	2024-09-07 06:21:01 UTC
++++ CMakeLists.txt
+@@ -414,26 +414,30 @@ interfaces/IMapAdapter.h
+ 
+ )
+ 
++if (UNIX)
++  include(GNUInstallDirs)
++endif()
++
+ if (NOT APPLE)
+-install( FILES ${CMAKE_SOURCE_DIR}/src/org.merkaartor.merkaartor.desktop          DESTINATION share/applications     )
+-install( FILES ${CMAKE_SOURCE_DIR}/src/org.merkaartor.merkaartor.appdata.xml      DESTINATION share/metainfo     )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/8x8/merkaartor.png      DESTINATION share/icons/hicolor/8x8/apps     )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/16x16/merkaartor.png    DESTINATION share/icons/hicolor/16x16/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/22x22/merkaartor.png    DESTINATION share/icons/hicolor/22x22/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/24x24/merkaartor.png    DESTINATION share/icons/hicolor/24x24/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/32x32/merkaartor.png    DESTINATION share/icons/hicolor/32x32/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/36x36/merkaartor.png    DESTINATION share/icons/hicolor/36x36/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/40x40/merkaartor.png    DESTINATION share/icons/hicolor/40x40/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/42x42/merkaartor.png    DESTINATION share/icons/hicolor/42x42/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/48x48/merkaartor.png    DESTINATION share/icons/hicolor/48x48/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/64x64/merkaartor.png    DESTINATION share/icons/hicolor/64x64/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/72x72/merkaartor.png    DESTINATION share/icons/hicolor/72x72/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/80x80/merkaartor.png    DESTINATION share/icons/hicolor/80x80/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/96x96/merkaartor.png    DESTINATION share/icons/hicolor/96x96/apps   )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/128x128/merkaartor.png  DESTINATION share/icons/hicolor/128x128/apps )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/192x192/merkaartor.png  DESTINATION share/icons/hicolor/192x192/apps )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/256x256/merkaartor.png  DESTINATION share/icons/hicolor/256x256/apps )
+-install( FILES ${CMAKE_SOURCE_DIR}/Icons/512x512/merkaartor.png  DESTINATION share/icons/hicolor/512x512/apps )
++install( FILES ${CMAKE_SOURCE_DIR}/src/org.merkaartor.merkaartor.desktop          DESTINATION ${CMAKE_INSTALL_DATADIR}/applications     )
++install( FILES ${CMAKE_SOURCE_DIR}/src/org.merkaartor.merkaartor.appdata.xml      DESTINATION ${CMAKE_INSTALL_DATADIR}/metainfo     )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/8x8/merkaartor.png      DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/8x8/apps     )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/16x16/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/16x16/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/22x22/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/22x22/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/24x24/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/24x24/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/32x32/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/32x32/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/36x36/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/36x36/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/40x40/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/40x40/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/42x42/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/42x42/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/48x48/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/48x48/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/64x64/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/64x64/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/72x72/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/72x72/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/80x80/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/80x80/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/96x96/merkaartor.png    DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/96x96/apps   )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/128x128/merkaartor.png  DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/128x128/apps )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/192x192/merkaartor.png  DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/192x192/apps )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/256x256/merkaartor.png  DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/256x256/apps )
++install( FILES ${CMAKE_SOURCE_DIR}/Icons/512x512/merkaartor.png  DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/512x512/apps )
+ endif()
+ 
+ set(MERKAARTOR_SHARE_FILES
+@@ -443,7 +447,7 @@ set(MERKAARTOR_SHARE_FILES
+   ${CMAKE_SOURCE_DIR}/share/WmsServersList.xml
+ )
+ 
+-install( FILES ${MERKAARTOR_SHARE_FILES} DESTINATION share/merkaartor)
++install( FILES ${MERKAARTOR_SHARE_FILES} DESTINATION ${CMAKE_INSTALL_DATADIR}/merkaartor)
+ set_source_files_properties(${MEKAARTOR_SHARE_FILES} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
+ 
+ set(TS_FILES
+@@ -469,7 +473,7 @@ qt_add_translation(QM_FILES
+ qt_add_translation(QM_FILES
+     ${TS_FILES}
+ )
+-install( FILES ${QM_FILES} DESTINATION share/merkaartor/translations )
++install( FILES ${QM_FILES} DESTINATION ${CMAKE_INSTALL_DATADIR}/merkaartor/translations )
+ 
+ find_program(LUPDATE lupdate)
+ add_custom_target(update-translations COMMAND ${LUPDATE} ${CMAKE_SOURCE_DIR}/src ${CMAKE_SOURCE_DIR}/plugins -source-language en -target-language en -ts ${CMAKE_SOURCE_DIR}/translations/merkaartor_en.ts)

@@ -1,7 +1,7 @@
 PORTNAME=	angle-grinder
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.19.4
-PORTREVISION=	1
+DISTVERSION=	0.19.6
+PORTREVISION=	8
 CATEGORIES=	textproc
 
 MAINTAINER=	lcook@FreeBSD.org
@@ -20,11 +20,9 @@ PORTDOCS=	README.md
 
 OPTIONS_DEFINE=	DOCS
 
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/agrind
-
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

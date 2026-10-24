@@ -1,5 +1,6 @@
 PORTNAME=	font-manager
 DISTVERSION=	0.9.4
+PORTREVISION=	2
 CATEGORIES=	x11-fonts gnome
 
 MAINTAINER=	ehaupt@FreeBSD.org

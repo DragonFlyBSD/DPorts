@@ -1,7 +1,8 @@
 PORTNAME=	Math-Prime-Util-GMP
-PORTVERSION=	0.52
+PORTVERSION=	0.54
 CATEGORIES=	math perl5
 MASTER_SITES=	CPAN
+MASTER_SITE_SUBDIR=	CPAN:DANAJ
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -16,6 +17,8 @@ LIB_DEPENDS=	libgmp.so:math/gmp
 
 USES=		localbase perl5
 USE_PERL5=	configure
+
+PORTSCOUT=	limit:^[0-9\.]*$$
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Math/Prime/Util/GMP/GMP.so

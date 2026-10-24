@@ -1,34 +1,52 @@
 PORTNAME=	wasmer
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.2.1
+DISTVERSION=	7.4.0
+PORTREVISION=	1
 CATEGORIES=	devel
+MASTER_SITES=	https://github.com/wasmerio/wasmer/releases/download/${DISTVERSIONFULL}/
+DISTFILES=	wasmer-full-source.tar.gz
 
 MAINTAINER=	kjozic@gmail.com
 COMMENT=	WebAssembly Runtime supporting WASIX, WASI and Emscripten
 WWW=		https://wasmer.io/
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	aarch64 amd64 riscv64
-ONLY_FOR_ARCHS_REASON= only aarch64, amd64 and riscv64 are supported so far
-BROKEN_aarch64=	needs fix for mcontext_t in lib/vm/src/trap/traphandlers.rs
-BROKEN_riscv64=	build issues
+ONLY_FOR_ARCHS=	amd64 aarch64
+ONLY_FOR_ARCHS_REASON=	only amd64 and aarch64 works so far
 
-BUILD_DEPENDS=	bash>0:shells/bash
+BUILD_DEPENDS=	bash>0:shells/bash \
+		clang${_LLVM_VERSION}:devel/llvm${_LLVM_VERSION}
+LIB_DEPENDS=	libffi.so:devel/libffi \
+		libzstd.so:archivers/zstd
 
-USES=		cargo gmake pkgconfig
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	wasmerio
+USES=		cargo gmake llvm:22 nodejs:build pkgconfig
 
 CARGO_BUILD=	no
 CARGO_INSTALL=	no
 
-MAKE_ENV+=	ENABLE_SINGLEPASS=0
+MAKE_ENV+=	ENABLE_CRANELIFT=1 \
+		ENABLE_LLVM=1 \
+		ENABLE_SINGLEPASS=1 \
+		ENABLE_V8=0 \
+		LLVM_SYS_221_PREFIX=${LLVM_PREFIX} \
+		RUSTFLAGS="-L ${LOCALBASE}/lib -C linker=clang"
+
 ALL_TARGET=	build-wasmer
 
+CC=		clang${_LLVM_VERSION}
+CPP=		clang-cpp${_LLVM_VERSION}
+CXX=		clang++${_LLVM_VERSION}
+
+WRKSRC=		${WRKDIR}/${PORTNAME}
+
 PLIST_FILES=	bin/wasmer
+
+_LLVM_VERSION=	22
+
+IGNORE= unmaintained, please request fixing to users mailing list
+pre-configure:
+	${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},' ${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wasmer ${STAGEDIR}${PREFIX}/bin/

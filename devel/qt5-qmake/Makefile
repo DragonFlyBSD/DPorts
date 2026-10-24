@@ -14,7 +14,7 @@ SHEBANG_FILES=	util/harfbuzz/update-harfbuzz \
 		mkspecs/features/data/mac/objc_namespace.sh \
 		mkspecs/features/uikit/devices.py \
 		mkspecs/features/uikit/device_destinations.sh
-USE_PERL5=	extract
+USE_PERL5= extract run
 
 REINPLACE_ARGS=	-i ""
 HAS_CONFIGURE=	yes
@@ -33,6 +33,7 @@ BUILD_WRKSRC=	${WRKSRC}/${PORTNAME}
 
 QT_BINARIES=	yes
 
+PLIST_FILES= ${QT_MKSPECDIR_REL}/dragonfly-g++/qmake.conf ${QT_MKSPECDIR_REL}/dragonfly-g++/qplatformdefs.h
 post-patch:
 # Clean up files created by patching
 	@${RM} ${WRKSRC}/mkspecs/*/*.orig
@@ -45,4 +46,8 @@ post-build:
 		${CONFIGURE_ENV} ${CONFIGURE_CMD} ${CONFIGURE_ARGS}
 post-install:
 	${RLN} ${STAGEDIR}${QT_BINDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}-qt5
+dfly-install:
+	${CP} -a ${STAGEDIR}${LOCALBASE}/${QT_MKSPECDIR_REL}/freebsd-g++ \
+		 ${STAGEDIR}${LOCALBASE}/${QT_MKSPECDIR_REL}/dragonfly-g++
+
 .include <bsd.port.mk>

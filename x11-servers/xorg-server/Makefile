@@ -1,15 +1,16 @@
 PORTNAME=	xorg
-PORTVERSION=	21.1.16
+DISTVERSION=	21.1.25
 PORTEPOCH=	1
 CATEGORIES=	x11-servers
 MASTER_SITES=	XORG/individual/xserver
-DISTNAME=	xorg-server-${PORTVERSION}
+DISTNAME=	xorg-server-${DISTVERSION}
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	X.Org X server and related programs
-WWW=		https://www.freedesktop.org/Software/xorg
+WWW=		https://gitlab.freedesktop.org/xorg/xserver
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 FLAVORS=	xorg xnest xephyr xvfb
 FLAVOR?=	${FLAVORS:[1]}
@@ -38,10 +39,10 @@ PLIST_FILES=	bin/${BINARY_NAME} \
 
 DESCR=	${.CURDIR}/pkg-descr-${FLAVOR}
 
-BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri
+BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-libs
 RUN_DEPENDS+=	xkeyboard-config>=2.5:x11/xkeyboard-config \
 		xkbcomp:x11/xkbcomp \
-		${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri
+		${LOCALBASE}/lib/dri/swrast_dri.so:graphics/mesa-dri
 
 MESON_ARGS+=	-Dxwin=false \
 		-Dxquartz=false \
@@ -52,6 +53,7 @@ MESON_ARGS+=	-Dxwin=false \
 		-Dfallback_input_driver=libinput \
 		-Ddocs=false \
 		-Dxcsecurity=true \
+		-Dsecure-rpc=false \
 		-D${FLAVOR}=true
 
 .for f in ${FLAVORS:N${FLAVOR}}
@@ -59,9 +61,12 @@ MESON_ARGS+=	-D${f}=false
 .endfor
 
 .if ${FLAVOR} == xorg
-LIB_DEPENDS+=	libudev.so:devel/libudev-devd \
+LIB_DEPENDS+=	libdrm.so:graphics/libdrm \
+		libepoxy.so:graphics/libepoxy \
+		libudev.so:devel/libudev-devd \
 		libxcvt.so:x11/libxcvt
-MESON_ARGS+=	-Dudev=true \
+MESON_ARGS+=	-Ddrm=true \
+		-Dudev=true \
 		-Dudev_kms=true \
 		-Dlog_dir=/var/log \
 		-Dsuid_wrapper=true
@@ -70,21 +75,12 @@ MESON_ARGS+=	-Dudev=false \
 		-Dudev_kms=false
 .endif
 
-.if ${FLAVOR} == xorg || ${FLAVOR} == xephyr
-MESON_ARGS+=	-Ddrm=true
-LIB_DEPENDS+=	libdrm.so:graphics/libdrm \
-		libepoxy.so:graphics/libepoxy
-# zrj: no glamor for xwayland (needs DRI3)
-. if ${PORTNAME} == "xwayland"
-CONFIGURE_ARGS+= --disable-dri3 --disable-glamor
-. endif
-.endif
-
 .if ${FLAVOR} == xephyr
 LIB_DEPENDS+=	libxcb-render-util.so:x11/xcb-util-renderutil \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-icccm.so:x11/xcb-util-wm \
-		libxcb-keysyms.so:x11/xcb-util-keysyms
+		libxcb-keysyms.so:x11/xcb-util-keysyms \
+		libxcb-util.so:x11/xcb-util
 .endif
 
 FONTPATH_ROOT?=	${LOCALBASE}/share/fonts
@@ -100,14 +96,17 @@ DEFAULT_FONTPATH_LIST= \
 MESON_ARGS+=	-Ddefault_font_path=${DEFAULT_FONTPATH_LIST:ts,}
 PLIST_SUB+=	FONTPATHD="${FONTPATHD:S,^${PREFIX}/,,}"
 
-USE_GL+=	gl
 USE_XORG+=	pixman xau xdmcp xfont2 xkbfile xorgproto xshmfence xtrans
 CPE_VENDOR=	x.org
-CPE_PRODUCT=	xorg-server
+CPE_PRODUCT=	x_server
 
 .if ${FLAVOR} == xorg
 USE_GL+=	gbm
 USE_XORG+=	pciaccess
+.elif ${FLAVOR} == xephyr
+USE_XORG+=	xcb
+.elif ${FLAVOR} == xnest
+USE_XORG+=	x11 xext
 .endif
 
 .include <bsd.port.pre.mk>
@@ -118,6 +117,7 @@ MESON_ARGS+=	-Dsha1=libmd
 
 .if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
 LIB_DEPENDS+=	libunwind.so:devel/libunwind
+MESON_ARGS+=	-Dlibunwind=true
 .endif
 
 .if ${FLAVOR} == xorg

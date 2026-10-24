@@ -1,14 +1,14 @@
 PORTNAME=	version_gem
-PORTVERSION=	1.1.8
+PORTVERSION=	1.1.15
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Introspectable Version module
-WWW=		https://gitlab.com/oauth-xx/version_gem
+WWW=		https://version-gem.galtzo.com/ \
+		https://github.com/ruby-oauth/version_gem
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 USES=		gem
 

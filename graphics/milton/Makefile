@@ -1,7 +1,7 @@
 PORTNAME=	milton
 PORTVERSION=	1.9.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 
 MAINTAINER=	danfe@FreeBSD.org
@@ -15,7 +15,7 @@ BUILD_DEPENDS=	icotool:graphics/icoutils
 USE_GITHUB=	yes
 GH_ACCOUNT=	serge-rgb
 
-USES=		cmake compiler:c++11-lang gl gnome sdl xorg
+USES= cmake compiler:c++11-lang gl gnome sdl xorg localbase:ldflags
 USE_GL=		gl glu
 USE_GNOME=	cairo gtk20
 USE_SDL=	sdl2 image2
@@ -47,5 +47,9 @@ do-install:
 	${INSTALL_DATA} ${INSTALL_WRKSRC}/milton_icon_?_${n}x${n}x32.png \
 		${STAGEDIR}${PREFIX}/share/icons/hicolor/${n}x${n}/apps/milton.png
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

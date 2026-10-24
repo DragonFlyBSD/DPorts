@@ -1,3 +1,0 @@
-# Warning flags already specified only for LLVM
-USE_CLANG_FALLBACK=	default
-

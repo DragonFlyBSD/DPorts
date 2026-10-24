@@ -31,8 +31,15 @@ INSTALL_TARGET=	install-strip
 INFO=		libffi
 TEST_TARGET=	check
 
+LDFLAGS+=	-Wl,--undefined-version
+
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's| -Wno-psabi||g' \
 		${WRKSRC}/testsuite/lib/libffi.exp
+
+post-install:
+	${RM} -r ${STAGEDIR}${PREFIX}/include
+	${RM} -r ${STAGEDIR}${PREFIX}/share/man
 
 .include <bsd.port.mk>

@@ -23,8 +23,8 @@ OPTIONS_DEFINE_i386=	RTCPU
 OPTIONS_DEFINE_x86_64=	RTCPU
 OPTIONS_DEFINE_powerpc=	RTCPU
 
-OPTIONS_DEFAULT_i386=	RTCPU VDPAU
-OPTIONS_DEFAULT_x86_64=	RTCPU VDPAU
+OPTIONS_DEFAULT_i386=	RTCPU
+OPTIONS_DEFAULT_x86_64=	RTCPU
 OPTIONS_DEFAULT_powerpc=RTCPU
 
 ASS_DESC?=	Subtitles rendering via libass
@@ -95,5 +95,8 @@ post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
 	${CP} ${WRKSRC}/etc/mplayer256x256.png ${STAGEDIR}${PREFIX}/share/pixmaps/mplayer.png
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|binary.ver|disable|' ${WRKSRC}/configure
 
 .include <bsd.port.post.mk>

@@ -1,5 +1,6 @@
 PORTNAME=	gcli
-DISTVERSION=	2.7.0
+DISTVERSION=	2.13.0
+PORTREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	https://herrhotzenplotz.de/gcli/releases/gcli-${DISTVERSION}/
 
@@ -10,10 +11,11 @@ WWW=		https://herrhotzenplotz.de/gcli/
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libcurl.so:ftp/curl
-TEST_DEPENDS=	kyua:devel/kyua
+LIB_DEPENDS=	libcurl.so:ftp/curl \
+		libpdjson.so:textproc/pdjson
 
-USES=		libtool pathfix pkgconfig ssl tar:xz
+USES=		libtool pathfix perl5 pkgconfig ssl tar:xz
+USE_PERL5=	test
 
 HAS_CONFIGURE=	yes
 .if defined(WITH_DEBUG)
@@ -23,7 +25,7 @@ CONFIGURE_ARGS=	--release
 .endif
 TEST_TARGET=	check
 
-OPTIONS_DEFINE=	LOWDOWN TEST
+OPTIONS_DEFINE=	LOWDOWN
 OPTIONS_DEFAULT=	LIBEDIT LOWDOWN
 OPTIONS_RADIO=	LINEEDIT
 OPTIONS_RADIO_LINEEDIT=	LIBEDIT READLINE
@@ -34,7 +36,6 @@ LOWDOWN_CONFIGURE_ENABLE=	liblowdown
 LOWDOWN_DESC=		pretty-print Markdown using textproc/lowdown
 READLINE_USES=		readline
 READLINE_CONFIGURE_ENABLE=	libreadline
-TEST_LIB_DEPENDS=	libatf-c.so:devel/atf
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/gcli

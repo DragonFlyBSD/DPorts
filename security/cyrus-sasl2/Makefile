@@ -1,9 +1,9 @@
-PORTREVISION=	5
+PORTREVISION=	6
 
 COMMENT=	RFC 2222 SASL (Simple Authentication and Security Layer)
 WWW=		https://www.cyrusimap.org/sasl/
 
-USES=		cpe libtool:keepla pathfix perl5
+USES= cpe libtool:keepla pathfix perl5 ssl
 USE_PERL5=	patch
 
 CYRUS_CONFIGURE_ARGS=	--with-saslauthd=${SASLAUTHD_RUNPATH}
@@ -12,7 +12,6 @@ NO_OPTIONS_SORT=	yes
 OPTIONS_DEFINE=		ALWAYSTRUE AUTHDAEMOND DOCS KEEP_DB_OPEN \
 			OBSOLETE_CRAM_ATTR OBSOLETE_DIGEST_ATTR \
 			OPIE SASLDB_IN_VAR
-OPTIONS_EXCLUDE_FreeBSD_13=	OPIE
 OPTIONS_RADIO=		SASLDB
 OPTIONS_RADIO_SASLDB=	BDB1 BDB GDBM LMDB
 OPTIONS_GROUP=		PLUGIN
@@ -43,7 +42,7 @@ GDBM_LIB_DEPENDS=	libgdbm.so:databases/gdbm
 GDBM_CONFIGURE_ON=	--with-dblib=gdbm \
 			--with-gdbm=${LOCALBASE}
 LMDB_DESC=		OpenLDAP Lightning Memory-Mapped Database support
-LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
+LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb0
 LMDB_CONFIGURE_ON=	--with-dblib=lmdb
 LMDB_CFLAGS=		-I${LOCALBASE}/include
 LMDB_LDFLAGS=		-L${LOCALBASE}/lib
@@ -68,4 +67,9 @@ SCRAM_CONFIGURE_ENABLE=	scram
 
 DOCS=	AUTHORS COPYING ChangeLog INSTALL.TXT README
 
+MAKE_JOBS_UNSAFE= yes
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NOTP} SSL
+CONFIGURE_ARGS= --with-openssl=${OPENSSLBASE}
+CFLAGS= -I${OPENSSLINC}
+LDFLAGS= -L${OPENSSLLIB}
 .include "${.CURDIR}/../../security/cyrus-sasl2/Makefile.common"

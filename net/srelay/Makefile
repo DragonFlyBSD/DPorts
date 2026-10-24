@@ -1,8 +1,7 @@
 PORTNAME=	srelay
-PORTVERSION=	0.4.8p3
-PORTREVISION=	1
+PORTVERSION=	0.4.9
 CATEGORIES=	net
-MASTER_SITES=	SOURCEFORGE/socks-relay/socks-relay/${PORTNAME}-0.4.8
+MASTER_SITES=	SOURCEFORGE/socks-relay/socks-relay/${PORTNAME}-0.4.9
 
 MAINTAINER=	decke@FreeBSD.org
 COMMENT=	Srelay is a SOCKS4/5 proxy and Relay
@@ -18,5 +17,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/srelay.passwd ${STAGEDIR}${PREFIX}/etc/srelay.passwd.sample
 	${INSTALL_MAN} ${WRKSRC}/srelay.8 ${STAGEDIR}${PREFIX}/share/man/man8
 	${INSTALL_PROGRAM} ${WRKSRC}/srelay ${STAGEDIR}${PREFIX}/sbin
+
+pre-patch:
+	${REINPLACE_CMD} -e 's/freebsd\*/freebsd*|dragonfly*/g' ${WRKSRC}/configure
 
 .include <bsd.port.mk>

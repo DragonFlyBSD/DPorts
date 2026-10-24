@@ -1,6 +1,6 @@
 PORTNAME=	cqrlog
 PORTVERSION=	2.5.2
-PORTREVISION=	13
+PORTREVISION=	19
 DISTVERSIONPREFIX=	v
 CATEGORIES=	comms hamradio
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
@@ -67,5 +67,9 @@ post-patch:
 post-build:
 	@${RM} ${WRKSRC}/help/cwd.html.*
 	@${RM} ${WRKSRC}/help/h1.html.*
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/src/synapse/synaser.pas
 
 .include <bsd.port.mk>

@@ -5,7 +5,7 @@
          openssl_ver = 0
          openssl_ver_re = re.compile(
 -            '^\s*#\s*define\s+OPENSSL_VERSION_NUMBER\s+(0x[0-9a-fA-F]+)' )
-+            '^\s*#\s*define\s+OPENSSL_VERSION_TEXT\s+\"OpenSSL\s+([0-9]+.[0-0]+.[0-9]+).*')
++            '^\s*#\s*define\s+OPENSSL_VERSION_TEXT\s+\"OpenSSL\s+([0-9]+.[0-9]+.[0-9]+).*')
  
          # look for the openssl version header on the compiler search path.
          opensslv_h = find_file('openssl/opensslv.h', [],

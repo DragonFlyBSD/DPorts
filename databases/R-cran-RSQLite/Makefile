@@ -1,13 +1,14 @@
 PORTNAME=	RSQLite
-PORTVERSION=	2.3.6
+DISTVERSION=	3.53.3
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	skreuzer@FreeBSD.org
 COMMENT=	Database Interface R driver for SQLite
-WWW=		https://cran.r-project.org/web/packages/RSQLite/
+WWW=		https://cran.r-project.org/package=RSQLite
 
-LICENSE=	LGPL21
+LICENSE=	LGPL21 LGPL3
+LICENSE_COMB=	dual
 
 CRAN_DEPENDS=	R-cran-bit64>0:devel/R-cran-bit64 \
 		R-cran-blob>=1.2.0:devel/R-cran-blob \
@@ -15,8 +16,6 @@ CRAN_DEPENDS=	R-cran-bit64>0:devel/R-cran-bit64 \
 		R-cran-DBI>=1.2.0:databases/R-cran-DBI \
 		R-cran-memoise>0:devel/R-cran-memoise \
 		R-cran-pkgconfig>0:devel/R-cran-pkgconfig \
-		R-cran-plogr>=0.2.0:devel/R-cran-plogr \
-		R-cran-Rcpp>=0.4.00:devel/R-cran-Rcpp \
 		R-cran-rlang>0:devel/R-cran-rlang
 BUILD_DEPENDS=	${CRAN_DEPENDS}
 RUN_DEPENDS=	${CRAN_DEPENDS}

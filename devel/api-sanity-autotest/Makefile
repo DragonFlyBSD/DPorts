@@ -62,4 +62,8 @@ do-install-DOCS-on:
 do-test:
 	cd ${WRKSRC} && ${PERL} ./${PORTNAME}.pl -test
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd|@&dragonfly|@g' \
+		${WRKSRC}/api-sanity-checker.pl
+
 .include <bsd.port.mk>

@@ -41,4 +41,10 @@ do-install:
 	cd ${WRKSRC}/example && ${FIND} . | \
 		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${STAGEDIR}${EXAMPLESDIR}
 
+.if ${DFLYVERSION} > 400501
+SLANG_USES_OFF=		ncurses
+SLANG_CONFIGURE_OFF=	--with-incdir=${LOCALBASE}/include	\
+			--with-libdir=${LOCALBASE}/lib
+.endif
+
 .include <bsd.port.mk>

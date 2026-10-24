@@ -24,6 +24,7 @@ INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=	DOCS
 
+CFLAGS= -Wno-implicit-fallthrough -Wno-cast-function-type
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|SOL_TCP|IPPROTO_TCP|g' ${WRKSRC}/hscutl.c

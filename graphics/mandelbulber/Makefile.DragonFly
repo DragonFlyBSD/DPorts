@@ -1,3 +1,0 @@
-# don't know how to make mandelbulber2/qt/tooltips_images/material\. Stop
-USES+= gmake
-IGNORE=   unmaintained, please request fixing to users mailing list

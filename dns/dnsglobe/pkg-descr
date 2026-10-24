@@ -1,0 +1,7 @@
+dnsglobe is a terminal application that checks DNS propagation across many
+public resolvers around the world and visualizes the results on an ASCII
+world map.
+
+It resolves a hostname against resolvers in different geographic regions and
+shows, at a glance, where a DNS record has propagated and where it has not,
+with an optional watch mode for continuous monitoring.

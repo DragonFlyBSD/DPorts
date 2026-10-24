@@ -1,0 +1,6 @@
+langchain-community-inspire-hep provides LangChain tools and utilities for
+searching and retrieving high energy physics literature from the INSPIRE HEP
+database.
+
+It includes tools for searching literature by topic, listing an author's
+papers, and fetching detailed paper information.

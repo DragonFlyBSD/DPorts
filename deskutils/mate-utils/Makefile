@@ -1,7 +1,8 @@
 PORTNAME=	mate-utils
-PORTVERSION=	1.28.0
+DISTVERSION=	1.28.0
+PORTREVISION=	1
 CATEGORIES=	deskutils mate
-MASTER_SITES=	MATE
+MASTER_SITES=	https://github.com/mate-desktop/${PORTNAME}/releases/download/v${DISTVERSION}/
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -17,13 +18,12 @@ LICENSE_FILE_LGPL20+ =	${WRKSRC}/COPYING.libs
 BUILD_DEPENDS=	itstool:textproc/itstool
 
 LIB_DEPENDS=	libgtop-2.0.so:devel/libgtop \
-		libcanberra-gtk3.so:audio/libcanberra-gtk3
+		libcanberra-gtk3.so:audio/libcanberra-gtk3 \
+		libudisks2.so:sysutils/libudisks
 
-PORTSCOUT=	limitw:1,even
-
-USES=		gettext gmake gnome libtool localbase mate pathfix \
+USES=		gettext gmake gnome libtool localbase mate \
 		pkgconfig tar:xz xorg
-USE_MATE=	panel
+USE_MATE=	panel common:build
 USE_XORG=	ice sm x11 xext
 USE_GNOME=	cairo gnomeprefix gtk30 intltool
 USE_LDCONFIG=	yes
@@ -31,7 +31,7 @@ GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 INSTALL_TARGET=	install-strip
 
-CONFIGURE_ARGS=	--disable-disk-image-mounter
+PORTSCOUT=	site:https://github.com/mate-desktop/mate-utils/releases/ limitw:1,even
 
 GLIB_SCHEMAS=	org.mate.dictionary.gschema.xml \
 		org.mate.disk-usage-analyzer.gschema.xml \

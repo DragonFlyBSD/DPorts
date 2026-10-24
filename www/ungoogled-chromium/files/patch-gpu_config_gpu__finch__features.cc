@@ -1,20 +1,29 @@
---- gpu/config/gpu_finch_features.cc.orig	2024-07-31 14:19:23 UTC
+--- gpu/config/gpu_finch_features.cc.orig	2026-08-13 07:41:05 UTC
 +++ gpu/config/gpu_finch_features.cc
-@@ -157,7 +157,7 @@ const base::FeatureParam<std::string>
- BASE_FEATURE(kDefaultEnableGpuRasterization,
-              "DefaultEnableGpuRasterization",
- #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || \
--    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX)
-+    BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+@@ -176,7 +176,7 @@ const base::FeatureParam<std::string>
+ // of associating with an unused IPC::Channel.
+ BASE_FEATURE(kRemoveGPULegacyIPC, base::FEATURE_DISABLED_BY_DEFAULT);
+ 
+-#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Feature flag to control whether SharedImageStub sequence uses high priority
+ // on ChromeOS and Linux. Enabled by default.
+ BASE_FEATURE(kSharedImageStubHighPriority, base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -185,7 +185,7 @@ BASE_FEATURE(kSharedImageStubHighPriority, base::FEATU
+ // Disables hardware YUV conversion on NVIDIA + Wayland to workaround a driver
+ // bug.
+ BASE_FEATURE(kNvidiaWaylandYuvHardwareConversionWorkaround,
+-#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -170,7 +170,7 @@ BASE_FEATURE(kCanvasOopRasterization,
-              "CanvasOopRasterization",
- #if BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_IOS) || BUILDFLAG(IS_WIN) ||         \
-     (BUILDFLAG(IS_MAC) && defined(ARCH_CPU_ARM64)) || BUILDFLAG(IS_ANDROID) || \
--    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_LINUX)
-+    BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT
+@@ -515,7 +515,7 @@ BASE_FEATURE(kGPUDriverBugListTestGroup, base::FEATURE
+ const base::FeatureParam<int> kGPUDriverBugListTestGroupId{
+     &kGPUDriverBugListTestGroup, "test_group", 0};
+ 
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ bool IsForceEnableWebGpuInterop() {
+   return base::FeatureList::IsEnabled(kForceEnableWebGpuInterop);
+ }

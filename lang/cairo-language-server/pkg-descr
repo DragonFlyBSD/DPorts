@@ -1,0 +1,5 @@
+CairoLS is an implementation of Language Server Protocol(LSP) for the Cairo
+language.
+
+Cairo is the first Turing-complete language for creating provable programs
+for general computation.

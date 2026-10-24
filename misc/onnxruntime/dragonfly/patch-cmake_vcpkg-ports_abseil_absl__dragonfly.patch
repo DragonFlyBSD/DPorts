@@ -1,0 +1,60 @@
+--- cmake/vcpkg-ports/abseil/absl_dragonfly.patch.orig	2026-09-10 06:09:41 UTC
++++ cmake/vcpkg-ports/abseil/absl_dragonfly.patch
+@@ -0,0 +1,57 @@
++--- a/absl/base/config.h
+++++ b/absl/base/config.h
++@@ -379,7 +379,8 @@
++     defined(__asmjs__) || defined(__EMSCRIPTEN__) || defined(__Fuchsia__) || \
++     defined(__sun) || defined(__myriad2__) || defined(__HAIKU__) ||          \
++     defined(__OpenBSD__) || defined(__NetBSD__) || defined(__QNX__) ||       \
++-    defined(__VXWORKS__) || defined(__hexagon__) || defined(__XTENSA__)
+++    defined(__VXWORKS__) || defined(__hexagon__) || defined(__XTENSA__) || \
+++    defined(__DragonFly__)
++ #define ABSL_HAVE_MMAP 1
++ #endif
++ 
++@@ -391,7 +392,7 @@
++ #error ABSL_HAVE_PTHREAD_GETSCHEDPARAM cannot be directly set
++ #elif defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || \
++     defined(_AIX) || defined(__ros__) || defined(__OpenBSD__) ||          \
++-    defined(__NetBSD__) || defined(__VXWORKS__)
+++    defined(__NetBSD__) || defined(__VXWORKS__) || defined(__DragonFly__)
++ #define ABSL_HAVE_PTHREAD_GETSCHEDPARAM 1
++ #endif
++ 
++--- a/absl/base/internal/sysinfo.cc
+++++ b/absl/base/internal/sysinfo.cc
++@@ -448,6 +448,10 @@
++ 
++ pid_t GetTID() { return static_cast<pid_t>(pthread_getthreadid_np()); }
++ 
+++#elif defined(__DragonFly__)
+++
+++pid_t GetTID() { return static_cast<pid_t>(lwp_gettid()); }
+++
++ #elif defined(__OpenBSD__)
++ 
++ pid_t GetTID() { return getthrid(); }
++--- a/absl/debugging/internal/vdso_support.cc
+++++ b/absl/debugging/internal/vdso_support.cc
++@@ -55,7 +55,7 @@
++ using Elf32_auxv_t = Aux32Info;
++ using Elf64_auxv_t = Aux64Info;
++ #endif
++-#if defined(__FreeBSD__)
+++#if defined(__FreeBSD__) || defined(__DragonFly__)
++ #if defined(__ELF_WORD_SIZE) && __ELF_WORD_SIZE == 64
++ using Elf64_auxv_t = Elf64_Auxinfo;
++ #endif
++--- a/absl/time/internal/cctz/src/time_zone_format.cc
+++++ b/absl/time/internal/cctz/src/time_zone_format.cc
++@@ -19,7 +19,8 @@
++ #endif
++ 
++ #if defined(HAS_STRPTIME) && HAS_STRPTIME
++-#if !defined(_XOPEN_SOURCE) && !defined(__FreeBSD__) && !defined(__OpenBSD__)
+++#if !defined(_XOPEN_SOURCE) && !defined(__FreeBSD__) && !defined(__OpenBSD__) && \
+++    !defined(__DragonFly__)
++ #define _XOPEN_SOURCE 500  // Exposes definitions for SUSv2 (UNIX 98).
++ #endif
++ #endif

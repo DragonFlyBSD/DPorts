@@ -1,0 +1,5 @@
+TIMESTAMP = 1776164057
+SHA256 (go/security_govulncheck/govulncheck-v1.2.0/v1.2.0.mod) = bece0849bea67bbfc63f62b9adc2a6aa45675e8b8642c34dfffa4ec24150e9db
+SIZE (go/security_govulncheck/govulncheck-v1.2.0/v1.2.0.mod) = 510
+SHA256 (go/security_govulncheck/govulncheck-v1.2.0/v1.2.0.zip) = 06e3f7795be43af83b5c18eab6379e81bf06b87bb96d88b63c41cbe9e72334bb
+SIZE (go/security_govulncheck/govulncheck-v1.2.0/v1.2.0.zip) = 853781

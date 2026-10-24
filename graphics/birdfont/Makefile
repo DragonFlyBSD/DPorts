@@ -1,6 +1,6 @@
 PORTNAME=	birdfont
 DISTVERSION=	2.33.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics x11-fonts
 MASTER_SITES=	https://birdfont.org/releases/
 
@@ -39,6 +39,7 @@ _STRIPPABLE=	bin/birdfont bin/birdfont-autotrace bin/birdfont-export \
 		bin/birdfont-import lib/libbirdfont.so.36.0 \
 		lib/libbirdgems.so.0.0
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-build:
 	(cd ${WRKSRC} && ${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${PYTHON_CMD} build.py)
 

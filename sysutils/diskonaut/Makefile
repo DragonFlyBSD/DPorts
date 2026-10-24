@@ -1,6 +1,6 @@
 PORTNAME=	diskonaut
 PORTVERSION=	0.11.0
-PORTREVISION=	41
+PORTREVISION=	54
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -107,4 +107,5 @@ CARGO_CRATES=	addr2line-0.12.1 \
 
 PLIST_FILES=	bin/${PORTNAME}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

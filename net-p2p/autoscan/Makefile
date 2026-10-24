@@ -1,7 +1,7 @@
 PORTNAME=	autoscan
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.4.0
-PORTREVISION=	1
+PORTREVISION=	32
 CATEGORIES=	net-p2p
 
 MAINTAINER=	michiel@vanbaak.eu
@@ -31,4 +31,5 @@ GROUPS=		autoscan
 
 PLIST_FILES=	bin/autoscan
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

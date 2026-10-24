@@ -1,5 +1,5 @@
 PORTNAME=	libndp
-PORTVERSION=	1.8
+PORTVERSION=	1.9
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 
@@ -10,12 +10,14 @@ WWW=		https://github.com/jpirko/libndp
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		autoreconf libtool
+USES=		autoreconf cpe libtool
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	jpirko
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

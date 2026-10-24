@@ -1,4 +1,0 @@
-
-# suppress false positives
-CFLAGS+=	-Wno-nonnull -Wno-uninitialized
-IGNORE=   unmaintained, please request fixing to users mailing list

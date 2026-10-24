@@ -1,53 +1,73 @@
---- base/threading/platform_thread_posix.cc.orig	2024-06-22 08:49:42 UTC
+--- base/threading/platform_thread_posix.cc.orig	2026-05-09 18:09:27 UTC
 +++ base/threading/platform_thread_posix.cc
-@@ -77,11 +77,11 @@ void* ThreadFunc(void* params) {
-     if (!thread_params->joinable)
-       base::DisallowSingleton();
+@@ -6,6 +6,9 @@
  
--#if PA_BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC)
-+#if PA_BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC) && !BUILDFLAG(IS_BSD)
+ #include <errno.h>
+ #include <pthread.h>
++#if BUILDFLAG(IS_BSD)
++#include <pthread_np.h>
++#endif
+ #include <sched.h>
+ #include <stddef.h>
+ #include <stdint.h>
+@@ -80,6 +83,7 @@ void* ThreadFunc(void* params) {
+       base::DisallowSingleton();
+     }
+ 
++#if !BUILDFLAG(IS_BSD)
+ #if PA_BUILDFLAG(USE_PARTITION_ALLOC_AS_MALLOC)
      partition_alloc::internal::StackTopRegistry::Get().NotifyThreadCreated();
  #endif
+@@ -93,6 +97,7 @@ void* ThreadFunc(void* params) {
+     // where they were created. This explicitly sets the priority of all new
+     // threads.
+     PlatformThread::SetCurrentThreadType(thread_params->thread_type);
++#endif
+   }
  
--#if !BUILDFLAG(IS_NACL)
-+#if !BUILDFLAG(IS_NACL) && !BUILDFLAG(IS_BSD)
- #if BUILDFLAG(IS_APPLE)
-     PlatformThread::SetCurrentThreadRealtimePeriodValue(
-         delegate->GetRealtimePeriod());
-@@ -265,6 +265,8 @@ PlatformThreadId PlatformThreadBase::CurrentId() {
-   return reinterpret_cast<int32_t>(pthread_self());
+   ThreadIdNameManager::GetInstance()->RegisterThread(
+@@ -270,6 +275,10 @@ PlatformThreadId PlatformThreadBase::CurrentId() {
+ 
  #elif BUILDFLAG(IS_POSIX) && BUILDFLAG(IS_AIX)
-   return pthread_self();
-+#elif BUILDFLAG(IS_BSD)
-+  return reinterpret_cast<uint64_t>(pthread_self());
+   return PlatformThreadId(pthread_self());
++#elif BUILDFLAG(IS_OPENBSD)
++  return PlatformThreadId(static_cast<uint64_t>(getthrid()));
++#elif BUILDFLAG(IS_FREEBSD)
++  return PlatformThreadId(static_cast<uint64_t>(pthread_getthreadid_np()));
  #elif BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_AIX)
-   return reinterpret_cast<int64_t>(pthread_self());
+   return PlatformThreadId(reinterpret_cast<int64_t>(pthread_self()));
  #endif
-@@ -355,7 +357,7 @@ void PlatformThreadBase::Detach(PlatformThreadHandle t
+@@ -363,6 +372,9 @@ void PlatformThreadBase::Detach(PlatformThreadHandle t
  
  // static
  bool PlatformThreadBase::CanChangeThreadType(ThreadType from, ThreadType to) {
--#if BUILDFLAG(IS_NACL)
-+#if BUILDFLAG(IS_NACL) || BUILDFLAG(IS_BSD)
-   return false;
- #else
++#if BUILDFLAG(IS_BSD)
++  return false;
++#else
    if (from >= to) {
-@@ -376,6 +378,9 @@ void SetCurrentThreadTypeImpl(ThreadType thread_type,
-                               MessagePumpType pump_type_hint) {
- #if BUILDFLAG(IS_NACL)
-   NOTIMPLEMENTED();
-+// avoid pledge(2) violation
-+#elif BUILDFLAG(IS_BSD)
-+   NOTIMPLEMENTED();
- #else
-   if (internal::SetCurrentThreadTypeForPlatform(thread_type, pump_type_hint))
-     return;
-@@ -398,7 +403,7 @@ void SetCurrentThreadTypeImpl(ThreadType thread_type,
+     // Decreasing thread priority on POSIX is always allowed.
+     return true;
+@@ -372,10 +384,15 @@ bool PlatformThreadBase::CanChangeThreadType(ThreadTyp
+   }
+ 
+   return internal::CanLowerNiceTo(internal::ThreadTypeToNiceValue(to));
++#endif
+ }
  
  // static
- ThreadPriorityForTest PlatformThreadBase::GetCurrentThreadPriorityForTest() {
--#if BUILDFLAG(IS_NACL)
-+#if BUILDFLAG(IS_NACL) || BUILDFLAG(IS_BSD)
-   NOTIMPLEMENTED();
-   return ThreadPriorityForTest::kNormal;
- #else
+ ThreadType PlatformThreadBase::GetCurrentEffectiveThreadTypeForTest() {
++#if BUILDFLAG(IS_BSD)
++  NOTIMPLEMENTED();
++  return ThreadType::kDefault;
++#else
+   // Mirrors SetCurrentThreadPriority()'s implementation.
+   auto platform_specific_priority =
+       internal::GetCurrentEffectiveThreadTypeForPlatformForTest();  // IN-TEST
+@@ -386,6 +403,7 @@ ThreadType PlatformThreadBase::GetCurrentEffectiveThre
+   int nice_value = internal::GetCurrentThreadNiceValue();
+ 
+   return internal::NiceValueToThreadTypeForTest(nice_value);  // IN-TEST
++#endif
+ }
+ 
+ #endif  // !BUILDFLAG(IS_APPLE) && !BUILDFLAG(IS_FUCHSIA)

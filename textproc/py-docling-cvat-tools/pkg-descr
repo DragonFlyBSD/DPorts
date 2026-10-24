@@ -1,0 +1,4 @@
+Docling CVAT Tools provides CVAT (Computer Vision Annotation Tool)
+integration for Docling document processing and evaluation workflows.
+It enables annotation-based assessment of document understanding
+pipelines using the CVAT platform.

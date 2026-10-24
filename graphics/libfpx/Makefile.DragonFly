@@ -1,2 +1,0 @@
-
-MAKE_ENV+=	CWARNFLAGS=-fcommon

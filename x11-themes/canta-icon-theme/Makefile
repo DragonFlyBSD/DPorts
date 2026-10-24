@@ -2,7 +2,7 @@ PORTNAME=	canta-icon-theme
 DISTVERSION=	2021-09-08
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Flat icons for Canta GTK theme
 WWW=		https://github.com/vinceliuice/Canta-theme
 

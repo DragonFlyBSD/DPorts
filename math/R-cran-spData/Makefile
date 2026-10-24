@@ -1,11 +1,11 @@
 PORTNAME=	spData
-PORTVERSION=	2.3.4
+PORTVERSION=	2.3.5
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Datasets for Spatial Analysis
-WWW=		https://cran.r-project.org/web/packages/spData/
+WWW=		https://cran.r-project.org/package=spData
 
 LICENSE=	CC0-1.0
 

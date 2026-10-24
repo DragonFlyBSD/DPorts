@@ -1,5 +1,5 @@
 PORTNAME=	${GH_PROJECT:tl}
-PORTVERSION=	g20220804
+PORTVERSION=	g20260716
 CATEGORIES=	games
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -14,18 +14,18 @@ LICENSE=	GPLv3+
 USE_GITHUB=	yes
 GH_ACCOUNT=	TheAssemblyArmada
 GH_PROJECT=	Vanilla-Conquer
-GH_TAGNAME=	8fb1a09
+GH_TAGNAME=	ce83b59
 
 USES=		cmake openal sdl
 USE_SDL=	sdl2
 CMAKE_ON=	BUILD_TOOLS
-CONFIGURE_ENV=	GIT_HEAD_SHA1=8fb1a09c91bd64fe599d4f15bd7fe3cdffd00707 \
+CONFIGURE_ENV=	GIT_HEAD_SHA1=ce83b59edd99cccac6cebaae054ca04962c744b7 \
 		GIT_HEAD_SHORT_SHA1=${GH_TAGNAME} \
 		GIT_COMMIT_DATE_ISO8601=${_GET_DATE:sh} \
 		GIT_AUTHOR_NAME=\<irrelevant\> GIT_TAG=latest \
 		GIT_COMMIT_TSTAMP=${_GET_TSTAMP:sh} GIT_IS_DIRTY=true \
-		GIT_RETRIEVED_STATE=true GIT_REV_LIST_COUNT=802
-LDFLAGS_i386=	-fuse-ld=bfd
+		GIT_RETRIEVED_STATE=true GIT_REV_LIST_COUNT=973
+LDFLAGS_i386=	-Wl,-znotext
 
 PLIST_FILES=	bin/vanillamix bin/vanillara bin/vanillatd \
 		share/icons/hicolor/scalable/apps/vanillara_icon.svg \
@@ -33,17 +33,7 @@ PLIST_FILES=	bin/vanillamix bin/vanillara bin/vanillatd \
 
 PORTSCOUT=	skipv:latest
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == i386
-BUILD_DEPENDS+=	ld.bfd:devel/binutils
-.endif
-
-post-patch:
-	@${REINPLACE_CMD} -e '/Obfuscate/s,long,unsigned,' \
-		${WRKSRC}/tiberiandawn/function.h \
-		${WRKSRC}/tiberiandawn/init.cpp
-
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/vanilla* \
 		${STAGEDIR}${PREFIX}/bin
@@ -51,7 +41,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/resources/*.svg \
 		${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
 
 _GET_DATE=	TZ= ${STAT} -f %Sm -t %FT%TZ ${WRKSRC}/.gitignore
 _GET_TSTAMP=	TZ= ${STAT} -f %m ${WRKSRC}/.gitignore

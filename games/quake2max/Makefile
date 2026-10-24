@@ -130,4 +130,10 @@ do-install:
 		${STAGEDIR}${LIBDIR}/baseq2/maxpak.pak
 
 .include "${.CURDIR}/../quake2-data/Makefile.include"
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1 || defined(__DragonFly__))@g'	\
+		${WRKSRC}/unix/cd_unix.c				\
+		${WRKSRC}/unix/qsh_unix.c				\
+		${WRKSRC}/unix/snd_unix.c
+
 .include <bsd.port.mk>

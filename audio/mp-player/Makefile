@@ -18,6 +18,7 @@ DEFINES=	-D_REENTRANT
 
 PLIST_FILES=	bin/mp-player
 
+DFLY_UNMAINTAINED= yes
 do-build:
 	${CC} ${CFLAGS} ${LDFLAGS} ${DEFINES} ${WRKSRC}/mp.c \
 		-o ${WRKSRC}/${PORTNAME}

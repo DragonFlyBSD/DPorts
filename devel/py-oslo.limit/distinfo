@@ -1,3 +1,3 @@
-TIMESTAMP = 1732260916
-SHA256 (oslo.limit-2.6.0.tar.gz) = c125c948bcd48c83e2dae9d32e7d17e17a2d2b4348dd0ea2d45097737873a17a
-SIZE (oslo.limit-2.6.0.tar.gz) = 31969
+TIMESTAMP = 1783784416
+SHA256 (oslo_limit-2.12.0.tar.gz) = 60f792faa04485a265d7dab5d83571ad7d7ceb455f05883d04ae3f048f1298a2
+SIZE (oslo_limit-2.12.0.tar.gz) = 36787

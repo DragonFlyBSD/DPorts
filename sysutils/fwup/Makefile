@@ -1,31 +1,25 @@
 PORTNAME=	fwup
-DISTVERSIONPREFIX=	v
-DISTVERSION=	1.12.0
+DISTVERSION=	1.17.1
 CATEGORIES=	sysutils
+MASTER_SITES=	https://github.com/fwup-home/${PORTNAME}/releases/download/v${DISTVERSION}/
 
-MAINTAINER=	dch@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Configurable embedded Linux firmware update creator and runner
 WWW=		https://github.com/fhunleth/fwup
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/autogen:devel/autogen \
-		${LOCALBASE}/bin/base64:converters/base64 \
-		${LOCALBASE}/bin/help2man:misc/help2man \
-		${LOCALBASE}/bin/mdir:filesystems/mtools \
-		${LOCALBASE}/bin/zip:archivers/zip
-LIB_DEPENDS=	libconfuse.so:devel/libconfuse \
-		libsodium.so:security/libsodium
+BUILD_DEPENDS=	help2man:misc/help2man
+LIB_DEPENDS=	libconfuse.so:devel/libconfuse
+#TEST_DEPENDS=	mdir:filesystems/mtools
 
-USES=		autoreconf libarchive libtool pkgconfig shebangfix
-USE_GITHUB=	yes
-GH_ACCOUNT=	fhunleth
+USES=		gettext-runtime libarchive libtool pkgconfig
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
-SHEBANG_FILES=	img2fwup scripts/*.sh
+EXTRACT_AFTER_ARGS=	--exclude scripts \
+			--no-same-owner --no-same-permissions
 
 PLIST_FILES=	bin/fwup \
 		bin/img2fwup \
@@ -35,9 +29,6 @@ PLIST_FILES=	bin/fwup \
 PORTDOCS=	README.md
 
 OPTIONS_DEFINE=	DOCS
-
-pre-configure:
-	@(cd ${WRKSRC} && ./autogen.sh)
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

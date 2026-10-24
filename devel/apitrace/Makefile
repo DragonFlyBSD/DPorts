@@ -1,51 +1,53 @@
 PORTNAME=	apitrace
-DISTVERSION=	9.0
-PORTREVISION=	2
+DISTVERSION=	14.0
 CATEGORIES=	devel
 
-PATCH_SITES=	https://github.com/a17r/${GH_PROJECT}/commit/
-# use system brotli: https://github.com/apitrace/apitrace/pull/610
-PATCHFILES=	cd3486343001d6a47.patch:-p1 \
-		b0f5a220c41af013d.patch:-p1
-# detect RTLD_DEEPBIND: https://github.com/apitrace/apitrace/pull/571
-PATCHFILES+=	2d31d49eac9bcc010.patch:-p1
-
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	freebsd@sysctl.cz
 COMMENT=	Tools for tracing OpenGL and other graphics APIs
 WWW=		https://apitrace.github.io
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libbrotlidec.so:archivers/brotli \
-		libpng.so:graphics/png
+BUILD_DEPENDS=	googletest>0:devel/googletest \
+		vulkan-headers>0:graphics/vulkan-headers
+LIB_DEPENDS=	libbacktrace.so:devel/libbacktrace \
+		libbrotlidec.so:archivers/brotli \
+		libbrotlienc.so:archivers/brotli \
+		libpng.so:graphics/png \
+		libsnappy.so:archivers/snappy \
+		libzstd.so:archivers/zstd
 
-USES=		cmake compiler:c++11-lang pkgconfig python shebangfix xorg
+USES=		cmake:testing compiler:c++17-lang gl localbase:ldflags pkgconfig \
+		python qt:6 shebangfix xorg
 USE_GITHUB=	yes
+GH_TUPLE=	microsoft:DirectXMath:apr2025:DirectXMath/thirdparty/directxmath \
+		facebook:zstd:v1.5.7:zstd/thirdparty/zstd
+USE_GL=		opengl
+USE_QT=		base
 USE_XORG=	x11
 
 SHEBANG_FILES=	scripts/*.py
 
-OPTIONS_DEFINE=		DOCS QT5 WAFFLE
-OPTIONS_DEFAULT=	QT5 WAFFLE
+CMAKE_ON=	ENABLE_QT6
+
+OPTIONS_DEFINE=		DOCS WAFFLE
+OPTIONS_DEFAULT=	WAFFLE
 OPTIONS_SUB=		yes
 
-WAFFLE_DESC=	Use Waffle library to allow retrace on Wayland, headless etc.
-
-QT5_USES=	qt:5
-QT5_USE=	QT=core,gui,network,widgets,buildtools:build,qmake:build
-QT5_CMAKE_BOOL=	ENABLE_GUI
-
+WAFFLE_DESC=		Use Waffle library to allow retrace on Wayland, headless etc.
+WAFFLE_BUILD_DEPENDS=	wayland-protocols>=0:graphics/wayland-protocols
 WAFFLE_LIB_DEPENDS=	libwaffle-1.so:graphics/waffle
 WAFFLE_CMAKE_BOOL=	ENABLE_WAFFLE
 
 post-patch:
-	${REINPLACE_CMD} -e 's|__linux__|__unix__|' ${WRKSRC}/retrace/glstate_images.cpp
+	${REINPLACE_CMD} 's|__linux__|__unix__|' \
+		${WRKSRC}/retrace/glstate_images.cpp
+	${REINPLACE_CMD} 's/0.0-unknown/${DISTVERSION}/g' \
+		${WRKSRC}/cmake/GenerateVersion.cmake
 
 post-install:
 	${RM} ${STAGEDIR}${DOCSDIR}/LICENSE.txt
-
-post-install-QT5-on:
-	${INSTALL_DATA} ${FILESDIR}/qapitrace.desktop ${STAGEDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${FILESDIR}/qapitrace.desktop ${STAGEDIR}${DESKTOPDIR}
 
 .include <bsd.port.mk>

@@ -1,0 +1,23 @@
+--- a/toolchains/private/BUILD.bazel
++++ b/toolchains/private/BUILD.bazel
+@@ -11,7 +11,7 @@
+     name = "preinstalled_make",
+     path = select({
+         "@platforms//os:windows": "make.exe",
+-        "//conditions:default": "make",
++        "//conditions:default": "gmake",
+     }),
+ )
+ 
+
+--- a/foreign_cc/cmake.bzl
++++ b/foreign_cc/cmake.bzl
+@@ -345,6 +345,8 @@
+         elif "macos" in execution_os_name:
+             generator = "Unix Makefiles"
+         elif "linux" in execution_os_name:
++            generator = "Unix Makefiles"
++        elif "freebsd" in execution_os_name:
+             generator = "Unix Makefiles"
+         else:
+             fail("No generator set and no default is known. Please set the cmake `generator` attribute")

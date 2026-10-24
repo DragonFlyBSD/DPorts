@@ -37,4 +37,8 @@ do-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/${FILE} ${STAGEDIR}${DOCSDIR}
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s@define ptrdiff_t int@include <stddef.h>@g"	\
+		${WRKSRC}/src/zport.h
+
 .include <bsd.port.mk>

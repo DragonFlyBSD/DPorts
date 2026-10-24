@@ -1,6 +1,6 @@
 PORTNAME=	BlackjackClient
 PORTVERSION=	0.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	games java
 MASTER_SITES=	SF/t-blackjack/
 DISTNAME=	t-blackjack-beta
@@ -21,8 +21,7 @@ post-extract-script:
 	@${ECHO_CMD} "Main-Class: ${PORTNAME}" > ${WRKDIR}/src/MANIFEST.MF
 
 do-build:
-	(cd ${WRKDIR}/src && ${SETENV} LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 \
-		${JAVAC} ${PORTNAME}.java)
+	(cd ${WRKDIR}/src && ${JAVAC} ${PORTNAME}.java)
 
 post-build-script:
 	@cd ${WRKDIR}/src && \

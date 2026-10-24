@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 USES=		gl gmake localbase:ldflags sdl
 USE_SDL=	sdl image mixer
 USE_GL=		gl
-USE_CXXSTD=	c++14 # unbreaks build together with 2 warning waivers below
+USE_CXXSTD= c++11
 CXXFLAGS+=	-Wno-static-float-init \
 		-Wno-c++11-narrowing
 
@@ -34,6 +34,7 @@ DESKTOP_ENTRIES="Fish Supper" \
 
 OPTIONS_DEFINE=	DOCS
 
+CXXFLAGS+= -fpermissive # 'constexpr' needed for in-class init of static member
 post-patch:
 	@${REINPLACE_CMD} -e 's|std::tr1::shared_ptr|std::shared_ptr|g' ${WRKSRC}/src/*.h ${WRKSRC}/src/*.cpp
 	@${REINPLACE_CMD} -e '/tr1\/memory/ d' ${WRKSRC}/src/*.h ${WRKSRC}/src/*.cpp
@@ -41,5 +42,8 @@ post-patch:
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
+
+dfly-extract:
+	${REINPLACE_CMD} -e 's,<tr1/memory>,<memory>,g' ${WRKSRC}/src/*.h ${WRKSRC}/src/*.cpp
 
 .include <bsd.port.mk>

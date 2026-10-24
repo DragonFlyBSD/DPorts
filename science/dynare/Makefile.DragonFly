@@ -1,3 +1,0 @@
-
-USES:=	${USES:Nlocalbase} alias localbase:ldflags
-IGNORE=   unmaintained, please request fixing to users mailing list

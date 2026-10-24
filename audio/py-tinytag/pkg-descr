@@ -1,0 +1,3 @@
+TinyTag reads metadata from audio files in various formats including
+MP3, FLAC, OGG, WAV, and more. It extracts tags such as artist, album,
+title, duration, and bitrate with minimal dependencies.

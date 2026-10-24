@@ -1,12 +1,13 @@
 PORTNAME=	bird
-DISTVERSION=	2.15.1
+DISTVERSION=	2.19.2
+PORTREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	https://bird.network.cz/download/
+MASTER_SITES=	https://bird.nic.cz/download/
 PKGNAMESUFFIX=	2
 
 MAINTAINER=	olivier@FreeBSD.org
 COMMENT=	Dynamic IP routing daemon
-WWW=		https://bird.network.cz/
+WWW=		https://bird.nic.cz/
 
 LICENSE=	GPLv2
 
@@ -15,8 +16,7 @@ rtsock_PKGNAMESUFFIX=	2-rtsock
 
 USES=		bison cpe gmake ncurses readline
 
-CONFLICTS=	bird
-CONFLICTS+=	bird6
+CONFLICTS=	bird3
 
 CPE_VENDOR=	nic
 
@@ -30,10 +30,10 @@ GROUPS=		birdvty
 
 MAKE_JOBS_UNSAFE=	yes
 
-OPTIONS_MULTI=	RP
+OPTIONS_GROUP=	RP
 RP_DESC=	Routing Protocols
-OPTIONS_MULTI_RP=	BFD BABEL BMP BGP MRT OSPF PIPE RADV RIP RPKI STATIC
-OPTIONS_DEFAULT=	BFD BABEL BGP MRT OSPF PIPE RADV RIP RPKI STATIC
+OPTIONS_GROUP_RP=	BFD BABEL BMP BGP MRT OSPF PIPE RADV RIP RPKI
+OPTIONS_DEFAULT=	BFD BABEL BMP BGP MRT OSPF PIPE RADV RIP RPKI
 
 BFD_DESC=	Bidirectional Forwarding Detection
 BABEL_DESC=	Babel routing protocol
@@ -45,7 +45,6 @@ PIPE_DESC=	PIPE routing
 RADV_DESC=	Router Advertisement
 RIP_DESC=	Routing Information Protocol
 RPKI_DESC=	Resource Public Key Infrastructure
-STATIC_DESC=	Static routing
 
 BFD_VARS=	rt_prot+=bfd
 BABEL_VARS=	rt_prot+=babel
@@ -57,25 +56,21 @@ PIPE_VARS=	rt_prot+=pipe
 RADV_VARS=	rt_prot+=radv
 RIP_VARS=	rt_prot+=rip
 RPKI_VARS=	rt_prot+=rpki
-STATIC_VARS=	rt_prot+=static
+
+RT_PROT+=	static
 
 CONFIGURE_ARGS+=--with-protocols="${RT_PROT}"
 RPKI_LIB_DEPENDS=	libssh.so:security/libssh
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${FLAVOR:U} != rtsock
 CONFIGURE_ARGS+=--with-sysconfig=bsd-netlink
 .endif
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1400000
-FLAVORS=	rtsock netlink
-netlink_PKGNAMESUFFIX=	2-netlink
-rtsock_PKGNAMESUFFIX=	2
-.endif
-
-.if ${OPSYS} == FreeBSD && ( ${OSVERSION} < 1303502 || ( ${OSVERSION} >= 1400000 && ${OSVERSION} < 1400510 ) || ( ${OSVERSION} >= 1500000 && ${OSVERSION} < 1500017 ))
-EXTRA_PATCHES=	${PATCHDIR}/extra-patch-netlink-route
-.endif
+dfly-patch:
+	${REINPLACE_CMD} -e 's@_Thread_local static@static _Thread_local@g' \
+		${WRKSRC}/filter/filter.c
 
 .include <bsd.port.mk>

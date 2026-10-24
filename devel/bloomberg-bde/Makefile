@@ -34,6 +34,7 @@ CMAKE_ARGS=	\
 		-DCMAKE_INSTALL_LIBDIR=lib \
 		--log-level=ERROR
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-stage:
 		${RM} ${STAGEDIR}/${LOCALBASE}/lib/libpcre2.a
 		${RM} ${STAGEDIR}/${LOCALBASE}/libdata/pkgconfig/pcre2.pc

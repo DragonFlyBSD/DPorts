@@ -1,12 +1,12 @@
 PORTNAME=	nntp
 PORTVERSION=	1.5.12.2
-PORTREVISION=	12
+PORTREVISION=	14
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.dinoex.org/pub/c-news/
 DISTNAME=	${PORTNAME}.${PORTVERSION}
 
 PATCH_SITES=	ftp://ftp.dinoex.org/pub/c-news/
-PATCHFILES=	nntp-patch-ansi3
+PATCHFILES=	nntp-patch-ansi4
 
 MAINTAINER=	dinoex@FreeBSD.org
 COMMENT=	NNTP with NOV support
@@ -33,11 +33,12 @@ NEWSOV?=	${VARBASE}/news/over.view
 MAKE_ENV+=	DBLIBS="${LOCALBASE}/lib/libcnews.a -lcrypt -lutil"
 MAKE_ENV+=	ETCDIR="${STAGEDIR}${PREFIX}/sbin"
 MAKE_ENV+=	BINDIR="${STAGEDIR}${NEWSBIN}"
-MAKE_ENV+=	MANDIR="${STAGEDIR}${PREFIX}/man"
+MAKE_ENV+=	MANDIR="${STAGEDIR}${PREFIX}/share/man"
 MAKE_ENV+=	EXECDIR="${STAGEDIR}${PREFIX}/libexec"
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 post-extract:
@@ -56,6 +57,9 @@ post-patch:
 pre-configure:
 	${REINPLACE_CMD} \
 		-e 's|\#define.ALONE.*||' \
+		-e 's|"usenet"|"news"|' \
+		-e "s=/usr/local/news/lib/inews=${NEWSBIN}/inject/inews=" \
+		-e "s=/usr/local/bin/rnews=${NEWSBIN}/input/rnews=" \
 		-e "s=/usr/local/news/lib/bin/config=${NEWSBIN}/config=" \
 		-e "s=/usr/local/news/cnewsbin=${NEWSBIN}=" \
 		-e "s=/usr/local/news/lib=${NEWSCTL}=" \
@@ -63,7 +67,7 @@ pre-configure:
 		-e "s=/var/news=${NEWSARTS}=" \
 		-e "s=/usr/local/bin=${PREFIX}/bin=" \
 		-e "s=/usr/local/sbin=${PREFIX}/sbin=" \
-		-e "s=/usr/local/man=${PREFIX}/man=" \
+		-e "s=/usr/local/man=${PREFIX}/share/man=" \
 		${WRKSRC}/conf.h
 
 pre-install:
@@ -79,5 +83,8 @@ post-install-DOCS-on:
 .for i in ${DOCSFILES2}
 	${INSTALL_DATA} ${WRKSRC}/${i}/README ${STAGEDIR}${DOCSDIR}/${i}-README
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e "s@getline@get_line@" ${WRKSRC}/xmit/nntpxmit.c
 
 .include <bsd.port.mk>

@@ -16,4 +16,12 @@ DOCS_USE=	TEX=docs
 SOURCE_DESC=	Install source files
 SOURCE_USE=	TEX=source
 
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
+OPTIONS_DEFINE:=	${OPTIONS_DEFINE:NDOCS}
+.endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@amd64@x86_64@g'	\
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

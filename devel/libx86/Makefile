@@ -34,4 +34,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/libx86.so.1 ${STAGEDIR}${PREFIX}/lib
 	${LN} -sf libx86.so.1 ${STAGEDIR}${PREFIX}/lib/libx86.so
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@ifndef \(__FreeBSD__\)@if \!defined(\1) \&\& \!defined(__DragonFly__)@g'	\
+		${WRKSRC}/thunk.c
+
 .include <bsd.port.mk>

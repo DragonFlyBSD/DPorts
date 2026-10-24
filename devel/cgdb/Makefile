@@ -27,4 +27,5 @@ LDFLAGS+=	/usr/lib/libutil.so
 post-patch:
 	@${REINPLACE_CMD} -e 's|dev_ptmx=yes|dev_ptmx=no|' ${WRKSRC}/configure
 
+USES:= ${USES:Nncurses*} ncurses
 .include <bsd.port.mk>

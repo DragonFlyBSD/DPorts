@@ -1,6 +1,5 @@
 PORTNAME=	devedeng
-DISTVERSION=	4.18.0
-PORTREVISION=	2
+DISTVERSION=	4.22.0
 CATEGORIES=	sysutils multimedia python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -11,9 +10,12 @@ WWW=		https://rastersoft.com/programas/devede.html
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}setuptools-gettext>0:devel/py-setuptools-gettext@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 LIB_DEPENDS=	libcanberra.so:audio/libcanberra
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}urllib3>0:net/py-urllib3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}cairo>0:graphics/py-cairo@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pycairo>0:graphics/py-pycairo@${PY_FLAVOR} \
 		ffmpeg>1.2.6:multimedia/ffmpeg \
 		dvdauthor:multimedia/dvdauthor \
 		vcdimager:multimedia/vcdimager \
@@ -22,12 +24,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}urllib3>0:net/py-urllib3@${PY_FLAVOR} \
 USES=		python gettext-tools gnome
 USE_GITLAB=	yes
 GL_ACCOUNT=	rastersoft
-GL_TAGNAME=	8cd457b494c1b746633d2490e319c07f6905e1f2
 USE_GNOME=	gtk30 pygobject3:run
-USE_PYTHON=	distutils autoplist
+USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
-PLIST_FILES=	bin/devede_ng
 
 OPTIONS_DEFAULT=	BRASERO MPV
 OPTIONS_MULTI=	PLAYER BURNER
@@ -51,8 +51,5 @@ XFBURN_RUN_DEPENDS=	xfburn:sysutils/xfburn
 
 pre-configure:
 	${REINPLACE_CMD} -e 's,/usr,${PREFIX},' ${WRKSRC}/setup.py
-
-post-install:
-	${LN} -s devede_ng.py ${STAGEDIR}${PREFIX}/bin/devede_ng
 
 .include <bsd.port.mk>

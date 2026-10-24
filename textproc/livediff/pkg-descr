@@ -1,0 +1,4 @@
+Livediff is a terminal application that watches files or directories and
+shows their diffs live as they change. It combines a filesystem watcher with
+a syntax-highlighting TUI so you can follow edits, builds, or generated
+output as they happen.

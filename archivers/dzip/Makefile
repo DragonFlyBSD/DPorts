@@ -10,7 +10,7 @@ WWW=		https://speeddemosarchive.com/dzip/
 
 LICENSE=	ZLIB
 
-USES=		cpe dos2unix zip
+USES= cpe dos2unix zip gmake
 
 CPE_VENDOR=	evan_wagner
 

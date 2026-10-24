@@ -1,8 +1,7 @@
 PORTNAME=	saga
-PORTVERSION=	8.5.1
+PORTVERSION=	9.13.1
 CATEGORIES=	math
-MASTER_SITES=	SF/saga-gis/SAGA%20-%20${PORTVERSION:C/\.[[:digit:]]\.[[:digit:]]*$//}/SAGA%20-%20${PORTVERSION}
-
+MASTER_SITES=	SF/saga-gis/SAGA%20-%20${PORTVERSION:C/([0-9]).*/\1/1}/SAGA%20-%20${PORTVERSION}
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	System for Automated Geoscientific Analyses
 WWW=		http://www.saga-gis.org/en/index.html
@@ -14,38 +13,54 @@ LICENSE_COMB=	multi
 BROKEN=		requires OpenMP support that is missing on this architecture
 .endif
 
-BUILD_DEPENDS=	\
-		swig:devel/swig
+BUILD_DEPENDS=	swig:devel/swig
 LIB_DEPENDS=	libcurl.so:ftp/curl \
+		libexiv2.so:graphics/exiv2 \
 		libfftw3.so:math/fftw3 \
 		libgdal.so:graphics/gdal \
 		libhdf5.so:science/hdf5 \
 		libhpdf.so:print/libharu \
 		libodbc.so:databases/unixODBC \
 		libopencv_core.so:graphics/opencv \
-		libpdal_base.so:math/pdal \
+		libpdalcpp.so:math/pdal \
 		libproj.so:graphics/proj \
-		libqhull_r.so:math/qhull \
 		libsvm.so:science/libsvm \
 		libsz.so:science/libaec \
 		libtiff.so:graphics/tiff
 RUN_DEPENDS:=	swig:devel/swig
 
-USES=		cmake compiler:c++11-lib dos2unix gnome \
-		iconv:wchar_t libtool localbase pkgconfig python
-DOS2UNIX_GLOB=	*.cpp *.h
+USES=		cmake compiler:c++17-lang desktop-file-utils dos2unix \
+		gnome iconv:wchar_t localbase pkgconfig python
+DOS2UNIX_GLOB=	*.cpp *.h *.txt
 USE_LDCONFIG=	yes
 USE_WX=		3.2+
 
-GIT_TAGNAME=	570fadfa8
+GIT_TAGNAME=	78fc4f757
 
-CMAKE_ARGS=	-DSVM_INCLUDE:PATH=${LOCALBASE}/include/svm.h
-CMAKE_ON=	WITH_DEV_TOOLS WITH_EXCERCISES WITH_MRMR WITH_SYSTEM_SVM
-CMAKE_ON+=	CMAKE_VERBOSE_MAKEFILE
+# We do not follow the SAGA developers approach of installing
+# the 'SAGA Processing Provider' Plugin as a QGIS kernel plugin
+# in /usr/local/share/qgis/plugins/saga_provider
+CMAKE_ARGS=	-DSVM_INCLUDE:PATH=${LOCALBASE}/include/svm.h \
+		-DINSTALL_QGIS_PLUGIN:PATH="" -DWITH_TOOLS_PDAL:BOOL=TRUE
+CMAKE_ON=	CMAKE_VERBOSE_MAKEFILE
+CMAKE_ON+=	WITH_CLOUD_STORAGE
+CMAKE_ON+=	WITH_DEV_TOOLS
+CMAKE_ON+=	WITH_EXCERCISES
+CMAKE_ON+=	WITH_EXIV2
+CMAKE_ON+=	WITH_LIFETIME_TRACKER
+CMAKE_ON+=	WITH_MRMR
+CMAKE_ON+=	WITH_SYSTEM_SVM
+CMAKE_ON+=	WITH_TOOLS_HPDF
+CMAKE_ON+=	WITH_TOOLS_OPENCV
+CMAKE_ON+=	WITH_PYTHON_PKG
+CMAKE_ON+=	WITH_TOOLS_POSTGRES
+CMAKE_ON+=	WITH_TOOLS_PROJ
 CMAKE_OFF=	WITH_CLIPPER_ONE
-CMAKE_OFF+=	WITH_TOOLS_LAS WITH_TRIANGLE
+CMAKE_OFF+=	WITH_TOOLS_RIEGL
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/saga-gis
+SUB_FILES=	pkg-message
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/${PORTNAME}-gis
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
@@ -84,12 +99,14 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/saga_core/saga_gui/res/saga*.txt ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/src/saga_core/saga_gui/res/saga.png ${STAGEDIR}${DATADIR}
 	${RM} ${STAGEDIR}${DATADIR}/saga_dic.txt ${STAGEDIR}${DATADIR}/saga_srs.txt
-# toolchains dir was moved in r2805 (and followups r2810,r2811,r2820)
+# Put accessories under share/saga, python/data already under site-packages/PySAGA ;)
+	(cd ${WRKSRC}/src/accessories && ${RM} -R python)
 	(cd ${WRKSRC}/src/accessories && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR})
 	${RM} -R ${STAGEDIR}${DATADIR}/CMakeLists.txt
+	${RM} -R ${STAGEDIR}${DATADIR}/classification
+	${RM} -R ${STAGEDIR}${DATADIR}/color_ramps
 	${RM} -R ${STAGEDIR}${DATADIR}/templates/template4saga-tools/my_tool_library/Makefile.bak
-	${INSTALL_DATA} ${WRKSRC}/src/saga_core/saga_gui/res/saga.desktop \
-		${STAGEDIR}${PREFIX}/share/applications/
+	${RM} -R ${STAGEDIR}${DATADIR}/saga4qgis  # doubles
 # library helper files are not needed and cripple some math/qgis extensions
 	@${RM} ${STAGEDIR}${PREFIX}/lib/saga/*.la
 

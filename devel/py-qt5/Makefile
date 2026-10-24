@@ -12,4 +12,5 @@ USES=		metaport python pyqt:5
 USE_PYTHON=	concurrent flavors py3kplist
 USE_PYQT=	pyqt5 3d charts datavis3d networkauth
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:Nwebengine}
 .include <bsd.port.mk>

@@ -1,5 +1,0 @@
-# src/core/core.cpp:669:1: error: control reaches end of non-void function [-Werror=return-type]
-dfly-patch:
-	${REINPLACE_CMD} -e "s|FreeBSD|DragonFly|" \
-			 -e '/-Werror")/d' \
-		${WRKSRC}/CMakeLists.txt

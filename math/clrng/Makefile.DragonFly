@@ -1,8 +1,0 @@
-# Error: Orphaned: libdata/pkgconfig/clRNG.pc
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's/-pedantic-errors //g'	\
-		${WRKSRC}/src/CMakeLists.txt
-
-# to avoid orphans
-PLIST_FILES+=	libdata/pkgconfig/clRNG.pc

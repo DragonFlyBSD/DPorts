@@ -1,15 +1,14 @@
 PORTNAME=	xtable
-DISTVERSION=	1.8-4
-PORTREVISION=	3
+DISTVERSION=	1.8-8
 CATEGORIES=	textproc
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Export tables to LaTeX or HTML
-WWW=		https://cran.r-project.org/web/packages/xtable/
+WWW=		https://cran.r-project.org/package=xtable
 
 LICENSE=	GPLv2+
 
-USES=	cran:auto-plist
+USES=		cran:auto-plist
 
 .include <bsd.port.mk>

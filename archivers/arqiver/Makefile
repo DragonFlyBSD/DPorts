@@ -1,10 +1,10 @@
 PORTNAME=	arqiver
-DISTVERSION=	1.0.1
+DISTVERSION=	1.0.2
 CATEGORIES=	archivers
 MASTER_SITES=	https://github.com/tsujan/${PORTNAME}/releases/download/V${DISTVERSION}/
 DISTNAME=	Arqiver-${DISTVERSION}
 
-MAINTAINER=	mew14930xvi@inbox.lv
+MAINTAINER=	mce@FreeBSD.org
 COMMENT=	Simple Qt archive manager
 WWW=		https://github.com/tsujan/Arqiver
 

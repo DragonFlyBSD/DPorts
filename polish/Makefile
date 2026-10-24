@@ -1,0 +1,11 @@
+SUBDIR += aspell
+SUBDIR += fortunepl
+SUBDIR += hunspell
+SUBDIR += hyphen
+SUBDIR += libgadu
+SUBDIR += libreoffice
+SUBDIR += mythes
+SUBDIR += napi
+SUBDIR += qnapi
+SUBDIR += trf
+SUBDIR += webalizer2

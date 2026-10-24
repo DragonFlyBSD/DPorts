@@ -1,6 +1,6 @@
 PORTNAME=	gillo
 DISTVERSION=	1.0beta1
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/1.0beta1
 DISTNAME=	${PORTNAME}-${DISTVERSION}-src
@@ -25,6 +25,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 JAM?=		${LOCALBASE}/bin/jam
 
+CXXFLAGS= -fpermissive
 post-patch:
 	@${REINPLACE_CMD} '/^LINKLIBS on gillo3/s|;$$|-L${LOCALBASE}/lib -lm ;|' \
 		${WRKSRC}/src/Jamfile

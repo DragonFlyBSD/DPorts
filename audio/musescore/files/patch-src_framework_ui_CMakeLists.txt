@@ -1,0 +1,25 @@
+--- src/framework/ui/CMakeLists.txt.orig	2026-06-09 13:11:02 UTC
++++ src/framework/ui/CMakeLists.txt
+@@ -137,10 +137,12 @@ elseif(OS_IS_WIN)
+     )
+ 
+     target_link_libraries(muse_ui PRIVATE dwmapi)
+-elseif(OS_IS_LIN)
++elseif(OS_IS_LIN OR OS_IS_FBSD)
+     target_sources(muse_ui PRIVATE
+         internal/platform/linux/linuxplatformtheme.cpp
+         internal/platform/linux/linuxplatformtheme.h
++        internal/platform/stub/stubplatformtheme.cpp
++        internal/platform/stub/stubplatformtheme.h
+     )
+ else()
+     target_sources(muse_ui PRIVATE
+@@ -159,7 +161,7 @@ if (MUSE_QT_SUPPORT)
+ if (MUSE_QT_SUPPORT)
+     target_link_libraries(muse_ui PRIVATE Qt::Quick Qt::Widgets)
+ 
+-    if (OS_IS_LIN)
++    if (OS_IS_LIN OR OS_IS_FBSD)
+         target_link_libraries(muse_ui PRIVATE Qt::DBus)
+     endif()
+ endif()

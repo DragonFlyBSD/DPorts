@@ -81,4 +81,8 @@ do-install:
 	${RLN} ${STAGEDIR}${PREFIX}/etc/fonts/conf.avail/62-fonts-${FONTNAME}.conf \
 	    ${STAGEDIR}${PREFIX}/etc/fonts/conf.d/62-fonts-${FONTNAME}.conf
 
+.if defined(DPORTS_BUILDER)
+FORCE_PACKAGE=yes
+.endif
+
 .include <bsd.port.mk>

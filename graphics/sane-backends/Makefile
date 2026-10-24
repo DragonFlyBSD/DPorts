@@ -1,8 +1,8 @@
 PORTNAME=	sane-backends
-DISTVERSION=	1.3.1
-PORTREVISION=	1
+DISTVERSION=	1.4.0
+PORTREVISION=	3
 CATEGORIES=	graphics
-MASTER_SITES=	https://gitlab.com/sane-project/backends/uploads/83bdbb6c9a115184c2d48f1fdc6847db/
+MASTER_SITES=	https://gitlab.com/-/project/429008/uploads/843c156420e211859e974f78f64c3ea3/
 
 MAINTAINER=	vvd@FreeBSD.org
 COMMENT=	API for accessing scanners, digital cameras, frame grabbers, etc
@@ -58,4 +58,5 @@ USB_CONFIGURE_WITH=		usb
 V4L_LIB_DEPENDS=		libv4l1.so:multimedia/libv4l
 V4L_CONFIGURE_WITH=		v4l
 
+LDFLAGS= -lcam -lsbuf -lz -lm
 .include <bsd.port.mk>

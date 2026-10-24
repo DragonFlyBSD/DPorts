@@ -22,4 +22,8 @@ do-install:
 	${MKDIR} ${STAGEDIR}/${PREFIX}/lib/libretro
 	${INSTALL_LIB} ${WRKSRC}/mame2003_libretro.so ${STAGEDIR}/${PREFIX}/lib/libretro
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s@-D_XOPEN_SOURCE@&__@g" \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

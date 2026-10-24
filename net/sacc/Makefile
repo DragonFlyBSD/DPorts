@@ -14,4 +14,9 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils
 
 PLIST_FILES=	bin/sacc share/man/man1/sacc.1.gz
 
+USES= ncurses
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lcurses@-lncurses@g' \
+		${WRKSRC}/config.mk
+
 .include <bsd.port.mk>

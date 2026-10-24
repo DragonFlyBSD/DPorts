@@ -1,5 +1,5 @@
 PORTNAME=	tuxpaint
-PORTVERSION=	0.9.34
+PORTVERSION=	0.9.35
 PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	SF
@@ -66,5 +66,11 @@ post-extract:
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/tuxpaint
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/tuxpaint/plugins/*.so
+
+pre-configure:
+	${MKDIR} ${WRKSRC}/trans
+	${REINPLACE_CMD} -e 's|sed -r|sed -E|g' \
+		${WRKSRC}/Makefile ${WRKSRC}/findbad
+	
 
 .include <bsd.port.mk>

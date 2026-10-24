@@ -126,7 +126,6 @@ share/icons/hicolor/32x32/apps/ksudoku.png
 share/locale/ar/LC_MESSAGES/ksudoku.mo
 share/locale/ast/LC_MESSAGES/ksudoku.mo
 share/locale/be/LC_MESSAGES/ksudoku.mo
-share/locale/bg/LC_MESSAGES/ksudoku.mo
 share/locale/bs/LC_MESSAGES/ksudoku.mo
 share/locale/ca/LC_MESSAGES/ksudoku.mo
 share/locale/ca@valencia/LC_MESSAGES/ksudoku.mo
@@ -149,6 +148,7 @@ share/locale/hi/LC_MESSAGES/ksudoku.mo
 share/locale/hne/LC_MESSAGES/ksudoku.mo
 share/locale/hr/LC_MESSAGES/ksudoku.mo
 share/locale/hu/LC_MESSAGES/ksudoku.mo
+share/locale/id/LC_MESSAGES/ksudoku.mo
 share/locale/is/LC_MESSAGES/ksudoku.mo
 share/locale/it/LC_MESSAGES/ksudoku.mo
 share/locale/ja/LC_MESSAGES/ksudoku.mo

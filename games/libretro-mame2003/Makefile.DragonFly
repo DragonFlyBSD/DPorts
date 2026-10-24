@@ -1,5 +1,0 @@
-
-# <sys/sysctl.h>: error: unknown type name "u_int"
-dfly-patch:
-	${REINPLACE_CMD} -e "s@-D_XOPEN_SOURCE@&__@g" \
-		${WRKSRC}/Makefile

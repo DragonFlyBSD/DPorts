@@ -5,7 +5,7 @@ CATEGORIES=	games
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
 
-MAINTAINER=	bofh@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Open source clone of Dune II
 WWW=		https://dunelegacy.sourceforge.net/website/
 
@@ -16,5 +16,9 @@ USES=		autoreconf compiler:c++11-lib pkgconfig sdl tar:bzip2
 GNU_CONFIGURE=	yes
 USE_SDL=	sdl2 mixer2
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@CXXFLAGS="-O3 @CXXFLAGS="-O3 -std=gnu++11 @g'	\
+		${WRKSRC}/configure.ac
 
 .include <bsd.port.mk>

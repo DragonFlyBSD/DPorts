@@ -1,2 +1,0 @@
-USES:= ${USES:S/cargo/cargo:extra/}
-IGNORE=   unmaintained, please request fixing to users mailing list

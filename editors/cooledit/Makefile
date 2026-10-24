@@ -1,5 +1,6 @@
 PORTNAME=	cooledit
 DISTVERSION=	4.1.2
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	SUNSITE/apps/editors/X/cooledit
 
@@ -33,6 +34,7 @@ CJK_RUN_DEPENDS=	noto-hk>0:x11-fonts/noto-hk \
 			noto-tc>0:x11-fonts/noto-tc
 
 # Don't install bundled fonts
+IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's|man notosans|man|g' ${WRKSRC}/Makefile.in
 

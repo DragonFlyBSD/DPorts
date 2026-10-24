@@ -1,6 +1,7 @@
 PORTNAME=	barrier
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.4.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	sec.research.2005@gmail.com
@@ -9,6 +10,9 @@ WWW=		https://github.com/debauchee/barrier
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Deprecated upstream, does not build with CMake 4
+EXPIRATION_DATE=2026-11-30
 
 USES=		cmake compiler:c++14-lang cpe localbase:ldflags pkgconfig ssl xorg
 USE_GITHUB=	yes
@@ -39,7 +43,7 @@ GUI_CMAKE_BOOL=		BARRIER_BUILD_GUI
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400092
+.if ${OPSYS} == FreeBSD
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-src_lib_net_SecureUtils.cpp
 .endif
 

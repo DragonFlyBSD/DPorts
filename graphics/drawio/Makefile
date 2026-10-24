@@ -1,0 +1,29 @@
+PORTNAME=	drawio
+PORTVERSION=	30.2.6
+PORTREVISION=	17
+DISTVERSIONPREFIX=	x86_64-
+CATEGORIES=	graphics
+MASTER_SITES=	https://github.com/jgraph/drawio-desktop/releases/download/v${PORTVERSION}/
+EXTRACT_SUFX=	.rpm
+
+MAINTAINER=	arrowd@FreeBSD.org
+COMMENT=	Diagramming and whiteboarding desktop app
+WWW=		https://drawio.com/
+
+LICENSE=	APACHE20
+
+USES=		desktop-file-utils electronfix:42 shared-mime-info
+
+NO_BUILD=	yes
+SUB_FILES=	drawio
+NO_WRKSUBDIR=	yes
+
+ELECTRONFIX_MAIN_EXECUTABLE=	drawio
+
+do-install:
+	cd ${WRKSRC}/opt/ && ${COPYTREE_SHARE} ${PORTNAME} ${STAGEDIR}${PREFIX}/share
+	cd ${WRKSRC}/usr/share && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/share
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${FIND} ${STAGEDIR}${PREFIX} -name '*.orig' -delete
+
+.include <bsd.port.mk>

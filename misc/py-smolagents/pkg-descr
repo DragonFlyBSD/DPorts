@@ -1,0 +1,4 @@
+smolagents is a lightweight library for building agents. Its flagship feature
+is the CodeAgent, an agent that writes Python snippets to call tools and
+orchestrate other agents. It supports multi-modal inputs, tool sharing via
+the Hugging Face Hub, and many LLM backends.

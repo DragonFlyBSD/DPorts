@@ -1,0 +1,5 @@
+Docling Slim is a modular, lightweight version of the Docling document
+conversion SDK and CLI. It parses PDF, DOCX, PPTX, XLSX, HTML, images,
+and other formats into a unified document representation, with a minimal
+dependency footprint. Additional features can be enabled by installing
+optional extras as needed.

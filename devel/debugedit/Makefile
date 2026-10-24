@@ -8,7 +8,7 @@ WWW=		https://github.com/CoryXie/DebugEdit
 
 LICENSE=	GPLv2+
 
-LIB_DEPENDS=	libpopt.so:devel/popt
+LIB_DEPENDS= libpopt.so:devel/popt libelf.so:devel/libelf
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	CoryXie
@@ -17,6 +17,7 @@ GH_TAGNAME=	b1e81ec
 
 USES=		gmake
 
+CFLAGS= -I${LOCALBASE}/include/libelf -L${LOCALBASE}/lib
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/debugedit ${STAGEDIR}${PREFIX}/bin
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

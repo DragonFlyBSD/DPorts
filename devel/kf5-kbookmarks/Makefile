@@ -12,4 +12,8 @@ USE_KDE=	auth codecs config configwidgets coreaddons \
 USE_QT=		core dbus gui linguisttools widgets xml \
 		buildtools:build qmake:build
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

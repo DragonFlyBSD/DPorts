@@ -1,10 +1,9 @@
 PORTNAME=	firebird
-PORTVERSION=	3.0.10
-PORTREVISION=	2
+DISTVERSION=	3.0.12
 CATEGORIES?=	databases
 MASTER_SITES=	https://github.com/FirebirdSQL/${PORTNAME}/releases/download/v${PORTVERSION}/
 PKGNAMESUFFIX?=	${PORTVERSION:R:S/.//}-server
-DISTNAME=	${PORTNAME:S/f/F/}-${PORTVERSION}.33601-0
+DISTNAME=	${PORTNAME:S/f/F/}-${PORTVERSION}.33787-0
 DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	acm@FreeBSD.org
@@ -23,7 +22,7 @@ LICENSE_PERMS_IPL=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LIB_DEPENDS=	libicuuc.so:devel/icu \
 		libtommath.so:math/libtommath
 
-CONFLICTS_INSTALL=	firebird25 firebird40
+CONFLICTS_INSTALL=	firebird40
 
 USES=		cpe gmake pkgconfig localbase:ldflags libedit tar:bzip2
 USE_CXXSTD=	gnu++03
@@ -64,8 +63,6 @@ LD=	${CC}
 STRIP=
 
 ONLY_FOR_ARCHS=	i386 amd64
-# sparc64 fails due to lack of valid AtomicCounter implementation in
-# src/common/classes/fb_atomic.h; presumably other tier-2s would as well
 
 INSTALL_FB=	${INSTALL} ${COPY}
 
@@ -197,5 +194,10 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/doc/license/* ${STAGEDIR}${DOCSDIR}/license
 	${INSTALL_DATA} ${WRKSRC}/src/misc/upgrade/v3.0/* ${STAGEDIR}${DOCSDIR}/upgrade
 .endif
+
+post-extract:
+	@${REINPLACE_CMD} -e 's,x86_64\*-\*-freebsd\* |,x86_64*-*-dragonfly* | x86_64*-*-freebsd* |,' \
+		-e 's,^  \*-\*-freebsd\* |,  *-*-dragonfly* | *-*-freebsd* |,' \
+		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>

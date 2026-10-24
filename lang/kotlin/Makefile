@@ -1,8 +1,8 @@
 PORTNAME=	kotlin
-DISTVERSION=	2.1.20
+DISTVERSION=	2.4.10
 CATEGORIES=	lang java
-MASTER_SITES=	https://github.com/JetBrains/kotlin/releases/download/v${PORTVERSION}/
-DISTNAME=	kotlin-compiler-${PORTVERSION}
+MASTER_SITES=	https://github.com/JetBrains/kotlin/releases/download/v${DISTVERSION}/
+DISTNAME=	kotlin-compiler-${DISTVERSION}
 
 MAINTAINER=	mizhka@FreeBSD.org
 COMMENT=	Kotlin Programming Language
@@ -15,6 +15,9 @@ RUN_DEPENDS=	bash:shells/bash
 
 USES=	java zip
 
+CONFLICTS=	kotlin22
+
+EXTRACT_BEFORE_ARGS=	-qo -x '*.bat'
 NO_ARCH=	yes
 NO_BUILD=	yes
 
@@ -24,18 +27,15 @@ KOTLIN_BIN=	kapt \
 		kotlin \
 		kotlinc \
 		kotlinc-js \
-		kotlinc-jvm
-
-post-extract:
-	${RM} ${WRKSRC}/bin/*.bat
+		kotlinc-jvm \
+		kotlinc-wasm \
+		kotlinr
 
 do-install:
-	${MKDIR} ${STAGEDIR}${DATADIR}/lib
-	${MKDIR} ${STAGEDIR}${DATADIR}/bin
-	cd ${WRKSRC}/bin && ${COPYTREE_BIN} . ${STAGEDIR}${DATADIR}/bin
+	cd ${WRKSRC}/bin && ${COPYTREE_BIN}   . ${STAGEDIR}${DATADIR}/bin
 	cd ${WRKSRC}/lib && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}/lib
 .for f in ${KOTLIN_BIN}
-	${LN} -sf ${DATADIR}/bin/${f} ${STAGEDIR}${PREFIX}/bin/${f}
+	${RLN} ${STAGEDIR}${DATADIR}/bin/${f} ${STAGEDIR}${PREFIX}/bin/${f}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/build.txt ${STAGEDIR}${DATADIR}
 

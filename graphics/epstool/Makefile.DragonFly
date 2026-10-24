@@ -1,3 +1,0 @@
-
-# mkdir ./epsobj race
-MAKE_JOBS_UNSAFE= yes

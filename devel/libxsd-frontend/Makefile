@@ -22,6 +22,7 @@ OPTIONS_DEFINE=	DOCS
 B_CMD=		${LOCALBASE}/bin/b
 B_ARGS=		-V -j ${MAKE_JOBS_NUMBER} -J ${MAKE_JOBS_NUMBER}
 
+NO_CCACHE= yes
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${B_CMD} configure ${B_ARGS} \
 		config.cxx=${CXX} \

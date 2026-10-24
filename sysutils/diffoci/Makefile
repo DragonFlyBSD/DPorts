@@ -1,7 +1,7 @@
 PORTNAME=	diffoci
-PORTVERSION=	0.1.4
+PORTVERSION=	0.1.8
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
+PORTREVISION=	9
 CATEGORIES=	sysutils
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -18,4 +18,5 @@ GO_TARGET=	./cmd/diffoci
 
 PLIST_FILES=	bin/diffoci
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

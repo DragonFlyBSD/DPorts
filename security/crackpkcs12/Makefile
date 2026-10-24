@@ -15,6 +15,8 @@ GNU_CONFIGURE=	yes
 
 PLIST_FILES=	bin/crackpkcs12
 
+CFLAGS= -I${OPENSSLINC}
+LDFLAGS= -L${OPENSSLLIB}
 post-patch:
 	@${REINPLACE_CMD} -e '/^PKG_CHECK_MODULES/d' ${WRKSRC}/configure.in
 

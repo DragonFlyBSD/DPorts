@@ -27,4 +27,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bsdhwmon ${STAGEDIR}${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/bsdhwmon.8 ${STAGEDIR}${PREFIX}/share/man/man8
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

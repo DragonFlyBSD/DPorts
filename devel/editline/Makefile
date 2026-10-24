@@ -1,5 +1,5 @@
 PORTNAME=	editline
-PORTVERSION=	1.17.1
+PORTVERSION=	2.1.0
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/troglobit/editline/releases/download/${PORTVERSION}/
 
@@ -10,7 +10,7 @@ WWW=		https://github.com/troglobit/editline
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		libtool ncurses pathfix
+USES=		libtool ncurses
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip

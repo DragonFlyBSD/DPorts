@@ -1,5 +1,6 @@
 PORTNAME=	drool
 DISTVERSION=	2.0.0
+PORTREVISION=	1
 CATEGORIES=	dns
 MASTER_SITES=	https://www.dns-oarc.net/files/drool/
 
@@ -15,7 +16,9 @@ BUILD_DEPENDS=	${MY_DEPENDS}
 RUN_DEPENDS=	${MY_DEPENDS}
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 OPTIONS_DEFINE=	DATADIR
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

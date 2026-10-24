@@ -1,5 +1,5 @@
 PORTNAME=	libwacom
-DISTVERSION=	2.12.1
+DISTVERSION=	2.19.1
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/linuxwacom/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/
 
@@ -31,6 +31,7 @@ SHEBANG_FILES=	tools/show-stylus.py tools/libwacom-update-db.py
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
+MAKE_ENV= LDVER=ld.bfd
 post-patch:
 	@${REINPLACE_CMD} -e 's,%%PREFIX%%,${PREFIX},' \
 		${WRKSRC}/tools/libwacom-update-db.py

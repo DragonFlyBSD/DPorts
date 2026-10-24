@@ -1,5 +1,0 @@
-
-# missing dep for X11
-X11_USES+=	gl
-X11_USE+=	GL=gl
-DFLY_UNMAINTAINED= yes

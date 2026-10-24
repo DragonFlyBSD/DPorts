@@ -1,6 +1,6 @@
 PORTNAME=	zart
 PORTVERSION=	g20191124
-PORTREVISION=	1
+PORTREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gmic.eu/files/source/:gmic
 DISTFILES=	gmic_${GMIC_VERSION}.tar.gz:gmic
@@ -10,6 +10,7 @@ PATCHFILES=	6ca1964690afbbc78627d7c868a692401043a584.patch:-p1
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	GMIC GUI for video streams
+WWW=		https://github.com/c-koi/zart
 
 LICENSE=	CeCILL
 LICENSE_NAME=	CeCILL
@@ -24,7 +25,7 @@ USES=		compiler:c++11-lang pkgconfig qmake qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	c-koi
 GH_TAGNAME=	099554f
-USE_QT=		core gui network widgets xml buildtools_build
+USE_QT=		core gui network widgets xml buildtools:build
 
 GMIC_VERSION=	2.8.1
 
@@ -37,5 +38,8 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+
+dfly-patch:
+	${REINPLACE_CMD} 's|SYS_thr_self|SYS_lwp_gettid|' ${WRKDIR}/gmic-*/src/gmic.cpp
 
 .include <bsd.port.mk>

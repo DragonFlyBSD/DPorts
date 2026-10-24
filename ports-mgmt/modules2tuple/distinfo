@@ -1,0 +1,5 @@
+TIMESTAMP = 1779377148
+SHA256 (go/ports-mgmt_modules2tuple/modules2tuple-v2.2.6/v2.2.6.mod) = 6c808d335b33a5dd49ec0672f46377a2778501000867837dbeeb5cf6cc49347c
+SIZE (go/ports-mgmt_modules2tuple/modules2tuple-v2.2.6/v2.2.6.mod) = 95
+SHA256 (go/ports-mgmt_modules2tuple/modules2tuple-v2.2.6/v2.2.6.zip) = b42f22bf9c847c70647860ca53f03275b0f1cb47870d96b8a3e2a857b2cc5674
+SIZE (go/ports-mgmt_modules2tuple/modules2tuple-v2.2.6/v2.2.6.zip) = 100480

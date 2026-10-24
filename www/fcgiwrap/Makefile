@@ -34,4 +34,7 @@ post-patch:
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/sbin/fcgiwrap
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror //g' ${WRKSRC}/configure.ac
+
 .include <bsd.port.mk>

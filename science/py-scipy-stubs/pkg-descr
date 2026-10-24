@@ -1,0 +1,4 @@
+SciPy Stubs provides type annotations (stub files) for the SciPy
+scientific computing library. These stubs enable static type checkers
+like mypy and pyright to validate code that uses SciPy, improving code
+quality and IDE support for scientific Python applications.

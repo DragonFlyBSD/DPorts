@@ -1,9 +1,9 @@
 PORTNAME=	dpinger
-PORTVERSION=	3.3
 DISTVERSIONPREFIX=	v
+DISTVERSION=	3.7
 CATEGORIES=	net
 
-MAINTAINER=	garga@FreeBSD.org
+MAINTAINER=	dennypage@me.com
 COMMENT=	IP device monitoring tool
 WWW=		https://github.com/dennypage/dpinger
 
@@ -16,4 +16,5 @@ MAKEFILE=	Makefile.freebsd
 
 PLIST_FILES=	bin/dpinger
 
+CFLAGS= -Wno-maybe-uninitialized
 .include <bsd.port.mk>

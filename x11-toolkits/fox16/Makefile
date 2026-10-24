@@ -77,6 +77,7 @@ XRENDER_CONFIGURE_OFF=	--with-xrender=no
 MAJORVER=	${PORTVERSION:R}
 SOVERSION=	0.0.${PORTVERSION:E}
 
+LDFLAGS= -L${LOCALBASE}/lib -lfontconfig
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MOPTIMIZED_CFLAGS}

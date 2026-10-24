@@ -1,1 +1,3 @@
-This package contains the X Fixes extension library.
+Xfixes is a simple library designed to interface the X Fixes Extension.
+This extension provides application with work arounds for various
+limitations in the core protocol.

@@ -1,4 +1,4 @@
-PORTREVISION=	2
+PORTREVISION=	4
 PKGNAMESUFFIX=	-saslauthd
 
 COMMENT=	SASL authentication server for cyrus-sasl2
@@ -38,7 +38,7 @@ GDBM_CONFIGURE_ON=	--enable-auth-sasldb \
 			--with-dblib=gdbm \
 			--with-gdbm=${LOCALBASE}
 LMDB_DESC=		OpenLDAP Lightning Memory-Mapped Database support
-LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb
+LMDB_LIB_DEPENDS=	liblmdb.so:databases/lmdb0
 LMDB_CONFIGURE_ON=	--enable-auth-sasldb \
 			--with-dblib=lmdb
 LMDB_CFLAGS=		-I${LOCALBASE}/include
@@ -53,7 +53,12 @@ OPTIONS_DEFAULT+=	GSSAPI_BASE
 OPTIONS_RADIO_GSSAPI+=	GSSAPI_HEIMDAL GSSAPI_MIT
 GSSAPI_BASE_USES=		gssapi:base
 GSSAPI_BASE_CONFIGURE_ON=	--enable-gssapi="${GSSAPIBASEDIR}" \
-				--with-gss_impl=heimdal
+
+.if exists(/usr/libexec/krb5kdc)
+GSSAPI_BASE_CONFIGURE_ON+=	--with-gss_impl=mit
+.else
+GSSAPI_BASE_CONFIGURE_ON+=	--with-gss_impl=heimdal
+.endif
 GSSAPI_HEIMDAL_USES=		gssapi:heimdal,flags
 GSSAPI_HEIMDAL_CONFIGURE_ON=	--enable-gssapi="${GSSAPIBASEDIR}" \
 				--with-gss_impl=heimdal
@@ -63,4 +68,5 @@ GSSAPI_MIT_CONFIGURE_ON=	--enable-gssapi="${GSSAPIBASEDIR}" \
 
 DOCS=		COPYING ChangeLog LDAP_SASLAUTHD
 
+USES= libtool
 .include "${.CURDIR}/../../security/cyrus-sasl2/Makefile.common"

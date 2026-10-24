@@ -1,0 +1,4 @@
+IBM COS SDK Core provides the low-level, data-driven core of the IBM
+Cloud Object Storage SDK for Python. It handles authentication, request
+signing, serialization, and other foundational functionality used by
+the higher-level IBM COS SDK packages.

@@ -134,4 +134,8 @@ do-install-PYTHON-on:
 	@${PYTHON_CMD} -m compileall -d ${PYTHON_SITELIBDIR} ${STAGEDIR}${PYTHON_SITELIBDIR} && \
 	  ${PYTHON_CMD} -O -m compileall -d ${PYTHON_SITELIBDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
 
+dfly-configure:
+	${REINPLACE_CMD} 's|edit/readline/readline.h|readline/readline.h|' \
+		${WRKSRC}/sample/ipmi_serial_bmc_emu.c
+
 .include <bsd.port.mk>

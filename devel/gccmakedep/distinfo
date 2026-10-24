@@ -1,3 +1,3 @@
-TIMESTAMP = 1709444693
-SHA256 (xorg/util/gccmakedep-1.0.4.tar.xz) = 5088f98769fb63c326e9b9d2cb7c9f4a630a2801dd1da06971d0829176cf25b6
-SIZE (xorg/util/gccmakedep-1.0.4.tar.xz) = 102704
+TIMESTAMP = 1783860216
+SHA256 (xorg/util/gccmakedep-1.0.5.tar.xz) = ffb69a7cd539fe219d918d4688bff943b9c41a901ab522d6222cfa35eb0d8bbf
+SIZE (xorg/util/gccmakedep-1.0.5.tar.xz) = 108564

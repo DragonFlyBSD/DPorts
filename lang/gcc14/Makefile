@@ -1,6 +1,6 @@
 PORTNAME=	gcc
 PORTVERSION=	14.2.0
-PORTREVISION=	3
+PORTREVISION=	7
 CATEGORIES=	lang
 MASTER_SITES=	GCC
 PKGNAMESUFFIX=	${SUFFIX}
@@ -73,6 +73,10 @@ GRAPHITE_CONFIGURE_WITH+=      isl
 
 .include <bsd.port.pre.mk>
 
+.if ${ARCH} == powerpc64le && ${OSVERSION} >= 1600019
+CONFIGURE_ARGS+=	--with-long-double-format=ieee
+.endif
+
 .if ${ARCH} == x86_64
 CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 
@@ -80,7 +84,11 @@ CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 CONFIGURE_ARGS+=	--with-abi=elfv2
 .endif
 
-LANGUAGES:=	c,c++,objc,fortran,jit
+LANGUAGES=	c,c++,objc,fortran
+.if ${ARCH} != i386 && !empty(PORT_OPTIONS:M*BOOTSTRAP)
+LANGUAGES:=	${LANGUAGES},jit
+.endif
+
 TARGLIB=	${PREFIX}/lib/gcc${SUFFIX}
 TARGLIB32=	${PREFIX}/lib32	# The version information is added later
 LIBEXEC=	${PREFIX}/libexec/gcc${SUFFIX}

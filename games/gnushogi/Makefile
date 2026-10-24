@@ -4,14 +4,14 @@ PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	GNU
 
-MAINTAINER=	mew14930xvi@inbox.lv
+MAINTAINER=	mce@FreeBSD.org
 COMMENT=	GNU version of Shogi
 WWW=		https://www.gnu.org/software/gnushogi/
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		makeinfo
+USES= makeinfo ncurses localbase:ldflags
 
 GNU_CONFIGURE=	yes
 
@@ -22,6 +22,7 @@ PORTDOCS=	BOOKFILES PORTING shogi.rules tutorial1.gam tutorial2.gam
 
 OPTIONS_DEFINE=	DOCS
 
+CONFIGURE_ARGS= --with-curses=yes
 pre-build:
 	cd ${WRKSRC}/doc && makeinfo --no-split gnushogi
 
@@ -37,5 +38,10 @@ do-install:
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-ltermcap@-ltinfo@g' \
+			 -e 's@lcurses@lncurses@g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

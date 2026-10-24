@@ -1,6 +1,6 @@
 PORTNAME=	wxsvg
-DISTVERSION=	1.5.24
-PORTREVISION=	4
+DISTVERSION=	1.5.25
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF
 
@@ -24,6 +24,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
+USE_CXXSTD= c++11
 post-extract:
 .for i in configure install-sh
 	@${CHMOD} ${BINMODE} ${WRKSRC}/${i}

@@ -1,6 +1,6 @@
 PORTNAME=	ufoai
 PORTVERSION=	2.5
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/UFO_AI%202.x/${PORTVERSION}
 DISTNAME=	${PORTNAME:S/$/-/}${PORTVERSION}-source
@@ -60,6 +60,7 @@ UFORADIANT_USES=	gnome
 UFORADIANT_USE=		GNOME=gtk20,glib20,gtksourceview2,libxml2
 UFORADIANT_LIB_DEPENDS=	libgtkglext-x11-1.0.so:x11-toolkits/gtkglext
 
+DPMSG= ${WRKDIR}/dports-message
 .include <bsd.port.pre.mk>
 
 post-extract:
@@ -104,5 +105,15 @@ do-install-UFORADIANT-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/radiant/uforadiant ${STAGEDIR}${UFO_DIR}/radiant
 	${INSTALL_SCRIPT} ${WRKDIR}/uforadiant ${STAGEDIR}${PREFIX}/bin
 	@cd ${WRKSRC}/radiant && ${COPYTREE_SHARE} . ${STAGEDIR}${UFO_DIR}/radiant
+
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
+RUN_DEPENDS:=	${RUN_DEPENDS:N*ufoai-data}
+PKGMESSAGE=	${DPMSG}
+
+dfly-patch:
+	@${ECHO} "###################################################" >> ${DPMSG}
+	@${ECHO} "# Build games/ufoai-data from source to play this #" >> ${DPMSG}
+	@${ECHO} "###################################################" >> ${DPMSG}
+.endif
 
 .include <bsd.port.post.mk>

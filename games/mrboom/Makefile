@@ -30,6 +30,7 @@ PLIST_FILES=	bin/mrboom \
 		share/man/man6/mrboom.6.gz \
 		share/pixmaps/mrboom.png
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Assets/${PORTNAME}.png \
 		${STAGEDIR}${PREFIX}/share/pixmaps/

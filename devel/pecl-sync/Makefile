@@ -1,5 +1,5 @@
 PORTNAME=	sync
-PORTVERSION=	1.1.2
+DISTVERSION=	1.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	gasol.wu@gmail.com
@@ -10,5 +10,12 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		php:pecl
+IGNORE_WITH_PHP=	86
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD
+CFLAGS+=	-Wno-error=int-conversion
+.endif
+
+.include <bsd.port.post.mk>

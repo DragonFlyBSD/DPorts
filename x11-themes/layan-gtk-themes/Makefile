@@ -2,7 +2,7 @@ PORTNAME=	layan-gtk-themes
 DISTVERSION=	2023-05-23
 CATEGORIES=	x11-themes
 
-MAINTAINER=	Alexander88207@protonmail.com
+MAINTAINER=	avereeken@fastmail.de
 COMMENT=	Flat Design theme for GTK 3, GTK 2 and Gnome-Shell
 WWW=		https://github.com/vinceliuice/Layan-gtk-theme
 

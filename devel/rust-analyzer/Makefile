@@ -1,6 +1,6 @@
 PORTNAME=	rust-analyzer
-DISTVERSION=	2024-06-03
-PORTREVISION=	1
+DISTVERSION=	2026-06-08
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	rust@FreeBSD.org
@@ -29,11 +29,9 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/rust-analyzer
-
 post-install-DOCS-on:
 	@cd ${WRKSRC}/docs && \
 		${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

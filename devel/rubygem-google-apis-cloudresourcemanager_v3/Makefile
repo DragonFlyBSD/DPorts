@@ -1,5 +1,5 @@
 PORTNAME=	google-apis-cloudresourcemanager_v3
-PORTVERSION=	0.54.0
+PORTVERSION=	0.65.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

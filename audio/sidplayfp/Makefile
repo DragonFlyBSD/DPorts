@@ -1,6 +1,5 @@
 PORTNAME=	sidplayfp
-DISTVERSION=	2.5.0
-PORTREVISION=	2
+DISTVERSION=	3.2.0
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/lib${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/
 
@@ -16,11 +15,13 @@ LIB_DEPENDS=	libstilview.so:audio/libsidplayfp
 USES=		compiler:c++17-lang localbase:ldflags pkgconfig
 GNU_CONFIGURE=	yes
 
+LDFLAGS+=	-pthread
+
 PLIST_FILES=	bin/sidplayfp \
 		bin/stilview \
-		man/man1/sidplayfp.1.gz \
-		man/man1/stilview.1.gz \
-		man/man5/sidplayfp.ini.5.gz
+		share/man/man1/sidplayfp.1.gz \
+		share/man/man1/stilview.1.gz \
+		share/man/man5/sidplayfp.ini.5.gz
 
 OPTIONS_DEFINE=		ALSA OUT123 PULSEAUDIO
 OPTIONS_DEFAULT=	OUT123
@@ -32,6 +33,7 @@ OUT123_LIB_DEPENDS=	libout123.so:audio/mpg123
 OUT123_CONFIGURE_WITH=	out123
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 
+IGNORE= unmaintained, please request fixing to users mailing list
 pre-configure-ALSA-off:
 	${REINPLACE_CMD} -e 's|alsa >= 1.0|alsa >= 9999.0|g' \
 	    ${PATCH_WRKSRC}/configure

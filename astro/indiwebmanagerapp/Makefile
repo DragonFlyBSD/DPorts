@@ -1,6 +1,6 @@
 PORTNAME=	indiwebmanagerapp
 DISTVERSION=	1.8
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	astro
 
 MAINTAINER=	acm@FreeBSD.org
@@ -30,4 +30,5 @@ post-patch:
 	${REINPLACE_CMD} -e 's|On Linux|On Linux\/FreeBSD|g' \
 		${WRKSRC}/src/opsconfiguration.cpp
 
+USES:= ${USES:Nninja} gmake
 .include <bsd.port.mk>

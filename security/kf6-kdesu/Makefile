@@ -2,10 +2,10 @@ PORTNAME=	kdesu
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	security kde kde-frameworks
 
-COMMENT=	User interface for running shell commands with root privileges
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	User interface for running shell commands with root privileges
 
-USES=		cmake gettext kde:6 qt:6 tar:xz xorg
+USES= cmake gettext kde:6 qt:6 tar:xz xorg gmake
 USE_KDE=	config coreaddons i18n pty \
 		ecm:build
 USE_QT=		base
@@ -20,13 +20,17 @@ SUDO_DESC=	Use sudo instead of su
 DOAS_DESC=	Use doas instead of su and sudo
 
 SUDO_CMAKE_BOOL=	KDESU_USE_SUDO_DEFAULT
-SUDO_BUILD_DEPENDS=	sudo:security/sudo
-SUDO_RUN_DEPENDS=	sudo:security/sudo
+SUDO_BUILD_DEPENDS=	${SUDO_DEPENDS}
+SUDO_USES=		sudo
 
 DOAS_CMAKE_BOOL=	KDESU_USE_DOAS_DEFAULT
 DOAS_BUILD_DEPENDS=	doas:security/doas
 DOAS_RUN_DEPENDS=	doas:security/doas
 
 OPTIONS_SUB=		yes
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

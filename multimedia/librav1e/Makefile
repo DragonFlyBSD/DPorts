@@ -1,4 +1,4 @@
-PORTREVISION=	3
+PORTREVISION=	11
 PKGNAMEPREFIX=	lib
 
 MASTERDIR=	${.CURDIR}/../rav1e
@@ -9,6 +9,7 @@ BUILD_DEPENDS=	cargo-cbuild:devel/cargo-c
 PLIST_FILES=	# empty
 PLIST_SUB=	VERSION=${DISTVERSION:C/-.*//}
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-build:
 	@${CARGO_CARGO_RUN} cbuild \
 		--verbose \
@@ -22,8 +23,5 @@ do-install:
 		--destdir "${STAGEDIR}" \
 		--prefix "${PREFIX}" \
 		${CARGO_INSTALL_ARGS}
-
-post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so
 
 .include "${MASTERDIR}/Makefile"

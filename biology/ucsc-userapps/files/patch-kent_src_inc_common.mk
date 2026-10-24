@@ -1,13 +1,12 @@
---- kent/src/inc/common.mk.orig	2021-04-02 22:47:03 UTC
+--- kent/src/inc/common.mk.orig	2026-07-07 22:13:59 UTC
 +++ kent/src/inc/common.mk
-@@ -61,6 +61,10 @@ else
+@@ -124,6 +124,9 @@ ifeq ($(UNAME_S),Darwin)
+   ifneq ($(wildcard /opt/local/lib/libiconv.a),)
+     ICONVLIB = /opt/local/lib/libiconv.a
    endif
- endif
- 
-+ifeq ($(UNAME_S),FreeBSD)
-+  ICONVLIB=-L${LOCALBASE}/lib -liconv
-+endif
-+
- # autodetect if openssl is installed
- ifeq (${SSLDIR},)
-   SSLDIR = /usr/include/openssl
++  ifeq ($(UNAME_S),FreeBSD)
++    ICONVLIB=-L${LOCALBASE}/lib -liconv
++  endif
+   ifneq ($(wildcard /usr/local/Cellar/mariadb/11.6.2/lib/libmariadbclient.a),)
+       MYSQLLIBS = /usr/local/Cellar/mariadb/11.6.2/lib/libmariadbclient.a
+   else

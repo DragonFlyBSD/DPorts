@@ -1,11 +1,10 @@
 PORTNAME=	xcb-util-cursor
-PORTVERSION=	0.1.3
+DISTVERSION=	0.1.6
 CATEGORIES=	x11
-MASTER_SITES=	http://xcb.freedesktop.org/dist/
 
 MAINTAINER=	x11@FreeBSD.org
-COMMENT=	XCB cursor library
-WWW=		https://xcb.freedesktop.org/
+COMMENT=	XCB port of libXcursor
+WWW=		https://gitlab.freedesktop.org/xorg/lib/libxcb-cursor
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING

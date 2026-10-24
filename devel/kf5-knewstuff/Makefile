@@ -15,4 +15,8 @@ USE_QT=		concurrent core dbus declarative gui network widgets xml \
 		buildtools:build qmake:build
 USE_XORG=	x11
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

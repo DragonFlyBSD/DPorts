@@ -1,0 +1,5 @@
+Sylve is an open-source management platform for FreeBSD systems. It manages
+bhyve virtual machines, Jails, ZFS storage, networking, firewalls, backups,
+replication, clustering, and related host services through a web interface and
+a local CLI. Its Go backend and Svelte frontend are distributed as a single
+binary.

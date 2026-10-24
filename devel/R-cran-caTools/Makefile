@@ -1,11 +1,11 @@
 PORTNAME=	caTools
-PORTVERSION=	1.18.3
+PORTVERSION=	1.18.4
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Tools: moving window statistics, GIF, Base64, ROC AUC, etc
-WWW=		https://cran.r-project.org/web/packages/caTools/
+WWW=		https://cran.r-project.org/package=caTools
 
 LICENSE=	GPLv3
 

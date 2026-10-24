@@ -1,6 +1,5 @@
 PORTNAME=	dbus
-PORTVERSION=	4.1
-PORTREVISION=	1
+DISTVERSION=	4.2
 CATEGORIES=	devel
 MASTER_SITES=	https://chiselapp.com/user/schelte/repository/dbus/uv/
 PKGNAMESUFFIX=	-tcl
@@ -16,6 +15,8 @@ BUILD_DEPENDS=	dtplite:devel/tcllib
 
 USES=		pkgconfig tcl:tea
 
+WRKSRC=		${WRKDIR}/${PORTNAME}${DISTVERSION}
+
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 OPTIONS_DEFINE=	DOCS
@@ -24,8 +25,8 @@ PORTDOCS=	*
 
 TEST_TARGET=	do-test
 
-PLIST_FILES=	lib/dbus/lib${TCL_PKG_LIB_PREFIX}${TCL_PKG}.so \
-		lib/dbus/pkgIndex.tcl \
+PLIST_FILES=	lib/${TCL_PKG}/lib${TCL_PKG_LIB_PREFIX}${TCL_PKG}.so \
+		lib/${TCL_PKG}/pkgIndex.tcl \
 		share/man/mann/dbus.n.gz
 
 post-patch:
@@ -40,5 +41,10 @@ do-test:
 	DBUS_ENV=DBUS_SESSION_BUS_ADDRESS=$$DBUS_ADDR; \
 	${SETENV} ${MAKE_ENV} $$DBUS_ENV ${MAKE} -C ${WRKSRC} test; \
 	kill $$DBUS_PID
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' \
+		${WRKSRC}/tclconfig/tcl.m4	\
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

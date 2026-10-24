@@ -1,11 +1,7 @@
 PORTNAME=	libvpx
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.15.0
-PORTREVISION=	1
+DISTVERSION=	1.17.0
 CATEGORIES=	multimedia
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	865eaf63a727.patch:-p1 # CVE-2025-5283
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	VP8/VP9 reference encoder/decoder

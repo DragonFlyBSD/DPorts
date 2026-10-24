@@ -1,4 +1,0 @@
-USES+= alias
-
-# avoid doxygen dep for now
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NDOXYGEN}

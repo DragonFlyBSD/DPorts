@@ -19,4 +19,8 @@ post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/fwlogwatch.sh.sample \
 		${STAGEDIR}${PREFIX}/etc/rc.d
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@[[:<:]]_KERNEL[[:>:]]@_KERNEL_STRUCTURES@g' \
+		${WRKSRC}/main.h ${WRKSRC}/resolve.c ${WRKSRC}/utils.c ${WRKSRC}/whois.c
+
 .include <bsd.port.mk>

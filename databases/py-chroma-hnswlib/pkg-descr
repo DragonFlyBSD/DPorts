@@ -1,0 +1,2 @@
+chroma-hnswlib is a header-only C++ approximate nearest neighbor search library
+with Python bindings, used by Chroma for vector index operations.

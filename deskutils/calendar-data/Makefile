@@ -16,6 +16,7 @@ GH_ACCOUNT=	freebsd
 NO_ARCH=	yes
 NO_BUILD=	yes
 
+DFLY_UNMAINTAINED= yes
 do-install:
 		cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${LOCALBASE}/share/calendar
 

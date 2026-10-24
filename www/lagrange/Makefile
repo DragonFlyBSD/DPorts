@@ -20,7 +20,7 @@ LIB_DEPENDS=	libfribidi.so:converters/fribidi \
 		libunistring.so:devel/libunistring \
 		libwebp.so:graphics/webp
 
-USES=		cmake compiler:c11 desktop-file-utils pkgconfig sdl ssl xorg
+USES= cmake compiler:c11 desktop-file-utils pkgconfig sdl ssl xorg localbase:ldflags
 BROKEN_SSL=	libressl
 BROKEN_SSL_REASON_libressl=	needs features only available in OpenSSL
 USE_SDL=	sdl2

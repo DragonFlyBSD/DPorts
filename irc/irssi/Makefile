@@ -42,6 +42,7 @@ UTF8PROC_MESON_NO=	disable-utf8proc
 
 PERL_USE_OFF=		perl5=build
 
+CAPSICUM_MESON_NO= with-capsicum
 post-install-PERL-off:
 	@${RM} -r ${STAGEDIR}${DATADIR}/scripts
 

@@ -1,5 +1,5 @@
 PORTNAME=	mousepad
-PORTVERSION=	0.6.5
+PORTVERSION=	0.7.0
 CATEGORIES=	editors xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
@@ -35,6 +35,7 @@ SPELL_LIB_DEPENDS=	libgspell-1.so:textproc/gspell
 SPELL_MESON_ENABLED=	gspell-plugin
 SPELL_VARS=		GLIB_SCHEMAS+=org.xfce.mousepad.plugins.gspell.gschema.xml
 
+LIB_DEPENDS= libpolkit-gobject-1.so:sysutils/polkit
 post-patch-NLS-off:
 	@${REINPLACE_CMD} -e "/^subdir('po')/d" ${WRKSRC}/meson.build
 

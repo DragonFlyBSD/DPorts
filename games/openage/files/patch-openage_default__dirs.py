@@ -1,4 +1,4 @@
---- openage/default_dirs.py.orig	2018-07-15 14:29:49 UTC
+--- openage/default_dirs.py.orig	2024-11-26 15:15:38 UTC
 +++ openage/default_dirs.py
 @@ -33,6 +33,14 @@ LINUX_DIRS = {
      "runtime_dir": ("XDG_RUNTIME_DIR", ("/run/user/$UID")),
@@ -15,13 +15,13 @@
  
  # Windows-specific paths
  WINDOWS_DIRS = {
-@@ -60,6 +68,9 @@ def get_dir(which):
+@@ -59,6 +67,9 @@ def get_dir(which):
+ 
      elif sys.platform.startswith("win32"):
          platform_table = WINDOWS_DIRS
- 
++
 +    elif sys.platform.startswith("freebsd"):
 +    	platform_table = FREEBSD_DIRS
-+
-     else:
-         raise Exception("unsupported platform: '%s'" % sys.platform)
  
+     else:
+         raise RuntimeError(f"unsupported platform: '{sys.platform}'")

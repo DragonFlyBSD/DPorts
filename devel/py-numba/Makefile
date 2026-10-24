@@ -1,25 +1,39 @@
-# Created by: David Kalliecharan <dave@dal.ca>
-
 PORTNAME=	numba
-DISTVERSION=	0.51.2
+DISTVERSION=	0.68.0
 CATEGORIES=	devel python
-MASTER_SITES=	CHEESESHOP
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	dave@dal.ca
+MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Optimizing compiler for Python using LLVM
+WWW=		https://numba.pydata.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>1.11,1:math/py-numpy@${PY_FLAVOR}
-LIB_DEPENDS=	libtbb.so:devel/tbb
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}llvmlite>=0.31.0:devel/py-llvmlite@${PY_FLAVOR}
+.if !exists(/usr/include/omp.h)
+BROKEN=		requires OpenMP support that is missing on this architecture
+.endif
 
-USES=		compiler:c++11-lang python:3.6+ fortran localbase
-USE_PYTHON=	distutils concurrent autoplist
+# numpy version is checked at runtime
+# https://github.com/numba/numba/blob/main/numba/__init__.py#L13
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=2.0,1<2.5,1:math/py-numpy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
+LIB_DEPENDS=	libtbb.so:devel/onetbb
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}llvmlite>=0.48.0:devel/py-llvmlite@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=2.0,1<2.5,1:math/py-numpy@${PY_FLAVOR} \
+
+USES=		compiler:c++11-lang python fortran localbase
+USE_PYTHON=	pep517 concurrent autoplist unittest
+
+TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+TEST_WRKSRC=	${WRKSRC}/numba/tests
 
 post-install:
 	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -name "*.so" | ${XARGS} ${STRIP_CMD}
+
+do-test: # tests run for a very long time
+	@cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} -m numba.runtests
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
---- win/tty/termcap.c.orig	2025-03-15 15:02:36 UTC
+--- win/tty/termcap.c.orig	2026-05-27 00:15:32 UTC
 +++ win/tty/termcap.c
-@@ -195,10 +195,6 @@ term_startup(int *wid, int *hgt)
+@@ -200,10 +200,6 @@ term_startup(int *wid, int *hgt)
          error("Terminal must backspace.");
  #else
          if (!(BC = Tgetstr(nhStr("bc")))) { /* termcap also uses bc/bs */

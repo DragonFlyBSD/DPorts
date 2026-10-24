@@ -1,5 +1,6 @@
 PORTNAME=	pgadmin3
 DISTVERSION=	1.23.0.20230324
+PORTREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	vvd@FreeBSD.org
@@ -34,6 +35,8 @@ OPTIONS_DEFINE=		DOCS
 DOCS_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
 DOCS_CONFIGURE_OFF=	--without-sphinx-build
 
+BUILD_DEPENDS= gsed:textproc/gsed
+DFLY_UNMAINTAINED= yes
 pre-configure:
 	@cd ${WRKSRC} ; ./bootstrap
 	@${REINPLACE_CMD} -e 's,/wx-config,/${WX_CONFIG:T},' ${WRKSRC}/configure
@@ -53,5 +56,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/pgadmin/include/images/pgAdmin3-${SZ}.png \
 			${STAGEDIR}${PREFIX}/share/icons/hicolor/${SZ}x${SZ}/apps/pgAdmin3.png
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/iso8859_1/s@[[:<:]]sed[[:>:]]@gsed@g' \
+                ${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>

@@ -1,5 +1,6 @@
 PORTNAME=	bazel
 DISTVERSION=	5.4.1 # please make sure that science/py-tensorflow builds before updating
+PORTREVISION=	2
 CATEGORIES=	devel java
 MASTER_SITES=	https://github.com/bazelbuild/${PORTNAME}/releases/download/${DISTVERSION}/
 DISTNAME=	bazel-${DISTVERSION}-dist
@@ -95,5 +96,14 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/output/bazel ${STAGEDIR}${PREFIX}/bin
 	@${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/scripts/packages/bazel.bazelrc ${STAGEDIR}${ETCDIR}/bazel.bazelrc.sample
+
+dfly-patch:
+	@${CP} ${DFLY_FILESDIR}/extra-absl_base_config.h \
+	       ${DFLY_FILESDIR}/extra-absl_debugging_internal_vdso_support.cc \
+		${WRKSRC}/third_party/py/abseil/
+	@${CP} ${DFLY_FILESDIR}/extra-include_grpc_impl_codegen_port__platform.h \
+	       ${DFLY_FILESDIR}/extra-include_grpc_event__engine_port.h \
+	       ${DFLY_FILESDIR}/extra-src_core_lib_iomgr_port.h \
+		${WRKSRC}/third_party/grpc
 
 .include <bsd.port.post.mk>

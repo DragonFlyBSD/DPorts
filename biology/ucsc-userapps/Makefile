@@ -1,33 +1,26 @@
 PORTNAME=	ucsc-userapps
-DISTVERSION=	414
-PORTREVISION=	1
+DISTVERSION=	502
 CATEGORIES=	biology perl5 python
-MASTER_SITES=	http://hgdownload.cse.ucsc.edu/admin/exe/userApps.archive/
-DISTNAME=	userApps.v${PORTVERSION}.src
+MASTER_SITES=	https://hgdownload.cse.ucsc.edu/admin/exe/userApps.archive/
+DISTNAME=	userApps.v${DISTVERSION}.src
 
 MAINTAINER=	jwb@FreeBSD.org
 COMMENT=	Command line tools from the UCSC Genome Browser project
 WWW=		https://hgdownload.cse.ucsc.edu/admin/exe/
 
-LICENSE=	UCSC-GB
-LICENSE_NAME=	UCSC Genome Browser License
-LICENSE_TEXT=	Some tools installed by this port require a license for\
-		commercial use.\n\nContact UCSC directly if you are using\
-		these tools for commercial purposes.\n\nSee\
-		https://genome.ucsc.edu/license/ for full terms.
-LICENSE_PERMS=	no-dist-mirror no-dist-sell no-pkg-mirror no-pkg-sell
-
-ONLY_FOR_ARCHS=		amd64
-ONLY_FOR_ARCHS_REASON=	uses _mm_popcnt_u64() function
+# Note: Some tools in the source dist are non-free for commercial use.
+# If they are added to the install, the license below must be changed
+# and packaging forbidden.
+LICENSE=	MIT
 
 BUILD_DEPENDS=	bash:shells/bash
-LIB_DEPENDS=	libiconv.so:converters/libiconv \
-		libpng.so:graphics/png
+LIB_DEPENDS=	libfreetype.so:print/freetype2 \
+		libunwind.so:devel/libunwind \
+		libcurl.so:ftp/curl \
+		libpng16.so:graphics/png
 RUN_DEPENDS=	bash:shells/bash
 
-USES=		gmake localbase:ldflags mysql shebangfix perl5 python ssl tar:tgz
-
-RESTRICTED=	Redistribution is limited, see license
+USES=		gmake iconv localbase:ldflags mysql:client shebangfix perl5 python ssl tar:tgz
 
 SHEBANG_FILES=	kent/src/checkUmask.sh \
 		kent/src/utils/bigHeat \
@@ -36,7 +29,10 @@ SHEBANG_FILES=	kent/src/checkUmask.sh \
 		kent/src/utils/tdbSort \
 		kent/src/utils/trackDbIndexBb/trackDbIndexBb \
 		kent/src/utils/ucscApiClient \
-		kent/src/utils/webSync
+		kent/src/utils/webSync \
+		kent/src/utils/bigGuessDb/bigGuessDb \
+		kent/src/utils/expMatrixToBarchartBed \
+		kent/src/utils/hubtools
 
 WRKSRC=		${WRKDIR}/userApps
 CFLAGS+=	-fcommon
@@ -48,11 +44,12 @@ SUB_FILES=	ucsc-shell
 # Build mostly non-commercial tools.  There is some leakage of proprietary
 # code from the libraries per conversation with UCSC.  Work to resolve this
 # is ongoing.
+IGNORE= unmaintained, please request fixing to users mailing list
 do-build:
-	@${MV} ${WRKSRC}/kent/src/inc/uuid.h ${WRKSRC}/kent/src/inc/my_uuid.h
+	@(test -f ${WRKSRC}/kent/src/inc/my_uuid.h || ${MV} ${WRKSRC}/kent/src/inc/uuid.h ${WRKSRC}/kent/src/inc/my_uuid.h)
 	@${MKDIR} ${WRKSRC}/bin
 	@(cd ${WRKSRC}/kent/src/lib && ${DO_MAKE_BUILD})
-	@(cd ${WRKSRC}/kent/src/htslib && ${DO_MAKE_BUILD})
+	@(cd ${WRKSRC}/kent/src/submodules/htslib && ${DO_MAKE_BUILD})
 	@(cd ${WRKSRC}/kent/src/jkOwnLib && ${DO_MAKE_BUILD})
 	@(cd ${WRKSRC}/kent/src/hg/lib && ${DO_MAKE_BUILD})
 	@(cd ${WRKSRC}/kent/src/utils && ${DO_MAKE_BUILD})
@@ -72,5 +69,9 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/ucsc-shell \
 		${STAGEDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKDIR}/kent ${STAGEDIR}${LOCALBASE}/bin
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/kent/src/inc/common.mk-IGNORE=   unmaintained, please request fixing to users mailing list
 
 .include <bsd.port.mk>

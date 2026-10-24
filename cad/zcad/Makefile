@@ -1,18 +1,20 @@
 PORTNAME=	zcad
 PORTVERSION=	0.9.8.5
-PORTREVISION=	7
+PORTREVISION=	21
 CATEGORIES=	cad
 PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Simple CAD program
 
+BROKEN=	Can't find unit TransferMacros used by uzmacros
+
+ONLY_FOR_ARCHS=	i386 amd64
+
 USES=		dos2unix fpc lazarus:flavors tar:xz
 USE_GITHUB=	yes
 GH_ACCOUNT=	zamtmn
 GH_TAGNAME=	8b8a693
-USE_FPC=	cairo chm fcl-base fcl-image fcl-json fcl-stl fcl-xml opengl \
-		pasjpeg rtl-extra rtl-generics rtl-objpas x11
 
 MAKE_ENV=	LAZBUILD_CMD="${LAZBUILD_CMD}" \
 		LAZBUILD_ARGS="${LAZBUILD_ARGS}" \
@@ -24,6 +26,7 @@ DOS2UNIX_GLOB=	*.pas *.lpi
 BUILD_WRKSRC=	${WRKSRC}/cad_source
 INSTALL_WRKSRC=	${WRKSRC}/cad
 
+LAZARUS_NO_FLAVORS=	qt6
 LAZARUS_PROJECT_FILES=	anchordocking/anchordocking.lpk \
 			fpvectorial/fpvectorialpkg.lpk \
 			lclextensions/lclextensions_package.lpk \
@@ -75,13 +78,15 @@ post-patch:
 post-configure:
 # OpenGL component must be fixed and rebuilt locally (to avoid touching
 # filesystem outside working directory)
-	${SED} -e 's,Linux,${OPSYS},' \
-		${LAZARUS_DIR}/components/opengl/openglcontext.pas \
-		> ${BUILD_WRKSRC}/openglcontext.pas
+	${SED} -e 's,@paintGL,paintGL,' \
+		${LAZARUS_DIR}/components/opengl/qlclopenglwidget.pas \
+		> ${BUILD_WRKSRC}/qlclopenglwidget.pas
 	${CP} ${LAZARUS_DIR}/components/opengl/glgtkglxcontext.pas \
 		${LAZARUS_DIR}/components/opengl/glqtcontext.pas \
-		${LAZARUS_DIR}/components/opengl/openglcontext.res \
+		${LAZARUS_DIR}/components/opengl/openglcontext.* \
 		${BUILD_WRKSRC}
+# Build components that do not come with precompiled *.ppu files (also
+# copy them locally first for the same reason as above)
 	${CP} -a ${LAZARUS_DIR}/components/fpvectorial \
 		${LAZARUS_DIR}/components/anchordocking \
 		${LAZARUS_DIR}/components/lclextensions ${BUILD_WRKSRC}

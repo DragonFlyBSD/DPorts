@@ -21,4 +21,7 @@ GNU_CONFIGURE=	yes
 
 CONFLICTS_INSTALL=	autoconf-archive # share/aclocal/ax_c_long_long.m4
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/configure.ac
+
 .include <bsd.port.mk>

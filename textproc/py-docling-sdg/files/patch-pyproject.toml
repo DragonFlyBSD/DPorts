@@ -1,0 +1,12 @@
+-- Fix license declaration format for PEP 621 compatibility and remove license-files path not present in distfile.
+--- pyproject.toml.orig	2026-07-09 20:28:30 UTC
++++ pyproject.toml
+@@ -6,7 +6,7 @@ description = "Docling for Synthetic Data Generation (
+ name = "docling-sdg"
+ version = "0.4.0"  # DO NOT EDIT, updated automatically
+ description = "Docling for Synthetic Data Generation (SDG) provides a set of tools to create artificial data from documents, leveraging generative AI and docling's parsing capabilities."
+-license = "MIT"
++license = {text = "MIT"}
+ authors = [
+     {name="Cesar Berrospi Ramis", email="ceb@zurich.ibm.com"},
+     {name="Rafael Teixeira de Lima", email="rtdl@ibm.com"},

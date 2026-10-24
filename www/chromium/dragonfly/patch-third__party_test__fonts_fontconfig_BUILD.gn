@@ -1,0 +1,22 @@
+diff --git third_party/test_fonts/fontconfig/BUILD.gn third_party/test_fonts/fontconfig/BUILD.gn
+index d3428e6508c2..bb8c8a3fc886 100644
+--- third_party/test_fonts/fontconfig/BUILD.gn
++++ third_party/test_fonts/fontconfig/BUILD.gn
+@@ -26,7 +26,7 @@ if (is_linux || is_chromeos) {
+ 
+   copy("fonts_conf") {
+     sources = [ "fonts.conf" ]
+-    if (is_freebsd) {
++    if (is_freebsd || is_dragonfly) {
+       outputs = [ "$root_out_dir/usr/local/etc/fonts/{{source_file_part}}" ]
+     } else {
+       outputs = [ "$root_out_dir/etc/fonts/{{source_file_part}}" ]
+@@ -51,7 +51,7 @@ if (is_linux || is_chromeos) {
+         "//third_party/test_fonts",
+       ]
+       args = []
+-      if (is_freebsd) {
++      if (is_freebsd || is_dragonfly) {
+         inputs = [ "$root_out_dir/usr/local/etc/fonts/fonts.conf" ]
+       } else {
+         inputs = [ "$root_out_dir/etc/fonts/fonts.conf" ]

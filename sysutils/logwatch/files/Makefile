@@ -3,7 +3,7 @@ PREFIX?=/usr/local/${PORTNAME}
 ETCDIR?=${PREFIX}/etc/${PORTNAME}
 LIBDIR?=${PREFIX}/lib/${PORTNAME}
 LIBEXECDIR?=${PREFIX}/libexec/${PORTNAME}
-CACHEDIR?=${PREFIX}/var/${PORTNAME}
+CACHEDIR?=/var/cache/${PORTNAME}
 MANDIR?=${PREFIX}/share/man
 MAN8DIR?=${MANDIR}/man8
 SITE_PERL=	${PREFIX}/${SITE_PERL_REL}
@@ -110,6 +110,7 @@ install:
 	autorpm \
 	barracuda \
 	bfd \
+	chronyd \
 	cisco \
 	citadel \
 	clam-update \
@@ -120,6 +121,7 @@ install:
 	denyhosts \
 	dhcpd \
 	dirsrv \
+	dnf5 \
 	dnf-automatic \
 	dnf-rpm \
 	dnssec \

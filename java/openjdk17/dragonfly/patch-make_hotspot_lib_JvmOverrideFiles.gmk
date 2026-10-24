@@ -1,9 +1,9 @@
---- make/hotspot/lib/JvmOverrideFiles.gmk.orig	2021-09-14 03:59:48 UTC
+--- make/hotspot/lib/JvmOverrideFiles.gmk.orig	2026-10-23 00:00:00 UTC
 +++ make/hotspot/lib/JvmOverrideFiles.gmk
-@@ -36,6 +36,8 @@ ifeq ($(TOOLCHAIN_TYPE), gcc)
-   BUILD_LIBJVM_assembler_x86.cpp_CXXFLAGS := -Wno-maybe-uninitialized
-   BUILD_LIBJVM_cardTableBarrierSetAssembler_x86.cpp_CXXFLAGS := -Wno-maybe-uninitialized
-   BUILD_LIBJVM_interp_masm_x86.cpp_CXXFLAGS := -Wno-uninitialized
+@@ -33,6 +33,8 @@
+   BUILD_LIBJVM_vmStructs.cpp_CXXFLAGS := -fno-var-tracking-assignments
+   BUILD_LIBJVM_jvmciCompilerToVM.cpp_CXXFLAGS := -fno-var-tracking-assignments
+   BUILD_LIBJVM_jvmciCompilerToVMInit.cpp_CXXFLAGS := -fno-var-tracking-assignments
 +  BUILD_LIBJVM_os_bsd.cpp_CXXFLAGS := -Wno-error=narrowing
 +  BUILD_LIBJVM_os_posix.cpp_CXXFLAGS := -Wno-error=stringop-truncation
    ifeq ($(DEBUG_LEVEL), release)

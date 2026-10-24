@@ -1,10 +1,8 @@
 PORTNAME=	cairosvg
-PORTVERSION=	2.7.1
-PORTREVISION=	1
+PORTVERSION=	2.9.1
 CATEGORIES=	graphics python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	CairoSVG-${PORTVERSION}
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple SVG Converter based on Cairo
@@ -30,8 +28,5 @@ USE_PYTHON=	autoplist concurrent pep517 pytest
 NO_ARCH=	yes
 
 CPE_VENDOR=	courtbouillon
-
-post-patch:
-	@${LN} -s .. ${WRKSRC}/test_non_regression/cairosvg_reference
 
 .include <bsd.port.mk>

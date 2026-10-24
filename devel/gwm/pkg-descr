@@ -1,0 +1,4 @@
+gwm (git worktree manager) streamlines working with multiple Git worktrees.
+It provides both a command-line interface and an interactive terminal UI to
+create, list, switch between, and remove worktrees, making it easy to keep
+several branches checked out at once.

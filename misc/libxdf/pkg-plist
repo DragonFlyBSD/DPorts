@@ -1,4 +1,6 @@
 include/xdf.h
+lib/cmake/libxdf/libxdfConfig.cmake
+lib/cmake/libxdf/libxdfConfigVersion.cmake
+lib/cmake/libxdf/libxdfTargets-%%CMAKE_BUILD_TYPE%%.cmake
+lib/cmake/libxdf/libxdfTargets.cmake
 lib/libxdf.so
-%%DATADIR%%Config-%%CMAKE_BUILD_TYPE%%.cmake
-%%DATADIR%%Config.cmake

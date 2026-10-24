@@ -1,0 +1,13 @@
+--- cargo-crates/git2-0.21.0/Cargo.toml.orig	2006-07-24 01:21:28 UTC
++++ cargo-crates/git2-0.21.0/Cargo.toml
+@@ -57,10 +57,6 @@ vendored-libgit2 = ["libgit2-sys/vendored"]
+ unstable = []
+ unstable-sha256 = ["libgit2-sys/unstable-sha256"]
+ vendored-libgit2 = ["libgit2-sys/vendored"]
+-vendored-openssl = [
+-    "openssl-sys/vendored",
+-    "libgit2-sys/vendored-openssl",
+-]
+ zlib-ng-compat = ["libgit2-sys/zlib-ng-compat"]
+ 
+ [lib]

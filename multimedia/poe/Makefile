@@ -1,6 +1,6 @@
 PORTNAME=	poe
 PORTVERSION=	0.5.1
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	multimedia gnustep
 MASTER_SITES=	http://www.eskimo.com/~pburns/Poe/files/
 DISTNAME=	Poe-${PORTVERSION}
@@ -18,6 +18,7 @@ USE_GNUSTEP=	back build
 
 PORTSCOUT=	skipv:0.5.2
 
+ADDITIONAL_CPPFLAGS= -I${LOCALBASE}/include
 post-patch:
 	${REINPLACE_CMD} -e 's|-lvorbisfile$$|-lvorbisfile -logg|' \
 		${WRKSRC}/GNUmakefile

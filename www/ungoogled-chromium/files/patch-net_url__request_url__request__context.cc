@@ -1,11 +1,11 @@
---- net/url_request/url_request_context.cc.orig	2024-06-22 08:49:42 UTC
+--- net/url_request/url_request_context.cc.orig	2026-01-16 13:40:34 UTC
 +++ net/url_request/url_request_context.cc
-@@ -121,7 +121,7 @@ const HttpNetworkSessionContext* URLRequestContext::Ge
- // TODO(crbug.com/40118868): Revisit once build flag switch of lacros-chrome is
- // complete.
- #if !BUILDFLAG(IS_WIN) && \
--    !(BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
-+    !(BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
+@@ -129,7 +129,7 @@ const HttpNetworkSessionContext* URLRequestContext::Ge
+   return &network_session->context();
+ }
+ 
+-#if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_LINUX)
++#if !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_BSD)
  std::unique_ptr<URLRequest> URLRequestContext::CreateRequest(
      const GURL& url,
      RequestPriority priority,

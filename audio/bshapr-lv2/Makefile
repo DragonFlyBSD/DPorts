@@ -23,7 +23,7 @@ USE_XORG=	x11
 
 MAKEFILE=	makefile
 
-MAKE_JOBS_UNSAFE=	yes # workaround for intermittent build failures: https://github.com/sjaehn/BShapr/issues/18
+MAKE_JOBS_UNSAFE= yes
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/lv2/BShapr.lv2/*.so

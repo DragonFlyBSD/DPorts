@@ -1,116 +1,255 @@
---- doc/de/faked.1.orig	2018-07-01 19:03:32 UTC
-+++ doc/de/faked.1
-@@ -89,5 +89,4 @@ Timo Savola
- gr√∂√ütenteils von J.H.M. Dassen <jdassen@debian.org>. Mods/Zus√§tze
- von Joost und Clint.
- .SH "SIEHE AUCH"
--\fBdebuild\fP(1), \fBdpkg\-buildpackage\fP(1), \fBfakeroot\fP(1),
--\fB/usr/share/doc/fakeroot/DEBUG\fP
-+\fBfakeroot\fP(1)
---- doc/de/fakeroot.1.orig	2018-07-01 19:03:32 UTC
-+++ doc/de/fakeroot.1
-@@ -242,6 +242,4 @@ Timo Savola
- gr√∂√ütenteils von J.H.M. Dassen <jdassen@debian.org>. Ziemlich viele
- Mods/Zus√§tze von Joost und Clint.
- .SH "SIEHE AUCH"
--\fBdebuild\fP(1), \fBdpkg\-buildpackage\fP(1), \fBfaked\fP(1),
--\fB/usr/share/doc/fakeroot/DEBUG\fP
--
-+\fBfaked\fP(1)
---- doc/es/faked.1.orig	2018-07-01 19:03:32 UTC
-+++ doc/es/faked.1
-@@ -86,5 +86,4 @@ TraducciÛn de RubÈn Porras Campo <debian
- la mayor parte de J.H.M. Dassen <jdassen@debian.org> con muchas
- modificaciones y aÒadiduras de joost y Clint.
- .SH "V…ASE ADEM¡S"
--\fBfakeroot\fP(1), \fBdpkg\-buildpackage\fP(1), \fBdebuild\fP(1)
--\fB/usr/share/doc/fakeroot/DEBUG\fP
-+\fBfakeroot\fP(1)
---- doc/es/fakeroot.1.orig	2018-07-01 19:03:32 UTC
-+++ doc/es/fakeroot.1
-@@ -236,6 +236,4 @@ TraducciÛn de RubÈn Porras Campo <debian
- la mayor parte de J.H.M. Dassen <jdassen@debian.org> con muchas
- modificaciones y aÒadiduras de joost y Clint.
- .SH "V…ASE ADEM¡S"
--\fBfaked\fP(1)  \fBdpkg\-buildpackage\fP(1), \fBdebuild\fP(1)
--\fB/usr/share/doc/fakeroot/DEBUG\fP
--
-+\fBfaked\fP(1)
---- doc/faked.1.orig	2018-07-01 19:01:34 UTC
-+++ doc/faked.1
-@@ -91,7 +91,4 @@ mostly by J.H.M. Dassen 
- .RI <jdassen@debian.org> 
+--- ./doc/faked.1.orig	2026-08-26 11:37:44 UTC
++++ ./doc/faked.1
+@@ -97,7 +97,4 @@ mods/additions by joost and Clint.
+ .RI < jdassen@debian.org >
  mods/additions by joost and Clint.
  .SH "SEE ALSO"
 -.BR fakeroot (1),
 -.BR dpkg-buildpackage (1),
--.BR debuild (1)
--.BR /usr/share/doc/fakeroot/DEBUG
+-.BR debuild (1),
+-.B /usr/share/doc/fakeroot/DEBUG
 +.BR fakeroot (1)
---- doc/fakeroot.1.orig	2018-07-01 19:01:34 UTC
-+++ doc/fakeroot.1
-@@ -298,7 +298,3 @@ mostly by J.H.M. Dassen 
- Rather a lot mods/additions by joost and Clint.
- .SH "SEE ALSO"
- .BR faked (1)
+--- ./doc/fakeroot.1.orig	2026-08-26 11:37:44 UTC
++++ ./doc/fakeroot.1
+@@ -295,7 +295,4 @@ with rather a lot of modsifications and additions by j
+ .BI < jdassen@debian.org >
+ with rather a lot of modsifications and additions by joost and Clint.
+ .SH SEE ALSO
+-.BR debuild (1),
 -.BR dpkg\-buildpackage (1),
--.BR debuild (1)
--.BR /usr/share/doc/fakeroot/DEBUG
--
---- doc/fr/faked.1.orig	2018-07-01 19:03:32 UTC
-+++ doc/fr/faked.1
-@@ -90,5 +90,4 @@ Sylvain Cherrier <sylvain.cherrier@free.
- En majeure partie Ècrite par J.H.M. Dassen <jdassen@debian.org>. La
- plupart des ajouts et des modifications par Joost et Clint.
- .SH "VOIR AUSSI"
--\fBfakeroot\fP(1)  \fBdpkg\-buildpackage\fP(1), \fBdebuild\fP(1)
--\fB/usr/share/doc/fakeroot/DEBUG\fP
-+\fBfakeroot\fP(1)
---- doc/fr/fakeroot.1.orig	2018-07-01 19:03:32 UTC
-+++ doc/fr/fakeroot.1
-@@ -242,6 +242,4 @@ Sylvain Cherrier <sylvain.cherrier@free.
- En majeure partie Ècrite par J.H.M. Dassen <jdassen@debian.org>: La
- plupart des ajouts et des modifications par Joost et Clint.
- .SH "VOIR AUSSI"
--\fBfaked\fP(1)  \fBdpkg\-buildpackage\fP(1), \fBdebuild\fP(1)
--\fB/usr/share/doc/fakeroot/DEBUG\fP
--
-+\fBfaked\fP(1)
---- doc/nl/faked.1.orig	2018-07-01 19:03:32 UTC
-+++ doc/nl/faked.1
-@@ -90,5 +90,4 @@ Martijn Dekker
- Vooral door J.H.M. Dassen <\fIjdassen@debian.org\fP>. Wijzigingen en
- aanvullingen door joost en Clint.
- .SH "ZIE OOK"
--\fBfakeroot\fP(1), \fBdpkg\-buildpackage\fP(1), \fBdebuild\fP(1),
--\fB/usr/share/doc/fakeroot/DEBUG\fP
-+\fBfakeroot\fP(1)
---- doc/nl/fakeroot.1.orig	2018-07-01 19:03:32 UTC
-+++ doc/nl/fakeroot.1
-@@ -249,6 +249,4 @@ Martijn Dekker
- Vooral door J.H.M. Dassen <\fIjdassen@debian.org\fP>. Nogal wat
- wijzigingen en aanvullingen door joost en Clint.
- .SH "ZIE OOK"
--\fBfaked\fP(1),  \fBdpkg\-buildpackage\fP(1), \fBdebuild\fP(1),
--\fB/usr/share/doc/fakeroot/DEBUG\fP
--
-+\fBfaked\fP(1)
---- doc/sv/faked.1.orig	2018-07-01 19:03:32 UTC
-+++ doc/sv/faked.1
-@@ -88,5 +88,4 @@ David Weinehall
- till st√∂rre delen skriven av J.H.M. Dassen
- <\fIjdassen@wi.LeidenUniv.nl\fP> √§ndringar/till√§gg av joost och Clint.
- .SH "SE √ÑVEN"
--\fBfakeroot\fP(1), \fBdpkg\-buildpackage\fP(1), \fBdebuild\fP(1)
--\fB/usr/share/doc/fakeroot/DEBUG\fP
-+\fBfakeroot\fP(1)
---- doc/sv/fakeroot.1.orig	2018-07-01 19:03:32 UTC
-+++ doc/sv/fakeroot.1
-@@ -230,6 +230,4 @@ till st√∂rre delen skriven av J.H.M. Das
- <jdassen@wi.LeidenUniv.nl> med ett flertal √§ndringar/till√§gg av
- joost och Clint.
- .SH "SE √ÑVEN"
--\fBfaked\fP(1)  \fBdpkg\-buildpackage\fP(1), \fBdebuild\fP(1)
--\fB/usr/share/doc/fakeroot/DEBUG\fP
--
-+\fBfaked\fP(1)
+-.BR faked (1),
+-.B /usr/share/doc/fakeroot/DEBUG
++.BR faked (1)
+--- ./doc/po4a/po/de.po.orig	2026-08-26 11:37:44 UTC
++++ ./doc/po4a/po/de.po
+@@ -825,11 +825,9 @@ msgid ""
+ #. type: Plain text
+ #: ../doc/fakeroot.1:301
+ msgid ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<faked>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ msgstr ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<faked>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ 
+ #. type: TH
+ #: ../doc/faked.1:16
+@@ -1024,11 +1022,9 @@ msgid ""
+ #. type: Plain text
+ #: ../doc/faked.1:103
+ msgid ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ msgstr ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<fakeroot>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ 
+ #, no-wrap
+ #~ msgid "5 October 2014"
+--- ./doc/po4a/po/es.po.orig	2026-08-26 11:37:44 UTC
++++ ./doc/po4a/po/es.po
+@@ -867,11 +867,9 @@ msgid ""
+ #| "B<faked>(1)  B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+ #| "fakeroot/DEBUG>"
+ msgid ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<faked>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ msgstr ""
+-"B<faked>(1)  B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ 
+ # type: TH
+ #. type: TH
+@@ -1088,11 +1086,9 @@ msgid ""
+ #| "B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+ #| "fakeroot/DEBUG>"
+ msgid ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ msgstr ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ 
+ # type: TH
+ #, no-wrap
+--- ./doc/po4a/po/fakeroot.pot.orig	2026-08-26 11:37:44 UTC
++++ ./doc/po4a/po/fakeroot.pot
+@@ -554,9 +554,9 @@ msgid ""
+ #. type: Plain text
+ #: ../doc/fakeroot.1:301
+ msgid ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<faked>(1), "
+-"B</usr/share/doc/fakeroot/DEBUG>"
++"B<faked>(1)"
+ msgstr ""
++"B<faked>(1)"
+ 
+ #. type: TH
+ #: ../doc/faked.1:16
+@@ -700,6 +700,6 @@ msgid ""
+ #. type: Plain text
+ #: ../doc/faked.1:103
+ msgid ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1), "
+-"B</usr/share/doc/fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ msgstr ""
++"B<fakeroot>(1)"
+--- ./doc/po4a/po/fr.po.orig	2026-08-26 11:37:44 UTC
++++ ./doc/po4a/po/fr.po
+@@ -874,11 +874,9 @@ msgid ""
+ #| "B<faked>(1)  B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+ #| "fakeroot/DEBUG>"
+ msgid ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<faked>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ msgstr ""
+-"B<faked>(1)  B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ 
+ # type: TH
+ #. type: TH
+@@ -1099,11 +1097,9 @@ msgid ""
+ #| "B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+ #| "fakeroot/DEBUG>"
+ msgid ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ msgstr ""
+-"B<fakeroot>(1)  B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ 
+ # type: TH
+ #, no-wrap
+--- ./doc/po4a/po/nl.po.orig	2026-08-26 11:37:44 UTC
++++ ./doc/po4a/po/nl.po
+@@ -877,11 +877,9 @@ msgid ""
+ #| "B<faked>(1)  B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+ #| "fakeroot/DEBUG>"
+ msgid ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<faked>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ msgstr ""
+-"B<faked>(1),  B<dpkg-buildpackage>(1), B<debuild>(1),  B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ 
+ # type: TH
+ #. type: TH
+@@ -1100,11 +1098,9 @@ msgid ""
+ #| "B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+ #| "fakeroot/DEBUG>"
+ msgid ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ msgstr ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ 
+ # type: TH
+ #, no-wrap
+--- ./doc/po4a/po/pt.po.orig	2026-08-26 11:37:44 UTC
++++ ./doc/po4a/po/pt.po
+@@ -729,11 +729,9 @@ msgid ""
+ #. type: Plain text
+ #: ../doc/fakeroot.1:301
+ msgid ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<faked>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ msgstr ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<faked>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ 
+ #. type: TH
+ #: ../doc/faked.1:16
+@@ -898,11 +896,9 @@ msgid ""
+ #. type: Plain text
+ #: ../doc/faked.1:103
+ msgid ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ msgstr ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ 
+ #, no-wrap
+ #~ msgid "5 October 2014"
+--- ./doc/po4a/po/ro.po.orig	2026-08-26 11:37:44 UTC
++++ ./doc/po4a/po/ro.po
+@@ -748,11 +748,9 @@ msgid ""
+ #. type: Plain text
+ #: ../doc/fakeroot.1:301
+ msgid ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<faked>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ msgstr ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<faked>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ 
+ #. type: TH
+ #: ../doc/faked.1:16
+@@ -918,11 +916,9 @@ msgid ""
+ #. type: Plain text
+ #: ../doc/faked.1:103
+ msgid ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ msgstr ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ 
+ #, no-wrap
+ #~ msgid "5 October 2014"
+--- ./doc/po4a/po/sv.po.orig	2026-08-26 11:37:44 UTC
++++ ./doc/po4a/po/sv.po
+@@ -862,11 +862,9 @@ msgid ""
+ #| "B<faked>(1)  B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+ #| "fakeroot/DEBUG>"
+ msgid ""
+-"B<debuild>(1), B<dpkg-buildpackage>(1), B<faked>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ msgstr ""
+-"B<faked>(1)  B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<faked>(1)"
+ 
+ # type: TH
+ #. type: TH
+@@ -1084,11 +1082,9 @@ msgid ""
+ #| "B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+ #| "fakeroot/DEBUG>"
+ msgid ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1), B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ msgstr ""
+-"B<fakeroot>(1), B<dpkg-buildpackage>(1), B<debuild>(1)  B</usr/share/doc/"
+-"fakeroot/DEBUG>"
++"B<fakeroot>(1)"
+ 
+ #, no-wrap
+ #~ msgid "5 October 2014"

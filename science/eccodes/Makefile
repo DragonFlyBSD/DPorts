@@ -1,5 +1,5 @@
 PORTNAME=	eccodes
-PORTVERSION=	2.40.0
+PORTVERSION=	2.49.0
 DISTVERSIONSUFFIX=	-Source
 CATEGORIES=	science
 MASTER_SITES=	https://confluence.ecmwf.int/download/attachments/45757960/ \
@@ -55,5 +55,9 @@ AEC_CMAKE_BOOL=		ENABLE_AEC
 AEC_LIB_DEPENDS=	libaec.so:science/libaec
 JASPER_LIB_DEPENDS=	libjasper.so:graphics/jasper
 OPENJPEG_LIB_DEPENDS=	libopenjp2.so:graphics/openjpeg
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/cmake/ecbuild_check_os.cmake
 
 .include <bsd.port.mk>

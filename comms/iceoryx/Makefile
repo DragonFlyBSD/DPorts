@@ -1,11 +1,12 @@
 PORTNAME=	iceoryx
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.0.5
+DISTVERSION=	2.0.8
 CATEGORIES=	comms
 
 MAINTAINER=	flo@purplekraken.com
 COMMENT=	True zero-copy inter-process communication
-WWW=		https://iceoryx.io/
+WWW=		https://iceoryx.io/ \
+		https://github.com/eclipse-iceoryx/iceoryx/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -30,4 +31,5 @@ PLIST_SUB=	VERSION=${GH_TAGNAME}
 
 OPTIONS_DEFINE=	DOCS
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

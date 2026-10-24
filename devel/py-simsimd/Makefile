@@ -1,6 +1,5 @@
 PORTNAME=	simsimd
-DISTVERSION=	6.0.4
-PORTREVISION=	1
+DISTVERSION=	6.5.16
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,11 +13,13 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
+BROKEN_i386=	fails to compile: error: _Float16 is not supported on this target
 
 USES=		python
 USE_PYTHON=	distutils autoplist
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/simsimd${PYTHON_EXT_SUFFIX}.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/simsimd${PYTHON_TAG}.so
 
+CFLAGS:= ${CFLAGS} -DSIMSIMD_NATIVE_F16=0 -DSIMSIMD_NATIVE_BF16=0
 .include <bsd.port.mk>

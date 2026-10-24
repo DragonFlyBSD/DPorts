@@ -31,6 +31,7 @@ lib/libPlasmaSystemMonitorTable.so
 %%QT_QMLDIR%%/org/kde/ksysguard/table/KillDialog.qml
 %%QT_QMLDIR%%/org/kde/ksysguard/table/LineChartCellDelegate.qml
 %%QT_QMLDIR%%/org/kde/ksysguard/table/PlasmaSystemMonitorTable.qmltypes
+%%QT_QMLDIR%%/org/kde/ksysguard/table/ReniceDialog.qml
 %%QT_QMLDIR%%/org/kde/ksysguard/table/TableViewHeader.qml
 %%QT_QMLDIR%%/org/kde/ksysguard/table/TextCellDelegate.qml
 %%QT_QMLDIR%%/org/kde/ksysguard/table/UserCellDelegate.qml
@@ -38,7 +39,6 @@ lib/libPlasmaSystemMonitorTable.so
 %%QT_QMLDIR%%/org/kde/ksysguard/table/libPlasmaSystemMonitorTableplugin.so
 %%QT_QMLDIR%%/org/kde/ksysguard/table/qmldir
 share/applications/org.kde.plasma-systemmonitor.desktop
-share/config.kcfg/systemmonitor.kcfg
 share/kconf_update/plasma-systemmonitor-replace-vmpss.py
 share/kconf_update/plasma-systemmonitor.upd
 share/kglobalaccel/org.kde.plasma-systemmonitor.desktop
@@ -108,6 +108,9 @@ share/locale/fi/LC_MESSAGES/plasma-systemmonitor.mo
 share/locale/fr/LC_MESSAGES/ksysguard_face_org.kde.ksysguard.applicationstable.mo
 share/locale/fr/LC_MESSAGES/ksysguard_face_org.kde.ksysguard.processtable.mo
 share/locale/fr/LC_MESSAGES/plasma-systemmonitor.mo
+share/locale/ga/LC_MESSAGES/ksysguard_face_org.kde.ksysguard.applicationstable.mo
+share/locale/ga/LC_MESSAGES/ksysguard_face_org.kde.ksysguard.processtable.mo
+share/locale/ga/LC_MESSAGES/plasma-systemmonitor.mo
 share/locale/gl/LC_MESSAGES/ksysguard_face_org.kde.ksysguard.applicationstable.mo
 share/locale/gl/LC_MESSAGES/ksysguard_face_org.kde.ksysguard.processtable.mo
 share/locale/gl/LC_MESSAGES/plasma-systemmonitor.mo
@@ -202,6 +205,8 @@ share/locale/zh_TW/LC_MESSAGES/plasma-systemmonitor.mo
 share/metainfo/org.kde.plasma-systemmonitor.metainfo.xml
 %%DATADIR%%/applications.page
 %%DATADIR%%/history.page
+%%DATADIR%%/old-history.page
+%%DATADIR%%/old-overview.page
 %%DATADIR%%/overview.page
 %%DATADIR%%/processes.page
 share/plasma/kinfocenter/externalmodules/kcm_external_plasma-systemmonitor.desktop

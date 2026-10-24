@@ -1,9 +1,0 @@
-LDFLAGS+= -lexecinfo
-LIB_DEPENDS:=	${LIB_DEPENDS:Nlibhwloc*}
-OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NMPI*}
-CMAKE_ON:=	${CMAKE_ON:NPKG_MPIIO:NPKG_LATBOLTZ}
-
-# deal with pkg-plist...
-dfly-install:
-	${MKDIR} ${STAGEDIR}${LOCALBASE}/include/lammps/mpi
-	${TOUCH} ${STAGEDIR}${LOCALBASE}/include/lammps/mpi/mpi.h

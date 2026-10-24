@@ -35,6 +35,7 @@ DANTE_CONFIGURE_ON=	--with-socks-includes=${LOCALBASE}/include \
 			--with-socks-libraries=${LOCALBASE}/lib
 DANTE_LIB_DEPENDS=	libsocks.so:net/dante
 
+CFLAGS= -Wno-unused-variable -Wno-int-to-pointer-cast -Wno-pointer-sign
 pre-patch:
 	@${FIND}  ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|$$(datadir)/icons|$$(pkgdatadir)/icons|g'

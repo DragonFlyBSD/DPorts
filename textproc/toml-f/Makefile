@@ -1,5 +1,5 @@
 PORTNAME=	toml-f
-DISTVERSION=	0.4.2
+DISTVERSION=	0.5.2
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/
 
@@ -17,6 +17,11 @@ USES=		cmake:testing fortran tar:xz
 USE_LDCONFIG=	yes
 
 CMAKE_ON=	BUILD_SHARED_LIBS
-CMAKE_TESTING_ON=	FREEBSD_BUILD_TESTS
+CMAKE_TESTING_ON=	BUILD_TESTING
+
+# tests as of 0.5.2: 100% tests passed, 0 tests failed out of 6
+
+dfly-install:
+	cd ${STAGEDIR}${PREFIX} && ${FIND} include/test-drive -type f >> ${TMPPLIST}
 
 .include <bsd.port.mk>

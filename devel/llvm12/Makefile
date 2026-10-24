@@ -1,6 +1,6 @@
 PORTNAME=	llvm
 DISTVERSION=	12.0.1
-PORTREVISION=	13
+PORTREVISION=	16
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
 		https://${PRE_}releases.llvm.org/${LLVM_RELEASE}/${RCDIR}
@@ -13,7 +13,10 @@ COMMENT=	LLVM and Clang
 WWW=		https://llvm.org/
 
 LICENSE_FILE_BSD3CLAUSE=${LICENSE_DIR}/utils/unittest/googletest/LICENSE.TXT
+CLANG_EXTRA_PATCHES= ${DFLY_PATCHDIR}/clang-patch-tools_clang_lib_Basic_Targets_OSTargets.h
 .include "${.CURDIR}/../llvm-devel/Makefile.LICENSE"
+
+BUILD_DEPENDS=	${PY_SETUPTOOLS}
 
 LLVM_RELEASE=	${DISTVERSION:C/rc.*//}
 LLVM_MAJOR=	${LLVM_RELEASE:C/\.[0-9]\.[0-9]$//}
@@ -61,25 +64,25 @@ CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=OFF
 
 OPTIONS_DEFINE=	BE_AMDGPU BE_WASM CLANG DOCS EXTRAS LIT LLD PYCLANG
 OPTIONS_DEFINE_aarch64=	OPENMP
-OPTIONS_DEFINE_x86_64=	COMPILER_RT GOLD LLDB OPENMP
-OPTIONS_DEFINE_i386=	COMPILER_RT LLDB OPENMP
-OPTIONS_DEFINE_powerpc=	GOLD
-OPTIONS_DEFINE_powerpc64=	GOLD OPENMP
-OPTIONS_DEFINE_powerpc64le=	GOLD OPENMP
+OPTIONS_DEFINE_x86_64=	COMPILER_RT OPENMP
+OPTIONS_DEFINE_i386=	COMPILER_RT OPENMP
+OPTIONS_DEFINE_powerpc=
+OPTIONS_DEFINE_powerpc64=	OPENMP
+OPTIONS_DEFINE_powerpc64le=	OPENMP
 OPTIONS_DEFINE_riscv64=	OPENMP
-OPTIONS_DEFAULT=	BE_AMDGPU BE_STANDARD BE_WASM CLANG EXTRAS LIT LLD PYCLANG
+OPTIONS_DEFAULT=	BE_AMDGPU BE_FREEBSD BE_WASM CLANG EXTRAS LLD
 OPTIONS_DEFAULT_aarch64=	OPENMP
-OPTIONS_DEFAULT_x86_64=	COMPILER_RT GOLD LLDB OPENMP
-OPTIONS_DEFAULT_i386=	COMPILER_RT LLDB OPENMP
-OPTIONS_DEFAULT_powerpc=	GOLD
-OPTIONS_DEFAULT_powerpc64=	GOLD OPENMP
-OPTIONS_DEFAULT_powerpc64le=	GOLD OPENMP
+OPTIONS_DEFAULT_x86_64=	COMPILER_RT OPENMP
+OPTIONS_DEFAULT_i386=	COMPILER_RT OPENMP
+OPTIONS_DEFAULT_powerpc=
+OPTIONS_DEFAULT_powerpc64=	OPENMP
+OPTIONS_DEFAULT_powerpc64le=	OPENMP
 OPTIONS_DEFAULT_riscv64=	OPENMP
 OPTIONS_SINGLE=		BACKENDS
 OPTIONS_SINGLE_BACKENDS=BE_FREEBSD BE_NATIVE BE_STANDARD
 OPTIONS_SUB=	yes
 # All non-backend options
-_ALL_OPTIONS=	CLANG COMPILER_RT DOCS EXTRAS GOLD LIT LLD LLDB PYCLANG OPENMP
+_ALL_OPTIONS=	CLANG COMPILER_RT DOCS EXTRAS LIT LLD PYCLANG OPENMP
 
 BE_AMDGPU_DESC=		AMD GPU backend (required by mesa)
 BE_FREEBSD_DESC=	Backends for FreeBSD architectures
@@ -119,25 +122,9 @@ DOCS_CMAKE_ON= \
 DOCS_PLIST_FILES=	${MAN1SRCS:S|^|share/man/man1/|:S|.1$|${LLVM_SUFFIX}.1.gz|}
 EXTRAS_DESC=		Extra clang tools
 EXTRAS_IMPLIES=		CLANG
-GOLD_DESC=		Build the LLVM Gold plugin for LTO
-GOLD_CMAKE_ON=		-DLLVM_BINUTILS_INCDIR=${LOCALBASE}/include
-GOLD_BUILD_DEPENDS=	${LOCALBASE}/bin/ld.gold:devel/binutils@native
 LIT_DESC=		Install lit and FileCheck test tools
 LIT_VARS=		_USES_PYTHON=python
 LLD_DESC=		Install lld, the LLVM linker
-LLDB_BUILD_DEPENDS=	swig:devel/swig
-LLDB_CMAKE_ON= \
-	-DLUA_INCLUDE_DIR=${LOCALBASE}/include/lua${LUA_VER_STR} \
-	-DLUA_LIBRARY=${LOCALBASE}/lib/liblua-${LUA_VER}.so \
-	-DCURSES_INCLUDE_PATH=/usr/include \
-	-DCURSES_CURSES_LIBRARY=/usr/lib/libcurses.so \
-	-DCURSES_FORM_LIBRARY=/usr/lib/libform.so \
-	-DCURSES_NCURSES_LIBRARY=/usr/lib/libncurses.so \
-	-DPANEL_LIBRARIES=/usr/lib/libpanel.so
-LLDB_DESC=		Install lldb, the LLVM debugger
-LLDB_IMPLIES=		CLANG
-LLDB_USES=		lua:53 libedit
-LLDB_VARS=		_USES_PYTHON=python
 OPENMP_DESC=		Install libomp, the LLVM OpenMP runtime library
 OPENMP_CMAKE_ON= \
 	-DLIBOMPTARGET_DEP_LIBELF_INCLUDE_DIR="/usr/include/libelf.h" \
@@ -189,6 +176,8 @@ EXTRAS_LIBS=	libclangApplyReplacements \
 EXTRAS_FILES=	index.js
 EXTRAS_PATTERN=	${EXTRAS_COMMANDS:tW:C/  */|/g}|${EXTRAS_LIBS:tW:C/  */|/g}|${EXTRAS_FILES:tW:C/  */|/g}
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NLLDB:NOPENMP}
+OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NCOMPILER_RT:NLLDB:NOPENMP}
 .include <bsd.port.options.mk>
 
 # keep in sync with /usr/src/lib/clang/clang.build.mk
@@ -238,11 +227,6 @@ COMMANDS+=	${LLD_COMMANDS}
 PORTDOCS+=	lld
 .endif
 
-.if ${PORT_OPTIONS:MLLDB}
-LLVM_ENABLE_PROJECTS+=	lldb
-COMMANDS+=	${LLDB_COMMANDS}
-.endif
-
 .if ${PORT_OPTIONS:MOPENMP}
 LLVM_ENABLE_PROJECTS+=	openmp
 MAN1SRCS+=	${OPENMP_MAN1SRCS}
@@ -261,7 +245,7 @@ CMAKE_ARGS+=	-DLLVM_ENABLE_PROJECTS="${LLVM_ENABLE_PROJECTS:ts;}"
 .include "${.CURDIR}/Makefile.COMMANDS"
 .include "${.CURDIR}/Makefile.MAN1SRCS"
 
-_FREEBSD_BACKENDS=	AArch64 ARM Mips PowerPC RISCV X86
+_FREEBSD_BACKENDS=	AArch64 ARM PowerPC RISCV X86
 FREEBSD_BACKENDS=	${_FREEBSD_BACKENDS}
 .if ${ARCH} == x86_64
 _NATIVE_BACKENDS=	X86
@@ -271,8 +255,6 @@ _NATIVE_BACKENDS=	AArch64
 _NATIVE_BACKENDS=	ARM
 .elif ${ARCH} == i386
 _NATIVE_BACKENDS=	X86
-.elif ${ARCH:Mmips*}
-_NATIVE_BACKENDS=	Mips
 .elif ${ARCH:Mpowerpc*}
 _NATIVE_BACKENDS=	PowerPC
 .elif ${ARCH:Mriscv*}
@@ -288,7 +270,7 @@ FREEBSD_BACKENDS+=	WebAssembly
 NATIVE_BACKENDS+=	WebAssembly
 .endif
 STANDARD_BACKENDS=	${_FREEBSD_BACKENDS} AMDGPU AVR BPF Hexagon Lanai \
-			MSP430 NVPTX Sparc SystemZ WebAssembly XCore
+			Mips MSP430 NVPTX Sparc SystemZ WebAssembly XCore
 _BE_LIBS_COMMON=	CodeGen Desc Info
 _BE_LIBS_AArch64=	AsmParser Disassembler Utils
 _BE_LIBS_AMDGPU=	AsmParser Disassembler Utils
@@ -494,6 +476,9 @@ do-test:
 		${SH} -c ${TEST_CMD}; \
 	fi
 
+post-install-OPENMP-on:
+	${RMDIR} ${STAGEDIR}/${DOCSDIR}/openmp/html/_sources
+
 build-plist:
 	${RM} ${PLIST} ${PLIST}.tmp
 	${ECHO_CMD} "@comment >>>>> GENERATED FILE, DO NOT EDIT <<<<<" >> ${PLIST}.tmp
@@ -531,9 +516,7 @@ build-plist:
 		{printf "%%%%COMPILER_RT%%%%"} \
 	    if ($$0 ~ /(${EXTRAS_PATTERN})/) {printf "%%%%EXTRAS%%%%"} \
 	    if ($$0 ~ /(bin\/(ld|lld|wasm-ld))|liblld[^b]|\/lld\// && $$0 !~ /(lldb)/) {printf "%%%%LLD%%%%"} \
-	    if ($$0 ~ /(argdumper|lldb|six.py)/) {printf "%%%%LLDB%%%%"} \
 	    if ($$0 ~ /(${OPENMP_PATTERN})/) {printf "%%%%OPENMP%%%%"} \
-	    if ($$0 ~ /(LLVMgold)/) {printf "%%%%GOLD%%%%"} \
 	    if ($$0 ~ /${PYCLANG_PATTERN}/) {printf "%%%%PYCLANG%%%%"} \
 	    if ($$0 !~ /(libclang_rt)/ && $$0 !~ /(${BE_PATTERN})$$/) {print}}' ${PLIST}.tmp >> ${PLIST}
 	${ECHO_CMD} '@postexec if type ccache-update-links >/dev/null 2>&1; then ccache-update-links -v; fi' >> ${PLIST}
@@ -544,5 +527,10 @@ check-commands:
 .for command in ${COMMANDS}
 	test -e ${STAGEDIR}${LLVM_PREFIX}/bin/${command}
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|gcc50|gcc80|g' -e 's|5.0"|8.0"|' \
+		${WRKSRC}/clang/lib/Driver/ToolChains/DragonFly.cpp \
+		${WRKSRC}/clang/lib/Frontend/InitHeaderSearch.cpp
 
 .include <bsd.port.post.mk>

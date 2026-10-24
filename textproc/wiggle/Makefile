@@ -12,12 +12,13 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	bash:shells/bash
 
-USES=		gmake groff
+USES= gmake groff ncurses
 USE_GITHUB=	yes
 GH_TUPLE=	neilbrown:${PORTNAME}:v${PORTVERSION}
 
 MAKE_ARGS+=	CFLAGS="${CFLAGS} -I. -Wall -Wstrict-prototypes -Wextra -Wno-unused-parameter"
 
+CFLAGS= -L${LOCALBASE}/lib
 pre-patch:
 		${REINPLACE_CMD} -Ee 's,\./dotest,bash ./dotest,' ${WRKSRC}/Makefile
 		${REINPLACE_CMD} -Ee 's|#include.*<endian.h>|#include <sys/endian.h>|' ${WRKSRC}/config.h

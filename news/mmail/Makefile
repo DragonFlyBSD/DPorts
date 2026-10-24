@@ -16,8 +16,10 @@ MAKE_ARGS=	OPTS="" LIBS="${LDFLAGS} -lncurses"
 PLIST_FILES=	bin/mmail \
 		share/man/man1/mmail.1.gz
 
+LDFLAGS= -L${NCURSESLIB}
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mm ${STAGEDIR}${PREFIX}/bin/mmail
 	${INSTALL_MAN} ${WRKSRC}/mm.1 ${STAGEDIR}${PREFIX}/share/man/man1/mmail.1
 
+MAKE_ARGS:= ${MAKE_ARGS:NOPTS=*} CURS_DIR=${NCURSESINC} OPTS="-I${LOCALBASE}/include"
 .include <bsd.port.mk>

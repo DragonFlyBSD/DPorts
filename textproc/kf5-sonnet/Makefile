@@ -16,4 +16,8 @@ USE_QT=		core declarative gui linguisttools network uiplugin widgets \
 # Disable examples -- they are not installed anyways.
 CMAKE_OFF=	ENABLE_EXAMPLES
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

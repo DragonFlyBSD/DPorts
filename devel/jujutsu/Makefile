@@ -1,29 +1,36 @@
 PORTNAME=	jujutsu
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.18.0
+DISTVERSION=	0.45.1
 PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	se@FreeBSD.org
 COMMENT=	Git-compatible VCS that is both simple and powerful
-WWW=		https://github.com/martinvonz/jj/blob/main/README.md
+WWW=		https://docs.jj-vcs.dev/v${DISTVERSION}/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libgit2.so:devel/libgit2 \
-                libssh2.so:security/libssh2 \
-                libzstd.so:archivers/zstd
+RUN_DEPENDS=	git:devel/git
 
-USES=		cargo localbase ssl
+USES=		cargo localbase shebangfix
 USE_GITHUB=	yes
-GH_ACCOUNT=	martinvonz
+GH_ACCOUNT=	jj-vcs
 GH_PROJECT=	jj
 
-PLIST_FILES=	bin/jj
+SHEBANG_FILES=	demos/*.sh
+
+OPTIONS_DEFINE=	DOCS EXAMPLES
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKDIR}/target/*-unknown-${OPSYS:tl}/release/jj \
+		${INSTALL_PROGRAM} ${WRKDIR}/target/release/jj \
 			${STAGEDIR}${PREFIX}/bin/
+		cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
+		cd ${WRKSRC}/demos && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR}
+		cd ${TMPDIR:U/tmp} && ${STAGEDIR}${PREFIX}/bin/jj util install-man-pages ${STAGEDIR}${PREFIX}/share/man/
+		${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
+		cd ${TMPDIR:U/tmp} && ${STAGEDIR}${PREFIX}/bin/jj util completion bash > ${STAGEDIR}${PREFIX}/etc/bash_completion.d/jj
+		${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions
+		cd ${TMPDIR:U/tmp} && ${STAGEDIR}${PREFIX}/bin/jj util completion zsh > ${STAGEDIR}${PREFIX}/share/zsh/site-functions/_jj
 
 .include <bsd.port.mk>

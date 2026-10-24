@@ -1,6 +1,6 @@
 PORTNAME=	ipyopt
-DISTVERSION=	0.12.9
-PORTREVISION=	1
+DISTVERSION=	0.12.10
+PORTREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +12,7 @@ WWW=		https://gitlab.com/g-braeunlich/ipyopt
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-PY_DEPENDS=	${PYNUMPY} \
+PY_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR}
 BUILD_DEPENDS=	${PY_DEPENDS}
 LIB_DEPENDS=	libipopt.so:math/ipopt
@@ -30,5 +30,7 @@ post-install:
 
 do-test:
 	@cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest
+
+# tests as of 0.12.10: 8 passed, 10 skipped in 18.39s
 
 .include <bsd.port.mk>

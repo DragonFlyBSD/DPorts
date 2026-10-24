@@ -1,6 +1,6 @@
 PORTNAME=	ip2location
-PORTVERSION=	1.0.3
-PORTREVISION=	3
+PORTVERSION=	1.0.4
+PORTREVISION=	1
 CATEGORIES=	www
 PKGNAMEPREFIX=	varnish-
 
@@ -25,7 +25,7 @@ INSTALL_TARGET=	install-strip
 DOCSDIR=	${PREFIX}/share/doc/vmod-dynamic
 MAKE_JOBS_UNSAFE=	yes
 
-CFLAGS+=	-I${WRKSRC}/src
+CFLAGS+= -I${WRKSRC}/src -Wno-format-overflow
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	ip2location
@@ -34,6 +34,7 @@ GH_TAGNAME=	32ff41a
 
 OPTIONS_DEFINE=	DOCS
 
+DFLY_UNMAINTAINED= yes
 post-extract:
 	@(cd ${WRKDIR} && ${LN} -sf IP2Location-Varnish-${GH_TAGNAME} \
 		${PORTNAME}-${PKGNAMEPREFIX}${GH_TAGNAME})

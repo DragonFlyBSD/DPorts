@@ -1,7 +1,7 @@
 PORTNAME=	litecoin
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.21.3
-PORTREVISION=	1
+DISTVERSION=	0.21.4
+PORTREVISION=	14
 CATEGORIES=	net-p2p finance
 
 MAINTAINER=	hsw@bitmark.com
@@ -83,6 +83,7 @@ MAKE_ENV+=	V=1
 PLIST_FILES?=	bin/litecoin-qt share/man/man1/litecoin-qt.1.gz \
 		share/applications/litecoin-qt.desktop share/pixmaps/litecoin.png
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MWALLET_BDBMODERN}
@@ -109,8 +110,11 @@ post-install:
 
 .endif
 
+post-patch:
+	@${REINPLACE_CMD} -e '/AX_BOOST_SYSTEM/d' ${WRKSRC}/configure.ac
+
 regression-test: build
-	# To use this sucessfully, remove --without-daemon and --without-utils
+	# To use this successfully, remove --without-daemon and --without-utils
 	# from CONFIGURE_ARGS above.
 
 	@cd ${WRKSRC} && ${GMAKE} check

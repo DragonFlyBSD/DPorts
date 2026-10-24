@@ -30,6 +30,7 @@ LICENSE?=	AGPLv3
 RUN_DEPENDS=	nextcloud${PHP_PKGNAMESUFFIX}>=${NEXTCLOUD_RUN_DEPENDS}:www/nextcloud@${PHP_FLAVOR}
 
 USES+=		php:flavors
+IGNORE_WITH_PHP=	82 86
 NO_BUILD=	yes
 NO_ARCH=	yes
 
@@ -46,7 +47,7 @@ add-pkg-message:
 	@${ECHO_CMD} "Run \`occ upgrade\` to create the Nextcloud ${PORTNAME} app database structure" >> ${NEXTCLOUD_APP_PKGMESSAGE}
 	@${ECHO_CMD} "EOD" >> ${NEXTCLOUD_APP_PKGMESSAGE}
 	@${ECHO_CMD} "}," >> ${NEXTCLOUD_APP_PKGMESSAGE}
-	@${ECHO_CMD} "{ type: upgrade:" >> ${NEXTCLOUD_APP_PKGMESSAGE}
+	@${ECHO_CMD} "{ type: upgrade" >> ${NEXTCLOUD_APP_PKGMESSAGE}
 	@${ECHO_CMD} "  message: <<EOD" >> ${NEXTCLOUD_APP_PKGMESSAGE}
 	@${ECHO_CMD} "Run \`occ upgrade\` to update the Nextcloud ${PORTNAME} app database structure" >> ${NEXTCLOUD_APP_PKGMESSAGE}
 	@${ECHO_CMD} "EOD" >> ${NEXTCLOUD_APP_PKGMESSAGE}

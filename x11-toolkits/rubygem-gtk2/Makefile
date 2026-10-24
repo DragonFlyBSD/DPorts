@@ -17,8 +17,12 @@ RUN_DEPENDS=	rubygem-atk>=${PORTVERSION}:accessibility/rubygem-atk \
 		rubygem-pango>=${PORTVERSION}:x11-toolkits/rubygem-pango
 
 USES=		gem gnome
-USE_GNOME=	gtk20
+USE_GNOME=	gtk20 introspection
 
 CONFIGURE_ARGS=	--with-cflags=-Wno-incompatible-function-pointer-types
+
+dfly-patch:
+	${REINPLACE_CMD} -e '/= 3.4.3/s@"=@">=@g' \
+                ${WRKSRC}/gtk2.gemspec
 
 .include <bsd.port.mk>

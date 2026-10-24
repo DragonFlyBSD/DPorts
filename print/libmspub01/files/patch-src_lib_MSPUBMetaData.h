@@ -1,6 +1,6 @@
---- src/lib/MSPUBMetaData.h.orig	2021-02-22 20:49:29 UTC
+--- src/lib/MSPUBMetaData.h.orig	2026-05-26 09:20:32 UTC
 +++ src/lib/MSPUBMetaData.h
-@@ -13,6 +13,7 @@
+@@ -14,6 +14,7 @@
  #include <map>
  #include <utility>
  #include <vector>

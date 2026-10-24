@@ -1,6 +1,5 @@
 PORTNAME=	oauth2
-PORTVERSION=	2.0.10
-PORTREVISION=	1
+PORTVERSION=	2.0.25
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	-gitlab
@@ -10,15 +9,17 @@ COMMENT=	Ruby wrapper for the OAuth 2.0 protocol
 WWW=		https://github.com/oauth-xx/oauth2
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE.txt
+LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
-RUN_DEPENDS=	rubygem-faraday-gitlab>=0.17.3<4:www/rubygem-faraday-gitlab \
+RUN_DEPENDS=	rubygem-anonymous_loader-gitlab>=0.1.3<1:devel/rubygem-anonymous_loader-gitlab \
+		rubygem-auth-sanitizer-gitlab>=0.2.3<1:security/rubygem-auth-sanitizer-gitlab \
+		rubygem-faraday-gitlab>=0.17.3<4:www/rubygem-faraday-gitlab \
 		rubygem-jwt>=1.0<4:www/rubygem-jwt \
 		rubygem-logger-gitlab>=1.2<2:devel/rubygem-logger-gitlab \
 		rubygem-multi_xml>=0.5<1:textproc/rubygem-multi_xml \
 		rubygem-rack>=1.2,3<4,3:www/rubygem-rack \
-		rubygem-snaky_hash>=2.0<3:devel/rubygem-snaky_hash \
-		rubygem-version_gem>=1.1.8<3:devel/rubygem-version_gem
+		rubygem-snaky_hash-gitlab>=2.0.7<3:devel/rubygem-snaky_hash-gitlab \
+		rubygem-version_gem-gitlab>=1.1.14<2:devel/rubygem-version_gem-gitlab
 
 USES=		gem
 

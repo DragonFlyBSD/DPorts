@@ -1,0 +1,3 @@
+Python bindings for the Comrak Rust library, a fast CommonMark/GFM parser.
+
+Feature: Fast Markdown to HTML parser in Rust, shipped for Python via PyO3.

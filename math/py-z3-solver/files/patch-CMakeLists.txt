@@ -1,0 +1,45 @@
+-- Add a minimum CMake version declaration required by CMake 4.0.
+
+--- CMakeLists.txt.orig	2026-02-18 22:57:51 UTC
++++ CMakeLists.txt
+@@ -1,4 +1,40 @@ message(STATUS "Emitting rules to build Z3 python bind
++cmake_minimum_required(VERSION 3.5)
++
+ message(STATUS "Emitting rules to build Z3 python bindings")
++
++## portion of src/CMakeLists.txt
++set(Z3_API_HEADER_FILES_TO_SCAN
++  z3_api.h
++  z3_ast_containers.h
++  z3_algebraic.h
++  z3_polynomial.h
++  z3_rcf.h
++  z3_fixedpoint.h
++  z3_optimization.h
++  z3_fpa.h
++  z3_spacer.h
++)
++set(Z3_FULL_PATH_API_HEADER_FILES_TO_SCAN "")
++foreach (header_file ${Z3_API_HEADER_FILES_TO_SCAN})
++  set(full_path_api_header_file "${CMAKE_CURRENT_SOURCE_DIR}/api/${header_file}")
++  list(APPEND Z3_FULL_PATH_API_HEADER_FILES_TO_SCAN "${full_path_api_header_file}")
++  if (NOT EXISTS "${full_path_api_header_file}")
++    message(FATAL_ERROR "API header file \"${full_path_api_header_file}\" does not exist")
++  endif()
++endforeach()
++
++## Define libz3 as an imported target pointing to the pre-installed library
++if (NOT TARGET libz3)
++  find_library(LIBZ3_LIBRARY NAMES z3 libz3)
++  if (NOT LIBZ3_LIBRARY)
++    message(FATAL_ERROR "Could not find libz3 library")
++  endif()
++  add_library(libz3 SHARED IMPORTED)
++  set_target_properties(libz3 PROPERTIES
++    IMPORTED_LOCATION "${LIBZ3_LIBRARY}"
++  )
++endif()
++
+ ###############################################################################
+ # Add target to build python bindings for the build directory
+ ###############################################################################

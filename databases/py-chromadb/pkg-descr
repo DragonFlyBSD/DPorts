@@ -1,0 +1,3 @@
+Chroma is an AI-native open-source embedding database. It ships with everything
+needed to build embedding apps: storage, filtering, metadata, and distance
+search.

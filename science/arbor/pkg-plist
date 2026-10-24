@@ -1,6 +1,7 @@
 bin/arbor-build-catalogue
 bin/lmorpho
 bin/modcc
+include/arbor/adex_cell.hpp
 include/arbor/arb_types.h
 include/arbor/arb_types.hpp
 include/arbor/arb_types.inc
@@ -12,6 +13,7 @@ include/arbor/cable_cell.hpp
 include/arbor/cable_cell_param.hpp
 include/arbor/common_types.hpp
 include/arbor/communication/mpi_error.hpp
+include/arbor/communication/remote.hpp
 include/arbor/constants.hpp
 include/arbor/context.hpp
 include/arbor/cv_policy.hpp
@@ -20,7 +22,6 @@ include/arbor/domdecexcept.hpp
 include/arbor/event_generator.hpp
 include/arbor/export.hpp
 include/arbor/fvm_types.hpp
-include/arbor/generic_event.hpp
 include/arbor/gpu/cuda_api.hpp
 include/arbor/gpu/gpu_api.hpp
 include/arbor/gpu/gpu_common.hpp
@@ -49,7 +50,8 @@ include/arbor/morph/primitives.hpp
 include/arbor/morph/region.hpp
 include/arbor/morph/segment_tree.hpp
 include/arbor/morph/stitch.hpp
-include/arbor/profile/clock.hpp
+include/arbor/network.hpp
+include/arbor/network_generation.hpp
 include/arbor/profile/meter.hpp
 include/arbor/profile/meter_manager.hpp
 include/arbor/profile/profiler.hpp
@@ -58,6 +60,7 @@ include/arbor/recipe.hpp
 include/arbor/s_expr.hpp
 include/arbor/sampling.hpp
 include/arbor/schedule.hpp
+include/arbor/serdes.hpp
 include/arbor/simd/approx.hpp
 include/arbor/simd/avx.hpp
 include/arbor/simd/avx512.hpp
@@ -68,12 +71,16 @@ include/arbor/simd/neon.hpp
 include/arbor/simd/simd.hpp
 include/arbor/simd/simd_io.hpp
 include/arbor/simd/sve.hpp
+include/arbor/simd/sve_bits.hpp
+include/arbor/simd/vls_sve.hpp
+include/arbor/simd/vls_sve_bits.hpp
 include/arbor/simple_sampler.hpp
 include/arbor/simulation.hpp
 include/arbor/spike.hpp
 include/arbor/spike_event.hpp
 include/arbor/spike_source_cell.hpp
 include/arbor/symmetric_recipe.hpp
+include/arbor/units.hpp
 include/arbor/util/any_cast.hpp
 include/arbor/util/any_ptr.hpp
 include/arbor/util/any_visitor.hpp
@@ -82,10 +89,8 @@ include/arbor/util/expected.hpp
 include/arbor/util/extra_traits.hpp
 include/arbor/util/handle_set.hpp
 include/arbor/util/hash_def.hpp
-include/arbor/util/lexcmp_def.hpp
 include/arbor/util/pp_util.hpp
 include/arbor/util/scope_exit.hpp
-include/arbor/util/typed_map.hpp
 include/arbor/util/uninitialized.hpp
 include/arbor/util/unique_any.hpp
 include/arbor/util/visibility.hpp
@@ -98,8 +103,12 @@ include/arborenv/gpu_env.hpp
 include/arborenv/with_mpi.hpp
 include/arborio/cableio.hpp
 include/arborio/cv_policy_parse.hpp
+include/arborio/debug.hpp
 include/arborio/export.hpp
+include/arborio/json_serdes.hpp
 include/arborio/label_parse.hpp
+include/arborio/loaded_morphology.hpp
+include/arborio/networkio.hpp
 include/arborio/neurolucida.hpp
 include/arborio/neuroml.hpp
 include/arborio/swcio.hpp

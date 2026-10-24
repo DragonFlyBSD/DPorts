@@ -3,7 +3,7 @@ DISTVERSIONPREFIX=	jetty-v
 DISTVERSION=		3.14_00
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			${PORTNAME}-upgrade-4.00.01.jar
-PORTREVISION=		0
+PORTREVISION=		2
 CATEGORIES=		security www java
 #MASTER_SITES=		https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v${PORTVERSION}/
 MASTER_SITES=		https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/releases/download/v3.14.0/
@@ -17,8 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 RUN_DEPENDS=	bash:shells/bash
 
-USES=		shebangfix
-USE_JAVA=	yes
+USES=		java shebangfix
 USE_GITHUB=	nodefault
 
 SHEBANG_FILES=	jetty_bastillion/bin/jetty.sh
@@ -53,6 +52,8 @@ SUB_FILES=	\
 PLIST_SUB=	APP_NAME=${APP_NAME} \
 		WWWDIR=${WWWDIR}
 
+NO_ARCH_IGNORE= libsetuid-linux.so libsetuid-osx.so
+IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	${RM} ${WRKSRC}/*.bat ${WRKSRC}/startBastillion.sh
 	${MV} ${WRKSRC}/jetty ${WRKSRC}/jetty_bastillion
@@ -92,5 +93,8 @@ gen-plist:
 	${FIND} ${STAGEDIR}${PREFIX}/${WWWDIR}/webapps -type f -a ! -name \*.orig | ${SED} -e "s:${STAGEDIR}${PREFIX}/${WWWDIR}:%%WWWDIR%%:g" | ${SORT} >> ${PLIST}.new
 	${FIND} ${STAGEDIR}${PREFIX}/${WWWDIR}/etc -type f -a ! -name \*.orig | ${SED} -e "s:${STAGEDIR}${PREFIX}/${WWWDIR}:%%WWWDIR%%:g" | ${SORT} >> ${PLIST}.new
 	${ECHO} 'jetty_bastillion/etc' >> ${PLIST}.new
+
+dfly-install:
+	${RMDIR} ${STAGEDIR}${LOCALBASE}/jetty_bastillion/resources
 
 .include <bsd.port.mk>

@@ -18,8 +18,8 @@ CONFLICTS=	nut-[0-9]*
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	networkupstools
-GH_TAGNAME=	d683bc1da 
-NUT_COMMIT_DATE=	2024.06.25
+GH_TAGNAME=	a66c00901
+NUT_COMMIT_DATE=	2026.09.18
 
 MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
@@ -45,7 +45,6 @@ OPTIONS_DEFAULT_powerpc=	FREEIPMI
 OPTIONS_DEFAULT_powerpc64=	FREEIPMI
 OPTIONS_DEFAULT_powerpc64le=	FREEIPMI
 OPTIONS_DEFAULT_riscv64=	FREEIPMI
-OPTIONS_DEFAULT_riscv64sf=	FREEIPMI
 OPTIONS_DEFINE=	SERIAL USB SNMP NEON PDU MODBUS CGI BASH AVAHI IPMIPSU FREEIPMI DOCS MANPAGES DEV
 OPTIONS_SINGLE=	SSL
 OPTIONS_SINGLE_SSL=	SSL_OFF OPENSSL NSS
@@ -74,6 +73,7 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/nut \
 		--program-transform-name="" \
 		--localstatedir=${STATEDIR} \
 		--datadir=${PREFIX}/etc/nut \
+		--mandir=${PREFIX}/share/man/nut \
 		--with-devd-dir=${PREFIX}/etc/devd \
 		--with-drvpath=${PREFIX}/libexec/nut \
 		--with-statepath=${STATEDIR} \
@@ -86,7 +86,9 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/nut \
 		--without-python2 \
 		--with-python3=${PYTHON_CMD} \
 		--without-nut_monitor \
-		--with-libltdl --with-nut-scanner
+		--with-libltdl --with-nut-scanner \
+		--without-augeas-lenses-dir \
+		--enable-extapi-enphase=no
 
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
@@ -111,6 +113,7 @@ CGI_CONFIGURE_ON=	--with-cgipath=${CGIDIR} \
 SERIAL_CONFIGURE_WITH=	serial
 
 USB_CONFIGURE_WITH=	usb=auto
+USB_LIB_DEPENDS=	libgio-2.0.so:devel/glib20
 
 SNMP_LIB_DEPENDS=	libnetsnmp.so:net-mgmt/net-snmp
 SNMP_CONFIGURE_WITH=	snmp
@@ -143,6 +146,9 @@ NSS_CONFIGURE_WITH=	nss
 
 DEV_CONFIGURE_WITH=	dev
 
+CONFIGURE_ARGS+= --with-libltdl-includes=-I${PREFIX}/include
+CONFIGURE_ARGS+= --with-libltdl-libs=-L${PREFIX}/lib
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 post-patch:

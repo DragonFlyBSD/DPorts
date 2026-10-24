@@ -29,6 +29,7 @@ OPTIONS_SUB=	yes
 MANPAGES_BUILD_DEPENDS=	docbook2html:textproc/docbook-utils \
 			docbook-sgml>0:textproc/docbook-sgml
 
+MAKE_JOBS_UNSAFE= yes
 post-patch-MANPAGES-off:
 	@${REINPLACE_CMD} -e "s|subdir('man')||g" \
 		${WRKSRC}/meson.build

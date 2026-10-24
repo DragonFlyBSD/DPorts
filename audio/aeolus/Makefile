@@ -26,6 +26,7 @@ PLIST_FILES=	bin/aeolus \
 		lib/aeolus_txt.so \
 		lib/aeolus_x11.so
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${STRIP_CMD} \
 		${STAGEDIR}${PREFIX}/bin/aeolus \

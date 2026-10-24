@@ -1,0 +1,13 @@
+[
+{ type: install
+  message: <<EOM
+%%PORTNAME%% has been installed with a wrapper script. By default, all 
+user data (configs, saves, caches, etc.) is stored in:
+    ~/.local/share/%%PORTNAME%%/
+
+The wrapper script supports a custom base directory via the TRX_BASE 
+environment variable, which automatically manages the required 
+subdirectories (cfg, cache, games, screenshots, saves).
+EOM
+}
+]

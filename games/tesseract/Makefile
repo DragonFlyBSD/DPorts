@@ -1,8 +1,10 @@
 PORTNAME=	tesseract
 DISTVERSION=	2014_05_12
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games
-MASTER_SITES=	http://download.tuxfamily.org/${PORTNAME}/
+#MASTER_SITES=	http://download.tuxfamily.org/${PORTNAME}/
+MASTER_SITES=	http://absinthe.tuxfamily.net/tesseract/ \
+		https://hina.lysator.liu.se/pub/void-ppc-sources/tesseract-1/
 PKGNAMESUFFIX=	-game
 DISTNAME=	${PORTNAME}_${DISTVERSION}_first_edition_linux
 
@@ -49,6 +51,7 @@ MASTER_DESC=		Build master server
 MASTER_ALL_TARGET=	master
 MASTER_PLIST_FILES=	bin/tess_master libexec/tess_master
 
+DPMSG= ${WRKDIR}/dports-message
 post-patch:
 	@${REINPLACE_CMD} -e '/OBJS.*PCH/d' \
 		-e '/-fomit-frame-pointer/d' \
@@ -72,5 +75,15 @@ do-install:
 do-install-DOCS-on:
 	(cd ${WRKSRC}/doc && ${COPYTREE_SHARE} \
 		. ${STAGEDIR}${DOCSDIR})
+
+.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
+RUN_DEPENDS:=	${RUN_DEPENDS:N*tesseract-data}
+PKGMESSAGE=	${DPMSG}
+
+dfly-patch:
+	@${ECHO} "#######################################################" >> ${DPMSG}
+	@${ECHO} "# Build games/tesseract-data from source to play this #" >> ${DPMSG}
+	@${ECHO} "#######################################################" >> ${DPMSG}
+.endif
 
 .include <bsd.port.mk>

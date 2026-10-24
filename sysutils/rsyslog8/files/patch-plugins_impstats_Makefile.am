@@ -1,0 +1,11 @@
+--- plugins/impstats/Makefile.am.orig	2026-06-23 11:08:14 UTC
++++ plugins/impstats/Makefile.am
+@@ -35,7 +35,7 @@ remote.pb-c.stamp: remote.proto
+ remote.pb-c.c remote.pb-c.h: remote.pb-c.stamp
+ 
+ remote.pb-c.stamp: remote.proto
+-	$(PROTOC_C) --proto_path=$(srcdir) --c_out=. $<
++	$(PROTOC_C) --c_out=. $>
+ 	{ \
+ 		echo '#if defined(__GNUC__)'; \
+ 		echo '#pragma GCC diagnostic push'; \

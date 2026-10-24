@@ -155,4 +155,12 @@ generate-distfile:
 	tar cjf ${DISTDIR}/${SRC_FILE}.tar.bz2 ${SRC_FILE}
 	${RM} -r ${SRC_FILE}
 
+.if !defined(DPORTS_BUILDER)
+MANUAL_PACKAGE_BUILD=	~660M package (too big for mirrors)
+.endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@freebsd@dragonfly@gi' \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

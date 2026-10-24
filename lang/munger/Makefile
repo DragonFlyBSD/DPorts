@@ -27,6 +27,7 @@ OPTIONS_DEFAULT=	SQLITE
 SQLITE_USES=	sqlite:3
 SQLITE_MAKE_ARGS=	-DWITH_SQL
 
+CFLAGS= -DMAXNAMLEN=255
 post-patch:
 	@${REINPLACE_CMD} -e 's|lcurses|lncurses|' ${WRKSRC}/Makefile
 

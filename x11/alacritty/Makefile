@@ -1,8 +1,10 @@
 PORTNAME=	alacritty
-DISTVERSIONPREFIX=	v
-DISTVERSION=	0.13.2
-PORTREVISION=	2
+DISTVERSION=	0.17.0
+PORTREVISION=	4
 CATEGORIES=	x11 wayland
+MASTER_SITES=	CRATESIO/${PORTNAME}/${DISTNAME}${CARGO_CRATE_EXT}
+# XXX Teach USES=cargo to have proper default
+DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
 
 MAINTAINER=	vishwin@FreeBSD.org
 COMMENT=	GPU-accelerated terminal emulator
@@ -17,11 +19,8 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 TEST_DEPENDS=	dejavu>0:x11-fonts/dejavu
 
 USES=		cargo localbase:ldflags python:build
-USE_GITHUB=	yes
 
-CARGO_INSTALL_PATH=	alacritty
 CARGO_FEATURES+=	--no-default-features
-CARGO_CARGOTOML=	${WRKSRC}/${PORTNAME}/Cargo.toml
 
 # For xcb crate
 BINARY_ALIAS=	python3=${PYTHON_CMD}
@@ -52,6 +51,7 @@ X11_USES=	xorg
 X11_USE=	XORG=xcb
 X11_VARS=	CARGO_FEATURES+=x11
 
+DFLY_UNMAINTAINED= yes
 post-build-MANPAGES-on:
 	scdoc < ${WRKSRC}/extra/man/alacritty.1.scd > ${WRKSRC}/alacritty.1
 	scdoc < ${WRKSRC}/extra/man/alacritty-msg.1.scd > ${WRKSRC}/alacritty-msg.1
@@ -59,7 +59,6 @@ post-build-MANPAGES-on:
 	scdoc < ${WRKSRC}/extra/man/alacritty-bindings.5.scd > ${WRKSRC}/alacritty-bindings.5
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/alacritty
 	${INSTALL_DATA} ${WRKSRC}/extra/linux/Alacritty.desktop \
 		${STAGEDIR}${DESKTOPDIR}
 	${INSTALL_DATA} ${WRKSRC}/extra/logo/alacritty-term.svg \
@@ -87,4 +86,5 @@ post-install-MANPAGES-on:
 	${INSTALL_MAN} ${WRKSRC}/alacritty-bindings.5 \
 		${STAGEDIR}${PREFIX}/share/man/man5/alacritty-bindings.5
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

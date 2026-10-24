@@ -1,5 +1,5 @@
 PORTNAME=	liblouis
-PORTVERSION=	3.30.0
+PORTVERSION=	3.38.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
@@ -19,4 +19,5 @@ USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 MAKE_JOBS_UNSAFE=	yes
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

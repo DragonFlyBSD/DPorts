@@ -1,7 +1,7 @@
 PORTNAME=	gorss
-PORTVERSION=	0.4
+PORTVERSION=	0.5
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	11
 CATEGORIES=	net www
 
 MAINTAINER=	ports@FreeBSD.org
@@ -15,16 +15,14 @@ USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	Lallassu
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include "${.CURDIR}/Makefile.deps"
 
 GO_BUILDFLAGS=	-ldflags "-w -X github.com/${GH_ACCOUNT}/${GH_PROJECT}/internal.Version=${PORTVERSION}"
 GO_TARGET=	./cmd/${PORTNAME}
 
-PLIST_FILES=	bin/${PORTNAME} \
-		${DATADIR_REL}/gorss.conf \
-		${DATADIR_REL}/themes/default.theme \
-		${DATADIR_REL}/themes/irssi.theme \
-		${DATADIR_REL}/themes/night.theme
+post-extract:
+	@${LN} -sf ${FILESDIR}/modules.txt ${WRKSRC}/vendor
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/local,${PREFIX},' \

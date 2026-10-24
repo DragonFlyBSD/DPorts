@@ -12,7 +12,7 @@ WWW=		https://hapy.sourceforge.net
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USES=		libtool
-USE_CXXSTD=	c++98
+USE_CXXSTD= c++98
 
 post-build:
 	@${ECHO_MSG} "Consider running 'make check' before 'make install'"

@@ -11,7 +11,7 @@ USES=		compiler tar:bzip2 xorg
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
 
-CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
+CXXFLAGS+= ${CXXFLAGS_${CHOSEN_COMPILER_TYPE}} -Wno-narrowing
 CXXFLAGS_clang=	-Wno-c++11-narrowing
 
 PLIST_FILES=	bin/unikey bin/ukxim

@@ -20,6 +20,7 @@ USE_LDCONFIG=	yes
 
 ALL_TARGET=	shared static
 
+CFLAGS= -Wno-pointer-sign
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != "i386"

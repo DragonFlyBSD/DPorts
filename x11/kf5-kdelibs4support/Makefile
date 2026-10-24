@@ -1,5 +1,6 @@
 PORTNAME=	kdelibs4support
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
+PORTREVISION=	2
 CATEGORIES=	x11 kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
@@ -23,5 +24,9 @@ USE_QT=		concurrent core dbus designer gui network \
 USE_XORG=	ice sm x11 xcb xext
 
 SHEBANG_FILES=	src/kio/fileshareset
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

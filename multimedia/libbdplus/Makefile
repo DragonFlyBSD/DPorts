@@ -20,4 +20,12 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-optimizations
 
+CFLAGS= -Wno-deprecated-declarations
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-D_POSIX_C_SOURCE@&__z@g' \
+			 -e 's@-D_ISOC99_SOURCE@&__z@g' \
+		${WRKSRC}/configure ${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e 's@[[:<:]]index[[:>:]]@dump_index@g' \
+		${WRKSRC}/src/examples/convtab_dump.c
+
 .include <bsd.port.mk>

@@ -12,11 +12,12 @@ COMMENT=	Gopher client for access to a distributed document service
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gmake
+USES= gmake ncurses
 GNU_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+CONFIGURE_ENV= ac_cv_lib_ncurses_main=yes
 pre-patch:
 	@${FIND} ${WRKSRC} -name '*.[ch]' | ${XARGS} ${REINPLACE_CMD} -e \
 		's,<malloc.h>,<stdlib.h>,'
@@ -30,5 +31,10 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/gopher.1 ${STAGEDIR}${PREFIX}/share/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/gophfilt.1 ${STAGEDIR}${PREFIX}/share/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/gopherrc.5 ${STAGEDIR}${PREFIX}/share/man/man5
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@curses@ncurses@g'				\
+			 -e "/LIBS/s@\(-lncurses\)@-L${LOCALBASE}/lib \1@g"	\
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

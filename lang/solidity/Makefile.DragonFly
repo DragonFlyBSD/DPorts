@@ -1,9 +1,0 @@
-USE_CLANG_FALLBACK=	default
-
-# StandardCompiler.cpp:118:14: error: catching polymorphic type 'struct dev::BadHexCharacter' by value [-Werror=catch-value=]
-dfly-patch:
-	${REINPLACE_CMD} -e '/add_compile_options(-Werror)/d'	\
-		${WRKSRC}/cmake/EthCompilerSettings.cmake
-	${REINPLACE_CMD} -e '/add_compile_options(-Qunused-arguments)/d' \
-		${WRKSRC}/cmake/EthCompilerSettings.cmake
-IGNORE=   unmaintained, please request fixing to users mailing list

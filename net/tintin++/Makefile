@@ -1,5 +1,5 @@
 PORTNAME=	tintin++
-PORTVERSION=	2.02.42
+PORTVERSION=	2.02.61
 CATEGORIES+=	net games
 MASTER_SITES=	SF/tintin/TinTin%2B%2B%20Source%20Code/${PORTVERSION:C|.$||}/ \
 		https://github.com/scandum/tintin/releases/download/${PORTVERSION}/
@@ -13,9 +13,9 @@ WWW=		https://tintin.mudhalla.net/ \
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/../COPYING
 
-LIB_DEPENDS=	libpcre.so:devel/pcre
+LIB_DEPENDS=	libpcre2-8.so:devel/pcre2
 
-USES=		gmake localbase
+USES=		cpe gmake localbase
 
 CONFIGURE_ARGS=	--includedir=${LOCALBASE}/include \
 		--libdir=${LOCALBASE}/lib \
@@ -28,6 +28,8 @@ PLIST_FILES=	bin/tt++
 PORTDOCS=	CREDITS FAQ README SCRIPTS TODO
 
 CONFLICTS_INSTALL?=	zh-tintin++
+
+CPE_VENDOR=	tintin++_project
 
 SLAVEDIRS=	chinese/tintin++
 

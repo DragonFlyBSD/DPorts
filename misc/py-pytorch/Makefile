@@ -1,7 +1,7 @@
 PORTNAME=	pytorch
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.6.0
-PORTREVISION=	3
+DISTVERSION=	2.14.0
+PORTREVISION=	2
 CATEGORIES=	misc # machine-learning
 MASTER_SITES=	https://github.com/pytorch/pytorch/releases/download/v${DISTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -10,47 +10,66 @@ DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	PyTorch: Tensors and dynamic neural networks in Python
-WWW=		https://pytorch.org/
+WWW=		https://pytorch.org/ \
+		https://github.com/pytorch/pytorch
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_aarch64=	build fails: CMake Error at third_party/QNNPACK/CMakeLists.txt:47 (MESSAGE): Unrecognized CMAKE_SYSTEM_NAME = FreeBSD, see https://github.com/pytorch/pytorch/issues/144608
 BROKEN_armv7=	build fails: CMake Error at third_party/QNNPACK/CMakeLists.txt:47 (MESSAGE): Unrecognized CMAKE_SYSTEM_NAME = FreeBSD, see https://github.com/pytorch/pytorch/issues/144608
 BROKEN_i386=	build fails: DispatchStub.cpp:162:29: [0m[0;1;31merror: [0m[1muse of undeclared identifier 'AVX2'[0m
 
 BUILD_DEPENDS=	cmake:devel/cmake-core \
 		gmake:devel/gmake \
 		pybind11>0:devel/pybind11 \
-		${PYNUMPY} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${LOCALBASE}/include/fxdiv.h:devel/fxdiv \
+		${PYTHON_PKGNAMEPREFIX}filelock>0:sysutils/py-filelock@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}fsspec>0:filesystems/py-fsspec@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}hypothesis>0:devel/py-hypothesis@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}optree>0:devel/py-optree@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}packaging>0:devel/py-packaging@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyyaml>0:devel/py-pyyaml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}scikit-build-core>=1.0:devel/py-scikit-build-core@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}sympy>=1.13.3:math/py-sympy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>0:devel/py-typing-extensions@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pyyaml>=0:devel/py-pyyaml@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
 LIB_DEPENDS=	libabsl_base.so:devel/abseil \
-		libblis.so:math/blis \
-		libmpi_cxx.so:net/openmpi4 \
 		libonnx.so:misc/onnx \
 		libopenblas.so:math/openblas \
-		libpthreadpool.so:devel/pthreadpool \
 		libprotobuf.so:devel/protobuf \
 		libsleef.so:math/sleef
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}filelock>0:sysutils/py-filelock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}fsspec>0:filesystems/py-fsspec@${PY_FLAVOR}  \
 		${PYTHON_PKGNAMEPREFIX}Jinja2>0:devel/py-Jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}networkx>0:math/py-networkx@${PY_FLAVOR} \
-		${PYNUMPY} \
-		${PYTHON_PKGNAMEPREFIX}sympy>=1.13.1:math/py-sympy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}sympy>=1.13.3:math/py-sympy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>=4.10.0:devel/py-typing-extensions@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyyaml>0:devel/py-pyyaml@${PY_FLAVOR}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}astunparse>0:devel/py-astunparse@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}dill>0:devel/py-dill@${PY_FLAVOR} # optional dependency
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}expecttest>=0.2.1:devel/py-expecttest@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}dill>0:devel/py-dill@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}protobuf>0:devel/py-protobuf@${PY_FLAVOR} # optional dependencies
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}expecttest>0:devel/py-expecttest@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pytest-rerunfailures>0:devel/py-pytest-rerunfailures@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pytest-xdist>0:devel/py-pytest-xdist@${PY_FLAVOR}
 
-USES=		compiler:c++17-lang localbase:ldflags python
-USE_PYTHON=	distutils autoplist
+USES=		compiler:c++17-lang localbase:ldflags mpi:openmpi python shebangfix
+USE_PYTHON=	pep517 autoplist
+
+SHEBANG_FILES=	torch/utils/hipify/hipify_python.py # installed executable, unlike with the pre-2.14 setuptools build
+USE_LDCONFIG=	${PYTHON_SITELIBDIR}/torch/lib
+
+# The Python package is named "torch" not "pytorch"
+PYDISTUTILS_PKGNAME=	torch
+PEP517_INSTALL_CMD=	${PYTHON_CMD} -m installer --destdir ${STAGEDIR} --prefix ${PREFIX} ${BUILD_WRKSRC}/dist/torch-${DISTVERSION}*.whl
 
 USE_GITHUB=	nodefault
-GH_TUPLE=	pytorch:cpuinfo:1e83a2f:cpuinfo/cpuinfo-with-freebsd-support # https://github.com/pytorch/cpuinfo/pull/230/commits
+GH_TUPLE=	pytorch:cpuinfo:bc3c01e:cpuinfo/cpuinfo-with-freebsd-support # https://github.com/pytorch/cpuinfo/pull/230/commits
 
 MAKE_ENV=	USE_NINJA=no # ninja breaks for some reason
 MAKE_ENV+=	BUILD_TEST=0 # ninja breaks for some reason
@@ -58,33 +77,84 @@ MAKE_ENV+=	USE_MKLDNN=0 # disable MKLDNN that doesn't exist, see https://github.
 MAKE_ENV+=	USE_CUDNN=0
 MAKE_ENV+=	USE_LAPACK=1 # needed on FreeBSD to run w/out GPU
 MAKE_ENV+=	USE_QNNPACK=0
-LDFLAGS+=	-lexecinfo
+MAKE_ENV+=	USE_DISTRIBUTED=1
+# point FindMPI at the openmpi requested by USES=mpi, otherwise it picks up the
+# mpicc/mpicxx wrappers that net/mpich installs into LOCALBASE/bin, which link
+# libmpi/libmpicxx from mpich and drag in lang/gcc14 via the wrapper's -rpath
+MAKE_ENV+=	CMAKE_ARGS="-DMPI_C_COMPILER=${MPI_HOME}/bin/mpicc -DMPI_CXX_COMPILER=${MPI_HOME}/bin/mpicxx" \
+		MAX_JOBS=${MAKE_JOBS_NUMBER}
+LDFLAGS= -L /usr/lib -L${LOCALBASE}/llvm${LLVM_DEFAULT}/lib/c++ -L /lib
 LDFLAGS_powerpc64le=	-pthread
 
-BINARY_ALIAS=	make=${GMAKE}
+BINARY_ALIAS= make=${GMAKE} cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} cc=${LOCALBASE}/bin/clang${LLVM_DEFAULT} c++=${LOCALBASE}/bin/clang++${LLVM_DEFAULT} ar=${LOCALBASE}/bin/llvm-ar${LLVM_DEFAULT} nm=${LOCALBASE}/bin/llvm-nm${LLVM_DEFAULT}
 
-POST_PLIST=	fix-plist
+TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} \
+		TORCHINDUCTOR_CACHE_DIR=${WRKDIR}/torchinductor_cache
+TEST_WRKSRC=	${WRKSRC}/test
 
+OPTIONS_DEFINE=		VULKAN
+OPTIONS_DEFAULT=	VULKAN # VULKAN is experimental in PyTorch and only simple computations work
+
+VULKAN_MAKE_ENV=	USE_VULKAN=1 USE_VULKAN_SHADERC_RUNTIME=1 USE_VULKAN_WRAPPER=0 # see https://docs.pytorch.org/tutorials/unstable/vulkan_workflow.html
+VULKAN_BUILD_DEPENDS=	glslc:graphics/shaderc \
+			vulkan-headers>0:graphics/vulkan-headers
+VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
+
+CONFLICTS_BUILD=	mpich # binaries are still linked with mpich when it is present
+
+IGNORE= unmaintained, please request fixing to users mailing list
+USE_CLANG_FALLBACK= default
+CXXFLAGS= -nostdlib++ -nostdinc++ -I${LOCALBASE}/include -I${LOCALBASE}/include/cxxrt -cxx-isystem ${LOCALBASE}/llvm${LLVM_DEFAULT}/include/c++/v1
+LIB_DIRS= ${PREFIX}/llvm${LLVM_DEFAULT}/lib
+LIB_DEPENDS+= libc++.so.1:devel/libcxx${LLVM_DEFAULT}
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD
-USES+=	llvm:max=15
+.if ${ARCH} == aarch64
+# torch's many dlopen'd shared libraries (OpenMP, mimalloc, cpuinfo, etc.) require
+# more initial-exec TLS than rtld's small default dlopen reserve, see rtld(1)
+TEST_ENV+=	LD_STATIC_TLS_EXTRA=4096
 .endif
+
+post-extract:
+	# upstream ships a stray *.orig file that 'make makepatch' would otherwise
+	# mistake for a patch baseline and turn into a bogus binary patch
+	@${RM} ${WRKSRC}/third_party/aiter/hsa/gfx950/pa/pa_bf16_noquant_gqa8_1tg_4w.co.orig
 
 post-patch:
 	@cd ${WRKSRC} && \
-		${RM} -r third_party/cpuinfo third_party/fbgemm/third_party/cpuinfo && \
+		${RM} -r third_party/cpuinfo third_party/fbgemm/external/cpuinfo && \
 		${CP} -r cpuinfo-with-freebsd-support third_party/cpuinfo && \
-		${CP} -r cpuinfo-with-freebsd-support third_party/fbgemm/third_party/cpuinfo
+		${CP} -r cpuinfo-with-freebsd-support third_party/fbgemm/external/cpuinfo
+	# change hardcoded compiler in torch/_inductor/config.py
+	@${REINPLACE_CMD} -e 's|"g++"|"${CXX}"|' \
+		${WRKSRC}/torch/_inductor/config.py
 
-post-install: # strip binaries
-	@${STRIP_CMD} \
-		${STAGEDIR}${PYTHON_SITELIBDIR}/torch/bin/torch_shm_manager \
-		${STAGEDIR}${PYTHON_SITELIBDIR}/torch/_C${PYTHON_EXT_SUFFIX}.so \
-		${STAGEDIR}${PYTHON_SITELIBDIR}/functorch/_C${PYTHON_EXT_SUFFIX}.so \
-		${STAGEDIR}${PYTHON_SITELIBDIR}/torch/lib/lib*.so
+do-install: # port should be moved to 'torch', but keep this for now with the hardcoded 'torch' name
+	@${MKDIR} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+	@cd ${INSTALL_WRKSRC} && ${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${PEP517_INSTALL_CMD}
+	@${PYTHON_CMD} -B ${PORTSDIR}/Mk/Scripts/strip_RECORD.py \
+		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/torch-${DISTVERSION}*.dist-info/RECORD >> ${_PYTHONPKGLIST}
+	@${REINPLACE_CMD} \
+		-e '/\.pyc$$/d' \
+		-e 's|^|${PYTHONPREFIX_SITELIBDIR}/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../etc/|etc/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../bin/|bin/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../include/|include/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../lib/|lib/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../libdata/|libdata/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../libexec/|libexec/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../man/|man/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../sbin/|sbin/|' \
+		-e 's|^${PYTHONPREFIX_SITELIBDIR}/../../../share/|share/|' \
+			${_PYTHONPKGLIST}
+	@cd ${STAGEDIR}${PREFIX} && ${FIND} lib -name '*.pyc' >> ${_PYTHONPKGLIST}
 
-fix-plist: # remove the stray %%PYTHON_SITELIBDIR%%/caffe2 file
-	@${REINPLACE_CMD} -e "s|.*/caffe2$$||" ${TMPPLIST}
+do-test:
+	@cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} run_test.py
+
+test-quick:
+	@cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} ${FILESDIR}/example.py
+
+# tests as of 2.14.0: 231 passed 6 skipped
 
 .include <bsd.port.mk>

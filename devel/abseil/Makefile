@@ -1,8 +1,12 @@
 PORTNAME=	abseil
-PORTVERSION=	20250127.0
+PORTVERSION=	20250127.1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/abseil/abseil-cpp/releases/download/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-cpp-${PORTVERSION}
+
+PATCH_SITES=	https://github.com/abseil/abseil-cpp/commit/
+PATCHFILES+=	a4950fba03217d0ea102c98ce795c189bba50383.patch:-p1 # https://github.com/llvm/llvm-project/pull/138835
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Abseil Common Libraries (C++)
@@ -18,6 +22,6 @@ PATHFIX_CMAKELISTSTXT=	AbseilHelpers.cmake
 
 _GET_SOVER=	${GREP} ABSL_SOVERSION ${WRKSRC}/CMakeLists.txt \
 		2>/dev/null | ${CUT} -d\" -f2
-PLIST_SUB+=	LIBSUFX=${_GET_SOVER:sh}
+PLIST_SUB+= LIBSUFX=${_GET_SOVER:sh} LIBSUFX=2301.0.0
 
 .include <bsd.port.mk>

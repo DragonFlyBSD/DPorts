@@ -1,5 +1,6 @@
 PORTNAME=	tcl-lmdb
 DISTVERSION=	0.5.0
+PORTREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	gahr@FreeBSD.org
@@ -8,7 +9,7 @@ WWW=		https://github.com/ray2501/tcl-lmdb
 
 LICENSE=	BSD2CLAUSE
 
-LIB_DEPENDS=	liblmdb.so:databases/lmdb
+LIB_DEPENDS=	liblmdb.so:databases/lmdb0
 
 USES=		gmake localbase:ldflags tcl:tea
 
@@ -27,5 +28,10 @@ PLIST_FILES=	lib/${TCL_PKG}/lib${TCL_PKG_LIB_PREFIX}${TCL_PKG}.so \
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${TCL_PKG}/lib${TCL_PKG_LIB_PREFIX}${TCL_PKG}.so
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/FreeBSD-\*/FreeBSD-*|DragonFly-*/g' \
+		${WRKSRC}/tclconfig/tcl.m4	\
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

@@ -324,6 +324,8 @@ include/polymake/topaz/next/ChainComplex.h
 include/polymake/topaz/next/Filtration.h
 include/polymake/topaz/next/HomologyComplex.h
 include/polymake/topaz/next/IntersectionForm.h
+include/polymake/topaz/nsw_3_spheres.h
+include/polymake/topaz/nsw_d_spheres.h
 include/polymake/topaz/random_discrete_morse.h
 include/polymake/topaz/subcomplex_tools.tcc
 include/polymake/topaz/sum_triangulation_tools.h
@@ -371,14 +373,14 @@ include/polymake/tropical/thomog.h
 include/polymake/type_utils.h
 include/polymake/vector
 lib/libpolymake-apps-rt.so
-lib/libpolymake-apps-rt.so.4
-lib/libpolymake-apps-rt.so.4.7
+lib/libpolymake-apps-rt.so.%%SOVER%%
+lib/libpolymake-apps-rt.so.%%VER%%
 lib/libpolymake-apps.so
-lib/libpolymake-apps.so.4
-lib/libpolymake-apps.so.4.7
+lib/libpolymake-apps.so.%%SOVER%%
+lib/libpolymake-apps.so.%%VER%%
 lib/libpolymake.so
-lib/libpolymake.so.4
-lib/libpolymake.so.4.7
+lib/libpolymake.so.%%SOVER%%
+lib/libpolymake.so.%%VER%%
 libexec/polymake/config.ninja
 libexec/polymake/lib/common.so
 libexec/polymake/lib/fan.so
@@ -387,27 +389,20 @@ libexec/polymake/lib/graph.so
 libexec/polymake/lib/group.so
 libexec/polymake/lib/ideal.so
 libexec/polymake/lib/libpolymake-apps-rt.so
-libexec/polymake/lib/libpolymake-apps-rt.so.4
-libexec/polymake/lib/libpolymake-apps-rt.so.4.7
+libexec/polymake/lib/libpolymake-apps-rt.so.%%SOVER%%
+libexec/polymake/lib/libpolymake-apps-rt.so.%%VER%%
 libexec/polymake/lib/libpolymake-apps.so
-libexec/polymake/lib/libpolymake-apps.so.4
-libexec/polymake/lib/libpolymake-apps.so.4.7
+libexec/polymake/lib/libpolymake-apps.so.%%SOVER%%
+libexec/polymake/lib/libpolymake-apps.so.%%VER%%
 libexec/polymake/lib/matroid.so
 libexec/polymake/lib/polytope.so
 libexec/polymake/lib/topaz.so
 libexec/polymake/lib/tropical.so
-@comment libexec/polymake/perlx/%%PERL_VERSION%%/amd64-freebsd-thread-multi/auto/Polymake/Ext/Ext.so
+libexec/polymake/perlx/%%PERL_VERSION%%/%%PERL_ARCHNAME%%/auto/Polymake/Ext/Ext.so
 libexec/polymake/shared
 %%DATADIR%%/apps/common/perllib/BackgroundViewer.pm
 %%DATADIR%%/apps/common/perllib/Geomview.pm
 %%DATADIR%%/apps/common/perllib/PmSvg.pm
-%%DATADIR%%/apps/common/perllib/PolyDB.pm
-%%DATADIR%%/apps/common/perllib/PolyDB/Client.pm
-%%DATADIR%%/apps/common/perllib/PolyDB/Collection.pm
-%%DATADIR%%/apps/common/perllib/PolyDB/Completion.pm
-%%DATADIR%%/apps/common/perllib/PolyDB/Cursor.pm
-%%DATADIR%%/apps/common/perllib/PolyDB/JsonIO.pm
-%%DATADIR%%/apps/common/perllib/PolyDB/Schema.pm
 %%DATADIR%%/apps/common/perllib/Postscript.pm
 %%DATADIR%%/apps/common/perllib/Povray.pm
 %%DATADIR%%/apps/common/perllib/Sage.pm
@@ -425,14 +420,6 @@ libexec/polymake/shared
 %%DATADIR%%/apps/common/perllib/X3d.pm
 %%DATADIR%%/apps/common/rules/algebraic_types
 %%DATADIR%%/apps/common/rules/basic_types
-%%DATADIR%%/apps/common/rules/db_collection_admin.rules
-%%DATADIR%%/apps/common/rules/db_help.rules
-%%DATADIR%%/apps/common/rules/db_info.rules
-%%DATADIR%%/apps/common/rules/db_insert.rules
-%%DATADIR%%/apps/common/rules/db_query.rules
-%%DATADIR%%/apps/common/rules/db_templates.rules
-%%DATADIR%%/apps/common/rules/db_test.rules
-%%DATADIR%%/apps/common/rules/db_user_admin.rules
 %%DATADIR%%/apps/common/rules/formatting_filters
 %%DATADIR%%/apps/common/rules/functions_help.rules
 %%DATADIR%%/apps/common/rules/geomview.rules
@@ -446,7 +433,6 @@ libexec/polymake/shared
 %%DATADIR%%/apps/common/rules/objects_help.rules
 %%DATADIR%%/apps/common/rules/pdfviewer.rules
 %%DATADIR%%/apps/common/rules/permutations
-%%DATADIR%%/apps/common/rules/polydb.rules
 %%DATADIR%%/apps/common/rules/polynomial_types
 %%DATADIR%%/apps/common/rules/postscript.rules
 %%DATADIR%%/apps/common/rules/povray.rules
@@ -539,6 +525,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/fulton/rules/toric_variety.rules
 %%DATADIR%%/apps/fulton/rules/toric_variety_properties.rules
 %%DATADIR%%/apps/fulton/src/class_group.cc
+%%DATADIR%%/apps/fulton/src/markov_bases.cc
 %%DATADIR%%/apps/graph/perllib/Graphviz.pm
 %%DATADIR%%/apps/graph/perllib/MetapostGraph.pm
 %%DATADIR%%/apps/graph/perllib/PostscriptGraph.pm
@@ -546,6 +533,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/graph/perllib/TikZGraph.pm
 %%DATADIR%%/apps/graph/perllib/Visual/Graph.pm
 %%DATADIR%%/apps/graph/perllib/Visual/Lattice.pm
+%%DATADIR%%/apps/graph/perllib/Visual/PhylogeneticTree.pm
 %%DATADIR%%/apps/graph/rules/common.rules
 %%DATADIR%%/apps/graph/rules/compare.rules
 %%DATADIR%%/apps/graph/rules/doubly_connected_edge_list.rules
@@ -555,7 +543,10 @@ libexec/polymake/shared
 %%DATADIR%%/apps/graph/rules/help.rules
 %%DATADIR%%/apps/graph/rules/lattice.rules
 %%DATADIR%%/apps/graph/rules/main.rules
+%%DATADIR%%/apps/graph/rules/mcf.rules
 %%DATADIR%%/apps/graph/rules/metapost.rules
+%%DATADIR%%/apps/graph/rules/network_flow.rules
+%%DATADIR%%/apps/graph/rules/phylo.rules
 %%DATADIR%%/apps/graph/rules/postscript.rules
 %%DATADIR%%/apps/graph/rules/povray.rules
 %%DATADIR%%/apps/graph/rules/sketch.rules
@@ -564,6 +555,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/graph/rules/tikz.rules
 %%DATADIR%%/apps/graph/rules/upgrade-plain.rules
 %%DATADIR%%/apps/graph/rules/visual.rules
+%%DATADIR%%/apps/graph/rules/visual_phylo.rules
 %%DATADIR%%/apps/graph/rules/x3d.rules
 %%DATADIR%%/apps/graph/src/Decoration.cc
 %%DATADIR%%/apps/graph/src/DoublyConnectedEdgeList.cc
@@ -588,6 +580,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/graph/src/homomorphisms.cc
 %%DATADIR%%/apps/graph/src/lattice_migration.cc
 %%DATADIR%%/apps/graph/src/maximal_chains.cc
+%%DATADIR%%/apps/graph/src/maximal_ranked_poset.cc
 %%DATADIR%%/apps/graph/src/neighborhood_graph.cc
 %%DATADIR%%/apps/graph/src/petersen.cc
 %%DATADIR%%/apps/graph/src/poset_tools.cc
@@ -607,6 +600,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/group/rules/main.rules
 %%DATADIR%%/apps/group/rules/permlib.rules
 %%DATADIR%%/apps/group/rules/switch_table.rules
+%%DATADIR%%/apps/group/src/action_functions.cc
 %%DATADIR%%/apps/group/src/col_to_row_action.cc
 %%DATADIR%%/apps/group/src/conjugacy_classes.cc
 %%DATADIR%%/apps/group/src/group_tools.cc
@@ -620,12 +614,12 @@ libexec/polymake/shared
 %%DATADIR%%/apps/group/src/permlib_group_tools.cc
 %%DATADIR%%/apps/group/src/representations.cc
 %%DATADIR%%/apps/group/src/sparse_isotypic_components.cc
-%%DATADIR%%/apps/ideal/rules/grassmann_pluecker.rules
 %%DATADIR%%/apps/ideal/rules/help.rules
 %%DATADIR%%/apps/ideal/rules/ideal.rules
 %%DATADIR%%/apps/ideal/rules/ideal_properties.rules
 %%DATADIR%%/apps/ideal/rules/main.rules
 %%DATADIR%%/apps/ideal/rules/slack_ideal.rules
+%%DATADIR%%/apps/ideal/src/grassmann_pluecker.cc
 %%DATADIR%%/apps/matroid/rules/_4ti2.rules
 %%DATADIR%%/apps/matroid/rules/automorphisms.rules
 %%DATADIR%%/apps/matroid/rules/dual.rules
@@ -663,6 +657,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/matroid/src/nested.cc
 %%DATADIR%%/apps/matroid/src/positroid.cc
 %%DATADIR%%/apps/matroid/src/projective_plane.cc
+%%DATADIR%%/apps/matroid/src/random_matroid.cc
 %%DATADIR%%/apps/matroid/src/representation.cc
 %%DATADIR%%/apps/matroid/src/revlex_basis_encoding.cc
 %%DATADIR%%/apps/matroid/src/split_flacets.cc
@@ -711,6 +706,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/polytope/rules/orbit_polytope.rules
 %%DATADIR%%/apps/polytope/rules/orbit_polytope_helpers.rules
 %%DATADIR%%/apps/polytope/rules/orbit_polytope_visual.rules
+%%DATADIR%%/apps/polytope/rules/plantri.rules
 %%DATADIR%%/apps/polytope/rules/point_configuration.rules
 %%DATADIR%%/apps/polytope/rules/point_configuration_properties.rules
 %%DATADIR%%/apps/polytope/rules/polarize.rules
@@ -726,7 +722,6 @@ libexec/polymake/shared
 %%DATADIR%%/apps/polytope/rules/require_libnormaliz.rules
 %%DATADIR%%/apps/polytope/rules/schlegel.rules
 %%DATADIR%%/apps/polytope/rules/slack_ideal.rules
-%%DATADIR%%/apps/polytope/rules/solids.rules
 %%DATADIR%%/apps/polytope/rules/steiner.rules
 %%DATADIR%%/apps/polytope/rules/stl.rules
 %%DATADIR%%/apps/polytope/rules/symmetrized_cocircuit_equations.rules
@@ -787,6 +782,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/polytope/src/cell_from_subdivision.cc
 %%DATADIR%%/apps/polytope/src/center.cc
 %%DATADIR%%/apps/polytope/src/centroid_volume.cc
+%%DATADIR%%/apps/polytope/src/chain_polytope.cc
 %%DATADIR%%/apps/polytope/src/check_inc.cc
 %%DATADIR%%/apps/polytope/src/check_poly.cc
 %%DATADIR%%/apps/polytope/src/chirotope.cc
@@ -871,6 +867,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/polytope/src/massive_gkz.cc
 %%DATADIR%%/apps/polytope/src/matroid_polytope.cc
 %%DATADIR%%/apps/polytope/src/max_GC_rank.cc
+%%DATADIR%%/apps/polytope/src/metric_cone.cc
 %%DATADIR%%/apps/polytope/src/minimal_vertex_angle.cc
 %%DATADIR%%/apps/polytope/src/minkowski_cone.cc
 %%DATADIR%%/apps/polytope/src/minkowski_sum.cc
@@ -886,6 +883,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/polytope/src/nn_crust.cc
 %%DATADIR%%/apps/polytope/src/non_vertices.cc
 %%DATADIR%%/apps/polytope/src/normal_cone.cc
+%%DATADIR%%/apps/polytope/src/order_polytope.cc
 %%DATADIR%%/apps/polytope/src/orthantify.cc
 %%DATADIR%%/apps/polytope/src/perles_irrational_8_polytope.cc
 %%DATADIR%%/apps/polytope/src/permutahedron.cc
@@ -927,6 +925,8 @@ libexec/polymake/shared
 %%DATADIR%%/apps/polytope/src/schlegel_transform.cc
 %%DATADIR%%/apps/polytope/src/separating_hyperplane.cc
 %%DATADIR%%/apps/polytope/src/simplex.cc
+%%DATADIR%%/apps/polytope/src/smooth_vertices.cc
+%%DATADIR%%/apps/polytope/src/solids.cc
 %%DATADIR%%/apps/polytope/src/spherize.cc
 %%DATADIR%%/apps/polytope/src/split_compatibility_graph.cc
 %%DATADIR%%/apps/polytope/src/split_polyhedron.cc
@@ -1027,6 +1027,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/topaz/src/is_manifold.cc
 %%DATADIR%%/apps/topaz/src/is_manifold_h.cc
 %%DATADIR%%/apps/topaz/src/is_pseudo_manifold.cc
+%%DATADIR%%/apps/topaz/src/is_shifted.cc
 %%DATADIR%%/apps/topaz/src/is_sphere_h_impl.cc
 %%DATADIR%%/apps/topaz/src/is_vertex_decomposition.cc
 %%DATADIR%%/apps/topaz/src/isomorphic_complexes.cc
@@ -1044,9 +1045,11 @@ libexec/polymake/shared
 %%DATADIR%%/apps/topaz/src/morse_matching_size.cc
 %%DATADIR%%/apps/topaz/src/morse_matching_tools.cc
 %%DATADIR%%/apps/topaz/src/multi_associahedron_sphere.cc
+%%DATADIR%%/apps/topaz/src/nsw_3_spheres.cc
+%%DATADIR%%/apps/topaz/src/nsw_constructibility.cc
+%%DATADIR%%/apps/topaz/src/nsw_d_spheres.cc
 %%DATADIR%%/apps/topaz/src/odd_complex.cc
 %%DATADIR%%/apps/topaz/src/odd_complex_of_manifold.cc
-%%DATADIR%%/apps/topaz/src/orientation.cc
 %%DATADIR%%/apps/topaz/src/persistent_homology.cc
 %%DATADIR%%/apps/topaz/src/poincare_sphere.cc
 %%DATADIR%%/apps/topaz/src/product.cc
@@ -1086,6 +1089,7 @@ libexec/polymake/shared
 %%DATADIR%%/apps/tropical/rules/main.rules
 %%DATADIR%%/apps/tropical/rules/patchwork.rules
 %%DATADIR%%/apps/tropical/rules/tplib.rules
+%%DATADIR%%/apps/tropical/rules/tropical_median.rules
 %%DATADIR%%/apps/tropical/rules/visual.rules
 %%DATADIR%%/apps/tropical/rules/visual_covector.rules
 %%DATADIR%%/apps/tropical/rules/voronoi.rules
@@ -1109,7 +1113,6 @@ libexec/polymake/shared
 %%DATADIR%%/apps/tropical/src/dual_addition_version_cone.cc
 %%DATADIR%%/apps/tropical/src/dual_addition_version_cycle.cc
 %%DATADIR%%/apps/tropical/src/envelope.cc
-%%DATADIR%%/apps/tropical/src/extract_pseudovertices.cc
 %%DATADIR%%/apps/tropical/src/feasible_cell.cc
 %%DATADIR%%/apps/tropical/src/hypersimplex.cc
 %%DATADIR%%/apps/tropical/src/hypersurface.cc
@@ -1254,6 +1257,7 @@ libexec/polymake/shared
 %%PPL%%%%DATADIR%%/bundled/ppl/apps/polytope/src/ppl_ch_client.cc
 %%PPL%%%%DATADIR%%/bundled/ppl/apps/polytope/src/ppl_interface.cc
 %%PPL%%%%DATADIR%%/bundled/ppl/apps/polytope/src/ppl_lp_client.cc
+%%DATADIR%%/bundled/polydb/polymake.ext
 %%DATADIR%%/bundled/ppl/polymake.ext
 %%SCIP%%%%DATADIR%%/bundled/scip/apps/fan/rules/main.rules
 %%SCIP%%%%DATADIR%%/bundled/scip/apps/polytope/rules/main.rules
@@ -1419,6 +1423,7 @@ libexec/polymake/shared
 %%DATADIR%%/resources/JuPyMake/README
 %%DATADIR%%/resources/JuPyMake/README.md
 %%DATADIR%%/resources/JuPyMake/example.py
+%%DATADIR%%/resources/JuPyMake/pyproject.toml
 %%DATADIR%%/resources/JuPyMake/setup.py
 %%DATADIR%%/resources/blender/pm_to_blender.py
 %%DATADIR%%/resources/host-agent/bin/env
@@ -1502,6 +1507,8 @@ libexec/polymake/shared
 %%DATADIR%%/upgrades/3.3
 %%DATADIR%%/upgrades/3.5
 %%DATADIR%%/upgrades/4.1
+%%DATADIR%%/upgrades/4.12
+%%DATADIR%%/upgrades/4.14
 %%DATADIR%%/upgrades/4.2
 %%DATADIR%%/upgrades/4.3
 %%DATADIR%%/upgrades/4.4
@@ -1520,12 +1527,17 @@ libexec/polymake/shared
 %%DATADIR%%/upgrades/big_objects-3.4.1
 %%DATADIR%%/upgrades/big_objects-4.0.1
 %%DATADIR%%/upgrades/big_objects-4.1.1
+%%DATADIR%%/upgrades/big_objects-4.11.1
+%%DATADIR%%/upgrades/big_objects-4.13.1
 %%DATADIR%%/upgrades/big_objects-4.2.1
 %%DATADIR%%/upgrades/big_objects-4.3.1
 %%DATADIR%%/upgrades/big_objects-4.3.3
 %%DATADIR%%/upgrades/big_objects-4.4.1
 %%DATADIR%%/upgrades/big_objects-4.5.1
 %%DATADIR%%/upgrades/big_objects-4.6.1
+%%DATADIR%%/upgrades/big_objects-4.7.1
+%%DATADIR%%/upgrades/big_objects-4.8.1
+%%DATADIR%%/upgrades/big_objects-4.9.1
 @dir libexec/polymake/bundled/atint
 %%BLISS%%@dir libexec/polymake/bundled/bliss
 @dir libexec/polymake/bundled/cdd

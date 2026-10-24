@@ -38,4 +38,5 @@ PULSEAUDIO_CMAKE_BOOL=		RTAUDIO_API_PULSE # is PULSEAUFIO broken? see https://gi
 PULSEAUDIO_USES=		localbase:ldflags # workaround for https://github.com/thestk/rtaudio/issues/360
 PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO} OSS
 .include <bsd.port.mk>

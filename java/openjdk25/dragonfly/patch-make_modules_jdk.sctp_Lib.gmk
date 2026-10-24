@@ -1,0 +1,12 @@
+--- make/modules/jdk.sctp/Lib.gmk.orig
++++ make/modules/jdk.sctp/Lib.gmk
+@@ -33,6 +33,9 @@
+   SCTP_SUPPORTED=true
+ endif
+ 
++# dragonfly disable
++SCTP_SUPPORTED=false
++
+ ifeq ($(SCTP_SUPPORTED), true)
+   ##############################################################################
+   ## Build libsctp

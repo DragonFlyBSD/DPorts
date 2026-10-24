@@ -1,2 +1,0 @@
-dfly-patch:
-	${CHMOD} ${BINMODE} ${WRKSRC}/post_install.py

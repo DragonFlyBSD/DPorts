@@ -1,11 +1,12 @@
 PORTNAME=	docker-credential-pass
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.3
-PORTREVISION=	1
+DISTVERSION=	0.6.4
+PORTREVISION=	46
 CATEGORIES=	sysutils
 
-MAINTAINER=	dmgk@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Helper to use sysutils/password-store as Docker credentials store
+WWW=		https://github.com/docker/docker-credential-helpers
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -23,8 +24,8 @@ GH_PROJECT=	docker-credential-helpers
 
 PLIST_FILES=	bin/docker-credential-pass
 
-pre-build:
-	${LN} -s ${GO_WRKSRC}/pass/cmd/main_linux.go ${GO_WRKSRC}/pass/cmd/main_freebsd.go
-	${LN} -s ${GO_WRKSRC}/pass/pass_linux.go ${GO_WRKSRC}/pass/pass_freebsd.go
+pre-build-script:
+	${LN} -s ${GO_WRKSRC}/pass/cmd/main_linux.go ${GO_WRKSRC}/pass/cmd/main_dragonfly.go
+	${LN} -s ${GO_WRKSRC}/pass/pass_linux.go ${GO_WRKSRC}/pass/pass_dragonfly.go
 
 .include <bsd.port.mk>

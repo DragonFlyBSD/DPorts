@@ -12,4 +12,5 @@ LICENSE=	BSD2CLAUSE
 
 NO_ARCH=	yes
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

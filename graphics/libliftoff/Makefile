@@ -18,4 +18,5 @@ USE_LDCONFIG=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	emersion
 
+CFLAGS= -Wno-error=sign-conversion
 .include <bsd.port.mk>

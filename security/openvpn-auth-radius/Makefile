@@ -37,4 +37,8 @@ post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/radiusplugin.cnf ${STAGEDIR}${EXAMPLESDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-Wall@& -Wno-deprecated-declarations@g' \
+		${WRKSRC}/Makefile.bsd
+
 .include <bsd.port.post.mk>

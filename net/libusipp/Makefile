@@ -19,6 +19,7 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	stealth
 
+IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/usi++ ${STAGEDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/../usi++/*.h ${STAGEDIR}${PREFIX}/include/usi++

@@ -1,11 +1,11 @@
 PORTNAME=	xml2
-PORTVERSION=	1.3.8
+PORTVERSION=	1.6.0
 CATEGORIES=	textproc
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Parse XML
-WWW=		https://cran.r-project.org/web/packages/xml2/
+WWW=		https://cran.r-project.org/package=xml2
 
 LICENSE=	MIT
 

@@ -1,10 +1,23 @@
---- CMakeLists.txt.orig	2017-07-21 13:14:18 UTC
+--- CMakeLists.txt.orig	2026-07-15 12:43:54 UTC
 +++ CMakeLists.txt
-@@ -342,7 +342,6 @@ else ()
- endif ()
+@@ -253,8 +253,11 @@ if(NOT APPLE OR MONO_ARCH)
+ 	endif()
+ 	function(add_linphone_app)
+ 			set(CMAKE_POLICY_DEFAULT_CMP0077 NEW) # Prevent project from overriding the options we just set here
+-			if(UNIX)
++			if(UNIX AND NOT CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+ 					set(CMAKE_INSTALL_RPATH "$ORIGIN:$ORIGIN/lib64:$ORIGIN/../lib64:$ORIGIN/lib:$ORIGIN/../lib")
++			elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++					# System Qt and Linphone SDK libraries are resolved through rtld/ldconfig.
++					set(CMAKE_SKIP_INSTALL_RPATH ON)
+ 			endif()
+ 			add_subdirectory("Linphone")
+ 	endfunction()
+@@ -293,4 +296,6 @@ endif()
+ # endif()
  
- if (NOT WIN32)
--  add_dependencies(update_translations check_qml)
- endif ()
- set_target_properties(${TARGET_NAME} PROPERTIES OUTPUT_NAME "${EXECUTABLE_NAME}")
- set_target_properties(${TESTER_TARGET_NAME} PROPERTIES OUTPUT_NAME "${TESTER_EXECUTABLE_NAME}")
+ 
+-file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/cmake/hook/pre-commit" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/.git/hooks/")
++if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/.git/hooks")
++	file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/cmake/hook/pre-commit" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/.git/hooks/")
++endif()

@@ -1,6 +1,6 @@
 PORTNAME=	rspamd
-PORTVERSION=	3.7.a1.20230808
-PORTREVISION=	3
+PORTVERSION=	3.11.a1.20241020
+PORTREVISION=	5
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-devel
 
@@ -11,6 +11,9 @@ WWW=		https://rspamd.com/
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
+DEPRECATED=	Behind the main port, does not build with CMake 4
+EXPIRATION_DATE=2026-11-30
+
 BUILD_DEPENDS=	ragel:devel/ragel
 LIB_DEPENDS=	libicui18n.so:devel/icu \
 		libpcre2-8.so:devel/pcre2 \
@@ -20,7 +23,7 @@ RUN_DEPENDS=	ca_root_nss>=3.*:security/ca_root_nss
 USES=		cmake compiler:c++20-lang cpe gnome perl5 pkgconfig sqlite ssl
 CPE_VENDOR=	${PORTNAME}_project
 USE_GITHUB=	yes
-GH_TAGNAME=	1f9ec9e
+GH_TAGNAME=	1ad4dba75
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 USE_PERL5=	build run
@@ -84,6 +87,8 @@ LUAJIT_USES=		luajit
 LUAJIT_USES_OFF=	lua:51+
 LUAJIT_CMAKE_OFF=	-DENABLE_LUAJIT=OFF
 
+LDFLAGS= -lm
+DFLY_UNMAINTAINED= yes
 post-install:
 	@${MKDIR} \
 		${STAGEDIR}/var/log/rspamd \

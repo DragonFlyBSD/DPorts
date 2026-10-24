@@ -1,6 +1,6 @@
 PORTNAME=	vdt
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.4
+DISTVERSION=	0.4.6
 CATEGORIES=	math devel science
 
 MAINTAINER=	erik@tenku.dk
@@ -16,4 +16,5 @@ GH_ACCOUNT=	dpiparo
 
 CMAKE_OFF=	SSE
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

@@ -1,5 +1,0 @@
-
-# unbundle texlive-docs from packages
-.if !defined(DPORTS_BUILDER) && defined(PACKAGE_BUILDING)
-OPTIONS_DEFINE:=	${OPTIONS_DEFINE:NDOCS}
-.endif

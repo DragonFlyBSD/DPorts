@@ -1,0 +1,4 @@
+LlamaIndex LLMs OpenAI-Like provides integration for OpenAI-compatible
+API endpoints within LlamaIndex. It enables the use of self-hosted and
+third-party LLM services that expose an OpenAI-compatible API interface
+within LlamaIndex pipelines.

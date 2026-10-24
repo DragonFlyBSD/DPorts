@@ -1,0 +1,3 @@
+OpenInference auto-instrumentation library for LLM agents implemented with
+smolagents. It is OpenTelemetry-compatible and can be sent to a collector such
+as arize-phoenix.

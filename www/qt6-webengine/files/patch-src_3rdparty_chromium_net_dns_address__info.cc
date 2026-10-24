@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/net/dns/address_info.cc.orig	2024-02-23 21:04:38 UTC
+--- src/3rdparty/chromium/net/dns/address_info.cc.orig	2025-08-07 06:57:29 UTC
 +++ src/3rdparty/chromium/net/dns/address_info.cc
 @@ -78,8 +78,12 @@ AddressInfo::AddressInfoAndResult AddressInfo::Get(
      // error.

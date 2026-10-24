@@ -23,4 +23,7 @@ GNU_CONFIGURE=	yes
 DATADIR=	${PREFIX}/lib/pcc
 PORTDATA=	*
 
+dfly-patch:
+	${LN} -sv ${WRKSRC}/csu/linux ${WRKSRC}/csu/dragonfly
+
 .include <bsd.port.mk>

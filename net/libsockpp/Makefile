@@ -47,6 +47,7 @@ EXAMPLES_TO_REMOVE=	tcp6echo \
 			unechosvr \
 			unechotest
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	cd ${STAGEDIR}${PREFIX}/bin && ${RM} ${EXAMPLES_TO_REMOVE}
 

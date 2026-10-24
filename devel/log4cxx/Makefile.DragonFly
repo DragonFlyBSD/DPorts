@@ -1,2 +1,0 @@
-CXXFLAGS+=	-Wno-narrowing
-USE_GCC_VERSION=	${GCC_DEFAULT}

@@ -1,0 +1,43 @@
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -364,7 +364,10 @@
+ if(ENABLE_WEBM_PARSER)
+   include_directories(webm_parser webm_parser/include)
+   add_library(webm_parser OBJECT ${webm_parser_sources})
+-  target_sources(webm PUBLIC $<TARGET_OBJECTS:webm_parser>)
++  # Wrap in BUILD_INTERFACE so the object files are compiled into the webm
++  # library but the $<TARGET_OBJECTS:...> expression does not leak into the
++  # installed/exported interface, where consumers cannot evaluate it.
++  target_sources(webm PUBLIC $<BUILD_INTERFACE:$<TARGET_OBJECTS:webm_parser>>)
+ 
+   add_executable(webm_parser_demo ${webm_parser_demo_sources})
+   target_link_libraries(webm_parser_demo LINK_PUBLIC webm)
+@@ -459,8 +462,13 @@
+ # webm_parser headers are rooted at webm/.
+ set_target_properties(webm PROPERTIES PUBLIC_HEADER
+                                       "${webm_parser_public_headers}")
++# Expose the installed include root so downstream consumers can reference
++# headers with their prefix, e.g. <mkvmuxer/mkvmuxer.h> or <common/webmids.h>.
++target_include_directories(webm INTERFACE
++  $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/webm>)
+ install(
+   TARGETS webm
++  EXPORT webmTargets
+   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+@@ -474,3 +482,14 @@
+         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/webm/mkvmuxer)
+ install(FILES ${mkvparser_public_headers}
+         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/webm/mkvparser)
++
++# Install a CMake package configuration so downstream projects can locate
++# libwebm with find_package(webm) and link against the webm::webm target.
++install(EXPORT webmTargets
++        FILE webmTargets.cmake
++        NAMESPACE webm::
++        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/webm)
++file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/webmConfig.cmake"
++     "include(\"\${CMAKE_CURRENT_LIST_DIR}/webmTargets.cmake\")\n")
++install(FILES "${CMAKE_CURRENT_BINARY_DIR}/webmConfig.cmake"
++        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/webm)

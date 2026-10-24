@@ -22,6 +22,9 @@ PLIST_FILES=	sbin/${PORTNAME} lib/${PORTNAME}_log_plugin.so \
 
 OPTIONS_DEFINE=	DOCS
 
+USES= localbase:ldflags
+LIB_DEPENDS= libradius.so.4:net/libradius
+CFLAGS= -DSLIST_FOREACH_SAFE=SLIST_FOREACH_MUTABLE
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD
@@ -32,5 +35,12 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}/${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}/${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${STAGEDIR}/${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-lthr@-pthread@g'	\
+		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e '/sys\/mac\.h/d'	\
+		${WRKSRC}/dhcprelya.h	\
+		${WRKSRC}/net_utils.c
 
 .include <bsd.port.post.mk>

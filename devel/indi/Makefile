@@ -1,28 +1,46 @@
 PORTNAME=	indi
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.6
-PORTREVISION=	2
-CATEGORIES=	devel
+DISTVERSION=	2.2.4.2
+PORTREVISION=	1
+CATEGORIES=	devel astro
 
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Implementation of the Instrument-Neutral-Device-Interface protocol
-WWW=		https://github.com/indilib/indi
+WWW=		https://indilib.org/ \
+		https://github.com/indilib/indi/
 
 LICENSE=	LGPL21
+LICENSE_FILE=	${WRKSRC}/COPYING.LGPL
 
-BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
+BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
+		nlohmann-json>0:devel/nlohmann-json \
+		cpp-httplib>0:www/cpp-httplib
 LIB_DEPENDS=	libcfitsio.so:astro/cfitsio \
-		libnova.so:astro/libnova \
 		libcurl.so:ftp/curl \
-		libgsl.so:math/gsl \
+		libev.so:devel/libev \
 		libfftw3.so:math/fftw3 \
+		libgsl.so:math/gsl \
+		libnova.so:astro/libnova \
+		libogg.so:audio/libogg \
 		libtheora.so:multimedia/libtheora \
-		libogg.so:audio/libogg
+		libXISF.so:graphics/libxisf \
+		liberfa.so:astro/erfa
 
-USES=		cmake jpeg iconv ninja pkgconfig
+USES=		cmake iconv jpeg ninja pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	indilib
 
+CMAKE_ARGS=	-DINDI_SYSTEM_HTTPLIB=on \
+		-DINDI_SYSTEM_JSONLIB=on
+
 USE_LDCONFIG=	yes
+
+PLIST_SUB=	SOVERSION=${DISTVERSION}
+
+USES:= ${USES:Nninja} gmake
+CMAKE_ARGS+= -DFIX_WARNINGS:BOOL=OFF
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/cmake_modules/CMakeCommon.cmake
 
 .include <bsd.port.mk>

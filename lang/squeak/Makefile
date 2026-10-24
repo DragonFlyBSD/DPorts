@@ -2,13 +2,11 @@ PORTNAME=	squeak
 PORTVERSION=	4.10.2
 PORTREVISION=	15
 CATEGORIES=	lang
-MASTER_SITES=	http://www.squeakvm.org/unix/release/:vmsrc \
-		http://ftp.squeak.org/${IMAGE_VERSION}/:src \
-		ftp://squeak.org/${IMAGE_VERSION}/:sqsrc \
-		http://squeak.610t.org/patches/:mainsrc
+MASTER_SITES=	http://squeakvm.org/unix/release/:vmsrc \
+		http://ftp.squeak.org/${IMAGE_VERSION}/:src
 DISTFILES=	Squeak-${VM_VERSION}-src${EXTRACT_SUFX}:vmsrc \
 		Squeak${IMAGE_FULL_VERSION}.zip:src \
-		${SQUEAK_SRC}.zip:sqsrc
+		${SQUEAK_SRC}.zip:src
 DIST_SUBDIR=	${PORTNAME}
 EXTRACT_ONLY=	Squeak-${VM_VERSION}-src${EXTRACT_SUFX}
 
@@ -63,6 +61,7 @@ IMAGES=		Squeak${IMAGE_FULL_VERSION}.image \
 		Squeak${IMAGE_FULL_VERSION}.changes \
 		${SQUEAK_SRC}
 
+PLIST= ${WRKDIR}/pulseless-plist
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
@@ -88,5 +87,17 @@ post-install:
 		-d ${WRKDIR}
 	${INSTALL_DATA} ${IMAGES:S,^,${WRKDIR}/,} \
 		${STAGEDIR}${PREFIX}/lib/squeak
+
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
+dfly-patch:
+	${REINPLACE_CMD} -e 's@__FreeBSD__@__DragonFly__@g' \
+		${WRKSRC}/Cross/plugins/SqueakFFIPrims/sqFFIPlugin.c \
+		${WRKSRC}/unix/plugins/CameraPlugin/sqCamera-linux.c
+	${RM} -rf "${WRKSRC}/unix/vm-sound-pulse"
+	${REINPLACE_CMD} -e '/"pulse"/d' \
+		${WRKSRC}/unix/vm/sqUnixMain.c
+	${REINPLACE_CMD} -e 's@pulseaudio --check@/usr/bin/false@g' \
+		${WRKSRC}/unix/cmake/squeak.in
+	${CAT} ${.CURDIR}/pkg-plist | ${SED} -e '/so.vm-sound-pulse/d' > ${PLIST}
 
 .include <bsd.port.mk>

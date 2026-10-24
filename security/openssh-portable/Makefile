@@ -1,6 +1,6 @@
 PORTNAME=	openssh
-DISTVERSION=	9.7p1
-PORTREVISION=	2
+DISTVERSION=	10.6p1
+PORTREVISION=	0
 PORTEPOCH=	1
 CATEGORIES=	security
 MASTER_SITES=	OPENBSD/OpenSSH/portable
@@ -17,7 +17,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 CONFLICTS?=		openssh-3.* ssh-1.* ssh2-3.* openssh-portable-devel
 
-USES=			alias autoreconf compiler:c11 cpe localbase ncurses \
+USES=			autoreconf compiler:c11 cpe localbase ncurses \
 			pkgconfig ssl
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
@@ -30,7 +30,7 @@ ETCOLD=			${PREFIX}/etc
 
 CPE_VENDOR=		openbsd
 
-FLAVORS=			default hpn gssapi
+FLAVORS= default hpn gssapi mit
 default_CONFLICTS_INSTALL=	openssh-portable-hpn openssh-portable-gssapi \
 				openssh-portable-x509
 hpn_CONFLICTS_INSTALL=		openssh-portable openssh-portable-gssapi \
@@ -42,8 +42,8 @@ gssapi_PKGNAMESUFFIX=		-portable-gssapi
 
 OPTIONS_DEFINE=		DOCS PAM TCP_WRAPPERS LIBEDIT BSM \
 			HPN KERB_GSSAPI \
-			LDNS NONECIPHER XMSS FIDO_U2F BLACKLISTD
-OPTIONS_DEFAULT=	LIBEDIT PAM TCP_WRAPPERS LDNS FIDO_U2F
+			LDNS NONECIPHER FIDO_U2F BLOCKLISTD
+OPTIONS_DEFAULT=	BLOCKLISTD LIBEDIT PAM TCP_WRAPPERS LDNS FIDO_U2F
 .if ${FLAVOR:U} == hpn
 OPTIONS_DEFAULT+=	HPN NONECIPHER
 .endif
@@ -61,9 +61,8 @@ HEIMDAL_DESC=		Heimdal Kerberos (security/heimdal)
 HEIMDAL_BASE_DESC=	Heimdal Kerberos (base)
 MIT_DESC=		MIT Kerberos (security/krb5)
 NONECIPHER_DESC=	NONE Cipher support
-XMSS_DESC=		XMSS key support (experimental)
 FIDO_U2F_DESC=		FIDO/U2F support (security/libfido2)
-BLACKLISTD_DESC=	FreeBSD blacklistd(8) support
+BLOCKLISTD_DESC=	FreeBSD blocklistd(8) support
 
 OPTIONS_SUB=		yes
 
@@ -73,7 +72,6 @@ TCP_WRAPPERS_EXTRA_PATCHES=${FILESDIR}/extra-patch-tcpwrappers
 
 LDNS_CONFIGURE_WITH=	ldns=${LOCALBASE}
 LDNS_LIB_DEPENDS=	libldns.so:dns/ldns
-LDNS_EXTRA_PATCHES=	${FILESDIR}/extra-patch-ldns
 
 HPN_CONFIGURE_WITH=		hpn
 NONECIPHER_CONFIGURE_WITH=	nonecipher
@@ -92,38 +90,67 @@ FIDO_U2F_LIB_DEPENDS=	libfido2.so:security/libfido2
 FIDO_U2F_CONFIGURE_ON=	--with-security-key-builtin
 FIDO_U2F_CONFIGURE_OFF=	--disable-security-key
 
-BLACKLISTD_EXTRA_PATCHES=	${FILESDIR}/extra-patch-blacklistd
+BLOCKLISTD_EXTRA_PATCHES=	${FILESDIR}/extra-patch-blocklistd
 
 ETCDIR?=		${PREFIX}/etc/ssh
 
+CONFIGURE_ARGS+= --disable-libutil
+CONFIGURE_ARGS+= --without-stackprotect
+mit_PKGNAMESUFFIX= -portable-mit
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 PATCH_SITES+=	http://mirror.shatow.net/freebsd/${PORTNAME}/:DEFAULT,hpn,gsskex
 
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
+BLOCKLISTD_EXTRA_PATCHES=	${FILESDIR}/extra-patch-blacklistd
+.endif
+
+.if ${FLAVOR:U} == hpn || ${PORT_OPTIONS:MHPN} || ${PORT_OPTIONS:MNONECIPHER}
+DEPRECATED=	HPN patch is deprecated. Removed in base in 2016, and does not match official HPN-SSH implementation
+EXPIRATION_DATE=2026-10-01
+PKGMESSAGE=	${PKGDIR}/pkg-message.hpn
+.endif
+
+# Must add this patch before HPN due to conflicts
+.if !${PORT_OPTIONS:MBLOCKLISTD}
+.  if ${PORT_OPTIONS:MHPN} || ${PORT_OPTIONS:MNONECIPHER}
+# Needed glue for applying HPN patch without conflict
+.    if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-no-blacklistd-hpn-glue
+.    else
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-no-blocklistd-hpn-glue
+.    endif
+.  endif
+.endif
+
 # Must add this patch before HPN due to conflicts
 .if ${PORT_OPTIONS:MKERB_GSSAPI} || ${FLAVOR:U} == gssapi
-#BROKEN=	KERB_GSSAPI No patch for ${DISTVERSION} yet.
+BROKEN=	KERB_GSSAPI No patch for ${DISTVERSION} yet.
 .  if ${PORT_OPTIONS:MHPN} || ${PORT_OPTIONS:MNONECIPHER}
 # Needed glue for applying HPN patch without conflict
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-hpn-gss-glue
 .  endif
 # - See https://sources.debian.org/data/main/o/openssh/ for which subdir to
 # pull from.
-GSSAPI_DEBIAN_VERSION=	9.7p1
-GSSAPI_DEBIAN_SUBDIR=	${GSSAPI_DEBIAN_VERSION:U${DISTVERSION}}-2
+# GSSAPI_DEBIAN_VERSION=	10.4p1
+GSSAPI_DEBIAN_SUBDIR=	${GSSAPI_DEBIAN_VERSION:U${DISTVERSION}}-1
 # - Debian does not use a versioned filename so we trick fetch to make one for
 # us with the ?<anything>=/ trick.
 PATCH_SITES+=	https://sources.debian.org/data/main/o/openssh/1:${GSSAPI_DEBIAN_SUBDIR}/debian/patches/gssapi.patch?dummy=/:gsskex
 # Bump this when updating the patch location
-GSSAPI_DISTVERSION=	9.7p1
+GSSAPI_DISTVERSION=	10.4p1
 PATCHFILES+=	openssh-${GSSAPI_DISTVERSION:U${DISTVERSION}}-gsskex-all-debian-rh-${GSSAPI_DISTVERSION}.patch:-p1:gsskex
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gssapi-auth2-gss.c
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gssapi-kexgssc.c
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gssapi-kexgsss.c
 .endif
 
-.if ${PORT_OPTIONS:MBLACKLISTD}
+.if ${PORT_OPTIONS:MBLOCKLISTD}
+.  if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
 CONFIGURE_LIBS+=	-lblacklist
+.  else
+CONFIGURE_LIBS+=	-lblocklist
+.  endif
 .endif
 
 # https://www.psc.edu/hpn-ssh https://github.com/rapier1/openssh-portable/tree/hpn-openssl1.1-7_7_P1
@@ -134,7 +161,11 @@ HPN_VERSION=		14v15
 HPN_DISTVERSION=	7.7p1
 #PATCH_SITES+=		SOURCEFORGE/hpnssh/HPN-SSH%20${HPN_VERSION}%20${HPN_DISTVERSION}/:hpn
 #PATCHFILES+=		${PORTNAME}-${HPN_DISTVERSION}-hpnssh${HPN_VERSION}.diff.gz:-p1:hpn
+.  if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
+EXTRA_PATCHES+=		${FILESDIR}/extra-patch-blacklist-hpn:-p2
+.  else
 EXTRA_PATCHES+=		${FILESDIR}/extra-patch-hpn:-p2
+.  endif
 .elif !${PORT_OPTIONS:MHPN} && !${PORT_OPTIONS:MNONECIPHER}
 # Apply compatibility patch
 EXTRA_PATCHES+=		${FILESDIR}/extra-patch-hpn-compat
@@ -158,6 +189,7 @@ IGNORE=		you have selected HEIMDAL_BASE but do not have heimdal installed in bas
 CONFIGURE_LIBS+=	-lgssapi_krb5
 CONFIGURE_ARGS+=	--with-kerberos5=/usr
 .	else
+CONFIGURE_LIBS+=	-lgssapi_krb5
 CONFIGURE_ARGS+=	--with-kerberos5=${LOCALBASE}
 .	endif
 .	if ${OPENSSLBASE} == "/usr"
@@ -210,11 +242,12 @@ post-patch:
 	@${ECHO_CMD} '#define SSH_VERSION_FREEBSD_PORT	"${VERSION_ADDENDUM_DEFAULT}"' >> \
 		${WRKSRC}/version.h
 
-post-configure-XMSS-on:
-	@${ECHO_CMD} "#define WITH_XMSS 1" >> ${WRKSRC}/config.h
-
-post-configure-BLACKLISTD-on:
+post-configure-BLOCKLISTD-on:
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500000
 	@${ECHO_CMD} "#define USE_BLACKLIST 1" >> ${WRKSRC}/config.h
+.else
+	@${ECHO_CMD} "#define USE_BLOCKLIST 1" >> ${WRKSRC}/config.h
+.endif
 
 post-install:
 	${MV} ${STAGEDIR}${ETCDIR}/moduli \
@@ -223,20 +256,50 @@ post-install:
 	    ${STAGEDIR}${ETCDIR}/ssh_config.sample
 	${MV} ${STAGEDIR}${ETCDIR}/sshd_config \
 	    ${STAGEDIR}${ETCDIR}/sshd_config.sample
+	${MKDIR} ${STAGEDIR}${ETCDIR}/ssh_config.d \
+		 ${STAGEDIR}${ETCDIR}/sshd_config.d
 .if ${PORT_OPTIONS:MHPN} || ${PORT_OPTIONS:MNONECIPHER}
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/HPN-README ${STAGEDIR}${DOCSDIR}
 .endif
 
+# percent test does not work unless user's $HOME is set properly.
+SKIP_LTESTS= percent
+
+# A tempdir is used to avoid unix socket namelen issues.
+# TEST_SSH_UNSAFE_PERMISSIONS is because /tmp is world-writable, but
+# the actual test dir is not.
+# Some TEST_SSH_* paths are passed in because test-exec.sh defaults to base
+# versions for them due to being outside of PATH.
 test: build
-	cd ${WRKSRC} && ${SETENV} -i \
-		OBJ=${WRKDIR} ${MAKE_ENV:NHOME=*} \
+	@rtmp=$$(mktemp -dt ssh-regress); \
+	chmod o-rx "$${rtmp}"; \
+	trap "'${RM} $${rtmp}'; exit 1" 1 2 3 5 10 13 15; \
+	${TAR} -cf - -C ${WRKSRC} . | ${TAR} -xf - -C $${rtmp}; \
+	cd $${rtmp} && ${SETENV} -i \
+		${MAKE_ENV:NHOME=*:NPATH=*} \
 		TEST_SHELL=${SH} \
-		SUDO="${SUDO}" \
+		${SUDO:DSUDO="${SUDO}"} \
 		LOGNAME="${LOGNAME}" \
-		HOME="${HOME}" \
+		HOME="$${rtmp}" \
+		TEST_SSH_UNSAFE_PERMISSIONS=1 \
 		TEST_SSH_TRACE=yes \
-		PATH=${WRKSRC}:${PREFIX}/bin:${PREFIX}/sbin:${PATH} \
-		${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} tests
+		TEST_SSH_FAIL_FATAL=yes \
+		TEST_SSH_SFTPSERVER=$${rtmp}/sftp-server \
+		TEST_SSH_SSHD_SESSION=$${rtmp}/sshd-session \
+		TEST_SSH_SSHD_AUTH=$${rtmp}/sshd-auth \
+		PATH=$${rtmp}:${PREFIX}/bin:${PREFIX}/sbin:${PATH} \
+		${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} tests \
+		BUILDDIR="$${rtmp}" \
+		abs_top_srcdir="$${rtmp}" \
+		abs_top_builddir="$${rtmp}" \
+		.OBJDIR="$${rtmp}" \
+		${LTESTS:DLTESTS="${LTESTS}"} \
+		${SKIP_LTESTS:DSKIP_LTESTS="${SKIP_LTESTS}"}; \
+	${RM} -R "$${rtmp}"
+
+.if ${FLAVOR:U} == mit
+OPTIONS_DEFAULT+=	MIT
+.endif
 
 .include <bsd.port.post.mk>

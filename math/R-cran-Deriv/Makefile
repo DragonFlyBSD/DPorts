@@ -1,14 +1,16 @@
 PORTNAME=	Deriv
-PORTVERSION=	4.1.6
+PORTVERSION=	4.3.5
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Symbolic Differentiation
-WWW=		https://cran.r-project.org/web/packages/Deriv/
+WWW=		https://cran.r-project.org/package=Deriv
 
 LICENSE=	GPLv3
 
-USES=		cran:auto-plist
+RUN_DEPENDS=	R-cran-Rcpp>0:devel/R-cran-Rcpp
+
+USES=		cran:auto-plist,compiles
 
 .include <bsd.port.mk>

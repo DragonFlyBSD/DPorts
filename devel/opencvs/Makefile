@@ -23,4 +23,9 @@ PLIST_FILES=	bin/opencvs \
 		share/man/man5/opencvs.5.gz \
 		share/man/man7/cvsintro.7.gz
 
+MAKE_ENV+= CWARNFLAGS=-fcommon
+dfly-patch:
+	${REINPLACE_CMD} -e '/LDADD/s@-lmd@@g' \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

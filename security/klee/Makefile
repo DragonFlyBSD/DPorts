@@ -1,6 +1,7 @@
 PORTNAME=	klee
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.0
+DISTVERSION=	3.2
+PORTREVISION=	3
 CATEGORIES=	security devel
 
 MAINTAINER=	arrowd@FreeBSD.org
@@ -10,20 +11,18 @@ WWW=		https://klee.github.io/
 LICENSE=	NCSA
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 
-NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS=	i386 powerpc
 
-BUILD_DEPENDS=	gmake:devel/gmake
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tabulate>0:devel/py-tabulate@${PY_FLAVOR}
 
-USES=		cmake compiler:c++14-lang llvm:min=11,max=14,build,run,noexport localbase \
+USES=		cmake compiler:c++14-lang llvm:min=13,max=16,build,run,noexport localbase \
 		pkgconfig python:run shebangfix sqlite
 USE_GITHUB=	yes
 SHEBANG_FILES=	tools/klee-stats/klee-stats tools/ktest-tool/ktest-tool tools/klee-zesti/klee-zesti
 USE_LDCONFIG=	yes
 
 CMAKE_OFF=	ENABLE_POSIX_RUNTIME ENABLE_UNIT_TESTS ENABLE_SYSTEM_TESTS
-CMAKE_ARGS=	-DLLVM_CONFIG_BINARY=${LOCALBASE}/bin/${LLVM_CONFIG} \
-		-DMAKE_BINARY=${LOCALBASE}/bin/gmake
+CMAKE_ARGS=	-DLLVM_DIR=${LLVM_PREFIX}/lib/cmake/llvm
 
 OPTIONS_DEFINE=		TCMALLOC
 OPTIONS_DEFAULT=	TCMALLOC Z3 STP
@@ -44,9 +43,10 @@ STP_CMAKE_BOOL=		ENABLE_SOLVER_STP
 STP_LIB_DEPENDS=	libstp.so:math/stp \
 			libcryptominisat5.so:math/cryptominisat
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == powerpc64le
+.if ${ARCH} == powerpc64le || ${ARCH} == aarch64
 PLIST_SUB=	32BIT="@comment " \
 		64BIT=""
 .else

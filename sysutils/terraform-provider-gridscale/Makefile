@@ -1,7 +1,7 @@
 PORTNAME=	terraform-provider-gridscale
 PORTVERSION=	1.6.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	24
+PORTREVISION=	47
 CATEGORIES=	sysutils
 
 MAINTAINER=	egypcio@FreeBSD.org

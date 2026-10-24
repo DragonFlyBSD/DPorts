@@ -1,6 +1,5 @@
 PORTNAME=	vbz-compression
-DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.3
+DISTVERSION=	1.0.13
 CATEGORIES=	archivers
 
 MAINTAINER=	jwb@FreeBSD.org
@@ -29,4 +28,5 @@ CMAKE_ARGS=	-DENABLE_CONAN=OFF \
 
 PLIST_FILES=	hdf5/lib/plugin/libvbz_hdf_plugin.so
 
+CMAKE_ARGS+= -DBUILD_TESTING=OFF
 .include <bsd.port.mk>

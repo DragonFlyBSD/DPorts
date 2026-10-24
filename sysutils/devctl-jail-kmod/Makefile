@@ -16,4 +16,5 @@ GH_TAGNAME=	d3c17d2381a
 
 PLIST_FILES=	${KMODDIR}/devctl_jail.ko
 
+DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

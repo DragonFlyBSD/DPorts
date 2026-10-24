@@ -48,4 +48,8 @@ post-install:
 		${STAGEDIR}${DOCSDIR}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*-[sl]
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@amd64@x86_64@g'	\
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

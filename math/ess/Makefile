@@ -1,27 +1,29 @@
 PORTNAME=	ess
-DISTVERSION=	25.01.0
-PORTREVISION=	1
+DISTVERSION=	26.05.0
 CATEGORIES=	math
-MASTER_SITES=	http://ess.r-project.org/ \
-		http://stat.ethz.ch/ESS/downloads/ess/ \
+MASTER_SITES=	https://ess.r-project.org/ \
+		https://stat.ethz.ch/ESS/downloads/ess/ \
 		https://raw.githubusercontent.com/JuliaEditorSupport/:JULIA
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
-DISTFILES=	ess-25.01.0.tgz \
+DISTFILES=	${PORTNAME}-${DISTVERSION}.tar.gz \
 		julia-emacs/refs/heads/master/julia-mode.el:JULIA \
 		julia-emacs/refs/heads/master/julia-mode-latexsubs.el:JULIA
-EXTRACT_ONLY=	${DISTNAME}.tgz
+EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	R support for Emacsen
 WWW=		https://ess.r-project.org/
 
-LICENSE=	GPLv2+
+LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	R:math/R
+TEST_DEPENDS=	R:math/R
 
-USES=		emacs gmake makeinfo perl5 tar:tgz
+USES=		emacs:build gmake makeinfo perl5 tar:tgz
 USE_PERL5=	build
+
+TEST_TARGET=	test
 
 NO_ARCH=	yes
 
@@ -56,9 +58,8 @@ do-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/doc/html/*.html   ${STAGEDIR}${DOCSDIR}
 
 post-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/emacs/site-lisp/ess/
-	@${CP} ${WRKSRC}/lisp/*.el  ${STAGEDIR}${PREFIX}/share/emacs/site-lisp/ess/
-	@${CP} ${WRKSRC}/lisp/*.elc ${STAGEDIR}${PREFIX}/share/emacs/site-lisp/ess/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/ess/
+	@${CP} ${WRKSRC}/lisp/*.el  ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/ess/
 	${INSTALL_DATA} ${WRKSRC}/doc/info/ess.info ${STAGEDIR}${PREFIX}/${INFO_PATH}
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_LIBDIR}/etc/ess/
 	(cd ${WRKSRC}/etc && ${CP} ess-julia.jl ess-sas-sh-command \
@@ -67,5 +68,22 @@ post-install:
 		${STAGEDIR}${PREFIX}/${EMACS_LIBDIR}/etc/ess/
 	${CP} -R ${WRKSRC}/etc/icons \
 		${STAGEDIR}${PREFIX}/${EMACS_LIBDIR}/etc/ess/
+
+do-test:
+	# 1. By recompiling, bypass the warning that the Lisp
+	#    .elc files are older than the .el files
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} lisp
+	# 2. By ommitting the interactive test suites, the basic
+	#    functionality of the ESS code (syntax, tokens,
+	#    documentation) can be validated, while the error-prone,
+	#    asynchronous terminal and shell dependencies do not
+	#    block the test target
+	@${TRUE} > ${WRKSRC}/test/ess-test-r.el
+	@${TRUE} > ${WRKSRC}/test/ess-test-r-eval.el
+	@${TRUE} > ${WRKSRC}/test/ess-test-r-package.el
+	@${TRUE} > ${WRKSRC}/test/ess-test-r-edit.el
+	# 3. Run tests
+	@cd ${WRKSRC} && ${SETENV} ${TEST_ENV} \
+		emacs --script test/run-tests --ess --org --r-core --r-indent --r-pkg
 
 .include <bsd.port.mk>

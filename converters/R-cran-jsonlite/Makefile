@@ -1,11 +1,11 @@
 PORTNAME=	jsonlite
-DISTVERSION=	1.9.1
+DISTVERSION=	2.0.0
 CATEGORIES=	converters
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	uzsolt@FreeBSD.org
 COMMENT=	Robust, High Performance JSON Parser and Generator for R
-WWW=		https://cran.r-project.org/web/packages/jsonlite/
+WWW=		https://cran.r-project.org/package=jsonlite
 
 LICENSE=	MIT
 

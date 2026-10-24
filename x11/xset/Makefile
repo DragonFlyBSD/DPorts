@@ -1,21 +1,19 @@
 PORTNAME=	xset
-PORTVERSION=	1.2.5
-PORTREVISION=	1
+DISTVERSION=	1.2.6
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	User preference utility for X
+WWW=		https://gitlab.freedesktop.org/xorg/app/xset
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-EXTRACT_SUFX=	.tar.xz
 USES=		xorg xorg-cat:app
-USE_XORG=	xmuu x11 xext
+USE_XORG=	x11 xext xmuu xorgproto
 
-GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
-CONFIGURE_ARGS=	--without-xf86misc \
-		--without-fontcache
+CONFIGURE_ARGS=	--without-fontcache
 
 PLIST_FILES=	bin/xset share/man/man1/xset.1.gz
+
 .include <bsd.port.mk>

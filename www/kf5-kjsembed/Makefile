@@ -12,4 +12,8 @@ USE_KDE=	i18n js \
 USE_QT=		core gui svg uiplugin uitools widgets xml \
 		buildtools:build qmake:build
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

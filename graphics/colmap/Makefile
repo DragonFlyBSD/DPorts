@@ -1,47 +1,54 @@
 PORTNAME=	colmap
-DISTVERSION=	3.8
-PORTREVISION=	5
+DISTVERSION=	4.2.1
 CATEGORIES=	graphics
 
 MAINTAINER=	fuz@FreeBSD.org
 COMMENT=	Structure from motion and multi-view stereo
 WWW=		https://colmap.github.io/
 
-LICENSE=	BSD2CLAUSE BSD3CLAUSE CC-BY-3.0 GPLv3+ MIT SIFTGPU
+LICENSE=	BSD2CLAUSE BSD3CLAUSE CC-BY-3.0 MIT SIFTGPU
 LICENSE_COMB=	multi
 LICENSE_NAME_SIFTGPU=	SiftGPU non-commercial license
-LICENSE_FILE_BSD2CLAUSE=	${WRKSRC}/lib/VLFeat/LICENSE
+LICENSE_FILE_BSD2CLAUSE=	${WRKSRC}/src/thirdparty/VLFeat/LICENSE
 LICENSE_FILE_BSD3CLAUSE=	${WRKSRC}/COPYING.txt # also FLANN
-LICENSE_FILE_CC-BY-3.0=	${WRKSRC}/src/ui/media/LICENSE
-LICENSE_FILE_GPLv3+ =	${WRKSRC}/lib/PBA/LICENSE # also Graclus, LSD
-LICENSE_FILE_MIT=	${WRKSRC}/lib/PoissonRecon/LICENSE
-LICENSE_FILE_SIFTGPU=	${WRKSRC}/lib/SiftGPU/LICENSE
+LICENSE_FILE_CC-BY-3.0=	${WRKSRC}/src/colmap/ui/media/LICENSE
+LICENSE_FILE_MIT=	${WRKSRC}/src/thirdparty/PoissonRecon/LICENSE
+LICENSE_FILE_SIFTGPU=	${WRKSRC}/src/thirdparty/SiftGPU/LICENSE
 LICENSE_PERMS_SIFTGPU=	dist-mirror pkg-mirror auto-accept
 
-LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs \
-		libceres.so:math/ceres-solver \
-		libflann.so:math/flann \
-		libfreeimage.so:graphics/freeimage \
-		libglog.so:devel/glog \
-		liblz4.so:archivers/liblz4 \
-		libmetis.so:math/metis
+BROKEN_i386=	src/thirdparty/PoissonRecon/NestedVector.h:301:45: error: in-class initializer for static data member is not a constant expression
 
-USES=		cmake compiler:${OPENMP}c++11-lib desktop-file-utils eigen:3 gl \
-		localbase python:env qt:5 sqlite
+LIB_DEPENDS=	libPoseLib.so:graphics/poselib \
+		libboost_program_options.so:devel/boost-libs \
+		libceres.so:math/ceres-solver \
+		libcurl.so:ftp/curl \
+		libfaiss.so:math/faiss \
+		libOpenImageIO.so:graphics/openimageio \
+		libglog.so:devel/glog \
+		libmetis.so:math/metis \
+		libcholmod.so:math/suitesparse-cholmod
+TEST_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtest.pc:devel/googletest
+
+USES=		cmake:testing compiler:${OPENMP}c++11-lib desktop-file-utils \
+		display:test eigen:3 gl localbase python:env qt:6 sqlite ssl
 USE_CXXSTD=	c++17
 USE_GITHUB=	yes
 USE_GL=		gl glew
-USE_QT=		core gui widgets buildtools:build opengl:build qmake:build
-EXCLUDE=	SQLite
-CMAKE_OFF=	BOOST_STATIC CUDA_ENABLED
-TEST_TARGET=	test
+USE_QT=		base svg
+CMAKE_OFF=	CUDA_ENABLED FETCH_FAISS FETCH_POSELIB FETCH_ONNX
+CMAKE_TESTING_ON=	TESTS_ENABLED
+.if exists(/usr/include/omp.h)
+CMAKE_ON+=	OPENMP_ENABLED
+.else
+CMAKE_OFF+=	OPENMP_ENABLED
+.endif
 
 LDFLAGS+=	-Wl,--as-needed # gflags, glu, xi, xmu
 
-EXTRACT_AFTER_ARGS=	${EXCLUDE:S,^,--exclude lib/,}
-
-OPTIONS_DEFINE=		CGAL DOCS OPENMP SIMD TEST
-OPTIONS_DEFAULT=	CGAL OPENMP SIMD
+OPTIONS_DEFINE=		CGAL ONNX DOCS SIMD
+OPTIONS_DEFAULT=	CGAL ONNX SIMD
+# misc/onnxruntime broken on i386
+OPTIONS_EXCLUDE_i386=	ONNX
 
 CGAL_DESC=		Graph-cut on Delaunay triangulation based meshing algorithm
 CGAL_BUILD_DEPENDS=	cgal>0:math/cgal
@@ -49,40 +56,42 @@ CGAL_LIB_DEPENDS=	libgmp.so:math/gmp
 CGAL_CMAKE_BOOL=	CGAL_ENABLED
 
 DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx_rtd_theme>0:textproc/py-sphinx_rtd_theme@${PY_FLAVOR} \
-			gmake:devel/gmake \
-			sphinx-build:textproc/py-sphinx
-DOCS_PORTDOCS=		*
+			${PYTHON_PKGNAMEPREFIX}sphinx-design>0:textproc/py-sphinx-design@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}sphinx-sitemap>0:textproc/py-sphinx-sitemap@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}sphinxext-opengraph>0:textproc/py-sphinxext-opengraph@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}pydata-sphinx-theme>0:textproc/py-pydata-sphinx-theme@${PY_FLAVOR} \
+			gmake:devel/gmake sphinx-build:textproc/py-sphinx
 
-OPENMP_CMAKE_BOOL=	OPENMP_ENABLED
-.if !exists(/usr/include/omp.h)
-# XXX ports/199603: LLVM openmp in base doesn't support armv6, armv7 yet
-OPENMP_VARS=		OPENMP=gcc-
-.endif
+ONNX_DESC=		Use Open Neural Network Exchange (ONNX)
+ONNX_LIB_DEPENDS=	libonnxruntime.so:misc/onnxruntime
+ONNX_CMAKE_BOOL=	ONNX_ENABLED
 
 SIMD_CMAKE_BOOL=	SIMD_ENABLED
+SIMD_CFLAGS_i386=	-msse2
+SIMD_CFLAGS=		${SIMD_CFLAGS_${ARCH}}
 
-TEST_CMAKE_BOOL=	TESTS_ENABLED
-
+USES+= python:3.6+,build
 post-patch:
-# XXX math/flann has -DUSE_OPENMP=OFF and lacks tunning:
-# https://github.com/colmap/colmap/commit/4b594eb85c13
-# https://github.com/colmap/colmap/commit/1e9f1f3324cd
-.if !defined(DISPLAY) # QApplication
-	@${REINPLACE_CMD} -e '/opengl_utils_test/d' \
-		${WRKSRC}/src/util/CMakeLists.txt
-.endif
+	@${REINPLACE_CMD} -e '/find_package/s|Qt5 Qt6|Qt6|' \
+		${WRKSRC}/cmake/FindDependencies.cmake
 
 post-build-DOCS-on:
-	@${SETENV} ${MAKE_ENV} ${GMAKE} ${_MAKE_JOBS} html -C${WRKSRC}/doc
-
-pre-install-TEST-on: do-test
+	${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${GMAKE} ${_MAKE_JOBS} -C ${WRKSRC}/doc html
 
 post-install:
-# XXX Clean up garbage after install(DIRECTORY)
-	@${FIND} ${STAGEDIR}${PREFIX}/include -type d -empty -delete
+	${FIND} ${STAGEDIR}${PREFIX}/include -type d -empty -delete
 
 post-install-DOCS-on:
 	(cd ${WRKSRC}/doc/_build/html && ${COPYTREE_SHARE} \
-		"${PORTDOCS}" ${STAGEDIR}${DOCSDIR})
+		. ${STAGEDIR}${DOCSDIR})
+	${RM} ${STAGEDIR}${DOCSDIR}/.buildinfo
 
+# https://github.com/colmap/colmap/issues/3021#issuecomment-2536520512
+pre-test:
+	@${ECHO_MSG} Expected test suite failures on displayless machines:
+	@${ECHO_MSG} "24 - feature/colmap_feature_sift_test (Subprocess aborted)"
+	@${ECHO_MSG} "88 - util/colmap_util_opengl_utils_test (Subprocess aborted)"
+
+DOCS_BUILD_DEPENDS:= ${DOCS_BUILD_DEPENDS:N*py-sphinx_rtd_theme} ${PYTHON_PKGNAMEPREFIX}sphinx_rtd_theme>0:textproc/py-sphinx_rtd_theme@${PY_FLAVOR}
 .include <bsd.port.mk>

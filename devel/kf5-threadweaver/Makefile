@@ -10,4 +10,10 @@ USE_KDE=	ecm:build
 USE_QT=		core widgets xml \
 		buildtools:build qmake:build testlib:build
 
+CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

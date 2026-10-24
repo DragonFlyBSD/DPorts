@@ -11,7 +11,7 @@ WWW=		https://github.com/savonet/ocaml-ssl
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		ocaml:dune,ldconfig ssl
+USES= ocaml:dune,ldconfig ssl pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	savonet
 GH_PROJECT=	ocaml-ssl

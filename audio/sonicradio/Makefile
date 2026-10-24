@@ -1,6 +1,7 @@
 PORTNAME=	sonicradio
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.14
+DISTVERSION=	0.8.14
+PORTREVISION=	12
 CATEGORIES=	audio
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -10,9 +11,12 @@ WWW=		https://github.com/dancnb/sonicradio
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.23,modules
-GO_MODULE=	github.com/dancnb/sonicradio
+LIB_DEPENDS=	libasound.so:audio/alsa-lib
 
-PLIST_FILES=	bin/sonicradio
+USES=		go:modules pkgconfig
+GO_MODULE=	github.com/dancnb/sonicradio
+GO_TARGET=	./cmd/sonicradio ./cmd/sonicradio_external
+
+PLIST_FILES=	bin/sonicradio bin/sonicradio_external
 
 .include <bsd.port.mk>

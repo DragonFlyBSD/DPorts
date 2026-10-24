@@ -1,12 +1,12 @@
 PORTNAME=	tealdeer
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.1
-PORTREVISION=	8
+DISTVERSION=	1.9.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
-MAINTAINER=	lcook@FreeBSD.org
+MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Fast tldr client written in Rust
-WWW=		https://github.com/dbrgn/tealdeer
+WWW=		https://github.com/tealdeer-rs/tealdeer
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
@@ -15,7 +15,9 @@ LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 
 USES=		cargo ssl
 USE_GITHUB=	yes
-GH_ACCOUNT=	dbrgn
+GH_ACCOUNT=	tealdeer-rs
+
+CONFLICTS_INSTALL=	tldr
 
 PLIST_FILES=	bin/tldr
 
@@ -33,7 +35,6 @@ COMPLETIONS_PLIST_FILES=	share/bash-completion/completions/${PORTNAME} \
 				share/zsh/site-functions/_${PORTNAME}
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/tldr
 .for _shell in bash fish zsh
 	${INSTALL_DATA} ${WRKSRC}/completion/${_shell}_${PORTNAME} \
 		${STAGEDIR}${PREFIX}/${COMPLETIONS_PLIST_FILES:M*${_shell}*}
@@ -44,4 +45,5 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} \
 		${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

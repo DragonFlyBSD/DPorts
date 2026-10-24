@@ -1,6 +1,6 @@
 PORTNAME=	maxr
 DISTVERSIONPREFIX=	release-
-DISTVERSION=	0.2.12
+DISTVERSION=	0.2.17
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -11,10 +11,15 @@ WWW=		https://www.maxr.org/ \
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/data/COPYING
 
+BUILD_DEPENDS=	${LOCALBASE}/include/nlohmann/json.hpp:devel/nlohmann-json
+BUILD_DEPENDS+=	${LOCALBASE}/lib/libvorbis.so:audio/libvorbis  # used to build a binary which is not installed
+
 USES=		cmake compiler:c++17-lang sdl
 USE_GITHUB=	yes
 GH_ACCOUNT=	maxr-dot-org
+GH_TUPLE=	oo13:spiritless_po:5d729be:spiritless_po/submodules/spiritless_po
 USE_SDL=	sdl2 mixer2 net2
+CMAKE_OFF=	BUILD_TESTING
 
 PLIST_FILES=	bin/${PORTNAME}
 PORTDATA=	*
@@ -26,4 +31,6 @@ DESKTOP_ENTRIES="M.A.X.R." \
 		"Game;StrategyGame;" \
 		false
 
+MAKE_ENV= LDVER=ld.bfd
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

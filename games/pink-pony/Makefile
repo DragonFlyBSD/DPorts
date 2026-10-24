@@ -1,6 +1,6 @@
 PORTNAME=	pink-pony
 PORTVERSION=	1.4.1
-PORTREVISION=	41
+PORTREVISION=	51
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -25,13 +25,16 @@ USE_GL=		gl glu
 USE_SDL=	mixer
 SUB_FILES=	pink-pony.sh
 
-LDFLAGS+=	-labsl_log_internal_check_op -labsl_log_internal_message
+LDFLAGS+=	-labsl_log_internal_check_op \
+		-labsl_log_internal_message \
+		-labsl_log_internal_nullguard
 
 PORTDOCS=	*
 PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
 
+DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -Ee 's,resources/,${DATADIR}/,' \
 		${WRKSRC}/pony.options ${WRKSRC}/src/Config.cc

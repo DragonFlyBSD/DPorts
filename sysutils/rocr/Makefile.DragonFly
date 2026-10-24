@@ -1,3 +1,0 @@
-
-USES+=	localbase
-LIB_DEPENDS+= libelf.so:devel/libelf

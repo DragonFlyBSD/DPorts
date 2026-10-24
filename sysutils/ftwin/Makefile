@@ -41,4 +41,8 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/ARCHIVE_LDADD/s@-lmd -lcrypto@@g' \
+		${WRKSRC}/acinclude.m4
+
 .include <bsd.port.mk>

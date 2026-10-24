@@ -1,0 +1,22 @@
+--- makefile.orig	2026-10-24 00:00:00 UTC
++++ makefile
+@@ -13,7 +13,7 @@
+ UNAME_M := $(shell uname -m)
+ 
+ VPATH := src
+-ifeq ($(UNAME), FreeBSD)
++ifneq (,$(filter FreeBSD DragonFly,$(UNAME)))
+ SRCS := lpcusbsio.c hid.c
+ CFLAGS += -Iinclude -Isrc/hid_api/freebsd -fPIC -Wall -c
+ else
+@@ -40,8 +40,8 @@
+ LIBNAME_SO = libusbsio.so
+ endif
+ 
+-ifeq ($(UNAME), FreeBSD)
+-BINDIR = freebsd_$(UNAME_M)
++ifneq (,$(filter FreeBSD DragonFly,$(UNAME)))
++BINDIR = $(shell echo $(UNAME) | tr A-Z a-z)_$(UNAME_M)
+ VPATH += src/hid_api/freebsd
+ LDFLAGS +=  -shared
+ CFLAGS += `pkg-config libusb-1.0 libudev hidapi --cflags`

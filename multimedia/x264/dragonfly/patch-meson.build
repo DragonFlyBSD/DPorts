@@ -1,0 +1,13 @@
+--- meson.build.orig
++++ meson.build
+@@ -115,7 +115,9 @@
+   # and the _GNU_SOURCE macro for GNU extensions (for CPU_COUNT)
+   # Unfortunately, using _POSIX_C_SOURCE triggers the requirement to use
+   # _DARWIN_C_SOURCE too
+-  add_project_arguments(['-D_POSIX_C_SOURCE=200112L'], language: 'c')
++  if host_system != 'dragonfly'
++    add_project_arguments(['-D_POSIX_C_SOURCE=200112L'], language: 'c')
++  endif
+   if ['darwin', 'ios'].contains(host_system)
+     add_project_arguments(['-D_DARWIN_C_SOURCE'], language: 'c')
+   else

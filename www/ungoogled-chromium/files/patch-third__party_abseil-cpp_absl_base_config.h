@@ -1,4 +1,4 @@
---- third_party/abseil-cpp/absl/base/config.h.orig	2024-07-31 14:19:23 UTC
+--- third_party/abseil-cpp/absl/base/config.h.orig	2025-11-01 06:40:37 UTC
 +++ third_party/abseil-cpp/absl/base/config.h
 @@ -412,7 +412,7 @@ static_assert(ABSL_INTERNAL_INLINE_NAMESPACE_STR[0] !=
  #ifdef ABSL_HAVE_SCHED_YIELD

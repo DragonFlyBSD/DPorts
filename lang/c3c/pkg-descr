@@ -1,0 +1,9 @@
+C3 is a programming language that is an evolution of C, enabling the same
+paradigms and retaining the same syntax as far as possible.
+
+It introduces module namespacing, generic modules, optional-based error
+handling, defer, slices, compile-time evaluation, contracts, and built-in
+support for foreign function interfaces, while staying binary compatible
+with C and keeping the low-level control C programmers expect.
+
+c3c is the C3 compiler, using LLVM as its backend.

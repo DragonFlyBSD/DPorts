@@ -46,6 +46,7 @@ OPTIONS_DEFINE=	DOCS
 
 DOCS_PLIST_FILES=${DOCSDIR_REL}/rom-distribution.txt
 
+EXTRACT_DEPENDS= zstd>0:archivers/zstd
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	(cd ${WRKSRC}/fuse-extra && \

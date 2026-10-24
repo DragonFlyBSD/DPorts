@@ -12,7 +12,7 @@ WWW=		https://25thandclement.com/~william/projects/cqueues.html
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		gmake lua:51-54,module ssl
+USES= gmake lua:51-54,module ssl localbase:ldflags
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	wahern

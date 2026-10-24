@@ -1,5 +1,5 @@
 PORTNAME=	grape
-PORTVERSION=	2.3.0
+PORTVERSION=	4.0.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -11,12 +11,13 @@ WWW=		https://www.ruby-grape.org/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	rubygem-activesupport60>=6:devel/rubygem-activesupport60 \
+RUN_DEPENDS=	rubygem-activesupport81>=7.2:devel/rubygem-activesupport81 \
+		rubygem-dry-configurable>=1.0:devel/rubygem-dry-configurable \
 		rubygem-dry-types>=1.1:devel/rubygem-dry-types \
-		rubygem-mustermann-grape>=1.1.0<1.2:devel/rubygem-mustermann-grape \
-		rubygem-rack>=2,3:www/rubygem-rack \
+		rubygem-mustermann>=4.0:devel/rubygem-mustermann \
+		rubygem-rack>=2.2.4,3:www/rubygem-rack \
 		rubygem-virtus>=1.0.0:devel/rubygem-virtus \
-		rubygem-zeitwerk>=0:devel/rubygem-zeitwerk
+		rubygem-zeitwerk>=2.6:devel/rubygem-zeitwerk
 
 USES=		cpe gem
 

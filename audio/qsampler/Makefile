@@ -1,6 +1,6 @@
 PORTNAME=	qsampler
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.1
+DISTVERSION=	1.0.3
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -22,4 +22,5 @@ USE_QT=		base svg tools:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	rncbc
 
+MAKE_JOBS_UNSAFE= yes
 .include <bsd.port.mk>

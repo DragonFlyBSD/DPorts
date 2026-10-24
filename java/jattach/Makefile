@@ -20,4 +20,8 @@ PLIST_FILES=	bin/jattach
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/jattach ${STAGEDIR}${PREFIX}/bin/jattach
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

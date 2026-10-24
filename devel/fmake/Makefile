@@ -19,4 +19,9 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/make.1 \
 		${STAGEDIR}${PREFIX}/share/man/man1/${PORTNAME}.1
 
+post-patch:
+.for F in cond job make suff proc dir main buf targ shell hash parse str util var for arch
+	@${REINPLACE_CMD} -e '/^__FBSDID/d' ${WRKSRC}/${F}.c
+.endfor
+
 .include <bsd.port.mk>

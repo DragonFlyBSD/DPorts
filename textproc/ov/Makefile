@@ -1,10 +1,10 @@
 PORTNAME=	ov
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.15.0
-PORTREVISION=	12
+DISTVERSION=	0.54.0
+PORTREVISION=	5
 CATEGORIES=	textproc
 
-MAINTAINER=	lcook@FreeBSD.org
+MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Feature rich terminal pager
 WWW=		https://github.com/noborus/ov
 
@@ -13,18 +13,18 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		go:modules
 
-_BUILD_VERSION=		${DISTVERSIONFULL}
-_BUILD_REVISION=	dc0b5ca
+_BUILD_VERSION=		${DISTVERSION}
+_BUILD_REVISION=	0a791c8
 
 GO_MODULE=	github.com/noborus/${PORTNAME}
-GO_BUILDFLAGS=	-ldflags "\
-		-s -w \
+GO_LDFLAGS=	-w \
 		-X main.Version=${_BUILD_VERSION} \
-		-X main.Revision=${_BUILD_REVISION}"
+		-X main.Revision=${_BUILD_REVISION}
 
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	README.md
-PORTEXAMPLES=	${PORTNAME}-disable-default.yaml ${PORTNAME}-less.yaml \
+PORTEXAMPLES=	${PORTNAME}-disable-default.yaml \
+		${PORTNAME}-less.yaml \
 		${PORTNAME}.yaml
 
 OPTIONS_DEFINE=	DOCS EXAMPLES

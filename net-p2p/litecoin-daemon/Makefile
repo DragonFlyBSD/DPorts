@@ -1,4 +1,5 @@
 MASTERDIR=	${.CURDIR}/../litecoin
+PORTREVISION=	6
 PKGNAMESUFFIX=	-daemon
 
 COMMENT=	Virtual Peer-to-Peer Currency (Daemon)
@@ -26,6 +27,7 @@ PLIST_FILES+=	"@sample etc/litecoin.conf.sample"
 
 USE_RC_SUBR=	litecoind
 
+DFLY_UNMAINTAINED= yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/share/examples/litecoin.conf ${STAGEDIR}${PREFIX}/etc/litecoin.conf.sample
 

@@ -1,12 +1,12 @@
-# Created by: Alexey Dokuchaev <danfe@FreeBSD.org>
-
 PORTNAME=	xray_re-tools
 DISTVERSION=	g20180902
 CATEGORIES=	games converters
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	X-Ray engine game asset converter (unofficial)
+WWW=		https://github.com/abramcumner/xray_re-tools
 
+BUILD_DEPENDS=	${NONEXISTENT}:graphics/nvidia-texture-tools:patch
 LIB_DEPENDS=	liblzo2.so:archivers/lzo2 \
 		libvorbisfile.so:audio/libvorbis \
 		libnvtt.so:graphics/nvidia-texture-tools
@@ -18,11 +18,13 @@ GH_TAGNAME=	52721d2
 MAKEFILE=	${FILESDIR}/Makefile
 BUILD_WRKSRC=	${WRKSRC}/sources
 WITHOUT_FBSD10_FIX=	yes
+_NVTT_WRKSRC=	${MAKE} -C ${PORTSDIR}/graphics/nvidia-texture-tools -V WRKSRC
 
 PLIST_FILES=	bin/xr_converter
 
 post-extract:
 	@${MV} ${WRKSRC}/sources/3rd\ party ${WRKSRC}/sources/3rd-party
+	@cd ${WRKSRC}/sources/3rd-party && ${RM} -r libogg libvorbis nvtt
 	@${MV} ${WRKSRC}/sources/utils/converter/opcode/Ice/IceTrilist.h \
 		${WRKSRC}/sources/utils/converter/opcode/Ice/IceTriList.h
 	@${LN} -s StdAfx.h ${WRKSRC}/sources/utils/converter/opcode/Stdafx.h
@@ -52,6 +54,10 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,MINGW32__),& || defined(__FreeBSD__),' \
 		${WRKSRC}/sources/xray_re/xr_types.h
 
+post-configure:
+	@${LN} -sf ${_NVTT_WRKSRC:sh}/src ${WRKSRC}/sources/3rd-party/nvtt
+	@${ECHO_CMD} > ${WRKSRC}/sources/xray_re/nvconfig.h
+
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/converter \
 		${STAGEDIR}${PREFIX}/bin/xr_converter
@@ -61,6 +67,15 @@ do-install:
 fixpatches:
 	@${FIND} ${FILESDIR} -name patch-* | ${XARGS} ${SED} -i '' \
 		-E 's,[[:cntrl:]]*$$,,'
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g' \
+		${WRKSRC}/sources/xray_re/xr_types.h
+	${REINPLACE_CMD} -e 's@[[:<:]]__unused[[:>:]]@__unused_@g' \
+		${WRKSRC}/sources/xray_re/xr_blender.h \
+		${WRKSRC}/sources/xray_re/xr_ai_way.h
+	${REINPLACE_CMD} -e 's@_THROW_BAD_ALLOC@throw()@g' \
+		${WRKSRC}/sources/3rd-party/nvtt/nvcore/Memory.h
 
 .include <bsd.port.mk>
 

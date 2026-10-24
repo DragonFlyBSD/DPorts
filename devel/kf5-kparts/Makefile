@@ -5,7 +5,7 @@ CATEGORIES=	devel kde kde-frameworks
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KF5 document centric plugin system
 
-USES=		cmake compiler:c++11-lib gettext kde:5 qt:5 tar:xz xorg
+USES= cmake compiler:c++11-lib gettext kde:5 qt:5 tar:xz xorg gmake
 USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		i18n iconthemes jobwidgets kio service \
 		solid textwidgets widgetsaddons windowsystem xmlgui \
@@ -13,5 +13,9 @@ USE_KDE=	auth codecs completion config configwidgets coreaddons \
 USE_QT=		concurrent core dbus gui network widgets xml \
 		buildtools:build qmake:build
 USE_XORG=	x11
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

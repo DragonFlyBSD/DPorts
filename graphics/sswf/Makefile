@@ -31,6 +31,7 @@ DEBUG_CONFIGURE_OFF=	--disable-debug --disable-yydebug
 
 BINARY_ALIAS=		freetype-config=true
 
+CXXFLAGS= -fpermissive
 .include <bsd.port.pre.mk>
 
 .if empty(ICONV_LIB)

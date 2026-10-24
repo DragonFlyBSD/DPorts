@@ -1,7 +1,7 @@
 PORTNAME=	pgpool-II
-PORTVERSION=	4.4.4
+DISTVERSION=	4.4.18
 CATEGORIES=	databases
-MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
+MASTER_SITES=	https://www.pgpool.net/source/
 PKGNAMESUFFIX=	-44
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -36,6 +36,7 @@ PAM_CONFIGURE_ON=	--with-pam
 SSL_USES=		ssl
 SSL_CONFIGURE_WITH=	openssl
 
+IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${MKDIR} ${STAGEDIR}/var/run/pgpool
 	${INSTALL_LIB} ${WRKSRC}/src/libs/pcp/.libs/libpcp.so.2.0.0 ${STAGEDIR}${PREFIX}/lib

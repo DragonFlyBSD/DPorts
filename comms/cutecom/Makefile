@@ -1,6 +1,7 @@
 PORTNAME=		cutecom
-DISTVERSION=		0.51.0
-PORTREVISION=	1
+DISTVERSION=		0.60.0
+DISTVERSIONSUFFIX=	-RC1
+PORTREVISION=		1
 CATEGORIES=		comms
 
 MAINTAINER=	jwb@FreeBSD.org
@@ -12,12 +13,10 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 RUN_DEPENDS=	lsz:comms/lrzsz
 
-USES=		cmake compiler:c++11-lang qt:5
-USE_QT=		buildtools:build core gui network qmake:build serialport widgets
+USES=		cmake compiler:c++17-lang qt:6
+USE_QT=		base serialport
 USE_GITLAB=	yes
 
-GL_TAGNAME=	cce2e5ec01df09ca4b05f055f21942e0de7eb7dd
-
-PLIST_FILES=	bin/cutecom
+GL_TAGNAME=	v0.60.0-RC1
 
 .include <bsd.port.mk>

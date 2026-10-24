@@ -1,18 +1,20 @@
-# Created by: Marcel Kaiser <mk@nic-nac-project.org>
-# $FreeBSD$
-
 PORTNAME=	dsbdriverd
-PORTVERSION=	1.0
+PORTVERSION=	1.1
+PORTREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://freeshell.de/~mk/download/
 
 MAINTAINER=	mk@nic-nac-project.org
 COMMENT=	Hardware detecting, device driver loading daemon
+WWW=		https://github.com/mrclksr/DSBDriverd
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		lua:52 tar:tgz
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	mrclksr
+GH_PROJECT=	DSBDriverd
 
 OPTIONS_DEFINE=	PCIIDS USBIDS
 
@@ -35,6 +37,11 @@ USE_RC_SUBR=	dsbdriverd
 PLIST_FILES=	"@sample ${ETCDIR}/config.lua.sample" \
 		${ETCDIR}/netif.lua \
 		libexec/dsbdriverd \
-		man/man8/dsbdriverd.8.gz
+		share/man/man8/dsbdriverd.8.gz
+
+IGNORE= FreeBSD specific
+post-patch:
+	@${REINPLACE_CMD} -e 's|^MANDIR.*|MANDIR = $${PREFIX}/share/man/man8|' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

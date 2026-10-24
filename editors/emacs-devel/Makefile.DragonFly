@@ -1,5 +1,0 @@
-# Remove NACL for now
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NACL}
-
-# Use GCC11+ to build since NATIVECOMP requires gcc11+
-USE_GCC_VERSION=	${GCC_DEFAULT}

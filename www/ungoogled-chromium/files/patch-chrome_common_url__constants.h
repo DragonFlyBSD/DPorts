@@ -1,8 +1,8 @@
---- chrome/common/url_constants.h.orig	2024-08-26 14:40:28 UTC
+--- chrome/common/url_constants.h.orig	2026-08-13 07:41:05 UTC
 +++ chrome/common/url_constants.h
-@@ -927,7 +927,7 @@ inline constexpr char kOutdatedPluginLearnMoreURL[] =
- inline constexpr char kPhoneHubPermissionLearnMoreURL[] =
-     "https://support.9oo91e.qjz9zk/chromebook?p=multidevice";
+@@ -734,7 +734,7 @@ inline constexpr char kOutdatedPluginLearnMoreURL[] =
+     "https://support.9oo91e.qjz9zk/chrome?p=ib_outdated_plugin";
+ #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

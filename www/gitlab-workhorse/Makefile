@@ -1,7 +1,7 @@
 PORTNAME=	gitlab-workhorse
 PORTVERSION=	${GITLAB_VERSION}
-PORTREVISION=	${GITLAB_PORTREVISION} # modify it in www/gitlab/Makefile.common
 DISTVERSIONPREFIX=	v
+PORTREVISION=	${GITLAB_PORTREVISION} # modify it in www/gitlab/Makefile.common
 CATEGORIES=	www
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -11,19 +11,21 @@ WWW=		https://gitlab.com/gitlab-org/gitlab/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 
+BROKEN_i386=	Platform i386 is not supported upstream
+
 BUILD_DEPENDS=	git>=2.42.0:devel/git
 RUN_DEPENDS=	p5-Image-ExifTool>=0:graphics/p5-Image-ExifTool
 
-USES=		gmake go:modules,no_targets,1.23
+USES=		gmake go:modules,no_targets
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 GO_MOD_DIST=	gitlab
+GO_MODULE=	gitlab.com/gitlab-org/gitlab/workhorse
 MAKE_ENV=	GOFLAGS="${GO_BUILDFLAGS}"
 MAKE_ENV+=	${GO_ENV}
 WRKSRC_SUBDIR=	workhorse
 # found in work/gitlab-foss*/workhorse/go.mod
-GO_MODULE=	gitlab.com/gitlab-org/gitlab/workhorse
 
 PLIST_FILES=	bin/gitlab-resize-image \
 		bin/gitlab-workhorse \
@@ -31,4 +33,8 @@ PLIST_FILES=	bin/gitlab-resize-image \
 		bin/gitlab-zip-metadata
 
 .include "${.CURDIR}/../gitlab/Makefile.common"
+dfly-patch:
+	${REINPLACE_CMD} -e 's,freebsd,dragonfly,g' \
+		${GO_GOPATH}/pkg/mod/github.com/?azure/azure-sdk-for-go/sdk/storage/azblob@v1.0.0/blockblob/mmf_unix.go
+
 .include <bsd.port.mk>

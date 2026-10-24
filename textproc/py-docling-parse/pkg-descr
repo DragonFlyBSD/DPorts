@@ -1,0 +1,5 @@
+Docling Parse is a native C++ PDF parsing backend that extracts text
+with coordinates from programmatic PDFs. It provides high-performance
+PDF content extraction used by the Docling document conversion pipeline,
+built against system libraries including qpdf, blend2d, jpeg, openjpeg,
+lcms2, loguru, utf8cpp, cxxopts, and nlohmann-json.

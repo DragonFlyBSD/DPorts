@@ -1,4 +1,4 @@
-PORTREVISION=	0
+PORTREVISION=	1
 PKGNAMESUFFIX=	-dummy
 
 COMMENT=	Dummy renderer for MyGUI

@@ -28,4 +28,8 @@ PLIST_FILES=	include/zita-convolver.h \
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libzita-convolver.so.${PORTVERSION}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/zita-convolver.h
+
 .include <bsd.port.mk>

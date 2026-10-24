@@ -1,7 +1,7 @@
 PORTNAME=	instant-meshes
 DISTVERSION=	0.0-42
 DISTVERSIONSUFFIX=	-g4a083f4
-PORTREVISION=	14
+PORTREVISION=	16
 CATEGORIES=	graphics
 
 MAINTAINER=	ports@FreeBSD.org
@@ -28,6 +28,8 @@ USE_GL=		gl
 USE_XORG=	x11 xcursor xi xinerama xrandr xxf86vm
 CMAKE_ON=	NANOGUI_BUILD_PYTHON
 
+USES+= gmake
+IGNORE= unmaintained, please request fixing to users mailing list
 post-build:
 	@convert -verbose -resize 500x500 -gravity center -background none -extent 512x512 \
 		${WRKSRC}/resources/icon.png ${WRKDIR}/icon_512x512.png

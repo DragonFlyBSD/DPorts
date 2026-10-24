@@ -11,4 +11,8 @@ USE_KDE=	config widgetsaddons \
 USE_QT=		core gui linguisttools widgets xml \
 		buildtools:build qmake:build
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

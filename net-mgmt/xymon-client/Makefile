@@ -1,6 +1,6 @@
 PORTNAME=	xymon
 PORTVERSION=	4.3.30
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	SF/xymon/Xymon/${PORTVERSION}
 PKGNAMESUFFIX=	-client${PKGNAMESUFFIX2}
@@ -41,5 +41,9 @@ post-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}/client/ext
 	${MKDIR} ${STAGEDIR}${WWWDIR}/client/logs
 	${MKDIR} ${STAGEDIR}${WWWDIR}/client/tmp
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-D_REENTRANT @&-Wno-stringop-truncation @g' \
+		${WRKSRC}/build/Makefile.FreeBSD
 
 .include <bsd.port.mk>

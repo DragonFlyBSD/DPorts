@@ -1,5 +1,5 @@
 PORTNAME=	qmmp
-PORTVERSION=	1.7.4
+PORTVERSION=	1.7.11
 CATEGORIES=	multimedia
 MASTER_SITES=	http://qmmp.ylsoftware.com/files/${PORTNAME}/${DISTVERSION:R}/ \
 		SF/qmmp-dev/${PORTNAME}/${DISTVERSION:R}/
@@ -258,4 +258,5 @@ post-install-DOXYGEN-on:
 	@${FIND} -P ${STAGEDIR}${DOCSDIR}/html -type f 2>/dev/null | \
 		${SED} -ne 's|^${STAGEDIR}${PREFIX}/||p' >> ${TMPPLIST}
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO:NOSS4:NUDISKS*}
 .include <bsd.port.mk>

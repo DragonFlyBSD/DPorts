@@ -1,2 +1,0 @@
-# with gold, one conftest fails with weird missing internal c++ reference
-CONFIGURE_ENV+= LDVER=ld.bfd

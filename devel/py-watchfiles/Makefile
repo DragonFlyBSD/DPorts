@@ -1,6 +1,5 @@
 PORTNAME=	watchfiles
-PORTVERSION=	0.22.0
-PORTREVISION=	1
+PORTVERSION=	1.3.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,8 +21,9 @@ USE_PYTHON=	autoplist concurrent pep517
 
 CARGO_BUILD=	no
 CARGO_INSTALL=	no
+CARGO_TEST=	no
 
-post-install:
-	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -name '*.so' -exec ${STRIP_CMD} {} +
+post-patch:
+	@${REINPLACE_CMD} -e 's/dragonflybsd/dragonfly/g' ${WRKSRC}/cargo-crates/notify-*/Cargo.toml
 
 .include <bsd.port.mk>

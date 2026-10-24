@@ -2,10 +2,11 @@ PORTNAME=	wxguitar
 PORTVERSION=	1.01
 PORTREVISION=	13
 CATEGORIES=	audio
-MASTER_SITES=	http://mirror.amdmi3.ru/distfiles/
+MASTER_SITES=	https://mirror.amdmi3.ru/distfiles/
 
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Simple guitar tuning assistant
+WWW=		https://code.google.com/p/wxguitar/
 
 RUN_DEPENDS=	wavplay:audio/wavplay
 

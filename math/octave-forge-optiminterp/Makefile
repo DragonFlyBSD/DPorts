@@ -1,6 +1,6 @@
 PORTNAME=	octave-forge-optiminterp
 PORTVERSION=	0.3.7
-PORTREVISION=	5
+PORTREVISION=	8
 CATEGORIES=	math
 MASTER_SITES=	SF/octave/Octave%20Forge%20Packages/Individual%20Package%20Releases
 DISTNAME=	${OCTAVE_PKGNAME}-${DISTVERSIONFULL}
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 
 MAKE_ENV+=	MKOCTFILE_FORTRAN_90=yes MKOCTFILE=mkoctfile
 
-MAKE_JOBS_UNSAFE=	yes
+MAKE_JOBS_UNSAFE= yes
 
 .include <bsd.port.pre.mk>
 

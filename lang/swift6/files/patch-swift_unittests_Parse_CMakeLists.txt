@@ -1,0 +1,13 @@
+--- swift/unittests/Parse/CMakeLists.txt.orig	2026-09-13 22:35:30 UTC
++++ swift/unittests/Parse/CMakeLists.txt
+@@ -9,7 +9,10 @@ target_link_libraries(SwiftParseTests
+     swiftParse
+     swiftAST
+     swiftClangImporter
++    swiftFrontend
+     swiftSIL
++    swiftSILGen
++    swiftSILOptimizer
+     # FIXME: Sema must go last because of circular dependencies with AST.
+     swiftSema
+ )

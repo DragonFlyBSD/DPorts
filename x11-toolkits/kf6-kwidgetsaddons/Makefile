@@ -2,12 +2,18 @@ PORTNAME=	kwidgetsaddons
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	x11-toolkits kde kde-frameworks
 
-COMMENT=	Large set of desktop widgets
 MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Large set of desktop widgets
 
 USES=		cmake gl kde:6 qt:6 tar:xz
 USE_GL=		gl opengl
 USE_KDE=	ecm:build
 USE_QT=		base tools
+
+CMAKE_OFF=	BUILD_PYTHON_BINDINGS
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
 
 .include <bsd.port.mk>

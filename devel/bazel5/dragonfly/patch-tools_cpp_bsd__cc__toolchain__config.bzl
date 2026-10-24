@@ -14,7 +14,7 @@
  
      if (is_bsd):
 -        cxx_builtin_include_directories = ["/usr/lib/clang", "/usr/local/include", "/usr/include"]
-+        cxx_builtin_include_directories = ["/usr/lib/clang", "/usr/local/include", "/usr/include", "/usr/libdata/gcc80"]
++        cxx_builtin_include_directories = ["/usr/lib/clang", "/usr/local/include", "/usr/include", "/usr/libdata/gcc80", "/usr/libdata/gcc120"]
      else:
          cxx_builtin_include_directories = []
  

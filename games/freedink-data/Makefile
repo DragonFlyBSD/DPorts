@@ -15,4 +15,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
 		${WRKSRC}/Makefile
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@xargs -0r @xargs -0 @g'			\
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

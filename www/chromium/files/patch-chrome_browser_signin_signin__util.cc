@@ -1,11 +1,20 @@
---- chrome/browser/signin/signin_util.cc.orig	2025-04-04 08:52:13 UTC
+--- chrome/browser/signin/signin_util.cc.orig	2026-10-18 13:29:39 UTC
 +++ chrome/browser/signin/signin_util.cc
-@@ -80,7 +80,7 @@ CookiesMover::CookiesMover(base::WeakPtr<Profile> sour
- CookiesMover::~CookiesMover() = default;
+@@ -40,7 +40,7 @@
+ #include "google_apis/gaia/gaia_id.h"
+ #include "ui/base/l10n/l10n_util.h"
  
- void CookiesMover::StartMovingCookies() {
--#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-   bool allow_cookies_to_be_moved = base::FeatureList::IsEnabled(
-       profile_management::features::kThirdPartyProfileManagement);
- #else
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/ui/dialogs/browser_dialogs.h"
+ #include "components/strings/grit/components_strings.h"
+ #include "ui/base/interaction/element_identifier.h"
+@@ -322,7 +322,7 @@ bool IsSyncingUserSelectableTypesAllowedByPolicy(
+   return true;
+ }
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ bool HasExplicitlyDisabledHistorySync(
+     const syncer::SyncService* sync_service,
+     const signin::IdentityManager* identity_manager) {

@@ -67,4 +67,5 @@ do-install-PGSQL-on:
 do-install-SQLITE3-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/dbd/sqlite3.so ${STAGEDIR}${LUA_MODLIBDIR}/dbd
 
+CFLAGS:= ${CFLAGS:N-Qunused-arguments}
 .include <bsd.port.mk>

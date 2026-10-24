@@ -1,0 +1,61 @@
+FreeBSD: remove QAT, lz4, and related Linux-only repository registrations.
+
+Intel QAT (qatlib, qatzip, qat_zstd), CryptoMB (ipp_crypto), numactl,
+uadk, and lz4 are Linux-only hardware acceleration / build dependencies
+that are never built on FreeBSD.  Remove their repository registrations
+so Bazel does not attempt to fetch them, and remove the lz4 foreign_cc
+build target and its use in librdkafka_build.
+
+--- a/bazel/repositories.bzl
++++ b/bazel/repositories.bzl
+@@ -187,13 +187,6 @@
+     _com_github_grpc_grpc()
+     _rules_proto_grpc()
+     _icu()
+-    _ipp_crypto()
+-    _numactl()
+-    _uadk()
+-    _qatlib()
+-    _qatzip()
+-    _qat_zstd()
+-    _lz4()
+     _yaml_cpp()
+     _libevent()
+     _luajit()
+
+--- a/bazel/foreign_cc/BUILD
++++ b/bazel/foreign_cc/BUILD
+@@ -50,25 +50,6 @@
+         "//bazel:linux": [":liburing"],
+         "//conditions:default": [],
+     }),
+-)
+-
+-make(
+-    name = "lz4",
+-    args = [
+-        "MOREFLAGS='-fPIC'",
+-        "BUILD_SHARED=no",
+-    ],
+-    lib_source = "@lz4//:all",
+-    out_static_libs = [
+-        "liblz4.a",
+-    ],
+-    tags = ["skip_on_windows"],
+-    targets = [
+-        "lib",
+-        "install",
+-    ],
+-    visibility = ["//visibility:public"],
+-    alwayslink = False,
+ )
+ 
+ # Kafka client dependency used by Kafka-mesh filter.
+@@ -89,7 +70,6 @@
+     targets = [
+         "ARFLAGS='' WITH_LDS='n' libs install-subdirs",
+     ],
+-    deps = [":lz4"],
+     alwayslink = True,
+ )
+ 

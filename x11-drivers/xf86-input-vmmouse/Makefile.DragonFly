@@ -1,3 +1,0 @@
-
-CONFIGURE_ARGS+=	--with-hal-callouts-dir=${PREFIX}/libexec/hal/scripts
-DFLY_UNMAINTAINED= yes

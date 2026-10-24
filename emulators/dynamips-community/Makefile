@@ -13,9 +13,9 @@ LICENSE=	GPLv2
 
 BROKEN_riscv64=		fails to compile: common/dynamips_common.h:71:2: Please define your architecture!
 
-LIB_DEPENDS=	libelf.so.0:devel/libelf
+LIB_DEPENDS= libelf.so.0:devel/libelf
 
-CFLAGS+=	-I${PREFIX}/include -I${PREFIX}/include/libelf
+CFLAGS= -I${PREFIX}/include -I${PREFIX}/include/libelf
 
 CONFLICTS=	dynamips dynamips-devel
 

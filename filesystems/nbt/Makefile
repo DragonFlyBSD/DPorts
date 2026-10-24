@@ -5,7 +5,7 @@ MASTER_SITES=	SF/nbtfsutils
 PKGNAMEPREFIX=	fusefs-
 DISTNAME=	nbtfsutils-${REVISION_DATE}-${REVISION_HASH}-src
 
-MAINTAINER=	msl0000023508@gmail.com
+MAINTAINER=	whr@rivoreo.one
 COMMENT=	Editing Named Binary Tag (NBT) as using a file system
 WWW=		https://sourceforge.net/projects/nbtfsutils/
 
@@ -22,8 +22,8 @@ LICENSE_PERMS_BEERWARE=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 USES=		fuse localbase:ldflags tar:bz2
 USE_LDCONFIG=	yes
 
-REVISION_DATE=	20250506
-REVISION_HASH=	dbd559a
+REVISION_DATE=	20260630
+REVISION_HASH=	c06da0c
 
 MAKE_ENV=	MANDIR=\${PREFIX}/share/man
 INSTALL_TARGET=	install-commands install-dev

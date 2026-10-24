@@ -1,2 +1,0 @@
-CONFIGURE_ARGS+=	--mandir=${MANPREFIX}/man
-DFLY_UNMAINTAINED= yes

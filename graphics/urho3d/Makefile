@@ -30,4 +30,5 @@ OPTIONS_DEFINE=	EXAMPLES
 
 EXAMPLES_CMAKE_OFF=	-DURHO3D_SAMPLES:BOOL=false
 
+IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

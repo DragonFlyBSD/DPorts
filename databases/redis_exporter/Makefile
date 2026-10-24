@@ -1,6 +1,7 @@
 PORTNAME=	redis_exporter
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.69.0
+DISTVERSION=	1.92.0
+PORTREVISION=	2
 CATEGORIES=	databases
 
 MAINTAINER=	arcade@b1t.name
@@ -10,16 +11,18 @@ WWW=		https://github.com/oliver006/redis_exporter
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:1.24,modules
+USES=		go:1.27+,modules
 
-USE_RC_SUBR=	redis_exporter
+USE_RC_SUBR=	${PORTNAME}
 
-GO_MODULE=	github.com/oliver006/redis_exporter
-GO_BUILDFLAGS=	-v -ldflags "${LD_FLAG_STRING}"
+GO_MODULE=	github.com/oliver006/${PORTNAME}
+GO_BUILDFLAGS=	-v -ldflags "${GO_LD_FLAGS:S|^|-X main.Build|}"
+GO_LD_FLAGS=	Version=${DISTVERSION} \
+		Date=${:!date -Iseconds -zUTC!} \
+		CommitSha=c796e82
 
-PLIST_FILES=	bin/redis_exporter
+TESTING_UNSAFE=	yes
 
-LD_FLAG_X_PREFIX=	-X main
-LD_FLAG_STRING=		${STRIP} ${LD_FLAG_X_PREFIX}.BuildVersion=${DISTVERSION}
+PLIST_FILES=	bin/${PORTNAME}
 
 .include <bsd.port.mk>

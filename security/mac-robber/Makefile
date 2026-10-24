@@ -14,6 +14,7 @@ PORTDOCS=	CHANGES README
 
 OPTIONS_DEFINE=	DOCS
 
+CFLAGS= -DMAXNAMLEN=255
 do-build:
 	cd ${WRKSRC}; ${CC} ${CFLAGS} -o mac-robber mac-robber.c
 

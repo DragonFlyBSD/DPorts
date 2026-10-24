@@ -1,2 +1,0 @@
-USES+= python:build
-USE_GCC_VERSION=	${GCC_DEFAULT}

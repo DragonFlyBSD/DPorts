@@ -15,4 +15,8 @@ USE_QT=		core dbus gui network widgets xml \
 		buildtools:build qmake:build
 USE_XORG=	xcb xcursor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
+		${WRKSRC}/metainfo.yaml
+
 .include <bsd.port.mk>

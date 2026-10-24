@@ -28,4 +28,8 @@ PLIST_FILES=	include/rtmidi/RtMidi.h \
 		lib/librtmidi.so.7.0.0 \
 		libdata/pkgconfig/rtmidi.pc
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|freebsd|dragonfly|' \
+		${WRKSRC}/configure.ac
+
 .include <bsd.port.mk>

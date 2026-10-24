@@ -1,0 +1,44 @@
+PORTNAME=	homepage
+DISTVERSION=	2.4.0
+CATEGORIES=	www
+MASTER_SITES=	LOCAL/dtxdf/${PORTNAME}/:assets
+# For instructions on how to create assets:
+#   https://github.com/DtxdF/port-assets-makejails/tree/main/homepage
+DISTFILES=	${PORTNAME}-v${DISTVERSION}${EXTRACT_SUFX}:assets
+
+MAINTAINER=	dtxdf@FreeBSD.org
+COMMENT=	Highly customizable homepage with service API integrations
+WWW=		https://gethomepage.dev
+
+LICENSE=	GPLv3
+
+USES=		nodejs:22,run
+
+USE_RC_SUBR=	${PORTNAME}
+
+NO_ARCH=	yes
+NO_BUILD=	yes
+SUB_LIST=	HOMEDIR=${HOMEPAGE_HOMEDIR} \
+		USER=${HOMEPAGE_USER}
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-files
+
+PLIST_SUB=	GROUP=${HOMEPAGE_GROUP} \
+		USER=${HOMEPAGE_USER} \
+		HOMEDIR=${HOMEPAGE_HOMEDIR}
+
+HOMEPAGE_HOMEDIR=	${WWWDIR}
+HOMEPAGE_CONFIGDIR=	${HOMEPAGE_HOMEDIR}/config
+HOMEPAGE_USER=		www
+HOMEPAGE_GROUP=		www
+
+do-install:
+	@${MKDIR} ${STAGEDIR}${HOMEPAGE_HOMEDIR}
+	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${HOMEPAGE_HOMEDIR}
+
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.env ${STAGEDIR}${PREFIX}/etc/${PORTNAME}.env.sample
+	@${MKDIR} ${STAGEDIR}${HOMEPAGE_CONFIGDIR}
+	@${MKDIR} ${STAGEDIR}${HOMEPAGE_CONFIGDIR}/logs
+
+.include <bsd.port.mk>

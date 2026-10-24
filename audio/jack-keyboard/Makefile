@@ -23,6 +23,7 @@ LASH_LIB_DEPENDS=	liblash.so:audio/lash
 LASH_CMAKE_ON=	-DLashEnable:BOOL=On
 LASH_CMAKE_OFF=	-DLashEnable:BOOL=Off
 
+LDFLAGS= -L${LOCALBASE}/lib -lgthread-2.0
 post-patch:
 	${REINPLACE_CMD} -e 's|DESTINATION man/man1|DESTINATION share/man/man1|' \
 		${WRKSRC}/CMakeLists.txt

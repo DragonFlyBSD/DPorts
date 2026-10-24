@@ -1,20 +1,20 @@
---- chrome/browser/component_updater/iwa_key_distribution_component_installer.cc.orig	2025-05-28 14:55:43 UTC
+--- chrome/browser/component_updater/iwa_key_distribution_component_installer.cc.orig	2026-08-31 10:59:09 UTC
 +++ chrome/browser/component_updater/iwa_key_distribution_component_installer.cc
-@@ -77,7 +77,7 @@ bool IsOnDemandUpdateSupported() {
+@@ -32,7 +32,7 @@ bool IsComponentSupported() {
+   // Key Distribution component is necessary for full IWAs support as it
+   // involves the IWA allowlist necessary to install IWAs in prod...
+   return base::FeatureList::IsEnabled(features::kIsolatedWebApps);
+-#elif BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#elif BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // ...however, on Mac/Linux, the component logic is not fully supported. A
+   // separate flag enables developing and testing both: IWAs and the component
+   // separately on these systems.
+@@ -67,7 +67,7 @@ void QueueOnDemandUpdate(
  
  namespace component_updater {
  
--#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kIwaKeyDistributionComponent,
-              "IwaKeyDistributionComponent",
- #if BUILDFLAG(IS_CHROMEOS)
-@@ -102,7 +102,7 @@ bool IwaKeyDistributionComponentInstallerPolicy::IsSup
-   // the main IWA feature.
- #if BUILDFLAG(IS_WIN)
-   return base::FeatureList::IsEnabled(features::kIsolatedWebApps);
--#elif BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-+#elif BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   return base::FeatureList::IsEnabled(kIwaKeyDistributionComponent);
- #else
-   return false;
+-#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ BASE_FEATURE(kIwaKeyDistributionComponent, base::FEATURE_DISABLED_BY_DEFAULT);
+ #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+ 

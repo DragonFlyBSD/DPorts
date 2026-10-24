@@ -1,6 +1,5 @@
 PORTNAME=	eclipse
-DISTVERSION=	4.34
-PORTREVISION=	2
+DISTVERSION=	4.41
 CATEGORIES=	java devel
 ECLIPSE_TAG=	R${DISTVERSION:S|.|_|g}
 
@@ -17,11 +16,10 @@ ONLY_FOR_ARCHS=	aarch64 amd64
 BUILD_DEPENDS=	git:devel/git \
 		mvn:devel/maven39 \
 		zip:archivers/zip
+LIB_DEPENDS=	libsecret-1.so:security/libsecret
+RUN_DEPENDS=	webkit2-gtk_41>=0:www/webkit2-gtk@41
 
-LIB_DEPENDS=	libsecret-1.so:security/libsecret \
-		libwebkit2gtk-4.0.so:www/webkit2-gtk@40
-
-USES=		compiler:c++17-lang gl gmake java pkgconfig gnome
+USES=		compiler:c++17-lang gl gmake gnome java pkgconfig
 # The github repositories.  The repository under NorbertXYZ is for a predefined maven
 # download, so the build does not need to download while do-build is running
 USE_GITHUB=	yes
@@ -38,10 +36,10 @@ GH_TUPLE=	chirontt:eclipse.platform.releng.aggregator:${ECLIPSE_TAG}_maintenance
 		chirontt:equinox:${ECLIPSE_TAG}_maintenance:k/equinox \
 		chirontt:equinox.binaries:${ECLIPSE_TAG}_maintenance:l/equinox.binaries \
 		chirontt:p2:${ECLIPSE_TAG}_maintenance:m/equinox.p2 \
-		NorbertXYZ:eclipse_maven:${DISTVERSION}:n
+		NorbertXYZ:eclipse-maven:${DISTVERSION}:n
 USE_GL=		gl glu
-USE_GNOME=	gtk30
-JAVA_VERSION=	17+
+USE_GNOME=	gtk30 gtk40
+JAVA_VERSION=	21+
 
 DESKTOP_ENTRIES=	"Eclipse" \
 			"${COMMENT}" \
@@ -54,22 +52,26 @@ SUB_FILES=	${PORTNAME}
 
 .include <bsd.port.pre.mk>
 
-MAVEN_ENV=	MAVEN_OPTS=-Xmx2048m CC=${CC} CFLAGS="${CFLAGS}" JAVA_HOME=${JAVA_HOME}
+MAVEN_ENV= MAVEN_OPTS=-Xmx2048m CC=${CC} CFLAGS="${CFLAGS}" JAVA_HOME=${JAVA_HOME} OS=FreeBSD
 
 # To make the build working, set the (maven) architecture to x86_64 instead of amd64
 # Finally there are problems with amd64
 MAVEN_ARCH=	${ARCH:S|amd64|x86_64|}
 
 MAVEN_PARAMS=	--offline \
-		-Dmaven.repo.local=${WRKDIR}/eclipse_maven-${DISTVERSION} \
+		-Dmaven.repo.local=${WRKDIR}/eclipse-maven-${DISTVERSION} \
 		-Dnative=gtk.freebsd.${MAVEN_ARCH} \
 		-DskipTests clean verify
 
-ECLIPSE_RESULT=	eclipse.platform.releng.tychoeclipsebuilder/eclipse.platform.repository/target/products/org.eclipse.sdk.ide-freebsd.gtk.${MAVEN_ARCH}.tar.gz
+ECLIPSE_RESULT=	products/eclipse-sdk/target/products/org.eclipse.sdk.ide-freebsd.gtk.${MAVEN_ARCH}.tar.gz
 
 .if ${COMPILER_TYPE} == clang
 CFLAGS+=	-Wno-deprecated-non-prototype
 .endif
+
+_ICONS_PNG=	16 22 24 32 48 64 128 256 512 1024
+_ICONS_SVG=	16 32 48
+_ICONS_PATH=	${STAGEDIR}${DATADIR}/plugins/org.eclipse.platform_${DISTVERSION}.0.v*
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAVEN_ENV} mvn ${MAVEN_PARAMS}
@@ -79,9 +81,28 @@ do-install:
 	${TAR} -x --directory ${STAGEDIR}${DATADIR}/.. --file ${WRKSRC}/${ECLIPSE_RESULT}
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
+	${MKDIR} ${_ICONS_PNG:C|([0-9]*)|${STAGEDIR}${PREFIX}/share/icons/hicolor/\1x\1/apps|}
+.for _ICON in ${_ICONS_PNG}
+	${INSTALL_DATA} \
+		${_ICONS_PATH}/${PORTNAME}${_ICON}.png \
+		${STAGEDIR}${PREFIX}/share/icons/hicolor/${_ICON}x${_ICON}/apps/${PORTNAME}.png
+.endfor
+.for _ICON in ${_ICONS_SVG}
+	${INSTALL_DATA} \
+		${_ICONS_PATH}/${PORTNAME}${_ICON}.svg \
+		${STAGEDIR}${PREFIX}/share/icons/hicolor/${_ICON}x${_ICON}/apps/${PORTNAME}.svg
+.endfor
+
 # Generate dynamic plist, to cater for different ARCHS
 post-install:
-	cd ${STAGEDIR}${PREFIX} && ${FIND} -s bin/${PORTNAME} share/${PORTNAME} -not -type d >> ${TMPPLIST}
+	cd ${STAGEDIR}${PREFIX} && ${FIND} -s bin/${PORTNAME} share/${PORTNAME} share/icons -not -type d >> ${TMPPLIST}
 	cd ${STAGEDIR}${PREFIX} && ${FIND} -ds share/${PORTNAME} -type d | ${SED} -e 's,^,@dir ,' >> ${TMPPLIST}
+
+dfly-patch:
+	@${PRINTF} '#ifdef GDK_WINDOWING_WAYLAND\n#if GTK_CHECK_VERSION(4,0,0)\n#include <gdk/wayland/gdkwayland.h>\n#else\n#include <gdk/gdkwayland.h>\n#endif\n#else\n#define GDK_IS_WAYLAND_DISPLAY(display) FALSE\n#endif\n' \
+		> "${WRKSRC}/eclipse.platform.swt/bundles/org.eclipse.swt/Eclipse SWT PI/gtk/library/dfly_wayland.h"
+	${REINPLACE_CMD} -e 's|^#include <gdk/wayland/gdkwayland.h>|#include "dfly_wayland.h"|' \
+		-e 's|^#include <gdk/gdkwayland.h>|#include "dfly_wayland.h"|' \
+		"${WRKSRC}/eclipse.platform.swt/bundles/org.eclipse.swt/Eclipse SWT PI/gtk/library/os.h"
 
 .include <bsd.port.post.mk>

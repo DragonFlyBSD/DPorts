@@ -21,4 +21,5 @@ GH_TUPLE=	\
 		a-n-t-h-o-n-y:Optional:daa1e69b7ff27aa05e47081ac90794f7881eaf5d:a_n_t_h_o_n_y_Optional/libs/Signals/libs/Optional
 USE_LDCONFIG=	yes
 
+CMAKE_ARGS= -DCURSES_INCLUDE_PATH=STR:"${LOCALBASE}/include/ncurses"
 .include <bsd.port.mk>

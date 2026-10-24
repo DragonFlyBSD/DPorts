@@ -1,9 +1,9 @@
---- folly/Subprocess.cpp.orig	2020-06-11 05:04:12 UTC
+--- folly/Subprocess.cpp.orig
 +++ folly/Subprocess.cpp
-@@ -565,7 +565,7 @@ int Subprocess::prepareChild(
+@@ -1309,7 +1309,7 @@ int Subprocess::prepareChild(SpawnRawArgs const& args) {
  #endif
  
-   if (options.processGroupLeader_) {
+   if (args.processGroupLeader) {
 -#if !defined(__FreeBSD__)
 +#if !defined(__FreeBSD__) && !defined(__DragonFly__)
      if (setpgrp() == -1) {
