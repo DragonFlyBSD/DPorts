@@ -62,7 +62,7 @@ PLIST_SUB+=		GTK="" \
 .endif
 
 OPTIONS_DEFINE=		LEXILLA MALLOC_REPLACEMENT TECO_INTEGER_32 LTO
-OPTIONS_DEFAULT= LEXILLA
+OPTIONS_DEFAULT=	LEXILLA MALLOC_REPLACEMENT
 OPTIONS_SUB=		yes
 
 LEXILLA_DESC=			Build with Lexilla lexer support (larger)
@@ -79,6 +79,7 @@ LTO_CFLAGS=	-flto=thin
 LTO_CXXFLAGS=	-flto=thin
 LTO_LDFLAGS=	-flto=thin
 
+CFLAGS_x86_64= -D_MALLOC_NP_H_
 .include <bsd.port.pre.mk>
 
 .if ${FLAVOR} == gtk

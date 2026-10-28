@@ -1,4 +1,4 @@
-TIMESTAMP = 1785488575
+TIMESTAMP = 1793176931
 SHA256 (openjdk25-25.0.1+8.f.1.aarch64.tar.xz) = cb1d88e0e299a0c2347dbbaa17c3650403a28e8065076cf7898478646c473b2b
 SIZE (openjdk25-25.0.1+8.f.1.aarch64.tar.xz) = 189254412
 SHA256 (openjdk25-25.0.1+8.f.1.ppc64.tar.xz) = ae3e9658208889233f374b172b06f10b36fb19061d830252384a5e98aebe7184
@@ -9,5 +9,5 @@ SHA256 (openjdk25-25.0.1+8.f.1.x86_64.tar.xz) = 0449e5a9257d8eb7ed1518af1e4e9e54
 SIZE (openjdk25-25.0.1+8.f.1.x86_64.tar.xz) = 191262784
 SHA256 (openjdk24-24.0.2+12.2.x86_64.tar.xz) = ffffaf82a094bafb352475fad981ddfe6a87a9324ea0e285f1afad6c3a436aa5
 SIZE (openjdk24-24.0.2+12.2.x86_64.tar.xz) = 188730088
-SHA256 (freebsd-openjdk-jdk-25.0.4+7-freebsd-1_GH0.tar.gz) = 8fb464c0896490e1a354f5f1459fe3c06f708751f52cca8b60e9abb8a6b6f0f8
-SIZE (freebsd-openjdk-jdk-25.0.4+7-freebsd-1_GH0.tar.gz) = 119798266
+SHA256 (freebsd-openjdk-jdk-25.0.5.0.3+1-freebsd-1_GH0.tar.gz) = 21c8eca6731785bb317ec77d619bee2535b1d2a87312eb5330484690142a74c6
+SIZE (freebsd-openjdk-jdk-25.0.5.0.3+1-freebsd-1_GH0.tar.gz) = 119878746

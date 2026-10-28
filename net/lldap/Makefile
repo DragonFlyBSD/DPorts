@@ -43,4 +43,5 @@ post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/lldap
 	${INSTALL_DATA} ${WRKSRC}/lldap_config.docker_template.toml ${STAGEDIR}${PREFIX}/share/lldap/ldap_config.toml.example
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

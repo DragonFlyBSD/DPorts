@@ -65,7 +65,10 @@ post-install:
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's/^  \*-\*-freebsd\*)/  *-*-freebsd*|*-*-dragonfly*)/' \
+		-e 's/^    THREADLIB=-lthr$$/    THREADLIB=-lpthread/' \
 		${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e '/^RUST_LDFLAGS = /s/ -lgcc_s / /' \
+		${WRKSRC}/Makefile.am
 	${REINPLACE_CMD} \
 		-e 's/defined(__FreeBSD__)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
 		-e 's/^#ifdef __FreeBSD__/#if defined(__FreeBSD__) || defined(__DragonFly__)/' \

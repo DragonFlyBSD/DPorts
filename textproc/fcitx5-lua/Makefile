@@ -18,4 +18,5 @@ USES=		cmake compiler:c++17-lang gettext-tools kde lua:53 pkgconfig \
 
 USE_KDE=	ecm:build
 
+USES+= dfly-libcxx
 .include <bsd.port.mk>

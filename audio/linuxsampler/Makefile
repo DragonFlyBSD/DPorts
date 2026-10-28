@@ -49,6 +49,7 @@ JACK_CONFIGURE_ENABLE=	jack-driver
 
 CONFLICTS_BUILD=	dssi # DSSI is a no-longer-maintained interface to obsolete LADSPA plugins - no need to pull DSSI and LADSPA into dependencies
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|CXX_CPU_SWITCH=.*|CXX_CPU_SWITCH=|g ; \

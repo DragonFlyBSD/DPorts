@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSES/LGPL-2.1-or-later.txt
 LIB_DEPENDS=	libchewing.so:chinese/libchewing \
 		libFcitx5Core.so:textproc/fcitx5
 
-USES=		compiler:c++17-lang gettext-tools cmake kde pkgconfig tar:zst
+USES= compiler:c++17-lang gettext-tools cmake kde pkgconfig tar:zst dfly-libcxx
 
 USE_KDE=	ecm:build
 

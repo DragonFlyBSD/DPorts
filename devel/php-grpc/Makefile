@@ -17,4 +17,10 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	grpc
 GH_PROJECT=	grpc-php-ext
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|' \
+		${WRKSRC}/third_party/abseil-cpp/absl/base/config.h \
+		${WRKSRC}/third_party/abseil-cpp/absl/base/internal/sysinfo.cc \
+		${WRKSRC}/third_party/abseil-cpp/absl/base/internal/raw_logging.cc
+
 .include <bsd.port.mk>

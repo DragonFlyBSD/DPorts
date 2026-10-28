@@ -33,4 +33,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/assets/images/maolan.svg \
 		${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

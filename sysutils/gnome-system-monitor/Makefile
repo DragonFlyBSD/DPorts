@@ -26,4 +26,5 @@ GLIB_SCHEMAS=	org.gnome.gnome-system-monitor.enums.xml \
 		org.gnome.gnome-system-monitor.gschema.xml
 
 USES+= python:3.4+,build shebangfix
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.mk>

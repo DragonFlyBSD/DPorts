@@ -15,7 +15,7 @@ BROKEN_i386=	link fails: error: undefined symbol: __atomic_fetch_add_8, etc
 
 BUILD_DEPENDS=	gmake:devel/gmake
 
-USES=		cargo perl5
+USES= cargo perl5 ssl
 USE_PERL5=	build
 
 USE_GITHUB=	yes
@@ -371,6 +371,7 @@ OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
 
+CARGO_ENV= OPENSSL_NO_VENDOR=1
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc

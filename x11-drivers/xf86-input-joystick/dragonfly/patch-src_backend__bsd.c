@@ -1,6 +1,6 @@
---- src/backend_bsd.c.orig	2011-04-20 18:57:00.000000000 +0000
+--- src/backend_bsd.c.orig
 +++ src/backend_bsd.c
-@@ -42,11 +42,26 @@
+@@ -42,14 +42,29 @@
  #include <xf86_OSproc.h>
  
  #include <usbhid.h>
@@ -18,6 +18,9 @@
  #include <dev/usb/usb.h>
  #include <dev/usb/usbhid.h>
 +#endif
+ #ifdef HAVE_DEV_HID_HID_H
+     #include <dev/hid/hid.h>
+ #endif
  #ifdef HAVE_DEV_USB_USB_IOCTL_H
      #include <dev/usb/usb_ioctl.h>
  #endif

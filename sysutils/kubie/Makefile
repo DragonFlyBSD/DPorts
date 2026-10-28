@@ -30,4 +30,5 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/completions
 	${INSTALL_DATA} ${WRKSRC}/completion/${PORTNAME}.fish ${STAGEDIR}${PREFIX}/share/fish/completions/${PORTNAME}.fish
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -1,0 +1,10 @@
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -483,6 +483,7 @@
+ # Single curl build mode: produce shared+static libcurl and static curl binary.
+ set(_curl_build_flags
+   -DBUILD_SHARED_LIBS=ON
++  -DCURL_LIBCURL_SOVERSION=ON
+   -DBUILD_STATIC_LIBS=ON
+   -DBUILD_STATIC_CURL=ON
+   -DBUILD_CURL_EXE=ON

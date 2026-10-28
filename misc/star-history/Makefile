@@ -232,4 +232,5 @@ OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

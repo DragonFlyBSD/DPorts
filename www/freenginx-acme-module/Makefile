@@ -22,7 +22,7 @@ USES=		cargo cpe llvm:lib,noexport ssl
 CPE_VENDOR=	f5
 CPE_PRODUCT=	nginx-acme
 
-CARGO_ENV+=	NGINX_BUILD_DIR=${WRKDIR}/freenginx-${NGINX_VERSION}/objs
+CARGO_ENV+= NGINX_BUILD_DIR=${WRKDIR}/freenginx-${NGINX_VERSION}/objs LIBCLANG_PATH=${LLVM_PREFIX}/lib
 
 CONFLICTS_INSTALL=	freenginx-devel-acme
 

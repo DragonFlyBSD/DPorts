@@ -21,15 +21,15 @@ index 410e7ec222d4..f405cdd92cd8 100644
  #define PA_IS_BSD
  #endif
  
-@@ -118,7 +121,7 @@
-     defined(PA_IS_FREEBSD) || defined(PA_IS_IOS) || defined(PA_IS_LINUX) ||  \
-     defined(PA_IS_CHROMEOS) || defined(PA_IS_MAC) || defined(PA_IS_NACL) ||  \
-     defined(PA_IS_NETBSD) || defined(PA_IS_OPENBSD) || defined(PA_IS_QNX) || \
--    defined(PA_IS_SOLARIS) || PA_BUILDFLAG(IS_CHROMEOS)
-+    defined(PA_IS_SOLARIS) || PA_BUILDFLAG(IS_CHROMEOS) || defined(PA_IS_DRAGONFLY)
+@@ -121,7 +121,7 @@
+     defined(PA_IS_IOS) || defined(PA_IS_LINUX) || defined(PA_IS_CHROMEOS) || \
+     defined(PA_IS_MAC) || defined(PA_IS_NETBSD) || defined(PA_IS_OPENBSD) || \
+     defined(PA_IS_QNX) || defined(PA_IS_SOLARIS) ||                          \
+-    PA_BUILDFLAG(IS_ANDROID) || PA_BUILDFLAG(IS_CHROMEOS)
++    PA_BUILDFLAG(IS_ANDROID) || PA_BUILDFLAG(IS_CHROMEOS) || defined(PA_IS_DRAGONFLY)
  #define PA_IS_POSIX
  #endif
- 
+
 @@ -472,6 +475,13 @@
  #endif
  #undef PA_IS_OPENBSD

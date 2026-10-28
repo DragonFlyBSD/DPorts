@@ -39,6 +39,7 @@ SYNCTEX_MESON_ENABLED=	synctex
 
 LDFLAGS= -lz
 USE_GCC_VERSION= 14
+LIB_DEPENDS+= libmagic.so:sysutils/file
 post-patch-MANPAGES-on:
 	@${REINPLACE_CMD} -e 's|^/etc|${PREFIX}/etc|' ${WRKSRC}/doc/man/zathurarc.5.rst
 

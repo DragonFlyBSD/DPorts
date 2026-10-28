@@ -563,4 +563,5 @@ post-patch:
 		-e 's|members = \["crates/\*"\]|members = ["crates/python"]|' \
 		${WRKSRC}/../../Cargo.toml
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

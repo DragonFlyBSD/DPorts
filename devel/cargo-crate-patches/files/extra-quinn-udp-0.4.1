@@ -1,0 +1,20 @@
+--- cargo-crates/quinn-udp-0.4.1/src/lib.rs.orig
++++ cargo-crates/quinn-udp-0.4.1/src/lib.rs
+@@ -22,7 +22,7 @@
+ 
+ #[cfg(unix)]
+ mod cmsg;
+-#[cfg(unix)]
++#[cfg(all(unix, not(target_os = "dragonfly")))]
+ #[path = "unix.rs"]
+ mod imp;
+ 
+@@ -31,7 +31,7 @@
+ mod imp;
+ 
+ // No ECN support
+-#[cfg(not(any(unix, windows)))]
++#[cfg(any(target_os = "dragonfly", not(any(unix, windows))))]
+ #[path = "fallback.rs"]
+ mod imp;
+ 

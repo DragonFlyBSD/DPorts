@@ -30,6 +30,7 @@ OPTIONS_SUB=	yes
 
 ELVISH_DESC=	Install Elvish module
 
+CARGO_ENV+= LIBCLANG_PATH=${LLVM_PREFIX}/lib
 post-install-BASH-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/bash-completion/completions
 	${INSTALL_DATA} ${CARGO_TARGET_DIR}/shell-completions/gpg-sq.bash \

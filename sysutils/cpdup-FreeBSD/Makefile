@@ -13,10 +13,12 @@ USES=		ssl tar:xz uidfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
 MAKEFILE=	Makefile.bsd
+CFLAGS+=	-I${OPENSSLINC}
 
 CONFLICTS_INSTALL=	cpdup
 
 PLIST_FILES=	bin/cpdup \
 		share/man/man1/cpdup.1.gz
 
+LDFLAGS= -L${OPENSSLLIB}
 .include <bsd.port.mk>

@@ -78,6 +78,7 @@ CONFIGURE_ARGS+=	no-dso no-sctp no-shared no-zlib-dynamic
 
 # Upstream default disabled options
 .for _option in md2 rc5 ssl3 zlib
+CONFIGURE_ARGS+= no-devcryptoeng
 ${_option:tu}_CONFIGURE_ON=	enable-${_option}
 .endfor
 

@@ -33,4 +33,5 @@ LTO_UNSAFE=	yes
 CARGO_ENV+=	CARGO_PROFILE_RELEASE_LTO=false
 .endif
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.post.mk>

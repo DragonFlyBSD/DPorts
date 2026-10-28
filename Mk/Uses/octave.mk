@@ -29,6 +29,10 @@ BUILD_DEPENDS+=	octave:math/octave
 RUN_DEPENDS+=	octave:math/octave \
 		${LOCALBASE}/libexec/octave/load-octave-pkg:math/octave-forge-base
 LIB_DEPENDS+=	libpcre.so:devel/pcre
+# DragonFly: math/octave links Qt, so it is a clang + libc++ build
+# (Uses/qt.mk, dfly-libcxx). octave-forge code compiles against its C++
+# API and has to use the same compiler and standard library.
+.include "${USESDIR}/dfly-libcxx.mk"
 
 .    if ! ${USES:Mcompiler}
 _USES_POST+=	compiler:c++14-lang

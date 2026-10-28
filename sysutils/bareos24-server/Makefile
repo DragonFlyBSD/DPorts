@@ -190,6 +190,8 @@ MP1+=	bsmtp.1 bregex.1 bwild.1 bareos-tray-monitor.1
 
 MAKE_ENV+=	MAN8="${MP8}" MAN1="${MP1}"
 
+CMAKE_ARGS+= -Dacl=OFF -DHAVE_SYS_EXTATTR_H:BOOL=OFF
+NLS_LDFLAGS= -lintl
 post-patch:
 .if ${PKGNAMESUFFIX} == "24-server"
 	@${REINPLACE_CMD}  '51d' ${WRKSRC}/core/src/plugins/CMakeLists.txt

@@ -1,0 +1,48 @@
+#!/bin/sh
+
+# PROVIDE: neogrok
+# REQUIRE: LOGIN NETWORKING
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf to enable neogrok:
+#
+# neogrok_enable (bool):	Set to "YES" to enable neogrok. Default: "NO"
+# neogrok_user (str):		User to run as. Default: "www"
+# neogrok_zoekt_url (str):	Base URL of zoekt-webserver, which must run
+#				with -rpc. Default: "http://127.0.0.1:6070"
+# neogrok_host (str):		Address to listen on. Default: "127.0.0.1"
+# neogrok_port (str):		Port to listen on. Default: "3000"
+# neogrok_env (str):		Extra environment, for example
+#				"ORIGIN=https://grok.example.org" behind a
+#				reverse proxy, or NEOGROK_CONFIG_FILE=<path> for
+#				a JSON file with openGrokProjectMappings.
+
+. /etc/rc.subr
+
+name=neogrok
+rcvar=neogrok_enable
+
+load_rc_config $name
+
+: ${neogrok_enable:="NO"}
+: ${neogrok_user:="www"}
+: ${neogrok_zoekt_url:="http://127.0.0.1:6070"}
+: ${neogrok_host:="127.0.0.1"}
+: ${neogrok_port:="3000"}
+
+neogrok_env="ZOEKT_URL=${neogrok_zoekt_url} HOST=${neogrok_host} \
+    PORT=${neogrok_port} ${neogrok_env}"
+
+pidfile="/var/run/${name}/${name}.pid"
+procname="%%LOCALBASE%%/bin/node"
+command="/usr/sbin/daemon"
+command_args="-f -T ${name} -p ${pidfile} \
+    ${procname} %%WWWDIR%%/main.js"
+start_precmd="${name}_precmd"
+
+neogrok_precmd()
+{
+	install -d -o ${neogrok_user} -m 755 /var/run/${name}
+}
+
+run_rc_command "$1"

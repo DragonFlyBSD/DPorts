@@ -39,6 +39,7 @@ MAKE_ENV=	FCITX5_DOWNLOAD_DISALLOWED=TRUE
 DICT_TAR=	jyutping-dict-20180104.tar.xz
 MODEL_TAR=	jyutping-model-20180103.tar.xz
 
+USES+= dfly-libcxx
 post-extract:
 	${CP} ${DISTDIR}/${DICT_TAR} ${WRKSRC}/data
 	${CP} ${DISTDIR}/${MODEL_TAR} ${WRKSRC}/data

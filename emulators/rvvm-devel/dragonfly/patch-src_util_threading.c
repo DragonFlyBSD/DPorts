@@ -1,6 +1,14 @@
 --- src/util/threading.c.orig
 +++ src/util/threading.c
-@@ -216,7 +216,7 @@
+@@ -106,6 +106,7 @@
+ #elif defined(HOST_TARGET_DRAGONFLYBSD)
+ 
+ // Use DragonFlyBSD futexes (DragonFlyBSD 1.1+)
++#include <errno.h>
+ #include <unistd.h>
+ #define DRAGONFLY_FUTEX_IMPL 1
+ #define NATIVE_FUTEX_IMPL    1
+@@ -216,7 +217,7 @@
      result         = !!thread->handle;
  #elif defined(POSIX_THREADS_IMPL)
      pthread_attr_t* aptr = NULL;
@@ -9,7 +17,7 @@
      if (stack_size && !pthread_attr_init(&attr) && !pthread_attr_setstacksize(&attr, stack_size)) {
          // Pass custom stack size if possible
          aptr = &attr;
-@@ -534,7 +534,7 @@
+@@ -534,7 +535,7 @@
      static void* attr_ptr = NULL;
  #if defined(CLOCK_GETTIME_IMPL)
      if (!attr_ptr) {

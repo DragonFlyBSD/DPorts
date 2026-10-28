@@ -34,6 +34,7 @@ CONFIGURE_ARGS=	BINDIR="${PREFIX}/bin" \
 
 WRKSRC=		${WRKDIR}/scid-code-ad78554b4678c62652a9f3632d3dc762ae167965
 
+USE_GCC_VERSION= 13
 post-patch:
 	@${REINPLACE_CMD} -i '' 's|#!/usr/bin/wish|#!${WISH}|g' \
 		${WRKSRC}/scripts/filter_spellcheck_file.tcl

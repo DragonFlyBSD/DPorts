@@ -46,4 +46,22 @@ post-install:
 		${MV} ${STAGEDIR}${DOCSDIR}-${EPSON_VERSION}-1 ${STAGEDIR}${DOCSDIR}
 		${INSTALL_DATA} ${WRKDIR}/Read_me.FreeBSD ${STAGEDIR}${PREFIX}/lib/epsonscan2
 
+dfly-patch:
+	${REINPLACE_CMD} \
+		-e 's/^#if __FreeBSD__$$/#if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#ifdef __FreeBSD__$$/#if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#ifndef __FreeBSD__$$/#if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		-e 's/^#elif __FreeBSD__$$/#elif defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		${WRKSRC}/src/Controller/Src/Finder/UsbFinder.cpp \
+		${WRKSRC}/src/Controller/Src/Filter/DTR.cpp \
+		${WRKSRC}/src/ES2Command/Src/Interface/usb/usbInterfaceImpl.h \
+		${WRKSRC}/src/ES2Command/Src/Utils/semaphore.hpp \
+		${WRKSRC}/src/Platform.cpp \
+		${WRKSRC}/src/CommonUtility/DbgLog.cpp \
+		${WRKSRC}/src/SaneWrapper/defines.h
+	${REINPLACE_CMD} -e 's/pthread_peekjoin_np(tid,st)/pthread_join(tid,st)/' \
+		${WRKSRC}/src/Platform.cpp
+	${REINPLACE_CMD} -e 's/CMAKE_SYSTEM_NAME STREQUAL "FreeBSD"/CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly"/' \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

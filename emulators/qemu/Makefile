@@ -89,7 +89,7 @@ CONFIGURE_ARGS+=	--disable-guest-agent
 .endif
 .if ${FLAVOR:U} != tools && ${FLAVOR:U} != guestagent
 CONFIGURE_ARGS+=	--enable-fdt=system \
-			--enable-netmap
+			--disable-netmap
 .endif
 .if ${FLAVOR:U} == tools || ${FLAVOR:U} == guestagent
 CONFIGURE_ARGS+=	--disable-attr \
@@ -234,6 +234,7 @@ CONFIGURE_ARGS+= --disable-stack-protector
 CONFIGURE_ARGS+= --enable-curses
 LIB_DIRS= /lib /usr/lib ${LOCALBASE}/lib ${LOCALBASE}/lib/elfutils
 USE_GCC_VERSION= ${GCC_DEFAULT}
+CONFIGURE_ARGS+= --disable-libdw
 .include <bsd.port.options.mk>
 
 .if ${FLAVOR:U} == tools || ${FLAVOR:U} == guestagent

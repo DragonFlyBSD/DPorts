@@ -1,0 +1,82 @@
+--- cargo-crates/netdev-0.43.0/src/os/mod.rs.orig
++++ cargo-crates/netdev-0.43.0/src/os/mod.rs
+@@ -20,5 +20,5 @@
+ #[cfg(target_os = "windows")]
+ pub mod windows;
+ 
+-#[cfg(any(target_os = "openbsd", target_os = "freebsd", target_os = "netbsd"))]
++#[cfg(any(target_os = "openbsd", target_os = "freebsd", target_os = "netbsd", target_os = "dragonfly"))]
+ pub mod bsd;
+--- cargo-crates/netdev-0.43.0/src/interface/mtu.rs.orig
++++ cargo-crates/netdev-0.43.0/src/interface/mtu.rs
+@@ -6,5 +6,5 @@
+ #[cfg(target_vendor = "apple")]
+ pub(crate) use crate::os::darwin::mtu::*;
+ 
+-#[cfg(any(target_os = "openbsd", target_os = "freebsd", target_os = "netbsd"))]
++#[cfg(any(target_os = "openbsd", target_os = "freebsd", target_os = "netbsd", target_os = "dragonfly"))]
+ pub(crate) use crate::os::bsd::mtu::*;
+--- cargo-crates/netdev-0.43.0/src/os/bsd/flags.rs.orig
++++ cargo-crates/netdev-0.43.0/src/os/bsd/flags.rs
+@@ -10,7 +10,8 @@
+     target_vendor = "apple",
+     target_os = "freebsd",
+     target_os = "openbsd",
+-    target_os = "netbsd"
++    target_os = "netbsd",
++    target_os = "dragonfly"
+ ))]
+ pub fn get_interface_flags(if_name: &str) -> std::io::Result<u32> {
+     use libc::{AF_INET, SOCK_DGRAM, c_char, ioctl, socket};
+--- cargo-crates/netdev-0.43.0/src/os/unix/sockaddr.rs.orig
++++ cargo-crates/netdev-0.43.0/src/os/unix/sockaddr.rs
+@@ -220,7 +220,8 @@
+     target_vendor = "apple",
+     target_os = "freebsd",
+     target_os = "netbsd",
+-    target_os = "openbsd"
++    target_os = "openbsd",
++    target_os = "dragonfly"
+ ))]
+ pub(crate) unsafe fn try_mac_from_raw(
+     sa: *const libc::sockaddr,
+@@ -310,7 +311,8 @@
+         target_vendor = "apple",
+         target_os = "freebsd",
+         target_os = "netbsd",
+-        target_os = "openbsd"
++        target_os = "openbsd",
++        target_os = "dragonfly"
+     ))]
+     {
+         let len = sa_dr.sa_len as libc::socklen_t;
+@@ -358,7 +360,8 @@
+         target_vendor = "apple",
+         target_os = "freebsd",
+         target_os = "netbsd",
+-        target_os = "openbsd"
++        target_os = "openbsd",
++        target_os = "dragonfly"
+     ))]
+     if family == libc::AF_LINK {
+         // sockaddr_dl is variable-length.
+@@ -396,7 +399,8 @@
+     target_vendor = "apple",
+     target_os = "freebsd",
+     target_os = "netbsd",
+-    target_os = "openbsd"
++    target_os = "openbsd",
++    target_os = "dragonfly"
+ ))]
+ /// Reads a netmask `IpAddr` from a BSD/Darwin `sockaddr` whose actual length is encoded in `sa_len`.
+ #[inline]
+@@ -489,7 +493,8 @@
+     target_vendor = "apple",
+     target_os = "freebsd",
+     target_os = "netbsd",
+-    target_os = "openbsd"
++    target_os = "openbsd",
++    target_os = "dragonfly"
+ ))]
+ #[inline]
+ pub(crate) unsafe fn netmask_prefix_autolen(sa: *const libc::sockaddr) -> Option<u8> {

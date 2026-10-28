@@ -19,7 +19,7 @@ LICENSE=	LGPL21
 LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs \
 		libFcitx5Utils.so:textproc/fcitx5
 
-USES=		cmake compiler:c++17-lang kde pkgconfig tar:zst
+USES= cmake compiler:c++17-lang kde pkgconfig tar:zst dfly-libcxx
 
 PLIST_SUB=	VER=${PORTVERSION} \
 		VER_MAJOR=${PORTVERSION:R:R}

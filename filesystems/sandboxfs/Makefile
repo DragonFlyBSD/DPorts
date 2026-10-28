@@ -88,4 +88,5 @@ PLIST_FILES=	bin/sandboxfs \
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/sandboxfs.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

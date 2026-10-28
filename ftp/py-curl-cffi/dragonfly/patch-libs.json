@@ -1,0 +1,18 @@
+--- libs.json.orig	2026-10-26 03:04:22 UTC
++++ libs.json
+@@ -196,5 +196,15 @@
+         "libdir": "/usr/local/lib",
+         "obj_name": "libcurl-impersonate.so",
+         "arch": "powerpc64"
++    },
++    {
++        "system": "DragonFly",
++        "machine": "x86_64",
++        "pointer_size": 64,
++        "sysname": "dragonfly",
++        "link_type": "dynamic",
++        "libdir": "/usr/local/lib",
++        "obj_name": "libcurl-impersonate.so",
++        "arch": "x86_64"
+     }
+ ]

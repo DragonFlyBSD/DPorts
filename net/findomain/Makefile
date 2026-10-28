@@ -375,6 +375,7 @@ PGSQL_VARS=	WANT_PGSQL=server
 
 SCREENSHOT_RUN_DEPENDS=	chrome:www/chromium
 
+CARGO_ENV= OPENSSL_NO_VENDOR=1
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc

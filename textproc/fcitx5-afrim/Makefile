@@ -16,7 +16,7 @@ BUILD_DEPENDS=	cbindgen:devel/rust-cbindgen \
 		corrosion>=0:devel/corrosion
 LIB_DEPENDS=	libFcitx5Core.so:textproc/fcitx5
 
-USES=		cargo cmake kde:6 pkgconfig
+USES= cargo cmake kde:6 pkgconfig dfly-libcxx
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	fodydev

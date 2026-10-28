@@ -58,7 +58,7 @@ TLS_DESC=	Use TLS (openssl req.)
 
 JEMALLOC_MAKE_ENV=	USE_JEMALLOC=yes
 TLS_USES=		ssl
-TLS_MAKE_ENV=		BUILD_TLS=yes
+TLS_MAKE_ENV= BUILD_TLS=yes OPENSSL_PREFIX=${OPENSSLBASE}
 
 BIN_FILES=	redis-benchmark redis-check-aof redis-check-rdb redis-cli \
 		redis-sentinel redis-server

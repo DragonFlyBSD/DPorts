@@ -570,4 +570,5 @@ do-install:
 		${WRKDIR}/target/release/prqlc \
 		${STAGEDIR}${PREFIX}/bin/prqlc
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -68,6 +68,7 @@ MYSQL_LDFLAGS=		-L${LOCALBASE}/lib/mysql
 LIBVIRT_CONFIGURE_WITH=	--with-libvirt=${LOCALBASE}
 LIBVIRT_LIB_DEPENDS+=	libvirt.so:devel/libvirt
 
+LIBS= -lutil
 dfly-patch:
 	${REINPLACE_CMD} -e 's/defined __FreeBSD__/& || defined __DragonFly__/' \
 		-e 's/defined(__FreeBSD__)/& || defined(__DragonFly__)/' \

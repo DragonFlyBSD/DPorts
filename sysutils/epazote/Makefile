@@ -17,4 +17,5 @@ USE_GITHUB=	yes
 
 PLIST_FILES=	bin/epazote
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

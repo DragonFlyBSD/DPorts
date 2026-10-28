@@ -46,4 +46,5 @@ CONFLICTS_BUILD=	llama-cpp
 
 # tests as of 0.3.35: 26 passed, 5 warnings
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.mk>

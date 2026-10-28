@@ -270,6 +270,7 @@ GNULS_DESC= Use gnu ls 'gls' for --dired flag support
 GNULS_RUN_DEPENDS= gls:sysutils/coreutils
 CFLAGS= -D__STDC_WANT_IEC_60559_BFP_EXT__
 USE_GCC_VERSION= ${GCC_DEFAULT}
+NATIVECOMP_VARS= USE_GCC_VERSION=13
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNATIVECOMP}

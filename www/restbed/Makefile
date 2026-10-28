@@ -24,6 +24,7 @@ CMAKE_OFF=	BUILD_TESTS
 CMAKE_ARGS=	-DCMAKE_INSTALL_LIBDIR:STRING=lib
 CMAKE_TESTING_ON=	BUILD_TESTS
 
+USE_GCC_VERSION= 13
 pre-test: # tests only pass when net.inet6.ip6.v6only=0, see pkg-message
 	@if [ $$(sysctl -n net.inet6.ip6.v6only) == 1 ]; then \
 		${ECHO} "tests only pass when net.inet6.ip6.v6only=0"; \

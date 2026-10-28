@@ -42,6 +42,7 @@ GROUPS=		${KUBO_GROUP}
 
 FULLNAME=	${PORTNAME}${PKGNAMESUFFIX}
 
+GO_BUILDFLAGS= -tags nofuse
 post-install:
 	@${MKDIR} ${STAGEDIR}${KUBO_HOME}
 

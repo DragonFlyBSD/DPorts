@@ -16,7 +16,7 @@ BROKEN_i386=	compilation fails, see https://bugs.freebsd.org/bugzilla/show_bug.c
 BUILD_DEPENDS=	gmake:devel/gmake
 LIB_DEPENDS=	libzstd.so:archivers/zstd
 
-USES=		cargo perl5 pkgconfig
+USES= cargo perl5 pkgconfig ssl
 USE_PERL5=	build
 
 USE_GITHUB=	yes
@@ -370,6 +370,7 @@ OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
 
+CARGO_ENV= OPENSSL_NO_VENDOR=1
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc

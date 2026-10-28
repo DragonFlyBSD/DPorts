@@ -17,4 +17,5 @@ GH_ACCOUNT=	rust-lang
 
 PLIST_FILES=	bin/rustlings
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

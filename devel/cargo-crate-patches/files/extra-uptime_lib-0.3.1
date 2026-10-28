@@ -1,0 +1,22 @@
+--- cargo-crates/uptime_lib-0.3.1/src/lib.rs.orig
++++ cargo-crates/uptime_lib-0.3.1/src/lib.rs
+@@ -11,7 +11,8 @@
+         target_os = "macos",
+         target_os = "freebsd",
+         target_os = "openbsd",
+-        target_os = "netbsd"
++        target_os = "netbsd",
++        target_os = "dragonfly"
+     ))]
+     #[error("sysctl failed")]
+     Sysctl,
+@@ -20,7 +21,8 @@
+         target_os = "macos",
+         target_os = "freebsd",
+         target_os = "openbsd",
+-        target_os = "netbsd"
++        target_os = "netbsd",
++        target_os = "dragonfly"
+     ))]
+     #[error(transparent)]
+     SystemTime(#[from] std::time::SystemTimeError),

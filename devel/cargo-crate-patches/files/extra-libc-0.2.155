@@ -1,0 +1,17 @@
+--- cargo-crates/libc-0.2.155/src/unix/bsd/freebsdlike/dragonfly/mod.rs.orig
++++ cargo-crates/libc-0.2.155/src/unix/bsd/freebsdlike/dragonfly/mod.rs
+@@ -1419,6 +1419,14 @@
+ pub const MNT_ROOTFS: ::c_int = 0x00004000;
+ pub const MNT_USER: ::c_int = 0x00008000;
+ pub const MNT_IGNORE: ::c_int = 0x00800000;
++
++// sys/netinet/in.h
++pub const IP_RECVTOS: ::c_int = 68;
++
++// netdb.h
++pub const EAI_NODATA: ::c_int = 7;
++pub const NI_NAMEREQD: ::c_int = 0x00000004;
++pub const NI_NUMERICSERV: ::c_int = 0x00000008;
+ 
+ // utmpx entry types
+ pub const EMPTY: ::c_short = 0;

@@ -30,7 +30,7 @@ LIB_DEPENDS=	libLLVM-${FLAVOR:S/llvm//}.so:devel/${FLAVOR} \
 
 FLAVORS=	${17 16 15 14 13 12:L:S/^/llvm/}
 
-USES=		cmake compiler:c++11-lib
+USES= cmake compiler:c++11-lib ${FLAVOR:Mllvm17:C/.+/dfly-libcxx/}
 USE_GITHUB=	yes
 USE_LDCONFIG=	${PREFIX}/${FLAVOR}/lib
 GH_ACCOUNT=	intel

@@ -1,0 +1,21 @@
+--- cargo-crates/mac_address-1.1.8/Cargo.toml.orig
++++ cargo-crates/mac_address-1.1.8/Cargo.toml
+@@ -58,7 +58,7 @@
+ [dev-dependencies.serde_test]
+ version = "1.0.117"
+ 
+-[target.'cfg(any(target_os = "linux", target_os = "macos", target_os = "freebsd", target_os = "netbsd", target_os = "openbsd", target_os = "android", target_os = "illumos"))'.dependencies.nix]
++[target.'cfg(any(target_os = "linux", target_os = "macos", target_os = "freebsd", target_os = "netbsd", target_os = "openbsd", target_os = "android", target_os = "illumos", target_os = "dragonfly"))'.dependencies.nix]
+ version = "0.29"
+ features = ["net"]
+ 
+--- cargo-crates/mac_address-1.1.8/src/iter/mod.rs.orig
++++ cargo-crates/mac_address-1.1.8/src/iter/mod.rs
+@@ -10,6 +10,7 @@
+     target_os = "openbsd",
+     target_os = "android",
+     target_os = "illumos",
++    target_os = "dragonfly",
+ ))]
+ #[path = "linux.rs"]
+ mod internal;

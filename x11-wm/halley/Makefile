@@ -59,4 +59,5 @@ post-install-DOCS-on:
 	(cd ${WRKSRC}/docs && \
 		${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR})
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

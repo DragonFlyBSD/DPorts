@@ -36,4 +36,5 @@ post-install-GUI-on:
 	${INSTALL_DATA} ${WRKSRC}/assets/cfait.desktop ${STAGEDIR}${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/assets/cfait.svg ${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps/
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

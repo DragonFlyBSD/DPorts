@@ -197,6 +197,7 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
+BUILD_DEPENDS= gmake:devel/gmake
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc

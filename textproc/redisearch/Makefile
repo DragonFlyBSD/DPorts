@@ -69,4 +69,8 @@ do-install:
 	${INSTALL} -m 0755 ${WRKDIR}/.build/redisearch.so ${STAGEDIR}${PREFIX}/lib
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}${PKGNAMESUFFIX}.so
 
+dfly-patch:
+	${GREP} -rlF 'cfg(target_os = "freebsd")] let clock' ${WRKSRC}/src/redisearch_rs | \
+		${XARGS} ${REINPLACE_CMD} -e 's|#\[cfg(target_os = "freebsd")] let clock|#[cfg(any(target_os = "freebsd", target_os = "dragonfly"))] let clock|'
+
 .include <bsd.port.mk>

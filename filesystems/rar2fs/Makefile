@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	${NONEXISTENT}:${LIBUNRAR_PORT}:patch
 LIB_DEPENDS=	libunrar.so:${LIBUNRAR_PORT}
 
-USES=		autoreconf compiler:c11 fuse gettext-tools gmake
+USES= autoreconf compiler:c11 fuse gettext-tools gmake ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	hasse69
 
@@ -34,4 +34,5 @@ PLIST_FILES=	bin/${PORTNAME} \
 LIBUNRAR_PORT=	archivers/libunrar
 LIBUNRAR_PKG=	${LIBUNRAR_PORT:S|archivers/||}
 
+CPPFLAGS= -I${OPENSSLINC}
 .include <bsd.port.mk>

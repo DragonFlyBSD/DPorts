@@ -19,4 +19,5 @@ GH_ACCOUNT=	grouzen
 
 PLIST_FILES=	bin/framework-tool-tui
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

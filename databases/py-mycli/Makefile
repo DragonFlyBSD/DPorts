@@ -22,7 +22,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cli-helpers>=2.15.0<2.16:devel/py-cli-helper
 		${PYTHON_PKGNAMEPREFIX}configobj>=5.0.9<5.1:devel/py-configobj@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}keyring>=25.6.0,1<25.8,1:security/py-keyring@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}prompt-toolkit>=3.0.41<4.0.0:devel/py-prompt-toolkit@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pycryptodomex>=3.23.0<3.24:security/py-pycryptodomex@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pycryptodomex>=3.23.0:security/py-pycryptodomex@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyfzf>=0.3.1<0.4:textproc/py-pyfzf@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pygments>=2.19.2:textproc/py-pygments@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pymysql>=1.1.2:databases/py-pymysql@${PY_FLAVOR} \

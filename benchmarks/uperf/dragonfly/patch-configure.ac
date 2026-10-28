@@ -1,0 +1,18 @@
+--- configure.ac.orig
++++ configure.ac
+@@ -37,6 +37,15 @@
+ 
+ good_os="yes"
+ case "$(uname -s)" in
++	DragonFly)
++		AC_MSG_NOTICE([*** DragonFly Machine ***])
++		AC_DEFINE([UPERF_FREEBSD],[1],[Setting machine os to FreeBSD])
++		good_os="no"
++		sctp_default="no"
++		ssl_default="yes"
++		UPERF_LIBS="$UPERF_LIBS -lrt -lm -pthread"
++		CFLAGS="-D_GNU_SOURCE $CFLAGS"
++		;;
+ 	FreeBSD)
+ 		AC_MSG_NOTICE([*** FreeBSD Machine ***])
+ 		AC_DEFINE([UPERF_FREEBSD],[1],[Setting machine os to FreeBSD])

@@ -1,0 +1,21 @@
+--- v8/BUILD.gn.orig	2026-10-26 06:48:27 UTC
++++ v8/BUILD.gn
+@@ -2635,6 +2635,18 @@ if (v8_use_metagen_instance_types) {
+         args += [ "--extra-flag=$flag" ]
+       }
+     }
++
++    if (is_dragonfly) {
++      # DragonFly builds against the libcxx dport (use_custom_libcxx=false).
++      # Its include dir reaches the compiler only through extra_cxxflags,
++      # which the toolchain's command template adds and `gn desc` never
++      # shows, and libclang has no clang install dir to derive it from
++      # ("'limits' file not found"). Pass it the way is_win passes the SDK.
++      args += [
++        "--extra-flag=-nostdinc++",
++        "--extra-flag=-isystem${LOCALBASE}/llvm${MODCLANG_VERSION}/include/c++/v1",
++      ]
++    }
+   }
+ }
+ 

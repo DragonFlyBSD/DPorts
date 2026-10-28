@@ -27,7 +27,7 @@ BUILD_DEPENDS=	spirv-llvm-translator-${FLAVOR}>0:devel/spirv-llvm-translator@${F
 
 FLAVORS=	${15 16 17 18 19 20 21 22:L:S/^/llvm/}
 
-USES=		cmake compiler:c++11-lib llvm:${FLAVOR:S/llvm//},build python:build tar:xz
+USES= cmake compiler:c++11-lib llvm:${FLAVOR:S/llvm//},build python:build tar:xz ${FLAVOR:Mllvm1[78]:C/.+/dfly-libcxx/}
 USE_LDCONFIG=	${PREFIX}/${FLAVOR}/lib
 
 BINARY_ALIAS=	python=${PYTHON_CMD}

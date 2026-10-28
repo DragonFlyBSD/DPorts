@@ -491,4 +491,5 @@ CARGO_CRATES=	addr2line-0.24.2 \
 
 PLIST_FILES=	bin/${PORTNAME}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -339,4 +339,5 @@ CARGO_CRATES=	adler2-2.0.1 \
 		zune-core-0.4.12 \
 		zune-jpeg-0.4.21
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

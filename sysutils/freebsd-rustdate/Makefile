@@ -22,7 +22,6 @@ PLIST_FILES=	bin/freebsd-rustdate \
 		share/zsh/site-functions/_freebsd-rustdate
 
 OPTIONS_DEFINE=		BUNDLED_OPENSSL
-OPTIONS_DEFAULT=	BUNDLED_OPENSSL
 
 BUNDLED_OPENSSL_DESC=	Build with bundled OpenSSL
 
@@ -43,4 +42,5 @@ post-install:
 	${STAGEDIR}${PREFIX}/bin/freebsd-rustdate complete -s zsh > \
 		${STAGEDIR}${PREFIX}/share/zsh/site-functions/_freebsd-rustdate
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

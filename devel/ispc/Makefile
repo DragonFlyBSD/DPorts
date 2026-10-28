@@ -19,7 +19,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex \
 LIB_DEPENDS=	${LLVM_LIBLLVM}:devel/llvm${LLVM_VERSION} \
 		libtbb.so:devel/onetbb
 
-USES= bison cmake compiler:c++17-lang llvm:lib,min=20,max=20 python:build,test shebangfix ncurses
+USES= bison cmake compiler:c++17-lang llvm:lib,min=20,max=20 python:build,test shebangfix ncurses dfly-libcxx:20
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -64,7 +64,6 @@ XE_PLIST_FILES=		include/ispcrt/ispcrt.h \
 			lib/libispcrt_static.a
 XE_BROKEN=		Unknown architecture
 
-USE_CLANG_FALLBACK= 15
 OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NGENX}
 .include <bsd.port.options.mk>
 

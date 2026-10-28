@@ -157,8 +157,4 @@ dfly-patch:
 	${RM} -fr ${WRKSRC}/channels/urbdrc
 
 
-post-configure:
-	${REINPLACE_CMD} -e '/MNT_UNION/d' \
-		${WRKSRC}/channels/rdpdr/client/mntent_compat.c
-
 .include <bsd.port.mk>

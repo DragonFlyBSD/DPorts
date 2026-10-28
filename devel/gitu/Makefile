@@ -304,4 +304,5 @@ CARGO_CRATES=	ahash-0.8.12 \
 
 PLIST_FILES=	bin/${PORTNAME}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

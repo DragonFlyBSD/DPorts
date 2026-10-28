@@ -32,4 +32,5 @@ QT6_USES=	qt:6
 QT6_USE=	QT=tools:build,base
 QT6_CMAKE_BOOL=	ENABLE_QT
 
+USES+= dfly-libcxx
 .include <bsd.port.mk>

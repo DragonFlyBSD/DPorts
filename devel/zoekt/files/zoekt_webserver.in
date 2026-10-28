@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# PROVIDE: zoekt_webserver
+# REQUIRE: LOGIN NETWORKING
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf to enable zoekt-webserver:
+#
+# zoekt_webserver_enable (bool):	Set to "YES" to enable. Default: "NO"
+# zoekt_webserver_user (str):		User to run as. Default: "www"
+# zoekt_webserver_index (path):		Directory holding the index shards.
+#					Default: "/var/db/zoekt"
+# zoekt_webserver_listen (str):		Address to listen on.
+#					Default: "127.0.0.1:6070"
+# zoekt_webserver_args (str):		Extra arguments. Default: "-rpc"
+#					(-rpc enables the JSON API used by
+#					frontends such as neogrok)
+
+. /etc/rc.subr
+
+name=zoekt_webserver
+rcvar=zoekt_webserver_enable
+
+load_rc_config $name
+
+: ${zoekt_webserver_enable:="NO"}
+: ${zoekt_webserver_user:="www"}
+: ${zoekt_webserver_index:="/var/db/zoekt"}
+: ${zoekt_webserver_listen:="127.0.0.1:6070"}
+: ${zoekt_webserver_args:="-rpc"}
+
+pidfile="/var/run/${name}/${name}.pid"
+procname="%%PREFIX%%/bin/zoekt-webserver"
+command="/usr/sbin/daemon"
+command_args="-f -T zoekt-webserver -p ${pidfile} \
+    ${procname} -index ${zoekt_webserver_index} \
+    -listen ${zoekt_webserver_listen} ${zoekt_webserver_args}"
+start_precmd="${name}_precmd"
+
+zoekt_webserver_precmd()
+{
+	install -d -o ${zoekt_webserver_user} -m 755 /var/run/${name} \
+	    ${zoekt_webserver_index}
+}
+
+run_rc_command "$1"

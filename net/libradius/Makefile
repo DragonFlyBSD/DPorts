@@ -21,9 +21,10 @@ PLIST_FILES=	include/radlib.h \
 		lib/libradius.a \
 		lib/libradius.so \
 		lib/libradius.so.4 \
-		man/man3/libradius.3.gz \
-		man/man5/radius.conf.5.gz
+		share/man/man3/libradius.3.gz \
+		share/man/man5/radius.conf.5.gz
 
+MAKE_ARGS= MANDIR=${PREFIX}/share/man/man
 post-patch:
 	${REINPLACE_CMD} -e "s@/etc/radius.conf@${LOCALBASE}&@g" \
 		${WRKSRC}/radlib_private.h \

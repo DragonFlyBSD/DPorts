@@ -18,4 +18,5 @@ GH_ACCOUNT=	Gobidev
 PLIST_FILES=	bin/pfetch
 
 .include "Makefile.crates"
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -101,4 +101,21 @@ post-stage:
 		"  ${STAGEDIR}${PREFIX}/share/applications/mscore.desktop
 	${LN} -s mscore ${STAGEDIR}${PREFIX}/bin/musescore
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/MATCHES "FreeBSD")/MATCHES "FreeBSD|DragonFly")/' \
+		${WRKSRC}/buildscripts/cmake/GetPlatformInfo.cmake
+	${REINPLACE_CMD} \
+		-e 's/defined *(Q_OS_FREEBSD)/(defined(Q_OS_FREEBSD) || defined(Q_OS_DRAGONFLY))/g' \
+		-e 's/^#ifdef Q_OS_FREEBSD$$/#if defined(Q_OS_FREEBSD) || defined(Q_OS_DRAGONFLY)/' \
+		${WRKSRC}/src/engraving/dom/masterscore.cpp \
+		${WRKSRC}/src/framework/audio/main/internal/audioconfiguration.cpp \
+		${WRKSRC}/src/framework/audio/main/internal/audiodrivercontroller.cpp \
+		${WRKSRC}/src/framework/global/runtime.cpp \
+		${WRKSRC}/src/framework/media/internal/ffmpegutils.cpp \
+		${WRKSRC}/src/framework/midi/midimodule.cpp \
+		${WRKSRC}/src/framework/midi/midimodule.h \
+		${WRKSRC}/src/framework/ui/graphicsapiprovider.cpp \
+		${WRKSRC}/src/framework/uicomponents/qml/Muse/UiComponents/buttonboxmodel.cpp \
+		${WRKSRC}/src/notation/internal/engravingfontscontroller.cpp
+
 .include <bsd.port.post.mk>

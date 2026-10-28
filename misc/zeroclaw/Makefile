@@ -1198,4 +1198,5 @@ CARGO_FEATURES=	channel-whatsapp-cloud whatsapp-web
 PLIST_FILES=	bin/zeroclaw \
 		bin/zeroclaw-acp-bridge
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

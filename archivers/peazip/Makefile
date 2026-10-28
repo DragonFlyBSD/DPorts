@@ -119,13 +119,15 @@ do-install:
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FREEBSD@DRAGONFLY@g' \
+		${WRKSRC}/dev/externalprograms.pas \
+		${WRKSRC}/dev/list_utils.pas \
+		${WRKSRC}/dev/pea.pas \
 		${WRKSRC}/dev/pea_utils.pas \
 		${WRKSRC}/dev/peach.pas \
-		${WRKSRC}/dev/list_utils.pas \
-		${WRKSRC}/dev/unit_gwrap.pas \
-		${WRKSRC}/dev/unit_pea.pas \
-		${WRKSRC}/dev/unit3.pas \
-		${WRKSRC}/dev/unit8.pas
+		${WRKSRC}/dev/unitgwrap.pas \
+		${WRKSRC}/dev/unitpm.pas \
+		${WRKSRC}/dev/unitpw.pas \
+		${WRKSRC}/dev/unitreport.pas
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
 		${WRKSRC}/dev/list_utils.pas
 

@@ -34,4 +34,5 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/CHANGELOG.md ${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

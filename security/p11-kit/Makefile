@@ -1,6 +1,6 @@
 PORTNAME=	p11-kit
 DISTVERSION=	0.26.5
-PORTREVISION=	1
+PORTREVISION= 2
 CATEGORIES=	security devel
 MASTER_SITES=	https://github.com/p11-glue/${PORTNAME}/releases/download/${DISTVERSION}/
 
@@ -23,7 +23,7 @@ CPE_VENDOR=	p11-kit_project
 MESON_ARGS=	-Dnls=false \
 		-Dsystemd=disabled \
 		-Dzsh_completion=disabled \
-		-Dtrust_paths=${DATADIR}/certs
+		-Dtrust_paths=${DATADIR}/certs:${LOCALBASE}/share/certs/ca-root-nss.crt
 
 OPTIONS_DEFINE=		DOCS MANPAGES TEST
 OPTIONS_SUB=		yes
@@ -38,6 +38,7 @@ MANPAGES_MESON_TRUE=	man
 
 TEST_MESON_TRUE=	test
 
+RUN_DEPENDS= ca_root_nss>=0:security/ca_root_nss
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS}

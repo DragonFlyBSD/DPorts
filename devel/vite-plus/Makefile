@@ -97,4 +97,14 @@ post-install:
 
 # To update Makefile.crates execute: make cargo-crates > Makefile.crates
 
+dfly-patch:
+	@for d in ${WRKDIR}/vite-task-*; do \
+		[ -d "$$d" ] || continue; \
+		${REINPLACE_CMD} -e 's/target_os = "freebsd"/any(target_os = "freebsd", target_os = "dragonfly")/g' \
+			$$d/crates/fspy/Cargo.toml $$d/crates/fspy/src/lib.rs \
+			$$d/crates/fspy/src/command.rs; \
+	done
+	${REINPLACE_CMD} -e 's/target_os = "freebsd"/any(target_os = "freebsd", target_os = "dragonfly")/g' \
+		${WRKSRC}/crates/vp_js_runtime/src/platform.rs
+
 .include <bsd.port.mk>

@@ -24,7 +24,6 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
-PLIST_FILES= sbin/c_example.x sbin/c_example_shlib.x
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O3 -D_FORTIFY_SOURCE=1|-D_FORTIFY_SOURCE=1|g' \
 	    ${PATCH_WRKSRC}/CMakeLists.txt

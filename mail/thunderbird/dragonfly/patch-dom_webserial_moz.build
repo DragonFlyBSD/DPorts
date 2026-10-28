@@ -1,0 +1,11 @@
+--- dom/webserial/moz.build.orig
++++ dom/webserial/moz.build
+@@ -29,7 +29,7 @@
+     ]
+ elif (
+     (CONFIG["OS_TARGET"] == "Darwin" and CONFIG["TARGET_OS"] != "iOS")
+-    or CONFIG["OS_TARGET"] == "FreeBSD"
++    or CONFIG["OS_TARGET"] in ("DragonFly", "FreeBSD")
+     or CONFIG["OS_TARGET"] == "Linux"
+ ):
+     UNIFIED_SOURCES += [

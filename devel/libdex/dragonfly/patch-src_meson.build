@@ -1,0 +1,11 @@
+--- src/meson.build.orig
++++ src/meson.build
+@@ -68,7 +68,7 @@
+   glib_dep,
+ ]
+ 
+-if host_machine.system() == 'linux'
++if host_machine.system() in ['linux', 'dragonfly']
+   libatomic_dep = cc.find_library('atomic')
+   if not cc.links('int main(){}', dependencies: [libatomic_dep])
+     error('libatomic dependency is missing!')

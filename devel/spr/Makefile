@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libgit2.so:devel/libgit2
 
-USES=		cargo
+USES= cargo ssl
 USE_GITHUB=	yes
 GH_ACCOUNT=	getcord
 
@@ -268,8 +268,6 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		zerovec-0.11.4 \
 		zerovec-derive-0.11.1
 
-OPENSSLINC=	/usr/include
-OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
 

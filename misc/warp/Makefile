@@ -111,4 +111,5 @@ do-test:
 		--package warp_completer \
 		--features v2
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

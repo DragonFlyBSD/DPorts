@@ -451,4 +451,5 @@ PLIST_FILES=	bin/${PORTNAME}
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

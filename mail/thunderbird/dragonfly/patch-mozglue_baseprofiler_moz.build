@@ -1,0 +1,11 @@
+--- mozglue/baseprofiler/moz.build.orig	2026-09-04 00:01:19 UTC
++++ mozglue/baseprofiler/moz.build
+@@ -38,7 +38,7 @@ if not CONFIG["JS_STANDALONE"]:
+             and CONFIG["TARGET_CPU"] in ("aarch64", "arm", "x86", "x86_64", "mips64")
+         )
+         or (
+-            CONFIG["OS_TARGET"] == "FreeBSD"
++            CONFIG["OS_TARGET"] in ("DragonFly", "FreeBSD")
+             and CONFIG["TARGET_CPU"] in ("aarch64", "x86_64")
+         )
+     ):

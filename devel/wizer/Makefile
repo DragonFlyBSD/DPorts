@@ -345,4 +345,5 @@ PLIST_FILES=	bin/${PORTNAME}
 do-install:
 	@${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/release/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -509,6 +509,7 @@ SUBDIR += nanoblogger
 SUBDIR += nanoblogger-extra
 SUBDIR += nbytes
 SUBDIR += ncgopher
+SUBDIR += neogrok
 SUBDIR += neon
 SUBDIR += netrik
 SUBDIR += netstiff

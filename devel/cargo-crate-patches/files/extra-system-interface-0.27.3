@@ -1,0 +1,74 @@
+--- cargo-crates/system-interface-0.27.3/src/fs/file_io_ext.rs.orig
++++ cargo-crates/system-interface-0.27.3/src/fs/file_io_ext.rs
+@@ -6,6 +6,7 @@
+     windows,
+     target_os = "ios",
+     target_os = "macos",
++    target_os = "dragonfly",
+     target_os = "netbsd",
+     target_os = "openbsd",
+     target_os = "redox",
+@@ -16,6 +17,7 @@
+ #[cfg(not(any(
+     windows,
+     target_os = "netbsd",
++    target_os = "dragonfly",
+     target_os = "redox",
+     target_os = "openbsd"
+ )))]
+@@ -34,6 +36,7 @@
+     windows,
+     target_os = "ios",
+     target_os = "macos",
++    target_os = "dragonfly",
+     target_os = "netbsd",
+     target_os = "openbsd",
+     target_os = "redox"
+@@ -60,6 +63,7 @@
+     windows,
+     target_os = "ios",
+     target_os = "macos",
++    target_os = "dragonfly",
+     target_os = "netbsd",
+     target_os = "openbsd",
+     target_os = "redox"
+@@ -406,6 +410,7 @@
+     #[cfg(not(any(
+         target_os = "ios",
+         target_os = "macos",
++        target_os = "dragonfly",
+         target_os = "netbsd",
+         target_os = "openbsd",
+         target_os = "redox"
+@@ -441,7 +446,7 @@
+         Ok(fcntl_rdadvise(self, offset, len)?)
+     }
+ 
+-    #[cfg(any(target_os = "netbsd", target_os = "redox", target_os = "openbsd"))]
++    #[cfg(any(target_os = "netbsd", target_os = "redox", target_os = "openbsd", target_os = "dragonfly"))]
+     #[inline]
+     fn advise(&self, _offset: u64, _len: u64, _advice: Advice) -> io::Result<()> {
+         // Netbsd lacks `posix_fadvise` and doesn't have an obvious replacement,
+@@ -449,7 +454,7 @@
+         Ok(())
+     }
+ 
+-    #[cfg(not(any(target_os = "netbsd", target_os = "redox", target_os = "openbsd")))]
++    #[cfg(not(any(target_os = "netbsd", target_os = "redox", target_os = "openbsd", target_os = "dragonfly")))]
+     #[inline]
+     fn allocate(&self, offset: u64, len: u64) -> io::Result<()> {
+         Ok(fallocate(self, FallocateFlags::empty(), offset, len)?)
+@@ -470,6 +475,13 @@
+         todo!("figure out what to do on redox for posix_fallocate")
+     }
+ 
++    #[cfg(target_os = "dragonfly")]
++    fn allocate(&self, _offset: u64, _len: u64) -> io::Result<()> {
++        // DragonFly has no fallocate support in rustix; ignore the request
++        // the way advise is ignored above.
++        Ok(())
++    }
++
+     #[inline]
+     fn read_at(&self, buf: &mut [u8], offset: u64) -> io::Result<usize> {
+         FileExt::read_at(&*self.as_filelike_view::<std::fs::File>(), buf, offset)

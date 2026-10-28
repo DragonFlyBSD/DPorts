@@ -20,7 +20,7 @@ BUILD_DEPENDS=	llvm${_LLVM_VER}>=0:devel/llvm${_LLVM_VER}
 
 LIB_DEPENDS=	libzstd.so:archivers/zstd
 
-USES=		cmake compiler:c++11-lang localbase:ldflags tar:xz
+USES= cmake compiler:c++11-lang localbase:ldflags tar:xz dfly-libcxx:21
 CMAKE_ARGS+=	-DZIG_TARGET_MCPU=baseline # ensure we run everywhere
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LOCALBASE}/bin/llvm-config${_LLVM_VER}
 CMAKE_ON=	THREADS_PREFER_PTHREAD_FLAG

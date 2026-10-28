@@ -282,4 +282,5 @@ SUB_LIST=	ASTERCTL=${PREFIX}/bin/asterctl \
 PLIST_FILES=	bin/asterctl \
 		bin/aster-sysinfo
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

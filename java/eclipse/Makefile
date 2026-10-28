@@ -60,7 +60,7 @@ MAVEN_ARCH=	${ARCH:S|amd64|x86_64|}
 
 MAVEN_PARAMS=	--offline \
 		-Dmaven.repo.local=${WRKDIR}/eclipse-maven-${DISTVERSION} \
-		-Dnative=gtk.freebsd.${MAVEN_ARCH} \
+		-Dnative=gtk.freebsd.${MAVEN_ARCH} -Dosgi.os=freebsd \
 		-DskipTests clean verify
 
 ECLIPSE_RESULT=	products/eclipse-sdk/target/products/org.eclipse.sdk.ide-freebsd.gtk.${MAVEN_ARCH}.tar.gz

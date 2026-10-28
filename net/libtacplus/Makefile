@@ -20,9 +20,10 @@ PLIST_FILES=	include/taclib.h \
 		lib/libtacplus.a \
 		lib/libtacplus.so \
 		lib/libtacplus.so.4 \
-		man/man3/libtacplus.3.gz \
-		man/man5/tacplus.conf.5.gz
+		share/man/man3/libtacplus.3.gz \
+		share/man/man5/tacplus.conf.5.gz
 
+MAKE_ARGS= MANDIR=${PREFIX}/share/man/man
 post-patch:
 	${REINPLACE_CMD} -e "s@/etc/tacplus.conf@${LOCALBASE}&@g" \
 		${WRKSRC}/taclib_private.h \

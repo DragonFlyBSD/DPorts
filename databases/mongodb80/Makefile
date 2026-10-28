@@ -183,4 +183,5 @@ do-install:
 do-test:
 	${SH} ${FILESDIR}/make.test.sh "${STAGEDIR}${PREFIX}/bin"
 
+IGNORE:= unmaintained, please request fixing to users mailing list
 .include <bsd.port.post.mk>

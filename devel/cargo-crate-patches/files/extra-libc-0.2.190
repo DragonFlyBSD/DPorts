@@ -1,0 +1,11 @@
+--- cargo-crates/libc-0.2.190/src/unix/bsd/freebsdlike/dragonfly/mod.rs.orig
++++ cargo-crates/libc-0.2.190/src/unix/bsd/freebsdlike/dragonfly/mod.rs
+@@ -1080,6 +1080,8 @@
+ pub const MSG_FMASK: c_int = u32_cast_int(0xFFFF0000);
+ 
+ // sys/mount.h
++pub const MNT_WAIT: c_int = 0x0001;
++pub const MNT_NOWAIT: c_int = 0x0002;
+ pub const MNT_NODEV: c_int = 0x00000010;
+ pub const MNT_AUTOMOUNTED: c_int = 0x00000020;
+ pub const MNT_TRIM: c_int = 0x01000000;

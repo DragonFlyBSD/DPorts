@@ -41,4 +41,10 @@ do-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/*
 
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(__FreeBSD__)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		${WRKSRC}/spectro/hidio.c ${WRKSRC}/spectro/icoms.h \
+		${WRKSRC}/spectro/icoms_ux.c ${WRKSRC}/spectro/usbio.c \
+		${WRKSRC}/spectro/usbio.h ${WRKSRC}/spectro/usbio_bsd.c
+
 .include <bsd.port.mk>

@@ -1,0 +1,11 @@
+--- configure.ac.orig
++++ configure.ac
+@@ -279,7 +279,7 @@
+     BASE_PCAP_H="pcap.h"
+     EXTRA_DEFINES="$EXTRA_DEFINES -D_BSD_SOURCE=1"
+ ],
+-[*bsd*], [
++[*bsd*|*dragonfly*], [
+     AC_SUBST(OS, BSD)
+ 
+     EXTRA_DEFINES="$EXTRA_DEFINES -D_BSD_SOURCE=1"

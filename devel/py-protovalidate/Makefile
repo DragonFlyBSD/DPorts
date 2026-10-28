@@ -23,4 +23,6 @@ CARGO_BUILD=	no
 CARGO_INSTALL=	no
 CARGO_TEST=	no
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
+MAKE_ENV= CC=${CC} CXX=${CXX}
 .include <bsd.port.mk>

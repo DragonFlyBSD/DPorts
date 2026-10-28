@@ -22,6 +22,4 @@ USE_GNOME=	gsound glib20 gtk40 libadwaita pango
 
 GLIB_SCHEMAS=	org.gnome.Nibbles.gschema.xml
 
-USES+= python:3.4+,build shebangfix
-SHEBANG_FILES= meson_post_install.py
 .include <bsd.port.mk>

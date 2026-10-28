@@ -97,6 +97,7 @@ UCX_CONFIGURE_ON=	--with-ucx
 UCX_CONFIGURE_OFF=	--without-ucx
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NSLURM}
+PORTREVISION= 1
 .include <bsd.port.pre.mk>
 
 .if ${FORTRAN_DEFAULT} == gfortran

@@ -46,4 +46,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/extra/ini/*.ini ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/extra/locale/*.mo ${STAGEDIR}${DATADIR}/locale/
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(FREEBSD)/(defined(FREEBSD) or defined(DRAGONFLY))/g' \
+		${WRKSRC}/source/dbconnection.pas
+	${REINPLACE_CMD} -e 's/{\$$IFDEF FREEBSD}/{$$IF defined(FREEBSD) or defined(DRAGONFLY)}/g' \
+		${WRKSRC}/source/apphelpers.pas
+
 .include <bsd.port.mk>

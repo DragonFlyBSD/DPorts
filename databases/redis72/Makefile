@@ -1,5 +1,5 @@
 PORTNAME=	redis
-DISTVERSION=	7.2.16
+DISTVERSION=	7.2.17
 CATEGORIES=	databases
 MASTER_SITES=	https://download.redis.io/releases/
 PKGNAMESUFFIX=	72
@@ -47,7 +47,7 @@ TLS_DESC=	Use TLS (openssl req.)
 
 JEMALLOC_MAKE_ENV=	USE_JEMALLOC=yes
 TLS_USES=		ssl
-TLS_MAKE_ENV=		BUILD_TLS=yes
+TLS_MAKE_ENV= BUILD_TLS=yes OPENSSL_PREFIX=${OPENSSLBASE}
 
 BIN_FILES=	redis-benchmark redis-check-aof redis-check-rdb redis-cli \
 		redis-sentinel redis-server

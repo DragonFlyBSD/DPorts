@@ -1,0 +1,41 @@
+--- cargo-crates/webbrowser-0.8.15/Cargo.toml.orig
++++ cargo-crates/webbrowser-0.8.15/Cargo.toml
+@@ -62,7 +62,7 @@
+ hardened = []
+ wasm-console = ["web-sys/console"]
+ 
+-[target."cfg(any(target_os = \"aix\", target_os = \"linux\", target_os = \"freebsd\", target_os = \"netbsd\", target_os = \"openbsd\", target_os = \"haiku\", target_os = \"illumos\"))".dependencies.home]
++[target."cfg(any(target_os = \"aix\", target_os = \"linux\", target_os = \"freebsd\", target_os = \"netbsd\", target_os = \"openbsd\", target_os = \"haiku\", target_os = \"illumos\", target_os = \"dragonfly\"))".dependencies.home]
+ version = "0.5"
+ 
+ [target."cfg(target_arch = \"wasm32\")".dependencies.web-sys]
+--- cargo-crates/webbrowser-0.8.15/src/lib.rs.orig
++++ cargo-crates/webbrowser-0.8.15/src/lib.rs
+@@ -54,7 +54,8 @@
+         target_os = "netbsd",
+         target_os = "openbsd",
+         target_os = "haiku",
+-        target_os = "illumos"
++        target_os = "illumos",
++        target_os = "dragonfly"
+     ),
+     path = "unix.rs"
+ )]
+@@ -72,6 +73,7 @@
+     target_os = "haiku",
+     target_os = "illumos",
+     target_os = "ios",
++    target_os = "dragonfly",
+     target_arch = "wasm32"
+ )))]
+ compile_error!(
+@@ -86,7 +88,8 @@
+     target_os = "openbsd",
+     target_os = "haiku",
+     target_os = "illumos",
+-    target_os = "windows"
++    target_os = "windows",
++    target_os = "dragonfly"
+ ))]
+ pub(crate) mod common;
+ 

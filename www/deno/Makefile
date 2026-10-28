@@ -123,4 +123,5 @@ do-test:
 			${CARGO} test -vv ${CARGO_BUILD_ARGS})
 
 USES:= ${USES:S/cargo/cargo:extra/}
+IGNORE:= fails to build on DragonFly, pending investigation
 .include <bsd.port.mk>

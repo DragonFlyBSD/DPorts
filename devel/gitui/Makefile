@@ -34,6 +34,7 @@ BINARY_ALIAS=	python3=${PYTHON_CMD} # xcb requires python3
 
 # Fix build on armv7, i386 and powerpc
 # sys-info-0.9.1 crate issue: https://github.com/FillZpp/sys-info-rs/issues/80
+CARGO_ENV= OPENSSL_NO_VENDOR=1
 xpost-patch:
 	@${REINPLACE_CMD} \
 	-e '/get_cpu/s|unsigned long|uint64_t|' \

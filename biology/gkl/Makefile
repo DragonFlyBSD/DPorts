@@ -33,5 +33,7 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's/^#if defined(__linux__) || defined(__FreeBSD__)$$/& || defined(__DragonFly__)/' \
 		${WRKSRC}/src/main/native/pdhmm/pdhmm-implementation.h \
 		${WRKSRC}/src/main/native/pdhmm/pdhmm-serial.cc
+	${REINPLACE_CMD} -e 's/"-static-libstdc++ -static-libgcc -Wl,-z,now"/"-Wl,-z,now"/' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

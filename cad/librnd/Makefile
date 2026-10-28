@@ -65,7 +65,6 @@ GTK4_CONFIGURE_OFF=	--disable-hid_gtk4_gl
 MOTIF_USES=		motif
 MOTIF_USE=		XORG=x11,xinerama,xrender,xt
 MOTIF_CONFIGURE_OFF=	--disable-hid_lesstif
-MOTIF_CFLAGS=		-Wno-error=incompatible-function-pointer-types
 STROKE_LIB_DEPENDS=	libstroke.so:devel/libstroke
 STROKE_CONFIGURE_OFF=	--disable-stroke
 WGET_RUN_DEPENDS=	wget:ftp/wget

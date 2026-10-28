@@ -16,7 +16,7 @@ BROKEN_i386=	compilation fails: undefined symbol: __atomic_fetch_add_8 (-march=i
 BUILD_DEPENDS=	gmake:devel/gmake
 LIB_DEPENDS=	libssh2.so:security/libssh2
 
-USES=		cargo localbase perl5
+USES= cargo localbase perl5 ssl
 USE_PERL5=	build
 
 USE_GITHUB=	yes
@@ -695,10 +695,12 @@ OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
 
+CARGO_ENV= OPENSSL_NO_VENDOR=1
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc
 LTO_UNSAFE=	yes
 .endif
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -17,4 +17,5 @@ USE_LDCONFIG=	yes
 
 CMAKE_TESTING_TARGET=	retest
 
+PORTREVISION= 1
 .include <bsd.port.mk>

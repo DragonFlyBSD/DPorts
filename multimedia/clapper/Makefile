@@ -41,4 +41,10 @@ ${OPT}_DESC=		Enable ${OPT:tl} feature
 ${OPT}_MESON_ENABLED=	${OPT:tl}
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s/\['linux', 'freebsd'\]/['linux', 'freebsd', 'dragonfly']/" \
+		${WRKSRC}/src/lib/clapper/features/mpris/meson.build
+	${REINPLACE_CMD} -e "s/\['linux','freebsd'\]/['linux', 'freebsd', 'dragonfly']/" \
+		${WRKSRC}/src/bin/clapper-app/data/meson.build
+
 .include <bsd.port.mk>

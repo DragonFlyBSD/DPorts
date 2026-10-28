@@ -28,4 +28,5 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.adoc ${STAGEDIR}${DOCSDIR}/README
 
+USES:= ${USES:Nncurses*} ncurses
 .include <bsd.port.mk>

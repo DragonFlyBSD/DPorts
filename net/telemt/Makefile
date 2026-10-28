@@ -34,4 +34,5 @@ post-install:
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-i386-src_config_load_validate__web.rs
 .endif
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -103,7 +103,6 @@ post-install: # zmsystemctl.pl is only for systemd-based systems
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
-		${WRKSRC}/CMakeLists.txt.c++20 \
 		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.post.mk>

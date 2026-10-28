@@ -39,7 +39,7 @@ USE_XORG=	pixman
 USE_LDCONFIG=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 MESON_FALSE=	examples
-MESON_ARGS=	-Dbackends=${BACKENDS:ts,} -Drenderers=${RENDERERS:ts,}
+MESON_ARGS= -Dbackends=${BACKENDS:ts,} -Drenderers=${RENDERERS:ts,} -Dwerror=false
 PLIST_SUB=	SUFFIX=-${DISTVERSION:R}
 
 PORTSCOUT=	limit:^0\.15\.

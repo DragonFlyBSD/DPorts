@@ -25,4 +25,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/target/release/tursodb \
 		${STAGEDIR}${PREFIX}/bin/tursodb
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

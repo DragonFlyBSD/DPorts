@@ -51,4 +51,5 @@ post-install-EXAMPLES-on:
 	cd ${WRKSRC}/yazi-config/preset && \
 	${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

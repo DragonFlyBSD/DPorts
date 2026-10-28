@@ -1,0 +1,13 @@
+--- meson.build.orig
++++ meson.build
+@@ -336,7 +336,9 @@
+   gtk4_features = []
+   gl_winsys = gstgl_dep.get_variable('gl_winsys').split()
+   gl_platforms = gstgl_dep.get_variable('gl_platforms').split()
+-  if 'wayland' in gl_winsys
++  # Only when GTK itself has the Wayland backend (gtk4-wayland.pc): GStreamer
++  # GL may support Wayland while GTK was built without it.
++  if 'wayland' in gl_winsys and dependency('gtk4-wayland', required: false).found()
+     gtk4_features += 'waylandegl'
+   endif
+   if 'x11' in gl_winsys

@@ -39,7 +39,7 @@
 -	if (swap_firsttime ||
 -	    (((new_swappgsin > swappgsin) || (new_swappgsout > swappgsout))
 -	     && cur_time > last_time_swap + 1)) {
--		int mib[2], n;
+-		int mib[3], n;
 -		size_t mibsize, size;
 -		struct xswdev xsw;
 -

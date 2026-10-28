@@ -17,7 +17,7 @@ BUILD_DEPENDS=	autoconf:devel/autoconf \
 # attempt to fix the intermittent failure: WARNING: 'automake-1.16' is missing on your system.
 LIB_DEPENDS=	libgmp.so:math/gmp
 
-USES=		gmake libtool localbase perl5 readline shebangfix
+USES= gmake libtool localbase perl5 readline shebangfix ncurses
 USE_PERL5=	run
 USE_LDCONFIG=	yes
 

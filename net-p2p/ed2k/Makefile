@@ -25,6 +25,7 @@ OPTIONS_DEFINE=	OPENSSL
 OPTIONS_DEFAULT=OPENSSL
 OPENSSL_DESC=	use faster hash libs from OpenSSL
 OPENSSL_USES=	ssl
+CFLAGS+=	-I${LOCALBASE}/include
 
 LDFLAGS= -L${OPENSSLLIB}
 .include <bsd.port.options.mk>

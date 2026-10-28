@@ -24,7 +24,7 @@ CONFIGURE_ARGS=	--disable-data \
 		--program-transform-name="" \
 		--with-zlib=/usr
 CONFIGURE_ENV=	PYTHON=${PYTHON_CMD}
-CXXFLAGS+=	-fexperimental-library # std::jthread
+CXXFLAGS+= # std::jthread
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 MAKE_JOBS_UNSAFE=	yes

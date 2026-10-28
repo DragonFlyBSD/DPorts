@@ -31,6 +31,7 @@ SDL_MAKE_ENV=	BUILD_SDL=YES
 X86_ASM_DESC=	Enable x86 assembly code
 
 ALL_TARGET=	release
+CFLAGS+=	-D__FreeBSD__=9
 SUB_FILES=	pkg-message
 
 .include "${.CURDIR}/../quake-data/Makefile.include"

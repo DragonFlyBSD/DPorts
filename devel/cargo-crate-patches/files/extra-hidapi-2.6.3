@@ -1,0 +1,11 @@
+--- cargo-crates/hidapi-2.6.3/build.rs.orig
++++ cargo-crates/hidapi-2.6.3/build.rs
+@@ -34,7 +34,7 @@
+         compile_windows();
+     } else if target.contains("darwin") {
+         compile_macos();
+-    } else if target.contains("freebsd") {
++    } else if target.contains("freebsd") || target.contains("dragonfly") {
+         compile_freebsd();
+     } else if target.contains("openbsd") {
+         compile_openbsd();

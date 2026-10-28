@@ -36,4 +36,8 @@ post-patch:
 		${WRKSRC}/CMakeLists.txt
 .endif
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/ BOTAN_TARGET_OS_HAS_ELF_AUX_INFO / /' \
+		${WRKSRC}/libraries/botan/botan.pri
+
 .include <bsd.port.mk>

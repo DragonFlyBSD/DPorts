@@ -15,6 +15,7 @@ LIB_DEPENDS=	libzstd.so:archivers/zstd \
 RUN_DEPENDS=	git:devel/git
 
 USES=		cargo gmake
+CFLAGS+=	-I${LOCALBASE}/include
 USE_GITHUB=	yes
 GH_ACCOUNT=	glandium
 GH_TUPLE=	git-for-windows:git:v2.55.0.windows.1-4-g33e5ecf213:git/git-core

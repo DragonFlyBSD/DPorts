@@ -1,0 +1,12 @@
+--- cargo-crates/if-addrs-0.10.2/src/posix.rs.orig
++++ cargo-crates/if-addrs-0.10.2/src/posix.rs
+@@ -25,7 +25,8 @@
+     target_os = "macos",
+     target_os = "tvos",
+     target_os = "openbsd",
+-    target_os = "netbsd"
++    target_os = "netbsd",
++    target_os = "dragonfly"
+ ))]
+ pub fn do_broadcast(ifaddr: &ifaddrs) -> Option<IpAddr> {
+     sockaddr::to_ipaddr(ifaddr.ifa_dstaddr)

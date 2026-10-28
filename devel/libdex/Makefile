@@ -22,4 +22,5 @@ MESON_ARGS=	-Dexamples=false \
 PORTSCOUT=	limit:^1\.0\.
 
 MESON_ARGS+= -Deventfd=disabled
+USE_GCC_VERSION= 13
 .include <bsd.port.mk>

@@ -101,6 +101,7 @@ CLN_LIB_DEPENDS=		libcln.so:math/cln \
 				libgmp.so:math/gmp
 
 USE_GCC_VERSION= ${GCC_DEFAULT}
+CXXFLAGS_x86_64= -include cstddef
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCLN}

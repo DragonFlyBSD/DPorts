@@ -1,0 +1,11 @@
+--- test/CMakeLists.txt.orig
++++ test/CMakeLists.txt
+@@ -125,7 +125,7 @@
+       TARGET_LINK_LIBRARIES(${T} ${ODBCLIB} ${ODBCINSTLIB} myodbc-util)
+     ENDIF(MYSQL8)
+   ELSE(WIN32)
+-    TARGET_LINK_LIBRARIES(${T} ${ODBC_LINK_FLAGS} ${ODBCINSTLIB} myodbc-util)
++    TARGET_LINK_LIBRARIES(${T} ${ODBC_LINK_FLAGS} ${ODBCINSTLIB} myodbc-util mysql_strings)
+   ENDIF(WIN32)
+   ADD_TEST(${T} ${T})
+ 

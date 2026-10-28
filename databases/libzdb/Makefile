@@ -32,7 +32,7 @@ SQLITE_CONFIGURE_WITH=	sqlite=${LOCALBASE}
 SQLITE_USES=		sqlite
 SSL_USES=		ssl
 
-USE_GCC_VERSION= ${GCC_DEFAULT}
+USE_GCC_VERSION= 13
 .include <bsd.port.options.mk>
 
 # See PR/237200 for details

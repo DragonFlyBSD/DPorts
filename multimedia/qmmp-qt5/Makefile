@@ -239,6 +239,7 @@ WILDMIDI_CMAKE_BOOL=	USE_MIDI
 XMP_LIB_DEPENDS=	libxmp.so:audio/libxmp
 XMP_CMAKE_BOOL=		USE_XMP
 
+USES+= localbase:ldflags
 post-patch:
 	@${GREP} -L '${LOCALBASE}/lib/oss' \
 		${WRKSRC}/src/plugins/Output/oss4/CMakeLists.txt | ${XARGS} \

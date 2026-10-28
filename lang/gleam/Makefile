@@ -50,4 +50,5 @@ do-test:
 		cd hello && \
 		gleam test)
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

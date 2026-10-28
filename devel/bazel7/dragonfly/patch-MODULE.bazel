@@ -1,17 +1,33 @@
 --- MODULE.bazel.orig
 +++ MODULE.bazel
-@@ -64,6 +64,14 @@
-     module_name = "rules_python",
+@@ -57,6 +57,8 @@
      patch_strip = 1,
+     patches = [
+         "//third_party/grpc:00_disable_layering_check.patch",
++        # DragonFly: take grpc's FreeBSD platform block (port_platform.h).
++        "//toolchain_local:grpc_dragonfly.patch",
+     ],
+ )
+ 
+@@ -66,6 +68,21 @@
      patches = ["//toolchain_local:rules_python_freebsd.patch"],
-+)
-+
+ )
+ 
 +# DragonFly: Java reports os.name "dragonflybsd", which rules_go takes as
 +# GOOS; map it to "dragonfly" so the host Go toolchain label exists.
 +single_version_override(
 +    module_name = "rules_go",
 +    patch_strip = 1,
 +    patches = ["//toolchain_local:rules_go_dragonfly.patch"],
- )
- 
++)
++
++# DragonFly: abseil's vdso_support.cc defines Elf64_auxv_t for FreeBSD only.
++single_version_override(
++    module_name = "abseil-cpp",
++    patch_strip = 1,
++    patches = ["//toolchain_local:abseil_dragonfly.patch"],
++)
++
  # The following Bazel modules are not direct dependencies for building Bazel,
+ # but are required for visibility from DIST_ARCHIVE_REPOS in repositories.bzl
+ bazel_dep(name = "apple_support", version = "1.23.1")

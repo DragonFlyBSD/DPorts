@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libgit2.so:devel/libgit2 \
 		libssh2.so:security/libssh2
 
-USES=		cargo localbase
+USES= cargo localbase ssl
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	hakoerber
@@ -201,8 +201,6 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		zerovec-derive-0.11.3 \
 		zmij-1.0.21
 
-OPENSSLINC=	/usr/include
-OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/grm
 

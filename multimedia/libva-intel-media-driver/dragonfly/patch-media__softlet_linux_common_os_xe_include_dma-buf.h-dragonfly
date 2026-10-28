@@ -1,0 +1,11 @@
+--- media_softlet/linux/common/os/xe/include/dma-buf.h.orig	2026-10-26 07:12:09 UTC
++++ media_softlet/linux/common/os/xe/include/dma-buf.h
+@@ -20,7 +20,7 @@
+ #ifndef _DMA_BUF_UAPI_H_
+ #define _DMA_BUF_UAPI_H_
+ 
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+     #include "freebsd_compat_linux_types.h"
+ #else
+     #include <linux/types.h>

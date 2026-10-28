@@ -400,4 +400,5 @@ CARGO_CRATES=	addr2line-0.24.2 \
 
 PLIST_FILES=	bin/${PORTNAME}
 
+CARGO_ENV= LIBCLANG_PATH=${LLVM_PREFIX}/lib
 .include <bsd.port.mk>

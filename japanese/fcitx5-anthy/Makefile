@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSES/GPL-2.0-or-later.txt
 LIB_DEPENDS=	libFcitx5Core.so:textproc/fcitx5 \
 		libanthy-unicode.so:japanese/anthy-unicode
 
-USES=		cmake compiler:c++17-lang gettext-tools kde pkgconfig tar:zst
+USES= cmake compiler:c++17-lang gettext-tools kde pkgconfig tar:zst dfly-libcxx
 
 USE_KDE=	ecm:build
 

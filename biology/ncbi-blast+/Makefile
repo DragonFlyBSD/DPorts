@@ -54,6 +54,7 @@ CONFIGURE_ARGS+=	--without-openmp
 .endif
 
 CONFIGURE_ARGS+= --with-lmdb=${LOCALBASE} --with-lzo=${LOCALBASE} --with-sqlite3=${LOCALBASE}
+CONFIGURE_ARGS+= --without-libdw
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == gcc
@@ -85,4 +86,5 @@ post-install:
 	${RMDIR} ${STAGEDIR}${PREFIX}/lib/debug
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/ncbi-tools++/*.so
 
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibdw.so*}
 .include <bsd.port.post.mk>

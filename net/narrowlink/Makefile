@@ -345,4 +345,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${what}/sample_${what}.yaml ${STAGEDIR}${ETCDIR}/${what}.yaml.sample
 .endfor
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

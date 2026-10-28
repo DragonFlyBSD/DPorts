@@ -23,4 +23,5 @@ post-patch:
 		${WRKSRC}/src/config.rs \
 		${WRKSRC}/src/shared/cfg.rs
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

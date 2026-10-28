@@ -1,0 +1,11 @@
+--- core/src/plugins/stored/CMakeLists.txt.orig	2026-10-26 07:02:22 UTC
++++ core/src/plugins/stored/CMakeLists.txt
+@@ -33,7 +33,7 @@ if(HAVE_WIN32)
+   endif()
+ endif()
+ 
+-if(HAVE_FREEBSD_OS)
++if(HAVE_FREEBSD_OS OR ${CMAKE_SYSTEM_NAME} MATCHES "DragonFly")
+   include_directories(
+     ${PROJECT_SOURCE_DIR}/src/fastlz/include
+   )

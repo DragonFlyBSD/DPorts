@@ -19,4 +19,5 @@ GH_ACCOUNT=	jakobhellermann
 
 PLIST_FILES=	bin/wasm-server-runner
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

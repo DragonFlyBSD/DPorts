@@ -1,0 +1,11 @@
+--- third_party/angle/angle_program_version_id_gn/moz.build.intermediate	2026-09-07 11:55:17 UTC
++++ third_party/angle/angle_program_version_id_gn/moz.build
+@@ -60,7 +60,7 @@ if CONFIG["OS_TARGET"] == "Linux":
+         script="/python/mozbuild/mozbuild/action/write_path_list.py",
+     )
+ 
+-if CONFIG["OS_TARGET"] == "FreeBSD":
++if CONFIG["OS_TARGET"] in ("DragonFly", "FreeBSD"):
+ 
+     GeneratedFile(
+         "/third_party/angle/gen/ANGLEShaderProgramVersion.h.rsp",

@@ -91,7 +91,7 @@ pre-configure:
 	${SETENVI} ${WRK_ENV} ${CMAKE_BIN} --install ${WRKDIR}/chromaprint-build
 	# configure links with plain `pkg-config --libs` (shared build), so the
 	# static deps go in Libs:, not Libs.private: as upstream's builder does
-	${REINPLACE_CMD} -e 's|^Libs:.*|Libs: -L$${libdir} -lchromaprint ${LOCALBASE}/lib/libfftw3f.a -lc++ -lm|' \
+	${REINPLACE_CMD} -e 's|^Libs:.*|Libs: -L$${libdir} -lchromaprint ${LOCALBASE}/lib/libfftw3f.a -lstdc++ -lm|' \
 	    ${CHROMAPRINT_PREFIX}/lib/pkgconfig/libchromaprint.pc
 
 HAS_CONFIGURE=	yes

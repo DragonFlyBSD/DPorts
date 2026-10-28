@@ -72,7 +72,7 @@ GUILE2_USES=	guile:2.2
 GUILE3_USES=	guile:3.0
 NLS_USES=	gettext-runtime
 
-CXXFLAGS= -Wno-sequence-point
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-patch:
 	@${SED} -e 's|%%FONTDIR%%|${WRKDIR}/fontconfig/cache/|' \
 		${FILESDIR}/fonts.conf > ${WRKDIR}/.fonts.conf
@@ -84,4 +84,5 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/lilypond
 	(cd ${STAGEDIR}/${DATADIR} && ${LN} -fs ${DISTVERSION} current)
 
+CXXFLAGS:= ${CXXFLAGS} -Wno-sequence-point
 .include <bsd.port.mk>

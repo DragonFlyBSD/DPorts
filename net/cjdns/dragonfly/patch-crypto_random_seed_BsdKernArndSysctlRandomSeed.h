@@ -1,14 +1,13 @@
-No KERN_ARND on DragonFly yet?
-
---- crypto/random/seed/BsdKernArndSysctlRandomSeed.h.orig	2020-10-05 21:46:19 UTC
+--- crypto/random/seed/BsdKernArndSysctlRandomSeed.h.orig
 +++ crypto/random/seed/BsdKernArndSysctlRandomSeed.h
-@@ -19,7 +19,9 @@
+@@ -19,8 +19,10 @@
  #include "memory/Allocator.h"
  #include "util/Linker.h"
  
 +#ifndef __DragonFly__
  Linker_require("crypto/random/seed/BsdKernArndSysctlRandomSeed.c")
- struct RandomSeed* BsdKernArndSysctlRandomSeed_new(struct Allocator* alloc);
+ RandomSeed_t* BsdKernArndSysctlRandomSeed_new(struct Allocator* alloc);
+ #define BsdKernArndSysctlRandomSeed_EXISTS
 +#endif
  
  #endif

@@ -174,4 +174,5 @@ post-install-JAVA_TOOLS-on:
 	${ECHO_CMD} "jardir = ${JAVAJARDIR}" > \
 	    ${STAGEDIR}${PREFIX}/etc/speedata/publisher.cfg.sample
 
+IGNORE:= requires Go -buildmode=c-shared, which Go does not support on DragonFly
 .include <bsd.port.mk>

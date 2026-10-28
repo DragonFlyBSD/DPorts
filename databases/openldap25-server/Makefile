@@ -239,6 +239,7 @@ OUTLOOK_EXTRA_PATCHES=		${FILESDIR}/extrapatch-outlook-servers__slapd__schema_pr
 
 CONFIGURE_SED=		-e 's,uuid/uuid.h,xxuuid/uuid.h,g'
 
+OPTIONS_EXCLUDE_DragonFly= SMBPWD
 .include <bsd.port.options.mk>
 
 .if defined(CLIENT_ONLY)

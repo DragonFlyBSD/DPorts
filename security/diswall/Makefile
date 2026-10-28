@@ -16,7 +16,7 @@ BROKEN_i386=	ld: error: undefined symbol: __atomic_compare_exchange
 
 BUILD_DEPENDS=	gmake:devel/gmake
 
-USES=		cargo perl5 sqlite
+USES= cargo perl5 sqlite ssl
 USE_PERL5=	build
 
 USE_GITHUB=	yes
@@ -366,4 +366,5 @@ OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
 
+CARGO_ENV= OPENSSL_NO_VENDOR=1
 .include <bsd.port.mk>

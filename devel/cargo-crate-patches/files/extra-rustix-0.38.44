@@ -1,0 +1,64 @@
+--- cargo-crates/rustix-0.38.44/src/backend/libc/net/sockopt.rs.orig
++++ cargo-crates/rustix-0.38.44/src/backend/libc/net/sockopt.rs
+@@ -558,7 +558,10 @@
+     setsockopt(fd, c::IPPROTO_IP, c::IP_ADD_MEMBERSHIP, mreqn)
+ }
+ 
+-#[cfg(any(apple, freebsdlike, linux_like, solarish, target_os = "aix"))]
++#[cfg(all(
++    any(apple, freebsdlike, linux_like, solarish, target_os = "aix"),
++    not(target_os = "dragonfly")
++))]
+ #[inline]
+ pub(crate) fn set_ip_add_source_membership(
+     fd: BorrowedFd<'_>,
+@@ -570,7 +573,10 @@
+     setsockopt(fd, c::IPPROTO_IP, c::IP_ADD_SOURCE_MEMBERSHIP, mreq_source)
+ }
+ 
+-#[cfg(any(apple, freebsdlike, linux_like, solarish, target_os = "aix"))]
++#[cfg(all(
++    any(apple, freebsdlike, linux_like, solarish, target_os = "aix"),
++    not(target_os = "dragonfly")
++))]
+ #[inline]
+ pub(crate) fn set_ip_drop_source_membership(
+     fd: BorrowedFd<'_>,
+@@ -1166,7 +1172,10 @@
+     }
+ }
+ 
+-#[cfg(any(apple, freebsdlike, linux_like, solarish, target_os = "aix"))]
++#[cfg(all(
++    any(apple, freebsdlike, linux_like, solarish, target_os = "aix"),
++    not(target_os = "dragonfly")
++))]
+ #[inline]
+ fn to_imr_source(
+     multiaddr: &Ipv4Addr,
+--- cargo-crates/rustix-0.38.44/src/net/sockopt.rs.orig
++++ cargo-crates/rustix-0.38.44/src/net/sockopt.rs
+@@ -812,7 +812,10 @@
+ /// See the [module-level documentation] for more.
+ ///
+ /// [module-level documentation]: self#references-for-get_ip_-and-set_ip_-functions
+-#[cfg(any(apple, freebsdlike, linux_like, solarish, target_os = "aix"))]
++#[cfg(all(
++    any(apple, freebsdlike, linux_like, solarish, target_os = "aix"),
++    not(target_os = "dragonfly")
++))]
+ #[inline]
+ #[doc(alias = "IP_ADD_SOURCE_MEMBERSHIP")]
+ pub fn set_ip_add_source_membership<Fd: AsFd>(
+@@ -834,7 +837,10 @@
+ /// See the [module-level documentation] for more.
+ ///
+ /// [module-level documentation]: self#references-for-get_ip_-and-set_ip_-functions
+-#[cfg(any(apple, freebsdlike, linux_like, solarish, target_os = "aix"))]
++#[cfg(all(
++    any(apple, freebsdlike, linux_like, solarish, target_os = "aix"),
++    not(target_os = "dragonfly")
++))]
+ #[inline]
+ #[doc(alias = "IP_DROP_SOURCE_MEMBERSHIP")]
+ pub fn set_ip_drop_source_membership<Fd: AsFd>(

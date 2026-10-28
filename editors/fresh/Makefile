@@ -23,4 +23,10 @@ CARGO_VENDOR_DIR=	${WRKDIR}/cargo-crates
 
 PLIST_FILES=	bin/fresh
 
+CARGO_ENV= LIBCLANG_PATH=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
+USES:= ${USES:S/cargo/cargo:extra/}
+dfly-patch:
+	${REINPLACE_CMD} -e 's|cfg(target_os = "freebsd")|cfg(any(target_os = "freebsd", target_os = "dragonfly"))|' \
+		${WRKSRC:H}/fresh-core/Cargo.toml ${WRKSRC:H}/fresh-plugin-runtime/Cargo.toml
+
 .include <bsd.port.mk>

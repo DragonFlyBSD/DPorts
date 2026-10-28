@@ -12,6 +12,7 @@ MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	LLVM and Clang
 WWW=		https://llvm.org/
 
+OPTIONS_DEFINE+= LLD_LINK
 .include "${.CURDIR}/../llvm-devel/Makefile.LICENSE"
 
 LIB_DEPENDS=	libzstd.so:archivers/zstd
@@ -256,6 +257,7 @@ FLANG_PATTERN=	${FLANG_COMMANDS:S/^/bin./:tW:C/  */|/g}|flang|libCUF|libFIR|libF
 
 MLIR_PATTERN=	${MLIR_COMMANDS:S/^/bin./:tW:C/  */|/g}|mlir|libMLIR|obj.MLIRCAP
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NLLDB:NFLANG:NCOMPILER_RT:NOPENMP}
 .include <bsd.port.options.mk>
 
 # keep in sync with /usr/src/lib/clang/clang.build.mk
@@ -593,7 +595,7 @@ post-install-LIT-on:
 	${LN} -fs ../${LLVM_DIR}/bin/FileCheck \
 	    ${STAGEDIR}${PREFIX}/bin/FileCheck${LLVM_SUFFIX}
 
-post-install-LLD-on:
+post-install-LLD_LINK-on:
 	${LN} -s ld.lld ${STAGEDIR}${LLVM_PREFIX}/bin/ld
 
 TEST_CMD=	'(cd ${WRKSRC}/test; ${SETENV} ${MAKE_ENV} LD_LIBRARY_PATH=${WRKSRC}/Release/lib ${MAKE_CMD} check-local-lit)'
@@ -669,5 +671,20 @@ check-commands:
 .for command in ${COMMANDS}
 	test -e ${STAGEDIR}${LLVM_PREFIX}/bin/${command}
 .endfor
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,set(ENABLE_LIBOMPTARGET ON),set(ENABLE_LIBOMPTARGET OFF),g' \
+		${WRKSRC}/openmp/CMakeLists.txt
+
+dfly-install:
+	-${RM} -fv ${STAGEDIR}${PREFIX}/bin/llvm-omp-device-info${LLVM_SUFFIX}
+
+.if ${OPSYS} == DragonFly
+USE_GCC_VERSION=	15
+LIB_DEPENDS+=		libc++.so.1:devel/libcxx23
+CMAKE_ARGS+=		-DCLANG_DEFAULT_CXX_STDLIB=libc++
+CXXFLAGS+=		-nostdinc++ -nostdlib++ -isystem ${LLVM_PREFIX}/include/c++/v1
+LDFLAGS+=		-L${LLVM_PREFIX}/lib -Wl,-rpath=${LLVM_PREFIX}/lib -lc++ -lc++abi -lm
+.endif
 
 .include <bsd.port.post.mk>

@@ -28,4 +28,5 @@ CARGO_INSTALL_PATH=	crates/veryl
 
 PLIST_FILES=	bin/${PORTNAME}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

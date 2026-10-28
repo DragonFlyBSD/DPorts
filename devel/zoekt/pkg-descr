@@ -1,0 +1,10 @@
+Zoekt is a fast text search engine intended for source code. It builds
+a trigram index and supports substring and regular expression matches,
+boolean queries, and filters on file name, repository, language and
+branch. When universal-ctags is installed, symbol definitions are
+recorded too, so they can be searched with sym: and used for ranking.
+
+The port installs the indexers (zoekt-index for plain directories,
+zoekt-git-index and zoekt-local-sync for git repositories, plus the
+mirroring helpers), the zoekt command-line search tool, and
+zoekt-webserver, which serves a web interface and JSON/gRPC search APIs.

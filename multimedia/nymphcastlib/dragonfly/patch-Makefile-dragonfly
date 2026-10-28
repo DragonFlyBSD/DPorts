@@ -1,0 +1,11 @@
+--- Makefile.orig	2026-10-26 07:15:44 UTC
++++ Makefile
+@@ -100,7 +100,7 @@ endif
+ INCLUDE := -I src
+ LIBS := -lnymphrpc -lPocoNet -lPocoUtil -lPocoFoundation -lPocoJSON 
+ 
+-ifeq ($(USYS),FreeBSD)
++ifneq (,$(filter FreeBSD DragonFly,$(USYS)))
+ 	INCLUDE += -I /usr/local/include
+ 	LIBS += -L /usr/local/lib
+ endif

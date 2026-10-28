@@ -259,11 +259,11 @@ X11_USES=		gl xorg
 X11_USE=		GL=egl,gbm,glu XORG=x11,xext,xrandr
 X11_LIB_DEPENDS=	libdrm.so:graphics/libdrm
 
-CXXFLAGS= -Wno-double-promotion
 PLIST_SUB+= OPSYS=${OPSYS:tl}
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGBM:NWAYLAND}
 OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NSSE4_1:NSSE4_2}
 MAKE_JOBS_UNSAFE= yes
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.options.mk>
 
 .if (!empty(PORT_OPTIONS:MGBM) && !empty(PORT_OPTIONS:MWAYLAND) || \
@@ -369,4 +369,5 @@ dfly-patch:
 		${WRKSRC}/xbmc/utils/test/TestCPUInfo.cpp \
 		${WRKSRC}/xbmc/windowing/X11/XRandR.cpp
 
+CXXFLAGS:= ${CXXFLAGS} -Wno-double-promotion
 .include <bsd.port.mk>

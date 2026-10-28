@@ -43,11 +43,15 @@ USES+=		guile:3.0,alias localbase octave:env pkgconfig python
 MAKE_ENV+=	GUILE_EXECUTABLE=${PREFIX}/bin/guile-3.0 \
 		GUILE_CONFIG_EXECUTABLE=${PREFIX}/bin/guile-config-3.0
 CMAKE_OFF=	NLOPT_JAVA
-GNU_HOST=	${ARCH}-portbld-freebsd${OSREL}
+GNU_HOST= ${CONFIGURE_TARGET}
 PLIST=		${PKGDIR}/pkg-plist.${FLAVOR}
 PLIST_SUB=	GNU_HOST=${GNU_HOST} OCTAVE_VERSION=${OCTAVE_VERSION}
 .elif ${FLAVOR} == minimal
 CMAKE_OFF=	NLOPT_GUILE NLOPT_JAVA NLOPT_OCTAVE NLOPT_PYTHON NLOPT_SWIG
+.endif
+
+.if ${FLAVOR:U:Mfull}
+USES+=	dfly-libcxx
 .endif
 
 .include <bsd.port.mk>

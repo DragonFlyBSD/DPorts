@@ -1189,6 +1189,19 @@ OSREL!=		${ECHO} ${DFLYVERSION} | ${AWK} '{a=int($$1/100000); b=int(($$1-(a*1000
 .endif
 _EXPORTED_VARS+=	DFLYVERSION OSREL
 
+# DFLY_BASE_CCVER is the base system's default compiler, as bsd.cpu.mk
+# names it: gcc80 on 6.4, gcc120 from 6.5. Ports built with the base
+# compiler use that one, so release and master builders each get their own.
+.if !defined(DFLY_BASE_CCVER)
+DFLY_BASE_CCVER=	${_DEFAULT_CCVER:Ugcc80}
+.endif
+_EXPORTED_VARS+=	DFLY_BASE_CCVER
+# ccache tells compilers apart by the binary's mtime, but DragonFly's cc is
+# one wrapper for every CCVER, so a cache filled by gcc80 would hand its
+# objects to gcc120 builds. Make ccache ask the compiler itself.
+MAKE_ENV+=		CCACHE_COMPILERCHECK="%compiler% -v"
+CONFIGURE_ENV+=		CCACHE_COMPILERCHECK="%compiler% -v"
+
 .    if ${OPSYS} == FreeBSD && (${OSVERSION} < 1404000 || (${OSVERSION} >= 1500000 && ${OSVERSION} < 1501000))
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
@@ -1878,8 +1891,8 @@ CPP=clang-cpp${USE_CLANG_FALLBACK}
 .include "${PORTSDIR}/Mk/bsd.df.gcc.mk"
 .else
 .  if !defined(USE_GNUSTEP)
-CONFIGURE_ENV+= 	CCVER=gcc80
-MAKE_ENV+=		CCVER=gcc80
+CONFIGURE_ENV+= 	CCVER=${DFLY_BASE_CCVER}
+MAKE_ENV+=		CCVER=${DFLY_BASE_CCVER}
 .  endif
 .endif
 .endif

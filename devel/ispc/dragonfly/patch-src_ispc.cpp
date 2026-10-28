@@ -1,18 +1,12 @@
---- src/ispc.cpp.orig	2020-12-19 00:48:42 UTC
+--- src/ispc.cpp.orig	2026-10-26 01:17:16 UTC
 +++ src/ispc.cpp
-@@ -1331,6 +1331,22 @@ std::string Target::GetTripleString() co
+@@ -2784,6 +2784,16 @@ llvm::Triple Target::GetTriple() const {
          triple.setVendor(llvm::Triple::VendorType::UnknownVendor);
          triple.setOS(llvm::Triple::OSType::FreeBSD);
          break;
 +    case TargetOS::dragonfly:
-+        if (m_arch == Arch::x86) {
-+            triple.setArchName("i686");
-+        } else if (m_arch == Arch::x86_64) {
-+            triple.setArchName("amd64");
-+        } else if (m_arch == Arch::arm) {
-+            triple.setArchName("armv7");
-+        } else if (m_arch == Arch::aarch64) {
-+            triple.setArchName("aarch64");
++        if (m_arch == Arch::x86_64) {
++            triple.setArchName("x86_64");
 +        } else {
 +            Error(SourcePos(), "Unknown arch.");
 +            exit(1);
@@ -22,4 +16,4 @@
 +        break;
      case TargetOS::macos:
          // asserts
-         if (m_arch != Arch::x86_64) {
+         if (m_arch == Arch::x86_64) {

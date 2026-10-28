@@ -3,7 +3,8 @@
 # The primary base compiler is used is possible, otherwise the ports default
 # is used unless there's a hard specification.
 #
-# For DragonFly 5.4+, the primary base compiler is gcc80,
+# For DragonFly 6.5+, the primary base compiler is gcc120, for 5.4 - 6.4 it
+# is gcc80 (DFLY_BASE_CCVER, from bsd.port.mk),
 # for DragonFly 4.1 - 5.3, the primary base compiler is gcc50 and for earlier
 # releases, the primary base compiler is gcc47.  The avoidance of the use of
 # the alternate compiler is intentional.
@@ -21,7 +22,7 @@ GCCVERSIONS=    4.8 8.0 9 10 11 12 13 14 15
 .undef PORT_COMPILER
 .undef BASE_COMPILER
 
-BASE_COMPILER=gcc80
+BASE_COMPILER=${DFLY_BASE_CCVER:Ugcc80}
 
 _GCCVERSION_OKAY=       false
 # See whether we have the specific version requested installed already
@@ -34,6 +35,9 @@ _GCCVERSION_OKAY=       true
 
 .if defined(USE_GCC_VERSION) && ${_GCCVERSION_OKAY} == true
 .   if ${BASE_COMPILER:Mgcc80}
+PORT_COMPILER=${USE_GCC_VERSION}
+# A newer base compiler covers every request up to its own version.
+.   elif ${USE_GCC_VERSION:C/\..*//} > ${BASE_COMPILER:S/^gcc//:C/0$//}
 PORT_COMPILER=${USE_GCC_VERSION}
 .   endif
 .endif

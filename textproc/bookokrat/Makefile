@@ -29,6 +29,7 @@ PORTDOCS=	readme.txt
 OPTIONS_DEFINE=	DOCS
 
 # fix Python interpreter path in other files
+BUILD_DEPENDS= gmake:devel/gmake
 post-patch:
 	@(cd ${WRKSRC} && \
 	${REINPLACE_CMD} -E -e 's|(/usr/bin/)?python3|${PYTHON_CMD}|g' \
@@ -44,4 +45,5 @@ post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

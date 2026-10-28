@@ -83,7 +83,11 @@ _COMPILER_ARGS+=	features
 .if ${CC} == cc
 # This is the DragonFly base compiler, we know it's gcc
 COMPILER_TYPE=		gcc
+.  if ${DFLY_BASE_CCVER:Ugcc80} == gcc120
+COMPILER_VERSION=	125
+.  else
 COMPILER_VERSION=	83
+.  endif
 .else
 .  if defined(_CCVERSION_${_CC_hash})
 _CCVERSION=	${_CCVERSION_${_CC_hash}}
@@ -135,10 +139,13 @@ CHOSEN_COMPILER_TYPE=	gcc
 
 .  if ${_COMPILER_ARGS:Mfeatures}
 .  if ${CC} == cc && ${CXX} == c++
-   # This is DragonFly's base gcc80 compiler
+   # This is DragonFly's base compiler, gcc80 or gcc120
    # Use a cache for DF rather than testing each feature.
-COMPILER_FEATURES=	libstdc++ c89 c99 c11 gnu89 gnu99 gnu11 c++98 \
-			c++0x c++11 c++14 c++17 gnu++98 gnu++11 gnu++17 dragonfly
+COMPILER_FEATURES=	libstdc++ c89 c99 c11 c17 gnu89 gnu99 gnu11 c++98 \
+			c++0x c++11 c++14 c++17 gnu++98 gnu++11 gnu++14 gnu++17 dragonfly
+.    if ${DFLY_BASE_CCVER:Ugcc80} == gcc120
+COMPILER_FEATURES+=	c++20 c++23 c++2b gnu++20 gnu++2b
+.    endif
 .  else
 .    if defined(_CXXINTERNAL_${_CXX_hash})
 _CXXINTERNAL=	${_CXXINTERNAL_${_CXX_hash}}

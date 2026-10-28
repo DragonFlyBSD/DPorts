@@ -1,0 +1,11 @@
+--- meson.build.orig
++++ meson.build
+@@ -179,7 +179,7 @@
+ 
+ system = host_machine.system()
+ 
+-if system == 'freebsd'
++if system == 'freebsd' or system == 'dragonfly'
+   # Defining _POSIX_C_SOURCE above makes freebsd not expose some functionality
+   # that's hidden behind __BSD_VISIBLE.  Not defininy any of the above however
+   # makes it expose verything.

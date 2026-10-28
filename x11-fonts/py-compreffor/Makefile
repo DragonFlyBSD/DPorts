@@ -19,4 +19,5 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fonttools>=4:print/py-fonttools@${PY_FLAVOR}
 USES=		compiler:c++11-lang python
 USE_PYTHON=	autoplist concurrent distutils
 
+BUILD_DEPENDS+= ${PYTHON_PKGNAMEPREFIX}cython>=0.29.30:lang/cython@${PY_FLAVOR}
 .include <bsd.port.mk>

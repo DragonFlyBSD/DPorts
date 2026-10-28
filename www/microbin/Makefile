@@ -19,7 +19,7 @@ BUILD_DEPENDS=	bash:shells/bash \
 LIB_DEPENDS=	libonig.so:devel/oniguruma \
 		libzstd.so:archivers/zstd
 
-USES=		cargo perl5
+USES= cargo perl5 ssl
 USE_PERL5=	build
 
 USE_GITHUB=	yes
@@ -440,6 +440,7 @@ CARGO_CRATES=	actix-codec-0.5.2 \
 
 USE_RC_SUBR=	microbin
 
+CARGO_ENV= OPENSSL_NO_VENDOR=1
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/microbin
 

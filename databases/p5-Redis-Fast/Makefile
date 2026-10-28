@@ -26,13 +26,14 @@ TEST_DEPENDS=	p5-Parallel-ForkManager>=0:devel/p5-Parallel-ForkManager \
 		p5-Test-UNIXSock>=0:devel/p5-Test-UNIXSock \
 		redis>=0:databases/redis
 
-USES=		perl5
+USES= perl5 ssl
 USE_PERL5=	modbuild
 
 OPTIONS_DEFINE=		SSL
 SSL_DESC=		SSL/TLS support
 SSL_RUN_DEPENDS=	p5-IO-Socket-SSL>=0:security/p5-IO-Socket-SSL
 
+CONFIGURE_ENV= OPENSSL_PREFIX=${OPENSSLBASE}
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Redis/Fast/Fast.so
 

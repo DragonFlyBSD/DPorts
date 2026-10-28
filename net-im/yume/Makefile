@@ -149,4 +149,5 @@ CARGO_CRATES=	aead-0.2.0 \
 
 PLIST_FILES=	bin/${PORTNAME}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

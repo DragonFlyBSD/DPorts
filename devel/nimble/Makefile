@@ -153,5 +153,7 @@ do-install:
 dfly-patch:
 	${REINPLACE_CMD} -e 's|defined(dragonflybsd)|defined(dragonfly)|' \
 		${WRKSRC_chronos}/chronos/sendfile.nim
+	${RM} -r ${WRKSRC_bearssl}/bearssl/csources
+	${LN} -s ${WRKSRC_bearsslc} ${WRKSRC_bearssl}/bearssl/csources
 
 .include <bsd.port.mk>

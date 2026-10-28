@@ -175,4 +175,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 
+IGNORE:= has never built on DragonFly, block to avoid wasting CPU cycles
 .include <bsd.port.post.mk>

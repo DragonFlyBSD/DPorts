@@ -1,11 +1,20 @@
---- src/mlvpn.c.intermediate	2019-12-29 13:46:44.000000000 +0000
+--- src/mlvpn.c.orig
 +++ src/mlvpn.c
-@@ -821,7 +821,7 @@ mlvpn_rtun_start(mlvpn_tunnel_t *t)
-             log_warn(NULL, "%s socket creation error",
-                 t->name);
-         } else {
+@@ -809,7 +809,7 @@
+     int ret, fd = -1;
+     char *addr, *port;
+     struct addrinfo hints, *res;
 -#if defined(HAVE_FREEBSD) || defined(HAVE_OPENBSD)
 +#if (defined(HAVE_FREEBSD) || defined(HAVE_OPENBSD)) && !defined(__DragonFly__)
- 			/* Setting SO_SETFIB (fib) supported on FreeBSD and OpenBSD only */
- 			if (setsockopt(fd, SOL_SOCKET, SO_SETFIB, &fib, sizeof(fib)) < 0)
- 			{
+     int fib = t->bindfib;
+ #endif
+     fd = t->fd;
+@@ -847,7 +847,7 @@
+                 t->name);
+         } else {
+             /* Setting fib/routing-table is supported on FreeBSD and OpenBSD only */
+-#if defined(HAVE_FREEBSD) || defined(HAVE_OPENBSD)
++#if (defined(HAVE_FREEBSD) || defined(HAVE_OPENBSD)) && !defined(__DragonFly__)
+             if (fib > 0)
+             {
+ #if defined(HAVE_FREEBSD)

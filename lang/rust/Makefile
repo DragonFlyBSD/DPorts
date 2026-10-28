@@ -100,7 +100,7 @@ _COMPONENTS+=		cargo-${_PACKAGE_VERS}-${_RUST_TARGET} \
 
 MASTER_SITES+= https://avalon.dragonflybsd.org/misc/distfiles/rust-bootstrap/:bootstrap
 MAKE_ENV+= LDVER=ld.bfd
-MAKE_ENV+= LD_LIBRARY_PATH=${WRKDIR}/bootstrap/lib:/usr/lib/gcc80
+MAKE_ENV+= LD_LIBRARY_PATH=${WRKDIR}/bootstrap/lib:/usr/lib/${DFLY_BASE_CCVER}
 LLVM_VERSION= 22
 .include <bsd.port.pre.mk>
 

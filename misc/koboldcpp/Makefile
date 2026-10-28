@@ -54,6 +54,8 @@ VULKAN_BROKEN=		shaderc doesn't support latest features of glslc, see https://gi
 MAKE_ARGS+=	KCPP_DEBUG=1
 .endif
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
+MAKE_ARGS+= UNAME_S=FreeBSD
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MVULKAN}
@@ -92,5 +94,14 @@ do-install-VULKAN-on:
 .if ${ARCH} != x86_64
 IGNORE=	portable flavor isn't defined on ${ARCH} because it is based on AVX2, etc. (?)
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(__linux__) || defined(__FreeBSD__) || defined(_AIX)/defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(_AIX)/' \
+		${WRKSRC}/common/common.cpp
+	${REINPLACE_CMD} -e 's/^#if defined(_AIX) || defined(__OpenBSD__) ||/#if defined(_AIX) || defined(__OpenBSD__) || defined(__DragonFly__) ||/' \
+		${WRKSRC}/vendor/sheredom/subprocess.h
+	${REINPLACE_CMD} -e 's/^#elif defined(__linux__) || defined(__FreeBSD__)$$/#elif defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#    elif defined(__FreeBSD__)$$/#    elif defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		${WRKSRC}/ggml/src/ggml-backend-reg.cpp
 
 .include <bsd.port.post.mk>

@@ -1,0 +1,10 @@
+--- cargo-crates/aws-lc-sys-0.39.0/aws-lc/crypto/rand_extra/internal.h.orig
++++ cargo-crates/aws-lc-sys-0.39.0/aws-lc/crypto/rand_extra/internal.h
+@@ -12,6 +12,7 @@
+ #define OPENSSL_RAND_WINDOWS
+ #elif defined(OPENSSL_MACOS) || defined(OPENSSL_OPENBSD) || \
+     defined(OPENSSL_FREEBSD)  || defined(OPENSSL_NETBSD) || \
++    defined(__DragonFly__) || \
+     defined(OPENSSL_SOLARIS) || defined(OPENSSL_WASM) || \
+     (defined(OPENSSL_LINUX) && !defined(HAVE_LINUX_RANDOM_H))
+ #define OPENSSL_RAND_GETENTROPY

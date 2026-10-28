@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSES/LGPL-2.1-or-later.txt
 LIB_DEPENDS=	libFcitx5Core.so:textproc/fcitx5 \
 		libhangul.so:korean/libhangul
 
-USES=		cmake compiler:c++17-lang gettext-tools kde pkgconfig tar:zst
+USES= cmake compiler:c++17-lang gettext-tools kde pkgconfig tar:zst dfly-libcxx
 
 USE_KDE=	ecm:build
 

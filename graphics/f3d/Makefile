@@ -80,6 +80,7 @@ RAYTRACING_DESC=		Raytracing module
 RAYTRACING_CMAKE_BOOL=		F3D_MODULE_RAYTRACING
 RAYTRACING_BROKEN=		Requires VTK::RenderingRayTracing enabled in VTK
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-install:
 	@${RM} -r ${STAGEDIR}${DOCSDIR}
 	# component-based install
@@ -89,4 +90,14 @@ post-install:
 		${SETENV} ${MAKE_ENV} ${CMAKE_BIN} --install . --component mimetypes
 
 .include <../../math/vtk9/Makefile.version>
+dfly-patch:
+	${REINPLACE_CMD} -e '/^    RUNTIME_DEPENDENCY_SET libf3dDeps$$/d' \
+		-e '/^  install(RUNTIME_DEPENDENCY_SET libf3dDeps$$/,/^    DIRECTORIES /d' \
+		${WRKSRC}/library/CMakeLists.txt
+	${REINPLACE_CMD} -e 's/^#elif defined(__linux__) || defined(__FreeBSD__)$$/& || defined(__DragonFly__)/' \
+		${WRKSRC}/external/dmon/dmon.h
+	${REINPLACE_CMD} -e 's/^#ifdef __FreeBSD__$$/#if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#if defined(__FreeBSD__)$$/#if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		${WRKSRC}/application/F3DSystemTools.cxx
+
 .include <bsd.port.mk>

@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -28,7 +28,7 @@
+ 
+ message(STATUS "System: ${CMAKE_SYSTEM}")
+ if(UNIX AND NOT APPLE)
+-    if(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBSD")
++    if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+         set(FREE_BSD TRUE)
+     else()
+         set(LINUX TRUE)

@@ -20,6 +20,7 @@ USE_LDCONFIG=	yes
 SHEBANG_FILES=	scripts/cg-sort scripts/cg-strictify scripts/cg-untrace \
 		scripts/cg3-autobin.pl.in
 
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-patch:
 	@${REINPLACE_CMD} -e '/D_POSIX_C_SOURCE/d' \
 		${WRKSRC}/CMakeLists.txt

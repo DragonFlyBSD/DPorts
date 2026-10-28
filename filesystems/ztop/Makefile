@@ -21,4 +21,5 @@ PLIST_FILES=	bin/${PORTNAME} \
 post-install:
 		${INSTALL_MAN} ${WRKSRC}/doc/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	firefox
-DISTVERSION=	158.0.1
+DISTVERSION=	159.0
 PORTEPOCH=	2
 CATEGORIES=	www wayland
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
@@ -14,7 +14,7 @@ NOT_FOR_ARCHS=		i386
 NOT_FOR_ARCHS_REASON=	fails to build: rust needs more address space than platform can provide
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.130:security/nss \
+		nss>=3.131:security/nss \
 		libevent>=2.1.8:devel/libevent \
 		png>=1.6.45:graphics/png \
 		dav1d>=1.0.0:multimedia/dav1d \
@@ -47,7 +47,7 @@ MOZ_OPTIONS+= --without-wasm-sandboxed-libraries
 MOZ_OPTIONS+= --with-libclang-path=${LLVM_PREFIX}/lib
 CXXFLAGS= -Wno-multistatement-macros -Wno-class-memaccess -stdlib=libc++ -cxx-isystem ${LLVM_PREFIX}/include/c++/v1
 BUILD_DEPENDS+= ${LOCALBASE}/llvm${LLVM_VERSION}/include/c++/v1/new:devel/libcxx${LLVM_VERSION}
-LDFLAGS= -L${LLVM_PREFIX}/lib -Wl,-rpath,/usr/lib/gcc80
+LDFLAGS= -L${LLVM_PREFIX}/lib -Wl,-rpath,/usr/lib/${DFLY_BASE_CCVER}
 LIB_DEPENDS= libc++.so.1:devel/libcxx${LLVM_VERSION}
 CONFIGURE_ENV= BINDGEN_CFLAGS="-I${LOCALBASE}/include -stdlib=libc++ -cxx-isystem ${LLVM_PREFIX}/include/c++/v1"
 BINARY_ALIAS= clang=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang clang++=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang++ wasm-ld=${LOCALBASE}/llvm${LLVM_VERSION}/bin/wasm-ld

@@ -1,0 +1,15 @@
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -29,6 +29,12 @@
+ 
+ project(PCL VERSION 1.15.1)
+ string(TOLOWER ${PROJECT_NAME} PROJECT_NAME_LOWER)
++
++# DragonFly: this port links with base ld.bfd 2.34, which rejects the
++# --undefined-version that USES=qt adds to LDFLAGS for lld.
++foreach(_dfly_flags CMAKE_EXE_LINKER_FLAGS CMAKE_SHARED_LINKER_FLAGS CMAKE_MODULE_LINKER_FLAGS)
++  string(REPLACE "-Wl,--undefined-version" "" ${_dfly_flags} "${${_dfly_flags}}")
++endforeach()
+ 
+ if(MSVC AND ("${MSVC_VERSION}" LESS 1910))
+   message(FATAL_ERROR "The compiler versions prior to Visual Studio version 2017 are not supported. Please upgrade to a newer version or another compiler!")

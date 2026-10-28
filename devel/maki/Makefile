@@ -23,4 +23,5 @@ PLIST_FILES=	bin/maki
 
 MAKE_ENV+=	PYO3_PYTHON=${PYTHON_CMD}
 
+CARGO_ENV= OPENSSL_NO_VENDOR=1
 .include <bsd.port.mk>

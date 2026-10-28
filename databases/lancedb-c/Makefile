@@ -803,4 +803,5 @@ do-test:
 	@${ECHO} "==> Run lancedb C++ testcase"
 	@${WRKDIR}/test_lancedb
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

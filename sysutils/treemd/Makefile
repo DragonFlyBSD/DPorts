@@ -27,4 +27,5 @@ post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/QUERY_LANGUAGE.md ${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

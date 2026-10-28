@@ -258,6 +258,11 @@ DEV_WARNING+=	"Please make sure this port uses the system OpenSSL and consider r
 # Make sure that openssl-sys can find the correct version of OpenSSL
 CARGO_ENV+=	OPENSSL_LIB_DIR=${OPENSSLLIB} \
 		OPENSSL_INCLUDE_DIR=${OPENSSLINC}
+# DragonFly has no base OpenSSL, and ports using openssl-sys do not always
+# carry USES=ssl, which leaves OPENSSLLIB/OPENSSLINC empty and makes the
+# probe fall back to /usr/lib. Include ssl.mk, the way the pkg-config
+# block below includes pkgconfig.mk.
+.include "${USESDIR}/ssl.mk"
 .  endif
 
 .  if ${_CARGO_CRATES:Mpkg-config}
@@ -267,6 +272,14 @@ CARGO_ENV+=	OPENSSL_LIB_DIR=${OPENSSLLIB} \
 .  if ${_CARGO_CRATES:Mzstd-sys}
 # Use the system's zstd instead of building the bundled version
 CARGO_ENV+=	ZSTD_SYS_USE_PKG_CONFIG=1
+.  endif
+
+# DragonFly: clang-sys has no fallback search directories for DragonFly and
+# llvm-config is not on PATH, so bindgen fails with "Unable to find libclang".
+# Point it at the USES=llvm prefix, falling back to LLVM_DEFAULT, unless the
+# port already sets LIBCLANG_PATH itself.
+.  if ${_CARGO_CRATES:Mbindgen} && empty(MAKE_ENV:MLIBCLANG_PATH=*) && empty(CARGO_ENV:MLIBCLANG_PATH=*)
+CARGO_ENV+=	LIBCLANG_PATH=${LLVM_PREFIX:U${LOCALBASE}/llvm${LLVM_DEFAULT}}/lib
 .  endif
 
 .  for _index _crate _name _version in ${_CARGO_CRATES}

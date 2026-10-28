@@ -38,4 +38,8 @@ do-install-DOCS-on:
 	cd ${WRKSRC}/docs && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
 
 USES:= ${USES:S/cargo/cargo:extra/}
+dfly-patch:
+	@${REINPLACE_CMD} -e 's|not(target_os = "freebsd")|not(any(target_os = "freebsd", target_os = "dragonfly"))|' \
+		${WRKSRC}/Cargo.toml
+
 .include <bsd.port.mk>

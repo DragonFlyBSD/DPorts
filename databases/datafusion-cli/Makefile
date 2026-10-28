@@ -29,4 +29,5 @@ PLIST_FILES=	bin/datafusion-cli
 USE_GITHUB=	yes
 GH_ACCOUNT=	apache
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

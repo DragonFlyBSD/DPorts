@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKSRC}/gnu.txt
 USES=		dos2unix gmake tar:bzip2
 WRKSRC=		${WRKDIR}/${PORTNAME}
 ALL_TARGET=	#
+CFLAGS+=	-D__FreeBSD__=9
 
 SVN_REV=	142
 

@@ -1,0 +1,69 @@
+--- cargo-crates/libc-0.2.186/src/unix/bsd/freebsdlike/dragonfly/mod.rs.orig
++++ cargo-crates/libc-0.2.186/src/unix/bsd/freebsdlike/dragonfly/mod.rs
+@@ -210,6 +210,11 @@
+         pub sdl_route: [c_ushort; 16],
+     }
+ 
++    pub struct ifreq_buffer {
++        pub length: size_t,
++        pub buffer: *mut c_void,
++    }
++
+     pub struct xucred {
+         pub cr_version: c_uint,
+         pub cr_uid: crate::uid_t,
+@@ -529,6 +534,30 @@
+     }
+ }
+ 
++s_no_extra_traits! {
++    pub struct ifreq {
++        pub ifr_name: [c_char; crate::IFNAMSIZ],
++        pub ifr_ifru: __c_anonymous_ifr_ifru,
++    }
++
++    pub union __c_anonymous_ifr_ifru {
++        pub ifru_addr: crate::sockaddr,
++        pub ifru_dstaddr: crate::sockaddr,
++        pub ifru_broadaddr: crate::sockaddr,
++        pub ifru_buffer: ifreq_buffer,
++        pub ifru_flags: [c_short; 2],
++        pub ifru_index: c_short,
++        pub ifru_metric: c_int,
++        pub ifru_mtu: c_int,
++        pub ifru_phys: c_int,
++        pub ifru_media: c_int,
++        pub ifru_data: *mut c_void,
++        pub ifru_cap: [c_int; 2],
++        pub ifru_pollcpu: c_int,
++        pub ifru_tsolen: c_int,
++    }
++}
++
+ pub const RAND_MAX: c_int = 0x7fff_ffff;
+ pub const PTHREAD_STACK_MIN: size_t = 16384;
+ pub const SIGSTKSZ: size_t = 40960;
+@@ -1041,6 +1070,8 @@
+ pub const MSG_FMASK: c_int = 0xFFFF0000;
+ 
+ // sys/mount.h
++pub const MNT_WAIT: c_int = 0x0001;
++pub const MNT_NOWAIT: c_int = 0x0002;
+ pub const MNT_NODEV: c_int = 0x00000010;
+ pub const MNT_AUTOMOUNTED: c_int = 0x00000020;
+ pub const MNT_TRIM: c_int = 0x01000000;
+@@ -1050,6 +1081,14 @@
+ pub const MNT_USER: c_int = 0x00008000;
+ pub const MNT_IGNORE: c_int = 0x00800000;
+ 
++// sys/netinet/in.h
++pub const IP_RECVTOS: c_int = 68;
++
++// netdb.h
++pub const EAI_NODATA: c_int = 7;
++pub const NI_NAMEREQD: c_int = 0x00000004;
++pub const NI_NUMERICSERV: c_int = 0x00000008;
++
+ // utmpx entry types
+ pub const EMPTY: c_short = 0;
+ pub const RUN_LVL: c_short = 1;

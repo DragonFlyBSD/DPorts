@@ -1,6 +1,6 @@
---- configure.ac.orig	2009-10-31 12:40:04.000000000 +0100
-+++ configure.ac	2013-01-03 03:55:44.385404000 +0100
-@@ -92,16 +92,16 @@
+--- configure.ac.orig
++++ configure.ac
+@@ -94,17 +94,17 @@
  fi
  
  bsd_backend=yes
@@ -14,6 +14,7 @@
 +#include <bus/usb/usb.h>
  #endif
  ]])
+ AC_CHECK_HEADERS([dev/hid/hid.h])
  AC_CHECK_LIB([usbhid],[hid_get_item],, [bsd_backend=no])
  AM_CONDITIONAL(BSD_BACKEND, [test "x$bsd_backend" = xyes])
  if test "x$bsd_backend" = xyes; then

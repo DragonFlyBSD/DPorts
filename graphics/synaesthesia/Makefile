@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		cpe gmake sdl
 USE_CXXSTD=	c++14
 USE_SDL=	sdl
+CFLAGS+=	-D__FreeBSD__=9
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-sdl-prefix=${LOCALBASE}

@@ -16,7 +16,7 @@ BUILD_DEPENDS=	a2x:textproc/asciidoc \
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libfmt.so:devel/libfmt
 
-USES=	cmake compiler:c11 fuse python shebangfix
+USES= cmake compiler:c11 fuse python shebangfix localbase
 USE_RC_SUBR=	mfscgiserv \
 	mfschunkserver \
 	mfsmaster \

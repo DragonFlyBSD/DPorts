@@ -1,6 +1,6 @@
---- folly/portability/Stdlib.h.intermediate	2020-06-28 21:28:04 UTC
+--- folly/portability/Stdlib.h.orig
 +++ folly/portability/Stdlib.h
-@@ -50,7 +50,7 @@ char*** _NSGetEnviron(void);
+@@ -48,7 +48,7 @@
  #define environ (*_NSGetEnviron())
  #endif
  
@@ -9,3 +9,13 @@
  // Needed to resolve linkage
  extern char** environ;
  #endif
+@@ -57,7 +57,8 @@
+ namespace folly {
+ namespace portability {
+ namespace stdlib {
+-#if !defined(__linux__) && !defined(__FreeBSD__) && !defined(__wasm__)
++#if !defined(__linux__) && !defined(__FreeBSD__) && !defined(__DragonFly__) && \
++    !defined(__wasm__)
+ int clearenv();
+ #endif
+ 

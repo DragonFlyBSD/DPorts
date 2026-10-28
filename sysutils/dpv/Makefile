@@ -13,7 +13,7 @@ LIB_DEPENDS=	libcdialog.so:devel/cdialog \
 		libdpv.so:devel/libdpv \
 		libfigpar.so:devel/libfigpar
 
-USES=		uidfix
+USES= uidfix ncurses
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd

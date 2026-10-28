@@ -1,6 +1,6 @@
 PORTNAME=	ladybug
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.21.1
+DISTVERSION=	0.22.0
 CATEGORIES=	databases
 
 MAINTAINER=	mahlon@martini.nu
@@ -31,6 +31,7 @@ EXTRACT_AFTER_ARGS=	--exclude third_party/brotli \
 
 PLIST_SUB=	VERSION=${DISTVERSION}
 
+USE_GCC_VERSION= 13
 post-install:
 	${RM} -r ${STAGEDIR}${PREFIX}/include/cppjieba ${STAGEDIR}${PREFIX}/share/cppjieba
 

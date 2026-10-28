@@ -1,6 +1,18 @@
 --- build/config/compiler/BUILD.gn.orig
 +++ build/config/compiler/BUILD.gn
-@@ -1687,8 +1687,18 @@
+@@ -659,7 +659,10 @@
+     # TODO(crbug.com/376278218): This causes segfault on Linux ARM builds.
+     # It also causes segfault on Linux s390x:
+     # https://github.com/llvm/llvm-project/issues/149511
+-    if (is_linux && use_lld && current_cpu != "arm" && current_cpu != "s390x") {
++    # DragonFly: libpdfium.so is linked from the archive with base ld,
++    # which cannot read CREL and leaves .crel.* sections unapplied.
++    if (is_linux && use_lld && current_cpu != "arm" && current_cpu != "s390x" &&
++        current_os != "freebsd") {
+       cflags += [ "-Wa,--crel,--allow-experimental-crel" ]
+     }
+   }
+@@ -1687,8 +1690,18 @@
    # can be replaced by the C++ symbols. This config ensures the C++ symbols
    # exist and are strong in order to cause that replacement to occur by
    # explicitly linking in clang's compiler-rt library.

@@ -26,4 +26,5 @@ GH_PROJECT=	Topologic
 
 CMAKE_ARGS=	-DOCC_INCLUDE_DIR=${LOCALBASE}/include/OpenCASCADE
 
+USE_CXXSTD= gnu++17
 .include <bsd.port.mk>

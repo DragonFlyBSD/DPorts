@@ -14,7 +14,6 @@ WWW=		https://llvm.org/
 # list of files in the chosen LLVM version which is under the ports
 # collection license.
 LICENSE=	BSD2CLAUSE
-LICENSE_FILE=	${.CURDIR}/../../COPYRIGHT
 
 RUN_DEPENDS=	bugpoint${LLVM_SUFFIX}:devel/llvm${LLVM_SUFFIX}
 

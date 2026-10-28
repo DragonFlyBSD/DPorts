@@ -15,7 +15,7 @@ BUILD_DEPENDS=	gmake:devel/gmake
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libssh2.so:security/libssh2
 
-USES=		cargo perl5
+USES= cargo perl5 ssl
 USE_PERL5=	build
 
 USE_GITHUB=	yes
@@ -30,6 +30,7 @@ OPTIONS_DEFAULT=	DOCS
 
 PORTDOCS=	*
 
+CARGO_ENV= OPENSSL_NO_VENDOR=1
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} *.md docs/man.md ${STAGEDIR}${DOCSDIR}

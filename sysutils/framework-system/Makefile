@@ -23,4 +23,5 @@ CARGO_INSTALL_PATH=	framework_tool
 
 PLIST_FILES=	bin/framework_tool
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

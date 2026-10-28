@@ -75,4 +75,8 @@ post-install:
 	@${MV} ${STAGEDIR}${ETCDIR}/testsuite.kdl ${STAGEDIR}${ETCDIR}/testsuite.kdl.sample
 	@${MKDIR} ${STAGEDIR}/var/db/${PORTNAME}
 
+dfly-patch:
+	${PATCH} -d ${WRKDIR} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/cargo-crates_region-3.0.2_src_os_mod.rs
+	${PATCH} -d ${WRKDIR} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/cargo-crates_region-3.0.2_src_os_dragonfly.rs
+
 .include <bsd.port.mk>

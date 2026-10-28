@@ -149,4 +149,8 @@ post-install:
 # symlink grass8
 	${LN} -sf ${PORTNAME} \
 		${STAGEDIR}${PREFIX}/bin/${PORTNAME}${PKGNAMESUFFIX}
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^	\*-freebsd\*)$$/	*-freebsd*|*-dragonfly*)/' \
+		${WRKSRC}/configure
+
 .include <bsd.port.post.mk>

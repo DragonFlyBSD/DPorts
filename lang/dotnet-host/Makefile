@@ -49,4 +49,5 @@ do-install:
 		${STAGEDIR}${DATADIR}
 	${RLN} ${STAGEDIR}${DATADIR}/dotnet ${STAGEDIR}${PREFIX}/bin/dotnet
 
+IGNORE:= the .NET runtime has no DragonFly port and there is no DragonFly bootstrap SDK
 .include <bsd.port.mk>

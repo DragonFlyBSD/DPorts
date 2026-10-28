@@ -15,26 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		cpe libtool localbase:ldflags perl5 shebangfix tar:xz
 USE_PERL5=	build
 
-CONFIGURE_ARGS=	--disable-httpsig \
-		--disable-unity \
-		--disable-werror \
-		--enable-aws \
-		--enable-dateparse \
-		--enable-dnsshuffle \
-		--enable-headers-api \
-		--enable-hsts \
-		--enable-http-auth \
-		--enable-manual \
-		--enable-mime \
-		--enable-netrc \
-		--enable-openssl-auto-load-config \
-		--enable-progress-meter \
-		--enable-ssls-export \
-		--enable-typecheck \
-		--with-ca-path=/etc/ssl/certs \
-		--with-zsh-functions-dir=${LOCALBASE}/share/zsh/site-functions \
-		--without-ca-bundle \
-		--without-fish-functions-dir
+CONFIGURE_ARGS= --disable-httpsig --disable-unity --disable-werror --enable-aws --enable-dateparse --enable-dnsshuffle --enable-headers-api --enable-hsts --enable-http-auth --enable-manual --enable-mime --enable-netrc --enable-openssl-auto-load-config --enable-progress-meter --enable-ssls-export --enable-typecheck --with-zsh-functions-dir=${LOCALBASE}/share/zsh/site-functions --without-ca-bundle --without-fish-functions-dir --without-ca-path
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE} \
 		ac_cv_func_SSLv2_client_method=no
 GNU_CONFIGURE=	yes
@@ -151,6 +132,8 @@ WOLFSSL_LIB_DEPENDS=	libwolfssl.so:security/wolfssl
 ZSTD_CONFIGURE_WITH=	zstd
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 
+OPENSSL_CONFIGURE_ON= --with-ca-fallback
+PORTREVISION= 1
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 1500050 && ${PORT_OPTIONS:MGSSAPI_BASE}

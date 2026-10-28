@@ -111,6 +111,7 @@ VDB_LIB_DEPENDS=	libopenvdb.so:misc/openvdb
 VDB_CMAKE_BOOL=		USE_OPENVDB
 
 CMAKE_ARGS+= -DUSE_CPP11:BOOL=ON
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-patch:
 	@${REINPLACE_CMD} -e "s,%%LOCALBASE%%,${LOCALBASE}," \
 	${WRKSRC}/src/cmake/modules/FindPtex.cmake

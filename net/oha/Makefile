@@ -17,4 +17,5 @@ GH_ACCOUNT=	hatoo
 
 PLIST_FILES=	bin/oha
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -17,7 +17,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61.0.0:devel/py-setuptools@${P
 		swig>=4.0:devel/swig
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}packaging>=0:devel/py-packaging@${PY_FLAVOR}
 
-USES=		cpe python ssl
+USES= cpe python ssl localbase:ldflags
 USE_PYTHON=	autoplist concurrent pep517
 
 CPE_VENDOR=	m2crypto_project

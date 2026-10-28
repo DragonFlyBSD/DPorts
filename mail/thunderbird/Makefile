@@ -1,5 +1,5 @@
 PORTNAME=	thunderbird
-DISTVERSION=	158.0.1
+DISTVERSION=	159.0
 CATEGORIES=	mail news net-im wayland
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
 		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build1/source
@@ -13,7 +13,7 @@ NOT_FOR_ARCHS=		i386
 NOT_FOR_ARCHS_REASON=	fails to build: rust needs more address space than platform can provide
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
-		nss>=3.130:security/nss \
+		nss>=3.131:security/nss \
 		libevent>=2.1.8:devel/libevent \
 		png>=1.6.45:graphics/png \
 		dav1d>=1.0.0:multimedia/dav1d \
@@ -26,7 +26,7 @@ BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
 		${LOCALBASE}/share/wasi-sysroot/lib/wasm32-wasip1/libc++abi.a:devel/wasi-libcxx${LLVM_VERSION} \
 		${LOCALBASE}/share/wasi-sysroot/lib/wasm32-wasip1/libc.a:devel/wasi-libc@${LLVM_VERSION} \
 		wasi-compiler-rt${LLVM_VERSION}>0:devel/wasi-compiler-rt${LLVM_VERSION}
-LIB_DEPENDS=	libjson-c.so:devel/json-c
+LIB_DEPENDS= libjson-c.so:devel/json-c libc++.so.1:devel/libcxx${LLVM_VERSION}
 
 USE_GECKO=	gecko
 CONFLICTS_INSTALL=	thunderbird-esr
@@ -52,14 +52,17 @@ SYSTEM_PREFS=	${FAKEDIR}/lib/${PORTNAME}/defaults/pref/${PORTNAME}.js
 
 OPTIONS_DEFAULT=CANBERRA
 
-LDFLAGS= -R${PREFIX}/lib/thunderbird
-MAKE_ENV= AR=/usr/bin/ar LD=/usr/bin/ld
-MOZ_OPTIONS+= --host=${ARCH}-dports-${OPSYS:tl}${OSREL}
+LDFLAGS= -R${PREFIX}/lib/thunderbird -L${LLVM_PREFIX}/lib -Wl,-rpath,/usr/lib/${DFLY_BASE_CCVER}
 MOZ_OPTIONS+= --disable-webrtc
-MOZ_OPTIONS+= --with-clang-path=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang
-MOZ_OPTIONS+= --with-libclang-path=${LOCALBASE}/llvm${LLVM_VERSION}/lib
-CXXFLAGS= -Wno-multistatement-macros -Wno-class-memaccess
+MOZ_OPTIONS+= --without-wasm-sandboxed-libraries
+MOZ_OPTIONS+= --with-libclang-path=${LLVM_PREFIX}/lib
+CXXFLAGS= -Wno-multistatement-macros -Wno-class-memaccess -stdlib=libc++ -cxx-isystem ${LLVM_PREFIX}/include/c++/v1
+BUILD_DEPENDS+= ${LOCALBASE}/llvm${LLVM_VERSION}/include/c++/v1/new:devel/libcxx${LLVM_VERSION}
+CONFIGURE_ENV= BINDGEN_CFLAGS="-I${LOCALBASE}/include -stdlib=libc++ -cxx-isystem ${LLVM_PREFIX}/include/c++/v1"
 BINARY_ALIAS= clang=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang clang++=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang++ wasm-ld=${LOCALBASE}/llvm${LLVM_VERSION}/bin/wasm-ld
+CC= ${LLVM_PREFIX}/bin/clang
+CXX= ${LLVM_PREFIX}/bin/clang++
+CPP= ${LLVM_PREFIX}/bin/clang-cpp
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 
 post-extract:
@@ -79,13 +82,15 @@ post-install:
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO:NPROFILE}
 OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NLTO}
+MOZ_OPTIONS:= ${MOZ_OPTIONS:N--with-wasi-sysroot*}
 dfly-patch:
 	# disable SCTP
 	${REINPLACE_CMD} -e 's|MOZ_SCTP|MOZ_DISABLE_SCTP|' \
 		${WRKSRC}/netwerk/moz.build
-	(cd ${WRKSRC}/gfx/angle/checkout/src/compiler/translator && \
-		${REINPLACE_CMD} -e 's|<math.h>|<cmath>|' \
-		InfoSink.h IntermNode.cpp)
+	# ANGLE moved: gfx/angle/checkout/src/... -> third_party/angle/src/...
+	${REINPLACE_CMD} -e 's|<math.h>|<cmath>|' \
+		${WRKSRC}/third_party/angle/src/compiler/translator/InfoSink.h \
+		${WRKSRC}/third_party/angle/src/compiler/translator/IntermNode.cpp
 	${REINPLACE_CMD} -e 's@_XOPEN_SOURCE@&___@g' \
 		${WRKSRC}/media/libcubeb/src/cubeb_alsa.c
 	${REINPLACE_CMD} -e 's@_POSIX_SOURCE@&___@g' \

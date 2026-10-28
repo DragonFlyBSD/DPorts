@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
-USES=		cargo
+USES= cargo ssl
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	stacked-git
@@ -199,8 +199,6 @@ CARGO_CRATES=	adler2-2.0.1 \
 		zlib-rs-0.6.4 \
 		zmij-1.0.21
 
-OPENSSLINC=	/usr/include
-OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/stg
 

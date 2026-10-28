@@ -1,0 +1,11 @@
+--- cargo-crates/atomic-wait-1.1.0/Cargo.toml.orig
++++ cargo-crates/atomic-wait-1.1.0/Cargo.toml
+@@ -27,7 +27,7 @@
+ license = "BSD-2-Clause"
+ repository = "https://github.com/m-ou-se/atomic-wait"
+ 
+-[target."cfg(any(target_os = \"linux\", target_os = \"android\", target_os = \"freebsd\"))".dependencies.libc]
++[target."cfg(any(target_os = \"linux\", target_os = \"android\", target_os = \"freebsd\", target_os = \"dragonfly\"))".dependencies.libc]
+ version = "0.2"
+ 
+ [target."cfg(windows)".dependencies.windows-sys]

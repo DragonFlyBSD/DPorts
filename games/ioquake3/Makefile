@@ -123,6 +123,7 @@ DPMSG= ${WRKDIR}/dports-message
 
 .include <bsd.port.options.mk>
 DPMSG=	${WRKDIR}/dports-message
+MAKE_ARGS+=	COMPILE_PLATFORM=freebsd
 
 .if !defined(DESKTOP_ENTRIES)
 . if ${IOQ3:MCLIENT}

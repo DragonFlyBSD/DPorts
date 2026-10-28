@@ -16,10 +16,9 @@ PORTSCOUT=	skipv:0.2
 USES=		gnustep
 USE_GNUSTEP=	back base build gui
 
-CPPFLAGS+=	-fcommon
+CPPFLAGS+= -fcommon -Wno-error=implicit-function-declaration
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/GNUstep/System/Applications/Jishyo.app/Jishyo
 
-CFLAGS:= ${CFLAGS} -Wno-error=implicit-function-declaration
 .include <bsd.port.mk>

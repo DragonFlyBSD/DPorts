@@ -27,7 +27,7 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libexpat.so:textproc/expat2 \
 		libfreetype.so:print/freetype2
 
-USES=		bison:build cmake:testing compiler:c++11-lang eigen:3 gnome llvm:23 pkgconfig python # llvm:23 is needed to avoid compiler crash on 16 with the base compiler, just use it for rdkit for now
+USES=		bison:build cmake:testing compiler:c++11-lang eigen:3 gnome pkgconfig python # llvm:23 is needed to avoid compiler crash on 16 with the base compiler, just use it for rdkit for now
 USE_GNOME=	cairo
 USE_LDCONFIG=	yes
 

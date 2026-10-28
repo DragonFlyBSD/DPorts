@@ -18,4 +18,5 @@ GH_ACCOUNT=	asciinema
 
 PLIST_FILES=	bin/agg
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

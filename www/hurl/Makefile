@@ -26,6 +26,7 @@ PLIST_FILES=	bin/hurl \
 		share/man/man1/hurl.1.gz \
 		share/man/man1/hurlfmt.1.gz
 
+CARGO_ENV= LIBCLANG_PATH=${LLVM_PREFIX}/lib
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/manual/*.1 ${STAGEDIR}${PREFIX}/share/man/man1/
 

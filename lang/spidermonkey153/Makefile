@@ -52,10 +52,11 @@ CONFIGURE_ENV=	HOST_CC=${CC} \
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 PLIST_SUB=	SP_VER=${SP_VER}
 
+CONFIGURE_ARGS+= --enable-linker=bfd
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == x86_64
-CONFIGURE_TARGET=	x86_64-portbld-freebsd${OSREL}
+CONFIGURE_TARGET= x86_64-portbld-dragonfly${OSREL}
 .endif
 
 .if ${CHOSEN_COMPILER_TYPE} == gcc
@@ -68,6 +69,7 @@ USE_GCC=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/js/moz.configure
 	@${REINPLACE_CMD} -e 's|icu-i18n|icu-uc icu-i18n|g' ${WRKSRC}/js/moz.configure
+	@${REINPLACE_CMD} -e 's|^Cflags: |Cflags: -DXP_UNIX |' ${WRKSRC}/js/src/build/js.pc.in
 
 post-install:
 	${RM} ${STAGEDIR}${PREFIX}/lib/libjs_static.ajs

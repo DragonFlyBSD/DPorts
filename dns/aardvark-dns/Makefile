@@ -20,7 +20,7 @@ PLIST_FILES=	bin/aardvark-dns
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500050
+.if (${OPSYS} == FreeBSD && ${OSVERSION} < 1500050) || ${OPSYS} == DragonFly
 LIB_DEPENDS=	libinotify.so:devel/libinotify
 USES+=		localbase:ldflags
 LDFLAGS+=	-linotify

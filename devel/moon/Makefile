@@ -26,4 +26,5 @@ MAKE_ENV+=	LIBCLANG_PATH=${LLVM_PREFIX}/lib \
 PLIST_FILES=	bin/moon \
 		bin/moonx
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

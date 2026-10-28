@@ -472,4 +472,5 @@ do-install:
 		${WRKDIR}/target/release/dist \
 		${STAGEDIR}${PREFIX}/bin
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

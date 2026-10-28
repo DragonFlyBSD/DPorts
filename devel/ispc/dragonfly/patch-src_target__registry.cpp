@@ -1,6 +1,6 @@
---- src/target_registry.cpp.orig	2020-12-19 00:48:42 UTC
+--- src/target_registry.cpp.orig	2026-10-26 01:17:16 UTC
 +++ src/target_registry.cpp
-@@ -161,6 +161,7 @@ const BitcodeLib *TargetLibRegistry::get
+@@ -228,6 +228,7 @@ static const BitcodeLib *lGetTargetLib(const std::map<uint32_t, const BitcodeLib
      case TargetOS::linux:
      case TargetOS::custom_linux:
      case TargetOS::freebsd:

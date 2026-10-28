@@ -51,4 +51,5 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_MAN} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

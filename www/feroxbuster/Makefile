@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_i386=	compilation fails: error: undefined symbol: __atomic_is_lock_free
 
-USES=		cargo gmake perl5
+USES= cargo gmake perl5 ssl
 USE_PERL5=	build
 
 USE_GITHUB=	yes
@@ -444,6 +444,7 @@ OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
 
+CARGO_ENV= OPENSSL_NO_VENDOR=1
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc

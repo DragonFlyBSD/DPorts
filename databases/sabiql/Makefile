@@ -35,4 +35,5 @@ OPTIONS_DEFAULT=	ER_DIAGRAMS
 ER_DIAGRAMS_DESC=		Enable support for E-R diagrams
 ER_DIAGRAMS_RUN_DEPENDS=	dot:graphics/graphviz
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

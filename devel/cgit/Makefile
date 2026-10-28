@@ -49,6 +49,7 @@ LUAJIT_MAKE_ARGS=	LUA_PKGCONFIG=luajit
 LUA_USES=		lua pkgconfig
 LUA_MAKE_ARGS=		LUA_PKGCONFIG=lua-${LUA_VER}
 
+MAKE_ARGS+= OPENSSLDIR=${OPENSSLBASE}
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MLUA*}

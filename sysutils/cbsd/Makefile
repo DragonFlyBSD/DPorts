@@ -17,7 +17,7 @@ RUN_DEPENDS=	curl:ftp/curl \
 		jq:textproc/jq \
 		rsync:net/rsync
 
-USES=		autoreconf:build compiler:c++11-lang gmake pkgconfig:both sqlite sudo
+USES= autoreconf:build compiler:c++11-lang gmake pkgconfig:both sqlite sudo ncurses
 USE_GITHUB=	yes
 USE_RC_SUBR=	cbsdd cbsdrsyncd cbsd-statsd-bhyve cbsd-statsd-hoster \
 		cbsd-statsd-jail

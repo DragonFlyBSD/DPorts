@@ -1,40 +1,23 @@
---- cmake/GenerateBuiltins.cmake.orig	2023-08-18 16:33:38 UTC
+--- cmake/GenerateBuiltins.cmake.orig	2026-10-26 01:17:16 UTC
 +++ cmake/GenerateBuiltins.cmake
-@@ -190,6 +190,9 @@ function(builtin_to_cpp bit os_name arch
-     elseif (${os_name} STREQUAL "freebsd")
-         set(triple ${target_arch}-unknown-freebsd)
+@@ -224,6 +224,9 @@ function (get_target_flags os arch out)
+     elseif (${os} STREQUAL "freebsd")
+         set(triple ${arch}-unknown-freebsd)
          set(fpic -fPIC)
-+    elseif (${os_name} STREQUAL "dragonfly")
-+        set(triple ${target_arch}-unknown-dragonfly)
++    elseif (${os} STREQUAL "dragonfly")
++        set(triple ${arch}-unknown-dragonfly)
 +        set(fpic -fPIC)
-     elseif (${os_name} STREQUAL "macos")
-         set(triple ${target_arch}-apple-macosx)
-     elseif (${os_name} STREQUAL "android")
-@@ -222,7 +225,7 @@ function(builtin_to_cpp bit os_name arch
-         if (${os_name} STREQUAL "ios")
-             # -isystem/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/
-             set(includePath -isystem${ISPC_IOS_SDK_PATH}/usr/include)
--        elseif (${os_name} STREQUAL "linux" OR ${os_name} STREQUAL "android" OR ${os_name} STREQUAL "freebsd")
-+        elseif (${os_name} STREQUAL "linux" OR ${os_name} STREQUAL "android" OR ${os_name} STREQUAL "freebsd" OR ${os_name} STREQUAL "dragonfly")
-             if (${target_arch} STREQUAL "armv7")
-                 # -isystem/Users/Shared/android-ndk-r20/sysroot/usr/include -isystem/Users/Shared/android-ndk-r20/sysroot/usr/include/arm-linux-androideabi
-                 set(includePath -isystem${ISPC_ANDROID_NDK_PATH}/sysroot/usr/include -isystem${ISPC_ANDROID_NDK_PATH}/sysroot/usr/include/arm-linux-androideabi)
-@@ -392,6 +395,9 @@ function (generate_common_builtins resul
-     if (ISPC_FREEBSD_TARGET)
-         list (APPEND supported_oses "freebsd")
+     elseif (${os} STREQUAL "macos")
+         set(triple ${arch}-apple-macosx)
+     elseif (${os} STREQUAL "android")
+@@ -469,6 +472,10 @@ function (generate_common_builtins)
+         builtin_to_cpp(64 android x86)
      endif()
-+    if (ISPC_DRAGONFLY_TARGET)
-+        list (APPEND supported_oses "dragonfly")
-+    endif()
-     if (ISPC_MACOS_TARGET)
-         list (APPEND supported_oses "macos")
-     endif()
-@@ -407,7 +413,7 @@ function (generate_common_builtins resul
  
-     message (STATUS "ISPC will be built with support of ${supported_oses} for ${supported_archs}")
-     foreach (bit 32 64)
--        foreach (os_name "windows" "linux" "freebsd" "macos" "android" "ios" "ps4" "web")
-+        foreach (os_name "windows" "linux" "freebsd" "dragonfly" "macos" "android" "ios" "ps4" "web")
-             foreach (arch "x86" "arm" "wasm")
-                 builtin_to_cpp(${bit} ${os_name} ${arch} "${supported_archs}" "${supported_oses}" res${bit}${os_name}${arch})
-                 list(APPEND tmpList ${res${bit}${os_name}${arch}} )
++    if (ISPC_DRAGONFLY_TARGET AND X86_ENABLED)
++        builtin_to_cpp(64 dragonfly x86)
++    endif()
++
+     if (ISPC_FREEBSD_TARGET AND ARM_ENABLED)
+         builtin_to_cpp(32 freebsd arm)
+         builtin_to_cpp(64 freebsd arm)

@@ -35,4 +35,5 @@ post-install:
 		${STAGEDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/
 .endfor
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

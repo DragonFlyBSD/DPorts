@@ -1,0 +1,11 @@
+--- hal/moz.build.intermediate	2026-09-07 11:55:16 UTC
++++ hal/moz.build
+@@ -19,7 +19,7 @@ EXPORTS.mozilla += [
+     "HalWakeLockInformation.h",
+ ]
+ 
+-if CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "FreeBSD":
++if CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] in ("DragonFly", "FreeBSD"):
+     EXPORTS.mozilla += [
+         "linux/UdevLib.h",
+     ]

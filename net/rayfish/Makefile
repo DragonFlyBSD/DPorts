@@ -23,4 +23,5 @@ USE_RC_SUBR=	rayfish
 
 PLIST_FILES=	bin/ray
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

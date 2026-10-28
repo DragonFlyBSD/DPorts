@@ -196,6 +196,7 @@ VALSORT_CONFIGURE_ENABLE=	valsort=mod
 
 CONFIGURE_SED=	-e 's,uuid/uuid.h,xxuuid/uuid.h,g'
 
+OPTIONS_EXCLUDE_DragonFly= SMBPWD
 .include <bsd.port.options.mk>
 
 .if defined(CLIENT_ONLY)

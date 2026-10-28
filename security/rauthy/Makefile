@@ -49,4 +49,5 @@ post-install:
 		${STAGEDIR}${EXAMPLESDIR}/config.toml
 
 .include "${.CURDIR}/Makefile.crates"
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

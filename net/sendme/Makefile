@@ -19,4 +19,5 @@ GH_ACCOUNT=	n0-computer
 
 PLIST_FILES=	bin/sendme
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

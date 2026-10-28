@@ -1,0 +1,11 @@
+--- Makefile.orig	2026-10-26 07:03:57 UTC
++++ Makefile
+@@ -8,7 +8,7 @@ TST_DIR = tests/unit_tests
+ BLD_DIR = build
+ TGT_DIR = .
+ 
+-ifeq ($(shell uname -s),FreeBSD)
++ifneq (,$(filter FreeBSD DragonFly,$(shell uname -s)))
+ 	INCLUDES = -I/usr/local/include/freetype2/
+ 	INCLUDES += -I/usr/local/include
+ 	LDLIBS = -lfreetype -lfontconfig -lutil -L/usr/local/lib -lm

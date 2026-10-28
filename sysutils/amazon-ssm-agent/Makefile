@@ -54,4 +54,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/amazon-ssm-agent.json.template ${STAGEDIR}${PREFIX}/etc/amazon/ssm
 	${INSTALL_DATA} ${WRKSRC}/seelog_unix.xml ${STAGEDIR}${PREFIX}/etc/amazon/ssm/seelog_unix.xml.template
 
+dfly-patch:
+	${FIND} ${WRKSRC}/agent ${WRKSRC}/common ${WRKSRC}/core \
+		${WRKSRC}/internal -name '*.go' \
+		-exec ${GREP} -l '^//go:build.*freebsd' {} + | \
+		${XARGS} ${REINPLACE_CMD} -e '/^\/\/go:build/{' \
+		-e '/dragonfly/!s/freebsd/(freebsd || dragonfly)/' -e '}'
+
 .include <bsd.port.mk>

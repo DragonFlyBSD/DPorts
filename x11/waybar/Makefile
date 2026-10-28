@@ -11,7 +11,7 @@ WWW=		https://github.com/Alexays/Waybar
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS= wayland-protocols>0:graphics/wayland-protocols cxxfs_gcc8>0:misc/cxxfs_gcc8
+BUILD_DEPENDS=	wayland-protocols>0:graphics/wayland-protocols
 LIB_DEPENDS=	libdate-tz.so:devel/date \
 		libfmt.so:devel/libfmt \
 		libgps.so:astro/gpsd@nox11 \
@@ -158,9 +158,7 @@ WIREPLUMBER_LIB_DEPENDS=	libwireplumber-0.5.so:multimedia/wireplumber
 WIREPLUMBER_MESON_ENABLED=	wireplumber
 WIREPLUMBER_VARS=		MANPAGES_PLIST_FILES+=share/man/man5/${PORTNAME}-wireplumber.5.gz
 
-CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
-LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
-CFLAGS= -DSIGRTMIN=50 -DSIGRTMAX=54
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-patch:
 # Extract (snapshot) version from the port instead of meson.build
 	@${REINPLACE_CMD} -i .nogit -e 's/git.found()/false/' \

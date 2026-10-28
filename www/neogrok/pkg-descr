@@ -1,0 +1,8 @@
+Neogrok is a web frontend for zoekt, the trigram-based code search
+engine. It offers live search as you type, syntax-highlighted results
+and built-in documentation of the zoekt query language. Its only
+backend is the JSON API of zoekt-webserver (started with -rpc).
+
+It can also replace an existing OpenGrok site: deployed at the same
+address, it redirects OpenGrok URLs to their neogrok equivalents and
+translates OpenGrok's Lucene queries into zoekt queries.

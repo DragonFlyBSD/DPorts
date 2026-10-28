@@ -29,4 +29,5 @@ _SCHEMA_DEPENDS=	\
 	${LOCALBASE}/share/rime-data/luna_pinyin.schema.yaml:chinese/rime-luna-pinyin	\
 	${LOCALBASE}/share/rime-data/stroke.schema.yaml:chinese/rime-stroke
 
+USES+= dfly-libcxx
 .include <bsd.port.mk>

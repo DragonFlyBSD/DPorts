@@ -47,9 +47,7 @@ SHEBANG_GLOB=	*.sh *.py
 
 #MAKE_ARGS=	TOPDIR=${WRKSRC}
 #BINARY_ALIAS=	make=gmake cpp=/usr/local/bin/cpp${GCC_DEFAULT}
-FFLAGS+=	${MPI_CFLAGS}
-LDFLAGS+=	${LOCALBASE}/lib/gcc${GCC_DEFAULT}/libgfortran.so -lm \
-		${MPI_LIBS}
+LDFLAGS+=	${LOCALBASE}/lib/gcc${GCC_DEFAULT}/libgfortran.so -lm
 
 BINARY_ALIAS=	git=false wget=false curl=false
 
@@ -62,6 +60,7 @@ MPICH_USES=		mpi:mpich
 OPENMPI_USES=		mpi:mpich # SEGV with openmpi4
 
 CONFIGURE_ARGS= --disable-parallel FC=gfortran${_GCC_VER}
+CMAKE_OFF= QE_ENABLE_MPI
 .include <bsd.port.pre.mk>
 
 .  if ${GCC_DEFAULT} >= 10

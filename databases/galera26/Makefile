@@ -43,7 +43,6 @@ PLIST_FILES=	bin/garbd \
 		lib/libgalera.so \
 		lib/libgalera_smm.so
 
-USE_CLANG_FALLBACK= default
 MAKE_ARGS= strict_build_flags=0
 post-install:
 	${RLN} ${STAGEDIR}/${PREFIX}/lib/libgalera_smm.so ${STAGEDIR}/${PREFIX}/lib/libgalera.so

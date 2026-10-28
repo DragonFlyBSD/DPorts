@@ -1,10 +1,10 @@
---- core/SoundMixer.cpp.orig	2019-06-25 23:49:22 UTC
+--- Core/SoundMixer.cpp.orig
 +++ Core/SoundMixer.cpp
-@@ -8,6 +8,7 @@
- #include "WaveRecorder.h"
+@@ -9,6 +9,7 @@
  #include "OggMixer.h"
  #include "Console.h"
-+#include <cmath>	// for std::ceil()
+ #include "BaseMapper.h"
++#include <cmath> // for std::ceil()
  
  SoundMixer::SoundMixer(shared_ptr<Console> console)
  {

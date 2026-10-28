@@ -38,4 +38,7 @@ post-install:
 	@${MV} ${STAGEDIR}${PREFIX}/lib/libLASi.so.2.0.0 \
 		${STAGEDIR}${PREFIX}/lib/libLASi.so.2
 
+dfly-patch:
+	${TOUCH} ${WRKSRC}/Doxyfile.user ${WRKSRC}/Doxyfile.developer
+
 .include <bsd.port.mk>

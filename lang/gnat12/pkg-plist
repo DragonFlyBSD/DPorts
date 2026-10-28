@@ -4319,9 +4319,6 @@
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adainclude/s-memory.ads
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adainclude/s-mmap.adb
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adainclude/s-mmap.ads
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adainclude/s-mmauni.ads
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adainclude/s-mmosin.adb
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adainclude/s-mmosin.ads
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adainclude/s-mudido.adb
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adainclude/s-mudido.ads
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adainclude/s-multip.adb
@@ -5339,7 +5336,6 @@
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-dmotpr.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-dourea.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-dsaser.ali
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-dwalin.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-elaall.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-excdeb.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-except.ali
@@ -5434,12 +5430,8 @@
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-mastop.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-memcop.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-memory.ali
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-mmap.ali
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-mmauni.ali
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-mmosin.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-mudido.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-multip.ali
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-objrea.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-os_lib.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-oscons.ali
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/adalib/s-osinte.ali
@@ -5697,13 +5689,7 @@
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/crtendS.o
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include-fixed/README
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include-fixed/limits.h
-%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include-fixed/stddef.h
-%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include-fixed/stdio.h
-%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include-fixed/stdlib.h
-%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include-fixed/sys/types.h
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include-fixed/syslimits.h
-%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include-fixed/unistd.h
-%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include-fixed/wchar.h
 %%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/acc_prof.h
 %%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/adxintrin.h
 %%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/ammintrin.h
@@ -5784,11 +5770,6 @@
 %%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/prfchwintrin.h
 %%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/rdseedintrin.h
 %%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/rtmintrin.h
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/sanitizer/asan_interface.h
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/sanitizer/common_interface_defs.h
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/sanitizer/hwasan_interface.h
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/sanitizer/lsan_interface.h
-%%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/sanitizer/tsan_interface.h
 %%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/serializeintrin.h
 %%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/sgxintrin.h
 %%X86%%%%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/include/shaintrin.h
@@ -6297,11 +6278,6 @@
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/plugin/libcp1plugin.so
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/plugin/libcp1plugin.so.0
 %%GNAT%%/lib/gcc/%%CONFTRGT%%/%%VER%%/plugin/libcp1plugin.so.0.0.0
-%%X86%%%%GNAT%%/lib/libasan.a
-%%X86%%%%GNAT%%/lib/libasan.so
-%%X86%%%%GNAT%%/lib/libasan.so.8
-%%X86%%%%GNAT%%/lib/libasan.so.8.0.0
-%%X86%%%%GNAT%%/lib/libasan_preinit.o
 %%GNAT%%/lib/libatomic.a
 %%GNAT%%/lib/libatomic.so
 %%GNAT%%/lib/libatomic.so.1
@@ -6321,7 +6297,6 @@
 %%GNAT%%/lib/libitm.so.1
 %%GNAT%%/lib/libitm.so.1.0.0
 %%GNAT%%/lib/libitm.spec
-%%X86%%%%GNAT%%/lib/libsanitizer.spec
 %%GNAT%%/lib/libstdc++.a
 %%GNAT%%/lib/libstdc++.so
 %%GNAT%%/lib/libstdc++.so.6
@@ -6329,10 +6304,6 @@
 %%GNAT%%/lib/libstdc++.so.6.0.30-gdb.py
 %%GNAT%%/lib/libstdc++fs.a
 %%GNAT%%/lib/libsupc++.a
-%%X86%%%%GNAT%%/lib/libubsan.a
-%%X86%%%%GNAT%%/lib/libubsan.so
-%%X86%%%%GNAT%%/lib/libubsan.so.1
-%%X86%%%%GNAT%%/lib/libubsan.so.1.0.0
 %%LIB32%%%%GNAT%%/lib32/libasan.a
 %%LIB32%%%%GNAT%%/lib32/libasan.so
 %%LIB32%%%%GNAT%%/lib32/libasan.so.8

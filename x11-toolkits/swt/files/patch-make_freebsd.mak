@@ -44,7 +44,7 @@
  		$(SWT_DEBUG) \
  		$(SWT_WEBKIT_DEBUG) \
 -		-DLINUX -DGTK \
-+		-DLINUX -DGTK -Wno-error=deprecated-non-prototype \
++		-DLINUX -DGTK \
  		-I$(JAVA_HOME)/include \
 -		-I$(JAVA_HOME)/include/linux \
 +		-I$(JAVA_HOME)/include/freebsd \

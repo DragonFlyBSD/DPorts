@@ -1,11 +1,11 @@
---- src/fts-backend-xapian-functions.cpp.orig	2022-03-05 15:49:44 UTC
+--- src/fts-backend-xapian-functions.cpp.orig
 +++ src/fts-backend-xapian-functions.cpp
-@@ -517,7 +517,7 @@ static long fts_backend_xapian_get_free_
- 
- 	if((l2>0) && ((limit>l2) || (limit<1))) limit=l2;
- 
--#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)	
-+#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)	
- 	uint32_t m;
- 	size_t len = sizeof(m);
- 	sysctlbyname("vm.stats.vm.v_free_count", &m, &len, NULL, 0);
+@@ -19,7 +19,7 @@
+ 	if(l<1)
+ 	{
+ 		if(verbose>1) syslog(LOG_WARNING,"FTS Xapian: Memory limit not available from getrlimit (probably vsz_limit not set");
+-#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
+ 		u_int page_size;
+ 		size_t uint_size = sizeof(page_size);
+ 		sysctlbyname("vm.stats.vm.v_page_size", &page_size, &uint_size, NULL, 0);

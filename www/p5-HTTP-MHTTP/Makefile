@@ -17,6 +17,7 @@ USE_PERL5=	configure patch
 
 CONFIGURE_ARGS=	--default
 CONFIGURE_ENV=	GOTSSL=yes
+CFLAGS+=	-I${OPENSSLINC}
 
 MAKE_JOBS_UNSAFE=	yes
 

@@ -1,7 +1,7 @@
---- stellarsolver/stellarsolver.cpp.intermediate	2021-12-24 07:20:43.000000000 +0000
+--- stellarsolver/stellarsolver.cpp.orig
 +++ stellarsolver/stellarsolver.cpp
-@@ -7,7 +7,7 @@
- */
+@@ -9,7 +9,7 @@
+ #include <QSettings>
  #if defined(__APPLE__)
  #include <sys/sysctl.h>
 -#elif defined(__FreeBSD__)
@@ -9,16 +9,25 @@
  #include <sys/types.h>
  #include <sys/sysctl.h>
  #elif defined(_WIN32)
-@@ -833,8 +833,12 @@ bool StellarSolver::getAvailableRAM(doub
+@@ -1023,7 +1023,7 @@
+     addPathToListIfExists(&indexFilePaths, QDir::homePath() + "/Library/Application Support/Astrometry");
+     //Homebrew location
+     addPathToListIfExists(&indexFilePaths, "/usr/local/share/astrometry");
+-#elif defined(Q_OS_FREEBSD)
++#elif defined(Q_OS_FREEBSD) || defined(Q_OS_DRAGONFLY)
+     //FreeBSD Default Location
+     addPathToListIfExists(&indexFilePaths, "/usr/local/share/astrometry/");
+     //FreeBSD Local KStars Location
+@@ -1052,9 +1052,11 @@
+ //But from what I read, getting the Available RAM is inconsistent and buggy on many systems.
+ bool StellarSolver::getAvailableRAM(double &availableRAM, double &totalRAM)
  {
- #if defined(Q_OS_OSX) || defined(Q_OS_FREEBSD)
+-#if defined(Q_OS_MACOS) || defined(Q_OS_FREEBSD)
++#if defined(Q_OS_MACOS) || defined(Q_OS_FREEBSD) || defined(Q_OS_DRAGONFLY)
  #if defined(Q_OS_FREEBSD)
-+#ifdef HW_REALMEM
      int mib [] = { CTL_HW, HW_REALMEM };
- #else
++#elif defined(Q_OS_DRAGONFLY)
 +    int mib [] = { CTL_HW, HW_PHYSMEM };
-+#endif
-+#else
+ #else
      int mib [] = { CTL_HW, HW_MEMSIZE };
  #endif
-     size_t length;

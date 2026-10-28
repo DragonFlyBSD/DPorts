@@ -9,7 +9,7 @@
          || (defined(__STDC_IEC_60559_BFP__)         \
              && __STDC_IEC_60559_BFP__ >= 202311L)   \
 -        || defined(__APPLE__) || defined(__MINGW32__) || defined(_MSC_VER)
-+        || defined(__APPLE__) || defined(__MINGW32__) || defined(_MSC_VER) || defined(__FreeBSD__)
++        || defined(__APPLE__) || defined(__MINGW32__) || defined(_MSC_VER) || defined(__FreeBSD__) || defined(__DragonFly__)
  #    define ZL_HAS_IEEE_754 1
  #else
  #    define ZL_HAS_IEEE_754 0

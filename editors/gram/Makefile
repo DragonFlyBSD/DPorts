@@ -50,4 +50,5 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 	@${INSTALL_DATA} ${WRKSRC}/crates/gram/resources/app.liten.Gram.svg ${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

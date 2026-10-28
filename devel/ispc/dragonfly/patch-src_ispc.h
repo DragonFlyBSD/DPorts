@@ -1,6 +1,6 @@
---- src/ispc.h.orig	2020-12-19 00:48:42 UTC
+--- src/ispc.h.orig	2026-10-26 01:17:16 UTC
 +++ src/ispc.h
-@@ -51,6 +51,8 @@
+@@ -21,6 +21,8 @@
  #define ISPC_HOST_IS_LINUX
  #elif defined(__FreeBSD__)
  #define ISPC_HOST_IS_FREEBSD

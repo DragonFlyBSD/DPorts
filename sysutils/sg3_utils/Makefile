@@ -12,6 +12,8 @@ COMMENT=	Set of utilities that send SCSI commands to devices
 USES=		gmake libtool shebangfix tar:tgz
 SHEBANG_FILES=	scripts/scsi_*
 
+GNU_CONFIGURE_MANPREFIX= ${PREFIX}
+MANDIRS= ${PREFIX}/man
 post-install:
 		${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libsgutils2.so.2
 
