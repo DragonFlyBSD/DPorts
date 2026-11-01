@@ -1,5 +1,5 @@
 PORTNAME=	clpeak
-DISTVERSION=	3.0.1
+DISTVERSION=	3.0.4
 CATEGORIES=	benchmarks
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -27,6 +27,8 @@ VULKAN_BUILD_DEPENDS=	vulkan-headers>0:graphics/vulkan-headers \
 VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
 VULKAN_CMAKE_BOOL=	CLPEAK_ENABLE_VULKAN
 
+USE_BINUTILS= yes
+CXXFLAGS_x86_64= -B${LOCALBASE}/bin
 post-patch:
 	@${REINPLACE_CMD} '/install.*LICENSE/d' ${WRKSRC}/CMakeLists.txt
 

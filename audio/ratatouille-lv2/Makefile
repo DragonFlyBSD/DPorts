@@ -25,4 +25,5 @@ WRKSRC=		${WRKDIR}/Ratatouille.lv2-v${DISTVERSION}
 
 MAKEFILE=	makefile
 
+MAKE_ARGS= TARGET=Linux
 .include <bsd.port.mk>

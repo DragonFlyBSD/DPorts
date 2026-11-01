@@ -1,0 +1,18 @@
+--- meson.build.orig
++++ meson.build
+@@ -164,7 +164,6 @@
+ global_link_args = []
+ test_link_args = [
+   '-Wl,-z,relro',
+-  '-Wl,-z,now',
+   '-Wl,-z,noexecstack',
+ ]
+ if not get_option('buildtype').startswith('debug')
+@@ -174,7 +173,6 @@
+   ]
+   test_link_args += [
+     '-Wl,-Bsymbolic',
+-    '-fno-plt',
+   ]
+ endif
+ foreach link_arg: test_link_args

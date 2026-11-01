@@ -33,4 +33,5 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/moonshine.toml.sample \
 		${STAGEDIR}${PREFIX}/etc/moonshine/moonshine.toml.sample
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

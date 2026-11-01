@@ -36,6 +36,7 @@ USES+=			shebangfix python:env
 python_OLD_CMD+=	"/bin/env python"
 SHEBANG_REGEX=		./tools/.*
 
+MAKE_ARGS= CMODEFLAGS=-std=gnu90
 .include "Makefile.common"
 
 SVNREPOS?=	/home/svn/repos

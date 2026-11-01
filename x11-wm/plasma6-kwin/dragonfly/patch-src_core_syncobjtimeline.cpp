@@ -1,14 +1,14 @@
---- src/core/syncobjtimeline.cpp.orig	Tue Jul  2 09:13:02 2024
-+++ src/core/syncobjtimeline.cpp	Sat Mar
-@@ -5,7 +5,6 @@
- */
+--- src/core/syncobjtimeline.cpp.orig
++++ src/core/syncobjtimeline.cpp
+@@ -6,7 +6,6 @@
  #include "syncobjtimeline.h"
  
+ #include <cerrno>
 -#include <sys/eventfd.h>
  #include <sys/ioctl.h>
  #include <xf86drm.h>
  
-@@ -93,6 +92,9 @@ SyncTimeline::~SyncTimeline()
+@@ -156,6 +155,9 @@
  
  FileDescriptor SyncTimeline::eventFd(uint64_t timelinePoint) const
  {
@@ -18,7 +18,7 @@
      FileDescriptor ret{eventfd(0, EFD_CLOEXEC)};
      if (!ret.isValid()) {
          return {};
-@@ -101,6 +103,7 @@ FileDescriptor SyncTimeline::eventFd(uint64_t timeline
+@@ -164,6 +166,7 @@
          return {};
      }
      return ret;

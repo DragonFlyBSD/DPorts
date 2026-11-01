@@ -1,5 +1,5 @@
 diff --git tools/gn/build/gen.py tools/gn/build/gen.py
-index 88ca880a8111..4350a33e49fe 100755
+index cdda385371d4..86f2b62f592a 100755
 --- tools/gn/build/gen.py
 +++ tools/gn/build/gen.py
 @@ -51,6 +51,8 @@ class Platform(object):
@@ -33,7 +33,7 @@ index 88ca880a8111..4350a33e49fe 100755
  
    def is_zos(self):
      return self._platform == 'zos'
-@@ -309,6 +314,7 @@ def WriteGenericNinja(path, static_libraries, executables,
+@@ -313,6 +318,7 @@ def WriteGenericNinja(path, static_libraries, executables,
        'darwin': 'build_mac.ninja.template',
        'linux': 'build_linux.ninja.template',
        'freebsd': 'build_linux.ninja.template',

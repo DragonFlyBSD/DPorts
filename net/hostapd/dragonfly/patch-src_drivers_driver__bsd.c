@@ -1,7 +1,17 @@
---- src/drivers/driver_bsd.c.intermediate	2022-12-04 12:34:06 UTC
+--- src/drivers/driver_bsd.c.orig
 +++ src/drivers/driver_bsd.c
-@@ -890,7 +890,7 @@ static int bsd_sta_deauth(void *priv, co
- 			  u16 reason_code);
+@@ -666,7 +666,9 @@
+ 		mode = IFM_IEEE80211_11B;
+ 	} else {
+ 		mode =
++#ifdef IFM_IEEE80211_VHT5G
+ 			freq->vht_enabled ? IFM_IEEE80211_VHT5G :
++#endif
+ 			freq->ht_enabled ? IFM_IEEE80211_11NA :
+ 			IFM_IEEE80211_11A;
+ 	}
+@@ -970,7 +972,7 @@
+ 			  u16 reason_code, int link_id);
  
  static const char *
 -ether_sprintf(const u8 *addr)
@@ -9,7 +19,7 @@
  {
  	static char buf[sizeof(MACSTR)];
  
-@@ -916,7 +916,7 @@ bsd_get_seqnum(const char *ifname, void
+@@ -996,7 +998,7 @@
  	struct ieee80211req_key wk;
  
  	wpa_printf(MSG_DEBUG, "%s: addr=%s idx=%d",

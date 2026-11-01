@@ -113,6 +113,7 @@ WEBP_MESON_ENABLED=	webp
 ZSH_MESON_ENABLED=	zsh
 ZSH_PLIST_FILES=	share/zsh/site-functions/_${PORTNAME}
 
+USE_GCC_VERSION= 14
 post-patch:
 # Respect PREFIX for system-wide config
 	@${REINPLACE_CMD} 's,/etc,${PREFIX}&,' \

@@ -20,7 +20,7 @@ PLIST_FILES=	bin/bindfs \
 		share/man/man1/bindfs.1.gz
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-pthread|-lthr|g' \
+	@${REINPLACE_CMD} -e 's|-pthread|-pthread|g' \
 	    ${PATCH_WRKSRC}/configure
 
 .include <bsd.port.mk>

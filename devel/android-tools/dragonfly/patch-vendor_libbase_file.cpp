@@ -1,22 +1,20 @@
---- vendor/libbase/file.cpp.orig	2022-06-10 23:11:16 UTC
+--- vendor/libbase/file.cpp.orig
 +++ vendor/libbase/file.cpp
-@@ -32,8 +32,9 @@
- #include <string>
- #include <vector>
- 
+@@ -36,7 +36,7 @@
+ #if defined(__APPLE__)
+ #include <mach-o/dyld.h>
+ #endif
 -#if defined(__FreeBSD__)
 +#if defined(__FreeBSD__) || defined(__DragonFly__)
  #include <sys/sysctl.h>
-+#include <sys/syslimits.h>
  #endif
- #if defined(__APPLE__)
- #include <mach-o/dyld.h>
-@@ -446,7 +447,7 @@ std::string GetExecutablePath() {
-   std::string path;
-   android::base::Readlink("/proc/self/exe", &path);
+ #if defined(_WIN32)
+@@ -518,7 +518,7 @@
+   if (result == 0 || result == sizeof(path) - 1) return "";
+   path[PATH_MAX - 1] = 0;
    return path;
 -#elif defined(__FreeBSD__)
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
-   int mib[4];
-   mib[0] = CTL_KERN;
-   mib[1] = KERN_PROC;
+   int mib[4] = {CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1};
+   char path[PATH_MAX + 1];
+   size_t path_len = sizeof(path);

@@ -1,0 +1,20 @@
+--- vendor/CMakeLists.f2fstools.txt.orig
++++ vendor/CMakeLists.f2fstools.txt
+@@ -20,7 +20,7 @@
+ 	-DWITH_BLKDISCARD
+ 	-DHAVE_SYS_IOCTL_H)
+ 
+-if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+ 	target_compile_definitions(libf2fs PUBLIC -DHAVE_LIMITS_H)
+ else()
+ 	target_compile_definitions(libf2fs PUBLIC
+@@ -74,7 +74,7 @@
+ 	-DWITH_SLOAD
+ 	-DHAVE_SYS_IOCTL_H)
+ 
+-if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+ 	target_compile_definitions(sload_f2fs PRIVATE -DHAVE_LIMITS_H)
+ else()
+ 	target_compile_definitions(sload_f2fs PRIVATE

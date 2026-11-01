@@ -1,0 +1,12 @@
+--- src/autoconf.orig
++++ src/autoconf
+@@ -1184,7 +1184,8 @@
+ test -f /bin/test && echo "#define GOT_bin_test" >>$ACONF
+ 
+ cat >_autotst.c <<\HERE
+-#define BENCHSIZE	16384
++/* No strstr() benchmark: gcc drops the timed libc loop as dead code,
++   so it doubles its count to 2^63 and then runs sstrstr() that often. */
+ #define GRANULARITY	64		    /* maximal benchmark granularity */
+ #include "sublib.c"
+ #ifndef NO_COMSAT

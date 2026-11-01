@@ -30,7 +30,7 @@ MAKE_FLAGS +=		LD=ld.bfd CCLDFLAGS=-fuse-ld=bfd
 # with system's libefivar.
 MAKE_FLAGS +=		SOFLAGS=-Wl,-rpath,/usr/local/lib
 # Specify various locations.
-MAKE_FLAGS +=		MANDIR=${PREFIX}/man LIBDIR=${PREFIX}/lib
+MAKE_FLAGS +=		MANDIR=${PREFIX}/share/man LIBDIR=${PREFIX}/lib
 
 CONFLICTS_INSTALL =	efivar
 

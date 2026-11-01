@@ -1,0 +1,11 @@
+--- meson.build.orig
++++ meson.build
+@@ -164,7 +164,7 @@
+ if SYSTEM == 'linux'
+     conf_data.set('OS_LINUX', true)
+     OS_TYPE = 'Linux'
+-elif SYSTEM == 'freebsd'
++elif SYSTEM == 'freebsd' or SYSTEM == 'dragonfly'
+     conf_data.set('OS_BSD', true)
+     conf_data.set('OS_FREEBSD', true)
+     OS_TYPE = 'BSD'

@@ -65,5 +65,13 @@ dfly-patch:
 		${WRKSRC}/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Resources/CMake/*.cmake \
 		${WRKSRC}/Resources/Orthanc/CMake/Compiler.cmake \
 		${WRKSRC}/Resources/Orthanc/Plugins/OrthancPluginsExports.cmake
+	${REINPLACE_CMD} -e 's/defined(__FreeBSD__)/defined(__FreeBSD__) || defined(__DragonFly__)/g' \
+		${WRKSRC}/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Sources/Endianness.h \
+		${WRKSRC}/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Sources/SharedLibrary.cpp \
+		${WRKSRC}/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Sources/SystemToolbox.cpp \
+		${WRKSRC}/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Resources/ThirdParty/minizip/ioapi.h
+	@${PRINTF} '/^#  include <arpa\\/inet.h>$$/a\\\n#  include <endian.h>\n' > ${WRKDIR}/dfly-endian.sed
+	${REINPLACE_CMD} -f ${WRKDIR}/dfly-endian.sed \
+		${WRKSRC}/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Sources/Endianness.h
 
 .include <bsd.port.mk>

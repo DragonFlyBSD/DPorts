@@ -1,14 +1,20 @@
---- src/CMakeLists.txt.intermediate	2021-03-10 15:07:59.000000000 +0000
+--- src/CMakeLists.txt.orig
 +++ src/CMakeLists.txt
-@@ -163,9 +163,9 @@ if (SCANNER_NVT_TIMEOUT)
+@@ -16,7 +16,7 @@
+ pkg_check_modules (LIBGVM_BOREAS REQUIRED libgvm_boreas>=22.4)
+ pkg_check_modules (LIBGVM_UTIL REQUIRED libgvm_util>=22.4)
+ pkg_check_modules (GLIB REQUIRED glib-2.0>=2.42)
+-if (NOT ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++if (NOT ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+ pkg_check_modules (LIBBSD REQUIRED libbsd)
+ endif()
+ 
+@@ -134,7 +134,7 @@
    add_definitions (-DSCANNER_NVT_TIMEOUT=${SCANNER_NVT_TIMEOUT})
  endif (SCANNER_NVT_TIMEOUT)
  
 -if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
 +if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
    set (EXECINFO_LDFLAGS "execinfo")
--endif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
-+endif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+ endif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
  
- target_link_libraries (openvas openvas_nasl_shared ${LIBOPENVAS_NASL_LDFLAGS}
-                        ${LIBOPENVAS_MISC_LDFLAGS}

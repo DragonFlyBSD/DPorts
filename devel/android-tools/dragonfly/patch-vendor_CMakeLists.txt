@@ -1,0 +1,13 @@
+--- vendor/CMakeLists.txt.orig
++++ vendor/CMakeLists.txt
+@@ -44,8 +44,8 @@
+ # On FreeBSD, _XOPEN_SOURCE (used by some sub-targets) hides BSD extensions
+ # like getprogname(). Ensure BSD visibility is preserved.
+ # Also provide compat macros for 64-bit functions that don't exist on FreeBSD
+-# (off_t is always 64-bit on FreeBSD).
+-if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++# (off_t is always 64-bit on FreeBSD and DragonFly).
++if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+ 	add_compile_definitions(__BSD_VISIBLE=1)
+ 	add_compile_definitions(lseek64=lseek ftruncate64=ftruncate mmap64=mmap pread64=pread pwrite64=pwrite off64_t=off_t)
+ endif()

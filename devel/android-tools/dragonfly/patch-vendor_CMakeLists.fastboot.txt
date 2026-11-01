@@ -1,0 +1,19 @@
+--- vendor/CMakeLists.fastboot.txt.orig
++++ vendor/CMakeLists.fastboot.txt
+@@ -121,7 +121,7 @@
+ if(APPLE)
+ 	list(APPEND fastboot_SOURCES
+ 		core/fastboot/usb_osx.cpp)
+-elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++elseif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+ 	list(APPEND fastboot_SOURCES
+ 		core/fastboot/usb_freebsd.cpp)
+ else()
+@@ -147,6 +147,6 @@
+ 	target_link_libraries(fastboot
+ 		"-framework CoreFoundation"
+ 		"-framework IOKit")
+-elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++elseif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+ 	target_link_libraries(fastboot PkgConfig::libusb-1.0)
+ endif()

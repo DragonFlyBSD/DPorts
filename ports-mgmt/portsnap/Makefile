@@ -17,5 +17,7 @@ post-patch:
 	${REINPLACE_CMD} -e "s,%%PREFIX%%,${PREFIX},g" \
 		${WRKSRC}/portsnap ${WRKSRC}/portsnap.8 \
 		${WRKSRC}/portsnap.conf.sample
+	${REINPLACE_CMD} -e "s,\$${PREFIX}/man/,\$${PREFIX}/share/man/,g" \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

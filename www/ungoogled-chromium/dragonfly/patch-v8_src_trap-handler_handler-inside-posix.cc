@@ -1,5 +1,5 @@
 diff --git v8/src/trap-handler/handler-inside-posix.cc v8/src/trap-handler/handler-inside-posix.cc
-index 1f876c7664a5..07bd8aa389ad 100644
+index d1432db9b2b3..dc6e0d13bf3d 100644
 --- v8/src/trap-handler/handler-inside-posix.cc
 +++ v8/src/trap-handler/handler-inside-posix.cc
 @@ -27,7 +27,7 @@

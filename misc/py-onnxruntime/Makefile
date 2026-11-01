@@ -48,6 +48,7 @@ do-build:
 		--build_wheel \
 		--cmake_extra_defines CMAKE_INSTALL_PREFIX=${PREFIX} \
 		--cmake_extra_defines onnxruntime_BUILD_UNIT_TESTS=OFF \
+		--cmake_extra_defines MLAS_COMPILER_SUPPORTS_AVXVNNI=OFF \
 		--cmake_extra_defines ONNXRUNTIME_NUMPY_INCLUDE_DIR=${PYTHONPREFIX_SITELIBDIR}/numpy/_core/include
 
 USE_GITHUB=	yes

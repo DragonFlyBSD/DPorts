@@ -43,7 +43,4 @@ post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/amberfish.html ${STAGEDIR}${DOCSDIR}
 
-dfly-patch:
-	${REINPLACE_CMD} -e 's/-ansi/-std=c++11/g' ${WRKSRC}/src/Makefile.in
-
 .include <bsd.port.mk>

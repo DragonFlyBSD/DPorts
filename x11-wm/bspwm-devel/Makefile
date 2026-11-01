@@ -30,6 +30,7 @@ OPTIONS_DEFAULT=	CONTRIB
 OPTIONS_SUB=		yes
 CONTRIB_DESC=		Install contrib (shell completions, etc.)
 
+CFLAGS_x86_64= -D_XOPEN_SOURCE=700
 do-install:
 	${MKDIR} ${STAGEDIR}${BINDIR} ${STAGEDIR}${PREFIX}/share/man/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/bspc ${STAGEDIR}${PREFIX}/bin

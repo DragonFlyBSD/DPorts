@@ -15,7 +15,7 @@ TEST_DEPENDS=	p5-HTTP-Daemon>=0:www/p5-HTTP-Daemon \
 
 USES=		charsetfix cpe iconv localbase pkgconfig tar:lz
 CPE_VENDOR=	gnu
-USE_CSTD=	c99
+USE_CSTD= gnu99
 
 GNU_CONFIGURE=			yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
@@ -62,6 +62,7 @@ PCRE2_CONFIGURE_ENABLE=	pcre2
 PSL_LIB_DEPENDS=	libpsl.so:dns/libpsl
 PSL_CONFIGURE_WITH=	libpsl
 
+PORTREVISION= 1
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}

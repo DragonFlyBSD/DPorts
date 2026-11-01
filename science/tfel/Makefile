@@ -51,8 +51,4 @@ post-install-PYTHON-on:
 	(cd ${STAGEDIR}${PREFIX} && ${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py \
 		-d ${PREFIX} -f ${PYTHONPREFIX_SITELIBDIR:S,${PREFIX}/,,})
 
-dfly-patch:
-	${REINPLACE_CMD} -e 's@x86_64\*bsd\*)@x86_64*bsd*|x86_64*dragonfly*)@g' \
-		${WRKSRC}/configure.ac
-
 .include <bsd.port.mk>

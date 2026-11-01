@@ -148,6 +148,7 @@ ZLIB_CONFIGURE_ON=	zlib-dynamic
 ZSTD_CFLAGS=		-I${PREFIX}/include
 ZSTD_CONFIGURE_ON=	enable-zstd-dynamic
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
+OPTIONS_EXCLUDE=	SCTP
 
 PORTSCOUT=		limit:^${DISTVERSION:R:S/./\./g}\.
 

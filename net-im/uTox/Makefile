@@ -39,7 +39,7 @@ DBUS_CMAKE_BOOL=	ENABLE_DBUS
 # ld.lld lacks default output emulation.  Using -b binary without
 # explicit -m will fail.  Mapping taken from lld/ELF/Driver.cpp.
 _LLD_EMUL_aarch64=	aarch64elf_fbsd
-_LLD_EMUL_x86_64=	elf_x86_64_fbsd
+_LLD_EMUL_x86_64= elf_x86_64
 _LLD_EMUL_armv6=	armelf_fbsd
 _LLD_EMUL_armv7=	armelf_fbsd
 _LLD_EMUL_i386=		elf_i386_fbsd
@@ -47,7 +47,8 @@ _LLD_EMUL_powerpc=	elf32ppc_fbsd
 _LLD_EMUL_powerpc64=	elf64ppc_fbsd
 _LLD_EMUL_powerpc64le=	elf64lppc_fbsd
 
-CFLAGS= -Wno-cast-function-type -Wno-implicit-fallthrough
+_LLD_EMUL_x86_64= elf_x86_64
+CFLAGS_x86_64= -Wno-cast-function-type -Wno-implicit-fallthrough
 post-patch:
 	@${REINPLACE_CMD} 's,[[:<:]]ld[[:>:]],ld -m${_LLD_EMUL_${ARCH}},' \
 		${WRKSRC}/src/xlib/CMakeLists.txt

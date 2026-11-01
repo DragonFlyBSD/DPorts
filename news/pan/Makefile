@@ -58,5 +58,4 @@ NOTIFY_LIB_DEPENDS=	libnotify.so:devel/libnotify
 WEBKITGTK_CMAKE_BOOL=	WANT_WEBKIT
 WEBKITGTK_LIB_DEPENDS=	libwebkitgtk-6.0.so:www/webkit2-gtk
 
-LDFLAGS:= ${LDFLAGS:N-lgnuregex} -lintl
 .include <bsd.port.mk>

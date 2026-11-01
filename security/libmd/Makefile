@@ -19,6 +19,7 @@ LDFLAGS+=	-L${OPENSSLLIB}
 # workaround but at some point it needs porting to the new api
 CFLAGS+=	-Wno-deprecated-declarations
 
+CFLAGS+= -Wno-error=array-parameter
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/libmd.a ${STAGEDIR}${PREFIX}/lib
 	${INSTALL_LIB} ${WRKSRC}/libmd.so.3 ${STAGEDIR}${PREFIX}/lib

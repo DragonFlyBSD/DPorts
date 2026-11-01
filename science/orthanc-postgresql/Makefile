@@ -54,5 +54,13 @@ dfly-patch:
 		${WRKSRC}/Resources/Orthanc/CMake/Compiler.cmake \
 		${WRKSRC}/Resources/CMake/PostgreSQLConfiguration.cmake \
 		${WRKSRC}/Resources/Orthanc/Plugins/OrthancPluginsExports.cmake
+	${REINPLACE_CMD} -e 's/defined(__FreeBSD__)/defined(__FreeBSD__) || defined(__DragonFly__)/g' \
+		${WRKSRC}/PostgreSQL/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Sources/Endianness.h \
+		${WRKSRC}/PostgreSQL/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Sources/SharedLibrary.cpp \
+		${WRKSRC}/PostgreSQL/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Sources/SystemToolbox.cpp \
+		${WRKSRC}/PostgreSQL/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Resources/ThirdParty/minizip/ioapi.h
+	@${PRINTF} '/^#  include <arpa\\/inet.h>$$/a\\\n#  include <endian.h>\n' > ${WRKDIR}/dfly-endian.sed
+	${REINPLACE_CMD} -f ${WRKDIR}/dfly-endian.sed \
+		${WRKSRC}/PostgreSQL/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Sources/Endianness.h
 
 .include <bsd.port.mk>

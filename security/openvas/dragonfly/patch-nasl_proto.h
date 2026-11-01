@@ -1,6 +1,6 @@
---- nasl/proto.h.orig	2021-02-01 15:26:51 UTC
+--- nasl/proto.h.orig
 +++ nasl/proto.h
-@@ -19,7 +19,7 @@
+@@ -8,7 +8,7 @@
  
  #include <sys/param.h>
  #include <time.h>

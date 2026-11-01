@@ -31,7 +31,7 @@ CMAKE_ON=	onnxruntime_BUILD_SHARED_LIB \
 CMAKE_OFF=	FETCHCONTENT_FULLY_DISCONNECTED \
 		onnxruntime_BUILD_UNIT_TESTS \
 		onnxruntime_DISABLE_RTTI
-CMAKE_ARGS= -Donnx_SOURCE_DIR=${WRKSRC}/cmake/external/onnx --compile-no-warning-as-error
+CMAKE_ARGS= -Donnx_SOURCE_DIR=${WRKSRC}/cmake/external/onnx --compile-no-warning-as-error -DMLAS_COMPILER_SUPPORTS_AVXVNNI=OFF
 CMAKE_TESTING_ON=	onnxruntime_BUILD_UNIT_TESTS
 
 CXXFLAGS+=	-Wno-array-bounds # workaround for https://github.com/microsoft/onnxruntime/issues/23410

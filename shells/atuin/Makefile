@@ -722,4 +722,5 @@ do-install:
 			${STAGEDIR}${PREFIX}/bin; \
 	done
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

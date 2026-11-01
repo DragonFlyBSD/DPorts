@@ -1,12 +1,12 @@
-diff --git extensions/common/api/runtime.json extensions/common/api/runtime.json
-index 730668b7ee6e..f8d075ed4b1c 100644
---- extensions/common/api/runtime.json
+--- extensions/common/api/runtime.json.orig	2026-09-09 12:00:00 UTC
 +++ extensions/common/api/runtime.json
-@@ -87,6 +87,7 @@
+@@ -86,7 +86,8 @@
+             {"name": "cros", "description": "Specifies the Chrome operating system."},
              {"name": "linux", "description": "Specifies the Linux operating system."},
              {"name": "openbsd", "description": "Specifies the OpenBSD operating system."},
-             {"name": "freebsd", "description": "Specifies the FreeBSD operating system."},
-+            {"name": "dragonfly", "description": "Specifies the DragonFly BSD operating system."},
-             {"name": "fuchsia", "description": "Specifies the Fuchsia operating system."}
+-            {"name": "freebsd", "description": "Specifies the FreeBSD operating system."}
++            {"name": "freebsd", "description": "Specifies the FreeBSD operating system."},
++            {"name": "dragonfly", "description": "Specifies the DragonFly BSD operating system."}
          ]
        },
+       {

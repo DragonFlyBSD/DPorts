@@ -25,9 +25,6 @@ OPTIONS_DEFINE=	DOCS
 
 DOCS_VARS_OFF=	EXTRACT_AFTER_ARGS+="--exclude udt${PORTVERSION:R}/doc"
 
-CFLAGS= -I${OPENSSLINC}
-LDFLAGS= -L${OPENSSLLIB}
-CXXFLAGS= -Wno-error=catch-value
 post-build:
 	# Building sample applications:
 .for a in ${UDT_APPS}
@@ -47,6 +44,9 @@ post-install-DOCS-on:
 .include <bsd.port.options.mk>
 .if ${DFLYVERSION} > 500700
 LIB_DEPENDS+=	libmd.so:security/libmd
+CXXFLAGS+=	-I${LOCALBASE}/include -Wno-error=catch-value \
+		-Wno-error=deprecated-copy -Wno-error=terminate
+LDFLAGS+=	-L${LOCALBASE}/lib
 .endif
 
 .include <bsd.port.mk>

@@ -12,10 +12,4 @@ RUN_DEPENDS=	dot-forward:mail/dot-forward \
 
 USES=		metaport
 
-dfly-patch:
-	${PATCH} -d ${WRKDF} -s <${DFLY_PATCHDIR}/extra-patch-error.h
-	${PATCH} -d ${WRKDF} -s <${DFLY_PATCHDIR}/extra-patch-find-systype.sh
-	${PATCH} -d ${WRKFF} -s <${DFLY_PATCHDIR}/extra-patch-error.h
-	${PATCH} -d ${WRKFF} -s <${DFLY_PATCHDIR}/extra-patch-find-systype.sh
-
 .include <bsd.port.mk>

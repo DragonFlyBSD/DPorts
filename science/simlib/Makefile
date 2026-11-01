@@ -30,4 +30,7 @@ do-install-DOCS-on:
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libsimlib.so
 
+dfly-patch:
+	${CP} ${WRKSRC}/src/Makefile.FreeBSD ${WRKSRC}/src/Makefile.DragonFly
+
 .include <bsd.port.mk>

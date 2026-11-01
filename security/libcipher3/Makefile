@@ -18,6 +18,6 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/libcipher.so.3 ${STAGEDIR}${PREFIX}/lib
 	${RLN} ${STAGEDIR}${PREFIX}/lib/libcipher.so.3 ${STAGEDIR}${PREFIX}/lib/libcipher.so
 	${INSTALL_DATA} ${WRKSRC}/libcipher3.h ${STAGEDIR}${PREFIX}/include
-	${INSTALL_MAN} ${WRKSRC}/cipher.3 ${STAGEDIR}${MANPREFIX}/man/man3
+	${INSTALL_MAN} ${WRKSRC}/cipher.3 ${STAGEDIR}${PREFIX}/share/man/man3
 
 .include <bsd.port.mk>

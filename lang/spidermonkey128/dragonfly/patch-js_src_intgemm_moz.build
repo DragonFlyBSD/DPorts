@@ -1,0 +1,23 @@
+--- js/src/intgemm/moz.build.orig
++++ js/src/intgemm/moz.build
+@@ -37,7 +37,9 @@
+         SOURCES[
+             "/third_party/gemmology/kernels/GemmologyEngineAVX2.cpp"
+         ].flags += CONFIG["AVX2_FLAGS"]
+-    if CONFIG["AVXVNNI_FLAGS"]:
++    # Base binutils predates AVX-VNNI; the -mavxvnni try_compile
++    # passes (flag acceptance only) but as rejects vpdpbusd.
++    if CONFIG["AVXVNNI_FLAGS"] and CONFIG["OS_TARGET"] != "DragonFly":
+         DEFINES["USE_AVXVNNI"] = True
+         SOURCES += ["/third_party/gemmology/kernels/GemmologyEngineAVXVNNI.cpp"]
+         SOURCES[
+@@ -49,7 +51,8 @@
+         SOURCES[
+             "/third_party/gemmology/kernels/GemmologyEngineAVX512BW.cpp"
+         ].flags += CONFIG["AVX512BW_FLAGS"]
+-    if CONFIG["AVX512VNNI_FLAGS"]:
++    # As above for AVX512-VNNI (vpdpbusds).
++    if CONFIG["AVX512VNNI_FLAGS"] and CONFIG["OS_TARGET"] != "DragonFly":
+         DEFINES["USE_AVX512VNNI"] = True
+         SOURCES += ["/third_party/gemmology/kernels/GemmologyEngineAVX512VNNI.cpp"]
+         SOURCES[

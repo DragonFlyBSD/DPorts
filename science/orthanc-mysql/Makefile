@@ -57,5 +57,10 @@ dfly-patch:
 		${WRKSRC}/Resources/Orthanc/CMake/Compiler.cmake \
 		${WRKSRC}/Resources/CMake/PostgreSQLConfiguration.cmake \
 		${WRKSRC}/Resources/Orthanc/Plugins/OrthancPluginsExports.cmake
+	${REINPLACE_CMD} -e 's/defined(__FreeBSD__)/defined(__FreeBSD__) || defined(__DragonFly__)/g' \
+		${WRKSRC}/MySQL/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Sources/Endianness.h \
+		${WRKSRC}/MySQL/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Sources/SharedLibrary.cpp \
+		${WRKSRC}/MySQL/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Sources/SystemToolbox.cpp \
+		${WRKSRC}/MySQL/ThirdPartyDownloads/Orthanc-*/OrthancFramework/Resources/ThirdParty/minizip/ioapi.h
 
 .include <bsd.port.mk>

@@ -34,4 +34,7 @@ VENUS_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader \
 			libepoll-shim.so:devel/libepoll-shim
 VENUS_MESON_TRUE=	venus
 
+CFLAGS_x86_64= -DETIME=ETIMEDOUT -DO_DSYNC=O_SYNC
+CXXFLAGS_x86_64= -DETIME=ETIMEDOUT
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NVENUS}
 .include <bsd.port.mk>

@@ -36,4 +36,5 @@ PLIST_FILES=	lib/librejson.so
 do-install:
 	${INSTALL} -m 0755 ${CARGO_TARGET_DIR}/*/librejson.so ${STAGEDIR}${PREFIX}/lib
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

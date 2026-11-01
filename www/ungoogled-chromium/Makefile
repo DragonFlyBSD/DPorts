@@ -235,10 +235,14 @@ SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 WIDEVINE_DESC=		Depend on foreign-cdm to enable playback of DRM content
 WIDEVINE_RUN_DEPENDS=	foreign-cdm>0:www/foreign-cdm
 
+GN_ARGS+= extra_cflags="${CFLAGS}"
+GN_ARGS+= v8_enable_sandbox=false
 .include "Makefile.tests"
 TEST_DISTFILES=		chromium-${DISTVERSION}-testdata${EXTRACT_SUFX}
 TEST_ALL_TARGET=	${TEST_TARGETS}
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NKERBEROS}
 .include <bsd.port.options.mk>
 .include <bsd.port.pre.mk> # for COMPILER_VERSION
 
@@ -253,7 +257,7 @@ BINARY_ALIAS+=		cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} \
 			c++=${LOCALBASE}/bin/clang++${LLVM_DEFAULT} \
 			ar=${LOCALBASE}/bin/llvm-ar${LLVM_DEFAULT} \
 			nm=${LOCALBASE}/bin/llvm-nm${LLVM_DEFAULT} \
-			ld=${LOCALBASE}/bin/ld.lld${LLVM_DEFAULT}
+			clang=${LOCALBASE}/bin/clang${LLVM_DEFAULT}
 
 # - swiftshader/lib/{libEGL.so,libGLESv2.so} is x86 only
 # - map ffmpeg target to ${ARCH}
@@ -270,8 +274,8 @@ PLIST_SUB+=	NOT_AARCH64=""
 FFMPEG_TARGET=	ia32
 .endif
 
-FFMPEG_BDIR=	${WRKSRC}/third_party/ffmpeg/build.${FFMPEG_TARGET}.${OPSYS:tl}/${FFMPEG_BRAND}
-FFMPEG_CDIR=	${WRKSRC}/third_party/ffmpeg/chromium/config/${FFMPEG_BRAND}/${OPSYS:tl}/${FFMPEG_TARGET}
+FFMPEG_BDIR= ${WRKSRC}/third_party/ffmpeg/build.${FFMPEG_TARGET}.${OPSYS:tl}/${FFMPEG_BRAND}
+FFMPEG_CDIR= ${WRKSRC}/third_party/ffmpeg/chromium/config/${FFMPEG_BRAND}/${OPSYS:tl}/${FFMPEG_TARGET}
 
 # Allow relocations against read-only segments (override lld default)
 LDFLAGS_i386=	-Wl,-znotext
@@ -319,7 +323,7 @@ pre-configure:
 		libusb libwebp libxml libxslt openh264 opus || ${FALSE}
 	# Chromium uses an unreleased version of FFmpeg, so configure it
 	cd ${WRKSRC}/media/ffmpeg && \
-		${PYTHON_CMD} scripts/build_ffmpeg.py ${OPSYS:tl} ${FFMPEG_TARGET} \
+		${PYTHON_CMD} scripts/build_ffmpeg.py dragonfly ${FFMPEG_TARGET} \
 		--config-only --branding=${FFMPEG_BRAND}
 	cd ${FFMPEG_BDIR} && ${GMAKE} ffversion.h
 	${MKDIR} ${FFMPEG_CDIR}
@@ -336,8 +340,9 @@ do-configure:
 	# GN generator bootstrapping and generating ninja files
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} CC=${CC} CXX=${CXX} LD=${CXX} \
 		READELF=${READELF} AR=${AR} NM=${NM} \
-		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
-		${PYTHON_CMD} ./tools/gn/bootstrap/bootstrap.py ${GN_BOOTSTRAP_FLAGS}
+		CFLAGS="${CFLAGS:N-flto*}" CXXFLAGS="${CXXFLAGS:N-flto*}" LDFLAGS="${LDFLAGS:N-flto*}" \
+		${PYTHON_CMD} \
+		./tools/gn/bootstrap/bootstrap.py ${GN_BOOTSTRAP_FLAGS}
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./out/${BUILDTYPE}/gn \
 		gen --args='${GN_ARGS}' out/${BUILDTYPE}
 
@@ -353,7 +358,7 @@ do-configure:
 	@${MKDIR} ${WRKSRC}/third_party/gperf/cipd/bin
 	${LN} -sf ${LOCALBASE}/bin/gperf ${WRKSRC}/third_party/gperf/cipd/bin/gperf
 
-	# Setup buildtools/${OPSYS:tl}
+	# Setup buildtools/freebsd
 	@${MKDIR} ${WRKSRC}/buildtools/${OPSYS:tl}
 	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/${OPSYS:tl}
 	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/${OPSYS:tl}
@@ -421,5 +426,48 @@ do-test-TEST-on:
 	cd ${WRKSRC}/out/${BUILDTYPE} && \
 		./${t} --gtest_filter=-${EXCLUDE_${t}:ts:} || ${TRUE}
 .endfor
+
+.if !defined(GN_ONLY)
+# XXX - This is a hack to force llvm to use libc++ C++ includes instead of base's gcc
+CXXFLAGS+=	-nostdlib++ -stdlib=libc++ -I${LOCALBASE}/include
+CXXFLAGS+=	-cxx-isystem ${LOCALBASE}/llvm${LLVM_DEFAULT}/include/c++/v1
+LDFLAGS+=	-L${LOCALBASE}/llvm${LLVM_DEFAULT}/lib -L /lib -L /usr/lib -lpthread
+LDFLAGS+=	-stdlib=libc++ -lc++ -lc++abi -Wl,-rpath,${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
+
+# Since FreeBSD has libc++ in base we need to rely on DPorts' libcxx
+LIB_DIRS+=	${PREFIX}/llvm${LLVM_DEFAULT}/lib
+LIB_DEPENDS+=  	libc++.so.1:devel/libcxx${LLVM_DEFAULT}
+
+# we don't support libcuse so no audio/virtual_oss
+RUN_DEPENDS:=	${RUN_DEPENDS:Nvirtual_oss*}
+.endif
+
+dfly-patch:
+	# Sandbox stuff
+	@${MKDIR} ${WRKSRC}/sandbox/policy/dragonfly
+	@${CP} ${WRKSRC}/sandbox/policy/freebsd/sandbox_freebsd.h ${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.h
+	@${CP} ${WRKSRC}/sandbox/policy/freebsd/sandbox_freebsd.cc ${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.cc
+	${REINPLACE_CMD} -e "s|FreeBSD|DragonFly|g" \
+		-e "s|freebsd\/sandbox_freebsd.h|dragonfly\/sandbox_dragonfly.h|g" \
+		${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.h \
+		${WRKSRC}/sandbox/policy/dragonfly/sandbox_dragonfly.cc \
+
+	# Chromium uses an unreleased version of FFmpeg, so configure it
+	${CP} -R \
+                ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/linux/ \
+                ${WRKSRC}/third_party/ffmpeg/chromium/config/Chrome/dragonfly
+
+	# Setup buildtools/freebsd
+	@${MKDIR} ${WRKSRC}/buildtools/dragonfly
+	${LN} -sf ${WRKSRC}/buildtools/linux64/clang-format ${WRKSRC}/buildtools/dragonfly
+	${LN} -sf ${WRKSRC}/out/${BUILDTYPE}/gn ${WRKSRC}/buildtools/dragonfly
+
+	# XXX The correct solution is to pass variables to gn
+	# Use the current LLVM version by replacing the hardcoded one
+	${REINPLACE_CMD} -e "s|clang60|clang${LLVM_DEFAULT}|g" \
+		-e "s|clang\+\+60|clang++${LLVM_DEFAULT}|g" \
+		-e "s|llvm-ar|llvm-ar${LLVM_DEFAULT}|g" \
+		-e "s|llvm-nm|llvm-nm${LLVM_DEFAULT}|g" \
+		${WRKSRC}/build/toolchain/gcc_toolchain.gni
 
 .include <bsd.port.post.mk>

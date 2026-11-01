@@ -84,9 +84,6 @@ NLS_CONFIGURE_WITH=	gettext
 MANTRANS_DESC=		Build and install manpage translations
 MANTRANS_BUILD_DEPENDS=	po4a:textproc/po4a
 
-BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
-CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
-LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} != clang

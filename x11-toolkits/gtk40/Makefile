@@ -1,5 +1,6 @@
 PORTNAME=	gtk
 PORTVERSION=	4.20.4
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	4
@@ -42,7 +43,7 @@ GLIB_SCHEMAS=	org.gtk.Demo4.gschema.xml \
 		org.gtk.gtk4.Settings.FileChooser.gschema.xml
 USE_LDCONFIG=	yes
 USE_PERL5=	build
-MESON_ARGS=	-Dbuild-testsuite=false
+MESON_ARGS= -Dbuild-testsuite=false -Df16c=disabled
 LDFLAGS+=	-lexecinfo
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
@@ -68,7 +69,8 @@ X11_DESC=		GDK X11 backend
 ACCESSKIT_LIB_DEPENDS=	libaccesskit-c-0.17.so:accessibility/accesskit-c
 ACCESSKIT_MESON_ENABLED=	accesskit
 
-BASH_BUILD_DEPENDS=	bash-completion>0:shells/bash-completion
+BASH_BUILD_DEPENDS=	${LOCALBASE}/bin/bash:shells/bash \
+			bash-completion>0:shells/bash-completion
 
 BROADWAY_MESON_TRUE=	broadway-backend
 

@@ -1,8 +1,8 @@
 diff --git v8/src/base/sys-info.cc v8/src/base/sys-info.cc
-index 096be2012410..a0f2b514cd3d 100644
+index 708c341c5eec..9a707380dec6 100644
 --- v8/src/base/sys-info.cc
 +++ v8/src/base/sys-info.cc
-@@ -74,7 +74,7 @@ int64_t SysInfo::AmountOfPhysicalMemory() {
+@@ -72,7 +72,7 @@ int64_t SysInfo::AmountOfPhysicalMemory() {
      return 0;
    }
    return memsize;

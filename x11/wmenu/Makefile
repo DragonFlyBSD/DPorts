@@ -24,4 +24,5 @@ PLIST_FILES=	bin/wmenu \
 		bin/wmenu-run \
 		share/man/man1/wmenu.1.gz
 
+LIB_DEPENDS+= libepoll-shim.so:devel/libepoll-shim
 .include <bsd.port.mk>

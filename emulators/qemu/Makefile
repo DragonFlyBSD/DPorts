@@ -315,7 +315,9 @@ dfly-install:
 .if ${FLAVOR:U} != tools && ${FLAVOR:U} != guestagent
 	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 \
 		${STAGEDIR}${PREFIX}/bin/qemu-x86_64 \
-		${STAGEDIR}${PREFIX}/bin/qemu-arm
+		${STAGEDIR}${PREFIX}/bin/qemu-arm \
+		${STAGEDIR}${PREFIX}/bin/qemu-aarch64 \
+		${STAGEDIR}${PREFIX}/bin/qemu-riscv64
 .endif
 
 .include <bsd.port.mk>

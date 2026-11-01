@@ -41,4 +41,5 @@ PLIST_FILES=	lib/clap/toneshifteq.clap \
 		lib/lv2/ToneShiftEQ.lv2/toneshifteq.ttl \
 		lib/lv2/ToneShiftEQ.lv2/toneshifteq_ui.so
 
+MAKE_ARGS+= TARGET=Linux
 .include <bsd.port.mk>

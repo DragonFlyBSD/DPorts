@@ -279,7 +279,9 @@ CARGO_ENV+=	ZSTD_SYS_USE_PKG_CONFIG=1
 # Point it at the USES=llvm prefix, falling back to LLVM_DEFAULT, unless the
 # port already sets LIBCLANG_PATH itself.
 .  if ${_CARGO_CRATES:Mbindgen} && empty(MAKE_ENV:MLIBCLANG_PATH=*) && empty(CARGO_ENV:MLIBCLANG_PATH=*)
-CARGO_ENV+=	LIBCLANG_PATH=${LLVM_PREFIX:U${LOCALBASE}/llvm${LLVM_DEFAULT}}/lib
+# MAKE_ENV, not CARGO_ENV: cmake-driven ports (like textproc/redisearch)
+# run cargo from inside cmake, which never sees CARGO_ENV.
+MAKE_ENV+=	LIBCLANG_PATH=${LLVM_PREFIX:U${LOCALBASE}/llvm${LLVM_DEFAULT}}/lib
 .  endif
 
 .  for _index _crate _name _version in ${_CARGO_CRATES}

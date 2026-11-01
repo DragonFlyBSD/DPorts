@@ -1,8 +1,8 @@
 diff --git build/config/ozone.gni build/config/ozone.gni
-index 6a590b0ef24c..f02aad7366d9 100644
+index ea5f122a7a09..3cb1040a6e93 100644
 --- build/config/ozone.gni
 +++ build/config/ozone.gni
-@@ -96,6 +96,10 @@ declare_args() {
+@@ -92,6 +92,10 @@ declare_args() {
        ozone_platform = "x11"
        ozone_platform_wayland = true
        ozone_platform_x11 = true

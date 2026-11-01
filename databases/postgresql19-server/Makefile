@@ -98,7 +98,6 @@ LZ4_LIB_DEPENDS+=	liblz4.so:archivers/liblz4
 .  endif
 
 OPTIONS_DEFINE+=	LLVM
-OPTIONS_DEFAULT+=	LLVM
 LLVM_DESC=		Build with support for JIT-compiling expressions
 LLVM_CONFIGURE_WITH=	llvm
 LLVM_CONFIGURE_ENV=	LLVM_CONFIG=${LLVM_CONFIG} \

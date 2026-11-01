@@ -21,7 +21,5 @@ PG_USER?=	postgres
 PG_GROUP?=	postgres
 PG_UID?=	770
 
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NLLVM}
 PG_UID!= grep -E '^pgsql:' ${PORTSDIR}/GIDs | awk -F ':' '{print $$3}'; echo
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NICU}
 .include "${.CURDIR}/../postgresql19-server/Makefile"

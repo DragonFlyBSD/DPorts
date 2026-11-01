@@ -1,3 +1,6 @@
+diff --git build/toolchain/dragonfly/BUILD.gn build/toolchain/dragonfly/BUILD.gn
+new file mode 100644
+index 000000000000..622a0aac8d8b
 --- /dev/null
 +++ build/toolchain/dragonfly/BUILD.gn
 @@ -0,0 +1,66 @@

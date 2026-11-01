@@ -68,8 +68,4 @@ post-install:
 		${INSTALL_DATA} $$i ${STAGEDIR}${ETCDIR}/$$i.sample; \
 	done)
 
-dfly-patch:
-	${REINPLACE_CMD} -e 's@\(\*\-freebsd\*\)@\1|*-dragonfly*@g' \
-		${WRKSRC}/configure.ac
-
 .include <bsd.port.mk>

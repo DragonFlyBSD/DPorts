@@ -53,8 +53,4 @@ PSTOEDIT_CONFIGURE_OFF=	--without-pstoedit
 post-install:
 	${RM} -r ${STAGEDIR}${PREFIX}/share/locale
 
-dfly-patch:
-	${REINPLACE_CMD} -e "/LINK) -rpath/s/$$/ -lm/g"	\
-		${WRKSRC}/Makefile.in
-
 .include <bsd.port.mk>

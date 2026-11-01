@@ -1,22 +1,6 @@
---- libobs/util/platform-nix.c.orig	2023-06-18 22:05:22 UTC
+--- libobs/util/platform-nix.c.orig
 +++ libobs/util/platform-nix.c
-@@ -26,7 +26,15 @@
- #include <errno.h>
- #include <sys/types.h>
- #include <sys/stat.h>
-+#ifdef __DragonFly__
-+/* XXX uuid_t name conflict <sys/uuid.h> vs "uuid/uuid.h" from libuuid from ports */
-+#define uuid_t dfly_uuid_t
-+#include <sys/uuid.h>
- #include <sys/statvfs.h>
-+#undef uuid_t
-+#else
-+#include <sys/statvfs.h>
-+#endif
- #include <dirent.h>
- #include <stdlib.h>
- #include <limits.h>
-@@ -41,14 +49,14 @@
+@@ -35,14 +35,14 @@
  #include <sys/times.h>
  #include <sys/wait.h>
  #include <libgen.h>
@@ -33,18 +17,18 @@
  #include <libprocstat.h>
  #endif
  #else
-@@ -1021,8 +1029,8 @@ bool os_get_proc_memory_usage(os_proc_me
+@@ -969,8 +969,8 @@
+ 	if (!os_get_proc_memory_usage_internal(&kinfo))
  		return false;
  
- 	usage->resident_size =
--		(uint64_t)kinfo.ki_rssize * sysconf(_SC_PAGESIZE);
+-	usage->resident_size = (uint64_t)kinfo.ki_rssize * sysconf(_SC_PAGESIZE);
 -	usage->virtual_size = (uint64_t)kinfo.ki_size;
-+		(uint64_t)kinfo.kp_vm_rssize * sysconf(_SC_PAGESIZE);
++	usage->resident_size = (uint64_t)kinfo.kp_vm_rssize * sysconf(_SC_PAGESIZE);
 +	usage->virtual_size = (uint64_t)kinfo.kp_vm_map_size;
  	return true;
  }
  
-@@ -1031,7 +1039,7 @@ uint64_t os_get_proc_resident_size(void)
+@@ -979,7 +979,7 @@
  	struct kinfo_proc kinfo;
  	if (!os_get_proc_memory_usage_internal(&kinfo))
  		return 0;
@@ -53,7 +37,7 @@
  }
  
  uint64_t os_get_proc_virtual_size(void)
-@@ -1039,7 +1047,7 @@ uint64_t os_get_proc_virtual_size(void)
+@@ -987,7 +987,7 @@
  	struct kinfo_proc kinfo;
  	if (!os_get_proc_memory_usage_internal(&kinfo))
  		return 0;
@@ -61,4 +45,4 @@
 +	return (uint64_t)kinfo.kp_vm_map_size;
  }
  #else
- uint64_t os_get_sys_free_size(void)
+ typedef struct {

@@ -84,43 +84,7 @@ JACK_VARS=		MANPAGES_PLIST_FILES+=share/man/man5/${PORTNAME}-jack.5.gz
 
 MANPAGES_BUILD_DEPENDS=	scdoc:textproc/scdoc
 MANPAGES_MESON_ENABLED=	man-pages
-MANPAGES_PLIST_FILES=	share/man/man5/${PORTNAME}-battery.5.gz \
-			share/man/man5/${PORTNAME}-cffi.5.gz \
-			share/man/man5/${PORTNAME}-clock.5.gz \
-			share/man/man5/${PORTNAME}-cpu.5.gz \
-			share/man/man5/${PORTNAME}-custom.5.gz \
-			share/man/man5/${PORTNAME}-disk.5.gz \
-			share/man/man5/${PORTNAME}-dwl-tags.5.gz \
-			share/man/man5/${PORTNAME}-dwl-window.5.gz \
-			share/man/man5/${PORTNAME}-ext-workspaces.5.gz \
-			share/man/man5/${PORTNAME}-gamemode.5.gz \
-			share/man/man5/${PORTNAME}-gps.5.gz \
-			share/man/man5/${PORTNAME}-hyprland-language.5.gz \
-			share/man/man5/${PORTNAME}-hyprland-submap.5.gz \
-			share/man/man5/${PORTNAME}-hyprland-window.5.gz \
-			share/man/man5/${PORTNAME}-hyprland-workspaces.5.gz \
-			share/man/man5/${PORTNAME}-idle-inhibitor.5.gz \
-			share/man/man5/${PORTNAME}-image.5.gz \
-			share/man/man5/${PORTNAME}-inhibitor.5.gz \
-			share/man/man5/${PORTNAME}-memory.5.gz \
-			share/man/man5/${PORTNAME}-menu.5.gz \
-			share/man/man5/${PORTNAME}-niri-language.5.gz \
-			share/man/man5/${PORTNAME}-niri-window.5.gz \
-			share/man/man5/${PORTNAME}-niri-workspaces.5.gz \
-			share/man/man5/${PORTNAME}-river-layout.5.gz \
-			share/man/man5/${PORTNAME}-river-mode.5.gz \
-			share/man/man5/${PORTNAME}-river-tags.5.gz \
-			share/man/man5/${PORTNAME}-river-window.5.gz \
-			share/man/man5/${PORTNAME}-states.5.gz \
-			share/man/man5/${PORTNAME}-styles.5.gz \
-			share/man/man5/${PORTNAME}-sway-language.5.gz \
-			share/man/man5/${PORTNAME}-sway-mode.5.gz \
-			share/man/man5/${PORTNAME}-sway-scratchpad.5.gz \
-			share/man/man5/${PORTNAME}-sway-window.5.gz \
-			share/man/man5/${PORTNAME}-sway-workspaces.5.gz \
-			share/man/man5/${PORTNAME}-temperature.5.gz \
-			share/man/man5/${PORTNAME}-wlr-taskbar.5.gz \
-			share/man/man5/${PORTNAME}.5.gz
+MANPAGES_PLIST_FILES= share/man/man5/${PORTNAME}-cffi.5.gz share/man/man5/${PORTNAME}-clock.5.gz share/man/man5/${PORTNAME}-cpu.5.gz share/man/man5/${PORTNAME}-custom.5.gz share/man/man5/${PORTNAME}-disk.5.gz share/man/man5/${PORTNAME}-dwl-tags.5.gz share/man/man5/${PORTNAME}-dwl-window.5.gz share/man/man5/${PORTNAME}-ext-workspaces.5.gz share/man/man5/${PORTNAME}-gamemode.5.gz share/man/man5/${PORTNAME}-gps.5.gz share/man/man5/${PORTNAME}-hyprland-language.5.gz share/man/man5/${PORTNAME}-hyprland-submap.5.gz share/man/man5/${PORTNAME}-hyprland-window.5.gz share/man/man5/${PORTNAME}-hyprland-workspaces.5.gz share/man/man5/${PORTNAME}-idle-inhibitor.5.gz share/man/man5/${PORTNAME}-image.5.gz share/man/man5/${PORTNAME}-inhibitor.5.gz share/man/man5/${PORTNAME}-memory.5.gz share/man/man5/${PORTNAME}-menu.5.gz share/man/man5/${PORTNAME}-niri-language.5.gz share/man/man5/${PORTNAME}-niri-window.5.gz share/man/man5/${PORTNAME}-niri-workspaces.5.gz share/man/man5/${PORTNAME}-river-layout.5.gz share/man/man5/${PORTNAME}-river-mode.5.gz share/man/man5/${PORTNAME}-river-tags.5.gz share/man/man5/${PORTNAME}-river-window.5.gz share/man/man5/${PORTNAME}-states.5.gz share/man/man5/${PORTNAME}-styles.5.gz share/man/man5/${PORTNAME}-sway-language.5.gz share/man/man5/${PORTNAME}-sway-mode.5.gz share/man/man5/${PORTNAME}-sway-scratchpad.5.gz share/man/man5/${PORTNAME}-sway-window.5.gz share/man/man5/${PORTNAME}-sway-workspaces.5.gz share/man/man5/${PORTNAME}-temperature.5.gz share/man/man5/${PORTNAME}-wlr-taskbar.5.gz share/man/man5/${PORTNAME}.5.gz
 
 MPD_LIB_DEPENDS=	libmpdclient.so:audio/libmpdclient
 MPD_MESON_ENABLED=	mpd

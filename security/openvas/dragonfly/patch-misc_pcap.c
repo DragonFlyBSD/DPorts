@@ -1,11 +1,29 @@
---- misc/pcap.c.orig	2021-02-01 15:26:51 UTC
+--- misc/pcap.c.orig
 +++ misc/pcap.c
-@@ -442,7 +442,7 @@ getinterfaces (int *howmany)
-     g_message (
-       "getinterfaces: SIOCGIFCONF claims you have no network interfaces!");
- 
--#ifndef __FreeBSD__
-+#if !defined(__FreeBSD__) && !defined(__DragonFly__)
-   len = sizeof (struct ifmap);
- #else
-   len = sizeof (struct sockaddr);
+@@ -25,7 +25,7 @@
+ #include <sys/ioctl.h>
+ #include <sys/param.h>
+ #include <sys/types.h>
+-#if defined __FreeBSD__
++#if defined __FreeBSD__ || defined __DragonFly__
+ #include <sys/socket.h>
+ #include <net/if.h>
+ #include <net/if_dl.h>
+@@ -421,7 +421,7 @@
+ {
+   static struct interface_info mydevs[1024];
+   int numinterfaces = 0;
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+   struct ifaddrs *ifaddr, *ifa;
+   struct sockaddr_in *saddr;
+   char *p;
+@@ -1247,7 +1247,7 @@
+         }
+       else
+         {
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+           void * addr_ptr;
+           struct sockaddr * sockaddr_ptr;
+           struct ifaddrs * ifaddrs_ptr;

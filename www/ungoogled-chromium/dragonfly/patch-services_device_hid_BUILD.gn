@@ -1,8 +1,8 @@
 diff --git services/device/hid/BUILD.gn services/device/hid/BUILD.gn
-index 1215615a54da..cf56efd99df3 100644
+index 0eb19e24870b..6271bb4390a9 100644
 --- services/device/hid/BUILD.gn
 +++ services/device/hid/BUILD.gn
-@@ -46,7 +46,7 @@ source_set("hid") {
+@@ -44,7 +44,7 @@ source_set("hid") {
      libs = ["fido2", "cbor", "usbhid", "crypto", "util"]
    }
  

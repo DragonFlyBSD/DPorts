@@ -13,8 +13,4 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 USES=		cmake compiler:c++11-lang localbase:ldflags python tar:tgz
 USE_LDCONFIG=	yes
 
-MAKE_JOBS_UNSAFE= yes
-dfly-patch:
-	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/Makefile
-
 .include <bsd.port.mk>

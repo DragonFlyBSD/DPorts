@@ -1,55 +1,39 @@
-
-WARNINGS
-     The basename() function returns a pointer to internal static storage
-     space that will be overwritten by subsequent calls.
-
-$ rkpng2c about.png about_png.c rk_about_png
-image size: 0x0
-$ cat about_png.c
-/**
- * Generated with png2c
- * File name: about.png
- * Image size name: 0x0
- */
-
-const unsigned char about.png[] = {
-};
-
-
---- tools/rkpng2c.c.orig	2020-10-25 12:39:57 UTC
+--- tools/rkpng2c.c.orig
 +++ tools/rkpng2c.c
-@@ -29,6 +29,10 @@
- #define RK_VERSION_STR "1.0.0"
+@@ -29,6 +29,8 @@
+ #define RK_VERSION_STR "1.1.0"
  
  #include <stdio.h>
-+#ifdef __DragonFly__
 +#include <stdlib.h>
 +#include <string.h>
-+#endif
  #include <libgen.h>
  #include <cairo/cairo.h>
  
-@@ -57,13 +61,23 @@ int main(int argc , char **argv)
+@@ -57,6 +59,9 @@
          }
  
          const unsigned char *buff = cairo_image_surface_get_data(image);
-+#ifdef __DragonFly__
-+        char *b1 = strdup(basename(argv[1]));
-+        char *b3 = strdup(basename(argv[3]));
-+#endif
++        /* basename() may hand back the same static buffer every time */
++        char *file_name = strdup(basename(argv[1]));
++        char *array_name = strdup(basename(argv[3]));
          fprintf(fptr, "/**\n"
                        " * Generated with rkpng2c version %s, part of Redkite GUI toolkit.\n"
                        " * File name: %s\n"
-                       " * Image size: %dx%d\n"
-                       " */\n"
-                       "\n"
-+#ifdef __DragonFly__
-+               "const unsigned char %s[] = {\n", RK_VERSION_STR, b1, w, h, b3);
-+               free(b1);
-+               free(b3);
-+#else
-                 "const unsigned char %s[] = {\n", RK_VERSION_STR, basename(argv[1]), w, h, basename(argv[3]));
-+#endif
+@@ -67,11 +72,13 @@
+                       "const int %s_h = %d;\n"
+                       "const unsigned char %s[] = {\n",
+                       RK_VERSION_STR,
+-                      basename(argv[1]),
++                      file_name,
+                       w, h,
+-                      basename(argv[3]), w,
+-                      basename(argv[3]), h,
+-                      basename(argv[3]));
++                      array_name, w,
++                      array_name, h,
++                      array_name);
++        free(file_name);
++        free(array_name);
          for (int i = 0; i < w * h * 4; i++) {
                  if ((i + 1) == 12 || (i + 1) % 12 == 0)
                          fprintf(fptr, "0x%02x,\n", buff[i]);

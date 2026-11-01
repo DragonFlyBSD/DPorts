@@ -28,6 +28,6 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/kgdb/gdb/gdb761 ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/kgdb/kgdb/kgdb761 ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/kgdb/kgdb/kgdb761.1 ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/kgdb/kgdb/kgdb761.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
 .include <bsd.port.mk>

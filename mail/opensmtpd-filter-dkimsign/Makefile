@@ -30,6 +30,6 @@ post-build:
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/opensmtpd/
 	${INSTALL_PROGRAM} ${WRKSRC}/opensmtpd-filter-dkimsign ${STAGEDIR}${PREFIX}/libexec/opensmtpd/
-	${INSTALL_MAN} ${WRKSRC}/opensmtpd-filter-dkimsign.8 ${STAGEDIR}${MAN8PREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/opensmtpd-filter-dkimsign.8 ${STAGEDIR}${PREFIX}/share/man/man8
 
 .include <bsd.port.mk>

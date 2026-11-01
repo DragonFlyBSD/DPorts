@@ -1,0 +1,11 @@
+--- ui/webui/webui_features.gni.intermediate	2026-09-09 18:12:49 UTC
++++ ui/webui/webui_features.gni
+@@ -45,7 +45,7 @@ if (enable_cast_receiver || is_cast_android || is_cast
+     enable_webui_ntp =
+         target_os == "win" || target_os == "mac" || target_os == "linux" ||
+         target_os == "chromeos" || is_desktop_android || target_os == "openbsd" ||
+-        target_os == "freebsd"
++        target_os == "freebsd" || target_os == "dragonfly"
+   }
+   declare_args() {
+     # Enable WebUI Contextual Tasks Composebox.

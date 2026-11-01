@@ -17,8 +17,4 @@ MAKE_ENV+= WITHOUT_PIE=true CWARNFLAGS=-fcommon
 # Fix build with clang11
 CFLAGS+=	-fcommon
 
-dfly-install:
-	${RM} -rfv ${STAGEDIR}${LOCALBASE}/man1
-	${INSTALL_MAN} ${WRKSRC}/*/*.1 ${STAGEDIR}${PREFIX}/man/man1/
-
 .include <bsd.port.mk>

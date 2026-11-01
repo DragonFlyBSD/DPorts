@@ -1,0 +1,21 @@
+--- cargo-crates/libdeflate-sys-1.23.1/build.rs.orig
++++ cargo-crates/libdeflate-sys-1.23.1/build.rs
+@@ -36,6 +36,18 @@
+         .warnings(false)
+         .out_dir(dst.join("lib"));
+ 
++    // Base binutils (2.34) predates AVX-VNNI and AVX512VNNI, which gcc 12
++    // happily emits for the _target_attribute("avxvnni") clones. The
++    // feature test in adler32_impl.h only checks the compiler version,
++    // so tell it the assembler cannot handle them.
++    if std::env::var("TARGET").unwrap().contains("dragonfly") {
++        build.define("LIBDEFLATE_ASSEMBLER_DOES_NOT_SUPPORT_AVX_VNNI", None);
++        build.define(
++            "LIBDEFLATE_ASSEMBLER_DOES_NOT_SUPPORT_AVX512VNNI",
++            None,
++        );
++    }
++
+     if cfg!(feature = "freestanding") && !build.get_compiler().is_like_msvc() {
+         build
+             .flag("-ffreestanding")

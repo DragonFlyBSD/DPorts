@@ -34,7 +34,7 @@ GH_ACCOUNT=	bluescarni
 CMAKE_ON=		HEYOKA_WITH_MPPP HEYOKA_WITH_SLEEF
 CMAKE_OFF=		BUILD_TESTING
 
-USE_CLANG_FALLBACK= 12
+USE_GCC_VERSION= 14
 .include <bsd.port.pre.mk>
 
 # LLVM 18 and later use 1 for their minor version, while 17 and earlier use 0.

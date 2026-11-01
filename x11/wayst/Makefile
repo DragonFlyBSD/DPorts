@@ -43,6 +43,7 @@ X11_USES=	xorg
 X11_USE=	XORG=x11,xrandr,xrender
 X11_MAKE_ARGS=	window_protocol+="x11"
 
+BUILD_DEPENDS= ${LOCALBASE}/include/threads.h:misc/libstdthreads
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/wayst
 	${MKDIR} ${STAGEDIR}${ETCDIR}

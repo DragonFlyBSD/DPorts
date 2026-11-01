@@ -1,0 +1,27 @@
+--- meson.build.orig
++++ meson.build
+@@ -29,6 +29,8 @@
+ xkbcommon       = dependency('xkbcommon')
+ 
+ rt = cc.find_library('rt')
++# timerfd on the BSDs without it in libc
++epoll_shim      = dependency('epoll-shim', required: false)
+ 
+ subdir('protocols')
+ subdir('docs')
+@@ -46,6 +48,7 @@
+ 	dependencies: [
+ 		cairo,
+ 		client_protos,
++		epoll_shim,
+ 		pango,
+ 		pangocairo,
+ 		rt,
+@@ -69,6 +72,7 @@
+ 	dependencies: [
+ 		cairo,
+ 		client_protos,
++		epoll_shim,
+ 		pango,
+ 		pangocairo,
+ 		rt,

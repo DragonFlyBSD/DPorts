@@ -25,8 +25,7 @@ do-install:
 	@${MKDIR} ${STAGEDIR}/var/db/nsnake
 
 dfly-patch:
-	${REINPLACE_CMD} -e "s@^CFLAGS=@& ${CFLAGS}@g" \
-			 -e "s@^LDFLAGS=@& ${LDFLAGS}@g" \
-		${WRKSRC}/config.mk
+	${REINPLACE_CMD} -e 's@^CFLAGS=@CFLAGS+=@' -e 's@^LDFLAGS=@LDFLAGS+=@' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

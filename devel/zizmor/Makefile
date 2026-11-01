@@ -30,6 +30,7 @@ COMPLETIONS_PLIST_FILES=etc/bash_completion.d/${PORTNAME} \
 			share/fish/completions/${PORTNAME}.fish \
 			share/zsh/site-functions/_${PORTNAME}
 
+BUILD_DEPENDS= gmake:devel/gmake
 post-build-COMPLETIONS-on:
 .for shell in bash fish zsh
 	${CARGO_TARGET_DIR}/*/${PORTNAME} --completions ${shell} > \

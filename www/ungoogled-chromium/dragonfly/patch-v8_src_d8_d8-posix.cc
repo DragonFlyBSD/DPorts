@@ -1,5 +1,5 @@
 diff --git v8/src/d8/d8-posix.cc v8/src/d8/d8-posix.cc
-index c36c27d12046..5d942ab6103d 100644
+index 5bda64215dbc..fd4b3889041b 100644
 --- v8/src/d8/d8-posix.cc
 +++ v8/src/d8/d8-posix.cc
 @@ -343,7 +343,7 @@ static Local<Value> GetStdout(Isolate* isolate, int child_fd,

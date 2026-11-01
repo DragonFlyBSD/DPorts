@@ -30,4 +30,5 @@ PORTDOCS=	*
 PLIST_FILES=	bin/andi \
 		share/man/man1/andi.1.gz
 
+BUILD_DEPENDS= ${LOCALBASE}/include/threads.h:misc/libstdthreads
 .include <bsd.port.mk>

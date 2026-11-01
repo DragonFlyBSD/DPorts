@@ -1,6 +1,6 @@
---- src/drivers/driver_bsd.c.intermediate	2021-12-20 19:31:24.000000000 +0000
+--- src/drivers/driver_bsd.c.orig
 +++ src/drivers/driver_bsd.c
-@@ -30,7 +30,9 @@
+@@ -32,7 +32,9 @@
  
  #ifdef __DragonFly__
  #include <netproto/802_11/ieee80211_ioctl.h>
@@ -10,3 +10,13 @@
  #else /* __DragonFly__ */
  #ifdef __GLIBC__
  #include <netinet/ether.h>
+@@ -666,7 +668,9 @@
+ 		mode = IFM_IEEE80211_11B;
+ 	} else {
+ 		mode =
++#ifdef IFM_IEEE80211_VHT5G
+ 			freq->vht_enabled ? IFM_IEEE80211_VHT5G :
++#endif
+ 			freq->ht_enabled ? IFM_IEEE80211_11NA :
+ 			IFM_IEEE80211_11A;
+ 	}

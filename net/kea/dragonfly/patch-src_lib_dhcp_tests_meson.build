@@ -1,0 +1,11 @@
+--- src/lib/dhcp/tests/meson.build.orig
++++ src/lib/dhcp/tests/meson.build
+@@ -4,7 +4,7 @@
+ 
+ if SYSTEM == 'linux'
+     pkt_filter_xpf_unittest_cc = 'pkt_filter_lpf_unittest.cc'
+-elif SYSTEM == 'freebsd' or SYSTEM == 'netbsd' or SYSTEM == 'openbsd' or SYSTEM == 'darwin'
++elif SYSTEM == 'freebsd' or SYSTEM == 'dragonfly' or SYSTEM == 'netbsd' or SYSTEM == 'openbsd' or SYSTEM == 'darwin'
+     pkt_filter_xpf_unittest_cc = 'pkt_filter_bpf_unittest.cc'
+ else
+     error(f'Build failed: Unsupported system "@SYSTEM@".')

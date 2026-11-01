@@ -10,13 +10,12 @@ WWW=		https://www.mahoroba.org/~ume/dtcp/
 
 LICENSE=	BSD2CLAUSE
 
-USES= uidfix ssl
+USES= uidfix localbase:ldflags
 USE_RC_SUBR=	dtcpclient
 
 PLIST_FILES=	share/man/man8/dtcpclient.8.gz \
 		sbin/dtcpclient \
 		"@sample %%EXAMPLESDIR%%/dtcpclient.script etc/dtcpclient.script"
 
-CFLAGS= -I${OPENSSLINC}
-LDFLAGS= -L${OPENSSLLIB}
+LIB_DEPENDS= libmd.so:security/libmd
 .include <bsd.port.mk>

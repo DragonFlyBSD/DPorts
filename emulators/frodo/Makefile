@@ -26,7 +26,8 @@ OPTIONS_DEFAULT=
 
 NLS_USES=	gettext-runtime
 
-CFLAGS= -Wno-narrowing
+USE_GCC_VERSION= 14
+CXXFLAGS_x86_64= -Wno-narrowing
 do-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${INSTALL_WRKSRC}/CHANGES ${STAGEDIR}${DOCSDIR}/

@@ -14,7 +14,8 @@ USES+=		localbase:ldflags
 LIB_DEPENDS=	libradius.so.4:net/libradius
 
 PLIST_FILES=	lib/pam_radius.so \
-		man/man8/pam_radius.8.gz
+		share/man/man8/pam_radius.8.gz
+MAKE_ARGS=	MANDIR=${PREFIX}/share/man/man
 
 # Only export these global pam symbols to avoid "issues"
 CFLAGS+=	-fvisibility=hidden

@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -17,7 +17,7 @@
+   message(FATAL_ERROR "Redkite is not implemented yet for Mac OS X")
+ elseif (CMAKE_SYSTEM_NAME MATCHES Linux)
+   message(STATUS " Build Redkite for GNU/Linux")
+-elseif (CMAKE_SYSTEM_NAME MATCHES FreeBSD)
++elseif (CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+   message(STATUS " Build Redkite for FreeBSD")
+ else()
+   message(FATAL_ERROR "Redkite is not implemented yet for ${CMAKE_SYSTEM_NAME}")

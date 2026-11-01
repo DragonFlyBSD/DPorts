@@ -1,8 +1,6 @@
-diff --git base/BUILD.gn base/BUILD.gn
-index 6afa72db0f69..de0930348b26 100644
---- base/BUILD.gn
+--- base/BUILD.gn.orig
 +++ base/BUILD.gn
-@@ -948,7 +948,7 @@ component("base") {
+@@ -1054,7 +1054,7 @@
      #"system/sys_info_openbsd.cc",
    ]
  
@@ -11,7 +9,16 @@ index 6afa72db0f69..de0930348b26 100644
      sources += [
        "posix/sysctl.cc",
        "posix/sysctl.h",
-@@ -2188,7 +2188,7 @@ component("base") {
+@@ -1222,7 +1222,7 @@
+     ]
+   }
+ 
+-  if (is_freebsd) {
++  if (is_freebsd || is_dragonfly) {
+     libs += [
+       "execinfo",
+       "kvm",
+@@ -2290,7 +2290,7 @@
        "process/process_metrics_openbsd.cc",
        "system/sys_info_openbsd.cc",
      ]

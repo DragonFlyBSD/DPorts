@@ -25,7 +25,4 @@ GLIB_SCHEMAS=	io.github.ellie_commons.sequeler.gschema.xml
 # for build-aux/meson_post_install.py
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
-dfly-patch:
-	${CHMOD} +x ${WRKSRC}/build-aux/meson_post_install.py
-
 .include <bsd.port.mk>

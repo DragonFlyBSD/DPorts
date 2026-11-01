@@ -140,7 +140,6 @@ SHARED_USE=		ldconfig=yes
 SHARED_VARS=		shlibs+="lib/libcrypto.so.${OPENSSL_SHLIBVER} \
 				lib/libssl.so.${OPENSSL_SHLIBVER} \
 				lib/engines-${OPENSSL_SHLIBVER}/capi.so \
-				lib/engines-${OPENSSL_SHLIBVER}/devcrypto.so \
 				lib/engines-${OPENSSL_SHLIBVER}/padlock.so"
 SSL3_CONFIGURE_ON=	enable-ssl3 enable-ssl3-method
 THREADPOOL_CONFIGURE_OFF=	no-thread-pool
@@ -150,6 +149,8 @@ ZSTD_CONFIGURE_ON=	enable-zstd-dynamic
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 
 SHLIBS=			lib/engines-${OPENSSL_SHLIBVER}/loader_attic.so
+OPTIONS_EXCLUDE=	SCTP
+CONFIGURE_ARGS+=	no-devcryptoeng
 
 PORTSCOUT=		limit:^${DISTVERSION:R:S/./\./g}\.
 

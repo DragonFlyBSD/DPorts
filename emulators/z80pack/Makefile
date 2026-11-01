@@ -22,4 +22,10 @@ OPTIONS_DEFINE=	DOCS
 do-install-DOCS-on:
 		cd ${WRKSRC}/doc && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|-lthr|-lpthread|' \
+		${WRKSRC}/altairsim/srcsim/Makefile \
+		${WRKSRC}/cromemcosim/srcsim/Makefile \
+		${WRKSRC}/imsaisim/srcsim/Makefile
+
 .include <bsd.port.mk>

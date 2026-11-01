@@ -1,9 +1,11 @@
-Since FreeBSD in MF does s/30/PATH_MAX/ it earns an extra include
-
---- src/main.cpp.intermediate	2016-07-04 19:42:13 UTC
+--- src/main.cpp.orig
 +++ src/main.cpp
-@@ -20,6 +20,7 @@
- #ifdef __FreeBSD__
+@@ -17,9 +17,10 @@
+  * 
+  */
+ 
+-#ifdef __linux__
++#if defined(__linux__) || defined(__DragonFly__)
  #include <unistd.h>
  #include <defaults.h>
 +#include <limits.h> // for PATH_MAX

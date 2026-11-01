@@ -32,6 +32,7 @@ PLIST_FILES=	lib/lv2/Fluida.lv2/Fluida.so \
 		lib/lv2/Fluida.lv2/Fluida_ui.so \
 		lib/lv2/Fluida.lv2/manifest.ttl
 
+MAKE_ARGS= TARGET=Linux
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
