@@ -18,7 +18,34 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/gperf:devel/gperf \
 RUN_DEPENDS=	${LOCALBASE}/bin/makeinfo:print/texinfo \
 		gnuplot:math/gnuplot \
 		gsed:textproc/gsed
-LIB_DEPENDS= libamd.so:math/suitesparse-amd libarpack.so:math/arpack-ng@mpich libcamd.so:math/suitesparse-camd libccolamd.so:math/suitesparse-ccolamd libcholmod.so:math/suitesparse-cholmod libcolamd.so:math/suitesparse-colamd libcurl.so:ftp/curl libcxsparse.so:math/suitesparse-cxsparse libdrm.so:graphics/libdrm libfftw3.so:math/fftw3 libfftw3f.so:math/fftw3-float libfltk.so:x11-toolkits/fltk libfontconfig.so:x11-fonts/fontconfig libfreetype.so:print/freetype2 libftgl.so:graphics/ftgl libgl2ps.so:print/gl2ps libglpk.so:math/glpk libhdf5.so:science/hdf5 libklu.so:math/suitesparse-klu libpcre.so:devel/pcre libportaudio.so:audio/portaudio libqhull_r.so:math/qhull libqrupdate.so:math/qrupdate libspqr.so:math/suitesparse-spqr libsuitesparseconfig.so:math/suitesparse-config libsundials_arkode.so:math/sundials libumfpack.so:math/suitesparse-umfpack
+LIB_DEPENDS=	libamd.so:math/suitesparse-amd \
+		libarpack.so:math/arpack-ng@mpich \
+		libcamd.so:math/suitesparse-camd \
+		libccolamd.so:math/suitesparse-ccolamd \
+		libcholmod.so:math/suitesparse-cholmod \
+		libcolamd.so:math/suitesparse-colamd \
+		libcurl.so:ftp/curl \
+		libcxsparse.so:math/suitesparse-cxsparse \
+		libdrm.so:graphics/libdrm \
+		libfftw3.so:math/fftw3 \
+		libfftw3f.so:math/fftw3-float \
+		libfltk.so:x11-toolkits/fltk \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2 \
+		libftgl.so:graphics/ftgl \
+		libgl2ps.so:print/gl2ps \
+		libglpk.so:math/glpk \
+		libGraphicsMagick.so:graphics/GraphicsMagick \
+		libhdf5.so:science/hdf5 \
+		libklu.so:math/suitesparse-klu \
+		libpcre.so:devel/pcre \
+		libportaudio.so:audio/portaudio \
+		libqhull_r.so:math/qhull \
+		libqrupdate.so:math/qrupdate \
+		libspqr.so:math/suitesparse-spqr \
+		libsuitesparseconfig.so:math/suitesparse-config \
+		libsundials_arkode.so:math/sundials \
+		libumfpack.so:math/suitesparse-umfpack
 
 USES=		charsetfix compiler:c++17-lang desktop-file-utils fortran gl \
 		gmake iconv libtool localbase:ldflags ncurses octave:env perl5 \
@@ -85,7 +112,6 @@ ATLAS_USES=	blaslapack:atlas
 
 BINARY_ALIAS=	sed=gsed
 
-CONFIGURE_ARGS+= --without-magick
 post-patch:
 	${REINPLACE_CMD} -e s+python3+${PYTHON_CMD}+g ${WRKSRC}/scripts/miscellaneous/python.m
 

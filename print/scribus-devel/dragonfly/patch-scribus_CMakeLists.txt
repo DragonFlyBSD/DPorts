@@ -1,6 +1,6 @@
---- scribus/CMakeLists.txt.orig	2022-10-26 09:32:38 UTC
+--- scribus/CMakeLists.txt.orig
 +++ scribus/CMakeLists.txt
-@@ -822,12 +822,12 @@ endif ()
+@@ -251,12 +251,12 @@
  
  # required to resolve symbols from libdl when ld is called with --no-add-needed
  # #9310 for the OpenBSD addition
@@ -10,8 +10,8 @@
  endif()
  
  # #9311 for the OpenBSD addition
--if(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-+if(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
+-if(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
++if(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD" OR CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
    target_link_libraries(${EXE_NAME} PRIVATE util execinfo)
  endif()
  

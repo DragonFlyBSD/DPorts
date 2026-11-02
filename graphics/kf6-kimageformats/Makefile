@@ -33,7 +33,6 @@ OPENJPEG_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_OpenJPEG
 RAW_LIB_DEPENDS=	libraw.so:graphics/libraw
 RAW_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_LibRaw
 
-OPTIONS_EXCLUDE_DragonFly= OPENEXR
 dfly-patch:
 	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
 		${WRKSRC}/metainfo.yaml

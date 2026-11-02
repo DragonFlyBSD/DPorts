@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/stb.pc:devel/stb
 TEST_DEPENDS=	googletest>0:devel/googletest
 
-USES= cmake:testing compiler:c++20-lang iconv pathfix pkgconfig dfly-libcxx
+USES=		cmake:testing compiler:c++20-lang iconv pathfix pkgconfig
 USE_LDCONFIG=	yes
 
 CMAKE_ARGS=	-DZXING_WRITERS=BOTH

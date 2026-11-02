@@ -12,14 +12,14 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cyclonedx-python-lib>0:textproc/py-cyclone
 LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon \
 		libzstd.so:archivers/zstd
 
-USES=		cmake compiler:c++17-lang gl llvm:min=17,lib,noexport \
+USES=		cmake compiler:c++17-lang gl \
 		python:build qt-dist:6
 USE_GL=		opengl
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 USE_QT=		base declarative sqldriver-sqlite:run
 
-CMAKE_ARGS=	-DClang_DIR:PATH="${LLVM_PREFIX}/lib/cmake/clang" \
-		-DLLVM_DIR:PATH="${LLVM_PREFIX}/lib/cmake/llvm"
+CMAKE_ARGS=	-DFEATURE_clang=OFF -DFEATURE_qdoc=OFF \
+		-DFEATURE_clangcpp=OFF
 # QDOC_USER_CLANG_VERSION is a custom CMake variable intended to override the
 # list of supported LLVM versions, i.e., QDOC_SUPPORTED_CLANG_VERSIONS in
 # src/qdoc/cmake/QDocConfiguration.cmake with the chosen version of LLVM.
@@ -29,7 +29,6 @@ CMAKE_ARGS=	-DClang_DIR:PATH="${LLVM_PREFIX}/lib/cmake/clang" \
 # major.minor version of llvm for this variable. Since LLVM_VERSION only provides
 # the major version, we pass the full version via a command and let CMake process
 # it during the configure stage.
-CMAKE_ARGS+=	-DQDOC_USER_CLANG_VERSION:STRING="`${LLVM_CONFIG} --version`"
 CMAKE_ON=	QT_INSTALL_XDG_DESKTOP_ENTRIES
 
 post-install:

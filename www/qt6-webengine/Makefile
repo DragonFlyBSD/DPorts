@@ -87,7 +87,7 @@ USE_XORG+=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 CMAKE_ON+=	QT_FEATURE_qtwebengine_build
 CMAKE_OFF+=	QT_FEATURE_qtpdf_build
 
-CXXFLAGS+= -I${LOCALBASE}/include/libepoll-shim -nostdinc++ -stdlib=libc++ -I${LOCALBASE}/include -I${LOCALBASE}/include/cxxrt -cxx-isystem ${LOCALBASE}/llvm${LLVM_DEFAULT}/include/c++/v1 -Wno-error=unused-command-line-argument -Wunused-command-line-argument
+CXXFLAGS+= -I${LOCALBASE}/include/libepoll-shim -I${LOCALBASE}/include
 
 SYS_LIBS=	freetype harfbuzz-ng libdrm libpng libxml libxslt openh264 opus
 .endif
@@ -113,7 +113,7 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 # real number of make jobs via MAKE_JOBS_NUMBER to ninja(1) to CONFIGURE_ENV.
 DO_MAKE_BUILD=	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} -j1 ${MAKE_ARGS:N${DESTDIRNAME}=*}
 
-BINARY_ALIAS= git=false python3=${PYTHON_CMD} cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} cc=${LOCALBASE}/bin/clang${LLVM_DEFAULT} c++=${LOCALBASE}/bin/clang++${LLVM_DEFAULT} ar=${LOCALBASE}/bin/llvm-ar${LLVM_DEFAULT} nm=${LOCALBASE}/bin/llvm-nm${LLVM_DEFAULT}
+BINARY_ALIAS=	git=false python3=${PYTHON_CMD}
 
 .if !defined(BUILD_QTPDF)
 OPTIONS_DEFINE=		DRIVER PIPEWIRE RUST
@@ -155,11 +155,8 @@ SNDIO_CMAKE_ON=		-DQT_FEATURE_webengine_system_sndio:BOOL=ON
 SNDIO_CMAKE_OFF=	-DQT_FEATURE_webengine_system_sndio:BOOL=OFF
 .endif
 
-USE_CLANG_FALLBACK= default
-LDFLAGS= -L /usr/lib -L${LOCALBASE}/llvm${LLVM_DEFAULT}/lib/c++ -L /lib
+MAKE_JOBS_NUMBER_LIMIT= 6
 CONFIGURE_ENV+= CXXFLAGS="${CXXFLAGS}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
-LIB_DIRS= /lib /usr/lib ${LOCALBASE}/lib ${PREFIX}/llvm${LLVM_DEFAULT}/lib
-LIB_DEPENDS+= libc++.so.1:devel/libcxx${LLVM_DEFAULT}
 LIB_DEPENDS+= libgbm.so.1:graphics/mesa-libs
 LIB_DEPENDS+= libva.so:multimedia/libva
 .include <bsd.port.options.mk>

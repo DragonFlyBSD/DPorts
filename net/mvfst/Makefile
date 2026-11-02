@@ -42,5 +42,4 @@ CMAKE_TESTING_ON=	BUILD_TESTS # several tests fail, see https://github.com/faceb
 CXXFLAGS+=	-fPIC
 CXXFLAGS+=	-DGLOG_USE_GLOG_EXPORT
 
-PLIST_FILES= include/quic/client/connector/QuicConnector.h include/quic/common/MonitoredObject.h include/quic/state/QuicStreamPrioritiesObserver.h
 .include <bsd.port.mk>

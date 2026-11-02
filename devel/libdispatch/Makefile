@@ -9,7 +9,7 @@ COMMENT=	Grand Central Dispatch API support library
 
 LICENSE=	APACHE20
 
-USES=		cmake:testing compiler:c++17-lang
+USES= cmake:testing compiler:c++17-lang dfly-libcxx
 USE_LDCONFIG=	yes
 USE_CXXSTD=	c++17
 
@@ -18,7 +18,6 @@ GH_ACCOUNT=	swiftlang
 GH_PROJECT=	swift-corelibs-libdispatch
 GH_TAGNAME=	swift-${DISTVERSION}-RELEASE
 
-USE_CLANG_FALLBACK= default
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD && (${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc)

@@ -30,9 +30,28 @@ BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		${LOCALBASE}/lib/libtde2e.a:net-im/tde2e \
 		${LOCALBASE}/lib/libtg_owt.a:net-im/tg_owt \
 		${LOCALBASE}/lib/libtlottie.a:graphics/tlottie
-LIB_DEPENDS= libabsl_base.so:devel/abseil libada.so:devel/libada libavformat.so:multimedia/ffmpeg libcrc32c.so:devel/crc32c libdbus-1.so:devel/dbus libfido2.so:security/libfido2 libfmt.so:devel/libfmt libheif.so:graphics/libheif libhunspell-1.7.so:textproc/hunspell libjxl.so:graphics/libjxl liblz4.so:archivers/liblz4 libopenh264.so:multimedia/openh264 libopus.so:audio/opus libpipewire-0.3.so:multimedia/pipewire libqrcodegencpp.so:graphics/qr-code-generator librnnoise.so:audio/rnnoise libsrtp2.so:net/libsrtp2 libxxhash.so:devel/xxhash libvpx.so:multimedia/libvpx
+LIB_DEPENDS=	libabsl_base.so:devel/abseil \
+		libada.so:devel/libada \
+		libavformat.so:multimedia/ffmpeg \
+		libcrc32c.so:devel/crc32c \
+		libdbus-1.so:devel/dbus \
+		libdispatch.so:devel/libdispatch \
+		libfido2.so:security/libfido2 \
+		libfmt.so:devel/libfmt \
+		libheif.so:graphics/libheif \
+		libhunspell-1.7.so:textproc/hunspell \
+		libjxl.so:graphics/libjxl \
+		liblz4.so:archivers/liblz4 \
+		libopenh264.so:multimedia/openh264 \
+		libopus.so:audio/opus \
+		libpipewire-0.3.so:multimedia/pipewire \
+		libqrcodegencpp.so:graphics/qr-code-generator \
+		librnnoise.so:audio/rnnoise \
+		libsrtp2.so:net/libsrtp2 \
+		libxxhash.so:devel/xxhash \
+		libvpx.so:multimedia/libvpx
 
-USES= cmake desktop-file-utils gl gnome jpeg kde:6 localbase minizip openal pkgconfig python:build qt:6 ssl gmake ninja
+USES= cmake desktop-file-utils gl gnome jpeg kde:6 minizip openal pkgconfig python:build qt:6 ssl localbase:ldflags
 
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	telegramdesktop
@@ -55,6 +74,7 @@ CMAKE_ON=	DESKTOP_APP_USE_PACKAGED \
 CMAKE_ARGS+=	-DLINUX=true
 
 # libdispatch components
+LDFLAGS+=	-lBlocksRuntime
 
 # Telegram uses OpenAL for its audio, but libtgvoip (for voice calls) can use PulseAudio or ALSA.
 # It dynamically loads PulseAudio, and if this fails, it loads ALSA.
@@ -85,8 +105,6 @@ TELEGRAM_API_HASH=	20a3432aab43f24bb4460fceac5ba38d
 TELEGRAM_API_ID=	601761
 
 USE_GCC_VERSION= 13
-CFLAGS= -I${OPENSSLINC}
-CXXFLAGS= -DWITHOUT_PULSE
 post-extract:
 	# Some of the third-party components already built, and
 	# can be safely removed
@@ -94,11 +112,14 @@ post-extract:
 		${WRKSRC}/Telegram/ThirdParty/GSL \
 		${WRKSRC}/Telegram/ThirdParty/QR \
 		${WRKSRC}/Telegram/ThirdParty/TooManyCooks \
+		${WRKSRC}/Telegram/ThirdParty/dispatch \
 		${WRKSRC}/Telegram/ThirdParty/expected \
 		${WRKSRC}/Telegram/ThirdParty/fcitx5-qt \
 		${WRKSRC}/Telegram/ThirdParty/hime \
 		${WRKSRC}/Telegram/ThirdParty/hunspell \
+		${WRKSRC}/Telegram/ThirdParty/jemalloc \
 		${WRKSRC}/Telegram/ThirdParty/jimf \
+		${WRKSRC}/Telegram/ThirdParty/kcoreaddons \
 		${WRKSRC}/Telegram/ThirdParty/kimageformats \
 		${WRKSRC}/Telegram/ThirdParty/lz4 \
 		${WRKSRC}/Telegram/ThirdParty/minizip \
@@ -114,11 +135,5 @@ post-patch:
 	# warning: argument unused during compilation: '-fstack-clash-protection'
 	${REINPLACE_CMD} -e /-Wno-maybe-uninitialized/d -e /-fstack-clash-protection/d \
 	    ${WRKSRC}/cmake/options_linux.cmake
-
-BUILD_DEPENDS:= ${BUILD_DEPENDS:Npulseaudio*} autoconf>0:devel/autoconf
-dfly-patch:
-	${REINPLACE_CMD} -e '/pkg_check_modules(PULSE/d' \
-			 -e '/PULSE_INCLUDE_DIRS/d' \
-		${WRKSRC}/Telegram/cmake/lib_tgvoip.cmake
 
 .include <bsd.port.mk>

@@ -109,21 +109,9 @@ QMAKESPEC?=		${QT_MKSPECDIR}/${QMAKESPECNAME}
 # better to support custom settings. Dereferencing the detection allows to
 # avoid forking a shell on each inclusion of this file, and to catch any CXX
 # customization (via USE_GCC, etc.).
-# Qt6 builds with the LLVM toolchain and libc++, Qt5 stays on gcc. Both are
-# stated rather than detected: the compiler is chosen here, not inherited.
-.  if ${_QT_VER:M6}
-.include "${USESDIR}/dfly-libcxx.mk"
-QMAKE_COMPILER=	clang
-# default_pre.prf probes QMAKE_CXX before qmake applies command-line
-# assignments, so it would run the spec's bare clang++, which DragonFly
-# lacks. -early hands qmake.mk's compiler to the probe as well.
-QMAKE_ARGS+=	-early QMAKE_CC="${CC}" QMAKE_CXX="${CXX}" -before
-# signond and qt6pas still hit a probe that runs the spec's bare clang++
-# despite -early; give the build a clang/clang++ that is the dfly-libcxx one.
-BINARY_ALIAS+=	clang=clang${DFLY_LIBCXX_VER} clang++=clang++${DFLY_LIBCXX_VER}
-.  else
+# Qt5 and Qt6 build with gcc and libstdc++, like the C++ libraries they
+# link. Stated rather than detected.
 QMAKE_COMPILER=	g++
-.  endif
 
 .  for dir in BIN INC LIB ARCH PLUGIN LIBEXEC IMPORT \
 	QML SBOM DATA DOC L10N ETC EXAMPLE TEST MKSPEC \

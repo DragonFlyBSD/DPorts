@@ -74,7 +74,7 @@ DEMO_FILES=	\
 DEMOS_PLIST_FILES=	${DEMO_FILES:S/^/bin\/${PORTNAME}-/}
 DEMOS_BROKEN=		build fails with JUCE_BUILD_EXAMPLES=ON, see https://github.com/juce-framework/JUCE/issues/1410
 
-DOS2UNIX_FILES+= modules/juce_core/system/juce_TargetPlatform.h extras/Projucer/Source/BinaryData/juce_SimpleBinaryBuilder.cpp
+DOS2UNIX_FILES+= modules/juce_core/system/juce_TargetPlatform.h extras/Projucer/Source/BinaryData/juce_SimpleBinaryBuilder.cpp extras/Build/CMake/JUCEModuleSupport.cmake extras/Build/CMake/JUCEUtils.cmake
 post-patch:
 	# fix fonts.conf path
 	@${REINPLACE_CMD} -i '' -e ' \

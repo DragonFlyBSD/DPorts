@@ -1,4 +1,4 @@
-@comment include/Block.h
+include/Block.h
 include/dispatch/base.h
 include/dispatch/block.h
 include/dispatch/data.h
@@ -16,7 +16,7 @@ include/os/generic_base.h
 include/os/generic_unix_base.h
 include/os/generic_win_base.h
 include/os/object.h
-@comment lib/libBlocksRuntime.so
+lib/libBlocksRuntime.so
 lib/libdispatch.so
 lib/libdispatch.so.1
 lib/libdispatch.so.1.3
