@@ -11,6 +11,7 @@ USE_KDE=	ecm:build
 USE_PERL5=	build
 USE_QT=		base declarative tools:build
 
+USE_GCC_VERSION= 14
 dfly-patch:
 	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
 		${WRKSRC}/metainfo.yaml

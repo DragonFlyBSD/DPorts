@@ -52,7 +52,7 @@ dfly-patch:
 	${REINPLACE_CMD} -e '/should not occur/s@//return@return@g' \
 		${WRKSRC}/melder/melder_search.cpp
 	${REINPLACE_CMD} -e 's@-ltinfow@-ltinfo@g' \
-		${WRKSRC}/makefile.defs
+		${WRKSRC}/Makefile
 	 ${REINPLACE_CMD} -e 's/[[:<:]]isinf[[:>:]]/std::isinf/g' \
 		-e 's@[[:<:]]isnan[[:>:]]@std::isnan@g' \
 		${WRKSRC}/melder/melder_audiofiles.cpp \

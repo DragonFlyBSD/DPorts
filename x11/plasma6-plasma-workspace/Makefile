@@ -54,6 +54,7 @@ OPTIONS_DEFINE=	GTK
 GTK_DESC=		Global menu bar support for GTK applications
 GTK_RUN_DEPENDS=	appmenu-gtk-module>0:x11/gtk-app-menu
 
+USE_GCC_VERSION= 14
 .include <bsd.port.options.mk>
 # https://reviews.freebsd.org/D59635
 .if ${OSVERSION} < 1501503
@@ -66,5 +67,13 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${PATCH_WRKSRC}/startkde/startplasma.cpp \
 		${PATCH_WRKSRC}/login-sessions/plasmawayland.desktop.cmake
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/CMAKE_SYSTEM_NAME STREQUAL "OpenBSD"/CMAKE_SYSTEM_NAME MATCHES "OpenBSD|DragonFly"/' \
+		${WRKSRC}/libclock/CMakeLists.txt
+	${REINPLACE_CMD} -e 's/^#if defined(Q_OS_OPENBSD)$$/#if defined(Q_OS_OPENBSD) || defined(Q_OS_DRAGONFLY)/' \
+		${WRKSRC}/libclock/alignedtimer.h
+	${REINPLACE_CMD} -e 's/^if(CMAKE_SYSTEM_NAME MATCHES FreeBSD)$$/if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")/' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

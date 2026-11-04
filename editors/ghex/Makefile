@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	itstool:textproc/itstool
 
-USES= desktop-file-utils gettext-tools gnome meson pkgconfig tar:xz shebangfix python
+USES=		desktop-file-utils gettext-tools gnome meson pkgconfig tar:xz
 USE_GNOME=	cairo glib20 gtk40  introspection:build libadwaita
 USE_LDCONFIG=	yes
 
@@ -23,5 +23,4 @@ GLIB_SCHEMAS=	org.gnome.GHex.gschema.xml
 MESON_ARGS=	-Dmmap-buffer-backend=false \
 		-Ddirect-buffer-backend=false
 
-SHEBANG_FILES= meson_post_install.py
 .include <bsd.port.mk>

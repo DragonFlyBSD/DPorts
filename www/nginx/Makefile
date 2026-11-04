@@ -1,6 +1,5 @@
 PORTNAME=	nginx
 PORTVERSION=	${NGINX_VERSION}
-NJS_LIB_DEPENDS= libpcre.so:devel/pcre
 .include "version.mk"
 PORTEPOCH=	3
 CATEGORIES=	www
@@ -421,11 +420,6 @@ post-install-WWW-on:
 	(cd ${WRKSRC}/html && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/www/nginx-dist && \
 	${TOUCH} ${STAGEDIR}${PREFIX}/www/nginx-dist/EXAMPLE_DIRECTORY-DONT_ADD_OR_TOUCH_ANYTHING)
 .endif
-
-post-patch-NJS-on:
-	(cd ${WRKSRC_njs} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-auto_openssl.diff)
-	(cd ${WRKSRC_njs} && ${PATCH} ${PATCH_ARGS} < ${DFLY_PATCHDIR}/extra-njs-cli.diff)
-
 
 pre-patch-MODSECURITY-on:
 	-${REINPLACE_CMD} -e 's|\*-\*-freebsd\*|*-*-dragonfly*|' \

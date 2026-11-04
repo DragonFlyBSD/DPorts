@@ -27,6 +27,4 @@ PORTSCOUT=	limitw:1,even
 
 GLIB_SCHEMAS=	org.gnome.sound-juicer.gschema.xml
 
-USES+= python:3.4+,build shebangfix
-SHEBANG_FILES= meson_post_install.py
 .include <bsd.port.mk>

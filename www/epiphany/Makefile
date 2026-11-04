@@ -44,7 +44,4 @@ GLIB_SCHEMAS=	org.gnome.Epiphany.enums.xml \
 
 PLIST_SUB+=	EPHY_VERSION=${PORTVERSION:R}
 
-dfly-patch:
-	${CHMOD} ${BINMODE} ${WRKSRC}/post_install.py
-
 .include <bsd.port.mk>

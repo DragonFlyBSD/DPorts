@@ -37,6 +37,7 @@ BACNET_SCRIPTS=	abort-reason.sh bacbbmd.sh bacroute.sh bacrpd.sh bvlc.sh \
 		reliability.sh restart-reason.sh router-mstp.sh units.sh \
 		vendor-id.sh
 
+MAKE_JOBS_UNSAFE= yes
 post-patch:
 	@${REINPLACE_CMD} -i "" 's|\./bin/||g' ${WRKSRC}/bin/*.sh
 	@${REINPLACE_CMD} -i "" 's|\./||g' ${WRKSRC}/bin/*.sh

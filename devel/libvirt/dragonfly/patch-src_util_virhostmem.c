@@ -1,4 +1,4 @@
---- src/util/virhostmem.c.orig	2021-12-01 09:51:11 UTC
+--- src/util/virhostmem.c.orig	2026-10-01 09:02:52 UTC
 +++ src/util/virhostmem.c
 @@ -24,7 +24,7 @@
  #include <fcntl.h>
@@ -9,7 +9,7 @@
  # include <sys/time.h>
  # include <sys/types.h>
  # include <sys/sysctl.h>
-@@ -54,7 +54,7 @@ VIR_LOG_INIT("util.hostmem");
+@@ -52,7 +52,7 @@
  static unsigned long long virHostTHPPMDSize; /* in kibibytes */
  static virOnceControl virHostMemGetTHPSizeOnce = VIR_ONCE_CONTROL_INITIALIZER;
  
@@ -18,7 +18,7 @@
  # define BSD_MEMORY_STATS_ALL 4
  
  static int
-@@ -297,7 +297,7 @@ virHostMemGetStats(int cellNum G_GNUC_UN
+@@ -293,7 +293,7 @@
  
          return ret;
      }

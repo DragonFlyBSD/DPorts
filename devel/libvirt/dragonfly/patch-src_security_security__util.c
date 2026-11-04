@@ -1,6 +1,6 @@
---- src/security/security_util.c.orig	2019-11-26 21:17:34 UTC
+--- src/security/security_util.c.orig	2026-10-01 09:02:52 UTC
 +++ src/security/security_util.c
-@@ -54,7 +54,7 @@ VIR_LOG_INIT("security.security_util");
+@@ -53,7 +53,7 @@
   */
  #if defined(__linux__)
  # define XATTR_NAMESPACE "trusted"

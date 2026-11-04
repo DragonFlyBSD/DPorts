@@ -30,6 +30,8 @@ SLANG_LIB_DEPENDS=	libslang.so:devel/libslang2
 SLANG_CONFIGURE_ON=	--with-incdir=${LOCALBASE}/include \
 			--with-libdir=${LOCALBASE}/lib
 
+SLANG_USES_OFF= ncurses
+SLANG_CONFIGURE_OFF= --with-incdir=${LOCALBASE}/include --with-libdir=${LOCALBASE}/lib
 post-patch:
 	@${REINPLACE_CMD} -e 's|^CFLAGS=|#CFLAGS=|g' \
 		-e 's|-lcurses|-lncurses|' ${WRKSRC}/configure
@@ -40,11 +42,5 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	cd ${WRKSRC}/example && ${FIND} . | \
 		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${STAGEDIR}${EXAMPLESDIR}
-
-.if ${DFLYVERSION} > 400501
-SLANG_USES_OFF=		ncurses
-SLANG_CONFIGURE_OFF=	--with-incdir=${LOCALBASE}/include	\
-			--with-libdir=${LOCALBASE}/lib
-.endif
 
 .include <bsd.port.mk>

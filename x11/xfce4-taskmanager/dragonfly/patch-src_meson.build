@@ -1,0 +1,11 @@
+--- src/meson.build.intermediate	2025-05-21 07:00:22 UTC
++++ src/meson.build
+@@ -47,7 +47,7 @@
+   libwnck,
+ ]
+ 
+-if target_os == 'freebsd' and kvm_lib.found()
++if (target_os == 'freebsd' or target_os == 'dragonfly') and kvm_lib.found()
+ dependencies += [ kvm_lib ]
+ endif
+ 

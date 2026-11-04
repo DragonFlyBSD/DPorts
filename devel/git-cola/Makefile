@@ -21,7 +21,7 @@ USES=		desktop-file-utils gmake gnome pyqt:6 python \
 		shebangfix
 USE_GITHUB=	yes
 USE_PYQT=	pyqt6
-USE_PYTHON= autoplist noflavors pep517 autoplist distutils
+USE_PYTHON=	autoplist noflavors pep517
 
 NO_ARCH=	yes
 
@@ -32,17 +32,5 @@ OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
 
 NLS_USES=	gettext
-
-DFLY_PLIST= ${WRKSRC}/pkg-plist
-PLIST= ${DFLY_PLIST}
-dfly-patch:
-	${TOUCH} ${DFLY_PLIST}
-	${REINPLACE_CMD} -e "/icons\/dark', '\*\.png'/d" \
-			 -e "/icons', '\*\.png'/d" \
-		${WRKSRC}/setup.py
-
-
-dfly-install:
-	${MKDIR} ${STAGEDIR}${DATADIR}/icons/dark
 
 .include <bsd.port.mk>

@@ -150,9 +150,7 @@ BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 SUB_FILES=	pkg-message
 
-SHEBANG_FILES+= tools/virt-qemu-sev-validate tools/virt-qemu-qmp-proxy
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NZFS} QEMU
-PLIST_FILES= bin/virt-qemu-qmp-proxy bin/virt-qemu-sev-validate lib/sysusers.d/libvirt-qemu.conf share/man/man1/virt-qemu-qmp-proxy.1.gz share/man/man1/virt-qemu-sev-validate.1.gz @dir /var/run/libvirt/qemu/passt
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBHYVE} || ${PORT_OPTIONS:MQEMU} || ${PORT_OPTIONS:MNSS}
@@ -228,8 +226,6 @@ RUN_DEPENDS+=	dmidecode:sysutils/dmidecode
 .endif
 
 dfly-patch:
-	${REINPLACE_CMD} -e 's|fdatasync|fsync|' \
-		${WRKSRC}/src/util/virfile.c
 	${REINPLACE_CMD} -e '/libvirt_no_warn_duplicate_libraries/d' \
 		${WRKSRC}/src/meson.build \
 		${WRKSRC}/tests/meson.build \

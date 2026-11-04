@@ -51,8 +51,4 @@ post-install:
 	cd ${WRKSRC}/include/cling && \
 		${COPYTREE_SHARE} Interpreter ${STAGEDIR}${PREFIX}/include/cling
 
-.if ${LLVM_RELEASE:M5.0.0}
-BROKEN= pending update
-.endif
-
 .include <bsd.port.post.mk>

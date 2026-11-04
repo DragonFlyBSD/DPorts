@@ -1,8 +1,10 @@
---- cmd/os-dirent_fileino.go.orig	2020-09-08 22:56:11 UTC
+--- cmd/os-dirent_fileino.go.orig	2025-10-15 17:29:55 UTC
 +++ cmd/os-dirent_fileino.go
-@@ -1,4 +1,4 @@
+@@ -1,5 +1,5 @@
+-//go:build freebsd || openbsd || netbsd
 -// +build freebsd openbsd netbsd
-+// +build freebsd openbsd netbsd dragonfly
++//go:build dragonfly || freebsd || openbsd || netbsd
++// +build dragonfly freebsd openbsd netbsd
  
- /*
-  * MinIO Cloud Storage, (C) 2019 MinIO, Inc.
+ // Copyright (c) 2015-2021 MinIO, Inc.
+ //

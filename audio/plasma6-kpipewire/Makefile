@@ -18,4 +18,5 @@ USE_KDE=	coreaddons i18n \
 		ecm:build plasma-wayland-protocols:build
 USE_QT=		base declarative wayland
 
+USE_GCC_VERSION= 14
 .include <bsd.port.mk>

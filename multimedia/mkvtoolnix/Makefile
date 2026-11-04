@@ -87,7 +87,7 @@ MANTRANS_BUILD_DEPENDS=	po4a:textproc/po4a
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} != clang
-USE_CXXSTD=	c++17
+USE_CXXSTD=	c++20
 .endif
 
 .include <bsd.port.post.mk>

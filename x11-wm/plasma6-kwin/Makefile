@@ -54,6 +54,7 @@ EI_DESC=		Emulated input for Wayland
 EI_LIB_DEPENDS=		libei.so:x11/libei
 EI_CMAKE_BOOL=		KWIN_BUILD_EIS
 
+USE_GCC_VERSION= 14
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500050
@@ -63,5 +64,7 @@ LIB_DEPENDS+=	libinotify.so.0:devel/libinotify
 dfly-patch:
 	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|g' \
 		${WRKSRC}/src/utils/CMakeLists.txt
+	${REINPLACE_CMD} -e 's/^#if KWIN_BUILD_X11$$/#if KWIN_BUILD_X11 \&\& defined(O_PATH)/' \
+		${WRKSRC}/src/plugins/eis/eisbackend.cpp
 
 .include <bsd.port.post.mk>

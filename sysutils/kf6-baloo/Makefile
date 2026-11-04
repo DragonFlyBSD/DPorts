@@ -18,5 +18,7 @@ USE_QT=		base declarative
 dfly-patch:
 	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
 		${WRKSRC}/metainfo.yaml
+	${REINPLACE_CMD} -e 's/^#ifdef SYS_ioprio_set$$/#if defined(SYS_ioprio_set) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/src/file/priority.cpp
 
 .include <bsd.port.mk>

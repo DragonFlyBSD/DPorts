@@ -52,7 +52,7 @@ SUB_FILES=	${PORTNAME}
 
 .include <bsd.port.pre.mk>
 
-MAVEN_ENV= MAVEN_OPTS=-Xmx2048m CC=${CC} CFLAGS="${CFLAGS}" JAVA_HOME=${JAVA_HOME} OS=FreeBSD
+MAVEN_ENV= MAVEN_OPTS="-Xmx2048m -Dos.name=FreeBSD" CC=${CC} CFLAGS="${CFLAGS}" JAVA_HOME=${JAVA_HOME} OS=FreeBSD
 
 # To make the build working, set the (maven) architecture to x86_64 instead of amd64
 # Finally there are problems with amd64

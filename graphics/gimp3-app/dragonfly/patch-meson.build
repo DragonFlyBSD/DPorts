@@ -1,0 +1,12 @@
+--- meson.build.intermediate	2026-09-10 11:33:42 UTC
++++ meson.build
+@@ -177,7 +177,8 @@
+ 
+ platform_linux = (
+   host_os.contains('linux') or
+-  host_os.contains('bsd')
++  host_os.contains('bsd') or
++  host_os.contains('dragonfly')
+ )
+ 
+ platform_windows = (

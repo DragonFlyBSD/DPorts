@@ -5,8 +5,8 @@ bin/coqc.byte
 bin/coqchk
 bin/coqdep
 %%IDE%%bin/coqide
-bin/coqidetop.byte
-bin/coqidetop.opt
+%%IDE%%bin/coqidetop.byte
+%%IDE%%bin/coqidetop.opt
 bin/coqdoc
 bin/coqnative
 bin/coqpp
@@ -25,7 +25,7 @@ bin/votour
 %%IDE%%%%PORTDOCS%%%%DATADIR%%/coq.png
 %%IDE%%%%PORTDOCS%%%%DATADIR%%/coq_style.xml
 @comment %%PORTDOCS%%%%DOCSDIR%%/FAQ-CoqIde
-%%DATADIR%%/default.bindings
+%%IDE%%%%DATADIR%%/default.bindings
 share/doc/ocaml/coq-core/LICENSE
 share/doc/ocaml/coq-core/README.md
 share/doc/ocaml/coq-stdlib/LICENSE
@@ -33,19 +33,19 @@ share/doc/ocaml/coq-stdlib/README.md
 share/doc/ocaml/coq/LICENSE
 share/doc/ocaml/coq/README.md
 share/doc/ocaml/coq/odoc-pages/index.mld
-share/doc/ocaml/coqide-server/LICENSE
-share/doc/ocaml/coqide-server/README.md
-share/doc/ocaml/coqide/FAQ
-share/doc/ocaml/coqide/LICENSE
-share/doc/ocaml/coqide/README.md
-share/doc/ocaml/coqide/odoc-pages/index.mld
+%%IDE%%share/doc/ocaml/coqide-server/LICENSE
+%%IDE%%share/doc/ocaml/coqide-server/README.md
+%%IDE%%share/doc/ocaml/coqide/FAQ
+%%IDE%%share/doc/ocaml/coqide/LICENSE
+%%IDE%%share/doc/ocaml/coqide/README.md
+%%IDE%%share/doc/ocaml/coqide/odoc-pages/index.mld
 share/man/man1/coq-tex.1.gz
 share/man/man1/coq_makefile.1.gz
 share/man/man1/coqc.1.gz
 share/man/man1/coqchk.1.gz
 share/man/man1/coqdep.1.gz
 share/man/man1/coqdoc.1.gz
-share/man/man1/coqide.1.gz
+%%IDE%%share/man/man1/coqide.1.gz
 share/man/man1/coqnative.1.gz
 share/man/man1/coqtop.byte.1.gz
 share/man/man1/coqtop.1.gz

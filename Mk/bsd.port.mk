@@ -2191,7 +2191,9 @@ PATCH_DIST_ARGS+=	--suffix .orig
 TAR?=	/usr/bin/tar
 
 # EXTRACT_SUFX is defined in .pre.mk section
-EXTRACT_CMD?=	${TAR}
+# LC_ALL is C here (no C.UTF-8): extract in UTF-8, or libarchive writes
+# non-ASCII pax names as '?'.
+EXTRACT_CMD?=	${SETENV} LC_ALL=en_US.UTF-8 ${TAR}
 EXTRACT_BEFORE_ARGS?=	-xf
 EXTRACT_AFTER_ARGS?=	--no-same-owner --no-same-permissions
 

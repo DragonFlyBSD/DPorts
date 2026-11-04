@@ -1,0 +1,5 @@
+QuEST is a high-performance simulator of quantum computers. It supports state-vector and density-matrix simulation and can exploit multithreaded CPU execution through OpenMP.
+
+QuEST is developed by the QuEST project and provides APIs for constructing and simulating quantum circuits.
+
+WWW: https://github.com/QuEST-Kit/QuEST

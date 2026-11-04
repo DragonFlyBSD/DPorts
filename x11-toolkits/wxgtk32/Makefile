@@ -1,7 +1,7 @@
 PORTNAME=	wx
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.2.8.1
-PORTREVISION=	1
+PORTREVISION= 2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	https://github.com/wxWidgets/wxWidgets/releases/download/v${DISTVERSION}/
 PKGNAMESUFFIX=	${_SHORT_WX_VER}-${FLAVOR}
@@ -103,7 +103,6 @@ PLIST_SUB+=		GTK2="" \
 
 _SHORT_WX_VER=	${PORTVERSION:S/./ /g:[1..2]:ts}
 
-USE_CLANG_FALLBACK= default
 .include <bsd.port.pre.mk>
 
 # TLS is broken on armv6/7, PR 229396

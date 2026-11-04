@@ -20,8 +20,4 @@ SOURCE_USE=	TEX=source
 OPTIONS_DEFINE:=	${OPTIONS_DEFINE:NDOCS}
 .endif
 
-dfly-patch:
-	${REINPLACE_CMD} -e 's@amd64@x86_64@g'	\
-		${WRKSRC}/Makefile
-
 .include <bsd.port.mk>

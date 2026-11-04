@@ -25,4 +25,8 @@ PLIST_SUB=	API_VER=0.9 \
 		SHLIB_VER=${DISTVERSION}
 
 USE_GCC_VERSION= ${GCC_DEFAULT}
+dfly-patch:
+	${REINPLACE_CMD} -e 's/class \[\[deprecated(\("[^"]*"\))\]\] QUOTIENT_API/class __attribute__((deprecated(\1))) QUOTIENT_API/' \
+		${WRKSRC}/Quotient/csapi/*.h
+
 .include <bsd.port.mk>

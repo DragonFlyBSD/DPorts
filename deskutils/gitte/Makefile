@@ -35,4 +35,5 @@ post-patch:
 		${WRKSRC}/meson.build
 
 .include "${.CURDIR}/Makefile.crates"
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

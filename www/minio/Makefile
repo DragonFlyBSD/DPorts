@@ -41,4 +41,11 @@ MINIO_USER?=	${PORTNAME}
 MINIO_GROUP?=	${PORTNAME}
 MINIO_DBDIR?=	/var/db/${PORTNAME}
 
+dfly-patch:
+	${SED} -e 's/Atimespec/Atim/g; s/Mtimespec/Mtim/g' \
+		${WRKSRC}/vendor/github.com/minio/mc/pkg/disk/stat_freebsd.go > \
+		${WRKSRC}/vendor/github.com/minio/mc/pkg/disk/stat_dragonfly.go
+	${CP} ${WRKSRC}/vendor/github.com/minio/mc/cmd/client-fs_freebsd.go \
+		${WRKSRC}/vendor/github.com/minio/mc/cmd/client-fs_dragonfly.go
+
 .include <bsd.port.mk>

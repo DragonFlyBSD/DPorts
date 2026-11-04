@@ -443,6 +443,8 @@ USE_GSTREAMER+=		libgstreamer
 .    if ${PORTDIRNAME} != gstreamer${_GST_VER}-plugins
 USE_GSTREAMER+=		plugins
 .    endif
+# pulseaudio is broken on DragonFly: build without its plugin
+USE_GSTREAMER:=		${USE_GSTREAMER:Npulse}
 
 # Gather all Impl values
 _GST_IMPL_LIST:=	${USE_GSTREAMER:S/^/\${gst-/:S/$/_IMPL}/}

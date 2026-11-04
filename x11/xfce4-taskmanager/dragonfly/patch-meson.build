@@ -1,0 +1,20 @@
+--- meson.build.intermediate	2025-05-21 07:00:22 UTC
++++ meson.build
+@@ -52,7 +52,7 @@
+ if get_option('skel')
+   os_implementation = 'skel'
+ else
+-  if target_os == 'freebsd'
++  if target_os == 'freebsd' or target_os == 'dragonfly'
+     os_implementation = 'freebsd'
+     kvm_lib = cc.find_library('kvm', required : true)
+     headers += [
+@@ -67,7 +67,7 @@
+       'pwd.h',
+       'unistd.h',
+     ]
+-  elif ['dragonfly', 'netbsd', 'openbsd'].contains(target_os)
++  elif ['netbsd', 'openbsd'].contains(target_os)
+     os_implementation = 'bsd'
+     headers += [
+       'sys/param.h',

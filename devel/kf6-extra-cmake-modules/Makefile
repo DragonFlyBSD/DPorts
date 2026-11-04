@@ -41,6 +41,7 @@ MANPAGES_CMAKE_BOOL=	BUILD_MAN_DOCS
 
 TESTING_UNSAFE=		requires reuse-tool port
 
+PORTREVISION= 1
 dfly-patch:
 	${REINPLACE_CMD} -e 's/^.*\- name: FreeBSD/&\n    - name: DragonFly/g' \
 		${WRKSRC}/metainfo.yaml

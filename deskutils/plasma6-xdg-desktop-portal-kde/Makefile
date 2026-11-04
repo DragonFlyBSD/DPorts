@@ -21,4 +21,5 @@ USE_QT=		base declarative wayland
 USE_XORG=	x11
 USE_GL=		gl opengl
 
+USE_GCC_VERSION= 14
 .include <bsd.port.mk>

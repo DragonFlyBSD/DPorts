@@ -45,4 +45,9 @@ USE_XORG=	ice sm x11 xcb xext xi
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 SHEBANG_FILES=	src/plugins/strip-effect-metadata.py
 
+USE_GCC_VERSION= 14
+dfly-patch:
+	${REINPLACE_CMD} -e 's|FreeBSD|DragonFly|g' \
+		${WRKSRC}/src/utils/CMakeLists.txt
+
 .include <bsd.port.mk>

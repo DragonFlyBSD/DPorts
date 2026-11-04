@@ -17,4 +17,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml@${PY_FLAVOR} \
 
 USES=		octave python:env
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/public __binary_function</public binary_function</' \
+		${WRKSRC}/martinez.h ${WRKSRC}/polygon.cpp
+
 .include <bsd.port.mk>

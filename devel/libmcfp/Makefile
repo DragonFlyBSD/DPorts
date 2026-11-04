@@ -1,7 +1,7 @@
 PORTNAME=	libmcfp
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.2
-PORTREVISION=	1
+PORTREVISION= 2
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -27,4 +27,5 @@ PORTSCOUT=	limit:^.*[0-9]\.[0-9].*
 
 # tests as of 1.4.2: 100% tests passed, 0 tests failed out of 1
 
+USES:= ${USES:Nllvm*}
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
---- src/conf/domain_conf.h.orig	2022-03-01 09:08:21 UTC
+--- src/conf/domain_conf.h.orig	2026-10-01 09:02:52 UTC
 +++ src/conf/domain_conf.h
-@@ -140,6 +140,7 @@ typedef enum {
+@@ -144,6 +144,7 @@
      VIR_DOMAIN_VIRT_BHYVE,
      VIR_DOMAIN_VIRT_VZ,
      VIR_DOMAIN_VIRT_HVF,

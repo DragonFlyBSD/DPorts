@@ -61,6 +61,7 @@ IDE_VARS=		ocaml_packages+=coqide-server ocaml_packages+=coqide
 
 SA_DIR=		${LOCALBASE}/${OCAML_SITELIBDIR}
 
+DUNE_INSTALL_TARGETS= ${OCAML_PACKAGES}
 pre-build:
 	@${MAKE_CMD} -C ${WRKSRC} dunestrap
 

@@ -22,8 +22,7 @@ EXTRACT_AFTER_ARGS=	--exclude third_party/tinyxml2 \
 WRKSRC=		${WRKDIR}/${DISTNAME:S|-source-full||}
 
 dfly-patch:
-	${REINPLACE_CMD} -e "s@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g"	\
-		${WRKSRC}/sdk/premake/src/os.c	\
-		${WRKSRC}/sdk/premake/src/os.h
+	${REINPLACE_CMD} -e '/^ *RUNTIME_DEPENDENCY_SET wxFormBuilder_dependencies$$/d' \
+		${WRKSRC}/src/CMakeLists.txt ${WRKSRC}/cmake/functions.cmake
 
 .include <bsd.port.mk>

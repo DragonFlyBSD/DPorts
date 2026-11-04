@@ -63,10 +63,4 @@ do-build:
 do-install:
 	@cd ${WRKSRC} && ${JAM} ${JAMARG} install
 
-dfly-patch:
-	${REINPLACE_CMD} -e 's@CLANG@CLANG_NOT@g'	\
-		${WRKSRC}/Jamrules
-	${REINPLACE_CMD} -e 's@-Werror@@g'		\
-		${WRKSRC}/Jamsettings ${WRKSRC}/Makefile
-
 .include <bsd.port.post.mk>

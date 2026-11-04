@@ -1,10 +1,10 @@
---- src/conf/domain_conf.c.orig	2022-03-01 09:08:21 UTC
+--- src/conf/domain_conf.c.orig	2026-10-01 09:02:52 UTC
 +++ src/conf/domain_conf.c
-@@ -126,6 +126,7 @@ VIR_ENUM_IMPL(virDomainVirt,
+@@ -128,6 +128,7 @@
                "bhyve",
                "vz",
                "hvf",
-+              "nvmm"
++              "nvmm",
  );
  
  VIR_ENUM_IMPL(virDomainOS,

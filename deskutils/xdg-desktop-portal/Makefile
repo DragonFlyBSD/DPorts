@@ -42,7 +42,6 @@ MANPAGES_MESON_ENABLED=	man-pages
 
 CPE_VENDOR=	flatpak
 
-IGNORE= FreeBSD specific
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1500000 && ${OSVERSION} < 1501000
@@ -57,4 +56,5 @@ pre-build:
 post-install:
 	@${RM} -r ${STAGEDIR}${PREFIX}/lib/systemd
 
+LIB_DEPENDS:= ${LIB_DEPENDS:Nlibfuse3.so*}
 .include <bsd.port.post.mk>

@@ -1,0 +1,20 @@
+--- document-portal/meson.build.orig
++++ document-portal/meson.build
+@@ -54,6 +54,9 @@
+   namespace: 'XdpDbus',
+ )
+ 
++# The FUSE document portal needs O_PATH, which DragonFly lacks; the
++# permission store above is still built.
++if host_machine.system() != 'dragonfly'
+ xdg_document_portal_sources = [
+   'document-portal.c',
+   'file-transfer.c',
+@@ -98,6 +101,7 @@
+   install: true,
+   install_dir: dbus_service_dir,
+ )
++endif
+ 
+ permission_portal_service_file_sources = files('org.freedesktop.impl.portal.PermissionStore.service.in')
+ permission_portal_service_file = configure_file(

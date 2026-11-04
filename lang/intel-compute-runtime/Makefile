@@ -18,7 +18,7 @@ ONLY_FOR_ARCHS_REASON=	only Intel GPUs on x86 are supported
 LIB_DEPENDS=	libigc.so:devel/intel-graphics-compiler@${FLAVOR} \
 		libigdgmm.so:multimedia/gmmlib
 
-FLAVORS=	${14 13 12 11:L:S/^/llvm/}
+FLAVORS= llvm14 llvm13 llvm12
 
 CONFLICTS_INSTALL=	${PORTNAME}-*
 

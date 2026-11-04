@@ -1,0 +1,10 @@
+--- src/conf/schemas/basictypes.rng.orig	2026-10-01 09:02:52 UTC
++++ src/conf/schemas/basictypes.rng
+@@ -731,6 +731,7 @@
+         <value>vz</value>
+         <value>bhyve</value>
+         <value>hvf</value>
++        <value>nvmm</value>
+       </choice>
+     </attribute>
+   </define>

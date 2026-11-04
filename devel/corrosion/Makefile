@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	rustc:lang/rust
 RUN_DEPENDS=	rustc:lang/rust
 
-USES=		cmake:testing compiler:c++14-lang
+USES= cmake:testing compiler:c++14-lang gmake
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	corrosion-rs
@@ -33,5 +33,4 @@ NO_ARCH=	yes
 # tests as of 0.5.2: 97% tests passed, 2 tests failed out of 72 (2 failures are in rustup and parsing of triplets)
 # tests as of 0.6.1: 91% tests passed, 9 tests failed out of 102
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

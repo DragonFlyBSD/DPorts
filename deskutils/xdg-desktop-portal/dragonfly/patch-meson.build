@@ -1,0 +1,12 @@
+--- meson.build.orig
++++ meson.build
+@@ -130,7 +130,8 @@
+ gio_dep = dependency('gio-2.0')
+ gio_unix_dep = dependency('gio-unix-2.0')
+ json_glib_dep = dependency('json-glib-1.0')
+-fuse3_dep = dependency('fuse3', version: '>= 3.10.0')
++fuse3_dep = dependency('fuse3', version: '>= 3.10.0',
++                       required: host_machine.system() != 'dragonfly')
+ gdk_pixbuf_dep = dependency('gdk-pixbuf-2.0')
+ gst_pbutils_dep = dependency('gstreamer-pbutils-1.0')
+ geoclue_dep = dependency(

@@ -2,7 +2,6 @@ libexec/xdg-desktop-portal
 libexec/xdg-desktop-portal-rewrite-launchers
 libexec/xdg-desktop-portal-validate-icon
 libexec/xdg-desktop-portal-validate-sound
-libexec/xdg-document-portal
 libexec/xdg-permission-store
 share/dbus-1/interfaces/org.freedesktop.host.portal.Registry.xml
 share/dbus-1/interfaces/org.freedesktop.impl.portal.Access.xml
@@ -63,7 +62,6 @@ share/dbus-1/interfaces/org.freedesktop.portal.Usb.xml
 share/dbus-1/interfaces/org.freedesktop.portal.Wallpaper.xml
 share/dbus-1/services/org.freedesktop.impl.portal.PermissionStore.service
 share/dbus-1/services/org.freedesktop.portal.Desktop.service
-share/dbus-1/services/org.freedesktop.portal.Documents.service
 share/locale/ar/LC_MESSAGES/xdg-desktop-portal.mo
 share/locale/be/LC_MESSAGES/xdg-desktop-portal.mo
 share/locale/bg/LC_MESSAGES/xdg-desktop-portal.mo

@@ -23,4 +23,5 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	accounts-sso
 GL_TAGNAME=	05e79ebbbf3784a87f72b7be571070125c10dfe3
 
+QMAKE_ARGS= CONFIG+=no_docs
 .include <bsd.port.mk>

@@ -25,6 +25,7 @@ USE_XORG=	x11 xcb xext xi
 
 SUB_FILES=	kde.pam
 
+USE_GCC_VERSION= 14
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/pam.d
 	${INSTALL_DATA} ${WRKDIR}/kde.pam ${STAGEDIR}${PREFIX}/etc/pam.d/kde

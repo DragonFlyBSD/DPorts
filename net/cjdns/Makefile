@@ -63,5 +63,10 @@ do-install:
 
 dfly-patch:
 	${REINPLACE_CMD} -e "/'-Werror',/d" ${WRKSRC}/node_build/make.js
+	cd ${WRKSRC}/cargo-crates/pnet_datalink-*/src && \
+	${REINPLACE_CMD} -e 's/target_os = "freebsd",/target_os = "freebsd", target_os = "dragonfly",/' \
+		lib.rs bpf.rs bindings/bpf.rs bindings/mod.rs unix_interfaces.rs
+	${REINPLACE_CMD} -e '/^#\[cfg(not(any(target_os = "windows"/s/)))\]$$/, target_os = "dragonfly")))]/' \
+		${BORINGTUN_WRKSRC}/src/lib.rs
 
 .include <bsd.port.mk>

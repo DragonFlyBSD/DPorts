@@ -142,6 +142,4 @@ PLIST_SUB+=		UHD=""
 PLIST_SUB+=		UHD="@comment "
 .endif
 
-BUILD_DEPENDS:= ${BUILD_DEPENDS:Ndoxygen*}
-RUN_DEPENDS:= ${RUN_DEPENDS:Ndoxygen*}
 .include <bsd.port.post.mk>

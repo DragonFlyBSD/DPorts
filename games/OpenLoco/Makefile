@@ -25,7 +25,6 @@ GH_TUPLE=	OpenLoco:OpenGraphics:v0.1.12:graphics
 CMAKE_ARGS+=	-DPROJECT_VERSION=${DISTVERSIONFULL}
 
 # for std::execution::par
-CXXFLAGS+=	-fexperimental-library
 DATADIR=	${PREFIX}/share/openloco
 
 .include <bsd.port.pre.mk>

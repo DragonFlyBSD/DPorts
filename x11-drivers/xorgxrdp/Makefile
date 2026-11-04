@@ -75,4 +75,8 @@ pre-configure:
 	@cd ${WRKSRC} && ./bootstrap
 
 CONFIGURE_ARGS:= --enable-strict-locations
+.if ${FLAVOR:U} == xlibre
+MAKE_ARGS+=	moduledir=${PREFIX}/${_XMODDIR}
+.endif
+
 .include <bsd.port.mk>

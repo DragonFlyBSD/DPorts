@@ -37,6 +37,10 @@ LIB_DIRS+=	${GNUSTEP_SYSTEM_LIBRARIES} \
 LLD_UNSAFE=yes
 .endif
 
+# clang links with -rpath /usr/lib/gcc80; let ld find the base compiler's
+# libstdc++ first, whose symbol versions libraries built with it need (icu).
+LDFLAGS+=	-Wl,-rpath-link,/usr/lib/${DFLY_BASE_CCVER}
+
 .  for a in CFLAGS CPPFLAGS CXXFLAGS OBJCCFLAGS OBJCFLAGS LDFLAGS
 MAKE_ENV+=	ADDITIONAL_${a}="${ADDITIONAL_${a}} ${${a}}"
 .  endfor

@@ -1,4 +1,4 @@
---- src/util/virhostcpu.c.orig	2020-09-01 07:09:12 UTC
+--- src/util/virhostcpu.c.orig	2026-10-01 09:02:52 UTC
 +++ src/util/virhostcpu.c
 @@ -32,7 +32,7 @@
  # include <linux/kvm.h>
@@ -9,7 +9,7 @@
  # include <sys/time.h>
  # include <sys/types.h>
  # include <sys/sysctl.h>
-@@ -58,7 +58,7 @@ VIR_LOG_INIT("util.hostcpu");
+@@ -56,7 +56,7 @@
  #define MSR_DEVICE "/dev/cpu/0/msr"
  
  
@@ -18,7 +18,7 @@
  static int
  virHostCPUGetCountAppleFreeBSD(void)
  {
-@@ -73,9 +73,9 @@ virHostCPUGetCountAppleFreeBSD(void)
+@@ -71,13 +71,18 @@
  
      return ncpu;
  }
@@ -30,7 +30,40 @@
  # define BSD_CPU_STATS_ALL 4
  # define BSD_MEMORY_STATS_ALL 4
  
-@@ -933,7 +933,7 @@ virHostCPUGetInfo(virArch hostarch G_GNU
+-# define TICK_TO_NSEC (1000ull * 1000ull * 1000ull / (stathz ? stathz : hz))
++# if defined(__DragonFly__)
++/* DragonFly's kern.cp_time(s) count microseconds, not stathz ticks. */
++#  define TICK_TO_NSEC 1000ull
++# else
++#  define TICK_TO_NSEC (1000ull * 1000ull * 1000ull / (stathz ? stathz : hz))
++# endif
+ 
+ static int
+ virHostCPUGetStatsFreeBSD(int cpuNum,
+@@ -138,7 +143,7 @@
+             return -1;
+         }
+ 
+-        offset = cpu_times_num * CPUSTATES;
++        offset = cpuNum * CPUSTATES;
+     }
+ 
+     cpu_times_size = sizeof(long) * cpu_times_num * CPUSTATES;
+@@ -163,8 +168,12 @@
+         }
+ 
+         param->value = 0;
+-        for (j = 0; j < G_N_ELEMENTS(cpu_map[i].idx); j++)
++        for (j = 0; j < G_N_ELEMENTS(cpu_map[i].idx); j++) {
++            /* Unused slots are 0, i.e. CP_USER, which only comes first. */
++            if (j > 0 && cpu_map[i].idx[j] == CP_USER)
++                break;
+             param->value += cpu_times[offset + cpu_map[i].idx[j]] * TICK_TO_NSEC;
++        }
+     }
+ 
+     return 0;
+@@ -972,7 +981,7 @@
   cleanup:
      VIR_FORCE_FCLOSE(cpuinfo);
      return ret;
@@ -39,7 +72,7 @@
      unsigned long cpu_freq;
      size_t cpu_freq_len = sizeof(cpu_freq);
  
-@@ -946,7 +946,7 @@ virHostCPUGetInfo(virArch hostarch G_GNU
+@@ -985,7 +994,7 @@
      *cores = *cpus;
      *threads = 1;
  
@@ -48,7 +81,34 @@
      /* dev.cpu.%d.freq reports current active CPU frequency. It is provided by
       * the cpufreq(4) framework. However, it might be disabled or no driver
       * available. In this case fallback to "hw.clockrate" which reports boot time
-@@ -1001,7 +1001,7 @@ virHostCPUGetStats(int cpuNum G_GNUC_UNU
+@@ -1014,7 +1023,7 @@
+     *mhz = cpu_freq / 1000000;
+ # endif
+ 
+-# ifdef __FreeBSD__
++# if defined(__FreeBSD__) || defined(__DragonFly__)
+ #  define FILL_DATA_SYSCTL(var, sysctl, error_msg) \
+     do { \
+         size_t _len = sizeof(*var); \
+@@ -1024,10 +1033,17 @@
+         } \
+     } while (0)
+ 
++#  if defined(__DragonFly__)
++    FILL_DATA_SYSCTL(sockets, "hw.cpu_topology_phys_ids", _("cannot obtain CPU package count"));
++    FILL_DATA_SYSCTL(cores, "hw.cpu_topology_core_ids", _("cannot obtain CPU core count"));
++    FILL_DATA_SYSCTL(threads, "hw.cpu_topology_ht_ids",
++                      _("cannot obtain CPU threads per core"));
++#  else
+     FILL_DATA_SYSCTL(nodes, "vm.ndomains", _("cannot obtain NUMA domain count"));
+     FILL_DATA_SYSCTL(cores, "kern.smp.cores", _("cannot obtain CPU core count"));
+     FILL_DATA_SYSCTL(threads, "kern.smp.threads_per_core",
+                       _("cannot obtain CPU threads per core"));
++#  endif
+ # endif /* __FreeBSD__ */
+ 
+     return 0;
+@@ -1059,7 +1075,7 @@
  
          return ret;
      }
@@ -57,7 +117,7 @@
      return virHostCPUGetStatsFreeBSD(cpuNum, params, nparams);
  #else
      virReportError(VIR_ERR_NO_SUPPORT, "%s",
-@@ -1016,7 +1016,7 @@ virHostCPUGetCount(void)
+@@ -1074,7 +1090,7 @@
  {
  #if defined(__linux__)
      return virHostCPUCountLinux();
@@ -66,21 +126,12 @@
      return virHostCPUGetCountAppleFreeBSD();
  #else
      virReportError(VIR_ERR_NO_SUPPORT, "%s",
-@@ -1281,7 +1281,7 @@ virHostCPUGetMicrocodeVersion(virArch ho
+@@ -1118,7 +1134,7 @@
+     virFileReadValueBitmap(&ret, "%s/cpu/online", SYSFS_SYSTEM_PATH);
  
- #if HAVE_LINUX_KVM_H && defined(KVM_GET_MSRS) && \
-     (defined(__i386__) || defined(__x86_64__)) && \
--    (defined(__linux__) || defined(__FreeBSD__))
-+    (defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__))
- static int
- virHostCPUGetMSRFromKVM(unsigned long index,
-                         uint64_t *result)
-@@ -1429,7 +1429,7 @@ virHostCPUGetTscInfo(void)
+     return ret;
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+     virBitmap *ret = NULL;
+     int ncpus = virHostCPUGetCountAppleFreeBSD();
  
- #endif /* HAVE_LINUX_KVM_H && defined(KVM_GET_MSRS) && \
-           (defined(__i386__) || defined(__x86_64__)) && \
--          (defined(__linux__) || defined(__FreeBSD__)) */
-+          (defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)) */
- 
- int
- virHostCPUReadSignature(virArch arch,

@@ -11,7 +11,7 @@ COMMENT=	Modern version of the LPMud game driver
 WWW=		https://www.ldmud.eu/
 
 LICENSE=	BSD2CLAUSE
-LICENSE_FILE=	${WRKRSC}/COPYRIGHT
+LICENSE_FILE= ${WRKDIR}/${PORTNAME}-${PORTVERSION}/COPYRIGHT
 
 BUILD_DEPENDS=	help2man:misc/help2man
 LIB_DEPENDS=	libpcre.so:devel/pcre

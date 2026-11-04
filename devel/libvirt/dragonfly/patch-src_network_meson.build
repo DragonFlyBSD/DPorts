@@ -1,0 +1,11 @@
+--- src/network/meson.build.intermediate	2026-10-01 09:02:52 UTC
++++ src/network/meson.build
+@@ -6,7 +6,7 @@
+   'network_nftables.c',
+ ]
+ 
+-if host_machine.system() == 'freebsd'
++if host_machine.system() in [ 'freebsd', 'dragonfly' ]
+   network_driver_sources += 'network_pf.c'
+ endif
+ 

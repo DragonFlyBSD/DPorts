@@ -38,6 +38,7 @@ MAKE_ENV=	CLASSPATH=		\
 		TARGET_RT_JAR=""
 #		TARGET_RT_JAR=${JAVA_HOME}/jre/lib/rt.jar
 
+MAKE_ENV+= ANT_OPTS=-Dos.name=FreeBSD
 post-extract:
 	${MV} ${WRKDIR}/gluegen-v${PORTVERSION} ${WRKDIR}/gluegen
 	${MV} ${WRKDIR}/jcpp-v${PORTVERSION}/src ${WRKDIR}/gluegen/jcpp/src

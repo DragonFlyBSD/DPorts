@@ -29,7 +29,6 @@ USE_XORG=	x11
 
 USE_GITHUB=	yes
 
-CXXFLAGS+=	-fexperimental-library
 
 CMAKE_OFF=	BUILD_ALSA \
 		BUILD_CCACHE \

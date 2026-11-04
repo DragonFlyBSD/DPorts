@@ -60,10 +60,9 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
 		${WRKSRC}/src/lib/geogram/NL/nl_private.h
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' -e 's@FREEBSD@DRAGONFLY@g' \
-		${WRKSRC}/src/lib/geogram/basic/atomics.h \
+		${WRKSRC}/src/lib/geogram/basic/algorithm.h \
 		${WRKSRC}/src/lib/geogram/basic/common.h \
 		${WRKSRC}/src/lib/geogram/basic/command_line.cpp \
-		${WRKSRC}/src/lib/geogram/basic/thread_sync.h \
 		${WRKSRC}/src/lib/geogram/lua/lua_io.cpp \
 		${WRKSRC}/src/lib/third_party/numerics/LIBF2C/sysdep1.h
 

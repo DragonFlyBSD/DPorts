@@ -1,6 +1,6 @@
---- src/storage/storage_util.c.orig	2020-02-26 09:46:02 UTC
+--- src/storage/storage_util.c.orig	2026-10-01 09:02:52 UTC
 +++ src/storage/storage_util.c
-@@ -1843,7 +1843,9 @@ virStorageBackendUpdateVolTargetInfoFD(v
+@@ -1905,7 +1905,9 @@
  # ifdef __linux__
      target->timestamps->btime = (struct timespec){0, 0};
  # else /* ! __linux__ */

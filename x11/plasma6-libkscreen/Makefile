@@ -16,6 +16,7 @@ USE_KDE=	config \
 USE_QT=		base wayland
 USE_XORG=	xcb
 
+USE_GCC_VERSION= 14
 post-patch:
 # Looking for pnp.ids
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \

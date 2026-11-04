@@ -45,4 +45,9 @@ SOURCE_DATE_EPOCH_CMD=	date -ur \
 			$$(${GREP} -m1 TIMESTAMP ${DISTINFO_FILE} | ${SED} -e 's/[^0-9]//g') \
 			'+%Y-%m-%dT%H:%M:%SZ'
 
+dfly-patch:
+	${SED} -e 's/Atimespec/Atim/g; s/Mtimespec/Mtim/g' \
+		${WRKSRC}/pkg/disk/stat_freebsd.go > ${WRKSRC}/pkg/disk/stat_dragonfly.go
+	${CP} ${WRKSRC}/cmd/client-fs_freebsd.go ${WRKSRC}/cmd/client-fs_dragonfly.go
+
 .include <bsd.port.post.mk>

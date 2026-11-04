@@ -491,6 +491,7 @@ SUBDIR += qt6-quick3dphysics
 SUBDIR += quantum-espresso
 SUBDIR += quantum-espresso-pseudopotentials
 SUBDIR += quantum-jet
+SUBDIR += quest
 SUBDIR += qwalk
 SUBDIR += rdkit
 SUBDIR += rmf

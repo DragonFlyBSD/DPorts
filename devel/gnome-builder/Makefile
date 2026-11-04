@@ -92,4 +92,8 @@ dfly-install:
 	${TOUCH} ${STAGEDIR}${LOCALBASE}/libexec/gnome-builder-clang
 	${TOUCH} ${STAGEDIR}${LOCALBASE}/share/glib-2.0/schemas/org.gnome.builder.clang.gschema.xml
 
+dfly-patch:
+	${REINPLACE_CMD} -E 's/GDK_RGBA \("([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})"\)/{ 0x\1 \/ 255., 0x\2 \/ 255., 0x\3 \/ 255., 1. }/g' \
+		${WRKSRC}/src/libide/terminal/ide-terminal-palettes.h
+
 .include <bsd.port.mk>

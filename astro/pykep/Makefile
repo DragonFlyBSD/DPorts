@@ -36,4 +36,5 @@ GH_ACCOUNT=	esa
 
 # tests as of 3.0.0: 97% tests passed, 1 tests failed out of 29, see https://github.com/esa/pykep/issues/198
 
+USE_GCC_VERSION= 14
 .include <bsd.port.mk>
