@@ -85,4 +85,8 @@ post-install:
 		${STAGEDIR}${PREFIX}/share/mime/packages
 .endfor
 
+USES:= ${USES:S/cargo/cargo:extra/}
+dfly-patch:
+	${REINPLACE_CMD} -e '/^    "wayland-native",$$/d' ${WRKSRC}/rustconn/Cargo.toml
+
 .include <bsd.port.mk>

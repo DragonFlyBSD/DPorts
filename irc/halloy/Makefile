@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libzstd.so:archivers/zstd
 
-USES=		cargo desktop-file-utils xorg
+USES= desktop-file-utils xorg cargo:extra
 USE_GITHUB=	yes
 GH_ACCOUNT=	squidowl
 USE_XORG=	xcb
@@ -33,5 +33,4 @@ LTO_UNSAFE=	yes
 CARGO_ENV+=	CARGO_PROFILE_RELEASE_LTO=false
 .endif
 
-USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.post.mk>

@@ -99,4 +99,13 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/scripts/packages/bazel.bazelrc ${STAGEDIR}${ETCDIR}/bazel.bazelrc.sample
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(__FreeBSD__)/defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		${WRKSRC}/src/tools/singlejar/diag.h \
+		${WRKSRC}/src/tools/singlejar/mapped_file_posix.inc \
+		${WRKSRC}/src/tools/singlejar/zip_headers.h \
+		${WRKSRC}/src/main/native/unix_jni.h \
+		${WRKSRC}/src/main/native/unix_jni_bsd.cc
+	${REINPLACE_CMD} -e '/"-lprocstat",/d' ${WRKSRC}/src/main/cpp/BUILD
+
 .include <bsd.port.post.mk>

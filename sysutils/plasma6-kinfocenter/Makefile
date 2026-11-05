@@ -34,7 +34,7 @@ AUX_UTILS_RUN_DEPENDS=	clinfo:devel/clinfo \
 			${${ARCH}_RUN_DEPENDS}
 
 # Sync with sysutils/dmidecode
-.for s in aarch64 amd64 armv6 armv7 i386 riscv64 riscv64sf
+.for s in aarch64 amd64 x86_64 armv6 armv7 i386 riscv64 riscv64sf
 ${s}_RUN_DEPENDS=	dmidecode:sysutils/dmidecode
 .endfor
 
@@ -48,5 +48,13 @@ post-install:
 	${MKDIR} ${STAGEDIR}/${PREFIX}/etc/xdg
 	${INSTALL_DATA} ${FILESDIR}/kcm-about-distrorc ${STAGEDIR}/${PREFIX}/etc/xdg/
 	${REINPLACE_CMD} -i "" -e "s#%%DATADIR%%#${DATADIR}#" ${STAGEDIR}/${PREFIX}/etc/xdg/kcm-about-distrorc
+
+AUX_UTILS_RUN_DEPENDS:= ${AUX_UTILS_RUN_DEPENDS:Npactl*}
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(Q_OS_FREEBSD)/& || defined(Q_OS_DRAGONFLY)/' \
+		${WRKSRC}/kcms/about-distro/src/MemoryEntry.cpp \
+		${WRKSRC}/kcms/interrupts/main.cpp
+	${REINPLACE_CMD} -e 's/CMAKE_SYSTEM_NAME STREQUAL "FreeBSD"/CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly"/' \
+		${WRKSRC}/kcms/pci/CMakeLists.txt
 
 .include <bsd.port.mk>

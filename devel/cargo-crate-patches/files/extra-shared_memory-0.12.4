@@ -1,0 +1,11 @@
+--- cargo-crates/shared_memory-0.12.4/src/lib.rs.orig
++++ cargo-crates/shared_memory-0.12.4/src/lib.rs
+@@ -36,7 +36,7 @@
+     if #[cfg(target_os="windows")] {
+         mod windows;
+         use windows as os_impl;
+-    } else if #[cfg(any(target_os="freebsd", target_os="linux", target_os="macos"))] {
++    } else if #[cfg(any(target_os="freebsd", target_os="dragonfly", target_os="linux", target_os="macos"))] {
+         mod unix;
+         use crate::unix as os_impl;
+     } else {

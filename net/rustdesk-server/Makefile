@@ -28,4 +28,5 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/rustdesk-server.newsyslog ${STAGEDIR}${EXAMPLESDIR}/newsyslog.sample
 	${INSTALL_DATA} ${FILESDIR}/rustdesk-server.syslog ${STAGEDIR}${EXAMPLESDIR}/syslog.sample
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

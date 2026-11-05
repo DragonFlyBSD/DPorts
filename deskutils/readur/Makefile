@@ -53,4 +53,5 @@ post-install:
 	@cd ${WRKDIR}/readur-frontend && ${COPYTREE_SHARE} . ${STAGEDIR}${WWWDIR}
 	@${MKDIR} ${STAGEDIR}${READUR_HOMEDIR}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

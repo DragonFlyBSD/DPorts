@@ -19,9 +19,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	aarch64 amd64
 
-BUILD_DEPENDS=	cargo-pgrx>0:databases/cargo-pgrx
+BUILD_DEPENDS= cargo-pgrx>0:databases/cargo-pgrx ${LOCALBASE}/llvm${LLVM_DEFAULT}/lib/libclang.so:devel/llvm${LLVM_DEFAULT}@default
 
-USES=		cargo gmake pgsql
+USES= gmake pgsql cargo:extra
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	paradedb

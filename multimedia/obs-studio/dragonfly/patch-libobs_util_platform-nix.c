@@ -1,6 +1,19 @@
 --- libobs/util/platform-nix.c.orig
 +++ libobs/util/platform-nix.c
-@@ -35,14 +35,14 @@
+@@ -27,7 +27,12 @@
+ #include <glob.h>
+ #include <time.h>
+ #include <signal.h>
++#ifdef __DragonFly__
++/* sys/statvfs.h already has the base uuid_t, which libuuid's clashes with */
++#include <uuid.h>
++#else
+ #include <uuid/uuid.h>
++#endif
+ 
+ #include "obsconfig.h"
+ 
+@@ -35,14 +40,14 @@
  #include <sys/times.h>
  #include <sys/wait.h>
  #include <libgen.h>
@@ -17,7 +30,7 @@
  #include <libprocstat.h>
  #endif
  #else
-@@ -969,8 +969,8 @@
+@@ -969,8 +974,8 @@
  	if (!os_get_proc_memory_usage_internal(&kinfo))
  		return false;
  
@@ -28,7 +41,7 @@
  	return true;
  }
  
-@@ -979,7 +979,7 @@
+@@ -979,7 +984,7 @@
  	struct kinfo_proc kinfo;
  	if (!os_get_proc_memory_usage_internal(&kinfo))
  		return 0;
@@ -37,7 +50,7 @@
  }
  
  uint64_t os_get_proc_virtual_size(void)
-@@ -987,7 +987,7 @@
+@@ -987,7 +992,7 @@
  	struct kinfo_proc kinfo;
  	if (!os_get_proc_memory_usage_internal(&kinfo))
  		return 0;
@@ -46,3 +59,29 @@
  }
  #else
  typedef struct {
+@@ -1099,10 +1104,25 @@
+ 
+ char *os_generate_uuid(void)
+ {
++#ifdef __DragonFly__
+ 	uuid_t uuid;
++	uint32_t status;
++	char *str = NULL;
++	char *out;
++
++	uuid_create(&uuid, &status);
++	uuid_to_string(&uuid, &str, &status);
++	if (status != uuid_s_ok)
++		return NULL;
++	out = bstrdup(str);
++	free(str);
++	return out;
++#else
++	uuid_t uuid;
+ 	// 36 char UUID + NULL
+ 	char *out = bmalloc(37);
+ 	uuid_generate(uuid);
+ 	uuid_unparse_lower(uuid, out);
+ 	return out;
++#endif
+ }

@@ -283,6 +283,11 @@ CARGO_ENV+=	ZSTD_SYS_USE_PKG_CONFIG=1
 # run cargo from inside cmake, which never sees CARGO_ENV.
 MAKE_ENV+=	LIBCLANG_PATH=${LLVM_PREFIX:U${LOCALBASE}/llvm${LLVM_DEFAULT}}/lib
 .  endif
+# bindgen adds clang's builtin headers (stdatomic.h, which base lacks here)
+# only from a clang binary that clang-sys finds, and there is none on PATH.
+.  if ${_CARGO_CRATES:Mbindgen} && empty(MAKE_ENV:MCLANG_PATH=*) && empty(CARGO_ENV:MCLANG_PATH=*)
+MAKE_ENV+=	CLANG_PATH=${LLVM_PREFIX:U${LOCALBASE}/llvm${LLVM_DEFAULT}}/bin/clang
+.  endif
 
 .  for _index _crate _name _version in ${_CARGO_CRATES}
 # Split up semantic version and try to sanitize it by removing

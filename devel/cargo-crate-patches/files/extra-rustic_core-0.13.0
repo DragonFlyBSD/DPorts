@@ -1,0 +1,50 @@
+--- cargo-crates/rustic_core-0.13.0/src/backend/local_destination.rs.orig
++++ cargo-crates/rustic_core-0.13.0/src/backend/local_destination.rs
+@@ -68,6 +68,7 @@
+     #[cfg(any(
+         target_os = "macos",
+         target_os = "openbsd",
++        target_os = "dragonfly",
+         all(target_os = "android", target_pointer_width = "32")
+     ))]
+     /// `DeviceID` could not be converted to other type `{target}` of device `{device}`: `{source}`
+@@ -667,6 +668,7 @@
+                 #[cfg(not(any(
+                     target_os = "macos",
+                     target_os = "openbsd",
++                    target_os = "dragonfly",
+                     all(target_os = "android", target_pointer_width = "32")
+                 )))]
+                 let device = *device;
+@@ -678,7 +680,10 @@
+                         source: err,
+                     }
+                 })?;
+-                #[cfg(all(target_os = "android", target_pointer_width = "32"))]
++                #[cfg(any(
++                    target_os = "dragonfly",
++                    all(target_os = "android", target_pointer_width = "32")
++                ))]
+                 let device = u32::try_from(*device).map_err(|err| {
+                     LocalDestinationErrorKind::DeviceIdConversionFailed {
+                         target: "u32".to_string(),
+@@ -693,6 +698,7 @@
+                 #[cfg(not(any(
+                     target_os = "macos",
+                     target_os = "openbsd",
++                    target_os = "dragonfly",
+                     all(target_os = "android", target_pointer_width = "32")
+                 )))]
+                 let device = *device;
+@@ -704,7 +710,10 @@
+                         source: err,
+                     }
+                 })?;
+-                #[cfg(all(target_os = "android", target_pointer_width = "32"))]
++                #[cfg(any(
++                    target_os = "dragonfly",
++                    all(target_os = "android", target_pointer_width = "32")
++                ))]
+                 let device = u32::try_from(*device).map_err(|err| {
+                     LocalDestinationErrorKind::DeviceIdConversionFailed {
+                         target: "u32".to_string(),

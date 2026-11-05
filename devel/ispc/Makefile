@@ -19,7 +19,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex \
 LIB_DEPENDS=	${LLVM_LIBLLVM}:devel/llvm${LLVM_VERSION} \
 		libtbb.so:devel/onetbb
 
-USES= bison cmake compiler:c++17-lang llvm:lib,min=20,max=20 python:build,test shebangfix ncurses dfly-libcxx:20
+USES= bison cmake compiler:c++17-lang llvm:lib,min=20,max=20 python:build,test shebangfix ncurses
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -96,5 +96,12 @@ run-examples: build
 dfly-patch:
 	${REINPLACE_CMD} -e 's@ curses@ ncurses@g'	\
 		${WRKSRC}/CMakeLists.txt
+
+.if ${OPSYS} == DragonFly
+USE_GCC_VERSION=	14
+LIB_DEPENDS+=		libc++.so.1:devel/libcxx20
+CXXFLAGS+=		-nostdinc++ -nostdlib++ -isystem ${LLVM_PREFIX}/include/c++/v1
+LDFLAGS+=		-L${LLVM_PREFIX}/lib -Wl,-rpath=${LLVM_PREFIX}/lib -lc++ -lc++abi -lm
+.endif
 
 .include <bsd.port.mk>

@@ -23,4 +23,5 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/croft
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

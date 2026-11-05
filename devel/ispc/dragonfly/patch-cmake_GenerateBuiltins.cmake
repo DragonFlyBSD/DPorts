@@ -10,11 +10,12 @@
      elseif (${os} STREQUAL "macos")
          set(triple ${arch}-apple-macosx)
      elseif (${os} STREQUAL "android")
-@@ -469,6 +472,10 @@ function (generate_common_builtins)
+@@ -469,6 +472,11 @@ function (generate_common_builtins)
          builtin_to_cpp(64 android x86)
      endif()
  
 +    if (ISPC_DRAGONFLY_TARGET AND X86_ENABLED)
++        builtin_to_cpp(32 dragonfly x86)
 +        builtin_to_cpp(64 dragonfly x86)
 +    endif()
 +

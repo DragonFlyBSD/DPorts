@@ -25,7 +25,6 @@ OPTIONS_DEFINE=	DOCS
 
 # Remove at 13.5-RELEASE EOL:
 .if !exists(/usr/bin/clang-scan-deps)
-USES+=		llvm
 .endif
 
 .include <bsd.port.mk>

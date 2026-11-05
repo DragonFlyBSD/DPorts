@@ -777,4 +777,12 @@ post-install:
 
 # tests as of 0.6.0: not run because CARGO_FEATURES=--no-default-features disables the test suite
 
+USES:= ${USES:S/cargo/cargo:extra/}
+dfly-patch:
+	${REINPLACE_CMD} -e 's/target_os = "freebsd"/&, target_os = "dragonfly"/' \
+		${WRKSRC}/src/server.rs \
+		${WRKDIR}/wgpu-*/wgpu/build.rs ${WRKDIR}/wgpu-*/wgpu-hal/build.rs \
+		${WRKDIR}/wgpu-*/wgpu-core/build.rs ${WRKDIR}/wgpu-*/wgpu-core/Cargo.toml \
+		${WRKDIR}/wgpu-*/wgpu-core/platform-deps/windows-linux-android/Cargo.toml
+
 .include <bsd.port.mk>

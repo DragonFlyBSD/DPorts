@@ -36,4 +36,5 @@ post-install-EXAMPLES-on:
 	(cd ${WRKSRC}/config && \
 	${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR} "! ( -name *.md -or -name *.bak )")
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

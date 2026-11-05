@@ -94,4 +94,5 @@ post-patch:
 	@${REINPLACE_CMD} -Ee "/cargo.*'c?(build|test)'/s/]/, '--verbose', '--verbose'&/" \
 		${WRKSRC}/cargo_wrapper.py
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

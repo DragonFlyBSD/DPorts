@@ -741,7 +741,9 @@ kde-kwin-x11_PORT=		x11-wm/plasma${_KDE_VERSION}-kwin-x11
 kde-kwin-x11_PATH=		${KDE_PREFIX}/bin/kwin_x11
 
 kde-kwrited_PORT=		devel/plasma${_KDE_VERSION}-kwrited
-kde-kwrited_PATH=		${QT_PLUGINDIR}/kf${_KDE_VERSION}/kded/kwrited.so
+# kpty has no utempter here, so kwrited builds as a program, not a kded
+# plugin (devel/plasma6-kwrited).
+kde-kwrited_PATH=		${KDE_PREFIX}/bin/kwrited
 
 kde-libkscreen_PORT=		x11/plasma${_KDE_VERSION}-libkscreen
 kde-libkscreen_LIB=		libKF${_KDE_VERSION}Screen.so

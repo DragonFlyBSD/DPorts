@@ -1,0 +1,10 @@
+--- cargo-crates/waitpid-any-0.3.0/src/lib.rs.orig
++++ cargo-crates/waitpid-any-0.3.0/src/lib.rs
+@@ -30,6 +30,7 @@
+ mod imp;
+ 
+ #[cfg(any(
++    target_os = "dragonfly",
+     target_os = "freebsd",
+     target_os = "macos",
+     target_os = "netbsd",

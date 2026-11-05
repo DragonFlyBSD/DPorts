@@ -9,7 +9,7 @@
      ],
  )
  
-@@ -66,6 +68,21 @@
+@@ -66,6 +68,30 @@
      patches = ["//toolchain_local:rules_python_freebsd.patch"],
  )
  
@@ -21,11 +21,20 @@
 +    patches = ["//toolchain_local:rules_go_dragonfly.patch"],
 +)
 +
-+# DragonFly: abseil's vdso_support.cc defines Elf64_auxv_t for FreeBSD only.
++# DragonFly: abseil enables mmap (config.h) and Elf64_auxv_t (vdso_support.cc)
++# for FreeBSD only; status.cc uses errno names libc++ supplies on FreeBSD.
 +single_version_override(
 +    module_name = "abseil-cpp",
 +    patch_strip = 1,
 +    patches = ["//toolchain_local:abseil_dragonfly.patch"],
++)
++
++# DragonFly: @platforms//host has no OS constraint for os.name
++# "dragonflybsd"; take FreeBSD's, as OS.java does.
++single_version_override(
++    module_name = "platforms",
++    patch_strip = 1,
++    patches = ["//toolchain_local:platforms_dragonfly.patch"],
 +)
 +
  # The following Bazel modules are not direct dependencies for building Bazel,

@@ -1094,4 +1094,13 @@ PLIST_FILES=	bin/cargo-tauri
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/cargo-tauri
 
+USES:= ${USES:S/cargo/cargo:extra/}
+dfly-patch:
+	${REINPLACE_CMD} -e 's/#\[cfg(target_os = "freebsd")\]/#[cfg(any(target_os = "freebsd", target_os = "dragonfly"))]/' \
+		${WRKSRC}/cargo-crates/cargo-mobile2-0.22.4/src/os/mod.rs \
+		${WRKSRC}/cargo-crates/cargo-mobile2-0.22.4/src/android/ndk.rs
+	${REINPLACE_CMD} -e 's/any(target_os = "linux", target_os = "freebsd")/any(target_os = "linux", target_os = "freebsd", target_os = "dragonfly")/' \
+		${WRKSRC}/cargo-crates/cargo-mobile2-0.22.4/src/os/linux/mod.rs \
+		${WRKSRC}/cargo-crates/cargo-mobile2-0.22.4/Cargo.toml
+
 .include <bsd.port.mk>

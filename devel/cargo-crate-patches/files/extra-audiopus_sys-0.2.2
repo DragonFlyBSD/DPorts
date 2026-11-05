@@ -1,0 +1,11 @@
+--- cargo-crates/audiopus_sys-0.2.2/build.rs.orig
++++ cargo-crates/audiopus_sys-0.2.2/build.rs
+@@ -85,7 +85,7 @@
+     {
+         true
+     }
+-    #[cfg(any(target_os = "freebsd", all(unix, target_env = "gnu")))]
++    #[cfg(any(target_os = "freebsd", target_os = "dragonfly", all(unix, target_env = "gnu")))]
+     {
+         false
+     }

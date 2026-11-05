@@ -188,6 +188,9 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
 		${WRKSRC}/kicad/kicad.cpp \
 		${WRKSRC}/thirdparty/libcontext/libcontext.h
+	cd ${WRKSRC} && ${GREP} -rlF --include='*.h' --include='*.cpp' \
+		'#if defined(__linux__) || defined(__FreeBSD__)' . | \
+		${XARGS} ${REINPLACE_CMD} -e 's/^#if defined(__linux__) || defined(__FreeBSD__)$$/& || defined(__DragonFly__)/'
 
 post-patch:
 	@${PRINTF} '#include <sys/types.h>\n#undef major\n#undef minor\n' > ${WRKDIR}/dfly-no-major-minor.h

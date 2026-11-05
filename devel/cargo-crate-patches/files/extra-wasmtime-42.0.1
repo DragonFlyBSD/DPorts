@@ -1,0 +1,29 @@
+--- cargo-crates/wasmtime-42.0.1/src/runtime/vm/sys/unix/signals.rs.orig
++++ cargo-crates/wasmtime-42.0.1/src/runtime/vm/sys/unix/signals.rs
+@@ -296,6 +296,12 @@
+                 }
+             }
+         } else if #[cfg(all(target_os = "freebsd", target_arch = "x86_64"))] {
++            let cx = unsafe { &*(cx as *const libc::ucontext_t) };
++            TrapRegisters {
++                pc: cx.uc_mcontext.mc_rip as usize,
++                fp: cx.uc_mcontext.mc_rbp as usize,
++            }
++        } else if #[cfg(all(target_os = "dragonfly", target_arch = "x86_64"))] {
+             let cx = unsafe { &*(cx as *const libc::ucontext_t) };
+             TrapRegisters {
+                 pc: cx.uc_mcontext.mc_rip as usize,
+@@ -383,6 +389,13 @@
+             cx.uc_mcontext.mc_rsp = handler.sp as _;
+             cx.uc_mcontext.mc_rax = 0;
+             cx.uc_mcontext.mc_rdx = 0;
++        } else if #[cfg(all(target_os = "dragonfly", target_arch = "x86_64"))] {
++            let cx = unsafe { cx.cast::<libc::ucontext_t>().as_mut().unwrap() };
++            cx.uc_mcontext.mc_rip = handler.pc as _;
++            cx.uc_mcontext.mc_rbp = handler.fp as _;
++            cx.uc_mcontext.mc_rsp = handler.sp as _;
++            cx.uc_mcontext.mc_rax = 0;
++            cx.uc_mcontext.mc_rdx = 0;
+         } else if #[cfg(all(target_os = "openbsd", target_arch = "x86_64"))] {
+             let cx = unsafe { cx.cast::<libc::ucontext_t>().as_mut().unwrap() };
+             cx.sc_rip = handler.pc as _;

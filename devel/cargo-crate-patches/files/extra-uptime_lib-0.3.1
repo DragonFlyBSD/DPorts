@@ -20,3 +20,35 @@
      ))]
      #[error(transparent)]
      SystemTime(#[from] std::time::SystemTimeError),
+@@ -61,6 +63,31 @@
+     if ret == 0 {
+         Ok(SystemTime::now().duration_since(SystemTime::UNIX_EPOCH)?
+             - Duration::new(boottime.tv_sec as u64, boottime.tv_usec as u32 * 1000))
++    } else {
++        Err(Error::Sysctl)
++    }
++}
++
++// DragonFly's kern.boottime is a struct timespec, not a timeval.
++#[cfg(target_os = "dragonfly")]
++pub fn get() -> Result<Duration, Error> {
++    use std::time::SystemTime;
++    let mut request = [libc::CTL_KERN, libc::KERN_BOOTTIME];
++    let mut boottime: libc::timespec = unsafe { std::mem::zeroed() };
++    let mut size: libc::size_t = std::mem::size_of_val(&boottime) as libc::size_t;
++    let ret = unsafe {
++        libc::sysctl(
++            &mut request[0],
++            2,
++            &mut boottime as *mut libc::timespec as *mut libc::c_void,
++            &mut size,
++            std::ptr::null_mut(),
++            0,
++        )
++    };
++    if ret == 0 {
++        Ok(SystemTime::now().duration_since(SystemTime::UNIX_EPOCH)?
++            - Duration::new(boottime.tv_sec as u64, boottime.tv_nsec as u32))
+     } else {
+         Err(Error::Sysctl)
+     }

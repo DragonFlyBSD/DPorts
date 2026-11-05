@@ -1,11 +1,13 @@
 --- src/ispc.cpp.orig	2026-10-26 01:17:16 UTC
 +++ src/ispc.cpp
-@@ -2784,6 +2784,16 @@ llvm::Triple Target::GetTriple() const {
+@@ -2784,6 +2784,18 @@ llvm::Triple Target::GetTriple() const {
          triple.setVendor(llvm::Triple::VendorType::UnknownVendor);
          triple.setOS(llvm::Triple::OSType::FreeBSD);
          break;
 +    case TargetOS::dragonfly:
-+        if (m_arch == Arch::x86_64) {
++        if (m_arch == Arch::x86) {
++            triple.setArchName("i686");
++        } else if (m_arch == Arch::x86_64) {
 +            triple.setArchName("x86_64");
 +        } else {
 +            Error(SourcePos(), "Unknown arch.");

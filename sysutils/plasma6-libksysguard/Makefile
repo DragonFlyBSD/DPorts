@@ -16,4 +16,9 @@ USE_KDE=	auth colorscheme completion config configwidgets coreaddons \
 USE_QT=		5compat base declarative positioning webchannel webengine
 USE_XORG=	x11
 
+PORTREVISION= 1
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^#ifdef Q_OS_FREEBSD$$/#if defined(Q_OS_FREEBSD) || defined(Q_OS_DRAGONFLY)/' \
+		${WRKSRC}/systemstats/SysctlSensor.h
+
 .include <bsd.port.mk>

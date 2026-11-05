@@ -8,7 +8,7 @@ COMMENT=	All kind of add-ons to improve your Plasma experience
 BUILD_DEPENDS=	${LOCALBASE}/share/cmake/Corrosion.cmake:devel/corrosion
 LIB_DEPENDS=	libicuuc.so:devel/icu
 
-USES=		cmake gettext gl kde:6 qt:6 tar:xz xorg
+USES= cmake gettext gl kde:6 qt:6 tar:xz xorg gmake
 USE_GL=		gl opengl
 USE_KDE=	colorscheme completion config configwidgets coreaddons \
 		globalaccel holidays i18n itemmodels jobwidgets kcmutils \
@@ -20,5 +20,9 @@ USE_KDE=	colorscheme completion config configwidgets coreaddons \
 USE_QT=		base declarative webchannel webengine \
 		quick3d
 USE_XORG=	x11
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/MATCHES FreeBSD)/MATCHES "FreeBSD|DragonFly")/' \
+		${WRKSRC}/kdeds/kameleon/CMakeLists.txt
 
 .include <bsd.port.mk>

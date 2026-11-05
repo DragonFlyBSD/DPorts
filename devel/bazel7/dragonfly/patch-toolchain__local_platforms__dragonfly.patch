@@ -1,0 +1,14 @@
+--- toolchain_local/platforms_dragonfly.patch.orig
++++ toolchain_local/platforms_dragonfly.patch
+@@ -0,0 +1,11 @@
++--- a/host/extension.bzl
+++++ b/host/extension.bzl
++@@ -20,7 +20,7 @@
++ def _translate_os(os):
++     if os.startswith("mac os"):
++         return "osx"
++-    if os.startswith("freebsd"):
+++    if os.startswith("freebsd") or os.startswith("dragonfly"):
++         return "freebsd"
++     if os.startswith("openbsd"):
++         return "openbsd"

@@ -3,7 +3,7 @@ PORTREVISION=	2
 USE_GCC_VERSION= 13
 CONFIGURE_ARGS+= --with-os-version=${DFLYVERSION}
 CONFIGURE_ARGS+= --with-vendor="DragonFly dports"
-REPLACE_LIST= external/curl/ExternalProject_curl.mk external/liblangtag/ExternalProject_liblangtag.mk external/libxslt/ExternalProject_libxslt.mk external/nss/ExternalProject_nss.mk external/openssl/ExternalProject_openssl.mk external/redland/ExternalProject_raptor.mk external/redland/ExternalProject_rasqal.mk external/redland/ExternalProject_redland.mk external/xmlsec/ExternalProject_xmlsec.mk external/pdfium/freebsd.patch include/osl/endian.h solenv/bin/modules/installer/parameter.pm soltools/mkdepend/main.c vcl/qa/cppunit/BitmapTest.cxx vcl/unx/generic/app/saldata.cxx vcl/unx/generic/dtrans/X11_selection.cxx vcl/unx/generic/printer/printerinfomanager.cxx desktop/unx/source/start.c sal/osl/unx/process_impl.cxx sal/osl/unx/sockimpl.hxx sal/osl/unx/pipe.cxx vcl/unx/gtk3/gtkdata.cxx
+REPLACE_LIST= external/curl/ExternalProject_curl.mk external/liblangtag/ExternalProject_liblangtag.mk external/libxslt/ExternalProject_libxslt.mk external/nss/ExternalProject_nss.mk external/openssl/ExternalProject_openssl.mk external/redland/ExternalProject_raptor.mk external/redland/ExternalProject_rasqal.mk external/redland/ExternalProject_redland.mk external/xmlsec/ExternalProject_xmlsec.mk external/pdfium/freebsd.patch include/osl/endian.h solenv/bin/modules/installer/parameter.pm soltools/mkdepend/main.c vcl/qa/cppunit/BitmapTest.cxx vcl/unx/generic/app/saldata.cxx vcl/unx/generic/dtrans/X11_selection.cxx vcl/unx/generic/printer/printerinfomanager.cxx desktop/unx/source/start.c sal/osl/unx/process_impl.cxx sal/osl/unx/sockimpl.hxx sal/osl/unx/socket.cxx sal/osl/unx/pipe.cxx vcl/unx/gtk3/gtkdata.cxx
 PERCENT_BSD_LIST= Repository.mk desktop/Library_crashreport.mk libreofficekit/Module_libreofficekit.mk libreofficekit/Executable_gtktiledviewer.mk libreofficekit/Library_libreofficekitgtk.mk svl/Library_svl.mk vcl/Module_vcl.mk vcl/Library_vcl.mk
 .include "${.CURDIR}/Makefile.common"
 
@@ -85,7 +85,6 @@ USE_PERL5=	build
 USE_XORG=	ice sm x11 xaw xcb xext xinerama xrandr xrender
 
 USES+=		elfctl
-ELF_FEATURES=	+wxneeded:instdir/program/soffice.bin
 
 OPTIONS_DEFINE=	COINMP CUPS DOCS GNOME GTK3 GTK4 JAVA LTO MMEDIA PDFIUM PGSQL MARIADB SDK TEST WEBDAV
 OPTIONS_RADIO=	QT KDE
@@ -383,8 +382,9 @@ post-install-SDK-on:
 	${FIND} -s ${subdir}/libreoffice -not -type d >> ${TMPPLIST}
 .endfor
 
-USES:= ${USES:Nelfctl}
 dfly-patch:
+	${REINPLACE_CMD} -e 's/test "$$_os" = "SunOS" -o "$$_os" = "Darwin" -o "$$_os" = "FreeBSD"; then/test "$$_os" = "SunOS" -o "$$_os" = "Darwin" -o "$$_os" = "FreeBSD" -o "$$_os" = "DragonFly"; then/' \
+		${WRKSRC}/configure
 	${CP} -v ${DFLY_FILESDIR}/pdfium-build__config.patch ${WRKSRC}/external/pdfium
 	${REINPLACE_CMD} -e 's,pdfium_patches += freebsd.patch,& pdfium-build__config.patch ,g' \
 		${WRKSRC}/external/pdfium/UnpackedTarball_pdfium.mk

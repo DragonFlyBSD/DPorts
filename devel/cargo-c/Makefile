@@ -17,7 +17,7 @@ LIB_DEPENDS=	libgit2.so:devel/libgit2 \
 		libcurl.so:ftp/curl \
 		libssh2.so:security/libssh2
 
-USES=		cargo ssl
+USES= ssl cargo:extra
 PLIST_FILES=	bin/cargo-capi \
 		bin/cargo-cbuild \
 		bin/cargo-cinstall \
@@ -35,5 +35,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's,libdir.join("pkgconfig,prefix.join("libdata/pkgconfig,' \
 		${WRKSRC}/src/install.rs
 
-USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.post.mk>

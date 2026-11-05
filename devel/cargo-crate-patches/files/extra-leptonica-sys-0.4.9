@@ -1,0 +1,32 @@
+--- cargo-crates/leptonica-sys-0.4.9/Cargo.toml.orig
++++ cargo-crates/leptonica-sys-0.4.9/Cargo.toml
+@@ -37,7 +37,7 @@
+ [build-dependencies.bindgen]
+ version = "0.64.0"
+ 
+-[target.'cfg(any(target_os="macos", target_os="linux", target_os="freebsd"))'.build-dependencies.pkg-config]
++[target.'cfg(any(target_os="macos", target_os="linux", target_os="freebsd", target_os="dragonfly"))'.build-dependencies.pkg-config]
+ version = "0.3.25"
+ 
+ [target."cfg(windows)".build-dependencies.vcpkg]
+--- cargo-crates/leptonica-sys-0.4.9/build.rs.orig
++++ cargo-crates/leptonica-sys-0.4.9/build.rs
+@@ -50,7 +50,7 @@
+ // we can use leptonica installed anywhere on Linux.
+ // if you change install path(--prefix) to `configure` script.
+ // set `export PKG_CONFIG_PATH=/path-to-lib/pkgconfig` before.
+-#[cfg(any(target_os = "macos", target_os = "linux", target_os = "freebsd"))]
++#[cfg(any(target_os = "macos", target_os = "linux", target_os = "freebsd", target_os = "dragonfly"))]
+ fn find_leptonica_system_lib() -> Option<String> {
+     let pk = pkg_config::Config::new().probe("lept").unwrap();
+     // Tell cargo to tell rustc to link the system proj shared library.
+@@ -68,7 +68,8 @@
+     not(windows),
+     not(target_os = "macos"),
+     not(target_os = "linux"),
+-    not(target_os = "freebsd")
++    not(target_os = "freebsd"),
++    not(target_os = "dragonfly")
+ ))]
+ fn find_leptonica_system_lib() -> Option<String> {
+     println!("cargo:rustc-link-lib=lept");

@@ -10,7 +10,7 @@ RUN_DEPENDS=	kde-baseapps>=${KDE_APPLICATIONS_VERSION}:x11/kde-baseapps
 
 USES=		kde:6 metaport qt:6
 # Spectacle unconditionally depends on heavy tesseract* packages.
-USE_KDE=	${_USE_PLASMA_ALL:Nbreeze-gtk:Nkde-gtk-config:Noxygen:Noxygen-sounds:Nspectacle}
+USE_KDE= ${_USE_PLASMA_ALL:Nplasma-pa:Nbreeze-gtk:Nkde-gtk-config:Noxygen:Noxygen-sounds:Nspectacle}
 
 # Phonon framework is superseded by QtMultimedia. Remove the option once
 # the last consumers, namely astro/marble, editors/calligra, graphics/kphotoalbum,

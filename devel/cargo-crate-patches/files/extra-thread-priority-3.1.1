@@ -1,0 +1,20 @@
+--- cargo-crates/thread-priority-3.1.1/src/unix.rs.orig
++++ cargo-crates/thread-priority-3.1.1/src/unix.rs
+@@ -49,7 +49,7 @@
+         cfg_if::cfg_if! {
+             if #[cfg(any(target_os = "openbsd", target_os = "netbsd", target_os = "android"))] {
+                 *libc::__errno()
+-            } else if #[cfg(target_os = "linux")] {
++            } else if #[cfg(any(target_os = "linux", target_os = "dragonfly"))] {
+                 *libc::__errno_location()
+             } else if #[cfg(any(target_os = "macos", target_os = "ios", target_os = "freebsd"))] {
+                 *libc::__error()
+@@ -67,7 +67,7 @@
+         cfg_if::cfg_if! {
+             if #[cfg(any(target_os = "openbsd", target_os = "netbsd", target_os = "android"))] {
+                 *libc::__errno() = number;
+-            } else if #[cfg(target_os = "linux")] {
++            } else if #[cfg(any(target_os = "linux", target_os = "dragonfly"))] {
+                 *libc::__errno_location() = number;
+             } else if #[cfg(any(target_os = "macos", target_os = "ios", target_os = "freebsd"))] {
+                 *libc::__error() = number;

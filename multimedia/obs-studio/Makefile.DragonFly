@@ -1,7 +1,12 @@
 # no pulse
 OPTIONS_DEFAULT:=	${OPTIONS_DEFAULT:NPULSEAUDIO:NWAYLAND}
+# No NVIDIA encoder libraries here; obs skips the plugin anyway.
+OPTIONS_EXCLUDE+=	NVENC
 
 .undef PULSEAUDIO_BROKEN_OFF
+
+# linux-v4l2's udev hotplug code needs eventfd, which DragonFly lacks.
+CMAKE_ARGS+=	-DENABLE_UDEV:BOOL=OFF
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's,OS_FREEBSD,OS_DRAGONFLY,g' \
@@ -16,3 +21,10 @@ dfly-patch:
 		${WRKSRC}/libobs-opengl/CMakeLists.txt
 	${REINPLACE_CMD} -e 's,FREEBSD,DRAGONFLY,g' \
 		${WRKSRC}/plugins/CMakeLists.txt
+	${REINPLACE_CMD} -e 's/^#elif __linux__ || __FreeBSD__$$/& || __DragonFly__/' \
+		${WRKSRC}/plugins/obs-vst/headers/VSTPlugin.h
+	${REINPLACE_CMD} -e 's,OS_FREEBSD,OS_DRAGONFLY,g' \
+		-e 's/PLATFORM_ID:Linux,FreeBSD/PLATFORM_ID:Linux,DragonFly/g' \
+		${WRKSRC}/frontend/cmake/ui-qt.cmake \
+		${WRKSRC}/plugins/*/CMakeLists.txt \
+		${WRKSRC}/plugins/*/cmake/*.cmake
