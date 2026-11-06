@@ -25,4 +25,8 @@ PLIST_SUB=	SHLIB_VER=${DISTVERSION}
 CFLAGS+=	-Wno-error=varargs
 .endif
 
+.if ${CHOSEN_COMPILER_TYPE} == gcc
+CFLAGS+=	-Wno-error=deprecated-declarations
+.endif
+
 .include <bsd.port.post.mk>

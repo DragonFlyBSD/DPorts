@@ -45,4 +45,8 @@ NLS_CONFIGURE_ENABLE=	nls
 post-configure:
 	@${REINPLACE_CMD} -e 's|DATADIRNAME = lib|DATADIRNAME = share|' ${WRKSRC}/po/Makefile
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@-std=c++0x@-std=c++17@' \
+		${WRKSRC}/src/Makefile.in
+
 .include <bsd.port.mk>

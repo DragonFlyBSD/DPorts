@@ -30,4 +30,5 @@ GSSAPI_MIT_USES=	gssapi:mit
 post-install:
 	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -name '*.so' -exec ${STRIP_CMD} {} +
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSSAPI_BASE} GSSAPI_MIT
 .include <bsd.port.mk>

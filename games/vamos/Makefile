@@ -39,7 +39,6 @@ ICON_SIZES=	32x32 48x48 64x64 72x72 96x96 128x128
 DESKTOP_ENTRIES="Vamos" "" ${PORTNAME} \
 		"${PORTNAME}" "Game;ArcadeGame;" ""
 
-USE_CXXSTD= gnu++98
 CONFIGURE_ENV= CC=c++
 post-patch:
 	@${REINPLACE_CMD} -e '/test/s,ax_boost_python_lib",BOOST_PYTHON_LIB",' \
@@ -67,5 +66,7 @@ dfly-patch:
 		${WRKSRC}/media/Makefile.in	\
 		${WRKSRC}/track/Makefile.in	\
 		${WRKSRC}/world/Makefile.in
+	${REINPLACE_CMD} -e 's/py_compile, imp$$/py_compile, importlib.util as imp/' \
+		-e 's/hasattr(imp, .get_tag.)/True/' ${WRKSRC}/config/py-compile
 
 .include <bsd.port.mk>

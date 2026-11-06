@@ -26,7 +26,6 @@ ATTRS_DESC=	Attrs integration
 ATTRS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}attrs>=0:devel/py-attrs@${PY_FLAVOR}
 NUMPY_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=0,1:math/py-numpy@${PY_FLAVOR}
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} >= 31300

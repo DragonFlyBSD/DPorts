@@ -10,7 +10,7 @@ somewhere in the toolchain, causing the byte order to be reversed.
      #if defined(__ANDROID__)
          #define PLATFORM_ANDROID
 -    #elif defined(__linux__)
-+    #elif defined(__linux__) || defined(__FreeBSD__)
++    #elif defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)
          #define PLATFORM_LINUX
      #elif defined(__APPLE__)
          #define PLATFORM_APPLE

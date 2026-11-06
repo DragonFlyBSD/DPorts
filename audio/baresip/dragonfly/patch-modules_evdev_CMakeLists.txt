@@ -1,0 +1,11 @@
+--- modules/evdev/CMakeLists.txt.orig	2026-11-04 19:53:25 UTC
++++ modules/evdev/CMakeLists.txt
+@@ -1,7 +1,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+ project(evdev)
+ 
+ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+-elseif(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++elseif(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+ else()
+   return()
+ endif()

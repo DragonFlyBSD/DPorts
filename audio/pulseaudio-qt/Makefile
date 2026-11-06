@@ -22,6 +22,4 @@ USE_QT=		base
 
 PLIST_SUB=	SOVERSION=${DISTVERSION}
 
-LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
-BROKEN= uses pulseaudio
 .include <bsd.port.mk>

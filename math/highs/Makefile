@@ -20,7 +20,6 @@ GH_PROJECT=	HiGHS
 
 CMAKE_OFF=	BUILD_TESTING
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	# see https://github.com/ERGO-Code/HiGHS/issues/502
 	${RM} -r ${STAGEDIR}${PREFIX}/external

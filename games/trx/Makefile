@@ -34,6 +34,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 		bin/${PORTNAME}.bin
 PORTDATA=	cfg games modules scripts
 
+USE_CLANG_FALLBACK= default
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/_build/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}.bin
 	${INSTALL_SCRIPT} ${WRKDIR}/trx.sh ${STAGEDIR}${PREFIX}/bin/${PORTNAME}

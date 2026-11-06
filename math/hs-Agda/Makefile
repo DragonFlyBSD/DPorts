@@ -28,9 +28,4 @@ post-install:
 	cd ${WRKSRC}/src/data && ${COPYTREE_SHARE} lib ${STAGEDIR}${DATADIR}
 	#cd ${WRKSRC}/src/data && ${COPYTREE_SHARE} emacs-mode ${STAGEDIR}${DATADIR}
 
-dfly-patch:
-	mv ${WRKSRC}/${PORTNAME}.cabal ${WRKSRC}/${PORTNAME}.cabal.orig
-	awk '{print; if (tolower($$1) == "executable") {print "    extra-libraries: m"}}' \
-		${WRKSRC}/${PORTNAME}.cabal.orig > ${WRKSRC}/${PORTNAME}.cabal
-
 .include <bsd.port.mk>

@@ -35,6 +35,7 @@ USE_XORG=	pixman
 PLIST_SUB=	SOVERSION_FULL=${DISTVERSION:C/-.*//} \
 		SOVERSION_MAJOR=14
 
+USE_GCC_VERSION= 14
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == i386 || ${ARCH:Marmv?}

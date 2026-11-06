@@ -113,6 +113,7 @@ MAKE_SH_ARGS+=	--dynamic-space-size=${DYNAMIC_SPACE_SIZE}
 SBCL_BOOT_LIST=	1.2.7-x86-64-freebsd 1.2.7-x86-freebsd 1.2.9-x86-64-dragonfly \
 		2.5.7-powerpc64le-freebsd 2.6.5-powerpc64-freebsd
 
+PORTREVISION= 1
 .include <bsd.port.options.mk>
 
 ARCHOS_PATTERN= *-${ARCH:S/amd64/x86-64/:S/i386/x86/:S/x86_64/x86-64/}-${OPSYS:tl}*

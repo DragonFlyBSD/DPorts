@@ -1,0 +1,35 @@
+--- configure.in.orig	2026-11-06 12:18:00 UTC
++++ configure.in
+@@ -1199,24 +1199,21 @@ AC_RUN_IFELSE([AC_LANG_SOURCE(
+ SCM_I_GSC_STACK_GROWS_UP=0
+ AC_RUN_IFELSE([AC_LANG_SOURCE(
+ [AC_INCLUDES_DEFAULT
+-int
+-find_stack_direction ()
++/* Pass the outer frame's address down and keep the call: gcc 12 at -O2
++   folds the static-pointer version and reports an upward stack. */
++__attribute__ ((noinline)) int
++find_stack_direction (char *addr)
+ {
+-  static char *addr = 0;
+-  auto char dummy;
++  char dummy;
+   if (addr == 0)
+-    {
+-      addr = &dummy;
+-      return find_stack_direction ();
+-    }
+-  else
+-    return (&dummy > addr) ? 1 : -1;
++    return find_stack_direction (&dummy);
++  return ((unsigned long) &dummy > (unsigned long) addr) ? 1 : -1;
+ }
+ 
+ int
+ main ()
+ {
+-  return find_stack_direction () < 0;
++  return find_stack_direction (0) < 0;
+ }])],
+ 	       [SCM_I_GSC_STACK_GROWS_UP=1],
+ 	       [],

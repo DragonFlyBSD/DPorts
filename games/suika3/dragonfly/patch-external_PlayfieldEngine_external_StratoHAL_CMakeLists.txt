@@ -1,0 +1,11 @@
+--- external/PlayfieldEngine/external/StratoHAL/CMakeLists.txt.orig	2026-04-30 07:06:04 UTC
++++ external/PlayfieldEngine/external/StratoHAL/CMakeLists.txt
+@@ -105,7 +105,7 @@ else()
+     set(STRATO_ENABLE_SHARED                      ON)
+     set(STRATO_ENABLE_DIST                        ON)
+ 
+-  elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++  elseif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+     message(STATUS "Targeting FreeBSD.")
+     set(STRATO_TARGET_FREEBSD_X11SOFT             ON)
+     set(STRATO_ENABLE_SHARED                      ON)

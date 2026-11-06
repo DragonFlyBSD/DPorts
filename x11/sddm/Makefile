@@ -53,7 +53,6 @@ SUB_FILES=	xinit-session \
 USERS=		sddm
 GROUPS=		sddm video
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's#/etc/X11#${LOCALBASE}/etc/X11#' \
 		-e 's#/usr/bin/#${LOCALBASE}/bin/#g' \

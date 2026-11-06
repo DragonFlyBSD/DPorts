@@ -1,0 +1,11 @@
+--- src/locker/meson.build.orig
++++ src/locker/meson.build
+@@ -22,7 +22,7 @@
+   epoxy,
+ ]
+ 
+-if build_machine.system() != 'freebsd'
++if not ['freebsd', 'dragonfly'].contains(build_machine.system())
+   deps += [pam]
+ endif
+ 

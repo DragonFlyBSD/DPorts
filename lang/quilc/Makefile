@@ -21,7 +21,7 @@ LIB_DEPENDS=	libblas.so:math/blas \
 		libffi.so:devel/libffi \
 		liblapack.so:math/lapack
 
-USES=		fortran:gfortran gmake localbase pkgconfig
+USES= fortran:gfortran gmake localbase pkgconfig ssl
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	quil-lang
@@ -77,11 +77,15 @@ post-extract:
 	@cd ${QL_DIR}/dists/quicklisp/software && ${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/${t}
 .  endfor
 	# fixups: same effect as https://github.com/cffi/cffi/pull/332
-	@${REINPLACE_CMD} -e 's|:openbsd "libffi.so"|:freebsd "libffi.so"|' ${QL_DIR}/dists/quicklisp/software/cffi_0.24.1/libffi/libffi.lisp
+	@${REINPLACE_CMD} -e 's|:openbsd "libffi.so"|:dragonfly "libffi.so"|' ${QL_DIR}/dists/quicklisp/software/cffi_0.24.1/libffi/libffi.lisp
 
 post-install:
 	${INSTALL_LIB} ${QL_DIR}/dists/quicklisp/software/magicl-v0.9.1/expokit/libexpokit.so ${STAGEDIR}${PREFIX}/lib
 
 .endif
+
+dfly-patch:
+	@${REINPLACE_CMD} -e 's|"librt.so.1"|"librt.so.1" "librt.so.0"|' \
+		${QL_DIR}/dists/quicklisp/software/qvm-v1.17.2/src/shm.lisp
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
---- src/hotspot/os/bsd/os_bsd.cpp.intermediate	2020-01-05 09:35:07.634116000 +0000
+--- src/hotspot/os/bsd/os_bsd.cpp.orig
 +++ src/hotspot/os/bsd/os_bsd.cpp
-@@ -121,7 +121,7 @@
+@@ -127,7 +127,7 @@
  #include <lwp.h>
  #endif
  
@@ -9,7 +9,7 @@
  # include <pthread_np.h>
  #endif
  
-@@ -200,7 +200,7 @@ julong os::Bsd::available_memory() {
+@@ -209,7 +209,7 @@
    if (kerr == KERN_SUCCESS) {
      available = vmstat.free_count * os::vm_page_size();
    }
@@ -18,7 +18,7 @@
    static const char *vm_stats[] = {
      "vm.stats.vm.v_free_count",
      "vm.stats.vm.v_cache_count",
-@@ -208,7 +208,11 @@ julong os::Bsd::available_memory() {
+@@ -217,7 +217,11 @@
    };
    size_t size;
    julong free_pages;
@@ -30,7 +30,7 @@
  
    for (i = 0, free_pages = 0; i < sizeof(vm_stats) / sizeof(vm_stats[0]); i++) {
      size = sizeof(npages);
-@@ -1181,7 +1185,7 @@ pid_t os::Bsd::gettid() {
+@@ -1210,7 +1214,7 @@
    guarantee(retval != 0, "just checking");
    return retval;
  
@@ -39,14 +39,28 @@
    return ::pthread_getthreadid_np();
  #elif defined(__OpenBSD__)
    retval = getthrid();
-@@ -3584,6 +3588,10 @@ int os::active_processor_count() {
+@@ -1277,10 +1281,10 @@
+   // the symbol address + symbol size. Since the jvm wants more
+   // accurate symbol resolution, only return symbols that are
+   // an exact match so that Decoder::decode can be called as a fallback.
+-  if (info->dli_saddr != nullptr && info->dli_sname != nullptr &&
++  if (info->dli_saddr != NULL && info->dli_sname != NULL &&
+       addr != info->dli_saddr) {
+-    info->dli_saddr = nullptr;
+-    info->dli_sname = nullptr;
++    info->dli_saddr = NULL;
++    info->dli_sname = NULL;
+   }
+   return ret;
+ #endif
+@@ -3719,6 +3723,10 @@
+                   ActiveProcessorCount);
      return ActiveProcessorCount;
    }
- 
++
 +#ifdef __DragonFly__
 +  return sysconf(_SC_NPROCESSORS_ONLN);
 +#endif
-+
+ 
  #ifdef __FreeBSD__
    int online_cpus = 0;
-   cpuset_t mask;

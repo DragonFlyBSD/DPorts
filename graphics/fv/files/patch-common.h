@@ -4,7 +4,7 @@
  	return angle * M_PI / 180.0;
  }
  
-+#if _LIBCPP_STD_VER <= 14
++#if __cplusplus < 201703L
  template <class T>
  inline T clamp(T x, T a, T b)
  {

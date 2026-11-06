@@ -1818,6 +1818,15 @@ CFLAGS:=	${CFLAGS:C/ $//:N-O}
 .if !${CFLAGS:M-O*}
 CFLAGS+=	-O2
 .endif
+# gcc rejects -Wno-error= for a warning it lacks; take clang's
+# incompatible-function-pointer-types as gcc's incompatible-pointer-types
+.if !${CC:M*clang*}
+.  for _f in CFLAGS CPPFLAGS CXXFLAGS
+.    if ${${_f}:U:M-Wno-error=incompatible-function-pointer-types}
+${_f}:=	${${_f}:S/^-Wno-error=incompatible-function-pointer-types$/-Wno-error=incompatible-pointer-types/}
+.    endif
+.  endfor
+.endif
 
 .    if defined(WITHOUT_CPU_CFLAGS)
 .      if defined(_CPUCFLAGS)

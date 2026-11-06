@@ -32,7 +32,7 @@ USE_LDCONFIG=	yes
 # Some symbols in the linker version script map-file are only defined when
 # building the mainloop-glib shared library. Suppress errors with lld >= 17 due
 # to these undefined symbols.
-LDFLAGS+=	-Wl,--undefined-version
+LDFLAGS+= -Wl,--undefined-version -L${LOCALBASE}/lib -lintl
 
 SHEBANG_FILES=	shell-completion/bash/pactl \
 		src/utils/pa-info \
@@ -87,12 +87,11 @@ TDB_DESC=	Trivial database support
 TDB_MESON_ON=	-Ddatabase=tdb
 TDB_LIB_DEPENDS=	libtdb.so:databases/tdb
 
-MESON_ARGS=	-Db_lundef=false -Dasyncns=disabled -Dbluez5=disabled -Dbluez5-gstreamer=disabled -Ddoxygen=false -Delogind=disabled -Dgstreamer=disabled -Dgtk=disabled -Dlirc=disabled -Dsystemd=disabled -Dvalgrind=disabled
+MESON_ARGS= -Db_lundef=false -Dasyncns=disabled -Dbluez5=disabled -Dbluez5-gstreamer=disabled -Ddoxygen=false -Delogind=disabled -Dgstreamer=disabled -Dgtk=disabled -Dlirc=disabled -Dsystemd=disabled -Dvalgrind=disabled -Ddaemon=false
 
 PULSE_VERSION=	${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 PLIST_SUB=	PULSE_VERSION=${PULSE_VERSION}
 
-BROKEN= spins one cpu 100% and doesn't make any sound
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share|${LOCALBASE}/share|g' \
 		${WRKSRC}/src/daemon/default.pa.in
@@ -103,7 +102,7 @@ post-patch:
 post-install:
 	${RM} -r ${STAGEDIR}/lib
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/pulse
-.for ii in default.pa daemon.conf client.conf system.pa
+.for ii in client.conf
 	${MV} ${STAGEDIR}${PREFIX}/etc/pulse/${ii} \
 		${STAGEDIR}${PREFIX}/etc/pulse/${ii}.sample
 .endfor

@@ -27,7 +27,7 @@ USES=		compiler:c++20-lang gmake localbase:ldflags perl5
 USE_PERL5=	build
 
 ALL_TARGET=	shared_lib static_lib all
-CFLAGS+= -DOS_FREEBSD -Wno-error=unused-parameter
+CFLAGS+=	-DOS_FREEBSD
 CONFIGURE_ARGS=	make_config.mk
 CONFIGURE_ENV=	PORTABLE=0 ROCKSDB_DISABLE_PG=1 ROCKSDB_ROOT=${WRKSRC}
 CONFIGURE_SCRIPT=	build_tools/build_detect_platform
@@ -57,7 +57,6 @@ LZ4_MAKE_ENV_OFF=	ROCKSDB_DISABLE_LZ4=yes
 ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 ZSTD_MAKE_ENV_OFF=	ROCKSDB_DISABLE_ZSTD=yes
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == clang

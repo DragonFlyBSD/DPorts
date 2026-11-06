@@ -32,4 +32,5 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.nsupdate.sample ${STAGEDIR}${PREFIX}/etc
 	${INSTALL_DATA} ${WRKDIR}/crontab ${STAGEDIR}${PREFIX}/etc/cron.d/${PORTNAME}
 
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSSAPI_BASE} GSSAPI_MIT
 .include <bsd.port.mk>

@@ -23,7 +23,6 @@ GH_ACCOUNT=	google
 
 WRKSRC_SUBDIR=	python
 
-DFLY_UNMAINTAINED= yes
 do-test:
 	@cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} ${PYSETUP} test
 

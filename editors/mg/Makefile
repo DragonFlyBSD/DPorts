@@ -45,4 +45,7 @@ post-install-DOCS-on:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 .endif
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|-lcurses|${NCURSESLIBS}|' ${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

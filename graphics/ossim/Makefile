@@ -40,4 +40,21 @@ OPTIONS_SUB=	yes
 
 TEST_CMAKE_BOOL=       BUILD_OSSIM_TESTS
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/!defined( __FreeBSD__)/& \&\& !defined(__DragonFly__)/' \
+		-e 's/!defined(__APPLE__) && !defined(__FreeBSD__)/& \&\& !defined(__DragonFly__)/' \
+		-e 's/|| defined(__FreeBSD__)/& || defined(__DragonFly__)/' \
+		${WRKSRC}/src/base/ossimDate.cpp \
+		${WRKSRC}/src/sockets/ossimToolServer.cpp \
+		${WRKSRC}/src/vpfutil/linklist.c \
+		${WRKSRC}/src/vpfutil/vpfclip.c \
+		${WRKSRC}/src/vpfutil/vpfcntnt.c \
+		${WRKSRC}/src/vpfutil/vpfdict.c \
+		${WRKSRC}/src/vpfutil/vpfdisp.c \
+		${WRKSRC}/src/vpfutil/vpfmisc.c \
+		${WRKSRC}/src/vpfutil/vpfprim.c \
+		${WRKSRC}/src/vpfutil/vpfquery.c \
+		${WRKSRC}/src/vpfutil/vpfrelat.c \
+		${WRKSRC}/src/vpfutil/vpfselec.c
+
 .include <bsd.port.mk>

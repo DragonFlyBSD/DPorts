@@ -4,7 +4,7 @@
  #include "si.h"
  #include <errno.h>
  #include <iconv.h>
-+#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
  #include <malloc.h>
 +#endif
  #include <stdlib.h> // for broadcaster stupidity workaround

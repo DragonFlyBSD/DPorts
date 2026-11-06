@@ -58,5 +58,4 @@ PULSEAUDIO_MESON_ENABLED=	volume-widget
 post-patch:
 	${REINPLACE_CMD} 's|/etc/|${LOCALBASE}/etc/|' ${WRKSRC}/data/meson.build
 
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
 .include <bsd.port.mk>

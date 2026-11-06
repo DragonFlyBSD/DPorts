@@ -22,5 +22,5 @@ QT5_RUN_DEPENDS=	plasma6-kwayland-integration-qt5>0:x11/plasma6-kwayland-integra
 			plasma6-plasma-integration-qt5>0:x11/plasma6-plasma-integration@qt5 \
 			plasma6-breeze-qt5>0:x11-themes/plasma6-breeze@qt5
 
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
+PORTREVISION= 1
 .include <bsd.port.mk>

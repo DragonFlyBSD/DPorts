@@ -1,6 +1,6 @@
 PORTNAME=	FreeWnn
 PORTVERSION=	1.1.1.a021
-PORTREVISION=	15
+PORTREVISION= 16
 CATEGORIES?=	japanese
 MASTER_SITES=	OSDN/freewnn
 PKGNAMESUFFIX=	-server
@@ -19,6 +19,7 @@ USERS=			wnn
 
 CPP= cpp -P
 .include "${.CURDIR}/../../japanese/FreeWnn-lib/Makefile.common"
+MAKE_ARGS+=	CPP='cpp -P -traditional-cpp'
 
 WNN_LIB_DEPENDS+=	libwnn.so:japanese/FreeWnn-lib
 WNN_CONFIGURE_ON+=	--with-libwnn=-lwnn \

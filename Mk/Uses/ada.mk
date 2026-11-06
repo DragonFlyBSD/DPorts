@@ -51,8 +51,10 @@ RUN_DEPENDS+=	${_BINDEP}:${_ADAPORT}
 .  endif
 
 BUILD_DEPENDS+=	${_BINDEP}:${_ADAPORT}
+# Ports binutils ld only searches /lib and /usr/lib here; gprbuild ignores LDFLAGS.
 MAKE_ENV+=	PATH=${_ADAPATH}:${PATH} \
-		ADA_PROJECT_PATH=${LOCALBASE}/lib/gnat
+		ADA_PROJECT_PATH=${LOCALBASE}/lib/gnat \
+		LIBRARY_PATH=${LOCALBASE}/lib
 CONFIGURE_ENV+=	PATH=${_ADAPATH}:${PATH} \
 		ADA_PROJECT_PATH=${LOCALBASE}/lib/gnat
 

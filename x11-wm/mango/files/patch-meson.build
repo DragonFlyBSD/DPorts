@@ -12,7 +12,7 @@
  # If sysconfdir starts with prefix, strip the prefix.
 -if sysconfdir.startswith(prefix) and not is_nixos
 -  sysconfdir = sysconfdir.substring(prefix.length())
-+if sysconfdir.startswith(prefix) and not is_nixos and osname != 'freebsd'
++if sysconfdir.startswith(prefix) and not is_nixos and osname != 'freebsd' and osname != 'dragonfly'
 +  # this fails with: Unknown method "length" in object <[OptionStringHolder] holds [OptionString]
 +  # sysconfdir = sysconfdir.substring(prefix.length())
 +  sysconfdir = sysconfdir.replace(prefix, '')

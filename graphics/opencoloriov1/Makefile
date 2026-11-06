@@ -26,7 +26,7 @@ CMAKE_OFF=	OCIO_BUILD_APPS OCIO_BUILD_JNIGLUE OCIO_BUILD_NUKE \
 CMAKE_ARGS+=	-DPYTHON:FILEPATH=${PYTHON_CMD}
 
 CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
-CXXFLAGS_gcc=	-Wno-unused-function -Wno-error
+CXXFLAGS_gcc= -Wno-unused-function -Wno-error -Wno-error=nonnull
 CXXFLAGS_clang=	-Wno-deprecated-register
 USE_LDCONFIG=	yes
 

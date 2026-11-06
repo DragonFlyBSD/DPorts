@@ -90,6 +90,9 @@ CABAL_CMD?=	cabal
 CABAL_PORT=	devel/hs-cabal-install
 CABAL_HOME?=	${WRKDIR}/cabal-home
 CABAL_HOME_ENV=XDG_DATA_HOME=${CABAL_HOME} XDG_CONFIG_HOME=${CABAL_HOME} XDG_CACHE_HOME=${CABAL_HOME} HOME=${CABAL_HOME}
+# GHC, happy and alex read files in the locale's encoding, and the
+# tree's C locale is ASCII here (no C.UTF-8 in base): build in UTF-8
+CABAL_HOME_ENV+=	LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 CABAL_LIBEXEC=	libexec/cabal
 CABAL_EXTRACT_SUFX=	.tar.gz
 CABAL_ARCH=	${ARCH:S/amd64/x86_64/:C/armv.*/arm/:S/powerpc64/ppc64/}

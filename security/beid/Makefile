@@ -42,6 +42,7 @@ OPTIONS_SUB=	yes
 NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
 
+CONFIGURE_ENV= OPENSSL_PATH=${OPENSSLBASE}/bin/openssl
 post-patch:
 	@${ECHO_CMD} ${DISTVERSION}-${GH_TAGNAME} > ${WRKSRC}/.version
 	@${REINPLACE_CMD} -e 's,/usr/bin/pinentry,${LOCALBASE}/bin/pinentry,' \

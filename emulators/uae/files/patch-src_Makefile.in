@@ -6,7 +6,7 @@
  		-DSYSTEM_ROMDIR=\"$(datadir)/uae/roms\" \
 -		-DSYSTEM_CFGDIR=\"$(datadir)/uae/configs\"
 +		-DSYSTEM_CFGDIR=\"$(datadir)/uae/configs\" \
-+		-Wno-error=incompatible-function-pointer-types
++		-Wno-error=incompatible-pointer-types
  X_CFLAGS  = @X_CFLAGS@ @GTK_CFLAGS@ -DSHM_SUPPORT_LINKS=@SHM_SUPPORT_LINKS@
  TARGET    = @TARGET@
  LIBRARIES = @LIBRARIES@ @LIBS@ @GTK_LIBS@

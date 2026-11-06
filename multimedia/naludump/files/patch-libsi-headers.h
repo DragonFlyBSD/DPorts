@@ -4,7 +4,7 @@
  #ifndef LIBSI_HEADERS_H
  #define LIBSI_HEADERS_H
  
-+#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
 +#include <sys/endian.h>
 +#else
  #include <endian.h>

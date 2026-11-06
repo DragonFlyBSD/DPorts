@@ -68,4 +68,8 @@ do-test-TEST-on:
 IGNORE=		Requires tdestroy(3) in libc
 .endif
 
+.if ${OPSYS} == DragonFly
+IGNORE=		needs tdestroy(3) in libc and a kernel RDMA stack
+.endif
+
 .include <bsd.port.post.mk>

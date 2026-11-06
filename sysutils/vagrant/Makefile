@@ -54,7 +54,7 @@ SHEBANG_FILES=	plugins/hosts/darwin/scripts/install_virtualbox.sh \
 GEMFILES=	vagrant-${PORTVERSION}.gem
 RUBYGEMBIN=	gem
 
-BUILD_TARGET=	${ARCH}-${OPSYS:tl}-${OSREL:R}
+BUILD_TARGET= ${ARCH}-unknown
 
 PLIST_SUB+=	BUILD_TARGET="${BUILD_TARGET}" \
 		DOC_DIR="lib/ruby/gems/${RUBY_VER}/doc" \

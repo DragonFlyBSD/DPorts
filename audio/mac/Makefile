@@ -20,4 +20,5 @@ DOS2UNIX_FILES=	Shared/*.h \
 
 NO_WRKSUBDIR=	yes
 
+PORTREVISION= 1
 .include <bsd.port.mk>

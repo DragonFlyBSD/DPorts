@@ -66,7 +66,6 @@ PYTHON_CONFIGURE_OFF=	--no-install-python-module
 SQLITE3_USES=		sqlite
 SQLITE3_CONFIGURE_WITH=	sqlite3
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 # llvm from ports fixes build failure, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=279136

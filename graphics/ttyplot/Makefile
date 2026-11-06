@@ -22,10 +22,4 @@ PLIST_FILES=	bin/${PORTNAME} \
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ttyplot
 
-dfly-patch:
-	${REINPLACE_CMD} -e 's@-lcurses@-lncurses@g' \
-		${WRKSRC}/Makefile
-	${REINPLACE_CMD} -e 's@|| defined (__FreeBSD__)@|| defined (__FreeBSD__) || defined (__DragonFly__)@' \
-		${WRKSRC}/ttyplot.c
-
 .include <bsd.port.mk>

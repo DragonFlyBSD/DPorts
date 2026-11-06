@@ -95,8 +95,7 @@ WEATHER_DESC=		Weather calendar backend
 WEATHER_LIB_DEPENDS=	libgweather-4.so:net/libgweather4
 WEATHER_CMAKE_BOOL=	ENABLE_WEATHER
 
-BUILD_DEPENDS= krb5-config:security/krb5
-RUN_DEPENDS= krb5-config:security/krb5
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSSAPI_BASE} GSSAPI_MIT
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOAUTH2}

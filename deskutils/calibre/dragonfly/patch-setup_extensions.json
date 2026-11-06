@@ -1,11 +1,11 @@
---- setup/extensions.json.orig	2021-03-26 03:24:02 UTC
+--- setup/extensions.json.orig	2025-12-06 03:52:49 UTC
 +++ setup/extensions.json
-@@ -193,7 +193,7 @@
+@@ -236,7 +236,7 @@
      },
      {
          "name": "libusb",
--        "only": "freebsd",
-+        "only": "freebsd dragonflybsd",
+-        "only": "macos linux haiku freebsd",
++        "only": "macos linux haiku freebsd dragonflybsd",
          "sources": "calibre/devices/libusb/libusb.c",
-         "libraries": "usb"
+         "libraries": "!usb_library"
      },

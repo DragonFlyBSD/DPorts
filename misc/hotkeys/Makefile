@@ -37,7 +37,7 @@ OSD_CONFIGURE_WITH=	xosd
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
-CFLAGS+= -Wno-error=incompatible-function-pointer-types -DHAVE_LOCALE_H -Wno-unused-function -Wno-incompatible-pointer-types -Wno-pointer-sign
+CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 
 post-extract:
@@ -54,5 +54,9 @@ post-configure:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/hotkeys.conf ${STAGEDIR}${PREFIX}/etc/hotkeys.conf.sample
+
+.if ${OPSYS} == DragonFly
+CFLAGS+=	-DHAVE_LOCALE_H -DHAVE_SETLOCALE -Wno-unused-function -Wno-incompatible-pointer-types -Wno-pointer-sign
+.endif
 
 .include <bsd.port.mk>

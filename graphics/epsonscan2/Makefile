@@ -61,6 +61,8 @@ dfly-patch:
 		${WRKSRC}/src/SaneWrapper/defines.h
 	${REINPLACE_CMD} -e 's/pthread_peekjoin_np(tid,st)/pthread_join(tid,st)/' \
 		${WRKSRC}/src/Platform.cpp
+	${REINPLACE_CMD} -e 's/^#if defined(__GNU_LIBRARY__) && !defined(_SEM_SEMUN_UNDEFINED)$$/& || defined(__DragonFly__)/' \
+		${WRKSRC}/src/ES2Command/Src/Utils/semaphore.hpp
 	${REINPLACE_CMD} -e 's/CMAKE_SYSTEM_NAME STREQUAL "FreeBSD"/CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly"/' \
 		${WRKSRC}/CMakeLists.txt
 

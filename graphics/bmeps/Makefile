@@ -37,4 +37,8 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/man/man1/${PORTNAME}.1 \
 		${STAGEDIR}${PREFIX}/share/man/man1
 
+.if ${COMPILER_TYPE} == gcc && ${CC} == cc
+CC=	gcc
+.endif
+
 .include <bsd.port.post.mk>

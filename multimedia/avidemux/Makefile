@@ -22,7 +22,6 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libADM6${l}
 .endfor
 
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
 dfly-patch:
 	${ECHO_MSG} 'target_link_libraries(ADM_core6 "-lexecinfo")' >> \
 		${WRKSRC}/avidemux_core/ADM_core/src/CMakeLists.txt

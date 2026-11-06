@@ -1,6 +1,14 @@
---- src/gldit/cairo-dock-config.c.intermediate	2019-05-09 17:56:17.000000000 +0000
+--- src/gldit/cairo-dock-config.c.orig	2026-11-06 06:40:31 UTC
 +++ src/gldit/cairo-dock-config.c
-@@ -28,7 +28,7 @@
+@@ -18,6 +18,7 @@
+ */
+ 
+ #define _POSIX_C_SOURCE 200809L // needed for O_CLOEXEC
++#define _XOPEN_SOURCE 700 // setkey(), encrypt()
+ 
+ #include <math.h>
+ #include <string.h>
+@@ -31,7 +32,7 @@
  #include "gldi-config.h"
  
  #ifdef HAVE_LIBCRYPT

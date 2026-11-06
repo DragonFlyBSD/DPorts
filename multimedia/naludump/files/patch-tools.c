@@ -4,7 +4,7 @@
  #include <stdarg.h>
  #include <stdlib.h>
  #include <sys/time.h>
-+#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
 +#include <sys/param.h>
 +#include <sys/mount.h>
 +#else

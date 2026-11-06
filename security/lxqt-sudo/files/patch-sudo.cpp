@@ -13,7 +13,7 @@
  
      const QString su_prog{QStringLiteral(LXQTSUDO_SU)};
      const QString sudo_prog{QStringLiteral(LXQTSUDO_SUDO)};
-+#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
 +    const QString pwd_prompt_end_c_locale{QStringLiteral(":")};
 +#endif
      const QString doas_prog{QStringLiteral(LXQTSUDO_DOAS)};

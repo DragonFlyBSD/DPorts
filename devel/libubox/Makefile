@@ -12,6 +12,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libjson-c.so:devel/json-c
 
 USES=		cmake pkgconfig lua:51
+CFLAGS+=	-Wno-error=array-bounds
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	mmatuska

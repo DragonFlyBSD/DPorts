@@ -77,7 +77,6 @@ UPLOAD_DESC=		HTTP file upload plugin
 UPLOAD_MESON_ON=	-DSOUP_VERSION:INT=2
 UPLOAD_MESON_ENABLED=	plugin-http-files
 
-MAKE_JOBS_UNSAFE= yes
 pre-configure:
 	@if [ -z "${PACKAGE_BUILDING}" ]; then if ! ${PKG_BIN} query \
 			'%o-%Ok-%Od' databases/sqlite3 | \
@@ -87,5 +86,4 @@ pre-configure:
 	exit 1; \
 	fi; fi
 
-USES:= ${USES:Nninja} gmake
 .include <bsd.port.mk>

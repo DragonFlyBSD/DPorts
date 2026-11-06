@@ -1,0 +1,11 @@
+--- build_tools/build_detect_platform.orig	2026-11-06 14:16:30 UTC
++++ build_tools/build_detect_platform
+@@ -228,7 +228,7 @@ case "$TARGET_OS" in
+     DragonFly)
+         PLATFORM=OS_DRAGONFLYBSD
+         COMMON_FLAGS="$COMMON_FLAGS -D_REENTRANT -DOS_DRAGONFLYBSD"
+-        PLATFORM_LDFLAGS="$PLATFORM_LDFLAGS -lpthread"
++        PLATFORM_LDFLAGS="$PLATFORM_LDFLAGS -lgtest -lpthread"
+         # PORT_FILES=port/dragonfly/dragonfly_specific.cc
+         ;;
+     Cygwin)

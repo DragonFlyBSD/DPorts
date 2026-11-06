@@ -1,7 +1,7 @@
---- src/calibre/devices/libusb/libusb.c.orig	2020-01-03 01:29:53 UTC
+--- src/calibre/devices/libusb/libusb.c.orig	2025-12-06 03:52:49 UTC
 +++ src/calibre/devices/libusb/libusb.c
-@@ -8,7 +8,7 @@
- #define UNICODE
+@@ -9,7 +9,7 @@
+ #define PY_SSIZE_T_CLEAN
  
  #include <Python.h>
 -#ifdef __FreeBSD__

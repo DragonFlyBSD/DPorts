@@ -77,6 +77,7 @@ TEXTURES_DISTFILES=	textures-1K.zip:gfx
 XLSX_LIB_DEPENDS=	libQXlsxQt5.so:devel/qxlsx@qt5
 XLSX_CMAKE_OFF=		-DENABLE_XLSX:BOOL=OFF
 
+CMAKE_ARGS= -DCMAKE_INSTALL_MANDIR=share/man
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMORE_STARS}

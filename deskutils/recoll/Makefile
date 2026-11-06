@@ -91,5 +91,7 @@ post-install-CHM-on:
 dfly-patch:
 	${REINPLACE_CMD} -e 's@ifdef REAL_GCC@&__z@g' \
 		${WRKSRC}/common/conf_post.h
+	${REINPLACE_CMD} -e 's@-std=c++11@-std=c++17@' \
+		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>

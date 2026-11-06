@@ -64,7 +64,7 @@ post-build:
 	@${ECHO} "===> Building plugins" && \
 	${MKDIR} ${WRKSRC}/../Plugins/build && \
 	cd ${WRKSRC}/../Plugins/build && \
-	${SETENVI} ${WRK_ENV} ${CONFIGURE_ENV} ${CMAKE_BIN} .. -GNinja ${WITH_PLUGIN_ARGS_OFF} ${WITH_PLUGIN_ARGS_ON} && \
+	${SETENVI} ${WRK_ENV} ${CONFIGURE_ENV} ${CMAKE_BIN} .. ${WITH_PLUGIN_ARGS_OFF} ${WITH_PLUGIN_ARGS_ON} && \
 	${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ${_MAKE_JOBS} ${ALL_TARGET}
 
 post-install:

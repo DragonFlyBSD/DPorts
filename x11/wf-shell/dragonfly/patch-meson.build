@@ -1,0 +1,11 @@
+--- meson.build.orig
++++ meson.build
+@@ -14,7 +14,7 @@
+ )
+ 
+ wayfire = dependency('wayfire')
+-if build_machine.system() != 'freebsd'
++if not ['freebsd', 'dragonfly'].contains(build_machine.system())
+ pam = dependency('pam')
+ endif
+ wayland_client = dependency('wayland-client')

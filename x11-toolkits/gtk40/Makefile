@@ -1,6 +1,6 @@
 PORTNAME=	gtk
 PORTVERSION=	4.20.4
-PORTREVISION=	1
+PORTREVISION= 2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	4
@@ -123,5 +123,4 @@ pre-test:
 		${TOUCH} ${WRKDIR}/.meson_build_tests; \
 	fi
 
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NWAYLAND}
 .include <bsd.port.mk>

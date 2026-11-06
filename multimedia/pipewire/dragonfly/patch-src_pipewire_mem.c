@@ -1,6 +1,6 @@
---- src/pipewire/mem.c.orig	2023-10-06 09:37:06 UTC
+--- src/pipewire/mem.c.orig
 +++ src/pipewire/mem.c
-@@ -26,7 +26,7 @@ PW_LOG_TOPIC_EXTERN(log_mem);
+@@ -27,7 +27,7 @@
  #define PW_LOG_TOPIC_DEFAULT log_mem
  
  #if !defined(__FreeBSD__) && !defined(__MidnightBSD__) && !defined(__GNU__) \
@@ -9,7 +9,7 @@
  /*
   * No glibc wrappers exist for memfd_create(2), so provide our own.
   *
-@@ -43,7 +43,8 @@ static inline int memfd_create(const cha
+@@ -44,7 +44,8 @@
  #define HAVE_MEMFD_CREATE 1
  #endif
  
@@ -19,12 +19,22 @@
  #define MAP_LOCKED 0
  #endif
  
-@@ -495,7 +496,7 @@ struct pw_memblock * pw_mempool_alloc(st
+@@ -558,6 +559,18 @@
  		pw_log_error("%p: Failed to create memfd: %m", pool);
  		goto error_free;
  	}
--#elif defined(__FreeBSD__) || defined(__MidnightBSD__)
-+#elif defined(__FreeBSD__) || defined(__MidnightBSD__) || !defined(__DragonFly__)
++#elif defined(__DragonFly__)
++	char shm_name[64];
++	static int shm_serial;
++	snprintf(shm_name, sizeof(shm_name), "/pipewire-shm-%d-%d",
++		 (int) getpid(), __sync_fetch_and_add(&shm_serial, 1));
++	b->this.fd = shm_open(shm_name, O_CREAT | O_EXCL | O_RDWR | O_CLOEXEC, 0600);
++	if (b->this.fd == -1) {
++		res = -errno;
++		pw_log_error("%p: Failed to create shm object: %m", pool);
++		goto error_free;
++	}
++	shm_unlink(shm_name);
+ #elif defined(__FreeBSD__) || defined(__MidnightBSD__)
  	b->this.fd = shm_open(SHM_ANON, O_CREAT | O_RDWR | O_CLOEXEC, 0);
  	if (b->this.fd == -1) {
- 		res = -errno;

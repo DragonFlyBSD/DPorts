@@ -29,7 +29,6 @@ DOCS_MESON_TRUE=	docs
 
 EXAMPLES_MESON_TRUE=	examples
 
-IGNORE= unmaintained, please request fixing to users mailing list
 pre-test:
 	@if [ ! -e ${WRKDIR}/.meson_build_tests ]; then \
 		${RM} ${CONFIGURE_COOKIE} ${BUILD_COOKIE}; \

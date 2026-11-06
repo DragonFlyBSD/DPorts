@@ -10,9 +10,9 @@ WWW=		https://sourceforge.net/projects/drumstick
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS= libpipewire-0.3.so:multimedia/pipewire libasound.so:audio/alsa-lib
+LIB_DEPENDS=	libpipewire-0.3.so:multimedia/pipewire
 
-USES= compiler:c++17-lang cmake desktop-file-utils gl pkgconfig qt:6 shared-mime-info tar:bz2 localbase:ldflags
+USES=		compiler:c++17-lang cmake desktop-file-utils gl pkgconfig qt:6 shared-mime-info tar:bz2
 USE_QT=		base svg 5compat tools:build
 USE_GL=		gl opengl
 USE_LDCONFIG=	yes
@@ -47,12 +47,9 @@ SONIVOX_CMAKE_BOOL=	USE_SONIVOX USE_PULSEAUDIO # these two options have to be al
 SONIVOX_LIB_DEPENDS=	libpulse.so:audio/pulseaudio \
 			libsonivox.so:audio/sonivox
 
-RUN_DEPENDS= ${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins alsa-lib>=1.1.1_1:audio/alsa-lib
-PLIST_FILES= bin/drumstick-drumgrid bin/drumstick-dumpmid bin/drumstick-guiplayer bin/drumstick-metronome bin/drumstick-playsmf bin/drumstick-sysinfo include/drumstick/alsaclient.h include/drumstick/alsaevent.h include/drumstick/alsaport.h include/drumstick/alsaqueue.h include/drumstick/alsatimer.h include/drumstick/playthread.h include/drumstick/sequencererror.h include/drumstick/subscription.h lib/cmake/drumstick/drumstick-alsa-config-version.cmake lib/cmake/drumstick/drumstick-alsa-config.cmake lib/cmake/drumstick/drumstick-alsa-targets-%%CMAKE_BUILD_TYPE%%.cmake lib/cmake/drumstick/drumstick-alsa-targets.cmake lib/drumstick2/libdrumstick-rt-alsa-in.so lib/drumstick2/libdrumstick-rt-alsa-out.so lib/libdrumstick-alsa.so lib/libdrumstick-alsa.so.2 lib/libdrumstick-alsa.so.2.5.0 share/applications/drumstick-drumgrid.desktop share/applications/drumstick-guiplayer.desktop %%DATADIR%%/drumstick-drumgrid_en.qm %%DATADIR%%/drumstick-drumgrid_es.qm %%DATADIR%%/drumstick-guiplayer_cs.qm %%DATADIR%%/drumstick-guiplayer_es.qm %%DATADIR%%/drumstick-guiplayer_ru.qm
 post-patch:
 	# instead of default.sf2 use FluidR3_GM.sf2 installed by fluid-soundfont
 	@${REINPLACE_CMD} -e 's|"default.sf2"|"${LOCALBASE}/share/sounds/sf2/FluidR3_GM.sf2"|' \
 		${WRKSRC}/library/rt-backends/fluidsynth/fluidsynthengine.cpp
 
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
 .include <bsd.port.mk>

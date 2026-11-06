@@ -4,7 +4,7 @@
        System.FS.BlockIO.Internal
        System.FS.BlockIO.Internal.Fcntl
  
-+  elif os(freebsd)
++  elif os(freebsd) || os(dragonfly)
 +    hs-source-dirs: src-linux
 +    build-depends:  unix ^>=2.8.4
 +    other-modules:

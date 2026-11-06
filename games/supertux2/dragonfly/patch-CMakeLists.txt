@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2026-03-15 05:38:50 UTC
++++ CMakeLists.txt
+@@ -388,7 +388,7 @@ endif()
+ 
+ target_include_directories(supertux2 PUBLIC ${CMAKE_BINARY_DIR} src/)
+ 
+-if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|NetBSD")
++if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly|NetBSD")
+   target_link_options(supertux2 PUBLIC -lexecinfo)
+ endif()
+ 

@@ -1,0 +1,11 @@
+--- src/dbmail.h.in.orig	2026-11-06 07:00:47 UTC
++++ src/dbmail.h.in
+@@ -34,7 +34,7 @@
+ 
+ #define __EXTENSIONS__ /* solaris */
+ 
+-#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__SUNPRO_C) || defined(__SMARTOS__) || defined(__ILLUMOS__) || defined(__sun)
++#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__APPLE__) || defined(__SUNPRO_C) || defined(__SMARTOS__) || defined(__ILLUMOS__) || defined(__sun)
+ 
+ #define _XOPEN_SOURCE
+ 
