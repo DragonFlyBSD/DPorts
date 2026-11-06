@@ -1132,18 +1132,3 @@ you update your ports collection, before attempting any port upgrades.
 
   You should uninstall the flavored package and install the unflavored package.
 
-20251105:
-  AFFECTS: users of net/unison
-  AUTHOR: madpilot@FreeBSD.org
-
-  With the update to version 2.53.8 the port uses upstream install target.
-  This causes the installed unison binary to always be the command line
-  version, even when the port is compiled with xorg support. The UI binary
-  is installed as unison-gui.
-
-  The unison.desktop file provided with the port is adjusted to launch the
-  new unison-gui binary.
-
-  Please verify any local scripts using the unison binaries are adapted to
-  this change.
-

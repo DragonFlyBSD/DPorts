@@ -1,0 +1,24 @@
+--- rts/configure.ac.orig	2026-03-26 05:06:13 UTC
++++ rts/configure.ac
+@@ -260,16 +260,17 @@ if test "$ac_cv_sizeof_void_p" -eq 8 ; then
+             # tabe for reserved memory eagerly. So we are now free to use LAS there too.
+                   use_large_address_space=yes
+         else
+-            AC_CHECK_DECLS([MAP_NORESERVE, MADV_FREE, MADV_DONTNEED],[],[],
++            AC_CHECK_DECLS([MAP_NORESERVE, MAP_GUARD, MADV_FREE, MADV_DONTNEED],[],[],
+                 [
+                 #include <unistd.h>
+                 #include <sys/types.h>
+                 #include <sys/mman.h>
+                 #include <fcntl.h>
+             ])
+-            if test "$ac_cv_have_decl_MAP_NORESERVE" = "yes" &&
+-                test "$ac_cv_have_decl_MADV_FREE" = "yes" ||
+-                test "$ac_cv_have_decl_MADV_DONTNEED" = "yes" ; then
++            if { test "$ac_cv_have_decl_MAP_NORESERVE" = "yes" ||
++                 test "$ac_cv_have_decl_MAP_GUARD" = "yes" ; } &&
++               { test "$ac_cv_have_decl_MADV_FREE" = "yes" ||
++                 test "$ac_cv_have_decl_MADV_DONTNEED" = "yes" ; } ; then
+                     use_large_address_space=yes
+             fi
+         fi

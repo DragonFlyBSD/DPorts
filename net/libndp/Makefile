@@ -19,5 +19,4 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	jpirko
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

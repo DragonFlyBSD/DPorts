@@ -75,4 +75,8 @@ post-patch:
 do-test:
 	${TEST_WRKSRC}/${PORTNAME}_verify
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'	\
+		${WRKSRC}/common/math/math.h
+
 .include <bsd.port.post.mk>

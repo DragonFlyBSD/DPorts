@@ -77,6 +77,6 @@ do-test:
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@\(defined(__FreeBSD__)\)@(\1||defined(__DragonFly__))@g'	\
-		${WRKSRC}/common/math/math.h
+		${WRKSRC}/common/math/emath.h
 
 .include <bsd.port.post.mk>

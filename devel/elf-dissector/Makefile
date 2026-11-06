@@ -24,10 +24,9 @@ KDE_INVENT=	a0d00720afb72d81256564caac21f050097ae190 sdk
 
 USES+= localbase:ldflags
 BUILD_DEPENDS+= bsdelf>0:devel/bsdelf
-CMAKE_ARGS= -DDwarf_INCLUDE_DIR=${LOCALBASE}/bsdelf/include -DDwarf_LIBRARY=${LOCALBASE}/bsdelf/lib/libdwarf.a -DElf_LIBRARY=${LOCALBASE}/bsdelf/lib/libelf.a
+CMAKE_ARGS= -DCMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES=${LOCALBASE}/bsdelf/include
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
-			 -e "s@Dwarf::Dwarf@& ${LOCALBASE}/bsdelf/lib/libelf.a@g" \
 			 -e "s@Binutils::Iberty Binutils::Opcodes@Binutils::Opcodes Binutils::Iberty@g" \
 		${WRKSRC}/src/lib/CMakeLists.txt \
 		${WRKSRC}/src/ui/CMakeLists.txt \

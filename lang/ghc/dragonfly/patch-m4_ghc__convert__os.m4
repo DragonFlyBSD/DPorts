@@ -1,6 +1,6 @@
---- m4/ghc_convert_os.m4.orig	2023-05-25 23:03:00 UTC
+--- m4/ghc_convert_os.m4.orig	2026-03-26 05:06:13 UTC
 +++ m4/ghc_convert_os.m4
-@@ -38,6 +38,9 @@ AC_DEFUN([GHC_CONVERT_OS],[
+@@ -41,6 +41,9 @@ AC_DEFUN([GHC_CONVERT_OS],[
        solaris2*)
          $3="solaris2"
          ;;

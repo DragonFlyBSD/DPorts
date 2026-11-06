@@ -1,0 +1,11 @@
+--- libraries/text/text.cabal.orig	2025-03-02 13:05:59 UTC
++++ libraries/text/text.cabal
+@@ -102,7 +102,7 @@ library
+         extra-libraries: stdc++
+       else
+         extra-libraries: c++ c++abi
+-    elif os(linux)
++    elif os(linux) || os(dragonfly)
+       extra-libraries: stdc++
+     else
+       -- This is supposed to be under arch(wasm32), but we can't do that yet

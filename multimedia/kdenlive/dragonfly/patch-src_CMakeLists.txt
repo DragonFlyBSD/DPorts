@@ -1,0 +1,16 @@
+--- src/CMakeLists.txt.orig	2026-11-05 14:34:15 UTC
++++ src/CMakeLists.txt
+@@ -124,6 +124,13 @@
+       QtQuick
+ )
+ 
++# With Makefiles, kdenliveLib_qmltyperegistration can parse metatypes.json
++# before kdenliveLib's moc --collect-json rule has copied it in; build
++# kdenliveLib first, as Qt does for Xcode (QTBUG-95763).
++if(CMAKE_GENERATOR MATCHES "Makefiles" AND TARGET kdenliveLib_qmltyperegistration)
++    add_dependencies(kdenliveLib_qmltyperegistration kdenliveLib)
++endif()
++
+ ecm_target_qml_sources(kdenliveLib
+     SOURCES
+     qml/ZoomBar.qml

@@ -30,6 +30,7 @@ OPTIONS_DEFINE=	DOCS
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-docs_pkg.8
 .endif
 
+PORTREVISION= 1
 PROBLEM_FILES= ${WRKSRC}/libpkg/pkg_config.c ${WRKSRC}/src/pkg.conf.sample ${WRKSRC}/docs/pkg-create.8 ${WRKSRC}/docs/pkg-set.8 ${WRKSRC}/docs/pkg-repo.8 ${WRKSRC}/docs/pkg.conf.5 ${WRKSRC}/docs/pkg-version.8 ${WRKSRC}/docs/pkg.8
 CFLAGS= -I/usr/include/priv
 LDFLAGS= -L/usr/lib/priv -R/lib/priv

@@ -29,4 +29,8 @@ USE_XORG=	x11
 
 CMAKE_ON=	SMB4K_WITH_WS_DISCOVERY
 
+dfly-patch:
+	${GREP} -rl 'Q_OS_FREEBSD' ${WRKSRC}/core ${WRKSRC}/helpers ${WRKSRC}/smb4k | \
+		${XARGS} ${REINPLACE_CMD} -e 's/defined(Q_OS_FREEBSD)/(defined(Q_OS_FREEBSD) || defined(Q_OS_DRAGONFLY))/g'
+
 .include <bsd.port.mk>

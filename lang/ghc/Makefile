@@ -99,10 +99,9 @@ PLIST_SUB+=		GHC_ARCH=${GHC_ARCH}
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} >= 1500000
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1500000
 BUILD_DEPENDS+=		${LOCALBASE}/lib/compat/libutil.so.9:misc/compat14x
 .endif
-
 
 .if ${SLAVE_PORT} != "yes"
 PORTDOCS=		*
@@ -134,7 +133,7 @@ BOOT_DIR=		${WRKDIR}/ghc-${BOOT_GHC_VERSION}-${CONFIGURE_TARGET}
 BOOT_INSTALL_DIR=	${WRKDIR}/ghc-boot-install
 
 .if ! ${PORT_OPTIONS:MBOOT}
-DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-freebsd${EXTRACT_SUFX}:boot
+DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-${OPSYS:tl}${EXTRACT_SUFX}:boot
 BOOT_GHC=		${BOOT_INSTALL_DIR}/bin/ghc-${BOOT_GHC_VERSION}
 .else
 # Allow to be overriden by user when using the BOOT option
@@ -230,11 +229,11 @@ post-install-DOCS-off:
 create-bootstrap:
 	cd ${WRKSRC} \
 		&& ${HADRIAN_CMD} binary-dist-xz \
-		&& ${MV} ${WRKSRC}/_build/bindist/ghc-${GHC_VERSION}-${CONFIGURE_TARGET}.tar.xz /tmp/ghc-${GHC_VERSION}-boot-${ARCH}-freebsd.tar.xz
+		&& ${MV} ${WRKSRC}/_build/bindist/ghc-${GHC_VERSION}-${CONFIGURE_TARGET}.tar.xz /tmp/ghc-${GHC_VERSION}-boot-${ARCH}-${OPSYS:tl}.tar.xz
 	@cd /tmp \
-		&& sha256 ghc-${GHC_VERSION}-boot-${ARCH}-freebsd.tar.xz \
-		&& ${ECHO_CMD} -n "SIZE (ghc-${GHC_VERSION}-boot-${ARCH}-freebsd.tar.xz) = " \
-		&& ${STAT} -f %z ghc-${GHC_VERSION}-boot-${ARCH}-freebsd.tar.xz
+		&& sha256 ghc-${GHC_VERSION}-boot-${ARCH}-${OPSYS:tl}.tar.xz \
+		&& ${ECHO_CMD} -n "SIZE (ghc-${GHC_VERSION}-boot-${ARCH}-${OPSYS:tl}.tar.xz) = " \
+		&& ${STAT} -f %z ghc-${GHC_VERSION}-boot-${ARCH}-${OPSYS:tl}.tar.xz
 
 # Much like create-bootstrap, just different naming and output format
 # Set DYNAMIC, GMP and PROFILE to ON, and DOCS to OFF when generating Stack bindist
@@ -257,18 +256,39 @@ create-stack-bindist:
 create-hadrian-bootstrap:
 	${MAKE} -C ${.CURDIR} patch build-depends USE_PACKAGE_DEPENDS_ONLY=yes IGNORE_MISSING_HADRIAN=yes
 	cd ${WRKSRC}/hadrian/bootstrap && \
-		./bootstrap.py -w ${BOOT_GHC} --deps ${HADRIAN_PLAN} fetch -o /tmp/hadrian-${GHC_VERSION}-${OPSYS:tl}-boot
+		./bootstrap.py -w ${BOOT_GHC} --deps ${HADRIAN_PLAN} fetch -o /tmp/hadrian-${GHC_VERSION}-boot
 
 	@cd /tmp \
-		&& sha256 hadrian-${GHC_VERSION}-${OPSYS:tl}-boot.tar.gz \
-		&& ${ECHO_CMD} -n "SIZE (hadrian-${GHC_VERSION}-${OPSYS:tl}-boot.tar.gz) = " \
-		&& ${STAT} -f %z hadrian-${GHC_VERSION}-${OPSYS:tl}-boot.tar.gz
+		&& sha256 hadrian-${GHC_VERSION}-boot.tar.gz \
+		&& ${ECHO_CMD} -n "SIZE (hadrian-${GHC_VERSION}-boot.tar.gz) = " \
+		&& ${STAT} -f %z hadrian-${GHC_VERSION}-boot.tar.gz
 	@${ECHO_CMD}
 	@${ECHO_CMD} "Remember to check that hadrian bootstrap builds fine by running \"make check-hadrian-bootstrap\""
 
 .PHONY: check-hadrian-bootstrap
 check-hadrian-bootstrap:
 	cd ${WRKSRC}/hadrian/bootstrap && \
-		./bootstrap.py -w ${BOOT_GHC} -s /tmp/hadrian-${GHC_VERSION}-${OPSYS:tl}-boot.tar.gz
+		./bootstrap.py -w ${BOOT_GHC} -s /tmp/hadrian-${GHC_VERSION}-boot.tar.gz
+
+.if ${OPSYS} == DragonFly
+# The 9.2.8 boot compiler links ports ncurses and libffi; 9.6.7 is static.
+.if ${BOOT_GHC_VERSION} == 9.2.8
+BUILD_DEPENDS+=	${LOCALBASE}/lib/libtinfo.so.6:devel/ncurses \
+		${LOCALBASE}/lib/libffi.so:devel/libffi
+.endif
+MAKE_ENV+=	LDVER=ld.bfd
+# No C.UTF-8 in base; hadrian reads UTF-8 sources in the locale encoding.
+WRK_ENV+=	LC_ALL=en_US.UTF-8
+# The plists name the FreeBSD library directory.
+GHC_PLIST_SRC:=	${PLIST:U${PKGDIR}/pkg-plist}
+PLIST=		${WRKDIR}/pkg-plist
+
+dfly-patch:
+	${SED} -e 's|-freebsd-ghc-|-${OPSYS:tl}-ghc-|' ${GHC_PLIST_SRC} > ${PLIST}
+	${MKDIR} ${WRKSRC}/_build
+	${ECHO_CMD} "*.*.ghc.hs.opts += -I${NCURSESINC} -L${NCURSESLIB} -I${LOCALBASE}/include -L${LOCALBASE}/lib" >> ${WRKSRC}/_build/hadrian.settings
+	${ECHO_CMD} "*.*.cc.c.opts += ${CFLAGS}" >> ${WRKSRC}/_build/hadrian.settings
+	${ECHO_CMD} "*.terminfo.cabal.configure.opts += --configure-option=--with-curses-libraries=${NCURSESLIB}" >> ${WRKSRC}/_build/hadrian.settings
+.endif
 
 .include <bsd.port.post.mk>

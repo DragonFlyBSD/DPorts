@@ -115,7 +115,7 @@ SBCL_BOOT_LIST=	1.2.7-x86-64-freebsd 1.2.7-x86-freebsd 1.2.9-x86-64-dragonfly \
 
 .include <bsd.port.options.mk>
 
-ARCHOS_PATTERN=	*-${ARCH:S/amd64/x86-64/:S/i386/x86/:S/x86_64/x86-64/}-${OPSYS:tl}*
+ARCHOS_PATTERN= *-${ARCH:S/amd64/x86-64/:S/i386/x86/:S/x86_64/x86-64/}-${OPSYS:tl}*
 BOOT_WRKSRC=	${WRKDIR}/${PORTNAME}-${SBCL_BOOT_LIST:M${ARCHOS_PATTERN}}
 
 .if ${PORT_OPTIONS:MLINKABLE_RUNTIME}
@@ -185,7 +185,7 @@ check regression-test test: build
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} >= 1500000
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1500000
 BUILD_DEPENDS+=	${LOCALBASE}/lib/compat/libutil.so.9:misc/compat14x
 .endif
 
