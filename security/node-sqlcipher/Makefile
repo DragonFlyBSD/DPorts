@@ -20,11 +20,12 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libsignal_sqlcipher_extension.a:devel/signal-sql
 
 USES=		nodejs:24,build python:build
 
-MAKE_ENV=	PYTHON=${PYTHON_CMD} 
+MAKE_ENV= PYTHON=${PYTHON_CMD} ESBUILD_BINARY_PATH=${LOCALBASE}/bin/esbuild
 
 PLIST_FILES=	lib/node_sqlcipher.node
 
 USE_GCC_VERSION= 13
+BUILD_DEPENDS+= esbuild:devel/esbuild
 post-patch:
 	${REINPLACE_CMD} "s#PREFIX#${PREFIX}#g" \
 		${WRKSRC}/deps/sqlcipher/sqlcipher.gyp \

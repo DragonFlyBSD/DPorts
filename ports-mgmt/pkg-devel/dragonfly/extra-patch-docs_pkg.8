@@ -1,0 +1,43 @@
+--- docs/pkg.8.orig	2026-08-10 09:58:28 UTC
++++ docs/pkg.8
+@@ -41,7 +41,7 @@
+ .Op Fl l
+ .Op Fl N
+ .Op Fl o Ao option=value Ac
+-.Op Fl j Ao jail name or id Ac | Fl c Ao chroot path Ac | Fl r Ao root directory Ac
++.Op Fl c Ao chroot path Ac | Fl r Ao root directory Ac
+ .Op Fl C Ao configuration file Ac
+ .Op Fl R Ao repository configuration directory Ac
+ .Op Fl 4 | Fl 6
+@@ -53,7 +53,7 @@
+ .Op Cm --list
+ .Op Fl N
+ .Op Cm --option Ao option=value Ac
+-.Op Cm --jail Ao jail name or id Ac | Cm --chroot Ao chroot path Ac | Cm --rootdir Ao root directory Ac
++.Op Cm --chroot Ao chroot path Ac | Cm --rootdir Ao root directory Ac
+ .Op Cm --config Ao configuration file Ac
+ .Op Cm --repo-conf-dir Ao repository configuration directory Ac
+ .Op Fl 4 | Fl 6
+@@ -164,22 +164,6 @@
+     # other package management system commands
+   fi
+ .Ed
+-.It Fl j Ao jail name or id Ac , Cm --jail Ao jail name or id Ac
+-.Nm
+-will execute in the given
+-.Ao jail name or id Ac ,
+-where
+-.Em name
+-matches
+-.Dq Cm jls Ar name
+-and
+-.Em id
+-matches
+-.Dq Cm jls Ar jid .
+-See
+-.Xr jail 8
+-and
+-.Xr jls 8 .
+ .It Fl c Ao chroot path Ac , Cm --chroot Ao chroot path Ac
+ .Nm
+ will chroot in the

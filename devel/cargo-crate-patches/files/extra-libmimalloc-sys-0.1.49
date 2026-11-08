@@ -1,0 +1,14 @@
+--- cargo-crates/libmimalloc-sys-0.1.49/build.rs.orig
++++ cargo-crates/libmimalloc-sys-0.1.49/build.rs
+@@ -89,7 +89,10 @@
+     let dynamic_tls = env::var("CARGO_FEATURE_LOCAL_DYNAMIC_TLS").is_ok();
+ 
+     if target_family == "unix" && target_os != "haiku" {
+-        if dynamic_tls {
++        if dynamic_tls && target_os == "dragonfly" {
++            // errno is an extern TLS variable, out of local-dynamic's reach
++            build.flag_if_supported("-ftls-model=global-dynamic");
++        } else if dynamic_tls {
+             build.flag_if_supported("-ftls-model=local-dynamic");
+         } else {
+             build.flag_if_supported("-ftls-model=initial-exec");

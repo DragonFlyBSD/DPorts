@@ -147,17 +147,13 @@ do-test:
 		${GMAKE} test smoketest
 
 dfly-patch:
-	# Copy over some files and add dragonfly to the list of systems
-	# available for vendor/go.bug.st
 	${CP} ${WRKSRC}/vendor/go.bug.st/serial/serial_freebsd.go \
 		${WRKSRC}/vendor/go.bug.st/serial/serial_dragonfly.go
-	${CP} ${WRKSRC}/vendor/go.bug.st/serial/zsyscall_freebsd.go \
-		${WRKSRC}/vendor/go.bug.st/serial/zsyscall_dragonfly.go
-	${REINPLACE_CMD} -e 's/openbsd/& dragonfly/' \
+	${CP} ${WRKSRC}/vendor/go.bug.st/serial/enumerator/usb_freebsd.go \
+		${WRKSRC}/vendor/go.bug.st/serial/enumerator/usb_dragonfly.go
+	${REINPLACE_CMD} -e 's/|| openbsd$$/|| openbsd || dragonfly/' \
 		${WRKSRC}/vendor/go.bug.st/serial/serial_unix.go \
 		${WRKSRC}/vendor/go.bug.st/serial/unixutils/pipe.go \
 		${WRKSRC}/vendor/go.bug.st/serial/unixutils/select.go
-	${REINPLACE_CMD} -e '/B460800/d' -e '/B921600/d' \
-		${WRKSRC}/vendor/go.bug.st/serial/serial_dragonfly.go
 
 .include <bsd.port.mk>

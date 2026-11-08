@@ -78,4 +78,9 @@ do-install:
 	${MKDIR} ${STAGEDIR}/${PREFIX}/share/mime/packages
 	${INSTALL_DATA} ${WRKSRC}/etc/shared/application-x-ugene.xml ${STAGEDIR}/${PREFIX}/share/mime/packages/
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Werror=/-W/' \
+		-e '/add_subdirectory(src\/plugins_3rdparty\/umuscle)/d' \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.post.mk>

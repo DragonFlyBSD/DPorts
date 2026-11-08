@@ -10,7 +10,7 @@ WWW=			https://root.cern/cling/
 LICENSE=		NCSA
 LICENSE_FILE=		${WRKSRC}/LICENSE.TXT
 
-USES=		cmake gnome
+USES=		cmake gnome python:build
 USE_GNOME=	libxml2
 
 USE_GITHUB=	yes
@@ -35,7 +35,6 @@ CFLAGS+=		-DNDEBUG -g -O0
 CXXFLAGS+=		-DNDEBUG -g -O0
 INSTALL_TARGET+=	tools/cling/tools/install
 .else
-INSTALL_TARGET+=	tools/cling/tools/install/strip
 .endif
 
 post-extract:
@@ -50,5 +49,9 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/include/cling
 	cd ${WRKSRC}/include/cling && \
 		${COPYTREE_SHARE} Interpreter ${STAGEDIR}${PREFIX}/include/cling
+
+dfly-install:
+	cd ${INSTALL_WRKSRC}/tools/cling/tools && \
+		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} DESTDIR=${STAGEDIR} install/strip
 
 .include <bsd.port.post.mk>

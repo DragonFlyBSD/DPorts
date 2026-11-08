@@ -20,6 +20,7 @@ USES=		compiler:c++11-lang qmake:outsource qt:5 ssl
 USE_QT=		qmake:build buildtools:build core gui network multimedia
 USE_LDCONFIG=	yes
 
+CXXFLAGS= -Wno-narrowing
 post-patch:
 	@${REINPLACE_CMD} -e "/OPENSSL_INCLUDE_PATH/d" \
 		${WRKSRC}/libqtelegram-ae.pri

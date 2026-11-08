@@ -1,0 +1,22 @@
+--- agents/ocf/SysInfo.in.orig
++++ agents/ocf/SysInfo.in
+@@ -186,6 +186,19 @@
+             cpu_cores=$(system_profiler SPHardwareDataType | awk -F': ' '/^Number Of/ {print $2; exit}')
+             cpu_load=$(uptime | awk -F 'load average: ' '{ print $2 }' | awk -F ', ' '{ print $2 }')
+         ;;
++        "DragonFly")
++            cpu_type=$(sysctl -in hw.model)
++            cpu_speed=$(sysctl -in hw.clockrate)
++            cpu_cores=$(sysctl -in hw.ncpu)
++            cpu_load=$(sysctl -in vm.loadavg | awk '{ print $4 }')
++
++            free_pages=$(sysctl -in vm.stats.vm.v_free_count)
++            page_count=$(sysctl -in vm.stats.vm.v_page_count)
++            page_size=$(sysctl -in vm.stats.vm.v_page_size)
++
++            mem=$(expr $free_pages \* $page_size / 1024 / 1024)M
++            mem_total=$(expr $page_count \* $page_size / 1024 / 1024)M
++        ;;
+         "FreeBSD")
+             cpu_type=$(sysctl -in hw.model)
+             cpu_speed=$(sysctl -in dev.cpu.0.freq)

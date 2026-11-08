@@ -26,7 +26,7 @@ PKGNAMESUFFIX=	-${FLAVOR}
 LIB_DEPENDS=	libbotan-3.so:security/botan3 \
 		libgit2.so:devel/libgit2
 CMAKE_ON=	BUILD_WITH_LIBGIT2 BUILD_WITH_SYSTEM_BOTAN QON_QT6_BUILD
-USES+=		cmake qt:6
+USES+=		cmake gmake qt:6
 USE_QT=		tools:build base declarative svg websockets
 USE_XORG+=	ice sm xext
 

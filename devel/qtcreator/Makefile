@@ -93,6 +93,7 @@ QTWEBENGINE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Qt6WebEngineWidgets
 # Documentation is excluded from the default build targets.
 CFLAGS= -Dfdatasync=fsync
 PLIST= ${WRKDIR}/qtcreator-plist
+OPTIONS_EXCLUDE= DOCS
 do-build-DOCS-on:
 	${SETENVI} ${WRK_ENV} ${CONFIGURE_ENV} ${CMAKE_BIN} \
 		--build ${BUILD_WRKSRC} \

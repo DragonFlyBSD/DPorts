@@ -29,6 +29,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 		lib/systemd/user/${PORTNAME}.service \
 		share/hypr/${PORTNAME}.conf
 
+USE_GCC_VERSION= 14
 post-patch:
 # https://github.com/ConsoleKit2/ConsoleKit2/issues/150
 # https://github.com/ConsoleKit2/ConsoleKit2/issues/151

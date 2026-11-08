@@ -1,0 +1,34 @@
+--- CMakeLists.txt.intermediate	2026-06-16 08:45:19 UTC
++++ CMakeLists.txt
+@@ -485,7 +485,7 @@
+ 	set(OS_WINDOWS 1)
+ elseif(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+ 	set(OS_MACOS 1)
+-elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
++elseif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
+ 	set(OS_FREEBSD 1)
+ else()
+ 	message(FATAL_ERROR "Unsupported platform '${CMAKE_SYSTEM_NAME}', quitting.")
+@@ -760,8 +760,12 @@
+ elseif (DEFINED OS_FREEBSD)
+ 
+ 	find_package(X11 REQUIRED)
+-	find_library(LIBRARY_PULSE NAMES pulse REQUIRED)
+-	find_library(LIBRARY_PULSE_SIMPLE NAMES pulse-simple REQUIRED)
++	# DragonFly has no working PulseAudio: JACK only.
++	if(NOT CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
++		find_library(LIBRARY_PULSE NAMES pulse REQUIRED)
++		find_library(LIBRARY_PULSE_SIMPLE NAMES pulse-simple REQUIRED)
++		list(APPEND PREPROCESSOR_DEFS __LINUX_PULSE__)
++	endif()
+ 	find_library(LIBRARY_FONTCONFIG NAMES fontconfig REQUIRED)
+ 	find_library(LIBRARY_JACK NAMES jack REQUIRED)
+ 	list(APPEND LIBRARIES
+@@ -772,7 +776,6 @@
+ 	
+ 	list(APPEND PREPROCESSOR_DEFS
+ 		WITH_AUDIO_JACK
+-		__LINUX_PULSE__
+ 		__UNIX_JACK__)
+ 
+ endif()

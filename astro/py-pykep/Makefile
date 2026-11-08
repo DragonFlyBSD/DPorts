@@ -34,6 +34,7 @@ GH_ACCOUNT=	esa
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 TEST_WRKSRC=	${WRKSRC}/pykep
 
+USE_GCC_VERSION= 14
 pre-test:
 	@${CP} ${WRKDIR}/.build/pykep/core${PYTHON_TAG}.so \
 		${WRKSRC}/pykep/core${PYTHON_TAG}.so

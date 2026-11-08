@@ -43,4 +43,9 @@ CMAKE_ARGS+=		-Dtraymonitor=yes \
 			-Dclient-only=yes \
 			-Dnls=ON
 
+CMAKE_ARGS+= -Dacl=OFF -DHAVE_SYS_EXTATTR_H:BOOL=OFF
+.if 1
+LDFLAGS+=	-lintl
+.endif
+
 .include "${MASTERDIR}/Makefile"

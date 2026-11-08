@@ -138,6 +138,7 @@ ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 ZSTD_MESON_ENABLED=	zstd
 
 OPTIONS_EXCLUDE_DragonFly= 
+LIB_DEPENDS+= libelf.so:devel/libelf
 post-patch:
 # Extract (snapshot) version from the port instead of empty string
 	@${REINPLACE_CMD} '/MESA_GIT_SHA1/s/""/" (git-${DISTVERSIONSUFFIX:C/.*-g//})"/' \

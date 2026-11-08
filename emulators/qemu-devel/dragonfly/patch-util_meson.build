@@ -1,0 +1,11 @@
+--- util/meson.build.orig	2026-10-23 00:00:00 UTC
++++ util/meson.build
+@@ -12,7 +12,7 @@
+     util_ss.add(files('mmap-alloc.c'))
+   endif
+   freebsd_dep = []
+-  if host_os == 'freebsd'
++  if host_os in ['freebsd','dragonfly']
+     freebsd_dep = util
+   endif
+   util_ss.add(files('oslib-posix.c'), freebsd_dep)

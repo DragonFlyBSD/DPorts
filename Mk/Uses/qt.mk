@@ -112,6 +112,13 @@ QMAKESPEC?=		${QT_MKSPECDIR}/${QMAKESPECNAME}
 # Qt5 and Qt6 build with gcc and libstdc++, like the C++ libraries they
 # link. Stated rather than detected.
 QMAKE_COMPILER=	g++
+# 6.4's base gcc 8 cannot build Qt 6: use the ports default gcc there.
+.  if ${_QT_VER:M6} && ${DFLY_BASE_CCVER} == gcc80
+USE_GCC_VERSION?=	${GCC_DEFAULT}
+# Ports gcc's libgcc_s lacks the _Float16 helpers (dp-8rf.32); link
+# libgcc statically, as base gcc always does.
+LDFLAGS+=	-static-libgcc
+.  endif
 
 .  for dir in BIN INC LIB ARCH PLUGIN LIBEXEC IMPORT \
 	QML SBOM DATA DOC L10N ETC EXAMPLE TEST MKSPEC \

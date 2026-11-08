@@ -1,6 +1,15 @@
---- deps/plog/include/plog/Util.h.orig	2018-09-16 03:57:30 UTC
+--- deps/plog/include/plog/Util.h.orig
 +++ deps/plog/include/plog/Util.h
-@@ -102,6 +102,8 @@ namespace plog
+@@ -68,7 +68,7 @@
+ #else
+ #   include <unistd.h>
+ #   include <sys/time.h>
+-#   if defined(__linux__) || defined(__FreeBSD__)
++#   if defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ #       include <sys/syscall.h>
+ #   elif defined(__rtems__)
+ #       include <rtems.h>
+@@ -174,6 +174,8 @@
              return GetCurrentThreadId();
  #elif defined(__linux__)
              return static_cast<unsigned int>(::syscall(__NR_gettid));

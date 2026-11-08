@@ -152,7 +152,7 @@ SASL_LIB_DEPENDS=		libsasl2.so:security/cyrus-sasl2
 SQLITE_USES=			sqlite
 TLSRPT_LIB_DEPENDS=		libtlsrpt.so:mail/libtlsrpt
 
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NBLACKLISTD}
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NBLOCKLISTD}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBLOCKLISTD}
@@ -491,9 +491,5 @@ do-install:
 do-install-TEST-on:
 	${INSTALL_PROGRAM} ${BINTEST:S|^|${WRKSRC}/bin/|} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${MANTEST:S|^|${WRKSRC}/man/man1/|} ${STAGEDIR}${PREFIX}/share/man/man1
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@define HAS_DEV_URANDOM@@g' \
-		${WRKSRC}/src/util/sys_defs.h
 
 .include <bsd.port.mk>

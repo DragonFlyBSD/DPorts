@@ -10,7 +10,7 @@ MAINTAINER=	zrj@ef.irc
 COMMENT=	Standalone JavaScript based from Mozilla 52-esr
 
 LICENSE=	MPL20
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE_FILE=	${WRKDIR}/firefox-${PORTVERSION}esr/LICENSE
 
 BUILD_DEPENDS=	autoconf2.13:devel/autoconf2.13
 LIB_DEPENDS=	libnspr4.so:devel/nspr \
@@ -25,7 +25,7 @@ SP_VER=		52
 
 WRKSRC=		${WRKDIR}/firefox-${PORTVERSION}esr/js/src
 PATCH_WRKSRC=	${WRKDIR}/firefox-${PORTVERSION}esr/
-INCLUDE=	.cargo Makefile.in build* config* gradle* js memory nsprpub/config
+INCLUDE=	.cargo LICENSE Makefile.in build* config* gradle* js memory nsprpub/config
 INCLUDE+=	mfbt modules moz* python taskcluster testing
 EXTRACT_AFTER_ARGS+=	${INCLUDE:S|^|firefox-${PORTVERSION}esr/|}
 
@@ -42,6 +42,10 @@ CONFIGURE_ENV= HOST_CC=${CC} HOST_CXX=${CXX}
 
 CFLAGS+=	-Wno-implicit-fallthrough -Wno-maybe-uninitialized
 CXXFLAGS+=	-Wno-class-memaccess
+# ICU's C++ API headers need C++17; only the C API is used.
+CXXFLAGS+=	-DU_SHOW_CPLUSPLUS_API=0 -DU_SHOW_CPLUSPLUS_HEADER_API=0
+# icu-i18n.pc has icu-uc only in Requires.private.
+LDFLAGS+=	-licuuc
 
 OPTIONS_DEFINE=	DEBUG OPTIMIZE READLINE UTF8
 OPTIONS_DEFAULT=	OPTIMIZE READLINE

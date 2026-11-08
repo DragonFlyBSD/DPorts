@@ -153,6 +153,7 @@ fill_fpregset (const struct regcache *regcache, gdb_fpregset_t *fpregsetp, int r
 {
   amd64_collect_fxsave (regcache, regnum, fpregsetp);
 }
+#endif /* DFLY_PCB_SUPPLY */
 
 /* Support for debugging kernel virtual memory images.  */
 
@@ -165,14 +166,11 @@ fill_fpregset (const struct regcache *regcache, gdb_fpregset_t *fpregsetp, int r
 static int
 amd64dfly_supply_pcb (struct regcache *regcache, struct pcb *pcb)
 {
-  /* The following is true for FreeBSD 5.2:
-
-     The pcb contains %rip, %rbx, %rsp, %rbp, %r12, %r13, %r14, %r15,
-     %ds, %es, %fs and %gs.  This accounts for all callee-saved
-     registers specified by the psABI and then some.  Here %esp
-     contains the stack pointer at the point just after the call to
-     cpu_switch().  From this information we reconstruct the register
-     state as it would like when we just returned from cpu_switch().  */
+  /* DragonFly's savectx(), which fills dumppcb, stores the caller's
+     return address in pcb_rip and %rsp as it was before returning,
+     plus %rbx, %rbp and %r12-%r15: all callee-saved registers of the
+     psABI.  Reconstruct the state as it is just after savectx()
+     returns.  */
 
   /* The stack pointer shouldn't be zero.  */
   if (pcb->pcb_rsp == 0)
@@ -190,7 +188,6 @@ amd64dfly_supply_pcb (struct regcache *regcache, struct pcb *pcb)
 
   return 1;
 }
-#endif /* DFLY_PCB_SUPPLY */
 
 
 /* Implement the read_description method.  */
@@ -286,10 +283,8 @@ _initialize_amd64dfly_nat ()
 
   add_inf_child_target (&the_amd64_dfly_nat_target);
 
-#ifdef DFLY_PCB_SUPPLY
   /* Support debugging kernel virtual memory images.  */
   bsd_kvm_add_target (amd64dfly_supply_pcb);
-#endif
 
   /* To support the recognition of signal handlers, i386-bsd-tdep.c
      hardcodes some constants.  Inclusion of this file means that we

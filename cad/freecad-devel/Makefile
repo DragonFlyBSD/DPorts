@@ -121,6 +121,7 @@ SPNAV_CMAKE_BOOL=       FREECAD_SPNAV_SUPPORT
 SPNAV_LIB_DEPENDS=      libspnav.so:misc/libspnav
 
 
+CMAKE_ARGS+= -DE57_RELEASE_LTO:BOOL=OFF
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386
@@ -148,4 +149,19 @@ post-install:
 	# 	${STAGEDIR}${PREFIX}/bin/freecad-thumbnailer
 
 .include <../../math/vtk9/Makefile.version>
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(__OpenBSD__)/& || defined(__DragonFly__)/' \
+		${WRKSRC}/src/FCConfig.h
+	${REINPLACE_CMD} -e 's/defined( __OpenBSD__ )/& || defined( __DragonFly__ )/' \
+		${WRKSRC}/src/3rdParty/libE57Format/src/CheckedFile.cpp
+	${REINPLACE_CMD} -e '/#include <format>/d' \
+		${WRKSRC}/src/Base/XMLParser.cpp
+	${REINPLACE_CMD} -e 's|#include <format>|#include <fmt/format.h>|' \
+		-e 's/std::format(/fmt::format(/' \
+		${WRKSRC}/src/App/Document.cpp
+	${REINPLACE_CMD} -e 's/ -Wpedantic -Werror)/ -Wpedantic)/' \
+		${WRKSRC}/src/3rdParty/Clipper2/CMakeLists.txt
+	${REINPLACE_CMD} -e 's/^TARGET_LINK_LIBRARIES(DriverSTL \(.*\))/TARGET_LINK_LIBRARIES(DriverSTL \1 execinfo)/' \
+		${WRKSRC}/src/3rdParty/salomesmesh/CMakeLists.txt
+
 .include <bsd.port.mk>

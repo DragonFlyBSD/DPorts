@@ -18,4 +18,5 @@ USES=		gem
 
 NO_ARCH=	yes
 
+IGNORE= needs gandiva-glib, and databases/arrow is built without Gandiva on DragonFly
 .include <bsd.port.mk>

@@ -31,4 +31,11 @@ PLIST_FILES=	bin/${PORTNAME} \
 LIB_DEPENDS+=	libdate-tz.so:devel/date
 .endif
 
+USE_GCC_VERSION= 14
+LIB_DEPENDS+= libepoll-shim.so:devel/libepoll-shim
+.if 1
+CXXFLAGS+=	-I${LOCALBASE}/include/libepoll-shim
+LDFLAGS+=	-L${LOCALBASE}/lib -lepoll-shim
+.endif
+
 .include <bsd.port.mk>

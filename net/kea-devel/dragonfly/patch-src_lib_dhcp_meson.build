@@ -1,0 +1,11 @@
+--- src/lib/dhcp/meson.build.orig
++++ src/lib/dhcp/meson.build
+@@ -2,7 +2,7 @@
+ if SYSTEM == 'linux'
+     iface_mgr = 'iface_mgr_linux.cc'
+     pkt_filter_cc = 'pkt_filter_lpf.cc'
+-elif SYSTEM == 'freebsd' or SYSTEM == 'netbsd' or SYSTEM == 'openbsd' or SYSTEM == 'darwin'
++elif SYSTEM == 'freebsd' or SYSTEM == 'dragonfly' or SYSTEM == 'netbsd' or SYSTEM == 'openbsd' or SYSTEM == 'darwin'
+     iface_mgr = 'iface_mgr_bsd.cc'
+ else
+     error(f'Build failed: Unsupported system "@SYSTEM@".')

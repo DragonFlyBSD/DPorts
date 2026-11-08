@@ -87,6 +87,7 @@ LTO_CMAKE_BOOL=		Ymir_ENABLE_IPO
 YMDASM_CMAKE_BOOL=	Ymir_ENABLE_YMDASM
 YMDASM_PLIST_FILES=	bin/ymdasm
 
+USE_GCC_VERSION= 14
 post-install:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/apps/ymir-sdl3/ymir-sdl3-${DISTVERSION} \
 		${STAGEDIR}${PREFIX}/bin/ymir-sdl3
@@ -103,4 +104,5 @@ post-install-YMDASM-on:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/apps/ymdasm/ymdasm-${DISTVERSION} \
 		${STAGEDIR}${PREFIX}/bin/ymdasm
 
+USES:= ${USES:Nllvm*}
 .include <bsd.port.mk>

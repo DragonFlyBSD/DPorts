@@ -13,9 +13,8 @@ WWW=		https://immich.app/
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	aarch64 amd64
-ONLY_FOR_ARCHS_REASON=	native Node.js modules are only tested on \
-			64-bit platforms
+ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS_REASON=	rolldown provides no FreeBSD/arm64 binding
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/npm:www/npm-node22
 LIB_DEPENDS=	libheif.so:graphics/libheif \
@@ -51,6 +50,7 @@ PNPM_VERSION=	11.22.0
 
 MAKE_ENV=	CI=1 \
 		COREPACK_ENABLE_STRICT=0 \
+		HOME=${WRKDIR} \
 		NODE_OPTIONS=--max-old-space-size=4096 \
 		npm_config_build_from_source=true \
 		npm_config_nodedir=${LOCALBASE} \
@@ -69,7 +69,7 @@ post-patch:
 		${WRKSRC}/server/src/services/database-backup.service.ts
 
 pre-build:
-	cd ${WRKDIR} && ${SETENV} PATH=${PATH} \
+	cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} PATH=${PATH} \
 		npm install -g --prefix ${WRKDIR}/pnpm-prefix \
 		${BUILDKIT}/pnpm-${PNPM_VERSION}.tgz
 

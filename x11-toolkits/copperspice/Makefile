@@ -45,4 +45,9 @@ NO_WRKSUBDIR=	yes
 #
 # CONFLICTS=	qt5-core
 
+dfly-patch:
+	${GREP} -rlF --include='*.cmake' --include=CMakeLists.txt \
+		'FreeBSD|NetBSD)"' ${WRKSRC}/src | \
+		${XARGS} ${REINPLACE_CMD} -e 's/FreeBSD|NetBSD)"/FreeBSD|NetBSD|DragonFly)"/'
+
 .include <bsd.port.mk>

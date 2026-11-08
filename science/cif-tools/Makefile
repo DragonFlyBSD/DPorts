@@ -21,4 +21,5 @@ USES=		cmake:noninja compiler:c++17-lang # ninja: error: build.ninja:890: multip
 USE_GITHUB=	yes
 GH_ACCOUNT=	PDB-REDO
 
+USE_GCC_VERSION= 14
 .include <bsd.port.mk>

@@ -7,7 +7,7 @@ COMMENT=	Cross-platform application and UI framework (metaport)
 WWW=		https://www.qt.io/
 
 USES=		metaport qt:6
-USE_QT=		${_USE_QT_ALL:S/$/:run/}
+USE_QT= ${_USE_QT_ALL:Ndoc:S/$/:run/}
 
 # Macro to generate a list of all Qt port origins (stripping flavors)
 # and to sort by category for helper update targets.

@@ -15,4 +15,5 @@ ALL_TARGET=	docs
 INSTALL_TARGET=	install_docs
 NO_ARCH=	yes
 
+IGNORE= needs qdoc, which needs a libclang built against libstdc++ (dp-shs.52)
 .include <bsd.port.mk>

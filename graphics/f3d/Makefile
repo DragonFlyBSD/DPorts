@@ -81,6 +81,7 @@ RAYTRACING_CMAKE_BOOL=		F3D_MODULE_RAYTRACING
 RAYTRACING_BROKEN=		Requires VTK::RenderingRayTracing enabled in VTK
 
 USE_GCC_VERSION= ${GCC_DEFAULT}
+MAKE_ENV= DESTDIR=${STAGEDIR}
 post-install:
 	@${RM} -r ${STAGEDIR}${DOCSDIR}
 	# component-based install

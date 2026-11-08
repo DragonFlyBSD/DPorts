@@ -1,36 +1,36 @@
---- src/meson.build.intermediate	2020-11-14 16:49:52.000000000 +0000
+--- src/meson.build.orig
 +++ src/meson.build
-@@ -83,7 +83,7 @@ libshell_menu = library('gnome-shell-men
+@@ -99,7 +99,7 @@
    sources: libshell_menu_sources,
-   dependencies: [gio_dep, clutter_dep],
+   dependencies: [gio_dep, clutter_dep, mtk_dep],
    include_directories: conf_inc,
 -  build_rpath: mutter_typelibdir,
 +  build_rpath: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
    install_rpath: mutter_typelibdir,
    install_dir: pkglibdir,
    install: true
-@@ -206,7 +206,7 @@ libshell = library('gnome-shell',
-   include_directories: [conf_inc, st_inc, include_directories('tray')],
+@@ -239,7 +239,7 @@
+   include_directories: [conf_inc, include_directories('tray')],
    c_args: gnome_shell_cflags,
-   link_with: [libtray],
+   link_with: libshell_link_with,
 -  build_rpath: mutter_typelibdir,
 +  build_rpath: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
    install_rpath: install_rpath,
    install_dir: pkglibdir,
    install: true
-@@ -247,7 +247,7 @@ executable('gnome-shell', 'main.c',
-   ],
+@@ -282,7 +282,7 @@
+   c_args: gnome_shell_cflags + typelib_cflags,
    dependencies: gnome_shell_deps + [libshell_dep, libst_dep, mutter_dep],
-   include_directories: [conf_inc, st_inc, include_directories('tray')],
+   include_directories: [conf_inc],
 -  build_rpath: mutter_typelibdir,
 +  build_rpath: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
    install_rpath: install_rpath,
    install: true
  )
-@@ -274,5 +274,5 @@ executable('run-js-test', 'run-js-test.c
-   dependencies: [mutter_dep, gio_dep, gi_dep, gjs_dep],
+@@ -309,5 +309,5 @@
+   dependencies: [gio_dep, gi_dep, gjs_dep, libshell_dep],
+   c_args: typelib_cflags,
    include_directories: [conf_inc],
-   link_with: libshell,
 -  build_rpath: mutter_typelibdir,
 +  build_rpath: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
  )

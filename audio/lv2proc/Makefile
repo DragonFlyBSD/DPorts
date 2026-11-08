@@ -30,4 +30,8 @@ PLIST_FILES=	bin/lv2proc \
 CFLAGS+=	-Wno-error=strict-prototypes
 .endif
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/ -Wno-error=nullability-extension//' \
+		${WRKSRC}/src/Makefile.in
+
 .include <bsd.port.mk>

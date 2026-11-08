@@ -47,7 +47,14 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/res/setup.sh ${STAGEDIR}${ETCDIR}/setup.sh.sample
 
 dfly-patch:
-	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
-		${WRKSRC}/makefile
+	${REINPLACE_CMD} -e 's/target\.result\.os\.tag == \.freebsd/(& or target.result.os.tag == .dragonfly)/' \
+		${WRKSRC}/ly-core/build.zig ${WRKSRC}/ly-ui/build.zig
+	${REINPLACE_CMD} -e 's/\.freebsd => struct/.freebsd, .dragonfly => struct/' \
+		-e 's/builtin\.os\.tag == \.freebsd/(& or builtin.os.tag == .dragonfly)/' \
+		${WRKSRC}/ly-core/src/interop.zig
+	${REINPLACE_CMD} -e 's/builtin\.os\.tag != \.freebsd/(& and builtin.os.tag != .dragonfly)/' \
+		${WRKSRC}/src/auth.zig
+	${REINPLACE_CMD} -e 's/\.{ "_Thread_local", \.keyword_thread_local },/& .{ "__thread", .keyword_thread_local },/' \
+		${WRKDIR}/zig-packages/aro-*/src/aro/Tokenizer.zig
 
 .include <bsd.port.mk>

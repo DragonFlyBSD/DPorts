@@ -42,7 +42,7 @@ SHEBANG_FILES=	scripts/xml-preprocess.py
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=/var --mandir=share/man --extra-ldflags=-L\"/usr/lib\" \
 		--extra-ldflags=-L\"${LOCALBASE}/lib\" --enable-debug \
-		--prefix=${PREFIX} --cc=${CC} --enable-netmap --disable-kvm \
+		--prefix=${PREFIX} --cc=${CC} --disable-netmap --disable-kvm \
 		--disable-linux-user --disable-linux-aio --disable-xen \
 		--enable-debug-info --python=${PYTHON_CMD} --disable-guest-agent \
 		--extra-cflags=-I${WRKSRC}\ -I${LOCALBASE}/include\ -DPREFIX=\\\"\"${PREFIX}\\\"\"
@@ -119,7 +119,9 @@ X11_USE=	SDL=sdl2 XORG=x11,xext GNOME=gdkpixbuf
 X11_CONFIGURE_ENABLE=	sdl
 
 USES+= ncurses
-CONFIGURE_ARGS+= --disable-netmap --disable-stack-protector --enable-curses
+CONFIGURE_ARGS+= --disable-stack-protector
+CONFIGURE_ARGS+= --enable-curses
+USE_GCC_VERSION= ${GCC_DEFAULT}
 .include <bsd.port.options.mk>
 
 .if !defined(STRIP) || ${STRIP} == ""
@@ -184,8 +186,11 @@ dfly-patch:
 			 -e "s@links(curses_test,@& args: '-DNCURSES_WIDECHAR',@g" \
 		${WRKSRC}/meson.build
 
-
 dfly-install:
-	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 ${STAGEDIR}${PREFIX}/bin/qemu-x86_64
+	${TOUCH} ${STAGEDIR}${PREFIX}/bin/qemu-i386 \
+		${STAGEDIR}${PREFIX}/bin/qemu-x86_64 \
+		${STAGEDIR}${PREFIX}/bin/qemu-arm \
+		${STAGEDIR}${PREFIX}/bin/qemu-aarch64 \
+		${STAGEDIR}${PREFIX}/bin/qemu-riscv64
 
 .include <bsd.port.mk>

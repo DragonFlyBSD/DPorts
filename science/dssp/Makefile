@@ -29,4 +29,5 @@ CMAKE_TESTING_ON=	BUILD_TESTING
 
 # tests as of 4.4.11: 100% tests passed, 0 tests failed out of 1
 
+USE_GCC_VERSION= 14
 .include <bsd.port.mk>

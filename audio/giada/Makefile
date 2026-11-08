@@ -12,7 +12,7 @@ BROKEN_FreeBSD_14=		fails to find clang-scan-deps
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS= nlohmann-json>0:devel/nlohmann-json cxxfs_gcc8>0:misc/cxxfs_gcc8
+BUILD_DEPENDS=	nlohmann-json>0:devel/nlohmann-json
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libatk-1.0.so:accessibility/at-spi2-core \
 		libcurl.so:ftp/curl \
@@ -50,13 +50,15 @@ CMAKE_ON=	CMAKE_SKIP_RPATH
 
 PLIST_FILES=	bin/${PORTNAME}
 
-CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
-LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
-LIBS= -lstdc++fs
 LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
+USE_GCC_VERSION= 14
 dfly-patch:
-	${REINPLACE_CMD} -e 's@-D__LINUX_PULSE__@-D__LINUX_ALSA__@g' \
-			 -e 's@-lpulse-simple -lpulse@@g' \
-		${WRKSRC}/Makefile.am
+	${REINPLACE_CMD} -e 's/defined (__FreeBSD__) || defined (__OpenBSD__)/& || defined (__DragonFly__)/' \
+		${WRKSRC}/src/deps/juce/modules/juce_core/system/juce_TargetPlatform.h
+	${REINPLACE_CMD} -e 's/info\.ki_flag & P_TRACED/info.kp_flags \& P_TRACED/' \
+		${WRKSRC}/src/deps/juce/modules/juce_core/native/juce_SystemStats_linux.cpp
+	${REINPLACE_CMD} -e 's/MATCHES "\.\*BSD"/MATCHES ".*BSD|DragonFly"/' \
+		-e 's/Linux|\.\*BSD"/Linux|.*BSD|DragonFly"/' \
+		${WRKSRC}/src/deps/juce/extras/Build/CMake/*.cmake
 
 .include <bsd.port.mk>

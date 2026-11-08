@@ -1,0 +1,38 @@
+--- meson.build.orig	2026-10-23 00:00:00 UTC
++++ meson.build
+@@ -53,7 +53,7 @@
+ qapi_trace_events = []
+ 
+ bsd_oses = ['gnu/kfreebsd', 'freebsd', 'netbsd', 'openbsd', 'dragonfly', 'darwin']
+-supported_oses = ['windows', 'freebsd', 'netbsd', 'openbsd', 'darwin', 'sunos', 'linux', 'emscripten']
++supported_oses = ['windows', 'freebsd', 'netbsd', 'openbsd', 'darwin', 'sunos', 'linux', 'emscripten', 'dragonfly']
+ supported_cpus = ['ppc64', 's390x', 'riscv64', 'x86_64',
+   'aarch64', 'loongarch64', 'sparc64', 'wasm64']
+ 
+@@ -252,7 +252,7 @@
+   .allowed()
+ have_ga = get_option('guest_agent') \
+   .disable_auto_if(not have_system and not have_tools) \
+-  .require(host_os in ['sunos', 'linux', 'windows', 'freebsd', 'netbsd', 'openbsd'],
++  .require(host_os in ['sunos', 'linux', 'windows', 'freebsd', 'netbsd', 'openbsd', 'dragonfly'],
+            error_message: 'unsupported OS for QEMU guest agent') \
+   .allowed()
+ have_block = have_system or have_tools
+@@ -915,7 +915,7 @@
+ endif
+ 
+ nvmm = not_found
+-if host_os == 'netbsd'
++if host_os in [ 'netbsd', 'dragonfly' ]
+   nvmm = cc.find_library('nvmm', required: get_option('nvmm'))
+   if nvmm.found()
+     accelerators += 'CONFIG_NVMM'
+@@ -5009,7 +5009,7 @@
+ summary_info += {'FUSE lseek':        fuse_lseek.found()}
+ summary_info += {'selinux':           selinux}
+ summary_info += {'libdw':             libdw}
+-if host_os == 'freebsd'
++if host_os in ['freebsd','dragonfly']
+   summary_info += {'libinotify-kqueue': inotify}
+ endif
+ if host_os == 'darwin'

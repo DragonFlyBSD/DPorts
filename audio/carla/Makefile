@@ -68,8 +68,7 @@ devel-features: patch
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
 		${WRKSRC}/source/includes/CarlaDefines.h \
-		${WRKSRC}/source/modules/AppConfig.h \
 		${WRKSRC}/source/modules/audio_decoder/minimp3_ex.h \
-		${WRKSRC}/source/modules/juce_core/system/juce_TargetPlatform.h
+		${WRKSRC}/source/modules/ysfx/sources/ysfx_utils_fts.cpp
 
 .include <bsd.port.mk>

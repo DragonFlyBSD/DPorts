@@ -1028,4 +1028,6 @@ CARGO_CRATES=	addr2line-0.25.1 \
 # tests as of 0.34.0: 82 passed in 1.69s
 # in 0.36.0: tests hang, see https://github.com/lancedb/lancedb/issues/3868
 
+USES:= ${USES:S/cargo/cargo:extra/}
+PATCH_WRKSRC= ${WRKSRC}/${CARGO_SRC_SUBDIR}
 .include <bsd.port.mk>

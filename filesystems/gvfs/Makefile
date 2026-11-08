@@ -102,4 +102,5 @@ SMB_USES=		samba:lib
 SMB_MESON_TRUE=		smb
 SMB_VARS=		GLIB_SCHEMAS+=org.gnome.system.smb.gschema.xml
 
+RUN_DEPENDS:= ${RUN_DEPENDS:N*bsdisks}
 .include <bsd.port.mk>

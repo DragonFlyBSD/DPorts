@@ -22,7 +22,7 @@ USE_GL=		opengl
 USE_LDCONFIG=	${PREFIX}/PySide6
 USE_PYTHON=	flavors
 USE_QT=		3d base charts canvaspainter connectivity datavis3d declarative \
-		doc graphs httpserver imageformats location multimedia networkauth \
+		graphs httpserver imageformats location multimedia networkauth \
 		positioning quick3d quicktimeline remoteobjects scxml sensors \
 		serialbus serialport shadertools speech svg tools translations \
 		webchannel websockets

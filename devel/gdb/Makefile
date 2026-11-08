@@ -1,6 +1,6 @@
 PORTNAME=	gdb
 DISTVERSION=	15.1
-PORTREVISION=	7
+PORTREVISION= 8
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
@@ -90,10 +90,14 @@ XXHASH_LIB_DEPENDS=	libxxhash.so:devel/xxhash
 
 ALL_TARGET=	all-gdb
 
-CXXFLAGS= -fpermissive
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NKGDB}
-KGDB_BROKEN= KGDB support not ready yet
+CXXFLAGS+= -fpermissive
 .include <bsd.port.pre.mk>
+
+# Work around PR gcc/120987, as gdb 17.1 and later do themselves in
+# gdbsupport/common-defs.h for gcc 12 up to 16.0.
+.if ${COMPILER_TYPE} == gcc && ${COMPILER_VERSION} >= 120
+CXXFLAGS+=	-fno-ipa-modref
+.endif
 
 .if ${PORT_OPTIONS:MPYTHON}
 .if ${PYTHON_VER} != ${PYTHON_DEFAULT}
@@ -143,8 +147,12 @@ post-patch:
 		${WRKSRC}/gdb/version.in
 
 post-patch-KGDB-on:
-	@${CP} -r ${FILESDIR}/kgdb/*.[ch] ${WRKSRC}/gdb/
-	@${PATCH} -d ${PATCH_WRKSRC} ${PATCH_ARGS} < ${FILESDIR}/extrapatch-kgdb
+	@${CP} ${FILESDIR}/kgdb/fbsd-kld.c ${FILESDIR}/kgdb/kgdb-main.c \
+	    ${FILESDIR}/kgdb/kgdb.h ${WRKSRC}/gdb/
+	@${CP} ${DFLY_FILESDIR}/dfly-kgdb.h ${DFLY_FILESDIR}/dfly-kvm.c \
+	    ${DFLY_FILESDIR}/dfly-kthr.c ${DFLY_FILESDIR}/amd64dfly-kern.c \
+	    ${WRKSRC}/gdb/
+	@${PATCH} -d ${PATCH_WRKSRC} ${PATCH_ARGS} < ${DFLY_FILESDIR}/extrapatch-kgdb
 
 do-install:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/gdb/gdb \

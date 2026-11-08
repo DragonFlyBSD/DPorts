@@ -179,4 +179,8 @@ post-install:
 	${MV} ${STAGEDIR}${PREFIX}/LICENSE.router ${STAGEDIR}${PREFIX}/README.router ${STAGEDIR}${DOCSDIR}
 .endif
 
+.if ${DFLYVERSION} < 600500
+CMAKE_ARGS+=	-DWITH_ZLIB=bundled
+.endif
+
 .include <bsd.port.post.mk>

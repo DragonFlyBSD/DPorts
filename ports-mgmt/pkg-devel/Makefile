@@ -30,9 +30,10 @@ OPTIONS_DEFINE=	DOCS SAN
 SAN_DESC=	Enable sanitizers (ASAN and UBSAN)
 
 .if !exists(/usr/include/jail.h)
-EXTRA_PATCHES=	${FILESDIR}/extra-patch-docs_pkg.8
+EXTRA_PATCHES=	${DFLY_PATCHDIR}/extra-patch-docs_pkg.8
 .endif
 
+PROBLEM_FILES= ${WRKSRC}/libpkg/pkg_config.c ${WRKSRC}/src/pkg.conf.sample ${WRKSRC}/docs/pkg-create.8 ${WRKSRC}/docs/pkg-set.8 ${WRKSRC}/docs/pkg-repo.8 ${WRKSRC}/docs/pkg.conf.5 ${WRKSRC}/docs/pkg-version.8 ${WRKSRC}/docs/pkg.8
 CFLAGS= -I/usr/include/priv
 LDFLAGS= -L/usr/lib/priv -R/lib/priv
 .include <bsd.port.pre.mk>
@@ -79,10 +80,6 @@ post-install:
 .endif
 
 dfly-patch:
-	${REINPLACE_CMD} -e 's@openssl@wolfssl@g' \
-		${WRKSRC}/external/libcurl/Makefile.autosetup
-	${REINPLACE_CMD} -e '/USE_OPENSSL/d' \
-		${WRKSRC}/external/libcurl/curl_config.h
 .if defined(PACKAGE_BUILDING)
 	@${REINPLACE_CMD} -e "s|/usr/ports|/usr/dports|g" ${PROBLEM_FILES}
 .else
@@ -92,9 +89,9 @@ dfly-patch:
 	${REINPLACE_CMD} \
 		-e 's|lssl|lprivate_ssl|' \
 		-e 's|lcrypto|lprivate_crypto|' \
-		${WRKSRC}/libpkg/Makefile.autosetup \
-		${WRKSRC}/src/Makefile.autosetup \
-		${WRKSRC}/tests/Makefile.autosetup
+		${WRKSRC}/libpkg/Makefile.in \
+		${WRKSRC}/src/Makefile.in \
+		${WRKSRC}/tests/Makefile.in
 .endif
 
 post-stage:

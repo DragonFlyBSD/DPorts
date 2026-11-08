@@ -29,4 +29,15 @@ USE_QT=		5compat base declarative positioning tools webchannel \
 OPTIONS_DEFINE=	DOCS
 
 RUN_DEPENDS:= ${RUN_DEPENDS:N*bsdisks}
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(Q_OS_FREEBSD)/(defined(Q_OS_FREEBSD) || defined(Q_OS_DRAGONFLY))/g' \
+		${WRKSRC}/src/qmt_rgb2pct/main.cpp \
+		${WRKSRC}/src/qmaptool/setup/CAppSetupLinux.cpp \
+		${WRKSRC}/src/qmaptool/setup/IAppSetup.cpp \
+		${WRKSRC}/src/qmapshack/CAbout.cpp \
+		${WRKSRC}/src/qmapshack/device/CDeviceWatcherLinux.cpp \
+		${WRKSRC}/src/qmapshack/setup/CAppSetupLinux.cpp \
+		${WRKSRC}/src/qmapshack/setup/IAppSetup.cpp \
+		${WRKSRC}/src/qmapshack/gis/CGisListWks.cpp
+
 .include <bsd.port.mk>

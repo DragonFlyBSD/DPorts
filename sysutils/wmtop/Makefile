@@ -35,4 +35,8 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S,^,${WRKSRC}/,} ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/\[\*freebsd\*\],/[*freebsd*|*dragonfly*],/' \
+		${WRKSRC}/configure.ac
+
 .include <bsd.port.mk>

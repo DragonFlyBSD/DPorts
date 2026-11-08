@@ -1,0 +1,11 @@
+--- meson.build.orig	2026-09-30 21:48:02 UTC
++++ meson.build
+@@ -1719,7 +1719,7 @@
+   pre_args += '-DHAVE_SC_PHYS_PAGES'
+ endif
+ 
+-if cpp.links('''
++if host_machine.system() != 'dragonfly' and cpp.links('''
+     #define _GNU_SOURCE
+     #include <stdlib.h>
+ 

@@ -1,0 +1,10 @@
+--- lib/Interpreter/CMakeLists.txt.orig
++++ lib/Interpreter/CMakeLists.txt
+@@ -116,7 +116,6 @@
+   LINK_LIBS
+   ${LIBS}
+   ${CMAKE_DL_LIBS}
+-  procstat
+   util
+   )
+ 

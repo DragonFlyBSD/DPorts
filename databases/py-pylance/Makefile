@@ -837,4 +837,5 @@ post-patch:
 
 # tests as of 12.0.0: 1494 passed, 1204 skipped, 72 deselected, 16 warnings in 110.16s
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

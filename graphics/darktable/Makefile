@@ -101,6 +101,7 @@ TOOLS_RUN_DEPENDS=	exiftool:graphics/p5-Image-ExifTool
 
 USE_GCC_VERSION= 13
 .include <bsd.port.options.mk>
+LDFLAGS+=	-lexecinfo
 
 .if ${ARCH} == aarch64 || ${ARCH} == powerpc64le
 CMAKE_ARGS+=	-DUSE_OPENCL:BOOL=OFF

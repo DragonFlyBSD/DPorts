@@ -13,7 +13,7 @@ WWW=		https://github.com/irontec/sngrep
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake ncurses pkgconfig
+USES=		cmake ncurses:port pkgconfig
 
 TEST_TARGET=	tests
 
@@ -39,6 +39,7 @@ OPENSSL_CMAKE_BOOL=	WITH_OPENSSL
 PCRE_LIB_DEPENDS=	libpcre2-8.so:devel/pcre2
 PCRE_CMAKE_BOOL=	WITH_PCRE2
 
+LIB_DEPENDS= libpcap.so:net/libpcap
 pre-test:
 	${CP} ${WRKSRC}/tests/*.pcap ${BUILD_WRKSRC}
 
@@ -48,8 +49,9 @@ post-test:
 	done
 
 dfly-patch:
-	${REINPLACE_CMD} -e 's@ncursesw@ncurses@g' -e 's@menuw@menu@g' \
-			 -e 's@panelw@panel@g' -e 's@formw@form@g' \
-		${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e 's/IMPORTED_TARGET panelw )/IMPORTED_TARGET panel )/' \
+		-e 's/IMPORTED_TARGET formw )/IMPORTED_TARGET form )/' \
+		-e 's/IMPORTED_TARGET menuw )/IMPORTED_TARGET menu )/' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

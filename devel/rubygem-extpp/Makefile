@@ -14,4 +14,5 @@ USES=		gem
 
 NO_ARCH=	yes
 
+PORTREVISION= 1
 .include <bsd.port.mk>

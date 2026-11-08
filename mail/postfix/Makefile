@@ -151,7 +151,7 @@ SASL_LIB_DEPENDS=		libsasl2.so:security/cyrus-sasl2
 SQLITE_USES=			sqlite
 TLSRPT_LIB_DEPENDS=		libtlsrpt.so:mail/libtlsrpt
 
-OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NBLACKLISTD}
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NBLOCKLISTD}
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MBLOCKLISTD}

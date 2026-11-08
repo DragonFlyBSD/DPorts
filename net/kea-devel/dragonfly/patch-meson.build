@@ -1,0 +1,12 @@
+--- meson.build.orig
++++ meson.build
+@@ -168,6 +168,9 @@
+     conf_data.set('OS_BSD', true)
+     conf_data.set('OS_FREEBSD', true)
+     OS_TYPE = 'BSD'
++elif SYSTEM == 'dragonfly'
++    conf_data.set('OS_BSD', true)
++    OS_TYPE = 'BSD'
+ elif SYSTEM == 'netbsd'
+     conf_data.set('OS_BSD', true)
+     conf_data.set('OS_NETBSD', true)

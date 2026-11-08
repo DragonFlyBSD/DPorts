@@ -62,6 +62,7 @@ post-install:
 	${RM} ${STAGEDIR}/${LOCALBASE}/resource-agents.conf
 
 dfly-patch:
-	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' ${WRKSRC}/configure.ac
+	${REINPLACE_CMD} -e 's/-Werror[[:>:]]//g' -e '/^[[:space:]]*-Wunsigned-char$$/d' \
+		${WRKSRC}/configure.ac
 
 .include <bsd.port.mk>

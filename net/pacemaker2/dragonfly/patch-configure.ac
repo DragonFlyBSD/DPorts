@@ -1,11 +1,11 @@
---- configure.ac.intermediate	2021-12-20 07:52:32.000000000 +0000
+--- configure.ac.orig
 +++ configure.ac
-@@ -719,7 +719,7 @@ INIT_EXT=""
+@@ -1016,7 +1016,7 @@
  PROCFS=0
- case "$host_os" in
-     dnl Solaris and some *BSD versions support procfs but not files we need
--    *bsd*)
-+    *bsd*|*dragonfly*)
-         INIT_EXT=".sh"
-         ;;
-     *linux*)
+ dnl Solaris and some *BSD versions support procfs but not files we need
+ AS_CASE(["$host_os"],
+-        [*bsd*], [INIT_EXT=".sh"],
++        [*bsd*|*dragonfly*], [INIT_EXT=".sh"],
+         [*linux*], [PROCFS=1],
+         [darwin*], [
+             LIBS="$LIBS -L${prefix}/lib"

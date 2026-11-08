@@ -52,7 +52,4 @@ CFLAGS+=	-Wno-error=int-conversion
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
-dfly-patch:
-	${CHMOD} +x ${WRKSRC}/build-aux/post_install.py
-
 .include <bsd.port.mk>
