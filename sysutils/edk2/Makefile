@@ -242,4 +242,8 @@ do-install:
 	${RLN} ${STAGEDIR}/${PREFIX}/share/${PORTNAME}-${PLAT}/${PLAT_FILENAME_VARS} ${STAGEDIR}/${PREFIX}/share/uefi-firmware/${PLAT_FILENAME_VARS}
 .endif
 
+.if ${FLAVOR:U} == bhyve
+IGNORE=	FreeBSD specific
+.endif
+
 .include <bsd.port.post.mk>
