@@ -72,6 +72,11 @@ post-install:
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
 OPTIONS_DEFAULT_x86_64:= ${OPTIONS_DEFAULT_x86_64:NLTO}
 MOZ_OPTIONS:= ${MOZ_OPTIONS:N--with-wasi-sysroot*}
+.include <bsd.port.options.mk>
+.if ${DFLYVERSION} < 600500
+LDFLAGS+=	-Wl,--no-as-needed -lpthread -Wl,--as-needed
+.endif
+
 dfly-patch:
 	# disable SCTP
 	${REINPLACE_CMD} -e 's|MOZ_SCTP|MOZ_DISABLE_SCTP|' \
