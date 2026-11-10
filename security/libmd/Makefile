@@ -19,7 +19,6 @@ LDFLAGS+=	-L${OPENSSLLIB}
 # workaround but at some point it needs porting to the new api
 CFLAGS+=	-Wno-deprecated-declarations
 
-CFLAGS+= -Wno-error=array-parameter
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/libmd.a ${STAGEDIR}${PREFIX}/lib
 	${INSTALL_LIB} ${WRKSRC}/libmd.so.3 ${STAGEDIR}${PREFIX}/lib
@@ -36,5 +35,10 @@ do-install:
 #	${INSTALL_MAN} ${WRKSRC}/md5.3 ${STAGEDIR}${MANDIRS}/man3
 	${INSTALL_MAN} ${WRKSRC}/sha256.3 ${STAGEDIR}${MANDIRS}/man3
 	${INSTALL_MAN} ${WRKSRC}/sha512.3 ${STAGEDIR}${MANDIRS}/man3
+
+.include <bsd.port.options.mk>
+.if ${DFLYVERSION} >= 600500
+CFLAGS+=	-Wno-error=array-parameter
+.endif
 
 .include <bsd.port.mk>
