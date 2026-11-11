@@ -94,6 +94,7 @@ SIMD_SRCS_x86_64=	src/compactions/compaction_avx2.c \
 SIMD_SRCS=		${SIMD_SRCS_${ARCH}}
 SIMD_OBJS=		${SIMD_SRCS:.c=.o}
 
+SETENVI= /usr/bin/env -i PATH=${PATH:Q}
 do-build:
 	@cd ${WRKSRC} && for src in ${MODULE_SRCS}; do \
 		${ECHO_MSG} "  CC $$src"; \

@@ -29,4 +29,8 @@ post-patch:
 post-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/libexec/rc/rc.d/routed ${STAGEDIR}${PREFIX}/etc/rc.d
 
+.if 1
+IGNORE=	DragonFly has routed in base
+.endif
+
 .include <bsd.port.mk>

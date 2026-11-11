@@ -33,4 +33,8 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/gnbd-bin ${STAGEDIR}${PREFIX}/sbin/gnbd
 	${INSTALL_DATA} ${WRKSRC}/devd.conf.sample ${STAGEDIR}${PREFIX}/etc/devd/${PORTNAME}.conf.sample
 
+.if 1
+IGNORE=	FreeBSD specific: kernel module
+.endif
+
 .include <bsd.port.mk>

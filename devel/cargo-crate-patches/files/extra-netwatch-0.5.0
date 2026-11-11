@@ -1,0 +1,295 @@
+--- cargo-crates/netwatch-0.5.0/src/interfaces.rs.orig
++++ cargo-crates/netwatch-0.5.0/src/interfaces.rs
+@@ -4,6 +4,7 @@
+ 
+ #[cfg(any(
+     target_os = "freebsd",
++    target_os = "dragonfly",
+     target_os = "openbsd",
+     target_os = "netbsd",
+     target_os = "macos",
+@@ -19,6 +20,7 @@
+ 
+ #[cfg(any(
+     target_os = "freebsd",
++    target_os = "dragonfly",
+     target_os = "openbsd",
+     target_os = "netbsd",
+     target_os = "macos",
+@@ -349,6 +351,7 @@
+ 
+     #[cfg(any(
+         target_os = "freebsd",
++        target_os = "dragonfly",
+         target_os = "openbsd",
+         target_os = "netbsd",
+         target_os = "macos",
+--- cargo-crates/netwatch-0.5.0/src/interfaces/bsd.rs.orig
++++ cargo-crates/netwatch-0.5.0/src/interfaces/bsd.rs
+@@ -23,6 +23,10 @@
+ mod freebsd;
+ #[cfg(target_os = "freebsd")]
+ pub(crate) use self::freebsd::*;
++#[cfg(target_os = "dragonfly")]
++mod dragonfly;
++#[cfg(target_os = "dragonfly")]
++pub(crate) use self::dragonfly::*;
+ #[cfg(target_os = "netbsd")]
+ mod netbsd;
+ #[cfg(target_os = "netbsd")]
+@@ -137,7 +141,7 @@
+     false
+ }
+ 
+-#[cfg(any(target_os = "freebsd", target_os = "openbsd", target_os = "netbsd"))]
++#[cfg(any(target_os = "freebsd", target_os = "dragonfly", target_os = "openbsd", target_os = "netbsd"))]
+ fn fetch_routing_table() -> Option<Vec<u8>> {
+     match fetch_rib(AF_UNSPEC, libc::NET_RT_DUMP, 0) {
+         Ok(res) => Some(res),
+@@ -148,7 +152,7 @@
+     }
+ }
+ 
+-#[cfg(any(target_os = "freebsd", target_os = "openbsd", target_os = "netbsd"))]
++#[cfg(any(target_os = "freebsd", target_os = "dragonfly", target_os = "openbsd", target_os = "netbsd"))]
+ fn parse_routing_table(rib: &[u8]) -> Option<Vec<RouteMessage>> {
+     match parse_rib(libc::NET_RT_IFLIST, rib) {
+         Ok(res) => {
+@@ -210,7 +214,7 @@
+     true
+ }
+ 
+-#[cfg(any(target_os = "freebsd", target_os = "netbsd"))]
++#[cfg(any(target_os = "freebsd", target_os = "dragonfly", target_os = "netbsd"))]
+ const fn is_valid_rib_type(typ: RIBType) -> bool {
+     true
+ }
+@@ -268,6 +272,7 @@
+         match self.typ {
+             #[cfg(any(
+                 target_os = "freebsd",
++                target_os = "dragonfly",
+                 target_os = "netbsd",
+                 target_os = "macos",
+                 target_os = "ios"
+@@ -291,6 +296,9 @@
+                     error: None,
+                     addrs,
+                 };
++                #[cfg(target_os = "dragonfly")]
++                let errno = u32_from_ne_range(data, 24..28)?;
++                #[cfg(not(target_os = "dragonfly"))]
+                 let errno = u32_from_ne_range(data, 28..32)?;
+                 if errno != 0 {
+                     m.error = Some(std::io::Error::from_raw_os_error(errno as _));
+@@ -335,7 +343,11 @@
+                 let l = u16_from_ne_range(data, 0..2)?;
+                 snafu::ensure!(data.len() >= l as usize, InvalidMessageSnafu);
+ 
+-                let attrs = u32_from_ne_range(data, 4..8)?;
++                // DragonFly: index at 4, flags at 8, addrs at 12.
++                #[cfg(target_os = "dragonfly")]
++                let (attrs, index) = (u32_from_ne_range(data, 12..16)?, u16_from_ne_range(data, 4..6)?);
++                #[cfg(not(target_os = "dragonfly"))]
++                let (attrs, index) = (u32_from_ne_range(data, 4..8)?, u16_from_ne_range(data, 12..14)?);
+                 if attrs as c_int & RTA_IFP == 0 {
+                     return Ok(None);
+                 }
+@@ -345,7 +357,7 @@
+                     version: data[2] as _,
+                     r#type: data[3] as _,
+                     flags: u32_from_ne_range(data, 8..12)? as _,
+-                    index: u16_from_ne_range(data, 12..14)? as _,
++                    index: index as _,
+                     ext_off: self.ext_off,
+                     addr_rtax_ifp: addr,
+                     name,
+@@ -360,11 +372,17 @@
+ 
+                 #[cfg(target_os = "netbsd")]
+                 let index = u16_from_ne_range(data, 16..18)?;
+-                #[cfg(not(target_os = "netbsd"))]
++                #[cfg(target_os = "dragonfly")]
++                let index = u16_from_ne_range(data, 4..6)?;
++                #[cfg(not(any(target_os = "netbsd", target_os = "dragonfly")))]
+                 let index = u16_from_ne_range(data, 12..14)?;
+ 
++                #[cfg(target_os = "dragonfly")]
++                let attrs = u32_from_ne_range(data, 12..16)?;
++                #[cfg(not(target_os = "dragonfly"))]
++                let attrs = u32_from_ne_range(data, 4..8)?;
+                 let addrs = parse_addrs(
+-                    u32_from_ne_range(data, 4..8)? as _,
++                    attrs as _,
+                     parse_kernel_inet_addr,
+                     &data[self.body_off..],
+                 )?;
+@@ -383,8 +401,12 @@
+                 let l = u16_from_ne_range(data, ..2)?;
+                 snafu::ensure!(data.len() >= l as usize, InvalidMessageSnafu);
+ 
++                #[cfg(target_os = "dragonfly")]
++                let (attrs, index) = (u32_from_ne_range(data, 12..16)?, u16_from_ne_range(data, 4..6)?);
++                #[cfg(not(target_os = "dragonfly"))]
++                let (attrs, index) = (u32_from_ne_range(data, 4..8)?, u16_from_ne_range(data, 12..14)?);
+                 let addrs = parse_addrs(
+-                    u32_from_ne_range(data, 4..8)? as _,
++                    attrs as _,
+                     parse_kernel_inet_addr,
+                     &data[self.body_off..],
+                 )?;
+@@ -392,7 +414,7 @@
+                     version: data[2] as _,
+                     r#type: data[3] as _,
+                     flags: u32_from_ne_range(data, 8..12)? as _,
+-                    index: u16_from_ne_range(data, 12..14)? as _,
++                    index: index as _,
+                     addrs,
+                 };
+                 Ok(Some(WireMessage::InterfaceMulticastAddr(m)))
+--- cargo-crates/netwatch-0.5.0/src/netmon.rs.orig
++++ cargo-crates/netwatch-0.5.0/src/netmon.rs
+@@ -13,6 +13,7 @@
+ mod android;
+ #[cfg(any(
+     target_os = "freebsd",
++    target_os = "dragonfly",
+     target_os = "openbsd",
+     target_os = "netbsd",
+     target_os = "macos",
+--- cargo-crates/netwatch-0.5.0/src/netmon/actor.rs.orig
++++ cargo-crates/netwatch-0.5.0/src/netmon/actor.rs
+@@ -16,6 +16,7 @@
+ use super::android as os;
+ #[cfg(any(
+     target_os = "freebsd",
++    target_os = "dragonfly",
+     target_os = "openbsd",
+     target_os = "netbsd",
+     target_os = "macos",
+--- cargo-crates/netwatch-0.5.0/src/netmon/bsd.rs.orig
++++ cargo-crates/netwatch-0.5.0/src/netmon/bsd.rs
+@@ -6,7 +6,7 @@
+ use tracing::{trace, warn};
+ 
+ use super::actor::NetworkMessage;
+-#[cfg(any(target_os = "freebsd", target_os = "netbsd", target_os = "openbsd"))]
++#[cfg(any(target_os = "freebsd", target_os = "dragonfly", target_os = "netbsd", target_os = "openbsd"))]
+ use crate::interfaces::bsd::{RTAX_DST, RTAX_IFP};
+ use crate::{interfaces::bsd::WireMessage, ip::is_link_local};
+ 
+--- /dev/null
++++ cargo-crates/netwatch-0.5.0/src/interfaces/bsd/dragonfly.rs
+@@ -0,0 +1,112 @@
++use libc::c_int;
++
++use super::{MessageType, RoutingStack, WireFormat};
++
++// Missing constants from libc.
++// https://github.com/rust-lang/libc/issues/3711
++
++// net/route.h
++pub const RTF_GATEWAY: c_int = 0x2;
++pub const RTAX_DST: c_int = 0;
++pub const RTAX_GATEWAY: c_int = 1;
++pub const RTAX_NETMASK: c_int = 2;
++pub const RTAX_IFP: c_int = 4;
++pub const RTAX_BRD: c_int = 7;
++pub const RTAX_MAX: c_int = 11;
++pub const RTM_VERSION: c_int = 7;
++pub const RTA_DST: c_int = 0x1;
++pub const RTA_GATEWAY: c_int = 0x2;
++pub const RTA_NETMASK: c_int = 0x4;
++pub const RTA_GENMASK: c_int = 0x8;
++pub const RTA_IFP: c_int = 0x10;
++pub const RTA_IFA: c_int = 0x20;
++pub const RTA_AUTHOR: c_int = 0x40;
++pub const RTA_BRD: c_int = 0x80;
++
++// Message types
++pub const RTM_ADD: c_int = 0x1;
++pub const RTM_DELETE: c_int = 0x2;
++pub const RTM_CHANGE: c_int = 0x3;
++pub const RTM_GET: c_int = 0x4;
++pub const RTM_LOSING: c_int = 0x5;
++pub const RTM_REDIRECT: c_int = 0x6;
++pub const RTM_MISS: c_int = 0x7;
++pub const RTM_LOCK: c_int = 0x8;
++pub const RTM_RESOLVE: c_int = 0xb;
++pub const RTM_NEWADDR: c_int = 0xc;
++pub const RTM_DELADDR: c_int = 0xd;
++pub const RTM_IFINFO: c_int = 0xe;
++pub const RTM_NEWMADDR: c_int = 0xf;
++pub const RTM_DELMADDR: c_int = 0x10;
++pub const RTM_IFANNOUNCE: c_int = 0x11;
++pub const RTM_IEEE80211: c_int = 0x12;
++
++// sizeof() of the DragonFly 5.8+ (RTM_VERSION 7) structures on x86_64.
++pub(super) const SIZEOF_IF_MSGHDR: usize = 0xb0;
++pub(super) const SIZEOF_IFA_MSGHDR: usize = 0x18;
++pub(super) const SIZEOF_IFMA_MSGHDR: usize = 0x10;
++pub(super) const SIZEOF_IF_ANNOUNCEMSGHDR: usize = 0x18;
++
++pub(super) const SIZEOF_RT_MSGHDR: usize = 0x98;
++pub(super) const SIZEOF_RT_METRICS: usize = 0x70;
++
++pub(super) const SIZEOF_SOCKADDR_STORAGE: usize = 0x80;
++pub(super) const SIZEOF_SOCKADDR_INET: usize = 0x10;
++pub(super) const SIZEOF_SOCKADDR_INET6: usize = 0x1c;
++
++pub(super) fn probe_routing_stack() -> RoutingStack {
++    let rtm_version = RTM_VERSION;
++
++    let rtm = WireFormat {
++        ext_off: SIZEOF_RT_MSGHDR - SIZEOF_RT_METRICS,
++        body_off: SIZEOF_RT_MSGHDR,
++        typ: MessageType::Route,
++    };
++    let ifm = WireFormat {
++        ext_off: 16,
++        body_off: SIZEOF_IF_MSGHDR,
++        typ: MessageType::Interface,
++    };
++    let ifam = WireFormat {
++        ext_off: SIZEOF_IFA_MSGHDR,
++        body_off: SIZEOF_IFA_MSGHDR,
++        typ: MessageType::InterfaceAddr,
++    };
++    let ifmam = WireFormat {
++        ext_off: SIZEOF_IFMA_MSGHDR,
++        body_off: SIZEOF_IFMA_MSGHDR,
++        typ: MessageType::InterfaceMulticastAddr,
++    };
++    let ifanm = WireFormat {
++        ext_off: SIZEOF_IF_ANNOUNCEMSGHDR,
++        body_off: SIZEOF_IF_ANNOUNCEMSGHDR,
++        typ: MessageType::InterfaceAnnounce,
++    };
++
++    let wire_formats = [
++        (RTM_ADD, rtm),
++        (RTM_DELETE, rtm),
++        (RTM_CHANGE, rtm),
++        (RTM_GET, rtm),
++        (RTM_LOSING, rtm),
++        (RTM_REDIRECT, rtm),
++        (RTM_MISS, rtm),
++        (RTM_LOCK, rtm),
++        (RTM_RESOLVE, rtm),
++        (RTM_NEWADDR, ifam),
++        (RTM_DELADDR, ifam),
++        (RTM_IFINFO, ifm),
++        (RTM_NEWMADDR, ifmam),
++        (RTM_DELMADDR, ifmam),
++        (RTM_IFANNOUNCE, ifanm),
++        (RTM_IEEE80211, ifanm),
++    ]
++    .into_iter()
++    .collect();
++    // RT_ROUNDUP pads to sizeof(long).
++    RoutingStack {
++        rtm_version,
++        wire_formats,
++        kernel_align: 8,
++    }
++}

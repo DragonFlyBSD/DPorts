@@ -29,4 +29,8 @@ post-patch:
 post-install:
 	@${INSTALL_SCRIPT} ${WRKSRC}/libexec/rc/rc.d/route6d ${STAGEDIR}${PREFIX}/etc/rc.d
 
+.if 1
+IGNORE=	DragonFly has route6d in base
+.endif
+
 .include <bsd.port.mk>

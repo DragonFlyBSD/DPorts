@@ -1,4 +1,4 @@
---- src/bin/system/e_system_cpufreq.c.orig	2020-07-26 16:39:12 UTC
+--- src/bin/system/e_system_cpufreq.c.orig
 +++ src/bin/system/e_system_cpufreq.c
 @@ -2,7 +2,7 @@
  
@@ -9,36 +9,21 @@
  // no local funcs
  #else
  static int
-@@ -83,8 +83,13 @@ _cb_cpufreq_freq(void *data EINA_UNUSED,
-              e_system_inout_command_send("cpufreq-freq", "ok");
-              return;
-           }
--#elif defined __FreeBSD__
-+#elif defined __FreeBSD__ || defined __DragonFly__
-+#ifdef __DragonFly__
-+	/* XXX specific to intel acpi */
-+        if (sysctlbyname("hw.acpi.cpu.px_dom0.select", NULL, NULL, &f, sizeof(f)) == 0)
-+#else
-         if (sysctlbyname("dev.cpu.0.freq", NULL, NULL, &f, sizeof(f)) == 0)
-+#endif
-           {
-              e_system_inout_command_send("cpufreq-freq", "ok");
-              return;
-@@ -106,7 +111,7 @@ _cb_cpufreq_governor(void *data EINA_UNU
-    // NAME
+@@ -256,7 +256,7 @@
+ {
  #if defined __OpenBSD__
-    e_system_inout_command_send("cpufreq-governor", "err");
+   e_system_inout_command_send("cpufreq-pwr-set", "err");
 -#elif defined __FreeBSD__
 +#elif defined __FreeBSD__ || defined __DragonFly__
-    e_system_inout_command_send("cpufreq-governor", "err");
+   e_system_inout_command_send("cpufreq-pwr-set", "err");
  #else
-    if (sys_cpu_setall("scaling_governor", params) <= 0)
-@@ -128,7 +133,7 @@ _cb_cpufreq_pstate(void *data EINA_UNUSE
-    // MIN_PERC MAX_PERC TURBO
+   int v = atoi(params); // 0->100
+@@ -292,7 +292,7 @@
+ {
  #if defined __OpenBSD__
-    e_system_inout_command_send("cpufreq-pstate", "err");
+   e_system_inout_command_send("cpufreq-pwr-get", "err");
 -#elif defined __FreeBSD__
 +#elif defined __FreeBSD__ || defined __DragonFly__
-    e_system_inout_command_send("cpufreq-pstate", "err");
+   e_system_inout_command_send("cpufreq-pwr-get", "err");
  #else
-    int min = 0, max = 100, turbo = 1;
+   int v;

@@ -58,16 +58,3 @@ share/fonts/OTB/uw-ttyp0/fonts.scale
 %%FONTSDIR%%/t0-40-uni.pcf.gz
 %%FONTSDIR%%/t0-40b-uni.pcf.gz
 %%FONTSDIR%%/t0-40i-uni.pcf.gz
-share/vt/fonts/ttyp0-11.fnt
-share/vt/fonts/ttyp0-12.fnt
-share/vt/fonts/ttyp0-13.fnt
-share/vt/fonts/ttyp0-14.fnt
-share/vt/fonts/ttyp0-15.fnt
-share/vt/fonts/ttyp0-16.fnt
-share/vt/fonts/ttyp0-17.fnt
-share/vt/fonts/ttyp0-18.fnt
-share/vt/fonts/ttyp0-22.fnt
-share/vt/fonts/ttyp0-30.fnt
-share/vt/fonts/ttyp0-40.fnt
-share/vt/fonts/ttyp0-60.fnt
-share/vt/fonts/ttyp0-80.fnt

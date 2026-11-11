@@ -26,4 +26,8 @@ EXTRA_PATCHES+= ${FILESDIR}/extra-patch-if__re.c
 
 PLIST_FILES=	${KMODDIR}/if_re.ko
 
+.if 1
+IGNORE=	FreeBSD specific: kernel module
+.endif
+
 .include <bsd.port.mk>

@@ -15,7 +15,7 @@ LIB_DEPENDS=	libgtk-layer-shell.so:x11-toolkits/gtk-layer-shell
 
 USES=		gnome go:modules pkgconfig
 
-USE_GNOME=	cairo gdkpixbuf gtk30
+USE_GNOME= cairo gdkpixbuf gtk30 introspection:build
 
 GO_MODULE=	github.com/nwg-piotr/nwg-dock-hyprland
 CGO_LDFLAGS+=	-Wl,--as-needed # harfbuzz, freetype2

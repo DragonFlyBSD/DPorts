@@ -72,7 +72,7 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-i386
 # powerpc: force the byte-copy Assign macros; the simple ones truncate 16/32-bit
 # values into u_char packet fields (fails -Werror on BE, wrong ethertype).
 .elif ${ARCH:Mpowerpc*}
-CFLAGS+= -DNEED_ALIGN -Wno-format-truncation -Wno-stringop-truncation -Wno-maybe-uninitialized
+CFLAGS+=	-DNEED_ALIGN
 .endif
 
 PLIST_SUB+=	SQLDOC=${SQLDOC}
@@ -91,5 +91,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 	${MKDIR} ${STAGEDIR}${DATADIR}
+
+.if 1
+CFLAGS+=	-Wno-format-truncation -Wno-stringop-truncation -Wno-maybe-uninitialized \
+		-Wno-array-bounds
+.endif
 
 .include <bsd.port.post.mk>

@@ -21,6 +21,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man1/${PORTNAME}.1.gz \
 		share/zsh/site-functions/_${PORTNAME}
 
+IGNORE= has no DragonFly backend to find processes' open files
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 

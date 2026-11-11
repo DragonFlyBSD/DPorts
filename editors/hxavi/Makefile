@@ -37,4 +37,8 @@ post-install-MANPAGES-on:
 	${INSTALL_MAN} ${WRKSRC}/man/hxavi_ja_utf8.1 \
 		${STAGEDIR}${PREFIX}/share/man/ja_JP.UTF-8/man1/hxavi.1
 
+.if 1
+MAKE_ARGS+=	LIBS="-L${NCURSESLIB} -lncursesw -lm"
+.endif
+
 .include <bsd.port.mk>

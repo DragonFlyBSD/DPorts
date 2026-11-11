@@ -27,7 +27,7 @@ PORTDOCS=	*
 
 do-build:
 .if ${PORT_OPTIONS:MDOCS}
-	cd ${BUILD_WRKSRC}; ${LOCALBASE}/bin/rdoc ${LIB_FILES}
+	cd ${BUILD_WRKSRC}; ${SETENV} LC_ALL=en_US.UTF-8 ${LOCALBASE}/bin/rdoc ${LIB_FILES}
 .endif
 
 do-install:

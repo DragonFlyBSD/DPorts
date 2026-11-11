@@ -43,4 +43,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/xbm/cabinet.xpm \
 		${STAGEDIR}${PREFIX}/share/pixmaps/xfile_48x48.xpm
 
+dfly-patch:
+	${CP} ${WRKSRC}/mf/Makefile.FreeBSD ${WRKSRC}/mf/Makefile.DragonFly
+
 .include <bsd.port.mk>

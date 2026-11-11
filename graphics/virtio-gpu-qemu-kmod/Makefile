@@ -34,4 +34,8 @@ PLIST_FILES=	${KMODDIR}/virtio_gpu_qemu.ko \
 IGNORE=		is for FreeBSD 15.x and newer
 .endif
 
+.if 1
+IGNORE=	FreeBSD specific: kernel module
+.endif
+
 .include <bsd.port.mk>

@@ -63,4 +63,8 @@ ENLIGHTENMENT_VERSION=	${PORTVERSION}
 PLIST_SUB=              ENLIGHTENMENT_ARCH=${ENLIGHTENMENT_ARCH}-${ENLIGHTENMENT_VERSION}
 
 LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
+.if 1
+MESON_ARGS+=	-Dprocstats=false
+.endif
+
 .include <bsd.port.mk>

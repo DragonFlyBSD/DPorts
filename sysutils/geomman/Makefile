@@ -20,4 +20,5 @@ MAKE_ENV=	BINDIR=${PREFIX}/bin \
 PLIST_FILES=	bin/geomman \
 		share/man/man8/geomman.8.gz
 
+IGNORE= FreeBSD specific: GEOM (libgeom)
 .include <bsd.port.mk>

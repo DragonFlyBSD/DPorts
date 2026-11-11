@@ -1,6 +1,6 @@
---- Make.intermediate	2016-08-16 13:06:35 UTC
+--- Make.orig
 +++ Make
-@@ -98,7 +98,7 @@ if [ "x$PREFIX" = "x" ]; then
+@@ -98,7 +98,7 @@
          SunOS:5.*)
              PREFIX="/opt/REXXimc"
              ;;
@@ -9,7 +9,7 @@
  	    PREFIX="${PREFIX}"
  	    ;;
          *|unknown)
-@@ -431,7 +431,7 @@ case $UNAME_S:$UNAME_R in
+@@ -431,7 +431,7 @@
                  ;;
          esac
          ;;
@@ -18,3 +18,12 @@
          REXXLIB="librexx.so"
  	SOLINK="librexx.so"
          RANLIB=ranlib
+@@ -439,7 +439,7 @@
+         LIBRARIES=""
+         SOFLAG="-shared -rdynamic"
+         : ${RUNLIBS='-L$(LIBDIR) -Wl,-rpath,$(PREFIX)/lib'}
+-        DLLFLAG="-shared -rdynamic -Wl,-soname=$(SONAME)"
++        DLLFLAG='-shared -rdynamic -Wl,-soname=$(SONAME)'
+         case $CC in
+             gcc)
+                 CCFLAG="${CFLAGS} -DHAS_TTYCOM -DRENAME_UNDELETE -DHAS_GMTOFF"

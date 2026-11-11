@@ -21,4 +21,8 @@ PLIST_FILES=	bin/${PORTNAME} \
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/ktcplist.1 ${STAGEDIR}${PREFIX}/share/man/man1/
 
+.if 1
+IGNORE=	FreeBSD specific: kernel TLS (KTLS) sessions
+.endif
+
 .include <bsd.port.mk>

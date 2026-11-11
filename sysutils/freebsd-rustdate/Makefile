@@ -22,6 +22,7 @@ PLIST_FILES=	bin/freebsd-rustdate \
 		share/zsh/site-functions/_freebsd-rustdate
 
 OPTIONS_DEFINE=		BUNDLED_OPENSSL
+OPTIONS_DEFAULT=	BUNDLED_OPENSSL
 
 BUNDLED_OPENSSL_DESC=	Build with bundled OpenSSL
 
@@ -30,6 +31,7 @@ BUNDLED_OPENSSL_USES_OFF=	ssl
 BUNDLED_OPENSSL_USE=		PERL5=build
 BUNDLED_OPENSSL_VARS_OFF=	CARGO_FEATURES+=--no-default-features
 
+IGNORE= FreeBSD specific: freebsd-update replacement
 post-install:
 	@${MKDIR} \
 		${STAGEDIR}${PREFIX}/etc/bash_completion.d \
@@ -42,5 +44,4 @@ post-install:
 	${STAGEDIR}${PREFIX}/bin/freebsd-rustdate complete -s zsh > \
 		${STAGEDIR}${PREFIX}/share/zsh/site-functions/_freebsd-rustdate
 
-USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

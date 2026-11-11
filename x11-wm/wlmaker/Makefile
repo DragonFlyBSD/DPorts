@@ -19,7 +19,7 @@ LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \
 		libxkbcommon.so:x11/libxkbcommon
 RUN_DEPENDS=	foot:x11/foot
 
-USES=		bison cmake compiler:c11 gnome pkgconfig xorg
+USES= bison cmake compiler:c11 gnome pkgconfig xorg ncurses
 USE_GITHUB=	yes
 USE_GNOME=	cairo
 USE_XORG=	xcb

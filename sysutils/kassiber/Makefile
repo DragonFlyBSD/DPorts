@@ -16,4 +16,5 @@ GH_ACCOUNT=	crest
 PLIST_FILES=	bin/kassiber \
 		share/man/man1/kassiber.1.gz
 
+IGNORE= FreeBSD specific: jails through libjail
 .include <bsd.port.mk>

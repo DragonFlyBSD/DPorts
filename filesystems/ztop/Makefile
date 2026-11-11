@@ -18,8 +18,8 @@ GH_ACCOUNT=	asomers
 PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man1/${PORTNAME}.1.gz
 
+IGNORE= FreeBSD specific: ZFS dataset statistics
 post-install:
 		${INSTALL_MAN} ${WRKSRC}/doc/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
-USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

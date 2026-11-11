@@ -52,4 +52,5 @@ USE_KDE=	ecm
 USE_XORG=	x11 xcb
 USE_LDCONFIG=	yes
 
+USES+= dfly-libcxx
 .include <bsd.port.mk>

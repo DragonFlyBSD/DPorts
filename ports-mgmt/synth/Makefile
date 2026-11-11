@@ -14,7 +14,7 @@ BUILD_DEPENDS=	gprbuild>0:devel/gprbuild \
 		${GPR}/ini_file_manager.gpr:misc/ini_file_manager \
 		${GPR}/adacurses.gpr:devel/adacurses
 
-USES=		ada elfctl ncurses
+USES=		ada ncurses
 USE_GITHUB=	yes
 GH_ACCOUNT=	jrmarino
 

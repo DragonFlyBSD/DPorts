@@ -18,6 +18,7 @@ PLIST_FILES=	sbin/boxrun \
 		share/boxrun/pf.conf.sample \
 		share/man/man1/boxrun.1.gz
 
+IGNORE= FreeBSD specific: jails and Capsicum
 do-build:
 	${CC} ${CFLAGS} -o ${WRKSRC}/boxrun ${WRKSRC}/boxrun.c -ljail
 

@@ -27,4 +27,12 @@ OPTIONS_SUB=	yes
 NLS_USES=	gettext
 NLS_CONFIGURE_ENABLE=	nls
 
+dfly-patch:
+	${MKDIR} ${WRKDIR}/include
+	${LN} -sf ${NCURSESINC} ${WRKDIR}/include/ncursesw
+
+.if 1
+CPPFLAGS+=	-I${WRKDIR}/include
+.endif
+
 .include <bsd.port.mk>

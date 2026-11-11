@@ -21,9 +21,13 @@ IGNORE=	requires perl to be built with -DWITH_THREADS
 .endif
 .endif
 
+.if !exists(/usr/include/libmilter/mfapi.h)
+LIB_DEPENDS+=	libmilter.so.7:mail/libmilter
+.endif
+
 dfly-patch:
 	${REINPLACE_CMD} -e "s@/usr/lib@${LOCALBASE}/lib@g" \
-			 -e "s@/usr/include@${LOCALBASE}/include@g" \
+			 -e 's@"/usr/include/libmilter"@"${LOCALBASE}/include/libmilter -I${LOCALBASE}/include"@' \
 		${WRKSRC}/Makefile.PL
 
 .include <bsd.port.post.mk>

@@ -1,0 +1,11 @@
+--- Makefile.orig
++++ Makefile
+@@ -69,7 +69,7 @@
+ 	INSTALL_INC = cp -r include/Cello.h $(INCDIR)
+ 	UNINSTALL_LIB = rm -f ${LIBDIR}/$(STATIC); rm -f ${BINDIR}/$(DYNAMIC)
+ 	UNINSTALL_INC = rm -f ${INCDIR}/Cello.h
+-else ifeq ($(findstring FreeBSD,$(PLATFORM)),FreeBSD)
++else ifneq (,$(filter FreeBSD DragonFly,$(PLATFORM)))
+ 	PREFIX ?= /usr/local
+ 
+ 	DYNAMIC = libCello.so

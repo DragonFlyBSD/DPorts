@@ -16,6 +16,7 @@ GH_TUPLE=	DaveGamble:cJSON:c859b25da02955fef659d658b8f324b5cde87be3:cJSONS/cjson
 
 PLIST_FILES=	bin/${PORTNAME}
 
+IGNORE= FreeBSD specific: libsysdecode
 do-build:
 		@cd ${WRKSRC}/ && ${SH} ./build.sh
 

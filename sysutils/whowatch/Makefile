@@ -14,7 +14,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		ncurses
 
 GNU_CONFIGURE=	yes
+CFLAGS+=	-fcommon
 
-PLIST_FILES=	bin/whowatch man/man1/${PORTNAME}.1.gz
+PLIST_FILES=	bin/whowatch share/man/man1/${PORTNAME}.1.gz
 
 .include <bsd.port.mk>

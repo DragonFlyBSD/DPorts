@@ -1,0 +1,15 @@
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -1225,6 +1225,12 @@
+     -lquota
+   )
+ endif()
++if (_lib_prop_dictionary_create)
++  # DragonFly: vquotactl() results come as a proplib dictionary
++  target_link_libraries (${DI_LIBNAME} PRIVATE
++    -lprop
++  )
++endif()
+ if (LIBGEN_REQUIRED)
+   # Unixware
+   target_link_libraries (${DI_LIBNAME} PRIVATE

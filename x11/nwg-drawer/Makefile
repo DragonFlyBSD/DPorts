@@ -18,7 +18,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils
 
 USES=		gnome go:modules pkgconfig
 
-USE_GNOME=	cairo gdkpixbuf gtk30
+USE_GNOME= cairo gdkpixbuf gtk30 introspection:build
 
 GO_MODULE=	github.com/nwg-piotr/nwg-drawer
 CGO_LDFLAGS+=	-Wl,--as-needed # harfbuzz, freetype2

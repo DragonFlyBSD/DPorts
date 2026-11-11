@@ -16,6 +16,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	kusumi
 GH_PROJECT=	freebsd_hammer2
 
+IGNORE= FreeBSD port of HAMMER2; DragonFly has it in base
 do-install:
 	${INSTALL_KLD} ${WRKSRC}/src/sys/fs/hammer2/hammer2.ko ${STAGEDIR}${KMODDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/src/sbin/hammer2/hammer2 ${STAGEDIR}${PREFIX}/sbin

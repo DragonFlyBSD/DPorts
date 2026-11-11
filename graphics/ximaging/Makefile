@@ -33,4 +33,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/XImaging.ad \
 		${STAGEDIR}${PREFIX}/etc/X11/app-defaults/XImaging
 
+dfly-patch:
+	${CP} ${WRKSRC}/mf/Makefile.FreeBSD ${WRKSRC}/mf/Makefile.DragonFly
+
 .include <bsd.port.mk>

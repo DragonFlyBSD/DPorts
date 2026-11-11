@@ -22,6 +22,7 @@ SDL_COMMIT=	a882afafe55501711593d96f8f0f59f0e3adf3ee
 PLIST_FILES=	etc/devd/${RULES_FILE}
 RULES_FILE=	gamecontrollers.conf
 
+MAKE_ENV= LC_ALL=en_US.UTF-8
 do-extract:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/usb_ids.h \
 		${DISTDIR}/${DIST_SUBDIR}/controller_list.h ${WRKDIR}

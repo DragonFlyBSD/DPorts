@@ -17,4 +17,8 @@ PLIST_FILES=	${KMODDIR}/if_pair.ko \
 		share/man/man4/if_pair.4.gz \
 		share/man/man4/pair.4.gz
 
+.if 1
+IGNORE=	FreeBSD specific: kernel module
+.endif
+
 .include <bsd.port.mk>

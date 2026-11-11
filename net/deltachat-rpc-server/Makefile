@@ -26,4 +26,5 @@ PLIST_FILES=	bin/${PORTNAME}
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/target/release/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

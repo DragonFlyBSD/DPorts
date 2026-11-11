@@ -47,4 +47,8 @@ post-install-DTRACE-on:
 	${INSTALL_DATA} ${WRKSRC}/dtrace/read_latency.d ${STAGEDIR}${PREFIX}/share/examples/tcpstats/
 	${INSTALL_DATA} ${WRKSRC}/dtrace/read_summary.d ${STAGEDIR}${PREFIX}/share/examples/tcpstats/
 
+.if 1
+IGNORE=	FreeBSD specific: kernel module
+.endif
+
 .include <bsd.port.mk>

@@ -3,6 +3,7 @@
 %%SITE_PERL%%/Alien/Role/Dino/MSWin32.pm
 %%SITE_PERL%%/Alien/Role/Dino/cygwin.pm
 %%SITE_PERL%%/Alien/Role/Dino/darwin.pm
+%%SITE_PERL%%/Alien/Role/Dino/dragonfly.pm
 %%SITE_PERL%%/Alien/Role/Dino/freebsd.pm
 %%SITE_PERL%%/Alien/Role/Dino/gnukfreebsd.pm
 %%SITE_PERL%%/Alien/Role/Dino/linux.pm
@@ -14,6 +15,7 @@
 %%PERL5_MAN3%%/Alien::Role::Dino::MSWin32.3.gz
 %%PERL5_MAN3%%/Alien::Role::Dino::cygwin.3.gz
 %%PERL5_MAN3%%/Alien::Role::Dino::darwin.3.gz
+%%PERL5_MAN3%%/Alien::Role::Dino::dragonfly.3.gz
 %%PERL5_MAN3%%/Alien::Role::Dino::freebsd.3.gz
 %%PERL5_MAN3%%/Alien::Role::Dino::gnukfreebsd.3.gz
 %%PERL5_MAN3%%/Alien::Role::Dino::linux.3.gz

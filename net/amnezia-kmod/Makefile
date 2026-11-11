@@ -18,4 +18,8 @@ GH_PROJECT=	wireguard-amnezia-kmod
 
 PLIST_FILES=	${KMODDIR}/if_amn.ko
 
+.if 1
+IGNORE=	FreeBSD specific: kernel module
+.endif
+
 .include <bsd.port.mk>

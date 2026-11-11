@@ -37,4 +37,8 @@ post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC}/.. && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
+.if 1
+IGNORE=	FreeBSD specific: kernel module
+.endif
+
 .include <bsd.port.mk>

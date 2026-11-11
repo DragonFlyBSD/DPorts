@@ -35,7 +35,6 @@ OPTIONS_DEFAULT=		READLINE
 READLINE_USES=			readline
 READLINE_CONFIGURE_WITH=	readline
 
-CFLAGS= -Wno-error=format
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
@@ -45,6 +44,10 @@ PLIST_FILES+=		share/locale/${lang}/LC_MESSAGES/pinfo.mo
 .endfor
 .else
 CONFIGURE_ARGS+=	--disable-nls
+.endif
+
+.if 1
+CFLAGS+=	-Wno-error=format -Wno-error=stringop-truncation
 .endif
 
 .include <bsd.port.mk>

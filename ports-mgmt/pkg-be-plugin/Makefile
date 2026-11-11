@@ -25,6 +25,7 @@ PORTDOCS=	README.md RELEASE-NOTES.md
 
 OPTIONS_DEFINE=	DOCS
 
+IGNORE= FreeBSD specific: ZFS boot environments (libbe)
 post-patch:
 	${REINPLACE_CMD} -e 's#/usr/local#${PREFIX}#' ${WRKSRC}/pkg-be-plugin.8
 

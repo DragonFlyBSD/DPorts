@@ -24,4 +24,5 @@ MAKE_ENV+=		MAKESYSPATH=/usr/src/share/mk \
 
 WRKSRC_SUBDIR=		usr.bin/shar
 
+MAKE_ENV:= ${MAKE_ENV:NMAKESYSPATH=*}
 .include <bsd.port.mk>

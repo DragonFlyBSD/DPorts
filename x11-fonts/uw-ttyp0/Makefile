@@ -25,7 +25,7 @@ HAS_CONFIGURE=	yes
 # Passing --prefix and --pcfdir to the configure script does not work: it is a
 # homebrewed script that relies on features only present in expr(1) from GNU
 # coreutils.
-MAKE_ARGS=	PREFIX=${PREFIX} PCFDIR=${FONTSDIR} GEN_CONS_FREEBSD_VT=1
+MAKE_ARGS=	PREFIX=${PREFIX} PCFDIR=${FONTSDIR}
 
 NO_ARCH=	yes
 

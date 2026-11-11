@@ -27,4 +27,8 @@ PLIST_FILES=	${KMODDIR}/if_rge.ko \
 post-install:
 	${INSTALL_MAN} ${FILESDIR}/rge.4 ${STAGEDIR}/${PREFIX}/share/man/man4
 
+.if 1
+IGNORE=	FreeBSD specific: kernel module
+.endif
+
 .include <bsd.port.mk>

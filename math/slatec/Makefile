@@ -24,7 +24,7 @@ SHLIB_MAJOR=	1
 PLIST_FILES=	lib/libslatec.a lib/libslatec.so lib/libslatec.so.${SHLIB_MAJOR}
 PORTDOCS=	guide toc
 
-LDFLAGS+=	${FFLAGS}
+LDFLAGS+=	${FFLAGS:N-std=*}
 LDADD ?=	-lgfortran -lm
 SRCCONF=	/dev/null
 MAKE_ENV+=	LDADD="${LDADD}" SHLIB_MAJOR="${SHLIB_MAJOR}" \

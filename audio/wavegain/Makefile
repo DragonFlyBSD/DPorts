@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}/WaveGain-${DISTVERSION}
 
 PLIST_FILES=	bin/wavegain
 
+SETENVI= /usr/bin/env -i PATH=${PATH:Q}
 do-build:
 	(cd ${WRKSRC} && ${SETENVI} ${CC} *.c -o ${PORTNAME} \
 	    ${CFLAGS} -DHAVE_CONFIG_H ${LDFLAGS} -lm)

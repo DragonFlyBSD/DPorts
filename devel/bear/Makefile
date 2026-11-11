@@ -16,6 +16,7 @@ GH_PROJECT=	Bear
 
 OPTIONS_DEFINE=	DOCS
 
+LDFLAGS= -L/usr/lib
 do-install:
 	${WRKDIR}/target/release/generate-completions ${WRKDIR}/target/release/completions
 	${SETENV} DESTDIR=${STAGEDIR} PREFIX=${PREFIX} SRCDIR=${WRKDIR}/target/release ${WRKSRC}/scripts/install.sh
