@@ -1,0 +1,11 @@
+--- VTK/Utilities/KWSys/vtksys/SharedForward.h.in.orig
++++ VTK/Utilities/KWSys/vtksys/SharedForward.h.in
+@@ -208,7 +208,7 @@
+ #    define KWSYS_SHARED_FORWARD_LDPATH "LD_LIBRARY_PATH"
+ 
+ /* FreeBSD */
+-#  elif defined(__FreeBSD__)
++#  elif (defined(__FreeBSD__)||defined(__DragonFly__))
+ #    define KWSYS_SHARED_FORWARD_LDD "ldd"
+ #    define KWSYS_SHARED_FORWARD_LDD_N 1
+ #    define KWSYS_SHARED_FORWARD_LDPATH "LD_LIBRARY_PATH"

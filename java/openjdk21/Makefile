@@ -179,7 +179,7 @@ post-build:
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${INSTALLDIR}
-	${CP} -rv ${JDK_IMAGEDIR}/include/freebsd ${JDK_IMAGEDIR}/include/dragonfly
+	@if [ -d ${JDK_IMAGEDIR}/include/freebsd ]; then ${CP} -R ${JDK_IMAGEDIR}/include/freebsd ${JDK_IMAGEDIR}/include/dragonfly; fi
 	@cd ${JDK_IMAGEDIR} && ${COPYTREE_SHARE} . ${STAGEDIR}${INSTALLDIR}
 	@cd ${STAGEDIR}${INSTALLDIR} && \
 		${FIND} bin -type f -exec ${CHMOD} ${BINMODE} {} \;
