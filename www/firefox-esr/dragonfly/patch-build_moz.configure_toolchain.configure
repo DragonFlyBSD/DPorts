@@ -1,0 +1,11 @@
+--- build/moz.configure/toolchain.configure.intermediate	2026-09-08 14:48:27 UTC
++++ build/moz.configure/toolchain.configure
+@@ -2379,7 +2379,7 @@ set_define("_LIBCPP_REMOVE_TRANSITIVE_INCLUDES", True,
+ @depends(target, build_environment)
+ def visibility_flags(target, env):
+     if target.os != "WINNT":
+-        if target.kernel in ("Darwin", "FreeBSD", "OpenBSD"):
++        if target.kernel in ("Darwin", "DragonFly", "FreeBSD", "OpenBSD"):
+             return ("-fvisibility=hidden", "-fvisibility-inlines-hidden")
+         return (
+             "-I%s/system_wrappers" % os.path.join(env.dist),
