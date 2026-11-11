@@ -1,0 +1,8 @@
+--- src/crispy/CMakeLists.txt.orig
++++ src/crispy/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
++if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
+     set(FREEBSD TRUE)
+ endif()
+ 

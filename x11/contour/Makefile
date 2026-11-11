@@ -43,6 +43,7 @@ PORTDOCS=	README.md SECURITY.md
 
 OPTIONS_DEFINE=	DOCS
 
+USE_GCC_VERSION= 14
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == i386

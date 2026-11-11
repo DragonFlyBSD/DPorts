@@ -1,0 +1,11 @@
+--- newt64-src/CMakeLists.txt.orig
++++ newt64-src/CMakeLists.txt
+@@ -22,7 +22,7 @@
+ 	# Linux
+ 	set (NEWT64_INSTALL_PREFIX "")
+ 
+-elseif (${CMAKE_SYSTEM_NAME} MATCHES ".*BSD$")
++elseif (${CMAKE_SYSTEM_NAME} MATCHES "(.*BSD|DragonFly)$")
+ 
+ 	# FreeBSD, NetBSD and OpenBSD
+     set (IS_BSD TRUE)

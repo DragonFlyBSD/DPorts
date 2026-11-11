@@ -21,4 +21,8 @@ GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 USES=		libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^#ifndef __FreeBSD__$$/#if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/src/logf.c ${WRKSRC}/src/formf.c
+
 .include <bsd.port.mk>

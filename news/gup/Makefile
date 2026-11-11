@@ -18,4 +18,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gup ${STAGEDIR}${PREFIX}/libexec
 	${INSTALL_MAN} ${WRKSRC}/gup.1 ${STAGEDIR}${PREFIX}/share/man/man1
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^#ifndef __FreeBSD__$$/#if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/rfc822.h
+
 .include <bsd.port.mk>

@@ -30,4 +30,8 @@ dfly-patch:
 	${REINPLACE_CMD} -e 's@STREQUAL "FreeBSD"@MATCHES "^(FreeBSD|DragonFly)$$"@g'	\
 		${WRKSRC}/CMakeLists.txt
 
+.if 1
+USE_CXXSTD=	c++11
+.endif
+
 .include <bsd.port.post.mk>

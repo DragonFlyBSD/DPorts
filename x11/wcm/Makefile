@@ -38,4 +38,8 @@ WDISPLAYS_RUN_DEPENDS=	wdisplays>0:x11/wdisplays
 WFSHELL_BUILD_DEPENDS=	wf-shell>0:x11/wf-shell
 WFSHELL_MESON_ENABLED=	wf_shell
 
+dfly-patch:
+	${REINPLACE_CMD} -e "s/build_machine.system() != 'freebsd'/build_machine.system() not in ['freebsd', 'dragonfly']/" \
+		${WRKSRC}/src/meson.build
+
 .include <bsd.port.mk>

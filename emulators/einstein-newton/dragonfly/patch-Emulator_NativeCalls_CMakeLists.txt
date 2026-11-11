@@ -1,0 +1,11 @@
+--- Emulator/NativeCalls/CMakeLists.txt.orig
++++ Emulator/NativeCalls/CMakeLists.txt
+@@ -18,7 +18,7 @@
+ 		Emulator/NativeCalls/TObjCBridgeCalls.mm
+ 		Emulator/NativeCalls/TObjCBridgeCalls.h
+ 	)
+-elseif (${CMAKE_SYSTEM_NAME} STREQUAL "Linux" OR ${CMAKE_SYSTEM_NAME} MATCHES ".*BSD$")
++elseif (${CMAKE_SYSTEM_NAME} STREQUAL "Linux" OR ${CMAKE_SYSTEM_NAME} MATCHES "(.*BSD|DragonFly)$")
+ 	list (APPEND common_sources
+ 			Emulator/NativeCalls/NativeCallsDefines.h
+ 			Emulator/NativeCalls/TNativeCalls.cpp

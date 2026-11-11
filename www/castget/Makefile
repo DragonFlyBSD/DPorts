@@ -31,4 +31,5 @@ INSTALL_TARGET=	install-strip
 PLIST_FILES=	bin/castget \
 		share/man/man1/castget.1.gz share/man/man5/castgetrc.5.gz
 
+MAKE_ENV= LC_ALL=en_US.UTF-8
 .include <bsd.port.mk>

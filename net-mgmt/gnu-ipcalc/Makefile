@@ -27,6 +27,7 @@ MAXMINDDB_LIB_DEPENDS=		libmaxminddb.so:net/libmaxminddb
 MAXMINDDB_MESON_ENABLED=	use_maxminddb
 MAXMINDDB_SUB_FILES=		pkg-message
 
+MAKE_ENV= LC_ALL=en_US.UTF-8
 post-patch-MAXMINDDB-on:
 	@${REINPLACE_CMD} -e "s|/usr/share|${LOCALBASE}/share|g" \
 		${WRKSRC}/ipcalc-maxmind.c

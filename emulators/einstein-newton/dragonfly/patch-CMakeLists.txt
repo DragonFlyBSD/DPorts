@@ -1,0 +1,29 @@
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -56,7 +56,7 @@
+ 
+ 	# Linux: nothing to do here
+ 
+-elseif ( ${CMAKE_SYSTEM_NAME} STREQUAL "FreeBSD" OR ${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD" )
++elseif ( ${CMAKE_SYSTEM_NAME} STREQUAL "FreeBSD" OR ${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD" OR ${CMAKE_SYSTEM_NAME} STREQUAL "DragonFly" )
+ 
+     # FreeBSD and NetBSD: nothing to do here
+ 
+@@ -447,7 +447,7 @@
+ 		)
+ 	endif ()
+ 
+-elseif ( ${CMAKE_SYSTEM_NAME} STREQUAL "Linux" OR ${CMAKE_SYSTEM_NAME} MATCHES ".*BSD$" )
++elseif ( ${CMAKE_SYSTEM_NAME} STREQUAL "Linux" OR ${CMAKE_SYSTEM_NAME} MATCHES "(.*BSD|DragonFly)$" )
+ 
+ 	# create the application
+ 	add_executable ( Einstein
+@@ -518,7 +518,7 @@
+ 		fltk::fltk fltk::images fltk::png fltk::z
+ 	)
+ 
+-	if ( ${CMAKE_SYSTEM_NAME} MATCHES ".*BSD$" )
++	if ( ${CMAKE_SYSTEM_NAME} MATCHES "(.*BSD|DragonFly)$" )
+ 		# Under BSD, libffi is in ports (i.e. /usr/local) not base (i.e. /usr)
+ 		find_library ( ffi_lib NAMES ffi )
+ 		find_file ( ffi_incl NAMES ffi.h )
