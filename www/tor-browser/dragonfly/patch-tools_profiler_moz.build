@@ -1,0 +1,11 @@
+--- tools/profiler/moz.build.orig	2026-09-04 00:01:31 UTC
++++ tools/profiler/moz.build
+@@ -118,7 +118,7 @@ elif CONFIG["OS_TARGET"] == "Linux" and CONFIG["TARGET
+             SOURCES += [
+                 "/toolkit/crashreporter/google-breakpad/src/common/linux/breakpad_getcontext.S"
+             ]
+-elif CONFIG["OS_TARGET"] == "FreeBSD" and CONFIG["TARGET_CPU"] in ("aarch64", "x86_64"):
++elif CONFIG["OS_TARGET"] in ("DragonFly", "FreeBSD") and CONFIG["TARGET_CPU"] in ("aarch64", "x86_64"):
+     UNIFIED_SOURCES += [
+         "gecko/nsProfiler.cpp",
+         "lul/AutoObjectMapper.cpp",

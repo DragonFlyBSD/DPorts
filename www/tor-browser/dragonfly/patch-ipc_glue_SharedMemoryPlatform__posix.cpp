@@ -1,6 +1,6 @@
---- ipc/glue/SharedMemoryPlatform_posix.cpp.orig
+--- ipc/glue/SharedMemoryPlatform_posix.cpp.orig	2026-09-04 00:01:13 UTC
 +++ ipc/glue/SharedMemoryPlatform_posix.cpp
-@@ -449,7 +449,8 @@
+@@ -476,7 +476,8 @@ bool Platform::Protect(char* aAddr, size_t aSize, Acce
  }
  
  void* Platform::FindFreeAddressSpace(size_t aSize) {

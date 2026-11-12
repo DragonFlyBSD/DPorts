@@ -1,5 +1,5 @@
 PORTNAME=	tor-browser
-DISTVERSION=	16.0
+DISTVERSION=	16.0.1
 CATEGORIES=	www net security wayland
 TAG_BASE=	62b5df0dd7513b83c15945d9dabe1b47783adf0a
 TAG_TOR=	c27a3e317da477b0d9b0d67ee4fc2a5f9d0eb740
@@ -17,9 +17,9 @@ MASTER_SITES=	TOR \
 		LOCAL/vvd:source5
 MASTER_SITE_SUBDIR=	torbrowser/${DISTVERSION}/:DEFAULT \
 			download/releases/:source3
-DISTNAME=	src-firefox-tor-browser-153.6.0esr-16.0-1-build3
+DISTNAME=	src-firefox-tor-browser-153.7.0esr-16.0-1-build2
 MANUAL=		manual_215922.zip
-NOSCRIPT=	noscript-13.6.37.1984.xpi
+NOSCRIPT=	noscript-13.6.38.1984.xpi
 DISTFILES=	${DISTNAME}.tar.xz \
 		${MANUAL}:source1 \
 		fonts-3--4348e1.tar.zst:source2 \
@@ -98,10 +98,16 @@ MOZ_OPTIONS=	--with-base-browser-version=${DISTVERSION} \
 		--with-distribution-id=org.torproject \
 		--with-branding=browser/branding/tb-release
 
-MOZ_OPTIONS+= --with-clang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang
-MOZ_OPTIONS+= --with-libclang-path=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
-CXXFLAGS= -Wno-multistatement-macros -Wno-class-memaccess
-BINARY_ALIAS= clang=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang clang++=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/clang++ wasm-ld=${LOCALBASE}/llvm${LLVM_DEFAULT}/bin/wasm-ld
+MOZ_OPTIONS+= --with-libclang-path=${LLVM_PREFIX}/lib
+CXXFLAGS= -Wno-multistatement-macros -Wno-class-memaccess -stdlib=libc++ -cxx-isystem ${LLVM_PREFIX}/include/c++/v1
+BUILD_DEPENDS+= ${LOCALBASE}/llvm${LLVM_VERSION}/include/c++/v1/new:devel/libcxx${LLVM_VERSION}
+LDFLAGS= -L${LLVM_PREFIX}/lib -Wl,-rpath,/usr/lib/${DFLY_BASE_CCVER}
+LIB_DEPENDS= libc++.so.1:devel/libcxx${LLVM_VERSION}
+CONFIGURE_ENV+= BINDGEN_CFLAGS="-I${LOCALBASE}/include -stdlib=libc++ -cxx-isystem ${LLVM_PREFIX}/include/c++/v1"
+BINARY_ALIAS= clang=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang clang++=${LOCALBASE}/llvm${LLVM_VERSION}/bin/clang++ wasm-ld=${LOCALBASE}/llvm${LLVM_VERSION}/bin/wasm-ld
+CC= ${LLVM_PREFIX}/bin/clang
+CXX= ${LLVM_PREFIX}/bin/clang++
+CPP= ${LLVM_PREFIX}/bin/clang-cpp
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO}
@@ -183,6 +189,11 @@ post-install:
 		${COPYTREE_SHARE} "*.otf *.ttf" ${STAGEDIR}${PREFIX}/lib/tor-browser/fonts)
 	${INSTALL_DATA} ${DISTDIR}/${NOSCRIPT} \
 		"${STAGEDIR}${PREFIX}/lib/tor-browser/distribution/extensions/{73a6fe31-595d-460b-a920-fcc0f8843232}.xpi"
+
+MOZ_OPTIONS:= ${MOZ_OPTIONS:N--with-wasi-sysroot*} --without-wasm-sandboxed-libraries
+.if ${DFLYVERSION} < 600500
+LDFLAGS+=	-Wl,--no-as-needed -lpthread -Wl,--as-needed
+.endif
 
 dfly-patch:
 	# disable SCTP
