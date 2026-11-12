@@ -2324,6 +2324,7 @@ SUBDIR += rubygem-kaminari-activerecord-rails60
 SUBDIR += rubygem-kaminari-activerecord-rails61
 SUBDIR += rubygem-kaminari-activerecord-rails70
 SUBDIR += rubygem-kaminari-core
+SUBDIR += rubygem-kaminari-core-gitlab
 SUBDIR += rubygem-kaminari-rails-gitlab
 SUBDIR += rubygem-kaminari-rails4
 SUBDIR += rubygem-kaminari-rails5

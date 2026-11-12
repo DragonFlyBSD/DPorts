@@ -1,0 +1,12 @@
+--- src/libical-glib/CMakeLists.txt.orig
++++ src/libical-glib/CMakeLists.txt
+@@ -215,6 +215,9 @@
+   )
+ 
+   add_custom_target(valafile DEPENDS ${vapi_file})
++  if(TARGET gir-girs-ICalGLib_${LIB_VERSION}_gir)
++    add_dependencies(valafile gir-girs-ICalGLib_${LIB_VERSION}_gir)
++  endif()
+ 
+   add_dependencies(vala valafile)
+ 

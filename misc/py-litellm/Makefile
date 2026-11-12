@@ -101,4 +101,5 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_MAN} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
+PROXY_RUN_DEPENDS:= ${PROXY_RUN_DEPENDS:N*misc/py-polars*}
 .include <bsd.port.mk>

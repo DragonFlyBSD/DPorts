@@ -1,5 +1,5 @@
 PORTNAME=	pkg
-DISTVERSION=	2.8.4
+DISTVERSION=	2.9.2
 _PKG_VERSION=	${DISTVERSION}
 CATEGORIES=	ports-mgmt
 
@@ -13,6 +13,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	freebsd
 
 USE_LDCONFIG=	${PREFIX}/lib/compat/pkg
+USE_RC_SUBR=	pkg_triggers
 HAS_CONFIGURE=	yes
 PORTDOCS=	NEWS
 PORTSCOUT=	ignore:1
@@ -30,7 +31,6 @@ OPTIONS_DEFINE=	DOCS
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-docs_pkg.8
 .endif
 
-PORTREVISION= 1
 PROBLEM_FILES= ${WRKSRC}/libpkg/pkg_config.c ${WRKSRC}/src/pkg.conf.sample ${WRKSRC}/docs/pkg-create.8 ${WRKSRC}/docs/pkg-set.8 ${WRKSRC}/docs/pkg-repo.8 ${WRKSRC}/docs/pkg.conf.5 ${WRKSRC}/docs/pkg-version.8 ${WRKSRC}/docs/pkg.8
 CFLAGS= -I/usr/include/priv
 LDFLAGS= -L/usr/lib/priv -R/lib/priv
