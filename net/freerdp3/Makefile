@@ -294,4 +294,9 @@ post-patch-GSM-on:
 		${WRKSRC}/cmake/FindGSM.cmake \
 		${WRKSRC}/libfreerdp/codec/dsp.c
 
+.if ${DFLY_BASE_CCVER} == gcc80
+USE_GCC_VERSION=	${GCC_DEFAULT}
+LDFLAGS+=	-static-libgcc
+.endif
+
 .include <bsd.port.mk>
