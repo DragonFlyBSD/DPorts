@@ -1,5 +1,5 @@
 PORTNAME=	rustup-init
-DISTVERSION=	1.29.1
+DISTVERSION=	1.29.3
 CATEGORIES=	devel
 DISTNAME=	rustup
 
@@ -10,7 +10,8 @@ WWW=		https://rustup.rs/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE-MIT
 
-ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS=		aarch64 amd64
+ONLY_FOR_ARCHS_REASON=	other architectures have no rustup-installable toolchain
 
 LIB_DEPENDS=	libbrotlicommon.so:archivers/brotli \
 		libbrotlidec.so:archivers/brotli \
@@ -27,14 +28,14 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	rust-lang
 GH_PROJECT=	rustup
 
-TESTING_UNSAFE=	yes
-
 .if make(test)
 CARGO_FEATURES=		test
 CARGO_TEST_ARGS=	-- --skip test_bonanza
 .endif
 
 CARGO_ENV=	OPENSSL_NO_VENDOR=1
+
+TESTING_UNSAFE=	yes
 
 PLIST_FILES=	bin/${PORTNAME}
 
