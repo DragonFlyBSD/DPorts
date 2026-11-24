@@ -26,7 +26,6 @@ CPUID_SUFFIX=	-etallen
 PLIST_FILES=	bin/cpuid${CPUID_SUFFIX} \
 		share/man/man1/cpuid${CPUID_SUFFIX}.1.gz
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	${REINPLACE_CMD} 's,CFL=.*,& -pthread,' ${WRKSRC}/Makefile
 

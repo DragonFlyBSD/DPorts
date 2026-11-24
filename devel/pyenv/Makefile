@@ -22,7 +22,6 @@ SHEBANG_FILES=	plugins/python-build/scripts/add_cpython.py \
 REINPLACE_ARGS=	-i ''
 NO_BUILD=	yes
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} ${REINPLACE_ARGS} -e "s|\$${root}/completions|${DATADIR}/completions|g" \
 		${WRKSRC}/libexec/pyenv-init

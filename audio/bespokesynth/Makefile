@@ -71,4 +71,9 @@ CMAKE_ON=	BESPOKE_SYSTEM_JUCE \
 CXXFLAGS+=	-DJUCE_INCLUDE_PNGLIB_CODE=0
 LDFLAGS+=	-lpng
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(LINK_PLATFORM_LINUX) || defined(__FreeBSD__)/& || defined(__DragonFly__)/' \
+		${WRKSRC}/libs/ableton-link/include/ableton/discovery/NetworkByteStreamSerializable.hpp \
+		${WRKSRC}/libs/ableton-link/include/ableton/platforms/Config.hpp
+
 .include <bsd.port.mk>

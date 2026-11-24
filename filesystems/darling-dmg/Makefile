@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	libxml2>0:textproc/libxml2
 LIB_DEPENDS=	libicuuc.so:devel/icu
 
-USES=		cmake fuse gnome ssl
+USES= cmake fuse gnome ssl localbase:ldflags
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 

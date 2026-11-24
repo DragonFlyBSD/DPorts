@@ -41,7 +41,7 @@ LDFLAGS_gcc=	-latomic
 
 BINARY_ALIAS=	git=false
 
-DFLY_UNMAINTAINED= yes
+CMAKE_ARGS= -DHPX_WITH_MODULES_AS_STATIC_LIBRARIES=ON
 post-install:
 	@${RM} ${STAGEDIR}${DATADIR}/LICENSE_1_0.txt
 	@${RMDIR} ${STAGEDIR}${DATADIR}
@@ -52,5 +52,12 @@ pre-test: # build tests with the 'tests' target
 		${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ${_MAKE_JOBS} ${MAKE_ARGS} tests
 
 # 1 test, numa_allocator_test, fails, see https://github.com/STEllAR-GROUP/hpx/issues/6502
+
+dfly-patch:
+	cd ${WRKSRC} && ${GREP} -rlF 'defined(__FreeBSD__)' libs | \
+		${XARGS} ${REINPLACE_CMD} -e 's/defined(__FreeBSD__)/(defined(__FreeBSD__) || defined(__DragonFly__))/g'
+	# No memory counter implementation here either.
+	${REINPLACE_CMD} -e 's/MATCHES "FreeBSD")/MATCHES "FreeBSD|DragonFly")/' \
+		${WRKSRC}/components/performance_counters/memory_counters/CMakeLists.txt
 
 .include <bsd.port.mk>

@@ -32,4 +32,8 @@ do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	@cd ${WRKSRC}/vendor/github.com/OpenPeeDeeP/xdg && \
+		${RLN} xdg_linux.go xdg_dragonfly.go
+
 .include <bsd.port.mk>

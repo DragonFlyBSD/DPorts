@@ -34,12 +34,20 @@ USE_XORG=	x11
 CMAKE_ON=	HEAPTRACK_USE_QT6
 
 CFLAGS= -D__WORDSIZE=64
-IGNORE= unmaintained, please request fixing to users mailing list
+LIB_DIRS= /lib /usr/lib ${LOCALBASE}/lib ${LOCALBASE}/lib/elfutils
+CMAKE_ARGS= -DLIBDW_LIBRARIES=${LOCALBASE}/lib/elfutils/libdw.so
+CXXFLAGS= -I${LOCALBASE}/include/elfutils
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
 		${WRKSRC}/src/track/CMakeLists.txt \
 		${WRKSRC}/tests/auto/CMakeLists.txt \
 		${WRKSRC}/src/track/heaptrack.sh.cmake \
 		${WRKSRC}/CMakeLists.txt
+	# Take the FreeBSD code paths (rtld's unrelocated dynamic tables,
+	# sysctl for the exe and arguments); RSS keeps its DragonFly branch.
+	cd ${WRKSRC}/src/track && ${REINPLACE_CMD} \
+		-e 's/^#ifdef __FreeBSD__$$/#if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#elif defined(__FreeBSD__)$$/#elif defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		heaptrack_env.cpp heaptrack_inject.cpp libheaptrack.cpp
 
 .include <bsd.port.mk>

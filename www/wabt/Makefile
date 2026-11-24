@@ -31,13 +31,11 @@ CMAKE_TESTING_ON=	BUILD_TESTS
 CMAKE_TESTING_TARGET=	${ALL_TARGET}
 
 OPTIONS_DEFINE=		FUZZ_TOOLS
-OPTIONS_DEFAULT_x86_64=	FUZZ_TOOLS # only enable on architectures where /usr/lib/clang/15.0.7/lib/freebsd/libclang_rt.fuzzer-{arch}.a is installed
 OPTIONS_SUB=		yes
 
 FUZZ_TOOLS_DESC=	Build tools that can repro fuzz bugs
 FUZZ_TOOLS_CMAKE_BOOL=	BUILD_FUZZ_TOOLS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-test:
 	@cd ${TEST_WRKSRC} && ./wabt-unittests
 

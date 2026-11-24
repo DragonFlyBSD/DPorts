@@ -18,4 +18,10 @@ GO_MODULE=	github.com/MattiaPun/SubTUI/v2
 
 PLIST_FILES=	bin/SubTUI
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@^//go:build linux || freebsd$$@& || dragonfly@' \
+		${WRKSRC}/internal/integration/media_dbus.go \
+		${WRKSRC}/internal/integration/media_dbus_methods.go \
+		${WRKSRC}/internal/integration/media_dbus_props.go
+
 .include <bsd.port.mk>

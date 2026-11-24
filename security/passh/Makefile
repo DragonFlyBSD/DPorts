@@ -18,7 +18,6 @@ PORTDOCS=	README.md sshpass-broken.md
 
 OPTIONS_DEFINE=	DOCS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 

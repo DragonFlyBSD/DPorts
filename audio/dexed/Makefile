@@ -68,4 +68,15 @@ do-install-VST3-on:
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/vst3
 	${INSTALL_LIB} ${BUILD_WRKSRC}/Source/Dexed_artefacts/Release/VST3/Dexed.vst3/Contents/*/Dexed.so ${STAGEDIR}${PREFIX}/lib/vst3
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined (__FreeBSD__) || defined (__OpenBSD__)/& || defined (__DragonFly__)/' \
+		${WRKSRC}/libs/JUCE/modules/juce_core/system/juce_TargetPlatform.h
+	${REINPLACE_CMD} -e 's/info\.ki_flag & P_TRACED/info.kp_flags \& P_TRACED/' \
+		${WRKSRC}/libs/JUCE/modules/juce_core/native/juce_SystemStats_linux.cpp
+	${REINPLACE_CMD} -e 's/MATCHES "\.\*BSD"/MATCHES ".*BSD|DragonFly"/' \
+		-e 's/Linux|\.\*BSD"/Linux|.*BSD|DragonFly"/' \
+		${WRKSRC}/libs/JUCE/extras/Build/CMake/*.cmake
+	${REINPLACE_CMD} -e 's/|| __linux__ || defined(__FreeBSD__)/& || defined(__DragonFly__)/' \
+		${WRKSRC}/libs/JUCE/modules/juce_audio_processors/format_types/VST3_SDK/pluginterfaces/base/fplatform.h
+
 .include <bsd.port.mk>

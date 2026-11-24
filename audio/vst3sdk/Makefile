@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 BROKEN_i386=	fails to build: static_assert failed due to requirement 'alignof(Steinberg::Vst::ProcessContext) == (0 ? 8U : 0 ? 1U : 1 ? 8U : 8U)
 
-BUILD_DEPENDS= bash:shells/bash cxxfs_gcc8>0:misc/cxxfs_gcc8
+BUILD_DEPENDS=	bash:shells/bash
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
@@ -22,7 +22,7 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libxcb-util.so:x11/xcb-util \
 		libxkbcommon.so:x11/libxkbcommon
 
-USES=		cmake compiler:c++14-lang gnome localbase:ldflags pkgconfig shebangfix xorg
+USES= cmake compiler:c++14-lang gnome localbase:ldflags pkgconfig shebangfix xorg ninja
 USE_GNOME=	gtk30 gtkmm30
 USE_XORG=	ice sm x11 xcb xext
 USE_CXXSTD=	c++20 # otherwise the code in public.sdk/source/vst/hosting/module_linux.cpp uses the default value of __cplusplus=201703 and fails to use the correct #include <filesystem>
@@ -41,8 +41,8 @@ SHEBANG_FILES=	vstgui4/vstgui/uidescription/editing/createuidescdata.sh
 
 PORTSCOUT=	limit:^.*\d\.\d # prevent tags like vstsdk370_31_07_2020_build_116
 
-CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
-LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
+USE_GCC_VERSION= ${GCC_DEFAULT}
+LIB_DEPENDS+= libsqlite3.so:databases/sqlite3
 do-install: # workaround for https://github.com/steinbergmedia/vst3sdk/issues/77
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/${PORTNAME}
 .for dir in base pluginterfaces public.sdk
@@ -58,7 +58,5 @@ dfly-patch:
 		${WRKSRC}/vstgui4/vstgui/lib/vstguibase.h
 	${REINPLACE_CMD} -e 's@//#include <ext@#include <ext@g' \
 		${WRKSRC}/pluginterfaces/base/funknown.cpp
-	${REINPLACE_CMD} -e 's@pthread@& stdc++fs@g' \
-                ${WRKSRC}/cmake/modules/SMTG_PlatformToolset.cmake
 
 .include <bsd.port.mk>

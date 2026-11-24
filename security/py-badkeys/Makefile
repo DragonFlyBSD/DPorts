@@ -28,5 +28,4 @@ URLLOOKUP_DESC=	Lookup keys also in URLs
 SSH_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}paramiko>0:security/py-paramiko@${PY_FLAVOR}
 URLLOOKUP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}binary_file_search>0:devel/py-binary_file_search@${PY_FLAVOR}
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

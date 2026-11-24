@@ -25,7 +25,6 @@ CMAKE_ARGS=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # CMake 4.5 compatibility, see ht
 
 TEST_WRKSRC=	${BUILD_WRKSRC}/tests
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-test: # run tests, all tests pass with 3313 assertions in 73 test cases, see https://github.com/boschmitt/tweedledum/issues/177
 	@cd ${TEST_WRKSRC} && ./run_tests
 

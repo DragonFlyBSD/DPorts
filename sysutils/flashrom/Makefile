@@ -47,7 +47,6 @@ FTDI_LIB_DEPENDS=	libftdi1.so:devel/libftdi1
 MANPAGES_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
 MANPAGES_MESON_ENABLED=	man-pages
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.rst ${STAGEDIR}${DOCSDIR}

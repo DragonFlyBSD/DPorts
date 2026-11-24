@@ -1,0 +1,11 @@
+--- deps/exqlite/Makefile.orig
++++ deps/exqlite/Makefile
+@@ -72,7 +72,7 @@
+ 		LDFLAGS += -fPIC -shared
+ 		LIB_NAME = $(PREFIX)/sqlite3_nif.dll
+ 	endif
+-	ifeq ($(KERNEL_NAME), $(filter $(KERNEL_NAME),OpenBSD FreeBSD NetBSD))
++	ifeq ($(KERNEL_NAME), $(filter $(KERNEL_NAME),DragonFly OpenBSD FreeBSD NetBSD))
+ 		CFLAGS += -fPIC
+ 		LDFLAGS += -fPIC -shared
+ 	endif

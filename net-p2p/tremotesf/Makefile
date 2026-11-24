@@ -28,5 +28,5 @@ CMAKE_ARGS=		-DTREMOTESF_WITH_HTTPLIB=system
 EXTRACT_AFTER_ARGS=	--exclude ${DISTNAME}/src/3rdparty/cpp-httplib \
 			--no-same-owner --no-same-permissions
 
-DFLY_UNMAINTAINED= yes
+USE_GCC_VERSION= 14
 .include <bsd.port.mk>

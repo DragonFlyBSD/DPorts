@@ -74,7 +74,6 @@ GUILE3_USES=	guile:3.0
 NLS_USES=	gettext-runtime
 
 CXXFLAGS= -Wno-sequence-point -Wno-suggest-override
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${SED} -e 's|%%FONTDIR%%|${WRKDIR}/fontconfig/cache/|' \
 		${FILESDIR}/fonts.conf > ${WRKDIR}/.fonts.conf

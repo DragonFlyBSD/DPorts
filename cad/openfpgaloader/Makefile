@@ -25,5 +25,4 @@ DATADIR=	${PREFIX}/share/openFPGALoader
 CPE_VENDOR=	trabucayre
 
 CXXFLAGS= -DETIME=ETIMEDOUT
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

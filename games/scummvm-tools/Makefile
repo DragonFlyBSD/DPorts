@@ -44,7 +44,6 @@ WXGTK_USE=	WX=3.2
 WXGTK_VARS=	WX_COMPS=wx WX_CONFIG_ARGS=absolute
 WXGTK_CONFIGURE_ENABLE=	wxwidgets
 
-DFLY_UNMAINTAINED= yes
 pre-patch:
 	@${REINPLACE_CMD} -e 's|^\(_wxconfig=\).*|\1${WX_CONFIG:C/.*\///}|' \
 		${WRKSRC}/configure

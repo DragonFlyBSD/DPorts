@@ -1,22 +1,43 @@
---- src/libfaketime.c.intermediate	2019-05-27 19:15:24 UTC
+--- src/libfaketime.c.orig
 +++ src/libfaketime.c
-@@ -69,7 +69,7 @@
- extern char *__progname;
- #ifdef __sun
- #include "sunos_endian.h"
--#elif defined(__FreeBSD__)
-+#elif defined(__FreeBSD__) || defined(__DragonFly__)
- #include <sys/endian.h>
- #else
- #include <endian.h>
-@@ -105,6 +105,10 @@ typedef int clockid_t;
- #define CLOCK_MONOTONIC_RAW (CLOCK_MONOTONIC + 1)
- #endif
+@@ -25,6 +25,12 @@
+ 
+ #define _LARGEFILE64_SOURCE 1   /* required for stat64 on musl */
  
 +#ifdef __DragonFly__
-+#define stat64 stat
++/* Other headers pull in <sys/time.h>; rename its gettimeofday() first. */
++#define gettimeofday bsd_gettimeofday
++#include <sys/time.h>
++#undef gettimeofday
++#endif
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <stdint.h>
+@@ -41,13 +47,13 @@
+ #endif
+ #endif
+ #include <time.h>
+-#if defined (MACOS_DYLD_INTERPOSE) || defined (__FreeBSD__)
++#if defined (MACOS_DYLD_INTERPOSE) || defined (__FreeBSD__) || defined (__DragonFly__)
+ #include <pthread.h>
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #define gettimeofday bsd_gettimeofday
+ #endif
+ #include <sys/time.h>
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #undef gettimeofday
+ #endif
+ #include <utime.h>
+@@ -155,6 +161,10 @@
+ /* some systems lack raw clock */
+ #ifndef CLOCK_MONOTONIC_RAW
+ #define CLOCK_MONOTONIC_RAW (CLOCK_MONOTONIC + 1)
 +#endif
 +
- /*
-  * Per thread variable, which we turn on inside real_* calls to avoid modifying
-  * time multiple times of for the whole process to prevent faking time
++#ifdef __DragonFly__
++#define stat64 stat
+ #endif
+ 
+ /* On some platforms (e.g. FreeBSD 15) CLOCK_BOOTTIME is an alias of another clock.

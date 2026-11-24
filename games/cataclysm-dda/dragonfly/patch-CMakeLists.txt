@@ -1,11 +1,21 @@
---- CMakeLists.txt.orig	2021-07-03 05:00:06 UTC
+--- CMakeLists.txt.orig
 +++ CMakeLists.txt
-@@ -97,7 +97,7 @@ else ()
+@@ -80,7 +80,8 @@
+ 
+ if ("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD"
+     OR "${CMAKE_SYSTEM_NAME}" MATCHES "NetBSD"
+-    OR "${CMAKE_SYSTEM_NAME}" MATCHES "OpenBSD")
++    OR "${CMAKE_SYSTEM_NAME}" MATCHES "OpenBSD"
++    OR "${CMAKE_SYSTEM_NAME}" MATCHES "DragonFly")
+     set(_OS_BSD_ 1)
  endif ()
  
- # System specific actions
--if (${CMAKE_SYSTEM_NAME} MATCHES Linux OR ${CMAKE_SYSTEM_NAME} MATCHES FreeBSD)
-+if (${CMAKE_SYSTEM_NAME} MATCHES Linux OR ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD|DragonFly")
-     if (NOT DATA_PREFIX)
-         set(DATA_PREFIX ${CMAKE_INSTALL_PREFIX}/share/cataclysm-dda)
-     endif ()
+@@ -177,7 +178,7 @@
+     add_definitions(-DRELEASE)
+     # Use CMAKE_INSTALL_PREFIX as storage of data,gfx, etc.. Useful only on *nix OS.
+     if(USE_PREFIX_DATA_DIR)
+-        if ("${CMAKE_SYSTEM_NAME}" MATCHES "(Linux|FreeBSD|Darwin)")
++        if ("${CMAKE_SYSTEM_NAME}" MATCHES "(Linux|FreeBSD|DragonFly|Darwin)")
+             set(CMAKE_INSTALL_DATAROOTDIR "${CMAKE_INSTALL_PREFIX}/share/cataclysm-dda")
+             add_definitions(-DPREFIX=${CMAKE_INSTALL_PREFIX})
+             configure_file(

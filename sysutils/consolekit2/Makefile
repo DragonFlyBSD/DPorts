@@ -55,13 +55,11 @@ CONFIGURE_ARGS=	--with-pid-file=/var/run/${PORTNAME}.pid \
 		--without-systemdsystemunitdir
 INSTALL_TARGET=	install-strip
 
-.if 0 #${OPSYS} == "FreeBSD"
 post-install:
 .for script in ck-system-hibernate ck-system-hybridsleep \
 	ck-system-restart ck-system-stop ck-system-suspend
 	cd ${STAGEDIR}${PREFIX}/lib/ConsoleKit/scripts && \
 		${MV} ${script} ${script}.sample
 .endfor
-.endif
 
 .include <bsd.port.mk>

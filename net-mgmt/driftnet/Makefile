@@ -44,5 +44,7 @@ dfly-patch:
 			 -e 's@ifdef \(__FreeBSD__\)@if defined(\1) || defined(__DragonFly__)@' \
 		${WRKSRC}/src/pid.c ${WRKSRC}/src/compat/compat.h \
 		${WRKSRC}/src/network/layer2.c ${WRKSRC}/src/network/layer3.c
+	${REINPLACE_CMD} -e 's@__bswap_32(@bswap_32(@g' \
+		${WRKSRC}/src/media/image.c
 
 .include <bsd.port.mk>

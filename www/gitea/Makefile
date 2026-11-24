@@ -1,7 +1,6 @@
 PORTNAME=	gitea
 DISTVERSIONPREFIX=	v
-DISTVERSION=	28.3.0
-PORTREVISION=	1
+DISTVERSION=	28.4.0
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/go-gitea/gitea/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/ \
 		https://dl.gitea.io/gitea/${DISTVERSION}/
@@ -43,7 +42,7 @@ PAM_DESC=	Enable support for PAM
 BINDATA_VARS=		GO_TAGS+=bindata
 GIT_LFS_RUN_DEPENDS=	git-lfs:devel/git-lfs
 PAM_VARS=		GO_TAGS+=pam
-SQLITE_VARS=		GO_TAGS+="sqlite sqlite_unlock_notify"
+SQLITE_VARS= GO_TAGS+="sqlite sqlite_unlock_notify sqlite_mattn"
 
 .include <bsd.port.options.mk>
 

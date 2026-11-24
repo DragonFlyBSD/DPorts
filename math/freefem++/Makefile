@@ -69,7 +69,6 @@ DATADIR=	${PREFIX}/share/FreeFEM/${PORTVERSION}
 
 TEST_TARGET=	check # 1 test fails, see https://github.com/FreeFem/FreeFem-sources/issues/281
 
-IGNORE= unmaintained, please request fixing to users mailing list
 pre-configure:
 	@${REINPLACE_CMD} -e 's|-llapack|${LAPACKLIB}|' ${WRKSRC}/configure.ac
 

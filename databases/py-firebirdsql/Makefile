@@ -18,5 +18,4 @@ NO_ARCH=	yes
 USES=		python
 USE_PYTHON=	autoplist pep517
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

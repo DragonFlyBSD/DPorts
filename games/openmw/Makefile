@@ -60,7 +60,7 @@ LUAJIT_CMAKE_BOOL=	USE_LUAJIT
 PORTDOCS=	*
 
 OPTIONS_EXCLUDE= DOCS
-IGNORE= unmaintained, please request fixing to users mailing list
+USE_GCC_VERSION= 14
 .include <bsd.port.pre.mk>
 
 # The following is actually meant for lld 15.0 and later, but the ports
@@ -83,6 +83,12 @@ post-install:
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@ki_flag@kp_flags@' \
+		-e 's/defined(__FreeBSD__)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#ifndef __FreeBSD__$$/#if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
 		${WRKSRC}/components/crashcatcher/crashcatcher.cpp
+	${REINPLACE_CMD} -e 's/defined(__FreeBSD__) || defined(__FreeBSD_kernel__)/& || defined(__DragonFly__)/' \
+		${WRKSRC}/components/files/fixedpath.hpp \
+		${WRKSRC}/components/files/linuxpath.hpp \
+		${WRKSRC}/components/files/linuxpath.cpp
 
 .include <bsd.port.post.mk>

@@ -33,4 +33,10 @@ CGO_ENABLED=	0
 
 PLIST_FILES=	"@shell bin/elvish"
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|^//go:build freebsd$$|//go:build freebsd \|\| dragonfly|' \
+		${WRKSRC}/pkg/mods/unix/rlim_t_int64.go
+	${REINPLACE_CMD} -e 's|^//go:build unix && !freebsd$$|//go:build unix \&\& !freebsd \&\& !dragonfly|' \
+		${WRKSRC}/pkg/mods/unix/rlim_t_uint64.go
+
 .include <bsd.port.mk>

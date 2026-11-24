@@ -21,5 +21,4 @@ PLIST_FILES=	bin/dgen \
 		share/man/man1/dgen_tobin.1.gz \
 		share/man/man5/dgenrc.5.gz
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

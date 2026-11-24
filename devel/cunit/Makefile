@@ -31,7 +31,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 EXAMPLES_CONFIGURE_ENABLE=	examples
 
-DFLY_UNMAINTAINED= yes
+CFLAGS= -DNCURSES_INTERNALS
 post-patch:
 	@${REINPLACE_CMD} -e 's|/doc/@PACKAGE@|/share/doc/@PACKAGE@|g' ${WRKSRC}/doc/Makefile.am ${WRKSRC}/doc/headers/Makefile.am
 	@${REINPLACE_CMD} -e 's|/@PACKAGE@/Examples/|/examples/@PACKAGE@/|g' ${WRKSRC}/Examples/*/Makefile.am

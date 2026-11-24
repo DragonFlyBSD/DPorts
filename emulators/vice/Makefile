@@ -82,7 +82,6 @@ ETHERNET_RUN_DEPENDS=		${LOCALBASE}/include/pcap.h:net/libpcap
 ETHERNET_CONFIGURE_ENABLE=	ethernet
 
 BUILD_DEPENDS+= gsed:textproc/gsed
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if !defined(BUILDING_INDEX)

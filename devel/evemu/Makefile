@@ -39,7 +39,6 @@ REINPLACE_ARGS=	-i ''
 TEST_TARGET=	check
 TEST_WRKSRC=	${WRKSRC}/test
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	${REINPLACE_CMD} -e 's|program_invocation_short_name|getprogname()|' \
 		${WRKSRC}/tools/evemu-event.c ${WRKSRC}/tools/evemu-play.c \

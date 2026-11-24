@@ -45,6 +45,7 @@ PLIST_SUB=	PORTVERSION="${PORTVERSION}"
 OPTIONS_DEFINE=	DOCS
 OPTIONS_SUB=	yes
 
+CXXFLAGS= -Wno-error=deprecated-declarations
 pre-patch:
 	${FIND} ${WRKSRC} -type f -not -name '*.png' \
 		-exec dos2unix {} > /dev/null 2>&1 \;

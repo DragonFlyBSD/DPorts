@@ -22,7 +22,6 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zita-audiotools>0:audio/py-zita-audiotools@$
 USES=		localbase python tar:bz2
 USE_PYTHON=	autoplist distutils
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/zita_jacktools/*.so
 

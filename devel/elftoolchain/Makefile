@@ -11,7 +11,8 @@ LICENSE=	BSD3CLAUSE
 
 USES=		tar:bz2
 
-CFLAGS+=	-Wno-error=implicit-fallthrough -Wno-error=shift-negative-value
+CFLAGS+=	-Wno-error=implicit-fallthrough -Wno-error=shift-negative-value \
+		-Wno-error=maybe-uninitialized
 
 MAKE_ARGS=	WITH_TESTS="no" NOPIC=yes NOPROFILE=yes
 MAKE_ARGS+=	BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man/man
@@ -104,6 +105,11 @@ post-patch:
 	${REINPLACE_CMD} -e '/PROG=/s@strings@et-&@g' -e '/MAN1=/s@strings@et-&@g' \
 		${WRKSRC}/strings/Makefile
 	${LN} -sv strings.c ${WRKSRC}/strings/et-strings.c
+
+# The stage tree has share/man only; the man pages install under man/.
+pre-install:
+	${MKDIR} ${STAGEDIR}${PREFIX}/man/man1 ${STAGEDIR}${PREFIX}/man/man3 \
+		${STAGEDIR}${PREFIX}/man/man5
 
 post-install:
 	${RM} -rf ${STAGEDIR}${PREFIX}/include

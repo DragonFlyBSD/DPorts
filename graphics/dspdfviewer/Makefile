@@ -32,7 +32,6 @@ PLIST_FILES=	bin/dspdfviewer \
 		share/applications/dspdfviewer.desktop \
 		share/man/man1/dspdfviewer.1.gz
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == clang

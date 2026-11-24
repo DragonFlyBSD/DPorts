@@ -88,7 +88,6 @@ LUAJIT_USES_OFF=	lua:51+
 LUAJIT_CMAKE_OFF=	-DENABLE_LUAJIT=OFF
 
 LDFLAGS= -lm
-DFLY_UNMAINTAINED= yes
 post-install:
 	@${MKDIR} \
 		${STAGEDIR}/var/log/rspamd \

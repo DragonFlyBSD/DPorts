@@ -44,4 +44,5 @@ OPTIONS_SUB=		yes
 PANGO_USE=		GNOME=pango
 PANGO_MESON_TRUE=	pixdecor
 
+CXXFLAGS= -include ctime
 .include <bsd.port.mk>

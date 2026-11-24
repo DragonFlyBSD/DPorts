@@ -45,7 +45,6 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}/Source/QtDialog
 
 DISTINFO_FILE=	${.CURDIR:H}/cmake-core/distinfo
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@(${FIND} ${WRKSRC}/Modules -name "*.cmake" -print0; \
 		${FIND} ${WRKSRC}/Tests -name "CMakeLists.txt" -print0 ) | \

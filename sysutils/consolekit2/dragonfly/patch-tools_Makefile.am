@@ -1,0 +1,14 @@
+--- tools/Makefile.am.orig
++++ tools/Makefile.am
+@@ -14,6 +14,11 @@
+ SUBDIRS += freebsd
+ endif
+ 
++# DragonFly uses the FreeBSD system scripts (shutdown, acpiconf)
++if CK_COMPILE_DRAGONFLY
++SUBDIRS += freebsd
++endif
++
+ if CK_COMPILE_NETBSD
+ SUBDIRS += netbsd
+ endif

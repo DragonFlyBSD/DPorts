@@ -35,7 +35,6 @@ GH_ACCOUNT=	jaelpark
 GH_PROJECT=	${PORTNAME}wm
 GH_TAGNAME=	b5bc725
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr,${PREFIX},' \
 		${WRKSRC}/src/config.cpp ${WRKSRC}/src/main.cpp

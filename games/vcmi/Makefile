@@ -50,7 +50,6 @@ QT_CMAKE_OFF=	-DENABLE_LAUNCHER:BOOL=OFF -DENABLE_EDITOR:BOOL=OFF
 VIDEO_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 VIDEO_CMAKE_OFF=	-DENABLE_VIDEO:BOOL=OFF
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e '/QT NAMES/s, Qt6,,' ${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e 's,^target_link_libraries(vcmieditor vcmi,& pthread,' \

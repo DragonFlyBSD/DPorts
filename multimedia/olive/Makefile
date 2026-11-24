@@ -46,5 +46,4 @@ PORTSCOUT=	limit:^.*[1-9]\..* # prevent tags like 20181223
 
 CONFLICTS_BUILD=	opentimelineio # fails to build with the opentimelineio optional dependency, see https://github.com/olive-editor/olive/issues/2201
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

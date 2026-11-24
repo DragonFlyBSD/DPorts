@@ -16,4 +16,5 @@ OPTIONS_DEFINE=		DOCS MANPAGES
 OPTIONS_DEFAULT=	DOCS MANPAGES
 OPTIONS_SUB=            yes
 
+CFLAGS= -Wno-error=stringop-truncation
 .include <bsd.port.mk>

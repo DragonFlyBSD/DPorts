@@ -21,7 +21,6 @@ PLIST_FILES=	bin/${PORTNAME} share/applications/${PORTNAME}.desktop \
 
 PORTSCOUT=	skipv:unstable
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e '/PLATFORM =/s,Linux,${OPSYS},' \
 		${PATCH_WRKSRC}/application.pro

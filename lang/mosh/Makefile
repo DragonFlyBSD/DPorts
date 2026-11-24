@@ -18,7 +18,7 @@ NOT_FOR_ARCHS_REASON=	gcconfig.h: the collector has not been ported to this mach
 LIB_DEPENDS=	libgmp.so:math/gmp \
 		libonig.so:devel/oniguruma
 
-USES=		gmake ssl
+USES= gmake ssl ncurses
 
 CONFLICTS_INSTALL=	mosh-1.[0-9].*
 
@@ -53,5 +53,7 @@ dfly-patch:
 			 -e 's@\(ptracestub_common\)=true@\1=false@g' \
 			 -e 's@HAVE_PTRACE_COMMON@&___@g' \
 		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's@-DMOSHEXPORT= $$< $$(CURSES_LIB)@-DMOSHEXPORT= -I${NCURSESINC} $$< -L${NCURSESLIB} $$(CURSES_LIB)@' \
+		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>

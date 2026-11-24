@@ -25,5 +25,4 @@ PLIST_FILES=	bin/scrypt \
 		lib/libscrypt-kdf.so.1.0.0 \
 		share/man/man1/scrypt.1.gz
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

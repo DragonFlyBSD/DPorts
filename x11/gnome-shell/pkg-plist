@@ -1,10 +1,12 @@
 bin/gnome-extensions-app
 bin/gnome-shell
 bin/gnome-shell-test-tool
+lib/gnome-shell/Gvc-1.0.typelib
 lib/gnome-shell/Shell-15.typelib
 lib/gnome-shell/St-15.typelib
 lib/gnome-shell/girepository-1.0/Shew-0.typelib
 lib/gnome-shell/libgnome-shell-menu.so
+lib/gnome-shell/libgvc.so
 lib/gnome-shell/libshell-15.so
 lib/gnome-shell/libshew-0.so
 lib/gnome-shell/libst-15.so
@@ -32,6 +34,7 @@ share/dbus-1/services/org.gnome.Shell.Screencast.service
 share/gnome-control-center/keybindings/50-gnome-shell-launchers.xml
 share/gnome-control-center/keybindings/50-gnome-shell-screenshots.xml
 share/gnome-control-center/keybindings/50-gnome-shell-system.xml
+%%DATADIR%%/Gvc-1.0.gir
 %%DATADIR%%/Shell-15.gir
 %%DATADIR%%/St-15.gir
 %%DATADIR%%/gir-1.0/Shew-0.gir

@@ -61,7 +61,6 @@ DYNAMIC_ARCH_CMAKE_BOOL=DYNAMIC_ARCH DYNAMIC_OLDER
 OPENMP_CMAKE_BOOL=	USE_OPENMP
 OPENMP_CMAKE_ON=	-DOpenMP_omp_LIBRARY="/usr/lib/libomp.so"
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc64

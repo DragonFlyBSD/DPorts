@@ -59,7 +59,6 @@ XFT_USE=		XORG=xft
 
 CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Prima/Prima.so
 	@${REINPLACE_CMD} -e 's|${STAGEDIR}||' ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/Prima/Config.pm

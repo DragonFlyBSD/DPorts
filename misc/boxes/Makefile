@@ -12,7 +12,7 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	libpcre2-32.so:devel/pcre2 \
 		libunistring.so:devel/libunistring
 
-USES=		bison gmake
+USES= bison gmake ncurses
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	ascii-boxes
@@ -33,7 +33,6 @@ PORTDOCS=	README.md
 
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${RM} ${WRKSRC}/src/${PORTNAME}.h ${WRKSRC}/doc/${PORTNAME}.1
 

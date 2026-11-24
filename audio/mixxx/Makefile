@@ -93,7 +93,6 @@ WAVPACK_CMAKE_BOOL=	WAVPACK
 
 SUB_FILES=	pkg-message
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e "s|^Exec=.*|Exec=mixxx|" \
 		${WRKSRC}/res/linux/org.mixxx.Mixxx.desktop

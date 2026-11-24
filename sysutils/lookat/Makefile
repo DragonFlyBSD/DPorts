@@ -20,7 +20,7 @@ PORTEXAMPLES=	blue_config.cfg
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-DFLY_UNMAINTAINED= yes
+CFLAGS= -DNCURSES_INTERNALS
 post-patch:
 	@${REINPLACE_CMD} 's|/etc/lookat.conf|${PREFIX}&|g' \
 		${WRKSRC}/${PORTNAME}.1

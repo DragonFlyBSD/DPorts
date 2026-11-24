@@ -53,7 +53,6 @@ BRAIN_CFLAGS=		-DWITH_BRAIN -Ideps/git/xxHash
 
 MAKE_ARGS+= CXXLIB="-lstdc++"
 LDFLAGS= -L${LOCALBASE}/lib
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == aarch64

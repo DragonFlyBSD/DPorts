@@ -66,5 +66,4 @@ LUA_CONFIGURE_ENV=			LUA_CFLAGS="-I${LUA_INCDIR}" \
 POSTPROCESSING_CONFIGURE_ENABLE=	post-processing
 POSTPROCESSING_LIB_DEPENDS=		libavcodec.so:multimedia/ffmpeg
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

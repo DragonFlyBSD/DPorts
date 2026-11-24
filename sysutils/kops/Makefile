@@ -30,4 +30,10 @@ pre-build:
 		${LOCALBASE}/bin/go-bindata -o upup/models/bindata.go -pkg models \
 		-prefix upup/models/ upup/models/...
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|^\(//go:build .*freebsd.*\)$$|\1 \|\| dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/moby/term/termios_bsd.go
+	${REINPLACE_CMD} -e 's|^\(//go:build .*!freebsd.*\)$$|\1 \&\& !dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/moby/term/termios_nonbsd.go
+
 .include <bsd.port.mk>

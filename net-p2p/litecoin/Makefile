@@ -83,7 +83,6 @@ MAKE_ENV+=	V=1
 PLIST_FILES?=	bin/litecoin-qt share/man/man1/litecoin-qt.1.gz \
 		share/applications/litecoin-qt.desktop share/pixmaps/litecoin.png
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MWALLET_BDBMODERN}

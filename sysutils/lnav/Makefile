@@ -26,7 +26,6 @@ PLIST_FILES=	bin/lnav \
 		share/man/man1/lnav.1.gz
 
 USES+= libarchive
-DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/lnav ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/lnav.1 ${STAGEDIR}${PREFIX}/share/man/man1

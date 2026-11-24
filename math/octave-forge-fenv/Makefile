@@ -17,5 +17,4 @@ USE_GCC=	yes
 
 OCTAVE_SRC=		${OCTAVE_PKGNAME}
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

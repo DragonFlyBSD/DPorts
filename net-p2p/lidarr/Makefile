@@ -40,7 +40,6 @@ WRKSRC=		${WRKDIR}/Lidarr
 USERS=		${PORTNAME}
 GROUPS=		${PORTNAME}
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 post-extract:

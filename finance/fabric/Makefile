@@ -150,7 +150,6 @@ PROGS=		configtxgen \
 GO_TARGET=	${PROGS:S/^/.\/cmd\//}
 PLIST_FILES=	${PROGS:S/^/bin\//}
 
-DFLY_UNMAINTAINED= yes
 post-extract:
 	@${RM} -r ${WRKSRC}/vendor/github.com/containerd/errdefs/pkg
 	@${RLN} ${WRKSRC_containerd_errdefs_pkg}/pkg ${WRKSRC}/vendor/github.com/containerd/errdefs/pkg

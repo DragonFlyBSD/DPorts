@@ -51,7 +51,6 @@ USE_LDCONFIG=	yes
 
 PLIST_FILES=	lib/libsignal_node.so
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 post-extract:
@@ -77,4 +76,5 @@ create-caches-tarball:
 	cd ${WRKDIR} && \
 		${TAR} czf libsignal-node-${DISTVERSION}-npm-cache.tar.gz .npm
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

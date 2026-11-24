@@ -27,4 +27,10 @@ post-patch:
 	@${MKDIR} ${WRKSRC}/vendor && ${CP} ${FILESDIR}/modules.txt ${WRKSRC}/vendor
 
 .include "Makefile.gomod"
+dfly-patch:
+	${REINPLACE_CMD} -e 's@^//go:build darwin || linux || freebsd$$@& || dragonfly@' \
+		${WRKSRC}/diagnostic/network/collector_unix.go
+	${SED} -e 's@^//go:build freebsd$$@//go:build dragonfly@' \
+		${WRKSRC}/diagnostic/system_collector_freebsd.go > ${WRKSRC}/diagnostic/system_collector_dragonfly.go
+
 .include <bsd.port.mk>

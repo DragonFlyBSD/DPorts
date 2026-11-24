@@ -10,7 +10,7 @@ LICENSE=	GPLv2+
 
 LIB_DEPENDS=	liblzo2.so:archivers/lzo2 libzstd.so:archivers/zstd
 
-USES=		cmake llvm:min=17 pkgconfig
+USES= cmake llvm:min=17 pkgconfig ninja
 USE_GITHUB=	yes
 GH_ACCOUNT=	maharmstone
 

@@ -24,7 +24,6 @@ GH_ACCOUNT=	boxdot
 PLIST_FILES=	bin/gurk \
 		${DATADIR}/README.md
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 # avoid address space exhaustion on armv7

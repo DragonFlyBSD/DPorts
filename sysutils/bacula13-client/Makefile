@@ -11,5 +11,4 @@ MASTERDIR=	${.CURDIR}/../../sysutils/bacula13-server
 
 OPTIONS_DEFINE=	NLS PYTHON IPV6
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include "${MASTERDIR}/Makefile"

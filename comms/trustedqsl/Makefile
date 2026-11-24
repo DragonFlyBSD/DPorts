@@ -38,7 +38,6 @@ GEN_CRQ_CMAKE_BOOL=	BUILD_GENCRQ
 LOAD_CERT_CMAKE_BOOL=	BUILD_LOADCERT
 STATION_LOC_CMAKE_BOOL=	BUILD_STATIONLOC
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${SED} -e 's:%%PREFIX%%:${PREFIX}:g' \
 		${FILESDIR}/pkg-message > ${WRKDIR}/pkg-message
@@ -54,7 +53,6 @@ post-install-STATION_LOC-on:
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@ STREQUAL "\(FreeBSD\)"@ MATCHES "\1|DragonFly"@g'	\
-		${WRKSRC}/apps/CMakeLists.txt				\
-		${WRKSRC}/cmakemodules/FindBDB.cmake
+		${WRKSRC}/apps/CMakeLists.txt
 
 .include <bsd.port.mk>

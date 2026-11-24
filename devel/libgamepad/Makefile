@@ -12,5 +12,4 @@ LICENSE=	BSD2CLAUSE
 USE_GITHUB=	yes
 GH_ACCOUNT=	outpaddling
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

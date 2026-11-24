@@ -1,5 +1,5 @@
 PORTNAME=	radare2
-DISTVERSION=	6.2.2
+DISTVERSION=	6.2.6
 CATEGORIES=	devel
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -22,8 +22,8 @@ PATHFIX_MAKEFILEIN=	Makefile
 USE_GITHUB=	yes
 GH_ACCOUNT=	radareorg
 GH_TUPLE=	\
-		radareorg:sdb:2.5.2:sdb/subprojects/sdb \
-		quickjs-ng:quickjs:9d15fb60b67c45fd0de413bb49e48f8dacebac16:qjs/subprojects/qjs \
+		radareorg:sdb:2.5.8:sdb/subprojects/sdb \
+		quickjs-ng:quickjs:b51e5278439b2fa0510fbb1f3b3dff9f0064d5d7:qjs/subprojects/qjs \
 		zyantific:zydis:v4.1.0:zydis/subprojects/zydis
 
 SHEBANG_FILES=	sys/clang-format-radare2
@@ -46,7 +46,7 @@ OPTIONS_DEFINE=	DOCS
 # current directory, including .bak file left by ${REINPLACE_CMD}
 # called by pathfix.
 MAKE_JOBS_UNSAFE= yes
-IGNORE= unmaintained, please request fixing to users mailing list
+LDFLAGS= -lexecinfo -lkvm
 post-patch:
 	${CP} ${WRKSRC}/libr/debug/p/native/linux/reg/linux-ppc.h \
 		${WRKSRC}/libr/debug/p/native/reg/kfbsd-ppc.h

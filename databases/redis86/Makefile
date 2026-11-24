@@ -25,7 +25,7 @@ MAKE_ENV=	OPTIMIZATION= \
 
 CONFLICTS_INSTALL=	redis-devel redis[0-9]*
 
-BINARY_ALIAS=	gmd5sum=md5sum
+BINARY_ALIAS= md5sum=md5
 #PIE_UNSAFE=	ld: error: relocation R_X86_64_32 cannot be used against local \
 #		symbol; recompile with -fPIC
 PORTSCOUT=	limit:^8\.6\.
@@ -67,6 +67,7 @@ REDIS_DBDIR?=	/var/db/redis
 REDIS_RUNDIR?=	/var/run/redis
 REDIS_LOGDIR?=	/var/log/redis
 
+MAKE_ENV+= OPENSSL_PREFIX=${LOCALBASE}
 post-patch-JEMALLOC-on:
 	@${REINPLACE_CMD} '78s!Linux!FreeBSD!g' ${WRKSRC}/src/Makefile
 

@@ -45,7 +45,6 @@ VLC_LIB_DEPENDS=	libvlc.so:multimedia/vlc
 VLC_VARS=		EMAV+=vlc
 WEBP_LIB_DEPENDS=	libwebp.so:graphics/webp
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if !empty(EMAV)

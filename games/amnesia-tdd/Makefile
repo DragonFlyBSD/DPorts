@@ -33,8 +33,11 @@ CMAKE_SOURCE_PATH=	${WRKSRC}/amnesia/src
 
 SUB_FILES=	pkg-message
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/${PORTNAME}
+
+dfly-patch:
+	cd ${WRKSRC} && ${GREP} -rlE --include='*.h' --include='*.cpp' 'defined ?\(__FreeBSD__\)' . | \
+		${XARGS} ${REINPLACE_CMD} -E -e 's/defined ?\(__FreeBSD__\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g'
 
 .include <bsd.port.mk>

@@ -23,7 +23,10 @@ LIB_DEPENDS=	libdrm.so:graphics/libdrm
 OPTIONS_DEFINE=		GSTREAMER
 OPTIONS_DEFAULT=	GSTREAMER
 
-GSTREAMER_USE=	gstreamer1=yes
+GSTREAMER_USES=	gstreamer
+
+# Each source defines the shared 'gl' struct.
+CFLAGS+=	-fcommon
 
 PLIST_FILES=	bin/kmscube
 

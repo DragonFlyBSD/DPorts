@@ -99,7 +99,6 @@ _INSPIRCD_DBDIR?=	/var/db/${PORTNAME}
 _INSPIRCD_LOGDIR?=	/var/log/${PORTNAME}
 _INSPIRCD_RUNDIR?=	/var/run/${PORTNAME}
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|examples/||g' -e 's|\.example||g' ${WRKSRC}/docs/conf/inspircd.example.conf
 	@${REINPLACE_CMD} -e 's|examples/||g' -e 's|\.example||g' ${WRKSRC}/docs/conf/modules.example.conf

@@ -1,0 +1,11 @@
+--- rust/vendor/suricata-lua-sys/lua/Makefile.orig
++++ rust/vendor/suricata-lua-sys/lua/Makefile
+@@ -105,7 +105,7 @@
+ AIX aix:
+ 	$(MAKE) $(ALL) CC_CMD="xlc" CFLAGS="-O2 -DLUA_USE_POSIX -DLUA_USE_DLOPEN" SYSLIBS="-ldl" SYSLDFLAGS="-brtl -bexpall"
+ 
+-bsd:
++bsd DragonFly:
+ 	$(MAKE) $(ALL) SYSCFLAGS="-DLUA_USE_POSIX -DLUA_USE_DLOPEN" SYSLIBS="-Wl,-E"
+ 
+ c89:

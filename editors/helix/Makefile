@@ -282,7 +282,6 @@ CARGO_ENV=		HELIX_DEFAULT_RUNTIME=${DATADIR}/runtime
 
 CONFLICTS_INSTALL=	shx
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	cd ${WRKSRC}/runtime/grammars/sources && ${CP} -a typescript tsx
 	cd ${WRKSRC}/runtime/grammars/sources && ${CP} -a ocaml ocaml-interface

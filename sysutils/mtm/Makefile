@@ -10,7 +10,7 @@ LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/README.rst
 
 # NB: ncurses 6.1 is required.
-USES=		localbase ncurses:base
+USES= localbase ncurses
 
 USE_CSTD=	gnu99
 USE_GITHUB=	yes
@@ -26,7 +26,6 @@ PLIST_FILES=	bin/mtm \
 PORTDATA=	mtm.ti
 
 MAKE_ARGS= LIBPATH="-L${LOCALBASE}/lib"
-DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/mtm.1 \
 		${STAGEDIR}${PREFIX}/share/man/man1/mtm.1

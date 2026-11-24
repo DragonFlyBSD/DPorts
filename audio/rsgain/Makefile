@@ -27,7 +27,7 @@ OPTIONS_DEFAULT=	UNICODE
 
 UNICODE_CMAKE_BOOL=	UCHECKMARKS
 
-IGNORE= unmaintained, please request fixing to users mailing list
+USE_GCC_VERSION= 14
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}

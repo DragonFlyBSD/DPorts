@@ -26,7 +26,6 @@ CMAKE_TESTING_ON=	BUILD_TESTING
 
 CONFLICTS_INSTALL=	linux-enemyterritory # bin/et
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/local,${PREFIX},' ${WRKSRC}/rc.d/etserver
 

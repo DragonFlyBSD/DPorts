@@ -17,5 +17,4 @@ DESCR=		${PKGDIR}/pkg-descr
 BF_CPPFLAGS=	-I${LOCALBASE}/include
 BF_LIBS=
 
-DFLY_UNMAINTAINED= yes
 .include "${MASTERDIR}/Makefile"

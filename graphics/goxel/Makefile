@@ -23,7 +23,6 @@ MAKE_ARGS=	mode=release werror=false
 DESKTOP_ENTRIES="Goxel" "${COMMENT}" "${PORTNAME}" \
 	"${PORTNAME}" "Graphics;3DGraphics;" false
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 .for n in 16 32 64 128 512 256 1024

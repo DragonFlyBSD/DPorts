@@ -163,11 +163,7 @@ GRASS_CMAKE_BOOL=	WITH_GRASS8
 SERVER_LIB_DEPENDS=	libfcgi.so:www/fcgi
 SERVER_CMAKE_BOOL=	WITH_SERVER WITH_SERVER_PLUGINS WITH_QSPATIALITE
 
-BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
-CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
-LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGRASS}
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 pre-patch:

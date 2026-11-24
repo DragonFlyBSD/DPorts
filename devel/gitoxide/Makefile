@@ -567,5 +567,5 @@ PLIST_FILES=	bin/ein \
 
 PORTSCOUT=	ignore:1 # repository tags don't make sense and only cause confusion
 
-IGNORE= unmaintained, please request fixing to users mailing list
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

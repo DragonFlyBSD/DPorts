@@ -44,7 +44,6 @@ SUB_FILES=	ucsc-shell
 # Build mostly non-commercial tools.  There is some leakage of proprietary
 # code from the libraries per conversation with UCSC.  Work to resolve this
 # is ongoing.
-IGNORE= unmaintained, please request fixing to users mailing list
 do-build:
 	@(test -f ${WRKSRC}/kent/src/inc/my_uuid.h || ${MV} ${WRKSRC}/kent/src/inc/uuid.h ${WRKSRC}/kent/src/inc/my_uuid.h)
 	@${MKDIR} ${WRKSRC}/bin
@@ -72,6 +71,6 @@ do-install:
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
-		${WRKSRC}/kent/src/inc/common.mk-IGNORE=   unmaintained, please request fixing to users mailing list
+		${WRKSRC}/kent/src/inc/common.mk
 
 .include <bsd.port.mk>

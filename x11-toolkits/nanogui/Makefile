@@ -50,7 +50,6 @@ PYTHON_BROKEN=		NANOGUI_BUILD_GLFW=ON required by the Python option installs con
 
 CONFLICTS=	glfw # see https://github.com/mitsuba-renderer/nanogui/issues/197 (build picks up the system glfw headers instead of the bundled ones, then nanogui installs conflicting headers)
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install-PYTHON-on:
 	@${MKDIR} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/nanogui
 	${INSTALL_DATA} ${WRKSRC}/nanogui/__init__.py ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/nanogui

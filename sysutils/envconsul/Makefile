@@ -32,4 +32,8 @@ post-install-DOCS-on:
 	${CP} ${WRKSRC}/${doc} ${STAGEDIR}${DOCSDIR}
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|^//go:build linux .*|& \|\| dragonfly|' -e 's|^// +build linux .*|& dragonfly|' \
+		${WRKSRC}/platform_unix.go
+
 .include <bsd.port.mk>

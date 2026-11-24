@@ -18,7 +18,6 @@ GO_TARGET=	./cmd/vale
 
 PLIST_FILES=	bin/vale
 
-DFLY_UNMAINTAINED= yes
 do-build:
 	(cd ${GO_WRKSRC}; \
 	for t in ${GO_TARGET}; do \

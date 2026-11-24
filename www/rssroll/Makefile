@@ -46,7 +46,6 @@ LDFLAGS+=	-L${WRKSRC_libfsl}/src/base \
 CFLAGS+= -I${OPENSSLINC}
 LDFLAGS+= -L${OPENSSLLIB}
 CFLAGS+= -Wno-stringop-overflow
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e "s|/etc/rssrollrc|${PREFIX}/etc/rssrollrc|" \
 		${WRKSRC}/src/rss.h

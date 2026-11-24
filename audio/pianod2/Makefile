@@ -55,4 +55,13 @@ MAKE_ARGS=	CC="${CC}" PREFIX="${PREFIX}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^#ifndef __FreeBSD__$$/#if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		-e 's/^#if !defined(__FreeBSD__) && !defined(__APPLE__)$$/#if !defined(__FreeBSD__) \&\& !defined(__DragonFly__) \&\& !defined(__APPLE__)/' \
+		${WRKSRC}/src/libfootball/fb_event.c \
+		${WRKSRC}/src/libfootball/fb_http.c \
+		${WRKSRC}/src/libfootball/fb_service.c \
+		${WRKSRC}/src/libfootball/fb_socketmgr.c \
+		${WRKSRC}/src/pianod.cpp
+
 .include <bsd.port.mk>

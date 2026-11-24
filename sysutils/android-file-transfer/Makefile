@@ -53,7 +53,7 @@ OPENSSL_CMAKE_BOOL=	BUILD_MTPZ
 TAGLIB_LIB_DEPENDS=	libtag.so:audio/taglib
 TAGLIB_CMAKE_BOOL=	BUILD_TAGLIB
 
-DFLY_UNMAINTAINED= yes
+USES+= readline
 post-patch:
 	@${REINPLACE_CMD} '/set.*AFT_VERSION/s/".*"/"${DISTVERSIONFULL}"/' \
 		${WRKSRC}/CMakeLists.txt

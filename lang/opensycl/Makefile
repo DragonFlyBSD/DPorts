@@ -29,7 +29,6 @@ USES+=	compiler:gcc-c++11-lib llvm:15
 USES+=	compiler:c++11-lang llvm:15
 .endif
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-test: # many tests fail, see https://github.com/OpenSYCL/OpenSYCL/issues/996
 	@cd ${WRKSRC}/tests && \
 		mkdir -p build && \

@@ -51,7 +51,6 @@ X11_USES=	xorg
 X11_USE=	XORG=xcb
 X11_VARS=	CARGO_FEATURES+=x11
 
-DFLY_UNMAINTAINED= yes
 post-build-MANPAGES-on:
 	scdoc < ${WRKSRC}/extra/man/alacritty.1.scd > ${WRKSRC}/alacritty.1
 	scdoc < ${WRKSRC}/extra/man/alacritty-msg.1.scd > ${WRKSRC}/alacritty-msg.1

@@ -16,5 +16,4 @@ USES=		cmake compiler:c++11-lang readline
 
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

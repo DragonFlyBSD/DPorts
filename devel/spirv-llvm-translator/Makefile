@@ -73,7 +73,7 @@ makesum:
 . endfor
 .endif
 
-.if ${FLAVOR:U:Mllvm19} || ${FLAVOR:U:Mllvm2[0-2]}
+.if ${FLAVOR:U:Mllvm19} || ${FLAVOR:U:Mllvm2[0-3]}
 USES+=	dfly-libcxx:${FLAVOR:S/llvm//}
 .endif
 

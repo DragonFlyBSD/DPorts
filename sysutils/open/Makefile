@@ -27,4 +27,10 @@ do-install:
 		${FILESDIR}/pkg-message.in > ${PKGMESSAGE}
 .endif
 
+dfly-patch:
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifdef[[:space:]]+__FreeBSD__/#\1if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/open.c ${WRKSRC}/open.h
+
 .include <bsd.port.mk>

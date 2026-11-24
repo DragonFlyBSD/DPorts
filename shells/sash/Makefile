@@ -17,6 +17,7 @@ dfly-patch:
 			 -e 's@<fs/msdosfs/@<vfs/msdosfs/@g' \
 			 -e 's@<fs/ntfs/@<vfs/ntfs/@g' \
 			 -e '/#include <vfs\/ufs\/extattr.h>/d' \
+			 -e 's@^#if __FreeBSD__$$@#if __FreeBSD__ || __DragonFly__@' \
 		${WRKSRC}/cmds.c
 
 .include <bsd.port.mk>

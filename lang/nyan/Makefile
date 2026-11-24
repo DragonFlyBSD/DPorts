@@ -16,5 +16,4 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	SFTtech
 USE_LDCONFIG=	yes
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

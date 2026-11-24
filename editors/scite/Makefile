@@ -32,7 +32,6 @@ PORTDOCS=	*.html *.jpg *.png
 
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == clang

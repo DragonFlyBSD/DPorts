@@ -37,7 +37,6 @@ PLIST_FILES=	bin/faketime \
 		share/doc/faketime/README \
 		share/man/man1/faketime.1.gz
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	${REINPLACE_CMD} -e 's|-lcompat|-lcompat -lutil|' \
 		${WRKSRC}/test/Makefile

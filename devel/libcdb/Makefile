@@ -20,5 +20,7 @@ MAKE_ENV=	DESTDIR=${STAGEDIR}${PREFIX} \
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
 		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e 's@ && !defined(__FreeBSD__)$$@& \&\& !defined(__DragonFly__)@' \
+		${WRKSRC}/cdb_impl.h
 
 .include <bsd.port.mk>

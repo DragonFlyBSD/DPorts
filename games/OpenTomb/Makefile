@@ -22,7 +22,6 @@ USE_SDL=	sdl2
 LDFLAGS_i386=	-Wl,-znotext
 SUB_FILES=	OpenTomb
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/src/render/shader_manager.cpp
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/scripts/entity/entity_functions.lua

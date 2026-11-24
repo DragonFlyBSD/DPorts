@@ -27,7 +27,6 @@ CABAL_PROJECT=	remove
 
 BINARY_ALIAS=	ghc=ghc-9.10.3
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD && !${ARCH:Mpowerpc64*}

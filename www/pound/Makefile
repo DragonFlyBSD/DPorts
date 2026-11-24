@@ -37,7 +37,8 @@ LUA_CONFIGURE_OFF=	--disable-lua
 PCRE_LIB_DEPENDS=	libpcre2-8.so:devel/pcre2
 PCRE_CONFIGURE_OFF=	--disable-pcre
 
-IGNORE= unmaintained, please request fixing to users mailing list
+CPPFLAGS= -I${OPENSSLINC}
+LDFLAGS= -L${OPENSSLLIB}
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.cfg \
 		${STAGEDIR}${PREFIX}/etc/${PORTNAME}.cfg.sample

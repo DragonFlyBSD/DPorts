@@ -27,4 +27,10 @@ GO_BUILDFLAGS=	-ldflags="-s -w \
 PLIST_FILES=	bin/yggdrasil \
 		bin/yggdrasilctl
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|^\(//go:build .*\)$$|\1 \|\| dragonfly|' \
+		${WRKSRC}/vendor/golang.zx2c4.com/wireguard/tun/operateonfd.go
+	${REINPLACE_CMD} -e 's|wgtun.CreateTUN(ifname, mtu)|wgtun.CreateTUN(ifname, int(mtu))|' \
+		${WRKSRC}/src/tun/tun_other.go
+
 .include <bsd.port.mk>

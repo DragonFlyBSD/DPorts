@@ -22,7 +22,6 @@ PLIST_FILES=	bin/code-minimap \
 		share/fish/vendor_completions.d/code-minimap \
 		share/zsh/site-functions/code-minimap
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d/ \
 		 ${STAGEDIR}${PREFIX}/share/fish/vendor_completions.d/ \

@@ -28,7 +28,6 @@ OPTIONS_SUB=		yes
 
 DOXYGEN_BUILD_DEPENDS=	doxygen:devel/doxygen
 
-DFLY_UNMAINTAINED= yes
 post-patch-DOXYGEN-off:
 	@${REINPLACE_CMD} -e '/find_package(Doxygen)/d' \
 		${WRKSRC}/CMakeLists.txt

@@ -131,7 +131,6 @@ NAGIOSWWWDIR?=	www/nagios
 NAGIOSHTMURL?=	/nagios
 NAGIOSCGIURL?=	${NAGIOSHTMURL}/cgi-bin
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 _PING6_CMD=	/sbin/ping6 -n -t %d -c %d %s

@@ -20,5 +20,4 @@ GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 OPTIONS_DEFINE=	DATADIR
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

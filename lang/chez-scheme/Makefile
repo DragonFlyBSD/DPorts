@@ -43,7 +43,6 @@ PLIST_SUB=	PORTNAME=${PORTNAME} \
 X11_USES=	xorg
 X11_USE=	XORG=x11
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if (${ARCH} == "x86_64")
@@ -78,9 +77,5 @@ post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/${f}
 	@${CHMOD} -w ${STAGEDIR}${PREFIX}/${f}
 .endfor
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@-Werror @& -Wno-implicit-fallthrough @g' \
-		${WRKSRC}/c/Mf-a6fb
 
 .include <bsd.port.post.mk>

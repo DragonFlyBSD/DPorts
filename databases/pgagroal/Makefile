@@ -49,4 +49,8 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PGAGROAL_RUNDIR} \
 		${STAGEDIR}${PGAGROAL_LOGDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e '/^add_compile_options(-Werror)$$/d' \
+		${WRKSRC}/src/CMakeLists.txt
+
 .include <bsd.port.mk>

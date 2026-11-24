@@ -25,5 +25,5 @@ PLIST_FILES=	bin/headsetcontrol \
 		include/headsetcontrol/result_types.hpp \
 		lib/libheadsetcontrol.a
 
-IGNORE= unmaintained, please request fixing to users mailing list
+USE_GCC_VERSION= 14
 .include <bsd.port.mk>

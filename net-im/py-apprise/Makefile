@@ -28,5 +28,4 @@ USE_PYTHON=	autoplist concurrent cryptography pep517
 
 NO_ARCH=	yes
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

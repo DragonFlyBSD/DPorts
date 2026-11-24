@@ -1,5 +1,5 @@
 PORTNAME=	haruna
-DISTVERSION=	1.9.0
+DISTVERSION=	1.9.1
 CATEGORIES=	multimedia kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}
 
@@ -31,5 +31,4 @@ OPTIONS_DEFINE=		YTDLP
 YTDLP_DESC=		Install yt-dlp to play videos from youtube
 YTDLP_RUN_DEPENDS=	yt-dlp:www/yt-dlp
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

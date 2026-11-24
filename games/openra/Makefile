@@ -55,7 +55,6 @@ ALL_TARGET=	all
 INSTALL_TARGET=	install install-man install-linux-appdata install-linux-shortcuts
 PORTDATA=	*
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if defined(MONO_DEFAULT) && ${MONO_DEFAULT} > 6

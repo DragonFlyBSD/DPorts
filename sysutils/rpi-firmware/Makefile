@@ -1,5 +1,6 @@
 PORTNAME=	rpi-firmware
 PORTVERSION=	1.20260521.g20260521
+PORTREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	uboot@FreeBSD.org
@@ -31,7 +32,6 @@ CONFIG_TXT_FILES=	config.txt \
 			config_rpi4.txt \
 			config_arm64.txt
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-patch:
 .for i in ${CONFIG_TXT_FILES}
 	${CP} ${FILESDIR}/${i} ${WRKSRC}/boot/

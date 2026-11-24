@@ -19,4 +19,6 @@ TEST_TARGET=	test
 PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man1/${PORTNAME}.1.gz
 
+LIB_DEPENDS= libelf.so:devel/libelf
+CFLAGS= -I${LOCALBASE}/include/libelf -I${LOCALBASE}/include -L${LOCALBASE}/lib
 .include <bsd.port.mk>

@@ -23,5 +23,4 @@ GH_PROJECT=	Caliper
 
 # 2 tests fail, see https://github.com/LLNL/Caliper/issues/611
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

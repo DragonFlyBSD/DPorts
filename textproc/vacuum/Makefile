@@ -19,7 +19,6 @@ GO_MODULE=	github.com/daveshanley/vacuum
 
 PLIST_FILES=	bin/${PORTNAME}
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-test:
 	${STAGEDIR}${PREFIX}/bin/${PORTNAME} lint ${WRKSRC}/model/test_files/petstorev3.json
 

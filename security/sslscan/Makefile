@@ -20,7 +20,6 @@ OPENSSL_VERSION=	3.2.1
 
 ALL_TARGET=	static
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc64
@@ -33,5 +32,9 @@ MAKE_ENV+=        OSSL_TARGET=BSD-riscv64
 
 post-patch:
 	$(LN) -sf "${WRKDIR}/openssl-${OPENSSL_VERSION}" "${WRKSRC}/openssl"
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/ enable-weak-ssl-ciphers zlib / enable-weak-ssl-ciphers zlib no-devcryptoeng /' \
+		${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

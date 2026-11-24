@@ -24,7 +24,6 @@ PORTDOCS=	README.md
 
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	${MV} ${STAGEDIR}${PREFIX}/etc/gmrunrc \
 		${STAGEDIR}${PREFIX}/etc/gmrunrc.sample

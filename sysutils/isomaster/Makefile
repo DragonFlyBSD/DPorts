@@ -23,7 +23,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include/iniparser \
 		-Diniparser_setstr=iniparser_set
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|<time.h>|<sys/time.h>|' ${WRKSRC}/bk/bkMisc.c

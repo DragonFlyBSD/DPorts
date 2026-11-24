@@ -31,7 +31,6 @@ USES=		compiler:c++11-lang gmake ssl
 PLIST_FILES=	bin/${PORTNAME}
 
 CFLAGS= -I${OPENSSLINC}
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${SSL_DEFAULT} != base

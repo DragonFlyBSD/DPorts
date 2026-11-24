@@ -21,7 +21,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 PKGNAMEPREFIX:=	${PKGNAMEPREFIX}${RUBY_PKGNAMEPREFIX}
@@ -36,5 +35,8 @@ post-install:
 	${MKDIR} ${STAGEDIR}${RUBY_MODDOCDIR}/ja
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${RUBY_MODDOCDIR}/
 	${INSTALL_DATA} ${WRKSRC}/README.ja ${STAGEDIR}${RUBY_MODDOCDIR}/ja/
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|-fdeclspec||g' ${WRKSRC}/extconf.rb
 
 .include <bsd.port.post.mk>

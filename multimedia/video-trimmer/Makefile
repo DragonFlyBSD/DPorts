@@ -29,7 +29,6 @@ CARGO_TEST=	no
 
 MAKE_ENV=	${CARGO_ENV}
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 # Make each cargo subcommand very verbose
 	@${REINPLACE_CMD} -e '/cargo/s/ --/&verbose&verbose&/' \

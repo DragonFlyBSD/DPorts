@@ -25,7 +25,6 @@ CARGO_INSTALL=	no
 CARGO_TEST=	no
 GLIB_SCHEMAS=	org.gnome.Podcasts.gschema.xml
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == i386 || ${ARCH} == powerpc || ${ARCH:Marmv?}

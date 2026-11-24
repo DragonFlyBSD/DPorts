@@ -84,7 +84,8 @@ SYSCALL_MAKE_ARGS_OFF=	USE_SYSCALL_FUNCTION=
 SYSTEM_MAKE_ARGS=	USE_SYSTEM_FUNCTION=yes
 SYSTEM_MAKE_ARGS_OFF=	USE_SYSTEM_FUNCTION=
 
-DFLY_UNMAINTAINED= yes
+USES+= ncurses
+MAKE_ENV= CPATH=${NCURSESINC}
 post-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/nlux/bin/${PORTNAME} \
 		${STAGEDIR}${PREFIX}/bin
@@ -102,5 +103,8 @@ post-install-EXAMPLES-on:
 			${PORTEXAMPLES:S|^|${WRKSRC}/samples/audio/|} \
 			${PORTEXAMPLES:S|^|${WRKSRC}/samples/network/|} \
 		${STAGEDIR}${EXAMPLESDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/ -lcurses)/ -lncurses)/' ${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

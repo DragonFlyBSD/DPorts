@@ -44,7 +44,6 @@ PORTDOCS=	README.md releasenotes.html
 
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} 's|/usr/X11R6|${LOCALBASE}|' \
 		${WRKSRC}/jfbuild/Makefile

@@ -35,7 +35,6 @@ PLIST_FILES=	${PYTHON_SITELIBDIR}/dionysus/__init__.py \
 		${PYTHON_SITELIBDIR}/dionysus/zigzag.py \
 		${PYTHON_SITELIBDIR}/dionysus-${PORTVERSION}.dist-info/METADATA
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${MKDIR} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/dionysus
 	cd ${BUILD_WRKSRC}/bindings/python && ${INSTALL_LIB} _dionysus${PYTHON_TAG}.so ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/dionysus

@@ -18,4 +18,7 @@ GO_TARGET=	./cmd/${PORTNAME}
 GO_BUILDFLAGS=	-ldflags="-s -w -X main.version=${PORTVERSION}"
 CGO_ENABLED=	0
 
+dfly-patch:
+	${CP} ${WRKSRC}/collector/system_freebsd.go ${WRKSRC}/collector/system_dragonfly.go
+
 .include <bsd.port.mk>

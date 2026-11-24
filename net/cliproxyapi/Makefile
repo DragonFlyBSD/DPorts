@@ -31,4 +31,9 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/.env.cluster.example \
 		${STAGEDIR}${DOCSDIR}/env.cluster.example
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@^//go:build cgo && (linux || darwin || freebsd)$$@//go:build cgo \&\& (linux || darwin || freebsd || dragonfly)@' \
+		${WRKSRC}/internal/pluginhost/loader_unix.go \
+		${WRKSRC}/internal/pluginhost/host_callbacks_unix.go
+
 .include <bsd.port.mk>

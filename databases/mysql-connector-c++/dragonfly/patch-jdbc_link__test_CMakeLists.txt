@@ -1,0 +1,11 @@
+--- jdbc/link_test/CMakeLists.txt.orig
++++ jdbc/link_test/CMakeLists.txt
+@@ -284,6 +284,8 @@
+ 
+   if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
+     list(APPEND libs execinfo unwind)
++  elseif(CMAKE_SYSTEM_NAME MATCHES "DragonFly")
++    list(APPEND libs execinfo)
+   else()
+     list(APPEND libs resolv)
+   endif()

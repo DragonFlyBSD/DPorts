@@ -1,0 +1,20 @@
+--- code/graphics/opengl/gropengl.cpp.orig
++++ code/graphics/opengl/gropengl.cpp
+@@ -6,7 +6,7 @@
+ #include <direct.h>
+ #endif
+ 
+-#if !defined __APPLE_CC__ && !defined __FreeBSD__ && defined SCP_UNIX
++#if !defined __APPLE_CC__ && !defined __FreeBSD__ && !defined __DragonFly__ && defined SCP_UNIX
+ #include<glad/glad_glx.h>
+ //Required because X defines none and always, which is used later
+ #undef None
+@@ -1339,7 +1339,7 @@
+ 		Error(LOCATION, "Failed to load OpenGL!");
+ 	}
+ 
+-#if !defined __APPLE_CC__ && !defined __FreeBSD__ && defined SCP_UNIX
++#if !defined __APPLE_CC__ && !defined __FreeBSD__ && !defined __DragonFly__ && defined SCP_UNIX
+ 	if (!gladLoadGLXLoader(GL_context->getLoaderFunction(), nullptr, 0)) {
+ 		Error(LOCATION, "Failed to load GLX!");
+ 	}

@@ -21,5 +21,4 @@ GH_ACCOUNT=	ea4k
 GH_PROJECT=	klog
 
 MAKE_JOBS_UNSAFE= yes
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

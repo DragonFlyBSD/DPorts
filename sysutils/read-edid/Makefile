@@ -16,4 +16,10 @@ PORTDOCS=	AUTHORS ChangeLog LICENSE README
 
 OPTIONS_DEFINE=	DOCS
 
+dfly-patch:
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifdef[[:space:]]+__FreeBSD__/#\1if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/get-edid/i2c-dev.h ${WRKSRC}/get-edid/classic.c ${WRKSRC}/get-edid/i2c.c
+
 .include <bsd.port.mk>

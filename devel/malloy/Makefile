@@ -43,7 +43,6 @@ TEST_CMAKE_BOOL=	MALLOY_BUILD_TESTS
 TLS_USES=		ssl
 TLS_CMAKE_BOOL=		MALLOY_FEATURE_TLS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-build-DOCS-on:
 	(cd ${WRKSRC} && ${LOCALBASE}/bin/doxygen)
 

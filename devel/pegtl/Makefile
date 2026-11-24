@@ -23,5 +23,4 @@ NO_ARCH=	yes
 
 # tests as of 4.0.1: 100% tests passed, 0 tests failed out of 257
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

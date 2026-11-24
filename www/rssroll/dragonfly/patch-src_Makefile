@@ -1,14 +1,19 @@
---- src/Makefile.orig	2018-10-29 16:50:45 UTC
+--- src/Makefile.orig
 +++ src/Makefile
-@@ -1,6 +1,5 @@
+@@ -1,10 +1,9 @@
  #
 -PROGS=		rssroll index.cgi
 -
 +NO_WERROR=yes
- SRCS.rssroll=	rssroll.c rss.c
- SRCS.index.cgi=	index.c
+ SRCS.rssroll=	rssroll.c rss.c item.c
+ SRCS.index.cgi=	index.c item.c
  
-@@ -22,4 +21,8 @@ install:
+-CFLAGS+=	-Werror \
++CFLAGS+=	\
+ 		-I./ \
+ 		-I/usr/local/include \
+ 		-I/usr/local/include/libxml2
+@@ -23,4 +22,8 @@
  
  test:
  

@@ -27,7 +27,6 @@ PLIST_FILES=	bin/minipro \
 		share/minipro/logicic.xml
 
 MAKE_JOBS_UNSAFE= yes
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 

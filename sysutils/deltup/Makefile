@@ -45,7 +45,6 @@ PORTDOCS=	ChangeLog README
 
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
 pre-build:
 	@${REINPLACE_CMD} -e 's,CC,CXX,;s,gcc,$${CXX},' \
 		-e "s|\(-lcrypto\)|-L${OPENSSLLIB} \1|g" ${WRKSRC}/src/Makefile
@@ -59,7 +58,7 @@ do-build:
 		${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} bzip2
 	@cd ${WRKSRC_BZIP2_103} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} \
 		${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} bzip2
-	cd ${WRKSRC}/src && ${MAKE} deltup
+	cd ${WRKSRC}/src && ${MAKE} CXXFLAGS="${CXXFLAGS}" deltup
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/deltup ${STAGEDIR}${PREFIX}/bin

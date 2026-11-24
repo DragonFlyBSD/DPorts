@@ -23,7 +23,6 @@ CMAKE_TESTING_TARGET=
 PLIST_FILES=	include/randomx.h \
 		lib/librandomx.so
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-test: # run tests
 	@cd ${BUILD_WRKSRC} && ./randomx-tests
 

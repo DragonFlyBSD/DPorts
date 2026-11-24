@@ -30,7 +30,6 @@ PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/man-edbrowse-freebsd.1 ${STAGEDIR}${PREFIX}/share/man/man1/${PORTNAME}.1
 	${INSTALL_PROGRAM} ${WRKSRC}/src/edbrowse ${STAGEDIR}${PREFIX}/bin

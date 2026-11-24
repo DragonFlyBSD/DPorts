@@ -39,14 +39,7 @@ PYTHON_CMAKE_BOOL=	PYTHON_BINDINGS
 PYTHON_CMAKE_ON=	-DPYTHON_EXECUTABLE=${PYTHON_CMD}
 PYTHON_TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lief>0:devel/py-lief@${PY_FLAVOR}
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install-PYTHON-on:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/triton.so
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
-		${WRKSRC}/src/scripts/extract_syscall.py \
-		${WRKSRC}/src/libtriton/includes/triton/syscalls.hpp \
-		${WRKSRC}/src/libtriton/CMakeLists.txt
 
 .include <bsd.port.mk>

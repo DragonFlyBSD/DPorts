@@ -64,7 +64,6 @@ DRI3_SUB_FILES=		pkg-message
 # Bug 285815
 NO_SHLIB_REQUIRES_GLOB=	libglamoregl.so
 
-DFLY_UNMAINTAINED= yes
 post-patch-DEBUG-on:
 	${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} -e 's|#define LOG_LEVEL [0-9]*|#define LOG_LEVEL 20|'
 

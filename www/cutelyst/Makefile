@@ -29,7 +29,6 @@ CMAKE_ARGS=	-DMANDIR:PATH=share/man \
 
 PLIST_SUB=	SOVER=${DISTVERSION}
 
-IGNORE= unmaintained, please request fixing to users mailing list
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
 		${WRKSRC}/CMakeLists.txt

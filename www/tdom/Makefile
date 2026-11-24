@@ -42,7 +42,6 @@ HTML5_USES=		pkgconfig
 HTML5_CONFIGURE_ENABLE=	html5
 HTML5_CFLAGS=		-I${LOCALBASE}/include
 
-DFLY_UNMAINTAINED= yes
 post-patch-EBASE-on:
 	${REINPLACE_CMD} 's|\([</]\)expat\.h|\1bsdxml.h|g' \
 	    ${WRKSRC}/configure \

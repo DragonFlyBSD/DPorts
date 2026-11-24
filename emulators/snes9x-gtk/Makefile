@@ -64,5 +64,4 @@ WAYLAND_CMAKE_BOOL=	USE_WAYLAND
 XVIDEO_USE=		XORG=xv
 XVIDEO_CMAKE_BOOL=	USE_XV
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

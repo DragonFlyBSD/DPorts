@@ -17,7 +17,6 @@ PORTDOCS=	i3blocks.1.md
 
 OPTIONS_DEFINE=	DOCS
 
-BROKEN= missing SIGRTMIN
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && \

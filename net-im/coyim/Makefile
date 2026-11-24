@@ -55,4 +55,12 @@ post-install:
 	${INSTALL_DATA} ${COYIM_DESKTOP} ${STAGEDIR}${PREFIX}/share/applications/
 	${INSTALL_DATA} ${COYIM_ICON_SRC} ${STAGEDIR}${PREFIX}/share/pixmaps/${COYIM_ICON}
 
+dfly-patch:
+	${SED} -e 's@^//go:build freebsd$$@//go:build dragonfly@' -e 's@^// +build freebsd$$@// +build dragonfly@' \
+		${GO_WRKSRC}/vendor/github.com/awnumar/memcall/memcall_freebsd.go > \
+		${GO_WRKSRC}/vendor/github.com/awnumar/memcall/memcall_dragonfly.go
+	${REINPLACE_CMD} -e 's@^//go:build !windows @//go:build !windows \&\& !dragonfly @' \
+		-e 's@^// +build !windows,@// +build !windows,!dragonfly,@' \
+		${GO_WRKSRC}/vendor/github.com/awnumar/memcall/memcall_unix.go
+
 .include <bsd.port.mk>

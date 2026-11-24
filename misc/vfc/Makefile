@@ -38,5 +38,4 @@ PORTDOCS=	*
 
 # 100% tests passed, 0 tests failed out of 4
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

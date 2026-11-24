@@ -33,7 +33,6 @@ GH_TAGNAME=	87d9231
 
 OPTIONS_DEFINE=	DOCS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	${REINPLACE_CMD} 's|$${VARNISHAPI_DATAROOTDIR}|${LOCALBASE}/share|' \
 		${WRKSRC}/Makefile.am

@@ -29,7 +29,6 @@ CMAKE_ARGS=	-DCMAKE_INSTALL_FULL_DATAROOTDIR=${LOCALBASE}/etc \
 
 LDFLAGS+=	-linotify
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${MV} \
 		${STAGEDIR}${ETCDIR}/touchegg.conf \

@@ -18,7 +18,6 @@ CONFIGURE_ARGS=	--disable-shared \
 		--with-ssl=${OPENSSLBASE}
 CONFIGURE_ENV=	PERL="${PERL}"
 
-IGNORE= unmaintained, please request fixing to users mailing list
 pre-configure:
 	@${RM} ${WRKSRC}/acinclude.m4
 	@${RM} ${WRKSRC}/utils/missing

@@ -23,6 +23,7 @@ USE_LDCONFIG=	yes
 QMAKE_ARGS=	BUILD_MODE+=lib \
 		LIBQTELEGRAM_INCLUDE_PATH="${LOCALBASE}/include/libqtelegram-ae"
 
+CXXFLAGS= -Wno-narrowing
 post-patch:
 	@${REINPLACE_CMD} -e "/isEmpty(OPENSSL_INCLUDE_PATH)/d" \
 		${WRKSRC}/telegramqml.pri

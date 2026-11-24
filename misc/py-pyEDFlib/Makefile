@@ -25,7 +25,6 @@ GH_PROJECT=	pyedflib
 
 USE_GCC=	yes # fails to build with clang: https://github.com/holgern/pyedflib/issues/104
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/pyedflib/_extensions/_pyedflib*.so
 

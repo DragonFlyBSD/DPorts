@@ -45,7 +45,6 @@ SDL3_USE_OFF=	SDL=sdl2
 SDL3_CMAKE_ON=	-DSDL2=OFF -DSDL3=ON
 SDL3_CMAKE_OFF=	-DSDL2=ON -DSDL3=OFF
 
-DFLY_UNMAINTAINED= yes
 post-patch-OPTIMIZED_CFLAGS-off:
 	@${REINPLACE_CMD} -e 's|-O3 -ffast-math -fno-unsafe-math-optimizations -fomit-frame-pointer||' ${WRKSRC}/CMakeLists.txt
 

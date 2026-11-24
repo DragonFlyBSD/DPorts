@@ -24,7 +24,6 @@ PLIST_FILES=	bin/ior \
 		bin/mdtest \
 		share/man/man1/mdtest.1.gz
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install: # see https://github.com/hpc/ior/issues/454
 	@${RM} \
 		${STAGEDIR}${PREFIX}/lib/libaiori.a \

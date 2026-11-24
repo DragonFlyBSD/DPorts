@@ -39,7 +39,6 @@ MQTT_LIB_DEPENDS=	libmosquitto.so:net/mosquitto
 MQTT_CONFIGURE_WITH=	mqtt
 MQTT_VARS=		LIBS+=-lmosquitto
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${MKDIR} ${STAGEDIR}${LOGDIR}
 	${MKDIR} ${STAGEDIR}${RUNDIR}

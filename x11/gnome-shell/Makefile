@@ -60,6 +60,7 @@ GLIB_SCHEMAS=	00_org.gnome.shell.gschema.override \
 		org.gnome.shell.gschema.xml \
 		org.gnome.Extensions.gschema.xml
 
+PORTREVISION= 1
 post-extract:
 	@${CP} ${FILESDIR}/*.xml ${WRKSRC}/data/dbus-interfaces
 
@@ -72,10 +73,5 @@ pre-install-EXAMPLES-on:
 
 post-install-EXAMPLES-on:
 	@${INSTALL_SCRIPT} ${WRKDIR}/xprofile ${STAGEDIR}${EXAMPLESDIR}
-
-LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
-dfly-patch:
-	${RM} -r ${WRKSRC}/subprojects/gvc
-	${REINPLACE_CMD} -e "/libgvc_gir/d" ${WRKSRC}/src/meson.build
 
 .include <bsd.port.mk>

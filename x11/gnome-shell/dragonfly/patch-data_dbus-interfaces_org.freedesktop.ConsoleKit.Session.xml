@@ -1,0 +1,10 @@
+--- data/dbus-interfaces/org.freedesktop.ConsoleKit.Session.xml.orig
++++ data/dbus-interfaces/org.freedesktop.ConsoleKit.Session.xml
+@@ -6,6 +6,7 @@
+     <property name="session-class" type="s" access="read"/>
+     <property name="session-state" type="s" access="read"/>
+     <property name="session-type" type="s" access="read"/>
++    <property name="is-local" type="b" access="read"/>
+     <method name="SetLockedHint">
+       <arg type="b" direction="in"/>
+     </method>

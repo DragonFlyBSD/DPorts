@@ -104,7 +104,6 @@ SUB_LIST+=	REMARK_PIDDIR=${REMARK_PIDDIR} \
 		REMARK_DATADIR=${REMARK_DATADIR}
 
 # (for maintainer) helper target to generate node_modules tarball
-DFLY_UNMAINTAINED= yes
 make-npm-cache: extract
 	@cd ${WRKDIR} && ${RM} -r .npm
 	@cd ${WRKSRC}/frontend/apps/${PORTNAME} \

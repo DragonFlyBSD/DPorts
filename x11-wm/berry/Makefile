@@ -31,7 +31,6 @@ PORTEXAMPLES=	autostart sxhkdrc xephyr.sh
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's,va_copy(,__&,' \
 		${WRKSRC}/utils.c

@@ -11,7 +11,7 @@ WWW=		https://github.com/nwg-piotr/nwg-launchers
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS= nlohmann-json>0:devel/nlohmann-json cxxfs_gcc8>0:misc/cxxfs_gcc8
+BUILD_DEPENDS=	nlohmann-json>0:devel/nlohmann-json
 
 USES=		compiler:c++17-lang gnome meson pkgconfig
 USE_GITHUB=	yes
@@ -24,9 +24,7 @@ OPTIONS_DEFAULT=WAYLAND
 WAYLAND_LIB_DEPENDS=	libgtk-layer-shell.so:x11-toolkits/gtk-layer-shell
 WAYLAND_MESON_ENABLED=	layer-shell
 
-USE_CLANG_FALLBACK= default
-CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
-LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
+USE_GCC_VERSION= ${GCC_DEFAULT}
 post-patch:
 # Respect PREFIX when looking for .desktop files
 	@${REINPLACE_CMD} 's,/usr/share,${DATADIR:H},' \

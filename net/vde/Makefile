@@ -30,5 +30,13 @@ dfly-patch:
 		${WRKSRC}/vdetaplib/libvdetap.c \
 		${WRKSRC}/tuntap.c \
 		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifdef[[:space:]]+__FreeBSD__/#\1if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/vde_switch.c ${WRKSRC}/vdetaplib/libvdetap.c ${WRKSRC}/vdetaplib/vdetap.c \
+		${WRKSRC}/qemu/vdeq.c ${WRKSRC}/vde_plug.c ${WRKSRC}/vde.h \
+		${WRKSRC}/slirpvde/tcp.h ${WRKSRC}/slirpvde/libslirp.h ${WRKSRC}/slirpvde/ip.h \
+		${WRKSRC}/slirpvde/slirpvde.c ${WRKSRC}/slirpvde/slirp_config.h ${WRKSRC}/port.c \
+		${WRKSRC}/hash.c ${WRKSRC}/tuntap.c
 
 .include <bsd.port.mk>

@@ -97,7 +97,6 @@ OPTIONS_SUB=		yes
 WRKSRC_SUBDIR=		src
 PORTEXAMPLES=		kdc.conf krb5.conf services.append
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 # Fix up -Wl,-rpath in LDFLAGS

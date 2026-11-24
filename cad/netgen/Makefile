@@ -58,5 +58,4 @@ JPEG_CMAKE_BOOL=	USE_JPEG
 MPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 MPEG_CMAKE_BOOL=	USE_MPEG
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

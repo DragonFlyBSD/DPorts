@@ -39,5 +39,4 @@ LOG_LEVEL_TRACE_CMAKE_ON=	-DCAF_LOG_LEVEL:STRING=TRACE
 
 # tests as of 1.1.0: 100% tests passed, 0 tests failed out of 231
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

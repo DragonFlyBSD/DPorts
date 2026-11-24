@@ -28,7 +28,7 @@ OPTIONS_SUB=		yes
 
 BACKEND_DESC=	Backend
 
-NCURSES_USES=		ncurses:base
+NCURSES_USES= ncurses
 NCURSES_ALL_TARGET=	curses
 WAYLAND_CATEGORIES=	wayland
 WAYLAND_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
@@ -44,7 +44,6 @@ X11_USE=		GNOME=cairo,glib20,pango \
 X11_ALL_TARGET=		x11
 
 CFLAGS= -fPIC
-DFLY_UNMAINTAINED= yes
 post-extract:
 	${REINPLACE_CMD} -e 's,$$(shell $$(PKG_CONFIG) --libs ncursesw),${NCURSES_LIB},' \
 		${WRKSRC}/${MAKEFILE}

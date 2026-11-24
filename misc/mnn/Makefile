@@ -44,7 +44,6 @@ CONVERTER_LIB_DEPENDS=	libprotobuf.so:devel/protobuf
 HARD_FP_DESC=		Hard floating point numbers
 HARD_FP_CMAKE_BOOL=	MNN_BUILD_HARD
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} != x86_64 && ${ARCH} != i386

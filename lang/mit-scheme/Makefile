@@ -52,6 +52,7 @@ X11_USE=	XORG=x11
 
 GDBM_LIB_DEPENDS+=	libgdbm.so:databases/gdbm
 
+CONFIGURE_ENV= LIBS=-L${NCURSESLIB}
 .include <bsd.port.pre.mk>
 
 MIT_SCHEME_ARCH=	x86-64

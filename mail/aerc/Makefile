@@ -116,4 +116,9 @@ post-install:
 	${STRIP_CMD} ${STAGEDIR}/${PREFIX}/libexec/aerc/filters/wrap
 	${STRIP_CMD} ${STAGEDIR}/${PREFIX}/libexec/aerc/filters/colorize
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@^//go:build darwin || freebsd || @//go:build darwin || dragonfly || freebsd || @' \
+		${GO_WRKSRC}/vendor/go.rockorager.dev/vaxis/tty_unix.go \
+		${GO_WRKSRC}/vendor/go.rockorager.dev/vaxis/vaxis_unix.go
+
 .include <bsd.port.post.mk>

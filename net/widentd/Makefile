@@ -21,6 +21,7 @@ PLIST_FILES=	sbin/widentd share/man/man8/widentd.8.gz
 PORTDOCS=	LICENSE README README.md
 
 # else ports framework can't handle USE_RC_SUBR
+MAKE_ARGS= NO_WERROR=yes
 post-extract:
 	${MV} ${WRKDIR}/${PORTNAME} ${WRKSRC}
 

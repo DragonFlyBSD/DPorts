@@ -3,5 +3,4 @@ CFENGINE_VERSION?=	328
 
 MASTERDIR=		${.CURDIR}/../cfengine${CFENGINE_VERSION}
 
-DFLY_UNMAINTAINED= yes
 .include "${MASTERDIR}/Makefile"

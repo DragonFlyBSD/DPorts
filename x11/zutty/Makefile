@@ -31,7 +31,6 @@ PLIST_FILES=	bin/zutty \
 		share/icons/zutty_64x64.png \
 		share/icons/zutty_96x96.png
 
-DFLY_UNMAINTAINED= yes
 pre-install:
 	${STRIP_CMD} ${WRKSRC}/build/src/zutty
 

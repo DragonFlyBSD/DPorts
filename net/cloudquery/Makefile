@@ -17,5 +17,4 @@ GO_MODULE=	github.com/cloudquery/cloudquery/v6
 
 PLIST_FILES=	bin/${PORTNAME}
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

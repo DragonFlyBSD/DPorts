@@ -25,9 +25,7 @@ GH_TUPLE=	PySCeS:pysces:0.9.8:fortran
 FORTRAN_FILES=	linalg_nleq2.f nleq2.f wnorm.f zibconst.f zibmon.f zibsec.f
 
 BUILD_DEPENDS+= libstdthreads>0:misc/libstdthreads
-BINARY_ALIAS= flang=gfortran8
-LDFLAGS= -Wl,-rpath=/usr/local/lib/gcc8 -L/usr/local/lib/gcc8
-DFLY_UNMAINTAINED= yes
+BINARY_ALIAS= flang=${FC}
 pre-build: # copy fortran sources and build the extension with f2py
 	@${CP} ${FORTRAN_FILES:C,^,${WRKSRC_fortran}/pysces/nleq2/,} ${WRKSRC}/nleq2/
 	@cd ${WRKSRC}/nleq2 && \

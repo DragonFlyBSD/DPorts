@@ -40,5 +40,4 @@ CXXFLAGS_powerpc=	-maltivec
 
 # tests as of 2.10.2: 100% tests passed, 0 tests failed out of 96
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

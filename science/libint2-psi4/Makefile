@@ -37,5 +37,4 @@ PLIST_SUB+=	VER=${VERSION}
 
 CONFLICTS=	libint2
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

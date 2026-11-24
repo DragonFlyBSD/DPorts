@@ -18,7 +18,7 @@ USES=		gmake llvm:lib pkgconfig readline ssl tar:tgz
 
 WRKSRC=		${WRKDIR}/pil21/src
 
-DFLY_UNMAINTAINED= yes
+MAKE_ENV= CPATH=${OPENSSLINC} LIBRARY_PATH=${OPENSSLLIB}
 post-patch:
 	${REINPLACE_CMD} \
 		-e 's|clang|clang${LLVM_VERSION}|' \

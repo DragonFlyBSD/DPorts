@@ -19,5 +19,4 @@ GH_PROJECT=	SpaceCadetPinball
 USE_SDL=	mixer2 sdl2
 USE_XORG=	ice sm x11 xext
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

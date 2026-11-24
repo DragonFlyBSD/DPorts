@@ -45,7 +45,6 @@ PAR2_CMAKE_BOOL_OFF=	DISABLE_PARCHECK
 
 PYTHON_USES=	python:run
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if (${ARCH} == "i386")

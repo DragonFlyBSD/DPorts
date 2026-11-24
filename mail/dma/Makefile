@@ -31,7 +31,7 @@ SUB_FILES=	dma_cron pkg-message
 BUILD_WRKSRC=	${WRKSRC}/bsd
 INSTALL_WRKSRC=	${WRKSRC}/bsd
 
-CFLAGS+= -Wno-error=implicit-fallthrough
+CFLAGS+= -Wno-error=implicit-fallthrough -Wno-error=deprecated-declarations
 post-patch:
 	@${REINPLACE_CMD} -e 's,/etc/dma,${PREFIX}/etc/dma,g' \
 		${WRKSRC}/dma.8

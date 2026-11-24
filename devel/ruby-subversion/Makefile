@@ -11,8 +11,6 @@ PORTREVISION_LTS=		0
 
 SVN_BUILD_BINDINGS=	yes
 
-IGNORE= unmaintained, please request fixing to users mailing list
-DFLY_UNMAINTAINED= yes
 .include "${.CURDIR}/../../devel/subversion/Makefile.addons"
 
 CATEGORIES+=	ruby
@@ -27,7 +25,6 @@ CONFIGURE_ARGS+=	--with-swig-ruby=${RUBY} \
 ALL_TARGET=	swig-rb-lib swig-rb
 INSTALL_TARGET=	install-swig-rb
 
-CFLAGS+=	-fdeclspec
 
 .if ${OPSYS} == FreeBSD
 CFLAGS+=	-Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types

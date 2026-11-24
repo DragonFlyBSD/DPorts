@@ -66,7 +66,6 @@ WEBENGINE_USE=		QT=positioning,webchannel,webengine
 WEBENGINE_CMAKE_ON=	-DWEBVIEW_PROVIDER:STRING=webengine
 WEBENGINE_CMAKE_OFF=	-DWEBVIEW_PROVIDER:STRING=none
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${RM} -r \
 		${STAGEDIR}${PREFIX}/include/c++utilities \

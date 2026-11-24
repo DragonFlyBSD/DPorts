@@ -25,7 +25,6 @@ TARGET_ORDER_OVERRIDE=	610:fix-shebang
 OPTIONS_DEFINE=	DOCS
 OPTIONS_SUB=	yes
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
 		${WRKSRC}/scripts/dw-start.sh

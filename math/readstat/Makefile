@@ -15,5 +15,5 @@ CPE_VENDOR=	wizardmac
 HAS_CONFIGURE=	yes
 CFLAGS+=	-Werror -Wstrict-prototypes
 
-DFLY_UNMAINTAINED= yes
+LDFLAGS= -lm
 .include <bsd.port.mk>

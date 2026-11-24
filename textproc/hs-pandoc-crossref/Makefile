@@ -19,7 +19,6 @@ SKIP_CABAL_PLIST=	yes
 PLIST_FILES=	bin/pandoc-crossref \
 		share/man/man1/pandoc-crossref.1.gz
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-build:
 	${LOCALBASE}/bin/pandoc -s -t man ${WRKSRC}/docs/index.md -o ${WRKSRC}/docs/pandoc-crossref.1
 

@@ -22,5 +22,4 @@ TEST_TARGET=	check # 1 test fails, see https://github.com/fmang/opustags/issues/
 PLIST_FILES=	bin/opustags \
 		share/man/man1/opustags.1.gz
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

@@ -113,7 +113,6 @@ PROXY_LIB_DEPENDS=      libproxy.so:net/libproxy
 PROXY_PREVENTS=		IDN
 PROXY_PREVENTS_MSG=	IDN self-tests break if PROXY option enabled
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD

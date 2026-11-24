@@ -53,7 +53,6 @@ MAKE_ARGS+=	WITH_MAN=1
 
 CPE_VENDOR=	gnu
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 GNU_CONFIGURE=	yes

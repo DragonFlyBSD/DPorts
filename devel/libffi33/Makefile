@@ -33,7 +33,6 @@ TEST_TARGET=	check
 
 LDFLAGS+=	-Wl,--undefined-version
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's| -Wno-psabi||g' \
 		${WRKSRC}/testsuite/lib/libffi.exp

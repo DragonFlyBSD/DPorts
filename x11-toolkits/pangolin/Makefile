@@ -35,5 +35,4 @@ CMAKE_OFF=	BUILD_PANGOLIN_PYTHON
 
 LDFLAGS+=	-pthread
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

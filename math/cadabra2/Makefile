@@ -54,7 +54,6 @@ GUI_CMAKE_BOOL=		ENABLE_FRONTEND
 
 _PY_SONAME=	${PYTHON_TAG}
 
-DFLY_UNMAINTAINED= yes
 post-extract: # unbundle
 	@${RM} -r ${WRKSRC}/libs/jsoncpp ${WRKSRC}/libs/websocketpp
 

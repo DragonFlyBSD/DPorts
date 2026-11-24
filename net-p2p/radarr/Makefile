@@ -39,7 +39,6 @@ WRKSRC=		${WRKDIR}/Radarr
 USERS=		${PORTNAME}
 GROUPS=		${PORTNAME}
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	${RM} -rf ${WRKSRC}/Radarr.Update
 

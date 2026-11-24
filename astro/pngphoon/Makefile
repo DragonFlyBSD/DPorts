@@ -19,7 +19,6 @@ MAKE_ARGS=	CC=${CC} CFLAGS="${CFLAGS}"
 
 PLIST_FILES=	bin/pngphoon bin/phoonX share/man/man1/pngphoon.1.gz
 
-DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pngphoon ${STAGEDIR}${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/phoonX ${STAGEDIR}${PREFIX}/bin/

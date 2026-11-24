@@ -29,11 +29,9 @@ F90FLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER}
 FCFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER}
 LDFLAGS+=	-Wl,-rpath=${LOCALBASE}/lib/gcc${_GCC_VER} \
 		-L${LOCALBASE}/lib/gcc${_GCC_VER}
-# C is built with base gcc, a different gcc 12 release whose LTO
-# bytecode gfortran cannot read. Link fat LTO objects as plain code:
-# CMake's FortranCInterface builds its C half with -flto
-# -ffat-lto-objects whenever the C compiler is GNU 12 or newer.
-LDFLAGS+=	-fno-lto
+# gfortran cannot link base cc LTO objects, which FortranCInterface makes.
+# Exe links only: -fno-lto empties shared libs built from slim LTO objects.
+DFLY_CMAKE_ARGS+=	-DCMAKE_EXE_LINKER_FLAGS:STRING="${LDFLAGS} -fno-lto"
 CFLAGS_F2018=	-I${LOCALBASE}/include/gcc${_GCC_VER}
 # Only needed on riscv64? See PR 287211
 .    if ${ARCH} == "riscv64"

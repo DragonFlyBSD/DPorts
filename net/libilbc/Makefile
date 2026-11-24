@@ -21,7 +21,6 @@ CONFLICTS=	ilbc-r[0-9]*
 EXTRACT_AFTER_ARGS=	--exclude ${DISTNAME}/abseil-cpp \
 			--no-same-owner --no-same-permissions
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	${LN} -s ${PREFIX}/include/absl ${WRKSRC}/abseil-cpp
 

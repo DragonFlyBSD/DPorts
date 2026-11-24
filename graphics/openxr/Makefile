@@ -30,5 +30,4 @@ EXTRACT_AFTER_ARGS=	--exclude src/cmake/FindJsonCpp.cmake \
 			--exclude src/external/jsoncpp \
 			--no-same-owner --no-same-permissions
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

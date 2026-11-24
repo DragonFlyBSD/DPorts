@@ -1,10 +1,10 @@
---- src/CompositorResource.cpp.orig	2020-01-15 12:50:41 UTC
+--- src/CompositorResource.cpp.orig
 +++ src/CompositorResource.cpp
-@@ -5,6 +5,7 @@
+@@ -3,6 +3,7 @@
+ #include "backend.h"
+ #include "CompositorResource.h"
  #include "compositor.h"
++#include <tuple>
  
  #include <algorithm>
-+#include <tuple>
- //#include <gbm.h>
  #include <unistd.h>
- 

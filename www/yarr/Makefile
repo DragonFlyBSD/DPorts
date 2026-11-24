@@ -31,4 +31,8 @@ GO_BUILDFLAGS=	-tags "sqlite_foreign_keys release" -ldflags "-X main.Version=${P
 
 PLIST_FILES=	bin/${PORTNAME}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@^//go:build linux || freebsd$$@& || dragonfly@' \
+		${WRKSRC}/src/platform/open_etc.go
+
 .include <bsd.port.mk>

@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS+=	libtermkey.so:devel/libtermkey
 TEST_DEPENDS=	vim>0:editors/vim
 
-USES+=		gmake lua pkgconfig
+USES+= gmake lua pkgconfig ncurses
 USE_GITHUB=	yes
 GH_ACCOUNT=	martanne
 GH_TAGNAME=	b7074021b7bfb0932b889b9560dd22df31cef818:test
@@ -47,7 +47,6 @@ WL_COPY_RUN_DEPENDS=	wl-clipboard>0:x11/wl-clipboard
 XCLIP_RUN_DEPENDS=	xclip>0:x11/xclip
 XSEL_RUN_DEPENDS=	xsel-conrad>0:x11/xsel-conrad
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	${CP} -a ${WRKSRC_test}/test/ ${WRKSRC}/test
 

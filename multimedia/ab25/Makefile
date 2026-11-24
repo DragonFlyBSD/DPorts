@@ -23,7 +23,6 @@ PLIST_FILES=	bin/b25 \
 
 OPTIONS_DEFINE=	DOCS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 pre-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/include/ab25
 

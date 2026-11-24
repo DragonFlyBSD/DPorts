@@ -61,7 +61,6 @@ SUB_LIST=	SE_DBDIR="${SE_DBDIR}" \
 		SE_PIDDIR="${SE_PIDDIR}"
 SUB_FILES=	pkg-message
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 # devel/cpu_features not available on these archs, see devel/cpu_features/Makefile

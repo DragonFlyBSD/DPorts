@@ -18,7 +18,6 @@ GH_ACCOUNT=	orhun
 PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man1/${PORTNAME}.1.gz
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/${PORTNAME}.1 \
 		${STAGEDIR}${PREFIX}/share/man/man1

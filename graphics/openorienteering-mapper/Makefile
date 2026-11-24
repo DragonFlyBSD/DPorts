@@ -57,7 +57,6 @@ TIFF_USE=	QT=imageformats
 CMAKE_ARGS+=	-DLICENSING_PROVIDER=OFF
 .endif
 
-IGNORE= unmaintained, please request fixing to users mailing list
 dfly-patch:
 	${LN} -sv ${WRKSRC}/doc/licensing/freebsd-licensing.cmake ${WRKSRC}/doc/licensing/dragonfly-licensing.cmake
 	${REINPLACE_CMD} -e '/third_party_components gdal/d' ${WRKSRC}/doc/licensing/CMakeLists.txt

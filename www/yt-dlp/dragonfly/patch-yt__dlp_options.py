@@ -1,0 +1,20 @@
+--- yt_dlp/options.py.orig
++++ yt_dlp/options.py
+@@ -464,14 +464,14 @@
+         callback=_list_from_options_callback,
+         type='str',
+         callback_kwargs={'delim': None},
+-        default=['deno'],
++        default=['node'],
+         help=(
+             'Additional JavaScript runtime to enable, with an optional location for the runtime '
+             '(either the path to the binary or its containing directory). '
+             'This option can be used multiple times to enable multiple runtimes. '
+             'Supported runtimes are (in order of priority, from highest to lowest): deno, node, quickjs, bun. '
+-            'Only "deno" is enabled by default. The highest priority runtime that is both enabled and '
+-            'available will be used. In order to use a lower priority runtime when "deno" is available, '
++            'Only "node" is enabled by default. The highest priority runtime that is both enabled and '
++            'available will be used. In order to use a lower priority runtime when "node" is available, '
+             '--no-js-runtimes needs to be passed before enabling other runtimes'))
+     general.add_option(
+         '--no-js-runtimes',

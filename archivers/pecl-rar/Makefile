@@ -24,5 +24,4 @@ CFLAGS+=	-Wno-error=incompatible-function-pointer-types
 
 CONFIGURE_ARGS=	--enable-rar
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

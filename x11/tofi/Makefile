@@ -40,7 +40,7 @@ MANPAGES_PLIST_FILES=	share/man/man1/${PORTNAME}-drun.1.gz \
 			share/man/man1/${PORTNAME}.1.gz \
 			share/man/man5/${PORTNAME}.5.gz
 
-IGNORE= unmaintained, please request fixing to users mailing list
+BUILD_DEPENDS+= ${LOCALBASE}/include/threads.h:misc/libstdthreads
 post-patch:
 # Respect PREFIX for system config and *.desktop
 	@${REINPLACE_CMD} -e 's,/etc,${PREFIX}&,' \

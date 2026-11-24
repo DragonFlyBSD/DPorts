@@ -12,13 +12,12 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libmikmod.so:audio/libmikmod
 
 USES=		ncurses
-CFLAGS+=	-I${LOCALBASE}/include
+CFLAGS+= -I${LOCALBASE}/include -DNCURSES_INTERNALS
 LDFLAGS+=	-L${LOCALBASE}/lib -lmikmod -lpthread -lncurses -lpanel
 DEFINES=	-D_REENTRANT
 
 PLIST_FILES=	bin/mp-player
 
-DFLY_UNMAINTAINED= yes
 do-build:
 	${CC} ${CFLAGS} ${LDFLAGS} ${DEFINES} ${WRKSRC}/mp.c \
 		-o ${WRKSRC}/${PORTNAME}

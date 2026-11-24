@@ -24,7 +24,6 @@ PLIST_FILES=	bin/${GH_PROJECT} \
 		share/applications/${GH_PROJECT}.desktop \
 		share/pixmaps/${GH_PROJECT}.png
 
-DFLY_UNMAINTAINED= yes
 post-extract:
 	@cd ${WRKSRC}/3rd && ${RM} -r libtorrent-rasterbar qtwebengine yt-dlp
 	@${RM} ${WRKSRC}/cmake/Modules/FindLibtorrentRasterbar.cmake

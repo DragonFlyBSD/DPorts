@@ -405,5 +405,4 @@ PROGS=		bin/${PORTNAME} \
 
 PLIST_FILES=	${PROGS}
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

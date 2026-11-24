@@ -1,0 +1,18 @@
+--- libraries/lib-wx-wrappers/CMakeLists.txt.orig
++++ libraries/lib-wx-wrappers/CMakeLists.txt
+@@ -25,7 +25,7 @@
+       FileDialog/mac/FileDialogPrivate.mm
+       FileDialog/mac/FileDialogPrivate.h
+    >
+-   $<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,CYGWIN>:
++   $<$<PLATFORM_ID:Linux,DragonFly,FreeBSD,OpenBSD,CYGWIN>:
+       FileDialog/gtk/FileDialogPrivate.cpp
+       FileDialog/gtk/FileDialogPrivate.h
+    >
+@@ -53,5 +53,5 @@
+ 
+ audacity_library( lib-wx-wrappers "${SOURCES}" "${LIBRARIES}"
+    ""
+-   "$<$<PLATFORM_ID:Linux,FreeBSD,OpenBSD,NetBSD,CYGWIN>:PkgConfig::GTK>"
++   "$<$<PLATFORM_ID:Linux,DragonFly,FreeBSD,OpenBSD,NetBSD,CYGWIN>:PkgConfig::GTK>"
+ )

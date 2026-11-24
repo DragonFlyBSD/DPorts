@@ -23,7 +23,6 @@ GH_SUBDIR=	nimbledeps/pkgs2/x11-1.2:x11 \
 
 PLIST_FILES=	bin/${PORTNAME}
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 .for pkg in x11 opengl
 	${LN} -s ${FILESDIR}/${pkg}-nimblemeta.json \

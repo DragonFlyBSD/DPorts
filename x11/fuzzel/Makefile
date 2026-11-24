@@ -20,7 +20,7 @@ LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libxkbcommon.so:x11/libxkbcommon
 
-USES=		compiler:c11 meson pkgconfig python:build xorg
+USES= compiler:c11 meson pkgconfig python:build xorg localbase:ldflags
 USE_XORG=	pixman
 WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST_FILES=	bin/${PORTNAME} \
@@ -53,7 +53,7 @@ RESVG_LIB_DEPENDS=	libresvg.so:graphics/resvg-capi
 RESVG_USES=		localbase:ldflags
 RESVG_MESON_ON=		-Dsvg-backend=resvg
 
-IGNORE= unmaintained, please request fixing to users mailing list
+LIB_DEPENDS+= libstdthreads.so:misc/libstdthreads
 post-patch:
 # Respect PREFIX for icons
 	@${REINPLACE_CMD} 's,/usr/share,${DATADIR:H},' \

@@ -25,7 +25,6 @@ PLIST_SUB=	USER=${USERS} \
 
 SUB_LIST=	USER=${USERS}
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' ${WRKSRC}/src/conf.c
 	@${REINPLACE_CMD} \

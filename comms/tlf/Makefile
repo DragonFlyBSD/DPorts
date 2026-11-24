@@ -39,5 +39,4 @@ FLDIGI_LIB_DEPENDS=	libxmlrpc.so:net/xmlrpc-c
 FLDIGI_CONFIGURE_ENABLE=fldigi-xmlrpc
 
 PLIST_FILES= %%PORTDOCS%%%%DOCSDIR%%/Xresources %%DATADIR%%/cwops.txt %%DATADIR%%/ok_om.txt %%DATADIR%%/okommults %%DATADIR%%/rules/cwops_mini_cwt %%DATADIR%%/rules/okom
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

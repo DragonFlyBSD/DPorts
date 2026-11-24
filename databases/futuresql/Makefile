@@ -13,5 +13,4 @@ USES=		cmake kde:6 qt:6 tar:xz
 USE_KDE=	ecm:build
 USE_QT=		base
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

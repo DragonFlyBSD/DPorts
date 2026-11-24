@@ -14,7 +14,6 @@ LICENSE_FILE=	${WRKDIR}/${OCTAVE_SRC}/COPYING
 
 USES=		compiler octave
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 # Force newer GCC on platforms using GCC 4.2 as base

@@ -32,5 +32,4 @@ DESKTOP_ENTRIES="M.A.X.R." \
 		false
 
 MAKE_ENV= LDVER=ld.bfd
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

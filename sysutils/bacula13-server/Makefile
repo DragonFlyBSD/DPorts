@@ -130,7 +130,6 @@ MTX_RUN_DEPENDS=	${LOCALBASE}/sbin/mtx:misc/mtx
 
 .endif
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MS3}

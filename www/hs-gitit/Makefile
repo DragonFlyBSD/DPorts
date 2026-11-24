@@ -239,7 +239,6 @@ CABAL_WRAPPER_SCRIPTS=	gitit
 
 USE_RC_SUBR=	gitit
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	cd ${WRKSRC} && \
 		${COPYTREE_SHARE} README.markdown ${STAGEDIR}${DATADIR} && \

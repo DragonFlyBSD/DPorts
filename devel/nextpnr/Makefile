@@ -21,7 +21,7 @@ BUILD_DEPENDS=	${LOCALBASE}/share/trellis/database:devel/trellis \
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libboost_program_options.so:devel/boost-libs
 
-USES=		compiler:c++17-lang cmake llvm:min=20 qt:6 eigen:3 python
+USES= compiler:c++17-lang cmake qt:6 eigen:3 python
 USE_QT=		base
 USE_GITHUB=	yes
 GH_ACCOUNT=	YosysHQ

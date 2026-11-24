@@ -27,7 +27,6 @@ GH_TUPLE=	ultraembedded:fat_io_lib:0ef5c2bb:fat_io_lib/learn-silice/classroom/so
 
 SHEBANG_GLOB=	*.sh *.py
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/silice-make.py ${STAGEDIR}${PREFIX}/bin

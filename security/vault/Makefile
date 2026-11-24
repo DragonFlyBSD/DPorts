@@ -70,4 +70,8 @@ _make-web_ui: clean extract
 		bofh@freefall.freebsd.org:public_distfiles/security/${PORTNAME}/
 .endif
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|^//go:build linux .*|& \|\| dragonfly|' -e 's|^// +build linux .*|& dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/hashicorp/consul-template/signals/signals_unix.go
+
 .include <bsd.port.post.mk>

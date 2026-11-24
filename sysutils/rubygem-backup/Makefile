@@ -80,5 +80,4 @@ NO_ARCH=	yes
 
 PLIST_FILES=	bin/backup
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

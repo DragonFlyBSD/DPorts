@@ -1,0 +1,38 @@
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -16,7 +16,7 @@
+     MESSAGE(FATAL_ERROR "Use the Visual Studio project file which located in gcta_win64 directory")
+ endif()
+ 
+-if("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD" OR "${CMAKE_SYSTEM_NAME}" MATCHES "Linux" OR "${CMAKE_SYSTEM_NAME}" MATCHES "Darwin")
++if("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD|DragonFly" OR "${CMAKE_SYSTEM_NAME}" MATCHES "Linux" OR "${CMAKE_SYSTEM_NAME}" MATCHES "Darwin")
+     MESSAGE("FreeBSD, Linux and Mac are supported.")
+ else()
+     MESSAGE("Your system: ${CMAKE_SYSTEM_NAME}")
+@@ -63,7 +63,7 @@
+ 
+ 
+ message(STATUS "ARCHITECTURE:${CMAKE_LIBRARY_ARCHITECTURE}")
+-if("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD")
++if("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD|DragonFly")
+     SET(OPENBLAS "$ENV{OPENBLAS}")
+     IF(NOT OPENBLAS)
+         MESSAGE(FATAL_ERROR "Specify environment variable OPENBLAS to the location of OPENBLAS package")
+@@ -184,7 +184,7 @@
+ if(APPLE)
+     link_directories(${MKLROOT}/lib)
+     link_directories(/usr/local/lib)
+-elseif("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD")
++elseif("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD|DragonFly")
+     link_directories(${LOCALBASE}/lib)
+ else(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+     #linux
+@@ -196,7 +196,7 @@
+ if(APPLE)
+     # iomp5
+     target_link_libraries(gcta64 ${libs_list} Pgenlib mainV1 z ${BLAS_LIB} sqlite3 zstd_s omp pthread m dl )
+-elseif("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD")
++elseif("${CMAKE_SYSTEM_NAME}" MATCHES "FreeBSD|DragonFly")
+     # FIXME: Clean this up
+     target_link_libraries(gcta64 mainV1 ${libs_list} Pgenlib gsl z sqlite3 zstd -Wl,--start-group ${BLAS_LIB} -Wl,--end-group -Wl,--whole-archive -lpthread -Wl,--no-whole-archive m dl)
+ else()

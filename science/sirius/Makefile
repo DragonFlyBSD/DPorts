@@ -56,5 +56,4 @@ OPENMPI_USES=		mpi:openmpi
 # 7.7.0: tests fail to compile, see https://github.com/electronic-structure/SIRIUS/issues/1070
 # 7.11.0: tests hang in the middle or run forever
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

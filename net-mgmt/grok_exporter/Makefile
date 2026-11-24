@@ -55,4 +55,7 @@ post-install:
 	@(cd ${WRKSRC} && ${COPYTREE_SHARE} example ${STAGEDIR}${DATADIR})
 	@(cd ${WRKSRC_plugins} && ${COPYTREE_SHARE} patterns ${STAGEDIR}${DATADIR})
 
+dfly-patch:
+	for f in `${FIND} ${WRKSRC}/tailer -name '*darwin*'`; do ${LN} -sf $${f} `echo $${f} | ${SED} 's/darwin/dragonfly/g'`; done
+
 .include <bsd.port.mk>

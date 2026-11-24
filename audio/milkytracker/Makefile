@@ -38,7 +38,6 @@ RTMIDI_LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 			librtmidi.so:audio/rtmidi
 RTMIDI_CMAKE_ON=	-DENABLE_RTMIDI:BOOL=ON
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 .for f in ${ICONS}
 	${INSTALL_DATA} ${WRKSRC}/resources/pictures/${f} \

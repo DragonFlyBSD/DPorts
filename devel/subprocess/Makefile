@@ -19,7 +19,6 @@ CMAKE_ON=	BUILD_SHARED_LIBS
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
-DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/cpp/subprocess.hpp ${STAGEDIR}${PREFIX}/include
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/subprocess

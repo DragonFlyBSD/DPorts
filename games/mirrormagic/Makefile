@@ -34,6 +34,7 @@ DESKTOP_ENTRIES="Mirror Magic" \
 
 OPTIONS_DEFINE=	DOCS
 
+MAKE_JOBS_UNSAFE= yes
 post-extract:
 	@${RM} -r ${WRKSRC}/lib ${WRKSRC}/mirrormagic # linux binaries
 

@@ -43,7 +43,6 @@ SHEBANG_FILES=	data/i18n-tools/scripts/process_translations.py
 
 BINARY_ALIAS=	xmlstarlet=${LOCALBASE}/bin/xml
 
-DFLY_UNMAINTAINED= yes
 post-extract:
 	@${MV} ${WRKDIR}/colobot-data-colobot-gold-${DISTVERSION}${DISTVERSIONSUFFIX}/* ${WRKSRC}/data
 	@${MV} ${WRKDIR}/*.ogg ${WRKDIR}/LICENSE.txt ${WRKSRC}/data/music/

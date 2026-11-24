@@ -19,4 +19,10 @@ GO_MODULE=	github.com/hashicorp/packer
 
 PLIST_FILES=	bin/${PORTNAME}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's,^//go:build !netbsd .*,& \&\& !dragonfly,' \
+		${WRKSRC}/internal/sbom/generator_syft.go
+	${REINPLACE_CMD} -e 's,^//go:build netbsd .*,& || dragonfly,' \
+		${WRKSRC}/internal/sbom/generator_unsupported.go
+
 .include <bsd.port.mk>

@@ -96,4 +96,8 @@ VERBOSE_JTAGIO_CONFIGURE_ENABLE=	verbose
 VERBOSE_USBCOMM_CONFIGURE_ENABLE=	verbose-usb-comms
 VERBOSE_USBIO_CONFIGURE_ENABLE=		verbose-usb-io
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^#if __FreeBSD__ >= 15$$/#if defined(__FreeBSD__) \&\& __FreeBSD__ >= 15/' \
+		${WRKSRC}/src/jtag/drivers/libusb_helper.c
+
 .include <bsd.port.mk>

@@ -53,7 +53,6 @@ OPTIONS_DEFINE=			OPENMP
 OPTIONS_DEFAULT=		OPENMP
 OPENMP_CONFIGURE_ENABLE=	openmp
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 # workaround for:

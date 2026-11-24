@@ -19,6 +19,4 @@ USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes
 
-LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
-BROKEN= uses pulseaudio
 .include <bsd.port.mk>

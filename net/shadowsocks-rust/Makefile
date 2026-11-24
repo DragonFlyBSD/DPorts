@@ -21,9 +21,9 @@ USE_RC_SUBR=	sslocal-rust \
 USE_GITHUB=	yes
 GH_ACCOUNT=	shadowsocks
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/config.json ${STAGEDIR}${ETCDIR}/config.json.sample
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -14,5 +14,4 @@ LIB_DEPENDS=	libinotify.so:devel/libinotify
 
 USES=		cabal
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

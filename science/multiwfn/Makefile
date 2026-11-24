@@ -22,7 +22,7 @@ LIB_DEPENDS=	libblas.so:math/blas \
 		libopenblas.so:math/openblas
 RUN_DEPENDS=	bash:shells/bash
 
-USES= gl gmake fortran motif xorg localbase
+USES= gl gmake fortran motif xorg localbase:ldflags
 USE_GL=		gl
 USE_XORG=	x11 xt
 
@@ -45,7 +45,6 @@ BINARY_ALIAS=	ifort=gfortran${GCC_DEFAULT} \
 PLIST_FILES=	bin/Multiwfn \
 		bin/Multiwfn_noGUI
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch: # replace the dislin.a library with the FreeBSD version
 	@${CP} \
 		${WRKDIR}/dislin-${DISLIN_VERSION}/fbsd_64/lib/dislin_d-${DISLIN_VERSION}.a \

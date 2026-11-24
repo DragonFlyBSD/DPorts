@@ -28,7 +28,7 @@ MAKE_ENV=	OPTIMIZATION= \
 
 CONFLICTS_INSTALL=	redis-devel redis[0-9]*
 
-BINARY_ALIAS=	gmd5sum=md5sum
+BINARY_ALIAS= md5sum=md5
 PORTSCOUT=	limit:^8\.8\.
 SUB_FILES=	pkg-message
 SUB_LIST=	PORTNAME=${PORTNAME} \
@@ -71,6 +71,7 @@ REDIS_DBDIR?=	/var/db/redis
 REDIS_RUNDIR?=	/var/run/redis
 REDIS_LOGDIR?=	/var/log/redis
 
+MAKE_ENV+= OPENSSL_PREFIX=${LOCALBASE}
 post-patch-JEMALLOC-on:
 	@${REINPLACE_CMD} '78s!Linux!FreeBSD!g' ${WRKSRC}/src/Makefile
 

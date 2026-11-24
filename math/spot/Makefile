@@ -34,7 +34,6 @@ OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	tl.pdf
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so
 

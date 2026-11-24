@@ -27,4 +27,8 @@ CMAKE_TESTING_ON=	NCRYSTAL_ENABLE_TESTING \
 
 # tests as of 4.4.6: 100% tests passed, 0 tests failed out of 127
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^#  ifndef __FreeBSD__$$/#  if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/ncrystal_core/src/utils/NCCFileUtils.cc
+
 .include <bsd.port.mk>

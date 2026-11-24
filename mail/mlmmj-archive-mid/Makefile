@@ -18,7 +18,6 @@ MAKE_ARGS=	MAN= LOCALBASE=${LOCALBASE}
 PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man1/${PORTNAME}.1.gz
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM}  ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/share/man/man1

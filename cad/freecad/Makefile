@@ -110,7 +110,6 @@ OPTIONS_DEFINE=	COLLADA
 COLLADA_DESC=		Install pycollada for Collada files import
 COLLADA_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycollada>0:graphics/py-pycollada@${PY_FLAVOR}
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == aarch64 || ${ARCH} == x86_64 || ${ARCH} == i386

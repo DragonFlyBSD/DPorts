@@ -35,7 +35,6 @@ MAKE_ENV=	AWS_CRT_BUILD_FORCE_STATIC_LIBS=0 \
 		AWS_CRT_BUILD_WARNINGS_ARE_ERRORS=0
 
 # Clean up bundled libraries
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${RM} -r ${WRKSRC}/crt/
 

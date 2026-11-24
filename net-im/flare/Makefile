@@ -36,6 +36,7 @@ SPELLCHECK_DESC=	for spell-checking support
 FEEDBACK_LIB_DEPENDS=	libfeedback-0.0.so:accessibility/feedbackd
 SPELLCHECK_LIB_DEPENDS=	libspelling-1.so:x11-toolkits/libspelling
 
+MAKE_ENV= GETTEXT_DIR=${LOCALBASE}
 post-patch:
 	@${REINPLACE_CMD} -e '/update_desktop_database/d' \
 		${WRKSRC}/meson.build
@@ -66,4 +67,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/_build/data/de.schmidhuberj.Flare.metainfo.xml \
 		${STAGEDIR}${PREFIX}/share/metainfo/de.schmidhuberj.Flare.metainfo.xml
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

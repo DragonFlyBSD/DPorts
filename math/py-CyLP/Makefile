@@ -38,7 +38,6 @@ MAKE_ENV=	COIN_INSTALL_DIR=${LOCALBASE}
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 
-DFLY_UNMAINTAINED= yes
 do-test:
 	# deselect tests:
 	# * test_PySolve.py: it SEGVs, see https://github.com/coin-or/CyLP/issues/232

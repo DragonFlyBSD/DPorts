@@ -16,9 +16,10 @@ BUILD_DEPENDS=	p5-Devel-CheckLib>=0:devel/p5-Devel-CheckLib \
 		${RUN_DEPENDS}
 RUN_DEPENDS=	p5-PDL>=0:math/p5-PDL
 
-USES=		perl5
+USES= perl5 ncurses
 USE_PERL5=	configure
 
+CONFIGURE_ENV= CPATH=${LOCALBASE}/include
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/PDL/IO/Browser/Browser.so
 

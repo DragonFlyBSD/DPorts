@@ -25,7 +25,6 @@ CARGO_INSTALL=	no
 CARGO_TEST=	no
 GLIB_SCHEMAS=	io.github.seadve.Kooha.gschema.xml
 
-BROKEN= uses pulseaudio
 post-patch:
 	@${REINPLACE_CMD} -e '/update_desktop_database/d' \
 		${WRKSRC}/meson.build
@@ -33,5 +32,4 @@ post-patch:
 	@${REINPLACE_CMD} -e "/cargo_options =/s/ '--/&verbose', &verbose', &/" \
 		${WRKSRC}/src/meson.build
 
-LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
 .include <bsd.port.mk>

@@ -36,5 +36,8 @@ dfly-patch:
 		${WRKSRC}/global.c			\
 		${WRKSRC}/global.h			\
 		${WRKSRC}/execute.c
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/term.c
 
 .include <bsd.port.mk>

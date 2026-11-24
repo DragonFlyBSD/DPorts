@@ -13,5 +13,4 @@ ONLY_FOR_ARCHS=	i386 amd64
 ONLY_FOR_ARCHS_REASON=	vmmouse protocol is only supported on x86-compatible architectures
 
 CONFIGURE_ARGS= --with-hal-callouts-dir=${PREFIX}/libexec/hal/scripts
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

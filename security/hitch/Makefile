@@ -35,7 +35,6 @@ OPTIONS_DEFINE=		DOCS
 
 BROKEN_SSL= libressl
 BROKEN_SSL_REASON_libressl= port requires SSL_CTX_set1_verify_cert_store()
-DFLY_UNMAINTAINED= yes
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc ${STAGEDIR}${CACHE_DIR}
 	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.conf.sample ${STAGEDIR}${PREFIX}/etc/

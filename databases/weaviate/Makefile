@@ -25,4 +25,9 @@ PLIST_FILES=	bin/${PORTNAME}-server
 
 # how to start: https://docs.weaviate.io/deploy/installation-guides/docker-installation#run-weaviate-with-default-settings
 
+dfly-patch:
+	${REINPLACE_CMD} -E -e 's/([ (:])fs\.(Blocks|Bfree) \* uint64\(fs\.Bsize\)/\1uint64(fs.\2) * uint64(fs.Bsize)/g' \
+		${WRKSRC}/usecases/cluster/disk_use_unix.go \
+		${WRKSRC}/adapters/repos/db/disk_use_unix.go
+
 .include <bsd.port.mk>

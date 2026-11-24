@@ -32,5 +32,4 @@ BROKEN=		needs /usr/include/byteswap.h
 
 # tests as of 2.4.1: 100% tests passed, 0 tests failed out of 16
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

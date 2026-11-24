@@ -36,4 +36,13 @@ do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/${PORTNAME}/|} ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifdef[[:space:]]+__FreeBSD__/#\1if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/mpifileutils/src/common/mfu_util.c ${WRKSRC}/mpifileutils/src/common/mfu_io.c ${WRKSRC}/mpifileutils/src/common/mfu_io.h \
+		${WRKSRC}/mpifileutils/src/common/mfu_bz2.c ${WRKSRC}/mpifileutils/src/dbcast/dbcast.c ${WRKSRC}/mpifileutils/src/dcmp/dcmp.c
+	${REINPLACE_CMD} -e 's/DTTOIF(entry->d_type)/((entry->d_type) << 12)/' \
+		${WRKSRC}/mpifileutils/src/common/mfu_flist_walk.c
+
 .include <bsd.port.mk>

@@ -83,10 +83,10 @@ MAKE_ENV+=	USE_DISTRIBUTED=1
 # libmpi/libmpicxx from mpich and drag in lang/gcc14 via the wrapper's -rpath
 MAKE_ENV+=	CMAKE_ARGS="-DMPI_C_COMPILER=${MPI_HOME}/bin/mpicc -DMPI_CXX_COMPILER=${MPI_HOME}/bin/mpicxx" \
 		MAX_JOBS=${MAKE_JOBS_NUMBER}
-LDFLAGS= -L /usr/lib -L${LOCALBASE}/llvm${LLVM_DEFAULT}/lib/c++ -L /lib
+LDFLAGS+=	-lexecinfo
 LDFLAGS_powerpc64le=	-pthread
 
-BINARY_ALIAS= make=${GMAKE} cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} cc=${LOCALBASE}/bin/clang${LLVM_DEFAULT} c++=${LOCALBASE}/bin/clang++${LLVM_DEFAULT} ar=${LOCALBASE}/bin/llvm-ar${LLVM_DEFAULT} nm=${LOCALBASE}/bin/llvm-nm${LLVM_DEFAULT}
+BINARY_ALIAS=	make=${GMAKE}
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR} \
 		TORCHINDUCTOR_CACHE_DIR=${WRKDIR}/torchinductor_cache
@@ -102,11 +102,6 @@ VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
 
 CONFLICTS_BUILD=	mpich # binaries are still linked with mpich when it is present
 
-IGNORE= unmaintained, please request fixing to users mailing list
-USE_CLANG_FALLBACK= default
-CXXFLAGS= -nostdlib++ -nostdinc++ -I${LOCALBASE}/include -I${LOCALBASE}/include/cxxrt -cxx-isystem ${LOCALBASE}/llvm${LLVM_DEFAULT}/include/c++/v1
-LIB_DIRS= ${PREFIX}/llvm${LLVM_DEFAULT}/lib
-LIB_DEPENDS+= libc++.so.1:devel/libcxx${LLVM_DEFAULT}
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == aarch64
@@ -156,5 +151,20 @@ test-quick:
 	@cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHON_CMD} ${FILESDIR}/example.py
 
 # tests as of 2.14.0: 231 passed 6 skipped
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(__FreeBSD__) || defined(__OpenBSD__)/defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)/' \
+		${WRKSRC}/c10/core/Scalar.h
+	${REINPLACE_CMD} -e 's/^#if defined(__APPLE__) || defined(__FreeBSD__)$$/& || defined(__DragonFly__)/' \
+		${WRKSRC}/torch/csrc/jit/frontend/strtod.cpp
+	${REINPLACE_CMD} -e 's/^#ifdef __FreeBSD__$$/#if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		${WRKSRC}/torch/csrc/utils/byte_order.h
+	${REINPLACE_CMD} -e 's/^#elif defined(__FreeBSD__)$$/#elif defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		${WRKSRC}/third_party/tensorpipe/tensorpipe/common/system.cc
+	${REINPLACE_CMD} -e 's/defined(__FreeBSD__)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		${WRKSRC}/torch/csrc/distributed/c10d/ProcessGroupGloo.cpp
+	# Base gcc has no libgcc_s; its driver links libgcc_pic instead.
+	${REINPLACE_CMD} -e 's/ gcc_s gcc)/ gcc_pic gcc)/' \
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

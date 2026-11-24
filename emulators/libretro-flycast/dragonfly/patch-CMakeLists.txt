@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -234,7 +234,7 @@
+ 			target_link_libraries(${PROJECT_NAME} PRIVATE "-lGLESv2")
+ 		endif()
+ 	elseif(USE_OPENGL)
+-		if (CMAKE_SYSTEM_NAME MATCHES "FreeBSD|OpenBSD|NetBSD")
++		if (CMAKE_SYSTEM_NAME MATCHES "DragonFly|FreeBSD|OpenBSD|NetBSD")
+ 			find_package(OpenGL REQUIRED)
+ 			if(CMAKE_VERSION VERSION_LESS 3.29.0)
+ 				target_include_directories(${PROJECT_NAME} PRIVATE ${OPENGL_INCLUDE_DIR})

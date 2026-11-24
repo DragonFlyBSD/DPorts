@@ -17,5 +17,4 @@ USES=		gem
 NO_ARCH=	yes
 
 USE_RUBY= yes
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

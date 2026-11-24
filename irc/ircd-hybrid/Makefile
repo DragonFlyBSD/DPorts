@@ -47,7 +47,6 @@ INSTALL_IGNORES=	charby* ircd-rat* ircu-*
 CERTSFILE=	${LOCALBASE}/share/certs/ca-root-nss.crt
 
 PLIST_FILES= %%DATADIR%%-%%PORTVERSION%%/ircd-hybrid/help/monitor
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSSL}

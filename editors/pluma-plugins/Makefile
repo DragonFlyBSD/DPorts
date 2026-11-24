@@ -38,5 +38,4 @@ GLIB_SCHEMAS=	org.mate.pluma.plugins.sourcecodebrowser.gschema.xml \
 		org.mate.pluma.plugins.wordcompletion.gschema.xml
 
 USES+= libtool
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

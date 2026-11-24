@@ -99,4 +99,10 @@ post-install:
 	@${RM} -r ${STAGEDIR}${PREFIX}/${unneeded}
 .endfor
 
+dfly-patch:
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifdef[[:space:]]+__FreeBSD__/#\1if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/source/libpapi-ipp/http-core/http.h ${WRKSRC}/source/libpapi-lpd/lpd-port.c
+
 .include <bsd.port.mk>

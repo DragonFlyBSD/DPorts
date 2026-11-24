@@ -41,8 +41,12 @@ DOCS_BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:textproc
 SUB_FILES=	realmd-freebsd.conf
 SUB_LIST=	SAMBA=samba${SAMBA_DEFAULT:S/.//}
 
-DFLY_UNMAINTAINED= yes
 pre-install:
 	@${INSTALL_DATA} ${WRKDIR}/realmd-freebsd.conf ${WRKSRC}/service/realmd-freebsd.conf
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^#if defined(__FreeBSD__)$$/& || defined(__DragonFly__)/' \
+		${WRKSRC}/service/realm-provider.c \
+		${WRKSRC}/service/realm-samba-enroll.c
 
 .include <bsd.port.mk>

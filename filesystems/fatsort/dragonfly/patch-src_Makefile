@@ -1,0 +1,11 @@
+--- src/Makefile.orig
++++ src/Makefile
+@@ -44,7 +44,7 @@
+ 		ifeq ($(UNAME_S),Linux)
+ 			override CFLAGS += -D __LINUX__
+ 		endif
+-		ifeq ($(UNAME_S),FreeBSD)
++		ifneq (,$(filter FreeBSD DragonFly,$(UNAME_S)))
+ 			override CFLAGS += -D __BSD__
+ 		endif
+ 		ifeq ($(UNAME_S),OpenBSD)

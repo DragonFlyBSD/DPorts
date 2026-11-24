@@ -17,5 +17,4 @@ MAKE_ARGS=	MANPREFIX=${PREFIX}/share
 
 PLIST_FILES=	bin/generand share/man/man1/generand.1.gz
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

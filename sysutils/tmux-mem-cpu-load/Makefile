@@ -15,5 +15,4 @@ GH_ACCOUNT=	thewtex
 
 PLIST_FILES=	bin/tmux-mem-cpu-load
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

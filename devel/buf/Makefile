@@ -25,5 +25,4 @@ PLIST_FILES=	bin/buf \
 		bin/protoc-gen-buf-breaking \
 		bin/protoc-gen-buf-lint
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

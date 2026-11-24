@@ -13,7 +13,6 @@ USES=		ncurses
 MANLANG=	ja
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
 do-build:
 	${CC} ${CFLAGS} ${CPPFLAGS} -o ${WRKSRC}/quit \
 		${WRKSRC}/quit.c ${LDFLAGS} -lncurses

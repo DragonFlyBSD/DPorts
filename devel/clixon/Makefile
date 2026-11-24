@@ -52,5 +52,4 @@ NATIVE_RUN_DEPENDS=	nghttp2>=0:www/nghttp2
 NATIVE_CONFIGURE_ON=	--with-restconf=native
 OFF_CONFIGURE_ON=	--without-restconf
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

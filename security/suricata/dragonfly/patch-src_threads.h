@@ -1,8 +1,8 @@
---- src/threads.h.orig	2019-10-14 11:25:49 UTC
+--- src/threads.h.orig
 +++ src/threads.h
-@@ -43,9 +43,9 @@
- #endif /* PROFILE_LOCKING */
- #endif /* PROFILING */
+@@ -46,9 +46,9 @@
+ #include <unistd.h>
+ #endif
  
 -#if defined OS_FREEBSD || __OpenBSD__
 +#if defined OS_FREEBSD || defined __OpenBSD__ || defined __DragonFly__
@@ -12,8 +12,8 @@
  #include <sys/thr.h>
  #endif
  enum {
-@@ -217,7 +217,7 @@ enum {
-     u_long _scgetthread_tid = (u_long)tmpthid; \
+@@ -219,7 +219,7 @@
+     unsigned long _scgetthread_tid = (unsigned long)tmpthid; \
      _scgetthread_tid; \
  })
 -#elif __OpenBSD__
@@ -21,12 +21,12 @@
  #define SCGetThreadIdLong(...) ({ \
      pid_t tpid; \
      tpid = getpid(); \
-@@ -272,7 +272,7 @@ enum {
-     pthread_set_name_np(pthread_self(), tname); \
-     0; \
- })
+@@ -277,7 +277,7 @@
+         strlcpy(t_thread_name, n, sizeof(t_thread_name));                                          \
+         pthread_set_name_np(pthread_self(), tname);                                                \
+     })
 -#elif defined __OpenBSD__ /* OpenBSD */
-+#elif defined __OpenBSD__ /* OpenBSD */ || defined __DragonFly__
++#elif defined __OpenBSD__ || defined __DragonFly__ /* OpenBSD */
  /** \todo Add implementation for OpenBSD */
- #define SCSetThreadName(n) (0)
+ #define SCSetThreadName(n) ({ strlcpy(t_thread_name, n, sizeof(t_thread_name)); })
  #elif defined OS_WIN32 /* Windows */

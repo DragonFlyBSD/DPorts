@@ -40,7 +40,7 @@ GLIB_SCHEMAS=	org.gnome.SessionManager.gschema.xml
 post-patch:
 # Avoid lots of warnings in gdm log
 .for f in gnome-wayland.desktop.in.in gnome.desktop.in.in
-	${REINPLACE_CMD} -e 's|/gnome-session|/gnome-session --disable-acceleration-check|g' \
+	${REINPLACE_CMD} -e '/^Exec=/s|/gnome-session|/gnome-session --disable-acceleration-check|' \
 		${WRKSRC}/data/${f}
 .endfor 
 

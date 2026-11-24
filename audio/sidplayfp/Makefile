@@ -33,7 +33,6 @@ OUT123_LIB_DEPENDS=	libout123.so:audio/mpg123
 OUT123_CONFIGURE_WITH=	out123
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 
-IGNORE= unmaintained, please request fixing to users mailing list
 pre-configure-ALSA-off:
 	${REINPLACE_CMD} -e 's|alsa >= 1.0|alsa >= 9999.0|g' \
 	    ${PATCH_WRKSRC}/configure

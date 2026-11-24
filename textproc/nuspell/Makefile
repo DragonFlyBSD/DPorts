@@ -34,7 +34,6 @@ OPTIONS_SUB=	yes
 MANPAGES_BUILD_DEPENDS=	pandoc:textproc/hs-pandoc
 MANPAGES_CMAKE_BOOL=	BUILD_MAN
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' ${WRKSRC}/src/nuspell/finder.cxx
 

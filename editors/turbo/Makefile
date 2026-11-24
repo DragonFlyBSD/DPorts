@@ -9,7 +9,7 @@ WWW=		https://github.com/magiblot/turbo
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
-USES=		cmake compiler:c++17-lang
+USES= cmake compiler:c++17-lang ncurses
 USE_GITHUB=	yes
 
 GH_ACCOUNT=	magiblot
@@ -17,5 +17,5 @@ GH_PROJECT=	tvision:tv
 GH_TAGNAME=	695175f df6424f:tv
 GH_SUBDIR=	deps/tvision:tv
 
-IGNORE= unmaintained, please request fixing to users mailing list
+CMAKE_ARGS= -DCMAKE_INCLUDE_PATH=${NCURSESINC}
 .include <bsd.port.mk>

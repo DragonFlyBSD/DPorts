@@ -23,7 +23,6 @@ MAKE_ENV=	NCURSESLIBS="${NCURSESLIBS}" VERBOSE=1
 
 PLIST_FILES=	share/man/man8/powermon.8.gz sbin/powermon
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/release/powermon \
 		${STAGEDIR}${PREFIX}/sbin

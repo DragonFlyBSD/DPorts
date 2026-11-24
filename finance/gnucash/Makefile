@@ -86,7 +86,6 @@ OFX_VARS=		GLIB_SCHEMAS+=org.gnucash.GnuCash.dialogs.import.ofx.gschema.xml
 PYTHON_CMAKE_BOOL=	WITH_PYTHON
 PYTHON_USES=		python
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's/-Werror //' ${WRKSRC}/CMakeLists.txt
 

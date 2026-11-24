@@ -673,7 +673,6 @@ PROGRAMS=	clipcat-menu clipcatctl clipcatd
 
 # rebuilds rocksdb - maybe it can link with external rocksdb?
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 .for p in ${PROGRAMS}
 	# workaround for error: found a virtual manifest at `xx` instead of a package manifest
@@ -682,4 +681,5 @@ do-install:
 		${STAGEDIR}${PREFIX}/bin/${p}
 .endfor
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

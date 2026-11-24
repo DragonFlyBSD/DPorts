@@ -55,5 +55,4 @@ NLS_LDFLAGS=		-lintl
 NLS_MESON_ENABLED=	nls
 
 MESON_ARGS+= -Dcurses=ncurses
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

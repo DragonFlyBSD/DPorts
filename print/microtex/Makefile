@@ -24,5 +24,4 @@ GH_TAGNAME=	0e3707f
 
 PORTSCOUT=	skipv:xml-def
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

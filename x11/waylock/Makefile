@@ -32,5 +32,4 @@ MANPAGES_BUILD_DEPENDS=	scdoc:textproc/scdoc
 MANPAGES_ZIG_BOOL=	man-pages
 MANPAGES_PLIST_FILES=	share/man/man1/${PORTNAME}.1.gz
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

@@ -26,10 +26,8 @@ USE_LDCONFIG=	yes
 
 WRKSRC=	${WRKDIR}/${PORTNAME}
 
-IGNORE= unmaintained, please request fixing to users mailing list
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FreeBSD@DragonFly@g' \
-		${WRKSRC}/CMakeLists.txt \
-		${WRKSRC}/lib/globalshortcut/CMakeLists.txt
+		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

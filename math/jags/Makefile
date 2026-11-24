@@ -51,7 +51,6 @@ S=		${PORTVERSION:C|\..*||}
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-IGNORE= unmaintained, please request fixing to users mailing list
 pre-configure:
 	${REINPLACE_CMD} \
 		-e '/@WINDOWS_FALSE@bin_SCRIPTS =/s/jags/mcmc-&/' \

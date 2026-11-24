@@ -9,11 +9,11 @@ WWW=		https://github.com/swesterfeld/liquidsfz
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS= lv2>0:audio/lv2 cxxfs_gcc8>0:misc/cxxfs_gcc8
+BUILD_DEPENDS=	lv2>0:audio/lv2
 LIB_DEPENDS=	libjack.so:audio/jack \
 		libsndfile.so:audio/libsndfile
 
-USES=		autoreconf compiler:c++17-lang gl gmake libtool pkgconfig readline xorg
+USES= autoreconf compiler:c++17-lang gl gmake libtool pkgconfig readline xorg ncurses
 USE_XORG=	x11 xcursor xext xrandr
 USE_GL=		gl
 USE_LDCONFIG=	yes
@@ -38,12 +38,10 @@ PLIST_FILES=	bin/liquidsfz \
 		lib/lv2/liquidsfz.lv2/manifest.ttl \
 		libdata/pkgconfig/liquidsfz.pc
 
-LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8 -lstdc++fs
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${CHOSEN_COMPILER_TYPE} == clang
-CXXFLAGS+= -Duint=unsigned -Dregister=registerx -isystem ${LOCALBASE}/cxxfs_gcc8
+CXXFLAGS+=	-Duint=unsigned -Dregister=registerx
 .endif
 
 post-install:

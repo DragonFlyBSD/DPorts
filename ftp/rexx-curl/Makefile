@@ -33,7 +33,6 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 DOCFILES=	getright.rexx getmail-pop3.rexx httppost.rexx scp.rexx \
 		sendmail-smtp.rexx testcurl.rexx upload.rexx README.txt
-DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rexxcurl ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_LIB} ${WRKSRC}/librexxcurl.so ${STAGEDIR}${PREFIX}/lib

@@ -32,5 +32,4 @@ DOS2UNIX_FILES=	${PORTNAME}.pro \
 		src/pdfviewer/PDFDocument.h \
 		src/qcodeedit/lib/widgets/qfoldpanel.cpp
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

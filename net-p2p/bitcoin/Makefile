@@ -76,7 +76,6 @@ ZMQ_BUILD_DEPENDS=	libzmq4>0:net/libzmq4
 ZMQ_RUN_DEPENDS=	libzmq4>0:net/libzmq4
 ZMQ_CMAKE_BOOL=		WITH_ZMQ
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if defined(SLAVE_PORT) && ${SLAVE_PORT} == "no"

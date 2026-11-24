@@ -18,6 +18,7 @@ share/applications/gnome-printers-panel.desktop
 share/applications/gnome-privacy-panel.desktop
 share/applications/gnome-region-panel.desktop
 share/applications/gnome-search-panel.desktop
+share/applications/gnome-sound-panel.desktop
 share/applications/gnome-system-panel.desktop
 share/applications/gnome-universal-access-panel.desktop
 share/applications/gnome-users-panel.desktop
@@ -68,6 +69,7 @@ share/icons/hicolor/scalable/apps/org.gnome.Settings-remote-desktop-symbolic.svg
 share/icons/hicolor/scalable/apps/org.gnome.Settings-screen-lock-symbolic.svg
 share/icons/hicolor/scalable/apps/org.gnome.Settings-search-symbolic.svg
 share/icons/hicolor/scalable/apps/org.gnome.Settings-secure-shell-symbolic.svg
+share/icons/hicolor/scalable/apps/org.gnome.Settings-sound-symbolic.svg
 share/icons/hicolor/scalable/apps/org.gnome.Settings-system-symbolic.svg
 share/icons/hicolor/scalable/apps/org.gnome.Settings-thunderbolt-access-symbolic.svg
 share/icons/hicolor/scalable/apps/org.gnome.Settings-time-symbolic.svg
@@ -323,3 +325,7 @@ share/polkit-1/actions/org.gnome.controlcenter.remote-session-helper.policy
 share/polkit-1/actions/org.gnome.controlcenter.system.policy
 share/polkit-1/actions/org.gnome.controlcenter.user-accounts.policy
 share/polkit-1/rules.d/gnome-control-center.rules
+share/sounds/gnome/default/alerts/click.ogg
+share/sounds/gnome/default/alerts/hum.ogg
+share/sounds/gnome/default/alerts/string.ogg
+share/sounds/gnome/default/alerts/swing.ogg

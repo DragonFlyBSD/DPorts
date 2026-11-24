@@ -32,7 +32,6 @@ FISH_PLIST_FILES=	share/fish/vendor_functions.d/chezmoi.fish
 ZSH_PLIST_FILES=	share/zsh/site-functions/_chezmoi
 
 # Required to bring DISTINFO_FILE
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 SOURCE_DATE_EPOCH_CMD=	date -ur $$(${AWK} '/TIMESTAMP/ {print $$3}' ${DISTINFO_FILE}) '+%FT%TZ'

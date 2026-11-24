@@ -33,4 +33,10 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/pf.conf.sample ${STAGEDIR}/${EXAMPLESDIR}
 	${INSTALL_DATA} ${FILESDIR}/ipfw-config.sample ${STAGEDIR}/${EXAMPLESDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined *(__FreeBSD__)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		${WRKSRC}/src/chilli.c ${WRKSRC}/src/dhcp.c ${WRKSRC}/src/dhcp.h \
+		${WRKSRC}/src/main-query.c ${WRKSRC}/src/net.c ${WRKSRC}/src/redir.c \
+		${WRKSRC}/src/system.h ${WRKSRC}/src/tun.c
+
 .include <bsd.port.mk>

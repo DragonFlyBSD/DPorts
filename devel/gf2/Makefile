@@ -30,7 +30,7 @@ LDFLAGS+=	-lX11 -pthread -lfreetype
 PLIST_FILES=	bin/gf2
 
 do-build:
-	(cd ${WRKSRC} && ${SETENVI} ${CXX} ${PORTNAME}.cpp -o ${PORTNAME} ${CXXFLAGS} ${LDFLAGS})
+	(cd ${WRKSRC} && ${SETENVI} ${WRK_ENV} ${CXX} ${PORTNAME}.cpp -o ${PORTNAME} ${CXXFLAGS} ${LDFLAGS})
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gf2 ${STAGEDIR}${PREFIX}/bin

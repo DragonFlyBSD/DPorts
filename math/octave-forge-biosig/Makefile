@@ -19,5 +19,4 @@ ALL_TARGET=	# nada
 
 OCTAVE_SRC=		${DISTNAME:R}
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

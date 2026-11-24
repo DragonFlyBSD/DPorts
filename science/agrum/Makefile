@@ -57,7 +57,7 @@ BINARY_ALIAS=	gcc=${CC} g++=${CXX} # only for tests, see https://gitlab.com/agru
 
 OPENMP_LIB_DEPENDS= 
 OPENMP_LDFLAGS= 
-IGNORE= unmaintained, please request fixing to users mailing list
+USE_GCC_VERSION= 14
 do-test:
 	@cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} ./act test release agrum -t all

@@ -96,8 +96,8 @@ ETCDIR?=		${PREFIX}/etc/ssh
 
 CONFIGURE_ARGS+= --disable-libutil
 CONFIGURE_ARGS+= --without-stackprotect
+OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NBLOCKLISTD}
 mit_PKGNAMESUFFIX= -portable-mit
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 PATCH_SITES+=	http://mirror.shatow.net/freebsd/${PORTNAME}/:DEFAULT,hpn,gsskex

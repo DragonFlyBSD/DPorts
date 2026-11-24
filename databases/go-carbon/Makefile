@@ -31,4 +31,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/deploy/storage-aggregation.conf ${STAGEDIR}${PREFIX}/etc/go-carbon/storage-aggregation.conf.sample
 	${INSTALL_DATA} ${WRKSRC}/deploy/storage-schemas.conf ${STAGEDIR}${PREFIX}/etc/go-carbon/storage-schemas.conf.sample
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/:= stat\.Blocks \* uint64(stat\.Bsize)/:= uint64(stat.Blocks) * uint64(stat.Bsize)/' \
+		${WRKSRC}/carbonserver/carbonserver.go
+
 .include <bsd.port.mk>

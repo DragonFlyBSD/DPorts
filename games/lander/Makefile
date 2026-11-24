@@ -27,7 +27,6 @@ PORTDATA=	*
 OPTIONS_DEFINE=	NLS DOCS
 OPTIONS_SUB=	yes
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}/

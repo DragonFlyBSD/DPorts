@@ -38,7 +38,6 @@ WRKSRC=		${WRKDIR}/Sonarr
 USERS=		sonarr
 GROUPS=		sonarr
 
-DFLY_UNMAINTAINED= yes
 post-extract:
 	${RM} -rf ${WRKSRC}/Sonarr.Update
 

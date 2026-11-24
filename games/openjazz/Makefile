@@ -22,7 +22,6 @@ DOS2UNIX_REGEX=	.*\.(h|cpp)
 
 SUB_FILES=	pkg-message
 
-DFLY_UNMAINTAINED= yes
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
 	${TOUCH} ${STAGEDIR}${DATADIR}/.keepme

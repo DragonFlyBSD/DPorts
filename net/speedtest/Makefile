@@ -22,7 +22,6 @@ PLIST_FILES=	bin/speedtest \
 
 CONFLICTS_INSTALL=	py*-speedtest-cli # bin/speedtest
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/bin/ ${STAGEDIR}${PREFIX}/share/man/man5/
 	${INSTALL_PROGRAM} ${WRKSRC}/usr/local/bin/speedtest ${STAGEDIR}${PREFIX}/bin/speedtest

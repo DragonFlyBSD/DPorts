@@ -11,7 +11,7 @@ WWW=		https://github.com/ggerganov/imtui
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cmake compiler:c++11-lang
+USES= cmake compiler:c++11-lang ncurses
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -21,5 +21,4 @@ GH_TUPLE=	ggerganov:imgui:d413be8:imgui/third-party/imgui/imgui
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	IMTUI_BUILD_EXAMPLES
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

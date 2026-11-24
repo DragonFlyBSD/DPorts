@@ -34,7 +34,6 @@ SUB_FILES=	pkg-message
 
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${SSL_DEFAULT} == openssl

@@ -69,7 +69,6 @@ PYTHON_DESC=		Install Python to support some plugin functionality
 PYTHON_USES=		python:run
 
 LDFLAGS= ${EXECINFO_LDFLAGS} -lexecinfo
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 post-patch-PYTHON-on:

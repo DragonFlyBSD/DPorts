@@ -59,4 +59,8 @@ post-install:
 		${INSTALL_MAN} $$doc ${STAGEDIR}${DOCSDIR}/`${DIRNAME} $$doc` ; \
 	done
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@^// +build darwin freebsd linux netbsd openbsd$$@& dragonfly@' \
+		${WRKSRC}/vendor/github.com/cloudfoundry/jibber_jabber/jibber_jabber_unix.go
+
 .include <bsd.port.mk>

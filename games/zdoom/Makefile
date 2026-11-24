@@ -57,4 +57,10 @@ do-install:
 	${INSTALL_DATA} ${CONFIGURE_WRKSRC}/${PORTNAME}.pk3 ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${FILESDIR}/${PORTNAME}.xpm ${STAGEDIR}${PREFIX}/share/pixmaps
 
+dfly-patch:
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/src/posix/sdl/crashcatcher.c ${WRKSRC}/src/sound/music_mus_midiout.cpp \
+		${WRKSRC}/src/sound/fmodsound.cpp
+
 .include <bsd.port.mk>

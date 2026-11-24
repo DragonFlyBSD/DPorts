@@ -38,5 +38,4 @@ CMAKE_ARGS=	-DCMAKE_INCLUDE_PATH:PATH=include/glib-2.0 \
 # Note that per PR 197984, cairo must be built with X11 and XCB options
 # otherwise configure fails with "cairo needs x11 enabled" message
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

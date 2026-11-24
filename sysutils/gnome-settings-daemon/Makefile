@@ -1,6 +1,6 @@
 PORTNAME=	gnome-settings-daemon
 PORTVERSION=	47.2
-PORTREVISION=	1
+PORTREVISION= 2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -76,11 +76,4 @@ post-install:
 		${STAGEDIR}${PREFIX}/share/glib-2.0/schemas/
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NSMARTCARD}
-LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
-dfly-patch:
-	${REINPLACE_CMD} -e "/libpulse_mainloop_glib_dep/d" \
-		${WRKSRC}/meson.build
-	${REINPLACE_CMD} -e "/sound/d" -e "/media-keys/d" \
-		${WRKSRC}/plugins/meson.build
-
 .include <bsd.port.mk>

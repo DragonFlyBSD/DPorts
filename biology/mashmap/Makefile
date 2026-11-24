@@ -34,5 +34,4 @@ NATIVE_CMAKE_BOOL=	OPTIMIZE_FOR_NATIVE
 PLIST_FILES=	bin/mashmap \
 		bin/mashmap-align
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

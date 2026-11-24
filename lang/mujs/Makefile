@@ -55,7 +55,7 @@ OPTIONS_DEFAULT=	32BIT
 SANITIZED_DESC=		Sanitized build (only for debugging)
 SANITIZED_MAKE_ARGS=	build=sanitize
 
-DFLY_UNMAINTAINED= yes
+MAKE_ENV= CPATH=${LOCALBASE}/include LIBRARY_PATH=${LOCALBASE}/lib
 post-patch:
 	${REINPLACE_CMD} -e 's|https://www.unicode.org/Public/16.0.0/ucd/|file://${DISTDIR}/${DIST_SUBDIR}/|g' \
 		${WRKSRC}/Makefile

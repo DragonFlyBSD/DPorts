@@ -80,4 +80,8 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.yml ${STAGEDIR}${PREFIX}/etc/${PORTNAME}.yml.sample
 	${INSTALL} -d ${STAGEDIR}/var/db/${PORTNAME}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/return stat\.Bfree \* uint64(stat\.Bsize), stat\.Blocks \* uint64(stat\.Bsize), nil/return uint64(stat.Bfree) * uint64(stat.Bsize), uint64(stat.Blocks) * uint64(stat.Bsize), nil/' \
+		${WRKSRC}/internal/disk/usage_default.go
+
 .include <bsd.port.mk>

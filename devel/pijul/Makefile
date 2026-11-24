@@ -439,7 +439,6 @@ CARGO_CRATES=	${PORTNAME}-1.0.0-beta.9 \
 PLIST_FILES=	bin/pijul
 
 MAKE_ENV= LIBCLANG_PATH=${LOCALBASE}/llvm${LLVM_DEFAULT}/lib
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc

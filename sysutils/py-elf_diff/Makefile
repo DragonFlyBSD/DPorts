@@ -29,10 +29,9 @@ USE_PYTHON=	autoplist concurrent distutils
 
 GH_ACCOUNT=	noseglasses
 
-BINARY_ALIAS=	objdump=llvm-objdump
+BINARY_ALIAS= 
 NO_ARCH=	yes
 
-DFLY_UNMAINTAINED= yes
 do-test:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} tests/test_main.py
 

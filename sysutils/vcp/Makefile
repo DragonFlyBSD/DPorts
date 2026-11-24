@@ -19,7 +19,6 @@ CONFLICTS=	p5-VCP \
 
 OPTIONS_DEFINE=	DOCS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 pre-build:
 	@${REINPLACE_CMD} -e 's|/etc/vcp.conf|${PREFIX}/etc/vcp.conf|' ${WRKSRC}/misc.c
 	@${REINPLACE_CMD} -e 's|/etc/vcp.conf|${PREFIX}/etc/vcp.conf|g' ${WRKSRC}/vcp.1
@@ -32,5 +31,8 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.pl.1 ${STAGEDIR}${PREFIX}/share/man/pl/man1/${PORTNAME}.1
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|-lcurses|-lncursesw|' ${WRKSRC}/Makefile
 
 .include <bsd.port.mk>

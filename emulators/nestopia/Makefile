@@ -33,5 +33,4 @@ OPTIONS_DEFINE=	DOCS JACK
 JACK_LIB_DEPENDS=	libjack.so:audio/jack
 JACK_CONFIGURE_WITH=	jack
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

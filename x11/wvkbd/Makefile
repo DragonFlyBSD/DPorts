@@ -24,7 +24,6 @@ PLIST_FILES=	bin/${PORTNAME}-mobintl \
 		share/man/man1/${PORTNAME}.1.gz
 LDFLAGS+=	-Wl,--as-needed # pango deps
 
-IGNORE= unmaintained, please request fixing to users mailing list
 pre-everything::
 	@${ECHO_MSG} "To build ${PORTNAME} with your own config.h set ${PORTNAME:tu}_CONF variable"
 	@${ECHO_MSG} "either in ${.CURDIR:T}/Makefile.local, make.conf(5), environ(7) or command line e.g.,"

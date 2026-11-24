@@ -48,4 +48,10 @@ post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/kubernetes
 	${CP} ${FILESDIR}/*.sample ${STAGEDIR}${PREFIX}/etc/kubernetes
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|^\(//go:build .*freebsd.*\)$$|\1 \|\| dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/moby/term/termios_bsd.go
+	${REINPLACE_CMD} -e 's|^\(//go:build .*!freebsd.*\)$$|\1 \&\& !dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/moby/term/termios_nonbsd.go
+
 .include <bsd.port.mk>

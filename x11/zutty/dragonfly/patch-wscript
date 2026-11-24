@@ -1,0 +1,11 @@
+--- wscript.orig
++++ wscript
+@@ -45,7 +45,7 @@
+     cfg.msg('Target platform', platform)
+     if platform == 'Linux':
+         cfg.env.append_value('CXXFLAGS', ['-DLINUX'])
+-    elif platform == 'FreeBSD':
++    elif platform in ('FreeBSD', 'DragonFly'):
+         cfg.env.append_value('CXXFLAGS',
+                              ['-DBSD', '-DFREEBSD', '-I/usr/local/include'])
+         cfg.env.append_value('LINKFLAGS', ['-L/usr/local/lib'])

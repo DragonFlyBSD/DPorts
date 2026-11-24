@@ -22,4 +22,8 @@ GH_ACCOUNT=	FlyGoat
 
 PLIST_FILES=	bin/ryzenadj
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/"^(Linux|FreeBSD)\$$"/"^(Linux|FreeBSD|DragonFly)$$"/' \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

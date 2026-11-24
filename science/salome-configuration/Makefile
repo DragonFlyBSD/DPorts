@@ -19,7 +19,6 @@ DATADIR=	${PREFIX}/share/salome
 NO_ARCH=	yes
 NO_BUILD=	yes
 
-DFLY_UNMAINTAINED= yes
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}/configuration
 	cd ${WRKSRC} && \

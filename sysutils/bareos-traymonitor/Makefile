@@ -27,4 +27,9 @@ CMAKE_ARGS+=		-Dtraymonitor=yes \
 			-Dnls=ON \
 			-DENABLE_WEBUI=OFF
 
+CMAKE_ARGS+= -Dacl=OFF -DHAVE_SYS_EXTATTR_H:BOOL=OFF
+.if 1
+LDFLAGS+=	-lintl
+.endif
+
 .include "${MASTERDIR}/Makefile"

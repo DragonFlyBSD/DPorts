@@ -33,9 +33,18 @@ ALL_TARGET=	sdl2
 MAKE_ENV=	RELEASEBUILD=1
 SUB_FILES=	pkg-message
 
+MAKE_JOBS_UNSAFE= yes
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/fbneo ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/gamelist.txt ${STAGEDIR}${DATADIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(__FreeBSD__)/& || defined(__DragonFly__)/' \
+		${WRKSRC}/src/dep/libs/dr_libs/dr_mp3.h \
+		${WRKSRC}/src/dep/libs/dr_libs/dr_wav.h \
+		${WRKSRC}/src/dep/libs/dr_libs/dr_flac.h \
+		${WRKSRC}/src/burner/ioapi.h \
+		${WRKSRC}/src/dep/libs/zip/miniz.h
 
 .include <bsd.port.mk>

@@ -32,7 +32,7 @@ CMAKE_ON=	CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT SICONOS_SYSTEM_WIDE_INSTAL
 CMAKE_OFF=	WITH_GIT WITH_TESTING
 CMAKE_TESTING_ON=	WITH_TESTING # tests are broken, see https://github.com/siconos/siconos/issues/415
 
-CFLAGS+= -DCLOCKTIME -DCLOCKS_PER_SEC=128 # workaround for 'Undefined symbol "ftime"', see https://github.com/siconos/siconos/issues/411 -DRTLD_DEEPBIND=0
+CFLAGS+=	-DCLOCKTIME -DCLOCKS_PER_SEC=128 # workaround for 'Undefined symbol "ftime"', see https://github.com/siconos/siconos/issues/411
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
@@ -49,5 +49,10 @@ PYTHON_BUILD_DEPENDS=	${PYTHON_PY_DEPENDS} \
 			swig:devel/swig
 PYTHON_RUN_DEPENDS=	${PYTHON_PY_DEPENDS}
 PYTHON_BROKEN=		compilation fails, see https://github.com/siconos/siconos/issues/501
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/RTLD_LAZY | RTLD_DEEPBIND/RTLD_LAZY/' \
+		${WRKSRC}/numerics/src/tools/open_lib.c \
+		${WRKSRC}/kernel/src/utils/SiconosSharedLibrary/SiconosSharedLibrary.cpp
 
 .include <bsd.port.mk>

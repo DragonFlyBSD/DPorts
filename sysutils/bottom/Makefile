@@ -28,7 +28,6 @@ CARGO_ENV+=	BTM_GENERATE=true
 
 GEN_DIR=	${WRKDIR}/bottom-*/target/tmp/bottom
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${INSTALL_MAN} ${GEN_DIR}/manpage/btm.1 ${STAGEDIR}${PREFIX}/share/man/man1
 	${INSTALL_DATA} ${GEN_DIR}/completion/btm.bash ${STAGEDIR}${PREFIX}/share/bash-completion/completions/btm

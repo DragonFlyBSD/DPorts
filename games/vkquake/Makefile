@@ -19,10 +19,9 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	Novum
 GH_PROJECT=	vkQuake
 
-DFLY_UNMAINTAINED= yes
 .include "${.CURDIR}/../quake-data/Makefile.include"
 
-CFLAGS+=	-DDATADIR='\"${Q1DIR}\"' -Wno-error=atomic-alignment
+CFLAGS+= -DDATADIR='\"${Q1DIR}\"'
 LDFLAGS+=	-lexecinfo
 
 OPTIONS_DEFINE=			DEBUG FLAC OPUS USERDIRS VORBIS WAVE

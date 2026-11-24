@@ -40,5 +40,4 @@ DOCS_MESON_ENABLED=		documentation
 FAST_HEARTBEAT_MESON_TRUE=	fast-heartbeat
 USB_MESON_ENABLED=		usb
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

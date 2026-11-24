@@ -20,7 +20,7 @@ BUILD_DEPENDS=	lv2>0:audio/lv2
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libsndfile.so:audio/libsndfile
 
-USES= gmake gl gnome iconv:wchar_t pkgconfig xorg # compiler:c11 localbase:ldflags
+USES=		gmake gl gnome iconv:wchar_t pkgconfig xorg localbase:ldflags # compiler:c11
 USE_GNOME=	cairo
 USE_XORG=	x11 xrandr
 USE_GL=		gl
@@ -45,8 +45,7 @@ VST2_MAKE_ARGS=		FEATURES+='vst2'
 
 LIB_DEPENDS+= libexpat.so:textproc/expat2
 CFLAGS= -DWCHAR=wchar_t -Dfdatasync=fsync
-MAKE_ENV= ICONV_LIBS=-liconv BUILD_PLATFORM=DragonFly
-IGNORE= unmaintained, please request fixing to users mailing list
+MAKE_ENV= ICONV_LIBS=-liconv PLATFORM=BSD
 post-patch:
 # FreeBSD does not have exp10(3), use pow(3) instead
 	@${GREP} -lR "exp10(" ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} -e \
@@ -69,10 +68,5 @@ post-install-JACK-on:
 
 post-install-VST2-on:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/vst/lsp-plugins/*.so
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@[[:<:]]BSD[[:>:]]@DragonFly@g' \
-		${WRKSRC}/src/container/Makefile \
-		${WRKSRC}/src/utils/Makefile
 
 .include <bsd.port.mk>

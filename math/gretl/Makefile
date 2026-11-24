@@ -95,7 +95,6 @@ CONFIGURE_ARGS+=	--enable-sse2=yes
 CONFIGURE_ARGS+=	--enable-sse2=no
 .endif
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${SED} -i '.orig' -E -e '/#include[[:blank:]]+<sys\/socket\.h>/\
 		{x; s/.*/#include <netinet\/in.h>/; H; x;}' \

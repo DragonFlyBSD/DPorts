@@ -21,7 +21,6 @@ SHEBANG_FILES=	scripts/*
 SHEBANG_LANG=	sh
 sh_CMD=		/bin/sh
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr,${LOCALBASE},' \
 		${WRKSRC}/scripts/mepo_ui_menu_user_pin_updater.sh

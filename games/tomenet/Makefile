@@ -46,7 +46,7 @@ X11_DESKTOP_ENTRIES=	"TomeNET" \
 			"Game;RolePlay;" \
 			${FALSE}
 
-DFLY_UNMAINTAINED= yes
+MAKE_ARGS= CC=${CC}
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tomenet ${STAGEDIR}${PREFIX}/bin
 	${MKDIR} ${STAGEDIR}${DATADIR}

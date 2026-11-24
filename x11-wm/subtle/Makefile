@@ -20,7 +20,6 @@ MAKE_CMD=	rake -v
 MAKEFILE=	Rakefile
 ALL_TARGET=	build
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 post-patch:
@@ -37,5 +36,8 @@ post-patch:
 
 do-configure:
 	@cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} config
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's| -fdeclspec||' ${WRKSRC}/Rakefile
 
 .include <bsd.port.post.mk>

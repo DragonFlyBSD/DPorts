@@ -24,7 +24,7 @@ LICENSE_FILE=	${WRKSRC}/licence.txt
 NOT_FOR_ARCHS=	powerpc powerpc64 powerpcspe
 NOT_FOR_ARCHS_REASON=	Only for little-endian architectures
 
-BUILD_DEPENDS= nlohmann-json>0:devel/nlohmann-json cxxfs_gcc8>0:misc/cxxfs_gcc8
+BUILD_DEPENDS=	nlohmann-json>0:devel/nlohmann-json
 LIB_DEPENDS=	libbenchmark.so:devel/benchmark \
 		libcurl.so:ftp/curl \
 		libFLAC.so:audio/flac \
@@ -55,10 +55,8 @@ CMAKE_TESTING_OFF=	DOWNLOAD_REPLAYS
 
 OPTIONS_DEFINE=	DOCS
 
-CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
-LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
 MAKE_ENV= LDVER=ld.bfd
-IGNORE= unmaintained, please request fixing to users mailing list
+CXXFLAGS= -Wno-error=stringop-overflow
 post-patch:
 	${MKDIR} ${WRKSRC}/data/sequence
 	${MKDIR} ${WRKSRC}/data/object

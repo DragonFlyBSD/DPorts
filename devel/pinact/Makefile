@@ -54,4 +54,8 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_MAN} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${CP} ${GO_WRKSRC}/vendor/github.com/suzuki-shunsuke/ghtkn-go-sdk/ghtkn/browser/browser_linux.go \
+		${GO_WRKSRC}/vendor/github.com/suzuki-shunsuke/ghtkn-go-sdk/ghtkn/browser/browser_dragonfly.go
+
 .include <bsd.port.mk>

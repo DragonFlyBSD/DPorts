@@ -26,7 +26,6 @@ PLIST_FILES=	bin/${PORTNAME} \
 		share/${PORTNAME}/${PORTNAME} \
 		share/${PORTNAME}/${PORTNAME}.pk3
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME} \

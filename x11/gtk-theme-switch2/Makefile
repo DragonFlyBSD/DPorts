@@ -14,5 +14,4 @@ USE_GNOME=	gtk20
 
 PLIST_FILES=	bin/switch2 share/man/man1/switch2.1.gz
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

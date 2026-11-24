@@ -26,7 +26,6 @@ USES=		gem
 
 NO_ARCH=	yes
 
-DFLY_UNMAINTAINED= yes
 dfly-patch:
 	${REINPLACE_CMD} -e '/puma>/s@~>@>=@g' \
 		${WRKSRC}/oxidized-web.gemspec

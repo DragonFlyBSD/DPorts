@@ -55,7 +55,6 @@ OPENMPI_CONFIGURE_ENV=	MPI_HOME=${LOCALBASE}/mpi/openmpi
 OPENMPI_CMAKE_ON=	-DMPI_C_COMPILE_OPTIONS="-lpthread" \
 			-DMPI_Fortran_COMPILE_OPTIONS="-lpthread"
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 post-patch:

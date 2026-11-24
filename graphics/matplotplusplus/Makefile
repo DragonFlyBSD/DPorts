@@ -31,5 +31,4 @@ CMAKE_TESTING_ON=	BUILD_TESTING MATPLOTPP_BUILD_TESTS MATPLOTPP_BUILD_EXAMPLES
 
 # tests as of 1.2.2: 100% tests passed, 0 tests failed out of 545 (tests need ENTER to be pressed for them to proceed, see https://github.com/alandefreitas/matplotplusplus/issues/478)
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

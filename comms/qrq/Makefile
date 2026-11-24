@@ -15,7 +15,6 @@ USE_CSTD=	c99
 
 SHEBANG_FILES=	qrqscore
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g'  \
 		-e 's|%%PREFIX%%|${PREFIX}|g' \

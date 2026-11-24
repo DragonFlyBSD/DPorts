@@ -21,7 +21,6 @@ CMAKE_OFF+=	${CMAKE_TESTING_ON}
 CMAKE_TESTING_ON=	BUILD_TESTS
 USE_LDCONFIG=	yes
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's/DecoderAppStatic/vvdecapp/' \
 		-e 's,\.\./bin,${BUILD_WRKSRC},' \

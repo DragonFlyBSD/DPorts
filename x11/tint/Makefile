@@ -27,4 +27,5 @@ OPTIONS_SUB=		yes
 NLS_USES=		gettext
 NLS_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Gettext
 
+LDFLAGS= -lm
 .include <bsd.port.mk>

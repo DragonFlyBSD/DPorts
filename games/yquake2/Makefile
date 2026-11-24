@@ -1,5 +1,6 @@
 PORTNAME=	yquake2
 DISTVERSION=	8.70
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://deponie.yamagi.org/quake2/
 DISTNAME=	quake2-${DISTVERSION}
@@ -24,7 +25,7 @@ MAKE_ARGS=	VERBOSE=1 WITH_SYSTEMWIDE=yes \
 
 OPTIONS_DEFINE=	DOCS
 
-IGNORE= unmaintained, please request fixing to users mailing list
+MAKE_ENV= LDLIBS=-lm
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/release/q2ded \
 		${STAGEDIR}${PREFIX}/bin/yq2ded

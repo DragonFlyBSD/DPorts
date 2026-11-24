@@ -52,4 +52,14 @@ do-install:
 	${MKDIR} -m 750 ${STAGEDIR}${WWWDIR}/hls
 	${MKDIR} -m 750 ${STAGEDIR}${WWWDIR}/webroot/hls
 
+dfly-patch:
+	${CP} ${WRKSRC}/core/chat/concurrentConnections_freebsd.go \
+		${WRKSRC}/core/chat/concurrentConnections_dragonfly.go
+	${REINPLACE_CMD} -e 's@^//go:build freebsd$$@//go:build dragonfly@' \
+		-e 's@^// +build freebsd$$@// +build dragonfly@' \
+		${WRKSRC}/core/chat/concurrentConnections_dragonfly.go
+	${REINPLACE_CMD} -e 's@^//go:build !freebsd && !windows$$@//go:build !freebsd \&\& !dragonfly \&\& !windows@' \
+		-e 's@^// +build !freebsd,!windows$$@// +build !freebsd,!dragonfly,!windows@' \
+		${WRKSRC}/core/chat/concurrentConnections.go
+
 .include <bsd.port.mk>

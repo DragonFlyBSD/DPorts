@@ -53,9 +53,8 @@ CMAKE_ARGS+=	-DCURSES_INCLUDE_PATH:STRING="${NCURSESINC}"
 
 PORTSCOUT=	limit:^0\.[A-Z]
 
-CXXFLAGS+=	-Wno-error=for-loop-analysis
 
-DFLY_UNMAINTAINED= yes
+CXXFLAGS+= -isystem ${LOCALBASE}/include/ncurses
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%DISTVERSION%%|${DISTVERSION}|' ${WRKSRC}/src/version.cmake
 

@@ -120,7 +120,6 @@ IMAGICK7_X11_USES=	magick:7,run
 
 PAPERLESS_STATICDIR=	${WRKSRC}/static
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/src/paperless/settings.py

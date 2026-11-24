@@ -25,7 +25,6 @@ OPTIONS_DEFAULT=TEST
 TEST_CMAKE_BOOL=	BUILD_TESTING
 TEST_TEST_TARGET=	test
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS.md CONTRIBUTING.md NEWS.md \

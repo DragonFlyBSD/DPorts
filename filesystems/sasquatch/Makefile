@@ -32,4 +32,11 @@ PLIST_FILES=	bin/${PORTNAME}
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/-Wall -Werror/-Wall/' ${WRKSRC}/Makefile
+	${REINPLACE_CMD} -E -e 's/^#define (__BYTE_ORDER|__BIG_ENDIAN|__LITTLE_ENDIAN) (BYTE_ORDER|BIG_ENDIAN|LITTLE_ENDIAN)$$/#define \1 _\2/' \
+		${WRKSRC}/mksquashfs.c ${WRKSRC}/read_fs.c ${WRKSRC}/read_xattrs.c \
+		${WRKSRC}/swap.c ${WRKSRC}/gzip_wrapper.h ${WRKSRC}/lz4_wrapper.h \
+		${WRKSRC}/lzo_wrapper.h ${WRKSRC}/unsquashfs.h ${WRKSRC}/xz_wrapper.h
+
 .include <bsd.port.mk>

@@ -41,7 +41,6 @@ CLIENT_GG_LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 			libvorbis.so:audio/libvorbis \
 			libpng.so:graphics/png
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_VER} != ${PYTHON_DEFAULT}

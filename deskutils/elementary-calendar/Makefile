@@ -31,5 +31,4 @@ GH_ACCOUNT=	elementary
 USE_GNOME=	evolutiondataserver3 gdkpixbuf glib20 gtk30
 GLIB_SCHEMAS=	io.elementary.calendar.gschema.xml
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

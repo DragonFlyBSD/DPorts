@@ -34,7 +34,6 @@ PLIST_FILES=	bin/${PORTNAME} \
 		share/applications/${PORTNAME}.desktop \
 		share/pixmaps/${PORTNAME}.png
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	${REINPLACE_CMD} -e 's,/opt/${PORTNAME}-icon.png,${PREFIX}/share/pixmaps/${PORTNAME}.png,' \
 		-e 's,/usr/local/bin/${PORTNAME},${PREFIX}/bin/${PORTNAME},' \

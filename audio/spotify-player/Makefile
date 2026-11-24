@@ -67,7 +67,6 @@ PULSEAUDIO_VARS=	CARGO_FEATURES+=pulseaudio-backend
 
 STREAMING_VARS=	CARGO_FEATURES+=streaming
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_MAN} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}

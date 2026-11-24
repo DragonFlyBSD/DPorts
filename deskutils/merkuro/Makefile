@@ -22,5 +22,4 @@ USE_KDE=	akonadi akonadicalendar akonadicontacts auth calendarcore \
 USE_QT=		base location
 USE_XORG=	x11
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

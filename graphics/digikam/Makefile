@@ -1,6 +1,6 @@
 PORTNAME=	digikam
 DISTVERSION=	8.8.0
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION} \
 		https://files.kde.org/${PORTNAME}/%SUBDIR%/:aitools,aesthetic,autotags,face,testimage,yunet \
@@ -125,7 +125,6 @@ MYSQL_INTERNAL_IMPLIES=		MYSQL
 
 SQLITE3_USE=		QT=sqldriver-sqlite:run
 
-DFLY_UNMAINTAINED= yes
 post-install-AITOOLS-on:
 	@${MKDIR} ${STAGEDIR}${DATADIR}/facesengine
 .for f in ${AITOOLS_DISTFILES:C/:.*//}

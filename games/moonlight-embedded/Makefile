@@ -64,7 +64,6 @@ X11_USE=		GL=egl,glesv2 \
 			XORG=x11
 X11_CMAKE_BOOL=		ENABLE_X11
 
-DFLY_UNMAINTAINED= yes
 post-extract:
 	@${REINPLACE_CMD} -e 's|/etc/moonlight/|${PREFIX}/etc/moonlight/|g' \
 		${WRKSRC}/docs/README.pod

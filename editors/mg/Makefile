@@ -35,7 +35,6 @@ MAKE_ARGS+=	BINDIR=${PREFIX}/bin \
 		NCURSESLIB=${NCURSESLIB}
 
 .if ${FLAVOR} == static
-DFLY_UNMAINTAINED= yes
 do-install:
 	@${MKDIR} ${STAGEDIR}/rescue
 	${INSTALL_PROGRAM} ${WRKSRC}/mg ${STAGEDIR}/rescue

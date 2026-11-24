@@ -36,7 +36,6 @@ PLIST_SUB=	GAMBIT_VERSION=${GAMBIT_VERSION}
 
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 post-patch:

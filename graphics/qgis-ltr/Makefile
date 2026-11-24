@@ -1,5 +1,5 @@
 PORTNAME=	qgis
-DISTVERSION=	3.44.15
+DISTVERSION=	3.44.16
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://qgis.org/downloads/
 PKGNAMESUFFIX=	-ltr
@@ -172,7 +172,6 @@ SERVER_CMAKE_BOOL=	WITH_SERVER WITH_SERVER_PLUGINS
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGRASS}
 CXXFLAGS= -Wno-deprecated-declarations
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 pre-patch:

@@ -15,7 +15,6 @@ RUN_DEPENDS=	rubygem-ffi>=0:devel/rubygem-ffi
 
 USES=		gem
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/ext/compile.rb
 # Clean up bundled libraries

@@ -30,7 +30,6 @@ OPTIONS_DEFINE=	DOCS
 DOCS_BUILD_DEPENDS=	scdoc:textproc/scdoc
 DOCS_MESON_ENABLED=	docs
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 # Respect PREFIX for system-wide config
 	@${REINPLACE_CMD} -e 's,/etc,${PREFIX}&,' \

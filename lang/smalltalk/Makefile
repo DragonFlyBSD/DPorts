@@ -51,7 +51,6 @@ PGSQL_USES=	pgsql
 SDL_USES=	sdl
 SDL_USE=	SDL=image,mixer,sdl,sound,ttf
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's/ia64-\*-\* /&|amd64-*-* /' \
 		${WRKSRC}/configure

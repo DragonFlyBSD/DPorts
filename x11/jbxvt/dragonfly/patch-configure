@@ -1,0 +1,11 @@
+--- configure.orig
++++ configure
+@@ -66,7 +66,7 @@
+ 		PREFIX=/usr/local
+ 		EOF
+ 		;;
+-	FREEBSD)
++	FREEBSD|DRAGONFLY)
+ 		cat >> $CFG <<- EOF
+ 		CFLAGS+=-DFREEBSD -D_BSD_SOURCE -D__BSD_VISIBLE
+ 		CFLAGS+=-I/usr/local/include

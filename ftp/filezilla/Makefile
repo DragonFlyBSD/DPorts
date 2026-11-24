@@ -51,5 +51,4 @@ NLS_CONFIGURE_OFF=	--disable-locales
 CONFIGURE_ARGS+=	--disable-manualupdatecheck
 .endif
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

@@ -42,5 +42,4 @@ INSTALL_TARGET=	install-strip
 CFLAGS+=	-I${LOCALBASE}/include/utf8cpp
 
 MAKE_ENV= LDVER=ld.bfd
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

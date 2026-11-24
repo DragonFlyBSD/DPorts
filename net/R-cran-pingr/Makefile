@@ -16,5 +16,4 @@ TEST_DEPENDS=	R-cran-covr>0:devel/R-cran-covr \
 
 USES=		cran:auto-plist,compiles
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

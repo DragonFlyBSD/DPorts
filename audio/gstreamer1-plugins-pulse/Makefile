@@ -12,5 +12,4 @@ PLIST=		${.CURDIR}/pkg-plist
 DIST=		good
 GST_PLUGIN=	pulse
 
-BROKEN= uses pulseaudio
 .include "${MASTERDIR}/Makefile"

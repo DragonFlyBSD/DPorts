@@ -22,7 +22,6 @@ MAKE_ARGS=	MYDESTDIR=${STAGEDIR}/${PREFIX} \
 		MYINSTALL=install
 CFLAGS+=	-DOPENSSL_API_COMPAT=0x10100000L # openssl3 compat
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}/${PREFIX}/bin/s3
 	${STRIP_CMD} ${STAGEDIR}/${PREFIX}/lib/libs3.so.4.1.bac

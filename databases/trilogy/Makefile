@@ -17,7 +17,8 @@ GH_ACCOUNT=	trilogy-libraries
 
 CPE_VENDOR=	trilogy_project
 
-DFLY_UNMAINTAINED= yes
+CFLAGS= -I${OPENSSLINC}
+LDFLAGS= -L${OPENSSLLIB}
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/example/trilogy_query ${STAGEDIR}${PREFIX}/bin/
 	cd ${WRKSRC}/inc/ && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/include/

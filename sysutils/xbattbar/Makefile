@@ -21,4 +21,10 @@ WRKSRC=		${WRKDIR}/xbattbar-${PORTVERSION}
 PLIST_FILES=	bin/xbattbar \
 		share/man/man1/xbattbar.1.gz
 
+dfly-patch:
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifdef[[:space:]]+__FreeBSD__/#\1if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/xbattbar.c
+
 .include <bsd.port.mk>

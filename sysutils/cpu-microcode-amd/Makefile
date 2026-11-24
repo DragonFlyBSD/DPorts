@@ -39,7 +39,6 @@ PLIST_FILES=	${DISTFILES:S/^/${DATADIR}\//g:C/\?.*//} \
 
 _REV=		2b318c8e4159234ddbcc1cadc90cf32d17d9ee82
 
-DFLY_UNMAINTAINED= yes
 post-extract:
 	${CAT} ${WRKSRC}/microcode_amd* > ${WRKSRC}/amd-ucode.bin
 

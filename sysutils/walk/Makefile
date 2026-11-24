@@ -28,5 +28,4 @@ WL_COPY_RUN_DEPENDS=	wl-clipboard>0:x11/wl-clipboard
 XCLIP_RUN_DEPENDS=	xclip>0:x11/xclip
 XSEL_RUN_DEPENDS=	xsel-conrad>0:x11/xsel-conrad
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

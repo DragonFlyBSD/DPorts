@@ -24,5 +24,4 @@ CMAKE_TESTING_ON=	ENABLE_TEST ENABLE_CATCH
 
 # tests as of 5.1.0: 100% tests passed, 0 tests failed out of 457
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

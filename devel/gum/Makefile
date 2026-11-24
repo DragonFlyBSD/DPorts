@@ -20,7 +20,6 @@ PLIST_FILES=	bin/gum \
 		share/man/man1/gum.1.gz \
 		share/zsh/site-functions/_gum
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-build:
 	${GO_WRKDIR_BIN}/${PORTNAME} man > ${WRKSRC}/${PORTNAME}.1
 .for SHELL in bash fish zsh

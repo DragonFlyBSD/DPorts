@@ -174,12 +174,10 @@ WEBSOCKET_VARS=		EXTRA_MODULES+=websocket
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NSCTP}
 MAKE_ARGS= SCTP=0 LOCALBASE=${LOCALBASE}
-PLIST_FILES= lib/kamailio/libprint.so.1.2 lib/kamailio/libsrdb1.so.1.0 lib/kamailio/libsrdb2.so.1.0 lib/kamailio/libtrie.so.1.0
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if !empty (EXTRA_MODULES)
-CMAKE_ARGS+=	-DINCLUDE_MODULES="${EXTRA_MODULES}"
+CMAKE_ARGS+= -DINCLUDE_MODULES="${EXTRA_MODULES}" -DUSE_SCTP=OFF
 .endif
 
 post-install:
@@ -191,5 +189,8 @@ dfly-patch:
 		${WRKSRC}/src/Makefile.defs
 	${REINPLACE_CMD} -e "s@LIBS = @& -L${LOCALBASE}/lib @g" \
 		${WRKSRC}/src/modules/db_mysql/Makefile
+	# Upstream's dragonfly.cmake is a copy of linux.cmake (epoll, SIGIO_RT).
+	${CP} ${WRKSRC}/cmake/os-specific/freebsd.cmake \
+		${WRKSRC}/cmake/os-specific/dragonfly.cmake
 
 .include <bsd.port.post.mk>

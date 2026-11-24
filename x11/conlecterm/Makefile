@@ -133,7 +133,6 @@ PORTEXAMPLES=	conlecterm.conf \
 		conlecterm.css \
 		tabs.css
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	${INSTALL_DATA} ${WRKSRC}/conlecterm.conf ${STAGEDIR}${EXAMPLESDIR}
@@ -143,13 +142,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/conlecterm.desktop ${STAGEDIR}${PREFIX}/share/applications/
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 	${INSTALL_DATA} ${WRKSRC}/conlecterm.svg ${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps/
-
-dfly-patch:
-	${REINPLACE_CMD} -e 's@\(\|\| os(freebsd)\)@\1 || os(dragonfly)@g' \
-			 -e 's@-D_Noreturn=@& -D_Bool=int @g' \
-		${WRKSRC}/_cabal_deps/cairo-*/cairo.cabal \
-		${WRKSRC}/_cabal_deps/glib-*/glib.cabal \
-		${WRKSRC}/_cabal_deps/gtk3-*/gtk3.cabal \
-		${WRKSRC}/_cabal_deps/pango-*/pango.cabal
 
 .include <bsd.port.mk>

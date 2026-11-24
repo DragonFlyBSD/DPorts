@@ -1124,11 +1124,3 @@ you update your ports collection, before attempting any port upgrades.
   Please update your option configuration. Otherwise, the build fails.
   See PR 290509 and 290588 for details.
 
-20251113:
-  AFFECTS: users of deskutils/fet
-  AUTHOR: uzsolt@FreeBSD.org
-
-  Remove Qt flavors, only use Qt6.
-
-  You should uninstall the flavored package and install the unflavored package.
-

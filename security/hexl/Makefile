@@ -33,5 +33,4 @@ CXXFLAGS+=	-I${LOCALBASE}/include/cpu_features
 # [==========] 2138 tests from 21 test suites ran. (1617 ms total)
 # [  PASSED  ] 2138 tests.
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

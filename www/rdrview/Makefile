@@ -32,4 +32,8 @@ do-install:
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^else ifeq (\$$(SYSTEM), FreeBSD)$$/else ifneq (,$$(filter FreeBSD DragonFly,$$(SYSTEM)))/' \
+		${WRKSRC}/Makefile
+
 .include <bsd.port.mk>

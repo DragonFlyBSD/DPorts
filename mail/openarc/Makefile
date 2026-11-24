@@ -16,7 +16,7 @@ LICENSE_FILE_SENDMAIL=	${WRKSRC}/LICENSE.Sendmail
 LICENSE_PERMS_SENDMAIL=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BUILD_DEPENDS=	autoconf-archive>0:devel/autoconf-archive
-LIB_DEPENDS=	libjansson.so:devel/jansson
+LIB_DEPENDS= libjansson.so:devel/jansson libmilter.so:mail/libmilter
 
 USES=		autoreconf gmake libtool localbase pkgconfig ssl
 USE_LDCONFIG=	yes
@@ -28,7 +28,7 @@ GH_TAGNAME=	eb430db
 
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
-CONFIGURE_ARGS=	--with-openssl=${OPENSSLBASE}
+CONFIGURE_ARGS= --with-openssl=${OPENSSLBASE} --with-milter=${LOCALBASE}
 
 USE_RC_SUBR=	${PORTNAME}
 
@@ -38,5 +38,4 @@ OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	*
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

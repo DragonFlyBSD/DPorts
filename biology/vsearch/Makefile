@@ -22,7 +22,6 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	torognes
 GNU_CONFIGURE=	yes
 
-DFLY_UNMAINTAINED= yes
 post-stage:
 	${INSTALL_MAN} ${WRKSRC}/man/manpages/*.1 ${STAGEDIR}${PREFIX}/share/man/man1
 

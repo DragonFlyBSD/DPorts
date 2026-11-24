@@ -20,5 +20,4 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 PLIST_FILES=	bin/cegobridge
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

@@ -46,7 +46,6 @@ JDBC_LIB_DEPENDS=	libunwind.so:devel/libunwind
 JDBC_CMAKE_ON=		-DWITH_JDBC=ON
 
 LDFLAGS= -L${LOCALBASE}/lib
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/INFO_BIN
 	@${RM} ${STAGEDIR}${PREFIX}/INFO_SRC

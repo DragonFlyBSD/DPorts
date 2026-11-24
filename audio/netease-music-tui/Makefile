@@ -312,5 +312,4 @@ OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/ncmt
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

@@ -16,7 +16,7 @@ LICENSE_FILE_LGPL3=	${WRKSRC}/licenses/LICENSE-LGPLv3
 LICENSE_FILE_MIT=	${WRKSRC}/licenses/LICENSE-MIT-sort
 LICENSE_FILE_MPL20=	${WRKSRC}/licenses/LICENSE-MPL2
 
-USES=			gmake pkgconfig
+USES= gmake pkgconfig perl5
 
 USE_GITHUB=		yes
 GH_ACCOUNT=		dzaima
@@ -40,6 +40,7 @@ FFI_LIB_DEPENDS=	libffi.so:devel/libffi
 PLIST_FILES=		bin/bqn \
 			include/bqnffi.h
 
+USE_PERL5= build
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/bqn
 

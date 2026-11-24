@@ -18,5 +18,4 @@ USE_SDL=	mixer2 sdl2
 
 OPTIONS_DEFINE=	DOCS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

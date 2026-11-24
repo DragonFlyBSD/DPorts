@@ -49,6 +49,13 @@ do-install-DOCS-on:
 	${MV} ${INSTALL_WRKSRC}/docs/* ${STAGEDIR}${DOCSDIR}
 .endif
 
+dfly-patch:
+	${CP} ${WRKSRC}/lib/filestream/filestream_openbsd.go \
+		${WRKSRC}/lib/filestream/filestream_dragonfly.go
+	${CP} ${WRKSRC}/lib/fs/fadvise_openbsd.go ${WRKSRC}/lib/fs/fadvise_dragonfly.go
+	${REINPLACE_CMD} -e 's@^\(//go:build .*freebsd.*\)$$@\1 || dragonfly@' \
+		${WRKSRC}/lib/fs/fs_nix.go ${WRKSRC}/lib/fs/fs_unix.go
+
 .include <bsd.port.mk>
 
 _GET_DATE=	TZ= ${STAT} -f %Sm -t %Y%m%d-%H%M%S ${WRKSRC}/.gitignore

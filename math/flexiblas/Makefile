@@ -46,7 +46,7 @@ PLIST_SUB+=	OPENBLASOPENMP="@comment " OPENBLASPTHREAD="@comment " ATLAS=""
 LIB_DEPENDS+=	libcblas.so:math/cblas	\
 		libopenblas.so:math/openblas
 PLIST_SUB+=	ATLAS="@comment "
-.if exists(/usr/include/omp.h)
+.if exists(/usr/include/omp.h) || ${OPSYS} == DragonFly
 PLIST_SUB+=	OPENBLASOPENMP="" OPENBLASPTHREAD="@comment " ATLAS="@comment "
 .else
 PLIST_SUB+=	OPENBLASOPENMP="@comment " OPENBLASPTHREAD="" ATLAS="@comment "

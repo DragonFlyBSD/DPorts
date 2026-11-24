@@ -23,5 +23,4 @@ USES=			python zip
 USE_PYTHON=		distutils autoplist
 NO_ARCH=		yes
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

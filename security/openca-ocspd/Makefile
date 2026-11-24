@@ -51,4 +51,8 @@ post-stage:
 	${RMDIR} ${STAGEDIR}${PREFIX}/var/run
 	${RMDIR} ${STAGEDIR}${PREFIX}/var
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^ \*bsd\*) myarch=bsd$$/ *bsd*|*dragonfly*) myarch=bsd/' \
+		${WRKSRC}/configure.ac
+
 .include <bsd.port.mk>

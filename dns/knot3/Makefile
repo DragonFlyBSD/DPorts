@@ -142,7 +142,6 @@ MODWHOAMI_CONFIGURE_WITH=	module-whoami=yes
 
 UTILS_CONFIGURE_ENABLE=		utilities
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == i386

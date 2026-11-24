@@ -37,7 +37,6 @@ OPTIONS_SUB=			yes
 STATIC_CONFIGURE_ENABLE=	static
 
 MAKE_ENV= LDVER=ld.bfd
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's| -rpath|${LDFLAGS} -rpath|g' \
 		${WRKSRC}/src/lib/MakeVars.in

@@ -21,7 +21,6 @@ OPTIONS_DEFINE=		DOCS EXAMPLES
 EXAMPLES_CMAKE_ON=	SLICOT_TESTING
 PORTDOCS=		*
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}

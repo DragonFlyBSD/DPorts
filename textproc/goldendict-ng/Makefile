@@ -42,4 +42,5 @@ EPWING_CMAKE_OFF=	-DWITH_EPWING_SUPPORT=OFF
 SPEECH_USE=		QT=speech
 SPEECH_CMAKE_ON=	-DWITH_TTS=ON
 
+USES+= iconv
 .include <bsd.port.mk>

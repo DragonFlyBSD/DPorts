@@ -22,5 +22,4 @@ CONFIGURE_ARGS=	--enable-shared
 
 INSTALL_TARGET=	install-strip
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

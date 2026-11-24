@@ -26,7 +26,6 @@ SYSTEM_ZLIB_NG_DESC=		Use archivers/zlib-ng instead of bundled version
 SYSTEM_ZLIB_NG_LIB_DEPENDS=	libz-ng.so:archivers/zlib-ng
 SYSTEM_ZLIB_NG_MAKE_ENV=	PYTHON_ZLIB_NG_LINK_DYNAMIC=1
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/${PORTNAME:S/-/_/}/${PORTNAME:S/-/_/}.cpython-${PYTHON_VER:S/.//}.so
 

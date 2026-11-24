@@ -19,4 +19,10 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/cli/${PORTNAME}.8 ${STAGEDIR}${PREFIX}/share/man/man8
 
+dfly-patch:
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifdef[[:space:]]+__FreeBSD__/#\1if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/cmos_lowlevel.c ${WRKSRC}/accessors/cmos-hw-unix.c
+
 .include <bsd.port.mk>

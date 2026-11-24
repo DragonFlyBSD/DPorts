@@ -44,4 +44,10 @@ USE_RC_SUBR=	kube-controller-manager
 
 PLIST_FILES=	bin/${PORTNAME}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|^\(//go:build .*freebsd.*\)$$|\1 \|\| dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/moby/term/termios_bsd.go
+	${REINPLACE_CMD} -e 's|^\(//go:build .*!freebsd.*\)$$|\1 \&\& !dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/moby/term/termios_nonbsd.go
+
 .include <bsd.port.mk>

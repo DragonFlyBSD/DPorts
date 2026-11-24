@@ -36,7 +36,6 @@ PAM_CONFIGURE_ON=	--with-pam
 SSL_USES=		ssl
 SSL_CONFIGURE_WITH=	openssl
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	@${MKDIR} ${STAGEDIR}/var/run/pgpool
 	${INSTALL_LIB} ${WRKSRC}/src/libs/pcp/.libs/libpcp.so.2.0.0 ${STAGEDIR}${PREFIX}/lib

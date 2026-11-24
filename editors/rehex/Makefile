@@ -31,7 +31,6 @@ DOCS_BUILD_DEPENDS=	p5-Template-Toolkit>0:www/p5-Template-Toolkit \
 			zip:archivers/zip
 DOCS_MAKE_ARGS_OFF=	BUILD_HELP=0
 
-DFLY_UNMAINTAINED= yes
 dfly-patch:
 	${REINPLACE_CMD} -e 's@define wxLUA_USE_wxAcceleratorTable@& 0 //@g' \
 		${WRKSRC}/wxLua/modules/wxbind/setup/wxluasetup.h

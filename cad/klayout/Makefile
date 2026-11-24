@@ -48,7 +48,6 @@ BUILD_WRKSRC=	${WRKSRC}/build-release
 INSTALL_WRKSRC=	${WRKSRC}/build-release
 PLIST_SUB=	DISTVERSION=${DISTVERSION} DISTVERSION_R=${DISTVERSION:R}
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${RLN} ${STAGEDIR}${PREFIX}/${PORTNAME}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${PORTNAME}/pymod/${PORTNAME}/*${PYTHON_TAG}.so

@@ -19,6 +19,7 @@ ALL_TARGET=	${PORTNAME}
 
 PLIST_FILES=	bin/xdgctl
 
+MAKE_ARGS= CC=${CC}
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 

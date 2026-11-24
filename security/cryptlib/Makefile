@@ -33,7 +33,6 @@ PLIST_FILES=		include/cryptlib.h \
 
 PORTDOCS=		README
 
-DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libcl.a ${WRKSRC}/libcl.so.${PORTVERSION} \
 		${STAGEDIR}${PREFIX}/lib

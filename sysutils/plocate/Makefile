@@ -20,7 +20,6 @@ SUB_FILES=	315.plocate
 
 GROUPS=		plocate
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	${CP} ${FILESDIR}/mntent_compat.c++ ${FILESDIR}/mntent.h ${WRKSRC}
 

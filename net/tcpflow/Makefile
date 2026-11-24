@@ -33,5 +33,4 @@ CPE_VENDOR=	digitalcorpora
 
 PLIST_FILES=	bin/tcpflow share/man/man1/tcpflow.1.gz
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

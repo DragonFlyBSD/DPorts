@@ -21,7 +21,6 @@ USE_GNOME=	gtk20 cairo gdkpixbuf
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's|gtk-config|pkgconf gtk+-2.0|g'\
 		${WRKSRC}/wmclockmon-config/Makefile.in

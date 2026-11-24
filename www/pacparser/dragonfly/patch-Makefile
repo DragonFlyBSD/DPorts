@@ -1,0 +1,11 @@
+--- Makefile.orig
++++ Makefile
+@@ -22,7 +22,7 @@
+ # packaging script.
+ -include version.mk
+ 
+-ifeq ($(shell uname),FreeBSD)
++ifneq (,$(filter FreeBSD DragonFly,$(shell uname)))
+ SHELL := /usr/local/bin/bash
+ else
+ SHELL := /bin/bash

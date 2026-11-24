@@ -23,7 +23,6 @@ USE_LDCONFIG=	yes
 GH_ACCOUNT=	jpbarrette
 USE_GITHUB=	yes
 
-DFLY_UNMAINTAINED= yes
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
 	${INSTALL_DATA} ${WRKSRC}/doc/guide.pdf ${STAGEDIR}${DOCSDIR}/

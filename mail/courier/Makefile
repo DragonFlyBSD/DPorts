@@ -186,7 +186,6 @@ WEBMAILRSENT_CONFIGURE_ENABLE=	autorenamesent
 
 WEBMAILXFACE_EXTRA_PATCHES=	${FILESDIR}/extra-patch-libs__sqwebmail__msg2html.c
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if !${PORT_OPTIONS:MASPELL} && !${PORT_OPTIONS:MISPELL}

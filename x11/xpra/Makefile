@@ -102,7 +102,6 @@ XPRA_OPTIONS_DISABLED=	pam strict uinput vpx Xdummy Xdummy_wrapper
 
 USES+= localbase:ldflags
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NGSTREAMER}
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .for opt in ${XPRA_OPTIONS_ALL}
@@ -150,6 +149,7 @@ do-test:
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@FREEBSD@DRAGONFLY@g' \
+		-e '/^peercred_ENABLED = /s@$$@ or DRAGONFLY@' \
 		${WRKSRC}/setup.py
 
 .include <bsd.port.post.mk>

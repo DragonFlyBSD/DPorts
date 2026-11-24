@@ -30,7 +30,6 @@ LDFLAGS_i386=	-Wl,-znotext
 
 PLIST_FILES=	bin/fs2_open
 
-DFLY_UNMAINTAINED= yes
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/bin/fs2_open \
 		${STAGEDIR}${PREFIX}/bin

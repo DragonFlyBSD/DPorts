@@ -27,7 +27,6 @@ BUILD_WRKSRC=	${WRKSRC}/examples
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
 CPPFLAGS= -std=c++11
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDOCS} || ${PORT_OPTIONS:MEXAMPLES}

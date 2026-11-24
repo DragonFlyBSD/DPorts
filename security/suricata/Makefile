@@ -90,7 +90,6 @@ REDIS_CONFIGURE_ON=	--enable-hiredis
 TESTS_CONFIGURE_ENABLE=	unittests
 
 LDFLAGS= -lm
-IGNORE= unmaintained, please request fixing to users mailing list
 pre-patch:
 	@${CP} ${FILESDIR}/ax_check_compile_flag.m4 ${WRKSRC}/m4
 

@@ -32,7 +32,6 @@ GNU_CONFIGURE=	yes
 BINARY_ALIAS=	make=${GMAKE}
 
 # Do not install libraries
-IGNORE= unmaintained, please request fixing to users mailing list
 pre-build:
 	@${REINPLACE_CMD} -e '/^install-exec-am:/s/install-libLTLIBRARIES//' \
 		${WRKSRC}/xpaintrw/Makefile.in

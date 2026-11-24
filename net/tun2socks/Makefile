@@ -49,4 +49,10 @@ PLIST_FILES=	bin/${PORTNAME}
 post-extract:
 	@${CP} ${FILESDIR}/modules.txt ${WRKSRC}/vendor
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|^\(//go:build .*\)$$|\1 \|\| dragonfly|' \
+		${WRKSRC}/vendor/golang.zx2c4.com/wireguard/tun/operateonfd.go
+	${REINPLACE_CMD} -e 's|^//go:build !unix && !windows$$|//go:build (!unix \&\& !windows) \|\| dragonfly|' \
+		${WRKSRC}/dialer/sockopt_others.go
+
 .include <bsd.port.mk>

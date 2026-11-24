@@ -32,7 +32,6 @@ ONIGURUMA_CONFIGURE_WITH=	oniguruma
 
 RELEASE_CONFIGURE_ENABLE=	release
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/bfs
 

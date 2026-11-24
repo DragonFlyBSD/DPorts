@@ -17,4 +17,8 @@ GO_TARGET=	./cmd/${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@^//go:build darwin || freebsd || @//go:build darwin || freebsd || dragonfly || @' \
+		${GO_WRKSRC}/vendor/github.com/projectdiscovery/utils/permission/permission_other.go
+
 .include <bsd.port.mk>

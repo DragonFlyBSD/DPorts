@@ -18,7 +18,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/wget:ftp/wget
 
 USES=		gmake localbase tar:xz
 
-USE_CXXSTD=	c++98
+USE_CXXSTD= c++11
 USE_SUBMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-libdb
@@ -31,7 +31,6 @@ OPTIONS_SUB=	yes
 NLS_USES=		gettext
 NLS_CONFIGURE_ENABLE=	nls
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/jigdo-file
 

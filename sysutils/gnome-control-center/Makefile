@@ -1,6 +1,6 @@
 PORTNAME=	gnome-control-center
 PORTVERSION=	47.7
-PORTREVISION=	1
+PORTREVISION= 2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -68,13 +68,4 @@ post-patch:
 		${WRKSRC}/panels/printers/pp-host.c
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NCHEESE}
-LIB_DEPENDS:= ${LIB_DEPENDS:Nlibpulse*}
-dfly-patch:
-	${RM} -r ${WRKSRC}/panels/sound
-	${RM} -r ${WRKSRC}/subprojects/gvc
-	${REINPLACE_CMD} -e "/pulse/d" ${WRKSRC}/meson.build
-	${REINPLACE_CMD} -e "/'sound'/d" ${WRKSRC}/panels/meson.build
-	${REINPLACE_CMD} -e "/sound/d" ${WRKSRC}/shell/cc-panel-list.c
-	${REINPLACE_CMD} -e "/sound/d" ${WRKSRC}/shell/cc-panel-loader.c
-
 .include <bsd.port.mk>

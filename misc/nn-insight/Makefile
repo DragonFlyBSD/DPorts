@@ -36,5 +36,4 @@ CMAKE_ARGS+=	-DENABLE_NATIVE_OPTIMIZATIONS:BOOL=OFF
 CMAKE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 USE_CLANG_FALLBACK= default
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

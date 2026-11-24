@@ -21,7 +21,6 @@ USE_LDCONFIG=	yes
 CMAKE_TESTING_ON=	GISMO_BUILD_UNITTESTS
 
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == aarch64

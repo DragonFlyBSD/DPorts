@@ -61,7 +61,6 @@ LOGSTASH_JRUBY_BIN_FILES=	ast gem irb jgem jirb jirb_swing jruby \
 LOGSTASH_JRUBY_SUBDIR=		vendor/jruby/bin
 LOGSTASH_JRUBY_VER=		3.1.0
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	${REINPLACE_CMD} 's|%%ETCDIR%%|${ETCDIR}|g' ${WRKSRC}/config/logstash.yml
 	${FIND} ${WRKSRC} -name '*.orig' -delete

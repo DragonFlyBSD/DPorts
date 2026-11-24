@@ -19,6 +19,7 @@ MAKE_ARGS=	CC="${CC}" \
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
+MAKE_ARGS+= LDFLAGS="-L${NCURSESLIB} -lncursesw"
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 

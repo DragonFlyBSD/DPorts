@@ -33,7 +33,6 @@ LDFLAGS+=	-fopenmp
 
 PLIST_FILES=	bin/gcta64 bin/gcta
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 # Temporary hack for clang build errors:
@@ -51,7 +50,9 @@ do-install:
 	${RLN} ${STAGEDIR}${PREFIX}/bin/gcta64 ${STAGEDIR}${PREFIX}/bin/gcta
 
 dfly-patch:
-	${REINPLACE_CMD} -e 's@-lz -Wl,--start-group @-lz @g' \
-		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e 's@!defined(__FreeBSD__)@& \&\& !defined(__DragonFly__)@' \
+		${WRKSRC}/include/cpu.h ${WRKSRC}/include/cpu_f77blas.h
+	${REINPLACE_CMD} -e 's@defined __FreeBSD__ ||@& defined __DragonFly__ ||@' \
+		${WRKSRC}/main/option.cpp ${WRKSRC}/src/main.cpp
 
 .include <bsd.port.post.mk>

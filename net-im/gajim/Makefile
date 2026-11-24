@@ -58,5 +58,4 @@ SENTRY_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sentry-sdk>0:devel/py-sentry-sdk@${PY
 VOICEMESSAGES_USES=	gstreamer
 VOICEMESSAGES_USE=	GSTREAMER=core good
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

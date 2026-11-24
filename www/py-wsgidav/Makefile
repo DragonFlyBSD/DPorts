@@ -61,7 +61,6 @@ WSGIUTILS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}wsgiutils>=0:devel/py-wsgiutils@${
 
 # In order to run tests, need to switch to the GitHub
 # repo, else will succeed with 0 test runs.
-DFLY_UNMAINTAINED= yes
 do-test:
 	(cd ${WRKSRC} && ${PYTHON_CMD} ${PYDISTUTILS_SETUP} test)
 

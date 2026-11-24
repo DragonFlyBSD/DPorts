@@ -30,7 +30,6 @@ MANPAGES_MESON_ENABLED=	man-pages
 MANPAGES_PLIST_FILES=	share/man/man1/${PORTNAME}.1.gz
 
 CFLAGS= -Wno-error=format-extra-args
-IGNORE= unmaintained, please request fixing to users mailing list
 dfly-patch:
 	${REINPLACE_CMD} -e 's@c_std=c11@c_std=gnu11@g' \
 		${WRKSRC}/meson.build

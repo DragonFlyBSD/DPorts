@@ -24,5 +24,4 @@ PLIST_FILES=	bin/${PORTNAME}
 
 # tests as of 0.7.12: test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

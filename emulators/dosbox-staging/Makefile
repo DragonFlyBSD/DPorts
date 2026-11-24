@@ -1,6 +1,6 @@
 PORTNAME=	dosbox-staging
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.83.0
+DISTVERSION=	0.83.1
 CATEGORIES=	emulators
 
 MAINTAINER=	makc@FreeBSD.org
@@ -10,7 +10,7 @@ WWW=		https://dosbox-staging.github.io/
 # src/libs/simde/x86/sse2.h:11214:11: error: _Float16 is not supported on this target
 IGNORE_i386=	fails to build on i386
 
-BUILD_DEPENDS= ${LOCALBASE}/include/asio.hpp:net/asio cxxfs_gcc8>0:misc/cxxfs_gcc8
+BUILD_DEPENDS=	${LOCALBASE}/include/asio.hpp:net/asio
 LIB_DEPENDS=	libz-ng.so:archivers/zlib-ng \
 		libasound.so:audio/alsa-lib \
 		libfluidsynth.so:audio/fluidsynth \
@@ -28,7 +28,7 @@ USE_GITHUB=	yes
 
 CMAKE_ON=	USE_SYSTEM_LIBS
 CMAKE_OFF=	OPT_TESTS
-LDFLAGS+= -pthread -L${LOCALBASE}/cxxfs_gcc8 -lexecinfo
+LDFLAGS+= -pthread -lexecinfo
 
 OPTIONS_DEFINE=		DOCS MT32EMU
 OPTIONS_DEFAULT=	MT32EMU
@@ -37,8 +37,6 @@ MT32EMU_DESC=		MIDI playback support via mt32emu
 MT32EMU_LIB_DEPENDS=	libmt32emu.so:emulators/libmt32emu
 MT32EMU_CMAKE_BOOL=	OPT_MT32EMU
 
-CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${SED} -i '' '1s,bash,sh,' ${WRKSRC}/scripts/ci/get-version.sh
 	@${REINPLACE_CMD} '/^Exec/s,dosbox,dosbox-staging,' \

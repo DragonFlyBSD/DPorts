@@ -30,7 +30,7 @@ PORTDOCS=	README.md
 
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
+USE_GCC_VERSION= 14
 post-patch:
 # Respect PREFIX for icons
 	@${REINPLACE_CMD} 's|/usr/share|${DATADIR:H}|' \

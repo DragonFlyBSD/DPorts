@@ -68,7 +68,6 @@ SOAPYSDR_LIB_DEPENDS=	libSoapySDR.so:misc/soapysdr
 UTILITIES_CMAKE_BOOL=	ENABLE_UTILITIES
 
 USES+= localbase:ldflags
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MGUI}

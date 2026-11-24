@@ -37,7 +37,6 @@ SERVER_LIB_DEPENDS_OFF=	libfontconfig.so:x11-fonts/fontconfig \
 			libopusfile.so:audio/opusfile
 SERVER_VARS=		USE_RC_SUBR=${PORTNAME}
 
-DFLY_UNMAINTAINED= yes
 post-install-SERVER-on:
 	@${REINPLACE_CMD} -E '/\.desktop|icons|pixmaps/d' ${TMPPLIST}
 

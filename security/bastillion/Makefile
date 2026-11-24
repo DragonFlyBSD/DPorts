@@ -53,7 +53,6 @@ PLIST_SUB=	APP_NAME=${APP_NAME} \
 		WWWDIR=${WWWDIR}
 
 NO_ARCH_IGNORE= libsetuid-linux.so libsetuid-osx.so
-IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	${RM} ${WRKSRC}/*.bat ${WRKSRC}/startBastillion.sh
 	${MV} ${WRKSRC}/jetty ${WRKSRC}/jetty_bastillion

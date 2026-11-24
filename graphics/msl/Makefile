@@ -33,5 +33,4 @@ GH_TUPLE=	akb825:glslang:22683c8:akb825_glslang/Compile/glslang \
 
 # tests as of 1.8.4: 100% tests passed, 0 tests failed out of 25
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

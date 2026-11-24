@@ -34,7 +34,6 @@ GH_TAGNAME=	32ff41a
 
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
 post-extract:
 	@(cd ${WRKDIR} && ${LN} -sf IP2Location-Varnish-${GH_TAGNAME} \
 		${PORTNAME}-${PKGNAMEPREFIX}${GH_TAGNAME})

@@ -142,7 +142,6 @@ VORBIS_CMAKE_OFF=	-Daudacity_use_libvorbis:STRING=off
 VST_CMAKE_BOOL=		audacity_use_vst
 
 USES+= localbase:ldflags
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} != x86_64 && ${ARCH} != i386

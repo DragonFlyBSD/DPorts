@@ -20,4 +20,7 @@ USES=		compiler:c++11-lang python
 USE_PYTHON=	autoplist concurrent distutils
 
 BUILD_DEPENDS+= ${PYTHON_PKGNAMEPREFIX}cython>=0.29.30:lang/cython@${PY_FLAVOR}
+dfly-patch:
+	${RM} ${WRKSRC}/src/cython/_compreffor.cpp
+
 .include <bsd.port.mk>

@@ -37,7 +37,7 @@ MANPAGES_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Sphinx
 NLS_USES=			gettext-runtime gettext-tools
 NLS_CMAKE_BOOL=			FREECIV_ENABLE_NLS
 
-DFLY_UNMAINTAINED= yes
+LIB_DIRS= /lib /usr/lib ${LOCALBASE}/lib ${LOCALBASE}/lib/elfutils
 post-install-DOCS-off:
 	@${RM} -r ${STAGEDIR}/${DOCSDIR}
 

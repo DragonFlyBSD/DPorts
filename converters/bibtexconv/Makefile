@@ -23,7 +23,6 @@ CMAKE_ARGS=	-DCMAKE_INSTALL_DOCDIR=${EXAMPLESDIR}
 OPTIONS_DEFINE=	EXAMPLES
 
 # Remove trailing subdir from CMAKE_INSTALL_DOCDIR
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/examples||' \
 		${WRKSRC}/src/CMakeLists.txt \

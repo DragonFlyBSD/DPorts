@@ -26,7 +26,6 @@ SUB_FILES=	pkg-message
 
 WWWDIR=		${PREFIX}/www/roundcube/plugins/${PORTNAME}
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${RM} ${WRKSRC}/docker-compose.yaml
 

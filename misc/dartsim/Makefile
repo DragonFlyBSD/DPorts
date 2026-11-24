@@ -65,7 +65,6 @@ OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	*
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD

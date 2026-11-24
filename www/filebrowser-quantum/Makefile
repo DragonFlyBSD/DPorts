@@ -56,6 +56,7 @@ FILEBROWSER_QUANTUM_USER=	www
 FILEBROWSER_QUANTUM_GROUP=	${FILEBROWSER_QUANTUM_USER}
 FILEBROWSER_QUANTUM_CHANNEL=	stable
 
+GO_BUILDFLAGS+= -tags cgosql
 post-extract:
 	@${MKDIR} ${WRKSRC}/vendor
 	@cd ${WRKDIR}/filebrowser-quantum-vendor && ${COPYTREE_SHARE} . ${WRKSRC}/vendor

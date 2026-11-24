@@ -29,5 +29,5 @@ GH_TUPLE=	p-ranav:argparse:15d745f:argparse/subprojects/argparse \
 
 BINARY_ALIAS=	python3=${PYTHON_CMD} # python3-config=${PYTHON_CMD}-config # installs python binding into a wrong location, see https://github.com/bcgsc/btllib/issues/111
 
-DFLY_UNMAINTAINED= yes
+MESON_ARGS= -Db_coverage=false
 .include <bsd.port.mk>

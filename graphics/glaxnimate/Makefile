@@ -19,5 +19,4 @@ USE_KDE=	archive breeze-icons colorscheme completion config configwidgets \
 		coreaddons crash guiaddons i18n iconthemes widgetsaddons xmlgui \
 		ecm:build
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

@@ -17,5 +17,4 @@ AP_GENPLIST=	yes
 
 WRKSRC_SUBDIR=	apache2
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

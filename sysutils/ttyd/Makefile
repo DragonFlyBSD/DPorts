@@ -25,5 +25,4 @@ CMAKE_ARGS=	-DCMAKE_DISABLE_FIND_PACKAGE_Git:BOOL=True
 PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man1/ttyd.1.gz
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

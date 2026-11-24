@@ -1,5 +1,5 @@
 PORTNAME=	wazuh
-DISTVERSION=	4.14.9
+DISTVERSION=	4.14.10
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 MASTER_SITES=	https://packages.wazuh.com/deps/55/libraries/sources/:wazuh_sources
@@ -23,7 +23,7 @@ USES=		cmake:indirect cpe gmake perl5 readline shebangfix sqlite:3 uidfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	alonsobsd
 GH_PROJECT=	wazuh-freebsd
-GH_TAGNAME=	d7a31169cf0afd646db38408dd56d5148090aba0
+GH_TAGNAME=	181f5396a2709d0dd91d7cda6c145d161533bd5e
 
 USE_RC_SUBR=	${PORTNAME}${PKGNAMESUFFIX}
 
@@ -214,5 +214,17 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/add_localfiles.sh ${STAGEDIR}${WAZUHPREFIX}/packages_files/agent_installation_scripts/
 
 	${INSTALL_DATA} ${WRKSRC}/VERSION.json ${STAGEDIR}${WAZUHPREFIX}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^OPENSSL_FLAGS = enable-weak-ssl-ciphers no-shared /&no-devcryptoeng /' \
+		${WRKSRC}/src/Makefile
+	${REINPLACE_CMD} -e 's/^if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")$$/if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")/' \
+		-e 's/^endif(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")$$/endif()/' \
+		-e 's/^   CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR$$/   CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly" OR/' \
+		${WRKSRC}/src/data_provider/CMakeLists.txt
+	${REINPLACE_CMD} -e 's/STREQUAL "FreeBSD"/MATCHES "FreeBSD|DragonFly"/' \
+		${WRKSRC}/src/data_provider/src/extended_sources/CMakeLists.txt \
+		${WRKSRC}/src/data_provider/src/extended_sources/groups/CMakeLists.txt \
+		${WRKSRC}/src/data_provider/src/extended_sources/users/CMakeLists.txt
 
 .include <bsd.port.post.mk>

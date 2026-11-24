@@ -12,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 BROKEN_i386=	error: non-constant-expression cannot be narrowed from type 'rep' (aka 'long long') to 'time_t' (aka 'int') in initializer list
 
-BUILD_DEPENDS= cxxopts>0:devel/cxxopts cxxfs_gcc8>0:misc/cxxfs_gcc8
+BUILD_DEPENDS=	cxxopts>0:devel/cxxopts
 LIB_DEPENDS=	libfmt.so:devel/libfmt \
 		libicui18n.so:devel/icu \
 		libjsoncpp.so:devel/jsoncpp \
@@ -83,12 +83,11 @@ TEST_TEST_TARGET=	test
 TEST_IMPLIES=		CURL DUKTAPE
 TEST_ENV=		CTEST_PARALLEL_LEVEL=${MAKE_JOBS_NUMBER}
 
-CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
-LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
+USE_GCC_VERSION= ${GCC_DEFAULT}
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NLIBNPUPNP} LIBUPNP
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500050
+.if (${OPSYS} == FreeBSD && ${OSVERSION} < 1500050) || ${OPSYS} == DragonFly
 LIB_DEPENDS+=	libinotify.so:devel/libinotify
 .else
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-FreeBSD-15-inotify

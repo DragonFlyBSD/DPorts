@@ -65,4 +65,10 @@ post-install-MANPAGES-on:
 	${INSTALL_MAN} ${GO_WRKSRC}/manpages/${PORTNAME}.1 \
 		${STAGEDIR}/${PREFIX}/share/man/man1
 
+dfly-patch:
+	${CP} ${GO_WRKSRC}/vendor/github.com/u-root/u-root/pkg/ls/fileinfo_openbsd.go \
+		${GO_WRKSRC}/vendor/github.com/u-root/u-root/pkg/ls/fileinfo_dragonfly.go
+	${REINPLACE_CMD} -e 's@^//go:build !plan9 && !windows && !tamago && !linux && !openbsd$$@& \&\& !dragonfly@' \
+		${GO_WRKSRC}/vendor/github.com/u-root/u-root/pkg/ls/fileinfo_unix.go
+
 .include <bsd.port.mk>

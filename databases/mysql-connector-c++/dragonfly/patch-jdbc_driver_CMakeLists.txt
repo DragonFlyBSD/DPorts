@@ -1,0 +1,11 @@
+--- jdbc/driver/CMakeLists.txt.orig
++++ jdbc/driver/CMakeLists.txt
+@@ -206,7 +206,7 @@
+   target_link_libraries(jdbc PRIVATE Dnsapi)
+ ELSE()
+   target_link_libraries(jdbc PRIVATE pthread)
+-  IF(NOT CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
++  IF(NOT CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly")
+     target_link_libraries(jdbc PRIVATE resolv)
+   ENDIF()
+ ENDIF()

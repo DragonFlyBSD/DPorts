@@ -27,4 +27,9 @@ post-patch:
 post-patch-DOCS-off:
 	@${REINPLACE_CMD} -e 's, doc , ,' ${WRKSRC}/Makefile.in
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(linux) || defined(__FreeBSD__)/& || defined(__DragonFly__)/' \
+		-e 's/^#if defined(__FreeBSD__)$$/#if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		${WRKSRC}/src/chirctl.c ${WRKSRC}/src/chirondbg.c ${WRKSRC}/src/chironfs.c
+
 .include <bsd.port.mk>

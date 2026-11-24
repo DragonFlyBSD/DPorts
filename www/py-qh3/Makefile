@@ -228,5 +228,4 @@ TEST_WRKSRC=	${WRKSRC}/tests
 
 # tests as of 2.0.3: 466 passed in 20.05s
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

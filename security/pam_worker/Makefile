@@ -13,6 +13,7 @@ LICENSE=	BSD2CLAUSE
 PLIST_FILES=	"@(root,wheel,2755) bin/${PORTNAME}" \
 		share/man/man8/${PORTNAME}.8.gz
 
+MAKE_ARGS= LDADD=-lpam
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.8.gz ${STAGEDIR}${PREFIX}/share/man/man8

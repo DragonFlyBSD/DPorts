@@ -42,4 +42,8 @@ GITID=			dd9c19c37a878cf4a81b18efb8d6f0599c7da923
 SOURCE_DATE_EPOCH=	${TIMEEPOCHNOW:gmtime}
 TIMEEPOCHNOW=		%Y-%m-%dT%H:%M:%SZ
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|^//go:build linux .*|& \|\| dragonfly|' -e 's|^// +build linux .*|& dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/openbao/openbao-template/signals/signals_unix.go
+
 .include <bsd.port.mk>

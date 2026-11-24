@@ -58,4 +58,10 @@ PLIST_FILES=		lib/nss_ndb.so.1 \
 do-install-CFG-on:
 	${INSTALL_DATA} ${WRKSRC}/nss_ndb.conf ${STAGEDIR}${PREFIX}/etc/nss_ndb.conf.sample
 
+dfly-patch:
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifdef[[:space:]]+__FreeBSD__/#\1if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/nsstest.c ${WRKSRC}/nss_ndb.c ${WRKSRC}/nss_ndb.h
+
 .include <bsd.port.mk>

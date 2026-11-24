@@ -18,5 +18,4 @@ USE_QT=		base svg webchannel webengine \
 # cf. PR 224488
 LDFLAGS+=	-Wl,--as-needed
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

@@ -28,4 +28,10 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/${PORTDOCS} \
 		${STAGEDIR}${DOCSDIR}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's@^// +build darwin freebsd$$@& dragonfly@' \
+		-e 's@^// +build linux darwin freebsd$$@& dragonfly@' \
+		-e 's@^// +build !windows,!linux,!darwin,!freebsd@&,!dragonfly@' \
+		${GO_WRKSRC}/vendor/github.com/andrew-d/go-termutil/*.go
+
 .include <bsd.port.mk>

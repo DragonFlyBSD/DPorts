@@ -1,0 +1,11 @@
+--- Makefile.orig
++++ Makefile
+@@ -165,7 +165,7 @@
+ 	done
+ 
+ install-periodic: all
+-	@if [ $$(uname) = "FreeBSD" ]; then \
++	@if [ $$(uname) = "FreeBSD" -o $$(uname) = "DragonFly" ]; then \
+ 		echo 'create ${DESTDIR}${PERIODICDIR}'; install -d ${DESTDIR}${PERIODICDIR}; \
+ 		for periodic in ${PERIODIC}; do \
+ 			basename=$${periodic%*.sh}; \

@@ -41,7 +41,6 @@ JAVA_CONFIGURE_WITH=	java
 
 INSTALL_TARGET=install-strip
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} != x86_64 && ${ARCH} != i386

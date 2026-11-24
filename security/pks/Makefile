@@ -32,7 +32,6 @@ PORTDOCS=	pks_help.* README EMAIL
 
 OPTIONS_DEFINE=	DOCS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
@@ -52,11 +51,5 @@ post-install:
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
 	cd ${WRKSRC}/ && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}/
-
-.if ${PORTVERSION} == 0.9.6.20040312
-USES:=	${USES:Nssl}
-BUILD_DEPENDS+=	libressl-static>0:security/libressl-static
-CONFIGURE_ARGS+= --with-openssl=${LOCALBASE}/libressl-static
-.endif
 
 .include <bsd.port.mk>

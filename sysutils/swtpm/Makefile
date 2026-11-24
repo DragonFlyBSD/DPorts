@@ -44,6 +44,7 @@ TEST_WRKSRC=	${STAGEDIR}${PREFIX}/libexec/installed-tests/swtpm
 USERS=		_tss
 GROUPS=		${USERS}
 
+USES+= localbase:ldflags
 do-test:
 	cd ${TEST_WRKSRC} && ${SETENV} ${TEST_ENV} ${TEST_TARGET}
 

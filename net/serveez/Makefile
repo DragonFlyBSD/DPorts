@@ -30,4 +30,10 @@ post-patch:
 	@${ECHO_CMD} 'static char created[] = "2021-11-15 13:19 UTC";' \
 		> ${WRKSRC}/src/irc-server/timestamp.c
 
+dfly-patch:
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifdef[[:space:]]+__FreeBSD__/#\1if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/src/libserveez/core.c ${WRKSRC}/src/libserveez/interface.c
+
 .include <bsd.port.mk>

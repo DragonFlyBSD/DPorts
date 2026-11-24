@@ -1,0 +1,20 @@
+--- deps/hiredis/Makefile.orig	2024-01-07 13:14:42 UTC
++++ deps/hiredis/Makefile
+@@ -112,7 +112,7 @@ ifeq ($(USE_SSL),1)
+   SSL_LDFLAGS+=-lssl -lcrypto
+ endif
+ 
+-ifeq ($(uname_S),FreeBSD)
++ifeq ($(uname_S), $(filter $(uname_S),FreeBSD DragonFly))
+   LDFLAGS+=-lm
+   IS_GCC=$(shell sh -c '$(CC) --version 2>/dev/null |egrep -i -c "gcc"')
+   ifeq ($(IS_GCC),1)
+@@ -121,7 +121,7 @@ ifeq ($(uname_S),FreeBSD)
+ else
+   REAL_CFLAGS+=-pedantic
+ endif
+-ifeq ($(uname_S),FreeBSD)
++ifeq ($(uname_S), $(filter $(uname_S),FreeBSD DragonFly))
+   CFLAGS?=$(CFLAGS)
+   CCLINK?=pthread
+   LDFLAGS?=-L. -Wl,-rpath,.

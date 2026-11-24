@@ -55,7 +55,6 @@ PLIST_SUB+=	LIBCRYPTO_SHLIBMAJ=57 \
 		LIBTLS_SHLIBMAJ=33 \
 		LIBTLS_SHLIBFULL=33.0.2
 
-DFLY_UNMAINTAINED= yes
 post-patch-MAN3-off:
 	${REINPLACE_CMD} -e '/^install-man:/s/install-man3//' \
 		-e '/$$(MAKE) $$(AM_MAKEFLAGS) install-data-hook/d' \

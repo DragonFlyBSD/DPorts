@@ -31,9 +31,4 @@ CARGO_INSTALL_PATH=	${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
 
-IGNORE= unmaintained, please request fixing to users mailing list
-dfly-patch:
-	${REINPLACE_CMD} -e 's@ EOWNERDEAD,@@g' -e 's@ ENOTRECOVERABLE,@@g' \
-		${WRKSRC}/cargo-crates/ffmpeg-next-*/src/util/error.rs
-
 .include <bsd.port.mk>

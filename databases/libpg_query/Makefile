@@ -18,7 +18,6 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	lfittl
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libpg_query.a ${STAGEDIR}${PREFIX}/lib/
 	${INSTALL_DATA} ${WRKSRC}/pg_query.h ${STAGEDIR}${PREFIX}/include/

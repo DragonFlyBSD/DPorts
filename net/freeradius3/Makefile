@@ -159,7 +159,6 @@ JSON_LIB_DEPENDS=		libjson-c.so:devel/json-c
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NHEIMDAL} MITKRB_PORT
 MAKE_ENV= LDVER=ld.bfd
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MUSER}

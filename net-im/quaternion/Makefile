@@ -24,5 +24,4 @@ CMAKE_ON=	BUILD_WITH_QT6
 USE_GITHUB=	yes
 GH_ACCOUNT=	quotient-im
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

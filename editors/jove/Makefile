@@ -13,7 +13,6 @@ USES=		groff ncurses
 USE_GITHUB=	yes
 GH_ACCOUNT=	jonmacs
 
-DFLY_UNMAINTAINED= yes
 pre-patch:
 	${REINPLACE_CMD} -e 's,/usr/local/,${PREFIX}/,' ${WRKSRC}/Makefile
 	${REINPLACE_CMD} -e 's,/etc/,${PREFIX}/etc/,' ${WRKSRC}/Makefile

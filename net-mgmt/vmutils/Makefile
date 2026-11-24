@@ -29,4 +29,13 @@ do-install-DOCS-on:
 
 MASTERDIR=	${.CURDIR}/../victoria-metrics
 
+dfly-patch:
+	${CP} ${WRKSRC}/lib/filestream/filestream_openbsd.go \
+		${WRKSRC}/lib/filestream/filestream_dragonfly.go
+	${REINPLACE_CMD} -e 's@^//go:build darwin || freebsd || netbsd || openbsd$$@& || dragonfly@' \
+		${WRKSRC}/app/vmctl/terminal/unix_bsd.go
+	${CP} ${WRKSRC}/lib/fs/fadvise_openbsd.go ${WRKSRC}/lib/fs/fadvise_dragonfly.go
+	${REINPLACE_CMD} -e 's@^\(//go:build .*freebsd.*\)$$@\1 || dragonfly@' \
+		${WRKSRC}/lib/fs/fs_nix.go ${WRKSRC}/lib/fs/fs_unix.go
+
 .include "${MASTERDIR}/Makefile"

@@ -25,9 +25,8 @@ SHEBANG_FILES=	contrib/view_palettes.sh src/bison.sh test/*.sh test/*/*.sh
 CMAKE_OFF=	BUILD_TESTING
 CMAKE_TESTING_ARGS=	-DCMAKE_CTEST_ARGUMENTS:STRING="--label-exclude;nonfree"
 
-BINARY_ALIAS=	make=${GMAKE} python3=${PYTHON_CMD} # Needed for external tests
+BINARY_ALIAS= make=${GMAKE}
 
 WRKSRC=		${WRKDIR}/rgbds
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

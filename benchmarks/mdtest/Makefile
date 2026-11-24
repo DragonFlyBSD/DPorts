@@ -29,7 +29,6 @@ OPENMPI_BUILD_DEPENDS_OFF=	${LOCALBASE}/bin/mpicc:net/mpich
 OPENMPI_RUN_DEPENDS_OFF=	${LOCALBASE}/bin/mpirun:net/mpich
 OPENMPI_VARS_OFF=		MPICC=${LOCALBASE}/bin/mpicc
 
-DFLY_UNMAINTAINED= yes
 do-build:
 	(cd ${WRKSRC} && ${MPICC} ${CFLAGS} -o ${PORTNAME} ${PORTNAME}.c -lm)
 

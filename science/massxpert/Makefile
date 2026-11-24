@@ -26,5 +26,4 @@ USE_QT=		core gui printsupport svg widgets xml buildtools:build \
 USE_XORG=	ice sm x11 xau xcb xdmcp xext xrender
 
 MAKE_JOBS_UNSAFE= yes
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

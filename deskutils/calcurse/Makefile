@@ -1,5 +1,5 @@
 PORTNAME=	calcurse
-DISTVERSION=	4.8.2
+DISTVERSION=	4.9.1
 CATEGORIES=	deskutils
 MASTER_SITES=	https://calcurse.org/files/ \
 		https://fossies.org/linux/privat/
@@ -11,13 +11,15 @@ WWW=		https://calcurse.org/
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		ncurses shebangfix pkgconfig
+USES=		ncurses pkgconfig shebangfix
 SHEBANG_FILES=	contrib/caldav/calcurse-caldav \
 		contrib/caldav/calcurse-caldav.py \
 		contrib/vdir/calcurse-vdir \
 		contrib/vdir/calcurse-vdir.py
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-asciidoc
+
+TEST_TARGET=	check
 
 OPTIONS_DEFINE=		CALDAV DOCS NLS
 OPTIONS_DEFAULT=	CALDAV
@@ -29,7 +31,6 @@ CALDAV_USES=		python
 CALDAV_USES_OFF=	python:env
 CALDAV_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}httplib2>=0:www/py-httplib2@${PY_FLAVOR}
 
-DOCS_USES=		gmake
 DOCS_CONFIGURE_ENABLE=	docs
 
 NLS_USES=		gettext

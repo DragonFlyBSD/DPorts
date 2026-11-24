@@ -37,8 +37,7 @@ OPENSSL_CONFIGURE_OFF=	--disable-openssl
 OPENSSL_CPPFLAGS=	-I${OPENSSLINC}
 OPENSSL_LDFLAGS=	-L${OPENSSLLIB}
 
-CFLAGS= -std=c++98
-IGNORE= unmaintained, please request fixing to users mailing list
+CFLAGS= -std=c++11
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|-lpthread|-pthread| ; \

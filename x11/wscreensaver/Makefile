@@ -20,7 +20,6 @@ WRKSRC_SUBDIR=	wayland
 CFLAGS+=	-Wno-incompatible-function-pointer-types # clang
 LDFLAGS+=	-lpthread # XXX dependency('threads')
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 # Skip configure
 	@${SED} '/@SET_MAKE@/d; s,@srcdir@,.,; s,@top_srcdir@,../..,' \

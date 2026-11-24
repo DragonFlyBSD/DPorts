@@ -22,4 +22,10 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/xc3sprog.1 \
 		${STAGEDIR}${PREFIX}/share/man/man1
 
+dfly-patch:
+	${REINPLACE_CMD} -E -e 's/defined[ ]*\([ ]*__FreeBSD__[ ]*\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^#([[:space:]]*)ifdef[[:space:]]+__FreeBSD__/#\1if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		-e 's/^#([[:space:]]*)ifndef[[:space:]]+__FreeBSD__/#\1if !defined(__FreeBSD__) \&\& !defined(__DragonFly__)/' \
+		${WRKSRC}/mapfile_xc2c.cpp ${WRKSRC}/ioparport.cpp
+
 .include <bsd.port.mk>

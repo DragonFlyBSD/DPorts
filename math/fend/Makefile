@@ -246,11 +246,11 @@ OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
 
-DFLY_UNMAINTAINED= yes
 do-install:
 	# workaround for error: found a virtual manifest at `xx` instead of a package manifest
 	${INSTALL_PROGRAM} \
 		${WRKDIR}/target/release/${PORTNAME} \
 		${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
+USES:= ${USES:S/cargo/cargo:extra/}
 .include <bsd.port.mk>

@@ -20,5 +20,4 @@ GNU_CONFIGURE=	yes
 
 CONFLICTS=	cutils
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

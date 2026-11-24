@@ -20,7 +20,8 @@ OPTIONS_SUB=	yes
 NLS_USES=	gettext
 NLS_CONFIGURE_OFF=	--disable-nls
 
-DFLY_UNMAINTAINED= yes
+CFLAGS= -DNCURSES_INTERNALS
+CXXFLAGS= -DNCURSES_INTERNALS
 .include <bsd.port.options.mk>
 
 .if ! ${PORT_OPTIONS:MNLS}

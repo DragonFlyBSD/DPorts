@@ -33,9 +33,9 @@ GH_TUPLE=	KDAB:perfparser:851ebf0:perfparser/3rdparty/perfparser \
 		koenpoppe:PrefixTickLabels:6e86393:PrefixTickLabels/3rdparty/PrefixTickLabels
 
 CMAKE_ON=	QT6_BUILD
-CMAKE_ARGS=	-DCMAKE_MODULE_PATH=${LOCALBASE}/share/ECM/find-modules
+CMAKE_ARGS= -DCMAKE_MODULE_PATH=${LOCALBASE}/share/ECM/find-modules -DLIBELF_INCLUDE_DIRS=${LOCALBASE}/include/elfutils -DLIBELF_LIBRARIES=${LOCALBASE}/lib/elfutils/libelf.so -DLIBDW_LIBRARIES=${LOCALBASE}/lib/elfutils/libdw.so
 
 PORTSCOUT=	limit:^.*[0-9]\.[0-9].*$$ # prevent tags like 'continuous'
 
-DFLY_UNMAINTAINED= yes
+LIB_DIRS= /lib /usr/lib ${LOCALBASE}/lib ${LOCALBASE}/lib/elfutils
 .include <bsd.port.mk>

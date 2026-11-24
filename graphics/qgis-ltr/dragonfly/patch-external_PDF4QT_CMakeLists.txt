@@ -1,0 +1,13 @@
+--- external/PDF4QT/CMakeLists.txt.orig
++++ external/PDF4QT/CMakeLists.txt
+@@ -94,7 +94,9 @@
+ 
+ if (UNIX AND NOT APPLE)
+     set(PDF4QT_LINUX ON)
+-    add_compile_options("-fexperimental-library")
++    if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
++        add_compile_options("-fexperimental-library")
++    endif()
+ endif()
+ 
+ if (LINUX_GCC)

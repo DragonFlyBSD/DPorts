@@ -37,7 +37,7 @@ SSE_DESC=		Enable SSE optimizations
 SSE_MESON_ON=		-Dx86_sse=auto
 SSE_MESON_OFF=		-Dx86_sse=none
 
-IGNORE= unmaintained, please request fixing to users mailing list
+LDFLAGS= -lexecinfo
 post-patch:
 	@${REINPLACE_CMD} -e "s|'python3'|'${PYTHON_CMD}'|" ${WRKSRC}/meson.build
 

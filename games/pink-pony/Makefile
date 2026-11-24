@@ -34,7 +34,6 @@ PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	@${REINPLACE_CMD} -Ee 's,resources/,${DATADIR}/,' \
 		${WRKSRC}/pony.options ${WRKSRC}/src/Config.cc

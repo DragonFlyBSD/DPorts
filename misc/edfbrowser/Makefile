@@ -17,7 +17,6 @@ USE_GL=		opengl
 
 OPTIONS_DEFINE=	DOCS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/edfbrowser
 

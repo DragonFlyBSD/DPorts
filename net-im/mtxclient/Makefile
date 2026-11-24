@@ -33,5 +33,4 @@ USE_GCC_VERSION= ${GCC_DEFAULT}
 LDFLAGS= -lstdc++fs
 BROKEN_SSL= libressl
 BROKEN_SSL_REASON_libressl= port requires openssl/kdf.h
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

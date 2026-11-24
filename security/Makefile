@@ -1175,6 +1175,7 @@ SUBDIR += rubygem-attr_encrypted
 SUBDIR += rubygem-attr_encrypted3
 SUBDIR += rubygem-auth-sanitizer
 SUBDIR += rubygem-auth-sanitizer-gitlab
+SUBDIR += rubygem-az-identity
 SUBDIR += rubygem-bcrypt
 SUBDIR += rubygem-bcrypt-ruby
 SUBDIR += rubygem-bcrypt_pbkdf

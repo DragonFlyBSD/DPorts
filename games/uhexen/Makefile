@@ -24,7 +24,6 @@ OPTIONS_DEFAULT=	MUSIC
 MUSIC_DESC=	In-game MIDI music support
 MUSIC_RUN_DEPENDS=	${LOCALBASE}/lib/timidity/goemon.cfg:audio/timidity
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 do-install:

@@ -25,5 +25,4 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

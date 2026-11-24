@@ -64,6 +64,13 @@ do-install-DOCS-on:
 	${MV} ${INSTALL_WRKSRC}/docs/victorialogs/* ${STAGEDIR}${DOCSDIR}
 .endif
 
+dfly-patch:
+	cd ${GO_WRKSRC}/vendor/github.com/VictoriaMetrics/VictoriaMetrics/lib && \
+		${CP} filestream/filestream_openbsd.go filestream/filestream_dragonfly.go && \
+		${CP} fs/fadvise_openbsd.go fs/fadvise_dragonfly.go && \
+		${REINPLACE_CMD} -e 's@^\(//go:build .*freebsd.*\)$$@\1 || dragonfly@' \
+			fs/fs_nix.go fs/fs_unix.go
+
 .include <bsd.port.mk>
 
 _GET_DATE=	TZ= ${STAT} -f %Sm -t %Y%m%d-%H%M%S ${WRKSRC}/.gitignore

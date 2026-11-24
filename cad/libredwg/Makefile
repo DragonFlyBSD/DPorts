@@ -42,7 +42,6 @@ PYTHON_CONFIGURE_OFF=	--disable-python
 PYTHON_PORTEXAMPLES=	load_dwg.py
 PYTHON_VARS=		SHEBANG_FILES+=examples/load_dwg.py
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 # XXX: switch the order of #include's to unbreak on powerpc
 # which are still based on gcc-4.2.1 (should be no-op elsewhere)

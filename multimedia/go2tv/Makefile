@@ -50,4 +50,14 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/assets/go2tv-icon-color.svg \
 		${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps/app.go2tv.go2tv.svg
 
+dfly-patch:
+	${FIND} ${WRKSRC}/vendor/fyne.io ${WRKSRC}/vendor/github.com/go-gl \
+		${WRKSRC}/vendor/github.com/alexballas/refyne \
+		-type f \( -name '*.go' -o -name '*.c' -o -name '*.h' -o -name '*.m' \) \
+		-exec ${SED} -i '' -E \
+		-e '/^\/\/go:build/s/([ !(])freebsd([ )]|$$)/\1(freebsd || dragonfly)\2/g' \
+		-e '/#cgo /s/([[:blank:]])([^[:blank:]:]*)freebsd([^[:blank:]:]*)([[:blank:]])/\1\2freebsd\3 \2dragonfly\3\4/g' \
+		-e 's/defined\(__FreeBSD__\)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		{} +
+
 .include <bsd.port.mk>

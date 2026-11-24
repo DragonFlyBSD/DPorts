@@ -273,7 +273,6 @@ ASSISTANT_USE_CABAL=	alex-3.5.1.0 \
 			yesod-persistent-1.6.0.8 \
 			yesod-static-1.6.1.0
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == aarch64

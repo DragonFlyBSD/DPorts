@@ -96,7 +96,6 @@ _USES_configure+=	471:post-autoreconf
 OPTIONS_EXCLUDE= SCTP
 LDFLAGS= -L${LOCALBASE}/lib
 CFLAGS= -I${LOCALBASE}/include
-DFLY_UNMAINTAINED= yes
 post-autoreconf:
 	cd ${WRKSRC} && ./yate-config.sh
 

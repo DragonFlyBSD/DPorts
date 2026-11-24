@@ -20,6 +20,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 		bin/${PORTNAME}-holder \
 		share/man/man1/${PORTNAME}.1.gz
 
+LIB_DEPENDS+= libepoll-shim.so:devel/libepoll-shim
 post-patch:
 	@${REINPLACE_CMD} -e 's/pidof/pgrep/' \
 		${WRKSRC}/src/holder.c \
@@ -28,5 +29,10 @@ post-patch:
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.man \
 		${STAGEDIR}${PREFIX}/share/man/man1/${PORTNAME}.1
+
+.if 1
+CFLAGS+=	-I${LOCALBASE}/include/libepoll-shim
+LDFLAGS+=	-L${LOCALBASE}/lib -lepoll-shim
+.endif
 
 .include <bsd.port.mk>

@@ -221,7 +221,6 @@ SUB_LIST=	DATADIR=${DATADIR}
 
 BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
 CXXFLAGS= -isystem ${LOCALBASE}/cxxfs_gcc8
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	@${REINPLACE_CMD} -e 's|/some/place/where/the/data/is|${DATADIR}|' \
 		${WRKSRC}/rust/stracciatella/src/config/ja2_json.rs \

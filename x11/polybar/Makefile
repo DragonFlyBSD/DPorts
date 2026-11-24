@@ -87,10 +87,9 @@ ETCFIX =	include/utils/command.hpp \
 		CHANGELOG.md
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NPULSEAUDIO} ALSA
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1500050
+.if ${OPSYS} == DragonFly || (${OPSYS} == FreeBSD && ${OSVERSION} < 1500050)
 LIB_DEPENDS+=	libinotify.so:devel/libinotify
 .else
 CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_LibInotify

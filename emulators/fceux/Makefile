@@ -53,7 +53,6 @@ FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 X264_LIB_DEPENDS=	libx264.so:multimedia/libx264
 X265_LIB_DEPENDS=	libx265.so:multimedia/x265
 
-IGNORE= unmaintained, please request fixing to users mailing list
 pre-configure:
 	${REINPLACE_CMD} -e 's,/usr,${PREFIX},' ${WRKSRC}/fceux.desktop
 	${REINPLACE_CMD} -e 's:%%PKGNAME%%:${PKGNAME}:' ${WRKSRC}/scripts/genGitHdr.sh

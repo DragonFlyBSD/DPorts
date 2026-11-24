@@ -40,5 +40,4 @@ PLIST_SUB=	PORTVERSION=${PORTVERSION}
 USE_GITHUB=	yes
 GH_ACCOUNT=	libcpr
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

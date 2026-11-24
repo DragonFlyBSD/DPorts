@@ -70,7 +70,8 @@ NCURSES_GH_TAGNAME=	${SCINTERM_HASH}:scitrm
 NCURSES_VARS=		_TARGETS+=curses
 
 USES+= ncurses
-IGNORE= unmaintained, please request fixing to users mailing list
+CFLAGS= -DNCURSES_INTERNALS
+CXXFLAGS= -L${NCURSESLIB}
 post-patch:
 	${LN} -s ${WRKDIR}/scintilla ${BUILD_WRKSRC}
 	${PATCH} -d ${BUILD_WRKSRC}/scintilla -N -p1 < \

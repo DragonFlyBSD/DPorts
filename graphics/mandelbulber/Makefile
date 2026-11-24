@@ -39,7 +39,6 @@ OPTIONS_EXCLUDE=	OPENMP  # not properly supported yet
 OPENCL_BUILD_DEPENDS=	opencl>=0:devel/opencl
 
 USES+= gmake
-IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	@${RM} -rf ${WRKSRC}/mandelbulber2/third-party
 

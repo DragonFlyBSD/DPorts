@@ -82,7 +82,6 @@ RADIXTREE_CONFIGURE_ENABLE=	radix-tree
 RRL_CONFIGURE_ENABLE=		ratelimit
 ZONE_STATS_CONFIGURE_ENABLE=	zone-stats
 
-DFLY_UNMAINTAINED= yes
 post-build-MUNIN_PLUGIN-on:
 	${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		-e 's|/usr/local/etc/nsd.conf|${ETCDIR}/nsd.conf|g' \

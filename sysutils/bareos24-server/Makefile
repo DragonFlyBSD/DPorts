@@ -234,4 +234,10 @@ post-install:
 .include "${MASTERDIR}/Makefile.common"
 .endif # 24-client and 24-server are defined
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^if(HAVE_FREEBSD_OS)$$/if(HAVE_FREEBSD_OS OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly")/' \
+		${WRKSRC}/core/src/plugins/stored/CMakeLists.txt
+	${REINPLACE_CMD} -e 's/bareossd PRIVATE bareos $${THREADS_THREADS} fmt::fmt-header-only/& $${JANSSON_LIBRARIES}/' \
+		${WRKSRC}/core/src/stored/CMakeLists.txt
+
 .include <bsd.port.mk>

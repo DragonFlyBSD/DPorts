@@ -64,7 +64,7 @@ CMAKE_ARGS=	-DFREEBSD_TCL_INCLUDEDIR=${TCL_INCLUDEDIR} -DFREEBSD_TCL_VER=${TCL_V
 CMAKE_ON=	BUILD_TCL
 CMAKE_OFF=	BUILD_PYTHON ENABLE_TESTS
 
-CXXFLAGS+= -DBOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED -isystem ${LOCALBASE}/cxxfs_gcc8
+CXXFLAGS+=	-DBOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED
 
 BINARY_ALIAS=	make=${GMAKE} python3=${PYTHON_CMD} tclsh=${TCLSH}
 PORTSCOUT=	limit:^[0-9][0-9]Q
@@ -78,8 +78,6 @@ OPTIONS_DEFAULT=	GUI
 GUI_USES=	qt:5
 GUI_USE=	QT=charts,core,gui,widgets,buildtools:build,qmake:build
 
-BUILD_DEPENDS+= cxxfs_gcc8>0:misc/cxxfs_gcc8
-LDFLAGS= -L${LOCALBASE}/cxxfs_gcc8
 post-patch: # override the TCL version to be the same as USES=tcl sets
 	@${FIND} ${WRKSRC} -name FindTCL.cmake \
 		| ${XARGS} ${REINPLACE_CMD} -e ' \

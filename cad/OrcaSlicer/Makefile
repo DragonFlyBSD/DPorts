@@ -60,4 +60,15 @@ CMAKE_ARGS=	-DBBL_INTERNAL_TESTING=0 \
 post-patch:
 	${CP} ${FILESDIR}/hid.c ${WRKSRC}/deps_src/hidapi/linux/hid.c
 
+dfly-patch:
+	cd ${WRKSRC}/src && ${GREP} -rlF --include='*.h' --include='*.hpp' \
+		--include='*.c' --include='*.cpp' '__FreeBSD__' . | \
+		${XARGS} ${REINPLACE_CMD} \
+		-e 's/defined(__FreeBSD__)/(defined(__FreeBSD__) || defined(__DragonFly__))/g' \
+		-e 's/^\([[:space:]]*\)#ifdef __FreeBSD__$$/\1#if defined(__FreeBSD__) || defined(__DragonFly__)/'
+	${REINPLACE_CMD} -e 's/CMAKE_SYSTEM_NAME STREQUAL "FreeBSD"/CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly"/' \
+		${WRKSRC}/CMakeLists.txt ${WRKSRC}/src/CMakeLists.txt \
+		${WRKSRC}/src/slic3r/CMakeLists.txt \
+		${WRKSRC}/deps_src/hidapi/CMakeLists.txt
+
 .include <bsd.port.mk>

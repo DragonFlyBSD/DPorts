@@ -24,8 +24,4 @@ GH_PROJECT=	docker-credential-helpers
 
 PLIST_FILES=	bin/docker-credential-pass
 
-pre-build-script:
-	${LN} -s ${GO_WRKSRC}/pass/cmd/main_linux.go ${GO_WRKSRC}/pass/cmd/main_dragonfly.go
-	${LN} -s ${GO_WRKSRC}/pass/pass_linux.go ${GO_WRKSRC}/pass/pass_dragonfly.go
-
 .include <bsd.port.mk>

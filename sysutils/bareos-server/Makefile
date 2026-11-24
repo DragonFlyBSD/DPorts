@@ -245,4 +245,8 @@ post-install:
 .endif # -client and -server are defined
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NSCSICRYPTO}
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^if(HAVE_FREEBSD_OS)$$/if(HAVE_FREEBSD_OS OR CMAKE_SYSTEM_NAME STREQUAL "DragonFly")/' \
+		${WRKSRC}/core/src/plugins/stored/CMakeLists.txt
+
 .include <bsd.port.mk>

@@ -33,5 +33,4 @@ GH_TUPLE=	YosysHQ:prjtrellis-db:015e0330630d7c238c0e4f2cdd9c8157eb78c54a:databas
 CMAKE_SOURCE_PATH=	${WRKSRC}/libtrellis
 CMAKE_ARGS=		-DCURRENT_GIT_VERSION=${GH_TAGNAME}
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

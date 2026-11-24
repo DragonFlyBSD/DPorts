@@ -40,7 +40,6 @@ PYTHON_INSTALL_TARGET=	install install-pymod
 PYTHON_PLIST_SUB=	PYBIND=""
 PYTHON_PLIST_SUB_OFF=	PYBIND="@comment "
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch-PYTHON-on:
 	@${REINPLACE_CMD} \
 		-e "s|version=pacparser_version()|version=\"${DISTVERSION}\"|" \

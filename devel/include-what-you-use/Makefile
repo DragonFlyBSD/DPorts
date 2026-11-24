@@ -20,5 +20,4 @@ CMAKE_ARGS+=	-DLLVM_DIR=${LOCALBASE}/llvm${LLVM_VER}/lib/cmake/llvm \
 
 LLVM_VER=	23
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

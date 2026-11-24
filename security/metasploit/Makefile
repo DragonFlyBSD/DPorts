@@ -202,7 +202,6 @@ STRIP=
 NO_ARCH=	yes
 NO_ARCH_IGNORE=	template_x64_bsd.bin template_x86_bsd.bin CVE-2013-2171.bin
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	${REINPLACE_CMD} "/rb-readline/d ; /win32api/d ; \
 		/date/s|, '3.4.1'|| ; /ffi/s|, '< 1.17.0'|| ; /rasn1/s|, '0.14.0'|| ; \

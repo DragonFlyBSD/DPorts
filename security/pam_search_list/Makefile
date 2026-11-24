@@ -11,7 +11,7 @@ WWW=		https://sourceforge.net/projects/pam-search-list/
 
 USES=		tar:xz uidfix
 
-MAKE_ARGS=	MANDIR="${PREFIX}/share/man/man"
+MAKE_ARGS= MANDIR="${PREFIX}/share/man/man" SHLIB=pam_search_list
 
 PLIST_FILES=	lib/libpam_search_list.a \
 		lib/pam_search_list.so \

@@ -16,7 +16,6 @@ USES=		cabal
 
 CABAL_EXECUTABLES=	yesod
 
-IGNORE= unmaintained, please request fixing to users mailing list
 dfly-patch:
 	mv ${WRKSRC}/${PORTNAME}.cabal ${WRKSRC}/${PORTNAME}.cabal.orig
 	awk '{print; if (tolower($$1) == "executable") {print "    extra-libraries: m"}}' \

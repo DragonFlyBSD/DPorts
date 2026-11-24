@@ -57,5 +57,4 @@ CFLAGS_i386=	-msse2
 # filevercmp is deprecated.  Remove conflict when the port is removed.
 CONFLICTS_INSTALL=	filevercmp libdisorder # include/disorder.h include/filevercmp.h include/pdflib.hpp
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

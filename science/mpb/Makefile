@@ -45,7 +45,6 @@ ATLAS_CONFIGURE_ON=	--with-lapack=-lalapack
 ATLAS_CONFIGURE_OFF=	--with-blas=openblas --with-lapack=-lopenblas
 OPENMP_CONFIGURE_ON=	--with-openmp
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	(cd ${WRKSRC}/examples && \

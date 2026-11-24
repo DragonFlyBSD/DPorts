@@ -1,0 +1,20 @@
+--- meson.build.orig
++++ meson.build
+@@ -36,7 +36,7 @@
+ # On FreeBSD, defining _POSIX_C_SOURCE / _XOPEN_SOURCE hides BSD-only
+ # interfaces such as sysconf(_SC_NPROCESSORS_ONLN). _DEFAULT_SOURCE and
+ # _GNU_SOURCE above already grant equivalent or stricter visibility on Linux.
+-if host_machine.system() != 'freebsd'
++if host_machine.system() != 'freebsd' and host_machine.system() != 'dragonfly'
+   pre_args += [
+     '-D_POSIX_C_SOURCE=200809L',
+     '-D_XOPEN_SOURCE=700',
+@@ -103,7 +103,7 @@
+ # FreeBSD does not provide <sys/epoll.h> or <sys/signalfd.h> natively. The
+ # libepoll-shim port (devel/libepoll-shim) implements these on top of kqueue.
+ extra_deps = []
+-if host_machine.system() == 'freebsd'
++if host_machine.system() == 'freebsd' or host_machine.system() == 'dragonfly'
+   extra_deps += dependency('epoll-shim')
+ endif
+ 

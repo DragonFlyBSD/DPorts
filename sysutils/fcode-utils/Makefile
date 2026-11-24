@@ -22,7 +22,6 @@ PORTDOCS=	detok.html toke.html workbook.css
 
 OPTIONS_DEFINE=	DOCS
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-build:
 .for f in detok romheaders toke
 	@${DO_MAKE_BUILD} -C ${WRKSRC}/${f}

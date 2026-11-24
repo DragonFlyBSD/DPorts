@@ -27,7 +27,6 @@ USES=		gem
 
 PLIST_FILES=	bin/cogbot
 
-IGNORE= unmaintained, please request fixing to users mailing list
 dfly-patch:
 	${REINPLACE_CMD} -e '/twitter/s@~>@>=@g'	\
 			 -e '/json/s@~>@>=@g'	\

@@ -38,4 +38,8 @@ OATPP_VERSION=	1.3.0
 
 USE_GITHUB=	yes
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/^  #if defined(__FreeBSD__)$$/  #if defined(__FreeBSD__) || defined(__DragonFly__)/' \
+		${WRKSRC}/src/oatpp/network/tcp/server/ConnectionProvider.cpp
+
 .include <bsd.port.mk>

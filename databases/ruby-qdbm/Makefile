@@ -22,10 +22,9 @@ USE_LDCONFIG=	yes
 CONFIGURE_ENV=	ac_cv_lib_iconv_main=yes
 MAKE_ENV=	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 		LOCALBASE="${LOCALBASE}"
-CFLAGS+=	-I${LOCALBASE}/include -fdeclspec
+CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-configure:
 	cd ${WRKSRC} && ${SETENV} RB_USER_INSTALL=yes ${MAKE_ENV} \
 	    ${MAKE} configure

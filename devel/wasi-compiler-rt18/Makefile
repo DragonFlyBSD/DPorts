@@ -4,5 +4,4 @@ PORTREVISION=	3
 
 MASTERDIR=	${.CURDIR}/../wasi-compiler-rt
 
-DFLY_UNMAINTAINED= yes
 .include "${MASTERDIR}/Makefile"

@@ -33,7 +33,6 @@ PLIST_FILES=	bin/vanillamix bin/vanillara bin/vanillatd \
 
 PORTSCOUT=	skipv:latest
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${INSTALL_WRKSRC}/vanilla* \
 		${STAGEDIR}${PREFIX}/bin

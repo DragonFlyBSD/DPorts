@@ -35,7 +35,6 @@ UTF16_CXXFLAGS=		-std=gnu++11
 UTF16_LDFLAGS=		-licuio -licuuc
 UTF16_LIB_DEPENDS=	libicuuc.so:devel/icu
 
-DFLY_UNMAINTAINED= yes
 do-install:
 .for i in fixparts gdisk sgdisk
 	${INSTALL_PROGRAM} ${WRKSRC}/${i} ${STAGEDIR}${PREFIX}/sbin

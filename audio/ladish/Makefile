@@ -37,7 +37,6 @@ GUI_LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
 			libgnomecanvasmm-2.6.so:graphics/libgnomecanvasmm26 \
 			libharfbuzz.so:print/harfbuzz
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	# strip
 	@cd ${STAGEDIR}${PREFIX} && \

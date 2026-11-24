@@ -18,7 +18,6 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zope.interface>=3.3.0:devel/py-zope.interf
 USES=		python
 USE_PYTHON=	autoplist pep517
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/zope/proxy/_zope_proxy_proxy${PYTHON_TAG}.so
 

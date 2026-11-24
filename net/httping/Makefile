@@ -33,5 +33,4 @@ NCURSES_USES=		ncurses
 NLS_CMAKE_BOOL=		USE_GETTEXT
 NLS_USES=		gettext-runtime gettext-tools
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

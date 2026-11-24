@@ -21,4 +21,10 @@ GO_TARGET=	./cmd/${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|^\(//go:build .*freebsd.*\)$$|\1 \|\| dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/moby/term/termios_bsd.go
+	${REINPLACE_CMD} -e 's|^\(//go:build .*!freebsd.*\)$$|\1 \&\& !dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/moby/term/termios_nonbsd.go
+
 .include <bsd.port.mk>

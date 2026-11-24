@@ -26,5 +26,4 @@ CMAKE_ARGS=	-DINSTALL_UINPUT_UDEV_RULES:BOOL=FALSE
 
 LDFLAGS+=	-lexecinfo
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

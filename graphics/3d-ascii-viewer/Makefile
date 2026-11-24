@@ -10,7 +10,7 @@ WWW=		https://github.com/autopawn/3d-ascii-viewer
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		gmake
+USES= gmake ncurses
 USE_GITHUB=	yes
 GH_ACCOUNT=	autopawn
 
@@ -21,7 +21,6 @@ PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	EXAMPLES
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/3d-ascii-viewer ${STAGEDIR}${PREFIX}/bin
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/models

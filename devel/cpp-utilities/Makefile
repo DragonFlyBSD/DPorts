@@ -27,5 +27,4 @@ CMAKE_TESTING_ARGS=	-DEXCLUDE_TESTS_FROM_ALL=OFF # tests fail to link: ld: error
 
 # tests as of 5.34.1: 100% tests passed, 0 tests failed out of 1
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

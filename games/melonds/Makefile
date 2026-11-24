@@ -31,5 +31,4 @@ GH_PROJECT=	melonDS
 
 CMAKE_ON=	USE_SYSTEM_LIBSLIRP
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

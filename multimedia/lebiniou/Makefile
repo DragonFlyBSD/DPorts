@@ -27,7 +27,7 @@ LIB_DEPENDS=	libavutil.so.58:multimedia/ffmpeg6 \
 		libfreetype.so:print/freetype2
 RUN_DEPENDS=	${LOCALBASE}/share/lebiniou/vue/index.html:multimedia/lebiniou-data
 
-USES=		autoreconf gl gnome magick pkgconfig sdl
+USES= autoreconf gl gnome magick pkgconfig sdl localbase
 USE_GL=		glu
 
 USE_GITLAB=	YES
@@ -43,7 +43,7 @@ GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} == 1600020
 BROKEN=	missing structs in V4L2, see D59203
-.elif ${OPSYS} == FreeBSD && ${OSVERSION} < 1600021
+.elif ${OPSYS} == DragonFly || (${OPSYS} == FreeBSD && ${OSVERSION} < 1600021)
 BUILD_DEPENDS+=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 RUN_DEPENDS+=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 .endif

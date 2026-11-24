@@ -17,4 +17,8 @@ GO_TARGET=	./cmd/${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}
 
+dfly-patch:
+	${SED} -e 's@^//go:build freebsd$$@//go:build dragonfly@' \
+		${WRKSRC}/pkg/privileges/privileges_freebsd.go > ${WRKSRC}/pkg/privileges/privileges_dragonfly.go
+
 .include <bsd.port.mk>

@@ -17,7 +17,6 @@ INSTALL_TARGET=	install-strip
 DOCS=		AUTHORS COPYING README docs/kconfig-language.txt \
 		docs/kconfig.txt
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 post-install:

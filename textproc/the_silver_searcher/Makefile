@@ -26,7 +26,6 @@ CONFIGURE_ARGS=	--with-pcre2 \
 TEST_TARGET=	test
 LDFLAGS+=	-L/usr/lib -llzma
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
 	${MV} ${STAGEDIR}${DATADIR}/completions/ag.bashcomp.sh \

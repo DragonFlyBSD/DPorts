@@ -30,5 +30,4 @@ GH_TUPLE=	mortbopet:VSRTL:8fd0bce:VSRTL/external/VSRTL \
 
 PORTSCOUT=	ignore:continuous-master
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

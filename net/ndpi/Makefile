@@ -37,7 +37,6 @@ LIBS+=		-ljson-c
 PLIST_SUB=	MAJOR_VER=${PORTVERSION:R:R} \
 		VER=${PORTVERSION:R}
 
-DFLY_UNMAINTAINED= yes
 post-configure:
 	@${REINPLACE_CMD} -e 's/#define PACKAGE/#define NDPI_PACKAGE/g' \
 		-e 's/#define VERSION/#define NDPI_VERSION/g' \

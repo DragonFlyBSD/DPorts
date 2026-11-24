@@ -97,6 +97,8 @@ SPEECHD_USES=		gettext-runtime gnome
 SPEECHD_USE=		GNOME=glib20
 SPEECHD_CMAKE_BOOL=	speechd
 
+OPTIONS_EXCLUDE= OVERLAY_32BIT
+USES+= ninja
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOVERLAY_32BIT}
@@ -109,5 +111,9 @@ PLIST_SUB+=	OVERLAY_NATIVE_SUFFIX=.x86_64
 PLIST_SUB+=	OVERLAY_32BIT="@comment "
 PLIST_SUB+=	OVERLAY_NATIVE_SUFFIX=""
 .endif
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/MATCHES "\.\*BSD")$$/MATCHES ".*BSD|DragonFly")/' \
+		${WRKSRC}/src/mumble/CMakeLists.txt
 
 .include <bsd.port.mk>

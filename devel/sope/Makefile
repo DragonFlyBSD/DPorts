@@ -57,10 +57,9 @@ OPTIONS_DEFAULT+=	PGSQL
 OPTIONS_DEFAULT+=	MYSQL
 .endif
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD
+.if ${OPSYS} == FreeBSD || ${OPSYS} == DragonFly
 CPPFLAGS+=	-Wno-error=incompatible-function-pointer-types
 .endif
 

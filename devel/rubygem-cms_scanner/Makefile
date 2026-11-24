@@ -25,7 +25,6 @@ USES=		gem
 
 NO_ARCH=	yes
 
-DFLY_UNMAINTAINED= yes
 dfly-patch:
 	${REINPLACE_CMD} -e '/nokogiri/s@1\.8\.0@1.8@g'	\
 		${WRKSRC}/cms_scanner.gemspec

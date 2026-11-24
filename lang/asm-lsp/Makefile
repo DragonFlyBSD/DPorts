@@ -331,7 +331,6 @@ OPENSSLLIB=	/usr/lib
 
 PLIST_FILES=	bin/${PORTNAME}
 
-DFLY_UNMAINTAINED= yes
 do-install:
 	# workaround for error: found a virtual manifest at `xx` instead of a package manifest
 	${INSTALL_PROGRAM} \

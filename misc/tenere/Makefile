@@ -398,5 +398,4 @@ CARGO_CRATES=	addr2line-0.24.2 \
 
 PLIST_FILES=	bin/${PORTNAME}
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.mk>

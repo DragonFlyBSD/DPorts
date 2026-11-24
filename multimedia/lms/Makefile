@@ -50,7 +50,7 @@ MAGICK_DESC=			Use GraphicsMagick++ as image library
 MAGICK_LIB_DEPENDS=		libGraphicsMagick.so:graphics/GraphicsMagick
 MAGICK_CMAKE_ON=		-DLMS_IMAGE_BACKEND:STRING=graphicsmagick
 
-USE_GCC_VERSION= ${GCC_DEFAULT}
+USE_GCC_VERSION= 14
 post-patch:
 	@${REINPLACE_CMD} -e 's|"/etc"|"${PREFIX}/etc"|' \
 		${WRKSRC}/src/libs/core/include/core/SystemPaths.hpp

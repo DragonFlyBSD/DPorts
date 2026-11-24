@@ -18,7 +18,6 @@ GH_ACCOUNT=	avh4
 
 CABAL_PROJECT=	append
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-extract:
 	${RM} ${WRKSRC}/cabal.project.freeze
 	${ECHO} "module Build_elm_format where" > ${WRKSRC}/src/Build_elm_format.hs

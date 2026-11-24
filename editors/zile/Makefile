@@ -29,5 +29,4 @@ PORTDOCS=	AUTHORS FAQ NEWS dotzile.sample
 OPTIONS_DEFINE=	DOCS
 
 LDFLAGS= -L${LOCALBASE}/lib
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

@@ -63,7 +63,6 @@ TEST_USES=		perl5
 TEST_CMAKE_BOOL=	ENABLE_TESTING
 TEST_TEST_TARGET=	check
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 CCLINKDIR=		libexec/ccache

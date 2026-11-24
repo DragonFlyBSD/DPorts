@@ -40,7 +40,6 @@ PORTDOCS=	*
 
 MAKEFILE=	mk_freebsd.mk
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	${REINPLACE_CMD} \
 	    -e 's|%%LOCALBASE%%|${LOCALBASE}|g;' \

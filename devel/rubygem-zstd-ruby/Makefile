@@ -11,5 +11,4 @@ LICENSE=	BSD3CLAUSE
 
 USES=		gem
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

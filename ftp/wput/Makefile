@@ -32,7 +32,6 @@ NLS_CONFIGURE_WITH=	libintl-prefix=${LOCALBASE}
 TLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
 TLS_CONFIGURE_WITH=	ssl
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD

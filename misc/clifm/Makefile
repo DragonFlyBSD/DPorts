@@ -22,7 +22,6 @@ MAKE_ENV=	LIBS_FreeBSD="-I${LOCALBASE}/include -L${LOCALBASE}/lib \
 		-lreadline -lintl -lmagic"
 SHEBANG_FILES=	misc/tools/deroff.py misc/tools/manpages_comp_gen.py
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${INSTALL_DATA} ${WRKSRC_cfmc}/colors/*.clifm \
 		${STAGEDIR}${DATADIR}/colors

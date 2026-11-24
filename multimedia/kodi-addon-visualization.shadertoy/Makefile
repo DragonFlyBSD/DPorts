@@ -11,7 +11,7 @@ LICENSE=	GPLv2+
 
 BUILD_DEPENDS=	glm>0:math/glm
 
-USES=		cmake compiler:c++14-lang gl kodi localbase
+USES= cmake compiler:c++14-lang gl kodi localbase pkgconfig
 USE_CXXSTD=	c++14
 USE_GITHUB=	yes
 GH_ACCOUNT=	xbmc
@@ -22,7 +22,7 @@ PLIST_SUB=	SOVERSION=${PORTVERSION}
 
 CMAKE_ARGS=	-DADDONS_TO_BUILD=${PORTNAME}
 
-IGNORE= unmaintained, please request fixing to users mailing list
+LIB_DEPENDS= libjsoncpp.so:devel/jsoncpp
 post-patch:
 	@${REINPLACE_CMD} -e 's|delete buffer;|delete[] buffer;|g' \
 		${WRKSRC}/src/main.cpp

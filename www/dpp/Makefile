@@ -34,7 +34,6 @@ CXXFLAGS+=	-DDPP_USE_EXTERNAL_JSON # workaround for https://github.com/brainboxd
 
 MAKE_ENV=	TEST_DATA_DIR=${WRKSRC}/testdata/ # only for tests
 
-DFLY_UNMAINTAINED= yes
 post-extract:
 	@${RM} -r ${WRKSRC}/include/dpp/nlohmann
 

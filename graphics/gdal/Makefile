@@ -1,5 +1,6 @@
 PORTNAME=	gdal
 PORTVERSION=	3.13.3
+PORTREVISION= 3
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://download.osgeo.org/gdal/${PORTVERSION}/ \
 		LOCAL/sunpoet
@@ -232,7 +233,6 @@ LIB_DEPENDS+= libarchive.so.13:archivers/libarchive
 CMAKE_OFF+= ENABLE_IPO GDAL_HIDE_INTERNAL_SYMBOLS
 CFLAGS= -DGDAL_DISABLE_FLOAT16
 CXXFLAGS= -DGDAL_DISABLE_FLOAT16
-PORTREVISION= 3
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc || ${ARCH} == powerpc64

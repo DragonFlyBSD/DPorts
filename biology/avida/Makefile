@@ -17,7 +17,7 @@ EXPIRATION_DATE=2026-11-30
 ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	invokes x86 assembler
 
-USES=		compiler:c11 cmake ncurses
+USES= compiler:c11 cmake ncurses localbase
 USE_CXXSTD= gnu++98
 CMAKE_ARGS=	-DAPTO_UNIT_TESTS:BOOL=OFF \
 		-DAVD_UNIT_TESTS:BOOL=OFF \
@@ -39,7 +39,8 @@ DATA_FILES=	analyze.cfg avida.cfg default-gx.org \
 OPTIONS_DEFINE=	DOCS
 
 CFALGS= -Wundef
-DFLY_UNMAINTAINED= yes
+CFLAGS= -DNCURSES_INTERNALS
+CXXFLAGS= -DNCURSES_INTERNALS
 pre-configure:
 	@${REINPLACE_CMD} -e '/__PPC__/s|linux|${OPSYS}|' \
 		${WRKSRC}/libs/tcmalloc-1.4/src/atomicops.h

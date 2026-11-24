@@ -49,8 +49,9 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	kicad/code
 GL_PROJECT=	kicad
 
-CXXFLAGS+=	-I${WRKSRC}/include -I${LOCALBASE}/include
+CXXFLAGS+= -I${WRKSRC}/include -I${LOCALBASE}/include -Wno-deprecated-declarations -fext-numeric-literals -DBOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED
 CXXFLAGS_powerpc=	-O0
+CXXFLAGS+=	-include ${WRKDIR}/dfly-no-major-minor.h
 CMAKE_ARGS=	-DwxWidgets_CONFIG_EXECUTABLE=${WX_CONFIG}	\
 		-DwxWidgets_USE_UNICODE=ON			\
 		-DwxWidgets_wxrc_EXECUTABLE=${WXRC_CMD}		\
@@ -81,9 +82,23 @@ NLS_CMAKE_BOOL= KICAD_BUILD_I18N
 
 CONFLICTS_INSTALL=	kicad-devel # bin/_cvpcb.kiface
 
-IGNORE= cad/kicad-devel is the modern development; use it instead
+USE_GCC_VERSION= ${GCC_DEFAULT}
+USES+= localbase:ldflags
 pre-configure:
 	${REINPLACE_CMD} -e 's|/usr/local/bin/xdg-open|${LOCALBASE}/bin/xdg-open|' \
 		${WRKSRC}/common/pgm_base.cpp
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's|__FreeBSD__|__DragonFly__|' \
+		${WRKSRC}/thirdparty/libcontext/libcontext.h
+	cd ${WRKSRC} && ${GREP} -rlF --include='*.h' --include='*.cpp' \
+		'#if defined(__linux__) || defined(__FreeBSD__)' . | \
+		${XARGS} ${REINPLACE_CMD} -e 's/^#if defined(__linux__) || defined(__FreeBSD__)$$/& || defined(__DragonFly__)/'
+	# No ENODATA here; FreeBSD gets libc++'s value.
+	${REINPLACE_CMD} -e 's|= ENODATA,|= 9919,|' \
+		${WRKSRC}/thirdparty/3dxware_sdk/inc/navlib/navlib_types.h
+
+post-patch:
+	@${PRINTF} '#include <sys/types.h>\n#undef major\n#undef minor\n' > ${WRKDIR}/dfly-no-major-minor.h
 
 .include <bsd.port.mk>

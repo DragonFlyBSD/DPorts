@@ -33,7 +33,6 @@ MANPAGES_CONFIGURE_OFF=	-Dman-pages=false
 X11_CONFIGURE_ON=	-Dxwayland=true
 X11_CONFIGURE_OFF=	-Dxwayland=false
 
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.options.mk>
 
 .if ${ARCH} != x86_64

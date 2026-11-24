@@ -30,5 +30,4 @@ GROUPS=		${USERS}
 
 PLIST_SUB=	USERS="${USERS}"
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

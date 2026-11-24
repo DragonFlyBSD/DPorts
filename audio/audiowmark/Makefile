@@ -38,7 +38,6 @@ OPTIONS_DEFAULT=	FFMPEG
 FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 FFMPEG_CONFIGURE_ON=	--with-ffmpeg
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.adoc ${STAGEDIR}${DOCSDIR}

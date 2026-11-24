@@ -30,14 +30,12 @@ CONFIGURE_ARGS=	--with-html-dir=${DOCSDIR} \
 
 INSTALL_TARGET=	install-strip
 
-CFLAGS+=	-fdeclspec
 
 PORTDOCS=	*
 PORTEXAMPLES=	*
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 .if ${COMPILER_TYPE} == clang

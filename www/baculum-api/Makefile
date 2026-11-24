@@ -18,6 +18,4 @@ USE_PHP=	bcmath pdo
 
 MASTERDIR=      ${.CURDIR}/../baculum-common
 
-IGNORE= unmaintained, please request fixing to users mailing list
-DFLY_UNMAINTAINED= yes
 .include "${MASTERDIR}/Makefile"

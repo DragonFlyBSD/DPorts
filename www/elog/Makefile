@@ -35,4 +35,9 @@ do-install-DOCS-on:
 	cd ${WRKSRC} && \
 		${COPYTREE_SHARE} "doc" ${STAGEDIR}${DOCSDIR}
 
+.if 1
+CFLAGS+=	-I${OPENSSLINC}
+LIBS+=		-L${OPENSSLLIB}
+.endif
+
 .include <bsd.port.mk>

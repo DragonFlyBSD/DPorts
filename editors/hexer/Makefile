@@ -25,10 +25,12 @@ MYC_DESC=	Builtin calculator
 
 MYC_ALL_TARGET=	myc
 
+CFLAGS= -I${NCURSESINC}
+LDFLAGS= -L${NCURSESLIB}
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD
-USES+= llvm:max=14 ncurses
+USES+=	llvm:max=14
 .endif
 
 post-install:
@@ -36,6 +38,10 @@ post-install:
 
 post-install-MYC-on:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/myc
+
+.if 1
+USES+=	ncurses
+.endif
 
 dfly-patch:
 	${REINPLACE_CMD} -e 's@-lcurses@-lncurses@'	\

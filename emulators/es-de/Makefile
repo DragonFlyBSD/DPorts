@@ -52,6 +52,7 @@ DEINIT_DESC=	Deinit frontend on emulator launch
 
 DEINIT_CMAKE_BOOL=	DEINIT_ON_LAUNCH
 
+OPTIONS_EXCLUDE= DEINIT
 post-install:
 	${LN} -sf ${LOCALBASE}/share/fonts/Droid/DroidSansFallbackFull.ttf \
 		${STAGEDIR}${DATADIR}/resources/fonts
@@ -65,5 +66,9 @@ post-install:
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.md ${STAGEDIR}${DOCSDIR}
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's/CMAKE_SYSTEM_NAME MATCHES FreeBSD/CMAKE_SYSTEM_NAME MATCHES "FreeBSD|DragonFly"/' \
+		${WRKSRC}/CMakeLists.txt ${WRKSRC}/es-app/CMakeLists.txt
 
 .include <bsd.port.mk>

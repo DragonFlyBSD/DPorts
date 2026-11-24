@@ -58,7 +58,6 @@ CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-Wl,--as-needed -L${LOCALBASE}/lib
 CMAKE_ARGS+=	-DUSE_QT6="ON" -DUSE_MIMALLOC="OFF" -DENABLE_CGAL="ON" -DUSE_BUILTIN_OPENCSG="ON" -DENABLE_GLX="ON" -DCMAKE_BUILD_TYPE=Debug
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include "Makefile.git_rev"
 
 .include <bsd.port.pre.mk>

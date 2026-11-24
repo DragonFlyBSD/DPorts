@@ -1,6 +1,6 @@
---- src/openvpn/tun.c.orig	2024-08-19 15:48:13 UTC
+--- src/openvpn/tun.c.orig
 +++ src/openvpn/tun.c
-@@ -1565,7 +1565,7 @@ do_ifconfig_ipv4(struct tuntap *tt, cons
+@@ -1466,7 +1466,7 @@
          add_route(&r, tt, 0, NULL, es, NULL);
      }
  
@@ -8,16 +8,17 @@
 +#elif defined(TARGET_FREEBSD)
  
      /* example: ifconfig tun2 10.2.0.2 10.2.0.1 mtu 1450 netmask 255.255.255.255 up */
-     if (tun)       /* point-to-point tun */
-@@ -1584,6 +1584,49 @@ do_ifconfig_ipv4(struct tuntap *tt, cons
+     if (tun_p2p) /* point-to-point tun */
+@@ -1483,6 +1483,49 @@
+ 
      argv_msg(M_INFO, &argv);
      openvpn_execve_check(&argv, es, S_FATAL, "FreeBSD ifconfig failed");
- 
++
 +#elif defined(TARGET_DRAGONFLY)
 +    in_addr_t remote_end = INADDR_ANY;  /* for "virtual" subnet topology */
 +
 +    /* example: ifconfig tun2 10.2.0.2 10.2.0.1 mtu 1450 netmask 255.255.255.255 up */
-+    if (tun)       /* point-to-point tun */
++    if (tun_p2p)   /* point-to-point tun */
 +    {
 +        argv_printf(&argv, "%s %s %s %s mtu %d netmask 255.255.255.255 up",
 +                    IFCONFIG_PATH, ifname, ifconfig_local,
@@ -45,7 +46,7 @@
 +    openvpn_execve_check(&argv, es, S_FATAL, "DragonFly ifconfig failed");
 +
 +    /* Add a network route for the local tun interface */
-+    if (!tun && tt->type == DEV_TYPE_TUN && tt->topology == TOP_SUBNET)
++    if (!tun_p2p && tt->type == DEV_TYPE_TUN && tt->topology == TOP_SUBNET)
 +    {
 +        struct route_ipv4 r;
 +        CLEAR(r);
@@ -55,7 +56,6 @@
 +        r.gateway = remote_end;
 +        add_route(&r, tt, 0, NULL, es, NULL);
 +    }
-+
+ 
  #elif defined(TARGET_AIX)
      {
-         /* AIX ifconfig will complain if it can't find ODM path in env */

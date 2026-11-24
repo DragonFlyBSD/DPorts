@@ -30,7 +30,6 @@ MAKE_ARGS=	ignore_unknown_variables=1 sdl2=1
 PLIST_FILES=	bin/d1x-rebirth \
 		bin/d2x-rebirth
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.options.mk>
 
 .if ${ARCH} != riscv64

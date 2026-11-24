@@ -38,5 +38,4 @@ MESON_ARGS=	-Dibus=disabled \
 
 PORTSCOUT=	limit:^47\.
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

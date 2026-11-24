@@ -69,5 +69,5 @@ QT5_USE=	qt=qmake:build,buildtools:build,core,gui,widgets,network,opengl,multime
 QT5_CMAKE_BOOL=	BUILD_QT
 
 OPTIONS_DEFAULT:= ${OPTIONS_DEFAULT:NDEBUGGERS}
-IGNORE= unmaintained, please request fixing to users mailing list
+LIB_DIRS= /lib /usr/lib ${LOCALBASE}/lib ${LOCALBASE}/lib/elfutils
 .include <bsd.port.mk>

@@ -1,17 +1,16 @@
 PORTNAME=	blocky
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.35.0
-PORTREVISION=	3
+DISTVERSION=	0.37.0
 CATEGORIES=	dns
 
-MAINTAINER=	diizzy@FreeBSD.org
+MAINTAINER=	daniel.engberg.lists@pyret.net
 COMMENT=	Fast and lightweight DNS proxy as ad-blocker
 WWW=		https://0xerr0r.github.io/blocky/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules
+USES=		go:1.27+,modules
 
 USE_RC_SUBR=	blocky
 
@@ -28,5 +27,11 @@ PLIST_FILES=	"@sample etc/blocky-config.yml.sample" \
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/blocky-config.yml.sample ${STAGEDIR}${PREFIX}/etc/blocky-config.yml.sample
+
+dfly-patch:
+	${REINPLACE_CMD} -e 's,^//go:build !mips .*,& \&\& !dragonfly,' \
+		${WRKSRC}/querylog/database_writer_sqlite.go
+	${REINPLACE_CMD} -e 's,^//go:build mips .*,& || dragonfly,' \
+		${WRKSRC}/querylog/database_writer_sqlite_unsupported.go
 
 .include <bsd.port.mk>

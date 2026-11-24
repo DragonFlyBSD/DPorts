@@ -26,4 +26,8 @@ PORTDOCS=	AUTHORS.bz2 CHANGELOG.bz2 README.bz2 TODO.bz2
 
 OPTIONS_DEFINE=	DOCS
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/"^(Linux|FreeBSD)$$"/"^(Linux|FreeBSD|DragonFly)$$"/' \
+		${WRKSRC}/CMakeLists.txt
+
 .include <bsd.port.mk>

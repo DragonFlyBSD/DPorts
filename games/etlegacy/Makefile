@@ -54,7 +54,8 @@ DEDICATED_USES=		minizip
 
 SUB_FILES=	pkg-message
 
-DFLY_UNMAINTAINED= yes
+LDFLAGS= -lexecinfo
+USES+= gmake
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "i386"

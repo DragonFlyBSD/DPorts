@@ -19,6 +19,7 @@ WANT_PGSQL=	server
 USE_GITHUB=	yes
 GH_ACCOUNT=	supabase
 
+MAKE_ARGS= COPT=-Wno-error=old-style-declaration
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/postgresql/pg_net.so
 

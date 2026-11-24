@@ -34,7 +34,6 @@ THREADS_DESC=	Enable threading (uses pthreads)
 THREADS_CFLAGS_OFF=	-DNO_THREADS
 THREADS_LDFLAGS=	-lpthread
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch-SSH-on:
 	@${REINPLACE_CMD} -e 's|shell\,\"rsh\"|shell\,\"ssh\"|' \
 		${WRKSRC}/iozone.c

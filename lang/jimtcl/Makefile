@@ -28,7 +28,6 @@ PORTDOCS=		*
 
 TEST_TARGET=		test
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-install:
 	@${STRIP_CMD} \
 		${STAGEDIR}${PREFIX}/bin/jimsh \

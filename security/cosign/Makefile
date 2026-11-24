@@ -33,4 +33,10 @@ SOURCE_DATE_EPOCH_CMD=	date -ur \
 			$$(${GREP} -m1 TIMESTAMP ${DISTINFO_FILE} | ${SED} -e 's/[^0-9]//g') \
 			'+%Y-%m-%dT%H:%M:%SZ'
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's|^\(//go:build .*freebsd.*\)$$|\1 \|\| dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/moby/term/termios_bsd.go
+	${REINPLACE_CMD} -e 's|^\(//go:build .*!freebsd.*\)$$|\1 \&\& !dragonfly|' \
+		${GO_WRKSRC}/vendor/github.com/moby/term/termios_nonbsd.go
+
 .include <bsd.port.post.mk>

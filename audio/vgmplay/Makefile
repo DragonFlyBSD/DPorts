@@ -28,7 +28,6 @@ MEDIACONTROLS_LIB_DEPENDS=	libdbus-1.so:devel/dbus
 MEDIACONTROLS_CMAKE_ON=	-DMEDIA_CONTROLS:STRING="DBUS"
 MEDIACONTROLS_CMAKE_OFF=-DMEDIA_CONTROLS:STRING="OFF"
 
-DFLY_UNMAINTAINED= yes
 post-install:
 .for f in updates.txt vgmplay.ini vgmplay.txt
 	@${RM} ${STAGEDIR}${PREFIX}/bin/${f}

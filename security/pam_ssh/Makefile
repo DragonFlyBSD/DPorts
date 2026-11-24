@@ -12,6 +12,8 @@ LICENSE=	BSD3CLAUSE
 USES=		ssl
 
 CFLAGS+=	-I${OPENSSLINC}
+# OpenSSL 3 deprecates the EC_KEY API the bundled openssh code uses.
+CFLAGS+=	-Wno-error=deprecated-declarations
 LDFLAGS+=	-L${OPENSSLLIB} -lcrypto
 
 SUB_FILES=	pkg-message
@@ -30,5 +32,9 @@ post-patch:
 
 pre-configure:
 	(cd ${WRKSRC} && ${CC} ${CFLAGS} select_config.c -o select_config && ./select_config)
+
+# The stage tree has share/man only; the man page installs under man/.
+pre-install:
+	${MKDIR} ${STAGEDIR}${PREFIX}/man/man8
 
 .include <bsd.port.mk>

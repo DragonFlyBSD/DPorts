@@ -39,7 +39,6 @@ MANPAGES_PLIST_FILES=	share/man/man1/${PORTNAME}.1.gz
 PIXBUF_USE=		GNOME=gdkpixbuf
 PIXBUF_MESON_ENABLED=	gdk-pixbuf
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 # Extract (snapshot) version from the port instead of meson.build
 	@${REINPLACE_CMD} -i .nogit -e 's/git.found()/false/' \
@@ -49,8 +48,10 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/_POSIX_C_SOURCE=200809L/_XOPEN_SOURCE=700/' \
 		${WRKSRC}/meson.build
 
-.if defined(PKGNAMESUFFIX) && ${PKGNAMESUFFIX:M-effects}
 dfly-patch:
+	${REINPLACE_CMD} -e "s/startswith('freebsd')$$/& or host_machine.system().startswith('dragonfly')/" \
+		${WRKSRC}/meson.build
+.if ${PKGNAMESUFFIX:U:M-effects}
 	${REINPLACE_CMD} -e 's@#ifdef __SSE2__@#if defined(__SSE2__) \&\& __GNUC__ \!= 8@g' \
 		${WRKSRC}/fade.c
 .endif

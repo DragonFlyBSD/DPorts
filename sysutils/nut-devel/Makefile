@@ -148,7 +148,6 @@ DEV_CONFIGURE_WITH=	dev
 
 CONFIGURE_ARGS+= --with-libltdl-includes=-I${PREFIX}/include
 CONFIGURE_ARGS+= --with-libltdl-libs=-L${PREFIX}/lib
-DFLY_UNMAINTAINED= yes
 .include <bsd.port.pre.mk>
 
 post-patch:

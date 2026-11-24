@@ -21,7 +21,6 @@ GH_ACCOUNT=	p-ranav
 CMAKE_ARGS=	-DLLVM_DIR:STRING=${PREFIX}/llvm${LLVM_VERSION}/lib/cmake/llvm
 CXXFLAGS+=	-I${LOCALBASE}/include/argparse
 
-IGNORE= unmaintained, please request fixing to users mailing list
 post-patch:
 	${REINPLACE_CMD} "s/llvm-config/${LLVM_CONFIG}/g" ${WRKSRC}/CMakeLists.txt
 

@@ -43,7 +43,6 @@ CAIRO_LIB_DEPENDS=	libcairo.so:graphics/cairo
 CAIRO_USES=		xorg
 CAIRO_USE=		XORG=x11
 
-DFLY_UNMAINTAINED= yes
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}/html
 	${INSTALL_DATA} ${WRKSRC}/doc/doxygen-doc/html/* ${STAGEDIR}${DOCSDIR}/html/

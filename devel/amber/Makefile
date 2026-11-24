@@ -148,5 +148,4 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 PLIST_FILES=	bin/ambr \
 		bin/ambs
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.mk>

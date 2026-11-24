@@ -39,4 +39,5 @@ OPTIONS_SUB=	yes
 NLS_USES=	gettext
 NLS_CONFIGURE_ENABLE=nls
 
+CXXFLAGS= -include exception
 .include <bsd.port.mk>

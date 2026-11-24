@@ -42,7 +42,6 @@ LDFLAGS+=	-lomp # https://github.com/Artelnics/opennn/issues/182
 USES+=		compiler:c++11-lang
 .endif
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/${PORTNAME} && ${INSTALL_DATA} ${WRKSRC}/${PORTNAME}/*.h ${STAGEDIR}${PREFIX}/include/${PORTNAME}
 	${INSTALL_DATA} ${BUILD_WRKSRC}/${PORTNAME}/libopennn.so ${STAGEDIR}${PREFIX}/lib

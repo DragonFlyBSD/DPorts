@@ -55,4 +55,13 @@ post-patch:
 	${REINPLACE_CMD} -e 's/-flto=auto//g' -e 's/-fno-fat-lto-objects//g' -e 's/-fstrength-reduce//g' ${WRKSRC}/NeuralRack/makefile
 	${REINPLACE_CMD} -e 's/CFLAGS :=/CFLAGS +=/g' -e 's/ -02/ -O2/' ${WRKSRC}/NeuralRack/makefile
 
+dfly-patch:
+	${REINPLACE_CMD} -e 's/defined(__linux__) || defined(__FreeBSD__)/& || defined(__DragonFly__)/' \
+		${WRKSRC}/NeuralRack/standalone/main.cpp \
+		${WRKSRC}/NeuralRack/standalone/NeuralRack.cc \
+		${WRKSRC}/NeuralRack/standalone/xpa.h \
+		${WRKSRC}/libxputty/xputty/header/xputty.h \
+		${WRKSRC}/libxputty/xputty/header/xfilepicker.h \
+		${WRKSRC}/libxputty/xputty/xwidget-linux.c
+
 .include <bsd.port.mk>

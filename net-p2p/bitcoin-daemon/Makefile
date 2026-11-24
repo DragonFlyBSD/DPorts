@@ -28,7 +28,6 @@ PLIST_FILES=	"@sample %%ETCDIR%%.conf.sample" \
 OPTIONS_DEFINE=		DEBUG TESTS WALLET ZMQ
 OPTIONS_DEFAULT=	WALLET ZMQ
 
-DFLY_UNMAINTAINED= yes
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/bitcoin.conf ${STAGEDIR}${PREFIX}/etc/bitcoin.conf.sample
 

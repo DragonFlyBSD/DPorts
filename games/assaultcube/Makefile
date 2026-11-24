@@ -56,7 +56,6 @@ DEDICATED_PLIST_FILES=	bin/${PORTNAME}_server libexec/${PORTNAME}_server
 #MASTER_ALL_TARGET=	master
 #MASTER_PLIST_FILES=	bin/${PORTNAME}_master libexec/${PORTNAME}_master
 
-IGNORE= unmaintained, please request fixing to users mailing list
 .include <bsd.port.pre.mk>
 
 post-patch: .SILENT

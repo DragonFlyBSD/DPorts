@@ -76,4 +76,7 @@ post-extract:
 	# create FreeBSD shell file by copying Linux one
 	@${CP} ${WRKSRC}/pkg/shell/shell_linux.go ${WRKSRC}/pkg/shell/shell_freebsd.go
 
+dfly-patch:
+	${CP} ${WRKSRC}/pkg/shell/shell_freebsd.go ${WRKSRC}/pkg/shell/shell_dragonfly.go
+
 .include <bsd.port.mk>

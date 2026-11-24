@@ -31,7 +31,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 PLIST_SUB=	PORTVERSION="${PORTVERSION}"
 
-IGNORE= unmaintained, please request fixing to users mailing list
 do-install:
 	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR} \
 		"! ( -name license\.txt -or -name *\.bat -or -name *\.exe -or \

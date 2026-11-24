@@ -22,7 +22,6 @@ SUB_FILES=	pkg-message
 
 PLIST_FILES=	bin/${PORTNAME}
 
-DFLY_UNMAINTAINED= yes
 post-patch:
 	${REINPLACE_CMD} 's,return "go",return "${GO_CMD}",g' \
 		${WRKSRC}/internal/utils/environment.go
